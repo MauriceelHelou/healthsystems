@@ -1,0 +1,33 @@
+[flake8]
+# Flake8 configuration for Python linting
+
+max-line-length = 100
+exclude =
+    .git,
+    __pycache__,
+    venv,
+    env,
+    .venv,
+    migrations,
+    .tox,
+    .eggs,
+    *.egg
+
+# Error codes to ignore
+ignore =
+    E203,  # Whitespace before ':'
+    E266,  # Too many leading '#' for block comment
+    E501,  # Line too long (handled by Black)
+    W503,  # Line break before binary operator
+    W504,  # Line break after binary operator
+
+# Select specific error codes
+select = C,E,F,W,B,B950
+
+# McCabe complexity
+max-complexity = 10
+
+# Per-file ignores
+per-file-ignores =
+    __init__.py:F401
+    tests/*:F401,F811

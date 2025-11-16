@@ -1,0 +1,113 @@
+"""
+FastAPI application entry point.
+"""
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
+from contextlib import asynccontextmanager
+import logging
+from typing import Dict, Any
+
+from api.config import settings
+from api.middleware.logging import LoggingMiddleware
+from api.middleware.rate_limit import RateLimitMiddleware
+# from api.routes import mechanisms, contexts, weights, visualizations, health
+from models.database import init_db, close_db
+
+# Configure logging
+logging.basicConfig(
+    level=settings.log_level,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """
+    Application lifespan manager.
+    Handles startup and shutdown events.
+    """
+    # Startup
+    logger.info("Starting HealthSystems Platform API...")
+    await init_db()
+    logger.info("Database initialized")
+
+    yield
+
+    # Shutdown
+    logger.info("Shutting down HealthSystems Platform API...")
+    await close_db()
+    logger.info("Database connections closed")
+
+
+# Create FastAPI application
+app = FastAPI(
+    title="HealthSystems Platform API",
+    description=(
+        "Decision support platform for quantifying how structural interventions "
+        "propagate through social-spatial-biological systems to affect health outcomes."
+    ),
+    version="0.1.0",
+    docs_url="/docs",
+    redoc_url="/redoc",
+    lifespan=lifespan,
+)
+
+# Middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=settings.allowed_origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+app.add_middleware(GZipMiddleware, minimum_size=1000)
+app.add_middleware(LoggingMiddleware)
+
+if settings.rate_limit_enabled:
+    app.add_middleware(RateLimitMiddleware)
+
+# Include routers
+# app.include_router(health.router, tags=["Health"])
+# app.include_router(mechanisms.router, prefix="/api/mechanisms", tags=["Mechanisms"])
+# app.include_router(contexts.router, prefix="/api/contexts", tags=["Contexts"])
+# app.include_router(weights.router, prefix="/api/weights", tags=["Weights"])
+# app.include_router(visualizations.router, prefix="/api/visualizations", tags=["Visualizations"])
+
+
+@app.get("/", tags=["Root"])
+async def root() -> Dict[str, str]:
+    """Root endpoint with API information."""
+    return {
+        "message": "HealthSystems Platform API",
+        "version": "0.1.0",
+        "docs": "/docs",
+        "health": "/health"
+    }
+
+
+@app.get("/health", tags=["Health"])
+async def health_check() -> Dict[str, Any]:
+    """
+    Health check endpoint for monitoring.
+
+    Returns:
+        Health status and system information
+    """
+    return {
+        "status": "healthy",
+        "version": "0.1.0",
+        "environment": settings.environment,
+    }
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(
+        "api.main:app",
+        host=settings.api_host,
+        port=settings.api_port,
+        reload=settings.environment == "development"
+    )

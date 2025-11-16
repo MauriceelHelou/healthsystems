@@ -1,0 +1,69 @@
+name: Frontend Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/frontend-tests.yml'
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - 'frontend/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: frontend/package-lock.json
+
+    - name: Install dependencies
+      working-directory: ./frontend
+      run: npm ci
+
+    - name: Run ESLint
+      working-directory: ./frontend
+      run: npm run lint
+
+    - name: Run TypeScript type check
+      working-directory: ./frontend
+      run: npm run type-check
+
+    - name: Run tests
+      working-directory: ./frontend
+      run: npm test -- --coverage --watchAll=false
+
+    - name: Run accessibility tests
+      working-directory: ./frontend
+      run: npm run test:a11y
+      continue-on-error: true
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./frontend/coverage/coverage-final.json
+        flags: frontend
+        name: frontend-coverage
+
+    - name: Build production bundle
+      working-directory: ./frontend
+      run: npm run build
+
+    - name: Check bundle size
+      working-directory: ./frontend
+      run: |
+        MAX_SIZE=500000  # 500KB
+        BUNDLE_SIZE=$(du -sb build/static/js/*.js | awk '{sum+=$1} END {print sum}')
+        if [ $BUNDLE_SIZE -gt $MAX_SIZE ]; then
+          echo "Bundle size ($BUNDLE_SIZE bytes) exceeds maximum ($MAX_SIZE bytes)"
+          exit 1
+        fi
+        echo "Bundle size: $BUNDLE_SIZE bytes (under $MAX_SIZE limit)"

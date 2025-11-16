@@ -1,0 +1,103 @@
+# Census API Variable Mappings
+
+name: census_acs_5year
+source: U.S. Census Bureau American Community Survey 5-Year Estimates
+api_endpoint: https://api.census.gov/data
+api_key_required: true
+rate_limit: 500  # requests per day
+documentation: https://www.census.gov/data/developers/data-sets/acs-5year.html
+
+# Variable definitions
+variables:
+  # Demographics
+  - name: total_population
+    code: DP05_0001E
+    table: DP05
+    description: Total population
+    universe: Total population
+
+  - name: percent_black
+    code: DP05_0037PE
+    table: DP05
+    description: Percent Black or African American alone
+    universe: Total population
+
+  - name: percent_hispanic
+    code: DP05_0071PE
+    table: DP05
+    description: Percent Hispanic or Latino
+    universe: Total population
+
+  # Economic
+  - name: poverty_rate
+    code: S1701_C03_001E
+    table: S1701
+    description: Percentage below poverty level
+    universe: Population for whom poverty status is determined
+
+  - name: median_income
+    code: S1901_C01_012E
+    table: S1901
+    description: Median household income (dollars)
+    universe: Households
+
+  - name: unemployment_rate
+    code: DP03_0009PE
+    table: DP03
+    description: Unemployment rate
+    universe: Civilian labor force
+
+  # Housing
+  - name: median_home_value
+    code: DP04_0089E
+    table: DP04
+    description: Median value (dollars) for owner-occupied units
+    universe: Owner-occupied housing units
+
+  - name: median_gross_rent
+    code: DP04_0134E
+    table: DP04
+    description: Median gross rent (dollars)
+    universe: Renter-occupied housing units
+
+  - name: percent_owner_occupied
+    code: DP04_0002PE
+    table: DP04
+    description: Percent owner-occupied housing units
+    universe: Occupied housing units
+
+  - name: housing_age_median_year
+    code: DP04_0058E
+    table: DP04
+    description: Median year structure built
+    universe: Housing units
+
+  # Education
+  - name: percent_college_educated
+    code: S1501_C02_014E
+    table: S1501
+    description: Percent bachelor's degree or higher
+    universe: Population 25 years and over
+
+  # Health Insurance
+  - name: percent_uninsured
+    code: DP03_0099PE
+    table: DP03
+    description: Percent with no health insurance coverage
+    universe: Civilian noninstitutionalized population
+
+# Geography levels supported
+geographies:
+  - us          # United States
+  - state       # State
+  - county      # County
+  - tract       # Census Tract
+  - block_group # Block Group
+  - place       # Incorporated Place
+  - zip         # ZIP Code Tabulation Area (ZCTA)
+
+# Cache settings
+cache:
+  enabled: true
+  duration_days: 30
+  location: data-sources/cache/census/
