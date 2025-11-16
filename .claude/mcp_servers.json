@@ -1,0 +1,34 @@
+{
+  "mcpServers": {
+    "academic-literature": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "env": {
+        "ALLOWED_DOMAINS": "api.semanticscholar.org,api.crossref.org,eutils.ncbi.nlm.nih.gov,pubmed.ncbi.nlm.nih.gov,scholar.google.com"
+      },
+      "description": "Academic literature search via Semantic Scholar, CrossRef, and PubMed APIs. Use for literature synthesis, effect size extraction, and citation retrieval."
+    },
+    "public-health-data": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-fetch"
+      ],
+      "env": {
+        "ALLOWED_DOMAINS": "api.census.gov,data.cdc.gov,wonder.cdc.gov,api.bls.gov,edg.epa.gov"
+      },
+      "description": "Public health and demographic data APIs including Census, CDC WONDER, BLS, and EPA. Use for geographic adaptation and contextual data."
+    },
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "description": "GitHub API access for repository operations, issue tracking, and pull requests."
+    }
+  }
+}

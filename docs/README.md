@@ -10,7 +10,8 @@ docs/
 ├── Core Technical Architecture/
 ├── LLM & Discovery Pipeline/
 ├── Geographic & Contextual Adaptation/
-└── Implementation & Operations/
+├── Implementation & Operations/
+└── Phase 2 - Quantification/
 ```
 
 ## Directory Purposes
@@ -59,13 +60,13 @@ AI/ML integration, mechanism discovery, and natural language processing componen
 Methods for adapting mechanisms to specific geographic and demographic contexts.
 
 **Suggested content:**
-- Bayesian weighting methodology
 - Contextual moderator specifications
 - Geographic data integration (Census, CDC, EPA, BLS)
 - Data scraping and ETL pipelines
 - Spatial analysis methods
 - Temporal adaptation strategies
 - Cross-geography validation
+- **[Phase 2]** Bayesian weighting methodology (see Phase 2 directory)
 
 ---
 
@@ -81,6 +82,25 @@ Practical guides for development, deployment, and ongoing operations.
 - Incident response procedures
 - Maintenance and update protocols
 - User support documentation
+
+---
+
+### 6. Phase 2 - Quantification
+Deferred capabilities for effect size quantification and Bayesian inference.
+
+**⚠️ Note**: This directory contains specifications for **Phase 2 only**. MVP (Phase 1) focuses on topology and direction discovery without numerical quantification.
+
+**Content:**
+- Effect size translation methods (Document 08)
+- LLM effect quantification pipeline (Document 10)
+- Bayesian methodology extraction (Document 02B - to be created)
+- Meta-analytic pooling specifications
+- Uncertainty propagation methods
+- Migration path from MVP to Phase 2
+
+**Purpose**: Clearly separates topology discovery (MVP) from quantification capabilities (Phase 2), allowing focused implementation while maintaining complete technical specifications.
+
+**See**: [Phase 2 - Quantification/README.md](Phase%202%20-%20Quantification/README.md) for complete rationale and implementation plan.
 
 ---
 

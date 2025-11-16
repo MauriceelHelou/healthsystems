@@ -1,10 +1,30 @@
 # Stock-Flow Paradigm
 ## Node Representation, Stock Types, and Functional Forms
 
-**Document ID**: 04_STOCK_FLOW_PARADIGM.md  
-**Version**: 2.0  
-**Last Updated**: November 15, 2025  
+**Document ID**: 04_STOCK_FLOW_PARADIGM.md
+**Version**: 2.0
+**Last Updated**: November 15, 2025
 **Tier**: 2 - Core Technical Architecture
+
+---
+
+## ⚠️ MVP vs. Phase 2 Scope
+
+**MVP (Phase 1)**: Stock-Flow Structure with Topology Only
+- ✓ All nodes represented as stocks with units
+- ✓ Stock types (real, proxy, crisis endpoint) specified
+- ✓ Mechanism directions (+/−) between stocks identified
+- ✓ Functional forms documented (for Phase 2 implementation)
+- ✗ **NO numerical equilibrium calculation** (requires effect sizes)
+- ✗ **NO stock level simulation** (requires quantified flows)
+
+**Phase 2**: Adds Numerical Simulation
+- Effect sizes enable flow rate calculation
+- Equilibrium solver computes baseline stock levels
+- Time simulation projects stock changes post-intervention
+- Uncertainty propagation through stock-flow network
+
+**This Document's Role**: Establishes stock-flow conceptual framework that MVP will use for network visualization and that Phase 2 will use for numerical simulation.
 
 ---
 

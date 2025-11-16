@@ -9,9 +9,31 @@
 
 ## Purpose of This Documentation
 
-This documentation ecosystem describes a platform that quantifies how structural interventions cascade through social, spatial, and biological systems to affect health outcomes. The platform enables policymakers, foundations, health departments, and community organizations to identify high-leverage intervention points using transparent, equity-centered systems modeling.
+This documentation ecosystem describes a platform that **maps** how structural interventions cascade through social, spatial, and biological systems to affect health outcomes. The platform enables policymakers, foundations, health departments, and community organizations to identify high-leverage intervention points using transparent, equity-centered systems modeling.
 
-**Core Innovation:** Self-configuring systems analysis that accepts any geography/demographic context, adapts a mechanism bank of ~2000 empirically-grounded causal pathways, and generates customized impact projections stratified by equity dimensions.
+**Core Innovation:** Self-configuring systems analysis that accepts any geography/demographic context, adapts a mechanism bank of ~2000 empirically-grounded causal pathways showing **topology and directionality**. **[Phase 2]** adds quantified impact projections stratified by equity dimensions.
+
+---
+
+## ⚠️ MVP vs. Phase 2 Scope
+
+**MVP (Phase 1)**: Topology & Direction
+- 2000 mechanisms mapped (which pathways exist, +/− direction)
+- 400 nodes catalogued
+- Spatial variation flagged
+- Evidence strength rated
+- Interactive visualization
+
+**Phase 2**: Quantification & Modeling
+- Effect size extraction and meta-analysis
+- Bayesian uncertainty quantification
+- Numerical impact projections
+- Monte Carlo simulation
+- See: `docs/Phase 2 - Quantification/`
+
+**Document Markings**:
+- [MVP] - Current scope
+- [Phase 2] - Deferred capabilities
 
 ---
 
@@ -28,9 +50,9 @@ This documentation ecosystem describes a platform that quantifies how structural
   - Target users and use cases
 
 - **02_METHODOLOGICAL_INTEGRATION.md** (15 pages)
-  - Systems Dynamics (SD) paradigm
-  - Structural Equation Modeling (SEM) integration
-  - Bayesian inference framework
+  - Systems Dynamics (SD) paradigm [MVP]
+  - Structural Equation Modeling (SEM) integration [MVP: topology only]
+  - Bayesian inference framework **[Phase 2]**
   - How three methodologies synthesize
   - Epistemological foundations
 
@@ -61,23 +83,26 @@ This documentation ecosystem describes a platform that quantifies how structural
   - Example mechanisms with full equations
   - Version control and lineage tracking
 
-- **06_EQUILIBRIUM_CALCULATION_ENGINE.md** (22 pages)
+- **06_EQUILIBRIUM_CALCULATION_ENGINE.md** (22 pages) **[Phase 2]**
   - Pre-intervention baseline calibration
   - Inverse calibration mathematics
   - Dampened equilibrium with feedback loops
   - Solving for unknown stocks
   - Multiple equilibria handling
   - Convergence criteria and algorithms
+  - **MVP**: Network visualization only, no equilibrium calculation
 
-- **07_TIME_SIMULATION_FRAMEWORK.md** (16 pages)
+- **07_TIME_SIMULATION_FRAMEWORK.md** (16 pages) **[Phase 2]**
   - Post-intervention dynamics
   - Annual time-step simulation
   - Convergence detection
   - Intervention ramp-up functions
   - Steady state vs. time horizon projection
   - Uncertainty propagation over time
+  - **MVP**: Pathway tracing only, no time simulation
 
-- **08_EFFECT_SIZE_TRANSLATION.md** (25 pages)
+- **08_EFFECT_SIZE_TRANSLATION.md** (25 pages) **→ MOVED TO Phase 2**
+  - **Location**: `docs/Phase 2 - Quantification/08_EFFECT_SIZE_TRANSLATION.md`
   - Literature effect types (RR, OR, β, d, HR)
   - Standardization to common metric
   - Translation to SD parameters
@@ -90,15 +115,18 @@ This documentation ecosystem describes a platform that quantifies how structural
 ### **TIER 3: LLM & Discovery Pipeline**
 *For ML engineers and scientists building automated mechanism generation*
 
-- **09_LLM_TOPOLOGY_DISCOVERY.md** (18 pages)
+- **09_LLM_TOPOLOGY_DISCOVERY.md** (18 pages) **[MVP]**
   - Node bank structure (400 nodes)
   - Literature-driven edge discovery
   - LLM prompts for topology detection
+  - **Direction identification** (positive/negative)
+  - **Spatial variation flagging** (qualitative)
   - Evidence strength assessment
   - Deduplication and clustering
   - Expert validation workflow
 
-- **10_LLM_EFFECT_QUANTIFICATION.md** (22 pages)
+- **10_LLM_EFFECT_QUANTIFICATION.md** (22 pages) **→ MOVED TO Phase 2**
+  - **Location**: `docs/Phase 2 - Quantification/10_LLM_EFFECT_QUANTIFICATION.md`
   - Effect size extraction from papers
   - Full-text PDF and abstract parsing
   - Meta-analytic pooling
@@ -106,11 +134,12 @@ This documentation ecosystem describes a platform that quantifies how structural
   - Publication bias detection
   - Bayesian synthesis for uncertainty
 
-- **11_LLM_MECHANISM_VALIDATION.md** (15 pages)
+- **11_LLM_MECHANISM_VALIDATION.md** (15 pages) **[MVP + Phase 2]**
   - Automated validation checkpoints
-  - Statistical soundness checks
-  - Causal logic verification
-  - Structural competency audit
+  - **[MVP]** Topology validation (existence, direction, logic)
+  - **[MVP]** Causal logic verification
+  - **[MVP]** Structural competency audit
+  - **[Phase 2]** Statistical soundness checks (effect sizes, CIs)
   - Expert review integration
   - Continuous quality monitoring
 
@@ -191,6 +220,54 @@ This documentation ecosystem describes a platform that quantifies how structural
   - Naming conventions
   - Common abbreviations
   - Cross-document reference guide
+
+---
+
+### **PHASE 2: Quantification & Uncertainty**
+*Deferred capabilities - Effect size quantification and Bayesian inference*
+
+**Location**: `docs/Phase 2 - Quantification/`
+
+- **README.md** - Phase 2 Overview
+  - Why separate phases (scientific, technical, practical rationale)
+  - Migration path from Phase 1 to Phase 2
+  - Timeline and milestones
+  - Implementation sequence
+
+- **08_EFFECT_SIZE_TRANSLATION.md** (25 pages) **[Moved from Tier 2]**
+  - Literature effect types (RR, OR, β, d, HR)
+  - Standardization to Cohen's d
+  - Translation to SD parameters
+  - Population stratification
+  - Confidence interval propagation
+  - Moderator adjustment mathematics
+
+- **10_LLM_EFFECT_QUANTIFICATION.md** (22 pages) **[Moved from Tier 3]**
+  - Effect size extraction from papers
+  - Full-text PDF and abstract parsing
+  - Meta-analytic pooling (fixed/random effects)
+  - Heterogeneity analysis (I²)
+  - Publication bias detection (Egger's test)
+  - Bayesian synthesis for uncertainty
+
+- **02B_BAYESIAN_METHODOLOGY.md** (To be created)
+  - Extracted from Document 02
+  - Prior specification by mechanism type
+  - MCMC sampling procedures
+  - Posterior distribution interpretation
+  - Credible interval calculation
+  - Prediction intervals
+  - Prior sensitivity analysis
+
+**Phase 2 Prerequisites**: Complete MVP (2000 mechanisms with topology/direction)
+
+**Phase 2 Adds**:
+- Exact effect sizes for all mechanisms
+- Meta-analytic pooling and heterogeneity assessment
+- Bayesian posteriors with credible intervals
+- Quantified moderators (e.g., "urban = 1.30×")
+- Monte Carlo uncertainty propagation
+- Numerical impact projections
 
 ---
 

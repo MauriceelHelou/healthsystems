@@ -1,10 +1,29 @@
 # Methodological Integration
 ## Synthesizing Systems Dynamics, Structural Equation Modeling, and Bayesian Inference
 
-**Document ID**: 02_METHODOLOGICAL_INTEGRATION.md  
-**Version**: 2.0  
-**Last Updated**: November 15, 2025  
+**Document ID**: 02_METHODOLOGICAL_INTEGRATION.md
+**Version**: 2.0
+**Last Updated**: November 15, 2025
 **Tier**: 1 - Foundational Principles
+
+---
+
+## ⚠️ MVP vs. Phase 2 Scope
+
+**This document describes the full methodological vision** integrating three frameworks:
+
+**MVP (Phase 1) - Systems Dynamics & SEM Only**:
+- ✓ **Systems Dynamics**: Stock-flow network structure
+- ✓ **SEM Framework**: Causal pathways from literature (direction only)
+- ✗ **Bayesian Inference**: Deferred to Phase 2
+
+**Phase 2 - Full Integration**:
+- ✓ Add Bayesian meta-analysis for effect quantification
+- ✓ Add uncertainty propagation via Monte Carlo
+- ✓ Add continuous updating with new evidence
+
+**Sections marked [Phase 2]** describe Bayesian capabilities deferred from MVP.
+**See**: `docs/Phase 2 - Quantification/02B_BAYESIAN_METHODOLOGY.md` for extracted Bayesian specifications.
 
 ---
 
@@ -350,9 +369,17 @@ Our encoding:
 
 ---
 
-## Bayesian Inference Framework
+## Bayesian Inference Framework [Phase 2]
 
-### Bayesian Contributions to Our Framework
+**⚠️ Note**: This entire section describes **Phase 2 capabilities**. MVP does not include Bayesian inference.
+
+**MVP Approach**: Qualitative uncertainty assessment (evidence strength ratings: strong/moderate/limited)
+
+**Phase 2 Approach**: Quantitative uncertainty via Bayesian posterior distributions
+
+**Full Bayesian specifications**: See `docs/Phase 2 - Quantification/02B_BAYESIAN_METHODOLOGY.md`
+
+### Bayesian Contributions to Our Framework [Phase 2]
 
 Bayesian methods provide rigorous uncertainty quantification without requiring users to understand Bayesian statistics.
 
@@ -499,31 +526,39 @@ Version 2.0: Real-world validation from 5 cities
 │               UNIFIED FRAMEWORK ARCHITECTURE                 │
 └─────────────────────────────────────────────────────────────┘
 
-LAYER 1: SYSTEMS DYNAMICS (Structure)
+LAYER 1: SYSTEMS DYNAMICS (Structure) [MVP]
 ├─ Stock-flow network (~400 nodes, ~2000 mechanisms)
 ├─ Feedback loops (reinforcing and balancing)
-├─ Time dynamics (simulation forward in annual steps)
-└─ Equilibrium concepts (pre/post intervention states)
+├─ [Phase 2] Time dynamics (simulation forward in annual steps)
+└─ [Phase 2] Equilibrium concepts (pre/post intervention states)
 
 LAYER 2: STRUCTURAL EQUATION MODELING (Empirical Grounding)
-├─ Effect sizes from literature (β coefficients, standardized)
-├─ Multi-level structure (structural → institutional → individual)
-├─ Mediation pathways (indirect effects through intermediates)
-└─ Population stratification (group-specific effects)
+├─ [MVP] Causal pathways from literature (direction only)
+├─ [MVP] Multi-level structure (structural → institutional → individual)
+├─ [MVP] Mediation pathways identification (which intermediates matter)
+├─ [Phase 2] Effect sizes from literature (β coefficients, standardized)
+└─ [Phase 2] Population stratification (group-specific effects)
 
-LAYER 3: BAYESIAN INFERENCE (Uncertainty Quantification)
+LAYER 3: BAYESIAN INFERENCE (Uncertainty Quantification) [Phase 2 Only]
 ├─ Meta-analytic synthesis (pooling across studies)
 ├─ Prior elicitation (expert knowledge integration)
 ├─ Posterior inference (credible intervals, probability statements)
 └─ Continuous updating (Bayesian learning as evidence accumulates)
 
-INTEGRATION POINTS:
+MVP INTEGRATION POINTS:
+1. SD provides network structure → SEM identifies pathways → Evidence strength rated
+2. SEM identifies moderators qualitatively → SD notes context-dependence
+3. Network visualization shows pathway topology, not numerical simulation
+
+PHASE 2 INTEGRATION POINTS:
 1. SD provides network structure → SEM populates with effect sizes → Bayesian quantifies uncertainty
 2. SEM identifies moderators → SD incorporates as context-adaptive parameters → Bayesian estimates moderation strength
 3. Bayesian provides posterior samples → SD uses for Monte Carlo simulation → SEM validates against empirical patterns
 ```
 
-### Concrete Example: CHW Intervention
+### Concrete Example: CHW Intervention [Phase 2]
+
+**⚠️ Note**: This example shows Phase 2 capabilities with effect sizes. MVP would show pathway topology only.
 
 **User Scenario**: "Increase CHW capacity from 50 to 200 FTE in Boston"
 

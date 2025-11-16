@@ -71,12 +71,11 @@ services:
       target: production
     container_name: healthsystems-frontend-railway
     environment:
-      VITE_API_BASE_URL: ${VITE_API_BASE_URL}
-      VITE_APP_NAME: ${VITE_APP_NAME:-HealthSystems Platform}
+      REACT_APP_API_URL: ${VITE_API_BASE_URL}
       PORT: ${PORT:-3000}
     ports:
       - "${PORT:-3000}:${PORT:-3000}"
-    command: npm run preview -- --host 0.0.0.0 --port ${PORT:-3000}
+    command: sh -c "npm run preview -- --host 0.0.0.0 --port ${PORT:-3000}"
 
 volumes:
   uploads:
