@@ -21,29 +21,70 @@
 
 ---
 
+## ⚠️ MVP vs. Phase 2 Scope
+
+### **MVP (Current Focus): Topology & Direction**
+The Minimum Viable Product establishes the **complete network structure**:
+- ✓ **2000 mechanisms** identified and catalogued
+- ✓ **400+ nodes** (stocks/variables) defined
+- ✓ **Direction** of each mechanism (positive/negative)
+- ✓ **Spatial variation** flags (when literature notes geographic differences)
+- ✓ **Qualitative moderators** (factors that strengthen/weaken effects, not quantified)
+- ✓ **Literature lineage** (which studies support each pathway)
+
+**MVP Does NOT Include:**
+- ✗ Exact effect size quantification (e.g., β = 0.35)
+- ✗ Confidence intervals or uncertainty propagation
+- ✗ Meta-analytic pooling or Bayesian synthesis
+- ✗ Quantified moderators (e.g., "urban = 1.30× multiplier")
+- ✗ Intervention impact calculations with numerical projections
+
+**MVP Value**: Complete topology map enables:
+- Pathway identification ("what connects to what")
+- Intervention planning ("which mechanisms are activated")
+- Evidence assessment ("is this pathway supported in literature")
+- Comparative analysis ("Boston vs. Mississippi - different pathways matter")
+
+### **Phase 2: Quantification & Uncertainty**
+After MVP completion, Phase 2 adds **effect magnitudes**:
+- Effect size extraction from 200-300 papers per mechanism
+- Meta-analytic pooling (fixed/random effects)
+- Bayesian synthesis with posterior distributions
+- Quantified moderators with exact multipliers
+- Monte Carlo uncertainty propagation
+- Numerical impact projections with confidence intervals
+
+**See**: `docs/Phase 2 - Quantification/README.md` for complete Phase 2 specifications.
+
+**Throughout this document**:
+- **Unmarked text** = applies to MVP
+- **[Phase 2]** tags = deferred to Phase 2
+
+---
+
 ## Executive Summary
 
 ### What This Platform Does
 
-The Systems-Based Health Impact Modeling Platform quantifies how structural interventions—housing policy, Medicaid design, workforce development, environmental remediation—cascade through interconnected social, spatial, and biological systems to affect health outcomes.
+The Systems-Based Health Impact Modeling Platform maps how structural interventions—housing policy, Medicaid design, workforce development, environmental remediation—cascade through interconnected social, spatial, and biological systems to affect health outcomes.
 
-**Core Capability**: Accept any geography and demographic specification, automatically configure a system map from a bank of ~2000 empirically-grounded mechanisms, and project health impact of proposed interventions with full transparency and equity stratification.
+**Core Capability (MVP)**: Accept any geography and demographic specification, automatically configure a system map from a bank of ~2000 empirically-grounded mechanisms showing **which pathways exist and their direction**. **[Phase 2]** adds quantified health impact projections with full transparency and equity stratification.
 
 ### Why It Matters
 
 State policymakers allocate billions annually on structural interventions yet cannot quantify their health effects. Health departments justify programs with "best practice" rather than evidence-based ROI. Foundations fund 50 programs across 5 states without standardized comparison. Community organizations document excellent work but cannot demonstrate health impact in terms funders understand.
 
-**The Gap**: No integrated framework exists to model how structural changes propagate through systems to produce health outcomes, identify high-leverage intervention points, or compare effectiveness across diverse geographies while maintaining equity focus.
+**The Gap**: No integrated framework exists to **map** how structural changes propagate through systems to produce health outcomes, identify high-leverage intervention points, or compare pathway relevance across diverse geographies while maintaining equity focus. **[Phase 2]** will add quantified modeling capabilities.
 
 ### Value Proposition
 
-**For Health Departments**: Justify specific budget investments with projected outcomes. Identify which interventions generate highest health impact per dollar. Coordinate across silos (housing, health, employment).
+**For Health Departments (MVP)**: Identify which pathways matter for specific health outcomes. Understand structural intervention mechanisms. Coordinate across silos using shared systems map. **[Phase 2]**: Justify investments with projected outcomes and ROI calculations.
 
-**For Foundations**: Compare portfolio impact across geographies and intervention types. Identify redundancies and synergies. Allocate funds toward highest structural leverage points.
+**For Foundations (MVP)**: Map portfolio interventions to see which mechanisms they activate. Identify synergies and gaps in pathway coverage. **[Phase 2]**: Compare quantified impact across geographies and intervention types.
 
-**For Community Organizations**: Demonstrate health impact of advocacy, organizing, and service work. Access credible quantification for funding justification.
+**For Community Organizations (MVP)**: Visualize how advocacy and services connect to health outcomes. Access evidence-based pathway maps for funding narratives. **[Phase 2]**: Demonstrate quantified health impact.
 
-**For Policymakers**: Model health consequences of policy decisions before implementation. Identify unintended effects. Prioritize interventions addressing root causes.
+**For Policymakers (MVP)**: See which health outcomes a policy intervention affects (pathways). Identify potential unintended effects through mechanism mapping. **[Phase 2]**: Model numerical health consequences before implementation.
 
 ---
 
@@ -118,23 +159,30 @@ $50B+ annual spending across state health, housing, labor, and education budgets
 - Edges = mechanisms (causal relationships): "Eviction → Healthcare Discontinuity → ED Visits"
 - Each mechanism has:
   - Functional form (sigmoid, linear, threshold, etc.)
-  - Effect size from meta-analytic literature synthesis
-  - Moderators (policy, demographic, implementation factors that strengthen/weaken effect)
-  - Confidence intervals
+  - **Direction (positive/negative) from literature synthesis** ← MVP scope
+  - Spatial variation flag (when literature notes geographic differences)
+  - Moderators identified qualitatively (policy, demographic, implementation factors that strengthen/weaken effect)
   - Literature lineage (which studies support this pathway)
+  - **[Phase 2]** Effect size quantification, confidence intervals, meta-analytic pooling
 
-**Geographic Customization**:
+**Geographic Customization** [Phase 2]:
 - User specifies geography (Boston, rural Mississippi, etc.)
 - System detects local policy context (Medicaid rules, housing protections, criminal justice approach)
-- Adjusts mechanism effect sizes based on moderators
+- **[Phase 2]** Adjusts mechanism effect sizes based on moderators
 - Prunes network to ~100 most relevant nodes for that context
 - Result: Boston system map ≠ Mississippi system map (different policy environments reshape causal pathways)
 
-**User Interaction**:
+**MVP Geographic Scope**:
+- Identify mechanisms with spatial variation noted in literature
+- Flag context-dependent pathways (e.g., "Medicaid expansion effects vary by state")
+- No quantified adjustments in MVP—qualitative flagging only
+
+**User Interaction** (MVP):
 - Interactive visualization showing structural determinants → intermediate mechanisms → health outcomes
 - Click any node to see: what affects it, what it affects, supporting evidence
-- Click any mechanism to see: effect size, confidence interval, moderating factors, source studies
+- Click any mechanism to see: **direction (+/−)**, moderating factors noted, source studies
 - Select health outcome of interest; system highlights pathways that matter for that outcome
+- **[Phase 2]** Click mechanism to see exact effect size, confidence intervals, quantified moderators
 
 #### **Layer 2: Intervention Analysis**
 
@@ -150,28 +198,36 @@ $50B+ annual spending across state health, housing, labor, and education budgets
    - Example: "Increase CHW capacity from 50 FTE to 200 FTE"
    - System doesn't calculate feasibility ($X budget → Y workers); user specifies capacity change and cost separately
 
-3. **Cascade Calculation**: System propagates change through network
-   - CHW stock increases → Healthcare Continuity stock increases (via mechanism with effect size 0.35)
-   - Healthcare Continuity increases → ED Utilization decreases (via mechanism with effect size -0.20)
+3. **Cascade Calculation** [Phase 2]: System propagates change through network
+   - CHW stock increases → Healthcare Continuity stock increases (positive mechanism)
+   - Healthcare Continuity increases → ED Utilization decreases (negative mechanism)
    - ED Utilization decreases → Projected ED visits reduced
    - Feedback loops accounted for (balancing and reinforcing)
    - System iterates to new equilibrium OR simulates forward to time horizon (whichever first)
+   - **MVP Note**: Cascade calculation requires quantified effect sizes (Phase 2). MVP identifies pathways only.
 
 4. **Outcome Projection**: Quantified at crisis endpoints only
    - Crisis endpoints: ED visits, hospitalizations, overdoses, arrests, deaths (have unit costs)
    - Intermediate outcomes: Tracked qualitatively (appointment adherence, housing stability, employment)
    - Equity stratification: Outcomes distributed by race/ethnicity, SES, insurance status based on literature-derived population moderators
 
-5. **Uncertainty and Sensitivity**: Full transparency
-   - 95% confidence intervals around effect sizes
-   - Sensitivity analysis: vary effect sizes ±20%, show robustness
-   - Monte Carlo simulation (1000 runs) for propagated uncertainty
-   - Explicitly state when evidence is weak or correlational
+5. **Uncertainty and Sensitivity** [Phase 2]: Full transparency
+   - **[Phase 2]** 95% confidence intervals around effect sizes
+   - **[Phase 2]** Sensitivity analysis: vary effect sizes ±20%, show robustness
+   - **[Phase 2]** Monte Carlo simulation (1000 runs) for propagated uncertainty
+   - **MVP**: Explicitly state when evidence is weak, correlational, or shows spatial variation
+   - **MVP**: Flag mechanisms with contradictory findings in literature
 
-**Output Format**:
-- **Primary**: ED visits prevented, hospitalizations avoided, deaths averted (with CIs)
-- **Monetization**: Crisis endpoints only (ED visit = $1,200, hospitalization = $8,500, etc.)
-- **Cost-effectiveness**: Intervention cost vs. health value generated
+**Output Format** [Phase 2]:
+- **[Phase 2]** Primary: ED visits prevented, hospitalizations avoided, deaths averted (with CIs)
+- **[Phase 2]** Monetization: Crisis endpoints only (ED visit = $1,200, hospitalization = $8,500, etc.)
+- **[Phase 2]** Cost-effectiveness: Intervention cost vs. health value generated
+
+**MVP Output**:
+- Pathway visualization showing intervention → intermediate effects → outcomes
+- Qualitative description of expected direction of effects
+- Literature support for each pathway
+- Flags for high/medium/low evidence quality
 - **Equity**: Which populations benefit most (stratified outcomes)
 - **Sensitivities**: How results change if assumptions vary
 - **Audit trail**: Click through to see mechanism chains, effect sizes, source studies

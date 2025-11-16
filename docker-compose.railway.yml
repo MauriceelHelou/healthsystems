@@ -1,0 +1,88 @@
+# Railway-specific Docker Compose
+# This file is for local testing of Railway deployment
+# Railway will use individual Dockerfiles, not this compose file
+
+version: '3.8'
+
+services:
+  # Backend API (for Railway)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: production
+    container_name: healthsystems-backend-railway
+    environment:
+      # Railway provides these via environment variables
+      DATABASE_URL: ${DATABASE_URL}
+      REDIS_URL: ${REDIS_URL}
+      ENVIRONMENT: ${ENVIRONMENT:-production}
+      SECRET_KEY: ${SECRET_KEY}
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      SENTRY_DSN: ${SENTRY_DSN}
+      PORT: ${PORT:-8000}
+    ports:
+      - "${PORT:-8000}:${PORT:-8000}"
+    volumes:
+      - ./mechanism-bank:/app/mechanism-bank:ro
+      - uploads:/app/uploads
+      - literature:/app/literature
+      - exports:/app/exports
+    command: uvicorn api.main:app --host 0.0.0.0 --port ${PORT:-8000} --workers 4
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:${PORT:-8000}/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Celery Worker (for background jobs)
+  celery-worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: production
+    container_name: healthsystems-celery-railway
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      REDIS_URL: ${REDIS_URL}
+      CELERY_BROKER_URL: ${REDIS_URL}
+      CELERY_RESULT_BACKEND: ${REDIS_URL}
+      ENVIRONMENT: ${ENVIRONMENT:-production}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      SENTRY_DSN: ${SENTRY_DSN}
+    volumes:
+      - ./mechanism-bank:/app/mechanism-bank:ro
+      - uploads:/app/uploads
+      - literature:/app/literature
+      - exports:/app/exports
+    command: celery -A api.tasks worker --loglevel=info --concurrency=4
+    healthcheck:
+      test: ["CMD-SHELL", "celery -A api.tasks inspect ping"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
+
+  # Frontend (for Railway)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: production
+    container_name: healthsystems-frontend-railway
+    environment:
+      VITE_API_BASE_URL: ${VITE_API_BASE_URL}
+      VITE_APP_NAME: ${VITE_APP_NAME:-HealthSystems Platform}
+      PORT: ${PORT:-3000}
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    command: npm run preview -- --host 0.0.0.0 --port ${PORT:-3000}
+
+volumes:
+  uploads:
+  literature:
+  exports:
+
+networks:
+  default:
+    name: healthsystems-railway-network

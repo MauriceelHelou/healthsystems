@@ -520,50 +520,90 @@ Web Interface renders:
 
 ## MVP vs. Phase 2 Scope
 
-### MVP Scope
+### ⚠️ MVP Scope: Topology & Direction Only
+
+**Core Focus**: Establish complete network structure WITHOUT quantification
 
 **Data Layer**:
-- ✓ Mechanism bank: Target 2000 mechanisms (literature-derived, LLM-generated)
-- ✓ Node bank: 400 nodes defined with specifications
-- ✓ Geographic contexts: 1 demonstration geography (Boston)
-- ✓ Literature corpus: 300+ papers per mechanism domain
+- ✓ **Mechanism bank: 2000 mechanisms** (topology + direction)
+  - Direction specified (positive/negative)
+  - Spatial variation flagged (qualitative)
+  - No effect sizes, CIs, or quantified moderators
+- ✓ **Node bank: 400 nodes** defined with specifications
+- ✓ **Literature corpus**: Qualitative evidence for each mechanism
+- ✓ **Geographic contexts**: Flag which mechanisms show spatial variation
+- ✗ **Effect sizes, meta-analysis** → Phase 2
 
 **Discovery Layer**:
-- ✓ LLM topology discovery functional
-- ✓ LLM effect quantification operational
-- ✓ Bayesian meta-analysis implemented
-- ✓ Validation pipeline automated
-- ✗ Community contribution workflow (deferred to Phase 2)
+- ✓ **LLM topology discovery** functional
+  - Identifies node connections (A → B)
+  - Determines direction (+/−)
+  - Flags spatial variation mentioned in literature
+- ✗ **LLM effect quantification** → Moved to Phase 2
+- ✗ **Bayesian meta-analysis** → Moved to Phase 2
+- ✗ **Quantitative validation** → Phase 2 (topology validation in MVP)
+- ✗ Community contribution workflow → Phase 2
 
-**Computation Layer**:
-- ✓ Equilibrium solver operational
-- ✓ Time simulator functional
-- ✓ Uncertainty propagation via Monte Carlo
-- ✗ Real-time policy detection (manual input in MVP)
+**Computation Layer** [Phase 2 Only]:
+- ✗ **Equilibrium solver** → Requires effect sizes (Phase 2)
+- ✗ **Time simulator** → Requires effect sizes (Phase 2)
+- ✗ **Uncertainty propagation** → Requires CIs (Phase 2)
+- MVP: Network visualization only, no numerical simulation
 
 **Contextualization Layer**:
-- ✓ Moderator engine operational
-- ✓ Geographic pruning implemented
-- ✓ Initial state calibration functional
-- ✗ Automatic policy scraping (manual input in MVP)
+- ✓ **Qualitative moderator flagging** (e.g., "urban setting matters")
+- ✓ **Geographic pathway pruning** (Boston uses different mechanisms than rural MS)
+- ✗ **Quantified moderators** (e.g., "1.30× for urban") → Phase 2
+- ✗ **Numerical calibration** → Phase 2
+- ✗ **Automatic policy scraping** → Phase 2
 
-**Presentation Layer**:
-- ✓ Web interface with system map
-- ✓ Scenario builder
-- ✓ Dashboard with outcomes, equity, sensitivity
-- ✓ PDF export
-- ✗ Mobile app (deferred to Phase 2)
+**Presentation Layer** (MVP):
+- ✓ **Web interface with system map visualization**
+  - Interactive network diagram
+  - Click nodes to see inflows/outflows
+  - Click mechanisms to see direction, moderators, evidence
+- ✓ **Pathway explorer**
+  - Trace intervention → outcomes
+  - See which mechanisms activate
+  - View evidence quality
+- ✗ **Quantified scenario builder** → Phase 2
+- ✗ **Numerical dashboards** (outcomes, ROI) → Phase 2
+- ✗ **PDF reports with projections** → Phase 2 (MVP: pathway maps only)
 
 **Infrastructure**:
 - ✓ Cloud deployment (AWS or similar)
 - ✓ Basic caching
 - ✓ Authentication and authorization
-- ✗ Multi-tenancy (single-organization in MVP)
+- ✗ Multi-tenancy → Phase 2
 
-### Phase 2 Additions
+### MVP Deliverables
+
+1. **Complete Topology Map**: 2000 mechanisms × 400 nodes
+2. **Direction Database**: Every mechanism tagged +/−
+3. **Spatial Variation Flags**: Geographic heterogeneity noted
+4. **Interactive Visualization**: Explore pathways, not simulate outcomes
+5. **Evidence Documentation**: Literature support for each mechanism
+6. **Pathway Reports**: Qualitative descriptions, no numerical projections
+
+### Phase 2 Additions: Quantification & Modeling
+
+**Quantification Capabilities** (Core Phase 2):
+- ✓ **Effect size extraction** from 200-300 papers per mechanism
+- ✓ **Meta-analytic pooling** (fixed/random effects)
+- ✓ **Bayesian synthesis** with posterior distributions
+- ✓ **Quantified moderators** (exact multipliers: e.g., urban = 1.30×)
+- ✓ **Confidence intervals** on all estimates
+- ✓ **Monte Carlo uncertainty propagation**
+
+**Computation Capabilities**:
+- ✓ **Equilibrium solver**: Calculate steady-state with quantified effects
+- ✓ **Time simulator**: Project dynamics over months/years
+- ✓ **Numerical impact projections**: ED visits prevented, deaths averted
+- ✓ **Cost-effectiveness analysis**: ROI calculations
+- ✓ **Sensitivity analysis**: Vary parameters ±20%
 
 **Expansion Capabilities**:
-- ✓ Multi-geography: 10+ cities operational
+- ✓ Multi-geography: 10+ cities with context-adjusted effects
 - ✓ Real-time policy detection: Automatic scraping of Medicaid rules, housing policy
 - ✓ Actor network layer: Organizational mapping onto mechanisms
 
@@ -571,6 +611,11 @@ Web Interface renders:
 - ✓ Intersectional equity analysis: Race × SES × geography stratification
 - ✓ Multi-intervention optimization: Find best portfolio of 5 interventions
 - ✓ Empirical calibration: Use local outcome data to refine mechanism effects
+
+**See**: `docs/Phase 2 - Quantification/` for complete specifications of:
+- Effect size translation methods (Document 08)
+- LLM effect quantification pipeline (Document 10)
+- Bayesian methodology (Document 02B)
 
 **Community Features**:
 - ✓ External researcher contributions: Submit mechanisms via GitHub PR

@@ -3,11 +3,34 @@
 
 ---
 
+## ⚠️ MVP Scope: Topology & Direction Only
+
+**This document describes MVP functionality**: Discovering which mechanisms exist and their direction (+/−).
+
+**MVP Includes**:
+- ✓ Node identification (what variables exist)
+- ✓ Mechanism existence (does pathway A→B exist in literature?)
+- ✓ Directionality (positive or negative relationship)
+- ✓ Spatial variation flags (geographic differences noted)
+- ✓ Evidence quality (strong/moderate/limited)
+
+**MVP Excludes** (deferred to Phase 2):
+- ✗ Effect size extraction (exact magnitudes like β = 0.35)
+- ✗ Confidence intervals
+- ✗ Meta-analytic pooling (see Document 10 in Phase 2)
+- ✗ Quantified moderators (see Document 08 in Phase 2)
+
+**See**: `docs/Phase 2 - Quantification/10_LLM_EFFECT_QUANTIFICATION.md` for effect size extraction specifications.
+
+---
+
 ## 1. Overview
 
 This document specifies how Large Language Models (LLMs) systematically extract causal pathways from academic literature to construct the **mechanism bank**: a structured database of ~2000 mechanisms connecting ~400 nodes. The process converts unstructured epidemiological knowledge into a versioned, auditable network topology that grounds the platform in empirical evidence.
 
 **Core Innovation**: LLM-mediated synthesis scales literature review from months-per-mechanism (traditional expert curation) to days-for-entire-bank, while maintaining traceability to source studies and enabling continuous refinement.
+
+**MVP Focus**: Topology (which nodes connect) and direction (+/−), NOT effect magnitude.
 
 ---
 
@@ -245,9 +268,12 @@ TASK: For each node-to-node connection below, determine if a causal mechanism ex
 1. source_node: Starting node (e.g., "Housing_Quality")
 2. target_node: Ending node (e.g., "Respiratory_Health")
 3. mechanism_description: 2-3 sentence explanation of causal pathway
-4. supporting_studies: List 3-5 key studies with [authors, year, study_design, sample_size]
+4. supporting_studies: List 2-3 key studies with [authors, year, study_design, sample_size] (qualitative reference only)
 5. evidence_strength: "strong" (RCT or meta-analysis), "moderate" (multiple cohorts), "limited" (single observational study)
 6. directionality: "positive" (source increases target) or "negative" (source decreases target)
+7. spatial_variation: true/false - Does literature note that effect varies by geography, urbanicity, state policy context, or population characteristics?
+
+**MVP Note**: Do NOT extract exact effect sizes, confidence intervals, or quantified moderators. Focus on existence, direction, and qualitative variation only.
 
 GUIDED CONNECTIONS (check each):
 Level 1 → Level 2:
@@ -295,10 +321,14 @@ OUTPUT: JSON array with only connections that have literature support
       }
     ],
     "evidence_strength": "strong",
-    "directionality": "negative"
+    "directionality": "negative",
+    "spatial_variation": true,
+    "spatial_variation_note": "Effect stronger in humid climates and older housing stock"
   },
   ...
 ]
+
+**MVP Note**: Effect sizes (e.g., OR = 1.34) are extracted in Phase 2 only. See Document 10.
 ```
 
 **Semantic Search Enhancement**:

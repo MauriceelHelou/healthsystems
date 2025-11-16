@@ -3,11 +3,34 @@
 
 ---
 
+## ⚠️ MVP Scope: Topology Validation Only
+
+**This document describes validation for both MVP and Phase 2**. Scope differs:
+
+**MVP Validation** (Current):
+- ✓ **Topology validation**: Does pathway exist in literature?
+- ✓ **Direction validation**: Is +/− consistent with evidence?
+- ✓ **Logic validation**: No contradictions, circular dependencies
+- ✓ **Citation validation**: Source studies exist and are accessible
+- ✓ **Evidence strength**: Strong/moderate/limited rating appropriate
+
+**Phase 2 Validation** (Future):
+- ✗ **Effect size validation**: Numeric plausibility checks
+- ✗ **Statistical validation**: CI ordering, heterogeneity, outliers
+- ✗ **Meta-analytic validation**: Publication bias, sensitivity analysis
+- ✗ **Moderator validation**: Quantified moderator consistency
+
+**This Document Structure**:
+- **Sections marked [MVP]** apply now
+- **Sections marked [Phase 2]** deferred to quantification phase
+
+---
+
 ## 1. Overview
 
-This document specifies the validation framework that ensures mechanism bank integrity through **automated statistical checks**, **causal logic verification**, and **structural competency audits**. The system operates as a **multi-stage gate** where mechanisms must pass validation checkpoints before deployment, with continuous monitoring post-release.
+This document specifies the validation framework that ensures mechanism bank integrity through **automated statistical checks** [Phase 2], **causal logic verification** [MVP], and **structural competency audits** [MVP]. The system operates as a **multi-stage gate** where mechanisms must pass validation checkpoints before deployment, with continuous monitoring post-release.
 
-**Core Principle**: Validation is primarily **automated** to maintain scalability, with optional consultation available for edge cases. All checks are **reproducible** and **auditable**, generating structured validation reports for transparency.
+**Core Principle**: Validation is primarily **automated** to maintain scalability, with expert consultation available for edge cases. All checks are **reproducible** and **auditable**, generating structured validation reports for transparency.
 
 ---
 
@@ -16,19 +39,21 @@ This document specifies the validation framework that ensures mechanism bank int
 ### 2.1 Four-Layer Validation Framework
 
 ```
-Layer 1: EXTRACTION VALIDATION
-├─ Trigger: Immediately after LLM effect size extraction
-├─ Checks: Data completeness, numeric plausibility, citation validity
+Layer 1: EXTRACTION VALIDATION [MVP]
+├─ Trigger: Immediately after LLM topology discovery
+├─ Checks: Data completeness, citation validity, direction specified
 ├─ Outcome: PASS → Stage 2 | FAIL → Quarantine for correction
 └─ Gate: ~5% mechanisms quarantined at this stage
+└─ [Phase 2]: Add numeric plausibility checks for effect sizes
 
-Layer 2: STATISTICAL VALIDATION
+Layer 2: STATISTICAL VALIDATION [Phase 2 Only]
 ├─ Trigger: After standardization and meta-analytic pooling
 ├─ Checks: CI ordering, heterogeneity assessment, outlier detection
 ├─ Outcome: PASS → Stage 3 | WARN → Flag but proceed | FAIL → Exclude
 └─ Gate: ~10% mechanisms flagged with warnings
+└─ MVP: SKIPPED (no effect sizes to validate)
 
-Layer 3: CAUSAL LOGIC VALIDATION
+Layer 3: CAUSAL LOGIC VALIDATION [MVP]
 ├─ Trigger: After complete mechanism record creation
 ├─ Checks: Direction consistency, feedback loop stability, network connectivity
 ├─ Outcome: PASS → Stage 4 | FAIL → Exclude or revise
