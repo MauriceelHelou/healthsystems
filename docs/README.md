@@ -1,107 +1,120 @@
-# Documentation
+# HealthSystems Platform Documentation
 
-Multi-level documentation for the HealthSystems Platform.
+This directory contains comprehensive documentation organized by major architectural and conceptual domains.
 
 ## Documentation Structure
 
 ```
 docs/
-├── technical/         # For developers and system administrators
-├── scientific/        # For researchers and methodologists
-├── user-guides/       # For end users (by persona)
-└── decision-logs/     # Design decisions and rationale
+├── Foundational Principles/
+├── Core Technical Architecture/
+├── LLM & Discovery Pipeline/
+├── Geographic & Contextual Adaptation/
+└── Implementation & Operations/
 ```
 
-## Documentation Levels
+## Directory Purposes
 
-### Technical Documentation (`technical/`)
-Audience: Software developers, DevOps engineers, system administrators
+### 1. Foundational Principles
+Core concepts, theoretical frameworks, and guiding principles that underpin the HealthSystems Platform.
 
-Content:
-- Architecture and system design
-- API specifications and endpoints
-- Database schemas
-- Deployment procedures
-- Development setup
-- CI/CD pipelines
-- Security considerations
+**Suggested content:**
+- Structural determinants of health framework
+- Systems thinking approach
+- Evidence hierarchy and quality standards
+- Ethical guidelines and principles
+- Theoretical foundations
 
-### Scientific Documentation (`scientific/`)
-Audience: Public health researchers, epidemiologists, statisticians
+---
 
-Content:
-- Statistical methodology
-- Bayesian weighting algorithms
-- Mechanism validation procedures
-- Evidence synthesis approach
-- Uncertainty quantification
-- Model assumptions and limitations
-- Validation studies
+### 2. Core Technical Architecture
+System design, technology stack, and architectural patterns.
 
-### User Guides (`user-guides/`)
-Audience: Community organizations, consultants, health departments, foundations
+**Suggested content:**
+- System architecture diagrams
+- Technology stack specifications
+- Database schemas and data models
+- API specifications (REST/GraphQL)
+- Security architecture
+- Deployment architecture
+- Scalability and performance considerations
 
-Content organized by persona:
-- Community organizers: Visual interface guides, interpretation help
-- Researchers: Data export, reproducibility, citation
-- Consultants: Scenario testing, report generation
-- Health departments: Policy analysis workflows
-- Foundation staff: Impact evaluation methods
+---
 
-### Decision Logs (`decision-logs/`)
-Audience: All stakeholders
+### 3. LLM & Discovery Pipeline
+AI/ML integration, mechanism discovery, and natural language processing components.
 
-Content:
-- Why specific technologies were chosen
-- Algorithm selection rationale
-- Trade-offs in design decisions
-- Future considerations
-- Lessons learned
+**Suggested content:**
+- LLM integration architecture
+- Mechanism discovery algorithms
+- Literature mining and evidence extraction
+- Natural language query processing
+- AI-assisted mechanism validation
+- Prompt engineering strategies
+- Model selection and evaluation
 
-## Contributing to Documentation
+---
 
-### Style Guide
+### 4. Geographic & Contextual Adaptation
+Methods for adapting mechanisms to specific geographic and demographic contexts.
 
-- **Clarity over cleverness**: Write for understanding, not impressiveness
-- **Examples**: Include code examples and screenshots
-- **Accessibility**: Use alt text for images, clear headings
-- **Citations**: Chicago style for scientific claims
-- **Version**: Document which version features were added
+**Suggested content:**
+- Bayesian weighting methodology
+- Contextual moderator specifications
+- Geographic data integration (Census, CDC, EPA, BLS)
+- Data scraping and ETL pipelines
+- Spatial analysis methods
+- Temporal adaptation strategies
+- Cross-geography validation
 
-### File Format
+---
 
-- Primary: Markdown (.md)
-- Diagrams: Mermaid diagrams in markdown
-- API specs: OpenAPI/Swagger YAML
-- Code examples: Syntax-highlighted code blocks
+### 5. Implementation & Operations
+Practical guides for development, deployment, and ongoing operations.
 
-### Documentation Checklist
+**Suggested content:**
+- Development setup and workflows
+- CI/CD pipeline documentation
+- Testing strategies and procedures
+- Deployment guides (staging, production)
+- Monitoring and observability
+- Incident response procedures
+- Maintenance and update protocols
+- User support documentation
 
-When adding new features:
-- [ ] Update technical architecture docs
-- [ ] Add API endpoint documentation
-- [ ] Update user guides (if user-facing)
-- [ ] Document assumptions (if scientific)
-- [ ] Add decision log entry (if significant choice)
-- [ ] Include code examples
-- [ ] Test all code examples
-- [ ] Add to changelog
+---
 
-## Building Documentation
+## Contributing Documentation
 
-We use Sphinx for technical documentation:
+When adding documentation:
 
-```bash
-cd docs/technical
-make html
-```
+1. **Choose the appropriate directory** based on the content's primary focus
+2. **Use clear, descriptive filenames** (e.g., `bayesian-weighting-algorithm.md`)
+3. **Include examples** where applicable
+4. **Add diagrams** using Mermaid or images in `assets/` subdirectories
+5. **Cross-reference** related documents in other directories
+6. **Update this README** if adding new major topics
 
-## Live Documentation
+## Documentation Standards
 
-- **API Documentation**: Auto-generated at `/docs` endpoint (FastAPI)
-- **GitHub Pages**: User-facing documentation
-- **Internal Wiki**: Developer knowledge base
+- **Format**: Markdown (.md) files
+- **Diagrams**: Mermaid (preferred) or PNG/SVG in `assets/`
+- **Code examples**: Use syntax highlighting with language tags
+- **Equations**: Use LaTeX notation within markdown
+- **Citations**: Chicago style for academic references
+- **Links**: Use relative paths for internal documentation
 
-## Contact
+## Getting Started
 
-Questions about documentation? Open an issue or contact [documentation team].
+If you're new to the documentation:
+
+1. Start with **Foundational Principles** to understand core concepts
+2. Review **Core Technical Architecture** for system overview
+3. Dive into specific domains (**LLM**, **Geographic**, **Implementation**) as needed
+
+## Documentation Maintenance
+
+- Review and update quarterly
+- Mark deprecated content clearly
+- Archive old versions in `docs/archive/` if needed
+- Keep synchronized with code changes
