@@ -1,0 +1,248 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Causal Mechanism Schema (MVP - Topology & Direction Only)",
+  "description": "MVP schema for mechanisms focusing on topology and direction, not quantification",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "from_node",
+    "to_node",
+    "direction",
+    "category",
+    "evidence",
+    "last_updated",
+    "version"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "description": "Unique identifier (snake_case)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the mechanism pathway"
+    },
+    "from_node": {
+      "type": "object",
+      "required": ["node_id", "node_name"],
+      "properties": {
+        "node_id": {
+          "type": "string",
+          "description": "Source node identifier"
+        },
+        "node_name": {
+          "type": "string",
+          "description": "Human-readable source node name"
+        },
+        "node_type": {
+          "type": "string",
+          "enum": ["stock", "proxy_index", "crisis_endpoint"],
+          "description": "Type of source node"
+        }
+      }
+    },
+    "to_node": {
+      "type": "object",
+      "required": ["node_id", "node_name"],
+      "properties": {
+        "node_id": {
+          "type": "string",
+          "description": "Target node identifier"
+        },
+        "node_name": {
+          "type": "string",
+          "description": "Human-readable target node name"
+        },
+        "node_type": {
+          "type": "string",
+          "enum": ["stock", "proxy_index", "crisis_endpoint"],
+          "description": "Type of target node"
+        }
+      }
+    },
+    "direction": {
+      "type": "string",
+      "enum": ["positive", "negative"],
+      "description": "Direction of causal effect: positive (increase A → increase B) or negative (increase A → decrease B)"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "built_environment",
+        "social_environment",
+        "economic",
+        "political",
+        "healthcare_access",
+        "biological",
+        "behavioral"
+      ],
+      "description": "Primary category of the mechanism"
+    },
+    "mechanism_pathway": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Step-by-step description of the causal pathway"
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["quality_rating", "n_studies", "primary_citation"],
+      "properties": {
+        "quality_rating": {
+          "type": "string",
+          "enum": ["A", "B", "C"],
+          "description": "A: Meta-analysis or 5+ studies; B: 3-4 studies; C: 1-2 studies"
+        },
+        "n_studies": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Number of supporting studies"
+        },
+        "primary_citation": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Chicago-style citation for primary supporting evidence"
+        },
+        "supporting_citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Additional supporting citations"
+        },
+        "doi": {
+          "type": "string",
+          "pattern": "^10\\.\\d{4,}/.+$",
+          "description": "DOI of primary citation"
+        }
+      }
+    },
+    "spatial_variation": {
+      "type": "object",
+      "properties": {
+        "varies_by_geography": {
+          "type": "boolean",
+          "description": "Whether literature notes geographic variation"
+        },
+        "variation_notes": {
+          "type": "string",
+          "description": "Qualitative description of how mechanism varies across contexts"
+        },
+        "relevant_geographies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Geographic contexts where this mechanism has been studied"
+        }
+      }
+    },
+    "moderators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "direction", "strength"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the moderating factor"
+          },
+          "direction": {
+            "type": "string",
+            "enum": ["strengthens", "weakens", "u_shaped"],
+            "description": "How the moderator affects the mechanism"
+          },
+          "strength": {
+            "type": "string",
+            "enum": ["weak", "moderate", "strong"],
+            "description": "Qualitative assessment of moderator strength"
+          },
+          "description": {
+            "type": "string",
+            "description": "Explanation of how the moderator operates"
+          }
+        }
+      },
+      "description": "Qualitative moderators (not quantified in MVP)"
+    },
+    "structural_competency": {
+      "type": "object",
+      "properties": {
+        "root_cause_level": {
+          "type": "string",
+          "enum": ["policy", "economic_system", "spatial_arrangement", "institutional", "interpersonal"],
+          "description": "Level of structural analysis"
+        },
+        "avoids_victim_blaming": {
+          "type": "boolean",
+          "description": "Confirms mechanism does not blame individuals for structural issues"
+        },
+        "equity_implications": {
+          "type": "string",
+          "description": "How this mechanism relates to health equity"
+        }
+      }
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last update"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$",
+      "description": "Version number (e.g., 1.0, 1.1)"
+    },
+    "validated_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Initials of expert validators"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the mechanism"
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Key assumptions underlying the mechanism"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Known limitations and boundary conditions"
+    },
+    "llm_metadata": {
+      "type": "object",
+      "properties": {
+        "extracted_by": {
+          "type": "string",
+          "description": "LLM model used for extraction (e.g., claude-sonnet-4.5)"
+        },
+        "extraction_date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "extraction_confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "LLM's confidence in extraction quality"
+        },
+        "prompt_version": {
+          "type": "string",
+          "description": "Version of prompt template used"
+        }
+      },
+      "description": "Metadata about LLM extraction process"
+    }
+  }
+}

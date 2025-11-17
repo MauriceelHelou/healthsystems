@@ -1,17 +1,22 @@
 /**
  * Interactive force-directed graph visualization for causal mechanisms.
  * Uses D3.js for accessible, interactive network diagrams.
+ * Enhanced with design system colors, states, and interactions.
  */
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 import { SystemsNetwork, MechanismNode, MechanismEdge } from '../types/mechanism';
+import { getCategoryColor } from '../utils/colors';
 
 interface MechanismGraphProps {
   data: SystemsNetwork;
   width?: number;
   height?: number;
   onNodeClick?: (node: MechanismNode) => void;
+  onEdgeClick?: (edge: MechanismEdge) => void;
+  selectedNodeId?: string | null;
+  filteredCategories?: string[];
 }
 
 const MechanismGraph: React.FC<MechanismGraphProps> = ({

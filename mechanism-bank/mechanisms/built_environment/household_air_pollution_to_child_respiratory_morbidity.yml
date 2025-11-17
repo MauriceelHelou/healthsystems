@@ -1,0 +1,42 @@
+id: household_air_pollution_to_child_respiratory_morbidity
+name: Household Air Pollution → Child Respiratory Morbidity
+from_node:
+  node_id: household_air_pollution
+  node_name: Household Air Pollution
+to_node:
+  node_id: child_respiratory_morbidity
+  node_name: Child Respiratory Morbidity
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Household air pollution contains particulate matter and toxic compounds'
+- 'Step 2: Children''s developing respiratory systems are more vulnerable to pollutant exposure'
+- 'Step 3: Inflammatory response in airways and lung tissue from pollutant inhalation'
+- 'Step 4: Compromised immune function and increased susceptibility to respiratory pathogens'
+- 'Step 5: Higher rates of acute respiratory infections and respiratory symptoms'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Authors not provided. Housing quality and its impact on Acute Respiratory Infection
+    (ARI) symptoms among children in Punjab, Pakistan. Data from MICS 2017–18.
+  doi: not provided
+last_updated: '2025-11-17'
+version: '1.0'
+description: Household air pollution directly increases respiratory morbidity in children through inflammatory
+  responses and compromised immune function, with children under five being particularly vulnerable.
+moderators:
+- name: child_age_under_five
+  direction: strengthens
+  strength: strong
+  description: Children under five have developing respiratory and immune systems making them particularly
+    vulnerable to air pollution effects
+structural_competency:
+  equity_implications: This mechanism highlights how environmental injustice operates through housing
+    - families with fewer economic resources are forced into housing with poor air quality, creating health
+    disparities from early childhood. The pathway from structural poverty to child health operates through
+    environmental exposure, demonstrating how housing is a fundamental determinant of health equity.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-17T10:23:04.607905'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

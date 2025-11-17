@@ -1,0 +1,50 @@
+id: air_pollution_concentration_to_childhood_asthma_incidence
+name: Ambient Air Pollution Concentration → Childhood Asthma Incidence
+from_node:
+  node_id: air_pollution_concentration
+  node_name: Ambient Air Pollution Concentration
+to_node:
+  node_id: childhood_asthma_incidence
+  node_name: Childhood Asthma Incidence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Air pollutants trigger oxidative stress and inflammatory cascades in developing airways'
+- 'Step 2: Chronic inflammation causes airway hyperresponsiveness and remodeling'
+- 'Step 3: Repeated exposure sensitizes immune system to environmental triggers'
+- 'Step 4: Airway structural changes become permanent, creating asthmatic phenotype'
+- 'Step 5: Clinical asthma symptoms and diagnosis emerge'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: Air quality and respiratory health in children. Global health review synthesis.
+last_updated: '2025-11-17'
+version: '1.0'
+description: Air pollution exposure triggers chronic inflammatory processes in children's developing airways,
+  leading to permanent structural changes that manifest as clinical asthma.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Geographic variation depends on pollution source types, concentrations, and exposure
+    duration patterns across different regions
+moderators:
+- name: child_physiological_susceptibility
+  direction: strengthens
+  strength: strong
+  description: Children are particularly susceptible due to developing respiratory systems and higher
+    breathing rates relative to body size
+- name: behavioral_exposure_patterns
+  direction: strengthens
+  strength: moderate
+  description: Children's behavioral patterns (outdoor play, mouth breathing) increase pollution exposure
+    compared to adults
+structural_competency:
+  equity_implications: This mechanism demonstrates how environmental racism and residential segregation
+    concentrate pollution exposure among marginalized communities. Children's asthma rates reflect structural
+    decisions about industrial siting, transportation infrastructure, and housing policy that determine
+    who lives near pollution sources. The 'behavioral factors' mentioned reflect children's normal developmental
+    needs, not individual choices.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-17T10:23:04.592588'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

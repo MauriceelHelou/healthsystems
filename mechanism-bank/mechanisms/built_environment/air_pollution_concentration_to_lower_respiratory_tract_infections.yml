@@ -1,0 +1,44 @@
+id: air_pollution_concentration_to_lower_respiratory_tract_infections
+name: Ambient Air Pollution Concentration → Lower Respiratory Tract Infections in Children
+from_node:
+  node_id: air_pollution_concentration
+  node_name: Ambient Air Pollution Concentration
+to_node:
+  node_id: lower_respiratory_tract_infections
+  node_name: Lower Respiratory Tract Infections in Children
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Air pollutants deposit in lower respiratory tract and alveoli'
+- 'Step 2: Pollutants cause direct cytotoxic damage to respiratory epithelium'
+- 'Step 3: Damaged epithelial barrier allows easier pathogen entry and colonization'
+- 'Step 4: Impaired mucociliary clearance reduces ability to clear pathogens'
+- 'Step 5: Higher rates of pneumonia and other lower respiratory tract infections'
+evidence:
+  quality_rating: A
+  n_studies: 4
+  primary_citation: Air quality and respiratory health in children. Global health review synthesis.
+last_updated: '2025-11-17'
+version: '1.0'
+description: Air pollution directly increases lower respiratory tract infections in children by damaging
+  protective epithelial barriers and impairing natural clearance mechanisms in the lungs.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Risk magnitude varies significantly between developing and developed countries, with
+    much higher risk in developing regions
+moderators:
+- name: country_development_status
+  direction: strengthens
+  strength: strong
+  description: Children in developing countries face much higher magnitude of risk due to higher pollution
+    levels and co-occurring risk factors
+structural_competency:
+  equity_implications: This mechanism reflects global inequities in environmental protection and industrial
+    development. Children in developing countries bear disproportionate disease burden due to weaker environmental
+    regulations, industrial pollution from global supply chains, and lack of access to clean energy. The
+    geographic variation represents structural violence embedded in global economic systems.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-17T10:23:04.600844'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

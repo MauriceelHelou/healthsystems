@@ -1,0 +1,38 @@
+id: household_mold_presence_to_adult_asthma_prevalence
+name: Presence of Mold in Home → Adult Asthma Prevalence
+from_node:
+  node_id: household_mold_presence
+  node_name: Presence of Mold in Home
+to_node:
+  node_id: adult_asthma_prevalence
+  node_name: Adult Asthma Prevalence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Inadequate housing construction, ventilation, or maintenance creates moisture accumulation'
+- 'Step 2: Moisture promotes mold growth and spore release in indoor air'
+- 'Step 3: Mold spores act as allergens and respiratory irritants when inhaled'
+- 'Step 4: Chronic exposure triggers inflammatory responses in airways'
+- 'Step 5: Persistent airway inflammation manifests as asthma symptoms and diagnosis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Prevalence and associated factors for asthma in adults in Quito: a cross-sectional
+    study. [Journal and year not provided in abstract]'
+  doi: not_provided
+last_updated: '2025-11-17'
+version: '1.0'
+description: Mold presence in homes significantly increases adult asthma risk through direct respiratory
+  irritation and allergenic responses. The study found mold exposure associated with increased asthma
+  odds.
+structural_competency:
+  equity_implications: This mechanism reflects structural housing inequities - mold growth typically results
+    from inadequate building codes, poor construction quality, insufficient maintenance resources, or
+    landlord neglect rather than individual choices. Low-income households disproportionately experience
+    housing quality problems due to limited housing options and weak tenant protections. Housing policy
+    failures create differential exposure to respiratory hazards.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-17T10:23:04.664516'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

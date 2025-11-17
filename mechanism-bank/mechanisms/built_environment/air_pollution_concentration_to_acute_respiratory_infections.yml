@@ -1,0 +1,56 @@
+id: air_pollution_concentration_to_acute_respiratory_infections
+name: Ambient Air Pollution Concentration → Acute Respiratory Infections in Children
+from_node:
+  node_id: air_pollution_concentration
+  node_name: Ambient Air Pollution Concentration
+to_node:
+  node_id: acute_respiratory_infections
+  node_name: Acute Respiratory Infections in Children
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Air pollutants (PM2.5, NO2, ozone) enter respiratory system through inhalation'
+- 'Step 2: Pollutants cause inflammatory response in airways and lung tissue'
+- 'Step 3: Inflammation compromises immune defense mechanisms in respiratory tract'
+- 'Step 4: Weakened respiratory defenses increase susceptibility to viral and bacterial pathogens'
+- 'Step 5: Higher rates of acute respiratory infections develop'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: Air quality and respiratory health in children. Global health review synthesis.
+last_updated: '2025-11-17'
+version: '1.0'
+description: Ambient air pollution directly causes acute respiratory infections in children through inflammatory
+  damage to respiratory defense mechanisms, with effects varying significantly by geographic location
+  and development status.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Risk varies across geographical regions depending on source of air pollution, duration
+    of exposures and concentration levels. Magnitude of risk is much higher in children in developing
+    countries compared with developed ones.
+moderators:
+- name: country_development_status
+  direction: strengthens
+  strength: strong
+  description: Children in developing countries face much higher magnitude of risk due to higher pollution
+    concentrations and longer exposure durations
+- name: pollution_source_type
+  direction: strengthens
+  strength: moderate
+  description: Different pollution sources (industrial, vehicular, residential) create varying risk profiles
+    and exposure patterns
+- name: exposure_duration
+  direction: strengthens
+  strength: moderate
+  description: Longer duration exposures amplify inflammatory responses and immune system compromise
+structural_competency:
+  equity_implications: This mechanism reflects structural inequities in environmental policy and industrial
+    regulation. Children in developing countries face disproportionate risk due to weaker environmental
+    protections, proximity to industrial pollution sources, and lack of clean energy infrastructure. Housing
+    location relative to pollution sources is often determined by economic constraints and residential
+    segregation patterns.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-17T10:23:04.589368'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp
