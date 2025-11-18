@@ -40,8 +40,15 @@ RUN npm run build
 # Production stage
 FROM nginx:alpine as production
 
-# Copy custom nginx config
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Install gettext for envsubst
+RUN apk add --no-cache gettext
+
+# Copy custom nginx config as template
+COPY nginx.conf /etc/nginx/conf.d/default.conf.template
+
+# Copy startup script
+COPY start-nginx.sh /start-nginx.sh
+RUN chmod +x /start-nginx.sh
 
 # Copy built application
 COPY --from=build /app/build /usr/share/nginx/html
@@ -51,7 +58,7 @@ EXPOSE 80
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD wget --quiet --tries=1 --spider http://localhost/ || exit 1
+    CMD wget --quiet --tries=1 --spider http://localhost:${PORT:-80}/ || exit 1
 
-# Start nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Start nginx with PORT substitution
+CMD ["/start-nginx.sh"]
