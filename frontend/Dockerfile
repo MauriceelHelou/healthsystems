@@ -33,7 +33,7 @@ RUN npm install --legacy-peer-deps
 COPY . .
 
 # Build application (disable eslint errors to allow build)
-ENV ESLINT_NO_DEV_ERRORS=true
+ENV DISABLE_ESLINT_PLUGIN=true
 RUN npm run build
 
 # Production stage
