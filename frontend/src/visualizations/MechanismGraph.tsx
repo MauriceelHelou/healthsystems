@@ -175,18 +175,4 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
   );
 };
 
-/**
- * Get color for mechanism category (ensure sufficient contrast).
- */
-function getCategoryColor(category: string): string {
-  const colorMap: Record<string, string> = {
-    built_environment: '#0369a1', // Dark blue
-    social_environment: '#9333ea', // Purple
-    economic: '#059669', // Green
-    political: '#dc2626', // Red
-    biological: '#ea580c', // Orange
-  };
-  return colorMap[category] || '#6b7280'; // Gray fallback
-}
-
 export default MechanismGraph;
