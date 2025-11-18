@@ -26,7 +26,7 @@ WORKDIR /app
 # Copy package files
 COPY package.json package-lock.json* ./
 
-# Install ALL dependencies (npm install is more reliable than npm ci for legacy-peer-deps)
+# Install ALL dependencies (using legacy-peer-deps for TypeScript compatibility)
 RUN npm install --legacy-peer-deps
 
 # Copy application code
