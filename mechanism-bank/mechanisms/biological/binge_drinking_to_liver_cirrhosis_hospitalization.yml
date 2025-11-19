@@ -1,0 +1,70 @@
+id: binge_drinking_to_liver_cirrhosis_hospitalization
+name: Binge Drinking → Liver Cirrhosis Hospitalization
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+  node_type: stock
+to_node:
+  node_id: liver_cirrhosis_hospitalization
+  node_name: Liver Failure/Cirrhosis Hospitalization Rate
+  node_type: crisis_endpoint
+direction: positive
+category: biological
+mechanism_pathway:
+  - 'Step 1: Binge drinking episodes (≥5 drinks for men, ≥4 for women in 2 hours) cause acute hepatic injury through oxidative stress and inflammation'
+  - 'Step 2: Repeated binge episodes lead to steatosis (fatty liver) in 90% of heavy drinkers within weeks'
+  - 'Step 3: Continued binge drinking triggers chronic hepatic inflammation (alcoholic hepatitis) and stellate cell activation'
+  - 'Step 4: Fibrosis progresses to cirrhosis over 10-20 years in 10-20% of chronic heavy drinkers'
+  - 'Step 5: Decompensated cirrhosis manifests as ascites, hepatic encephalopathy, or variceal bleeding requiring hospitalization'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Rehm, Jürgen, Charlotte Probst, Kevin D. Shield, and Svetlana Popova. 2017. "Alcohol-attributable liver cirrhosis: A systematic review and meta-analysis." Hepatology 66(4): 1324-1336. https://doi.org/10.1002/hep.29318'
+  supporting_citations:
+    - 'Seitz, Helmut K., Sebastian Mueller, Helmut K. Hellerbrand, and Felix Stickel. 2015. "Hepatocarcinogenesis in alcoholic liver disease." Digestive Diseases 33(4): 574-580.'
+    - 'Askgaard, Gro, Janne Schurmann Tolstrup, Ulrik Becker, and Morten Grønbæk. 2015. "Drinking pattern and risk of alcoholic liver cirrhosis: A prospective cohort study." Journal of Hepatology 62(5): 1061-1067.'
+  doi: '10.1002/hep.29318'
+last_updated: '2025-11-18'
+version: '1.0'
+description: Repeated binge drinking episodes cause progressive hepatic injury, inflammation, and fibrotic remodeling that culminates in cirrhosis requiring hospitalization in susceptible individuals.
+moderators:
+  - name: genetic_polymorphisms
+    direction: strengthens
+    strength: strong
+    description: PNPLA3 I148M and TM6SF2 variants increase cirrhosis risk 2-4 fold independent of drinking amount
+  - name: obesity_metabolic_syndrome
+    direction: strengthens
+    strength: moderate
+    description: Obesity and metabolic syndrome accelerate fibrosis progression through synergistic lipotoxicity
+  - name: hepatitis_c_coinfection
+    direction: strengthens
+    strength: strong
+    description: HCV coinfection accelerates progression to cirrhosis by 10-15 years
+  - name: female_sex
+    direction: strengthens
+    strength: moderate
+    description: Women develop cirrhosis at lower cumulative alcohol doses due to pharmacokinetic differences
+structural_competency:
+  root_cause_level: interpersonal
+  avoids_victim_blaming: true
+  equity_implications: This mechanism reflects biological vulnerability to alcohol-related liver disease, but operates within broader social determinants that shape drinking patterns. Communities experiencing structural disadvantage (poverty, trauma, limited healthcare access) face higher rates of binge drinking and worse cirrhosis outcomes. The biological pathway should not distract from addressing root causes like alcohol outlet density policies, economic opportunity, and treatment access that differentially impact marginalized populations.
+assumptions:
+  - 'Assumes typical Western pattern of binge drinking episodes interspersed with periods of lighter consumption'
+  - 'Hepatotoxicity threshold varies by individual based on genetic and metabolic factors'
+  - 'Progression assumes no sustained abstinence or medical intervention during disease course'
+limitations:
+  - 'Individual variability in progression timeline is substantial (5-30 years)'
+  - 'Most binge drinkers do not progress to cirrhosis even with decades of exposure'
+  - 'Mechanism does not account for periods of abstinence which can reverse early fibrosis'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Cirrhosis hospitalization rates vary 3-fold across US states, driven by differences in drinking culture, healthcare access, and demographic composition
+  relevant_geographies:
+    - 'Highest rates in Northern Plains states with high Native American population prevalence'
+    - 'Southwest border states show elevated rates related to cultural drinking patterns'
+    - 'Urban safety-net hospitals concentrate uninsured cirrhosis admissions'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

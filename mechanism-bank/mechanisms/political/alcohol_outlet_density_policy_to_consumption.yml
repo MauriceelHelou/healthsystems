@@ -1,0 +1,67 @@
+id: alcohol_outlet_density_policy_to_consumption
+name: Alcohol Outlet Density Policy → Alcohol Consumption
+from_node:
+  node_id: alcohol_outlet_density
+  node_name: Alcohol Outlet Density (Outlets per Capita)
+  node_type: stock
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+  node_type: stock
+direction: positive
+category: political
+mechanism_pathway:
+  - 'Step 1: Permissive alcohol licensing policies and weak zoning enforcement create high density of alcohol retail outlets (bars, liquor stores, convenience stores)'
+  - 'Step 2: High outlet density increases physical availability and convenience of alcohol purchase, reducing barriers to acquisition'
+  - 'Step 3: Concentrated outlets in neighborhoods create environmental cues and normalization of heavy drinking'
+  - 'Step 4: Price competition among dense outlets may reduce alcohol costs, increasing affordability'
+  - 'Step 5: Easy alcohol access combined with marketing and social normalization increases consumption including binge drinking at population level'
+evidence:
+  quality_rating: A
+  n_studies: 28
+  primary_citation: 'Campbell, Carla A., Randy W. Elder, Dwayne Proctor, et al. 2009. "Excessive alcohol consumption and related consequences—Puerto Rico, 2005." MMWR Morbidity and Mortality Weekly Report 58(8): 179-183. https://doi.org/10.1016/j.amepre.2009.01.020'
+  supporting_citations:
+    - 'Popova, Svetlana, Jürgen Rehm, and Charlotte Probst. 2012. "Alcohol-attributable mortality and years of potential life lost in Canada 2001: Implications for prevention and policy." Addiction 107(8): 1460-1468.'
+    - 'Gruenewald, Paul J., Lillian G. Remer, and Andrew J. Treno. 2010. "Physical and social availability: Modeling alcohol and tobacco outlets and consumption in nonmetropolitan communities." Addiction 105(8): 1371-1380.'
+  doi: '10.1016/j.amepre.2009.01.020'
+last_updated: '2025-11-18'
+version: '1.0'
+description: Permissive alcohol licensing policies creating high outlet density increase population-level alcohol consumption through increased physical availability, reduced barriers to purchase, environmental normalization, and price competition.
+moderators:
+  - name: outlet_type
+    direction: u_shaped
+    strength: moderate
+    description: Off-premise outlets (liquor stores) show stronger consumption association than on-premise (bars/restaurants)
+  - name: neighborhood_poverty
+    direction: strengthens
+    strength: strong
+    description: High outlet density has amplified harmful effects in economically disadvantaged neighborhoods
+  - name: enforcement_of_sales_laws
+    direction: weakens
+    strength: moderate
+    description: Strict enforcement of sales to minors and intoxicated persons moderates outlet density effects
+structural_competency:
+  root_cause_level: policy
+  avoids_victim_blaming: true
+  equity_implications: Alcohol outlet density is not market-driven but reflects political decisions about licensing, zoning, and enforcement that systematically disadvantage certain communities. The alcohol industry deliberately targets high-poverty neighborhoods and communities of color with dense outlet placement and aggressive marketing. Local governments dependent on alcohol tax revenue approve outlets despite community opposition. Zoning laws protect affluent neighborhoods from outlet proliferation while concentrating them in marginalized areas. This represents environmental racism—policy-driven unequal exposure to health hazards. High alcohol consumption and related harms in over-saturated neighborhoods reflect structural violence, not individual choices or cultural pathologies. Communities organizing against outlet density face industry lobbying power. Addressing this requires: municipal alcohol outlet density limits, community control over licensing decisions, zoning equity, restriction of outlets near schools and residential areas, and challenging industry political influence over local alcohol policy.
+assumptions:
+  - 'Outlet density measured as licenses per capita or per square mile'
+  - 'Mechanism operates through both physical availability and social normalization'
+  - 'Policies include licensing limits, zoning restrictions, and hours of sale regulations'
+limitations:
+  - 'Individual-level factors (income, preferences) mediate outlet density effects'
+  - 'Online alcohol sales and delivery may reduce importance of physical outlet proximity'
+  - 'Cultural and regulatory context creates variation in density-consumption relationship across regions'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Outlet density varies dramatically by local licensing policies, zoning, and enforcement, with systematic inequities by neighborhood demographics
+  relevant_geographies:
+    - 'Low-income urban neighborhoods often have 3-5x higher outlet density than affluent areas'
+    - 'Communities of color face concentrated outlet placement through discriminatory zoning and industry targeting'
+    - 'Some cities have enacted outlet density limits and conditional use permits'
+    - 'State alcohol control systems (e.g., Pennsylvania, Utah) limit private retail, reducing overall density'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

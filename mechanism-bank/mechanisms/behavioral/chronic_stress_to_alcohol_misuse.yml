@@ -1,0 +1,71 @@
+id: chronic_stress_to_alcohol_misuse
+name: Chronic Stress → Alcohol Misuse
+from_node:
+  node_id: chronic_stress
+  node_name: Chronic Stress
+  node_type: stock
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+  node_type: stock
+direction: positive
+category: behavioral
+mechanism_pathway:
+  - 'Step 1: Chronic stressors (financial strain, work stress, caregiving burden) cause sustained activation of HPA axis and allostatic load'
+  - 'Step 2: Prolonged stress depletes adaptive coping resources and produces anxiety, sleep disruption, and emotional dysregulation'
+  - 'Step 3: Alcohol use provides temporary stress relief through GABAergic anxiolysis and dopaminergic reward'
+  - 'Step 4: Negative reinforcement learning strengthens drinking as automatic stress-coping response'
+  - 'Step 5: Escalating consumption develops as tolerance builds and stress persists, transitioning to binge drinking pattern'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: 'Keyes, Katherine M., Mark L. Hatzenbuehler, and Deborah S. Hasin. 2011. "Stressful life experiences, alcohol consumption, and alcohol use disorders: The epidemiologic evidence for four main types of stressors." Psychopharmacology 218(1): 1-17. https://doi.org/10.1007/s00213-011-2236-1'
+  supporting_citations:
+    - 'Sinha, Rajita. 2008. "Chronic stress, drug use, and vulnerability to addiction." Annals of the New York Academy of Sciences 1141: 105-130.'
+    - 'Keyes, Katherine M., Ava Hamilton, Magdalena Cerdá, et al. 2019. "Stress and alcohol: Epidemiologic evidence." Alcohol Research: Current Reviews 40(1): arcr.v40.1.06.'
+  doi: '10.1007/s00213-011-2236-1'
+last_updated: '2025-11-18'
+version: '1.0'
+description: Chronic stress exposure drives alcohol misuse through HPA axis dysregulation, depletion of adaptive coping resources, and reinforcement of drinking as automatic stress-relief response.
+moderators:
+  - name: coping_skills
+    direction: weakens
+    strength: moderate
+    description: Adaptive stress management skills (exercise, mindfulness, social support) reduce reliance on alcohol coping
+  - name: stress_type
+    direction: u_shaped
+    strength: moderate
+    description: Uncontrollable chronic stressors (poverty, discrimination) show strongest drinking association compared to time-limited stress
+  - name: alcohol_expectancies
+    direction: strengthens
+    strength: moderate
+    description: Strong beliefs about alcohol's stress-reducing properties predict transition from use to misuse
+  - name: alternative_coping_access
+    direction: weakens
+    strength: moderate
+    description: Access to mental health services, exercise facilities, and social support reduces alcohol as default coping
+structural_competency:
+  root_cause_level: economic_system
+  avoids_victim_blaming: true
+  equity_implications: Chronic stress is not randomly distributed but concentrates in communities experiencing structural disadvantage. Economic precarity, employment instability, housing insecurity, and discrimination create relentless stress exposure. Working multiple jobs for subsistence wages leaves no time or energy for adaptive coping. Communities of color face chronic stress from racism and structural discrimination. The stress-alcohol pathway reflects how inequality literally gets "under the skin" to shape health behaviors. High alcohol misuse in stressed populations is a predictable response to structural conditions, not individual weakness. Reducing stress-driven drinking requires addressing root causes including living wages, stable housing, discrimination, and work conditions—not just teaching individual stress management.
+assumptions:
+  - 'Chronic stress refers to sustained or recurrent stressors over months to years'
+  - 'Mechanism operates through both biological stress response and learned coping patterns'
+  - 'Assumes limited access to adaptive coping alternatives'
+limitations:
+  - 'Individual differences in stress appraisal and coping resources create variability'
+  - 'Some individuals under chronic stress reduce drinking or use other coping mechanisms'
+  - 'Bidirectional relationship possible (alcohol misuse may also generate chronic stress)'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Chronic stress varies by economic conditions, employment stability, and exposure to structural stressors
+  relevant_geographies:
+    - 'High-poverty communities face concentrated chronic stressors (housing instability, violence, economic precarity)'
+    - 'Rural areas with economic decline show stress from limited opportunity and social service erosion'
+    - 'Communities of color experience stress from structural racism, discrimination, and over-policing'
+    - 'Regions with strong safety nets (healthcare, housing assistance, living wages) buffer chronic stress effects'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

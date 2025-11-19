@@ -1,0 +1,3948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Health Systems Network Diagram - Direct Connections Only</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            overflow: auto;
+            touch-action: pan-x pan-y;
+        }
+        
+        body {
+            font-family: 'Nobel', 'Avenir', 'Futura', Arial, sans-serif;
+            background: white;
+        }
+        
+        #container {
+            width: 100vw;
+            min-height: 100vh;
+            position: relative;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        svg {
+            width: 100%;
+            min-height: 100vh;
+            height: 100%;
+            background: white;
+            touch-action: pan-x pan-y;
+            will-change: transform;
+        }
+        
+        .node {
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+        
+        .node-bg {
+            fill: white;
+            stroke: #333;
+            stroke-width: 1;
+            rx: 3;
+            ry: 3;
+            transition: all 0.2s ease;
+        }
+        
+        .node:hover .node-bg {
+            fill: #f8f8f8;
+            stroke-width: 1;
+        }
+        
+        .node.active .node-bg {
+        }
+        
+        .node-text {
+            font-size: 10.8px;
+            font-weight: 500;
+            fill: #333;
+            text-anchor: middle;
+            pointer-events: none;
+            user-select: none;
+            transition: font-weight 0.2s ease;
+        }
+        
+        .node:hover .node-text {
+            font-weight: 600;
+        }
+        
+        .node-glow {
+            fill: transparent;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .highlighted-node .node-glow {
+            fill: #FF8C00;
+            opacity: 0.45;
+        }
+        
+        .cyan-highlighted .node-glow {
+            fill: #00CED1;
+            opacity: 0.45;
+        }
+        
+        .connection {
+            stroke: #888;
+            stroke-width: 0.8;
+            fill: none;
+            pointer-events: none;
+            transition: opacity 0.3s ease, stroke-width 0.2s ease, stroke 0.3s ease;
+        }
+        
+        .connection-hitbox {
+            stroke: transparent;
+            stroke-width: 8.0;
+            fill: none;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+        
+        .connection-hitbox:hover + .connection {
+            stroke: #333;
+            stroke-width: 1.0;
+        }
+        
+        .connection.highlighted {
+            stroke: #000;
+            stroke-width: 1.2;
+        }
+        
+        .mechanism-tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-size: 11px;
+            pointer-events: none;
+            z-index: 1000;
+            max-width: 350px;
+            display: none;
+            line-height: 1.5;
+        }
+        
+        .mechanism-type {
+            font-weight: 600;
+            color: #FF8C00;
+            margin-bottom: 4px;
+        }
+        
+        .header-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 44px;
+            background: white;
+            border-bottom: 2px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 12px;
+            gap: 8px;
+            z-index: 1001;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        
+        .header-title {
+            display: none;
+        }
+        
+        .header-controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .header-btn {
+            background: white;
+            border: 2px solid #333;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        
+        .header-btn:hover {
+            background: #333;
+            color: white;
+        }
+        
+        .header-btn.active {
+            background: #FF8C00;
+            border-color: #FF8C00;
+            color: white;
+        }
+        
+        .header-btn.active:hover {
+            background: #FF7700;
+            border-color: #FF7700;
+        }
+        
+        .header-btn.reset {
+            display: none;
+            background: #333;
+            border-color: #333;
+            color: white;
+        }
+        
+        .header-btn.reset:hover {
+            background: #555;
+            border-color: #555;
+        }
+        
+        #container {
+            padding-top: 0;
+        }
+        
+        .reset-button {
+            display: none;
+        }
+        
+        .axes-button {
+            display: none;
+        }
+        
+        .levels-button {
+            display: none;
+        }
+        
+        .zoom-instruction {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-size: 11px;
+            z-index: 999;
+            pointer-events: none;
+            animation: fadeInOut 6s ease-in-out;
+            opacity: 0;
+        }
+        
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            85% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        .zoom-instruction-line {
+            margin: 4px 0;
+        }
+        
+        .zoom-instruction strong {
+            color: #FF8C00;
+        }
+        
+        .interventions-button {
+            display: none;
+        }
+        
+        .axis-arrow-group {
+            transition: opacity 0.3s ease;
+        }
+        
+        .axis-arrow-line {
+            stroke: #666;
+            stroke-width: 2;
+            fill: none;
+        }
+        
+        .axis-arrow-head {
+            fill: #666;
+        }
+        
+        .axis-label-svg {
+            font-size: 13px;
+            font-weight: 600;
+            fill: #333;
+            text-anchor: middle;
+        }
+        
+        .level-description-group {
+            transition: opacity 0.3s ease;
+        }
+        
+        .level-desc-title {
+            font-size: 14px;
+            font-weight: 700;
+            fill: #333;
+            text-anchor: middle;
+        }
+        
+        .level-desc-text {
+            font-size: 11px;
+            fill: #555;
+            text-anchor: middle;
+        }
+        
+        .panel-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 1100;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        
+        .panel-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .intervention-panel {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 360px;
+            height: 100vh;
+            height: 100dvh;
+            background: white;
+            box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 1200;
+            display: flex;
+            flex-direction: column;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        
+        .intervention-panel.active {
+            right: 0;
+        }
+        
+        .panel-header {
+            padding: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            background: #f8f8f8;
+            flex-shrink: 0;
+        }
+        
+        .panel-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s ease;
+        }
+        
+        .panel-close:hover {
+            color: #333;
+        }
+        
+        .panel-node-id {
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        
+        .panel-node-name {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        
+        .panel-subheader {
+            font-size: 11px;
+            font-weight: 600;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .panel-content {
+            padding: 20px;
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+        
+        .intervention-card {
+            padding: 12px;
+            margin-bottom: 8px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            background: #fafafa;
+            transition: background 0.2s ease;
+        }
+        
+        .intervention-card:hover {
+            background: #f0f0f0;
+        }
+        
+        .intervention-name {
+            font-size: 12px;
+            color: #333;
+            line-height: 1.4;
+        }
+        
+        .intervention-count-tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            pointer-events: none;
+            z-index: 1000;
+            display: none;
+            white-space: nowrap;
+        }
+        
+        @media (max-width: 768px) {
+            .header-bar {
+                height: 44px;
+                gap: 6px;
+                padding: 0 8px;
+            }
+            
+            .header-btn {
+                padding: 6px 10px;
+                font-size: 11px;
+            }
+            
+            .intervention-panel {
+                width: 100% !important;
+                right: -100% !important;
+                top: 0 !important;
+                height: 100vh;
+                height: 100dvh;
+            }
+            
+            .intervention-panel.active {
+                right: 0 !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-bar {
+                gap: 4px;
+                padding: 0 6px;
+            }
+            
+            .header-btn {
+                padding: 5px 8px;
+                font-size: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .panel-header {
+                padding: 16px;
+            }
+            
+            .panel-content {
+                padding: 16px;
+            }
+            
+            .panel-node-id {
+                font-size: 13px;
+            }
+            
+            .panel-node-name {
+                font-size: 12px;
+            }
+            
+            .intervention-card {
+                padding: 10px;
+            }
+            
+            .intervention-name {
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-bar">
+        <button class="header-btn active" id="interventions-btn">Interventions</button>
+        <button class="header-btn" id="axes-btn">View Axes</button>
+        <button class="header-btn" id="levels-btn">Descriptions</button>
+        <button class="header-btn reset" id="reset-btn">Reset</button>
+    </div>
+    
+    <div id="container">
+        <svg id="diagram"></svg>
+        <div id="mechanism-tooltip" class="mechanism-tooltip"></div>
+        <div id="intervention-count-tooltip" class="intervention-count-tooltip"></div>
+    </div>
+    
+    <div id="panel-overlay" class="panel-overlay"></div>
+    <div id="intervention-panel" class="intervention-panel">
+        <div class="panel-header">
+            <button id="panel-close" class="panel-close">X</button>
+            <div id="panel-node-id" class="panel-node-id"></div>
+            <div id="panel-node-name" class="panel-node-name"></div>
+            <div class="panel-subheader">
+                <span id="intervention-count-text">INTERVENTIONS TARGETING THIS NODE</span>
+            </div>
+        </div>
+        <div id="panel-content" class="panel-content">
+        </div>
+    </div>
+    
+    <div class="zoom-instruction">
+        <div class="zoom-instruction-line"><strong>Desktop:</strong> Ctrl + Scroll to zoom</div>
+        <div class="zoom-instruction-line"><strong>Mobile:</strong> Pinch to zoom</div>
+        <div class="zoom-instruction-line">Scroll normally to pan when zoomed</div>
+    </div>
+
+    <script>
+        const nodeInterventions = {
+            "L1.01": [
+                "Playground Green Roof Heat Mitigation",
+                "Industrial Buffer Zone Green Space",
+                "Vacant Lot Activation for Social Cohesion",
+                "Year-Round Aging-in-Community Infrastructure"
+            ],
+            "L1.02": [
+                "Community Health Center Workforce Pipeline",
+                "Community Health Mutual Aid Fund",
+                "BHA Maintenance Workforce Pipeline"
+            ],
+            "L1.03": [
+                "Vacant Lot Activation for Social Cohesion",
+                "Year-Round Aging-in-Community Infrastructure",
+                "Nonprofit Collaborative Food Access Programming"
+            ],
+            "L1.04": [
+                "Municipal Housing Repair Department"
+            ],
+            "L2.13": [
+                "Municipal Housing Repair Department",
+                "BHA Maintenance Workforce Pipeline"
+            ],
+            "L2.14": [
+                "Industrial Buffer Zone Green Space",
+                "Vacant Lot Activation for Social Cohesion",
+                "Municipal Housing Repair Department"
+            ],
+            "L2.17": [
+                "Industrial Buffer Zone Green Space",
+                "Vacant Lot Activation for Social Cohesion"
+            ],
+            "L2.18": [
+                "Athletic Space Access Platform",
+                "Playground Green Roof Heat Mitigation",
+                "Vacant Lot Activation for Social Cohesion",
+                "Year-Round Aging-in-Community Infrastructure",
+                "Third Space Mental Health Programming for Youth"
+            ],
+            "L2.20": [
+                "Community Health Mutual Aid Fund"
+            ],
+            "L2.22": [
+                "Intergenerational Afterschool Programming",
+                "Market Basket Hot Food Access Points",
+                "Nonprofit Collaborative Food Access Programming"
+            ],
+            "L2.24": [
+                "Community Health Center Workforce Pipeline",
+                "BHA Maintenance Workforce Pipeline"
+            ],
+            "L2.25": [
+                "Athletic Space Access Platform",
+                "Non-Digital Information Access Hotline"
+            ],
+            "L2.26": [
+                "Community Health Mutual Aid Fund"
+            ],
+            "L2.27": [
+                "Intergenerational Afterschool Programming",
+                "Community-Based Maternal Care Networks",
+                "Vacant Lot Activation for Social Cohesion",
+                "Year-Round Aging-in-Community Infrastructure",
+                "Third Space Mental Health Programming for Youth"
+            ],
+            "L2.29": [
+                "Community Health Center Workforce Pipeline",
+                "Non-Digital Information Access Hotline",
+                "Mobile Health Van Lead Screening Integration",
+                "Year-Round Aging-in-Community Infrastructure",
+                "Third Space Mental Health Programming for Youth"
+            ],
+            "L2.30": [
+                "Community Health Center Workforce Pipeline"
+            ],
+            "L3.36": [
+                "Intergenerational Afterschool Programming",
+                "Year-Round Aging-in-Community Infrastructure",
+                "Third Space Mental Health Programming for Youth"
+            ],
+            "L3.37": [
+                "Low-Barrier Harm Reduction Housing"
+            ],
+            "L3.38": [
+                "Athletic Space Access Platform"
+            ],
+            "L3.42": [
+                "Industrial Buffer Zone Green Space",
+                "Mobile Health Van Lead Screening Integration"
+            ],
+            "L3.43": [
+                "Playground Green Roof Heat Mitigation",
+                "Year-Round Aging-in-Community Infrastructure"
+            ],
+            "L3.44": [
+                "Intergenerational Afterschool Programming",
+                "Market Basket Hot Food Access Points",
+                "Nonprofit Collaborative Food Access Programming"
+            ],
+            "L3.46": [
+                "Non-Digital Information Access Hotline"
+            ],
+            "L3.47": [
+                "Community-Based Maternal Care Networks"
+            ],
+            "L3.48": [
+                "Community-Based Maternal Care Networks"
+            ],
+            "L3.50": [
+                "Third Space Mental Health Programming for Youth"
+            ],
+            "L3.51": [
+                "Low-Barrier Harm Reduction Housing"
+            ],
+            "L3.54": [
+                "Community Health Mutual Aid Fund"
+            ],
+            "L4.63": [
+                "Low-Barrier Harm Reduction Housing"
+            ],
+            "L5.93": [
+                "Low-Barrier Harm Reduction Housing"
+            ]
+        };
+        
+        let interventionsEnabled = true;
+        let currentPanelNode = null;
+        
+        const connections = [
+        {
+                "source": "L1.01",
+                "target": "L2.13",
+                "mechanism_type": "Spatial-Economic",
+                "mechanism_desc": "Structural investment patterns determine housing stock maintenance, renovation cycles, and building code enforcement"
+        },
+        {
+                "source": "L1.01",
+                "target": "L2.14",
+                "mechanism_type": "Environmental-Spatial",
+                "mechanism_desc": "Built form density, street configuration, and green infrastructure determine air circulation patterns and pollution concentration"
+        },
+        {
+                "source": "L1.01",
+                "target": "L2.17",
+                "mechanism_type": "Spatial",
+                "mechanism_desc": "Land use allocation and park investment determine green space distribution"
+        },
+        {
+                "source": "L1.01",
+                "target": "L2.18",
+                "mechanism_type": "Spatial-Economic",
+                "mechanism_desc": "Infrastructure investment determines sidewalk quality, street lighting, public amenity maintenance"
+        },
+        {
+                "source": "L1.01",
+                "target": "L2.23",
+                "mechanism_type": "Spatial",
+                "mechanism_desc": "Street network design, sidewalk connectivity, and transit infrastructure determine mobility access"
+        },
+        {
+                "source": "L1.02",
+                "target": "L2.20",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Income after fixed expenses directly determines capacity to meet basic needs"
+        },
+        {
+                "source": "L1.02",
+                "target": "L2.21",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Income level determines proportion consumed by housing costs"
+        },
+        {
+                "source": "L1.02",
+                "target": "L2.22",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Available income determines food purchasing capacity and access to quality food"
+        },
+        {
+                "source": "L1.02",
+                "target": "L2.24",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Income level reflects and reinforces job quality and employment stability"
+        },
+        {
+                "source": "L1.02",
+                "target": "L2.26",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Income determines insurance affordability and out-of-pocket healthcare capacity"
+        },
+        {
+                "source": "L1.02",
+                "target": "L2.32",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Income-to-rent ratio determines eviction vulnerability"
+        },
+        {
+                "source": "L1.03",
+                "target": "L2.27",
+                "mechanism_type": "Social",
+                "mechanism_desc": "Collective efficacy and organizational density enable social tie formation"
+        },
+        {
+                "source": "L1.03",
+                "target": "L2.28",
+                "mechanism_type": "Social-Political",
+                "mechanism_desc": "Community collective efficacy and informal social control reduce violence"
+        },
+        {
+                "source": "L1.03",
+                "target": "L2.29",
+                "mechanism_type": "Political-Social",
+                "mechanism_desc": "Community political power determines institutional responsiveness and resource allocation"
+        },
+        {
+                "source": "L1.03",
+                "target": "L2.31",
+                "mechanism_type": "Political-Social",
+                "mechanism_desc": "Existing social cohesion enables political mobilization and advocacy"
+        },
+        {
+                "source": "L1.04",
+                "target": "L2.13",
+                "mechanism_type": "Economic-Spatial",
+                "mechanism_desc": "Ownership structure determines maintenance incentives and investment patterns"
+        },
+        {
+                "source": "L1.04",
+                "target": "L2.21",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Property speculation and commodification drive rent levels"
+        },
+        {
+                "source": "L1.04",
+                "target": "L2.32",
+                "mechanism_type": "Economic-Political",
+                "mechanism_desc": "Rental market structure and landlord-tenant power relations determine eviction rates"
+        },
+        {
+                "source": "L1.05",
+                "target": "L2.20",
+                "mechanism_type": "Economic-Political",
+                "mechanism_desc": "Racialized labor markets and wage suppression produce material deprivation"
+        },
+        {
+                "source": "L1.05",
+                "target": "L2.24",
+                "mechanism_type": "Economic-Political",
+                "mechanism_desc": "Racial segmentation of labor markets concentrates precarious work"
+        },
+        {
+                "source": "L1.05",
+                "target": "L2.30",
+                "mechanism_type": "Social-Political",
+                "mechanism_desc": "Racialized institutional practices produce differential service quality"
+        },
+        {
+                "source": "L1.02",
+                "target": "L2.20",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Wage levels, benefits availability, and job quality determine household economic security"
+        },
+        {
+                "source": "L1.02",
+                "target": "L2.24",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Industry composition and labor regulation determine job stability"
+        },
+        {
+                "source": "L1.02",
+                "target": "L2.26",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Employer-sponsored insurance availability depends on labor market structure"
+        },
+        {
+                "source": "L1.08",
+                "target": "L2.28",
+                "mechanism_type": "Carceral-Social",
+                "mechanism_desc": "Police presence and criminal legal system contact shapes violence exposure"
+        },
+        {
+                "source": "L1.08",
+                "target": "L2.30",
+                "mechanism_type": "Carceral-Political",
+                "mechanism_desc": "Carceral institutions and surveillance produce discriminatory service encounters"
+        },
+        {
+                "source": "L1.09",
+                "target": "L2.26",
+                "mechanism_type": "Economic-Political",
+                "mechanism_desc": "Insurance market design and subsidy levels determine coverage accessibility"
+        },
+        {
+                "source": "L1.09",
+                "target": "L2.29",
+                "mechanism_type": "Political-Spatial",
+                "mechanism_desc": "Provider reimbursement rates and network design determine service availability"
+        },
+        {
+                "source": "L1.10",
+                "target": "L2.20",
+                "mechanism_type": "Economic-Political",
+                "mechanism_desc": "Benefit generosity and eligibility determine poverty mitigation"
+        },
+        {
+                "source": "L1.10",
+                "target": "L2.22",
+                "mechanism_type": "Economic-Political",
+                "mechanism_desc": "SNAP and nutrition program design determine food access"
+        },
+        {
+                "source": "L1.10",
+                "target": "L2.26",
+                "mechanism_type": "Economic-Political",
+                "mechanism_desc": "Medicaid eligibility and benefit levels determine coverage for low-income populations"
+        },
+        {
+                "source": "L1.11",
+                "target": "L2.23",
+                "mechanism_type": "Spatial-Economic",
+                "mechanism_desc": "Transit network design, frequency, and cost determine mobility"
+        },
+        {
+                "source": "L1.11",
+                "target": "L2.29",
+                "mechanism_type": "Spatial",
+                "mechanism_desc": "Transit connectivity determines physical access to services and institutions"
+        },
+        {
+                "source": "L1.04",
+                "target": "L2.13",
+                "mechanism_type": "Political-Spatial",
+                "mechanism_desc": "Zoning determines permissible housing types and density, affecting stock quality"
+        },
+        {
+                "source": "L1.04",
+                "target": "L2.14",
+                "mechanism_type": "Environmental-Political",
+                "mechanism_desc": "Industrial/residential separation determines pollution exposure proximity"
+        },
+        {
+                "source": "L1.04",
+                "target": "L2.17",
+                "mechanism_type": "Spatial-Political",
+                "mechanism_desc": "Open space requirements and park dedication determine green access"
+        },
+        {
+                "source": "L1.04",
+                "target": "L2.22",
+                "mechanism_type": "Spatial-Economic",
+                "mechanism_desc": "Commercial zoning determines food retail location and accessibility"
+        },
+        {
+                "source": "L1.04",
+                "target": "L2.29",
+                "mechanism_type": "Spatial-Political",
+                "mechanism_desc": "Zoning determines permitted institutional uses and service distribution"
+        },
+        {
+                "source": "L2.13",
+                "target": "L3.35",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Housing disrepair produces chronic stress via uncontrollable environmental conditions"
+        },
+        {
+                "source": "L2.13",
+                "target": "L3.39",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Poor housing quality disrupts sleep via noise, temperature instability, pests"
+        },
+        {
+                "source": "L2.13",
+                "target": "L3.42",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Deteriorated housing increases exposure to lead, mold, allergens, toxins"
+        },
+        {
+                "source": "L2.13",
+                "target": "L3.43",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Inadequate heating/cooling systems produce temperature extremes"
+        },
+        {
+                "source": "L2.13",
+                "target": "L3.45",
+                "mechanism_type": "Environmental",
+                "mechanism_desc": "Housing hazards (structural defects, electrical issues) increase injury risk"
+        },
+        {
+                "source": "L2.14",
+                "target": "L3.42",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Ambient air pollution increases respiratory and cardiovascular toxin exposure"
+        },
+        {
+                "source": "L2.14",
+                "target": "L3.38",
+                "mechanism_type": "Environmental-Behavioral",
+                "mechanism_desc": "Poor air quality discourages outdoor physical activity"
+        },
+        {
+                "source": "L2.14",
+                "target": "L3.45",
+                "mechanism_type": "Environmental",
+                "mechanism_desc": "Structural hazards increase injury risk from building failures"
+        },
+        {
+                "source": "L2.17",
+                "target": "L3.38",
+                "mechanism_type": "Spatial-Behavioral",
+                "mechanism_desc": "Park availability enables and encourages physical activity"
+        },
+        {
+                "source": "L2.17",
+                "target": "L3.36",
+                "mechanism_type": "Spatial-Social",
+                "mechanism_desc": "Public green space provides settings for social interaction"
+        },
+        {
+                "source": "L2.17",
+                "target": "L3.35",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Nature contact reduces physiological stress response"
+        },
+        {
+                "source": "L2.17",
+                "target": "L3.43",
+                "mechanism_type": "Environmental",
+                "mechanism_desc": "Tree canopy and green space reduce heat island effects"
+        },
+        {
+                "source": "L2.18",
+                "target": "L3.38",
+                "mechanism_type": "Spatial-Behavioral",
+                "mechanism_desc": "Safe, accessible sidewalks and public spaces enable walking and activity"
+        },
+        {
+                "source": "L2.18",
+                "target": "L3.36",
+                "mechanism_type": "Spatial-Social",
+                "mechanism_desc": "Quality public space facilitates social encounters and community interaction"
+        },
+        {
+                "source": "L2.18",
+                "target": "L3.40",
+                "mechanism_type": "Spatial-Social",
+                "mechanism_desc": "Well-maintained public space with natural surveillance reduces violence"
+        },
+        {
+                "source": "L2.20",
+                "target": "L3.35",
+                "mechanism_type": "Economic-Biological",
+                "mechanism_desc": "Persistent economic insecurity produces chronic physiological stress response"
+        },
+        {
+                "source": "L2.20",
+                "target": "L3.37",
+                "mechanism_type": "Economic-Behavioral",
+                "mechanism_desc": "Economic hardship increases substance use as coping mechanism"
+        },
+        {
+                "source": "L2.20",
+                "target": "L3.39",
+                "mechanism_type": "Economic-Biological",
+                "mechanism_desc": "Financial stress disrupts sleep via worry and cortisol dysregulation"
+        },
+        {
+                "source": "L2.20",
+                "target": "L3.44",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Limited resources constrain food quality and quantity"
+        },
+        {
+                "source": "L2.20",
+                "target": "L3.46",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Cost barriers produce forgone care and treatment interruption"
+        },
+        {
+                "source": "L2.21",
+                "target": "L3.35",
+                "mechanism_type": "Economic-Biological",
+                "mechanism_desc": "Rent burden produces chronic stress via housing payment insecurity"
+        },
+        {
+                "source": "L2.21",
+                "target": "L3.44",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Housing costs crowd out food expenditure"
+        },
+        {
+                "source": "L2.21",
+                "target": "L3.46",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Housing costs crowd out healthcare expenditure"
+        },
+        {
+                "source": "L2.21",
+                "target": "L3.51",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "High cost burden increases eviction and homelessness risk"
+        },
+        {
+                "source": "L2.22",
+                "target": "L3.44",
+                "mechanism_type": "Economic-Spatial",
+                "mechanism_desc": "Limited food access and affordability produce poor nutrition"
+        },
+        {
+                "source": "L2.22",
+                "target": "L3.35",
+                "mechanism_type": "Economic-Biological",
+                "mechanism_desc": "Food insecurity produces chronic stress response"
+        },
+        {
+                "source": "L2.23",
+                "target": "L3.46",
+                "mechanism_type": "Spatial-Economic",
+                "mechanism_desc": "Limited mobility constrains healthcare access and follow-up"
+        },
+        {
+                "source": "L2.23",
+                "target": "L3.47",
+                "mechanism_type": "Spatial-Economic",
+                "mechanism_desc": "Transportation limits prenatal care attendance"
+        },
+        {
+                "source": "L2.23",
+                "target": "L3.45",
+                "mechanism_type": "Spatial",
+                "mechanism_desc": "Limited job access concentrates workers in hazardous local employment"
+        },
+        {
+                "source": "L2.24",
+                "target": "L3.35",
+                "mechanism_type": "Economic-Biological",
+                "mechanism_desc": "Job insecurity produces chronic stress via economic threat"
+        },
+        {
+                "source": "L2.24",
+                "target": "L3.45",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Precarious employment concentrates in hazardous occupations with poor safety"
+        },
+        {
+                "source": "L2.24",
+                "target": "L3.46",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Unstable employment disrupts insurance continuity and care access"
+        },
+        {
+                "source": "L2.25",
+                "target": "L3.46",
+                "mechanism_type": "Spatial-Economic",
+                "mechanism_desc": "Limited internet/phone access constrains telehealth and appointment scheduling"
+        },
+        {
+                "source": "L2.25",
+                "target": "L3.36",
+                "mechanism_type": "Spatial-Social",
+                "mechanism_desc": "Digital divide limits social connection opportunities"
+        },
+        {
+                "source": "L2.26",
+                "target": "L3.46",
+                "mechanism_type": "Economic-Political",
+                "mechanism_desc": "Insurance status and benefit design determine care accessibility"
+        },
+        {
+                "source": "L2.26",
+                "target": "L3.47",
+                "mechanism_type": "Economic-Political",
+                "mechanism_desc": "Coverage determines prenatal and delivery care access"
+        },
+        {
+                "source": "L2.26",
+                "target": "L3.49",
+                "mechanism_type": "Economic-Political",
+                "mechanism_desc": "Insurance coverage determines medication adherence and specialist access"
+        },
+        {
+                "source": "L2.27",
+                "target": "L3.36",
+                "mechanism_type": "Social",
+                "mechanism_desc": "Network density and quality determine subjective social connection"
+        },
+        {
+                "source": "L2.27",
+                "target": "L3.35",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Social support buffers stress via multiple biological pathways"
+        },
+        {
+                "source": "L2.27",
+                "target": "L3.52",
+                "mechanism_type": "Social",
+                "mechanism_desc": "Strong networks amplify displacement trauma via loss of social ecosystem"
+        },
+        {
+                "source": "L2.28",
+                "target": "L3.40",
+                "mechanism_type": "Social-Environmental",
+                "mechanism_desc": "Neighborhood violence rates determine individual victimization and witnessing"
+        },
+        {
+                "source": "L2.28",
+                "target": "L3.35",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Chronic violence exposure produces sustained physiological stress response"
+        },
+        {
+                "source": "L2.28",
+                "target": "L3.38",
+                "mechanism_type": "Social-Behavioral",
+                "mechanism_desc": "Safety concerns restrict outdoor activity and movement"
+        },
+        {
+                "source": "L2.28",
+                "target": "L3.41",
+                "mechanism_type": "Social-Carceral",
+                "mechanism_desc": "Racialized policing produces cumulative traumatic stress"
+        },
+        {
+                "source": "L2.29",
+                "target": "L3.46",
+                "mechanism_type": "Spatial-Political",
+                "mechanism_desc": "Provider availability and quality determine care utilization"
+        },
+        {
+                "source": "L2.29",
+                "target": "L3.47",
+                "mechanism_type": "Spatial-Political",
+                "mechanism_desc": "OB/GYN availability determines prenatal care access"
+        },
+        {
+                "source": "L2.29",
+                "target": "L3.49",
+                "mechanism_type": "Political-Spatial",
+                "mechanism_desc": "Primary care availability and quality determine chronic disease control"
+        },
+        {
+                "source": "L2.30",
+                "target": "L3.46",
+                "mechanism_type": "Social-Political",
+                "mechanism_desc": "Discriminatory treatment produces care avoidance and mistrust"
+        },
+        {
+                "source": "L2.30",
+                "target": "L3.41",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Repeated discrimination produces cumulative traumatic stress"
+        },
+        {
+                "source": "L2.30",
+                "target": "L3.47",
+                "mechanism_type": "Social-Political",
+                "mechanism_desc": "Discriminatory prenatal care experiences reduce utilization"
+        },
+        {
+                "source": "L2.31",
+                "target": "L2.29",
+                "mechanism_type": "Political",
+                "mechanism_desc": "Political engagement increases institutional responsiveness and resource allocation"
+        },
+        {
+                "source": "L2.32",
+                "target": "L3.51",
+                "mechanism_type": "Economic-Social",
+                "mechanism_desc": "Eviction risk materializes in housing loss events"
+        },
+        {
+                "source": "L2.32",
+                "target": "L3.35",
+                "mechanism_type": "Economic-Biological",
+                "mechanism_desc": "Housing insecurity produces chronic stress via persistent threat"
+        },
+        {
+                "source": "L2.32",
+                "target": "L3.52",
+                "mechanism_type": "Economic-Social",
+                "mechanism_desc": "Housing instability forces displacement and community disconnection"
+        },
+        {
+                "source": "L3.35",
+                "target": "L4.55",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Chronic cortisol elevation produces hypertension, atherosclerosis, and cardiac remodeling"
+        },
+        {
+                "source": "L3.35",
+                "target": "L4.56",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Stress hormones dysregulate glucose metabolism and promote insulin resistance"
+        },
+        {
+                "source": "L3.35",
+                "target": "L4.61",
+                "mechanism_type": "Biological-Behavioral",
+                "mechanism_desc": "Chronic stress precipitates mental health disorders via HPA axis dysregulation"
+        },
+        {
+                "source": "L3.35",
+                "target": "L4.62",
+                "mechanism_type": "Biological-Behavioral",
+                "mechanism_desc": "Sustained stress produces PTSD, adjustment disorders, and complex trauma"
+        },
+        {
+                "source": "L3.35",
+                "target": "L4.65",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Maternal stress increases pregnancy complications via inflammatory pathways"
+        },
+        {
+                "source": "L3.36",
+                "target": "L4.61",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Social disconnection precipitates depression via neurobiological pathways"
+        },
+        {
+                "source": "L3.36",
+                "target": "L4.55",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Social isolation increases cardiovascular risk via stress and health behavior pathways"
+        },
+        {
+                "source": "L3.36",
+                "target": "L4.71",
+                "mechanism_type": "Social-Behavioral",
+                "mechanism_desc": "Isolation accelerates functional decline via reduced activity and support"
+        },
+        {
+                "source": "L3.37",
+                "target": "L4.63",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Regular substance use produces addiction via neuroadaptation"
+        },
+        {
+                "source": "L3.37",
+                "target": "L4.72",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Alcohol and substance toxicity produces hepatic damage"
+        },
+        {
+                "source": "L3.37",
+                "target": "L4.69",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Injection drug use increases HIV, HCV, and bacterial infection risk"
+        },
+        {
+                "source": "L3.37",
+                "target": "L4.55",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Stimulant use and smoking increase cardiovascular risk"
+        },
+        {
+                "source": "L3.38",
+                "target": "L4.56",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Inactivity produces insulin resistance and metabolic dysfunction"
+        },
+        {
+                "source": "L3.38",
+                "target": "L4.55",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Sedentary behavior increases cardiovascular risk independent of other factors"
+        },
+        {
+                "source": "L3.38",
+                "target": "L4.68",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Childhood inactivity produces obesity and metabolic syndrome"
+        },
+        {
+                "source": "L3.39",
+                "target": "L4.56",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Sleep disruption impairs glucose regulation and increases diabetes risk"
+        },
+        {
+                "source": "L3.39",
+                "target": "L4.55",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Poor sleep increases hypertension and cardiovascular events"
+        },
+        {
+                "source": "L3.39",
+                "target": "L4.61",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Sleep deprivation precipitates and exacerbates mood disorders"
+        },
+        {
+                "source": "L3.40",
+                "target": "L4.62",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Traumatic events produce PTSD and complex trauma syndromes"
+        },
+        {
+                "source": "L3.40",
+                "target": "L4.61",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Trauma exposure increases depression and anxiety via neurobiological changes"
+        },
+        {
+                "source": "L3.40",
+                "target": "L4.64",
+                "mechanism_type": "Social-Behavioral",
+                "mechanism_desc": "Childhood trauma produces behavioral dysregulation and conduct problems"
+        },
+        {
+                "source": "L3.41",
+                "target": "L4.62",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Repeated discrimination produces race-based traumatic stress"
+        },
+        {
+                "source": "L3.41",
+                "target": "L4.61",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Cumulative discrimination increases depression via chronic stress pathways"
+        },
+        {
+                "source": "L3.41",
+                "target": "L4.55",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Discrimination experiences accelerate cardiovascular aging via weathering"
+        },
+        {
+                "source": "L3.42",
+                "target": "L4.59",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Air pollution and allergen exposure produce asthma and COPD"
+        },
+        {
+                "source": "L3.42",
+                "target": "L4.60",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Lead and neurotoxin exposure impairs neurological development and function"
+        },
+        {
+                "source": "L3.42",
+                "target": "L4.70",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Carcinogenic exposure increases cancer risk via DNA damage"
+        },
+        {
+                "source": "L3.42",
+                "target": "L4.57",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Heavy metal exposure produces nephrotoxicity"
+        },
+        {
+                "source": "L3.43",
+                "target": "L4.55",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Heat stress increases cardiovascular strain and acute events"
+        },
+        {
+                "source": "L3.43",
+                "target": "L4.59",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Extreme heat exacerbates respiratory conditions"
+        },
+        {
+                "source": "L3.44",
+                "target": "L4.56",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Poor nutrition produces obesity, diabetes, and metabolic syndrome"
+        },
+        {
+                "source": "L3.44",
+                "target": "L4.55",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Nutrient deficiency and poor diet increase cardiovascular risk"
+        },
+        {
+                "source": "L3.44",
+                "target": "L4.66",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Maternal malnutrition produces low birth weight and developmental problems"
+        },
+        {
+                "source": "L3.44",
+                "target": "L4.67",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Childhood malnutrition impairs growth and development"
+        },
+        {
+                "source": "L3.44",
+                "target": "L4.68",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Poor nutrition quality produces childhood obesity"
+        },
+        {
+                "source": "L3.45",
+                "target": "L4.58",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Occupational injuries produce chronic pain conditions"
+        },
+        {
+                "source": "L3.45",
+                "target": "L4.59",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Occupational exposures (dust, fumes) produce respiratory disease"
+        },
+        {
+                "source": "L3.45",
+                "target": "L4.71",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Work injuries produce lasting functional limitations"
+        },
+        {
+                "source": "L3.46",
+                "target": "L4.55",
+                "mechanism_type": "Behavioral-Political",
+                "mechanism_desc": "Untreated hypertension and missed prevention produce cardiovascular events"
+        },
+        {
+                "source": "L3.46",
+                "target": "L4.56",
+                "mechanism_type": "Behavioral-Political",
+                "mechanism_desc": "Unmanaged diabetes progresses to complications"
+        },
+        {
+                "source": "L3.46",
+                "target": "L4.61",
+                "mechanism_type": "Behavioral-Political",
+                "mechanism_desc": "Untreated mental health conditions worsen"
+        },
+        {
+                "source": "L3.46",
+                "target": "L4.69",
+                "mechanism_type": "Behavioral-Political",
+                "mechanism_desc": "Missed vaccinations and untreated infections produce disease spread"
+        },
+        {
+                "source": "L3.46",
+                "target": "L4.70",
+                "mechanism_type": "Behavioral-Political",
+                "mechanism_desc": "Missed screening and delayed treatment worsen cancer outcomes"
+        },
+        {
+                "source": "L3.47",
+                "target": "L4.65",
+                "mechanism_type": "Political-Biological",
+                "mechanism_desc": "Inadequate prenatal care increases pregnancy complications"
+        },
+        {
+                "source": "L3.47",
+                "target": "L4.66",
+                "mechanism_type": "Political-Biological",
+                "mechanism_desc": "Inadequate prenatal care produces adverse birth outcomes"
+        },
+        {
+                "source": "L3.48",
+                "target": "L4.65",
+                "mechanism_type": "Biological-Behavioral",
+                "mechanism_desc": "Maternal stress increases pregnancy complications via multiple pathways"
+        },
+        {
+                "source": "L3.48",
+                "target": "L4.66",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Prenatal stress affects fetal development via placental and hormonal mechanisms"
+        },
+        {
+                "source": "L3.48",
+                "target": "L4.67",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "In utero stress exposure affects infant developmental trajectories"
+        },
+        {
+                "source": "L3.49",
+                "target": "L4.55",
+                "mechanism_type": "Political-Biological",
+                "mechanism_desc": "Poor disease management accelerates cardiovascular complications"
+        },
+        {
+                "source": "L3.49",
+                "target": "L4.56",
+                "mechanism_type": "Political-Biological",
+                "mechanism_desc": "Poor diabetes management produces microvascular and macrovascular complications"
+        },
+        {
+                "source": "L3.49",
+                "target": "L4.57",
+                "mechanism_type": "Political-Biological",
+                "mechanism_desc": "Uncontrolled hypertension and diabetes produce kidney damage"
+        },
+        {
+                "source": "L3.50",
+                "target": "L4.61",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Acute crises reflect underlying or precipitate mood disorder episodes"
+        },
+        {
+                "source": "L3.50",
+                "target": "L4.62",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Acute decompensation reflects trauma disorder severity"
+        },
+        {
+                "source": "L3.50",
+                "target": "L4.63",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Mental health crises often co-occur with substance use escalation"
+        },
+        {
+                "source": "L3.51",
+                "target": "L4.61",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Housing loss precipitates mental health crises via multiple stress pathways"
+        },
+        {
+                "source": "L3.51",
+                "target": "L4.62",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Eviction and homelessness produce traumatic stress"
+        },
+        {
+                "source": "L3.51",
+                "target": "L4.69",
+                "mechanism_type": "Social-Environmental",
+                "mechanism_desc": "Homelessness increases exposure to infectious disease"
+        },
+        {
+                "source": "L3.52",
+                "target": "L4.62",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Displacement trauma produces PTSD-like symptoms and complex trauma"
+        },
+        {
+                "source": "L3.52",
+                "target": "L4.61",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Loss of place attachment precipitates depression"
+        },
+        {
+                "source": "L3.53",
+                "target": "L4.64",
+                "mechanism_type": "Social-Behavioral",
+                "mechanism_desc": "Family disruption produces childhood behavioral problems"
+        },
+        {
+                "source": "L3.53",
+                "target": "L4.62",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Separation trauma produces attachment and stress disorders"
+        },
+        {
+                "source": "L3.53",
+                "target": "L4.67",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Family instability disrupts child development"
+        },
+        {
+                "source": "L4.55",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Acute cardiovascular symptoms prompt emergency care seeking"
+        },
+        {
+                "source": "L4.55",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Cardiovascular disease produces hospitalizations for acute events and management"
+        },
+        {
+                "source": "L4.55",
+                "target": "L5.77",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Acute MI, stroke, heart failure exacerbation require emergency intervention"
+        },
+        {
+                "source": "L4.55",
+                "target": "L5.95",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Cardiovascular disease is leading cause of premature death"
+        },
+        {
+                "source": "L4.56",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Diabetes complications prompt emergency care"
+        },
+        {
+                "source": "L4.56",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Metabolic disease produces hospitalizations for complications and management"
+        },
+        {
+                "source": "L4.56",
+                "target": "L5.76",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Hyperglycemia, hypoglycemia, DKA require emergency intervention"
+        },
+        {
+                "source": "L4.56",
+                "target": "L5.95",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Diabetes complications produce premature mortality"
+        },
+        {
+                "source": "L4.57",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Renal complications prompt emergency care"
+        },
+        {
+                "source": "L4.57",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Kidney disease produces hospitalizations for dialysis and complications"
+        },
+        {
+                "source": "L4.57",
+                "target": "L5.95",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "End-stage renal disease contributes to premature mortality"
+        },
+        {
+                "source": "L4.58",
+                "target": "L5.73",
+                "mechanism_type": "Biological-Behavioral",
+                "mechanism_desc": "Unmanaged pain produces emergency care seeking"
+        },
+        {
+                "source": "L4.58",
+                "target": "L5.86",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Pain medication produces overdose risk"
+        },
+        {
+                "source": "L4.59",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Respiratory symptoms prompt emergency care"
+        },
+        {
+                "source": "L4.59",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Respiratory disease produces hospitalizations"
+        },
+        {
+                "source": "L4.59",
+                "target": "L5.75",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Asthma exacerbations require emergency intervention"
+        },
+        {
+                "source": "L4.59",
+                "target": "L5.78",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "COPD exacerbations and pneumonia require emergency care"
+        },
+        {
+                "source": "L4.59",
+                "target": "L5.95",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Respiratory disease contributes to premature mortality"
+        },
+        {
+                "source": "L4.60",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Neurological symptoms prompt emergency evaluation"
+        },
+        {
+                "source": "L4.60",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Neurological conditions produce hospitalizations"
+        },
+        {
+                "source": "L4.60",
+                "target": "L5.71",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Neurological disease produces progressive disability"
+        },
+        {
+                "source": "L4.61",
+                "target": "L5.88",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Severe mood episodes require crisis intervention"
+        },
+        {
+                "source": "L4.61",
+                "target": "L5.89",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Depression is primary risk factor for suicide"
+        },
+        {
+                "source": "L4.61",
+                "target": "L5.73",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Mental health crises prompt emergency care seeking"
+        },
+        {
+                "source": "L4.61",
+                "target": "L5.86",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Depression increases overdose risk via suicidality and substance use"
+        },
+        {
+                "source": "L4.62",
+                "target": "L5.88",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "PTSD episodes and trauma responses require crisis intervention"
+        },
+        {
+                "source": "L4.62",
+                "target": "L5.89",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Trauma disorders increase suicide risk"
+        },
+        {
+                "source": "L4.62",
+                "target": "L5.73",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Trauma-related crises prompt emergency care"
+        },
+        {
+                "source": "L4.63",
+                "target": "L5.86",
+                "mechanism_type": "Biological-Behavioral",
+                "mechanism_desc": "Addiction produces overdose via tolerance and supply variability"
+        },
+        {
+                "source": "L4.63",
+                "target": "L5.87",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Physical dependence produces dangerous withdrawal syndromes"
+        },
+        {
+                "source": "L4.63",
+                "target": "L5.73",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Substance-related complications prompt emergency care"
+        },
+        {
+                "source": "L4.63",
+                "target": "L5.74",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Substance use complications produce hospitalizations"
+        },
+        {
+                "source": "L4.63",
+                "target": "L5.90",
+                "mechanism_type": "Carceral-Behavioral",
+                "mechanism_desc": "Criminalized substance use produces incarceration"
+        },
+        {
+                "source": "L4.64",
+                "target": "L5.73",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Behavioral crises prompt emergency evaluation"
+        },
+        {
+                "source": "L4.64",
+                "target": "L5.88",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Severe behavioral dysregulation requires crisis intervention"
+        },
+        {
+                "source": "L4.64",
+                "target": "L5.90",
+                "mechanism_type": "Carceral-Behavioral",
+                "mechanism_desc": "Behavioral disorders produce school discipline and legal system contact"
+        },
+        {
+                "source": "L4.65",
+                "target": "L5.79",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Pregnancy complications require emergency obstetric care"
+        },
+        {
+                "source": "L4.65",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Maternal complications produce hospitalizations"
+        },
+        {
+                "source": "L4.65",
+                "target": "L5.95",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Severe maternal morbidity can progress to maternal mortality"
+        },
+        {
+                "source": "L4.66",
+                "target": "L5.80",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Premature birth and complications require NICU care"
+        },
+        {
+                "source": "L4.66",
+                "target": "L5.95",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Adverse birth outcomes produce infant mortality"
+        },
+        {
+                "source": "L4.67",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Developmental problems and illness produce pediatric emergency care"
+        },
+        {
+                "source": "L4.67",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Pediatric conditions produce hospitalizations"
+        },
+        {
+                "source": "L4.68",
+                "target": "L5.76",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Childhood Type 2 diabetes produces acute complications"
+        },
+        {
+                "source": "L4.68",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Metabolic complications prompt pediatric emergency care"
+        },
+        {
+                "source": "L4.69",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Acute infections prompt emergency care"
+        },
+        {
+                "source": "L4.69",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Serious infections require hospitalization"
+        },
+        {
+                "source": "L4.69",
+                "target": "L5.82",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Untreated or severe infections progress to sepsis"
+        },
+        {
+                "source": "L4.69",
+                "target": "L5.95",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Infectious disease contributes to premature mortality"
+        },
+        {
+                "source": "L4.70",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Cancer complications prompt emergency care"
+        },
+        {
+                "source": "L4.70",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Cancer treatment and complications require hospitalization"
+        },
+        {
+                "source": "L4.70",
+                "target": "L5.95",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Cancer is major cause of premature mortality"
+        },
+        {
+                "source": "L4.71",
+                "target": "L5.84",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Functional limitations increase fall risk"
+        },
+        {
+                "source": "L4.71",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Disabilities and functional decline increase emergency care utilization"
+        },
+        {
+                "source": "L4.71",
+                "target": "L5.94",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Severe functional decline necessitates institutional long-term care"
+        },
+        {
+                "source": "L4.72",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Liver disease complications prompt emergency care"
+        },
+        {
+                "source": "L4.72",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Cirrhosis complications require hospitalization"
+        },
+        {
+                "source": "L4.72",
+                "target": "L5.95",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "End-stage liver disease produces premature mortality"
+        },
+        {
+                "source": "L1.01",
+                "target": "L1.02",
+                "mechanism_type": "Spatial-Economic",
+                "mechanism_desc": "Built environment quality affects property values and neighborhood economic opportunity"
+        },
+        {
+                "source": "L1.02",
+                "target": "L1.04",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Income determines capacity for property acquisition and maintenance"
+        },
+        {
+                "source": "L1.08",
+                "target": "L1.05",
+                "mechanism_type": "Carceral-Economic",
+                "mechanism_desc": "Carceral system functions as mechanism of racialized labor control and extraction"
+        },
+        {
+                "source": "L2.20",
+                "target": "L2.21",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Material hardship increases housing payment strain"
+        },
+        {
+                "source": "L2.21",
+                "target": "L2.32",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Rent burden directly increases eviction vulnerability"
+        },
+        {
+                "source": "L2.27",
+                "target": "L2.28",
+                "mechanism_type": "Social",
+                "mechanism_desc": "Strong social networks enable informal social control reducing violence"
+        },
+        {
+                "source": "L3.35",
+                "target": "L3.37",
+                "mechanism_type": "Biological-Behavioral",
+                "mechanism_desc": "Chronic stress increases substance use as coping mechanism"
+        },
+        {
+                "source": "L3.35",
+                "target": "L3.39",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Stress dysregulates sleep via HPA axis and cortisol"
+        },
+        {
+                "source": "L3.36",
+                "target": "L3.37",
+                "mechanism_type": "Social-Behavioral",
+                "mechanism_desc": "Social disconnection increases substance use"
+        },
+        {
+                "source": "L3.37",
+                "target": "L3.45",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Substance use impairs safety awareness and increases injury risk"
+        },
+        {
+                "source": "L3.37",
+                "target": "L3.46",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Substance use disrupts healthcare engagement"
+        },
+        {
+                "source": "L3.40",
+                "target": "L3.37",
+                "mechanism_type": "Social-Behavioral",
+                "mechanism_desc": "Trauma exposure increases substance use as self-medication"
+        },
+        {
+                "source": "L3.44",
+                "target": "L3.38",
+                "mechanism_type": "Biological-Behavioral",
+                "mechanism_desc": "Poor nutrition reduces energy for physical activity"
+        },
+        {
+                "source": "L3.46",
+                "target": "L3.49",
+                "mechanism_type": "Political-Behavioral",
+                "mechanism_desc": "Care discontinuity produces poor disease management"
+        },
+        {
+                "source": "L3.46",
+                "target": "L3.50",
+                "mechanism_type": "Political-Behavioral",
+                "mechanism_desc": "Unmet mental health needs escalate to crisis"
+        },
+        {
+                "source": "L3.51",
+                "target": "L3.52",
+                "mechanism_type": "Economic-Social",
+                "mechanism_desc": "Housing loss forces displacement from community"
+        },
+        {
+                "source": "L3.51",
+                "target": "L3.53",
+                "mechanism_type": "Economic-Social",
+                "mechanism_desc": "Housing loss disrupts family stability"
+        },
+        {
+                "source": "L4.55",
+                "target": "L4.57",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Hypertension and diabetes produce kidney damage"
+        },
+        {
+                "source": "L4.55",
+                "target": "L4.71",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Stroke and heart disease produce functional limitations"
+        },
+        {
+                "source": "L4.56",
+                "target": "L4.55",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Diabetes accelerates atherosclerosis and cardiovascular disease"
+        },
+        {
+                "source": "L4.56",
+                "target": "L4.57",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Diabetes produces diabetic nephropathy"
+        },
+        {
+                "source": "L4.61",
+                "target": "L4.55",
+                "mechanism_type": "Biological-Behavioral",
+                "mechanism_desc": "Depression increases cardiovascular risk via multiple pathways"
+        },
+        {
+                "source": "L4.61",
+                "target": "L4.63",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Co-occurring depression and substance use are common"
+        },
+        {
+                "source": "L4.63",
+                "target": "L4.72",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Alcohol use produces cirrhosis and hepatitis"
+        },
+        {
+                "source": "L4.63",
+                "target": "L4.69",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Injection drug use increases HIV and HCV risk"
+        },
+        {
+                "source": "L5.73",
+                "target": "L5.74",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Emergency presentations often result in hospital admission"
+        },
+        {
+                "source": "L5.75",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Asthma exacerbations are common ED presentations"
+        },
+        {
+                "source": "L5.76",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Diabetic crises are common ED presentations"
+        },
+        {
+                "source": "L5.77",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Cardiovascular emergencies are common ED presentations"
+        },
+        {
+                "source": "L5.86",
+                "target": "L5.73",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Overdoses commonly present to emergency departments"
+        },
+        {
+                "source": "L5.86",
+                "target": "L5.95",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Overdose is major cause of premature mortality"
+        },
+        {
+                "source": "L5.88",
+                "target": "L5.90",
+                "mechanism_type": "Carceral-Behavioral",
+                "mechanism_desc": "Mental health crises often result in police contact and potential incarceration"
+        },
+        {
+                "source": "L5.88",
+                "target": "L5.73",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Mental health crises commonly present to emergency departments"
+        },
+        {
+                "source": "L5.89",
+                "target": "L5.95",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Suicide is major cause of premature mortality"
+        },
+        {
+                "source": "L5.90",
+                "target": "L5.95",
+                "mechanism_type": "Carceral-Biological",
+                "mechanism_desc": "Incarceration increases mortality risk via multiple pathways"
+        },
+        {
+                "source": "L5.93",
+                "target": "L5.73",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Homelessness increases emergency department utilization"
+        },
+        {
+                "source": "L5.93",
+                "target": "L5.90",
+                "mechanism_type": "Carceral-Social",
+                "mechanism_desc": "Homelessness criminalization produces arrests"
+        },
+        {
+                "source": "L5.93",
+                "target": "L5.95",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Homelessness dramatically increases mortality risk"
+        },
+        {
+                "source": "L5.94",
+                "target": "L5.95",
+                "mechanism_type": "Biological-Social",
+                "mechanism_desc": "Nursing home placement often precedes death in elderly populations"
+        },
+        {
+                "source": "L2.13",
+                "target": "L2.32",
+                "mechanism_type": "Economic-Spatial",
+                "mechanism_desc": "Poor housing conditions can trigger code violations and eviction"
+        },
+        {
+                "source": "L2.20",
+                "target": "L2.22",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Material hardship directly constrains food access"
+        },
+        {
+                "source": "L2.20",
+                "target": "L2.24",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Material hardship reflects and reinforces precarious employment"
+        },
+        {
+                "source": "L2.20",
+                "target": "L2.26",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Material hardship limits healthcare affordability"
+        },
+        {
+                "source": "L2.27",
+                "target": "L2.31",
+                "mechanism_type": "Social-Political",
+                "mechanism_desc": "Strong networks enable collective political action"
+        },
+        {
+                "source": "L3.35",
+                "target": "L3.50",
+                "mechanism_type": "Biological-Behavioral",
+                "mechanism_desc": "Chronic stress precipitates acute mental health crises"
+        },
+        {
+                "source": "L3.37",
+                "target": "L3.50",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Substance use escalation produces mental health crises"
+        },
+        {
+                "source": "L3.40",
+                "target": "L3.41",
+                "mechanism_type": "Social",
+                "mechanism_desc": "Violence often occurs in context of discriminatory systems"
+        },
+        {
+                "source": "L3.42",
+                "target": "L3.43",
+                "mechanism_type": "Environmental",
+                "mechanism_desc": "Environmental hazards often cluster with climate vulnerability"
+        },
+        {
+                "source": "L3.46",
+                "target": "L3.47",
+                "mechanism_type": "Political-Behavioral",
+                "mechanism_desc": "General healthcare barriers constrain prenatal care"
+        },
+        {
+                "source": "L3.51",
+                "target": "L3.46",
+                "mechanism_type": "Economic-Spatial",
+                "mechanism_desc": "Housing loss disrupts healthcare continuity"
+        },
+        {
+                "source": "L4.61",
+                "target": "L4.62",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Depression and trauma disorders commonly co-occur"
+        },
+        {
+                "source": "L5.73",
+                "target": "L5.95",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "High ED utilization indicates severe illness burden and mortality risk"
+        },
+        {
+                "source": "L5.74",
+                "target": "L5.95",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Hospitalizations reflect disease severity and mortality risk"
+        },
+        {
+                "source": "L5.84",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Falls are common cause of emergency department visits"
+        },
+        {
+                "source": "L1.03",
+                "target": "L1.08",
+                "mechanism_type": "Political-Social",
+                "mechanism_desc": "Community power can resist or be suppressed by carceral systems"
+        },
+        {
+                "source": "L1.09",
+                "target": "L1.10",
+                "mechanism_type": "Political-Economic",
+                "mechanism_desc": "Healthcare system is component of broader social safety net"
+        },
+        {
+                "source": "L1.11",
+                "target": "L1.01",
+                "mechanism_type": "Spatial",
+                "mechanism_desc": "Transportation infrastructure is component of built environment quality"
+        },
+        {
+                "source": "L2.17",
+                "target": "L2.18",
+                "mechanism_type": "Spatial",
+                "mechanism_desc": "Green space is component of public space quality"
+        },
+        {
+                "source": "L2.26",
+                "target": "L2.29",
+                "mechanism_type": "Economic-Political",
+                "mechanism_desc": "Coverage determines which institutions are accessible"
+        },
+        {
+                "source": "L2.28",
+                "target": "L2.18",
+                "mechanism_type": "Social-Spatial",
+                "mechanism_desc": "Violence constrains public space use and quality"
+        },
+        {
+                "source": "L3.36",
+                "target": "L3.35",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Social isolation produces chronic stress"
+        },
+        {
+                "source": "L3.38",
+                "target": "L3.44",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Inactivity and poor nutrition often co-occur"
+        },
+        {
+                "source": "L3.39",
+                "target": "L3.35",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Sleep deprivation and stress mutually reinforce"
+        },
+        {
+                "source": "L3.42",
+                "target": "L3.45",
+                "mechanism_type": "Environmental",
+                "mechanism_desc": "Environmental and occupational exposures often overlap"
+        },
+        {
+                "source": "L3.48",
+                "target": "L3.35",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Prenatal stress reflects maternal weathering"
+        },
+        {
+                "source": "L3.52",
+                "target": "L3.36",
+                "mechanism_type": "Social",
+                "mechanism_desc": "Displacement severs social networks producing isolation"
+        },
+        {
+                "source": "L4.55",
+                "target": "L4.58",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Cardiovascular disease can produce chronic pain"
+        },
+        {
+                "source": "L4.59",
+                "target": "L4.71",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Chronic respiratory disease limits functional capacity"
+        },
+        {
+                "source": "L4.61",
+                "target": "L4.64",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Mental health and behavioral disorders often co-occur"
+        },
+        {
+                "source": "L4.65",
+                "target": "L4.66",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Maternal complications directly affect infant outcomes"
+        },
+        {
+                "source": "L5.79",
+                "target": "L5.80",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Birth emergencies often result in NICU admission"
+        },
+        {
+                "source": "L5.87",
+                "target": "L5.73",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Withdrawal crises present to emergency departments"
+        },
+        {
+                "source": "L1.04",
+                "target": "L1.12",
+                "mechanism_type": "Political-Economic",
+                "mechanism_desc": "Property relations shape and are shaped by zoning policy"
+        },
+        {
+                "source": "L1.05",
+                "target": "L1.08",
+                "mechanism_type": "Political-Economic",
+                "mechanism_desc": "Carceral systems enforce racialized economic extraction"
+        },
+        {
+                "source": "L1.08",
+                "target": "L1.10",
+                "mechanism_type": "Political",
+                "mechanism_desc": "Carceral spending competes with social safety net investment"
+        },
+        {
+                "source": "L2.14",
+                "target": "L2.13",
+                "mechanism_type": "Environmental",
+                "mechanism_desc": "Lead hazards reflect housing deterioration"
+        },
+        {
+                "source": "L2.24",
+                "target": "L2.20",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Employment instability produces material hardship"
+        },
+        {
+                "source": "L2.30",
+                "target": "L2.29",
+                "mechanism_type": "Social-Political",
+                "mechanism_desc": "Discrimination reflects institutional quality deficits"
+        },
+        {
+                "source": "L2.32",
+                "target": "L2.20",
+                "mechanism_type": "Economic",
+                "mechanism_desc": "Housing instability produces and reflects material hardship"
+        },
+        {
+                "source": "L3.37",
+                "target": "L3.39",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Substance use disrupts sleep architecture"
+        },
+        {
+                "source": "L3.40",
+                "target": "L3.35",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Trauma exposure produces chronic stress response"
+        },
+        {
+                "source": "L3.44",
+                "target": "L3.39",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Poor nutrition affects sleep quality"
+        },
+        {
+                "source": "L3.50",
+                "target": "L3.37",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Mental health crises often involve substance use"
+        },
+        {
+                "source": "L3.51",
+                "target": "L3.35",
+                "mechanism_type": "Economic-Biological",
+                "mechanism_desc": "Housing loss produces severe acute and chronic stress"
+        },
+        {
+                "source": "L3.53",
+                "target": "L3.36",
+                "mechanism_type": "Social",
+                "mechanism_desc": "Family separation produces social isolation"
+        },
+        {
+                "source": "L4.56",
+                "target": "L4.58",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Diabetic neuropathy produces chronic pain"
+        },
+        {
+                "source": "L4.62",
+                "target": "L4.63",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Trauma and substance use commonly co-occur"
+        },
+        {
+                "source": "L4.63",
+                "target": "L4.61",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Substance use and mood disorders commonly co-occur"
+        },
+        {
+                "source": "L4.66",
+                "target": "L4.67",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Birth outcomes affect developmental trajectories"
+        },
+        {
+                "source": "L5.75",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Severe asthma exacerbations require hospitalization"
+        },
+        {
+                "source": "L5.76",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Diabetic crises require hospitalization"
+        },
+        {
+                "source": "L5.77",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Cardiovascular emergencies require hospitalization"
+        },
+        {
+                "source": "L5.78",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Respiratory crises require hospitalization"
+        },
+        {
+                "source": "L5.79",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Birth emergencies require hospitalization"
+        },
+        {
+                "source": "L5.82",
+                "target": "L5.74",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Sepsis requires hospitalization"
+        },
+        {
+                "source": "L3.51",
+                "target": "L5.93",
+                "mechanism_type": "Economic-Spatial",
+                "mechanism_desc": "Acute housing loss directly produces unsheltered homelessness without intermediate chronic conditions"
+        },
+        {
+                "source": "L3.40",
+                "target": "L5.93",
+                "mechanism_type": "Social-Economic",
+                "mechanism_desc": "Violence and trauma exposure can lead directly to homelessness through displacement and loss of housing stability"
+        },
+        {
+                "source": "L3.50",
+                "target": "L5.88",
+                "mechanism_type": "Clinical-Crisis",
+                "mechanism_desc": "Mental health crisis and decompensation manifests as emergency mental health intervention need"
+        },
+        {
+                "source": "L3.37",
+                "target": "L5.86",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Substance use and self-medication leads directly to overdose risk"
+        },
+        {
+                "source": "L3.37",
+                "target": "L5.87",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Substance use without formal diagnosis produces acute withdrawal crises"
+        },
+        {
+                "source": "L3.36",
+                "target": "L5.93",
+                "mechanism_type": "Social-Economic",
+                "mechanism_desc": "Social isolation and loss of support networks can precipitate homelessness"
+        },
+        {
+                "source": "L4.63",
+                "target": "L5.93",
+                "mechanism_type": "Behavioral-Economic",
+                "mechanism_desc": "Substance use disorders lead to loss of housing through inability to maintain employment and housing costs"
+        },
+        {
+                "source": "L2.28",
+                "target": "L4.62",
+                "mechanism_type": "Social-Biological",
+                "mechanism_desc": "Neighborhood violence exposure directly produces trauma and stress-related disorders"
+        },
+        {
+                "source": "L3.51",
+                "target": "L4.63",
+                "mechanism_type": "Behavioral",
+                "mechanism_desc": "Acute housing loss increases substance use disorders as coping mechanism"
+        },
+        {
+                "source": "L1.05",
+                "target": "L3.35",
+                "mechanism_type": "Economic-Biological",
+                "mechanism_desc": "Racialized exploitation produces direct weathering through discrimination stress"
+        },
+        {
+                "source": "L1.08",
+                "target": "L3.35",
+                "mechanism_type": "Carceral-Biological",
+                "mechanism_desc": "Police violence and surveillance produce chronic stress physiology"
+        },
+        {
+                "source": "L1.08",
+                "target": "L3.40",
+                "mechanism_type": "Carceral-Social",
+                "mechanism_desc": "State violence directly produces trauma exposure"
+        },
+        {
+                "source": "L1.05",
+                "target": "L3.41",
+                "mechanism_type": "Economic-Social",
+                "mechanism_desc": "Structural racism produces cumulative discrimination trauma"
+        },
+        {
+                "source": "L2.14",
+                "target": "L4.59",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Direct air pollution and toxin exposure damages lungs"
+        },
+        {
+                "source": "L2.14",
+                "target": "L4.70",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Carcinogen exposure produces cancer directly"
+        },
+        {
+                "source": "L2.14",
+                "target": "L4.60",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Lead and toxin exposure damages nervous system directly"
+        },
+        {
+                "source": "L2.13",
+                "target": "L4.59",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Mold, allergens, poor ventilation directly cause respiratory disease"
+        },
+        {
+                "source": "L2.22",
+                "target": "L4.56",
+                "mechanism_type": "Economic-Biological",
+                "mechanism_desc": "Direct nutritional deficiency/excess pathway to diabetes, obesity"
+        },
+        {
+                "source": "L2.22",
+                "target": "L4.55",
+                "mechanism_type": "Economic-Biological",
+                "mechanism_desc": "Poor nutrition directly affects cardiovascular health"
+        },
+        {
+                "source": "L3.35",
+                "target": "L5.77",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Acute stress response triggers heart attack/stroke directly"
+        },
+        {
+                "source": "L3.39",
+                "target": "L5.84",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Sleep deprivation increases fall risk through impaired coordination"
+        },
+        {
+                "source": "L3.38",
+                "target": "L5.84",
+                "mechanism_type": "Behavioral-Biological",
+                "mechanism_desc": "Inactivity reduces strength/balance increasing fall injury risk"
+        },
+        {
+                "source": "L3.43",
+                "target": "L5.77",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Extreme heat/cold directly triggers cardiovascular events"
+        },
+        {
+                "source": "L3.42",
+                "target": "L5.82",
+                "mechanism_type": "Environmental-Biological",
+                "mechanism_desc": "Toxin exposure can produce systemic infection directly"
+        },
+        {
+                "source": "L3.35",
+                "target": "L5.95",
+                "mechanism_type": "Biological",
+                "mechanism_desc": "Weathering and allostatic load reduce lifespan directly"
+        },
+        {
+                "source": "L3.52",
+                "target": "L5.93",
+                "mechanism_type": "Spatial-Economic",
+                "mechanism_desc": "Root shock from displacement leads directly to homelessness"
+        },
+        {
+                "source": "L2.32",
+                "target": "L5.93",
+                "mechanism_type": "Economic-Spatial",
+                "mechanism_desc": "Housing instability and eviction risk leads directly to homelessness"
+        },
+        {
+                "source": "L1.02",
+                "target": "L2.25",
+                "mechanism_type": "Economic-Digital",
+                "mechanism_desc": "Income level determines access to devices, broadband, and digital literacy resources"
+        },
+        {
+                "source": "L1.10",
+                "target": "L2.25",
+                "mechanism_type": "Institutional-Digital",
+                "mechanism_desc": "Safety net program access increasingly requires digital infrastructure for application and maintenance"
+        },
+        {
+                "source": "L2.20",
+                "target": "L3.48",
+                "mechanism_type": "Economic-Reproductive",
+                "mechanism_desc": "Economic strain during pregnancy creates chronic stress affecting fetal development and maternal health behaviors"
+        },
+        {
+                "source": "L2.26",
+                "target": "L3.48",
+                "mechanism_type": "Healthcare-Reproductive",
+                "mechanism_desc": "Healthcare coverage determines access to prenatal care and ability to manage pregnancy-related conditions"
+        },
+        {
+                "source": "L2.32",
+                "target": "L3.48",
+                "mechanism_type": "Housing-Reproductive",
+                "mechanism_desc": "Housing instability during pregnancy creates toxic stress and disrupts prenatal care continuity"
+        },
+        {
+                "source": "L2.20",
+                "target": "L3.50",
+                "mechanism_type": "Economic-Mental",
+                "mechanism_desc": "Severe economic crisis triggers acute mental health decompensation in vulnerable individuals"
+        },
+        {
+                "source": "L2.26",
+                "target": "L3.50",
+                "mechanism_type": "Healthcare-Mental",
+                "mechanism_desc": "Lack of insurance coverage prevents ongoing mental health treatment, leading to crisis"
+        },
+        {
+                "source": "L2.27",
+                "target": "L3.50",
+                "mechanism_type": "Social-Mental",
+                "mechanism_desc": "Social network fragmentation removes support systems that buffer mental health decline"
+        },
+        {
+                "source": "L2.32",
+                "target": "L3.50",
+                "mechanism_type": "Housing-Mental",
+                "mechanism_desc": "Acute housing loss precipitates mental health crisis through trauma and loss of stability"
+        },
+        {
+                "source": "L2.28",
+                "target": "L3.53",
+                "mechanism_type": "Violence-Familial",
+                "mechanism_desc": "Violence exposure forces family separation for safety or through system intervention"
+        },
+        {
+                "source": "L2.32",
+                "target": "L3.53",
+                "mechanism_type": "Housing-Familial",
+                "mechanism_desc": "Eviction and housing instability fractures families through doubling-up, shelter system separation, and foster care placement"
+        },
+        {
+                "source": "L2.31",
+                "target": "L3.41",
+                "mechanism_type": "Political-Protective",
+                "mechanism_desc": "Civic participation and political power enable communities to challenge discriminatory practices and advocate for equitable treatment"
+        },
+        {
+                "source": "L2.31",
+                "target": "L3.46",
+                "mechanism_type": "Political-Healthcare",
+                "mechanism_desc": "Organized political power secures healthcare resources and holds institutions accountable for quality and access"
+        }
+];
+
+        const nodes = {
+        "L1": [
+                [
+                        "L1.02",
+                        "Financial Resources"
+                ],
+                [
+                        "L1.04",
+                        "Property Ownership & Land Relations"
+                ],
+                [
+                        "L1.01",
+                        "Built Environment Quality"
+                ],
+                [
+                        "L1.03",
+                        "Community Cohesion & Power"
+                ],
+                [
+                        "L1.05",
+                        "Racial Capitalism & Structural Extraction"
+                ],
+                [
+                        "L1.08",
+                        "Carceral Systems & State Violence"
+                ],
+                [
+                        "L1.09",
+                        "Healthcare System Financing & Structure"
+                ],
+                [
+                        "L1.10",
+                        "Social Safety Net Design"
+                ],
+                [
+                        "L1.11",
+                        "Transportation Infrastructure"
+                ],
+        ],
+        "L2": [
+                [
+                        "L2.20",
+                        "Economic Strain & Material Hardship"
+                ],
+                [
+                        "L2.21",
+                        "Housing Cost Burden"
+                ],
+                [
+                        "L2.22",
+                        "Food Security & Access"
+                ],
+                [
+                        "L2.24",
+                        "Employment Precarity"
+                ],
+                [
+                        "L2.26",
+                        "Healthcare Coverage & Affordability"
+                ],
+                [
+                        "L2.32",
+                        "Housing Instability & Eviction Risk"
+                ],
+                [
+                        "L2.25",
+                        "Digital Infrastructure Access"
+                ],
+                [
+                        "L2.13",
+                        "Housing Quality & Condition"
+                ],
+                [
+                        "L2.14",
+                        "Environmental Hazards"
+                ],
+                [
+                        "L2.17",
+                        "Green Space Access"
+                ],
+                [
+                        "L2.18",
+                        "Public Space Quality"
+                ],
+                [
+                        "L2.23",
+                        "Transportation Barriers"
+                ],
+                [
+                        "L2.27",
+                        "Social Network Strength & Fragmentation"
+                ],
+                [
+                        "L2.28",
+                        "Neighborhood Safety & Violence Exposure"
+                ],
+                [
+                        "L2.29",
+                        "Institutional Access & Quality"
+                ],
+                [
+                        "L2.30",
+                        "Discrimination in Healthcare & Services"
+                ],
+                [
+                        "L2.31",
+                        "Civic Participation & Political Power"
+                ]
+        ],
+        "L3": [
+                [
+                        "L3.35",
+                        "Chronic Stress & Weathering"
+                ],
+                [
+                        "L3.37",
+                        "Substance Use & Self-Medication"
+                ],
+                [
+                        "L3.39",
+                        "Sleep Deprivation & Poor Sleep Quality"
+                ],
+                [
+                        "L3.44",
+                        "Nutritional Inadequacy"
+                ],
+                [
+                        "L3.45",
+                        "Occupational & Injury Risk Exposures"
+                ],
+                [
+                        "L3.46",
+                        "Healthcare Discontinuity & Unmet Need"
+                ],
+                [
+                        "L3.47",
+                        "Maternal Care Access & Utilization"
+                ],
+                [
+                        "L3.48",
+                        "Prenatal Stress & Health Behaviors"
+                ],
+                [
+                        "L3.49",
+                        "Chronic Disease Management Quality"
+                ],
+                [
+                        "L3.50",
+                        "Mental Health Crisis & Decompensation"
+                ],
+                [
+                        "L3.51",
+                        "Acute Housing Loss"
+                ],
+                [
+                        "L3.52",
+                        "Residential Displacement & Root Shock"
+                ],
+                [
+                        "L3.53",
+                        "Family Separation & Instability"
+                ],
+                [
+                        "L3.36",
+                        "Social Isolation & Loneliness"
+                ],
+                [
+                        "L3.38",
+                        "Physical Inactivity & Sedentary Behavior"
+                ],
+                [
+                        "L3.40",
+                        "Violence & Trauma Exposure"
+                ],
+                [
+                        "L3.41",
+                        "Discrimination & Cumulative Trauma"
+                ],
+                [
+                        "L3.42",
+                        "Environmental Exposure & Toxin Accumulation"
+                ],
+                [
+                        "L3.43",
+                        "Thermal Stress"
+                ]
+        ],
+        "L4": [
+                [
+                        "L4.55",
+                        "Cardiovascular Disease"
+                ],
+                [
+                        "L4.56",
+                        "Metabolic Disease"
+                ],
+                [
+                        "L4.57",
+                        "Renal Disease"
+                ],
+                [
+                        "L4.58",
+                        "Chronic Pain Syndrome"
+                ],
+                [
+                        "L4.59",
+                        "Respiratory Disease"
+                ],
+                [
+                        "L4.61",
+                        "Depression & Anxiety Disorders"
+                ],
+                [
+                        "L4.62",
+                        "Trauma & Stress-Related Disorders"
+                ],
+                [
+                        "L4.63",
+                        "Substance Use Disorders"
+                ],
+                [
+                        "L4.65",
+                        "Maternal Morbidity"
+                ],
+                [
+                        "L4.66",
+                        "Infant Health Outcomes"
+                ],
+                [
+                        "L4.67",
+                        "Pediatric Growth & Development"
+                ],
+                [
+                        "L4.68",
+                        "Childhood Obesity & Early-Onset Metabolic Disease"
+                ],
+                [
+                        "L4.69",
+                        "Infectious Disease"
+                ],
+                [
+                        "L4.70",
+                        "Cancer"
+                ],
+                [
+                        "L4.71",
+                        "Functional Decline & Disability"
+                ],
+                [
+                        "L4.72",
+                        "Liver Disease"
+                ],
+                [
+                        "L4.64",
+                        "Behavioral Disorders"
+                ],
+                [
+                        "L4.60",
+                        "Neurological & Developmental Disorders"
+                ]
+        ],
+        "L5": [
+                [
+                        "L5.73",
+                        "Emergency Department Visit - All Causes"
+                ],
+                [
+                        "L5.74",
+                        "Hospitalization - All Causes"
+                ],
+                [
+                        "L5.75",
+                        "Asthma Emergency"
+                ],
+                [
+                        "L5.76",
+                        "Diabetic Emergency"
+                ],
+                [
+                        "L5.77",
+                        "Cardiovascular Emergency"
+                ],
+                [
+                        "L5.78",
+                        "Respiratory Acute Event"
+                ],
+                [
+                        "L5.79",
+                        "Obstetric & Birth Emergency"
+                ],
+                [
+                        "L5.80",
+                        "Neonatal Intensive Care Admission"
+                ],
+                [
+                        "L5.82",
+                        "Sepsis & Systemic Infection"
+                ],
+                [
+                        "L5.84",
+                        "Fall & Injury Requiring Emergency Care"
+                ],
+                [
+                        "L5.86",
+                        "Overdose"
+                ],
+                [
+                        "L5.87",
+                        "Acute Withdrawal Crisis"
+                ],
+                [
+                        "L5.88",
+                        "Mental Health Crisis Requiring Emergency Intervention"
+                ],
+                [
+                        "L5.89",
+                        "Suicide Attempt & Completion"
+                ],
+                [
+                        "L5.90",
+                        "Carceral System Contact"
+                ],
+                [
+                        "L5.93",
+                        "Unshelteredness & Homelessness"
+                ],
+                [
+                        "L5.94",
+                        "Nursing Home Placement"
+                ],
+                [
+                        "L5.95",
+                        "Premature Mortality"
+                ]
+        ]
+};
+
+        const highlightedNodes = new Set([
+            "L1.01", "L1.02", "L1.03", "L1.04",
+            "L2.13", "L2.14", "L2.17", "L2.18", "L2.20", "L2.22", "L2.24", "L2.25", "L2.26", "L2.27", "L2.29", "L2.30",
+            "L3.36", "L3.37", "L3.38", "L3.42", "L3.43", "L3.44", "L3.46", "L3.47", "L3.48", "L3.50", "L3.51", "L3.54",
+            "L4.63",
+            "L5.93"
+        ]);
+
+        let activeNodeId = null;
+
+        function initializeDiagram() {
+            const svg = document.getElementById('diagram');
+            const container = document.getElementById('container');
+            
+            // Create main content group for zoom transforms
+            const mainGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+            mainGroup.setAttribute('id', 'main-content-group');
+            svg.appendChild(mainGroup);
+            
+            
+            const width = 18 * 96;
+            const height = 13 * 96;
+            
+            svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+            svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+            
+            const levels = ['L1', 'L2', 'L3', 'L4', 'L5'];
+            
+            const boxWidth = 120;
+            const lineHeight = 13;
+            const padding = 4;
+            const minBoxHeight = 35;
+            const edgeSpacing = 8;
+            
+            const horizontalMarginLeft = 150;
+            const horizontalMarginRight = 50;
+            const availableWidth = width - horizontalMarginLeft - horizontalMarginRight;
+            const levelSpacing = (availableWidth / (levels.length - 1)) * 0.85;
+            const nodePositions = {};
+            const nodeHeights = {};
+            
+            const calculateBoxHeight = (name) => {
+                const words = name.split(' ');
+                const maxCharsPerLine = 18;
+                let lines = [];
+                let currentLine = '';
+                
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxCharsPerLine && currentLine.length > 0) {
+                        lines.push(currentLine.trim());
+                        currentLine = word + ' ';
+                    } else {
+                        currentLine += word + ' ';
+                    }
+                });
+                if (currentLine.trim()) lines.push(currentLine.trim());
+                if (lines.length > 3) lines = lines.slice(0, 3);
+                
+                return Math.max(minBoxHeight, (lines.length * lineHeight) + (padding * 2));
+            };
+            
+            levels.forEach((level, levelIndex) => {
+                const levelNodes = nodes[level];
+                const x = horizontalMarginLeft + (levelIndex * levelSpacing);
+                
+                let totalHeight = 0;
+                levelNodes.forEach(([id, name]) => {
+                    const boxHeight = calculateBoxHeight(name);
+                    nodeHeights[id] = boxHeight;
+                    totalHeight += boxHeight;
+                });
+                totalHeight += (levelNodes.length - 1) * edgeSpacing;
+                
+                let currentY = (height - totalHeight) / 2;
+                
+                levelNodes.forEach(([id, name], nodeIndex) => {
+                    const boxHeight = nodeHeights[id];
+                    const y = currentY + (boxHeight / 2);
+                    nodePositions[id] = { x, y, name, level };
+                    currentY += boxHeight + edgeSpacing;
+                });
+            });
+            
+            const directParents = {};
+            const directChildren = {};
+            
+            connections.forEach(conn => {
+                const sourceLevel = parseInt(conn.source.split('.')[0].substring(1));
+                const targetLevel = parseInt(conn.target.split('.')[0].substring(1));
+                
+                if (targetLevel > sourceLevel) {
+                    if (!directChildren[conn.source]) directChildren[conn.source] = new Set();
+                    directChildren[conn.source].add(conn.target);
+                    
+                    if (!directParents[conn.target]) directParents[conn.target] = new Set();
+                    directParents[conn.target].add(conn.source);
+                }
+            });
+            
+            function getAllRelevantNodes(nodeId) {
+                const relevant = new Set([nodeId]);
+                
+                const focalLevel = nodeId.split('.')[0];
+                
+                function addAllAncestors(id) {
+                    if (directParents[id]) {
+                        directParents[id].forEach(parent => {
+                            if (!relevant.has(parent)) {
+                                relevant.add(parent);
+                                addAllAncestors(parent);
+                            }
+                        });
+                    }
+                }
+                
+                function addAllDescendants(id) {
+                    if (directChildren[id]) {
+                        directChildren[id].forEach(child => {
+                            if (!relevant.has(child)) {
+                                relevant.add(child);
+                                addAllDescendants(child);
+                            }
+                        });
+                    }
+                }
+                
+                connections.forEach(conn => {
+                    const sourceLevel = conn.source.split('.')[0];
+                    const targetLevel = conn.target.split('.')[0];
+                    
+                    if (conn.source === nodeId && sourceLevel === targetLevel) {
+                        relevant.add(conn.target);
+                    }
+                    if (conn.target === nodeId && sourceLevel === targetLevel) {
+                        relevant.add(conn.source);
+                    }
+                });
+                
+                addAllAncestors(nodeId);
+                addAllDescendants(nodeId);
+                
+                return relevant;
+            }
+            
+            const connectionGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+            connectionGroup.setAttribute('class', 'connections');
+            mainGroup.appendChild(connectionGroup);
+            
+            connections.forEach(conn => {
+                if (nodePositions[conn.source] && nodePositions[conn.target]) {
+                    const source = nodePositions[conn.source];
+                    const target = nodePositions[conn.target];
+                    
+                    const controlX = (source.x + target.x) / 2;
+                    const d = `M ${source.x} ${source.y} Q ${controlX} ${source.y}, ${controlX} ${(source.y + target.y) / 2} T ${target.x} ${target.y}`;
+                    
+                    const hitbox = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    hitbox.setAttribute('d', d);
+                    hitbox.setAttribute('class', 'connection-hitbox');
+                    hitbox.setAttribute('data-source', conn.source);
+                    hitbox.setAttribute('data-target', conn.target);
+                    hitbox.style.opacity = '1.0';
+                    
+                    const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    path.setAttribute('d', d);
+                    path.setAttribute('class', 'connection');
+                    path.setAttribute('data-source', conn.source);
+                    path.setAttribute('data-target', conn.target);
+                    path.style.opacity = '1.0';
+                    
+                    hitbox.addEventListener('mouseenter', (e) => {
+                        const tooltip = document.getElementById('mechanism-tooltip');
+                        tooltip.innerHTML = `<div class="mechanism-type">${conn.mechanism_type}</div>${conn.mechanism_desc}`;
+                        tooltip.style.display = 'block';
+                    });
+                    
+                    hitbox.addEventListener('mousemove', (e) => {
+                        const tooltip = document.getElementById('mechanism-tooltip');
+                        tooltip.style.left = (e.pageX + 15) + 'px';
+                        tooltip.style.top = (e.pageY + 15) + 'px';
+                    });
+                    
+                    hitbox.addEventListener('mouseleave', () => {
+                        const tooltip = document.getElementById('mechanism-tooltip');
+                        tooltip.style.display = 'none';
+                    });
+                    
+                    connectionGroup.appendChild(hitbox);
+                    connectionGroup.appendChild(path);
+                }
+            });
+            
+            const nodeGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+            nodeGroup.setAttribute('class', 'nodes');
+            mainGroup.appendChild(nodeGroup);
+            
+            Object.entries(nodePositions).forEach(([id, pos]) => {
+                const isHighlighted = highlightedNodes.has(id);
+                
+                const nodeElement = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+                nodeElement.setAttribute('class', `node ${isHighlighted ? 'highlighted-node' : ''}`);
+                nodeElement.setAttribute('data-id', id);
+                nodeElement.setAttribute('data-originally-highlighted', isHighlighted ? 'true' : 'false');
+                nodeElement.style.opacity = '1';
+                
+                const words = pos.name.split(' ');
+                const maxCharsPerLine = 18;
+                let lines = [];
+                let currentLine = '';
+                
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxCharsPerLine && currentLine.length > 0) {
+                        lines.push(currentLine.trim());
+                        currentLine = word + ' ';
+                    } else {
+                        currentLine += word + ' ';
+                    }
+                });
+                if (currentLine.trim()) lines.push(currentLine.trim());
+                if (lines.length > 3) {
+                    lines = lines.slice(0, 3);
+                    lines[2] = lines[2].substring(0, 15) + '...';
+                }
+                
+                const boxHeight = nodeHeights[id];
+                
+                const glow = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                glow.setAttribute('class', 'node-glow');
+                glow.setAttribute('x', pos.x - (boxWidth / 2) - 8);
+                glow.setAttribute('y', pos.y - (boxHeight / 2) - 8);
+                glow.setAttribute('width', boxWidth + 16);
+                glow.setAttribute('height', boxHeight + 16);
+                glow.setAttribute('rx', '8');
+                glow.setAttribute('ry', '8');
+                nodeElement.appendChild(glow);
+                
+                const bg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                bg.setAttribute('class', 'node-bg');
+                bg.setAttribute('x', pos.x - (boxWidth / 2));
+                bg.setAttribute('y', pos.y - (boxHeight / 2));
+                bg.setAttribute('width', boxWidth);
+                bg.setAttribute('height', boxHeight);
+                nodeElement.appendChild(bg);
+                
+                const startY = pos.y - ((lines.length - 1) * lineHeight / 2);
+                lines.forEach((line, i) => {
+                    const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    text.setAttribute('class', 'node-text');
+                    text.setAttribute('x', pos.x);
+                    text.setAttribute('y', startY + (i * lineHeight) + 5);
+                    text.textContent = line;
+                    nodeElement.appendChild(text);
+                });
+                
+                nodeElement.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const resetButton = document.getElementById('reset-btn');
+                    
+                    if (activeNodeId === id) {
+                        activeNodeId = null;
+                        
+                        document.querySelectorAll('.node').forEach(n => {
+                            n.style.opacity = '1';
+                            n.classList.remove('active');
+                            n.classList.remove('cyan-highlighted');
+                            
+                            if (n.getAttribute('data-originally-highlighted') === 'true') {
+                                n.classList.add('highlighted-node');
+                            }
+                            n.querySelectorAll('.node-text').forEach(text => {
+                                text.style.fontWeight = '500';
+                            });
+                        });
+                        
+                        document.querySelectorAll('.connection').forEach(c => {
+                            c.style.opacity = '1.0';
+                            c.classList.remove('highlighted');
+                        });
+                        
+                        document.querySelectorAll('.connection-hitbox').forEach(c => {
+                            c.style.opacity = '1.0';
+                            c.style.pointerEvents = 'auto';
+                        });
+                        
+                        resetButton.style.display = 'none';
+                        
+                        if (interventionsEnabled && currentPanelNode === id) {
+                            closeInterventionPanel();
+                        }
+                    } else {
+                        activeNodeId = id;
+                        const connectedNodes = getAllRelevantNodes(id);
+                        
+                        document.querySelectorAll('.node').forEach(n => {
+                            const nodeId = n.getAttribute('data-id');
+                            n.classList.remove('active');
+                            n.classList.remove('cyan-highlighted');
+                            
+                            n.classList.remove('highlighted-node');
+                            
+                            if (connectedNodes.has(nodeId)) {
+                                n.style.opacity = '1';
+                                n.querySelectorAll('.node-text').forEach(text => {
+                                    text.style.fontWeight = '700';
+                                });
+                            } else {
+                                n.style.opacity = '0.25';
+                                n.querySelectorAll('.node-text').forEach(text => {
+                                    text.style.fontWeight = '500';
+                                });
+                            }
+                        });
+                        
+                        nodeElement.classList.add('active');
+                        nodeElement.style.opacity = '1';
+                        
+                        nodeElement.classList.add('cyan-highlighted');
+                        
+                        if (interventionsEnabled && nodeInterventions[id]) {
+                            openInterventionPanel(id, pos.name);
+                        }
+                        
+                        document.querySelectorAll('.connection').forEach(c => {
+                            const source = c.getAttribute('data-source');
+                            const target = c.getAttribute('data-target');
+                            
+                            if (connectedNodes.has(source) && connectedNodes.has(target)) {
+                                c.style.opacity = '1.0';
+                                c.classList.add('highlighted');
+                            } else {
+                                c.style.opacity = '0.25';
+                                c.classList.remove('highlighted');
+                            }
+                        });
+                        
+                        document.querySelectorAll('.connection-hitbox').forEach(c => {
+                            const source = c.getAttribute('data-source');
+                            const target = c.getAttribute('data-target');
+                            
+                            if (connectedNodes.has(source) && connectedNodes.has(target)) {
+                                c.style.opacity = '1.0';
+                                c.style.pointerEvents = 'auto';
+                            } else {
+                                c.style.opacity = '0.25';
+                                c.style.pointerEvents = 'none';
+                            }
+                        });
+                        
+                        resetButton.style.display = 'block';
+                    }
+                });
+                
+                if (nodeInterventions[id]) {
+                    nodeElement.addEventListener('mouseenter', (e) => {
+                        const tooltip = document.getElementById('intervention-count-tooltip');
+                        const count = nodeInterventions[id].length;
+                        tooltip.textContent = count === 1 ? '1 intervention' : `${count} interventions`;
+                        tooltip.style.display = 'block';
+                        tooltip.style.left = e.pageX + 10 + 'px';
+                        tooltip.style.top = e.pageY + 10 + 'px';
+                    });
+                    
+                    nodeElement.addEventListener('mousemove', (e) => {
+                        const tooltip = document.getElementById('intervention-count-tooltip');
+                        tooltip.style.left = e.pageX + 10 + 'px';
+                        tooltip.style.top = e.pageY + 10 + 'px';
+                    });
+                    
+                    nodeElement.addEventListener('mouseleave', () => {
+                        const tooltip = document.getElementById('intervention-count-tooltip');
+                        tooltip.style.display = 'none';
+                    });
+                }
+                
+                nodeGroup.appendChild(nodeElement);
+            });
+            
+            const levelMinYPositions = {};
+            levels.forEach(level => {
+                const levelNodes = Object.entries(nodePositions).filter(([id, pos]) => pos.level === level);
+                if (levelNodes.length > 0) {
+                    const minY = Math.min(...levelNodes.map(([id, pos]) => pos.y - nodeHeights[id] / 2));
+                    levelMinYPositions[level] = minY;
+                }
+            });
+            
+            const axesGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+            axesGroup.setAttribute('class', 'axis-arrow-group');
+            axesGroup.setAttribute('id', 'axes-arrow-group');
+            axesGroup.style.opacity = '0';
+            axesGroup.style.pointerEvents = 'none';
+            
+            const arrowY = height - 70;
+            const arrowStartX = horizontalMarginLeft + (0.3 * levelSpacing);
+            const arrowEndX = horizontalMarginLeft + (3.7 * levelSpacing);
+            const curveHeight = 60;
+            
+            const labelStartX = horizontalMarginLeft + (0 * levelSpacing);
+            const labelEndX = horizontalMarginLeft + (4 * levelSpacing);
+            
+            const leftLabelText = ['Difficult to Quantify', 'Generalizable', 'Preventative'];
+            leftLabelText.forEach((text, i) => {
+                const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                label.setAttribute('class', 'axis-label-svg');
+                label.setAttribute('x', labelStartX);
+                label.setAttribute('y', arrowY - 35 + (i * 16));
+                label.setAttribute('text-anchor', 'middle');
+                label.textContent = text;
+                axesGroup.appendChild(label);
+            });
+            
+            const rightLabelText = ['Empirically Measurable', 'Contextually Specific to Roxbury', 'Responsive'];
+            rightLabelText.forEach((text, i) => {
+                const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                label.setAttribute('class', 'axis-label-svg');
+                label.setAttribute('x', labelEndX);
+                label.setAttribute('y', arrowY - 35 + (i * 16));
+                label.setAttribute('text-anchor', 'middle');
+                label.textContent = text;
+                axesGroup.appendChild(label);
+            });
+            
+            const arrowPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            arrowPath.setAttribute('class', 'axis-arrow-line');
+            const midX = (arrowStartX + arrowEndX) / 2;
+            const curveD = `M ${arrowStartX} ${arrowY} Q ${midX} ${arrowY + curveHeight} ${arrowEndX} ${arrowY}`;
+            arrowPath.setAttribute('d', curveD);
+            axesGroup.appendChild(arrowPath);
+            
+            const leftArrowHead = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+            leftArrowHead.setAttribute('class', 'axis-arrow-head');
+            leftArrowHead.setAttribute('points', `${arrowStartX},${arrowY} ${arrowStartX + 15},${arrowY - 8} ${arrowStartX + 15},${arrowY + 8}`);
+            axesGroup.appendChild(leftArrowHead);
+            
+            const rightArrowHead = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+            rightArrowHead.setAttribute('class', 'axis-arrow-head');
+            rightArrowHead.setAttribute('points', `${arrowEndX},${arrowY} ${arrowEndX - 15},${arrowY - 8} ${arrowEndX - 15},${arrowY + 8}`);
+            axesGroup.appendChild(rightArrowHead);
+            
+            const leftLabelTextBottom = ['Gradual Impact', 'Structural Focus'];
+            leftLabelTextBottom.forEach((text, i) => {
+                const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                label.setAttribute('class', 'axis-label-svg');
+                label.setAttribute('x', labelStartX);
+                label.setAttribute('y', arrowY + 13 + (i * 16));
+                label.setAttribute('text-anchor', 'middle');
+                label.textContent = text;
+                axesGroup.appendChild(label);
+            });
+            
+            const rightLabelTextBottom = ['Immediate Impact', 'Individual Focus'];
+            rightLabelTextBottom.forEach((text, i) => {
+                const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                label.setAttribute('class', 'axis-label-svg');
+                label.setAttribute('x', labelEndX);
+                label.setAttribute('y', arrowY + 13 + (i * 16));
+                label.setAttribute('text-anchor', 'middle');
+                label.textContent = text;
+                axesGroup.appendChild(label);
+            });
+            
+            mainGroup.appendChild(axesGroup);
+            
+            const levelDescriptions = {
+                'L1': { title: 'L1 - High level/regional & global structural issues', desc: 'Macro-level forces including global economic systems, federal policies, and regional political-economic structures that shape health determinants across populations.' },
+                'L2': { title: 'L2 - Local structural and built environment issues', desc: 'Municipal policies, neighborhood infrastructure, housing markets, and physical environments that directly shape daily living conditions and health exposures.' },
+                'L3': { title: 'L3 - Specific individual and local health risk factors', desc: 'Concrete determinants affecting health at the household and individual level, including employment, education, housing quality, and environmental exposures.' },
+                'L4': { title: 'L4 - Individual illness and health complications', desc: 'Disease states, chronic conditions, and health complications requiring medical intervention and care management.' },
+                'L5': { title: 'L5 - Individual crisis end points', desc: 'Acute health crises and severe outcomes representing failures of upstream prevention, requiring immediate intensive intervention.' }
+            };
+            
+            Object.entries(levelDescriptions).forEach(([level, data]) => {
+                const levelGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+                levelGroup.setAttribute('class', 'level-description-group');
+                levelGroup.setAttribute('id', `level-desc-${level}`);
+                levelGroup.style.opacity = '0';
+                levelGroup.style.pointerEvents = 'none';
+                
+                const levelNodes = Object.entries(nodePositions).filter(([id, pos]) => pos.level === level);
+                const levelX = levelNodes.length > 0 ? levelNodes[0][1].x : width / 2;
+                
+                let titleY;
+                const topDescriptionY = 85;
+                const middleDescriptionY = 55;
+                const halfwayDescriptionY = (topDescriptionY + middleDescriptionY) / 2;
+                
+                if (level === 'L1' || level === 'L5') {
+                    titleY = topDescriptionY;
+                } else if (level === 'L2' || level === 'L4') {
+                    titleY = halfwayDescriptionY;
+                } else {
+                    titleY = middleDescriptionY;
+                }
+                
+                const title = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                title.setAttribute('class', 'level-desc-title');
+                title.setAttribute('x', levelX);
+                title.setAttribute('y', titleY);
+                title.textContent = data.title;
+                levelGroup.appendChild(title);
+                
+                const words = data.desc.split(' ');
+                let lines = [];
+                let currentLine = '';
+                const maxCharsPerLine = 40;
+                
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxCharsPerLine && currentLine.length > 0) {
+                        lines.push(currentLine.trim());
+                        currentLine = word + ' ';
+                    } else {
+                        currentLine += word + ' ';
+                    }
+                });
+                if (currentLine.trim()) lines.push(currentLine.trim());
+                
+                lines.forEach((line, i) => {
+                    const descText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    descText.setAttribute('class', 'level-desc-text');
+                    descText.setAttribute('x', levelX);
+                    descText.setAttribute('y', titleY + 18 + (i * 14));
+                    descText.textContent = line;
+                    levelGroup.appendChild(descText);
+                });
+                
+                mainGroup.appendChild(levelGroup);
+            });
+            
+            function openInterventionPanel(nodeId, nodeName) {
+                const panel = document.getElementById('intervention-panel');
+                const overlay = document.getElementById('panel-overlay');
+                const panelNodeId = document.getElementById('panel-node-id');
+                const panelNodeName = document.getElementById('panel-node-name');
+                const panelContent = document.getElementById('panel-content');
+                const countText = document.getElementById('intervention-count-text');
+                
+                const interventions = nodeInterventions[nodeId];
+                
+                if (!interventions) {
+                    return;
+                }
+                
+                panelNodeId.textContent = nodeId;
+                panelNodeName.textContent = nodeName;
+                const count = interventions.length;
+                countText.textContent = `INTERVENTIONS TARGETING THIS NODE (${count})`;
+                
+                panelContent.innerHTML = '';
+                interventions.forEach(intervention => {
+                    const card = document.createElement('div');
+                    card.className = 'intervention-card';
+                    
+                    const name = document.createElement('div');
+                    name.className = 'intervention-name';
+                    name.textContent = intervention;
+                    
+                    card.appendChild(name);
+                    panelContent.appendChild(card);
+                });
+                
+                overlay.classList.add('active');
+                panel.classList.add('active');
+                currentPanelNode = nodeId;
+            }
+            
+            function closeInterventionPanel() {
+                const panel = document.getElementById('intervention-panel');
+                const overlay = document.getElementById('panel-overlay');
+                
+                overlay.classList.remove('active');
+                panel.classList.remove('active');
+                currentPanelNode = null;
+            }
+            
+            document.getElementById('reset-btn').addEventListener('click', () => {
+                activeNodeId = null;
+                
+                document.querySelectorAll('.node').forEach(n => {
+                    n.style.opacity = '1';
+                    n.classList.remove('active');
+                    n.classList.remove('cyan-highlighted');
+                    
+                    if (n.getAttribute('data-originally-highlighted') === 'true') {
+                        n.classList.add('highlighted-node');
+                    }
+                    n.querySelectorAll('.node-text').forEach(text => {
+                        text.style.fontWeight = '500';
+                    });
+                });
+                
+                document.querySelectorAll('.connection').forEach(c => {
+                    c.style.opacity = '1.0';
+                    c.classList.remove('highlighted');
+                });
+                
+                document.querySelectorAll('.connection-hitbox').forEach(c => {
+                    c.style.opacity = '1.0';
+                    c.style.pointerEvents = 'auto';
+                });
+                
+                document.getElementById('reset-btn').style.display = 'none';
+                
+                if (interventionsEnabled) {
+                    closeInterventionPanel();
+                }
+            });
+            
+            document.getElementById('interventions-btn').addEventListener('click', () => {
+                const button = document.getElementById('interventions-btn');
+                interventionsEnabled = !interventionsEnabled;
+                
+                if (interventionsEnabled) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                    closeInterventionPanel();
+                }
+            });
+            
+            document.getElementById('panel-close').addEventListener('click', () => {
+                closeInterventionPanel();
+            });
+            
+            document.getElementById('panel-overlay').addEventListener('click', () => {
+                closeInterventionPanel();
+            });
+            
+            document.getElementById('diagram').addEventListener('click', () => {
+                if (currentPanelNode !== null) {
+                    closeInterventionPanel();
+                }
+            });
+            
+            document.getElementById('axes-btn').addEventListener('click', () => {
+                const axesGroup = document.getElementById('axes-arrow-group');
+                const currentOpacity = axesGroup.style.opacity;
+                
+                if (currentOpacity === '0' || currentOpacity === '') {
+                    axesGroup.style.opacity = '1';
+                    axesGroup.style.pointerEvents = 'auto';
+                } else {
+                    axesGroup.style.opacity = '0';
+                    axesGroup.style.pointerEvents = 'none';
+                }
+            });
+            
+            document.getElementById('levels-btn').addEventListener('click', () => {
+                const levelGroups = document.querySelectorAll('.level-description-group');
+                const firstGroup = levelGroups[0];
+                const currentOpacity = firstGroup.style.opacity;
+                
+                levelGroups.forEach(group => {
+                    if (currentOpacity === '0' || currentOpacity === '') {
+                        group.style.opacity = '1';
+                        group.style.pointerEvents = 'auto';
+                    } else {
+                        group.style.opacity = '0';
+                        group.style.pointerEvents = 'none';
+                    }
+                });
+            });
+            
+            document.getElementById('interventions-btn').classList.add('active');
+        }
+        
+        function initializeZoom() {
+            let currentScale = 1;
+            let currentTranslate = { x: 0, y: 0 };
+            const minScale = 0.5;
+            const maxScale = 100;  // Essentially unlimited zoom
+            const scaleStep = 0.1;
+            const svgElement = document.getElementById('diagram');
+            const mainGroup = document.getElementById('main-content-group');
+            
+            if (!svgElement || !mainGroup) return;
+            
+            function applyTransform() {
+                mainGroup.setAttribute('transform', 
+                    `translate(${currentTranslate.x}, ${currentTranslate.y}) scale(${currentScale})`);
+            }
+            
+            function getSVGPoint(clientX, clientY) {
+                const pt = svgElement.createSVGPoint();
+                pt.x = clientX;
+                pt.y = clientY;
+                return pt.matrixTransform(svgElement.getScreenCTM().inverse());
+            }
+
+            let isPanning = false;
+            let panStart = { x: 0, y: 0 };
+            let lastTranslate = { x: 0, y: 0 };
+            
+            // Mouse panning
+            svgElement.addEventListener('mousedown', (e) => {
+                // Only pan if not clicking a node or connection
+                if (e.target === svgElement || e.target === mainGroup || 
+                    e.target.tagName === 'svg' || e.target.tagName === 'g') {
+                    isPanning = true;
+                    panStart = { x: e.clientX, y: e.clientY };
+                    lastTranslate = { ...currentTranslate };
+                    svgElement.style.cursor = 'grabbing';
+                    e.preventDefault();
+                }
+            });
+            
+            svgElement.addEventListener('mousemove', (e) => {
+                if (isPanning) {
+                    const dx = e.clientX - panStart.x;
+                    const dy = e.clientY - panStart.y;
+                    
+                    // Apply pan in screen space for consistent speed
+                    currentTranslate.x = lastTranslate.x + dx;
+                    currentTranslate.y = lastTranslate.y + dy;
+                    
+                    applyTransform();
+                    e.preventDefault();
+                }
+            });
+            
+            svgElement.addEventListener('mouseup', () => {
+                if (isPanning) {
+                    isPanning = false;
+                    svgElement.style.cursor = 'default';
+                }
+            });
+            
+            svgElement.addEventListener('mouseleave', () => {
+                if (isPanning) {
+                    isPanning = false;
+                    svgElement.style.cursor = 'default';
+                }
+            });
+            
+            // Touch panning (single finger)
+            let touchPanStart = null;
+            
+            svgElement.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 1 && !isZooming) {
+                    touchPanStart = {
+                        x: e.touches[0].clientX,
+                        y: e.touches[0].clientY,
+                        translate: { ...currentTranslate }
+                    };
+                }
+            }, { passive: true });
+            
+            svgElement.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 1 && touchPanStart && !isZooming) {
+                    const dx = e.touches[0].clientX - touchPanStart.x;
+                    const dy = e.touches[0].clientY - touchPanStart.y;
+                    
+                    // Apply pan in screen space with mobile multiplier for faster response
+                    const mobilePanMultiplier = 2.0;  // Makes mobile panning 2x faster
+                    currentTranslate.x = touchPanStart.translate.x + (dx * mobilePanMultiplier);
+                    currentTranslate.y = touchPanStart.translate.y + (dy * mobilePanMultiplier);
+                    
+                    applyTransform();
+                }
+            }, { passive: true });
+            
+            svgElement.addEventListener('touchend', (e) => {
+                if (e.touches.length === 0) {
+                    touchPanStart = null;
+                }
+            }, { passive: true });
+            
+
+            let isZooming = false;
+            let initialDistance = 0;
+            let initialScale = 1;
+            let zoomCenter = null;
+            
+            svgElement.addEventListener('touchstart', (e) => {
+                if (e.touches.length === 2) {
+                    e.preventDefault();
+                    touchPanStart = null;  // Cancel any ongoing pan
+                    isZooming = true;
+                    
+                    const touch1 = e.touches[0];
+                    const touch2 = e.touches[1];
+                    
+                    initialDistance = Math.hypot(
+                        touch2.clientX - touch1.clientX,
+                        touch2.clientY - touch1.clientY
+                    );
+                    
+                    initialScale = currentScale;
+                    
+                    // Calculate center point in SVG coordinates
+                    const centerX = (touch1.clientX + touch2.clientX) / 2;
+                    const centerY = (touch1.clientY + touch2.clientY) / 2;
+                    zoomCenter = getSVGPoint(centerX, centerY);
+                }
+            }, { passive: false });
+            
+            svgElement.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 2 && isZooming && zoomCenter) {
+                    e.preventDefault();
+                    
+                    const touch1 = e.touches[0];
+                    const touch2 = e.touches[1];
+                    
+                    const currentDistance = Math.hypot(
+                        touch2.clientX - touch1.clientX,
+                        touch2.clientY - touch1.clientY
+                    );
+                    
+                    const scaleRatio = currentDistance / initialDistance;
+                    let newScale = initialScale * scaleRatio;
+                    
+                    newScale = Math.min(Math.max(newScale, minScale), maxScale);
+                    
+                    if (Math.abs(newScale - currentScale) > 0.001) {
+                        // Adjust translation to keep zoom center fixed
+                        const scaleDelta = newScale / currentScale;
+                        currentTranslate.x -= (zoomCenter.x - currentTranslate.x) * (scaleDelta - 1);
+                        currentTranslate.y -= (zoomCenter.y - currentTranslate.y) * (scaleDelta - 1);
+                        currentScale = newScale;
+                        
+                        applyTransform();
+                    }
+                }
+            }, { passive: false });
+            
+            svgElement.addEventListener('touchend', (e) => {
+                if (isZooming && e.touches.length < 2) {
+                    isZooming = false;
+                    zoomCenter = null;
+                }
+            }, { passive: false });
+            
+            svgElement.addEventListener('touchcancel', () => {
+                isZooming = false;
+                zoomCenter = null;
+            }, { passive: false });
+            
+            svgElement.addEventListener('wheel', (e) => {
+                if (e.ctrlKey || e.metaKey) {
+                    e.preventDefault();
+                    
+                    // Get cursor position in SVG coordinates
+                    const cursor = getSVGPoint(e.clientX, e.clientY);
+                    
+                    const delta = e.deltaY > 0 ? -scaleStep : scaleStep;
+                    const newScale = Math.min(Math.max(currentScale + delta, minScale), maxScale);
+                    
+                    if (Math.abs(newScale - currentScale) > 0.001) {
+                        // Calculate zoom factor
+                        const zoom = newScale / currentScale;
+                        
+                        // Adjust translation to keep cursor position fixed
+                        currentTranslate.x -= (cursor.x - currentTranslate.x) * (zoom - 1);
+                        currentTranslate.y -= (cursor.y - currentTranslate.y) * (zoom - 1);
+                        currentScale = newScale;
+                        
+                        applyTransform();
+                    }
+                }
+            }, { passive: false });
+        }
+        
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                initializeDiagram();
+                initializeZoom();
+            });
+        } else {
+            initializeDiagram();
+            initializeZoom();
+        }
+    </script>
+</body>
+</html>

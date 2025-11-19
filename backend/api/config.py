@@ -3,12 +3,20 @@ Application configuration management.
 """
 
 from pydantic_settings import BaseSettings
-from typing import List
+from typing import List, Optional
 import os
 
 
 class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
+
+    # LLM API Keys
+    anthropic_api_key: Optional[str] = None
+
+    # Literature Search APIs
+    semantic_scholar_api_key: Optional[str] = None
+    pubmed_email: Optional[str] = None
+    pubmed_api_key: Optional[str] = None
 
     # Application
     environment: str = "development"
@@ -18,10 +26,12 @@ class Settings(BaseSettings):
     # API
     api_host: str = "0.0.0.0"
     api_port: int = int(os.getenv("PORT", "8000"))
+    api_reload: bool = True
     allowed_origins: List[str] = ["http://localhost:3000", "http://localhost:8000"]
 
     # Database
     database_url: str = "postgresql://healthsystems_user:changeme@localhost:5432/healthsystems"
+    database_test_url: Optional[str] = None
 
     # Redis
     redis_url: str = "redis://localhost:6379/0"
@@ -61,6 +71,14 @@ class Settings(BaseSettings):
     enable_graph_database: bool = False
     enable_real_time_updates: bool = False
     enable_export_reports: bool = True
+
+    # Mechanism Bank Settings
+    mechanism_bank_path: str = "../mechanism-bank/mechanisms"
+    mvp_extraction_max_tokens: int = 4000
+    mvp_extraction_model: str = "claude-sonnet-4-20250514"
+    min_evidence_quality: str = "C"
+    min_confidence: str = "medium"
+    enable_structural_competency_check: bool = True
 
     class Config:
         env_file = ".env"

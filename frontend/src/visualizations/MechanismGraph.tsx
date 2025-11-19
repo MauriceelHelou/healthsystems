@@ -4,10 +4,10 @@
  * Enhanced with design system colors, states, and interactions.
  */
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
 import { SystemsNetwork, MechanismNode, MechanismEdge } from '../types/mechanism';
-import { getCategoryColor } from '../utils/colors';
+import { colors, getCategoryBorder } from '../utils/colors';
 
 interface MechanismGraphProps {
   data: SystemsNetwork;
@@ -64,7 +64,7 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
       .force('center', d3.forceCenter(width / 2, height / 2))
       .force('collision', d3.forceCollide().radius(50));
 
-    // Create links
+    // Create links (gray edges)
     const link = svg
       .append('g')
       .attr('class', 'links')
@@ -72,9 +72,9 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
       .data(data.edges)
       .enter()
       .append('line')
-      .attr('stroke', '#999')
-      .attr('stroke-opacity', 0.6)
-      .attr('stroke-width', (d) => Math.sqrt(d.strength) * 2);
+      .attr('stroke', colors.edgeDefault)
+      .attr('stroke-opacity', 0.4)
+      .attr('stroke-width', 1);
 
     // Create nodes
     const node = svg
@@ -95,27 +95,59 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
           .on('end', dragEnded) as any
       );
 
-    // Add circles to nodes
-    node
-      .append('circle')
-      .attr('r', (d) => Math.sqrt(d.weight) * 20)
-      .attr('fill', (d) => getCategoryColor(d.category))
-      .attr('stroke', '#fff')
-      .attr('stroke-width', 2);
+    // Add rectangles to nodes (white with gray border)
+    const nodeWidth = 80;
+    const nodeHeight = 40;
 
-    // Add labels
+    node
+      .append('rect')
+      .attr('width', nodeWidth)
+      .attr('height', nodeHeight)
+      .attr('x', -nodeWidth / 2)
+      .attr('y', -nodeHeight / 2)
+      .attr('rx', 4) // Rounded corners
+      .attr('fill', colors.nodeDefault)
+      .attr('stroke', (d) => getCategoryBorder(d.category))
+      .attr('stroke-width', 1)
+      .style('filter', 'drop-shadow(0 1px 2px rgba(0, 0, 0, 0.05))');
+
+    // Add labels (compact, centered text)
     node
       .append('text')
-      .text((d) => d.label)
+      .text((d) => {
+        // Truncate long labels
+        const maxLength = 12;
+        return d.label.length > maxLength
+          ? d.label.substring(0, maxLength) + '...'
+          : d.label;
+      })
       .attr('x', 0)
       .attr('y', 4)
       .attr('text-anchor', 'middle')
-      .attr('font-size', '12px')
-      .attr('fill', '#333')
+      .attr('font-size', '11px')
+      .attr('font-weight', '500')
+      .attr('fill', colors.textPrimary)
       .attr('pointer-events', 'none');
 
+    // Add hover states (orange accent)
+    node
+      .on('mouseenter', function () {
+        d3.select(this)
+          .select('rect')
+          .attr('fill', colors.nodeHover)
+          .attr('stroke', colors.orange)
+          .attr('stroke-width', 2);
+      })
+      .on('mouseleave', function () {
+        d3.select(this)
+          .select('rect')
+          .attr('fill', colors.nodeDefault)
+          .attr('stroke', colors.nodeBorder)
+          .attr('stroke-width', 1);
+      });
+
     // Add click handler
-    node.on('click', (event, d) => {
+    node.on('click', (_event, d) => {
       if (onNodeClick) {
         onNodeClick(d);
       }

@@ -1,0 +1,71 @@
+id: childhood_aces_to_alcohol_use_disorder
+name: Childhood Adverse Experiences (ACEs) → Alcohol Use Disorder
+from_node:
+  node_id: childhood_adverse_experiences
+  node_name: Childhood Adverse Experiences (ACEs Score)
+  node_type: stock
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+  node_type: stock
+direction: positive
+category: behavioral
+mechanism_pathway:
+  - 'Step 1: Childhood adversity (abuse, neglect, household dysfunction) causes toxic stress and disrupts neurodevelopment of limbic and prefrontal systems'
+  - 'Step 2: Altered stress response systems (HPA axis dysregulation) create heightened reactivity to stressors and impaired emotional regulation'
+  - 'Step 3: Developmental trauma increases vulnerability to substance use as maladaptive coping for emotional pain and hyperarousal'
+  - 'Step 4: Early alcohol initiation (often in adolescence) provides temporary relief from trauma symptoms but reinforces self-medication pattern'
+  - 'Step 5: Chronic use for affect regulation combined with neurobiological vulnerability leads to addiction with each additional ACE increasing AUD risk 50%'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'Dube, Shanta R., Vincent J. Felitti, Maxia Dong, Wayne H. Giles, and Robert F. Anda. 2003. "Childhood abuse, neglect, and household dysfunction and the risk of illicit drug use: The Adverse Childhood Experiences Study." Pediatrics 111(3): 564-572. https://doi.org/10.1542/peds.111.3.564'
+  supporting_citations:
+    - 'Felitti, Vincent J., Robert F. Anda, Dale Nordenberg, et al. 1998. "Relationship of childhood abuse and household dysfunction to many of the leading causes of death in adults: The Adverse Childhood Experiences (ACE) Study." American Journal of Preventive Medicine 14(4): 245-258.'
+    - 'Hughes, Karen, Mark A. Bellis, Katherine A. Hardcastle, et al. 2017. "The effect of multiple adverse childhood experiences on health: A systematic review and meta-analysis." The Lancet Public Health 2(8): e356-e366.'
+  doi: '10.1542/peds.111.3.564'
+last_updated: '2025-11-18'
+version: '1.0'
+description: Childhood adversity causes neurobiological changes and maladaptive coping patterns that substantially increase alcohol use disorder risk through self-medication of trauma symptoms and impaired stress regulation.
+moderators:
+  - name: social_support
+    direction: weakens
+    strength: strong
+    description: Stable supportive relationships buffer ACE effects and reduce AUD risk by 40-50%
+  - name: mental_health_treatment
+    direction: weakens
+    strength: moderate
+    description: Trauma-focused therapy addresses root trauma and reduces substance use as maladaptive coping
+  - name: early_alcohol_access
+    direction: strengthens
+    strength: strong
+    description: Easy alcohol access in adolescence amplifies ACE-related risk through earlier initiation
+  - name: additional_adult_trauma
+    direction: strengthens
+    strength: moderate
+    description: Continued trauma exposure in adulthood compounds ACE effects
+structural_competency:
+  root_cause_level: policy
+  avoids_victim_blaming: true
+  equity_implications: The ACEs-to-AUD pathway reflects intergenerational cycles of structural violence and deprivation. ACEs disproportionately cluster in communities experiencing poverty, racism, mass incarceration, and disinvestment. These are not random individual experiences but predictable outcomes of policy choices about economic inequality, family support systems, child welfare funding, and criminal justice approaches. High ACE prevalence in marginalized communities represents cumulative structural trauma that increases AUD risk. Interrupting this pathway requires investments in family economic security, parental mental health and addiction services, high-quality childcare, and community violence prevention—not just treating individual addiction downstream.
+assumptions:
+  - 'ACEs typically assessed by standard 10-item questionnaire (abuse, neglect, household dysfunction)'
+  - 'Dose-response relationship where each additional ACE incrementally increases risk'
+  - 'Mechanism operates through both neurobiological changes and learned coping patterns'
+limitations:
+  - 'Not all individuals with high ACEs develop AUD; protective factors create resilience'
+  - 'Standard ACE measure may not capture community-level trauma (racism, violence, poverty)'
+  - 'Timing and type of adversity may matter beyond simple cumulative score'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: ACE prevalence varies 2-3 fold across communities, driven by structural determinants that also shape AUD rates
+  relevant_geographies:
+    - 'Communities with high poverty, incarceration, and family separation show elevated ACE prevalence'
+    - 'Rural areas with limited mental health services show stronger ACE-AUD association'
+    - 'Native American communities face historical and ongoing collective trauma increasing both ACEs and AUD'
+    - 'Neighborhoods with strong social cohesion show buffering effects despite high individual ACE exposure'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

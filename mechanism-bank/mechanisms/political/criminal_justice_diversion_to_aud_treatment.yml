@@ -1,0 +1,71 @@
+id: criminal_justice_diversion_to_aud_treatment
+name: Criminal Justice Diversion Programs → AUD Treatment Access
+from_node:
+  node_id: criminal_justice_contact_any
+  node_name: Criminal Justice System Contact (Any)
+  node_type: stock
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+  node_type: stock
+direction: negative
+category: political
+mechanism_pathway:
+  - 'Step 1: Pre-trial diversion, drug courts, and treatment alternatives to incarceration identify individuals with AUD in criminal justice system'
+  - 'Step 2: Court mandate or incentive structure (charges dropped/reduced) overcomes individual barriers to treatment initiation'
+  - 'Step 3: Diversion programs connect justice-involved individuals to community-based treatment services they otherwise wouldn't access'
+  - 'Step 4: Supervision and accountability from court or probation supports treatment engagement and completion'
+  - 'Step 5: Successful treatment completion reduces recidivism, addresses underlying AUD, and interrupts cycle of addiction and justice involvement'
+evidence:
+  quality_rating: A
+  n_studies: 19
+  primary_citation: 'Belenko, Steven, Matthew Hiller, and Leah Hamilton. 2013. "Treating substance use disorders in the criminal justice system." Current Psychiatry Reports 15(11): 414. https://doi.org/10.1007/s11920-013-0414-z'
+  supporting_citations:
+    - 'Mitchell, Ojmarrh, David B. Wilson, Amy Eggers, and Doris L. MacKenzie. 2012. "Drug courts' effects on criminal offending for juveniles and adults." Campbell Systematic Reviews 8(1): 1-87.'
+    - 'Marlowe, Douglas B., David S. Festinger, and Patricia A. Lee. 2004. "The judge is a key component of drug court." Drug Court Review 4(2): 1-34.'
+  doi: '10.1007/s11920-013-0414-z'
+last_updated: '2025-11-18'
+version: '1.0'
+description: Criminal justice diversion programs increase treatment access for individuals with alcohol use disorder by identifying cases, providing mandate or incentive for treatment, connecting to services, and offering accountability for engagement.
+moderators:
+  - name: program_quality
+    direction: strengthens
+    strength: strong
+    description: Programs offering evidence-based treatment (not just supervision) show better AUD outcomes
+  - name: coercion_vs_incentive
+    direction: u_shaped
+    strength: moderate
+    description: Incentive-based approaches may be more effective than purely punitive mandates for long-term recovery
+  - name: treatment_capacity
+    direction: strengthens
+    strength: strong
+    description: Diversion only works if adequate community treatment slots exist to serve referred individuals
+  - name: racial_equity
+    direction: u_shaped
+    strength: strong
+    description: Diversion access must be equitable; often white defendants access diversion while defendants of color face incarceration
+structural_competency:
+  root_cause_level: policy
+  avoids_victim_blaming: true
+  equity_implications: Criminal justice diversion represents partial recognition that addiction is health issue, not crime—but operates within fundamentally unjust system. Criminalization of addiction itself reflects policy choice to punish rather than treat. Diversion programs show racial inequities with white defendants accessing treatment while Black and Latino defendants face incarceration for identical behaviors. Drug courts can be coercive, punishing relapse as criminal behavior rather than medical symptom. The existence of diversion as "alternative" normalizes criminalization as default. Communities of color experience both over-policing that funnels people into system AND under-resourcing of voluntary treatment alternatives. Diversion is harm reduction within punitive system but inadequate solution. True structural competency requires: decriminalization of addiction, investment in voluntary community treatment exceeding diversion capacity, elimination of racial disparities in diversion access, and challenging premise that criminal justice system should be gateway to healthcare.
+assumptions:
+  - 'Diversion programs include drug courts, pre-trial diversion, and deferred prosecution'
+  - 'Participation involves both treatment mandate and incentive (charge dismissal)'
+  - 'Mechanism assumes connection to evidence-based community treatment'
+limitations:
+  - 'Coerced treatment may be less effective than voluntary treatment for some individuals'
+  - 'Diversion often limited to first-time or non-violent offenders, excluding those with greatest need'
+  - 'Relapse during diversion can result in incarceration, compounding punishment'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Diversion program availability and quality varies dramatically by jurisdiction, with systematic racial and geographic inequities
+  relevant_geographies:
+    - 'Urban areas more likely to have drug courts and diversion programs than rural jurisdictions'
+    - 'States vary widely in diversion availability and eligibility criteria'
+    - 'Affluent counties offer more robust diversion options than under-resourced jurisdictions'
+    - 'Racial disparities in diversion access documented across jurisdictions with white defendants preferentially diverted'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

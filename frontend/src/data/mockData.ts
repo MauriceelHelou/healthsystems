@@ -13,16 +13,9 @@ const categories: Category[] = [
   'biological',
 ]
 
-const stockTypes: StockType[] = ['structural', 'proxy', 'crisis']
-
-const categoryLabels: Record<Category, string> = {
-  built_environment: 'Built Environment',
-  social_environment: 'Social Environment',
-  economic: 'Economic',
-  political: 'Political',
-  biological: 'Biological',
-  default: 'Default',
-}
+// Removed unused constants to fix TS6133 errors
+// const stockTypes: StockType[] = ['structural', 'proxy', 'crisis']
+// const categoryLabels: Record<Category, string> = {...}
 
 // Sample node names by category
 const nodeNamesByCategory: Record<Category | 'default', string[]> = {
@@ -95,10 +88,11 @@ function randomChoice<T>(array: T[]): T {
   return array[Math.floor(random() * array.length)]
 }
 
-function randomSample<T>(array: T[], count: number): T[] {
-  const shuffled = [...array].sort(() => random() - 0.5)
-  return shuffled.slice(0, count)
-}
+// Removed unused helper function randomSample to fix TS6133
+// function randomSample<T>(array: T[], count: number): T[] {
+//   const shuffled = [...array].sort(() => random() - 0.5)
+//   return shuffled.slice(0, count)
+// }
 
 /**
  * Generate mock nodes (400 total)
@@ -247,6 +241,7 @@ export function generateMockMechanism(edge: MechanismEdge, nodes: MechanismNode[
       year: randomInt(2010, 2024),
       title: `Impact of ${sourceNode.label} on ${targetNode.label}`,
       journal: randomChoice(['Health Affairs', 'JAMA', 'NEJM', 'Lancet', 'Am J Public Health']),
+      doi: `10.1001/jama.${randomInt(2010, 2024)}.${randomInt(1000, 9999)}`,
       url: `https://pubmed.ncbi.nlm.nih.gov/${randomInt(10000000, 40000000)}`,
     })
   }
@@ -254,6 +249,7 @@ export function generateMockMechanism(edge: MechanismEdge, nodes: MechanismNode[
   const moderators: Moderator[] = []
   if (random() > 0.5) {
     moderators.push({
+      type: 'policy',
       category: 'policy',
       description: 'Effect stronger when supportive policies are in place',
       effect: 'strengthens',
@@ -261,6 +257,7 @@ export function generateMockMechanism(edge: MechanismEdge, nodes: MechanismNode[
   }
   if (random() > 0.6) {
     moderators.push({
+      type: 'geographic',
       category: 'geographic',
       description: 'Effect varies between urban and rural contexts',
       effect: 'varies',
@@ -343,11 +340,15 @@ export function generateMockPathways(
 
     pathways.push({
       id: `pathway_${index + 1}`,
+      fromNodeId: interventionNodeId,
+      toNodeId: outcomeNodeId,
       interventionNodeId,
       outcomeNodeId,
       mechanisms,
+      overallEvidence: lowestQuality,
       aggregateQuality: lowestQuality,
       overallDirection,
+      pathLength: mechanisms.length,
     })
   })
 

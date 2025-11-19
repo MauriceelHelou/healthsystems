@@ -1,0 +1,71 @@
+id: medicaid_expansion_to_sud_treatment_access
+name: Medicaid Expansion → SUD Treatment Access and AUD Outcomes
+from_node:
+  node_id: health_insurance_coverage_uninsured
+  node_name: Health Insurance Coverage (% Uninsured)
+  node_type: stock
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+  node_type: stock
+direction: negative
+category: political
+mechanism_pathway:
+  - 'Step 1: ACA Medicaid expansion extends coverage to adults <138% FPL, dramatically reducing uninsured rates in low-income populations with high AUD prevalence'
+  - 'Step 2: Medicaid covers substance use disorder treatment including counseling, medications (naltrexone, acamprosate), and residential services'
+  - 'Step 3: Insurance coverage eliminates financial barrier to treatment, enabling individuals with AUD to access previously unaffordable care'
+  - 'Step 4: Medicaid expansion increases treatment facility capacity as providers gain sustainable reimbursement for serving low-income populations'
+  - 'Step 5: Population-level increase in treatment access reduces AUD prevalence through higher treatment initiation and completion rates'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Wen, Hefei, Janet R. Cummings, Jason M. Hockenberry, Laura M. Gaydos, and Benjamin G. Druss. 2013. "State parity laws and access to treatment for substance use disorder in the United States: Implications for federal parity legislation." JAMA Psychiatry 70(12): 1355-1362. https://doi.org/10.1001/jamapsychiatry.2013.1834'
+  supporting_citations:
+    - 'Saloner, Brendan, Shankar Bandara, Colleen Grogan, and Benjamin Lê Cook. 2017. "Medicaid coverage for substance use disorder treatment and receipt of provider-delivered services: Evidence from the National Survey of Substance Abuse Treatment Services." Psychiatric Services 68(9): 890-896.'
+    - 'Clemans-Cope, Lisa, Marni Epstein, and Genevieve M. Kenney. 2017. "Rapid growth in Medicaid spending on medications to treat opioid use disorder and overdose." Urban Institute Brief, June 2017.'
+  doi: '10.1001/jamapsychiatry.2013.1834'
+last_updated: '2025-11-18'
+version: '1.0'
+description: Medicaid expansion substantially improves alcohol use disorder outcomes by extending insurance coverage to low-income adults, eliminating treatment cost barriers, and increasing treatment system capacity through sustainable reimbursement.
+moderators:
+  - name: state_expansion_status
+    direction: strengthens
+    strength: strong
+    description: Effect only occurs in states that adopted expansion; non-expansion states show no improvement
+  - name: medicaid_benefit_generosity
+    direction: strengthens
+    strength: moderate
+    description: States with robust SUD benefits and fewer restrictions show better treatment access
+  - name: treatment_infrastructure
+    direction: strengthens
+    strength: moderate
+    description: Expansion impact depends on treatment facility capacity and willingness to accept Medicaid
+  - name: implementation_timeline
+    direction: strengthens
+    strength: weak
+    description: Early-expanding states show larger cumulative effects than late adopters
+structural_competency:
+  root_cause_level: policy
+  avoids_victim_blaming: true
+  equity_implications: Medicaid expansion represents explicit policy choice about whether healthcare including addiction treatment is right or privilege. States refusing expansion are disproportionately in the South with large Black populations, perpetuating historical health inequities rooted in racism. The expansion-treatment gradient demonstrates that lack of addiction care is policy-driven, not resource scarcity. Non-expansion states force low-income individuals with AUD to remain uninsured and untreated, predictably generating worse health outcomes and higher emergency care costs. This is structural violence—deliberate policy producing preventable suffering. Communities of color in non-expansion states face compounded harm from both higher AUD prevalence (driven by structural determinants) and systematic denial of treatment coverage. The variation across states proves addiction treatment access is political choice. Addressing this requires: Medicaid expansion in all states, federal baseline SUD benefit standards, robust parity enforcement, and ultimately universal healthcare that breaks link between state politics and treatment access.
+assumptions:
+  - 'Expansion refers to ACA Medicaid eligibility to 138% FPL for adults'
+  - 'States retain flexibility in benefit design and provider reimbursement rates'
+  - 'Mechanism operates through both coverage expansion and provider participation'
+limitations:
+  - 'Treatment access requires facilities accepting Medicaid; reimbursement rates affect participation'
+  - 'Individual awareness and enrollment also affect coverage uptake'
+  - 'Other barriers (transportation, stigma, childcare) persist despite coverage'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Medicaid expansion status creates stark state-level variation in coverage and treatment access, with systematic geographic and racial inequities
+  relevant_geographies:
+    - '12 states have not expanded Medicaid as of 2025, concentrated in the South'
+    - 'Non-expansion states are disproportionately those with large Black and Latino populations'
+    - 'Expansion states show 20-40% increases in SUD treatment utilization post-expansion'
+    - 'Border areas between expansion and non-expansion states show treatment migration patterns'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

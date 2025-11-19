@@ -1,0 +1,71 @@
+id: depression_to_alcohol_use_disorder
+name: Depression → Alcohol Use Disorder
+from_node:
+  node_id: depression
+  node_name: Depression Prevalence
+  node_type: stock
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+  node_type: stock
+direction: positive
+category: behavioral
+mechanism_pathway:
+  - 'Step 1: Major depressive disorder produces anhedonia, hopelessness, sleep disruption, and emotional pain'
+  - 'Step 2: Alcohol provides temporary mood elevation through dopaminergic reward activation and GABA-mediated anxiolysis'
+  - 'Step 3: Self-medication pattern develops as drinking becomes automatic response to depressive symptoms'
+  - 'Step 4: Neurobiological vulnerability increases as depression and alcohol use both dysregulate stress and reward systems'
+  - 'Step 5: Escalating consumption leads to tolerance, dependence, and AUD, with depression worsening due to alcohol''s depressant effects'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Boden, Joseph M., and David M. Fergusson. 2011. "Alcohol and depression." Addiction 106(5): 906-914. https://doi.org/10.1111/j.1360-0443.2010.03351.x'
+  supporting_citations:
+    - 'Conner, Kenneth R., Peter M. Pinquart, and Sylvia A. Duberstein. 2008. "Meta-analysis of depression and substance use and impairment among intravenous drug users (IDUs)." Addiction 103(4): 524-534.'
+    - 'Hasin, Deborah S., Tulshi D. Saha, Bradley T. Kerridge, et al. 2015. "Prevalence of marijuana use disorders in the United States between 2001-2002 and 2012-2013." JAMA Psychiatry 72(12): 1235-1242.'
+  doi: '10.1111/j.1360-0443.2010.03351.x'
+last_updated: '2025-11-18'
+version: '1.0'
+description: Depression increases alcohol use disorder risk through self-medication of emotional pain, shared neurobiological vulnerabilities, and reinforcement of drinking as maladaptive coping response.
+moderators:
+  - name: mental_health_treatment_access
+    direction: weakens
+    strength: strong
+    description: Evidence-based depression treatment (psychotherapy, antidepressants) reduces self-medication and AUD risk
+  - name: comorbid_anxiety
+    direction: strengthens
+    strength: moderate
+    description: Co-occurring anxiety disorders amplify self-medication pattern and AUD risk
+  - name: social_support
+    direction: weakens
+    strength: moderate
+    description: Strong social connections buffer depression effects and provide alternative coping resources
+  - name: adverse_childhood_experiences
+    direction: strengthens
+    strength: strong
+    description: History of childhood trauma predisposes to both depression and substance use as coping
+structural_competency:
+  root_cause_level: institutional
+  avoids_victim_blaming: true
+  equity_implications: The depression-AUD pathway reflects systematic failures in mental health care access and structural conditions that produce depression. Communities experiencing poverty, racism, and disinvestment have elevated depression rates due to chronic stress and trauma exposure. These same communities face mental health treatment deserts, lack of insurance, and culturally incompetent care. When evidence-based depression treatment is inaccessible, alcohol becomes default self-medication. High co-occurrence in marginalized populations is not coincidental but reflects deliberate under-resourcing of community mental health. Interrupting this pathway requires universal mental health coverage, community-based culturally responsive care, and addressing structural determinants (poverty, discrimination, trauma) that generate depression.
+assumptions:
+  - 'Depression measured by clinical diagnosis or validated screening instruments'
+  - 'Self-medication hypothesis assumes drinking motivated by symptom relief'
+  - 'Bidirectional relationship exists but this mechanism focuses on depression → AUD direction'
+limitations:
+  - 'Causal direction debated; alcohol use can also cause or worsen depression'
+  - 'Many individuals with depression do not develop AUD'
+  - 'Effectiveness of self-medication is transient; chronic use worsens depression'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Depression prevalence and treatment access vary substantially, shaping local depression-AUD pathways
+  relevant_geographies:
+    - 'Rural areas have high depression rates and severe mental health provider shortages'
+    - 'Low-income urban neighborhoods face treatment barriers despite higher provider density'
+    - 'States with robust Medicaid mental health coverage show lower depression-AUD conversion'
+    - 'Communities with integrated primary care-behavioral health show earlier intervention'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

@@ -1,0 +1,67 @@
+id: substance_use_disorder_any_to_alcohol_use_disorder
+name: Substance Use Disorder (Any) → Alcohol Use Disorder
+from_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder - Any
+  node_type: stock
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+  node_type: stock
+direction: positive
+category: behavioral
+mechanism_pathway:
+  - 'Step 1: Pre-existing substance use disorder indicates vulnerability through shared genetic risk factors and dysregulated reward/stress neurocircuitry'
+  - 'Step 2: Cross-sensitization occurs where chronic drug use alters dopamine, glutamate, and stress systems increasing sensitivity to all substances'
+  - 'Step 3: Polysubstance use patterns develop as individuals seek additional substances for varied effects or to manage withdrawal'
+  - 'Step 4: Alcohol is readily accessible, legal, and socially normalized compared to controlled substances, facilitating transition'
+  - 'Step 5: Shared neural adaptations in prefrontal cortex and limbic regions impair self-regulation across all substances, enabling AUD development'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: 'Connor, Jason P., Megan M. Gullo, Katrina E. Champion, and Maree Teesson. 2014. "Polysubstance use: Diagnostic challenges, patterns of use and health." Current Opinion in Psychiatry 27(4): 269-275. https://doi.org/10.1097/YCO.0000000000000069'
+  supporting_citations:
+    - 'Stinson, Frederick S., Bradley T. Kerridge, W. June Ruan, and Bridget F. Grant. 2005. "The epidemiology of DSM-IV specific phobia in the USA: Results from the National Epidemiologic Survey on Alcohol and Related Conditions." Psychological Medicine 35(7): 1013-1024.'
+    - 'McCabe, Sean Esteban, Brady T. West, and Carol J. Boyd. 2013. "Leftover prescription opioids and nonmedical use among high school seniors: A multi-cohort national study." Journal of Adolescent Health 52(4): 480-485.'
+  doi: '10.1097/YCO.0000000000000069'
+last_updated: '2025-11-18'
+version: '1.0'
+description: Pre-existing substance use disorder substantially increases alcohol use disorder risk through shared genetic vulnerabilities, cross-sensitization, and common neuroadaptations that impair self-regulation across all substances.
+moderators:
+  - name: primary_substance_type
+    direction: strengthens
+    strength: moderate
+    description: Opioid and stimulant use disorders show strongest progression to polysubstance use including alcohol
+  - name: integrated_sud_treatment
+    direction: weakens
+    strength: strong
+    description: Comprehensive SUD treatment addressing multiple substances reduces transition to additional SUDs
+  - name: recovery_support_services
+    direction: weakens
+    strength: moderate
+    description: Peer recovery support and mutual aid reduce polysubstance use patterns
+structural_competency:
+  root_cause_level: institutional
+  avoids_victim_blaming: true
+  equity_implications: Polysubstance use patterns reflect both neurobiological vulnerability and structural conditions. Communities experiencing economic distress, hopelessness, and limited opportunity show high rates of both initiation and progression across substances. The "diseases of despair" framework recognizes how structural abandonment drives overlapping epidemics of alcohol, opioids, and suicide. Criminal justice approaches that punish rather than treat SUD increase polysubstance use by creating barriers to employment, housing, and treatment. Fragmented treatment systems that address only one substance miss the reality of polysubstance patterns. High AUD among individuals with other SUDs reflects inadequate comprehensive addiction care, not individual moral failure across multiple substances.
+assumptions:
+  - 'Any SUD includes opioid, stimulant, cannabis, or other substance use disorders'
+  - 'Shared liability model assumes common genetic and neurobiological risk factors'
+  - 'Polysubstance use is more common than single-substance use in clinical populations'
+limitations:
+  - 'Not all individuals with non-alcohol SUD develop AUD'
+  - 'Directionality can vary (alcohol may also precede other substance use)'
+  - 'Social determinants may confound the substance-to-substance relationship'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Polysubstance patterns vary by drug market availability, treatment system design, and overdose crisis evolution
+  relevant_geographies:
+    - 'Communities experiencing opioid crisis show high alcohol co-use and overdose risk'
+    - 'Regions with methamphetamine markets show alcohol use to manage stimulant effects'
+    - 'Areas with comprehensive SUD treatment show lower progression to polysubstance dependence'
+    - 'Criminal justice-involved populations show especially high polysubstance rates'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

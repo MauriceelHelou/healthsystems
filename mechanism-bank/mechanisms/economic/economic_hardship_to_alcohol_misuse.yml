@@ -1,0 +1,67 @@
+id: economic_hardship_to_alcohol_misuse
+name: Household Economic Hardship → Alcohol Misuse
+from_node:
+  node_id: household_economic_hardship_index
+  node_name: Household Economic Hardship Index
+  node_type: stock
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+  node_type: stock
+direction: positive
+category: economic
+mechanism_pathway:
+  - 'Step 1: Economic hardship (food insecurity, utility shutoffs, medical debt, unmet needs) creates chronic stress and daily struggles'
+  - 'Step 2: Constant financial worry depletes cognitive and emotional resources needed for self-regulation'
+  - 'Step 3: Economic deprivation produces feelings of hopelessness, shame, and diminished sense of control over life circumstances'
+  - 'Step 4: Alcohol provides temporary escape from economic stress and poverty-related psychological pain'
+  - 'Step 5: Drinking escalates to binge pattern as maladaptive coping while paradoxically worsening economic situation through expenditure and impairment'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'Mulia, Nina, Yu Ye, Sarah E. Zemore, and Thomas K. Greenfield. 2008. "Social disadvantage, stress, and alcohol use among black, Hispanic, and white Americans: Findings from the 2005 U.S. National Alcohol Survey." Journal of Studies on Alcohol and Drugs 69(6): 824-833. https://doi.org/10.15288/jsad.2008.69.824'
+  supporting_citations:
+    - 'Probst, Charlotte, Svetlana Popova, Sandra Heer Melo, and Jürgen Rehm. 2018. "The role of alcohol use in the relation between unemployment and suicide: A longitudinal cohort study." Addiction 113(7): 1202-1208.'
+    - 'Karriker-Jaffe, Katherine J., Libo Li, and Nina Mulia. 2018. "Effects of socioeconomic status on alcohol use in a diverse U.S. sample." Social Science & Medicine 96: 91-101.'
+  doi: '10.15288/jsad.2008.69.824'
+last_updated: '2025-11-18'
+version: '1.0'
+description: Economic hardship drives alcohol misuse through chronic stress, depletion of self-regulatory resources, hopelessness from poverty, and use of drinking as temporary escape from material deprivation and psychological suffering.
+moderators:
+  - name: social_safety_net_access
+    direction: weakens
+    strength: strong
+    description: SNAP, TANF, utility assistance, and Medicaid buffer economic hardship effects on stress and drinking
+  - name: community_cohesion
+    direction: weakens
+    strength: moderate
+    description: Strong community mutual aid and social support mitigate individual economic hardship impacts
+  - name: hardship_duration
+    direction: strengthens
+    strength: strong
+    description: Chronic persistent hardship shows stronger drinking association than transient financial stress
+structural_competency:
+  root_cause_level: economic_system
+  avoids_victim_blaming: true
+  equity_implications: Economic hardship is not random misfortune but reflects systemic inequality in wages, wealth, and opportunity. Four decades of wage stagnation, declining union power, and erosion of social safety nets have created massive economic insecurity. Communities of color experience concentrated hardship from historical wealth extraction and ongoing discrimination. The hardship-drinking pathway reveals how economic systems generate suffering that manifests as health behaviors. Countries with robust social protections show minimal SES health gradients, proving economic hardship effects are policy-mediated, not natural. High alcohol misuse in economically distressed populations represents rational coping with intolerable structural conditions. Addressing this requires economic transformation: living wages, wealth redistribution, universal basic income, robust safety nets, and challenging systems that require deprivation to discipline labor.
+assumptions:
+  - 'Economic hardship index includes multiple domains (food, housing, utilities, medical care)'
+  - 'Mechanism operates through both material deprivation and chronic stress pathways'
+  - 'Assumes limited social safety net buffering'
+limitations:
+  - 'Individual coping resources and social capital create variability in responses'
+  - 'Some individuals reduce drinking during hardship due to prioritizing scarce resources'
+  - 'Bidirectionality exists (drinking can worsen economic hardship)'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Economic hardship concentrates geographically based on labor markets, cost of living, and safety net generosity
+  relevant_geographies:
+    - 'High-cost cities create severe hardship despite higher nominal wages'
+    - 'Rural areas face hardship from limited employment and service access'
+    - 'Former industrial regions show persistent hardship from economic restructuring'
+    - 'States with robust TANF, Medicaid, and utility assistance buffer hardship health impacts'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

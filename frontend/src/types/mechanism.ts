@@ -2,6 +2,19 @@
  * TypeScript types for mechanisms.
  */
 
+// Category types
+export type Category =
+  | 'built_environment'
+  | 'social_environment'
+  | 'economic'
+  | 'political'
+  | 'biological'
+  | 'default';
+
+export type StockType = 'structural' | 'proxy' | 'crisis';
+
+export type EvidenceQuality = 'A' | 'B' | 'C' | null;
+
 export interface EffectSize {
   measure: string;
   point_estimate: number;
@@ -15,20 +28,46 @@ export interface Evidence {
   citation: string;
 }
 
+export interface Citation {
+  id: string;
+  authors: string;
+  year: number;
+  title: string;
+  journal: string;
+  doi: string;
+  url?: string;
+}
+
+export interface Moderator {
+  type: 'policy' | 'geographic' | 'population';
+  category?: 'policy' | 'geographic' | 'population';
+  description: string;
+  effect: string;
+}
+
 export interface Mechanism {
   id: string;
-  name: string;
-  category: string;
-  mechanism_type: string;
-  effect_size: EffectSize;
-  evidence: Evidence;
-  version: string;
-  last_updated: string;
-  validated_by: string[];
-  description?: string;
-  assumptions?: string[];
-  limitations?: string[];
-  moderators?: Record<string, any>;
+  fromNode: string;
+  toNode: string;
+  direction: 'positive' | 'negative';
+  description: string;
+  evidenceQuality: EvidenceQuality;
+  studyCount: number;
+  citations: Citation[];
+  moderators: Moderator[];
+}
+
+export interface Pathway {
+  id: string;
+  fromNodeId: string;
+  toNodeId: string;
+  interventionNodeId?: string;
+  outcomeNodeId?: string;
+  mechanisms: Mechanism[];
+  overallEvidence: EvidenceQuality;
+  aggregateQuality?: EvidenceQuality;
+  overallDirection: 'positive' | 'negative';
+  pathLength: number;
 }
 
 export interface MechanismWeight {
@@ -47,12 +86,20 @@ export interface MechanismNode {
   id: string;
   label: string;
   weight: number;
-  confidence_interval: [number, number];
-  category: string;
+  category: Category;
+  stockType: StockType;
+  connections: {
+    outgoing: number;
+    incoming: number;
+  };
 }
 
 export interface MechanismEdge {
+  id: string;
   source: string;
   target: string;
   strength: number;
+  direction: 'positive' | 'negative';
+  evidenceQuality: EvidenceQuality;
+  studyCount: number;
 }

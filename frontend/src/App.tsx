@@ -1,4 +1,4 @@
-import React from 'react';
+import { FC } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { DashboardLayout } from './layouts/DashboardLayout';
@@ -14,7 +14,7 @@ const queryClient = new QueryClient({
   },
 });
 
-function App() {
+const App: FC = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>

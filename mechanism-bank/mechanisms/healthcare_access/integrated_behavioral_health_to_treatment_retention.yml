@@ -1,0 +1,67 @@
+id: integrated_behavioral_health_to_treatment_retention
+name: Integrated Behavioral Health Care → AUD Treatment Retention
+from_node:
+  node_id: integrated_behavioral_health_visits
+  node_name: Integrated Behavioral Health Visits (% Primary Care with BH Integration)
+  node_type: stock
+to_node:
+  node_id: sud_treatment_dropout_rate
+  node_name: SUD Treatment Dropout Rate
+  node_type: crisis_endpoint
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+  - 'Step 1: Integration of behavioral health into primary care enables routine alcohol screening (AUDIT, CAGE) identifying AUD early'
+  - 'Step 2: Co-located or embedded addiction counselors reduce fragmentation and "no-show" rates from referral to separate specialty care'
+  - 'Step 3: Primary care-based medication for alcohol use disorder (MAT) prescribing increases treatment access in familiar, low-stigma setting'
+  - 'Step 4: Warm handoffs and care coordination between primary care and BH specialists improve treatment engagement'
+  - 'Step 5: Ongoing primary care touchpoints provide continuous engagement and retention in addiction treatment, reducing dropout'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: 'Saitz, Richard, Tibor P. Palfai, Christine Cheng, et al. 2014. "Screening and brief intervention for drug use in primary care: The ASPIRE randomized clinical trial." JAMA 312(5): 502-513. https://doi.org/10.1001/jama.2014.7862'
+  supporting_citations:
+    - 'Bray, Jeremy W., Gary A. Zarkin, Arnie Aldridge, et al. 2017. "The effect of behavioral health integration on patient costs and utilization of medical services: Evidence from the SUMMIT trial." Journal of General Internal Medicine 32(6): 593-599.'
+    - 'Watkins, Katherine E., Sarah B. Hunter, Claudia M. Hepner, et al. 2011. "An effectiveness trial of group cognitive behavioral therapy for patients with persistent depressive symptoms in substance abuse treatment." Archives of General Psychiatry 68(6): 577-584.'
+  doi: '10.1001/jama.2014.7862'
+last_updated: '2025-11-18'
+version: '1.0'
+description: Integration of behavioral health into primary care settings improves alcohol use disorder treatment retention through routine screening, reduced fragmentation, accessible medication treatment, care coordination, and continuous engagement.
+moderators:
+  - name: integration_model_type
+    direction: u_shaped
+    strength: moderate
+    description: Co-located or fully integrated models show better outcomes than simple referral coordination
+  - name: provider_training
+    direction: strengthens
+    strength: moderate
+    description: Primary care provider training in addiction care and motivational interviewing improves engagement
+  - name: medicaid_reimbursement_structure
+    direction: strengthens
+    strength: strong
+    description: Reimbursement for same-day BH and medical visits enables sustainable integration
+structural_competency:
+  root_cause_level: institutional
+  avoids_victim_blaming: true
+  equity_implications: Fragmented care separating medical and addiction treatment is not natural but reflects historical stigma and discriminatory insurance practices. Carve-out behavioral health systems were deliberately designed to limit costs by creating access barriers. Integrated care remains rare because fee-for-service payment doesn't support care coordination. Safety-net health centers serving marginalized populations pioneered integration out of necessity but face inadequate reimbursement. Communities of color and rural populations benefit most from integration but have least access. The fragmentation-retention gradient reflects policy choices about payment models, parity enforcement, and whether addiction care is treated as legitimate healthcare. High treatment dropout from fragmented systems represents institutional discrimination making addiction care deliberately difficult to access. Addressing this requires: value-based payment supporting integration, robust parity enforcement, technical assistance and funding for safety-net integration, medical education reform, and challenging stigma separating addiction from "real" medicine.
+assumptions:
+  - 'Integration includes co-location of BH providers in primary care and/or primary care-based MAT prescribing'
+  - 'Mechanism operates through reduced access barriers and improved care coordination'
+  - 'Assumes primary care as usual source of care; doesn't apply to uninsured without access'
+limitations:
+  - 'Integration model and quality varies widely across practices'
+  - 'Requires adequate staffing and training which is resource-intensive'
+  - 'May not address severe AUD requiring residential or intensive specialty care'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Integrated care availability varies by practice resources, payment models, and state policies
+  relevant_geographies:
+    - 'Federally Qualified Health Centers lead in integration, serving safety-net populations'
+    - 'States with Health Homes and Certified Community Behavioral Health Clinics expand integrated care'
+    - 'Rural areas with provider shortages benefit most from primary care-based MAT but have least capacity'
+    - 'Academic medical centers and integrated delivery systems (Kaiser) show advanced integration models'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

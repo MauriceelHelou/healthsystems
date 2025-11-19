@@ -1,22 +1,22 @@
-import React, { useState, useRef } from 'react'
+import { FC, useState, useRef } from 'react'
 import { Panel } from '../layouts/Panel'
 import MechanismGraph from '../visualizations/MechanismGraph'
-import { mockNodes, mockEdges, generateMockMechanism } from '../data/mockData'
-import type { MechanismNode, MechanismEdge } from '../types'
+import type { MechanismNode, MechanismEdge, Citation } from '../types'
 import { Button } from '../components/base/Button'
 import { Icon } from '../components/base/Icon'
-import { Input } from '../components/base/Input'
 import { CategoryBadge } from '../components/domain/CategoryBadge'
 import { EvidenceBadge } from '../components/domain/EvidenceBadge'
 import { Badge } from '../components/base/Badge'
+import { useGraphData, useMechanismById } from '../hooks/useData'
 
-export const SystemsMapView: React.FC = () => {
+export const SystemsMapView: FC = () => {
   const [selectedNode, setSelectedNode] = useState<MechanismNode | null>(null)
   const [selectedEdge, setSelectedEdge] = useState<MechanismEdge | null>(null)
   const [showPanel, setShowPanel] = useState(false)
-  const [searchQuery, setSearchQuery] = useState('')
-  const [filteredCategories, setFilteredCategories] = useState<string[]>([])
   const containerRef = useRef<HTMLDivElement>(null)
+
+  // Fetch graph data from API
+  const { data: graphData, isLoading, error } = useGraphData()
 
   const handleNodeClick = (node: MechanismNode) => {
     setSelectedNode(node)
@@ -39,6 +39,43 @@ export const SystemsMapView: React.FC = () => {
   // Get container dimensions
   const width = containerRef.current?.clientWidth || 1200
   const height = containerRef.current?.clientHeight || 800
+
+  // Handle loading and error states
+  if (isLoading) {
+    return (
+      <div className="flex-1 flex items-center justify-center">
+        <div className="text-center">
+          <Icon name="refresh" size="lg" className="animate-spin text-primary-600 mx-auto mb-4" />
+          <p className="text-gray-600">Loading mechanisms and nodes...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="flex-1 flex items-center justify-center">
+        <div className="text-center max-w-md">
+          <Icon name="alert-circle" size="lg" className="text-error-600 mx-auto mb-4" />
+          <p className="text-gray-900 font-semibold mb-2">Failed to load data</p>
+          <p className="text-gray-600 text-sm">
+            {error instanceof Error ? error.message : 'An error occurred while loading the graph data.'}
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  if (!graphData || graphData.nodes.length === 0) {
+    return (
+      <div className="flex-1 flex items-center justify-center">
+        <div className="text-center">
+          <Icon name="info" size="lg" className="text-gray-400 mx-auto mb-4" />
+          <p className="text-gray-600">No mechanisms or nodes available.</p>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="flex flex-1 overflow-hidden">
@@ -72,69 +109,19 @@ export const SystemsMapView: React.FC = () => {
           </Button>
         </div>
 
-        {/* Legend */}
-        <div className="absolute bottom-4 left-4 z-10 bg-white/95 backdrop-blur rounded-lg shadow-lg p-4 max-w-sm">
-          <div className="flex items-center justify-between mb-3">
-            <h3 className="font-semibold text-sm text-gray-900">Legend</h3>
-            <Button variant="icon" size="sm" ariaLabel="Hide legend">
-              <Icon name="chevron-down" size="sm" />
-            </Button>
-          </div>
-
-          <div className="space-y-3">
-            {/* Categories */}
-            <div>
-              <p className="text-xs font-medium text-gray-700 mb-2">Categories</p>
-              <div className="flex flex-wrap gap-2">
-                <CategoryBadge category="built_environment" size="sm" />
-                <CategoryBadge category="social_environment" size="sm" />
-                <CategoryBadge category="economic" size="sm" />
-                <CategoryBadge category="political" size="sm" />
-                <CategoryBadge category="biological" size="sm" />
-              </div>
-            </div>
-
-            {/* Evidence Quality */}
-            <div>
-              <p className="text-xs font-medium text-gray-700 mb-2">Evidence Quality</p>
-              <div className="flex gap-3">
-                <EvidenceBadge quality="A" size="sm" showLabel />
-                <EvidenceBadge quality="B" size="sm" showLabel />
-                <EvidenceBadge quality="C" size="sm" showLabel />
-              </div>
-            </div>
-
-            {/* Node Types */}
-            <div>
-              <p className="text-xs font-medium text-gray-700 mb-2">Stock Types</p>
-              <div className="flex gap-2 text-xs">
-                <span className="flex items-center gap-1">
-                  <span className="w-3 h-3 bg-blue-500 rounded-full" />
-                  Structural
-                </span>
-                <span className="flex items-center gap-1">
-                  <span className="w-3 h-3 bg-purple-500 rounded-full" />
-                  Proxy
-                </span>
-                <span className="flex items-center gap-1">
-                  <span className="w-3 h-3 bg-red-500 rounded-full" />
-                  Crisis
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Legend - Hidden for minimalist design */}
+        {/* Removed legend overlay to maintain clean, minimalist aesthetic */}
 
         {/* Graph Visualization */}
         <div className="w-full h-full">
           <MechanismGraph
-            data={{ nodes: mockNodes, edges: mockEdges }}
+            data={graphData}
             width={width}
             height={height}
             onNodeClick={handleNodeClick}
             onEdgeClick={handleEdgeClick}
             selectedNodeId={selectedNode?.id || null}
-            filteredCategories={filteredCategories}
+            filteredCategories={[]}
           />
         </div>
       </div>
@@ -158,7 +145,7 @@ export const SystemsMapView: React.FC = () => {
             </div>
           }
         >
-          <NodeDetailPanel node={selectedNode} edges={mockEdges} />
+          <NodeDetailPanel node={selectedNode} edges={graphData.edges} />
         </Panel>
       )}
 
@@ -170,7 +157,7 @@ export const SystemsMapView: React.FC = () => {
           resizable
           collapsible
         >
-          <MechanismDetailPanel edge={selectedEdge} nodes={mockNodes} />
+          <MechanismDetailPanel edge={selectedEdge} nodes={graphData.nodes} />
         </Panel>
       )}
     </div>
@@ -282,9 +269,26 @@ const MechanismDetailPanel: React.FC<{ edge: MechanismEdge; nodes: MechanismNode
   edge,
   nodes,
 }) => {
-  const mechanism = generateMockMechanism(edge, nodes)
+  // Fetch detailed mechanism data from API
+  const { data: mechanism, isLoading } = useMechanismById(edge.id)
   const sourceNode = nodes.find((n) => n.id === edge.source)
   const targetNode = nodes.find((n) => n.id === edge.target)
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center py-8">
+        <Icon name="refresh" size="md" className="animate-spin text-primary-600" />
+      </div>
+    )
+  }
+
+  if (!mechanism) {
+    return (
+      <div className="text-center py-8 text-gray-600">
+        <p>Unable to load mechanism details.</p>
+      </div>
+    )
+  }
 
   return (
     <div className="space-y-6">
@@ -336,7 +340,7 @@ const MechanismDetailPanel: React.FC<{ edge: MechanismEdge; nodes: MechanismNode
             Supporting Literature ({mechanism.citations.length})
           </h3>
           <div className="space-y-2">
-            {mechanism.citations.slice(0, 3).map((citation) => (
+            {mechanism.citations.slice(0, 3).map((citation: Citation) => (
               <div
                 key={citation.id}
                 className="p-3 border border-gray-200 rounded text-xs space-y-1"

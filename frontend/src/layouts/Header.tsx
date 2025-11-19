@@ -1,24 +1,28 @@
-import React from 'react'
+import { FC } from 'react'
 import { NavLink } from 'react-router-dom'
 import { Icon } from '../components/base/Icon'
-import { Button } from '../components/base/Button'
 
-export const Header: React.FC = () => {
+/**
+ * Minimalist fixed header with white background and orange accents
+ */
+export const Header: FC = () => {
   return (
-    <header className="h-15 bg-white border-b border-gray-200 px-6 flex items-center justify-between sticky top-0 z-30">
-      <div className="flex items-center gap-6">
-        {/* Logo */}
-        <div className="text-xl font-bold text-gray-900">HealthSystems</div>
+    <header className="h-14 bg-white border-b border-gray-200 px-6 flex items-center justify-between fixed top-0 left-0 right-0 z-30 shadow-sm">
+      <div className="flex items-center gap-8">
+        {/* Logo - Compact */}
+        <div className="text-lg font-semibold text-gray-900 tracking-tight">
+          HealthSystems
+        </div>
 
-        {/* Tab Navigation */}
+        {/* Tab Navigation - Minimal */}
         <nav className="flex gap-1" role="navigation" aria-label="Main navigation">
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `px-4 py-3 text-sm font-medium transition-colors relative ${
+              `px-3 py-2 text-xs font-medium transition-all relative ${
                 isActive
-                  ? 'text-primary-600'
-                  : 'text-gray-600 hover:text-gray-900'
+                  ? 'text-orange-600'
+                  : 'text-gray-500 hover:text-gray-900'
               }`
             }
           >
@@ -26,7 +30,7 @@ export const Header: React.FC = () => {
               <>
                 Systems Map
                 {isActive && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-600" />
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500" />
                 )}
               </>
             )}
@@ -34,10 +38,10 @@ export const Header: React.FC = () => {
           <NavLink
             to="/pathways"
             className={({ isActive }) =>
-              `px-4 py-3 text-sm font-medium transition-colors relative ${
+              `px-3 py-2 text-xs font-medium transition-all relative ${
                 isActive
-                  ? 'text-primary-600'
-                  : 'text-gray-600 hover:text-gray-900'
+                  ? 'text-orange-600'
+                  : 'text-gray-500 hover:text-gray-900'
               }`
             }
           >
@@ -45,7 +49,7 @@ export const Header: React.FC = () => {
               <>
                 Pathway Explorer
                 {isActive && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-600" />
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500" />
                 )}
               </>
             )}
@@ -53,10 +57,10 @@ export const Header: React.FC = () => {
           <NavLink
             to="/library"
             className={({ isActive }) =>
-              `px-4 py-3 text-sm font-medium transition-colors relative ${
+              `px-3 py-2 text-xs font-medium transition-all relative ${
                 isActive
-                  ? 'text-primary-600'
-                  : 'text-gray-600 hover:text-gray-900'
+                  ? 'text-orange-600'
+                  : 'text-gray-500 hover:text-gray-900'
               }`
             }
           >
@@ -64,7 +68,7 @@ export const Header: React.FC = () => {
               <>
                 Library
                 {isActive && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary-600" />
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500" />
                 )}
               </>
             )}
@@ -72,29 +76,23 @@ export const Header: React.FC = () => {
         </nav>
       </div>
 
-      {/* Right Section */}
-      <div className="flex items-center gap-3">
-        {/* Geography Selector */}
-        <select className="px-3 py-1.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500">
-          <option>Boston, MA</option>
-          <option>Chicago, IL</option>
-          <option>National</option>
-        </select>
-
+      {/* Right Section - Minimal buttons only */}
+      <div className="flex items-center gap-2">
         {/* Settings Button */}
-        <Button variant="icon" size="sm" ariaLabel="Settings">
-          <Icon name="settings" size="md" />
-        </Button>
+        <button
+          className="p-2 text-gray-400 hover:text-orange-600 transition-colors"
+          aria-label="Settings"
+        >
+          <Icon name="settings" size="sm" />
+        </button>
 
         {/* Help Button */}
-        <Button variant="icon" size="sm" ariaLabel="Help">
-          <Icon name="help" size="md" />
-        </Button>
-
-        {/* User Menu */}
-        <Button variant="icon" size="sm" ariaLabel="User menu">
-          <Icon name="user" size="md" />
-        </Button>
+        <button
+          className="p-2 text-gray-400 hover:text-orange-600 transition-colors"
+          aria-label="Help"
+        >
+          <Icon name="help" size="sm" />
+        </button>
       </div>
     </header>
   )

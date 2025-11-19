@@ -1,0 +1,71 @@
+id: alcohol_use_disorder_to_alcohol_induced_mortality
+name: Alcohol Use Disorder → Alcohol-Induced Mortality
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+  node_type: stock
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality Rate
+  node_type: crisis_endpoint
+direction: positive
+category: biological
+mechanism_pathway:
+  - 'Step 1: Chronic heavy drinking in AUD causes direct organ toxicity across multiple systems (liver, cardiovascular, neurologic)'
+  - 'Step 2: Alcohol-attributable diseases develop including alcoholic cardiomyopathy, pancreatitis, and alcohol-related dementia'
+  - 'Step 3: Acute alcohol toxicity episodes produce respiratory depression, aspiration, and cardiac arrhythmias'
+  - 'Step 4: Alcohol withdrawal complications in untreated dependence cause seizures and autonomic instability'
+  - 'Step 5: Death occurs from organ failure, acute intoxication, withdrawal complications, or alcohol-attributable cancers'
+evidence:
+  quality_rating: A
+  n_studies: 20
+  primary_citation: 'Rehm, Jürgen, Gerrit Gmel, Charlotte Probst, Kevin D. Shield, and Jayadeep Sitharthan. 2017. "Lifetime-risk of alcohol-attributable mortality based on different levels of alcohol consumption in seven European countries: Implications for low-risk drinking guidelines." Addiction 112(9): 1535-1544. https://doi.org/10.1111/add.13827'
+  supporting_citations:
+    - 'Roerecke, Michael, and Jürgen Rehm. 2013. "Alcohol use disorders and mortality: A systematic review and meta-analysis." Addiction 108(9): 1562-1578.'
+    - 'Grant, Bridget F., Tulshi D. Saha, W. June Ruan, et al. 2016. "Epidemiology of DSM-5 alcohol use disorder: Results from the National Epidemiologic Survey on Alcohol and Related Conditions III." JAMA Psychiatry 73(1): 39-47.'
+  doi: '10.1111/add.13827'
+last_updated: '2025-11-18'
+version: '1.0'
+description: Alcohol Use Disorder causes mortality through multiple pathways including chronic organ damage, acute intoxication, withdrawal complications, and increased cancer and cardiovascular disease risk.
+moderators:
+  - name: treatment_engagement
+    direction: weakens
+    strength: strong
+    description: Engagement with addiction treatment and achievement of sustained remission dramatically reduces mortality risk
+  - name: socioeconomic_status
+    direction: weakens
+    strength: moderate
+    description: Higher SES provides access to quality healthcare and harm reduction resources that mitigate mortality risk
+  - name: comorbid_substance_use
+    direction: strengthens
+    strength: strong
+    description: Polysubstance use (especially opioids) increases overdose mortality risk 3-10 fold
+  - name: mental_health_comorbidity
+    direction: strengthens
+    strength: moderate
+    description: Co-occurring depression or PTSD increases suicide risk and treatment disengagement
+structural_competency:
+  root_cause_level: policy
+  avoids_victim_blaming: true
+  equity_implications: Alcohol-induced mortality rates reflect structural inequities that shape both addiction risk and treatment access. Communities experiencing historical marginalization face higher AUD prevalence due to concentrated disadvantage, trauma, and targeted alcohol marketing. These same communities have fewer addiction treatment resources, lower insurance rates, and greater exposure to criminalization rather than treatment. Mortality disparities by race, class, and geography represent predictable outcomes of policy choices about alcohol regulation, healthcare funding, social safety nets, and criminal justice approaches. Reducing alcohol-induced mortality requires addressing root causes including economic opportunity, trauma-informed services, and universal healthcare access.
+assumptions:
+  - 'Assumes untreated or inadequately treated AUD with continued heavy drinking'
+  - 'Mortality encompasses both direct alcohol effects and alcohol-attributable diseases'
+  - 'Does not include alcohol-related injuries, homicides, or motor vehicle deaths'
+limitations:
+  - 'Individual variability in disease progression creates wide mortality risk range'
+  - 'Mechanism does not capture protective effects of recovery and sustained abstinence'
+  - 'Competing mortality risks in populations with AUD may obscure alcohol-specific attribution'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Alcohol-induced mortality varies 4-fold across US counties, shaped by drinking patterns, treatment access, and population characteristics
+  relevant_geographies:
+    - 'Native American communities experience 2-4x higher alcohol-induced mortality'
+    - 'Appalachian region shows elevated rates related to economic distress and limited treatment infrastructure'
+    - 'Rural areas have higher mortality due to treatment deserts and delayed emergency care'
+    - 'States with robust Medicaid and treatment funding show lower mortality despite similar AUD prevalence'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

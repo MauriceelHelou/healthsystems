@@ -1,0 +1,67 @@
+id: lack_insurance_to_untreated_aud
+name: Lack of Health Insurance → Untreated Alcohol Use Disorder
+from_node:
+  node_id: health_insurance_coverage_uninsured
+  node_name: Health Insurance Coverage (% Uninsured)
+  node_type: stock
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder (Untreated)
+  node_type: stock
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+  - 'Step 1: Lack of insurance creates financial barrier to accessing addiction treatment which is expensive ($5,000-$30,000 for residential programs)'
+  - 'Step 2: Uninsured individuals avoid screening and early intervention in primary care due to cost concerns'
+  - 'Step 3: Limited access to medications for alcohol use disorder (naltrexone, acamprosate) which require prescriber visits and pharmacy costs'
+  - 'Step 4: Delayed treatment seeking results in progression to severe AUD with medical complications requiring expensive acute care'
+  - 'Step 5: Cycling through emergency departments and hospitals for complications without receiving underlying addiction treatment perpetuates untreated AUD'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Saloner, Brendan, and Benjamin Lê Cook. 2013. "Blacks and Hispanics are less likely than whites to complete addiction treatment, largely due to socioeconomic factors." Health Affairs 32(1): 135-145. https://doi.org/10.1377/hlthaff.2011.0983'
+  supporting_citations:
+    - 'Ali, Mir M., William N. Dowd, Tami Classen, Ryan Mutter, and Shamena L. Novak. 2017. "Prescription drug monitoring programs, nonmedical use of prescription drugs, and heroin use: Evidence from the National Survey of Drug Use and Health." Addictive Behaviors 69: 65-77.'
+    - 'Wen, Hefei, Jason M. Hockenberry, and Janet R. Cummings. 2014. "The effect of Medicaid expansion on crime reduction: Evidence from HIFA-waiver expansions." Journal of Public Economics 154: 67-94.'
+  doi: '10.1377/hlthaff.2011.0983'
+last_updated: '2025-11-18'
+version: '1.0'
+description: Lack of health insurance creates major barrier to alcohol use disorder treatment through unaffordable costs for screening, counseling, medications, and residential programs, resulting in delayed or absent treatment.
+moderators:
+  - name: medicaid_expansion
+    direction: weakens
+    strength: strong
+    description: Medicaid expansion dramatically increases treatment access and reduces uninsured rates in low-income populations with AUD
+  - name: safety_net_treatment_capacity
+    direction: weakens
+    strength: moderate
+    description: Federally Qualified Health Centers and public treatment programs provide sliding-scale care but have limited capacity
+  - name: geographic_location
+    direction: u_shaped
+    strength: moderate
+    description: Rural areas lack treatment facilities even for insured; urban areas have more safety-net options
+structural_competency:
+  root_cause_level: policy
+  avoids_victim_blaming: true
+  equity_implications: Tying healthcare access to employment and ability to pay is a deliberate policy choice, not natural law. The US is unique among wealthy nations in allowing insurance status to determine addiction treatment access. Uninsured rates concentrate in states refusing Medicaid expansion, disproportionately harming low-income communities of color. The insurance-treatment gap reflects political decisions to prioritize private insurance industry profits over universal health coverage. Mental Health Parity laws exist but are poorly enforced, allowing insurers to deny addiction care. High untreated AUD among uninsured populations represents policy violence—predictable suffering from refusal to guarantee healthcare as right. Addressing this requires: Medicare for All, Medicaid expansion in all states, robust parity enforcement, and challenging profit-driven healthcare that treats addiction care as discretionary rather than essential.
+assumptions:
+  - 'Assumes market-rate treatment costs prohibitive for uninsured low-income individuals'
+  - 'Limited safety-net capacity cannot meet need from uninsured population'
+  - 'Insurance status assessed as primary coverage, not episodic emergency Medicaid'
+limitations:
+  - 'Some uninsured individuals access treatment through sliding-scale clinics or mutual aid'
+  - 'Even insured face barriers from inadequate coverage and prior authorization denials'
+  - 'Treatment access encompasses more than insurance (geographic access, cultural competence matter)'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Uninsured rates and treatment access vary dramatically by state Medicaid policies and safety-net capacity
+  relevant_geographies:
+    - 'Medicaid expansion states show 40-50% lower uninsured rates and higher treatment utilization'
+    - 'Texas and Florida have highest uninsured populations and large treatment access gaps'
+    - 'Rural areas lack addiction treatment facilities regardless of insurance status'
+    - 'Urban areas with FQHCs and public hospitals provide more safety-net treatment options'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

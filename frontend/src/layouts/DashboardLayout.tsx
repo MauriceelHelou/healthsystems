@@ -5,12 +5,16 @@ interface DashboardLayoutProps {
   children: React.ReactNode
 }
 
+/**
+ * Main dashboard layout with fixed header and minimalist styling
+ */
 export const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   return (
-    <div className="flex flex-col h-screen bg-gray-50">
+    <div className="flex flex-col h-screen bg-white">
       <Header />
 
-      <div className="flex flex-1 overflow-hidden">
+      {/* Add padding-top to account for fixed header (h-14 = 56px) */}
+      <div className="flex flex-1 overflow-hidden pt-14">
         {children}
       </div>
     </div>

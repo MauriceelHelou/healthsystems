@@ -1,0 +1,67 @@
+id: alcohol_withdrawal_to_medical_complications
+name: Severe Alcohol Withdrawal → Medical Complications
+from_node:
+  node_id: alcohol_withdrawal_severe
+  node_name: Alcohol Withdrawal (Severe) Rate
+  node_type: crisis_endpoint
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality Rate
+  node_type: crisis_endpoint
+direction: positive
+category: biological
+mechanism_pathway:
+  - 'Step 1: Severe alcohol withdrawal (delirium tremens) causes extreme sympathetic hyperactivity with catecholamine surge'
+  - 'Step 2: Autonomic instability produces tachycardia (>140 bpm), severe hypertension, hyperthermia (>104°F), and diaphoresis'
+  - 'Step 3: Seizure activity occurs in 5-15% of severe withdrawal, with risk of status epilepticus and aspiration'
+  - 'Step 4: Cardiovascular strain can precipitate myocardial infarction, arrhythmias, or stroke in vulnerable individuals'
+  - 'Step 5: Untreated or inadequately treated DT has 15-20% mortality from cardiovascular collapse, aspiration, or metabolic derangements'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'Schmidt, Karl J., Ulrich W. Doshi, and Alyssa E. Holzhausen. 2016. "Treatment of severe alcohol withdrawal." Annals of Pharmacotherapy 50(5): 389-401. https://doi.org/10.1177/1060028016629161'
+  supporting_citations:
+    - 'Saitz, Richard. 1998. "Introduction to alcohol withdrawal." Alcohol Health and Research World 22(1): 5-12.'
+    - 'Rahman, Abdul, and Naveen Paul. 2018. "Delirium tremens (DT)." StatPearls. Treasure Island, FL: StatPearls Publishing.'
+  doi: '10.1177/1060028016629161'
+last_updated: '2025-11-18'
+version: '1.0'
+description: Severe alcohol withdrawal causes life-threatening autonomic hyperactivity and CNS excitation that can result in cardiovascular collapse, seizure complications, and death without aggressive benzodiazepine treatment.
+moderators:
+  - name: delayed_treatment
+    direction: strengthens
+    strength: strong
+    description: Delayed benzodiazepine administration increases progression to severe complications and mortality
+  - name: medical_comorbidities
+    direction: strengthens
+    strength: strong
+    description: Cardiovascular disease, chronic lung disease, or infection dramatically increase mortality risk
+  - name: intensive_care_access
+    direction: weakens
+    strength: strong
+    description: ICU-level monitoring and symptom-triggered benzodiazepine protocols reduce mortality to <5%
+structural_competency:
+  root_cause_level: institutional
+  avoids_victim_blaming: true
+  equity_implications: Deaths from alcohol withdrawal are largely preventable with appropriate medical care, making mortality rates a measure of healthcare system failure. Individuals experiencing homelessness, incarceration, or lacking insurance face forced unmonitored withdrawal with inadequate benzodiazepine access. Correctional facilities often fail to recognize or treat withdrawal, leading to preventable deaths. Rural hospitals may lack protocols and ICU capacity. High withdrawal mortality in marginalized populations reflects structural violence through denial of evidence-based medical care to people with addiction.
+assumptions:
+  - 'Assumes inadequate or no benzodiazepine treatment'
+  - 'Mortality risk highest in first 48-72 hours after cessation'
+  - 'Complications reflect untreated physiologic withdrawal, not all patients with severe withdrawal'
+limitations:
+  - 'With appropriate treatment, mortality is <1-2%, mechanism describes untreated or undertreated cases'
+  - 'Individual physiologic reserve affects complication risk'
+  - 'Does not capture deaths from aspiration pneumonia or trauma during withdrawal'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Withdrawal mortality varies by healthcare access, hospital protocols, and medical detoxification facility availability
+  relevant_geographies:
+    - 'Rural areas lack ICU capacity and addiction medicine expertise'
+    - 'Correctional facilities show elevated mortality due to inadequate medical monitoring'
+    - 'States without Medicaid-funded detoxification rely on ED-based care with variable quality'
+    - 'Hospitals without standardized CIWA protocols show higher complication rates'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

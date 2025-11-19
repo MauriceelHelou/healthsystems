@@ -70,8 +70,9 @@ if settings.rate_limit_enabled:
     app.add_middleware(RateLimitMiddleware)
 
 # Include routers
-# app.include_router(health.router, tags=["Health"])
-# app.include_router(mechanisms.router, prefix="/api/mechanisms", tags=["Mechanisms"])
+from api.routes import mechanisms_router
+
+app.include_router(mechanisms_router)
 # app.include_router(contexts.router, prefix="/api/contexts", tags=["Contexts"])
 # app.include_router(weights.router, prefix="/api/weights", tags=["Weights"])
 # app.include_router(visualizations.router, prefix="/api/visualizations", tags=["Visualizations"])
