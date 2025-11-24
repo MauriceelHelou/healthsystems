@@ -1,0 +1,74 @@
+topic: cardiovascular
+
+query_template: |
+  Identify causal mechanisms linking {from_node} to {to_node} in the context of cardiovascular disease.
+
+  Focus on:
+  - Atherosclerosis and thrombosis pathways
+  - Blood pressure regulation and hypertension
+  - Lipid metabolism and dyslipidemia
+  - Inflammation and endothelial dysfunction
+  - Healthcare access and treatment adherence
+  - Behavioral risk factors (diet, physical activity, smoking)
+  - Social determinants (SES, stress, neighborhood environment)
+  - Structural factors (healthcare policy, environmental exposures)
+
+  Provide evidence from cardiovascular epidemiology, clinical trials, and meta-analyses.
+
+from_nodes:
+  - hypertension
+  - dyslipidemia
+  - diabetes
+  - obesity
+  - smoking
+  - physical_inactivity
+  - dietary_patterns
+  - sodium_intake
+  - alcohol_consumption
+  - stress_chronic
+  - socioeconomic_status
+  - healthcare_access
+  - medication_adherence
+  - air_pollution
+  - neighborhood_deprivation
+  - social_isolation
+  - depression
+  - sleep_duration
+  - inflammation_systemic
+  - family_history_cvd
+
+to_nodes:
+  - cardiovascular_disease
+  - coronary_heart_disease
+  - myocardial_infarction
+  - stroke
+  - heart_failure
+  - atrial_fibrillation
+  - peripheral_artery_disease
+  - atherosclerosis
+  - endothelial_dysfunction
+  - left_ventricular_hypertrophy
+  - cardiac_arrest
+  - mortality_cardiovascular
+  - hospitalization_cardiovascular
+  - revascularization
+  - blood_pressure
+  - ldl_cholesterol
+  - hdl_cholesterol
+  - triglycerides
+
+scales:
+  - 1  # Structural (policy, environment)
+  - 2  # Environmental (air pollution, neighborhood)
+  - 3  # Institutional (healthcare access)
+  - 4  # Individual conditions (hypertension, diabetes)
+  - 5  # Behaviors (diet, smoking, physical activity)
+  - 6  # Intermediate pathways (atherosclerosis, inflammation)
+  - 7  # Cardiovascular events and outcomes
+
+output_dir: mechanism-bank/mechanisms/cardiovascular
+
+notes: |
+  Cardiovascular disease has well-established risk factors but also strong social determinants.
+  Focus on both biological pathways and structural drivers (SES, healthcare access, environment).
+  Consider medication access, treatment adherence, and secondary prevention.

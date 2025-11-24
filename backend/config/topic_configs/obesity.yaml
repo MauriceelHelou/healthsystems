@@ -1,0 +1,70 @@
+topic: obesity
+
+query_template: |
+  Identify causal mechanisms linking {from_node} to {to_node} in the context of obesity.
+
+  Focus on:
+  - Biological pathways (metabolic, hormonal, appetite regulation)
+  - Behavioral factors (diet, physical activity, sedentary behavior)
+  - Environmental determinants (food access, built environment, walkability)
+  - Socioeconomic influences (income, education, food policy)
+  - Structural factors (zoning, transportation, food marketing)
+
+  Provide evidence from peer-reviewed literature, prioritizing meta-analyses and systematic reviews.
+
+from_nodes:
+  - food_environment
+  - built_environment
+  - socioeconomic_status
+  - food_policy
+  - urban_planning
+  - transportation_access
+  - food_marketing
+  - income_level
+  - education_level
+  - neighborhood_walkability
+  - park_access
+  - grocery_store_access
+  - fast_food_density
+  - housing_quality
+  - employment_status
+  - food_insecurity
+  - stress_chronic
+  - sleep_duration
+  - physical_activity_norms
+  - dietary_norms
+
+to_nodes:
+  - obesity_prevalence
+  - bmi_continuous
+  - metabolic_syndrome
+  - cardiovascular_disease
+  - type_2_diabetes
+  - hypertension
+  - dyslipidemia
+  - insulin_resistance
+  - weight_gain
+  - caloric_intake
+  - diet_quality
+  - physical_activity_level
+  - sedentary_time
+  - adiposity
+  - inflammation_systemic
+  - leptin_resistance
+  - mortality_all_cause
+
+scales:
+  - 1  # Structural (policy, environment)
+  - 2  # Built environment
+  - 3  # Institutional
+  - 4  # Individual conditions
+  - 5  # Behaviors
+  - 6  # Intermediate pathways
+  - 7  # Health outcomes
+
+output_dir: mechanism-bank/mechanisms/obesity
+
+notes: |
+  Obesity is a complex condition with structural, environmental, and biological determinants.
+  Focus on upstream structural factors rather than individual blame.
+  Consider food systems, built environment, and socioeconomic context.

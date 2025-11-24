@@ -12,6 +12,7 @@ import type {
   EvidenceQuality,
   Category,
   StockType,
+  NodeScale,
 } from '../types/mechanism';
 
 // Backend API types
@@ -91,7 +92,8 @@ function mapCategory(backendCategory: string): Category {
     'economic': 'economic',
     'political': 'political',
     'biological': 'biological',
-    'healthcare_access': 'built_environment', // Map to closest category
+    'behavioral': 'behavioral',
+    'healthcare_access': 'healthcare_access', // Keep healthcare_access as its own category
   };
   return categoryMap[backendCategory] || 'default';
 }
@@ -103,6 +105,29 @@ function mapStockType(nodeType: string): StockType {
   if (nodeType === 'crisis_endpoint') return 'crisis';
   if (nodeType === 'proxy_index') return 'proxy';
   return 'structural';
+}
+
+/**
+ * Derive scale (1-7) from category and node type
+ * Based on the 7-scale hierarchy defined in NODE_SYSTEM_DEFINITIONS.md
+ */
+function deriveScale(category: Category, stockType: StockType): NodeScale {
+  // Crisis endpoints are always scale 7
+  if (stockType === 'crisis') return 7;
+
+  // Map categories to scales
+  const categoryToScale: Record<Category, NodeScale> = {
+    political: 1, // Structural Determinants
+    built_environment: 2, // Built Environment & Infrastructure
+    healthcare_access: 3, // Institutional Infrastructure
+    economic: 4, // Individual/Household Conditions
+    social_environment: 4, // Individual/Household Conditions
+    behavioral: 5, // Individual Behaviors & Psychosocial
+    biological: 6, // Intermediate Pathways
+    default: 4, // Default to Individual Conditions
+  };
+
+  return categoryToScale[category] || 4;
 }
 
 /**
@@ -119,12 +144,16 @@ export function transformNode(
   // Calculate weight based on total connections
   const weight = Math.max(1, outgoing + incoming);
 
+  const category = mapCategory(apiNode.category);
+  const stockType = mapStockType(apiNode.node_type);
+
   return {
     id: apiNode.id,
     label: apiNode.name,
     weight,
-    category: mapCategory(apiNode.category),
-    stockType: mapStockType(apiNode.node_type),
+    category,
+    stockType,
+    scale: deriveScale(category, stockType), // Add derived scale field
     connections: {
       outgoing,
       incoming,
@@ -144,8 +173,30 @@ export function transformMechanismToEdge(
     target: apiMechanism.to_node_id,
     strength: apiMechanism.evidence_quality === 'A' ? 3 : apiMechanism.evidence_quality === 'B' ? 2 : 1,
     direction: apiMechanism.direction,
+    category: mapCategory(apiMechanism.category),
     evidenceQuality: apiMechanism.evidence_quality as EvidenceQuality,
     studyCount: 1, // Will be updated from detailed mechanism
+  };
+}
+
+/**
+ * Transform API mechanism list item to frontend Mechanism type
+ * Used for graph building with the new graphBuilder utilities
+ */
+export function transformApiMechanismToMechanism(
+  apiMechanism: ApiMechanismListItem
+): Mechanism {
+  return {
+    id: apiMechanism.id,
+    name: apiMechanism.name,
+    from_node_id: apiMechanism.from_node_id,
+    from_node_name: apiMechanism.from_node_name,
+    to_node_id: apiMechanism.to_node_id,
+    to_node_name: apiMechanism.to_node_name,
+    direction: apiMechanism.direction,
+    category: mapCategory(apiMechanism.category),
+    evidence_quality: apiMechanism.evidence_quality as EvidenceQuality,
+    n_studies: 1,
   };
 }
 
@@ -206,12 +257,17 @@ export function transformMechanismDetail(
 
   return {
     id: apiMechanism.id,
-    fromNode: apiMechanism.from_node.node_name,
-    toNode: apiMechanism.to_node.node_name,
+    name: apiMechanism.name,
+    from_node_id: apiMechanism.from_node.node_id,
+    from_node_name: apiMechanism.from_node.node_name,
+    to_node_id: apiMechanism.to_node.node_id,
+    to_node_name: apiMechanism.to_node.node_name,
     direction: apiMechanism.direction,
+    category: apiMechanism.category as Category,
     description: apiMechanism.mechanism_pathway.join(' → '),
-    evidenceQuality: apiMechanism.evidence.quality_rating as EvidenceQuality,
-    studyCount: apiMechanism.evidence.n_studies,
+    evidence_quality: apiMechanism.evidence.quality_rating as EvidenceQuality,
+    n_studies: apiMechanism.evidence.n_studies,
+    mechanism_pathway: apiMechanism.mechanism_pathway,
     citations,
     moderators,
   };
@@ -236,4 +292,37 @@ export function buildGraph(
   const edges = apiMechanisms.map(transformMechanismToEdge);
 
   return { nodes, edges };
+}
+
+/**
+ * Transform API mechanisms to SystemsNetwork
+ * @deprecated Use buildGraphFromMechanisms from graphBuilder.ts directly
+ */
+export function transformToSystemsNetwork(
+  mechanisms: ApiMechanismListItem[]
+): GraphData {
+  // Extract unique nodes from mechanisms
+  const nodeMap = new Map<string, ApiNode>();
+
+  mechanisms.forEach(mech => {
+    if (!nodeMap.has(mech.from_node_id)) {
+      nodeMap.set(mech.from_node_id, {
+        id: mech.from_node_id,
+        name: mech.from_node_name,
+        node_type: 'stock',
+        category: mech.category,
+      });
+    }
+    if (!nodeMap.has(mech.to_node_id)) {
+      nodeMap.set(mech.to_node_id, {
+        id: mech.to_node_id,
+        name: mech.to_node_name,
+        node_type: 'stock',
+        category: mech.category,
+      });
+    }
+  });
+
+  const nodes = Array.from(nodeMap.values());
+  return buildGraph(nodes, mechanisms);
 }

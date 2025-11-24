@@ -3,7 +3,7 @@
  * Generates realistic test data for 400 nodes and 2000+ mechanisms
  */
 
-import type { MechanismNode, MechanismEdge, Mechanism, Citation, Moderator, Pathway, Category, StockType } from '../types'
+import type { MechanismNode, MechanismEdge, Mechanism, Citation, Moderator, Pathway, Category, StockType, NodeScale } from '../types'
 
 const categories: Category[] = [
   'built_environment',
@@ -11,6 +11,8 @@ const categories: Category[] = [
   'economic',
   'political',
   'biological',
+  'behavioral',
+  'healthcare_access',
 ]
 
 // Removed unused constants to fix TS6133 errors
@@ -62,6 +64,20 @@ const nodeNamesByCategory: Record<Category | 'default', string[]> = {
     'Medication Adherence',
     'Health Behaviors',
   ],
+  behavioral: [
+    'Physical Activity',
+    'Diet Quality',
+    'Smoking Behavior',
+    'Alcohol Use',
+    'Stress Management',
+  ],
+  healthcare_access: [
+    'Insurance Coverage',
+    'Provider Availability',
+    'Transportation to Care',
+    'Telehealth Access',
+    'Appointment Wait Times',
+  ],
   default: [],
 }
 
@@ -108,6 +124,7 @@ export function generateMockNodes(): MechanismNode[] {
       label: name,
       category: 'default',
       stockType: 'crisis',
+      scale: 7, // Crisis Endpoints
       weight: randomInt(30, 50), // High connection count
       connections: { outgoing: 0, incoming: randomInt(30, 50) },
     })
@@ -122,16 +139,31 @@ export function generateMockNodes(): MechanismNode[] {
                       category === 'economic' ? 60 :
                       category === 'political' ? 40 : 35
 
+    // Map categories to scales (distribute across 1-6, crisis is already 7)
+    const categoryToScales: Record<Category, number[]> = {
+      political: [1, 1, 1, 3], // Mostly Scale 1 (Structural), some Scale 3 (Institutional)
+      built_environment: [2, 2, 2, 3], // Mostly Scale 2 (Built Environment), some Scale 3
+      economic: [1, 3, 4, 4], // Mix of Structural, Institutional, Individual Conditions
+      social_environment: [4, 4, 4, 5], // Mostly Scale 4 (Conditions), some Scale 5 (Behaviors)
+      behavioral: [5, 5, 5, 6], // Mostly Scale 5 (Behaviors), some Scale 6 (Pathways)
+      healthcare_access: [3, 4, 6, 6], // Mix of Institutional, Conditions, Pathways
+      biological: [6, 6, 6, 6], // Mostly Scale 6 (Intermediate Pathways)
+      default: [4, 4, 5, 6], // Default fallback
+    }
+
     for (let i = 0; i < nodeCount; i++) {
       const baseName = randomChoice(baseNames)
       const suffix = i > baseNames.length - 1 ? ` ${i + 1}` : ''
       const stockType: StockType = i < nodeCount * 0.4 ? 'structural' : 'proxy'
+      const scaleOptions = categoryToScales[category] || [4, 4, 5, 6]
+      const scale = randomChoice(scaleOptions) as NodeScale
 
       nodes.push({
         id: `node_${String(idCounter).padStart(3, '0')}`,
         label: `${baseName}${suffix}`,
         category,
         stockType,
+        scale,
         weight: randomInt(5, 30),
         connections: { outgoing: randomInt(3, 25), incoming: randomInt(2, 20) },
       })
@@ -141,11 +173,13 @@ export function generateMockNodes(): MechanismNode[] {
 
   // Pad to 400 nodes with default category
   while (nodes.length < 400) {
+    const scales: NodeScale[] = [1, 2, 3, 4, 5, 6, 7]
     nodes.push({
       id: `node_${String(idCounter).padStart(3, '0')}`,
       label: `Node ${idCounter}`,
       category: 'default',
       stockType: 'structural',
+      scale: randomChoice(scales),
       weight: randomInt(5, 15),
       connections: { outgoing: randomInt(3, 15), incoming: randomInt(2, 12) },
     })
@@ -265,15 +299,26 @@ export function generateMockMechanism(edge: MechanismEdge, nodes: MechanismNode[
   }
 
   const directionText = edge.direction === 'positive' ? 'increases' : 'decreases'
+  const mechanismPathway = [
+    sourceNode.label,
+    'Improved access and coordination',
+    'Sustained engagement',
+    targetNode.label,
+  ]
 
   return {
     id: edge.id,
-    fromNode: edge.source,
-    toNode: edge.target,
+    name: `${sourceNode.label} → ${targetNode.label}`,
+    from_node_id: edge.source,
+    from_node_name: sourceNode.label,
+    to_node_id: edge.target,
+    to_node_name: targetNode.label,
     direction: edge.direction,
+    category: edge.category || 'default',
     description: `${sourceNode.label} ${directionText} ${targetNode.label} through improved access, coordination, and sustained engagement. Research shows consistent effects across diverse populations and settings.`,
-    evidenceQuality: edge.evidenceQuality,
-    studyCount: edge.studyCount,
+    evidence_quality: edge.evidenceQuality,
+    n_studies: edge.studyCount,
+    mechanism_pathway: mechanismPathway,
     citations,
     moderators,
   }

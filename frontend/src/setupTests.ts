@@ -1,3 +1,25 @@
+// Polyfills for Node.js Jest environment (must come first)
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
+// Mock ReadableStream for MSW v2.x
+if (typeof global.ReadableStream === 'undefined') {
+  global.ReadableStream = class ReadableStream {
+    locked: boolean;
+    constructor() {
+      this.locked = false;
+    }
+    getReader() {
+      return {
+        read: () => Promise.resolve({ done: true, value: undefined }),
+        releaseLock: () => {},
+        closed: Promise.resolve(),
+      };
+    }
+  } as any;
+}
+
 // Jest-DOM matchers
 import '@testing-library/jest-dom';
 
@@ -8,83 +30,26 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
 });
 
-// Mock IntersectionObserver (for lazy loading, scroll-based components)
+// Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
-  takeRecords() {
-    return [];
-  }
+  takeRecords() { return []; }
   unobserve() {}
 } as any;
-
-// Mock ResizeObserver (for responsive visualizations)
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-} as any;
-
-// Mock SVGElement.prototype.getBBox (for D3.js tests)
-if (typeof SVGElement !== 'undefined') {
-  SVGElement.prototype.getBBox = jest.fn().mockReturnValue({
-    x: 0,
-    y: 0,
-    width: 100,
-    height: 100,
-  });
-}
-
-// Mock scrollTo (for navigation tests)
-window.scrollTo = jest.fn();
-
-// Suppress console errors/warnings in tests (optional - comment out if you want to see them)
-const originalError = console.error;
-const originalWarn = console.warn;
-
-beforeAll(() => {
-  console.error = (...args: any[]) => {
-    // Ignore specific React warnings that are expected in tests
-    if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('Warning: ReactDOM.render') ||
-       args[0].includes('Warning: useLayoutEffect') ||
-       args[0].includes('Not implemented: HTMLFormElement.prototype.submit'))
-    ) {
-      return;
-    }
-    originalError.call(console, ...args);
-  };
-
-  console.warn = (...args: any[]) => {
-    // Ignore specific warnings
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('componentWillReceiveProps')
-    ) {
-      return;
-    }
-    originalWarn.call(console, ...args);
-  };
-});
-
-afterAll(() => {
-  console.error = originalError;
-  console.warn = originalWarn;
-});
 
 // Import MSW server for API mocking
-import './tests/mocks/server';
+// TODO: Re-enable when MSW server is set up
+// import './tests/mocks/server';
 
 // Clean up after each test
 afterEach(() => {

@@ -5,7 +5,7 @@ Provides REST API for accessing and managing causal mechanisms.
 """
 
 from fastapi import APIRouter, Depends, HTTPException, Query
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, selectinload
 from typing import List, Optional
 from pathlib import Path
 import yaml
@@ -83,7 +83,10 @@ def list_mechanisms(
 
     Returns minimal mechanism info for efficient list views.
     """
-    query = db.query(Mechanism)
+    query = db.query(Mechanism).options(
+        selectinload(Mechanism.from_node),
+        selectinload(Mechanism.to_node)
+    )
 
     # Apply filters
     if category:
@@ -137,69 +140,19 @@ def get_mechanism(mechanism_id: str, db: Session = Depends(get_db)):
     return mechanism.to_dict()
 
 
-@router.get("/search/pathway")
-def search_pathway(
-    from_node: str = Query(..., description="Starting node ID"),
-    to_node: str = Query(..., description="Ending node ID"),
-    max_depth: int = Query(3, ge=1, le=5, description="Maximum pathway depth"),
-    db: Session = Depends(get_db)
-):
-    """
-    Find causal pathways between two nodes.
-
-    Returns all possible pathways from `from_node` to `to_node`
-    up to `max_depth` mechanisms deep.
-
-    Useful for:
-    - Tracing intervention impacts
-    - Understanding causal chains
-    - Identifying leverage points
-    """
-    # TODO: Implement graph traversal algorithm
-    # For MVP, return direct connections only
-    direct = db.query(Mechanism).filter(
-        Mechanism.from_node_id == from_node,
-        Mechanism.to_node_id == to_node
-    ).all()
-
-    if not direct:
-        # Try finding one-hop pathways
-        intermediates = db.query(Mechanism).filter(
-            Mechanism.from_node_id == from_node
-        ).all()
-
-        pathways = []
-        for intermediate in intermediates:
-            second_hop = db.query(Mechanism).filter(
-                Mechanism.from_node_id == intermediate.to_node_id,
-                Mechanism.to_node_id == to_node
-            ).all()
-
-            for hop in second_hop:
-                pathways.append({
-                    "pathway_length": 2,
-                    "mechanisms": [
-                        intermediate.to_dict(),
-                        hop.to_dict()
-                    ]
-                })
-
-        return {
-            "from_node": from_node,
-            "to_node": to_node,
-            "pathways_found": len(pathways),
-            "pathways": pathways[:10]  # Limit to 10 pathways
-        }
-
-    return {
-        "from_node": from_node,
-        "to_node": to_node,
-        "pathways_found": len(direct),
-        "pathways": [{
-            "pathway_length": 1,
-            "mechanisms": [m.to_dict() for m in direct]
-        }]
-    }
+# ==========================================
+# NOTE: Deprecated /search/pathway endpoint removed
+# ==========================================
+# The old 2-hop limited pathway search endpoint has been removed.
+# Use the new full-featured pathfinding endpoint instead:
+#   POST /api/nodes/pathfinding
+# Located in: backend/api/routes/nodes.py
+# Features:
+#   - Full graph traversal (up to 8 hops)
+#   - Multiple algorithms (shortest, strongest_evidence, all_simple)
+#   - Category filtering
+#   - NetworkX-powered graph operations
+# ==========================================
 
 
 @router.get("/stats/summary")
@@ -249,6 +202,136 @@ def get_stats(db: Session = Depends(get_db)):
 # Utility: Load mechanisms from YAML files
 # ==========================================
 
+def get_node_scale_from_category(category: str) -> int:
+    """
+    Determine node scale based on category.
+
+    7-scale taxonomy mapping:
+    - political -> 1 (structural determinants - policy)
+    - built_environment -> 2 (built environment & infrastructure)
+    - economic, social_services -> 3 (institutional infrastructure)
+    - social_environment, economic_individual -> 4 (individual/household conditions)
+    - behavioral, psychosocial -> 5 (individual behaviors & psychosocial)
+    - healthcare_access, clinical -> 6 (intermediate pathways)
+    - biological, crisis -> 7 (crisis endpoints)
+    """
+    scale_mapping = {
+        'political': 1,
+        'built_environment': 2,
+        'economic': 3,
+        'social_services': 3,
+        'social_environment': 4,
+        'economic_individual': 4,
+        'behavioral': 5,
+        'psychosocial': 5,
+        'healthcare_access': 6,
+        'clinical': 6,
+        'biological': 7,
+        'crisis': 7
+    }
+
+    return scale_mapping.get(category, 4)  # Default to scale 4
+
+
+@router.post("/admin/load-nodes-from-yaml")
+def load_nodes_from_yaml(db: Session = Depends(get_db)):
+    """
+    Load node definitions from mechanism-bank/nodes/*.yml files.
+
+    This should be called BEFORE loading mechanisms, as mechanisms
+    reference nodes by ID. Allows explicit node metadata including
+    scale, domain, type, baseline values, and data sources.
+
+    Returns number of nodes loaded/updated.
+    """
+    nodes_dir = Path(__file__).parent.parent.parent.parent / "mechanism-bank" / "nodes"
+
+    if not nodes_dir.exists():
+        # Create directory if it doesn't exist
+        nodes_dir.mkdir(parents=True, exist_ok=True)
+        return {
+            "loaded": 0,
+            "updated": 0,
+            "errors": [],
+            "message": "nodes directory created but empty"
+        }
+
+    loaded_count = 0
+    updated_count = 0
+    errors = []
+
+    for yaml_file in nodes_dir.glob("*.yml"):
+        try:
+            with open(yaml_file, 'r', encoding='utf-8') as f:
+                node_data = yaml.safe_load(f)
+
+            # Validate required fields
+            required_fields = ['id', 'name', 'scale', 'category']
+            for field in required_fields:
+                if field not in node_data:
+                    raise ValueError(f"Missing required field: {field}")
+
+            # Validate scale range
+            if not (1 <= node_data['scale'] <= 7):
+                raise ValueError(f"scale must be between 1 and 7, got {node_data['scale']}")
+
+            # Check if node exists
+            node = db.query(Node).filter(Node.id == node_data['id']).first()
+
+            if node:
+                # Update existing node
+                node.name = node_data['name']
+                node.scale = node_data['scale']
+                node.category = node_data['category']
+                node.node_type = node_data.get('type', node.node_type)
+                node.unit = node_data.get('unit')
+                node.description = node_data.get('description')
+                node.measurement_method = node_data.get('measurement_method')
+                node.typical_range = node_data.get('typical_range')
+
+                # Parse data_sources if present
+                if 'data_sources' in node_data:
+                    node.data_sources = node_data['data_sources']
+
+                updated_count += 1
+            else:
+                # Create new node
+                node = Node(
+                    id=node_data['id'],
+                    name=node_data['name'],
+                    scale=node_data['scale'],
+                    category=node_data['category'],
+                    node_type=node_data.get('type', 'stock'),
+                    unit=node_data.get('unit'),
+                    description=node_data.get('description'),
+                    measurement_method=node_data.get('measurement_method'),
+                    typical_range=node_data.get('typical_range'),
+                    data_sources=node_data.get('data_sources')
+                )
+                db.add(node)
+                loaded_count += 1
+
+        except Exception as e:
+            errors.append({
+                "file": str(yaml_file),
+                "error": str(e)
+            })
+
+    # Commit all changes
+    try:
+        db.commit()
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(status_code=500, detail=f"Database commit failed: {e}")
+
+    return {
+        "loaded": loaded_count,
+        "updated": updated_count,
+        "errors": errors,
+        "total_errors": len(errors)
+    }
+
+
 @router.post("/admin/load-from-yaml")
 def load_mechanisms_from_yaml(db: Session = Depends(get_db)):
     """
@@ -256,6 +339,10 @@ def load_mechanisms_from_yaml(db: Session = Depends(get_db)):
 
     This is an admin endpoint to populate the database from
     the YAML files generated by the LLM pipeline.
+
+    Note: If using dedicated node YAMLs, call /admin/load-nodes-from-yaml first.
+    This endpoint will still auto-create nodes if they don't exist, but with
+    inferred scale values based on category.
 
     Returns number of mechanisms loaded.
     """
@@ -281,22 +368,26 @@ def load_mechanisms_from_yaml(db: Session = Depends(get_db)):
             # Create nodes if they don't exist
             from_node = db.query(Node).filter(Node.id == data['from_node']['node_id']).first()
             if not from_node:
+                category = data.get('category', 'unknown')
                 from_node = Node(
                     id=data['from_node']['node_id'],
                     name=data['from_node']['node_name'],
                     node_type='stock',  # Default, can be updated later
-                    category=data.get('category', 'unknown')
+                    category=category,
+                    scale=get_node_scale_from_category(category)
                 )
                 db.add(from_node)
                 db.flush()  # Flush immediately to avoid duplicate key errors
 
             to_node = db.query(Node).filter(Node.id == data['to_node']['node_id']).first()
             if not to_node:
+                category = data.get('category', 'unknown')
                 to_node = Node(
                     id=data['to_node']['node_id'],
                     name=data['to_node']['node_name'],
                     node_type='stock',  # Default
-                    category=data.get('category', 'unknown')
+                    category=category,
+                    scale=get_node_scale_from_category(category)
                 )
                 db.add(to_node)
                 db.flush()  # Flush immediately to avoid duplicate key errors

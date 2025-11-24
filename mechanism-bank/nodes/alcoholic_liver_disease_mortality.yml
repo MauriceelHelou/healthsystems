@@ -1,0 +1,45 @@
+# Node Definition: Alcoholic Liver Disease (ALD) Mortality
+# Scale 7 - Crisis Endpoints
+
+id: alcoholic_liver_disease_mortality
+name: Alcoholic Liver Disease (ALD) Mortality
+scale: 7
+category: biological
+type: Rate
+
+unit: "Deaths per 100,000 population, age-adjusted"
+
+description: |
+  Death due to alcohol-related liver disease, including alcoholic cirrhosis,
+  alcoholic hepatitis, and acute alcoholic liver failure. Represents the
+  terminal endpoint of chronic heavy alcohol exposure.
+
+measurement_method: |
+  - Death certificates with ICD-10 codes K70.x (alcoholic liver disease)
+  - National Vital Statistics System (NVSS)
+  - State vital records
+
+typical_range: "5-15 per 100,000 (varies by state, demographics)"
+
+data_sources:
+  - name: "CDC WONDER Multiple Cause of Death Database"
+    icd10_codes: ["K70.0", "K70.1", "K70.2", "K70.3", "K70.4", "K70.9"]
+    availability: "Annual (1999-present)"
+    granularity: "County-level (suppressed if <10 deaths), State-level"
+  - name: "National Vital Statistics System (NVSS)"
+    availability: "Annual"
+    granularity: "State and county-level"
+
+baseline_us: "7.3 per 100,000 (2019, CDC WONDER, age-adjusted)"
+
+trends: |
+  - Increasing trend since 2000 (3.9 → 7.3 per 100,000)
+  - Disproportionately affects American Indian/Alaska Native populations
+  - Higher rates in states with higher alcohol consumption
+  - Accelerated increase during COVID-19 pandemic (2020-2022)
+
+limitations: |
+  - Undercount due to misattribution (coded as "cirrhosis unspecified")
+  - County-level suppression in low-population areas
+  - Racial/ethnic disparities in death certificate accuracy
+  - Lag time (2-3 years for final data)

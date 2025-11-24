@@ -1,0 +1,76 @@
+topic: mental_health
+
+query_template: |
+  Identify causal mechanisms linking {from_node} to {to_node} in mental health contexts.
+
+  Focus on:
+  - Psychosocial stress pathways and chronic adversity
+  - Access to mental healthcare and treatment barriers
+  - Social support, isolation, and community connection
+  - Substance use and maladaptive coping behaviors
+  - Socioeconomic adversity (poverty, unemployment, housing instability)
+  - Discrimination, racism, and minority stress
+  - Neurobiological mechanisms (HPA axis, inflammation, neurotransmitters)
+  - Trauma exposure and adverse childhood experiences
+
+  Provide evidence from psychiatric epidemiology, clinical trials, and longitudinal cohort studies.
+
+from_nodes:
+  - social_isolation
+  - unemployment
+  - housing_instability
+  - discrimination
+  - childhood_adversity
+  - trauma_exposure
+  - intimate_partner_violence
+  - poverty
+  - food_insecurity
+  - neighborhood_disorder
+  - community_violence
+  - social_support
+  - healthcare_access
+  - mental_health_stigma
+  - substance_use
+  - chronic_pain
+  - physical_health_conditions
+  - sleep_disturbance
+  - work_stress
+  - financial_strain
+
+to_nodes:
+  - depression
+  - major_depressive_disorder
+  - anxiety_disorders
+  - generalized_anxiety_disorder
+  - ptsd
+  - substance_use_disorder
+  - alcohol_use_disorder
+  - suicide
+  - suicidal_ideation
+  - self_harm
+  - psychiatric_hospitalization
+  - psychosis
+  - schizophrenia
+  - bipolar_disorder
+  - eating_disorders
+  - panic_disorder
+  - social_anxiety
+  - psychological_distress
+  - mental_health_treatment_utilization
+
+scales:
+  - 1  # Structural (policy, discrimination, economic systems)
+  - 2  # Environmental (neighborhood, housing)
+  - 3  # Institutional (healthcare access, stigma)
+  - 4  # Individual conditions (trauma, chronic stress)
+  - 5  # Behaviors (substance use, coping)
+  - 6  # Intermediate pathways (sleep, inflammation)
+  - 7  # Mental health outcomes
+
+output_dir: mechanism-bank/mechanisms/mental_health
+
+notes: |
+  Mental health is deeply shaped by structural determinants and social adversity.
+  Focus on upstream factors: discrimination, poverty, housing, trauma.
+  Avoid individual blame - emphasize structural competency and equity lens.
+  Consider bidirectional relationships (e.g., mental health <-> substance use).

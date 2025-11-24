@@ -47,6 +47,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY . .
 
+# Make startup script executable
+RUN chmod +x start.sh
+
 # Create non-root user
 RUN useradd -m -u 1000 appuser && \
     chown -R appuser:appuser /app
@@ -60,5 +63,5 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 # Expose port (Railway will override this with $PORT)
 EXPOSE 8000
 
-# Run production server with dynamic port
-CMD sh -c "uvicorn api.main:app --host 0.0.0.0 --port ${PORT:-8000} --workers 4"
+# Run startup script which handles migrations, seeding, and app startup
+CMD ["./start.sh"]

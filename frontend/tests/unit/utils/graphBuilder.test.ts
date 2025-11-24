@@ -1,0 +1,299 @@
+/**
+ * Unit tests for graphBuilder utilities
+ */
+
+import {
+  buildGraphFromMechanisms,
+  filterGraphByCategory,
+  filterGraphByScale,
+  calculateNodeMetrics,
+  getGraphCategories,
+  getGraphScales,
+  buildAlcoholismSubgraph,
+  calculateGraphStats,
+} from '../../../src/utils/graphBuilder';
+import type { Mechanism, SystemsNetwork, Category } from '../../../src/types/mechanism';
+
+// Mock mechanisms for testing
+const createMockMechanism = (
+  id: string,
+  fromNodeId: string,
+  toNodeId: string,
+  category: Category,
+  evidenceQuality: 'A' | 'B' | 'C' = 'B'
+): Mechanism => ({
+  id,
+  name: `Mechanism ${id}`,
+  from_node_id: fromNodeId,
+  from_node_name: `Node ${fromNodeId}`,
+  to_node_id: toNodeId,
+  to_node_name: `Node ${toNodeId}`,
+  direction: 'positive',
+  category,
+  evidence_quality: evidenceQuality,
+  n_studies: 1,
+});
+
+describe('graphBuilder', () => {
+  describe('buildGraphFromMechanisms', () => {
+    it('should build nodes and edges from mechanisms', () => {
+      const mechanisms = [
+        createMockMechanism('mech1', 'node1', 'node2', 'economic'),
+        createMockMechanism('mech2', 'node2', 'node3', 'social_environment'),
+      ];
+
+      const graph = buildGraphFromMechanisms(mechanisms);
+
+      expect(graph.nodes).toHaveLength(3);
+      expect(graph.edges).toHaveLength(2);
+
+      // Check node1
+      const node1 = graph.nodes.find(n => n.id === 'node1');
+      expect(node1).toBeDefined();
+      expect(node1?.label).toBe('Node node1');
+      expect(node1?.connections.outgoing).toBe(1);
+      expect(node1?.connections.incoming).toBe(0);
+
+      // Check node2
+      const node2 = graph.nodes.find(n => n.id === 'node2');
+      expect(node2).toBeDefined();
+      expect(node2?.connections.outgoing).toBe(1);
+      expect(node2?.connections.incoming).toBe(1);
+      expect(node2?.weight).toBe(2); // incoming + outgoing
+
+      // Check edges
+      expect(graph.edges[0].source).toBe('node1');
+      expect(graph.edges[0].target).toBe('node2');
+      expect(graph.edges[0].strength).toBe(2); // B quality = 2
+    });
+
+    it('should filter by category', () => {
+      const mechanisms = [
+        createMockMechanism('mech1', 'node1', 'node2', 'economic'),
+        createMockMechanism('mech2', 'node2', 'node3', 'social_environment'),
+        createMockMechanism('mech3', 'node3', 'node4', 'economic'),
+      ];
+
+      const graph = buildGraphFromMechanisms(mechanisms, {
+        filterCategories: ['economic'],
+      });
+
+      expect(graph.edges).toHaveLength(2);
+      expect(graph.edges.every(e => e.category === 'economic')).toBe(true);
+      expect(graph.nodes).toHaveLength(3); // node1, node2, node3, node4 but only connected via economic
+    });
+
+    it('should exclude disconnected nodes by default', () => {
+      const mechanisms = [
+        createMockMechanism('mech1', 'node1', 'node2', 'economic'),
+      ];
+
+      const graph = buildGraphFromMechanisms(mechanisms, {
+        includeDisconnected: false,
+      });
+
+      // Should only include nodes that are connected
+      expect(graph.nodes).toHaveLength(2);
+      expect(graph.nodes.every(n => ['node1', 'node2'].includes(n.id))).toBe(true);
+    });
+
+    it('should map evidence quality to strength correctly', () => {
+      const mechanisms = [
+        createMockMechanism('mech1', 'node1', 'node2', 'economic', 'A'),
+        createMockMechanism('mech2', 'node2', 'node3', 'economic', 'B'),
+        createMockMechanism('mech3', 'node3', 'node4', 'economic', 'C'),
+      ];
+
+      const graph = buildGraphFromMechanisms(mechanisms);
+
+      expect(graph.edges[0].strength).toBe(3); // A = 3
+      expect(graph.edges[1].strength).toBe(2); // B = 2
+      expect(graph.edges[2].strength).toBe(1); // C = 1
+    });
+  });
+
+  describe('filterGraphByCategory', () => {
+    const mockGraph: SystemsNetwork = {
+      nodes: [
+        { id: 'node1', label: 'Node 1', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 0, outgoing: 1 } },
+        { id: 'node2', label: 'Node 2', category: 'social_environment', stockType: 'structural', weight: 1, connections: { incoming: 1, outgoing: 1 } },
+        { id: 'node3', label: 'Node 3', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 1, outgoing: 0 } },
+      ],
+      edges: [
+        { id: 'edge1', source: 'node1', target: 'node2', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+        { id: 'edge2', source: 'node2', target: 'node3', direction: 'positive', category: 'social_environment', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+      ],
+    };
+
+    it('should filter edges by category', () => {
+      const filtered = filterGraphByCategory(mockGraph, ['economic']);
+
+      expect(filtered.edges).toHaveLength(1);
+      expect(filtered.edges[0].category).toBe('economic');
+    });
+
+    it('should only include nodes referenced in filtered edges', () => {
+      const filtered = filterGraphByCategory(mockGraph, ['economic']);
+
+      expect(filtered.nodes).toHaveLength(2);
+      expect(filtered.nodes.map(n => n.id).sort()).toEqual(['node1', 'node2']);
+    });
+
+    it('should return full graph when categories array is empty', () => {
+      const filtered = filterGraphByCategory(mockGraph, []);
+
+      expect(filtered.nodes).toHaveLength(mockGraph.nodes.length);
+      expect(filtered.edges).toHaveLength(mockGraph.edges.length);
+    });
+  });
+
+  describe('filterGraphByScale', () => {
+    const mockGraph: SystemsNetwork = {
+      nodes: [
+        { id: 'node1', label: 'Node 1', category: 'economic', stockType: 'structural', scale: 1, weight: 1, connections: { incoming: 0, outgoing: 1 } },
+        { id: 'node2', label: 'Node 2', category: 'economic', stockType: 'structural', scale: 2, weight: 1, connections: { incoming: 1, outgoing: 1 } },
+        { id: 'node3', label: 'Node 3', category: 'economic', stockType: 'structural', scale: 3, weight: 1, connections: { incoming: 1, outgoing: 0 } },
+      ],
+      edges: [
+        { id: 'edge1', source: 'node1', target: 'node2', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+        { id: 'edge2', source: 'node2', target: 'node3', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+      ],
+    };
+
+    it('should filter nodes by scale', () => {
+      const filtered = filterGraphByScale(mockGraph, [1, 2]);
+
+      expect(filtered.nodes).toHaveLength(2);
+      expect(filtered.nodes.every(n => n.scale && [1, 2].includes(n.scale))).toBe(true);
+    });
+
+    it('should only include edges between filtered nodes', () => {
+      const filtered = filterGraphByScale(mockGraph, [1, 2]);
+
+      expect(filtered.edges).toHaveLength(1);
+      expect(filtered.edges[0].source).toBe('node1');
+      expect(filtered.edges[0].target).toBe('node2');
+    });
+
+    it('should return full graph when scales array is empty', () => {
+      const filtered = filterGraphByScale(mockGraph, []);
+
+      expect(filtered.nodes).toHaveLength(mockGraph.nodes.length);
+      expect(filtered.edges).toHaveLength(mockGraph.edges.length);
+    });
+  });
+
+  describe('calculateNodeMetrics', () => {
+    it('should calculate degree and centrality metrics', () => {
+      const graph: SystemsNetwork = {
+        nodes: [
+          { id: 'node1', label: 'Node 1', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 2, outgoing: 3 } },
+          { id: 'node2', label: 'Node 2', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 1, outgoing: 1 } },
+        ],
+        edges: [],
+      };
+
+      const withMetrics = calculateNodeMetrics(graph);
+
+      const node1 = withMetrics.nodes[0] as any;
+      expect(node1.degree).toBe(5); // 2 + 3
+      expect(node1.centrality).toBe(5 / 2); // degree / total nodes
+
+      const node2 = withMetrics.nodes[1] as any;
+      expect(node2.degree).toBe(2); // 1 + 1
+      expect(node2.centrality).toBe(2 / 2);
+    });
+  });
+
+  describe('getGraphCategories', () => {
+    it('should return unique categories from edges', () => {
+      const graph: SystemsNetwork = {
+        nodes: [],
+        edges: [
+          { id: 'e1', source: 'n1', target: 'n2', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'e2', source: 'n2', target: 'n3', direction: 'positive', category: 'social_environment', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'e3', source: 'n3', target: 'n4', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+        ],
+      };
+
+      const categories = getGraphCategories(graph);
+
+      expect(categories).toHaveLength(2);
+      expect(categories).toContain('economic');
+      expect(categories).toContain('social_environment');
+    });
+  });
+
+  describe('getGraphScales', () => {
+    it('should return unique scales from nodes in sorted order', () => {
+      const graph: SystemsNetwork = {
+        nodes: [
+          { id: 'node1', label: 'N1', category: 'economic', stockType: 'structural', scale: 3, weight: 1, connections: { incoming: 0, outgoing: 0 } },
+          { id: 'node2', label: 'N2', category: 'economic', stockType: 'structural', scale: 1, weight: 1, connections: { incoming: 0, outgoing: 0 } },
+          { id: 'node3', label: 'N3', category: 'economic', stockType: 'structural', scale: 3, weight: 1, connections: { incoming: 0, outgoing: 0 } },
+          { id: 'node4', label: 'N4', category: 'economic', stockType: 'structural', scale: 2, weight: 1, connections: { incoming: 0, outgoing: 0 } },
+        ],
+        edges: [],
+      };
+
+      const scales = getGraphScales(graph);
+
+      expect(scales).toEqual([1, 2, 3]);
+    });
+  });
+
+  describe('buildAlcoholismSubgraph', () => {
+    it('should filter mechanisms with alcohol-related keywords', () => {
+      const mechanisms = [
+        createMockMechanism('mech1', 'alcohol_use', 'liver_disease', 'behavioral'),
+        createMockMechanism('mech2', 'poverty', 'depression', 'economic'),
+        createMockMechanism('mech3', 'binge_drinking', 'ald', 'behavioral'),
+      ];
+
+      const subgraph = buildAlcoholismSubgraph(mechanisms);
+
+      expect(subgraph.edges).toHaveLength(2);
+      expect(subgraph.nodes.length).toBeGreaterThan(0);
+
+      // Should include alcohol and ald related mechanisms
+      expect(subgraph.edges.some(e => e.id === 'mech1')).toBe(true);
+      expect(subgraph.edges.some(e => e.id === 'mech3')).toBe(true);
+      expect(subgraph.edges.some(e => e.id === 'mech2')).toBe(false);
+    });
+
+    it('should match keywords in mechanism name and node names', () => {
+      const mechanisms = [
+        {
+          ...createMockMechanism('mech1', 'stress', 'outcome', 'social_environment'),
+          name: 'Alcohol consumption pathway',
+        },
+      ];
+
+      const subgraph = buildAlcoholismSubgraph(mechanisms);
+
+      expect(subgraph.edges).toHaveLength(1);
+    });
+  });
+
+  describe('calculateGraphStats', () => {
+    it('should calculate comprehensive graph statistics', () => {
+      const mechanisms = [
+        createMockMechanism('mech1', 'node1', 'node2', 'economic'),
+        createMockMechanism('mech2', 'node2', 'node3', 'social_environment'),
+        createMockMechanism('mech3', 'node3', 'node4', 'economic'),
+      ];
+
+      const graph = buildGraphFromMechanisms(mechanisms);
+      const stats = calculateGraphStats(graph);
+
+      expect(stats.totalNodes).toBe(4);
+      expect(stats.totalEdges).toBe(3);
+      expect(stats.nodesByCategory).toHaveProperty('economic');
+      expect(stats.edgesByCategory).toHaveProperty('economic');
+      expect(stats.edgesByCategory.economic).toBe(2);
+      expect(stats.edgesByCategory.social_environment).toBe(1);
+      expect(stats.avgDegree).toBeGreaterThan(0);
+      expect(stats.maxDegree).toBeGreaterThanOrEqual(stats.minDegree);
+    });
+  });
+});

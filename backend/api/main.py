@@ -70,9 +70,14 @@ if settings.rate_limit_enabled:
     app.add_middleware(RateLimitMiddleware)
 
 # Include routers
-from api.routes import mechanisms_router
+from api.routes import mechanisms_router, nodes_router, pathways_router
 
 app.include_router(mechanisms_router)
+logger.info(f"Mechanisms router included with {len(mechanisms_router.routes)} routes")
+app.include_router(nodes_router)
+logger.info(f"Nodes router included with {len(nodes_router.routes)} routes: {[r.path for r in nodes_router.routes]}")
+app.include_router(pathways_router)
+logger.info(f"Pathways router included with {len(pathways_router.routes)} routes")
 # app.include_router(contexts.router, prefix="/api/contexts", tags=["Contexts"])
 # app.include_router(weights.router, prefix="/api/weights", tags=["Weights"])
 # app.include_router(visualizations.router, prefix="/api/visualizations", tags=["Visualizations"])
@@ -112,3 +117,4 @@ if __name__ == "__main__":
         port=settings.api_port,
         reload=settings.environment == "development"
     )
+

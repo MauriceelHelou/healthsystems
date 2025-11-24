@@ -10,7 +10,12 @@ import type {
   ApiMechanismDetail,
   GraphData,
 } from '../utils/transformers';
-import { buildGraph as buildGraphFn, transformMechanismDetail as transformDetailFn } from '../utils/transformers';
+import {
+  buildGraph as buildGraphFn,
+  transformMechanismDetail as transformDetailFn,
+  transformApiMechanismToMechanism,
+} from '../utils/transformers';
+import type { Mechanism } from '../types/mechanism';
 
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
 
@@ -55,25 +60,6 @@ async function fetchStats(): Promise<ApiStats> {
   return response.data;
 }
 
-/**
- * Fetch pathway between two nodes
- */
-interface ApiPathway {
-  mechanisms: ApiMechanismDetail[];
-  pathway_length: number;
-}
-
-async function fetchPathway(fromNodeId: string, toNodeId: string): Promise<ApiPathway | null> {
-  try {
-    const response = await api.get<ApiPathway>('/api/mechanisms/search/pathway', {
-      params: { from_node: fromNodeId, to_node: toNodeId, max_depth: 3 },
-    });
-    return response.data;
-  } catch (error) {
-    console.error('Error fetching pathway:', error);
-    return null;
-  }
-}
 
 /**
  * Build graph data from mechanisms
@@ -144,17 +130,6 @@ export function useStats() {
   });
 }
 
-/**
- * Hook to fetch pathway between nodes
- */
-export function usePathway(fromNodeId: string | null, toNodeId: string | null) {
-  return useQuery({
-    queryKey: ['pathway', fromNodeId, toNodeId],
-    queryFn: () => fetchPathway(fromNodeId!, toNodeId!),
-    enabled: !!fromNodeId && !!toNodeId,
-    staleTime: 5 * 60 * 1000,
-  });
-}
 
 /**
  * Hook to fetch graph data (nodes + edges)
@@ -163,6 +138,20 @@ export function useGraphData() {
   return useQuery({
     queryKey: ['graph'],
     queryFn: fetchGraphData,
+    staleTime: 5 * 60 * 1000,
+  });
+}
+
+/**
+ * Hook to fetch mechanisms in Mechanism format (for use with graphBuilder)
+ */
+export function useMechanismsForGraph() {
+  return useQuery({
+    queryKey: ['mechanisms-for-graph'],
+    queryFn: async (): Promise<Mechanism[]> => {
+      const apiMechanisms = await fetchMechanisms();
+      return apiMechanisms.map(transformApiMechanismToMechanism);
+    },
     staleTime: 5 * 60 * 1000,
   });
 }

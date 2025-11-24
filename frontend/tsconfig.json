@@ -21,19 +21,22 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@components/*": ["components/*"],
-      "@services/*": ["services/*"],
-      "@utils/*": ["utils/*"],
-      "@types/*": ["types/*"],
-      "@hooks/*": ["hooks/*"],
-      "@visualizations/*": ["visualizations/*"],
-      "@stores/*": ["stores/*"]
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@services/*": ["src/services/*"],
+      "@utils/*": ["src/utils/*"],
+      "@types/*": ["src/types/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@visualizations/*": ["src/visualizations/*"],
+      "@stores/*": ["src/stores/*"],
+      "@tests/*": ["tests/*"]
     }
   },
   "include": [
-    "src"
+    "src",
+    "tests"
   ],
   "exclude": [
     "node_modules",

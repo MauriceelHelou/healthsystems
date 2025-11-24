@@ -1,6 +1,6 @@
 [build]
 builder = "DOCKERFILE"
-dockerfilePath = "Dockerfile"
+dockerfilePath = "backend/Dockerfile"
 
 [deploy]
 startCommand = ""
@@ -15,3 +15,12 @@ variables = {}
 
 [environments.staging]
 variables = {}
+
+# Railway will automatically provide:
+# - DATABASE_URL (from PostgreSQL service)
+# - PORT (dynamically assigned)
+#
+# You need to set these in Railway dashboard:
+# - ANTHROPIC_API_KEY
+# - ENVIRONMENT=production
+# - Any other API keys from .env.railway.example

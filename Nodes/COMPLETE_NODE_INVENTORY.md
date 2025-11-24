@@ -102,7 +102,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.1 HEALTHCARE SYSTEM POLICY
 
 ### Node 1: Medicaid Expansion Status
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Healthcare System
 - **Type:** Policy
 - **Unit:** Binary (0=not expanded, 1=expanded)
@@ -111,7 +111,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Kaiser Family Foundation (KFF) Medicaid expansion tracker, updated quarterly. State-level only. https://www.kff.org/medicaid/issue-brief/status-of-state-medicaid-expansion-decisions/
 
 ### Node 2: Medicaid Work Requirements Status
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Healthcare System
 - **Type:** Policy
 - **Unit:** Binary (0=no work requirements, 1=work requirements implemented)
@@ -120,7 +120,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** KFF Medicaid waiver tracker, CMS waiver database. State-level.
 
 ### Node 3: Medicaid Coverage Generosity Index
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Healthcare System
 - **Type:** Policy
 - **Unit:** Index score 0-100 (higher = more generous)
@@ -129,7 +129,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** MACPAC annual reports, KFF state Medicaid fact sheets, CMS financial reports. State-level, annual.
 
 ### Node 4: Marketplace Plan Availability
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Healthcare System
 - **Type:** Access/Availability
 - **Unit:** Number of insurance carriers offering plans on state marketplace
@@ -138,7 +138,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** CMS Marketplace Open Enrollment Public Use Files, annual. State and county-level availability.
 
 ### Node 5: ACA Premium Tax Credit Generosity
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Healthcare System
 - **Type:** Policy
 - **Unit:** Maximum household income % FPL eligible for subsidies
@@ -147,7 +147,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Federal legislation (ARPA, IRA), IRS regulations. Federal policy with state-specific impacts.
 
 ### Node 6: Prescription Drug Price Regulation Stringency
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Healthcare System
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more stringent regulation)
@@ -156,7 +156,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** NASHP Prescription Drug State Bill Tracking Database, annual. State-level.
 
 ### Node 7: Pharmacy Benefit Manager (PBM) Regulation Index
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Healthcare System
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more regulated)
@@ -165,7 +165,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Academy for State Health Policy (NASHP), National Conference of State Legislatures (NCSL) PBM tracking. State-level, annual.
 
 ### Node 8: Surprise Billing Protection Strength
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Healthcare System
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = stronger protection)
@@ -174,7 +174,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Commonwealth Fund state balance billing analysis, NAIC model law tracking. State-level, updated with legislation.
 
 ### Node 9: Telehealth Payment Parity Laws
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Healthcare System
 - **Type:** Policy
 - **Unit:** Categorical: None, Private only, Medicaid only, Both
@@ -183,7 +183,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Center for Connected Health Policy (CCHP) State Telehealth Laws and Reimbursement Policies database, updated quarterly. State-level.
 
 ### Node 10: Certificate of Need (CON) Law Stringency
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Healthcare System
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more stringent)
@@ -196,7 +196,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.2 HOUSING POLICY
 
 ### Node 11: Rent Control / Stabilization Policy Strength
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Housing
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = stronger rent control)
@@ -205,7 +205,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Urban Institute rent control policy database, local ordinances, NMHC state preemption tracking. State and major city-level.
 
 ### Node 12: Just-Cause Eviction Protection
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Housing
 - **Type:** Policy
 - **Unit:** Categorical: None, Moderate, Strong
@@ -214,7 +214,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Eviction Lab policy database, National Low Income Housing Coalition (NLIHC) state scorecards, local ordinances. State and city-level.
 
 ### Node 13: Public Housing Funding Per Capita
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Housing
 - **Type:** Policy
 - **Unit:** Federal dollars per capita per year
@@ -223,7 +223,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** HUD annual budget appropriations, Census population estimates. Federal-level, annual.
 
 ### Node 14: Housing Choice Voucher Coverage Rate
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Housing
 - **Type:** Policy
 - **Unit:** Percent of eligible households receiving vouchers
@@ -232,7 +232,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** HUD Picture of Subsidized Households, ACS income data for eligibility estimates. Center on Budget and Policy Priorities (CBPP) analyses. State and metro-level, annual.
 
 ### Node 15: Inclusionary Zoning Policy Prevalence
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Housing
 - **Type:** Policy
 - **Unit:** Percent of jurisdictions with inclusionary zoning in state
@@ -241,7 +241,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Grounded Solutions Network Inclusionary Housing Database, local ordinances. State and city-level, updated periodically.
 
 ### Node 16: Single-Family Zoning Restriction Prevalence
-- **Scale:** Structural
+- **Scale:** 6
 - **Domain:** Housing
 - **Type:** Policy
 - **Unit:** Percent of residentially zoned land restricted to single-family
@@ -250,7 +250,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Local zoning maps (GIS), research analyses (e.g., Berkeley Terner Center, NYU Furman Center). City and metro-level, updated with zoning reforms.
 
 ### Node 17: Source of Income Discrimination Protection
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Housing
 - **Type:** Policy
 - **Unit:** Categorical: None, Limited, Comprehensive
@@ -259,7 +259,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Poverty & Race Research Action Council (PRRAC) Source of Income Laws database, local ordinances. State and city-level.
 
 ### Node 18: Eviction Legal Representation Right
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Housing
 - **Type:** Policy
 - **Unit:** Categorical: None, Partial, Universal right to counsel
@@ -268,7 +268,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Coalition for a Civil Right to Counsel (NCCRC) Right to Counsel tracker, local legislation. State and city-level.
 
 ### Node 19: Eviction Filing Fee
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Housing
 - **Type:** Policy
 - **Unit:** Dollars (filing fee for landlord to file eviction)
@@ -277,7 +277,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Eviction Lab policy database, state and local court fee schedules. State and county-level.
 
 ### Node 20: Eviction Sealing/Expungement Law
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Housing
 - **Type:** Policy
 - **Unit:** Categorical: No sealing, Sealing after dismissal, Automatic sealing
@@ -290,7 +290,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.3 LABOR AND EMPLOYMENT POLICY
 
 ### Node 21: Minimum Wage Level
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Economic Security, Employment
 - **Type:** Policy
 - **Unit:** Dollars per hour
@@ -299,7 +299,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** US Department of Labor Wage and Hour Division, Economic Policy Institute minimum wage tracker. State and city-level, updated with legislation.
 
 ### Node 22: Paid Sick Leave Mandate
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Employment
 - **Type:** Policy
 - **Unit:** Categorical: None, Limited, Comprehensive
@@ -308,7 +308,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Partnership for Women & Families (NPWF), National Employment Law Project (NELP) paid leave trackers. State and city-level.
 
 ### Node 23: Paid Family Leave Policy Generosity
-- **Scale:** Structural
+- **Scale:** 3
 - **Domain:** Employment
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more generous)
@@ -317,7 +317,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Partnership for Women & Families (NPWF), National Conference of State Legislatures (NCSL) paid leave database. State-level.
 
 ### Node 24: Unemployment Insurance Generosity Index
-- **Scale:** Structural
+- **Scale:** 6
 - **Domain:** Economic Security, Employment
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more generous)
@@ -326,7 +326,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** US Department of Labor UI Data, Center on Budget and Policy Priorities (CBPP) analyses. State-level, annual.
 
 ### Node 25: Workers' Compensation Coverage Rate
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Employment, Occupational Health
 - **Type:** Policy
 - **Unit:** Percent of workforce covered by workers' comp insurance
@@ -335,7 +335,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Academy of Social Insurance (NASI) Workers' Compensation report, state labor departments. State-level, annual.
 
 ### Node 26: Workers' Compensation Benefit Adequacy
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Employment, Occupational Health
 - **Type:** Policy
 - **Unit:** Average weekly benefit as % of state average wage
@@ -344,7 +344,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Academy of Social Insurance (NASI) Workers' Compensation report. State-level, annual.
 
 ### Node 27: Right-to-Work Law Status
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Employment, Labor
 - **Type:** Policy
 - **Unit:** Binary (0=not right-to-work, 1=right-to-work)
@@ -353,7 +353,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Conference of State Legislatures (NCSL), National Right to Work Legal Defense Foundation. State-level.
 
 ### Node 28: Union Density Rate [REVISED - Consolidated with Node 113]
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Employment, Labor
 - **Type:** Rate
 - **Unit:** Percent of wage and salary workers who are union members
@@ -365,7 +365,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Bureau of Labor Statistics (BLS) Current Population Survey Union Membership Supplement, annual. State-level.
 
 ### Node 29: Occupational Licensing Stringency
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Employment
 - **Type:** Policy
 - **Unit:** Percent of workforce in occupations requiring license
@@ -374,7 +374,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Conference of State Legislatures (NCSL), research analyses (e.g., Kleiner & Krueger), state licensing boards. State-level estimates, periodic updates.
 
 ### Node 30: Ban-the-Box Policy Adoption
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Employment, Criminal Justice
 - **Type:** Policy
 - **Unit:** Categorical: None, Public employers only, Private employers included
@@ -383,7 +383,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Employment Law Project (NELP) Ban the Box tracker, local ordinances. State and city-level.
 
 ### Node 31: Non-Compete Agreement Restrictions
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Employment
 - **Type:** Policy
 - **Unit:** Categorical: Fully enforceable, Limited restrictions, Banned/Unenforceable
@@ -392,7 +392,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Beck Reed Riden law firm analysis, Economic Policy Institute, state statutes. State-level. Federal FTC ban proposed 2023 (pending).
 
 ### Node 32: Wage Theft Enforcement Strength
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Employment, Economic Security
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = stronger enforcement)
@@ -401,7 +401,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Employment Law Project (NELP), Economic Policy Institute, state labor department reports. State-level.
 
 ### Node 33: Gig Worker Classification Laws
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Employment
 - **Type:** Policy
 - **Unit:** Categorical: ABC test, Multifactor test, Gig carve-out
@@ -414,7 +414,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.3a CRIME AND COMMUNITY SAFETY [NEW SECTION - Added to fill mechanism gap]
 
 ### Node 100: Violent Crime Rate [NEW - Added to fill mechanism gap]
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Criminal Justice, Social Environment, Public Safety
 - **Type:** Rate
 - **Unit:** Violent crimes per 100,000 population per year
@@ -425,7 +425,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Consolidation Note:** Previously missing from inventory but referenced in mechanisms linking violence exposure to mental health, stress, and child outcomes.
 
 ### Node 101: Property Crime Rate [NEW - Added for completeness]
-- **Scale:** Structural
+- **Scale:** 5
 - **Domain:** Criminal Justice, Social Environment, Economic Security
 - **Type:** Rate
 - **Unit:** Property crimes per 100,000 population per year
@@ -440,7 +440,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.4 CRIMINAL JUSTICE POLICY
 
 ### Node 34: Incarceration Rate
-- **Scale:** Structural (could be Individual, but treated as structural for macro prison policy effects)
+- **Scale:** 7 (could be Individual, but treated as structural for macro prison policy effects)
 - **Domain:** Criminal Justice
 - **Type:** Rate
 - **Unit:** Prisoners per 100,000 population (state prisons + local jails)
@@ -449,7 +449,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Vera Institute of Justice Incarceration Trends dataset, Bureau of Justice Statistics. State and county-level, annual.
 
 ### Node 35: Mandatory Minimum Sentencing Prevalence
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Criminal Justice
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more prevalent mandatory minimums)
@@ -458,7 +458,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Families Against Mandatory Minimums (FAMM) state law database, The Sentencing Project, state sentencing commissions. State-level.
 
 ### Node 36: Drug Decriminalization/Defelonization Status
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Criminal Justice, Substance Use
 - **Type:** Policy
 - **Unit:** Categorical: Fully criminalized, Marijuana decrim, Marijuana legal, Broader decrim
@@ -467,7 +467,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** NORML state law database, Drug Policy Alliance, Marijuana Policy Project. State-level.
 
 ### Node 37: Cash Bail Reform Status
-- **Scale:** Structural
+- **Scale:** 3
 - **Domain:** Criminal Justice, Economic Security
 - **Type:** Policy
 - **Unit:** Categorical: Cash bail default, Risk assessment, Eliminated for most offenses
@@ -476,7 +476,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Pretrial Justice Institute state profiles, The Bail Project, state judiciary rules. State and county-level (varies by jurisdiction).
 
 ### Node 38: Three Strikes / Habitual Offender Law Stringency
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Criminal Justice
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more stringent)
@@ -485,7 +485,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** The Sentencing Project, Families Against Mandatory Minimums (FAMM), state statutes. State-level.
 
 ### Node 39: Juvenile Justice Transfer Laws Stringency
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Criminal Justice, Child Welfare
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = easier transfer to adult court)
@@ -494,7 +494,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Campaign for Youth Justice, National Center for Juvenile and Family Court Judges (NCJFCJ), state statutes. State-level.
 
 ### Node 40: Felon Disenfranchisement Stringency
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Criminal Justice, Civic Engagement
 - **Type:** Policy
 - **Unit:** Categorical: No restriction, Incarcerated only, Parole/probation included, Permanent for some
@@ -503,7 +503,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** The Sentencing Project Felony Disenfranchisement database, Brennan Center, state election laws. State-level.
 
 ### Node 41: Civil Asset Forfeiture Reform Status
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Criminal Justice, Economic Security
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = stronger protections against forfeiture)
@@ -512,7 +512,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Institute for Justice Policing for Profit report (updated every 2-3 years), state statutes. State-level.
 
 ### Node 42: Police Accountability Law Strength
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Criminal Justice, Social Environment
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = stronger accountability)
@@ -525,7 +525,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.5 EDUCATION AND CHILD WELFARE POLICY
 
 ### Node 43: Early Childhood Education (Pre-K) Access Funding Per Capita
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Education, Child Welfare
 - **Type:** Policy
 - **Unit:** State dollars per child age 3-4 per year
@@ -534,7 +534,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Institute for Early Education Research (NIEER) State of Preschool Yearbook, annual. State-level.
 
 ### Node 44: Child Tax Credit Generosity (State Supplement)
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Economic Security, Child Welfare
 - **Type:** Policy
 - **Unit:** Maximum state credit dollars per child per year
@@ -543,7 +543,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Center on Budget and Policy Priorities (CBPP), Institute on Taxation and Economic Policy (ITEP) state tax credits database. State-level, annual.
 
 ### Node 45: SNAP Maximum Benefit Supplement
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Food Security, Economic Security
 - **Type:** Policy
 - **Unit:** Percent supplement above federal SNAP maximum
@@ -552,7 +552,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Center on Budget and Policy Priorities (CBPP), USDA Food and Nutrition Service (FNS) state options report. State-level.
 
 ### Node 46: TANF Benefit Adequacy
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Economic Security, Child Welfare
 - **Type:** Policy
 - **Unit:** Maximum TANF benefit for family of 3 as % of federal poverty line
@@ -561,7 +561,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Center on Budget and Policy Priorities (CBPP) TANF state fact sheets, HHS Administration for Children and Families (ACF) data. State-level, annual.
 
 ### Node 47: TANF Work Requirement Stringency
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Economic Security, Child Welfare, Employment
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more stringent)
@@ -570,7 +570,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Center on Budget and Policy Priorities (CBPP), Urban Institute TANF policy database, state TANF plans. State-level.
 
 ### Node 48: School Funding Equity (Progressivity) Index
-- **Scale:** Structural
+- **Scale:** 3
 - **Domain:** Education
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more progressive/equitable)
@@ -579,7 +579,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Education Law Center Making the Grade report (annual), The Education Trust Funding Gaps report, state education finance data. State-level.
 
 ### Node 49: Universal School Meals Policy
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Food Security, Education
 - **Type:** Policy
 - **Unit:** Categorical: None, Free for low-income only (federal), Free for all (universal)
@@ -588,7 +588,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Food Research & Action Center (FRAC), state education departments, state legislation. State-level.
 
 ### Node 50: School Discipline Disparity Oversight
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Education, Criminal Justice
 - **Type:** Policy
 - **Unit:** Categorical: No oversight, Data reporting required, Disparity reduction mandates
@@ -601,7 +601,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.6 ENVIRONMENTAL AND CLIMATE POLICY
 
 ### Node 51: Clean Air Act Enforcement Stringency
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Environmental, Built Environment
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more stringent)
@@ -610,7 +610,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** EPA Enforcement and Compliance History Online (ECHO), Environmental Defense Fund (EDF) state scorecards, state air quality agencies. State-level, annual.
 
 ### Node 52: Lead Abatement Policy Strength
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Environmental, Housing
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = stronger policy)
@@ -619,7 +619,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Center for Healthy Housing (NCHH), CDC Childhood Lead Poisoning Prevention Program, state health departments. State-level.
 
 ### Node 53: Environmental Justice Screening Tool Adoption
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Environmental, Social Environment
 - **Type:** Policy
 - **Unit:** Categorical: No tool, Tool exists, Tool mandated for decision-making
@@ -628,7 +628,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** EPA EJ resources, state environmental agency websites, Environmental Law Institute tracking. State-level.
 
 ### Node 54: Climate Adaptation Funding Per Capita
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Environmental, Climate, Infrastructure
 - **Type:** Policy
 - **Unit:** State dollars per capita per year for climate adaptation
@@ -637,7 +637,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Georgetown Climate Center state adaptation tracking, state budget appropriations analysis. State-level, annual.
 
 ### Node 55: Renewable Portfolio Standard (RPS) Stringency
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Environmental, Climate
 - **Type:** Policy
 - **Unit:** Percent of electricity from renewables required by target year
@@ -646,7 +646,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Conference of State Legislatures (NCSL), Database of State Incentives for Renewables & Efficiency (DSIRE). State-level.
 
 ### Node 56: Carbon Pricing/Cap-and-Trade Policy
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Environmental, Climate
 - **Type:** Policy
 - **Unit:** Categorical: None, Carbon tax, Cap-and-trade
@@ -655,7 +655,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** World Bank Carbon Pricing Dashboard, Regional Greenhouse Gas Initiative (RGGI), California Air Resources Board (CARB), state legislation. State-level.
 
 ### Node 57: Flood Risk Disclosure Requirements
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Environmental, Climate, Housing
 - **Type:** Policy
 - **Unit:** Categorical: No requirement, FEMA zones only, Comprehensive (includes future risk)
@@ -664,7 +664,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Natural Resources Defense Council (NRDC) flood disclosure analysis, state real estate disclosure laws. State-level.
 
 ### Node 58: Heat Action Plan Existence
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Environmental, Climate, Public Health
 - **Type:** Policy
 - **Unit:** Binary (0=no plan, 1=plan exists)
@@ -673,7 +673,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** CDC Building Resilience Against Climate Effects (BRACE) program, C40 Cities Climate Leadership Group, state/city emergency management plans. State and major city-level.
 
 ### Node 59: Water Quality Regulation Stringency (PFAS, etc.)
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Environmental, Public Health
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more stringent)
@@ -682,7 +682,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Environmental Working Group (EWG) Tap Water Database, EPA SDWA tracking, Environmental Law Institute state law database. State-level.
 
 ### Node 60: Pesticide Regulation Stringency
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Environmental, Occupational Health, Public Health
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more stringent)
@@ -695,7 +695,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.7 INFRASTRUCTURE INVESTMENT POLICY
 
 ### Node 61: Public Transit Operating Funding Per Capita
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Transportation, Infrastructure
 - **Type:** Policy
 - **Unit:** Combined federal and state dollars per capita per year
@@ -704,7 +704,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** FTA National Transit Database, state transportation department budgets, APTA analyses. State and metro-level, annual.
 
 ### Node 62: Active Transportation Infrastructure Investment
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Transportation, Infrastructure, Built Environment
 - **Type:** Policy
 - **Unit:** Dollars per capita per year for bike/ped infrastructure
@@ -713,7 +713,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Alliance for Biking & Walking Benchmarking Reports, state transportation department budgets, Rails-to-Trails Conservancy. State and metro-level.
 
 ### Node 63: Parks and Green Space Investment Per Capita
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Built Environment, Infrastructure, Environmental
 - **Type:** Policy
 - **Unit:** State and local dollars per capita per year
@@ -722,7 +722,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Trust for Public Land City Park Facts database (annual), US Census government finance data. City and metro-level, aggregated to state.
 
 ### Node 64: Affordable Housing Bond/Trust Fund Capitalization
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Housing, Infrastructure
 - **Type:** Policy
 - **Unit:** Dollars in housing trust fund or bond authority per capita
@@ -731,7 +731,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Center for Community Change Housing Trust Fund Project, National Council of State Housing Agencies (NCSHA), state housing finance agency reports. State-level, annual.
 
 ### Node 65: Broadband Infrastructure Investment Per Capita
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Digital Access, Infrastructure
 - **Type:** Policy
 - **Unit:** State and federal dollars per capita for broadband expansion
@@ -740,7 +740,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Telecommunications and Information Administration (NTIA) BroadbandUSA, state broadband office reports, IIJA funding allocations. State-level.
 
 ### Node 66: Water Infrastructure Investment Per Capita
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Infrastructure, Environmental, Public Health
 - **Type:** Policy
 - **Unit:** Dollars per capita per year for water/wastewater infrastructure
@@ -749,7 +749,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** EPA Clean Water State Revolving Fund (CWSRF), Drinking Water State Revolving Fund (DWSRF), ASCE Infrastructure Report Card. State-level, annual.
 
 ### Node 67: School Infrastructure Investment Per Student
-- **Scale:** Structural
+- **Scale:** 3
 - **Domain:** Education, Infrastructure
 - **Type:** Policy
 - **Unit:** Dollars per student per year for school facilities
@@ -762,7 +762,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.8 TAXATION AND FISCAL POLICY
 
 ### Node 68: State Income Tax Progressivity
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Economic Security, Taxation
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more progressive)
@@ -771,7 +771,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Institute on Taxation and Economic Policy (ITEP) Who Pays report (biennial), state tax codes. State-level.
 
 ### Node 69: State and Local Tax (SALT) Regressivity Index
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Economic Security, Taxation
 - **Type:** Policy
 - **Unit:** Ratio of effective tax rate (bottom 20% / top 1%)
@@ -780,7 +780,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Institute on Taxation and Economic Policy (ITEP) Who Pays report (biennial). State-level.
 
 ### Node 70: Earned Income Tax Credit (EITC) Refundability
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Economic Security, Taxation
 - **Type:** Policy
 - **Unit:** State EITC as % of federal EITC (0% if no state EITC)
@@ -789,7 +789,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Center on Budget and Policy Priorities (CBPP), Institute on Taxation and Economic Policy (ITEP) state EITC database. State-level, annual.
 
 ### Node 71: Property Tax Circuit Breaker Coverage
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Economic Security, Taxation, Housing
 - **Type:** Policy
 - **Unit:** Categorical: No circuit breaker, Elderly only, All low-income
@@ -798,7 +798,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** AARP state property tax relief programs, Lincoln Institute of Land Policy, state revenue department programs. State-level.
 
 ### Node 72: Sales Tax Exemption for Necessities
-- **Scale:** Structural
+- **Scale:** 6
 - **Domain:** Economic Security, Taxation
 - **Type:** Policy
 - **Unit:** Index 0-10 (higher = more exemptions)
@@ -807,7 +807,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Center on Budget and Policy Priorities (CBPP) sales tax analysis, state revenue departments, Tax Policy Center. State-level.
 
 ### Node 73: Estate/Inheritance Tax Existence
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Economic Security, Taxation, Wealth
 - **Type:** Policy
 - **Unit:** Categorical: No tax, Inheritance tax, Estate tax
@@ -816,7 +816,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Tax Foundation state estate tax reports, state revenue departments. State-level.
 
 ### Node 74: Safety Net Funding Per Capita
-- **Scale:** Structural
+- **Scale:** 3
 - **Domain:** Economic Security, Social Services
 - **Type:** Policy
 - **Unit:** State dollars per capita per year for safety net programs
@@ -829,7 +829,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.9 TRADE AND ECONOMIC POLICY
 
 ### Node 75: State Minimum Wage Indexed to Inflation
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Economic Security, Employment
 - **Type:** Policy
 - **Unit:** Binary (0=not indexed, 1=indexed)
@@ -838,7 +838,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Economic Policy Institute (EPI), National Conference of State Legislatures (NCSL) minimum wage tracking. State-level.
 
 ### Node 76: State Rainy Day Fund Balance
-- **Scale:** Structural
+- **Scale:** 5
 - **Domain:** Economic Security, Fiscal Policy
 - **Type:** Policy
 - **Unit:** Rainy day fund balance as % of state general fund expenditures
@@ -847,7 +847,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Association of State Budget Officers (NASBO) Fiscal Survey, Pew Charitable Trusts Fiscal 50 dashboard. State-level, annual.
 
 ### Node 77: Economic Development Incentive Spending Per Capita
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Economic Security, Employment, Fiscal Policy
 - **Type:** Policy
 - **Unit:** State dollars per capita per year on business incentives
@@ -856,7 +856,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Good Jobs First Subsidy Tracker, state economic development agency reports, state budgets. State-level, annual.
 
 ### Node 78: State Business Tax Climate Index
-- **Scale:** Structural
+- **Scale:** 6
 - **Domain:** Economic Security, Employment, Taxation
 - **Type:** Policy
 - **Unit:** Index rank 1-50 (1=most business-friendly)
@@ -865,7 +865,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Tax Foundation State Business Tax Climate Index (annual). State-level.
 
 ### Node 79: Prevailing Wage Law Existence
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Employment, Labor, Infrastructure
 - **Type:** Policy
 - **Unit:** Binary (0=no prevailing wage law, 1=law exists)
@@ -874,7 +874,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Economic Policy Institute, National Conference of State Legislatures (NCSL), state labor departments. State-level.
 
 ### Node 80: Community Benefits Agreement Requirements
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Employment, Social Environment, Economic Security
 - **Type:** Policy
 - **Unit:** Categorical: No requirement, Voluntary encouraged, Mandatory for public projects
@@ -887,7 +887,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.10 ECONOMIC STRUCTURE AND MARKET CONDITIONS
 
 ### Node 81: Wealth Inequality (Gini Coefficient)
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Economic Security
 - **Type:** Structural Condition
 - **Unit:** Gini coefficient 0-1 (higher = more unequal)
@@ -896,7 +896,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Federal Reserve Survey of Consumer Finances (SCF), state-level wealth estimates from academic analyses (e.g., Kuhn, Schularick, Steins). Triennial with lag.
 
 ### Node 82: Racial Wealth Gap
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Economic Security, Social Environment
 - **Type:** Structural Condition
 - **Unit:** Ratio of median White household wealth to median Black household wealth
@@ -905,7 +905,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Federal Reserve Survey of Consumer Finances (SCF), Urban Institute Race and Wealth Scorecard, Prosperity Now racial wealth divide state data. State-level, periodic.
 
 ### Node 83: Income Volatility Index
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Economic Security
 - **Type:** Structural Condition
 - **Unit:** Index 0-100 (higher = more volatile income)
@@ -914,7 +914,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** JPMorgan Chase Institute Financial Health Pulse, Pew Charitable Trusts income volatility analysis, Federal Reserve Survey of Household Economics. Metro-level, annual.
 
 ### Node 84: Median Discretionary Income After Necessities
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Economic Security
 - **Type:** Structural Condition
 - **Unit:** Dollars per month remaining after housing, food, transportation, healthcare, childcare
@@ -923,7 +923,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** United Way ALICE (Asset Limited, Income Constrained, Employed) county reports, MIT Living Wage Calculator, Economic Policy Institute Family Budget Calculator. County and metro-level, annual.
 
 ### Node 85: Household Debt-to-Income Ratio
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Economic Security
 - **Type:** Structural Condition
 - **Unit:** Median household total debt as ratio to annual income
@@ -932,7 +932,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Federal Reserve Consumer Credit Panel, Experian State of Credit reports, Urban Institute Debt in America database. State and metro-level, annual.
 
 ### Node 86: Predatory Lending Exposure
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Economic Security
 - **Type:** Structural Condition
 - **Unit:** Payday lenders + pawn shops per 100,000 population
@@ -941,7 +941,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Consumer Financial Protection Bureau (CFPB) complaint database, Pew Charitable Trusts payday lending reports, Center for Responsible Lending, business license data. State and county-level.
 
 ### Node 87: Banking Access (Unbanked Rate)
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Economic Security
 - **Type:** Structural Condition
 - **Unit:** Percent of households without checking or savings account
@@ -950,7 +950,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** FDIC National Survey of Unbanked and Underbanked Households (biennial). State and metro-level estimates available.
 
 ### Node 88: Underbanked Rate
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Economic Security
 - **Type:** Structural Condition
 - **Unit:** Percent of households using alternative financial services despite having bank account
@@ -959,7 +959,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** FDIC National Survey of Unbanked and Underbanked Households (biennial). State and metro-level.
 
 ### Node 89: Consumer Debt in Collections Rate
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Economic Security
 - **Type:** Structural Condition
 - **Unit:** Percent of adults with debt in collections
@@ -968,7 +968,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Urban Institute Debt in America database (credit bureau data), Consumer Financial Protection Bureau (CFPB) data. State, metro, and ZIP-level, updated periodically.
 
 ### Node 90: Medical Debt Prevalence
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Economic Security, Healthcare Access
 - **Type:** Structural Condition
 - **Unit:** Percent of adults with medical debt in collections
@@ -977,7 +977,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Urban Institute Debt in America, Kaiser Family Foundation medical debt analysis, CFPB credit bureau data. State and county-level.
 
 ### Node 91: Bank Branch Density
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Economic Security, Built Environment
 - **Type:** Structural Condition
 - **Unit:** Bank branches per 100,000 population
@@ -986,7 +986,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** FDIC Summary of Deposits (annual), NCUA Credit Union locator. State, county, and tract-level.
 
 ### Node 92: Credit Score Distribution (Median)
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Economic Security
 - **Type:** Structural Condition
 - **Unit:** Median FICO credit score
@@ -999,7 +999,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.11 LABOR MARKET STRUCTURE
 
 ### Node 93: Job Quality Index
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Employment
 - **Type:** Structural Condition
 - **Unit:** Index 0-100 (higher = better job quality)
@@ -1008,7 +1008,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** RAND American Working Conditions Survey, Aspen Institute Future of Work Initiative, Bureau of Labor Statistics (BLS) compensation and safety data. Metro-level, updated periodically.
 
 ### Node 94: Precarious Employment Rate
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Employment
 - **Type:** Structural Condition
 - **Unit:** Percent of workforce in non-standard arrangements
@@ -1017,7 +1017,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Bureau of Labor Statistics Contingent Worker Supplement (CWS, periodic), JPMorgan Chase Institute gig economy data, Economic Policy Institute analyses. State and metro-level.
 
 ### Node 95: Wage Stagnation Rate
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Employment, Economic Security
 - **Type:** Structural Condition
 - **Unit:** Percent change in real median wage over 10 years
@@ -1026,7 +1026,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Bureau of Labor Statistics Occupational Employment and Wage Statistics (OEWS), Current Population Survey. State-level, annual.
 
 ### Node 96: Occupational Hazard Exposure Rate
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Employment, Occupational Health
 - **Type:** Structural Condition
 - **Unit:** Percent of workforce in high-hazard occupations
@@ -1035,7 +1035,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Bureau of Labor Statistics Occupational Employment and Wage Statistics (OEWS), OSHA hazard classifications by SOC code. State and metro-level, annual.
 
 ### Node 97: Workplace Injury and Illness Rate
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Employment, Occupational Health
 - **Type:** Structural Condition (could be Individual, but aggregate rate is structural)
 - **Unit:** Cases per 100 full-time equivalent (FTE) workers per year
@@ -1044,7 +1044,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Bureau of Labor Statistics Survey of Occupational Injuries and Illnesses (SOII), annual. State-level, by industry.
 
 ### Node 98: Fatal Occupational Injury Rate
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Employment, Occupational Health
 - **Type:** Structural Condition
 - **Unit:** Fatalities per 100,000 FTE workers per year
@@ -1053,7 +1053,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Bureau of Labor Statistics Census of Fatal Occupational Injuries (CFOI), annual. State-level.
 
 ### Node 99: Industrial Composition Index
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Employment, Economic Security
 - **Type:** Structural Condition
 - **Unit:** Index 0-100 (higher = higher-wage industries)
@@ -1062,7 +1062,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Bureau of Labor Statistics Quarterly Census of Employment and Wages (QCEW), BEA regional economic accounts. State and metro-level, annual.
 
 ### Node 100: Part-Time for Economic Reasons Rate
-- **Scale:** Structural
+- **Scale:** 6
 - **Domain:** Employment, Economic Security
 - **Type:** Structural Condition (labor market condition)
 - **Unit:** Percent of workforce part-time involuntarily
@@ -1071,7 +1071,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Bureau of Labor Statistics Current Population Survey (CPS), Local Area Unemployment Statistics (LAUS). State and metro-level, monthly.
 
 ### Node 101: Labor Force Participation Rate
-- **Scale:** Structural
+- **Scale:** 6
 - **Domain:** Employment, Economic Security
 - **Type:** Structural Condition
 - **Unit:** Percent of working-age population (16+) in labor force
@@ -1080,7 +1080,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Bureau of Labor Statistics Current Population Survey (CPS), Local Area Unemployment Statistics (LAUS). State and metro-level, monthly.
 
 ### Node 102: Youth (16-24) Unemployment Rate
-- **Scale:** Structural
+- **Scale:** 6
 - **Domain:** Employment, Economic Security, Education
 - **Type:** Structural Condition
 - **Unit:** Percent of youth labor force unemployed
@@ -1093,7 +1093,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.12 TRANSPORTATION SYSTEM STRUCTURE
 
 ### Node 103: Average Commute Time
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Transportation, Employment
 - **Type:** Structural Condition
 - **Unit:** Median minutes per one-way commute
@@ -1102,7 +1102,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** American Community Survey (ACS) Journey to Work, annual. State, metro, county, and tract-level.
 
 ### Node 104: Vehicle Dependency Rate
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Transportation
 - **Type:** Structural Condition
 - **Unit:** Percent of workers who must drive alone to work
@@ -1111,7 +1111,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** American Community Survey (ACS) Commuting Characteristics, annual. State, metro, county, tract-level.
 
 ### Node 105: Transit Service Frequency
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Transportation, Built Environment
 - **Type:** Structural Condition
 - **Unit:** Median wait time (minutes) for transit at median stop
@@ -1120,7 +1120,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** General Transit Feed Specification (GTFS) data analyzed by researchers (e.g., Transit Center, ITDP), OpenTripPlanner. Metro and transit agency-level.
 
 ### Node 106: Job Accessibility by Transit
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Transportation, Employment
 - **Type:** Structural Condition
 - **Unit:** Percent of metro jobs accessible within 45 minutes by transit
@@ -1129,7 +1129,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** University of Minnesota Accessibility Observatory (annual analysis of GTFS + LODES employment data). Metro-level.
 
 ### Node 107: Transportation Cost Burden
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Transportation, Economic Security
 - **Type:** Structural Condition
 - **Unit:** Median transportation costs as % of household income
@@ -1138,7 +1138,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Bureau of Labor Statistics Consumer Expenditure Survey, Center for Neighborhood Technology (CNT) Housing + Transportation (H+T) Affordability Index. Metro and neighborhood-level.
 
 ### Node 108: Transit Desert Prevalence
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Transportation, Built Environment
 - **Type:** Structural Condition
 - **Unit:** Percent of population living in transit deserts
@@ -1147,7 +1147,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** TransitCenter analysis of GTFS data, Brookings metro transit analyses. Metro and neighborhood-level.
 
 ### Node 109: Pedestrian and Cyclist Safety (Fatality Rate)
-- **Scale:** Structural
+- **Scale:** 7
 - **Domain:** Transportation, Built Environment, Public Health
 - **Type:** Structural Condition
 - **Unit:** Pedestrian + cyclist fatalities per 100,000 population per year
@@ -1156,7 +1156,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Highway Traffic Safety Administration (NHTSA) Fatality Analysis Reporting System (FARS), Smart Growth America Dangerous by Design report (periodic). State and metro-level, annual.
 
 ### Node 110: Walkability Index
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Transportation, Built Environment
 - **Type:** Structural Condition
 - **Unit:** Index 0-100 (higher = more walkable)
@@ -1169,7 +1169,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.13 COMMUNITY POWER AND CIVIC INFRASTRUCTURE
 
 ### Node 111: Voter Turnout Rate
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Civic Engagement, Social Environment
 - **Type:** Structural Condition
 - **Unit:** Percent of eligible population voting in general elections
@@ -1178,7 +1178,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** US Elections Project (University of Florida), state election boards. State and county-level, biennial.
 
 ### Node 112: Community Organizing Density
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Social Environment, Civic Engagement
 - **Type:** Structural Condition
 - **Unit:** Community-based organizations per 10,000 population
@@ -1192,7 +1192,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Bureau of Labor Statistics CPS Union Membership Supplement (state-level), Economic Policy Institute metro estimates (modeled). Metro-level, annual.
 
 ### Node 114: Tenant Union and Organizing Capacity
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Housing, Social Environment
 - **Type:** Structural Condition
 - **Unit:** Tenant unions + tenant rights organizations per 100,000 renters
@@ -1201,7 +1201,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Tenant organizing network surveys (e.g., Right to the City Alliance, Homes Guarantee campaign), local housing justice coalitions. City-level, updated periodically.
 
 ### Node 115: Civic Participation Rate (Beyond Voting)
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Civic Engagement, Social Environment
 - **Type:** Structural Condition
 - **Unit:** Percent of adults engaged in civic activities (past year)
@@ -1210,7 +1210,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** US Census Current Population Survey Civic Engagement and Volunteering Supplement (periodic), National Conference on Citizenship Civic Health Index. State and metro-level.
 
 ### Node 116: Grassroots Funding Capacity
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Economic Security, Civic Engagement
 - **Type:** Structural Condition
 - **Unit:** Small donations (<$200) per capita to community organizations and campaigns
@@ -1219,7 +1219,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Federal Election Commission (FEC) itemized contribution data (political), GuideStar/Candid nonprofit giving data. Incomplete for non-itemized <$200 donations to nonprofits. State and metro estimates.
 
 ### Node 117: Public Meeting Attendance Rate
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Civic Engagement
 - **Type:** Structural Condition
 - **Unit:** Average attendees per city council / county board meeting
@@ -1228,7 +1228,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National League of Cities surveys, local government attendance records (where tracked). City and county-level.
 
 ### Node 118: Language Access in Government Services
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Civic Engagement, Social Environment
 - **Type:** Structural Condition
 - **Unit:** Percent of LEP population with language access to government services
@@ -1237,7 +1237,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** Migration Policy Institute language access assessments, Department of Justice Language Access Assessments, local government language access plans. City and county-level.
 
 ### Node 119: Media Diversity (Local News Outlets)
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Civic Engagement, Information Environment
 - **Type:** Structural Condition
 - **Unit:** Local news outlets per 100,000 population
@@ -1246,7 +1246,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** UNC Hussman School of Journalism News Deserts and Ghost Newspapers project (biennial), Pew Research Center State of the News Media. County-level.
 
 ### Node 120: Digital Civic Engagement Infrastructure
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Civic Engagement, Digital Access
 - **Type:** Structural Condition
 - **Unit:** Percent of residents with access to online civic platforms
@@ -1259,7 +1259,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 ## 1.14 CLIMATE AND ENVIRONMENTAL EXPOSURES
 
 ### Node 121: Extreme Heat Days Per Year
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Environmental, Climate, Public Health
 - **Type:** Structural Condition
 - **Unit:** Days per year with heat index >100°F
@@ -1268,7 +1268,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** National Oceanic and Atmospheric Administration (NOAA) climate data, CDC BRACE heat exposure tracking, Climate Central analysis. County-level, annual.
 
 ### Node 122: Flood Risk Exposure (100-Year Floodplain)
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Environmental, Climate, Housing
 - **Type:** Structural Condition
 - **Unit:** Percent of population living in FEMA 100-year floodplain
@@ -1277,7 +1277,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** FEMA National Flood Hazard Layer (NFHL), First Street Foundation Flood Factor (includes climate projections), Census population. County and tract-level.
 
 ### Node 123: Wildfire Risk Exposure
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Environmental, Climate
 - **Type:** Structural Condition
 - **Unit:** Percent of population in high/very high wildfire hazard zones
@@ -1286,7 +1286,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** USDA Forest Service Wildfire Hazard Potential dataset, CAL FIRE, Climate Central, Census population. County and tract-level.
 
 ### Node 124: Ambient Air Pollution (PM2.5) [REVISED - Consolidated with Node 226]
-- **Scale:** Structural/Individual (bridge node - applicable at both scales)
+- **Scale:** 2/Individual (bridge node - applicable at both scales)
 - **Domain:** Environmental, Public Health
 - **Type:** Exposure
 - **Unit:** μg/m³ PM2.5 annual average
@@ -1298,7 +1298,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** EPA Air Quality System (AQS), modeled estimates for areas without monitors (EPA, NASA). County and tract-level, annual.
 
 ### Node 125: Climate Vulnerability Index
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Environmental, Climate, Public Health
 - **Type:** Structural Condition
 - **Unit:** Index 0-100 (higher = more vulnerable)
@@ -1307,7 +1307,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** CDC Social Vulnerability Index (SVI) Climate and Health module, EPA EJScreen climate indicators, FEMA National Risk Index. County and tract-level, updated periodically.
 
 ### Node 126: Drought Severity
-- **Scale:** Structural
+- **Scale:** 6
 - **Domain:** Environmental, Climate
 - **Type:** Structural Condition
 - **Unit:** Percent of time in moderate/severe drought (5-year average)
@@ -1316,7 +1316,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** US Drought Monitor (NOAA, USDA), updated weekly. State and county-level, historical archive for multi-year averages.
 
 ### Node 127: Superfund and Toxic Site Proximity
-- **Scale:** Structural
+- **Scale:** 1
 - **Domain:** Environmental, Public Health
 - **Type:** Structural Condition
 - **Unit:** Percent of population within 1 mile of Superfund or toxic site
@@ -1325,7 +1325,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** EPA EJScreen (Superfund, RCRA, brownfields), EPA Envirofacts. Tract-level, annual.
 
 ### Node 128: Water Insecurity / Quality Violations
-- **Scale:** Structural
+- **Scale:** 4
 - **Domain:** Environmental, Public Health
 - **Type:** Structural Condition
 - **Unit:** Percent of population served by systems with health-based violations
@@ -1334,7 +1334,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** EPA Safe Drinking Water Information System (SDWIS), Natural Resources Defense Council (NRDC) Watered Down Justice analysis. Water system and county-level, annual.
 
 ### Node 129: Urban Heat Island Intensity
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Environmental, Climate, Built Environment
 - **Type:** Structural Condition
 - **Unit:** Degrees Fahrenheit warmer than surrounding rural areas
@@ -1343,7 +1343,7 @@ Federal/State Policy Level - Laws, regulations, and macro-economic conditions th
 - **Data Source:** NASA Landsat satellite surface temperature, NOAA urban heat island assessments, Climate Central urban heat analysis. City and neighborhood-level.
 
 ### Node 130: Green Space Access
-- **Scale:** Structural
+- **Scale:** 2
 - **Domain:** Environmental, Built Environment, Public Health
 - **Type:** Structural Condition
 - **Unit:** Percent of population within 10-minute walk (1/2 mile) of park
@@ -1374,52 +1374,52 @@ Local Implementation and Organizational Level - Organizations, facilities, workf
 ## 2.1 HEALTHCARE DELIVERY INFRASTRUCTURE
 
 ### Node 131: Primary Care Physician Density
-- **Scale:** Institutional | **Domain:** Healthcare | **Type:** Availability | **Unit:** PCPs per 100k pop
+- **Scale:** 3 | **Domain:** Healthcare | **Type:** Availability | **Unit:** PCPs per 100k pop
 - **Description:** Primary care physicians per 100k population.
 - **Baseline:** 75/100k (2023). Range: 40-120. **Source:** HRSA AHRF, annual, county-level.
 
 ### Node 132: Specialist Physician Density
-- **Scale:** Institutional | **Domain:** Healthcare | **Type:** Availability | **Unit:** Specialists per 100k
+- **Scale:** 3 | **Domain:** Healthcare | **Type:** Availability | **Unit:** Specialists per 100k
 - **Description:** Specialist physicians per 100k.
 - **Baseline:** 140/100k (2023). Range: 50-350+. **Source:** HRSA AHRF, county-level.
 
 ### Node 133: FQHC Density
-- **Scale:** Institutional | **Domain:** Healthcare | **Type:** Availability | **Unit:** FQHCs per 100k
+- **Scale:** 3 | **Domain:** Healthcare | **Type:** Availability | **Unit:** FQHCs per 100k
 - **Description:** Federally Qualified Health Center sites per 100k.
 - **Baseline:** 3.2/100k (2022). Range: 0-15+. **Source:** HRSA UDS, county-level.
 
 ### Node 134: Hospital Beds Per Capita
-- **Scale:** Institutional | **Domain:** Healthcare | **Type:** Availability | **Unit:** Beds per 1k pop
+- **Scale:** 3 | **Domain:** Healthcare | **Type:** Availability | **Unit:** Beds per 1k pop
 - **Description:** Staffed acute care beds per 1k.
 - **Baseline:** 2.4/1k (2023). Range: 1.5-5+. **Source:** AHA Survey, CMS, county-level.
 
 ### Node 135: Mental Health Provider Density
-- **Scale:** Institutional | **Domain:** Healthcare, Behavioral | **Type:** Availability | **Unit:** Providers per 100k
+- **Scale:** 3 | **Domain:** Healthcare, Behavioral | **Type:** Availability | **Unit:** Providers per 100k
 - **Description:** Mental health providers (psychiatrists, psychologists, LCSWs) per 100k.
 - **Baseline:** 350/100k (2023). Range: 50-800+. **Source:** HRSA, SAMHSA, county-level.
 
 ### Node 136: SUD Treatment Facility Density
-- **Scale:** Institutional | **Domain:** Healthcare, Behavioral | **Type:** Availability | **Unit:** Facilities per 100k
+- **Scale:** 3 | **Domain:** Healthcare, Behavioral | **Type:** Availability | **Unit:** Facilities per 100k
 - **Description:** Substance use disorder treatment facilities per 100k.
 - **Baseline:** 11/100k (2023). Range: 2-30+. **Source:** SAMHSA N-SSATS, county-level.
 
 ### Node 137: Pharmacy Density
-- **Scale:** Institutional | **Domain:** Healthcare | **Type:** Availability | **Unit:** Pharmacies per 100k
+- **Scale:** 3 | **Domain:** Healthcare | **Type:** Availability | **Unit:** Pharmacies per 100k
 - **Description:** Retail pharmacies per 100k.
 - **Baseline:** 22/100k (2023). Range: 5-40+. **Source:** NCPDP, state boards, county-level.
 
 ### Node 138: Emergency Department Availability
-- **Scale:** Institutional | **Domain:** Healthcare | **Type:** Availability | **Unit:** EDs per 100k
+- **Scale:** 7 | **Domain:** Healthcare | **Type:** Availability | **Unit:** EDs per 100k
 - **Description:** Hospital emergency departments per 100k.
 - **Baseline:** 1.1/100k (2023). Range: 0-3+. **Source:** AHA, CMS, county-level.
 
 ### Node 139: Nurse-to-Population Ratio
-- **Scale:** Institutional | **Domain:** Healthcare | **Type:** Availability | **Unit:** RNs per 100k
+- **Scale:** 3 | **Domain:** Healthcare | **Type:** Availability | **Unit:** RNs per 100k
 - **Description:** Registered nurses per 100k.
 - **Baseline:** 1,100/100k (2023). Range: 600-1,800. **Source:** HRSA, state boards, county-level.
 
 ### Node 140: Hospital Market Concentration
-- **Scale:** Institutional | **Domain:** Healthcare | **Type:** Quality | **Unit:** HHI 0-10,000
+- **Scale:** 3 | **Domain:** Healthcare | **Type:** Quality | **Unit:** HHI 0-10,000
 - **Description:** Hospital market HHI. >2,500 = highly concentrated.
 - **Baseline:** Median metro HHI=3,200 (2023). Range: 1,500-10,000. **Source:** AHA, metro-level.
 
@@ -1428,37 +1428,37 @@ Local Implementation and Organizational Level - Organizations, facilities, workf
 ## 2.2 HOUSING INFRASTRUCTURE
 
 ### Node 141: Affordable Housing Units
-- **Scale:** Institutional | **Domain:** Housing | **Type:** Availability | **Unit:** Units per 100 eligible HH
+- **Scale:** 4 | **Domain:** Housing | **Type:** Availability | **Unit:** Units per 100 eligible HH
 - **Description:** Subsidized affordable units per 100 households <50% AMI.
 - **Baseline:** 37/100 (2023). **Source:** HUD PIH, county-level.
 
 ### Node 142: Public Housing Units
-- **Scale:** Institutional | **Domain:** Housing | **Type:** Availability | **Unit:** Units per 10k pop
+- **Scale:** 3 | **Domain:** Housing | **Type:** Availability | **Unit:** Units per 10k pop
 - **Description:** Public housing units per 10k.
 - **Baseline:** 35/10k (2023). Range: 0-200+. **Source:** HUD PIH, PHA-level.
 
 ### Node 143: Housing Choice Vouchers
-- **Scale:** Institutional | **Domain:** Housing | **Type:** Availability | **Unit:** Vouchers per 10k
+- **Scale:** 3 | **Domain:** Housing | **Type:** Availability | **Unit:** Vouchers per 10k
 - **Description:** Active Section 8 vouchers per 10k.
 - **Baseline:** 75/10k (2023). Range: 10-250+. **Source:** HUD PIH, PHA-level.
 
 ### Node 144: Permanent Supportive Housing Units
-- **Scale:** Institutional | **Domain:** Housing, Behavioral | **Type:** Availability | **Unit:** PSH units per 10k
+- **Scale:** 3 | **Domain:** Housing, Behavioral | **Type:** Availability | **Unit:** PSH units per 10k
 - **Description:** PSH units (housing + services) per 10k.
 - **Baseline:** 12/10k (2023). Range: 0-50+. **Source:** HUD HIC, CoC-level.
 
 ### Node 145: Emergency Shelter Capacity
-- **Scale:** Institutional | **Domain:** Housing, Social Services | **Type:** Availability | **Unit:** Beds per 10k
+- **Scale:** 3 | **Domain:** Housing, Social Services | **Type:** Availability | **Unit:** Beds per 10k
 - **Description:** Emergency shelter beds per 10k.
 - **Baseline:** 22/10k (2023). Range: 5-80+. **Source:** HUD HIC, CoC-level.
 
 ### Node 146: Housing Code Enforcement Capacity
-- **Scale:** Institutional | **Domain:** Housing | **Type:** Availability | **Unit:** Inspectors per 100k units
+- **Scale:** 3 | **Domain:** Housing | **Type:** Availability | **Unit:** Inspectors per 100k units
 - **Description:** Code enforcement inspectors per 100k housing units.
 - **Baseline:** 15/100k units (2023). Range: 2-40+. **Source:** Local govt, ICMA, city-level.
 
 ### Node 147: Eviction Legal Aid Availability
-- **Scale:** Institutional | **Domain:** Housing, Legal | **Type:** Availability | **Unit:** Attorneys per 10k renters
+- **Scale:** 3 | **Domain:** Housing, Legal | **Type:** Availability | **Unit:** Attorneys per 10k renters
 - **Description:** Eviction defense attorneys per 10k renter households.
 - **Baseline:** 0.5/10k renters (2023). Range: 0-3+. **Source:** LSC, city-level.
 
@@ -1467,22 +1467,22 @@ Local Implementation and Organizational Level - Organizations, facilities, workf
 ## 2.3 SOCIAL SERVICES INFRASTRUCTURE
 
 ### Node 148: Social Worker Density
-- **Scale:** Institutional | **Domain:** Social Services | **Type:** Availability | **Unit:** SWs per 100k
+- **Scale:** 3 | **Domain:** Social Services | **Type:** Availability | **Unit:** SWs per 100k
 - **Description:** Licensed social workers per 100k.
 - **Baseline:** 420/100k (2023). Range: 200-700+. **Source:** HRSA, state boards, county-level.
 
 ### Node 149: Food Pantry Density
-- **Scale:** Institutional | **Domain:** Food, Social Services | **Type:** Availability | **Unit:** Pantries per 100k
+- **Scale:** 3 | **Domain:** Food, Social Services | **Type:** Availability | **Unit:** Pantries per 100k
 - **Description:** Emergency food pantries per 100k.
 - **Baseline:** 12/100k (2023). Range: 3-30+. **Source:** Feeding America, county-level.
 
 ### Node 150: Child Welfare Worker Caseload
-- **Scale:** Institutional | **Domain:** Child Welfare | **Type:** Quality | **Unit:** Cases per worker
+- **Scale:** 3 | **Domain:** Child Welfare | **Type:** Quality | **Unit:** Cases per worker
 - **Description:** Average children per CPS caseworker. CWLA recommends 12-15.
 - **Baseline:** 18 cases/worker (2023). Range: 10-35+. **Source:** CWLA, state CPS, state-level.
 
 ### Node 151: DV Shelter Capacity
-- **Scale:** Institutional | **Domain:** Social Services | **Type:** Availability | **Unit:** Beds per 100k
+- **Scale:** 3 | **Domain:** Social Services | **Type:** Availability | **Unit:** Beds per 100k
 - **Description:** Domestic violence shelter beds per 100k.
 - **Baseline:** 12/100k (2023). Range: 2-30+. **Source:** NNEDV, state-level.
 
@@ -1491,22 +1491,22 @@ Local Implementation and Organizational Level - Organizations, facilities, workf
 ## 2.4 EDUCATION INFRASTRUCTURE
 
 ### Node 152: School Counselor Ratio
-- **Scale:** Institutional | **Domain:** Education | **Type:** Quality | **Unit:** Students per counselor
+- **Scale:** 3 | **Domain:** Education | **Type:** Quality | **Unit:** Students per counselor
 - **Description:** Student-to-counselor ratio. ASCA recommends 250:1.
 - **Baseline:** 430:1 (2023). Range: 200:1-800:1. **Source:** ED CRDC, district-level.
 
 ### Node 153: School Nurse Ratio
-- **Scale:** Institutional | **Domain:** Education, Healthcare | **Type:** Quality | **Unit:** Students per nurse
+- **Scale:** 3 | **Domain:** Education, Healthcare | **Type:** Quality | **Unit:** Students per nurse
 - **Description:** Student-to-nurse ratio. NASN recommends 750:1.
 - **Baseline:** 950:1 (2023). Range: 400:1-2,000:1. **Source:** ED CRDC, district-level.
 
 ### Node 154: School-Based Health Centers
-- **Scale:** Institutional | **Domain:** Education, Healthcare | **Type:** Availability | **Unit:** SBHCs per 100 schools
+- **Scale:** 3 | **Domain:** Education, Healthcare | **Type:** Availability | **Unit:** SBHCs per 100 schools
 - **Description:** School-based health centers per 100 schools.
 - **Baseline:** 8/100 (2023). Range: 0-30+. **Source:** SBHA census, district-level.
 
 ### Node 155: Afterschool Program Access
-- **Scale:** Institutional | **Domain:** Education | **Type:** Availability | **Unit:** % students with access
+- **Scale:** 3 | **Domain:** Education | **Type:** Availability | **Unit:** % students with access
 - **Description:** Percent of K-12 students with afterschool program access.
 - **Baseline:** 42% (2023). Range: 20-70%. **Source:** Afterschool Alliance, district-level.
 
@@ -1515,42 +1515,42 @@ Local Implementation and Organizational Level - Organizations, facilities, workf
 ## 2.5 BUILT ENVIRONMENT INFRASTRUCTURE
 
 ### Node 156: Transit Route Density
-- **Scale:** Institutional | **Domain:** Transportation | **Type:** Availability | **Unit:** Routes per sq mi
+- **Scale:** 2 | **Domain:** Transportation | **Type:** Availability | **Unit:** Routes per sq mi
 - **Description:** Transit routes per square mile (urbanized).
 - **Baseline:** 1.8/sq mi (2023). Range: 0.3-8+. **Source:** FTA NTD, GTFS, metro-level.
 
 ### Node 157: Transit Stop Density
-- **Scale:** Institutional | **Domain:** Transportation | **Type:** Availability | **Unit:** Stops per sq mi
+- **Scale:** 2 | **Domain:** Transportation | **Type:** Availability | **Unit:** Stops per sq mi
 - **Description:** Bus/rail stops per square mile.
 - **Baseline:** 45/sq mi (2023). Range: 10-200+. **Source:** GTFS, metro-level.
 
 ### Node 158: Bike Lane Mileage
-- **Scale:** Institutional | **Domain:** Transportation | **Type:** Availability | **Unit:** Miles per 100 sq mi
+- **Scale:** 2 | **Domain:** Transportation | **Type:** Availability | **Unit:** Miles per 100 sq mi
 - **Description:** Bike lane miles per 100 sq mi.
 - **Baseline:** 15/100 sq mi (2023). Range: 1-80+. **Source:** Alliance Biking & Walking, city-level.
 
 ### Node 159: Sidewalk Completeness
-- **Scale:** Institutional | **Domain:** Built Environment | **Type:** Quality | **Unit:** % streets with sidewalks
+- **Scale:** 2 | **Domain:** Built Environment | **Type:** Quality | **Unit:** % streets with sidewalks
 - **Description:** Percent of street miles with sidewalks both sides.
 - **Baseline:** 42% (2023). Range: 10-85%. **Source:** Local GIS, city-level.
 
 ### Node 160: Park Acreage Per Capita
-- **Scale:** Institutional | **Domain:** Built Environment | **Type:** Availability | **Unit:** Acres per 1k residents
+- **Scale:** 2 | **Domain:** Built Environment | **Type:** Availability | **Unit:** Acres per 1k residents
 - **Description:** Park acres per 1k residents.
 - **Baseline:** 10.2/1k (2023). Range: 2-40+. **Source:** TPL ParkServe, city-level.
 
 ### Node 161: Tree Canopy Coverage
-- **Scale:** Institutional | **Domain:** Built Environment, Environmental | **Type:** Quality | **Unit:** % land with canopy
+- **Scale:** 2 | **Domain:** Built Environment, Environmental | **Type:** Quality | **Unit:** % land with canopy
 - **Description:** Percent of land area with tree canopy.
 - **Baseline:** 35% (metros, 2023). Range: 5-70%. **Source:** USFS, NASA, city-level.
 
 ### Node 162: Grocery Store Density
-- **Scale:** Institutional | **Domain:** Food | **Type:** Availability | **Unit:** Stores per 100k
+- **Scale:** 2 | **Domain:** Food | **Type:** Availability | **Unit:** Stores per 100k
 - **Description:** Full-service grocery stores per 100k.
 - **Baseline:** 18/100k (2023). Range: 5-35+. **Source:** USDA, NETS, tract-level.
 
 ### Node 163: Food Desert Prevalence
-- **Scale:** Institutional | **Domain:** Food | **Type:** Availability | **Unit:** % pop in food deserts
+- **Scale:** 2 | **Domain:** Food | **Type:** Availability | **Unit:** % pop in food deserts
 - **Description:** Percent living >1mi (urban) or >10mi (rural) from grocery + low-income/no vehicle.
 - **Baseline:** 13.5% (2023). Range: 2-40%+. **Source:** USDA Food Access Atlas, tract-level.
 
@@ -1559,27 +1559,27 @@ Local Implementation and Organizational Level - Organizations, facilities, workf
 ## 2.6 CRIMINAL JUSTICE IMPLEMENTATION
 
 ### Node 164: Police Per Capita
-- **Scale:** Institutional | **Domain:** Criminal Justice | **Type:** Availability | **Unit:** Officers per 100k
+- **Scale:** 4 | **Domain:** Criminal Justice | **Type:** Availability | **Unit:** Officers per 100k
 - **Description:** Sworn police officers per 100k.
 - **Baseline:** 240/100k (2023). Range: 100-500+. **Source:** FBI UCR, city-level.
 
 ### Node 165: Jail Capacity
-- **Scale:** Institutional | **Domain:** Criminal Justice | **Type:** Availability | **Unit:** Jail beds per 100k
+- **Scale:** 3 | **Domain:** Criminal Justice | **Type:** Availability | **Unit:** Jail beds per 100k
 - **Description:** Local jail beds per 100k.
 - **Baseline:** 260/100k (2023). Range: 100-600+. **Source:** BJS, Vera, county-level.
 
 ### Node 166: Drug Court Availability
-- **Scale:** Institutional | **Domain:** Criminal Justice, Behavioral | **Type:** Availability | **Unit:** Drug courts per 100k
+- **Scale:** 3 | **Domain:** Criminal Justice, Behavioral | **Type:** Availability | **Unit:** Drug courts per 100k
 - **Description:** Specialty drug courts per 100k.
 - **Baseline:** 0.5/100k (2023). Range: 0-2+. **Source:** NADCP, county-level.
 
 ### Node 167: Pretrial Diversion Programs
-- **Scale:** Institutional | **Domain:** Criminal Justice | **Type:** Availability | **Unit:** Programs per 100k
+- **Scale:** 3 | **Domain:** Criminal Justice | **Type:** Availability | **Unit:** Programs per 100k
 - **Description:** Pretrial diversion program capacity per 100k.
 - **Baseline:** 0.8/100k (2023). Range: 0-3+. **Source:** BJS, local courts, county-level.
 
 ### Node 168: Reentry Service Providers
-- **Scale:** Institutional | **Domain:** Criminal Justice, Social Services | **Type:** Availability | **Unit:** Providers per 100k
+- **Scale:** 3 | **Domain:** Criminal Justice, Social Services | **Type:** Availability | **Unit:** Providers per 100k
 - **Description:** Reentry service organizations per 100k.
 - **Baseline:** 1.2/100k (2023). Range: 0-5+. **Source:** CSGJC, county-level.
 
@@ -1588,22 +1588,22 @@ Local Implementation and Organizational Level - Organizations, facilities, workf
 ## 2.7 PUBLIC HEALTH INFRASTRUCTURE
 
 ### Node 169: Public Health Department Staffing
-- **Scale:** Institutional | **Domain:** Public Health | **Type:** Availability | **Unit:** PH staff per 100k
+- **Scale:** 3 | **Domain:** Public Health | **Type:** Availability | **Unit:** PH staff per 100k
 - **Description:** Local/state public health department FTE staff per 100k.
 - **Baseline:** 55/100k (2023, declining). Range: 20-120+. **Source:** NACCHO, ASTHO, county-level.
 
 ### Node 170: Immunization Clinic Density
-- **Scale:** Institutional | **Domain:** Public Health | **Type:** Availability | **Unit:** Clinics per 100k
+- **Scale:** 3 | **Domain:** Public Health | **Type:** Availability | **Unit:** Clinics per 100k
 - **Description:** Immunization clinic sites per 100k.
 - **Baseline:** 8/100k (2023). Range: 2-20+. **Source:** CDC, state health depts, county-level.
 
 ### Node 171: Disease Surveillance Capacity
-- **Scale:** Institutional | **Domain:** Public Health | **Type:** Quality | **Unit:** Index 0-10
+- **Scale:** 3 | **Domain:** Public Health | **Type:** Quality | **Unit:** Index 0-10
 - **Description:** Public health surveillance system capacity index (reporting, lab, analysis).
 - **Baseline:** Median=5.5 (2023). Range: 2-9. **Source:** CDC PHEP, state-level.
 
 ### Node 172: WIC Clinic Density
-- **Scale:** Institutional | **Domain:** Public Health, Food | **Type:** Availability | **Unit:** WIC sites per 100k
+- **Scale:** 3 | **Domain:** Public Health, Food | **Type:** Availability | **Unit:** WIC sites per 100k
 - **Description:** WIC program sites per 100k.
 - **Baseline:** 6/100k (2023). Range: 1-15+. **Source:** USDA FNS, county-level.
 
@@ -1612,17 +1612,17 @@ Local Implementation and Organizational Level - Organizations, facilities, workf
 ## 2.8 WORKPLACE & OCCUPATIONAL INFRASTRUCTURE
 
 ### Node 173: OSHA Inspectors Per Workers
-- **Scale:** Institutional | **Domain:** Occupational Health | **Type:** Availability | **Unit:** Inspectors per 100k workers
+- **Scale:** 4 | **Domain:** Occupational Health | **Type:** Availability | **Unit:** Inspectors per 100k workers
 - **Description:** Federal + state OSHA inspectors per 100k workers.
 - **Baseline:** 2.5/100k workers (2023). Range: 1-5+ (state plans vs federal). **Source:** OSHA, state-level.
 
 ### Node 174: Worker Center Density
-- **Scale:** Institutional | **Domain:** Employment, Labor | **Type:** Availability | **Unit:** Centers per 100k workers
+- **Scale:** 3 | **Domain:** Employment, Labor | **Type:** Availability | **Unit:** Centers per 100k workers
 - **Description:** Worker centers (low-wage worker advocacy) per 100k workers.
 - **Baseline:** 0.3/100k workers (2023). Range: 0-2+. **Source:** NDWA, NELP, metro-level.
 
 ### Node 175: Employee Assistance Programs
-- **Scale:** Institutional | **Domain:** Employment, Behavioral | **Type:** Availability | **Unit:** % workers with EAP access
+- **Scale:** 3 | **Domain:** Employment, Behavioral | **Type:** Availability | **Unit:** % workers with EAP access
 - **Description:** Percent of workers with employer-provided EAP access.
 - **Baseline:** 65% (2023). Range: 30-90%. **Source:** SHRM, BLS, state-level.
 
@@ -1631,27 +1631,27 @@ Local Implementation and Organizational Level - Organizations, facilities, workf
 ## 2.9 ORGANIZATIONAL QUALITY INDICATORS
 
 ### Node 176: Cultural Competency Training
-- **Scale:** Institutional | **Domain:** Healthcare, Social Services | **Type:** Quality | **Unit:** % orgs with training
+- **Scale:** 3 | **Domain:** Healthcare, Social Services | **Type:** Quality | **Unit:** % orgs with training
 - **Description:** Percent of health/social service orgs with cultural competency training.
 - **Baseline:** 58% (2023). Range: 20-85%. **Source:** HRSA, CLAS standards, state-level.
 
 ### Node 177: Interpretation Services Availability
-- **Scale:** Institutional | **Domain:** Healthcare | **Type:** Quality | **Unit:** % facilities with interpreters
+- **Scale:** 3 | **Domain:** Healthcare | **Type:** Quality | **Unit:** % facilities with interpreters
 - **Description:** Percent of healthcare facilities with interpretation services for LEP patients.
 - **Baseline:** 72% (2023). Range: 40-95%. **Source:** CLAS, state surveys, state-level.
 
 ### Node 178: Trauma-Informed Care Adoption
-- **Scale:** Institutional | **Domain:** Healthcare, Social Services | **Type:** Quality | **Unit:** % orgs trauma-informed
+- **Scale:** 4 | **Domain:** Healthcare, Social Services | **Type:** Quality | **Unit:** % orgs trauma-informed
 - **Description:** Percent of organizations with trauma-informed care practices.
 - **Baseline:** 45% (2023). Range: 15-75%. **Source:** SAMHSA TIC assessment, state-level.
 
 ### Node 179: Community Benefit Spending
-- **Scale:** Institutional | **Domain:** Healthcare | **Type:** Quality | **Unit:** % revenue to community benefit
+- **Scale:** 3 | **Domain:** Healthcare | **Type:** Quality | **Unit:** % revenue to community benefit
 - **Description:** Nonprofit hospital community benefit spending as % of revenue (IRS requirement).
 - **Baseline:** 7.5% (2023). Range: 2-15%. **Source:** IRS 990 Schedule H, hospital-level.
 
 ### Node 180: Health IT Interoperability
-- **Scale:** Institutional | **Domain:** Healthcare | **Type:** Quality | **Unit:** % with EHR interoperability
+- **Scale:** 4 | **Domain:** Healthcare | **Type:** Quality | **Unit:** % with EHR interoperability
 - **Description:** Percent of providers with interoperable EHR systems.
 - **Baseline:** 48% (2023). Range: 20-70%. **Source:** ONC, state-level.
 
@@ -1668,43 +1668,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.1 ECONOMIC SECURITY (INDIVIDUAL)
 
 ### Node 181: Household Income (Median)
-- **Scale:** Individual | **Domain:** Economic | **Unit:** Median $ annually
+- **Scale:** 6 | **Domain:** Economic | **Unit:** Median $ annually
 - **Baseline:** $74,580 (2023). Range: $45k-$140k+. **Source:** ACS, tract-level.
 
 ### Node 182: Poverty Rate
-- **Scale:** Individual | **Domain:** Economic | **Unit:** % below FPL
+- **Scale:** 6 | **Domain:** Economic | **Unit:** % below FPL
 - **Baseline:** 11.5% (2023). Range: 3-40%+. **Source:** ACS, tract-level.
 
 ### Node 183: Deep Poverty Rate
-- **Scale:** Individual | **Domain:** Economic | **Unit:** % below 50% FPL
+- **Scale:** 6 | **Domain:** Economic | **Unit:** % below 50% FPL
 - **Baseline:** 5.3% (2023). Range: 1-20%+. **Source:** ACS, tract-level.
 
 ### Node 184: Asset Poverty Rate
-- **Scale:** Individual | **Domain:** Economic | **Unit:** % lacking 3mo emergency savings
+- **Scale:** 6 | **Domain:** Economic | **Unit:** % lacking 3mo emergency savings
 - **Baseline:** 38% (2023). Range: 20-60%+. **Source:** Fed SHED, Prosperity Now.
 
 ### Node 185: Unemployment Rate (Local)
-- **Scale:** Individual | **Domain:** Employment | **Unit:** % labor force unemployed
+- **Scale:** 6 | **Domain:** Employment | **Unit:** % labor force unemployed
 - **Baseline:** 3.8% (2023). Range: 2-12%. **Source:** BLS LAUS, county/tract.
 
 ### Node 186: Underemployment Rate
-- **Scale:** Individual | **Domain:** Employment | **Unit:** % working part-time involuntarily
+- **Scale:** 6 | **Domain:** Employment | **Unit:** % working part-time involuntarily
 - **Baseline:** 3.5% (2023). Range: 2-7%. **Source:** BLS CPS, state/metro.
 
 ### Node 187: Gig Economy Reliance
-- **Scale:** Individual | **Domain:** Employment | **Unit:** % relying on gig work for income
+- **Scale:** 4 | **Domain:** Employment | **Unit:** % relying on gig work for income
 - **Baseline:** 16% (2023). Range: 8-30%. **Source:** JPMChase, Pew, metro.
 
 ### Node 188: Multiple Job Holding
-- **Scale:** Individual | **Domain:** Employment | **Unit:** % working multiple jobs
+- **Scale:** 4 | **Domain:** Employment | **Unit:** % working multiple jobs
 - **Baseline:** 7.8% (2023). Range: 4-12%. **Source:** BLS CPS, state.
 
 ### Node 189: Benefits Access (Health Insurance from Job)
-- **Scale:** Individual | **Domain:** Employment, Healthcare | **Unit:** % workers with employer coverage
+- **Scale:** 4 | **Domain:** Employment, Healthcare | **Unit:** % workers with employer coverage
 - **Baseline:** 54.3% (2023). Range: 35-70%. **Source:** ACS, county.
 
 ### Node 190: Retirement Account Access
-- **Scale:** Individual | **Domain:** Economic, Employment | **Unit:** % with retirement account
+- **Scale:** 4 | **Domain:** Economic, Employment | **Unit:** % with retirement account
 - **Baseline:** 56% (2023). Range: 30-75%. **Source:** Fed SCF, state.
 
 ---
@@ -1712,46 +1712,46 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.2 HOUSING STABILITY & QUALITY
 
 ### Node 191: Housing Cost Burden
-- **Scale:** Individual | **Domain:** Housing, Economic | **Unit:** % paying >30% income on housing
+- **Scale:** 4 | **Domain:** Housing, Economic | **Unit:** % paying >30% income on housing
 - **Baseline:** 30.2% (2023). Range: 18-50%+. **Source:** ACS, tract.
 
 ### Node 192: Severe Housing Cost Burden
-- **Scale:** Individual | **Domain:** Housing, Economic | **Unit:** % paying >50% income
+- **Scale:** 4 | **Domain:** Housing, Economic | **Unit:** % paying >50% income
 - **Baseline:** 14.8% (2023). Range: 8-30%+. **Source:** ACS, tract.
 
 ### Node 193: Eviction Filing Rate
-- **Scale:** Individual | **Domain:** Housing | **Unit:** Filings per 100 renter HH/year
+- **Scale:** 4 | **Domain:** Housing | **Unit:** Filings per 100 renter HH/year
 - **Baseline:** 6.3/100 (2023). Range: 2-20+. **Source:** Eviction Lab, county.
 
 ### Node 194: Eviction Rate
-- **Scale:** Individual | **Domain:** Housing | **Unit:** Evictions per 100 renter HH/year
+- **Scale:** 7 | **Domain:** Housing | **Unit:** Evictions per 100 renter HH/year
 - **Baseline:** 2.3/100 (2023). Range: 0.5-8+. **Source:** Eviction Lab, county.
 
 ### Node 195: Housing Instability
-- **Scale:** Individual | **Domain:** Housing | **Unit:** % moved 2+ times in past year
+- **Scale:** 4 | **Domain:** Housing | **Unit:** % moved 2+ times in past year
 - **Baseline:** 8.2% (2023). Range: 3-18%. **Source:** ACS, SHED, tract.
 
 ### Node 196: Homeownership Rate
-- **Scale:** Individual | **Domain:** Housing, Economic | **Unit:** % households owning home
+- **Scale:** 4 | **Domain:** Housing, Economic | **Unit:** % households owning home
 - **Baseline:** 66.0% (2023). Range: 35-85%. **Source:** ACS, tract.
 
 ### Node 197: Homelessness Rate
-- **Scale:** Individual | **Domain:** Housing | **Unit:** Homeless per 10k pop
+- **Scale:** 7 | **Domain:** Housing | **Unit:** Homeless per 10k pop
 - **Baseline:** 18/10k (2024). Range: 5-80+. **Source:** HUD PIT Count, CoC.
 
 ### Node 198: Unsheltered Homelessness Rate
-- **Scale:** Individual | **Domain:** Housing | **Unit:** Unsheltered per 10k
+- **Scale:** 7 | **Domain:** Housing | **Unit:** Unsheltered per 10k
 - **Baseline:** 7.5/10k (2024). Range: 1-40+. **Source:** HUD PIT, CoC.
 
 ### Node 199: Housing Quality Index (REVISED - Consolidated)
-- **Scale:** Individual | **Domain:** Housing | **Unit:** Index 0-100 (higher = better quality)
+- **Scale:** 2 | **Domain:** Housing | **Unit:** Index 0-100 (higher = better quality)
 - **Description:** Composite index of housing quality including: structural deficiencies (plumbing, heating, electrical), physical problems (roof, windows, foundation), code violations, and maintenance adequacy. Based on American Housing Survey (AHS) housing quality indicators. Excludes environmental hazards (see Node 315).
 - **Baseline:** National median = 78. Range: 65 (severely deficient) to 95 (excellent condition). **Source:** AHS, local housing inspections.
 - **Consolidation Note:** Replaces former "Housing Quality Deficiencies" (Node 199) and "Housing Repair Needs Severe" (former Node 346, now removed).
 - **Mechanism node_id:** `housing_quality_index`
 
 ### Node 200: Overcrowding Rate
-- **Scale:** Individual | **Domain:** Housing | **Unit:** % units >1 person per room
+- **Scale:** 5 | **Domain:** Housing | **Unit:** % units >1 person per room
 - **Baseline:** 3.2% (2023). Range: 1-12%. **Source:** ACS, tract.
 
 ---
@@ -1759,43 +1759,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.3 HEALTHCARE ACCESS & COVERAGE
 
 ### Node 201: Uninsured Rate
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % without insurance
+- **Scale:** 5 | **Domain:** Healthcare | **Unit:** % without insurance
 - **Baseline:** 8.0% (2023). Range: 2-18%. **Source:** ACS, county.
 
 ### Node 202: Underinsured Rate
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % with inadequate coverage
+- **Scale:** 5 | **Domain:** Healthcare | **Unit:** % with inadequate coverage
 - **Baseline:** 23% insured adults (2023). Range: 15-35%. **Source:** Commonwealth Fund, state.
 
 ### Node 203: Usual Source of Care
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % with usual PCP/clinic
+- **Scale:** 5 | **Domain:** Healthcare | **Unit:** % with usual PCP/clinic
 - **Baseline:** 76% (2023). Range: 60-85%. **Source:** BRFSS, state/metro.
 
 ### Node 204: Delayed Care Due to Cost
-- **Scale:** Individual | **Domain:** Healthcare, Economic | **Unit:** % delayed in past year
+- **Scale:** 5 | **Domain:** Healthcare, Economic | **Unit:** % delayed in past year
 - **Baseline:** 11.5% (2023). Range: 6-20%. **Source:** BRFSS, NHIS, state.
 
 ### Node 205: Skipped Medication Due to Cost
-- **Scale:** Individual | **Domain:** Healthcare, Economic | **Unit:** % skipped meds past year
+- **Scale:** 6 | **Domain:** Healthcare, Economic | **Unit:** % skipped meds past year
 - **Baseline:** 9.2% (2023). Range: 5-16%. **Source:** BRFSS, state.
 
 ### Node 206: Medical Debt (Individuals)
-- **Scale:** Individual | **Domain:** Healthcare, Economic | **Unit:** % with medical debt
+- **Scale:** 6 | **Domain:** Healthcare, Economic | **Unit:** % with medical debt
 - **Baseline:** 23% adults (2023). Range: 12-35%. **Source:** KFF, Urban Institute.
 
 ### Node 207: Prescription Drug Affordability
-- **Scale:** Individual | **Domain:** Healthcare, Economic | **Unit:** % reporting Rx unaffordable
+- **Scale:** 6 | **Domain:** Healthcare, Economic | **Unit:** % reporting Rx unaffordable
 - **Baseline:** 18% (2023). Range: 10-28%. **Source:** KFF, BRFSS.
 
 ### Node 208: Preventive Care Utilization
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % with annual checkup
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** % with annual checkup
 - **Baseline:** 68% (2023). Range: 55-78%. **Source:** BRFSS, state.
 
 ### Node 209: Dental Care Access
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % with dental visit past year
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** % with dental visit past year
 - **Baseline:** 65% (2023). Range: 50-75%. **Source:** BRFSS, state.
 
 ### Node 210: Mental Healthcare Access
-- **Scale:** Individual | **Domain:** Healthcare, Behavioral | **Unit:** % needing MH who accessed care
+- **Scale:** 6 | **Domain:** Healthcare, Behavioral | **Unit:** % needing MH who accessed care
 - **Baseline:** 47% (2023). Range: 35-62%. **Source:** NSDUH, state.
 
 ---
@@ -1803,23 +1803,23 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.4 FOOD SECURITY
 
 ### Node 211: Food Insecurity Rate
-- **Scale:** Individual | **Domain:** Food | **Unit:** % households food insecure
+- **Scale:** 4 | **Domain:** Food | **Unit:** % households food insecure
 - **Baseline:** 12.8% (2023). Range: 6-22%. **Source:** USDA, Feeding America, county.
 
 ### Node 212: Child Food Insecurity
-- **Scale:** Individual | **Domain:** Food, Child | **Unit:** % children in food insecure HH
+- **Scale:** 4 | **Domain:** Food, Child | **Unit:** % children in food insecure HH
 - **Baseline:** 17.0% (2023). Range: 8-28%. **Source:** Feeding America, county.
 
 ### Node 213: SNAP Participation Rate
-- **Scale:** Individual | **Domain:** Food, Economic | **Unit:** % eligible participating
+- **Scale:** 2 | **Domain:** Food, Economic | **Unit:** % eligible participating
 - **Baseline:** 82% eligible (2023). Range: 65-92%. **Source:** USDA FNS, state.
 
 ### Node 214: WIC Participation
-- **Scale:** Individual | **Domain:** Food, Child | **Unit:** % eligible participating
+- **Scale:** 2 | **Domain:** Food, Child | **Unit:** % eligible participating
 - **Baseline:** 52% eligible (2023). Range: 35-70%. **Source:** USDA FNS, state.
 
 ### Node 215: Free/Reduced School Lunch Eligibility
-- **Scale:** Individual | **Domain:** Food, Education | **Unit:** % students eligible
+- **Scale:** 3 | **Domain:** Food, Education | **Unit:** % students eligible
 - **Baseline:** 50.9% (2023). Range: 20-85%. **Source:** ED NCES, district.
 
 ---
@@ -1827,23 +1827,23 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.5 TRANSPORTATION ACCESS
 
 ### Node 216: Zero-Vehicle Households
-- **Scale:** Individual | **Domain:** Transportation | **Unit:** % HH with no vehicle
+- **Scale:** 4 | **Domain:** Transportation | **Unit:** % HH with no vehicle
 - **Baseline:** 8.3% (2023). Range: 2-35% (urban). **Source:** ACS, tract.
 
 ### Node 217: Long Commute (>60min)
-- **Scale:** Individual | **Domain:** Transportation, Employment | **Unit:** % with commute >60min
+- **Scale:** 4 | **Domain:** Transportation, Employment | **Unit:** % with commute >60min
 - **Baseline:** 9.6% workers (2023). Range: 3-25%. **Source:** ACS, tract.
 
 ### Node 218: Transit Commute Mode Share
-- **Scale:** Individual | **Domain:** Transportation | **Unit:** % commuting by transit
+- **Scale:** 4 | **Domain:** Transportation | **Unit:** % commuting by transit
 - **Baseline:** 5.0% (2023). Range: <1-35%. **Source:** ACS, tract.
 
 ### Node 219: Walk/Bike Commute Share
-- **Scale:** Individual | **Domain:** Transportation | **Unit:** % walking/biking
+- **Scale:** 4 | **Domain:** Transportation | **Unit:** % walking/biking
 - **Baseline:** 3.2% (2023). Range: 1-15%. **Source:** ACS, tract.
 
 ### Node 220: Work-from-Home Rate
-- **Scale:** Individual | **Domain:** Employment, Transportation | **Unit:** % WFH
+- **Scale:** 4 | **Domain:** Employment, Transportation | **Unit:** % WFH
 - **Baseline:** 13.4% (2023, post-COVID). Range: 5-40%. **Source:** ACS, tract.
 
 ---
@@ -1851,23 +1851,23 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.6 EMPLOYMENT CONDITIONS
 
 ### Node 221: Low-Wage Work
-- **Scale:** Individual | **Domain:** Employment, Economic | **Unit:** % workers earning <$15/hr
+- **Scale:** 4 | **Domain:** Employment, Economic | **Unit:** % workers earning <$15/hr
 - **Baseline:** 28% (2023). Range: 18-42%. **Source:** BLS OES, metro.
 
 ### Node 222: Unstable Work Schedule
-- **Scale:** Individual | **Domain:** Employment | **Unit:** % with irregular schedules
+- **Scale:** 2 | **Domain:** Employment | **Unit:** % with irregular schedules
 - **Baseline:** 17% workers (2023). Range: 10-28%. **Source:** Fed SHED, surveys.
 
 ### Node 223: Lack of Paid Sick Leave
-- **Scale:** Individual | **Domain:** Employment | **Unit:** % workers without paid sick leave
+- **Scale:** 2 | **Domain:** Employment | **Unit:** % workers without paid sick leave
 - **Baseline:** 24% (2023). Range: 12-40%. **Source:** BLS NLSY, state.
 
 ### Node 224: Workplace Injury Exposure (Individual)
-- **Scale:** Individual | **Domain:** Employment, Occupational | **Unit:** % in high-hazard jobs
+- **Scale:** 2 | **Domain:** Employment, Occupational | **Unit:** % in high-hazard jobs
 - **Baseline:** 32% (2023). Range: 18-52%. **Source:** BLS OES.
 
 ### Node 225: Workplace Discrimination Experience
-- **Scale:** Individual | **Domain:** Employment, Social | **Unit:** % reporting discrimination
+- **Scale:** 2 | **Domain:** Employment, Social | **Unit:** % reporting discrimination
 - **Baseline:** 14% workers (2023). Range: 8-22%. **Source:** EEOC, surveys.
 
 ---
@@ -1879,19 +1879,19 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 - **Migration:** Update all references to use Node 124 `ambient_pm25`
 
 ### Node 227: Lead Exposure Prevalence (Children)
-- **Scale:** Individual | **Domain:** Environmental, Child | **Unit:** % children BLL ≥5 μg/dL
+- **Scale:** 6 | **Domain:** Environmental, Child | **Unit:** % children BLL ≥5 μg/dL
 - **Baseline:** 2.5% (2023, declining). Range: 0.5-12%. **Source:** CDC, state/county.
 
 ### Node 228: Noise Exposure
-- **Scale:** Individual | **Domain:** Environmental | **Unit:** % exposed to >55dB
+- **Scale:** 2 | **Domain:** Environmental | **Unit:** % exposed to >55dB
 - **Baseline:** 35% (2023). Range: 15-60%. **Source:** EPA, DOT, metro.
 
 ### Node 229: Extreme Heat Exposure (Individual)
-- **Scale:** Individual | **Domain:** Environmental, Climate | **Unit:** Days >100°F heat index
+- **Scale:** 2 | **Domain:** Environmental, Climate | **Unit:** Days >100°F heat index
 - **Baseline:** 17 days/year (2023). Range: 0-80+. **Source:** NOAA, tract.
 
 ### Node 230: Green Space Access (Individual)
-- **Scale:** Individual | **Domain:** Environmental | **Unit:** % within 10min walk of park
+- **Scale:** 2 | **Domain:** Environmental | **Unit:** % within 10min walk of park
 - **Baseline:** 55% (2023). Range: 20-95%. **Source:** TPL, block.
 
 ---
@@ -1899,23 +1899,23 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.8 SOCIAL ENVIRONMENT
 
 ### Node 231: Social Isolation
-- **Scale:** Individual | **Domain:** Social | **Unit:** % socially isolated
+- **Scale:** 4 | **Domain:** Social | **Unit:** % socially isolated
 - **Baseline:** 24% (2023). Range: 15-38%. **Source:** BRFSS, surveys.
 
 ### Node 232: Discrimination Experience
-- **Scale:** Individual | **Domain:** Social | **Unit:** % reporting discrimination
+- **Scale:** 6 | **Domain:** Social | **Unit:** % reporting discrimination
 - **Baseline:** 31% (2023). Range: 18-50%. **Source:** BRFSS, surveys.
 
 ### Node 233: Community Trust
-- **Scale:** Individual | **Domain:** Social | **Unit:** % trusting neighbors
+- **Scale:** 6 | **Domain:** Social | **Unit:** % trusting neighbors
 - **Baseline:** 54% (2023). Range: 35-72%. **Source:** GSS, surveys.
 
 ### Node 234: Neighborhood Safety Perception
-- **Scale:** Individual | **Domain:** Social | **Unit:** % feeling safe
+- **Scale:** 6 | **Domain:** Social | **Unit:** % feeling safe
 - **Baseline:** 71% (2023). Range: 45-88%. **Source:** Gallup, local surveys.
 
 ### Node 235: Civic Engagement (Individual)
-- **Scale:** Individual | **Domain:** Social, Civic | **Unit:** % participated civically
+- **Scale:** 6 | **Domain:** Social, Civic | **Unit:** % participated civically
 - **Baseline:** 34% (2022). Range: 22-48%. **Source:** CPS Civic Supp.
 
 ---
@@ -1923,23 +1923,23 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.9 EDUCATION & DEVELOPMENT
 
 ### Node 236: Educational Attainment (<HS)
-- **Scale:** Individual | **Domain:** Education | **Unit:** % adults without HS/GED
+- **Scale:** 6 | **Domain:** Education | **Unit:** % adults without HS/GED
 - **Baseline:** 10.0% (2023). Range: 3-28%. **Source:** ACS, tract.
 
 ### Node 237: Bachelor's Degree Attainment
-- **Scale:** Individual | **Domain:** Education | **Unit:** % adults with BA+
+- **Scale:** 4 | **Domain:** Education | **Unit:** % adults with BA+
 - **Baseline:** 37.5% (2023). Range: 12-75%. **Source:** ACS, tract.
 
 ### Node 238: Early Childhood Education Enrollment
-- **Scale:** Individual | **Domain:** Education, Child | **Unit:** % age 3-4 in pre-K
+- **Scale:** 6 | **Domain:** Education, Child | **Unit:** % age 3-4 in pre-K
 - **Baseline:** 54% (2023). Range: 30-75%. **Source:** ACS, state.
 
 ### Node 239: Chronic School Absenteeism
-- **Scale:** Individual | **Domain:** Education | **Unit:** % missing 15+ days/year
+- **Scale:** 3 | **Domain:** Education | **Unit:** % missing 15+ days/year
 - **Baseline:** 26% (2023, post-COVID spike). Range: 12-45%. **Source:** ED CRDC, district.
 
 ### Node 240: School Suspension Rate
-- **Scale:** Individual | **Domain:** Education, Criminal Justice | **Unit:** % students suspended
+- **Scale:** 6 | **Domain:** Education, Criminal Justice | **Unit:** % students suspended
 - **Baseline:** 6.5% (2023). Range: 2-15%. **Source:** ED CRDC, district.
 
 ---
@@ -1947,19 +1947,19 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.10 STRESS, TRAUMA, & ADVERSITY
 
 ### Node 241: Chronic Stress
-- **Scale:** Individual | **Domain:** Mental Health | **Unit:** % high chronic stress
+- **Scale:** 6 | **Domain:** Mental Health | **Unit:** % high chronic stress
 - **Baseline:** 32% (2023). Range: 22-45%. **Source:** APA surveys, BRFSS.
 
 ### Node 242: Adverse Childhood Experiences (ACEs)
-- **Scale:** Individual | **Domain:** Child, Trauma | **Unit:** % adults with 4+ ACEs
+- **Scale:** 6 | **Domain:** Child, Trauma | **Unit:** % adults with 4+ ACEs
 - **Baseline:** 12.5% (2023). Range: 8-20%. **Source:** BRFSS ACE module, state.
 
 ### Node 243: Intimate Partner Violence
-- **Scale:** Individual | **Domain:** Social, Trauma | **Unit:** % experiencing IPV
+- **Scale:** 6 | **Domain:** Social, Trauma | **Unit:** % experiencing IPV
 - **Baseline:** 3.8% past year (2023). Range: 2-6%. **Source:** NISVS, BRFSS.
 
 ### Node 244: Gun Violence Exposure
-- **Scale:** Individual | **Domain:** Social, Trauma | **Unit:** % witnessed/victim
+- **Scale:** 6 | **Domain:** Social, Trauma | **Unit:** % witnessed/victim
 - **Baseline:** 18% (2023). Range: 10-35%. **Source:** Pew, CDC WONDER.
 
 ### Node 244a: Community Violence Exposure [NEW - Added to fill mechanism gap]
@@ -1978,7 +1978,7 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 - **Related Nodes:** Node 100 (Violent Crime Rate - structural), Node 244 (Gun Violence Exposure - specific type), Node 243 (Intimate Partner Violence - different exposure)
 
 ### Node 245: Economic Insecurity Stress
-- **Scale:** Individual | **Domain:** Economic, Mental Health | **Unit:** % very/somewhat worried
+- **Scale:** 6 | **Domain:** Economic, Mental Health | **Unit:** % very/somewhat worried
 - **Baseline:** 42% (2023). Range: 28-58%. **Source:** Fed SHED.
 
 ---
@@ -1986,7 +1986,7 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.11 DIGITAL ACCESS
 
 ### Node 246: Digital Inclusion Index [REVISED - Consolidated 4 nodes]
-- **Scale:** Individual
+- **Scale:** 6
 - **Domain:** Digital Access, Social Determinants
 - **Type:** Composite
 - **Unit:** Index 0-100 (higher = more digitally included)
@@ -1997,7 +1997,7 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 - **Mechanism node_id:** `digital_inclusion_index`
 
 ### Node 249: Digital Health Access [REVISED - Healthcare-Specific]
-- **Scale:** Individual
+- **Scale:** 4
 - **Domain:** Digital Access, Healthcare
 - **Type:** Access/Availability
 - **Unit:** % of individuals able to access telehealth services
@@ -2020,7 +2020,7 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.12 CRIMINAL JUSTICE CONTACT [SECTION REVISED - 8 nodes consolidated to 4]
 
 ### Node 251: Criminal Justice System Contact (Any) [REVISED]
-- **Scale:** Individual
+- **Scale:** 4
 - **Domain:** Criminal Justice
 - **Type:** Binary
 - **Unit:** Binary: Any criminal justice contact in lifetime (arrest, conviction, incarceration, supervision)
@@ -2031,7 +2031,7 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 - **Consolidation Note:** Combines former Nodes 251 (arrest), 258 (juvenile) into binary "any contact" measure.
 
 ### Node 252: Criminal Justice Involvement Intensity [REVISED - Consolidated]
-- **Scale:** Individual
+- **Scale:** 4
 - **Domain:** Criminal Justice
 - **Type:** Composite
 - **Unit:** Index 0-10 (higher = more intensive involvement)
@@ -2042,7 +2042,7 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 - **Consolidation Note:** Combines former Nodes 252 (incarceration), 253 (felony), 254 (supervision), 256 (police stops) into comprehensive intensity measure.
 
 ### Node 255: Criminal Record Barriers [REVISED - Clarified]
-- **Scale:** Individual
+- **Scale:** 4
 - **Domain:** Criminal Justice, Employment, Housing, Social Determinants
 - **Type:** Exposure/Barrier
 - **Unit:** Index 0-10 (higher = more barriers)
@@ -2053,7 +2053,7 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 - **Note:** Original Node 255 retained and clarified.
 
 ### Node 257: Court-Related Debt [REVISED - Clarified]
-- **Scale:** Individual
+- **Scale:** 4
 - **Domain:** Criminal Justice, Economic Security
 - **Type:** Debt
 - **Unit:** Dollars in outstanding court-related financial obligations
@@ -2080,133 +2080,133 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.13 HEALTH STATUS (INDIVIDUAL)
 
 ### Node 259: Self-Rated Health (Fair/Poor)
-- **Scale:** Individual | **Domain:** Health | **Unit:** % fair/poor health
+- **Scale:** 4 | **Domain:** Health | **Unit:** % fair/poor health
 - **Baseline:** 16.8% adults (2023). Range: 12-25%. **Source:** BRFSS, state.
 
 ### Node 260: Disability Status (Any)
-- **Scale:** Individual | **Domain:** Health, Disability | **Unit:** % with any disability
+- **Scale:** 4 | **Domain:** Health, Disability | **Unit:** % with any disability
 - **Baseline:** 13.5% adults (2023). Range: 10-20%. **Source:** ACS, state.
 
 ### Node 261: Mobility Disability
-- **Scale:** Individual | **Domain:** Health, Disability | **Unit:** % with serious difficulty walking
+- **Scale:** 4 | **Domain:** Health, Disability | **Unit:** % with serious difficulty walking
 - **Baseline:** 7.1% adults (2023). Range: 5-12%. **Source:** ACS, state.
 
 ### Node 262: Cognitive Disability
-- **Scale:** Individual | **Domain:** Health, Disability | **Unit:** % with cognitive difficulty
+- **Scale:** 4 | **Domain:** Health, Disability | **Unit:** % with cognitive difficulty
 - **Baseline:** 5.4% adults (2023). Range: 4-9%. **Source:** ACS, state.
 
 ### Node 263: Self-Care Disability
-- **Scale:** Individual | **Domain:** Health, Disability | **Unit:** % difficulty with self-care
+- **Scale:** 4 | **Domain:** Health, Disability | **Unit:** % difficulty with self-care
 - **Baseline:** 3.7% adults (2023). Range: 2.5-6%. **Source:** ACS, state.
 
 ### Node 264: Vision/Hearing Disability
-- **Scale:** Individual | **Domain:** Health, Disability | **Unit:** % with vision/hearing difficulty
+- **Scale:** 6 | **Domain:** Health, Disability | **Unit:** % with vision/hearing difficulty
 - **Baseline:** 6.8% adults (2023). Range: 5-11%. **Source:** ACS, state.
 
 ### Node 265: Activity Limitation
-- **Scale:** Individual | **Domain:** Health, Disability | **Unit:** % limited in usual activities
+- **Scale:** 6 | **Domain:** Health, Disability | **Unit:** % limited in usual activities
 - **Baseline:** 22% adults (2023). Range: 16-30%. **Source:** NHIS.
 
 ### Node 266: Chronic Pain
-- **Scale:** Individual | **Domain:** Health | **Unit:** % with chronic pain
+- **Scale:** 6 | **Domain:** Health | **Unit:** % with chronic pain
 - **Baseline:** 20.5% adults (2023). Range: 15-28%. **Source:** NHIS, CDC.
 
 ### Node 267: High-Impact Chronic Pain
-- **Scale:** Individual | **Domain:** Health | **Unit:** % pain limiting activities
+- **Scale:** 6 | **Domain:** Health | **Unit:** % pain limiting activities
 - **Baseline:** 8.0% adults (2023). Range: 5-13%. **Source:** NHIS.
 
 ### Node 268: Obesity (Individual)
-- **Scale:** Individual | **Domain:** Health | **Unit:** % BMI ≥30
+- **Scale:** 6 | **Domain:** Health | **Unit:** % BMI ≥30
 - **Baseline:** 41.9% adults (2023). Range: 28-48%. **Source:** BRFSS, state.
 
 ### Node 269: Diabetes Diagnosis
-- **Scale:** Individual | **Domain:** Health | **Unit:** % diagnosed diabetic
+- **Scale:** 6 | **Domain:** Health | **Unit:** % diagnosed diabetic
 - **Baseline:** 11.6% adults (2023). Range: 8-16%. **Source:** BRFSS, state.
 
 ### Node 270: Hypertension Diagnosis
-- **Scale:** Individual | **Domain:** Health | **Unit:** % diagnosed hypertensive
+- **Scale:** 6 | **Domain:** Health | **Unit:** % diagnosed hypertensive
 - **Baseline:** 32.9% adults (2023). Range: 25-42%. **Source:** BRFSS, state.
 
 ### Node 271: Asthma Prevalence (Adults) [REVISED - Terminology Standardized]
-- **Scale:** Individual | **Domain:** Health, Respiratory | **Unit:** % adults with current asthma
+- **Scale:** 6 | **Domain:** Health, Respiratory | **Unit:** % adults with current asthma
 - **Description:** Percentage of adults (18+) with current asthma (ever diagnosed AND still have asthma). Distinct from asthma incidence (new diagnoses) and lifetime asthma.
 - **Baseline:** 9.0% adults (2023). Range: 7-13% by state. Disparities: Higher among women (10.8%), Black adults (11.1%), low-income. **Source:** BRFSS, state.
 - **Mechanism node_id:** `adult_asthma_prevalence`
 
 ### Node 272: COPD Prevalence
-- **Scale:** Individual | **Domain:** Health | **Unit:** % diagnosed COPD
+- **Scale:** 6 | **Domain:** Health | **Unit:** % diagnosed COPD
 - **Baseline:** 5.6% adults (2023). Range: 3-10%. **Source:** BRFSS, state.
 
 ### Node 273: Heart Disease Prevalence
-- **Scale:** Individual | **Domain:** Health | **Unit:** % diagnosed heart disease
+- **Scale:** 6 | **Domain:** Health | **Unit:** % diagnosed heart disease
 - **Baseline:** 6.1% adults (2023). Range: 4-9%. **Source:** BRFSS, state.
 
 ### Node 274: Stroke History
-- **Scale:** Individual | **Domain:** Health | **Unit:** % ever had stroke
+- **Scale:** 6 | **Domain:** Health | **Unit:** % ever had stroke
 - **Baseline:** 3.1% adults (2023). Range: 2-5%. **Source:** BRFSS, state.
 
 ### Node 275: Cancer History
-- **Scale:** Individual | **Domain:** Health | **Unit:** % ever diagnosed cancer
+- **Scale:** 6 | **Domain:** Health | **Unit:** % ever diagnosed cancer
 - **Baseline:** 6.9% adults (2023). Range: 5-10%. **Source:** BRFSS, state.
 
 ### Node 276: Kidney Disease
-- **Scale:** Individual | **Domain:** Health | **Unit:** % diagnosed CKD
+- **Scale:** 6 | **Domain:** Health | **Unit:** % diagnosed CKD
 - **Baseline:** 3.2% adults (2023). Range: 2-5%. **Source:** BRFSS, state.
 
 ### Node 277: Depression Diagnosis
-- **Scale:** Individual | **Domain:** Mental Health | **Unit:** % diagnosed depression
+- **Scale:** 6 | **Domain:** Mental Health | **Unit:** % diagnosed depression
 - **Baseline:** 21.0% adults (2023). Range: 15-28%. **Source:** BRFSS, state.
 
 ### Node 278: Anxiety Disorder
-- **Scale:** Individual | **Domain:** Mental Health | **Unit:** % diagnosed anxiety
+- **Scale:** 6 | **Domain:** Mental Health | **Unit:** % diagnosed anxiety
 - **Baseline:** 18.5% adults (2023). Range: 12-25%. **Source:** NSDUH, surveys.
 
 ### Node 279: Serious Mental Illness (SMI)
-- **Scale:** Individual | **Domain:** Mental Health | **Unit:** % SMI past year
+- **Scale:** 5 | **Domain:** Mental Health | **Unit:** % SMI past year
 - **Baseline:** 5.5% adults (2023). Range: 4-8%. **Source:** NSDUH, state.
 
 ### Node 280: Serious Psychological Distress
-- **Scale:** Individual | **Domain:** Mental Health | **Unit:** % SPD (K6≥13)
+- **Scale:** 5 | **Domain:** Mental Health | **Unit:** % SPD (K6≥13)
 - **Baseline:** 4.8% adults (2023). Range: 3-7%. **Source:** NHIS.
 
 ### Node 281: Suicidal Ideation
-- **Scale:** Individual | **Domain:** Mental Health | **Unit:** % serious thoughts past year
+- **Scale:** 5 | **Domain:** Mental Health | **Unit:** % serious thoughts past year
 - **Baseline:** 4.9% adults (2023). Range: 3.5-7%. **Source:** NSDUH, state.
 
 ### Node 282: Substance Use Disorder (Any)
-- **Scale:** Individual | **Domain:** Behavioral Health | **Unit:** % SUD past year
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** % SUD past year
 - **Baseline:** 16.7% age 12+ (2023). Range: 12-22%. **Source:** NSDUH, state.
 
 ### Node 283: Alcohol Use Disorder
-- **Scale:** Individual | **Domain:** Behavioral Health | **Unit:** % AUD past year
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** % AUD past year
 - **Baseline:** 10.6% adults (2023). Range: 7-15%. **Source:** NSDUH, state.
 
 ### Node 284: Opioid Use Disorder
-- **Scale:** Individual | **Domain:** Behavioral Health | **Unit:** % OUD past year
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** % OUD past year
 - **Baseline:** 1.6% age 12+ (2023). Range: 0.8-3%. **Source:** NSDUH, state.
 
 ### Node 285: Stimulant Use Disorder
-- **Scale:** Individual | **Domain:** Behavioral Health | **Unit:** % stimulant UD past year
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** % stimulant UD past year
 - **Baseline:** 1.4% age 12+ (2023). Range: 0.6-2.5%. **Source:** NSDUH.
 
 ### Node 286: Illicit Drug Use (Past Month)
-- **Scale:** Individual | **Domain:** Behavioral Health | **Unit:** % using illicit drugs
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** % using illicit drugs
 - **Baseline:** 21.4% age 12+ (2023). Range: 15-28%. **Source:** NSDUH, state.
 
 ### Node 287: Prescription Opioid Misuse
-- **Scale:** Individual | **Domain:** Behavioral Health | **Unit:** % misusing Rx opioids past year
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** % misusing Rx opioids past year
 - **Baseline:** 3.4% age 12+ (2023). Range: 2-5%. **Source:** NSDUH, state.
 
 ### Node 288: Binge Drinking
-- **Scale:** Individual | **Domain:** Behavioral Health | **Unit:** % binge drinking past month
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** % binge drinking past month
 - **Baseline:** 26.0% adults (2023). Range: 18-35%. **Source:** BRFSS, state.
 
 ### Node 289: Smoking (Current)
-- **Scale:** Individual | **Domain:** Behavioral Health | **Unit:** % current smokers
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** % current smokers
 - **Baseline:** 11.6% adults (2023). Range: 7-23%. **Source:** BRFSS, state.
 
 ### Node 290: E-Cigarette Use
-- **Scale:** Individual | **Domain:** Behavioral Health | **Unit:** % current vaping
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** % current vaping
 - **Baseline:** 6.0% adults (2023). Range: 3-9%. **Source:** BRFSS, surveys.
 
 ---
@@ -2214,66 +2214,66 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.14 MATERNAL & CHILD HEALTH (INDIVIDUAL)
 
 ### Node 291: Prenatal Care (First Trimester)
-- **Scale:** Individual | **Domain:** Maternal Health | **Unit:** % first trimester care
+- **Scale:** 5 | **Domain:** Maternal Health | **Unit:** % first trimester care
 - **Baseline:** 77.6% (2023). Range: 65-88%. **Source:** NVSS, county.
 
 ### Node 292: Adequate Prenatal Care
-- **Scale:** Individual | **Domain:** Maternal Health | **Unit:** % Kotelchuck adequate+
+- **Scale:** 5 | **Domain:** Maternal Health | **Unit:** % Kotelchuck adequate+
 - **Baseline:** 68.2% (2023). Range: 55-80%. **Source:** NVSS, county.
 
 ### Node 293: Pregnancy Intention (Unintended)
-- **Scale:** Individual | **Domain:** Maternal Health | **Unit:** % unintended pregnancies
+- **Scale:** 5 | **Domain:** Maternal Health | **Unit:** % unintended pregnancies
 - **Baseline:** 45% (2023). Range: 35-58%. **Source:** PRAMS, Guttmacher.
 
 ### Node 294: Maternal Smoking During Pregnancy
-- **Scale:** Individual | **Domain:** Maternal Health, Child | **Unit:** % smoking while pregnant
+- **Scale:** 5 | **Domain:** Maternal Health, Child | **Unit:** % smoking while pregnant
 - **Baseline:** 6.0% (2023). Range: 3-15%. **Source:** NVSS, state.
 
 ### Node 295: Maternal Chronic Conditions
-- **Scale:** Individual | **Domain:** Maternal Health | **Unit:** % prepregnancy chronic disease
+- **Scale:** 5 | **Domain:** Maternal Health | **Unit:** % prepregnancy chronic disease
 - **Baseline:** 28% (2023). Range: 20-38%. **Source:** PRAMS, CDC.
 
 ### Node 296: Maternal Postpartum Depression
-- **Scale:** Individual | **Domain:** Maternal Health | **Unit:** % postpartum depression
+- **Scale:** 6 | **Domain:** Maternal Health | **Unit:** % postpartum depression
 - **Baseline:** 13.2% (2023). Range: 9-19%. **Source:** PRAMS, state.
 
 ### Node 297: Breastfeeding Initiation
-- **Scale:** Individual | **Domain:** Child Health | **Unit:** % ever breastfed
+- **Scale:** 6 | **Domain:** Child Health | **Unit:** % ever breastfed
 - **Baseline:** 84.1% (2023). Range: 70-92%. **Source:** NVSS, state.
 
 ### Node 298: Breastfeeding Duration (6mo+)
-- **Scale:** Individual | **Domain:** Child Health | **Unit:** % breastfeeding 6mo+
+- **Scale:** 6 | **Domain:** Child Health | **Unit:** % breastfeeding 6mo+
 - **Baseline:** 58.3% (2023). Range: 45-72%. **Source:** NVSS, surveys, state.
 
 ### Node 299: Child Well-Visit Adherence
-- **Scale:** Individual | **Domain:** Child Health | **Unit:** % well-child visits on time
+- **Scale:** 5 | **Domain:** Child Health | **Unit:** % well-child visits on time
 - **Baseline:** 72% (2023). Range: 60-85%. **Source:** NCQA HEDIS, Medicaid.
 
 ### Node 300: Childhood Vaccination (Complete)
-- **Scale:** Individual | **Domain:** Child Health | **Unit:** % fully vaccinated by 24mo
+- **Scale:** 5 | **Domain:** Child Health | **Unit:** % fully vaccinated by 24mo
 - **Baseline:** 69.8% (2023). Range: 58-82%. **Source:** CDC NIS, state.
 
 ### Node 301: Asthma Prevalence (Children 0-17) [REVISED - Terminology Standardized]
-- **Scale:** Individual | **Domain:** Child Health, Respiratory | **Unit:** % children with current asthma
+- **Scale:** 6 | **Domain:** Child Health, Respiratory | **Unit:** % children with current asthma
 - **Description:** Percentage of children ages 0-17 years with current asthma (ever diagnosed AND still have asthma). Age range explicitly 0-17 years. Distinct from asthma incidence (new diagnoses).
 - **Baseline:** 7.5% children 0-17 (2023). Range: 5-12% by state. Disparities: Higher among Black children (13.9%), boys (8.4% vs 6.5% girls), low-income families. **Source:** National Survey of Children's Health (NSCH), state.
 - **Terminology Note:** Use "child/children" not "childhood" or "pediatric" per standardization.
 - **Mechanism node_id:** `child_asthma_prevalence`
 
 ### Node 302: Childhood Obesity
-- **Scale:** Individual | **Domain:** Child Health | **Unit:** % children obese
+- **Scale:** 6 | **Domain:** Child Health | **Unit:** % children obese
 - **Baseline:** 19.7% age 2-19 (2023). Range: 12-28%. **Source:** NSCH, state.
 
 ### Node 303: Adverse Birth Environment (Maternal ACEs)
-- **Scale:** Individual | **Domain:** Child, Maternal | **Unit:** % mothers 4+ ACEs
+- **Scale:** 2 | **Domain:** Child, Maternal | **Unit:** % mothers 4+ ACEs
 - **Baseline:** 14% (2023). Range: 9-22%. **Source:** PRAMS ACE module.
 
 ### Node 304: Child Special Healthcare Needs
-- **Scale:** Individual | **Domain:** Child Health | **Unit:** % children with SHCN
+- **Scale:** 2 | **Domain:** Child Health | **Unit:** % children with SHCN
 - **Baseline:** 19.8% (2023). Range: 15-26%. **Source:** NSCH, state.
 
 ### Node 305: Teen Birth Exposure (Mother Age <20)
-- **Scale:** Individual | **Domain:** Maternal, Child | **Unit:** % births to mothers <20
+- **Scale:** 2 | **Domain:** Maternal, Child | **Unit:** % births to mothers <20
 - **Baseline:** 4.6% births (2023). Range: 2-9%. **Source:** NVSS, county.
 
 ---
@@ -2281,58 +2281,58 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.15 ADDITIONAL CLIMATE & ENVIRONMENTAL EXPOSURES
 
 ### Node 306: Extreme Heat Days Exposure
-- **Scale:** Individual | **Domain:** Environmental, Climate | **Unit:** Days >95°F annually
+- **Scale:** 2 | **Domain:** Environmental, Climate | **Unit:** Days >95°F annually
 - **Baseline:** 18 days (2023). Range: 0-90+. **Source:** NOAA, tract/block.
 
 ### Node 307: Wildfire Smoke Exposure
-- **Scale:** Individual | **Domain:** Environmental, Climate | **Unit:** Days with unhealthy AQI
+- **Scale:** 2 | **Domain:** Environmental, Climate | **Unit:** Days with unhealthy AQI
 - **Baseline:** 8 days (2023). Range: 0-60+. **Source:** EPA AirNow, NOAA HMS.
 
 ### Node 308: Flood Risk Exposure (Individual)
-- **Scale:** Individual | **Domain:** Environmental, Climate | **Unit:** % in 100-year floodplain
+- **Scale:** 4 | **Domain:** Environmental, Climate | **Unit:** % in 100-year floodplain
 - **Baseline:** 4.2% housing units (2023). Range: 0-35%. **Source:** FEMA NFHL, tract.
 
 ### Node 309: Hurricane/Storm Exposure
-- **Scale:** Individual | **Domain:** Environmental, Climate | **Unit:** % in high-risk zones
+- **Scale:** 4 | **Domain:** Environmental, Climate | **Unit:** % in high-risk zones
 - **Baseline:** 11% coastal (2023). Range: 0-60%. **Source:** NOAA, FEMA, tract.
 
 ### Node 310: Drought Exposure
-- **Scale:** Individual | **Domain:** Environmental, Climate | **Unit:** % in drought areas
+- **Scale:** 4 | **Domain:** Environmental, Climate | **Unit:** % in drought areas
 - **Baseline:** 38% (2023, varies). Range: 0-100%. **Source:** US Drought Monitor.
 
 ### Node 311: Water Insecurity
-- **Scale:** Individual | **Domain:** Environmental | **Unit:** % HH worried about water safety
+- **Scale:** 4 | **Domain:** Environmental | **Unit:** % HH worried about water safety
 - **Baseline:** 17% (2023). Range: 8-35%. **Source:** Household Pulse, surveys.
 
 ### Node 312: Pesticide Exposure (Residential)
-- **Scale:** Individual | **Domain:** Environmental, Occupational | **Unit:** % near agricultural pesticide use
+- **Scale:** 2 | **Domain:** Environmental, Occupational | **Unit:** % near agricultural pesticide use
 - **Baseline:** 8% (2023). Range: 2-25% (rural). **Source:** EPA, USGS.
 
 ### Node 313: Industrial Pollution Proximity
-- **Scale:** Individual | **Domain:** Environmental | **Unit:** % within 1mi major emitter
+- **Scale:** 2 | **Domain:** Environmental | **Unit:** % within 1mi major emitter
 - **Baseline:** 12% (2023). Range: 3-35%. **Source:** EPA TRI, tract.
 
 ### Node 314: Drinking Water Contamination Risk
-- **Scale:** Individual | **Domain:** Environmental | **Unit:** % served by systems with violations
+- **Scale:** 2 | **Domain:** Environmental | **Unit:** % served by systems with violations
 - **Baseline:** 7.5% (2023). Range: 2-20%. **Source:** EPA SDWIS, county.
 
 ### Node 315: Indoor Environmental Hazards Index (REVISED - Expanded)
-- **Scale:** Individual | **Domain:** Housing, Environmental | **Unit:** Index 0-100 (higher = more hazards)
+- **Scale:** 2 | **Domain:** Housing, Environmental | **Unit:** Index 0-100 (higher = more hazards)
 - **Description:** Composite index of indoor environmental health hazards including: mold/dampness, pest infestation (rodents, cockroaches), lead paint, asbestos, radon, and inadequate ventilation. Weighted by severity and health impact. Complements Housing Quality Index (Node 199) which focuses on structural quality.
 - **Baseline:** National median = 25. Range: 0 (no hazards) to 85 (multiple severe hazards). **Source:** AHS, NHANES environmental home assessment, local health department inspections.
 - **Consolidation Note:** Expanded from former "Household Mold/Dampness" to comprehensive environmental hazards composite. Related individual hazard nodes (316: Pests, 317: Radon) remain for specific analyses.
 - **Mechanism node_id:** `indoor_environmental_hazards`
 
 ### Node 316: Household Pest Infestation
-- **Scale:** Individual | **Domain:** Housing, Environmental | **Unit:** % reporting pest problems
+- **Scale:** 2 | **Domain:** Housing, Environmental | **Unit:** % reporting pest problems
 - **Baseline:** 14% (2023). Range: 8-28%. **Source:** AHS.
 
 ### Node 317: Indoor Radon Exposure
-- **Scale:** Individual | **Domain:** Environmental | **Unit:** % homes >4 pCi/L
+- **Scale:** 2 | **Domain:** Environmental | **Unit:** % homes >4 pCi/L
 - **Baseline:** 6.3% (2023). Range: 1-18%. **Source:** EPA radon maps.
 
 ### Node 318: PFAS Exposure Risk
-- **Scale:** Individual | **Domain:** Environmental | **Unit:** % served by PFAS-detected water
+- **Scale:** 6 | **Domain:** Environmental | **Unit:** % served by PFAS-detected water
 - **Baseline:** 15% (2023 est). Range: 5-40%. **Source:** EPA UCMR, EWG.
 
 ---
@@ -2340,43 +2340,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.16 ADDITIONAL EMPLOYMENT & ECONOMIC CONDITIONS
 
 ### Node 319: Multiple Job Holding
-- **Scale:** Individual | **Domain:** Employment, Economic | **Unit:** % with 2+ jobs
+- **Scale:** 6 | **Domain:** Employment, Economic | **Unit:** % with 2+ jobs
 - **Baseline:** 7.8% employed (2023). Range: 5-12%. **Source:** CPS, state.
 
 ### Node 320: Underemployment
-- **Scale:** Individual | **Domain:** Employment, Economic | **Unit:** % part-time for economic reasons
+- **Scale:** 6 | **Domain:** Employment, Economic | **Unit:** % part-time for economic reasons
 - **Baseline:** 6.1% labor force (2023). Range: 4-10%. **Source:** BLS LAUS, state.
 
 ### Node 321: Job Insecurity Perception
-- **Scale:** Individual | **Domain:** Employment | **Unit:** % worried about job loss
+- **Scale:** 4 | **Domain:** Employment | **Unit:** % worried about job loss
 - **Baseline:** 18% employed (2023). Range: 12-28%. **Source:** Fed SHED, surveys.
 
 ### Node 322: Gig/Contract Work
-- **Scale:** Individual | **Domain:** Employment | **Unit:** % contingent workers
+- **Scale:** 4 | **Domain:** Employment | **Unit:** % contingent workers
 - **Baseline:** 10.6% (2023). Range: 7-16%. **Source:** BLS CWS, surveys.
 
 ### Node 323: Retirement Savings Access
-- **Scale:** Individual | **Domain:** Employment, Economic | **Unit:** % with employer retirement plan
+- **Scale:** 4 | **Domain:** Employment, Economic | **Unit:** % with employer retirement plan
 - **Baseline:** 56% workers (2023). Range: 42-68%. **Source:** BLS NCS, state.
 
 ### Node 324: Paid Family Leave Access
-- **Scale:** Individual | **Domain:** Employment | **Unit:** % with paid family leave
+- **Scale:** 4 | **Domain:** Employment | **Unit:** % with paid family leave
 - **Baseline:** 27% workers (2023). Range: 15-90%. **Source:** BLS NCS, state.
 
 ### Node 325: Workplace Flexibility
-- **Scale:** Individual | **Domain:** Employment | **Unit:** % with flexible schedules
+- **Scale:** 4 | **Domain:** Employment | **Unit:** % with flexible schedules
 - **Baseline:** 38% (2023). Range: 25-55%. **Source:** BLS, surveys.
 
 ### Node 326: Union Membership
-- **Scale:** Individual | **Domain:** Employment, Labor | **Unit:** % workers unionized
+- **Scale:** 4 | **Domain:** Employment, Labor | **Unit:** % workers unionized
 - **Baseline:** 10.1% (2023). Range: 2-23%. **Source:** BLS, state.
 
 ### Node 327: Wage Theft Experience
-- **Scale:** Individual | **Domain:** Employment, Economic | **Unit:** % reporting wage violations
+- **Scale:** 6 | **Domain:** Employment, Economic | **Unit:** % reporting wage violations
 - **Baseline:** 8.5% (2023). Range: 5-14%. **Source:** EPI surveys, DOL data.
 
 ### Node 328: Occupational Licensing Burden
-- **Scale:** Individual | **Domain:** Employment | **Unit:** % in licensed occupations
+- **Scale:** 6 | **Domain:** Employment | **Unit:** % in licensed occupations
 - **Baseline:** 22% workers (2023). Range: 12-33%. **Source:** DOL, state studies.
 
 ---
@@ -2384,43 +2384,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.17 ADDITIONAL SOCIAL & CIVIC ENVIRONMENT
 
 ### Node 329: Social Support (Low)
-- **Scale:** Individual | **Domain:** Social Environment | **Unit:** % low social support
+- **Scale:** 6 | **Domain:** Social Environment | **Unit:** % low social support
 - **Baseline:** 18% (2023). Range: 12-28%. **Source:** BRFSS, surveys.
 
 ### Node 330: Loneliness
-- **Scale:** Individual | **Domain:** Social, Mental Health | **Unit:** % often/always lonely
+- **Scale:** 6 | **Domain:** Social, Mental Health | **Unit:** % often/always lonely
 - **Baseline:** 22% adults (2023). Range: 15-32%. **Source:** BRFSS, surveys.
 
 ### Node 331: Civic Participation
-- **Scale:** Individual | **Domain:** Civic | **Unit:** % voted in last election
+- **Scale:** 4 | **Domain:** Civic | **Unit:** % voted in last election
 - **Baseline:** 66% eligible (2020 pres). Range: 50-78%. **Source:** Census CPS, state.
 
 ### Node 332: Volunteer Rate
-- **Scale:** Individual | **Domain:** Civic, Social | **Unit:** % volunteering
+- **Scale:** 4 | **Domain:** Civic, Social | **Unit:** % volunteering
 - **Baseline:** 28.3% (2023). Range: 20-42%. **Source:** AmeriCorps, CPS, state.
 
 ### Node 333: Organizational Membership
-- **Scale:** Individual | **Domain:** Social, Civic | **Unit:** % belonging to organizations
+- **Scale:** 4 | **Domain:** Social, Civic | **Unit:** % belonging to organizations
 - **Baseline:** 42% (2023). Range: 30-58%. **Source:** Surveys.
 
 ### Node 334: Religious Participation
-- **Scale:** Individual | **Domain:** Social | **Unit:** % attending weekly+
+- **Scale:** 4 | **Domain:** Social | **Unit:** % attending weekly+
 - **Baseline:** 27% (2023). Range: 15-45%. **Source:** Pew, Gallup.
 
 ### Node 335: Neighborhood Trust
-- **Scale:** Individual | **Domain:** Social | **Unit:** % trust most neighbors
+- **Scale:** 4 | **Domain:** Social | **Unit:** % trust most neighbors
 - **Baseline:** 52% (2023). Range: 35-68%. **Source:** BRFSS, surveys.
 
 ### Node 336: Experienced Discrimination (Any Domain)
-- **Scale:** Individual | **Domain:** Social | **Unit:** % reporting discrimination
+- **Scale:** 4 | **Domain:** Social | **Unit:** % reporting discrimination
 - **Baseline:** 31% (2023). Range: 20-48% (varies by group). **Source:** RWJF surveys.
 
 ### Node 337: Language Barriers (LEP)
-- **Scale:** Individual | **Domain:** Social, Healthcare | **Unit:** % limited English proficiency
+- **Scale:** 4 | **Domain:** Social, Healthcare | **Unit:** % limited English proficiency
 - **Baseline:** 8.2% (2023). Range: 1-25%. **Source:** ACS, state.
 
 ### Node 338: Immigration Status Insecurity
-- **Scale:** Individual | **Domain:** Social | **Unit:** % undocumented
+- **Scale:** 4 | **Domain:** Social | **Unit:** % undocumented
 - **Baseline:** 3.2% pop (2023). Range: 0.5-8%. **Source:** Pew, MPI, state.
 
 ---
@@ -2428,31 +2428,31 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.18 ADDITIONAL HOUSING CONDITIONS
 
 ### Node 339: Household Crowding
-- **Scale:** Individual | **Domain:** Housing | **Unit:** % >1 person/room
+- **Scale:** 4 | **Domain:** Housing | **Unit:** % >1 person/room
 - **Baseline:** 3.2% (2023). Range: 1-12%. **Source:** ACS, tract.
 
 ### Node 340: Multigenerational Households
-- **Scale:** Individual | **Domain:** Housing, Social | **Unit:** % HH with 3+ generations
+- **Scale:** 4 | **Domain:** Housing, Social | **Unit:** % HH with 3+ generations
 - **Baseline:** 5.1% (2023). Range: 2-12%. **Source:** ACS, state.
 
 ### Node 341: Housing Instability (Multiple Moves)
-- **Scale:** Individual | **Domain:** Housing | **Unit:** % moved 2+ times past year
+- **Scale:** 4 | **Domain:** Housing | **Unit:** % moved 2+ times past year
 - **Baseline:** 4.8% (2023). Range: 2-9%. **Source:** Surveys, ACS.
 
 ### Node 342: Utility Shutoff Experience
-- **Scale:** Individual | **Domain:** Housing, Economic | **Unit:** % had utility shut off
+- **Scale:** 4 | **Domain:** Housing, Economic | **Unit:** % had utility shut off
 - **Baseline:** 5.2% past year (2023). Range: 2-10%. **Source:** Household Pulse, surveys.
 
 ### Node 343: Housing Discrimination Experience
-- **Scale:** Individual | **Domain:** Housing, Social | **Unit:** % reporting housing discrimination
+- **Scale:** 2 | **Domain:** Housing, Social | **Unit:** % reporting housing discrimination
 - **Baseline:** 6.5% (2023). Range: 3-12%. **Source:** HUD HFEO, surveys.
 
 ### Node 344: Lack of Kitchen Facilities
-- **Scale:** Individual | **Domain:** Housing | **Unit:** % HH lacking complete kitchen
+- **Scale:** 2 | **Domain:** Housing | **Unit:** % HH lacking complete kitchen
 - **Baseline:** 2.1% (2023). Range: 0.8-8%. **Source:** ACS, tract.
 
 ### Node 345: Lack of Plumbing
-- **Scale:** Individual | **Domain:** Housing | **Unit:** % HH lacking complete plumbing
+- **Scale:** 2 | **Domain:** Housing | **Unit:** % HH lacking complete plumbing
 - **Baseline:** 0.5% (2023). Range: 0.1-8% (rural/tribal). **Source:** ACS, tract.
 
 ### ~~Node 346: Housing Repair Needs (Severe)~~ [REMOVED - Consolidated into Node 199]
@@ -2460,7 +2460,7 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 - **Migration:** Update all references to use Node 199 `housing_quality_index`
 
 ### Node 347: Heating/Cooling Adequacy
-- **Scale:** Individual | **Domain:** Housing, Energy | **Unit:** % unable to maintain temp
+- **Scale:** 4 | **Domain:** Housing, Energy | **Unit:** % unable to maintain temp
 - **Baseline:** 8.3% (2023). Range: 4-16%. **Source:** AHS, EIA RECS.
 
 ---
@@ -2468,55 +2468,55 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.19 ADDITIONAL HEALTHCARE & DISABILITY
 
 ### Node 348: Caregiver Burden
-- **Scale:** Individual | **Domain:** Health, Social | **Unit:** % unpaid caregivers
+- **Scale:** 4 | **Domain:** Health, Social | **Unit:** % unpaid caregivers
 - **Baseline:** 19.2% adults (2023). Range: 14-26%. **Source:** BRFSS, surveys.
 
 ### Node 349: Need for Personal Care Assistance
-- **Scale:** Individual | **Domain:** Disability, LTSS | **Unit:** % needing help with ADLs
+- **Scale:** 4 | **Domain:** Disability, LTSS | **Unit:** % needing help with ADLs
 - **Baseline:** 6.8% adults (2023). Range: 5-11%. **Source:** NHIS, ACS.
 
 ### Node 350: Unmet LTSS Need
-- **Scale:** Individual | **Domain:** Disability, LTSS | **Unit:** % needing but not receiving help
+- **Scale:** 4 | **Domain:** Disability, LTSS | **Unit:** % needing but not receiving help
 - **Baseline:** 2.4% (2023). Range: 1.5-4%. **Source:** NSLTCP, surveys.
 
 ### Node 351: Nursing Home Residence
-- **Scale:** Individual | **Domain:** LTSS | **Unit:** % in nursing facilities
+- **Scale:** 5 | **Domain:** LTSS | **Unit:** % in nursing facilities
 - **Baseline:** 1.0% age 65+ (2023). Range: 0.6-2.5%. **Source:** CMS, CDC.
 
 ### Node 352: Assisted Living Residence
-- **Scale:** Individual | **Domain:** LTSS | **Unit:** % in assisted living
+- **Scale:** 5 | **Domain:** LTSS | **Unit:** % in assisted living
 - **Baseline:** 1.8% age 65+ (2023). Range: 1-3.5%. **Source:** NCHS, industry.
 
 ### Node 353: Vision Impairment
-- **Scale:** Individual | **Domain:** Health, Disability | **Unit:** % difficulty seeing
+- **Scale:** 5 | **Domain:** Health, Disability | **Unit:** % difficulty seeing
 - **Baseline:** 4.6% (2023). Range: 3-7%. **Source:** NHIS, ACS.
 
 ### Node 354: Hearing Impairment
-- **Scale:** Individual | **Domain:** Health, Disability | **Unit:** % difficulty hearing
+- **Scale:** 5 | **Domain:** Health, Disability | **Unit:** % difficulty hearing
 - **Baseline:** 5.9% adults (2023). Range: 4-10%. **Source:** NHIS, ACS.
 
 ### Node 355: Medication Adherence (Low)
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % not taking meds as prescribed
+- **Scale:** 5 | **Domain:** Healthcare | **Unit:** % not taking meds as prescribed
 - **Baseline:** 30% chronic disease patients (2023). Range: 20-45%. **Source:** Surveys, MEPS.
 
 ### Node 356: Specialist Access Delay
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % delayed specialist care needed
+- **Scale:** 5 | **Domain:** Healthcare | **Unit:** % delayed specialist care needed
 - **Baseline:** 12% (2023). Range: 7-19%. **Source:** MEPS, surveys.
 
 ### Node 357: Emergency Department Utilization (Frequent)
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % 4+ ED visits/year
+- **Scale:** 5 | **Domain:** Healthcare | **Unit:** % 4+ ED visits/year
 - **Baseline:** 2.8% (2023). Range: 1.5-5%. **Source:** MEPS, state all-payer.
 
 ### Node 358: Hospitalization (Past Year)
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % hospitalized
+- **Scale:** 5 | **Domain:** Healthcare | **Unit:** % hospitalized
 - **Baseline:** 8.5% (2023). Range: 6-12%. **Source:** MEPS, NHIS.
 
 ### Node 359: Preventable Hospitalization (Individual)
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % with ambulatory-sensitive admission
+- **Scale:** 5 | **Domain:** Healthcare | **Unit:** % with ambulatory-sensitive admission
 - **Baseline:** 1.8% Medicare (2023). Range: 1-3.5%. **Source:** CMS, county.
 
 ### Node 360: Telemedicine Use
-- **Scale:** Individual | **Domain:** Healthcare, Digital | **Unit:** % used telehealth past year
+- **Scale:** 5 | **Domain:** Healthcare, Digital | **Unit:** % used telehealth past year
 - **Baseline:** 37% (2023). Range: 25-52%. **Source:** HINTS, surveys.
 
 ---
@@ -2524,7 +2524,7 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.20 ADDITIONAL FOOD & NUTRITION [SECTION REVISED - Consolidated]
 
 ### Node 361: Diet Quality Index (HEI-2015) [REVISED - Primary Measure]
-- **Scale:** Intermediate
+- **Scale:** 5
 - **Domain:** Health Behaviors, Food Security, Nutrition
 - **Type:** Quality/Intensity
 - **Unit:** Healthy Eating Index (HEI) score 0-100 (higher = better diet quality)
@@ -2535,7 +2535,7 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 - **Consolidation Note:** Replaces former low-quality framing with comprehensive index. Former Node 362 (fruits/vegetables) and Node 364 (fast food) are components of HEI and should not be modeled separately.
 
 ### Node 363: Sugar-Sweetened Beverage (SSB) Consumption [RETAINED - Policy-Relevant]
-- **Scale:** Intermediate
+- **Scale:** 6
 - **Domain:** Health Behaviors, Nutrition
 - **Type:** Behavior
 - **Unit:** Servings per day OR % consuming ≥1 serving/day
@@ -2552,7 +2552,7 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 - **Migration:** Fast food frequency is captured in HEI components (refined grains, saturated fats, added sugars, sodium). Use Node 361 HEI for overall diet quality pathways.
 
 ### Node 365: Food Assistance Receipt (Any)
-- **Scale:** Individual | **Domain:** Food, Economic | **Unit:** % receiving any food assistance
+- **Scale:** 4 | **Domain:** Food, Economic | **Unit:** % receiving any food assistance
 - **Baseline:** 18% (2023). Range: 10-28%. **Source:** ACS, USDA, state.
 
 ---
@@ -2560,43 +2560,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.21 ADDITIONAL FINANCIAL STRESS
 
 ### Node 366: Emergency Savings (Lacking)
-- **Scale:** Individual | **Domain:** Economic | **Unit:** % unable to cover $400 emergency
+- **Scale:** 4 | **Domain:** Economic | **Unit:** % unable to cover $400 emergency
 - **Baseline:** 37% (2023). Range: 28-50%. **Source:** Fed SHED.
 
 ### Node 367: Checking/Savings Account (Unbanked)
-- **Scale:** Individual | **Domain:** Economic | **Unit:** % no bank account
+- **Scale:** 4 | **Domain:** Economic | **Unit:** % no bank account
 - **Baseline:** 4.5% HH (2023). Range: 2-10%. **Source:** FDIC, state.
 
 ### Node 368: Underbanked Status
-- **Scale:** Individual | **Domain:** Economic | **Unit:** % using alternative financial services
+- **Scale:** 4 | **Domain:** Economic | **Unit:** % using alternative financial services
 - **Baseline:** 14.1% HH (2023). Range: 8-22%. **Source:** FDIC, state.
 
 ### Node 369: Payday Loan Use
-- **Scale:** Individual | **Domain:** Economic | **Unit:** % used payday loan past year
+- **Scale:** 4 | **Domain:** Economic | **Unit:** % used payday loan past year
 - **Baseline:** 5.3% (2023). Range: 2-9%. **Source:** FDIC, Pew.
 
 ### Node 370: Credit Card Debt (High)
-- **Scale:** Individual | **Domain:** Economic | **Unit:** % carrying high CC debt (>$5k)
+- **Scale:** 4 | **Domain:** Economic | **Unit:** % carrying high CC debt (>$5k)
 - **Baseline:** 28% HH (2023). Range: 18-40%. **Source:** Fed SCF, surveys.
 
 ### Node 371: Student Loan Debt
-- **Scale:** Individual | **Domain:** Economic, Education | **Unit:** % with student loans
+- **Scale:** 4 | **Domain:** Economic, Education | **Unit:** % with student loans
 - **Baseline:** 34% adults <40 (2023). Range: 22-48%. **Source:** Fed SCF, state.
 
 ### Node 372: Collections/Derogatory Marks
-- **Scale:** Individual | **Domain:** Economic | **Unit:** % with debt in collections
+- **Scale:** 4 | **Domain:** Economic | **Unit:** % with debt in collections
 - **Baseline:** 28% credit records (2023). Range: 18-42%. **Source:** CFPB, Urban Inst.
 
 ### Node 373: Credit Score (Subprime)
-- **Scale:** Individual | **Domain:** Economic | **Unit:** % credit score <620
+- **Scale:** 5 | **Domain:** Economic | **Unit:** % credit score <620
 - **Baseline:** 18% (2023). Range: 12-28%. **Source:** CFPB, FICO estimates.
 
 ### Node 374: Bankruptcy (Recent)
-- **Scale:** Individual | **Domain:** Economic | **Unit:** % filed past 2 years
+- **Scale:** 5 | **Domain:** Economic | **Unit:** % filed past 2 years
 - **Baseline:** 0.4% annually (2023). Range: 0.2-0.7%. **Source:** Courts, ABI.
 
 ### Node 375: Tax Refund Dependence
-- **Scale:** Individual | **Domain:** Economic | **Unit:** % relying on EITC/refund
+- **Scale:** 5 | **Domain:** Economic | **Unit:** % relying on EITC/refund
 - **Baseline:** 14% filers (2023). Range: 8-22%. **Source:** IRS, state.
 
 ---
@@ -2604,103 +2604,103 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 3.22 MISCELLANEOUS INDIVIDUAL CONDITIONS
 
 ### Node 376: Sleep Duration (Inadequate)
-- **Scale:** Individual | **Domain:** Health | **Unit:** % <7 hours nightly
+- **Scale:** 5 | **Domain:** Health | **Unit:** % <7 hours nightly
 - **Baseline:** 35.2% adults (2023). Range: 28-45%. **Source:** BRFSS, state.
 
 ### Node 377: Physical Activity (Insufficient)
-- **Scale:** Individual | **Domain:** Health | **Unit:** % not meeting guidelines
+- **Scale:** 5 | **Domain:** Health | **Unit:** % not meeting guidelines
 - **Baseline:** 77.6% adults (2023). Range: 68-85%. **Source:** BRFSS, state.
 
 ### Node 378: Sedentary Behavior
-- **Scale:** Individual | **Domain:** Health | **Unit:** % sitting 8+ hours/day
+- **Scale:** 5 | **Domain:** Health | **Unit:** % sitting 8+ hours/day
 - **Baseline:** 26% employed adults (2023). Range: 18-38%. **Source:** NHIS, surveys.
 
 ### Node 379: Flu Vaccination
-- **Scale:** Individual | **Domain:** Healthcare, Prevention | **Unit:** % flu shot past year
+- **Scale:** 5 | **Domain:** Healthcare, Prevention | **Unit:** % flu shot past year
 - **Baseline:** 48.5% (2023). Range: 38-62%. **Source:** BRFSS, state.
 
 ### Node 380: COVID-19 Vaccination (Complete Primary)
-- **Scale:** Individual | **Domain:** Healthcare, Prevention | **Unit:** % completed primary series
+- **Scale:** 5 | **Domain:** Healthcare, Prevention | **Unit:** % completed primary series
 - **Baseline:** 69% (2023). Range: 52-82%. **Source:** CDC, state.
 
 ### Node 381: Cancer Screening (Colorectal)
-- **Scale:** Individual | **Domain:** Healthcare, Prevention | **Unit:** % age 50-75 screened
+- **Scale:** 5 | **Domain:** Healthcare, Prevention | **Unit:** % age 50-75 screened
 - **Baseline:** 69.7% (2023). Range: 60-78%. **Source:** BRFSS, state.
 
 ### Node 382: Cancer Screening (Breast)
-- **Scale:** Individual | **Domain:** Healthcare, Prevention | **Unit:** % women 50-74 mammogram
+- **Scale:** 5 | **Domain:** Healthcare, Prevention | **Unit:** % women 50-74 mammogram
 - **Baseline:** 76.4% (2023). Range: 68-84%. **Source:** BRFSS, state.
 
 ### Node 383: Cancer Screening (Cervical)
-- **Scale:** Individual | **Domain:** Healthcare, Prevention | **Unit:** % women 21-65 screened
+- **Scale:** 5 | **Domain:** Healthcare, Prevention | **Unit:** % women 21-65 screened
 - **Baseline:** 81.1% (2023). Range: 72-88%. **Source:** BRFSS, state.
 
 ### Node 384: Dental Insurance
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % with dental coverage
+- **Scale:** 4 | **Domain:** Healthcare | **Unit:** % with dental coverage
 - **Baseline:** 56% adults (2023). Range: 45-68%. **Source:** BRFSS, surveys.
 
 ### Node 385: Vision Insurance
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % with vision coverage
+- **Scale:** 4 | **Domain:** Healthcare | **Unit:** % with vision coverage
 - **Baseline:** 52% (2023). Range: 40-65%. **Source:** Surveys.
 
 ### Node 386: Birth Control Access/Use
-- **Scale:** Individual | **Domain:** Healthcare, Maternal | **Unit:** % using contraception
+- **Scale:** 6 | **Domain:** Healthcare, Maternal | **Unit:** % using contraception
 - **Baseline:** 65% women 15-49 (2023). Range: 55-75%. **Source:** NSFG.
 
 ### Node 387: STI Diagnosis (Past Year)
-- **Scale:** Individual | **Domain:** Health | **Unit:** % diagnosed STI
+- **Scale:** 6 | **Domain:** Health | **Unit:** % diagnosed STI
 - **Baseline:** 3.2% sexually active (2023). Range: 1.5-6%. **Source:** CDC STD Surveillance.
 
 ### Node 388: HIV Status (Diagnosed)
-- **Scale:** Individual | **Domain:** Health | **Unit:** Rate per 100k living with diagnosed HIV
+- **Scale:** 5 | **Domain:** Health | **Unit:** Rate per 100k living with diagnosed HIV
 - **Baseline:** 380/100k (2023). Range: 150-850. **Source:** CDC HIV Surveillance.
 
 ### Node 389: Hepatitis C Prevalence
-- **Scale:** Individual | **Domain:** Health | **Unit:** % anti-HCV positive
+- **Scale:** 6 | **Domain:** Health | **Unit:** % anti-HCV positive
 - **Baseline:** 1.0% adults (2023). Range: 0.5-2.5%. **Source:** CDC, NHANES.
 
 ### Node 390: Prescription Drug Coverage
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % with Rx coverage
+- **Scale:** 5 | **Domain:** Healthcare | **Unit:** % with Rx coverage
 - **Baseline:** 86% (2023). Range: 78-92%. **Source:** MEPS, KFF.
 
 ### Node 391: Out-of-Pocket Medical Spending
-- **Scale:** Individual | **Domain:** Healthcare, Economic | **Unit:** Median annual OOP $
+- **Scale:** 5 | **Domain:** Healthcare, Economic | **Unit:** Median annual OOP $
 - **Baseline:** $1,200 (2023). Range: $400-$3,500. **Source:** MEPS.
 
 ### Node 392: Cost-Related Medication Nonadherence
-- **Scale:** Individual | **Domain:** Healthcare, Economic | **Unit:** % skipped meds due to cost
+- **Scale:** 5 | **Domain:** Healthcare, Economic | **Unit:** % skipped meds due to cost
 - **Baseline:** 18% (2023). Range: 12-28%. **Source:** KFF, MEPS.
 
 ### Node 393: Delayed Care Due to Transportation
-- **Scale:** Individual | **Domain:** Healthcare, Transportation | **Unit:** % delayed care—transport barrier
+- **Scale:** 5 | **Domain:** Healthcare, Transportation | **Unit:** % delayed care—transport barrier
 - **Baseline:** 5.6% (2023). Range: 3-11%. **Source:** MEPS, surveys.
 
 ### Node 394: Delayed Care Due to Cost
-- **Scale:** Individual | **Domain:** Healthcare, Economic | **Unit:** % delayed care—cost barrier
+- **Scale:** 5 | **Domain:** Healthcare, Economic | **Unit:** % delayed care—cost barrier
 - **Baseline:** 26% (2023). Range: 18-38%. **Source:** MEPS, KFF.
 
 ### Node 395: Health Literacy (Low)
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % below basic health literacy
+- **Scale:** 5 | **Domain:** Healthcare | **Unit:** % below basic health literacy
 - **Baseline:** 12% adults (2023). Range: 8-20%. **Source:** NAAL, PIAAC.
 
 ### Node 396: Medical Mistrust
-- **Scale:** Individual | **Domain:** Healthcare, Social | **Unit:** % low trust in healthcare system
+- **Scale:** 6 | **Domain:** Healthcare, Social | **Unit:** % low trust in healthcare system
 - **Baseline:** 28% (2023). Range: 18-48% (varies by group). **Source:** Surveys.
 
 ### Node 397: Usual Source of Care
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % with usual source
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** % with usual source
 - **Baseline:** 77.5% (2023). Range: 68-86%. **Source:** NHIS, state.
 
 ### Node 398: Patient-Centered Medical Home Access
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % attributed to PCMH
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** % attributed to PCMH
 - **Baseline:** 35% (2023). Range: 20-55%. **Source:** NCQA, state.
 
 ### Node 399: Chronic Disease Self-Management Support
-- **Scale:** Individual | **Domain:** Healthcare | **Unit:** % chronic patients in self-mgmt programs
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** % chronic patients in self-mgmt programs
 - **Baseline:** 18% (2023). Range: 10-30%. **Source:** BRFSS, surveys.
 
 ### Node 400: Advance Directive Completion
-- **Scale:** Individual | **Domain:** Healthcare, LTSS | **Unit:** % with advance directive
+- **Scale:** 2 | **Domain:** Healthcare, LTSS | **Unit:** % with advance directive
 - **Baseline:** 37% adults (2023). Range: 28-52%. **Source:** BRFSS, surveys.
 
 ---
@@ -2721,63 +2721,63 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.1 HEALTHCARE UTILIZATION PATTERNS
 
 ### Node 401: Primary Care Visit Rate
-- **Scale:** Intermediate | **Domain:** Healthcare | **Unit:** Avg visits per person annually
+- **Scale:** 4 | **Domain:** Healthcare | **Unit:** Avg visits per person annually
 - **Baseline:** 3.2 visits/year (2023). Range: 2.0-4.5. **Source:** MEPS, Medicare.
 
 ### Node 402: Specialist Visit Rate
-- **Scale:** Intermediate | **Domain:** Healthcare | **Unit:** Avg specialist visits annually
+- **Scale:** 4 | **Domain:** Healthcare | **Unit:** Avg specialist visits annually
 - **Baseline:** 1.8 visits/year (2023). Range: 1.0-3.0. **Source:** MEPS.
 
 ### Node 403: Emergency Department Visit Rate
-- **Scale:** Intermediate | **Domain:** Healthcare | **Unit:** ED visits per 1k pop
+- **Scale:** 7 | **Domain:** Healthcare | **Unit:** ED visits per 1k pop
 - **Baseline:** 420/1k (2023). Range: 280-650. **Source:** HCUP NEDS, state.
 
 ### Node 404: Avoidable ED Visit Rate
-- **Scale:** Intermediate | **Domain:** Healthcare | **Unit:** Avoidable ED visits per 1k
+- **Scale:** 7 | **Domain:** Healthcare | **Unit:** Avoidable ED visits per 1k
 - **Baseline:** 180/1k (2023). Range: 120-280. **Source:** HCUP, NYU algorithm.
 
 ### Node 405: Inpatient Admission Rate
-- **Scale:** Intermediate | **Domain:** Healthcare | **Unit:** Admissions per 1k pop
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** Admissions per 1k pop
 - **Baseline:** 95/1k (2023). Range: 70-140. **Source:** HCUP NIS, state.
 
 ### Node 406: Ambulatory Care-Sensitive Admission Rate
-- **Scale:** Intermediate | **Domain:** Healthcare | **Unit:** ACSC admissions per 1k Medicare
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** ACSC admissions per 1k Medicare
 - **Baseline:** 48/1k (2023). Range: 30-80. **Source:** CMS, county.
 
 ### Node 407: 30-Day Hospital Readmission Rate
-- **Scale:** Intermediate | **Domain:** Healthcare | **Unit:** % readmitted within 30 days
+- **Scale:** 3 | **Domain:** Healthcare | **Unit:** % readmitted within 30 days
 - **Baseline:** 15.5% (2023). Range: 12-21%. **Source:** CMS, hospital.
 
 ### Node 408: Preventive Service Utilization (Composite)
-- **Scale:** Intermediate | **Domain:** Healthcare | **Unit:** % receiving age-appropriate prevention
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** % receiving age-appropriate prevention
 - **Baseline:** 62% (2023). Range: 48-75%. **Source:** MEPS, HEDIS.
 
 ### Node 409: Mental Health Service Utilization Rate
-- **Scale:** Intermediate | **Domain:** Healthcare, Behavioral | **Unit:** MH visits per 1k pop
+- **Scale:** 6 | **Domain:** Healthcare, Behavioral | **Unit:** MH visits per 1k pop
 - **Baseline:** 285/1k (2023). Range: 150-450. **Source:** MEPS, Medicaid.
 
 ### Node 410: SUD Treatment Entry Rate
-- **Scale:** Intermediate | **Domain:** Healthcare, Behavioral | **Unit:** Treatment admissions per 1k need
+- **Scale:** 6 | **Domain:** Healthcare, Behavioral | **Unit:** Treatment admissions per 1k need
 - **Baseline:** 185/1k needing (2023). Range: 100-320. **Source:** SAMHSA TEDS.
 
 ### Node 411: Medication Fill Rate (Chronic Disease)
-- **Scale:** Intermediate | **Domain:** Healthcare | **Unit:** Proportion of days covered (PDC)
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** Proportion of days covered (PDC)
 - **Baseline:** 0.68 PDC (2023). Range: 0.50-0.82. **Source:** NCQA, PQA.
 
 ### Node 412: Dental Service Utilization
-- **Scale:** Intermediate | **Domain:** Healthcare | **Unit:** Dental visits per person annually
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** Dental visits per person annually
 - **Baseline:** 0.9 visits/year (2023). Range: 0.5-1.4. **Source:** ADA, MEPS.
 
 ### Node 413: Home Health Visit Rate
-- **Scale:** Intermediate | **Domain:** Healthcare, LTSS | **Unit:** Home health episodes per 1k Medicare
+- **Scale:** 6 | **Domain:** Healthcare, LTSS | **Unit:** Home health episodes per 1k Medicare
 - **Baseline:** 82/1k (2023). Range: 45-150. **Source:** CMS, state.
 
 ### Node 414: Observation Stay Rate
-- **Scale:** Intermediate | **Domain:** Healthcare | **Unit:** Obs stays per 1k pop
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** Obs stays per 1k pop
 - **Baseline:** 28/1k (2023). Range: 15-45. **Source:** HCUP, CMS.
 
 ### Node 415: Outpatient Surgery Rate
-- **Scale:** Intermediate | **Domain:** Healthcare | **Unit:** Outpatient surgeries per 1k
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** Outpatient surgeries per 1k
 - **Baseline:** 65/1k (2023). Range: 45-95. **Source:** HCUP, NSAS.
 
 ---
@@ -2785,45 +2785,45 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.2 CHRONIC DISEASE MANAGEMENT & CONTROL
 
 ### Node 416: Diabetes Control (HbA1c <8%)
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % diabetics with HbA1c <8%
+- **Scale:** 6 | **Domain:** Health | **Unit:** % diabetics with HbA1c <8%
 - **Baseline:** 64% (2023). Range: 52-75%. **Source:** HEDIS, BRFSS.
 
 ### Node 417: Hypertension Control (<140/90)
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % hypertensives controlled
+- **Scale:** 6 | **Domain:** Health | **Unit:** % hypertensives controlled
 - **Baseline:** 48% (2023). Range: 38-62%. **Source:** NHANES, HEDIS.
 
 ### Node 418: Asthma Control Rate [REVISED - Clarified]
-- **Scale:** Intermediate | **Domain:** Health, Respiratory, Chronic Disease Management | **Unit:** % of persons with asthma who have well-controlled asthma
+- **Scale:** 6 | **Domain:** Health, Respiratory, Chronic Disease Management | **Unit:** % of persons with asthma who have well-controlled asthma
 - **Description:** Among persons with diagnosed asthma (all ages), the percentage with well-controlled asthma based on: symptom frequency, nighttime awakenings, activity limitation, and rescue inhaler use. Analogous to HbA1c control for diabetes. Measured via validated Asthma Control Test (ACT) or clinical assessment. Well-controlled = ACT ≥20 or meeting NAEPP guidelines.
 - **Baseline:** 56% of persons with asthma are well-controlled (2023). Range: 42-68% by state/population. Lower control among low-income, Black/Hispanic, uninsured, and Medicaid enrollees. **Source:** BRFSS asthma call-back surveys, HEDIS, research surveys.
 - **Mechanism node_id:** `asthma_control_rate`
 
 ### Node 419: Cholesterol Management (Statin Use)
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % high-risk on statins
+- **Scale:** 6 | **Domain:** Health | **Unit:** % high-risk on statins
 - **Baseline:** 71% (2023). Range: 60-82%. **Source:** HEDIS, MEPS.
 
 ### Node 420: Depression Treatment Adherence
-- **Scale:** Intermediate | **Domain:** Mental Health | **Unit:** % depressed receiving adequate Rx
+- **Scale:** 5 | **Domain:** Mental Health | **Unit:** % depressed receiving adequate Rx
 - **Baseline:** 42% (2023). Range: 30-58%. **Source:** HEDIS, NSDUH.
 
 ### Node 421: HIV Viral Suppression
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % PLWH virally suppressed
+- **Scale:** 5 | **Domain:** Health | **Unit:** % PLWH virally suppressed
 - **Baseline:** 66% (2023). Range: 52-78%. **Source:** CDC HIV surveillance.
 
 ### Node 422: Hepatitis C Treatment Completion
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % HCV+ completing DAA therapy
+- **Scale:** 5 | **Domain:** Health | **Unit:** % HCV+ completing DAA therapy
 - **Baseline:** 38% diagnosed (2023). Range: 25-55%. **Source:** CDC, claims.
 
 ### Node 423: Cancer Survivorship Follow-Up
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % cancer survivors with follow-up
+- **Scale:** 5 | **Domain:** Health | **Unit:** % cancer survivors with follow-up
 - **Baseline:** 68% (2023). Range: 55-80%. **Source:** SEER, surveys.
 
 ### Node 424: Heart Failure Medication Adherence
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** PDC for HF medications
+- **Scale:** 5 | **Domain:** Health | **Unit:** PDC for HF medications
 - **Baseline:** 0.62 PDC (2023). Range: 0.48-0.76. **Source:** HEDIS, PQA.
 
 ### Node 425: COPD Appropriate Medication Use
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % COPD on guideline meds
+- **Scale:** 6 | **Domain:** Health | **Unit:** % COPD on guideline meds
 - **Baseline:** 58% (2023). Range: 45-72%. **Source:** HEDIS, claims.
 
 ---
@@ -2831,43 +2831,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.3 MATERNAL & CHILD HEALTH PATHWAYS
 
 ### Node 426: Interpregnancy Interval (Short <18mo)
-- **Scale:** Intermediate | **Domain:** Maternal | **Unit:** % births with interval <18mo
+- **Scale:** 5 | **Domain:** Maternal | **Unit:** % births with interval <18mo
 - **Baseline:** 28% (2023). Range: 20-38%. **Source:** NVSS.
 
 ### Node 427: Gestational Weight Gain (Inadequate/Excessive)
-- **Scale:** Intermediate | **Domain:** Maternal | **Unit:** % outside IOM guidelines
+- **Scale:** 5 | **Domain:** Maternal | **Unit:** % outside IOM guidelines
 - **Baseline:** 52% (2023). Range: 42-65%. **Source:** PRAMS, NVSS.
 
 ### Node 428: Prenatal Substance Exposure
-- **Scale:** Intermediate | **Domain:** Maternal, Child | **Unit:** % births with prenatal substance exposure
+- **Scale:** 5 | **Domain:** Maternal, Child | **Unit:** % births with prenatal substance exposure
 - **Baseline:** 8.5% (2023). Range: 4-16%. **Source:** NVSS, PRAMS.
 
 ### Node 429: Breastfeeding Support Received
-- **Scale:** Intermediate | **Domain:** Child, Maternal | **Unit:** % new mothers receiving lactation support
+- **Scale:** 5 | **Domain:** Child, Maternal | **Unit:** % new mothers receiving lactation support
 - **Baseline:** 58% (2023). Range: 42-72%. **Source:** PRAMS, mPINC.
 
 ### Node 430: Well-Child Visit Completion (0-15mo)
-- **Scale:** Intermediate | **Domain:** Child | **Unit:** % completing 6+ well-child visits
+- **Scale:** 5 | **Domain:** Child | **Unit:** % completing 6+ well-child visits
 - **Baseline:** 64% (2023). Range: 52-78%. **Source:** HEDIS, Medicaid.
 
 ### Node 431: Developmental Screening Rate
-- **Scale:** Intermediate | **Domain:** Child | **Unit:** % children screened by age 3
+- **Scale:** 6 | **Domain:** Child | **Unit:** % children screened by age 3
 - **Baseline:** 31% (2023). Range: 20-48%. **Source:** NSCH, surveys.
 
 ### Node 432: Early Intervention Service Receipt
-- **Scale:** Intermediate | **Domain:** Child | **Unit:** % eligible receiving EI services
+- **Scale:** 6 | **Domain:** Child | **Unit:** % eligible receiving EI services
 - **Baseline:** 72% identified (2023). Range: 55-88%. **Source:** IDEA Part C, state.
 
 ### Node 433: Lead Screening Rate (Children)
-- **Scale:** Intermediate | **Domain:** Child, Environmental | **Unit:** % children screened for lead
+- **Scale:** 6 | **Domain:** Child, Environmental | **Unit:** % children screened for lead
 - **Baseline:** 42% by age 2 (2023). Range: 25-68%. **Source:** CDC, state.
 
 ### Node 434: Adolescent Well-Visit Rate
-- **Scale:** Intermediate | **Domain:** Child | **Unit:** % teens age 12-21 with annual visit
+- **Scale:** 6 | **Domain:** Child | **Unit:** % teens age 12-21 with annual visit
 - **Baseline:** 52% (2023). Range: 42-66%. **Source:** HEDIS, NSCH.
 
 ### Node 435: Adolescent Depression Screening
-- **Scale:** Intermediate | **Domain:** Child, Mental Health | **Unit:** % teens screened for depression
+- **Scale:** 6 | **Domain:** Child, Mental Health | **Unit:** % teens screened for depression
 - **Baseline:** 58% (2023). Range: 42-72%. **Source:** HEDIS, NSCH.
 
 ---
@@ -2875,43 +2875,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.4 BEHAVIORAL HEALTH TREATMENT PATHWAYS
 
 ### Node 436: SUD Medication Treatment Rate (OUD)
-- **Scale:** Intermediate | **Domain:** Behavioral Health | **Unit:** % OUD receiving MAT
+- **Scale:** 6 | **Domain:** Behavioral Health | **Unit:** % OUD receiving MAT
 - **Baseline:** 22% (2023). Range: 12-38%. **Source:** SAMHSA TEDS, claims.
 
 ### Node 437: Mental Health Treatment Retention (90 days)
-- **Scale:** Intermediate | **Domain:** Mental Health | **Unit:** % retained 90+ days
+- **Scale:** 6 | **Domain:** Mental Health | **Unit:** % retained 90+ days
 - **Baseline:** 48% (2023). Range: 35-62%. **Source:** TEDS, state systems.
 
 ### Node 438: Peer Support Service Utilization
-- **Scale:** Intermediate | **Domain:** Behavioral Health | **Unit:** % BH patients receiving peer support
+- **Scale:** 6 | **Domain:** Behavioral Health | **Unit:** % BH patients receiving peer support
 - **Baseline:** 18% (2023). Range: 8-32%. **Source:** SAMHSA, Medicaid.
 
 ### Node 439: Crisis Intervention Service Use
-- **Scale:** Intermediate | **Domain:** Mental Health | **Unit:** Crisis contacts per 1k pop
+- **Scale:** 6 | **Domain:** Mental Health | **Unit:** Crisis contacts per 1k pop
 - **Baseline:** 45/1k (2023). Range: 20-85. **Source:** SAMHSA, state systems.
 
 ### Node 440: Assertive Community Treatment (ACT) Enrollment
-- **Scale:** Intermediate | **Domain:** Mental Health | **Unit:** ACT clients per 100k pop
+- **Scale:** 5 | **Domain:** Mental Health | **Unit:** ACT clients per 100k pop
 - **Baseline:** 12/100k (2023). Range: 5-28. **Source:** SAMHSA, state.
 
 ### Node 441: Integrated Behavioral Health Visits
-- **Scale:** Intermediate | **Domain:** Healthcare, Behavioral | **Unit:** % primary care visits with BH integration
+- **Scale:** 5 | **Domain:** Healthcare, Behavioral | **Unit:** % primary care visits with BH integration
 - **Baseline:** 24% (2023). Range: 12-42%. **Source:** HRSA, surveys.
 
 ### Node 442: Recovery Housing Utilization
-- **Scale:** Intermediate | **Domain:** Behavioral Health, Housing | **Unit:** Recovery housing residents per 100k
+- **Scale:** 5 | **Domain:** Behavioral Health, Housing | **Unit:** Recovery housing residents per 100k
 - **Baseline:** 28/100k (2023). Range: 10-65. **Source:** NARR, state.
 
 ### Node 443: Substance Use Harm Reduction Service Access
-- **Scale:** Intermediate | **Domain:** Behavioral Health | **Unit:** Syringe exchange participants per 1k PWID
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** Syringe exchange participants per 1k PWID
 - **Baseline:** 180/1k PWID (2023). Range: 0-450. **Source:** CDC, NASEN.
 
 ### Node 444: Mental Health Hospitalization Rate
-- **Scale:** Intermediate | **Domain:** Mental Health | **Unit:** Inpatient psych admits per 1k
+- **Scale:** 7 | **Domain:** Mental Health | **Unit:** Inpatient psych admits per 1k
 - **Baseline:** 4.2/1k (2023). Range: 2.5-7.0. **Source:** HCUP, state.
 
 ### Node 445: Involuntary Commitment Rate
-- **Scale:** Intermediate | **Domain:** Mental Health | **Unit:** Involuntary holds per 1k pop
+- **Scale:** 6 | **Domain:** Mental Health | **Unit:** Involuntary holds per 1k pop
 - **Baseline:** 2.8/1k (2023). Range: 1.2-6.5. **Source:** State systems.
 
 ---
@@ -2919,43 +2919,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.5 BIOLOGICAL RISK FACTORS & ALLOSTATIC LOAD
 
 ### Node 446: Elevated Inflammatory Markers (CRP)
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % adults CRP >3 mg/L
+- **Scale:** 4 | **Domain:** Health | **Unit:** % adults CRP >3 mg/L
 - **Baseline:** 38% (2023). Range: 30-48%. **Source:** NHANES.
 
 ### Node 447: Metabolic Syndrome Prevalence
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % adults with metabolic syndrome
+- **Scale:** 6 | **Domain:** Health | **Unit:** % adults with metabolic syndrome
 - **Baseline:** 34% (2023). Range: 28-42%. **Source:** NHANES.
 
 ### Node 448: Prediabetes (Undiagnosed Dysglycemia)
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % adults with prediabetes
+- **Scale:** 6 | **Domain:** Health | **Unit:** % adults with prediabetes
 - **Baseline:** 38% (2023). Range: 30-48%. **Source:** CDC, NHANES.
 
 ### Node 449: High Total Cholesterol
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % adults total cholesterol ≥240
+- **Scale:** 6 | **Domain:** Health | **Unit:** % adults total cholesterol ≥240
 - **Baseline:** 11.4% (2023). Range: 8-16%. **Source:** NHANES.
 
 ### Node 450: Elevated Blood Lead Levels
-- **Scale:** Intermediate | **Domain:** Environmental, Health | **Unit:** % children BLL ≥5 μg/dL
+- **Scale:** 2 | **Domain:** Environmental, Health | **Unit:** % children BLL ≥5 μg/dL
 - **Baseline:** 2.2% (2023). Range: 0.5-8%. **Source:** CDC, state surveillance.
 
 ### Node 451: Cadmium Exposure (Biomarker)
-- **Scale:** Intermediate | **Domain:** Environmental, Health | **Unit:** Geometric mean urine cadmium μg/L
+- **Scale:** 2 | **Domain:** Environmental, Health | **Unit:** Geometric mean urine cadmium μg/L
 - **Baseline:** 0.25 μg/L (2023). Range: 0.15-0.45. **Source:** NHANES.
 
 ### Node 452: Cotinine Levels (Secondhand Smoke)
-- **Scale:** Intermediate | **Domain:** Environmental, Health | **Unit:** % nonsmokers detectable cotinine
+- **Scale:** 6 | **Domain:** Environmental, Health | **Unit:** % nonsmokers detectable cotinine
 - **Baseline:** 25% (2023). Range: 18-38%. **Source:** NHANES.
 
 ### Node 453: Allostatic Load Index (High)
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % adults high allostatic load (≥4 indicators)
+- **Scale:** 5 | **Domain:** Health | **Unit:** % adults high allostatic load (≥4 indicators)
 - **Baseline:** 32% (2023). Range: 24-42%. **Source:** NHANES, research.
 
 ### Node 454: Telomere Length (Short)
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % adults shortest quartile telomeres
+- **Scale:** 5 | **Domain:** Health | **Unit:** % adults shortest quartile telomeres
 - **Baseline:** 25% by definition (2023). Range: 20-32% (varies by stress). **Source:** NHANES, research.
 
 ### Node 455: Chronic Stress Biomarkers (Cortisol)
-- **Scale:** Intermediate | **Domain:** Health, Mental Health | **Unit:** % elevated hair cortisol
+- **Scale:** 5 | **Domain:** Health, Mental Health | **Unit:** % elevated hair cortisol
 - **Baseline:** 28% (est 2023). Range: 18-42%. **Source:** Research studies.
 
 ---
@@ -2963,43 +2963,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.6 HEALTH BEHAVIORS ENACTED
 
 ### Node 456: Smoking Cessation Attempts
-- **Scale:** Intermediate | **Domain:** Behavioral Health | **Unit:** % smokers attempted quit past year
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** % smokers attempted quit past year
 - **Baseline:** 57% (2023). Range: 48-68%. **Source:** BRFSS, state.
 
 ### Node 457: Smoking Cessation Treatment Use
-- **Scale:** Intermediate | **Domain:** Behavioral Health, Healthcare | **Unit:** % quit attempts using treatment
+- **Scale:** 5 | **Domain:** Behavioral Health, Healthcare | **Unit:** % quit attempts using treatment
 - **Baseline:** 32% (2023). Range: 22-45%. **Source:** BRFSS, surveys.
 
 ### Node 458: Physical Activity Engagement (Any)
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % some leisure-time activity
+- **Scale:** 5 | **Domain:** Health | **Unit:** % some leisure-time activity
 - **Baseline:** 77% (2023). Range: 68-85%. **Source:** BRFSS, state.
 
 ### Node 459: Weight Loss Attempts
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % overweight/obese trying to lose weight
+- **Scale:** 6 | **Domain:** Health | **Unit:** % overweight/obese trying to lose weight
 - **Baseline:** 62% (2023). Range: 52-72%. **Source:** NHANES, BRFSS.
 
 ### Node 460: Seatbelt Use
-- **Scale:** Intermediate | **Domain:** Health, Safety | **Unit:** % always wear seatbelt
+- **Scale:** 4 | **Domain:** Health, Safety | **Unit:** % always wear seatbelt
 - **Baseline:** 90% (2023). Range: 82-96%. **Source:** BRFSS, observations.
 
 ### Node 461: Bicycle Helmet Use
-- **Scale:** Intermediate | **Domain:** Health, Safety | **Unit:** % cyclists wearing helmets
+- **Scale:** 4 | **Domain:** Health, Safety | **Unit:** % cyclists wearing helmets
 - **Baseline:** 48% (2023). Range: 25-78%. **Source:** Observations, surveys.
 
 ### Node 462: Sun Protection Behaviors
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % regularly using sun protection
+- **Scale:** 2 | **Domain:** Health | **Unit:** % regularly using sun protection
 - **Baseline:** 34% (2023). Range: 22-52%. **Source:** HINTS, surveys.
 
 ### Node 463: Hand Hygiene Compliance
-- **Scale:** Intermediate | **Domain:** Health, Prevention | **Unit:** % reporting regular handwashing
+- **Scale:** 5 | **Domain:** Health, Prevention | **Unit:** % reporting regular handwashing
 - **Baseline:** 71% (2023). Range: 60-82%. **Source:** Surveys.
 
 ### Node 464: Safe Sexual Practices (Condom Use)
-- **Scale:** Intermediate | **Domain:** Health | **Unit:** % sexually active using condoms
+- **Scale:** 2 | **Domain:** Health | **Unit:** % sexually active using condoms
 - **Baseline:** 24% (2023). Range: 18-35%. **Source:** NSFG, YRBS.
 
 ### Node 465: Medication Disposal (Proper)
-- **Scale:** Intermediate | **Domain:** Health, Environmental | **Unit:** % properly disposing unused meds
+- **Scale:** 2 | **Domain:** Health, Environmental | **Unit:** % properly disposing unused meds
 - **Baseline:** 38% (2023). Range: 25-55%. **Source:** Surveys.
 
 ---
@@ -3007,43 +3007,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.7 HOUSING & ENVIRONMENTAL EXPOSURES (PATHWAYS)
 
 ### Node 466: Radon Testing (Homes Tested)
-- **Scale:** Intermediate | **Domain:** Housing, Environmental | **Unit:** % homes tested for radon
+- **Scale:** 2 | **Domain:** Housing, Environmental | **Unit:** % homes tested for radon
 - **Baseline:** 14% (2023). Range: 8-28%. **Source:** EPA, surveys.
 
 ### Node 467: Radon Mitigation (Homes Mitigated)
-- **Scale:** Intermediate | **Domain:** Housing, Environmental | **Unit:** % high-radon homes mitigated
+- **Scale:** 2 | **Domain:** Housing, Environmental | **Unit:** % high-radon homes mitigated
 - **Baseline:** 22% (2023). Range: 12-38%. **Source:** EPA, state.
 
 ### Node 468: Lead Paint Remediation Rate
-- **Scale:** Intermediate | **Domain:** Housing, Environmental | **Unit:** Lead hazard control units per 1k pre-1978
+- **Scale:** 2 | **Domain:** Housing, Environmental | **Unit:** Lead hazard control units per 1k pre-1978
 - **Baseline:** 3.2/1k (2023). Range: 1.0-8.0. **Source:** HUD OLHCHH, state.
 
 ### Node 469: Water Filter Use (Households)
-- **Scale:** Intermediate | **Domain:** Environmental | **Unit:** % HH using water filters
+- **Scale:** 4 | **Domain:** Environmental | **Unit:** % HH using water filters
 - **Baseline:** 58% (2023). Range: 42-72%. **Source:** Surveys, market data.
 
 ### Node 470: Air Purifier Use
-- **Scale:** Intermediate | **Domain:** Environmental | **Unit:** % HH using air purifiers
+- **Scale:** 4 | **Domain:** Environmental | **Unit:** % HH using air purifiers
 - **Baseline:** 32% (2023). Range: 18-52%. **Source:** Market data, surveys.
 
 ### Node 471: Mold Remediation (Homes Addressed)
-- **Scale:** Intermediate | **Domain:** Housing, Environmental | **Unit:** % homes with mold professionally remediated
+- **Scale:** 4 | **Domain:** Housing, Environmental | **Unit:** % homes with mold professionally remediated
 - **Baseline:** 12% of affected (2023). Range: 6-22%. **Source:** Surveys.
 
 ### Node 472: Pest Control Services Use
-- **Scale:** Intermediate | **Domain:** Housing, Environmental | **Unit:** % HH using professional pest control
+- **Scale:** 4 | **Domain:** Housing, Environmental | **Unit:** % HH using professional pest control
 - **Baseline:** 42% (2023). Range: 28-62%. **Source:** Market data, surveys.
 
 ### Node 473: Home Energy Efficiency Upgrades
-- **Scale:** Intermediate | **Domain:** Housing, Energy | **Unit:** % homes with weatherization past 5yr
+- **Scale:** 2 | **Domain:** Housing, Energy | **Unit:** % homes with weatherization past 5yr
 - **Baseline:** 8% (2023). Range: 4-18%. **Source:** EIA RECS, DOE WAP.
 
 ### Node 474: Indoor Temperature Maintenance
-- **Scale:** Intermediate | **Domain:** Housing | **Unit:** % homes maintaining 68-78°F year-round
+- **Scale:** 2 | **Domain:** Housing | **Unit:** % homes maintaining 68-78°F year-round
 - **Baseline:** 78% (2023). Range: 62-88%. **Source:** EIA RECS.
 
 ### Node 475: Safe Water Access (Point-of-Use Treatment)
-- **Scale:** Intermediate | **Domain:** Environmental | **Unit:** % at-risk HH with POE/POU treatment
+- **Scale:** 2 | **Domain:** Environmental | **Unit:** % at-risk HH with POE/POU treatment
 - **Baseline:** 28% (2023). Range: 15-45%. **Source:** Surveys.
 
 ---
@@ -3051,43 +3051,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.8 OCCUPATIONAL & INJURY EXPOSURES
 
 ### Node 476: Workplace Injury Rate
-- **Scale:** Intermediate | **Domain:** Occupational | **Unit:** Injuries per 100 FTE workers
+- **Scale:** 2 | **Domain:** Occupational | **Unit:** Injuries per 100 FTE workers
 - **Baseline:** 2.7/100 FTE (2023). Range: 1.5-5.0. **Source:** BLS SOII, industry.
 
 ### Node 477: Occupational Illness Rate
-- **Scale:** Intermediate | **Domain:** Occupational | **Unit:** Illnesses per 100 FTE workers
+- **Scale:** 2 | **Domain:** Occupational | **Unit:** Illnesses per 100 FTE workers
 - **Baseline:** 0.9/100 FTE (2023). Range: 0.4-2.5. **Source:** BLS SOII.
 
 ### Node 478: Workers' Compensation Claim Rate
-- **Scale:** Intermediate | **Domain:** Occupational | **Unit:** Claims per 100 covered workers
+- **Scale:** 2 | **Domain:** Occupational | **Unit:** Claims per 100 covered workers
 - **Baseline:** 1.8/100 (2023). Range: 1.0-3.5. **Source:** NASI, state.
 
 ### Node 479: Lost Work Time Injury Rate
-- **Scale:** Intermediate | **Domain:** Occupational | **Unit:** DART rate per 100 FTE
+- **Scale:** 2 | **Domain:** Occupational | **Unit:** DART rate per 100 FTE
 - **Baseline:** 1.1/100 FTE (2023). Range: 0.6-2.5. **Source:** BLS SOII.
 
 ### Node 480: Occupational Noise Exposure
-- **Scale:** Intermediate | **Domain:** Occupational | **Unit:** % workers exposed >85 dBA
+- **Scale:** 2 | **Domain:** Occupational | **Unit:** % workers exposed >85 dBA
 - **Baseline:** 22% (2023). Range: 12-38%. **Source:** NIOSH, BLS.
 
 ### Node 481: Occupational Chemical Exposure
-- **Scale:** Intermediate | **Domain:** Occupational | **Unit:** % workers with hazardous chem exposure
+- **Scale:** 2 | **Domain:** Occupational | **Unit:** % workers with hazardous chem exposure
 - **Baseline:** 18% (2023). Range: 8-32%. **Source:** NIOSH, OSHA.
 
 ### Node 482: Ergonomic Hazard Exposure
-- **Scale:** Intermediate | **Domain:** Occupational | **Unit:** % workers with ergonomic risks
+- **Scale:** 2 | **Domain:** Occupational | **Unit:** % workers with ergonomic risks
 - **Baseline:** 35% (2023). Range: 22-52%. **Source:** BLS, NIOSH.
 
 ### Node 483: Heat Stress Exposure (Occupational)
-- **Scale:** Intermediate | **Domain:** Occupational, Climate | **Unit:** % outdoor workers heat-exposed
+- **Scale:** 2 | **Domain:** Occupational, Climate | **Unit:** % outdoor workers heat-exposed
 - **Baseline:** 48% outdoor workers (2023). Range: 28-78%. **Source:** NIOSH, OSHA.
 
 ### Node 484: Fall Risk Exposure (Work)
-- **Scale:** Intermediate | **Domain:** Occupational | **Unit:** % workers at elevation/fall risk
+- **Scale:** 4 | **Domain:** Occupational | **Unit:** % workers at elevation/fall risk
 - **Baseline:** 24% (2023). Range: 12-42%. **Source:** OSHA, BLS.
 
 ### Node 485: Motor Vehicle Crash Rate (Occupational)
-- **Scale:** Intermediate | **Domain:** Occupational, Transportation | **Unit:** Work-related crashes per 100 FTE
+- **Scale:** 4 | **Domain:** Occupational, Transportation | **Unit:** Work-related crashes per 100 FTE
 - **Baseline:** 0.8/100 FTE (2023). Range: 0.3-2.0. **Source:** BLS CFOI, NHTSA.
 
 ---
@@ -3095,43 +3095,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.9 SOCIAL SUPPORT & CONNECTIVITY PROCESSES
 
 ### Node 486: Social Network Size
-- **Scale:** Intermediate | **Domain:** Social | **Unit:** Mean number close contacts
+- **Scale:** 5 | **Domain:** Social | **Unit:** Mean number close contacts
 - **Baseline:** 4.2 contacts (2023). Range: 2.5-6.5. **Source:** GSS, surveys.
 
 ### Node 487: Frequency of Social Contact
-- **Scale:** Intermediate | **Domain:** Social | **Unit:** % daily+ in-person contact
+- **Scale:** 4 | **Domain:** Social | **Unit:** % daily+ in-person contact
 - **Baseline:** 38% (2023). Range: 25-55%. **Source:** Surveys.
 
 ### Node 488: Social Participation (Events/Month)
-- **Scale:** Intermediate | **Domain:** Social | **Unit:** Mean social events per month
+- **Scale:** 4 | **Domain:** Social | **Unit:** Mean social events per month
 - **Baseline:** 3.8 events (2023). Range: 2.0-6.5. **Source:** Time use surveys.
 
 ### Node 489: Family Support Received
-- **Scale:** Intermediate | **Domain:** Social | **Unit:** % receiving family support when needed
+- **Scale:** 4 | **Domain:** Social | **Unit:** % receiving family support when needed
 - **Baseline:** 72% (2023). Range: 58-84%. **Source:** BRFSS, surveys.
 
 ### Node 490: Community Cohesion (Perceived)
-- **Scale:** Intermediate | **Domain:** Social | **Unit:** % high community cohesion
+- **Scale:** 4 | **Domain:** Social | **Unit:** % high community cohesion
 - **Baseline:** 48% (2023). Range: 32-68%. **Source:** Surveys.
 
 ### Node 491: Religious/Spiritual Engagement
-- **Scale:** Intermediate | **Domain:** Social | **Unit:** % high engagement (weekly+)
+- **Scale:** 4 | **Domain:** Social | **Unit:** % high engagement (weekly+)
 - **Baseline:** 31% (2023). Range: 18-52%. **Source:** Pew, GSS.
 
 ### Node 492: Neighborly Exchange Frequency
-- **Scale:** Intermediate | **Domain:** Social | **Unit:** % exchanging favors with neighbors
+- **Scale:** 2 | **Domain:** Social | **Unit:** % exchanging favors with neighbors
 - **Baseline:** 42% (2023). Range: 28-62%. **Source:** Surveys.
 
 ### Node 493: Online Social Connectivity
-- **Scale:** Intermediate | **Domain:** Social, Digital | **Unit:** Mean hours social media/week
+- **Scale:** 2 | **Domain:** Social, Digital | **Unit:** Mean hours social media/week
 - **Baseline:** 8.2 hrs/week (2023). Range: 4-15. **Source:** Time use, Pew.
 
 ### Node 494: Intergenerational Contact
-- **Scale:** Intermediate | **Domain:** Social | **Unit:** % regular contact across generations
+- **Scale:** 2 | **Domain:** Social | **Unit:** % regular contact across generations
 - **Baseline:** 54% (2023). Range: 38-72%. **Source:** Surveys.
 
 ### Node 495: Peer Support Group Participation
-- **Scale:** Intermediate | **Domain:** Social, Health | **Unit:** % in support groups
+- **Scale:** 2 | **Domain:** Social, Health | **Unit:** % in support groups
 - **Baseline:** 12% adults (2023). Range: 6-22%. **Source:** Surveys.
 
 ---
@@ -3139,43 +3139,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.10 ENVIRONMENTAL PATHWAY PROCESSES
 
 ### Node 496: Air Quality Alert Days
-- **Scale:** Intermediate | **Domain:** Environmental | **Unit:** Days AQI >100 annually
+- **Scale:** 2 | **Domain:** Environmental | **Unit:** Days AQI >100 annually
 - **Baseline:** 12 days (2023). Range: 0-60. **Source:** EPA AirNow, county.
 
 ### Node 497: Heat Advisory Days
-- **Scale:** Intermediate | **Domain:** Climate, Environmental | **Unit:** Heat advisory days annually
+- **Scale:** 2 | **Domain:** Climate, Environmental | **Unit:** Heat advisory days annually
 - **Baseline:** 8 days (2023). Range: 0-45. **Source:** NOAA NWS.
 
 ### Node 498: Cooling Center Utilization
-- **Scale:** Intermediate | **Domain:** Climate, Social | **Unit:** Visits per 1k pop during heat
+- **Scale:** 2 | **Domain:** Climate, Social | **Unit:** Visits per 1k pop during heat
 - **Baseline:** 4.2/1k (2023). Range: 0.5-18. **Source:** Local agencies.
 
 ### Node 499: Green Space Utilization
-- **Scale:** Intermediate | **Domain:** Environmental, Health | **Unit:** % using parks weekly+
+- **Scale:** 2 | **Domain:** Environmental, Health | **Unit:** % using parks weekly+
 - **Baseline:** 38% (2023). Range: 22-62%. **Source:** Surveys, NRPA.
 
 ### Node 500: Active Transportation Use (Walking/Biking)
-- **Scale:** Intermediate | **Domain:** Transportation, Health | **Unit:** Mean walk/bike trips per week
+- **Scale:** 2 | **Domain:** Transportation, Health | **Unit:** Mean walk/bike trips per week
 - **Baseline:** 2.8 trips/week (2023). Range: 1.0-6.5. **Source:** NHTS, time use.
 
 ### Node 501: Public Transit Utilization
-- **Scale:** Intermediate | **Domain:** Transportation | **Unit:** Transit trips per capita annually
+- **Scale:** 2 | **Domain:** Transportation | **Unit:** Transit trips per capita annually
 - **Baseline:** 42 trips (2023). Range: 5-220. **Source:** APTA, FTA NTD.
 
 ### Node 502: Tree Canopy Cover (Change)
-- **Scale:** Intermediate | **Domain:** Environmental | **Unit:** % change canopy cover 5yr
+- **Scale:** 2 | **Domain:** Environmental | **Unit:** % change canopy cover 5yr
 - **Baseline:** -1.2% (2023). Range: -5% to +3%. **Source:** NLCD, local.
 
 ### Node 503: Urban Heat Island Mitigation
-- **Scale:** Intermediate | **Domain:** Climate, Environmental | **Unit:** Cool surface area %
+- **Scale:** 2 | **Domain:** Climate, Environmental | **Unit:** Cool surface area %
 - **Baseline:** 28% (2023). Range: 12-52%. **Source:** Remote sensing, local.
 
 ### Node 504: Stormwater Management (Green Infrastructure)
-- **Scale:** Intermediate | **Domain:** Environmental | **Unit:** % impervious area with GI
+- **Scale:** 2 | **Domain:** Environmental | **Unit:** % impervious area with GI
 - **Baseline:** 8% (2023). Range: 2-22%. **Source:** EPA, local utilities.
 
 ### Node 505: Brownfield Remediation Rate
-- **Scale:** Intermediate | **Domain:** Environmental | **Unit:** Sites remediated per 100k pop
+- **Scale:** 2 | **Domain:** Environmental | **Unit:** Sites remediated per 100k pop
 - **Baseline:** 2.4/100k (2023). Range: 0.5-8. **Source:** EPA, state.
 
 ---
@@ -3183,43 +3183,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.11 FOOD & NUTRITION PATHWAYS
 
 ### Node 506: Food Pantry Utilization
-- **Scale:** Intermediate | **Domain:** Food, Social | **Unit:** Visits per 1k pop
+- **Scale:** 4 | **Domain:** Food, Social | **Unit:** Visits per 1k pop
 - **Baseline:** 185/1k (2023). Range: 80-380. **Source:** Feeding America.
 
 ### Node 507: SNAP Benefit Adequacy
-- **Scale:** Intermediate | **Domain:** Food, Economic | **Unit:** % month covered by benefits
+- **Scale:** 2 | **Domain:** Food, Economic | **Unit:** % month covered by benefits
 - **Baseline:** 68% of month (2023). Range: 55-82%. **Source:** USDA FNS.
 
 ### Node 508: School Meal Participation
-- **Scale:** Intermediate | **Domain:** Food, Education | **Unit:** % eligible participating
+- **Scale:** 3 | **Domain:** Food, Education | **Unit:** % eligible participating
 - **Baseline:** 83% (2023). Range: 68-92%. **Source:** USDA FNS.
 
 ### Node 509: Farmers Market Utilization (SNAP)
-- **Scale:** Intermediate | **Domain:** Food | **Unit:** % SNAP at farmers markets
+- **Scale:** 2 | **Domain:** Food | **Unit:** % SNAP at farmers markets
 - **Baseline:** 0.8% of SNAP $ (2023). Range: 0.2-3%. **Source:** USDA FNS.
 
 ### Node 510: Community Garden Participation
-- **Scale:** Intermediate | **Domain:** Food, Social | **Unit:** Gardeners per 1k pop
+- **Scale:** 2 | **Domain:** Food, Social | **Unit:** Gardeners per 1k pop
 - **Baseline:** 8.5/1k (2023). Range: 2-28. **Source:** ACGA, local.
 
 ### Node 511: Grocery Store Access (Utilization)
-- **Scale:** Intermediate | **Domain:** Food | **Unit:** % primary shopping at full-service grocery
+- **Scale:** 2 | **Domain:** Food | **Unit:** % primary shopping at full-service grocery
 - **Baseline:** 72% (2023). Range: 45-88%. **Source:** Surveys.
 
 ### Node 512: Fresh Produce Consumption Frequency
-- **Scale:** Intermediate | **Domain:** Food, Health | **Unit:** Mean servings fruit/veg daily
+- **Scale:** 4 | **Domain:** Food, Health | **Unit:** Mean servings fruit/veg daily
 - **Baseline:** 2.1 servings (2023). Range: 1.2-3.5. **Source:** BRFSS, NHANES.
 
 ### Node 513: Home Meal Preparation Frequency
-- **Scale:** Intermediate | **Domain:** Food | **Unit:** Meals cooked at home per week
+- **Scale:** 4 | **Domain:** Food | **Unit:** Meals cooked at home per week
 - **Baseline:** 8.2 meals (2023). Range: 4-13. **Source:** Time use surveys.
 
 ### Node 514: Emergency Food Network Capacity Utilization
-- **Scale:** Intermediate | **Domain:** Food, Social | **Unit:** % network capacity used
+- **Scale:** 4 | **Domain:** Food, Social | **Unit:** % network capacity used
 - **Baseline:** 78% (2023). Range: 55-98%. **Source:** Feeding America.
 
 ### Node 515: Nutrition Education Participation
-- **Scale:** Intermediate | **Domain:** Food, Education | **Unit:** % food insecure receiving nutrition ed
+- **Scale:** 5 | **Domain:** Food, Education | **Unit:** % food insecure receiving nutrition ed
 - **Baseline:** 18% (2023). Range: 8-35%. **Source:** SNAP-Ed, EFNEP.
 
 ---
@@ -3227,43 +3227,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.12 JUSTICE SYSTEM PATHWAY PROCESSES
 
 ### Node 516: Jail Booking Rate
-- **Scale:** Intermediate | **Domain:** Criminal Justice | **Unit:** Bookings per 1k pop
+- **Scale:** 4 | **Domain:** Criminal Justice | **Unit:** Bookings per 1k pop
 - **Baseline:** 35/1k (2023). Range: 18-65. **Source:** BJS, jails.
 
 ### Node 517: Pretrial Detention Rate
-- **Scale:** Intermediate | **Domain:** Criminal Justice | **Unit:** % defendants detained pretrial
+- **Scale:** 4 | **Domain:** Criminal Justice | **Unit:** % defendants detained pretrial
 - **Baseline:** 38% (2023). Range: 22-58%. **Source:** BJS, courts.
 
 ### Node 518: Diversion Program Utilization
-- **Scale:** Intermediate | **Domain:** Criminal Justice | **Unit:** Diversions per 1k arrests
+- **Scale:** 4 | **Domain:** Criminal Justice | **Unit:** Diversions per 1k arrests
 - **Baseline:** 82/1k arrests (2023). Range: 20-180. **Source:** State systems.
 
 ### Node 519: Reentry Service Receipt
-- **Scale:** Intermediate | **Domain:** Criminal Justice | **Unit:** % released receiving reentry services
+- **Scale:** 6 | **Domain:** Criminal Justice | **Unit:** % released receiving reentry services
 - **Baseline:** 28% (2023). Range: 12-52%. **Source:** NRRC, state.
 
 ### Node 520: Recidivism Rate (3-Year)
-- **Scale:** Intermediate | **Domain:** Criminal Justice | **Unit:** % rearrested within 3yr
+- **Scale:** 6 | **Domain:** Criminal Justice | **Unit:** % rearrested within 3yr
 - **Baseline:** 68% (2023). Range: 55-82%. **Source:** BJS, state.
 
 ### Node 521: Probation Revocation Rate
-- **Scale:** Intermediate | **Domain:** Criminal Justice | **Unit:** % probation revoked
+- **Scale:** 6 | **Domain:** Criminal Justice | **Unit:** % probation revoked
 - **Baseline:** 18% (2023). Range: 10-32%. **Source:** BJS, state.
 
 ### Node 522: Drug Court Participation
-- **Scale:** Intermediate | **Domain:** Criminal Justice, Behavioral | **Unit:** Participants per 1k SUD arrests
+- **Scale:** 6 | **Domain:** Criminal Justice, Behavioral | **Unit:** Participants per 1k SUD arrests
 - **Baseline:** 45/1k (2023). Range: 0-120. **Source:** NADCP, state.
 
 ### Node 523: Mental Health Court Utilization
-- **Scale:** Intermediate | **Domain:** Criminal Justice, Mental Health | **Unit:** Participants per 100k pop
+- **Scale:** 6 | **Domain:** Criminal Justice, Mental Health | **Unit:** Participants per 100k pop
 - **Baseline:** 12/100k (2023). Range: 0-35. **Source:** CMHS, state.
 
 ### Node 524: Restorative Justice Program Participation
-- **Scale:** Intermediate | **Domain:** Criminal Justice | **Unit:** Cases per 1k offenses
+- **Scale:** 4 | **Domain:** Criminal Justice | **Unit:** Cases per 1k offenses
 - **Baseline:** 8/1k (2023). Range: 0-45. **Source:** State systems.
 
 ### Node 525: Expungement/Sealing Rate
-- **Scale:** Intermediate | **Domain:** Criminal Justice | **Unit:** Records sealed per 1k eligible
+- **Scale:** 4 | **Domain:** Criminal Justice | **Unit:** Records sealed per 1k eligible
 - **Baseline:** 22/1k eligible (2023). Range: 5-85. **Source:** Courts, state.
 
 ---
@@ -3271,43 +3271,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.13 EDUCATION & DEVELOPMENT PATHWAYS
 
 ### Node 526: Early Literacy Support Receipt
-- **Scale:** Intermediate | **Domain:** Education, Child | **Unit:** % low-income children in literacy programs
+- **Scale:** 6 | **Domain:** Education, Child | **Unit:** % low-income children in literacy programs
 - **Baseline:** 32% (2023). Range: 18-52%. **Source:** ACF Head Start, state.
 
 ### Node 527: After-School Program Participation
-- **Scale:** Intermediate | **Domain:** Education, Child | **Unit:** % school-age in after-school programs
+- **Scale:** 3 | **Domain:** Education, Child | **Unit:** % school-age in after-school programs
 - **Baseline:** 18% (2023). Range: 10-32%. **Source:** Afterschool Alliance.
 
 ### Node 528: Tutoring/Academic Support Use
-- **Scale:** Intermediate | **Domain:** Education | **Unit:** % students receiving tutoring
+- **Scale:** 4 | **Domain:** Education | **Unit:** % students receiving tutoring
 - **Baseline:** 24% (2023). Range: 12-42%. **Source:** NCES, surveys.
 
 ### Node 529: College Application Rate
-- **Scale:** Intermediate | **Domain:** Education | **Unit:** % HS seniors applying to college
+- **Scale:** 4 | **Domain:** Education | **Unit:** % HS seniors applying to college
 - **Baseline:** 68% (2023). Range: 45-88%. **Source:** NCES, state.
 
 ### Node 530: FAFSA Completion Rate
-- **Scale:** Intermediate | **Domain:** Education, Economic | **Unit:** % eligible completing FAFSA
+- **Scale:** 4 | **Domain:** Education, Economic | **Unit:** % eligible completing FAFSA
 - **Baseline:** 52% (2023). Range: 38-72%. **Source:** ED FSA, state.
 
 ### Node 531: College Enrollment (Immediate)
-- **Scale:** Intermediate | **Domain:** Education | **Unit:** % HS grads enrolling fall after graduation
+- **Scale:** 4 | **Domain:** Education | **Unit:** % HS grads enrolling fall after graduation
 - **Baseline:** 62% (2023). Range: 45-78%. **Source:** NCES, state.
 
 ### Node 532: College Persistence (2nd Year)
-- **Scale:** Intermediate | **Domain:** Education | **Unit:** % first-year students returning
+- **Scale:** 4 | **Domain:** Education | **Unit:** % first-year students returning
 - **Baseline:** 74% (2023). Range: 58-88%. **Source:** NCES IPEDS.
 
 ### Node 533: Developmental Education Placement
-- **Scale:** Intermediate | **Domain:** Education | **Unit:** % college students in remedial courses
+- **Scale:** 4 | **Domain:** Education | **Unit:** % college students in remedial courses
 - **Baseline:** 42% (2023). Range: 28-62%. **Source:** NCES, CCRC.
 
 ### Node 534: Student Support Service Utilization
-- **Scale:** Intermediate | **Domain:** Education | **Unit:** % college students using support services
+- **Scale:** 4 | **Domain:** Education | **Unit:** % college students using support services
 - **Baseline:** 38% (2023). Range: 22-58%. **Source:** NCES, surveys.
 
 ### Node 535: Apprenticeship Participation
-- **Scale:** Intermediate | **Domain:** Education, Employment | **Unit:** Apprentices per 1k labor force
+- **Scale:** 4 | **Domain:** Education, Employment | **Unit:** Apprentices per 1k labor force
 - **Baseline:** 2.8/1k (2023). Range: 1.0-6.5. **Source:** DOL, state.
 
 ---
@@ -3315,43 +3315,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.14 ECONOMIC PATHWAY PROCESSES
 
 ### Node 536: Job Search Activity (Unemployed)
-- **Scale:** Intermediate | **Domain:** Employment, Economic | **Unit:** Mean job applications per week
+- **Scale:** 6 | **Domain:** Employment, Economic | **Unit:** Mean job applications per week
 - **Baseline:** 5.2 apps (2023). Range: 3-9. **Source:** BLS, surveys.
 
 ### Node 537: Job Training Program Participation
-- **Scale:** Intermediate | **Domain:** Employment, Education | **Unit:** % unemployed in training
+- **Scale:** 6 | **Domain:** Employment, Education | **Unit:** % unemployed in training
 - **Baseline:** 14% (2023). Range: 8-28%. **Source:** DOL, state.
 
 ### Node 538: Workforce Development Service Use
-- **Scale:** Intermediate | **Domain:** Employment | **Unit:** % labor force using American Job Centers
+- **Scale:** 3 | **Domain:** Employment | **Unit:** % labor force using American Job Centers
 - **Baseline:** 3.2% (2023). Range: 1.5-6%. **Source:** DOL WIOA, state.
 
 ### Node 539: Unemployment Insurance Receipt
-- **Scale:** Intermediate | **Domain:** Employment, Economic | **Unit:** % unemployed receiving UI
+- **Scale:** 6 | **Domain:** Employment, Economic | **Unit:** % unemployed receiving UI
 - **Baseline:** 28% (2023). Range: 18-45%. **Source:** DOL, state.
 
 ### Node 540: Public Benefit Application Rate
-- **Scale:** Intermediate | **Domain:** Economic, Social | **Unit:** Applications per 1k eligible
+- **Scale:** 4 | **Domain:** Economic, Social | **Unit:** Applications per 1k eligible
 - **Baseline:** 420/1k eligible (2023). Range: 280-650. **Source:** HHS, state.
 
 ### Node 541: TANF Participation Rate
-- **Scale:** Intermediate | **Domain:** Economic, Social | **Unit:** % eligible families participating
+- **Scale:** 4 | **Domain:** Economic, Social | **Unit:** % eligible families participating
 - **Baseline:** 21% (2023). Range: 8-48%. **Source:** ACF, state.
 
 ### Node 542: Housing Voucher Utilization Rate
-- **Scale:** Intermediate | **Domain:** Housing, Economic | **Unit:** % vouchers issued and leased
+- **Scale:** 6 | **Domain:** Housing, Economic | **Unit:** % vouchers issued and leased
 - **Baseline:** 96% (2023). Range: 88-99%. **Source:** HUD PIC.
 
 ### Node 543: Emergency Rental Assistance Receipt
-- **Scale:** Intermediate | **Domain:** Housing, Economic | **Unit:** Households assisted per 1k renters
+- **Scale:** 4 | **Domain:** Housing, Economic | **Unit:** Households assisted per 1k renters
 - **Baseline:** 28/1k (2023). Range: 10-65. **Source:** Treasury ERA, local.
 
 ### Node 544: Eviction Filing Rate
-- **Scale:** Intermediate | **Domain:** Housing, Economic | **Unit:** Eviction filings per 100 rental HH
+- **Scale:** 4 | **Domain:** Housing, Economic | **Unit:** Eviction filings per 100 rental HH
 - **Baseline:** 3.6/100 (2023). Range: 1.5-8.5. **Source:** Eviction Lab, courts.
 
 ### Node 545: Utility Assistance (LIHEAP) Receipt
-- **Scale:** Intermediate | **Domain:** Housing, Economic | **Unit:** % eligible receiving LIHEAP
+- **Scale:** 4 | **Domain:** Housing, Economic | **Unit:** % eligible receiving LIHEAP
 - **Baseline:** 16% (2023). Range: 8-32%. **Source:** HHS ACF, state.
 
 ---
@@ -3359,23 +3359,23 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 4.15 CLIMATE ADAPTATION & RESILIENCE PATHWAYS
 
 ### Node 546: Extreme Weather Preparedness
-- **Scale:** Intermediate | **Domain:** Climate, Safety | **Unit:** % HH with emergency supplies
+- **Scale:** 2 | **Domain:** Climate, Safety | **Unit:** % HH with emergency supplies
 - **Baseline:** 42% (2023). Range: 28-68%. **Source:** FEMA, surveys.
 
 ### Node 547: Evacuation Compliance (Hurricanes)
-- **Scale:** Intermediate | **Domain:** Climate, Safety | **Unit:** % evacuating when ordered
+- **Scale:** 5 | **Domain:** Climate, Safety | **Unit:** % evacuating when ordered
 - **Baseline:** 68% (2023). Range: 45-88%. **Source:** FEMA, NHC.
 
 ### Node 548: Flood Insurance Coverage
-- **Scale:** Intermediate | **Domain:** Climate, Economic | **Unit:** % flood-prone homes insured
+- **Scale:** 4 | **Domain:** Climate, Economic | **Unit:** % flood-prone homes insured
 - **Baseline:** 32% SFHA (2023). Range: 12-62%. **Source:** FEMA NFIP.
 
 ### Node 549: Heat Illness Incidence
-- **Scale:** Intermediate | **Domain:** Climate, Health | **Unit:** Heat illness ED visits per 100k
+- **Scale:** 6 | **Domain:** Climate, Health | **Unit:** Heat illness ED visits per 100k
 - **Baseline:** 28/100k (2023). Range: 8-95. **Source:** CDC ESSENCE, state.
 
 ### Node 550: Climate Migration (Internal)
-- **Scale:** Intermediate | **Domain:** Climate, Housing | **Unit:** % moved due to climate/disaster 5yr
+- **Scale:** 4 | **Domain:** Climate, Housing | **Unit:** % moved due to climate/disaster 5yr
 - **Baseline:** 2.8% (2023). Range: 0.5-12%. **Source:** Census, surveys.
 
 **END SCALE 4: Nodes 401-550 (150 nodes total). Intermediate Pathways complete.**
@@ -3394,47 +3394,47 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.1 MORTALITY ENDPOINTS
 
 ### Node 551: All-Cause Mortality Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Deaths per 100k pop
+- **Scale:** 7 | **Domain:** Health | **Unit:** Deaths per 100k pop
 - **Baseline:** 880/100k (2023). Range: 650-1,150. **Source:** CDC WONDER, county.
 
 ### Node 552: Premature Mortality (YPLL)
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Years of potential life lost per 100k <75
+- **Scale:** 4 | **Domain:** Health | **Unit:** Years of potential life lost per 100k <75
 - **Baseline:** 7,400/100k (2023). Range: 4,500-12,000. **Source:** CDC WONDER, county.
 
 ### Node 553: Infant Mortality Rate
-- **Scale:** Crisis | **Domain:** Maternal, Child | **Unit:** Deaths per 1k live births
+- **Scale:** 7 | **Domain:** Maternal, Child | **Unit:** Deaths per 1k live births
 - **Baseline:** 5.6/1k (2023). Range: 3.5-10.0. **Source:** NVSS, county.
 
 ### Node 554: Neonatal Mortality
-- **Scale:** Crisis | **Domain:** Maternal, Child | **Unit:** Deaths <28 days per 1k births
+- **Scale:** 4 | **Domain:** Maternal, Child | **Unit:** Deaths <28 days per 1k births
 - **Baseline:** 3.8/1k (2023). Range: 2.2-7.0. **Source:** NVSS, state.
 
 ### Node 555: Postneonatal Mortality
-- **Scale:** Crisis | **Domain:** Child | **Unit:** Deaths 28d-1yr per 1k births
+- **Scale:** 4 | **Domain:** Child | **Unit:** Deaths 28d-1yr per 1k births
 - **Baseline:** 1.8/1k (2023). Range: 0.8-3.5. **Source:** NVSS, state.
 
 ### Node 556: Child Mortality (1-4 years)
-- **Scale:** Crisis | **Domain:** Child | **Unit:** Deaths per 100k children 1-4
+- **Scale:** 4 | **Domain:** Child | **Unit:** Deaths per 100k children 1-4
 - **Baseline:** 24/100k (2023). Range: 15-40. **Source:** CDC WONDER.
 
 ### Node 557: Maternal Mortality Ratio
-- **Scale:** Crisis | **Domain:** Maternal | **Unit:** Deaths per 100k live births
+- **Scale:** 4 | **Domain:** Maternal | **Unit:** Deaths per 100k live births
 - **Baseline:** 32.9/100k (2023, US high). Range: 18-55. **Source:** NVSS, state.
 
 ### Node 558: Pregnancy-Related Mortality
-- **Scale:** Crisis | **Domain:** Maternal | **Unit:** Deaths per 100k live births
+- **Scale:** 4 | **Domain:** Maternal | **Unit:** Deaths per 100k live births
 - **Baseline:** 22.3/100k (2023). Range: 12-42. **Source:** PMSS, state.
 
 ### Node 559: Cardiovascular Disease Mortality
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Deaths per 100k
+- **Scale:** 4 | **Domain:** Health | **Unit:** Deaths per 100k
 - **Baseline:** 240/100k (2023). Range: 180-350. **Source:** CDC WONDER, county.
 
 ### Node 560: Cancer Mortality
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Deaths per 100k
+- **Scale:** 2 | **Domain:** Health | **Unit:** Deaths per 100k
 - **Baseline:** 146/100k (2023). Range: 110-190. **Source:** CDC WONDER, county.
 
 ### Node 561: Respiratory Disease Mortality
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Deaths per 100k
+- **Scale:** 2 | **Domain:** Health | **Unit:** Deaths per 100k
 - **Baseline:** 52/100k (2023). Range: 35-80. **Source:** CDC WONDER, county.
 
 ### Node 561a: Asthma Incidence Rate [NEW - Added to fill mechanism gap]
@@ -3462,79 +3462,79 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 - **Consolidation Note:** Previously missing from inventory but referenced in multiple mechanisms. Now explicitly defined.
 
 ### Node 562: Stroke Mortality
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Deaths per 100k
+- **Scale:** 4 | **Domain:** Health | **Unit:** Deaths per 100k
 - **Baseline:** 38/100k (2023). Range: 25-65. **Source:** CDC WONDER, county.
 
 ### Node 563: Diabetes Mortality
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Deaths per 100k
+- **Scale:** 6 | **Domain:** Health | **Unit:** Deaths per 100k
 - **Baseline:** 25/100k (2023). Range: 15-45. **Source:** CDC WONDER, county.
 
 ### Node 564: Alzheimer's/Dementia Mortality
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Deaths per 100k
+- **Scale:** 4 | **Domain:** Health | **Unit:** Deaths per 100k
 - **Baseline:** 32/100k (2023). Range: 20-52. **Source:** CDC WONDER, county.
 
 ### Node 565: Kidney Disease Mortality
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Deaths per 100k
+- **Scale:** 4 | **Domain:** Health | **Unit:** Deaths per 100k
 - **Baseline:** 13/100k (2023). Range: 8-22. **Source:** CDC WONDER, county.
 
 ### Node 566: Liver Disease Mortality
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Deaths per 100k
+- **Scale:** 4 | **Domain:** Health | **Unit:** Deaths per 100k
 - **Baseline:** 14.5/100k (2023). Range: 8-28. **Source:** CDC WONDER, county.
 
 ### Node 567: Suicide Rate
-- **Scale:** Crisis | **Domain:** Mental Health | **Unit:** Deaths per 100k
+- **Scale:** 7 | **Domain:** Mental Health | **Unit:** Deaths per 100k
 - **Baseline:** 14.2/100k (2023). Range: 8-28. **Source:** CDC WONDER, county.
 
 ### Node 568: Drug Overdose Mortality
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** Deaths per 100k
+- **Scale:** 7 | **Domain:** Behavioral Health | **Unit:** Deaths per 100k
 - **Baseline:** 32.5/100k (2023). Range: 8-85. **Source:** CDC WONDER, county.
 
 ### Node 569: Opioid Overdose Mortality
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** Deaths per 100k
+- **Scale:** 7 | **Domain:** Behavioral Health | **Unit:** Deaths per 100k
 - **Baseline:** 22.0/100k (2023). Range: 4-65. **Source:** CDC WONDER, county.
 
 ### Node 570: Alcohol-Induced Mortality
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** Deaths per 100k
+- **Scale:** 4 | **Domain:** Behavioral Health | **Unit:** Deaths per 100k
 - **Baseline:** 12.5/100k (2023). Range: 6-28. **Source:** CDC WONDER, county.
 
 ### Node 571: Homicide Rate
-- **Scale:** Crisis | **Domain:** Criminal Justice, Violence | **Unit:** Deaths per 100k
+- **Scale:** 4 | **Domain:** Criminal Justice, Violence | **Unit:** Deaths per 100k
 - **Baseline:** 6.5/100k (2023). Range: 1.5-35. **Source:** CDC WONDER, FBI UCR, county.
 
 ### Node 572: Firearm Mortality
-- **Scale:** Crisis | **Domain:** Violence | **Unit:** Deaths per 100k
+- **Scale:** 4 | **Domain:** Violence | **Unit:** Deaths per 100k
 - **Baseline:** 14.8/100k (2023). Range: 5-32. **Source:** CDC WONDER, county.
 
 ### Node 573: Motor Vehicle Crash Mortality
-- **Scale:** Crisis | **Domain:** Transportation, Injury | **Unit:** Deaths per 100k
+- **Scale:** 4 | **Domain:** Transportation, Injury | **Unit:** Deaths per 100k
 - **Baseline:** 12.9/100k (2023). Range: 6-28. **Source:** CDC WONDER, NHTSA, county.
 
 ### Node 574: Pedestrian/Cyclist Fatality Rate
-- **Scale:** Crisis | **Domain:** Transportation, Injury | **Unit:** Deaths per 100k
+- **Scale:** 7 | **Domain:** Transportation, Injury | **Unit:** Deaths per 100k
 - **Baseline:** 2.8/100k (2023). Range: 0.8-7.5. **Source:** NHTSA FARS, county.
 
 ### Node 575: Occupational Fatality Rate
-- **Scale:** Crisis | **Domain:** Occupational | **Unit:** Deaths per 100k workers
+- **Scale:** 7 | **Domain:** Occupational | **Unit:** Deaths per 100k workers
 - **Baseline:** 3.5/100k FTE (2023). Range: 1.5-10. **Source:** BLS CFOI.
 
 ### Node 576: Heat-Related Mortality
-- **Scale:** Crisis | **Domain:** Climate, Environmental | **Unit:** Deaths per 1M pop
+- **Scale:** 4 | **Domain:** Climate, Environmental | **Unit:** Deaths per 1M pop
 - **Baseline:** 8.5/1M (2023). Range: 1-45. **Source:** CDC WONDER, county.
 
 ### Node 577: Cold-Related Mortality
-- **Scale:** Crisis | **Domain:** Climate, Environmental | **Unit:** Deaths per 1M pop
+- **Scale:** 4 | **Domain:** Climate, Environmental | **Unit:** Deaths per 1M pop
 - **Baseline:** 1.8/1M (2023). Range: 0.2-8. **Source:** CDC WONDER.
 
 ### Node 578: Disaster-Related Mortality
-- **Scale:** Crisis | **Domain:** Climate, Environmental | **Unit:** Deaths per year
+- **Scale:** 4 | **Domain:** Climate, Environmental | **Unit:** Deaths per year
 - **Baseline:** 0.15/100k annually (2023). Range: 0-20+ (varies). **Source:** FEMA, NOAA.
 
 ### Node 579: Sepsis Mortality
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Deaths per 100k
+- **Scale:** 4 | **Domain:** Health | **Unit:** Deaths per 100k
 - **Baseline:** 11.5/100k (2023). Range: 8-18. **Source:** CDC WONDER, claims.
 
 ### Node 580: Pneumonia/Influenza Mortality
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Deaths per 100k
+- **Scale:** 4 | **Domain:** Health | **Unit:** Deaths per 100k
 - **Baseline:** 13.2/100k (2023). Range: 8-24. **Source:** CDC WONDER, county.
 
 ---
@@ -3542,63 +3542,63 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.2 BIRTH OUTCOMES & CRISES
 
 ### Node 581: Preterm Birth Rate
-- **Scale:** Crisis | **Domain:** Maternal, Child | **Unit:** % births <37 weeks
+- **Scale:** 4 | **Domain:** Maternal, Child | **Unit:** % births <37 weeks
 - **Baseline:** 10.4% (2023). Range: 7.5-15%. **Source:** NVSS, county.
 
 ### Node 582: Very Preterm Birth (<32 weeks)
-- **Scale:** Crisis | **Domain:** Maternal, Child | **Unit:** % births <32 weeks
+- **Scale:** 7 | **Domain:** Maternal, Child | **Unit:** % births <32 weeks
 - **Baseline:** 2.8% (2023). Range: 1.8-4.5%. **Source:** NVSS, county.
 
 ### Node 583: Low Birthweight Rate
-- **Scale:** Crisis | **Domain:** Maternal, Child | **Unit:** % births <2,500g
+- **Scale:** 4 | **Domain:** Maternal, Child | **Unit:** % births <2,500g
 - **Baseline:** 8.3% (2023). Range: 5.5-12%. **Source:** NVSS, county.
 
 ### Node 584: Very Low Birthweight (<1,500g)
-- **Scale:** Crisis | **Domain:** Maternal, Child | **Unit:** % births <1,500g
+- **Scale:** 7 | **Domain:** Maternal, Child | **Unit:** % births <1,500g
 - **Baseline:** 1.4% (2023). Range: 0.9-2.2%. **Source:** NVSS, county.
 
 ### Node 585: Small for Gestational Age (SGA)
-- **Scale:** Crisis | **Domain:** Maternal, Child | **Unit:** % births <10th percentile
+- **Scale:** 4 | **Domain:** Maternal, Child | **Unit:** % births <10th percentile
 - **Baseline:** 11.2% (2023). Range: 8-16%. **Source:** NVSS, research.
 
 ### Node 586: Neonatal Abstinence Syndrome (NAS)
-- **Scale:** Crisis | **Domain:** Maternal, Child | **Unit:** NAS cases per 1k births
+- **Scale:** 4 | **Domain:** Maternal, Child | **Unit:** NAS cases per 1k births
 - **Baseline:** 7.3/1k (2023). Range: 2-25. **Source:** NVSS, hospital data.
 
 ### Node 587: Stillbirth Rate
-- **Scale:** Crisis | **Domain:** Maternal | **Unit:** Fetal deaths ≥20wk per 1k births
+- **Scale:** 7 | **Domain:** Maternal | **Unit:** Fetal deaths ≥20wk per 1k births
 - **Baseline:** 5.9/1k (2023). Range: 4.2-9.0. **Source:** NVSS, state.
 
 ### Node 588: Birth Trauma/Injury Rate
-- **Scale:** Crisis | **Domain:** Maternal, Child | **Unit:** Birth injuries per 1k births
+- **Scale:** 4 | **Domain:** Maternal, Child | **Unit:** Birth injuries per 1k births
 - **Baseline:** 1.2/1k (2023). Range: 0.6-2.5. **Source:** Hospital discharge data.
 
 ### Node 589: Cesarean Delivery Rate
-- **Scale:** Crisis | **Domain:** Maternal | **Unit:** % births by C-section
+- **Scale:** 4 | **Domain:** Maternal | **Unit:** % births by C-section
 - **Baseline:** 32.1% (2023). Range: 22-42%. **Source:** NVSS, state.
 
 ### Node 590: Severe Maternal Morbidity Rate
-- **Scale:** Crisis | **Domain:** Maternal | **Unit:** SMM per 10k deliveries
+- **Scale:** 7 | **Domain:** Maternal | **Unit:** SMM per 10k deliveries
 - **Baseline:** 144/10k (2023). Range: 95-220. **Source:** NVSS, HCUP, state.
 
 ### Node 591: Maternal ICU Admission Rate
-- **Scale:** Crisis | **Domain:** Maternal | **Unit:** ICU admits per 1k deliveries
+- **Scale:** 7 | **Domain:** Maternal | **Unit:** ICU admits per 1k deliveries
 - **Baseline:** 2.8/1k (2023). Range: 1.5-5.5. **Source:** Hospital data.
 
 ### Node 592: Maternal Hemorrhage Rate
-- **Scale:** Crisis | **Domain:** Maternal | **Unit:** Hemorrhage per 1k deliveries
+- **Scale:** 6 | **Domain:** Maternal | **Unit:** Hemorrhage per 1k deliveries
 - **Baseline:** 28/1k (2023). Range: 18-45. **Source:** Hospital data, HCUP.
 
 ### Node 593: Preeclampsia/Eclampsia Rate
-- **Scale:** Crisis | **Domain:** Maternal | **Unit:** Cases per 1k deliveries
+- **Scale:** 6 | **Domain:** Maternal | **Unit:** Cases per 1k deliveries
 - **Baseline:** 42/1k (2023). Range: 28-68. **Source:** Hospital data, NVSS.
 
 ### Node 594: Gestational Diabetes Rate
-- **Scale:** Crisis | **Domain:** Maternal | **Unit:** % pregnancies with GDM
+- **Scale:** 6 | **Domain:** Maternal | **Unit:** % pregnancies with GDM
 - **Baseline:** 8.2% (2023). Range: 5-13%. **Source:** Hospital data, PRAMS.
 
 ### Node 595: Neonatal ICU Admission Rate
-- **Scale:** Crisis | **Domain:** Child | **Unit:** NICU admits per 1k births
+- **Scale:** 7 | **Domain:** Child | **Unit:** NICU admits per 1k births
 - **Baseline:** 78/1k (2023). Range: 55-115. **Source:** Hospital data.
 
 ---
@@ -3606,83 +3606,83 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.3 CHRONIC DISEASE CRISES & COMPLICATIONS
 
 ### Node 596: Acute Myocardial Infarction Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** AMI per 100k adults
+- **Scale:** 4 | **Domain:** Health | **Unit:** AMI per 100k adults
 - **Baseline:** 235/100k (2023). Range: 160-380. **Source:** Hospital data, CMS.
 
 ### Node 597: Stroke Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Strokes per 100k adults
+- **Scale:** 6 | **Domain:** Health | **Unit:** Strokes per 100k adults
 - **Baseline:** 285/100k (2023). Range: 200-450. **Source:** Hospital data, CDC.
 
 ### Node 598: Heart Failure Hospitalization Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Admits per 1k Medicare
+- **Scale:** 7 | **Domain:** Health | **Unit:** Admits per 1k Medicare
 - **Baseline:** 12.5/1k (2023). Range: 8-22. **Source:** CMS, county.
 
 ### Node 599: COPD Hospitalization Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Admits per 1k adults
+- **Scale:** 7 | **Domain:** Health | **Unit:** Admits per 1k adults
 - **Baseline:** 4.8/1k (2023). Range: 2.5-9.5. **Source:** HCUP, state.
 
 ### Node 600: Asthma Hospitalization Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Admits per 100k
+- **Scale:** 7 | **Domain:** Health | **Unit:** Admits per 100k
 - **Baseline:** 42/100k (2023). Range: 25-85. **Source:** HCUP, state.
 
 ### Node 601: Diabetes Lower Extremity Amputation Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Amputations per 1k diabetics
+- **Scale:** 6 | **Domain:** Health | **Unit:** Amputations per 1k diabetics
 - **Baseline:** 3.8/1k diabetics (2023). Range: 2.0-7.5. **Source:** CMS, state.
 
 ### Node 602: Diabetic Ketoacidosis (DKA) Admission Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** DKA admits per 1k diabetics
+- **Scale:** 4 | **Domain:** Health | **Unit:** DKA admits per 1k diabetics
 - **Baseline:** 6.2/1k (2023). Range: 3.5-12. **Source:** Hospital data.
 
 ### Node 603: Hypoglycemic Crisis Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Severe hypo admits per 1k diabetics
+- **Scale:** 4 | **Domain:** Health | **Unit:** Severe hypo admits per 1k diabetics
 - **Baseline:** 5.5/1k (2023). Range: 3-10. **Source:** Hospital data, CMS.
 
 ### Node 604: End-Stage Renal Disease Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** New ESRD cases per 1M pop
+- **Scale:** 6 | **Domain:** Health | **Unit:** New ESRD cases per 1M pop
 - **Baseline:** 365/1M (2023). Range: 220-650. **Source:** USRDS, state.
 
 ### Node 605: Dialysis Initiation Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** New dialysis per 1M pop
+- **Scale:** 4 | **Domain:** Health | **Unit:** New dialysis per 1M pop
 - **Baseline:** 340/1M (2023). Range: 200-620. **Source:** USRDS, state.
 
 ### Node 606: Liver Failure/Cirrhosis Hospitalization
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Admits per 100k
+- **Scale:** 4 | **Domain:** Health | **Unit:** Admits per 100k
 - **Baseline:** 38/100k (2023). Range: 18-75. **Source:** HCUP.
 
 ### Node 607: Cancer Incidence (All Sites)
-- **Scale:** Crisis | **Domain:** Health | **Unit:** New cases per 100k
+- **Scale:** 6 | **Domain:** Health | **Unit:** New cases per 100k
 - **Baseline:** 442/100k (2023). Range: 360-550. **Source:** SEER, state registries.
 
 ### Node 608: Lung Cancer Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Cases per 100k
+- **Scale:** 6 | **Domain:** Health | **Unit:** Cases per 100k
 - **Baseline:** 54/100k (2023). Range: 35-85. **Source:** SEER, state.
 
 ### Node 609: Colorectal Cancer Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Cases per 100k
+- **Scale:** 6 | **Domain:** Health | **Unit:** Cases per 100k
 - **Baseline:** 38/100k (2023). Range: 28-52. **Source:** SEER, state.
 
 ### Node 610: Breast Cancer Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Cases per 100k women
+- **Scale:** 6 | **Domain:** Health | **Unit:** Cases per 100k women
 - **Baseline:** 128/100k (2023). Range: 105-155. **Source:** SEER, state.
 
 ### Node 611: Late-Stage Cancer Diagnosis Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** % diagnosed stage III/IV
+- **Scale:** 6 | **Domain:** Health | **Unit:** % diagnosed stage III/IV
 - **Baseline:** 38% (2023). Range: 28-52%. **Source:** SEER.
 
 ### Node 612: Sepsis Hospitalization Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Admits per 1k adults
+- **Scale:** 7 | **Domain:** Health | **Unit:** Admits per 1k adults
 - **Baseline:** 6.8/1k (2023). Range: 4.5-11. **Source:** HCUP, claims.
 
 ### Node 613: Venous Thromboembolism (VTE) Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** VTE per 100k
+- **Scale:** 5 | **Domain:** Health | **Unit:** VTE per 100k
 - **Baseline:** 115/100k (2023). Range: 80-165. **Source:** Hospital data.
 
 ### Node 614: Hip Fracture Rate (Age 65+)
-- **Scale:** Crisis | **Domain:** Health, Injury | **Unit:** Fractures per 1k elderly
+- **Scale:** 5 | **Domain:** Health, Injury | **Unit:** Fractures per 1k elderly
 - **Baseline:** 4.2/1k (2023). Range: 2.8-6.5. **Source:** Hospital data, CMS.
 
 ### Node 615: Pressure Ulcer Incidence (Hospital-Acquired)
-- **Scale:** Crisis | **Domain:** Health | **Unit:** % patients with HAC pressure ulcer
+- **Scale:** 6 | **Domain:** Health | **Unit:** % patients with HAC pressure ulcer
 - **Baseline:** 2.8% (2023). Range: 1.5-5.5%. **Source:** CMS HAC, hospitals.
 
 ---
@@ -3690,63 +3690,63 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.4 MENTAL HEALTH & SUBSTANCE USE CRISES
 
 ### Node 616: Psychiatric Hospitalization Rate
-- **Scale:** Crisis | **Domain:** Mental Health | **Unit:** Admits per 1k pop
+- **Scale:** 7 | **Domain:** Mental Health | **Unit:** Admits per 1k pop
 - **Baseline:** 4.5/1k (2023). Range: 2.5-8.5. **Source:** HCUP, state.
 
 ### Node 617: Suicide Attempt Rate (ED/Hospital)
-- **Scale:** Crisis | **Domain:** Mental Health | **Unit:** Attempts per 100k
+- **Scale:** 4 | **Domain:** Mental Health | **Unit:** Attempts per 100k
 - **Baseline:** 275/100k (2023). Range: 180-450. **Source:** HCUP, CDC WISQARS.
 
 ### Node 618: Self-Harm Injury Rate
-- **Scale:** Crisis | **Domain:** Mental Health | **Unit:** ED visits per 100k
+- **Scale:** 5 | **Domain:** Mental Health | **Unit:** ED visits per 100k
 - **Baseline:** 185/100k (2023). Range: 120-320. **Source:** HCUP NEDS.
 
 ### Node 619: Opioid Overdose (Nonfatal) Rate
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** ED visits per 100k
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** ED visits per 100k
 - **Baseline:** 85/100k (2023). Range: 25-220. **Source:** CDC DOSE, state.
 
 ### Node 620: Stimulant Overdose (Nonfatal) Rate
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** ED visits per 100k
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** ED visits per 100k
 - **Baseline:** 42/100k (2023). Range: 15-110. **Source:** CDC, HCUP.
 
 ### Node 621: Alcohol Poisoning ED Visit Rate
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** Visits per 100k
+- **Scale:** 7 | **Domain:** Behavioral Health | **Unit:** Visits per 100k
 - **Baseline:** 38/100k (2023). Range: 18-75. **Source:** HCUP NEDS.
 
 ### Node 622: Substance Use-Related ED Visit Rate
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** Visits per 1k pop
+- **Scale:** 7 | **Domain:** Behavioral Health | **Unit:** Visits per 1k pop
 - **Baseline:** 12.5/1k (2023). Range: 6-28. **Source:** HCUP NEDS, state.
 
 ### Node 623: Involuntary Psychiatric Hold Rate
-- **Scale:** Crisis | **Domain:** Mental Health | **Unit:** Holds per 1k pop
+- **Scale:** 4 | **Domain:** Mental Health | **Unit:** Holds per 1k pop
 - **Baseline:** 3.2/1k (2023). Range: 1.5-7.5. **Source:** State systems.
 
 ### Node 624: Psychiatric Emergency Service Utilization
-- **Scale:** Crisis | **Domain:** Mental Health | **Unit:** Crisis ED visits per 1k
+- **Scale:** 4 | **Domain:** Mental Health | **Unit:** Crisis ED visits per 1k
 - **Baseline:** 8.5/1k (2023). Range: 4-18. **Source:** HCUP, state systems.
 
 ### Node 625: Suicide by Firearm Rate
-- **Scale:** Crisis | **Domain:** Mental Health, Violence | **Unit:** Deaths per 100k
+- **Scale:** 4 | **Domain:** Mental Health, Violence | **Unit:** Deaths per 100k
 - **Baseline:** 7.7/100k (2023). Range: 2.5-18. **Source:** CDC WONDER.
 
 ### Node 626: Drug-Involved Crime Rate
-- **Scale:** Crisis | **Domain:** Criminal Justice, Behavioral | **Unit:** Arrests per 1k pop
+- **Scale:** 5 | **Domain:** Criminal Justice, Behavioral | **Unit:** Arrests per 1k pop
 - **Baseline:** 4.2/1k (2023). Range: 1.8-9.5. **Source:** FBI UCR, state.
 
 ### Node 627: Fentanyl-Involved Overdose Rate
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** Deaths per 100k
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** Deaths per 100k
 - **Baseline:** 18.5/100k (2023). Range: 3-55. **Source:** CDC WONDER, state.
 
 ### Node 628: Polysubstance Overdose Rate
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** Deaths per 100k
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** Deaths per 100k
 - **Baseline:** 12.2/100k (2023). Range: 4-35. **Source:** CDC WONDER.
 
 ### Node 629: Naloxone Administration Rate (EMS)
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** Administrations per 1k pop
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** Administrations per 1k pop
 - **Baseline:** 2.8/1k (2023). Range: 0.5-12. **Source:** EMS, NEMSIS.
 
 ### Node 630: Substance Use Treatment Dropout Rate
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** % leaving against advice
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** % leaving against advice
 - **Baseline:** 32% (2023). Range: 22-48%. **Source:** TEDS, state.
 
 ---
@@ -3754,63 +3754,63 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.5 INFECTIOUS DISEASE CRISES
 
 ### Node 631: HIV Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** New diagnoses per 100k
+- **Scale:** 6 | **Domain:** Health | **Unit:** New diagnoses per 100k
 - **Baseline:** 12.5/100k (2023). Range: 3-45. **Source:** CDC HIV surveillance, state.
 
 ### Node 632: Hepatitis C Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Acute HCV per 100k
+- **Scale:** 6 | **Domain:** Health | **Unit:** Acute HCV per 100k
 - **Baseline:** 1.2/100k (2023). Range: 0.3-4.5. **Source:** CDC, state.
 
 ### Node 633: Tuberculosis Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** TB cases per 100k
+- **Scale:** 6 | **Domain:** Health | **Unit:** TB cases per 100k
 - **Baseline:** 2.5/100k (2023). Range: 0.5-12. **Source:** CDC TB surveillance, state.
 
 ### Node 634: Sexually Transmitted Infection Rate (Composite)
-- **Scale:** Crisis | **Domain:** Health | **Unit:** STI cases per 100k
+- **Scale:** 4 | **Domain:** Health | **Unit:** STI cases per 100k
 - **Baseline:** 680/100k (2023). Range: 320-1,400. **Source:** CDC STD surveillance.
 
 ### Node 635: Chlamydia Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Cases per 100k
+- **Scale:** 6 | **Domain:** Health | **Unit:** Cases per 100k
 - **Baseline:** 495/100k (2023). Range: 220-950. **Source:** CDC, state.
 
 ### Node 636: Gonorrhea Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Cases per 100k
+- **Scale:** 6 | **Domain:** Health | **Unit:** Cases per 100k
 - **Baseline:** 172/100k (2023). Range: 65-420. **Source:** CDC, state.
 
 ### Node 637: Syphilis Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Cases per 100k
+- **Scale:** 6 | **Domain:** Health | **Unit:** Cases per 100k
 - **Baseline:** 18.5/100k (2023). Range: 4-65. **Source:** CDC, state.
 
 ### Node 638: Congenital Syphilis Rate
-- **Scale:** Crisis | **Domain:** Maternal, Child | **Unit:** Cases per 100k live births
+- **Scale:** 4 | **Domain:** Maternal, Child | **Unit:** Cases per 100k live births
 - **Baseline:** 78/100k births (2023, rising). Range: 15-220. **Source:** CDC, state.
 
 ### Node 639: Vaccine-Preventable Disease Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Cases per 100k
+- **Scale:** 6 | **Domain:** Health | **Unit:** Cases per 100k
 - **Baseline:** 15/100k (2023). Range: 3-45. **Source:** CDC, state.
 
 ### Node 640: Healthcare-Associated Infection Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** HAIs per 1k patient-days
+- **Scale:** 2 | **Domain:** Health | **Unit:** HAIs per 1k patient-days
 - **Baseline:** 3.2/1k days (2023). Range: 1.8-6.5. **Source:** CDC NHSN, CMS.
 
 ### Node 641: C. difficile Infection Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** CDI per 100k pop
+- **Scale:** 2 | **Domain:** Health | **Unit:** CDI per 100k pop
 - **Baseline:** 68/100k (2023). Range: 35-125. **Source:** CDC, EIP.
 
 ### Node 642: MRSA Infection Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Invasive MRSA per 100k
+- **Scale:** 2 | **Domain:** Health | **Unit:** Invasive MRSA per 100k
 - **Baseline:** 18/100k (2023). Range: 8-38. **Source:** CDC ABCs.
 
 ### Node 643: Foodborne Illness Outbreak Rate
-- **Scale:** Crisis | **Domain:** Health, Food | **Unit:** Outbreaks per 1M pop
+- **Scale:** 2 | **Domain:** Health, Food | **Unit:** Outbreaks per 1M pop
 - **Baseline:** 4.5/1M (2023). Range: 1.5-12. **Source:** CDC FoodNet.
 
 ### Node 644: Waterborne Disease Rate
-- **Scale:** Crisis | **Domain:** Health, Environmental | **Unit:** Cases per 100k
+- **Scale:** 4 | **Domain:** Health, Environmental | **Unit:** Cases per 100k
 - **Baseline:** 2.8/100k (2023). Range: 0.5-12. **Source:** CDC, state.
 
 ### Node 645: Vector-Borne Disease Incidence
-- **Scale:** Crisis | **Domain:** Health, Environmental | **Unit:** Cases per 100k
+- **Scale:** 6 | **Domain:** Health, Environmental | **Unit:** Cases per 100k
 - **Baseline:** 28/100k (2023). Range: 5-95. **Source:** CDC ArboNET, state.
 
 ---
@@ -3818,83 +3818,83 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.6 INJURY & VIOLENCE CRISES
 
 ### Node 646: Traumatic Brain Injury (TBI) Hospitalization
-- **Scale:** Crisis | **Domain:** Injury | **Unit:** TBI admits per 100k
+- **Scale:** 4 | **Domain:** Injury | **Unit:** TBI admits per 100k
 - **Baseline:** 82/100k (2023). Range: 55-135. **Source:** HCUP, CDC.
 
 ### Node 647: Spinal Cord Injury Incidence
-- **Scale:** Crisis | **Domain:** Injury | **Unit:** SCI per 1M pop
+- **Scale:** 6 | **Domain:** Injury | **Unit:** SCI per 1M pop
 - **Baseline:** 54/1M (2023). Range: 32-85. **Source:** NSCISC.
 
 ### Node 648: Burn Injury Hospitalization
-- **Scale:** Crisis | **Domain:** Injury | **Unit:** Admits per 100k
+- **Scale:** 4 | **Domain:** Injury | **Unit:** Admits per 100k
 - **Baseline:** 12.5/100k (2023). Range: 7-22. **Source:** HCUP, ABA.
 
 ### Node 649: Fall-Related Injury (Age 65+)
-- **Scale:** Crisis | **Domain:** Injury | **Unit:** ED visits per 1k elderly
+- **Scale:** 4 | **Domain:** Injury | **Unit:** ED visits per 1k elderly
 - **Baseline:** 82/1k (2023). Range: 55-125. **Source:** HCUP, CDC WISQARS.
 
 ### Node 650: Unintentional Poisoning Rate
-- **Scale:** Crisis | **Domain:** Injury | **Unit:** ED visits per 100k
+- **Scale:** 4 | **Domain:** Injury | **Unit:** ED visits per 100k
 - **Baseline:** 185/100k (2023). Range: 95-350. **Source:** HCUP, CDC.
 
 ### Node 651: Motor Vehicle Crash Injury Rate
-- **Scale:** Crisis | **Domain:** Transportation, Injury | **Unit:** Injuries per 1k pop
+- **Scale:** 4 | **Domain:** Transportation, Injury | **Unit:** Injuries per 1k pop
 - **Baseline:** 8.2/1k (2023). Range: 4.5-15. **Source:** NHTSA, state.
 
 ### Node 652: Pedestrian Injury Rate
-- **Scale:** Crisis | **Domain:** Transportation, Injury | **Unit:** Injuries per 100k
+- **Scale:** 4 | **Domain:** Transportation, Injury | **Unit:** Injuries per 100k
 - **Baseline:** 42/100k (2023). Range: 18-95. **Source:** NHTSA, state.
 
 ### Node 653: Bicycle Crash Injury Rate
-- **Scale:** Crisis | **Domain:** Transportation, Injury | **Unit:** Injuries per 100k
+- **Scale:** 4 | **Domain:** Transportation, Injury | **Unit:** Injuries per 100k
 - **Baseline:** 22/100k (2023). Range: 8-52. **Source:** NHTSA, local.
 
 ### Node 654: Drowning Incidence
-- **Scale:** Crisis | **Domain:** Injury | **Unit:** Deaths + rescues per 100k
+- **Scale:** 6 | **Domain:** Injury | **Unit:** Deaths + rescues per 100k
 - **Baseline:** 3.8/100k (2023). Range: 1.5-9.5. **Source:** CDC WONDER, Coast Guard.
 
 ### Node 655: Firearm Injury (Nonfatal) Rate
-- **Scale:** Crisis | **Domain:** Violence, Injury | **Unit:** ED visits per 100k
+- **Scale:** 4 | **Domain:** Violence, Injury | **Unit:** ED visits per 100k
 - **Baseline:** 28/100k (2023). Range: 8-95. **Source:** HCUP, CDC WISQARS.
 
 ### Node 656: Intimate Partner Violence (IPV) Injury Rate
-- **Scale:** Crisis | **Domain:** Violence | **Unit:** ED visits per 100k
+- **Scale:** 4 | **Domain:** Violence | **Unit:** ED visits per 100k
 - **Baseline:** 45/100k (2023). Range: 22-95. **Source:** HCUP, NISVS.
 
 ### Node 657: Child Maltreatment Substantiated Rate
-- **Scale:** Crisis | **Domain:** Child, Violence | **Unit:** Victims per 1k children
+- **Scale:** 4 | **Domain:** Child, Violence | **Unit:** Victims per 1k children
 - **Baseline:** 8.4/1k (2023). Range: 4.5-16. **Source:** ACF NCANDS, state.
 
 ### Node 658: Child Physical Abuse Rate
-- **Scale:** Crisis | **Domain:** Child, Violence | **Unit:** Substantiated per 1k
+- **Scale:** 4 | **Domain:** Child, Violence | **Unit:** Substantiated per 1k
 - **Baseline:** 2.8/1k (2023). Range: 1.2-6.5. **Source:** NCANDS.
 
 ### Node 659: Child Sexual Abuse Rate
-- **Scale:** Crisis | **Domain:** Child, Violence | **Unit:** Substantiated per 1k
+- **Scale:** 4 | **Domain:** Child, Violence | **Unit:** Substantiated per 1k
 - **Baseline:** 0.8/1k (2023). Range: 0.3-2.2. **Source:** NCANDS.
 
 ### Node 660: Child Neglect Rate
-- **Scale:** Crisis | **Domain:** Child, Social | **Unit:** Substantiated per 1k
+- **Scale:** 4 | **Domain:** Child, Social | **Unit:** Substantiated per 1k
 - **Baseline:** 5.2/1k (2023). Range: 2.5-11. **Source:** NCANDS.
 
 ### Node 661: Elder Abuse/Neglect (Reported) Rate
-- **Scale:** Crisis | **Domain:** Social, Violence | **Unit:** Reports per 1k age 65+
+- **Scale:** 4 | **Domain:** Social, Violence | **Unit:** Reports per 1k age 65+
 - **Baseline:** 18/1k (2023). Range: 8-38. **Source:** APS, NCEA.
 
 ### Node 662: Assault Injury Rate
-- **Scale:** Crisis | **Domain:** Violence | **Unit:** ED visits per 1k pop
+- **Scale:** 4 | **Domain:** Violence | **Unit:** ED visits per 1k pop
 - **Baseline:** 6.8/1k (2023). Range: 3.5-18. **Source:** HCUP, CDC.
 
 ### Node 663: Sexual Assault Rate
-- **Scale:** Crisis | **Domain:** Violence | **Unit:** Reports per 100k
+- **Scale:** 4 | **Domain:** Violence | **Unit:** Reports per 100k
 - **Baseline:** 42/100k (2023). Range: 18-85. **Source:** FBI UCR, NISVS.
 
 ### Node 664: Human Trafficking (Identified) Rate
-- **Scale:** Crisis | **Domain:** Violence, Criminal Justice | **Unit:** Cases per 100k
+- **Scale:** 4 | **Domain:** Violence, Criminal Justice | **Unit:** Cases per 100k
 - **Baseline:** 1.2/100k (2023). Range: 0.3-5.5. **Source:** DOJ, NHTH.
 
 ### Node 665: Workplace Violence Rate
-- **Scale:** Crisis | **Domain:** Occupational, Violence | **Unit:** Incidents per 1k workers
+- **Scale:** 4 | **Domain:** Occupational, Violence | **Unit:** Incidents per 1k workers
 - **Baseline:** 3.5/1k (2023). Range: 1.5-8.5. **Source:** BLS, OSHA.
 
 ---
@@ -3902,63 +3902,63 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.7 HOUSING & ECONOMIC CRISES
 
 ### Node 666: Homelessness Rate (Point-in-Time)
-- **Scale:** Crisis | **Domain:** Housing | **Unit:** Homeless per 10k pop
+- **Scale:** 7 | **Domain:** Housing | **Unit:** Homeless per 10k pop
 - **Baseline:** 18/10k (2023). Range: 6-65. **Source:** HUD PIT, CoC.
 
 ### Node 667: Unsheltered Homelessness Rate
-- **Scale:** Crisis | **Domain:** Housing | **Unit:** Unsheltered per 10k
+- **Scale:** 7 | **Domain:** Housing | **Unit:** Unsheltered per 10k
 - **Baseline:** 7.5/10k (2023). Range: 1.5-35. **Source:** HUD PIT.
 
 ### Node 668: Family Homelessness Rate
-- **Scale:** Crisis | **Domain:** Housing, Child | **Unit:** Homeless families per 10k HH
+- **Scale:** 7 | **Domain:** Housing, Child | **Unit:** Homeless families per 10k HH
 - **Baseline:** 4.2/10k (2023). Range: 1.5-15. **Source:** HUD PIT.
 
 ### Node 669: Youth Homelessness (Unaccompanied) Rate
-- **Scale:** Crisis | **Domain:** Housing, Child | **Unit:** Homeless youth per 10k age <25
+- **Scale:** 7 | **Domain:** Housing, Child | **Unit:** Homeless youth per 10k age <25
 - **Baseline:** 2.8/10k (2023). Range: 0.8-9.5. **Source:** HUD PIT, Chapin Hall.
 
 ### Node 670: Eviction Judgment Rate
-- **Scale:** Crisis | **Domain:** Housing, Economic | **Unit:** Evictions per 100 rentals
+- **Scale:** 4 | **Domain:** Housing, Economic | **Unit:** Evictions per 100 rentals
 - **Baseline:** 2.2/100 (2023). Range: 0.8-5.5. **Source:** Eviction Lab, courts.
 
 ### Node 671: Foreclosure Rate
-- **Scale:** Crisis | **Domain:** Housing, Economic | **Unit:** Foreclosures per 1k owner units
+- **Scale:** 7 | **Domain:** Housing, Economic | **Unit:** Foreclosures per 1k owner units
 - **Baseline:** 1.8/1k (2023). Range: 0.5-6.5. **Source:** RealtyTrac, state.
 
 ### Node 672: Utility Disconnection Rate
-- **Scale:** Crisis | **Domain:** Housing, Economic | **Unit:** Disconnects per 1k HH
+- **Scale:** 4 | **Domain:** Housing, Economic | **Unit:** Disconnects per 1k HH
 - **Baseline:** 12/1k (2023). Range: 4-32. **Source:** Utilities, PUC.
 
 ### Node 673: Food Bank Emergency Distribution Rate
-- **Scale:** Crisis | **Domain:** Food, Economic | **Unit:** Emergency visits per 1k pop
+- **Scale:** 4 | **Domain:** Food, Economic | **Unit:** Emergency visits per 1k pop
 - **Baseline:** 145/1k (2023). Range: 65-350. **Source:** Feeding America.
 
 ### Node 674: Personal Bankruptcy Filing Rate
-- **Scale:** Crisis | **Domain:** Economic | **Unit:** Filings per 1k adults
+- **Scale:** 4 | **Domain:** Economic | **Unit:** Filings per 1k adults
 - **Baseline:** 1.8/1k (2023). Range: 0.8-4.2. **Source:** Courts, ABI.
 
 ### Node 675: Wage Garnishment Rate
-- **Scale:** Crisis | **Domain:** Economic | **Unit:** Garnishments per 1k workers
+- **Scale:** 4 | **Domain:** Economic | **Unit:** Garnishments per 1k workers
 - **Baseline:** 6.5/1k (2023). Range: 3-14. **Source:** ADP, courts.
 
 ### Node 676: Vehicle Repossession Rate
-- **Scale:** Crisis | **Domain:** Economic, Transportation | **Unit:** Repos per 1k financed vehicles
+- **Scale:** 4 | **Domain:** Economic, Transportation | **Unit:** Repos per 1k financed vehicles
 - **Baseline:** 8.5/1k (2023). Range: 4-18. **Source:** Industry data.
 
 ### Node 677: Payday Loan Default Rate
-- **Scale:** Crisis | **Domain:** Economic | **Unit:** % loans defaulted
+- **Scale:** 4 | **Domain:** Economic | **Unit:** % loans defaulted
 - **Baseline:** 22% (2023). Range: 15-35%. **Source:** CFPB, Pew.
 
 ### Node 678: Medical Debt Collections Rate
-- **Scale:** Crisis | **Domain:** Economic, Healthcare | **Unit:** % adults with medical collections
+- **Scale:** 4 | **Domain:** Economic, Healthcare | **Unit:** % adults with medical collections
 - **Baseline:** 18% (2023). Range: 10-32%. **Source:** CFPB, Urban Institute.
 
 ### Node 679: Child Foster Care Entry Rate
-- **Scale:** Crisis | **Domain:** Child, Social | **Unit:** Entries per 1k children
+- **Scale:** 4 | **Domain:** Child, Social | **Unit:** Entries per 1k children
 - **Baseline:** 3.8/1k (2023). Range: 1.8-9.5. **Source:** ACF AFCARS, state.
 
 ### Node 680: Child Welfare System Involvement Rate
-- **Scale:** Crisis | **Domain:** Child, Social | **Unit:** Investigations per 1k children
+- **Scale:** 4 | **Domain:** Child, Social | **Unit:** Investigations per 1k children
 - **Baseline:** 42/1k (2023). Range: 22-85. **Source:** NCANDS, state.
 
 ---
@@ -3966,43 +3966,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.8 CRIMINAL JUSTICE CRISES
 
 ### Node 681: Jail Incarceration Rate
-- **Scale:** Crisis | **Domain:** Criminal Justice | **Unit:** Jailed per 100k pop
+- **Scale:** 7 | **Domain:** Criminal Justice | **Unit:** Jailed per 100k pop
 - **Baseline:** 225/100k (2023). Range: 95-450. **Source:** BJS, jails.
 
 ### Node 682: Prison Incarceration Rate
-- **Scale:** Crisis | **Domain:** Criminal Justice | **Unit:** Imprisoned per 100k
+- **Scale:** 7 | **Domain:** Criminal Justice | **Unit:** Imprisoned per 100k
 - **Baseline:** 350/100k (2023). Range: 180-650. **Source:** BJS, state DOC.
 
 ### Node 683: Jail Mortality Rate
-- **Scale:** Crisis | **Domain:** Criminal Justice, Health | **Unit:** Deaths per 100k inmates
+- **Scale:** 7 | **Domain:** Criminal Justice, Health | **Unit:** Deaths per 100k inmates
 - **Baseline:** 185/100k (2023). Range: 95-350. **Source:** BJS, jails.
 
 ### Node 684: Prison Mortality Rate
-- **Scale:** Crisis | **Domain:** Criminal Justice, Health | **Unit:** Deaths per 100k inmates
+- **Scale:** 7 | **Domain:** Criminal Justice, Health | **Unit:** Deaths per 100k inmates
 - **Baseline:** 295/100k (2023). Range: 180-520. **Source:** BJS, state DOC.
 
 ### Node 685: Police Use of Force Incidents
-- **Scale:** Crisis | **Domain:** Criminal Justice, Violence | **Unit:** Incidents per 1k arrests
+- **Scale:** 4 | **Domain:** Criminal Justice, Violence | **Unit:** Incidents per 1k arrests
 - **Baseline:** 18/1k (2023). Range: 8-45. **Source:** FBI, local agencies.
 
 ### Node 686: Police Shooting Rate
-- **Scale:** Crisis | **Domain:** Criminal Justice, Violence | **Unit:** Shootings per 1M pop
+- **Scale:** 4 | **Domain:** Criminal Justice, Violence | **Unit:** Shootings per 1M pop
 - **Baseline:** 3.5/1M (2023). Range: 0.8-12. **Source:** Mapping Police Violence, WaPo.
 
 ### Node 687: Wrongful Conviction Exoneration Rate
-- **Scale:** Crisis | **Domain:** Criminal Justice | **Unit:** Exonerations per 100k incarcerated
+- **Scale:** 4 | **Domain:** Criminal Justice | **Unit:** Exonerations per 100k incarcerated
 - **Baseline:** 8.5/100k (2023). Range: 3-22. **Source:** National Registry.
 
 ### Node 688: Juvenile Detention Rate
-- **Scale:** Crisis | **Domain:** Criminal Justice, Child | **Unit:** Youth detained per 100k age 10-17
+- **Scale:** 4 | **Domain:** Criminal Justice, Child | **Unit:** Youth detained per 100k age 10-17
 - **Baseline:** 125/100k (2023). Range: 45-285. **Source:** OJJDP, state.
 
 ### Node 689: Juvenile Transfer to Adult Court Rate
-- **Scale:** Crisis | **Domain:** Criminal Justice, Child | **Unit:** Transfers per 1k juvenile arrests
+- **Scale:** 4 | **Domain:** Criminal Justice, Child | **Unit:** Transfers per 1k juvenile arrests
 - **Baseline:** 4.2/1k (2023). Range: 1-12. **Source:** OJJDP, state.
 
 ### Node 690: Pretrial Detention Mortality
-- **Scale:** Crisis | **Domain:** Criminal Justice, Health | **Unit:** Deaths per 100k pretrial detainees
+- **Scale:** 3 | **Domain:** Criminal Justice, Health | **Unit:** Deaths per 100k pretrial detainees
 - **Baseline:** 145/100k (2023). Range: 65-320. **Source:** BJS, jails.
 
 ---
@@ -4010,23 +4010,23 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.9 EDUCATIONAL CRISES
 
 ### Node 691: High School Dropout Rate
-- **Scale:** Crisis | **Domain:** Education | **Unit:** % not completing HS
+- **Scale:** 6 | **Domain:** Education | **Unit:** % not completing HS
 - **Baseline:** 5.3% (2023). Range: 2.8-12%. **Source:** NCES, state.
 
 ### Node 692: College Dropout Rate (First Year)
-- **Scale:** Crisis | **Domain:** Education | **Unit:** % not returning 2nd year
+- **Scale:** 6 | **Domain:** Education | **Unit:** % not returning 2nd year
 - **Baseline:** 26% (2023). Range: 12-42%. **Source:** NCES IPEDS.
 
 ### Node 693: Student Loan Default Rate (3-Year)
-- **Scale:** Crisis | **Domain:** Education, Economic | **Unit:** % defaulting within 3yr
+- **Scale:** 4 | **Domain:** Education, Economic | **Unit:** % defaulting within 3yr
 - **Baseline:** 7.6% (2023). Range: 3-22%. **Source:** ED FSA, institution.
 
 ### Node 694: School Expulsion Rate
-- **Scale:** Crisis | **Domain:** Education | **Unit:** % students expelled
+- **Scale:** 4 | **Domain:** Education | **Unit:** % students expelled
 - **Baseline:** 0.4% (2023). Range: 0.1-1.5%. **Source:** ED CRDC, district.
 
 ### Node 695: School-Based Arrest Rate
-- **Scale:** Crisis | **Domain:** Education, Criminal Justice | **Unit:** Arrests per 1k students
+- **Scale:** 4 | **Domain:** Education, Criminal Justice | **Unit:** Arrests per 1k students
 - **Baseline:** 4.2/1k (2023). Range: 0.5-15. **Source:** ED CRDC, district.
 
 ---
@@ -4034,63 +4034,63 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.10 HEALTHCARE SYSTEM FAILURE ENDPOINTS
 
 ### Node 696: Emergency Department Boarding Time
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Median hours boarded
+- **Scale:** 3 | **Domain:** Healthcare | **Unit:** Median hours boarded
 - **Baseline:** 4.2 hrs (2023). Range: 1.5-12. **Source:** Hospitals, ACEP.
 
 ### Node 697: ED Walkout/Left Without Being Seen Rate
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** % LWBS
+- **Scale:** 3 | **Domain:** Healthcare | **Unit:** % LWBS
 - **Baseline:** 2.8% (2023). Range: 1-8%. **Source:** Hospitals, HCUP.
 
 ### Node 698: Ambulance Diversion Hours
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Hours on diversion annually
+- **Scale:** 3 | **Domain:** Healthcare | **Unit:** Hours on diversion annually
 - **Baseline:** 85 hrs (2023). Range: 0-650. **Source:** EMS, hospitals.
 
 ### Node 699: Hospital Bed Occupancy (>95%)
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Days at surge capacity
+- **Scale:** 3 | **Domain:** Healthcare | **Unit:** Days at surge capacity
 - **Baseline:** 45 days (2023). Range: 5-180. **Source:** Hospitals, AHA.
 
 ### Node 700: ICU Bed Shortage Days
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Days no ICU beds
+- **Scale:** 2 | **Domain:** Healthcare | **Unit:** Days no ICU beds
 - **Baseline:** 12 days (2023). Range: 0-95. **Source:** Hospitals, state.
 
 ### Node 701: Mental Health Bed Shortage (Crisis)
-- **Scale:** Crisis | **Domain:** Mental Health, Healthcare | **Unit:** % psych admits delayed 24+ hrs
+- **Scale:** 2 | **Domain:** Mental Health, Healthcare | **Unit:** % psych admits delayed 24+ hrs
 - **Baseline:** 38% (2023). Range: 18-72%. **Source:** State systems.
 
 ### Node 702: Medication Shortage Impact
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Critical shortages per year
+- **Scale:** 2 | **Domain:** Healthcare | **Unit:** Critical shortages per year
 - **Baseline:** 145 shortages (2023). Range: 85-220. **Source:** FDA, ASHP.
 
 ### Node 703: Healthcare Worker Shortage (Vacancy Rate)
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** % RN positions vacant
+- **Scale:** 2 | **Domain:** Healthcare | **Unit:** % RN positions vacant
 - **Baseline:** 9.5% (2023). Range: 4-22%. **Source:** Hospitals, BLS.
 
 ### Node 704: Preventable Medical Error Rate
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Serious events per 1k admits
+- **Scale:** 7 | **Domain:** Healthcare | **Unit:** Serious events per 1k admits
 - **Baseline:** 2.8/1k (2023). Range: 1.2-6.5. **Source:** AHRQ PSI, CMS.
 
 ### Node 705: Hospital-Acquired Condition Rate
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** HACs per 1k admits
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** HACs per 1k admits
 - **Baseline:** 18/1k (2023). Range: 10-32. **Source:** CMS HAC.
 
 ### Node 706: Surgical Site Infection Rate
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** SSI per 100 surgeries
+- **Scale:** 4 | **Domain:** Healthcare | **Unit:** SSI per 100 surgeries
 - **Baseline:** 1.8/100 (2023). Range: 0.8-4.5. **Source:** CDC NHSN.
 
 ### Node 707: Central Line Infection (CLABSI) Rate
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** CLABSI per 1k line-days
+- **Scale:** 4 | **Domain:** Healthcare | **Unit:** CLABSI per 1k line-days
 - **Baseline:** 0.8/1k (2023). Range: 0.3-2.5. **Source:** CDC NHSN, CMS.
 
 ### Node 708: Catheter UTI (CAUTI) Rate
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** CAUTI per 1k catheter-days
+- **Scale:** 4 | **Domain:** Healthcare | **Unit:** CAUTI per 1k catheter-days
 - **Baseline:** 1.2/1k (2023). Range: 0.5-3.2. **Source:** CDC NHSN, CMS.
 
 ### Node 709: Ventilator-Associated Pneumonia (VAP) Rate
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** VAP per 1k ventilator-days
+- **Scale:** 4 | **Domain:** Healthcare | **Unit:** VAP per 1k ventilator-days
 - **Baseline:** 0.9/1k (2023). Range: 0.3-2.8. **Source:** CDC NHSN.
 
 ### Node 710: Wrong-Site Surgery Rate
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Events per 100k surgeries
+- **Scale:** 4 | **Domain:** Healthcare | **Unit:** Events per 100k surgeries
 - **Baseline:** 1.2/100k (2023). Range: 0.3-4.5. **Source:** Joint Commission, PSO.
 
 ---
@@ -4098,43 +4098,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.11 ENVIRONMENTAL & CLIMATE CRISIS EVENTS
 
 ### Node 711: Heat Wave Mortality Events
-- **Scale:** Crisis | **Domain:** Climate, Health | **Unit:** Deaths per heat event
+- **Scale:** 4 | **Domain:** Climate, Health | **Unit:** Deaths per heat event
 - **Baseline:** 8.5/event (2023). Range: 2-45. **Source:** CDC, NOAA.
 
 ### Node 712: Wildfire Evacuation Events
-- **Scale:** Crisis | **Domain:** Climate, Housing | **Unit:** Evacuations per 1M pop
+- **Scale:** 2 | **Domain:** Climate, Housing | **Unit:** Evacuations per 1M pop
 - **Baseline:** 18/1M (2023). Range: 0-250. **Source:** CAL FIRE, FEMA.
 
 ### Node 713: Flood Displacement Events
-- **Scale:** Crisis | **Domain:** Climate, Housing | **Unit:** Displacements per 100k
+- **Scale:** 2 | **Domain:** Climate, Housing | **Unit:** Displacements per 100k
 - **Baseline:** 12/100k (2023). Range: 0-450. **Source:** FEMA, Red Cross.
 
 ### Node 714: Hurricane/Storm Casualties
-- **Scale:** Crisis | **Domain:** Climate, Health | **Unit:** Deaths + injuries per event
+- **Scale:** 2 | **Domain:** Climate, Health | **Unit:** Deaths + injuries per event
 - **Baseline:** 22/major event (2023). Range: 3-850. **Source:** NOAA, FEMA.
 
 ### Node 715: Tornado Fatality Rate
-- **Scale:** Crisis | **Domain:** Climate, Health | **Unit:** Deaths per year
+- **Scale:** 7 | **Domain:** Climate, Health | **Unit:** Deaths per year
 - **Baseline:** 75/year US (2023). Range: 25-550. **Source:** NOAA SPC.
 
 ### Node 716: Air Quality Emergency Days
-- **Scale:** Crisis | **Domain:** Environmental | **Unit:** Days AQI >150
+- **Scale:** 2 | **Domain:** Environmental | **Unit:** Days AQI >150
 - **Baseline:** 3.5 days (2023). Range: 0-28. **Source:** EPA AirNow, county.
 
 ### Node 717: Water System Failure Events
-- **Scale:** Crisis | **Domain:** Environmental | **Unit:** Boil orders per 100k pop
+- **Scale:** 2 | **Domain:** Environmental | **Unit:** Boil orders per 100k pop
 - **Baseline:** 2.8/100k (2023). Range: 0.5-18. **Source:** EPA, state.
 
 ### Node 718: Lead Poisoning Crisis (Community-Level)
-- **Scale:** Crisis | **Domain:** Environmental, Child | **Unit:** % children BLL ≥5 μg/dL in cluster
+- **Scale:** 2 | **Domain:** Environmental, Child | **Unit:** % children BLL ≥5 μg/dL in cluster
 - **Baseline:** Varies (crisis if >10%). **Source:** CDC, state surveillance.
 
 ### Node 719: Chemical Spill/Exposure Events
-- **Scale:** Crisis | **Domain:** Environmental | **Unit:** Events per 1M pop
+- **Scale:** 2 | **Domain:** Environmental | **Unit:** Events per 1M pop
 - **Baseline:** 1.2/1M (2023). Range: 0.2-8. **Source:** EPA, NRC.
 
 ### Node 720: Power Grid Failure (Extended Outage)
-- **Scale:** Crisis | **Domain:** Infrastructure | **Unit:** Outages >4hrs per 100k pop
+- **Scale:** 4 | **Domain:** Infrastructure | **Unit:** Outages >4hrs per 100k pop
 - **Baseline:** 3.5/100k (2023). Range: 0.5-22. **Source:** DOE, utilities.
 
 ---
@@ -4142,123 +4142,123 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.12 ADDITIONAL HEALTH CRISES
 
 ### Node 721: Acute Kidney Injury Hospitalization
-- **Scale:** Crisis | **Domain:** Health | **Unit:** AKI admits per 1k adults
+- **Scale:** 4 | **Domain:** Health | **Unit:** AKI admits per 1k adults
 - **Baseline:** 18/1k (2023). Range: 12-28. **Source:** Hospital data, CMS.
 
 ### Node 722: Acute Liver Failure Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** ALF per 1M pop
+- **Scale:** 6 | **Domain:** Health | **Unit:** ALF per 1M pop
 - **Baseline:** 8.5/1M (2023). Range: 4-18. **Source:** Hospital data, UNOS.
 
 ### Node 723: Anaphylaxis ED Visit Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Visits per 100k
+- **Scale:** 7 | **Domain:** Health | **Unit:** Visits per 100k
 - **Baseline:** 42/100k (2023). Range: 22-85. **Source:** HCUP.
 
 ### Node 724: Diabetic Coma Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Coma admits per 1k diabetics
+- **Scale:** 6 | **Domain:** Health | **Unit:** Coma admits per 1k diabetics
 - **Baseline:** 1.8/1k (2023). Range: 0.8-4.5. **Source:** Hospital data.
 
 ### Node 725: Acute Respiratory Failure Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** ARF admits per 1k adults
+- **Scale:** 4 | **Domain:** Health | **Unit:** ARF admits per 1k adults
 - **Baseline:** 12.5/1k (2023). Range: 8-22. **Source:** Hospital data, HCUP.
 
 ### Node 726: Pulmonary Embolism Incidence
-- **Scale:** Crisis | **Domain:** Health | **Unit:** PE per 100k
+- **Scale:** 6 | **Domain:** Health | **Unit:** PE per 100k
 - **Baseline:** 68/100k (2023). Range: 42-115. **Source:** Hospital data.
 
 ### Node 727: Aortic Aneurysm Rupture Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Ruptures per 100k age 50+
+- **Scale:** 4 | **Domain:** Health | **Unit:** Ruptures per 100k age 50+
 - **Baseline:** 8.5/100k (2023). Range: 4.5-16. **Source:** Hospital data.
 
 ### Node 728: Cardiac Arrest (Out-of-Hospital) Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** OHCA per 100k
+- **Scale:** 4 | **Domain:** Health | **Unit:** OHCA per 100k
 - **Baseline:** 95/100k (2023). Range: 65-145. **Source:** CARES, EMS.
 
 ### Node 729: Sudden Infant Death Syndrome (SIDS) Rate
-- **Scale:** Crisis | **Domain:** Child | **Unit:** Deaths per 100k live births
+- **Scale:** 4 | **Domain:** Child | **Unit:** Deaths per 100k live births
 - **Baseline:** 38/100k (2023). Range: 22-68. **Source:** NVSS, CDC.
 
 ### Node 730: Pregnancy Loss (Miscarriage) Rate
-- **Scale:** Crisis | **Domain:** Maternal | **Unit:** Losses per 100 pregnancies
+- **Scale:** 4 | **Domain:** Maternal | **Unit:** Losses per 100 pregnancies
 - **Baseline:** 15/100 (2023). Range: 12-22. **Source:** Research, NVSS.
 
 ### Node 731: Ectopic Pregnancy Rate
-- **Scale:** Crisis | **Domain:** Maternal | **Unit:** Per 1k pregnancies
+- **Scale:** 6 | **Domain:** Maternal | **Unit:** Per 1k pregnancies
 - **Baseline:** 20/1k (2023). Range: 14-32. **Source:** Hospital data, research.
 
 ### Node 732: Postpartum Hemorrhage (Severe) Rate
-- **Scale:** Crisis | **Domain:** Maternal | **Unit:** Severe PPH per 1k deliveries
+- **Scale:** 4 | **Domain:** Maternal | **Unit:** Severe PPH per 1k deliveries
 - **Baseline:** 12/1k (2023). Range: 7-22. **Source:** Hospital data, HCUP.
 
 ### Node 733: Obstetric Embolism Rate
-- **Scale:** Crisis | **Domain:** Maternal | **Unit:** Embolism per 100k deliveries
+- **Scale:** 4 | **Domain:** Maternal | **Unit:** Embolism per 100k deliveries
 - **Baseline:** 18/100k (2023). Range: 8-38. **Source:** Hospital data.
 
 ### Node 734: Hypertensive Crisis (Emergency) Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Crises per 100k adults
+- **Scale:** 4 | **Domain:** Health | **Unit:** Crises per 100k adults
 - **Baseline:** 45/100k (2023). Range: 22-85. **Source:** ED data.
 
 ### Node 735: Hypoglycemic Emergency (Nond diabetic)
-- **Scale:** Crisis | **Domain:** Health | **Unit:** ED visits per 100k
+- **Scale:** 4 | **Domain:** Health | **Unit:** ED visits per 100k
 - **Baseline:** 18/100k (2023). Range: 8-38. **Source:** HCUP.
 
 ### Node 736: Severe Allergic Reaction Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** ED visits per 100k
+- **Scale:** 4 | **Domain:** Health | **Unit:** ED visits per 100k
 - **Baseline:** 85/100k (2023). Range: 45-165. **Source:** HCUP.
 
 ### Node 737: Dehydration Hospitalization (Elderly)
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Admits per 1k age 65+
+- **Scale:** 2 | **Domain:** Health | **Unit:** Admits per 1k age 65+
 - **Baseline:** 8.5/1k (2023). Range: 4.5-16. **Source:** CMS, hospital data.
 
 ### Node 738: Malnutrition Hospitalization Rate
-- **Scale:** Crisis | **Domain:** Health, Food | **Unit:** Admits per 100k
+- **Scale:** 7 | **Domain:** Health, Food | **Unit:** Admits per 100k
 - **Baseline:** 22/100k (2023). Range: 10-52. **Source:** HCUP.
 
 ### Node 739: Hypothermia/Frostbite Incidence
-- **Scale:** Crisis | **Domain:** Climate, Health | **Unit:** Cases per 100k
+- **Scale:** 6 | **Domain:** Climate, Health | **Unit:** Cases per 100k
 - **Baseline:** 3.5/100k (2023). Range: 0.5-18. **Source:** ED data, CDC.
 
 ### Node 740: Heat Stroke Incidence
-- **Scale:** Crisis | **Domain:** Climate, Health | **Unit:** Cases per 100k
+- **Scale:** 6 | **Domain:** Climate, Health | **Unit:** Cases per 100k
 - **Scale:** 12/100k (2023). Range: 2-65. **Source:** ED data, CDC ESSENCE.
 
 ### Node 741: Carbon Monoxide Poisoning Rate
-- **Scale:** Crisis | **Domain:** Environmental, Housing | **Unit:** ED visits per 100k
+- **Scale:** 4 | **Domain:** Environmental, Housing | **Unit:** ED visits per 100k
 - **Baseline:** 18/100k (2023). Range: 8-42. **Source:** HCUP, CDC.
 
 ### Node 742: Lead Poisoning (Adults) Rate
-- **Scale:** Crisis | **Domain:** Environmental, Occupational | **Unit:** BLL ≥10 μg/dL per 100k adults
+- **Scale:** 4 | **Domain:** Environmental, Occupational | **Unit:** BLL ≥10 μg/dL per 100k adults
 - **Baseline:** 8.5/100k (2023). Range: 2-35. **Source:** State surveillance, OSHA.
 
 ### Node 743: Pesticide Poisoning Rate
-- **Scale:** Crisis | **Domain:** Environmental, Occupational | **Unit:** Cases per 100k
+- **Scale:** 4 | **Domain:** Environmental, Occupational | **Unit:** Cases per 100k
 - **Baseline:** 4.5/100k (2023). Range: 1.2-22. **Source:** Poison centers, NPDS.
 
 ### Node 744: Asthma Exacerbation (Severe) Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Severe exacerbations per 1k asthmatics
+- **Scale:** 4 | **Domain:** Health | **Unit:** Severe exacerbations per 1k asthmatics
 - **Baseline:** 85/1k (2023). Range: 45-165. **Source:** ED data, claims.
 
 ### Node 745: COPD Exacerbation (Severe) Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Severe exacerbations per 1k COPD
+- **Scale:** 4 | **Domain:** Health | **Unit:** Severe exacerbations per 1k COPD
 - **Baseline:** 125/1k (2023). Range: 65-245. **Source:** ED data, CMS.
 
 ### Node 746: Sickle Cell Crisis Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Crises per 100 SCD patients
+- **Scale:** 4 | **Domain:** Health | **Unit:** Crises per 100 SCD patients
 - **Baseline:** 85/100 (2023). Range: 45-165. **Source:** Hospital data.
 
 ### Node 747: Seizure-Related ED Visit Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Visits per 100k
+- **Scale:** 7 | **Domain:** Health | **Unit:** Visits per 100k
 - **Baseline:** 145/100k (2023). Range: 85-245. **Source:** HCUP NEDS.
 
 ### Node 748: Opioid Withdrawal Hospitalization
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** Admits per 100k
+- **Scale:** 4 | **Domain:** Behavioral Health | **Unit:** Admits per 100k
 - **Baseline:** 38/100k (2023). Range: 15-95. **Source:** Hospital data.
 
 ### Node 749: Alcohol Withdrawal (Severe) Rate
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** DT/severe withdrawal per 100k
+- **Scale:** 4 | **Domain:** Behavioral Health | **Unit:** DT/severe withdrawal per 100k
 - **Baseline:** 22/100k (2023). Range: 10-52. **Source:** Hospital data.
 
 ### Node 750: Psychiatric Crisis (Non-Suicide) Rate
-- **Scale:** Crisis | **Domain:** Mental Health | **Unit:** Crisis ED visits per 1k pop
+- **Scale:** 4 | **Domain:** Mental Health | **Unit:** Crisis ED visits per 1k pop
 - **Baseline:** 6.5/1k (2023). Range: 3.5-14. **Source:** HCUP, state systems.
 
 ---
@@ -4266,43 +4266,43 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.13 DISABILITY & FUNCTIONAL DECLINE CRISES
 
 ### Node 751: New Wheelchair Dependence Rate
-- **Scale:** Crisis | **Domain:** Disability | **Unit:** New wheelchair users per 1k adults
+- **Scale:** 4 | **Domain:** Disability | **Unit:** New wheelchair users per 1k adults
 - **Baseline:** 2.8/1k (2023). Range: 1.5-5.5. **Source:** Medicare, surveys.
 
 ### Node 752: New Blindness/Severe Vision Loss Rate
-- **Scale:** Crisis | **Domain:** Disability | **Unit:** Incident blindness per 100k
+- **Scale:** 4 | **Domain:** Disability | **Unit:** Incident blindness per 100k
 - **Baseline:** 85/100k (2023). Range: 45-165. **Source:** Medicare, NEI.
 
 ### Node 753: New Deafness/Severe Hearing Loss Rate
-- **Scale:** Crisis | **Domain:** Disability | **Unit:** Incident severe loss per 100k
+- **Scale:** 4 | **Domain:** Disability | **Unit:** Incident severe loss per 100k
 - **Baseline:** 145/100k (2023). Range: 75-285. **Source:** Medicare, surveys.
 
 ### Node 754: Amputation (Non-Trauma) Rate
-- **Scale:** Crisis | **Domain:** Health, Disability | **Unit:** Amputations per 100k
+- **Scale:** 4 | **Domain:** Health, Disability | **Unit:** Amputations per 100k
 - **Baseline:** 28/100k (2023). Range: 15-65. **Source:** Hospital data, CMS.
 
 ### Node 755: Stroke-Related Disability Rate
-- **Scale:** Crisis | **Domain:** Health, Disability | **Unit:** % strokes with lasting disability
+- **Scale:** 4 | **Domain:** Health, Disability | **Unit:** % strokes with lasting disability
 - **Baseline:** 42% (2023). Range: 32-58%. **Source:** Hospital data, registries.
 
 ### Node 756: TBI-Related Disability Rate
-- **Scale:** Crisis | **Domain:** Injury, Disability | **Unit:** % TBI with lasting impairment
+- **Scale:** 4 | **Domain:** Injury, Disability | **Unit:** % TBI with lasting impairment
 - **Baseline:** 38% (2023). Range: 25-55%. **Source:** Research, TBI Model Systems.
 
 ### Node 757: Dementia Diagnosis Rate
-- **Scale:** Crisis | **Domain:** Health, Disability | **Unit:** New diagnoses per 1k age 65+
+- **Scale:** 6 | **Domain:** Health, Disability | **Unit:** New diagnoses per 1k age 65+
 - **Baseline:** 22/1k (2023). Range: 14-38. **Source:** Medicare, claims.
 
 ### Node 758: Functional Decline (ADL Loss)
-- **Scale:** Crisis | **Domain:** Disability, LTSS | **Unit:** % age 65+ losing ADL independence
+- **Scale:** 4 | **Domain:** Disability, LTSS | **Unit:** % age 65+ losing ADL independence
 - **Baseline:** 8.5% annually (2023). Range: 5-15%. **Source:** Medicare, NHATS.
 
 ### Node 759: Nursing Home Placement (Unplanned)
-- **Scale:** Crisis | **Domain:** LTSS, Disability | **Unit:** Emergency placements per 1k age 65+
+- **Scale:** 4 | **Domain:** LTSS, Disability | **Unit:** Emergency placements per 1k age 65+
 - **Baseline:** 4.5/1k (2023). Range: 2.5-9.5. **Source:** CMS, state.
 
 ### Node 760: Falls with Serious Injury (Age 65+)
-- **Scale:** Crisis | **Domain:** Injury, Disability | **Unit:** Falls with fracture/TBI per 1k elderly
+- **Scale:** 6 | **Domain:** Injury, Disability | **Unit:** Falls with fracture/TBI per 1k elderly
 - **Baseline:** 18/1k (2023). Range: 10-35. **Source:** Hospital data, CDC.
 
 ---
@@ -4310,363 +4310,363 @@ Lived Experience Level - Actual conditions, resources, exposures, constraints ex
 ## 5.14 ADDITIONAL SYSTEM FAILURE & CRISIS INDICATORS
 
 ### Node 761: Ambulance Response Time >10min
-- **Scale:** Crisis | **Domain:** Healthcare, Emergency | **Unit:** % calls >10min response
+- **Scale:** 6 | **Domain:** Healthcare, Emergency | **Unit:** % calls >10min response
 - **Baseline:** 18% (2023). Range: 8-42%. **Source:** EMS, NEMSIS.
 
 ### Node 762: Ambulance Transport Refusal Rate
-- **Scale:** Crisis | **Domain:** Healthcare, Economic | **Unit:** % refusing transport due to cost
+- **Scale:** 6 | **Domain:** Healthcare, Economic | **Unit:** % refusing transport due to cost
 - **Baseline:** 8.5% (2023). Range: 3.5-18%. **Source:** EMS, NEMSIS.
 
 ### Node 763: Mental Health Crisis Call Volume
-- **Scale:** Crisis | **Domain:** Mental Health | **Unit:** MH crisis calls per 1k pop
+- **Scale:** 6 | **Domain:** Mental Health | **Unit:** MH crisis calls per 1k pop
 - **Baseline:** 12.5/1k (2023). Range: 5.5-28. **Source:** 988, crisis lines.
 
 ### Node 764: Poison Control Center Call Rate
-- **Scale:** Crisis | **Domain:** Health, Environmental | **Unit:** Calls per 1k pop
+- **Scale:** 4 | **Domain:** Health, Environmental | **Unit:** Calls per 1k pop
 - **Baseline:** 32/1k (2023). Range: 18-55. **Source:** NPDS, AAPCC.
 
 ### Node 765: Child Protective Services Removal Rate
-- **Scale:** Crisis | **Domain:** Child, Social | **Unit:** Removals per 1k children
+- **Scale:** 4 | **Domain:** Child, Social | **Unit:** Removals per 1k children
 - **Baseline:** 3.2/1k (2023). Range: 1.5-7.5. **Source:** AFCARS, state.
 
 ### Node 766: Adult Protective Services Investigation Rate
-- **Scale:** Crisis | **Domain:** Social, Disability | **Unit:** Investigations per 1k age 65+
+- **Scale:** 4 | **Domain:** Social, Disability | **Unit:** Investigations per 1k age 65+
 - **Baseline:** 22/1k (2023). Range: 10-45. **Source:** State APS systems.
 
 ### Node 767: Domestic Violence Shelter Utilization
-- **Scale:** Crisis | **Domain:** Violence, Housing | **Unit:** Shelter days per 1k pop
+- **Scale:** 3 | **Domain:** Violence, Housing | **Unit:** Shelter days per 1k pop
 - **Baseline:** 85/1k (2023). Range: 35-185. **Source:** NNEDV, state.
 
 ### Node 768: Crisis Pregnancy Center Utilization
-- **Scale:** Crisis | **Domain:** Maternal, Economic | **Unit:** Visits per 1k women 15-44
+- **Scale:** 4 | **Domain:** Maternal, Economic | **Unit:** Visits per 1k women 15-44
 - **Baseline:** 42/1k (2023). Range: 18-95. **Source:** CPC networks, surveys.
 
 ### Node 769: Emergency Financial Assistance Requests
-- **Scale:** Crisis | **Domain:** Economic, Social | **Unit:** Requests per 1k pop
+- **Scale:** 4 | **Domain:** Economic, Social | **Unit:** Requests per 1k pop
 - **Baseline:** 65/1k (2023). Range: 28-145. **Source:** United Way 211, agencies.
 
 ### Node 770: Disaster Relief Application Rate
-- **Scale:** Crisis | **Domain:** Climate, Economic | **Unit:** FEMA applications per disaster
+- **Scale:** 4 | **Domain:** Climate, Economic | **Unit:** FEMA applications per disaster
 - **Baseline:** 850 per major disaster (2023). Range: 150-8,500. **Source:** FEMA.
 
 ### Node 771: Transfusion Reaction Rate
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Reactions per 1k transfusions
+- **Scale:** 4 | **Domain:** Healthcare | **Unit:** Reactions per 1k transfusions
 - **Baseline:** 1.2/1k (2023). Range: 0.5-3.5. **Source:** FDA, blood banks.
 
 ### Node 772: Organ Transplant Rejection (Acute) Rate
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Acute rejections per 100 transplants
+- **Scale:** 4 | **Domain:** Healthcare | **Unit:** Acute rejections per 100 transplants
 - **Baseline:** 8.5/100 (2023). Range: 4-18. **Source:** UNOS, OPTN.
 
 ### Node 773: Dialysis Access Failure Rate
-- **Scale:** Crisis | **Domain:** Health | **Unit:** Access failures per 100 patient-years
+- **Scale:** 3 | **Domain:** Health | **Unit:** Access failures per 100 patient-years
 - **Baseline:** 42/100 (2023). Range: 25-75. **Source:** USRDS, CMS.
 
 ### Node 774: Medical Device Failure/Recall Impact
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Serious device events per 100k pop
+- **Scale:** 3 | **Domain:** Healthcare | **Unit:** Serious device events per 100k pop
 - **Baseline:** 18/100k (2023). Range: 8-42. **Source:** FDA MAUDE.
 
 ### Node 775: Blood Supply Shortage Days
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Days with critical shortage
+- **Scale:** 3 | **Domain:** Healthcare | **Unit:** Days with critical shortage
 - **Baseline:** 22 days (2023). Range: 5-85. **Source:** Red Cross, AABB.
 
 ### Node 776: Pharmacy Closure (Community Impact)
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Closures per 100k pop
+- **Scale:** 3 | **Domain:** Healthcare | **Unit:** Closures per 100k pop
 - **Baseline:** 2.8/100k (2023). Range: 0.5-12. **Source:** NCPDP, pharmacy chains.
 
 ### Node 777: Mental Health Provider Burnout Rate
-- **Scale:** Crisis | **Domain:** Mental Health, Healthcare | **Unit:** % high burnout
+- **Scale:** 3 | **Domain:** Mental Health, Healthcare | **Unit:** % high burnout
 - **Baseline:** 52% (2023). Range: 35-72%. **Source:** Surveys, research.
 
 ### Node 778: Healthcare Worker Assault Rate
-- **Scale:** Crisis | **Domain:** Healthcare, Violence | **Unit:** Assaults per 1k workers
+- **Scale:** 4 | **Domain:** Healthcare, Violence | **Unit:** Assaults per 1k workers
 - **Baseline:** 8.5/1k (2023). Range: 4-22. **Source:** BLS, OSHA.
 
 ### Node 779: School Shooting Incidents
-- **Scale:** Crisis | **Domain:** Violence, Education | **Unit:** Incidents per 10k schools
+- **Scale:** 3 | **Domain:** Violence, Education | **Unit:** Incidents per 10k schools
 - **Baseline:** 0.8/10k (2023). Range: 0.2-2.5. **Source:** K-12 SSDB, FBI.
 
 ### Node 780: Mass Shooting Events
-- **Scale:** Crisis | **Domain:** Violence | **Unit:** Events (4+ shot) per 1M pop
+- **Scale:** 4 | **Domain:** Violence | **Unit:** Events (4+ shot) per 1M pop
 - **Baseline:** 0.18/1M (2023). Range: 0.05-0.65. **Source:** GVA, FBI.
 
 ### Node 781: Hate Crime Rate
-- **Scale:** Crisis | **Domain:** Violence, Social | **Unit:** Offenses per 100k
+- **Scale:** 4 | **Domain:** Violence, Social | **Unit:** Offenses per 100k
 - **Baseline:** 7.5/100k (2023). Range: 2.5-22. **Source:** FBI UCR, state.
 
 ### Node 782: Human Rights Violation (Documented) Rate
-- **Scale:** Crisis | **Domain:** Social, Criminal Justice | **Unit:** Violations per 100k
+- **Scale:** 4 | **Domain:** Social, Criminal Justice | **Unit:** Violations per 100k
 - **Baseline:** 4.2/100k (2023). Range: 1.2-15. **Source:** DOJ, advocacy orgs.
 
 ### Node 783: Labor Trafficking (Identified) Rate
-- **Scale:** Crisis | **Domain:** Economic, Violence | **Unit:** Cases per 100k
+- **Scale:** 4 | **Domain:** Economic, Violence | **Unit:** Cases per 100k
 - **Baseline:** 0.8/100k (2023). Range: 0.2-3.5. **Source:** DOJ, NHTH.
 
 ### Node 784: Immigration Detention Rate
-- **Scale:** Crisis | **Domain:** Social, Criminal Justice | **Unit:** Detained per 1k immigrants
+- **Scale:** 3 | **Domain:** Social, Criminal Justice | **Unit:** Detained per 1k immigrants
 - **Baseline:** 12/1k (2023). Range: 3.5-35. **Source:** ICE, DHS.
 
 ### Node 785: Asylum Application Denial Rate
-- **Scale:** Crisis | **Domain:** Social | **Unit:** % applications denied
+- **Scale:** 3 | **Domain:** Social | **Unit:** % applications denied
 - **Baseline:** 68% (2023). Range: 45-88%. **Source:** EOIR, DHS.
 
 ### Node 786: Language Access Barrier (Healthcare)
-- **Scale:** Crisis | **Domain:** Healthcare, Social | **Unit:** % LEP reporting access issues
+- **Scale:** 3 | **Domain:** Healthcare, Social | **Unit:** % LEP reporting access issues
 - **Baseline:** 42% LEP (2023). Range: 28-68%. **Source:** Surveys, OCR.
 
 ### Node 787: Medical Interpreter Unavailability Rate
-- **Scale:** Crisis | **Domain:** Healthcare, Social | **Unit:** % encounters needing but lacking interpreter
+- **Scale:** 3 | **Domain:** Healthcare, Social | **Unit:** % encounters needing but lacking interpreter
 - **Baseline:** 22% (2023). Range: 12-45%. **Source:** Hospitals, surveys.
 
 ### Node 788: Disability Discrimination (Documented) Rate
-- **Scale:** Crisis | **Domain:** Disability, Social | **Unit:** Complaints per 100k with disability
+- **Scale:** 4 | **Domain:** Disability, Social | **Unit:** Complaints per 100k with disability
 - **Baseline:** 85/100k (2023). Range: 35-185. **Source:** EEOC, DOJ, HUD.
 
 ### Node 789: Housing Discrimination Complaints
-- **Scale:** Crisis | **Domain:** Housing, Social | **Unit:** Complaints per 100k pop
+- **Scale:** 4 | **Domain:** Housing, Social | **Unit:** Complaints per 100k pop
 - **Baseline:** 18/100k (2023). Range: 8-42. **Source:** HUD FHEO.
 
 ### Node 790: Employment Discrimination Charges
-- **Scale:** Crisis | **Domain:** Employment, Social | **Unit:** Charges per 1k workers
+- **Scale:** 4 | **Domain:** Employment, Social | **Unit:** Charges per 1k workers
 - **Baseline:** 1.8/1k (2023). Range: 0.8-4.5. **Source:** EEOC.
 
 ### Node 791: Voting Rights Violation (Documented) Rate
-- **Scale:** Crisis | **Domain:** Civic, Social | **Unit:** Violations per 100k registered
+- **Scale:** 4 | **Domain:** Civic, Social | **Unit:** Violations per 100k registered
 - **Baseline:** 4.5/100k (2023). Range: 1.2-18. **Source:** DOJ, advocacy.
 
 ### Node 792: Public Benefit Application Denial Rate
-- **Scale:** Crisis | **Domain:** Economic, Social | **Unit:** % applications denied
+- **Scale:** 3 | **Domain:** Economic, Social | **Unit:** % applications denied
 - **Baseline:** 38% (2023). Range: 22-62%. **Source:** HHS, state agencies.
 
 ### Node 793: Medicaid Disenrollment (Procedural) Rate
-- **Scale:** Crisis | **Domain:** Healthcare, Economic | **Unit:** % disenrolled procedurally
+- **Scale:** 3 | **Domain:** Healthcare, Economic | **Unit:** % disenrolled procedurally
 - **Baseline:** 28% (2023 unwinding). Range: 15-55%. **Source:** CMS, KFF, state.
 
 ### Node 794: SNAP Benefit Reduction/Termination Rate
-- **Scale:** Crisis | **Domain:** Food, Economic | **Unit:** % benefits reduced/ended
+- **Scale:** 3 | **Domain:** Food, Economic | **Unit:** % benefits reduced/ended
 - **Baseline:** 22% participants (2023). Range: 12-42%. **Source:** USDA FNS, state.
 
 ### Node 795: Childcare Center Closure Rate
-- **Scale:** Crisis | **Domain:** Child, Economic | **Unit:** Closures per 1k centers
+- **Scale:** 3 | **Domain:** Child, Economic | **Unit:** Closures per 1k centers
 - **Baseline:** 45/1k (2023). Range: 22-95. **Source:** State licensing, NAEYC.
 
 ### Node 796: Rural Hospital Closure Rate
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Closures per 1k rural hospitals
+- **Scale:** 3 | **Domain:** Healthcare | **Unit:** Closures per 1k rural hospitals
 - **Baseline:** 12/1k annually (2023). Range: 5-28. **Source:** UNC Sheps, AHA.
 
 ### Node 797: Primary Care Practice Closure Rate
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Closures per 1k practices
+- **Scale:** 5 | **Domain:** Healthcare | **Unit:** Closures per 1k practices
 - **Baseline:** 8.5/1k (2023). Range: 3.5-18. **Source:** HRSA, surveys.
 
 ### Node 798: Mental Health Clinic Closure Rate
-- **Scale:** Crisis | **Domain:** Mental Health, Healthcare | **Unit:** Closures per 1k clinics
+- **Scale:** 3 | **Domain:** Mental Health, Healthcare | **Unit:** Closures per 1k clinics
 - **Baseline:** 22/1k (2023). Range: 10-52. **Source:** SAMHSA, state.
 
 ### Node 799: Substance Use Treatment Program Closure
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** Closures per 1k programs
+- **Scale:** 5 | **Domain:** Behavioral Health | **Unit:** Closures per 1k programs
 - **Baseline:** 28/1k (2023). Range: 12-65. **Source:** SAMHSA N-SSATS.
 
 ### Node 800: Public Transit Route Cancellation Rate
-- **Scale:** Crisis | **Domain:** Transportation | **Unit:** % routes reduced/eliminated
+- **Scale:** 2 | **Domain:** Transportation | **Unit:** % routes reduced/eliminated
 - **Baseline:** 8.5% (2023). Range: 2.5-22%. **Source:** FTA NTD, transit agencies.
 
 ### Node 801: School Closure (Permanent) Rate
-- **Scale:** Crisis | **Domain:** Education | **Unit:** Closures per 1k schools
+- **Scale:** 4 | **Domain:** Education | **Unit:** Closures per 1k schools
 - **Baseline:** 12/1k (2023). Range: 4.5-32. **Source:** NCES, state.
 
 ### Node 802: Library Closure/Hour Reduction Rate
-- **Scale:** Crisis | **Domain:** Education, Social | **Unit:** % libraries reducing services
+- **Scale:** 4 | **Domain:** Education, Social | **Unit:** % libraries reducing services
 - **Baseline:** 18% (2023). Range: 8-38%. **Source:** IMLS, ALA.
 
 ### Node 803: Community Center Closure Rate
-- **Scale:** Crisis | **Domain:** Social | **Unit:** Closures per 1k centers
+- **Scale:** 5 | **Domain:** Social | **Unit:** Closures per 1k centers
 - **Baseline:** 22/1k (2023). Range: 8-52. **Source:** Local agencies, surveys.
 
 ### Node 804: Faith-Based Org Closure Rate (Community Impact)
-- **Scale:** Crisis | **Domain:** Social | **Unit:** % congregations closing
+- **Scale:** 5 | **Domain:** Social | **Unit:** % congregations closing
 - **Baseline:** 2.8% annually (2023). Range: 1.2-6.5%. **Source:** ARDA, surveys.
 
 ### Node 805: Nonprofit Dissolution Rate (Health/Human Services)
-- **Scale:** Crisis | **Domain:** Social | **Unit:** Dissolutions per 1k nonprofits
+- **Scale:** 3 | **Domain:** Social | **Unit:** Dissolutions per 1k nonprofits
 - **Baseline:** 28/1k (2023). Range: 15-55. **Source:** IRS, NCCS.
 
 ### Node 806: Social Safety Net Gap (Unmet Need)
-- **Scale:** Crisis | **Domain:** Social, Economic | **Unit:** % eligible not receiving benefits
+- **Scale:** 3 | **Domain:** Social, Economic | **Unit:** % eligible not receiving benefits
 - **Baseline:** 42% (2023). Range: 28-68%. **Source:** HHS, research, state.
 
 ### Node 807: Crisis Hotline Unanswered Call Rate
-- **Scale:** Crisis | **Domain:** Mental Health, Social | **Unit:** % calls not answered
+- **Scale:** 3 | **Domain:** Mental Health, Social | **Unit:** % calls not answered
 - **Baseline:** 18% (2023). Range: 8-42%. **Source:** 988, Lifeline, crisis lines.
 
 ### Node 808: Emergency Shelter Capacity Shortage
-- **Scale:** Crisis | **Domain:** Housing, Social | **Unit:** % turned away due to capacity
+- **Scale:** 3 | **Domain:** Housing, Social | **Unit:** % turned away due to capacity
 - **Baseline:** 32% (2023). Range: 18-65%. **Source:** HUD, CoC, providers.
 
 ### Node 809: Food Bank Capacity Shortage Days
-- **Scale:** Crisis | **Domain:** Food, Social | **Unit:** Days unable to meet demand
+- **Scale:** 3 | **Domain:** Food, Social | **Unit:** Days unable to meet demand
 - **Baseline:** 22 days (2023). Range: 5-95. **Source:** Feeding America.
 
 ### Node 810: Blood Bank Critical Shortage Days
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Days <1 day supply
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** Days <1 day supply
 - **Baseline:** 8 days (2023). Range: 2-32. **Source:** Red Cross, AABB.
 
 ### Node 811: Organ Donation Waiting List Growth
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** % annual increase waiting
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** % annual increase waiting
 - **Baseline:** 3.5% (2023). Range: 1-8%. **Source:** UNOS OPTN.
 
 ### Node 812: Vaccine Shortage Impact
-- **Scale:** Crisis | **Domain:** Healthcare, Prevention | **Unit:** Days with critical shortage
+- **Scale:** 6 | **Domain:** Healthcare, Prevention | **Unit:** Days with critical shortage
 - **Baseline:** 12 days (2023). Range: 0-85. **Source:** CDC, FDA.
 
 ### Node 813: Insulin Affordability Crisis (Rationing)
-- **Scale:** Crisis | **Domain:** Healthcare, Economic | **Unit:** % diabetics rationing insulin
+- **Scale:** 6 | **Domain:** Healthcare, Economic | **Unit:** % diabetics rationing insulin
 - **Baseline:** 18% (2023). Range: 10-32%. **Source:** Surveys, ADA.
 
 ### Node 814: Prescription Drug Affordability Crisis
-- **Scale:** Crisis | **Domain:** Healthcare, Economic | **Unit:** % not filling due to cost
+- **Scale:** 3 | **Domain:** Healthcare, Economic | **Unit:** % not filling due to cost
 - **Baseline:** 22% chronic disease (2023). Range: 12-42%. **Source:** KFF, surveys.
 
 ### Node 815: Medical Bankruptcy Rate
-- **Scale:** Crisis | **Domain:** Economic, Healthcare | **Unit:** % bankruptcies medical-related
+- **Scale:** 3 | **Domain:** Economic, Healthcare | **Unit:** % bankruptcies medical-related
 - **Baseline:** 58% (2023). Range: 42-72%. **Source:** Courts, research.
 
 ### Node 816: Maternal Healthcare Desert (County-Level)
-- **Scale:** Crisis | **Domain:** Maternal, Healthcare | **Unit:** % counties no OB services
+- **Scale:** 3 | **Domain:** Maternal, Healthcare | **Unit:** % counties no OB services
 - **Baseline:** 32% counties (2023). Range: 15-55%. **Source:** March of Dimes.
 
 ### Node 817: Mental Health Provider Shortage (Severe)
-- **Scale:** Crisis | **Domain:** Mental Health, Healthcare | **Unit:** % population in HPSA
+- **Scale:** 3 | **Domain:** Mental Health, Healthcare | **Unit:** % population in HPSA
 - **Baseline:** 45% (2023). Range: 28-72%. **Source:** HRSA HPSA.
 
 ### Node 818: Primary Care Shortage (Severe)
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** % population in HPSA
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** % population in HPSA
 - **Baseline:** 38% (2023). Range: 22-68%. **Source:** HRSA HPSA.
 
 ### Node 819: Dental Care Shortage (Severe)
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** % population in HPSA
+- **Scale:** 6 | **Domain:** Healthcare | **Unit:** % population in HPSA
 - **Baseline:** 42% (2023). Range: 28-72%. **Source:** HRSA HPSA.
 
 ### Node 820: Disability Services Waitlist (Years)
-- **Scale:** Crisis | **Domain:** Disability, LTSS | **Unit:** Median years on waitlist
+- **Scale:** 3 | **Domain:** Disability, LTSS | **Unit:** Median years on waitlist
 - **Baseline:** 3.2 years (2023). Range: 0.5-12. **Source:** State Medicaid, KFF.
 
 ### Node 821: Affordable Housing Waitlist (Years)
-- **Scale:** Crisis | **Domain:** Housing, Economic | **Unit:** Median years on waitlist
+- **Scale:** 3 | **Domain:** Housing, Economic | **Unit:** Median years on waitlist
 - **Baseline:** 2.8 years (2023). Range: 0.5-8.5. **Source:** HUD, PHAs.
 
 ### Node 822: Childcare Waitlist (Months)
-- **Scale:** Crisis | **Domain:** Child, Economic | **Unit:** Median months waiting
+- **Scale:** 3 | **Domain:** Child, Economic | **Unit:** Median months waiting
 - **Baseline:** 8.5 months (2023). Range: 2-24. **Source:** State agencies, surveys.
 
 ### Node 823: Mental Health Treatment Waitlist (Weeks)
-- **Scale:** Crisis | **Domain:** Mental Health | **Unit:** Median weeks to first appointment
+- **Scale:** 3 | **Domain:** Mental Health | **Unit:** Median weeks to first appointment
 - **Baseline:** 6.5 weeks (2023). Range: 2-22. **Source:** Surveys, providers.
 
 ### Node 824: Specialty Care Waitlist (Weeks)
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** Median weeks to specialist
+- **Scale:** 3 | **Domain:** Healthcare | **Unit:** Median weeks to specialist
 - **Baseline:** 4.5 weeks (2023). Range: 1.5-18. **Source:** Surveys, Merritt Hawkins.
 
 ### Node 825: SUD Treatment Capacity Shortage
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** % needing but unable to access
+- **Scale:** 3 | **Domain:** Behavioral Health | **Unit:** % needing but unable to access
 - **Baseline:** 82% (2023). Range: 68-92%. **Source:** NSDUH, SAMHSA.
 
 ### Node 826: Crisis Stabilization Bed Shortage
-- **Scale:** Crisis | **Domain:** Mental Health, Healthcare | **Unit:** % needing bed but unavailable
+- **Scale:** 3 | **Domain:** Mental Health, Healthcare | **Unit:** % needing bed but unavailable
 - **Baseline:** 65% (2023). Range: 42-88%. **Source:** State systems, SAMHSA.
 
 ### Node 827: Detox Bed Shortage
-- **Scale:** Crisis | **Domain:** Behavioral Health | **Unit:** % needing but unable to access
+- **Scale:** 3 | **Domain:** Behavioral Health | **Unit:** % needing but unable to access
 - **Baseline:** 72% (2023). Range: 52-92%. **Source:** State systems, SAMHSA.
 
 ### Node 828: Respite Care Unavailability (Caregivers)
-- **Scale:** Crisis | **Domain:** LTSS, Social | **Unit:** % caregivers needing but unable
+- **Scale:** 2 | **Domain:** LTSS, Social | **Unit:** % caregivers needing but unable
 - **Baseline:** 68% (2023). Range: 48-85%. **Source:** Surveys, AARP.
 
 ### Node 829: Home Health Aide Shortage (Unmet Hours)
-- **Scale:** Crisis | **Domain:** LTSS, Healthcare | **Unit:** % needed hours unfilled
+- **Scale:** 2 | **Domain:** LTSS, Healthcare | **Unit:** % needed hours unfilled
 - **Baseline:** 42% (2023). Range: 28-72%. **Source:** State Medicaid, PHI.
 
 ### Node 830: Interpreter Service Unavailability (Critical)
-- **Scale:** Crisis | **Domain:** Healthcare, Social | **Unit:** % critical needs unmet
+- **Scale:** 2 | **Domain:** Healthcare, Social | **Unit:** % critical needs unmet
 - **Baseline:** 28% (2023). Range: 15-55%. **Source:** Hospitals, OCR.
 
 ### Node 831: Accessible Transportation Denial Rate
-- **Scale:** Crisis | **Domain:** Disability, Transportation | **Unit:** % paratransit requests denied
+- **Scale:** 2 | **Domain:** Disability, Transportation | **Unit:** % paratransit requests denied
 - **Baseline:** 12% (2023). Range: 4-32%. **Source:** FTA, disability advocates.
 
 ### Node 832: Disability Benefit Application Denial Rate
-- **Scale:** Crisis | **Domain:** Disability, Economic | **Unit:** % SSDI/SSI denied initially
+- **Scale:** 6 | **Domain:** Disability, Economic | **Unit:** % SSDI/SSI denied initially
 - **Baseline:** 65% (2023). Range: 52-78%. **Source:** SSA.
 
 ### Node 833: Unemployment Benefits Denial Rate
-- **Scale:** Crisis | **Domain:** Employment, Economic | **Unit:** % claims denied
+- **Scale:** 6 | **Domain:** Employment, Economic | **Unit:** % claims denied
 - **Baseline:** 22% (2023). Range: 12-42%. **Source:** DOL, state.
 
 ### Node 834: Workers' Compensation Denial Rate
-- **Scale:** Crisis | **Domain:** Occupational, Economic | **Unit:** % claims denied
+- **Scale:** 4 | **Domain:** Occupational, Economic | **Unit:** % claims denied
 - **Baseline:** 38% (2023). Range: 22-62%. **Source:** State agencies, NASI.
 
 ### Node 835: Family Leave Request Denial Rate
-- **Scale:** Crisis | **Domain:** Employment, Social | **Unit:** % FMLA requests denied
+- **Scale:** 4 | **Domain:** Employment, Social | **Unit:** % FMLA requests denied
 - **Baseline:** 18% (2023). Range: 8-38%. **Source:** DOL, surveys.
 
 ### Node 836: School Meal Debt Crisis (Students Affected)
-- **Scale:** Crisis | **Domain:** Food, Education, Child | **Unit:** % students with meal debt
+- **Scale:** 3 | **Domain:** Food, Education, Child | **Unit:** % students with meal debt
 - **Baseline:** 12% (2023). Range: 4-28%. **Source:** School Nutrition Assn.
 
 ### Node 837: Student Lunch Shaming Incidents
-- **Scale:** Crisis | **Domain:** Food, Education, Child | **Unit:** Incidents per 1k students
+- **Scale:** 4 | **Domain:** Food, Education, Child | **Unit:** Incidents per 1k students
 - **Baseline:** 4.5/1k (2023). Range: 1-15. **Source:** Advocacy, surveys.
 
 ### Node 838: Energy Insecurity (Inability to Heat/Cool)
-- **Scale:** Crisis | **Domain:** Housing, Economic, Climate | **Unit:** % HH unable to maintain temp
+- **Scale:** 4 | **Domain:** Housing, Economic, Climate | **Unit:** % HH unable to maintain temp
 - **Baseline:** 18% (2023). Range: 8-38%. **Source:** EIA RECS, Household Pulse.
 
 ### Node 839: Internet Disconnection Due to Cost
-- **Scale:** Crisis | **Domain:** Digital, Economic | **Unit:** % HH losing internet—cost
+- **Scale:** 4 | **Domain:** Digital, Economic | **Unit:** % HH losing internet—cost
 - **Baseline:** 12% (2023). Range: 5-28%. **Source:** Surveys, FCC.
 
 ### Node 840: Phone Disconnection Due to Cost
-- **Scale:** Crisis | **Domain:** Digital, Economic | **Unit:** % HH losing phone—cost
+- **Scale:** 4 | **Domain:** Digital, Economic | **Unit:** % HH losing phone—cost
 - **Baseline:** 8.5% (2023). Range: 3-22%. **Source:** Surveys, FCC.
 
 ### Node 841: Broadband Affordability Crisis
-- **Scale:** Crisis | **Domain:** Digital, Economic | **Unit:** % unable to afford broadband
+- **Scale:** 4 | **Domain:** Digital, Economic | **Unit:** % unable to afford broadband
 - **Baseline:** 22% (2023). Range: 10-45%. **Source:** FCC, surveys.
 
 ### Node 842: Digital Literacy Barrier (Critical)
-- **Scale:** Crisis | **Domain:** Digital, Education | **Unit:** % unable to complete essential online tasks
+- **Scale:** 6 | **Domain:** Digital, Education | **Unit:** % unable to complete essential online tasks
 - **Baseline:** 18% adults (2023). Range: 8-38%. **Source:** PIAAC, surveys.
 
 ### Node 843: Telehealth Inability Due to Digital Access
-- **Scale:** Crisis | **Domain:** Healthcare, Digital | **Unit:** % unable to access telehealth
+- **Scale:** 2 | **Domain:** Healthcare, Digital | **Unit:** % unable to access telehealth
 - **Baseline:** 22% (2023). Range: 10-45%. **Source:** Surveys, FCC.
 
 ### Node 844: Banking Desert (No Physical Bank Access)
-- **Scale:** Crisis | **Domain:** Economic | **Unit:** % population in banking desert
+- **Scale:** 2 | **Domain:** Economic | **Unit:** % population in banking desert
 - **Baseline:** 8.5% (2023). Range: 2-25%. **Source:** FDIC, NCRC.
 
 ### Node 845: Pharmacy Desert
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** % population >5mi from pharmacy
+- **Scale:** 2 | **Domain:** Healthcare | **Unit:** % population >5mi from pharmacy
 - **Baseline:** 4.5% (2023). Range: 1-18%. **Source:** NCPDP, research.
 
 ### Node 846: Grocery Store Desert (Food Desert)
-- **Scale:** Crisis | **Domain:** Food | **Unit:** % population in food desert
+- **Scale:** 2 | **Domain:** Food | **Unit:** % population in food desert
 - **Baseline:** 12.8% (2023). Range: 4-35%. **Source:** USDA ERS.
 
 ### Node 847: Healthcare Desert (No Primary Care)
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** % population >30min from PCP
+- **Scale:** 3 | **Domain:** Healthcare | **Unit:** % population >30min from PCP
 - **Baseline:** 18% rural (2023). Range: 5-52%. **Source:** HRSA, research.
 
 ### Node 848: Hospital Desert (No Hospital Access)
-- **Scale:** Crisis | **Domain:** Healthcare | **Unit:** % population >60min from hospital
+- **Scale:** 3 | **Domain:** Healthcare | **Unit:** % population >60min from hospital
 - **Baseline:** 8.5% (2023). Range: 2-32%. **Source:** AHA, research.
 
 ### Node 849: Mental Health Desert (No Provider Access)
-- **Scale:** Crisis | **Domain:** Mental Health | **Unit:** % population no provider within 60min
+- **Scale:** 3 | **Domain:** Mental Health | **Unit:** % population no provider within 60min
 - **Baseline:** 28% (2023). Range: 10-65%. **Source:** HRSA, SAMHSA.
 
 ### Node 850: Broadband Desert (No Access)
-- **Scale:** Crisis | **Domain:** Digital | **Unit:** % without broadband access
+- **Scale:** 4 | **Domain:** Digital | **Unit:** % without broadband access
 - **Baseline:** 12% (2023). Range: 3-42%. **Source:** FCC, county.
 
 ---

@@ -1,7 +1,7 @@
 # Node and System Definitions
 
-**Version:** 1.0
-**Last Updated:** 2025-11-17
+**Version:** 1.1
+**Last Updated:** 2025-11-19
 **Purpose:** Foundational framework defining nodes, systems, and organizational principles for the HealthSystems Platform
 
 ---
@@ -26,11 +26,11 @@
 
 A **health system** is the complete network of factors, processes, and feedback loops that determine population health outcomes. This includes:
 
-- **Structural determinants** (policies, economic systems, power structures)
-- **Institutional infrastructure** (organizations, facilities, service delivery systems)
-- **Individual/household conditions** (lived experiences, resources, exposures)
-- **Intermediate pathways** (behaviors, biological states, utilization patterns)
-- **Crisis endpoints** (health outcomes, system failures, mortality)
+- **Structural determinants (Scale 1-2)** - Policies, economic systems, power structures at federal/state level
+- **Institutional infrastructure (Scale 3)** - Organizations, facilities, service delivery systems
+- **Individual/household conditions (Scale 4)** - Lived experiences, resources, exposures at the individual level
+- **Intermediate pathways (Scale 6)** - Behaviors, biological states, utilization patterns that mediate outcomes
+- **Crisis endpoints (Scale 7)** - Health outcomes, system failures, mortality events
 
 ### Node Definition
 
@@ -179,10 +179,19 @@ If a node is an index, its construction must be specified.
 
 ## Scale Hierarchy
 
-Nodes are organized by the **level of system operation** they represent, forming a causal hierarchy from macro-structures to individual outcomes.
+Nodes are organized by the **level of system operation** they represent, forming a causal hierarchy from macro-structures to individual outcomes. The system uses a **1-7 scale** where:
+- **1 = Structural determinants** (federal/state policy level)
+- **2 = Built environment & infrastructure** (physical environment and regional structures)
+- **3 = Institutional infrastructure** (organizations and service delivery)
+- **4 = Individual/household conditions** (lived experiences)
+- **5 = Individual behaviors & psychosocial** (health-seeking, adherence, coping)
+- **6 = Intermediate pathways** (clinical measures and utilization patterns)
+- **7 = Crisis endpoints** (acute health outcomes and mortality)
+
+The 7-scale taxonomy reflects **causal distance** from health outcomes (decades → years → months → weeks → days → hours → immediate) and the **structural → individual spectrum** from macro-policy to crisis response.
 
 ### Scale 1: STRUCTURAL DETERMINANTS
-**Federal/State Policy Level**
+**Entirely Structural - Federal/State Policy Level**
 
 **Definition:** Policy regimes, laws, regulations, and macro-economic conditions that shape the rules and resources available across populations.
 
@@ -212,8 +221,48 @@ Nodes are organized by the **level of system operation** they represent, forming
 
 ---
 
-### Scale 2: INSTITUTIONAL INFRASTRUCTURE
-**Local Implementation and Organizational Level**
+### Scale 2: BUILT ENVIRONMENT & INFRASTRUCTURE
+**Physical Infrastructure, Environmental Quality, and Regional Structural Factors**
+
+**Definition:** The physical environment, infrastructure systems, and environmental quality measures that shape health opportunities and exposures at the regional or neighborhood level. These structural factors sit between macro-policy (Scale 1) and institutional implementation (Scale 3).
+
+**Characteristics:**
+- Physical/environmental rather than policy or institutional
+- Regional or neighborhood-level variation
+- Changes occur over years to decades (slower than individual conditions)
+- Shapes opportunities for health behaviors and exposures
+- Often measurable through environmental monitoring or GIS data
+
+**Causal Distance:** Years to decades from health outcomes
+
+**Domains:**
+- Air quality and pollution (PM2.5, ozone, pollutants)
+- Water quality and contamination
+- Noise pollution and environmental noise
+- Climate and heat exposure (urban heat islands, extreme heat days)
+- Green space and tree canopy (parks, natural areas)
+- Walkability and pedestrian infrastructure (sidewalks, street connectivity)
+- Transportation infrastructure (transit access, bike lanes, public transit density)
+- Food environment (food deserts, grocery store access, supermarket density)
+- Housing stock quality and age
+- Neighborhood design and built environment quality
+
+**Example Nodes:**
+- PM2.5 air pollution concentration (μg/m³)
+- Noise exposure level (decibels)
+- Urban heat island intensity (°F above rural baseline)
+- Green space per capita (acres per 1,000 residents)
+- Walkability score (index 0-100)
+- Transit stop density (stops per square mile)
+- Food desert status (binary: yes/no grocery access within 1 mile)
+- Bike lane mileage per capita
+- Housing stock age (median year built)
+- Street connectivity (intersection density)
+
+---
+
+### Scale 3: INSTITUTIONAL INFRASTRUCTURE
+**Organizations, Systems, and Institutional Capacity**
 
 **Definition:** Organizations, facilities, workforce, and local systems that deliver services and implement structural policies on the ground.
 
@@ -245,8 +294,8 @@ Nodes are organized by the **level of system operation** they represent, forming
 
 ---
 
-### Scale 3: INDIVIDUAL/HOUSEHOLD CONDITIONS
-**Lived Experience Level**
+### Scale 4: INDIVIDUAL/HOUSEHOLD CONDITIONS
+**Proximal Living Conditions and Exposures**
 
 **Definition:** The actual conditions, resources, exposures, and constraints experienced by individuals and households in their daily lives.
 
@@ -285,8 +334,70 @@ Nodes are organized by the **level of system operation** they represent, forming
 
 ---
 
-### Scale 4: INTERMEDIATE PATHWAYS/PROXIES
-**Behavioral, Biological, and Utilization Mediators**
+### Scale 5: INDIVIDUAL BEHAVIORS & PSYCHOSOCIAL FACTORS
+**Health-Seeking, Adherence, Coping, and Individual-Level Actions**
+
+**Definition:** Individual-level behaviors, health-seeking actions, adherence patterns, and psychosocial responses that mediate between living conditions (Scale 4) and biological pathways (Scale 6). These represent individual agency operating within structural constraints.
+
+**Characteristics:**
+- Individual actions and choices (constrained by upstream factors)
+- Modifiable through education, support, or behavior change interventions
+- Shorter causal distance than conditions (days to weeks to health impacts)
+- Bridge between material conditions and biological embodiment
+- Often measured through surveys, self-report, or behavioral tracking
+
+**Causal Distance:** Days to weeks from health outcomes
+
+**Domains:**
+- Healthcare-seeking and utilization behaviors
+  - Medication adherence and compliance
+  - Well-visit adherence (pediatric, adult preventive)
+  - Screening adherence (cancer, chronic disease)
+  - Care-seeking when sick
+  - Delayed or forgone care due to barriers
+  - Treatment adherence and follow-up
+
+- Health risk behaviors
+  - Tobacco use and smoking
+  - Alcohol consumption patterns
+  - Substance use behaviors
+  - Physical activity and exercise
+  - Sedentary behavior
+  - Dietary patterns and nutrition choices
+
+- Psychosocial factors
+  - Health literacy and health knowledge
+  - Patient activation and self-efficacy
+  - Coping strategies and stress management
+  - Social support utilization
+  - Resilience and adaptation
+  - Help-seeking behaviors
+
+**Important Distinction:**
+- **Scale 4 = Conditions** ("Can't afford medications" - material constraint)
+- **Scale 5 = Behaviors** ("Skipping doses to save money" - behavioral response to constraint)
+
+**Example Nodes:**
+- Medication adherence rate (% taking as prescribed)
+- Medication nonadherence (% not taking as prescribed)
+- Well-child visit adherence (% on schedule)
+- Preventive screening adherence (mammography, colonoscopy on time)
+- Delayed care due to cost (% reporting)
+- Forgone medical care (% with unmet need)
+- Current smoking prevalence (% current smokers)
+- Binge drinking prevalence (% reporting)
+- Physical activity level (minutes per week)
+- Sedentary behavior (hours per day)
+- Fruit and vegetable consumption (servings per day)
+- Health literacy score (index 0-100)
+- Patient activation measure (PAM score)
+
+**Key Insight:** Scale 5 behaviors are NOT freely chosen - they are shaped and constrained by Scale 1-4 structural and material conditions. This taxonomy explicitly rejects victim-blaming narratives by positioning behaviors DOWNSTREAM of structural determinants.
+
+---
+
+### Scale 6: INTERMEDIATE PATHWAYS
+**Behaviors, Utilization, and Intermediate Risk Factors**
 
 **Definition:** States and behaviors that mediate between living conditions and health outcomes. These are often partially modifiable by individuals but heavily constrained by upstream conditions.
 
@@ -317,8 +428,8 @@ Nodes are organized by the **level of system operation** they represent, forming
 
 ---
 
-### Scale 5: CRISIS ENDPOINTS
-**Acute Events and Health Outcomes**
+### Scale 7: CRISIS ENDPOINTS
+**Pure Crisis Endpoints - Acute Health Outcomes and Crises**
 
 **Definition:** Acute health crises, chronic disease states, mortality, and other ultimate outcomes that the system seeks to prevent or minimize.
 
@@ -665,7 +776,8 @@ Every node in the inventory must include the following fields:
 - "Air Pollution Concentration (PM2.5)"
 
 #### 2. **Scale**
-- One of: Structural, Institutional, Individual, Intermediate, Crisis
+- Numeric value: 1 (entirely structural), 3 (institutional), 4 (individual/household), 6 (intermediate pathways), or 7 (crisis endpoints)
+- Note: Scales 2 and 5 reserved for future taxonomy refinement
 
 #### 3. **Domain(s)**
 - Primary domain
@@ -732,7 +844,7 @@ Every node in the inventory must include the following fields:
 ### Example 1: Clear Node
 
 **Node Name:** Uninsured Rate
-**Scale:** Individual
+**Scale:** 4
 **Domain:** Healthcare System
 **Type:** Rate
 **Unit:** Percent of population under age 65
@@ -751,7 +863,7 @@ Every node in the inventory must include the following fields:
 ### Example 2: Edge Case - Policy as Node
 
 **Node Name:** Medicaid Expansion Status
-**Scale:** Structural
+**Scale:** 1
 **Domain:** Healthcare System
 **Type:** Policy
 **Unit:** Binary (0=not expanded, 1=expanded)
@@ -774,7 +886,7 @@ Every node in the inventory must include the following fields:
 ### Example 3: Edge Case - Service Availability
 
 **Node Name:** Federally Qualified Health Center Density
-**Scale:** Institutional
+**Scale:** 3
 **Domain:** Healthcare System
 **Type:** Access/Availability
 **Unit:** FQHCs per 100,000 population
@@ -796,7 +908,7 @@ Every node in the inventory must include the following fields:
 ### Example 4: Edge Case - Intermediate Pathway
 
 **Node Name:** Hypertension Control Rate
-**Scale:** Intermediate
+**Scale:** 6
 **Domain:** Healthcare System (secondary: Chronic Disease)
 **Type:** Quality/Intensity
 **Unit:** Percent of adults with diagnosed hypertension with BP <140/90 mmHg
@@ -818,7 +930,7 @@ Every node in the inventory must include the following fields:
 ### Example 5: Edge Case - Composite Index
 
 **Node Name:** Neighborhood Deprivation Index
-**Scale:** Individual
+**Scale:** 4
 **Domain:** Economic Security (secondary: Social Environment)
 **Type:** Exposure
 **Unit:** Standardized score (mean=0, SD=1), higher = more deprived
@@ -876,7 +988,7 @@ Every node in the inventory must include the following fields:
 **Answer:** Yes, it's a valid **crisis endpoint** node.
 
 **Node Name:** Ambulatory Care-Sensitive Emergency Department Visit Rate
-**Scale:** Crisis
+**Scale:** 7
 **Domain:** Healthcare System
 **Type:** Rate
 **Unit:** ED visits for ACSC per 1,000 population per year
@@ -900,7 +1012,7 @@ Before adding a node to the inventory, verify:
 - ✅ **Observable:** Can be measured with existing or feasible data
 - ✅ **Quantifiable:** Has defined units
 - ✅ **Independent:** Exists as a system state, not as an intervention
-- ✅ **Scale-appropriate:** Correctly classified as Structural, Institutional, Individual, Intermediate, or Crisis
+- ✅ **Scale-appropriate:** Correctly classified as Scale 1 (structural), 3 (institutional), 4 (individual), 6 (intermediate), or 7 (crisis)
 - ✅ **Domain-aligned:** Fits within one or more defined domains
 - ✅ **Well-defined:** Clear operational definition, no ambiguity
 - ✅ **Data-grounded:** Data source identified (even if aspirational)
@@ -909,6 +1021,17 @@ Before adding a node to the inventory, verify:
 ---
 
 ## Version History
+
+**Version 1.1 (2025-11-19):**
+- **Updated to 1-7 scale system** (from previous 5-scale system)
+  - Scale 1: Entirely structural (federal/state policy)
+  - Scale 3: Institutional infrastructure
+  - Scale 4: Individual/household conditions
+  - Scale 6: Intermediate pathways
+  - Scale 7: Pure crisis endpoints
+  - Scales 2 and 5 reserved for future refinement
+- Updated all examples to use numeric scale labels
+- Clarified scale definitions with numeric identifiers
 
 **Version 1.0 (2025-11-17):**
 - Initial comprehensive framework

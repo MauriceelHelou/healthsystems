@@ -1,0 +1,74 @@
+topic: respiratory
+
+query_template: |
+  Identify causal mechanisms linking {from_node} to {to_node} in the context of respiratory health and disease.
+
+  Focus on:
+  - Airway inflammation and remodeling
+  - Environmental exposures (air pollution, allergens, occupational hazards)
+  - Infectious respiratory diseases
+  - Housing quality and indoor air quality
+  - Healthcare access and treatment adherence
+  - Behavioral factors (smoking, physical activity)
+  - Social determinants (poverty, neighborhood environment)
+  - Structural factors (environmental policy, housing policy)
+
+  Provide evidence from respiratory epidemiology, environmental health studies, and clinical trials.
+
+from_nodes:
+  - air_pollution_outdoor
+  - air_pollution_indoor
+  - housing_quality
+  - dampness_mold
+  - smoking
+  - secondhand_smoke
+  - occupational_exposures
+  - allergen_exposure
+  - poverty
+  - neighborhood_deprivation
+  - healthcare_access
+  - medication_adherence
+  - obesity
+  - physical_activity
+  - climate_extremes
+  - temperature_variability
+  - humidity
+  - green_space_access
+  - traffic_proximity
+  - industrial_facilities
+
+to_nodes:
+  - asthma
+  - asthma_exacerbation
+  - copd
+  - chronic_bronchitis
+  - emphysema
+  - respiratory_infection
+  - pneumonia
+  - lung_function_fev1
+  - airway_inflammation
+  - hospitalization_respiratory
+  - mortality_respiratory
+  - wheezing
+  - dyspnea
+  - respiratory_symptoms
+  - lung_cancer
+  - interstitial_lung_disease
+  - bronchiolitis
+  - respiratory_failure
+
+scales:
+  - 1  # Structural (environmental policy, housing policy)
+  - 2  # Environmental (air pollution, housing quality)
+  - 3  # Institutional (healthcare access)
+  - 4  # Individual conditions (asthma, COPD)
+  - 5  # Behaviors (smoking, medication adherence)
+  - 6  # Intermediate pathways (airway inflammation)
+  - 7  # Respiratory outcomes and complications
+
+output_dir: mechanism-bank/mechanisms/respiratory
+
+notes: |
+  Respiratory health is strongly influenced by environmental exposures and housing quality.
+  Focus on air pollution (outdoor and indoor), housing conditions, and occupational exposures.
+  Consider health disparities related to environmental racism and poverty.

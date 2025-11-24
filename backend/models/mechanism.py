@@ -5,7 +5,7 @@ MVP Scope: Focuses on network topology and directionality.
 Phase 2: Will add quantitative effect sizes and meta-analysis data.
 """
 
-from sqlalchemy import Column, String, Integer, DateTime, JSON, Text, Boolean, ForeignKey, Float
+from sqlalchemy import Column, String, Integer, DateTime, JSON, Text, Boolean, ForeignKey, Float, CheckConstraint
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from datetime import datetime
@@ -40,10 +40,18 @@ class Node(Base):
     # Category
     category = Column(String, index=True)  # built_environment, economic, political, etc.
 
+    # Scale (7-level taxonomy: 1=policy, 2=built_env, 3=institutional, 4=individual, 5=behavioral, 6=intermediate, 7=crisis)
+    scale = Column(Integer, nullable=False, index=True)
+
     # Metadata
     description = Column(Text)
     created_at = Column(DateTime, server_default=func.now())
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
+
+    # Table constraints
+    __table_args__ = (
+        CheckConstraint('scale >= 1 AND scale <= 7', name='scale_range'),
+    )
 
     # Relationships
     mechanisms_from = relationship("Mechanism", foreign_keys="Mechanism.from_node_id", back_populates="from_node")

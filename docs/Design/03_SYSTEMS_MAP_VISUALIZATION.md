@@ -1,8 +1,8 @@
 # Interactive Systems Map Visualization
 **HealthSystems Platform - Network Graph Specification**
 
-Version: 1.0
-Last Updated: 2025-11-16
+Version: 1.1
+Last Updated: 2025-11-19
 Status: MVP Scope (Topology & Direction Only)
 
 ---
@@ -74,30 +74,40 @@ This document specifies the visual design and interaction patterns for the core 
 | **Biological** | `#ea580c` (orange) | `#9a3412` (darker orange) | 80% |
 | **Default/Mixed** | `#6b7280` (gray) | `#374151` (darker gray) | 80% |
 
-### Node Type Indicators
+### Node Scale Indicators
 
-**Three Stock Types** (Differentiated by badge/icon, not shape):
+Nodes are labeled with a **1-7 scale** indicating their position in the causal hierarchy:
 
-1. **Structural/Capacity Nodes**
-   - Badge: Small square icon (top-right of circle)
-   - Icon: Building/cube (12px)
-   - Examples: CHWs, Housing Units
+**Scale Values:**
+- **Scale 1**: Entirely structural - Federal/state policy level (e.g., Medicaid Expansion Status)
+- **Scale 3**: Institutional infrastructure (e.g., Primary Care Physician Density, FQHC Sites)
+- **Scale 4**: Individual/household conditions (e.g., Uninsured Rate, Housing Cost Burden)
+- **Scale 6**: Intermediate pathways (e.g., Hypertension Control, Preventive Care Utilization)
+- **Scale 7**: Pure crisis endpoints (e.g., ED Visits, Hospitalizations, Mortality)
 
-2. **Proxy/Index Nodes**
-   - Badge: Gauge/meter icon
-   - Icon: Dashboard dial (12px)
-   - Examples: Trust Index, Continuity Index
+**Note:** Scales 2 and 5 are reserved for future taxonomy refinement.
 
-3. **Crisis/Outcome Nodes**
-   - Badge: Alert triangle icon
-   - Icon: Warning symbol (12px)
-   - Examples: ED Visits, Hospitalizations
-   - Additional visual: Thicker stroke (3px)
+**Visual Representation Options:**
+
+1. **Badge with Scale Number**
+   - Badge: Small circular badge (top-right of node)
+   - Content: Scale number (1, 3, 4, 6, or 7) in white text
+   - Background color based on scale:
+     - Scale 1: `#1e40af` (dark blue) - Structural
+     - Scale 3: `#7c3aed` (purple) - Institutional
+     - Scale 4: `#059669` (green) - Individual
+     - Scale 6: `#ea580c` (orange) - Intermediate
+     - Scale 7: `#dc2626` (red) - Crisis
+
+2. **Crisis Endpoint Special Treatment** (Scale 7)
+   - Additional alert triangle icon
+   - Thicker stroke (3px)
+   - Higher visual prominence
 
 **Badge Positioning**:
 ```
     ┌─────┐
-    │   [!]│  ← Badge (12px icon, white bg circle)
+    │   [7]│  ← Badge (14px diameter, scale number)
     │  •  │
     │     │
     └─────┘
@@ -359,7 +369,12 @@ If multiple mechanisms share the same source→target:
 
 **Custom Constraints**:
 - **Category Clustering**: Slight attraction within same category (optional)
-- **Stock Type Layering**: Structural → Proxy → Crisis (left to right tendency)
+- **Scale Layering**: Tendency to position nodes by scale (Scale 1 → Scale 7, left to right or top to bottom)
+  - Scale 1 (Structural) → leftmost/topmost
+  - Scale 3 (Institutional) → mid-left
+  - Scale 4 (Individual) → center
+  - Scale 6 (Intermediate) → mid-right
+  - Scale 7 (Crisis) → rightmost/bottommost
 - **Boundary**: Keep nodes within viewport bounds
 
 ### Initial Layout
@@ -440,8 +455,8 @@ If multiple mechanisms share the same source→target:
 ```
 ┌─────────────────────────────────┐
 │ Community Health Workers        │
+│ Scale: 3 (Institutional)        │
 │ Category: Built Environment     │
-│ Type: Structural Stock          │
 │ Connections: 15 outgoing, 3 in  │
 └─────────────────────────────────┘
 ```
@@ -537,16 +552,19 @@ When Economic is clicked (deactivated):
 
 **Behavior**: Dim edges that don't meet quality threshold
 
-### Node Type Filter
+### Node Scale Filter
 
 **UI**: Checkboxes in filter panel
 
 **Options**:
-- [x] Structural Stocks
-- [x] Proxy Indices
-- [x] Crisis Outcomes
+- [x] Scale 1 (Structural Policy)
+- [x] Scale 3 (Institutional)
+- [x] Scale 4 (Individual/Household)
+- [x] Scale 6 (Intermediate Pathways)
+- [x] Scale 7 (Crisis Endpoints)
 
-**Behavior**: Hide/show entire node types
+**Behavior**: Hide/show nodes by scale level
+**Use Case**: Focus on specific levels of the system (e.g., only show structural and crisis endpoints to see macro-level pathways)
 
 ### Search Function
 
@@ -638,7 +656,7 @@ Search: "housing"
 
 **Node Announcement** (on focus):
 ```
-"Community Health Workers, Built Environment category, Structural stock.
+"Community Health Workers, Scale 3 Institutional, Built Environment category.
 15 outgoing connections, 3 incoming connections. Press Enter to view details."
 ```
 
@@ -770,8 +788,9 @@ const MemoizedNode = React.memo(Node, (prev, next) => {
 │ Direction                                           │
 │ → Positive  ⊖→ Negative  ↔ Bidirectional          │
 ├─────────────────────────────────────────────────────┤
-│ Node Types                                          │
-│ [▪] Structural  [◗] Proxy  [⚠] Crisis Outcome     │
+│ Node Scale (1-7)                                    │
+│ [1] Structural  [3] Institutional  [4] Individual  │
+│ [6] Intermediate  [7] Crisis                       │
 └─────────────────────────────────────────────────────┘
 ```
 
@@ -908,6 +927,28 @@ downloadBlob(blob, 'systems-map.svg')
 **Existing Code**: `frontend/src/visualizations/MechanismGraph.tsx`
 - Already has basic force-directed layout
 - Needs enhancement for states, filtering, accessibility
+
+---
+
+## Version History
+
+**Version 1.1 (2025-11-19):**
+- Updated node taxonomy from text labels to **1-7 numeric scale system**
+- Scale 1: Entirely structural (policy level)
+- Scale 3: Institutional infrastructure
+- Scale 4: Individual/household conditions
+- Scale 6: Intermediate pathways
+- Scale 7: Pure crisis endpoints
+- Updated visual indicators, tooltips, and filters to use numeric scales
+- Added scale-based layout layering for force-directed graph
+- Scales 2 and 5 reserved for future refinement
+
+**Version 1.0 (2025-11-16):**
+- Initial specification
+- MVP scope defined (topology & direction only)
+- Node visual design with category colors
+- Edge design with evidence quality indicators
+- Interactive behaviors and accessibility
 
 ---
 

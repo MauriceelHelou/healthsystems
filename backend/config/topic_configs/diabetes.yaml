@@ -1,0 +1,72 @@
+topic: diabetes
+
+query_template: |
+  Identify causal mechanisms linking {from_node} to {to_node} in the context of type 2 diabetes.
+
+  Focus on:
+  - Insulin resistance and beta-cell dysfunction pathways
+  - Glycemic control factors and metabolic dysfunction
+  - Healthcare access and treatment adherence
+  - Dietary patterns and lifestyle behaviors
+  - Social determinants of health (SES, education, discrimination)
+  - Structural factors (healthcare policy, food environment)
+
+  Provide evidence from peer-reviewed literature, especially meta-analyses, RCTs, and cohort studies.
+
+from_nodes:
+  - dietary_patterns
+  - physical_activity
+  - healthcare_access
+  - medication_adherence
+  - socioeconomic_status
+  - health_insurance
+  - food_insecurity
+  - obesity
+  - sedentary_behavior
+  - sleep_quality
+  - stress_chronic
+  - neighborhood_deprivation
+  - healthcare_quality
+  - primary_care_access
+  - diabetes_education
+  - family_history
+  - genetic_risk
+  - inflammation_systemic
+  - built_environment
+  - food_environment
+
+to_nodes:
+  - type_2_diabetes_incidence
+  - glycemic_control
+  - hba1c_level
+  - insulin_resistance
+  - beta_cell_function
+  - diabetic_complications
+  - diabetic_retinopathy
+  - diabetic_nephropathy
+  - diabetic_neuropathy
+  - cardiovascular_disease
+  - stroke
+  - myocardial_infarction
+  - peripheral_artery_disease
+  - diabetic_foot_ulcer
+  - amputation_risk
+  - mortality_diabetes
+  - hypoglycemia_events
+  - hospitalization_diabetes
+
+scales:
+  - 1  # Structural (policy, healthcare system)
+  - 2  # Environmental (food, built environment)
+  - 3  # Institutional (healthcare access)
+  - 4  # Individual conditions (obesity, insulin resistance)
+  - 5  # Behaviors (diet, physical activity)
+  - 6  # Intermediate pathways (glycemic control)
+  - 7  # Complications and outcomes
+
+output_dir: mechanism-bank/mechanisms/diabetes
+
+notes: |
+  Type 2 diabetes has strong social determinants and structural drivers.
+  Focus on healthcare access, food environment, and socioeconomic context.
+  Consider medication access, treatment adherence, and complications prevention.

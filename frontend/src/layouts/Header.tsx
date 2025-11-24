@@ -21,7 +21,7 @@ export const Header: FC = () => {
             className={({ isActive }) =>
               `px-3 py-2 text-xs font-medium transition-all relative ${
                 isActive
-                  ? 'text-orange-600'
+                  ? 'text-orange-700'
                   : 'text-gray-500 hover:text-gray-900'
               }`
             }
@@ -36,11 +36,68 @@ export const Header: FC = () => {
             )}
           </NavLink>
           <NavLink
+            to="/systems/alcoholism"
+            className={({ isActive }) =>
+              `px-3 py-2 text-xs font-medium transition-all relative ${
+                isActive
+                  ? 'text-orange-700'
+                  : 'text-gray-500 hover:text-gray-900'
+              }`
+            }
+          >
+            {({ isActive }) => (
+              <>
+                Alcoholism System
+                {isActive && (
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500" />
+                )}
+              </>
+            )}
+          </NavLink>
+          <NavLink
+            to="/important-nodes"
+            className={({ isActive }) =>
+              `px-3 py-2 text-xs font-medium transition-all relative ${
+                isActive
+                  ? 'text-orange-700'
+                  : 'text-gray-500 hover:text-gray-900'
+              }`
+            }
+          >
+            {({ isActive }) => (
+              <>
+                Important Nodes
+                {isActive && (
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500" />
+                )}
+              </>
+            )}
+          </NavLink>
+          <NavLink
+            to="/pathfinder"
+            className={({ isActive }) =>
+              `px-3 py-2 text-xs font-medium transition-all relative ${
+                isActive
+                  ? 'text-orange-700'
+                  : 'text-gray-500 hover:text-gray-900'
+              }`
+            }
+          >
+            {({ isActive }) => (
+              <>
+                Pathfinder
+                {isActive && (
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500" />
+                )}
+              </>
+            )}
+          </NavLink>
+          <NavLink
             to="/pathways"
             className={({ isActive }) =>
               `px-3 py-2 text-xs font-medium transition-all relative ${
                 isActive
-                  ? 'text-orange-600'
+                  ? 'text-orange-700'
                   : 'text-gray-500 hover:text-gray-900'
               }`
             }
@@ -55,11 +112,30 @@ export const Header: FC = () => {
             )}
           </NavLink>
           <NavLink
+            to="/crisis-explorer"
+            className={({ isActive }) =>
+              `px-3 py-2 text-xs font-medium transition-all relative ${
+                isActive
+                  ? 'text-orange-700'
+                  : 'text-gray-500 hover:text-gray-900'
+              }`
+            }
+          >
+            {({ isActive }) => (
+              <>
+                Crisis Explorer
+                {isActive && (
+                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-500" />
+                )}
+              </>
+            )}
+          </NavLink>
+          <NavLink
             to="/library"
             className={({ isActive }) =>
               `px-3 py-2 text-xs font-medium transition-all relative ${
                 isActive
-                  ? 'text-orange-600'
+                  ? 'text-orange-700'
                   : 'text-gray-500 hover:text-gray-900'
               }`
             }
@@ -80,7 +156,7 @@ export const Header: FC = () => {
       <div className="flex items-center gap-2">
         {/* Settings Button */}
         <button
-          className="p-2 text-gray-400 hover:text-orange-600 transition-colors"
+          className="p-2 text-gray-400 hover:text-orange-700 transition-colors"
           aria-label="Settings"
         >
           <Icon name="settings" size="sm" />
@@ -88,7 +164,7 @@ export const Header: FC = () => {
 
         {/* Help Button */}
         <button
-          className="p-2 text-gray-400 hover:text-orange-600 transition-colors"
+          className="p-2 text-gray-400 hover:text-orange-700 transition-colors"
           aria-label="Help"
         >
           <Icon name="help" size="sm" />

@@ -17,6 +17,8 @@ const categoryLabels: Record<Category, string> = {
   economic: 'Economic',
   political: 'Political',
   biological: 'Biological',
+  behavioral: 'Behavioral',
+  healthcare_access: 'Healthcare Access',
   default: 'Default',
 }
 

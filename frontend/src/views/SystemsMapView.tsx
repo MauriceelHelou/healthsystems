@@ -1,12 +1,13 @@
 import { FC, useState, useRef } from 'react'
 import { Panel } from '../layouts/Panel'
 import MechanismGraph from '../visualizations/MechanismGraph'
-import type { MechanismNode, MechanismEdge, Citation } from '../types'
+import type { MechanismNode, MechanismEdge, Citation, GraphLayoutMode, PhysicsSettings } from '../types'
 import { Button } from '../components/base/Button'
 import { Icon } from '../components/base/Icon'
 import { CategoryBadge } from '../components/domain/CategoryBadge'
 import { EvidenceBadge } from '../components/domain/EvidenceBadge'
 import { Badge } from '../components/base/Badge'
+import { Legend } from '../components/visualization/Legend'
 import { useGraphData, useMechanismById } from '../hooks/useData'
 
 export const SystemsMapView: FC = () => {
@@ -14,6 +15,17 @@ export const SystemsMapView: FC = () => {
   const [selectedEdge, setSelectedEdge] = useState<MechanismEdge | null>(null)
   const [showPanel, setShowPanel] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
+
+  // Layout mode state
+  const [layoutMode, setLayoutMode] = useState<GraphLayoutMode>('hierarchical')
+
+  // Physics settings for force-directed mode
+  const [physicsSettings, setPhysicsSettings] = useState<PhysicsSettings>({
+    charge: -300,
+    linkDistance: 150,
+    gravity: 0.05,
+    collision: 20,
+  })
 
   // Fetch graph data from API
   const { data: graphData, isLoading, error } = useGraphData()
@@ -81,6 +93,127 @@ export const SystemsMapView: FC = () => {
     <div className="flex flex-1 overflow-hidden">
       {/* Main Canvas */}
       <div ref={containerRef} className="flex-1 relative bg-white">
+        {/* Visually hidden H1 for accessibility */}
+        <h1 className="sr-only">Health Systems Causal Network Map</h1>
+
+        {/* Layout Toggle - Top Left */}
+        <div className="absolute top-4 left-4 z-10 bg-white rounded-lg shadow-md p-3">
+          <div className="space-y-3">
+            <div className="flex items-center gap-3">
+              <label className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
+                Layout
+              </label>
+              <div className="flex bg-gray-100 rounded-lg p-0.5">
+                <button
+                  onClick={() => setLayoutMode('hierarchical')}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                    layoutMode === 'hierarchical'
+                      ? 'bg-white text-gray-900 shadow-sm'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  Hierarchical
+                </button>
+                <button
+                  onClick={() => setLayoutMode('force-directed')}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors ${
+                    layoutMode === 'force-directed'
+                      ? 'bg-white text-gray-900 shadow-sm'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  Force-Directed
+                </button>
+              </div>
+            </div>
+
+            {/* Physics Settings (collapsible) */}
+            {layoutMode === 'force-directed' && (
+              <details className="border-t pt-3">
+                <summary className="cursor-pointer text-xs font-semibold text-gray-700 uppercase tracking-wide mb-2 hover:text-gray-900">
+                  Physics Settings
+                </summary>
+                <div className="space-y-2.5 pl-1 mt-2">
+                  <div>
+                    <div className="flex justify-between items-center mb-1">
+                      <label className="text-xs text-gray-600 font-medium">Repulsion</label>
+                      <span className="text-xs text-gray-500">{physicsSettings.charge}</span>
+                    </div>
+                    <input
+                      type="range"
+                      min="-1000"
+                      max="-50"
+                      step="50"
+                      value={physicsSettings.charge}
+                      onChange={(e) =>
+                        setPhysicsSettings({ ...physicsSettings, charge: Number(e.target.value) })
+                      }
+                      className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                    />
+                  </div>
+
+                  <div>
+                    <div className="flex justify-between items-center mb-1">
+                      <label className="text-xs text-gray-600 font-medium">Link Distance</label>
+                      <span className="text-xs text-gray-500">{physicsSettings.linkDistance}</span>
+                    </div>
+                    <input
+                      type="range"
+                      min="50"
+                      max="300"
+                      step="10"
+                      value={physicsSettings.linkDistance}
+                      onChange={(e) =>
+                        setPhysicsSettings({
+                          ...physicsSettings,
+                          linkDistance: Number(e.target.value),
+                        })
+                      }
+                      className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                    />
+                  </div>
+
+                  <div>
+                    <div className="flex justify-between items-center mb-1">
+                      <label className="text-xs text-gray-600 font-medium">Gravity</label>
+                      <span className="text-xs text-gray-500">{physicsSettings.gravity.toFixed(2)}</span>
+                    </div>
+                    <input
+                      type="range"
+                      min="0"
+                      max="0.2"
+                      step="0.01"
+                      value={physicsSettings.gravity}
+                      onChange={(e) =>
+                        setPhysicsSettings({ ...physicsSettings, gravity: Number(e.target.value) })
+                      }
+                      className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                    />
+                  </div>
+
+                  <div>
+                    <div className="flex justify-between items-center mb-1">
+                      <label className="text-xs text-gray-600 font-medium">Collision Buffer</label>
+                      <span className="text-xs text-gray-500">{physicsSettings.collision}</span>
+                    </div>
+                    <input
+                      type="range"
+                      min="0"
+                      max="50"
+                      step="5"
+                      value={physicsSettings.collision}
+                      onChange={(e) =>
+                        setPhysicsSettings({ ...physicsSettings, collision: Number(e.target.value) })
+                      }
+                      className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                    />
+                  </div>
+                </div>
+              </details>
+            )}
+          </div>
+        </div>
+
         {/* Graph Controls */}
         <div className="absolute top-4 right-4 z-10 flex gap-2 bg-white rounded-lg shadow-md p-2">
           <Button
@@ -109,8 +242,10 @@ export const SystemsMapView: FC = () => {
           </Button>
         </div>
 
-        {/* Legend - Hidden for minimalist design */}
-        {/* Removed legend overlay to maintain clean, minimalist aesthetic */}
+        {/* Legend */}
+        <div className="absolute bottom-4 left-4 z-10 max-w-xs">
+          <Legend showEvidenceQuality showScales />
+        </div>
 
         {/* Graph Visualization */}
         <div className="w-full h-full">
@@ -122,6 +257,8 @@ export const SystemsMapView: FC = () => {
             onEdgeClick={handleEdgeClick}
             selectedNodeId={selectedNode?.id || null}
             filteredCategories={[]}
+            layoutMode={layoutMode}
+            physicsSettings={layoutMode === 'force-directed' ? physicsSettings : undefined}
           />
         </div>
       </div>
@@ -334,7 +471,7 @@ const MechanismDetailPanel: React.FC<{ edge: MechanismEdge; nodes: MechanismNode
       </div>
 
       {/* Citations */}
-      {mechanism.citations.length > 0 && (
+      {mechanism.citations && mechanism.citations.length > 0 && (
         <div>
           <h3 className="text-sm font-semibold text-gray-900 mb-3">
             Supporting Literature ({mechanism.citations.length})
