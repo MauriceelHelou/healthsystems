@@ -524,26 +524,11 @@ const NodeDetailPanel: React.FC<{ node: MechanismNode; edges: MechanismEdge[] }>
     return target === node.id;
   });
 
-  // Map stockType to human-readable label
-  const getStockTypeLabel = (stockType: string) => {
-    switch (stockType) {
-      case 'structural': return 'Structural Determinant';
-      case 'proxy': return 'Proxy/Intermediate';
-      case 'crisis': return 'Crisis Endpoint';
-      default: return stockType;
-    }
-  };
-
   return (
     <div className="space-y-6">
       {/* Quick Stats */}
       <div className="flex items-center gap-3 pb-4 border-b flex-wrap">
         {node.category && <CategoryBadge category={node.category} />}
-        {node.stockType && (
-          <Badge color="primary" size="sm">
-            {getStockTypeLabel(node.stockType)}
-          </Badge>
-        )}
         {node.scale && (
           <Badge color="gray" size="sm">
             Scale {node.scale}
@@ -555,11 +540,6 @@ const NodeDetailPanel: React.FC<{ node: MechanismNode; edges: MechanismEdge[] }>
       <div>
         <h3 className="text-sm font-semibold text-gray-900 mb-2">Overview</h3>
         <div className="space-y-2 text-sm text-gray-700">
-          {node.stockType && (
-            <p>
-              <span className="font-medium">Stock Type:</span> {getStockTypeLabel(node.stockType)}
-            </p>
-          )}
           {node.scale && (
             <p>
               <span className="font-medium">Scale:</span> {node.scale}
