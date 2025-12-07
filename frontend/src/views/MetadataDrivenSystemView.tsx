@@ -540,7 +540,7 @@ const NodeDetailPanel: React.FC<{ node: MechanismNode; edges: MechanismEdge[] }>
       <div className="flex items-center gap-3 pb-4 border-b flex-wrap">
         {node.category && <CategoryBadge category={node.category} />}
         {node.stockType && (
-          <Badge color="blue" size="sm">
+          <Badge color="primary" size="sm">
             {getStockTypeLabel(node.stockType)}
           </Badge>
         )}

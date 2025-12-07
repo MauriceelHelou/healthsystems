@@ -92,7 +92,10 @@ Examples:
         parser.error(f"Config file not found: {args.config}")
 
     # Check environment variables
-    required_env = ["ANTHROPIC_API_KEY"]
+    required_env = []
+    if not args.dry_run:
+        # Only need API key for actual runs
+        required_env.append("ANTHROPIC_API_KEY")
     if not args.dry_run and not args.no_search:
         required_env.append("PUBMED_EMAIL")
 

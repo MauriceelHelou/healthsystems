@@ -3,16 +3,29 @@ Database seeding script for Railway deployment.
 
 This script:
 1. Loads mechanism YAML files from the mechanism-bank
-2. Extracts and creates unique nodes
+2. Extracts and creates unique nodes from nodes/by_scale/ directory
 3. Creates mechanism records with proper relationships
 4. Handles bidirectional relationships
 5. Idempotent - can be run multiple times safely
+6. Supports quality filtering (min_quality parameter)
+7. Supports topic filtering (e.g., alcohol-related mechanisms)
+
+Usage:
+    # Seed all mechanisms (quality B or better):
+    python seed_database.py --min-quality B
+
+    # Seed only alcohol-related mechanisms:
+    python seed_database.py --topic alcohol
+
+    # Seed with both filters:
+    python seed_database.py --min-quality B --topic alcohol
 """
 
 import os
 import sys
 import yaml
 import logging
+import argparse
 from pathlib import Path
 from typing import Dict, List, Set, Optional
 from datetime import datetime
@@ -27,6 +40,26 @@ from models.database import Base
 from models.mechanism import Node, Mechanism
 from config.database import DatabaseConfig
 
+# Quality rating hierarchy (A is best, C is worst)
+QUALITY_HIERARCHY = {'A': 1, 'B': 2, 'C': 3}
+
+# Topic keywords for filtering
+TOPIC_KEYWORDS = {
+    'alcohol': [
+        'alcohol', 'aud', 'drinking', 'binge', 'liver_disease', 'cirrhosis',
+        'intoxication', 'withdrawal', 'ethanol', 'liquor', 'beer', 'wine',
+        'dui', 'dwi', 'hangover', 'detox', 'sobriety', 'abstinence'
+    ],
+    'housing': [
+        'housing', 'homeless', 'eviction', 'rent', 'mortgage', 'foreclosure',
+        'shelter', 'dwelling', 'residence', 'landlord', 'tenant'
+    ],
+    'respiratory': [
+        'asthma', 'copd', 'respiratory', 'lung', 'breathing', 'air_quality',
+        'pm25', 'pollution', 'ventilation', 'mold'
+    ],
+}
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -38,12 +71,29 @@ logger = logging.getLogger(__name__)
 class DatabaseSeeder:
     """Seeds database with mechanisms from YAML files."""
 
-    def __init__(self, database_url: Optional[str] = None):
-        """Initialize seeder with database connection."""
+    def __init__(
+        self,
+        database_url: Optional[str] = None,
+        min_quality: Optional[str] = None,
+        topic: Optional[str] = None
+    ):
+        """
+        Initialize seeder with database connection and filters.
+
+        Args:
+            database_url: Database connection URL
+            min_quality: Minimum evidence quality (A, B, or C). If set, only
+                        mechanisms with this quality or better are loaded.
+                        A is best, C is lowest.
+            topic: Topic filter (e.g., 'alcohol', 'housing', 'respiratory').
+                   If set, only mechanisms related to this topic are loaded.
+        """
         self.database_url = database_url or os.getenv(
             "DATABASE_URL",
             "sqlite:///./healthsystems.db"
         )
+        self.min_quality = min_quality
+        self.topic = topic
 
         # Create engine
         self.engine = create_engine(
@@ -61,6 +111,45 @@ class DatabaseSeeder:
 
         # Track unique nodes
         self.nodes_cache: Dict[str, Node] = {}
+
+    def passes_quality_filter(self, mech_data: Dict) -> bool:
+        """Check if mechanism passes quality filter."""
+        if not self.min_quality:
+            return True
+
+        evidence = mech_data.get('evidence', {})
+        quality = evidence.get('quality_rating', 'C')
+
+        # Compare quality ratings (lower number = better quality)
+        mech_rank = QUALITY_HIERARCHY.get(quality.upper(), 3)
+        min_rank = QUALITY_HIERARCHY.get(self.min_quality.upper(), 3)
+
+        return mech_rank <= min_rank
+
+    def passes_topic_filter(self, mech_data: Dict) -> bool:
+        """Check if mechanism passes topic filter."""
+        if not self.topic:
+            return True
+
+        keywords = TOPIC_KEYWORDS.get(self.topic.lower(), [])
+        if not keywords:
+            logger.warning(f"Unknown topic '{self.topic}'. Available: {list(TOPIC_KEYWORDS.keys())}")
+            return True
+
+        # Check mechanism ID, from_node, to_node, description
+        mech_id = mech_data.get('id', '').lower()
+        description = mech_data.get('description', '').lower()
+
+        # Extract node IDs
+        from_node_id, to_node_id = '', ''
+        if '_to_' in mech_id:
+            parts = mech_id.split('_to_')
+            from_node_id = parts[0].lower()
+            to_node_id = '_to_'.join(parts[1:]).lower()
+
+        # Check if any keyword matches
+        text_to_search = f"{mech_id} {from_node_id} {to_node_id} {description}"
+        return any(keyword in text_to_search for keyword in keywords)
 
     def init_tables(self, drop_existing: bool = False):
         """Create all database tables."""
@@ -98,6 +187,96 @@ class DatabaseSeeder:
 
         logger.info(f"Found {len(yaml_files)} mechanism files")
         return yaml_files
+
+    def load_node_files(self) -> List[Path]:
+        """Load all node YAML files from nodes/by_scale/ directory."""
+        nodes_path = Path(__file__).parent.parent.parent / "nodes" / "by_scale"
+
+        if not nodes_path.exists():
+            logger.warning(f"Nodes directory not found at {nodes_path}")
+            return []
+
+        # Find all YAML files recursively
+        yaml_files = list(nodes_path.glob("**/*.yml")) + \
+                     list(nodes_path.glob("**/*.yaml"))
+
+        logger.info(f"Found {len(yaml_files)} node definition files")
+        return yaml_files
+
+    def extract_scale_from_path(self, file_path: Path) -> int:
+        """Extract scale level from node file path (e.g., scale_5_behaviors -> 5)."""
+        path_str = str(file_path)
+
+        # Look for scale_N pattern in path
+        import re
+        match = re.search(r'scale_(\d+)', path_str)
+        if match:
+            return int(match.group(1))
+
+        # Fallback to default
+        return 4
+
+    def load_node_from_yaml(self, session: Session, file_path: Path) -> Optional[Node]:
+        """Load a node from a YAML definition file."""
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                data = yaml.safe_load(f)
+
+            if not data or 'id' not in data:
+                return None
+
+            node_id = data.get('id')
+
+            # Check if node already exists
+            stmt = select(Node).where(Node.id == node_id)
+            existing_node = session.execute(stmt).scalar_one_or_none()
+
+            if existing_node:
+                # Update existing node with YAML data
+                existing_node.name = data.get('name', node_id.replace('_', ' ').title())
+                existing_node.scale = data.get('scale', self.extract_scale_from_path(file_path))
+                existing_node.category = data.get('category', 'built_environment')
+                existing_node.description = data.get('description', '')
+                existing_node.node_type = data.get('type', 'stock').lower()
+                self.nodes_cache[node_id] = existing_node
+                return existing_node
+
+            # Create new node
+            new_node = Node(
+                id=node_id,
+                name=data.get('name', node_id.replace('_', ' ').title()),
+                node_type=data.get('type', 'stock').lower(),
+                category=data.get('category', 'built_environment'),
+                scale=data.get('scale', self.extract_scale_from_path(file_path)),
+                description=data.get('description', '')
+            )
+
+            session.add(new_node)
+            self.nodes_cache[node_id] = new_node
+            return new_node
+
+        except Exception as e:
+            logger.warning(f"Error loading node from {file_path}: {e}")
+            return None
+
+    def seed_nodes_from_yaml(self, session: Session) -> int:
+        """Load all nodes from YAML definition files."""
+        node_files = self.load_node_files()
+        nodes_loaded = 0
+
+        for file_path in node_files:
+            node = self.load_node_from_yaml(session, file_path)
+            if node:
+                nodes_loaded += 1
+
+            # Commit every 50 nodes
+            if nodes_loaded % 50 == 0:
+                session.commit()
+                logger.info(f"Loaded {nodes_loaded}/{len(node_files)} node definitions...")
+
+        session.commit()
+        logger.info(f"Loaded {nodes_loaded} nodes from YAML definitions")
+        return nodes_loaded
 
     def parse_yaml_file(self, file_path: Path) -> Optional[Dict]:
         """Parse a single YAML file."""
@@ -353,8 +532,11 @@ class DatabaseSeeder:
             Dictionary with counts of nodes and mechanisms created
         """
         stats = {
-            'nodes_created': 0,
+            'nodes_from_yaml': 0,
+            'nodes_from_mechanisms': 0,
             'mechanisms_created': 0,
+            'mechanisms_filtered_quality': 0,
+            'mechanisms_filtered_topic': 0,
             'files_processed': 0,
             'files_failed': 0
         }
@@ -369,7 +551,22 @@ class DatabaseSeeder:
                     logger.info(f"Database already contains {existing_count} mechanisms. Skipping seed.")
                     return stats
 
-            # Load mechanism files
+            # Log filter settings
+            if self.min_quality:
+                logger.info(f"Quality filter: {self.min_quality} or better")
+            if self.topic:
+                logger.info(f"Topic filter: {self.topic}")
+
+            # Step 1: Load nodes from YAML definitions
+            logger.info("=" * 60)
+            logger.info("STEP 1: Loading node definitions from YAML files")
+            logger.info("=" * 60)
+            stats['nodes_from_yaml'] = self.seed_nodes_from_yaml(session)
+
+            # Step 2: Load mechanism files
+            logger.info("=" * 60)
+            logger.info("STEP 2: Loading mechanisms from mechanism-bank")
+            logger.info("=" * 60)
             yaml_files = self.load_mechanism_files()
 
             if not yaml_files:
@@ -385,14 +582,26 @@ class DatabaseSeeder:
                         stats['files_failed'] += 1
                         continue
 
-                    # Create mechanism (this also creates nodes)
+                    # Apply quality filter
+                    if not self.passes_quality_filter(mech_data):
+                        stats['mechanisms_filtered_quality'] += 1
+                        stats['files_processed'] += 1
+                        continue
+
+                    # Apply topic filter
+                    if not self.passes_topic_filter(mech_data):
+                        stats['mechanisms_filtered_topic'] += 1
+                        stats['files_processed'] += 1
+                        continue
+
+                    # Create mechanism (this also creates nodes if needed)
                     nodes_before = len(self.nodes_cache)
                     mechanism = self.create_mechanism(session, mech_data)
                     nodes_after = len(self.nodes_cache)
 
                     if mechanism:
                         stats['mechanisms_created'] += 1
-                        stats['nodes_created'] += (nodes_after - nodes_before)
+                        stats['nodes_from_mechanisms'] += (nodes_after - nodes_before)
 
                     stats['files_processed'] += 1
 
@@ -416,10 +625,19 @@ class DatabaseSeeder:
             logger.info("=" * 60)
             logger.info("DATABASE SEEDING COMPLETE")
             logger.info("=" * 60)
-            logger.info(f"Files processed: {stats['files_processed']}")
+            logger.info(f"Filters applied:")
+            logger.info(f"  - Quality: {self.min_quality or 'None'}")
+            logger.info(f"  - Topic: {self.topic or 'None'}")
+            logger.info("-" * 60)
+            logger.info(f"Node definitions loaded from YAML: {stats['nodes_from_yaml']}")
+            logger.info(f"Additional nodes from mechanisms: {stats['nodes_from_mechanisms']}")
+            logger.info(f"Mechanisms created: {stats['mechanisms_created']}")
+            logger.info(f"Mechanisms filtered (quality): {stats['mechanisms_filtered_quality']}")
+            logger.info(f"Mechanisms filtered (topic): {stats['mechanisms_filtered_topic']}")
             logger.info(f"Files failed: {stats['files_failed']}")
-            logger.info(f"Total nodes in database: {total_nodes}")
-            logger.info(f"Total mechanisms in database: {total_mechanisms}")
+            logger.info("-" * 60)
+            logger.info(f"TOTAL nodes in database: {total_nodes}")
+            logger.info(f"TOTAL mechanisms in database: {total_mechanisms}")
             logger.info("=" * 60)
 
         except Exception as e:
@@ -433,24 +651,96 @@ class DatabaseSeeder:
 
 
 def main():
-    """Run database seeding."""
+    """Run database seeding with command-line options."""
+    parser = argparse.ArgumentParser(
+        description="Seed the HealthSystems database with nodes and mechanisms",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  # Seed all mechanisms (no filters):
+  python seed_database.py
+
+  # Seed only high-quality mechanisms (A or B rating):
+  python seed_database.py --min-quality B
+
+  # Seed only alcohol-related mechanisms:
+  python seed_database.py --topic alcohol
+
+  # Seed alcohol mechanisms with quality B or better:
+  python seed_database.py --min-quality B --topic alcohol
+
+  # Keep existing data (don't drop tables):
+  python seed_database.py --no-drop
+
+Available topics: alcohol, housing, respiratory
+Quality ratings: A (best), B, C (lowest)
+        """
+    )
+
+    parser.add_argument(
+        '--min-quality', '-q',
+        choices=['A', 'B', 'C'],
+        help='Minimum evidence quality rating (A=best, C=lowest)'
+    )
+
+    parser.add_argument(
+        '--topic', '-t',
+        choices=list(TOPIC_KEYWORDS.keys()),
+        help='Filter mechanisms by topic'
+    )
+
+    parser.add_argument(
+        '--no-drop',
+        action='store_true',
+        help='Do not drop existing tables before seeding'
+    )
+
+    parser.add_argument(
+        '--skip-if-exists',
+        action='store_true',
+        help='Skip seeding if data already exists'
+    )
+
+    args = parser.parse_args()
+
     logger.info("Starting database seeding process...")
+    logger.info(f"Options: min_quality={args.min_quality}, topic={args.topic}")
 
-    # Initialize seeder
-    seeder = DatabaseSeeder()
+    # Initialize seeder with filters
+    seeder = DatabaseSeeder(
+        min_quality=args.min_quality,
+        topic=args.topic
+    )
 
-    # Create tables (drop existing to handle schema changes)
-    seeder.init_tables(drop_existing=True)
+    # Create tables
+    seeder.init_tables(drop_existing=not args.no_drop)
 
     # Seed data
-    stats = seeder.seed(skip_if_data_exists=False)
+    stats = seeder.seed(skip_if_data_exists=args.skip_if_exists)
 
-    if stats['mechanisms_created'] > 0 or stats['nodes_created'] > 0:
+    total_created = stats.get('nodes_from_yaml', 0) + stats.get('mechanisms_created', 0)
+    if total_created > 0:
         logger.info("Database seeded successfully!")
     else:
         logger.info("Database already seeded or no data to seed")
 
     return 0
+
+
+def seed_base_system():
+    """Convenience function to seed the base system with all mechanisms."""
+    logger.info("Seeding BASE system (all nodes, all mechanisms)...")
+    seeder = DatabaseSeeder()
+    seeder.init_tables(drop_existing=True)
+    return seeder.seed(skip_if_data_exists=False)
+
+
+def seed_alcohol_system(min_quality: str = 'C'):
+    """Convenience function to seed only alcohol-related mechanisms."""
+    logger.info(f"Seeding ALCOHOL system (quality >= {min_quality})...")
+    seeder = DatabaseSeeder(min_quality=min_quality, topic='alcohol')
+    seeder.init_tables(drop_existing=True)
+    return seeder.seed(skip_if_data_exists=False)
 
 
 if __name__ == "__main__":

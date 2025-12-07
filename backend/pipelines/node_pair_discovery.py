@@ -727,6 +727,27 @@ Return ONLY valid JSON. No additional text.
         pairs = self.build_node_pairs()
         logger.info(f"Built {len(pairs)} node pairs to process")
 
+        # Dry run - show plan and exit without searching
+        if dry_run:
+            # Show sample search queries for first few pairs
+            logger.info("Dry run mode - showing search plan without executing")
+            sample_queries = []
+            for pair in pairs[:3]:
+                queries = self.build_search_query(pair)
+                sample_queries.append({
+                    "pair": f"{pair.from_node_id} -> {pair.to_node_id}",
+                    "queries": queries[:2]  # First 2 queries
+                })
+
+            return {
+                "dry_run": True,
+                "pairs_total": len(pairs),
+                "pairs_priority_1": sum(1 for p in pairs if p.priority == 1),
+                "pairs_priority_2": sum(1 for p in pairs if p.priority == 2),
+                "nodes_loaded": len(self.node_metadata),
+                "sample_queries": sample_queries
+            }
+
         # Search for evidence
         evidence_list = []
 
@@ -749,14 +770,6 @@ Return ONLY valid JSON. No additional text.
 
         logger.info(f"Found {total_papers} total papers across {len(pairs)} pairs")
         logger.info(f"Pairs with sufficient evidence (≥3 papers): {pairs_with_evidence}")
-
-        if dry_run:
-            return {
-                "dry_run": True,
-                "pairs_total": len(pairs),
-                "pairs_with_evidence": pairs_with_evidence,
-                "total_papers": total_papers
-            }
 
         # Run batch extraction
         llm_config = self.config.get('llm_config', {})

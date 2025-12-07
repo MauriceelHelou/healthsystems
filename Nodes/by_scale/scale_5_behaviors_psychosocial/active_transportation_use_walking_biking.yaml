@@ -1,8 +1,8 @@
 id: active_transportation_use_walking_biking
 name: Active Transportation Use (Walking/Biking)
-scale: 2
-domain: Transportation, Health
-category: social_environment
+scale: 5
+domain: Transportation, Health Behavior
+category: behavioral
 stock:
   value: TBD
   unit: Mean walk/bike trips per week
@@ -11,14 +11,18 @@ stock:
 geographic_variation:
   score: 4
   level: county
-  notes: Physical infrastructure varies by region and locality
+  notes: Behavior varies by infrastructure availability and climate
 data_quality:
   availability: low
   frequency: annual
   bias_notes: Standard survey/administrative data limitations apply
   primary_sources:
-  - name: TBD
+  - name: NHTS
+    granularity: national
+  - name: BRFSS
     granularity: state
 description: |-
-  Measures active transportation use (walking/biking). Measured in Mean walk/bike trips per week. Part of the Transportation, Health domain.
+  Measures active transportation use (walking/biking). This is a standalone health behavior
+  measuring transportation mode choice. Relationships to infrastructure, health outcomes,
+  or environmental factors are captured in mechanisms.
 type: Rate
