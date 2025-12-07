@@ -1,0 +1,135 @@
+id: medicaid_nemt_policy_to_healthcare_access
+name: Medicaid NEMT Policy → Healthcare Access
+from_node:
+  node_id: medicaid_nemt_policy
+  node_name: Medicaid Non-Emergency Medical Transportation Policy
+  node_type: stock
+to_node:
+  node_id: healthcare_access
+  node_name: Healthcare Access and Utilization
+  node_type: stock
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Federal Medicaid requires states to provide non-emergency medical transportation
+  (NEMT) to beneficiaries'
+- 'Step 2: State NEMT programs provide rides via public transit passes, taxi vouchers,
+  van services, or mileage reimbursement'
+- 'Step 3: Transportation assistance removes physical barrier to healthcare appointments
+  for eligible beneficiaries'
+- 'Step 4: Improved appointment attendance enables preventive care, chronic disease
+  management, and medication access'
+- 'Step 5: Enhanced healthcare access improves health outcomes and reduces costly
+  emergency care reliance'
+evidence:
+  quality_rating: B
+  n_studies: 8
+  primary_citation: 'Syed, Samina T., Ben S. Gerber, and Lisa K. Sharp. 2013. "Traveling
+    towards disease: transportation barriers to health care access." Journal of Community
+    Health 38(5): 976-993.'
+  supporting_citations:
+  - 'Starbird, Laura E., et al. 2019. "A systematic review of interventions to minimize
+    transportation barriers among people with chronic diseases." Journal of Community
+    Health 44(2): 400-411.'
+  - 'Tierney, William M., et al. 2000. "Restricting Medicaid payments for transportation:
+    Effects on inner-city patients'' health care." American Journal of the Medical
+    Sciences 319(5): 326-333.'
+  - 'Hughes-Cromwick, Paul, et al. 2005. "Cost benefit analysis of providing non-emergency
+    medical transportation." Transportation Research Record 1903(1): 104-112.'
+  doi: 10.1007/s10900-013-9681-1
+  journal: Journal of Community Health
+  year: 2013
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4265215/
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  policy_restriction_effect:
+    value: -16
+    type: percentage_change
+    comparison: primary care visits following NEMT restriction
+    source: Tierney et al. 2000 (n=23,707)
+    description: Restricting Medicaid transportation payments led to 16% decline in
+      primary care visits
+  cost_benefit:
+    benefit_cost_ratio: 2.4
+    description: NEMT programs return $2.40 in avoided healthcare costs for every
+      $1 spent on transportation
+    source: Hughes-Cromwick et al. 2005
+  transportation_barrier_prevalence:
+    medicaid_recipients: 5.6
+    below_poverty: 7.0
+    unit: percentage reporting transportation barriers to healthcare
+    source: NHIS 2017
+  sample_size: 23707
+  interpretation: Medicaid NEMT policy improves healthcare access; policy restrictions
+    reduce primary care utilization by 16%. Cost-benefit analysis shows NEMT returns
+    $2.40 in avoided costs per dollar spent.
+last_updated: '2025-11-30'
+version: '1.0'
+description: Medicaid non-emergency medical transportation (NEMT) is a federally mandated
+  benefit that improves healthcare access for low-income beneficiaries facing transportation
+  barriers. Evidence shows restricting NEMT leads to 16% decline in primary care visits,
+  while cost-benefit analysis finds NEMT returns $2.40 in avoided healthcare costs
+  for every dollar invested. NEMT addresses structural transportation barriers that
+  otherwise prevent healthcare utilization among Medicaid populations.
+moderators:
+- name: program_design
+  direction: varies
+  strength: moderate
+  description: NEMT effectiveness varies by modality (van service, taxi voucher, rideshare)
+    and ease of use
+- name: geographic_coverage
+  direction: strengthens
+  strength: strong
+  description: Rural areas with greater distances benefit more from NEMT but may have
+    limited program availability
+- name: awareness_and_enrollment
+  direction: strengthens
+  strength: moderate
+  description: Many eligible beneficiaries are unaware of NEMT benefit; outreach improves
+    utilization
+- name: chronic_disease_burden
+  direction: strengthens
+  strength: strong
+  description: Those with chronic conditions requiring frequent visits benefit most
+    from NEMT
+- name: managed_care_carveout
+  direction: varies
+  strength: moderate
+  description: Some states carve NEMT into managed care which may affect coordination
+    and quality
+structural_competency:
+  root_cause_level: policy
+  avoids_victim_blaming: true
+  equity_implications: NEMT is a structural policy intervention that addresses transportation
+    barriers created by urban planning, transit disinvestment, and healthcare facility
+    siting decisions that disadvantage low-income communities. Expanding and improving
+    NEMT programs, including integration with rideshare services, is a policy lever
+    to reduce transportation-based healthcare disparities.
+assumptions:
+- NEMT benefit covers transportation to Medicaid-covered healthcare services
+- Program modalities include public transit, taxi, van, rideshare, mileage reimbursement
+- Effect operates through removing transportation barriers to appointment attendance
+limitations:
+- NEMT program quality varies substantially across states
+- Administrative barriers may limit effective use of benefit
+- Studies of policy restrictions provide stronger causal evidence than observational
+  studies
+- Limited research on newer rideshare-based NEMT models
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: NEMT program design, quality, and utilization vary substantially
+    by state and urban/rural geography.
+  relevant_geographies:
+  - Rural areas face greater transportation barriers but may have limited NEMT options
+  - Urban areas have more NEMT options but still face barriers for those with disabilities
+  - States with better-funded NEMT programs show improved healthcare access
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

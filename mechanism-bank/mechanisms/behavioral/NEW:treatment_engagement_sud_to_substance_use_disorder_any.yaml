@@ -1,0 +1,54 @@
+id: NEW:treatment_engagement_sud_to_substance_use_disorder_any
+name: Treatment Engagement for Substance Use Disorder → Substance Use Disorder
+from_node:
+  node_id: NEW:treatment_engagement_sud
+  node_name: Treatment Engagement for Substance Use Disorder
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Treatment engagement interventions (e.g., Assertive Community Treatment)
+  increase contact frequency and continuity of care for patients with substance use
+  disorder'
+- 'Step 2: Sustained engagement enables delivery of evidence-based SUD treatments
+  including counseling, medication-assisted treatment, and psychosocial support'
+- 'Step 3: Consistent therapeutic contact addresses barriers to care access and maintains
+  treatment adherence over time'
+- 'Step 4: Cumulative exposure to treatment interventions leads to behavioral changes
+  and coping skill development'
+- 'Step 5: Substance use reduces, though effects vary across populations and treatment
+  fidelity levels'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: 'Louise Penzenstadler et al. 2019. Effect of Assertive Community
+    Treatment for Patients with Substance Use Disorder: A Systematic Review. European
+    Addiction Research.'
+  supporting_citations: []
+description: This systematic review of 5 randomized controlled trial datasets found
+  mixed evidence that treatment engagement interventions reduce substance use. While
+  ACT consistently improved treatment engagement (4 of 5 datasets showed higher engagement),
+  substance use reduced in only half of the datasets, with only one showing significant
+  reduction in the ACT group compared to controls. The relationship between engagement
+  and substance use outcomes appears to be moderated by treatment fidelity and patient
+  characteristics.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Treatment model fidelity
+  direction: strengthens
+  strength: moderate
+  description: Higher fidelity to the ACT model appears to improve outcomes for substance
+    use reduction
+- name: Service utilization level
+  direction: strengthens
+  strength: moderate
+  description: Patients with high inpatient service use appear to benefit most from
+    assertive treatment approaches
+- name: Housing status
+  direction: strengthens
+  strength: weak
+  description: Homeless patients may have different response patterns; engagement
+    models may particularly benefit this population

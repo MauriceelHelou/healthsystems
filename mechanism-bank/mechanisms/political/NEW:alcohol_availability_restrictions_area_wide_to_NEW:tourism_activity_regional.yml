@@ -1,0 +1,71 @@
+id: NEW:alcohol_availability_restrictions_area_wide_to_NEW:tourism_activity_regional
+name: Area-Wide Alcohol Availability Restrictions → Regional Tourism Activity
+from_node:
+  node_id: NEW:alcohol_availability_restrictions_area_wide
+  node_name: Area-Wide Alcohol Availability Restrictions
+to_node:
+  node_id: NEW:tourism_activity_regional
+  node_name: Regional Tourism Activity
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Section 64 alcohol restrictions implemented in Western Australia place conditions on liquor
+  licenses limiting alcohol sales (e.g., off-premises trading hours) in specified communities'
+- 'Step 2: Restrictions aim to reduce community-wide alcohol availability and associated harms'
+- 'Step 3: Rather than deterring tourism, regions with restrictions showed tourism growth over time'
+- 'Step 4: Evidence suggests restrictions may support sustainable tourism by reducing alcohol-related
+  harms that could negatively impact visitor experience and community safety'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Martyn Symons et al. 2025. "Are alcohol restrictions bad for tourism? An exploratory
+    study of tourism trends in Western Australia.." https://doi.org/10.1016/j.anzjph.2025.100256
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not provide specific references to prior
+    studies
+  doi: 10.1016/j.anzjph.2025.100256
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This exploratory study examined whether area-wide alcohol restrictions (Section 64) implemented
+  in Western Australian communities negatively affected tourism. Time-series analysis found that regions
+  with restrictions experienced tourism growth over time, and trip numbers for restricted versus non-restricted
+  non-metropolitan regions were significantly cross-correlated (r=0.48, p=0.03). The study concludes that
+  alcohol restrictions aimed at reducing harm do not appear to negatively affect tourism, challenging
+  industry objections to such policies.
+quantitative_effects:
+  effect_size:
+    value: 0.48
+    type: correlation
+  p_value: 0.03
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study examined tourism trends across different Western Australia tourism regions (metropolitan
+    vs non-metropolitan, restricted vs non-restricted areas). North-West and Golden Outback regions were
+    specifically noted as areas affected by restrictions. International trips contributed less than 20%
+    of total trips.
+moderators:
+- name: region_type
+  direction: strengthens
+  strength: moderate
+  description: Non-metropolitan regions with restrictions showed cross-correlated tourism patterns with
+    non-restricted regions, suggesting restrictions did not differentially harm tourism in restricted
+    areas
+- name: trip_type
+  direction: weakens
+  strength: weak
+  description: Domestic trips were primary focus; international trips represented less than 20% of total
+    and may respond differently to restrictions
+structural_competency:
+  equity_implications: This mechanism importantly addresses a common political argument against evidence-based
+    alcohol policy - that restrictions will harm local economies through reduced tourism. The study demonstrates
+    that structural interventions to reduce alcohol availability (a known driver of alcohol-related harms)
+    need not conflict with economic development goals. This has equity implications as alcohol restrictions
+    are often implemented in regional and Indigenous communities that face disproportionate alcohol-related
+    harms. Objections based on tourism concerns may perpetuate health inequities by blocking protective
+    policies in vulnerable communities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.223834'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

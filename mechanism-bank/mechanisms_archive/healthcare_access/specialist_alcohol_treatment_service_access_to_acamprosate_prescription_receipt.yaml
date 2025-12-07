@@ -1,0 +1,43 @@
+id: specialist_alcohol_treatment_service_access_to_acamprosate_prescription_receipt
+name: Access to Specialist Alcohol Treatment Services → Receipt of Acamprosate Prescription
+from_node:
+  node_id: specialist_alcohol_treatment_service_access
+  node_name: Access to Specialist Alcohol Treatment Services
+to_node:
+  node_id: acamprosate_prescription_receipt
+  node_name: Receipt of Acamprosate Prescription
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Geographic availability and capacity of specialist alcohol treatment services
+  determines which populations can access evidence-based pharmacotherapy'
+- 'Step 2: Specialist services provide clinical assessment, diagnosis of alcohol dependence,
+  and evidence-based prescribing of medications like acamprosate'
+- 'Step 3: Receipt of acamprosate prescription creates opportunity for pharmacological
+  relapse prevention following alcohol detoxification'
+- 'Step 4: Prescription receipt is prerequisite for benefiting from medication''s
+  therapeutic effects and any adherence support interventions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. Donoghue et al. 2023. "Adjunctive Medication Management and
+    Contingency Management to enhance adherence to acamprosate for alcohol dependence:
+    the ADAM trial RCT.." *Health Technology Assessment*. https://doi.org/10.3310/DQKL6124'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.652153'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_abstinence_requirement
+  direction: weakens
+  strength: moderate
+  description: Requirement that participants be abstinent at baseline assessment creates
+    additional barrier to accessing intervention, potentially excluding those with
+    greatest clinical need
+- name: geographic_service_distribution
+  direction: strengthens
+  strength: strong
+  description: Five-region implementation demonstrates geographic variation in specialist
+    service availability, with implications for who can access evidence-based pharmacotherapy

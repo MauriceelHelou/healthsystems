@@ -1,0 +1,48 @@
+id: delayed_diagnosis_to_mortality_morbidity_complications
+name: Delayed or Missed Diagnosis → Mortality, Morbidity, and Complication Rates
+from_node:
+  node_id: delayed_diagnosis
+  node_name: Delayed or Missed Diagnosis
+to_node:
+  node_id: mortality_morbidity_complications
+  node_name: Mortality, Morbidity, and Complication Rates
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Groove pancreatitis presents with significant clinical and radiological
+  overlap with benign and malignant conditions affecting the pancreaticoduodenal region'
+- 'Step 2: Diagnostic challenges lead to delayed recognition and delayed initiation
+  of appropriate treatment'
+- 'Step 3: Untreated or inadequately treated groove pancreatitis progresses with worsening
+  inflammation, fibrosis, and complications'
+- 'Step 4: Treatment delays result in increased morbidity, mortality, and complication
+  rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Dushyant S Dahiya et al. 2024. "Groove pancreatitis: From enigma
+    to future directions-A comprehensive review.." *Journal of gastroenterology and
+    hepatology*. https://doi.org/10.1111/jgh.16683'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.205185'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: clinician_awareness
+  direction: weakens
+  strength: strong
+  description: Increased clinician awareness of groove pancreatitis as a distinct
+    entity can reduce diagnostic delays and improve patient outcomes
+- name: ai_diagnostic_tools
+  direction: weakens
+  strength: moderate
+  description: Artificial intelligence applications in diagnostic imaging show promise
+    for differentiating groove pancreatitis from pancreatic malignancies with high
+    sensitivity and specificity
+- name: access_to_specialized_imaging
+  direction: weakens
+  strength: strong
+  description: Access to advanced radiological and endoscopic evaluation enables more
+    accurate and timely diagnosis

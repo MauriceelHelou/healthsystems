@@ -1,0 +1,47 @@
+id: partner_alcohol_consumption_to_intimate_partner_violence_pregnancy
+name: Partner Alcohol Consumption → Intimate Partner Violence During Pregnancy
+from_node:
+  node_id: partner_alcohol_consumption
+  node_name: Partner Alcohol Consumption
+to_node:
+  node_id: intimate_partner_violence_pregnancy
+  node_name: Intimate Partner Violence During Pregnancy
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Partner alcohol consumption creates physiological disinhibition and impaired
+  cognitive functioning, reducing behavioral control'
+- 'Step 2: Alcohol-induced cognitive impairment reduces capacity for conflict resolution
+  and increases aggressive responses to stress'
+- 'Step 3: Economic stress from alcohol expenditure in low-resource settings compounds
+  household tensions'
+- 'Step 4: Social norms in contexts where alcohol use is normalized may reinforce
+  violent behaviors as acceptable responses'
+- 'Step 5: Pregnant women experience heightened vulnerability due to physical changes
+  and economic dependence, increasing exposure to violence'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Mamaru Melkam et al. 2024. "Domestic violence and associated
+    factors among pregnant women in sub-Saharan African countries from the recent
+    demographic and health survey data: a multilevel analysis.." *Frontiers in public
+    health*. https://doi.org/10.3389/fpubh.2024.1386524'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.161281'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: household_poverty_level
+  direction: strengthens
+  strength: strong
+  description: Economic stress from alcohol expenditure in poor households likely
+    amplifies the relationship between partner drinking and violence through increased
+    financial strain and resource scarcity
+- name: partner_education_level
+  direction: strengthens
+  strength: moderate
+  description: Lack of partner education may compound alcohol-related violence through
+    reduced access to information about alcohol harms and limited conflict resolution
+    skills

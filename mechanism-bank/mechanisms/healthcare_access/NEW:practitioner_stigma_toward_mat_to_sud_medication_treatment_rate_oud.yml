@@ -1,0 +1,51 @@
+id: NEW:practitioner_stigma_toward_mat_to_sud_medication_treatment_rate_oud
+name: Practitioner Stigma Toward Medication-Assisted Treatment → Medication Treatment Rate for OUD
+from_node:
+  node_id: NEW:practitioner_stigma_toward_mat
+  node_name: Practitioner Stigma Toward Medication-Assisted Treatment
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: Medication Treatment Rate for OUD
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Probation staff hold negative attitudes toward medication-assisted treatment for OUD'
+- 'Step 2: Stigma manifests as reluctance to refer clients to medication-based treatment'
+- 'Step 3: Clients receive inadequate information about treatment options'
+- 'Step 4: Reduced utilization of evidence-based pharmacological treatments for OUD'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jessica Reichert and Lily Gleicher 2019. "Probation clients' barriers to access and
+    use of opioid use disorder medications." https://doi.org/10.1186/s40352-019-0089-6
+  supporting_citations:
+  - Additional citations require full-text access - abstract references practitioner attitudes as barrier
+    but does not cite specific studies
+  doi: 10.1186/s40352-019-0089-6
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Negative attitudes and stigma among probation practitioners toward medication-assisted treatment
+  creates barriers to OUD treatment access for supervised individuals, with particular stigma against
+  methadone compared to other FDA-approved medications.
+quantitative_effects:
+  sample_size: 26
+moderators:
+- name: medication_familiarity
+  direction: weakens
+  strength: moderate
+  description: Probation leaders knew less about methadone and its administration compared to buprenorphine
+    and naltrexone, contributing to differential referral patterns
+structural_competency:
+  equity_implications: Practitioner stigma reflects broader societal stigmatization of people with substance
+    use disorders and of medication-based treatment approaches. This institutional stigma within the criminal
+    justice system compounds the marginalization of justice-involved individuals with OUD, creating compounding
+    disadvantages for an already vulnerable population.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.214369'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

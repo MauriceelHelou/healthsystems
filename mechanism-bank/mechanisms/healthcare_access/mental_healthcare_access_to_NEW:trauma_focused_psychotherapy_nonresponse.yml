@@ -1,0 +1,53 @@
+id: mental_healthcare_access_to_NEW:trauma_focused_psychotherapy_nonresponse
+name: Mental Healthcare Access → Trauma-Focused Psychotherapy Non-Response
+from_node:
+  node_id: mental_healthcare_access
+  node_name: Mental Healthcare Access
+to_node:
+  node_id: NEW:trauma_focused_psychotherapy_nonresponse
+  node_name: Trauma-Focused Psychotherapy Non-Response
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Limited mental healthcare access delays PTSD treatment initiation'
+- 'Step 2: Delayed treatment allows trauma symptoms to become more entrenched and chronic'
+- 'Step 3: Chronic PTSD associated with neurobiological changes that reduce treatment responsiveness'
+- 'Step 4: Access barriers may force treatment discontinuation before adequate dose received'
+- 'Step 5: Inadequate treatment exposure leads to incomplete symptom resolution'
+evidence:
+  quality_rating: A
+  n_studies: 114
+  primary_citation: Dharani Keyan et al. 2024. "A systematic review and meta-analysis of predictors of
+    response to trauma-focused psychotherapy for posttraumatic stress disorder.." https://doi.org/10.1037/bul0000438
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 114 studies
+  - Literature on treatment timing and PTSD chronicity
+  - Research on treatment dose and PTSD outcomes
+  doi: 10.1037/bul0000438
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Healthcare access barriers influence PTSD treatment outcomes by affecting treatment timing,
+  continuity, and completion. The finding that up to half of patients do not respond to trauma-focused
+  psychotherapy may partly reflect structural barriers to optimal treatment delivery.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Mental healthcare access varies significantly by geography, with rural areas and underserved
+    urban communities having fewer trauma-trained providers
+moderators:
+- name: mental_health_provider_shortage_severe
+  direction: strengthens
+  strength: strong
+  description: Severe provider shortages in mental health professional shortage areas exacerbate access
+    barriers and treatment delays
+structural_competency:
+  equity_implications: Mental healthcare access is structurally determined by insurance coverage, provider
+    distribution, transportation infrastructure, and workplace policies allowing time off for treatment.
+    Rural and low-income communities face systematic disadvantage in accessing evidence-based PTSD treatment.
+    The 50% non-response rate cannot be separated from healthcare system failures in providing adequate,
+    accessible, and culturally appropriate care.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.025628'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

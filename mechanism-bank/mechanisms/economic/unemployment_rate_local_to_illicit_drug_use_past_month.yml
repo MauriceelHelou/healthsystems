@@ -1,0 +1,73 @@
+id: unemployment_rate_local_to_illicit_drug_use_past_month
+name: Unemployment Rate Local → Illicit Drug Use Past Month
+from_node:
+  node_id: unemployment_rate_local
+  node_name: Unemployment Rate Local
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use Past Month
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Economic recessions lead to increased unemployment rates at local and national levels'
+- 'Step 2: Unemployment creates financial stress, loss of purpose, and reduced social integration among
+  young populations'
+- 'Step 3: Reduced income and economic uncertainty increase psychological distress and coping-related
+  substance use'
+- 'Step 4: Young populations with fewer economic opportunities and social supports turn to illicit drugs
+  as coping mechanism'
+- 'Step 5: Aggregate drug use increases during recessionary periods, particularly cannabis use'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'Berta Rivera et al. 2023. "Economic recession, illicit drug use and the young population:
+    a systematic literature review and meta-analysis." https://doi.org/10.1177/17579139231180751'
+  supporting_citations:
+  - Studies covering 2007 financial crisis (17 studies included in review)
+  - OECD country empirical analyses (25 studies from 2008-2020)
+  - Additional citations require full-text access for specific author names
+  doi: 10.1177/17579139231180751
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis of 25 studies demonstrates that economic recessions, measured primarily through
+  unemployment rates, are associated with increased illicit drug use among young populations. The partial
+  correlation of 0.03 indicates a small but statistically significant positive relationship, supporting
+  countercyclical drug use patterns. Nine studies found countercyclical relationships, three found procyclical,
+  and thirteen found mixed results, with the aggregate evidence supporting increased drug use during economic
+  hardship.
+quantitative_effects:
+  effect_size:
+    value: 0.03
+    type: correlation
+    ci_lower: 0.0147
+    ci_upper: 0.0453
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies conducted across OECD countries; heterogeneity assessed using I² statistic
+    suggesting potential geographic and contextual variation
+moderators:
+- name: drug_type
+  direction: strengthens
+  strength: moderate
+  description: Cannabis use shows stronger countercyclical relationship with unemployment compared to
+    cocaine, opioids, or other drugs
+- name: age_group
+  direction: strengthens
+  strength: strong
+  description: Young populations specifically show increased drug use during economic downturns compared
+    to general population
+structural_competency:
+  equity_implications: This mechanism appropriately locates the driver of drug use in macroeconomic conditions
+    and policy failures rather than individual moral failings. The framework recognizes that unemployment
+    and economic recession create structural vulnerabilities that increase substance use risk, particularly
+    among young people who may have fewer resources and social supports. The policy implication emphasizes
+    the need for public prevention programs and demand reduction interventions during economic downturns,
+    targeting structural causes rather than individual behavior. Equity implications include recognizing
+    that young populations face differential vulnerability during recessions due to their position in
+    labor markets and limited accumulated resources.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.405289'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

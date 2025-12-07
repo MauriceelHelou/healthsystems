@@ -1,0 +1,45 @@
+id: alcohol_outlet_density_to_violent_crime_incidence
+name: Alcohol Outlet Density → Violent Crime Incidence
+from_node:
+  node_id: alcohol_outlet_density
+  node_name: Alcohol Outlet Density
+to_node:
+  node_id: violent_crime_incidence
+  node_name: Violent Crime Incidence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Concentration of alcohol outlets in urban areas increases availability
+  and consumption of alcohol in public and semi-public spaces'
+- 'Step 2: Alcohol consumption impairs judgment and increases aggression among individuals
+  in concentrated nighttime economy zones'
+- 'Step 3: Clustering of intoxicated individuals in areas with limited social control
+  creates opportunities for interpersonal conflicts'
+- 'Step 4: These conflicts escalate to violent incidents including assaults and other
+  violent crimes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Joseph Redfern et al. 2020. "Association of violence with urban
+    points of interest.." *PloS one*. https://doi.org/10.1371/journal.pone.0239840
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.101826'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: city_specific_urban_form
+  direction: strengthens
+  strength: moderate
+  description: City-specific urban characteristics and point of interest distributions
+    modify the strength of the alcohol outlet-violence relationship, requiring targeted,
+    city-specific initiatives
+- name: other_urban_points_of_interest
+  direction: strengthens
+  strength: moderate
+  description: Other points of interest associated with the city centre alcohol consumption
+    economy amplify the relationship between alcohol outlets and violence
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/alcohol_outlet_density_to_violent_crime_incidence.yaml
+_category: built_environment

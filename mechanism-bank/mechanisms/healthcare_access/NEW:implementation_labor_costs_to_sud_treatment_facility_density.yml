@@ -1,0 +1,72 @@
+id: NEW:implementation_labor_costs_to_sud_treatment_facility_density
+name: Implementation Labor Costs → SUD Treatment Facility Density
+from_node:
+  node_id: NEW:implementation_labor_costs
+  node_name: Implementation Labor Costs
+to_node:
+  node_id: sud_treatment_facility_density
+  node_name: SUD Treatment Facility Density
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare organizations allocate resources for pre-implementation planning activities ($1,031
+  average per site)'
+- 'Step 2: Organizations invest in implementation activities including staff training and workflow changes
+  ($17,816 average per site)'
+- 'Step 3: Labor investment enables healthcare sites to overcome individual and system-level barriers
+  to MOUD adoption'
+- 'Step 4: Sites gain capacity to prescribe and dispense buprenorphine, methadone, and naltrexone'
+- 'Step 5: Increased treatment capacity reduces geographic and organizational barriers to MOUD access'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Carla Garcia et al. 2023. "Costs of implementing a multi-site facilitation intervention
+    to increase access to medication treatment for opioid use disorder." https://doi.org/10.1186/s43058-023-00482-8
+  supporting_citations:
+  - Additional citations require full-text access - abstract references evidence on MOUD effectiveness
+    for reducing overdoses and deaths
+  - Additional citations require full-text access - abstract references individual and system-level barriers
+    to MOUD adoption
+  - Additional citations require full-text access - abstract references sensitivity analysis using Veterans
+    Health Administration data
+  doi: 10.1186/s43058-023-00482-8
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The cost analysis reveals that labor investment is the primary driver of MOUD implementation
+  costs. Pre-implementation activities averaged $1,031 per site while implementation activities averaged
+  $17,816 per site. At approximately $48 per patient with OUD, the intervention may be affordable depending
+  on payer budget constraints, suggesting that resource allocation decisions at the system level are key
+  determinants of treatment access expansion.
+quantitative_effects:
+  effect_size:
+    value: 48.0
+    type: cost_per_patient
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: VHA costs were higher than Bureau of Labor Statistics estimates, likely due to higher
+    wages in the VHA system compared to general labor market estimates.
+moderators:
+- name: healthcare_system_type
+  direction: strengthens
+  strength: moderate
+  description: VHA had higher implementation costs than BLS estimates due to higher wages, indicating
+    that healthcare system characteristics moderate implementation costs
+- name: implementation_phase
+  direction: strengthens
+  strength: strong
+  description: Implementation activities ($17,816) cost substantially more than pre-implementation activities
+    ($1,031), indicating that the active implementation phase drives most costs
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare financing and workforce allocation structures
+    determine whether evidence-based OUD treatments reach patients. The opioid epidemic has disproportionately
+    affected rural and economically disadvantaged communities where healthcare resources are limited.
+    By quantifying implementation costs, this research provides actionable information for health system
+    decision makers to address structural barriers to MOUD access. The finding that costs are relatively
+    modest ($48 per patient) compared to the burden of untreated OUD suggests that resource allocation
+    decisions, not treatment efficacy, are the limiting factor in addressing the epidemic.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.207024'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,53 @@
+id: NEW:ultra_processed_food_consumption_to_NEW:non_alcoholic_fatty_liver_disease
+name: Ultra-Processed Food Consumption → Non-Alcoholic Fatty Liver Disease (NAFLD)
+from_node:
+  node_id: NEW:ultra_processed_food_consumption
+  node_name: Ultra-Processed Food Consumption
+to_node:
+  node_id: NEW:non_alcoholic_fatty_liver_disease
+  node_name: Non-Alcoholic Fatty Liver Disease (NAFLD)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Ultra-processed foods are consumed regularly, characterized by high energy
+  density, added sugars, unhealthy fats, and low fiber content as classified by the
+  NOVA food classification system'
+- 'Step 2: Chronic caloric excess from UPF consumption promotes positive energy balance,
+  leading to weight gain and development of overweight/obesity'
+- 'Step 3: Excess caloric intake and associated metabolic dysfunction promote hepatic
+  de novo lipogenesis and increased free fatty acid flux to the liver'
+- 'Step 4: Accumulation of triglycerides in hepatocytes leads to hepatic steatosis,
+  the hallmark of NAFLD'
+- 'Step 5: UPF consumption also contributes to metabolic syndrome and type 2 diabetes,
+  which are strongly associated with NAFLD progression'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: 'Alex E. Henney et al. 2023. Ultra-Processed Food Intake Is Associated
+    with Non-Alcoholic Fatty Liver Disease in Adults: A Systematic Review and Meta-Analysis.
+    Nutrients.'
+  supporting_citations: []
+description: A systematic review and meta-analysis of 9 studies (3 cross-sectional,
+  3 case-control, 3 cohort) analyzing 60,961 individuals found that ultra-processed
+  food consumption is significantly associated with increased risk of non-alcoholic
+  fatty liver disease. The relationship shows a dose-response effect, with high UPF
+  intake associated with 42% increased risk of NAFLD compared to low intake. The mechanism
+  operates through chronic caloric excess, promotion of obesity, metabolic syndrome,
+  and type 2 diabetes, all of which contribute to hepatic fat accumulation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.42
+    type: relative_risk
+    ci_lower: 1.16
+    ci_upper: 1.75
+  p_value: 0.01
+  sample_size: 60961
+moderators:
+- name: dose_level
+  direction: strengthens
+  strength: strong
+  description: 'Dose-response relationship observed: moderate UPF intake (vs. low)
+    showed RR 1.03 (1.00-1.07), while high UPF intake (vs. low) showed RR 1.42 (1.16-1.75),
+    demonstrating significantly stronger effects with higher consumption'

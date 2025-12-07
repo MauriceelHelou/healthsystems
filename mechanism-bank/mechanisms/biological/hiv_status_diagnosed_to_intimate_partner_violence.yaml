@@ -1,0 +1,70 @@
+id: hiv_status_diagnosed_to_intimate_partner_violence
+name: HIV Status → Intimate Partner Violence
+from_node:
+  node_id: hiv_status_diagnosed
+  node_name: HIV Status
+to_node:
+  node_id: intimate_partner_violence
+  node_name: Intimate Partner Violence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: HIV diagnosis creates disclosure-related vulnerabilities, where women may
+  face partner blame, accusations of infidelity, or fear of disclosure'
+- 'Step 2: HIV status intersects with other syndemic factors (substance abuse, economic
+  dependence) creating synergistic risk interactions that amplify violence risk'
+- 'Step 3: Women living with HIV may experience increased partner control, economic
+  abuse, or physical violence as partners react to perceived sexual risk or stigma
+  associated with HIV status'
+- 'Step 4: The SAVA (Substance Abuse, Violence, AIDS) syndemic creates geographic
+  clustering where HIV, alcohol use, and IPV co-occur and interact synergistically
+  to elevate violence risk'
+evidence:
+  quality_rating: A
+  n_studies: 20
+  primary_citation: 'Tomita et al. 2022. Syndemics of intimate partner violence among
+    women in HIV endemic South Africa: geospatial analysis of nationally representative
+    data. Scientific reports.'
+  supporting_citations:
+  - 'Shamu et al. 2011. A systematic review of African studies on intimate partner
+    violence against pregnant women: prevalence and risk factors. PloS one.'
+description: HIV diagnosis is significantly associated with increased risk of intimate
+  partner violence through syndemic mechanisms. Evidence from systematic review of
+  19 African studies and nationally representative South African data demonstrates
+  that HIV-positive women face 1.48-3.10 times higher odds of IPV compared to HIV-negative
+  women. The relationship operates through the SAVA (Substance Abuse, Violence, AIDS)
+  syndemic framework, where HIV, alcohol use, and violence interact synergistically
+  rather than merely additively. Geographic analysis reveals clustering of these syndemic
+  interactions in specific high-risk areas, with synergy indices indicating multiplicative
+  rather than additive effects on physical violence risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.29
+    type: odds_ratio
+    ci_lower: 1.48
+    ci_upper: 3.1
+  p_value: null
+  sample_size: 5874
+moderators:
+- name: alcohol_use
+  direction: strengthens
+  strength: strong
+  description: Partner alcohol abuse significantly increases IPV risk (OR 2.89-11.60),
+    and creates synergistic interactions with HIV in predicting violence
+- name: history_of_violence
+  direction: strengthens
+  strength: strong
+  description: Prior history of violence significantly associated with continued IPV
+    risk among HIV-positive women
+- name: pregnancy_status
+  direction: strengthens
+  strength: moderate
+  description: Pregnant women with HIV face elevated IPV risk, with prevalence ranging
+    2-57% across African studies
+- name: socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Low socioeconomic status identified as risk factor compounding HIV-IPV
+    relationship

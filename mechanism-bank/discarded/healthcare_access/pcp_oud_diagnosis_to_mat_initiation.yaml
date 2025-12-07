@@ -1,0 +1,42 @@
+id: pcp_oud_diagnosis_to_mat_initiation
+name: Opioid Use Disorder Diagnosis During Primary Care Visit → Medication-Assisted
+  Treatment Initiation
+from_node:
+  node_id: pcp_oud_diagnosis
+  node_name: Opioid Use Disorder Diagnosis During Primary Care Visit
+to_node:
+  node_id: mat_initiation
+  node_name: Medication-Assisted Treatment Initiation
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: OUD diagnosis during primary care visit occurs within established patient-provider
+  relationship, reducing stigma and facilitating treatment discussion'
+- 'Step 2: Primary care setting allows immediate treatment planning and prescription
+  for those with waivered PCPs, eliminating referral delays'
+- 'Step 3: Integration within primary care reduces structural barriers of separate
+  specialty appointments, additional travel, and appointment coordination'
+- 'Step 4: Immediate access and reduced logistical barriers increase likelihood of
+  treatment initiation and engagement'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Evan S Cole et al. 2019. "The Role of Primary Care in Improving
+    Access to Medication-Assisted Treatment for Rural Medicaid Enrollees with Opioid
+    Use Disorder.." *Journal of general internal medicine*. https://doi.org/10.1007/s11606-019-04943-6
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.503448'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: pcp_mat_waiver_status
+  direction: strengthens
+  strength: strong
+  description: 67.6% of MAT recipients who were diagnosed in PCP setting received
+    MAT from their PCP, indicating waivered PCPs can provide immediate integrated
+    treatment
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/pcp_oud_diagnosis_to_mat_initiation.yaml
+_category: healthcare_access

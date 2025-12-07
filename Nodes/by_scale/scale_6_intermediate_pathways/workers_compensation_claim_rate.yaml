@@ -1,0 +1,28 @@
+id: workers_compensation_claim_rate
+name: Workers' Compensation Claim Rate
+scale: 6
+domain: Occupational Health
+category: biological
+stock:
+  value: TBD
+  unit: Claims per 100 covered workers
+  year: 2024
+  source: TBD - needs population from authoritative source
+geographic_variation:
+  score: 4
+  level: state
+  notes: Rates vary by industry mix and state workers comp laws
+data_quality:
+  availability: medium
+  frequency: annual
+  bias_notes: Administrative data - may reflect reporting variations across jurisdictions
+  primary_sources:
+  - name: BLS
+    granularity: state
+  - name: State Workers Compensation Boards
+    granularity: state
+description: |-
+  Measures workers' compensation claim rate. This is a standalone intermediate pathway
+  measure capturing reported occupational injuries/illnesses. Relationships to workplace
+  safety or policy interventions are captured in mechanisms.
+type: Rate

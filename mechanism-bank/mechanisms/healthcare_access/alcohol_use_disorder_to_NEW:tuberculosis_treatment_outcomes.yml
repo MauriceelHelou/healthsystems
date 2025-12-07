@@ -1,0 +1,56 @@
+id: alcohol_use_disorder_to_NEW:tuberculosis_treatment_outcomes
+name: Alcohol Use Disorder → Tuberculosis Treatment Outcomes
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:tuberculosis_treatment_outcomes
+  node_name: Tuberculosis Treatment Outcomes
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: AUD compromises immune system function, reducing capacity to fight TB infection'
+- 'Step 2: Hepatotoxicity from both alcohol and TB medications creates treatment complications'
+- 'Step 3: Poor adherence to treatment leads to drug resistance development'
+- 'Step 4: Social marginalization of individuals with dual diagnosis limits healthcare engagement'
+- 'Step 5: Treatment failure, relapse, and increased mortality result from untreated comorbid AUD'
+evidence:
+  quality_rating: A
+  n_studies: 28
+  primary_citation: 'Mogesie Necho et al. 2021. "Prevalence and associated factors for alcohol use disorder
+    among tuberculosis patients: a systematic review and meta-analysis study.." https://doi.org/10.1186/s13011-020-00335-w'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 28 primary studies
+  - Studies documenting poor TB treatment outcomes in AUD patients
+  - Research on TB treatment complications with alcohol use
+  doi: 10.1186/s13011-020-00335-w
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The systematic review identifies that AUD is associated with poor tuberculosis treatment
+  outcomes. With 30% of TB patients having AUD, this represents a major structural challenge for TB control
+  programs globally.
+quantitative_effects:
+  sample_size: 30854
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Treatment outcomes likely vary by availability of integrated TB-AUD care programs and
+    healthcare system resources across different continents
+moderators:
+- name: treatment_integration
+  direction: weakens
+  strength: strong
+  description: Early screening and integrated management of AUD in TB patients can improve treatment outcomes
+structural_competency:
+  equity_implications: 'This mechanism illustrates how siloed healthcare systems fail patients with comorbid
+    conditions. Structural factors include: lack of integrated screening protocols, insufficient training
+    of TB program staff in AUD identification, absence of linkage to SUD treatment services, and systemic
+    barriers to addressing social determinants (housing, food security) that affect both conditions. The
+    geographic variation in prevalence suggests structural healthcare capacity differences across regions.
+    Equity implications include disproportionate burden on marginalized populations who face barriers
+    to accessing integrated care.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.946545'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

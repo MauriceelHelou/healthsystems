@@ -76,33 +76,32 @@ This document specifies the visual design and interaction patterns for the core 
 
 ### Node Scale Indicators
 
-Nodes are labeled with a **1-7 scale** indicating their position in the causal hierarchy:
+Nodes are labeled with a **1-5 scale** indicating their position in the causal hierarchy. All node IDs reference `mechanism-bank/mechanisms/canonical_nodes.json`.
 
-**Scale Values:**
-- **Scale 1**: Entirely structural - Federal/state policy level (e.g., Medicaid Expansion Status)
-- **Scale 3**: Institutional infrastructure (e.g., Primary Care Physician Density, FQHC Sites)
-- **Scale 4**: Individual/household conditions (e.g., Uninsured Rate, Housing Cost Burden)
-- **Scale 6**: Intermediate pathways (e.g., Hypertension Control, Preventive Care Utilization)
-- **Scale 7**: Pure crisis endpoints (e.g., ED Visits, Hospitalizations, Mortality)
-
-**Note:** Scales 2 and 5 are reserved for future taxonomy refinement.
+**Scale Values** (with canonical node examples):
+- **Scale 1**: Structural Policy (e.g., `medicaid_expansion_status`, `rent_control_stabilization_policy_strength`, `minimum_wage_level`)
+- **Scale 2**: Institutional Infrastructure (e.g., `primary_care_physician_density`, `emergency_department_availability`, `eviction_legal_aid_availability`)
+- **Scale 3**: Individual/Household Conditions (e.g., `uninsured_rate`, `housing_cost_burden`, `eviction_filing_rate`)
+- **Scale 4**: Intermediate Pathways (e.g., `primary_care_visit_rate`, `just_cause_eviction_protection`, `mental_healthcare_access`)
+- **Scale 5**: Crisis Endpoints (e.g., `emergency_department_visit_rate`, `asthma_hospitalization_rate`, `all_cause_mortality_rate`)
 
 **Visual Representation Options:**
 
 1. **Badge with Scale Number**
    - Badge: Small circular badge (top-right of node)
-   - Content: Scale number (1, 3, 4, 6, or 7) in white text
+   - Content: Scale number (1-5) in white text
    - Background color based on scale:
-     - Scale 1: `#1e40af` (dark blue) - Structural
-     - Scale 3: `#7c3aed` (purple) - Institutional
-     - Scale 4: `#059669` (green) - Individual
-     - Scale 6: `#ea580c` (orange) - Intermediate
-     - Scale 7: `#dc2626` (red) - Crisis
+     - Scale 1: `#1e40af` (dark blue) - Structural Policy
+     - Scale 2: `#7c3aed` (purple) - Institutional
+     - Scale 3: `#059669` (green) - Individual/Household
+     - Scale 4: `#ea580c` (orange) - Intermediate
+     - Scale 5: `#dc2626` (red) - Crisis Endpoints
 
-2. **Crisis Endpoint Special Treatment** (Scale 7)
+2. **Crisis Endpoint Special Treatment** (Scale 5)
    - Additional alert triangle icon
    - Thicker stroke (3px)
    - Higher visual prominence
+   - Examples: `emergency_department_visit_rate`, `all_cause_mortality_rate`
 
 **Badge Positioning**:
 ```

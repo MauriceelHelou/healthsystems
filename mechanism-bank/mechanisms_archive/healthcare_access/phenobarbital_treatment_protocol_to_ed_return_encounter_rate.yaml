@@ -1,0 +1,40 @@
+id: phenobarbital_treatment_protocol_to_ed_return_encounter_rate
+name: Phenobarbital Treatment Protocol for Alcohol Withdrawal → Emergency Department
+  Return Encounter Rate
+from_node:
+  node_id: phenobarbital_treatment_protocol
+  node_name: Phenobarbital Treatment Protocol for Alcohol Withdrawal
+to_node:
+  node_id: ed_return_encounter_rate
+  node_name: Emergency Department Return Encounter Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Emergency departments implement phenobarbital-based treatment protocols
+  for alcohol withdrawal management as an alternative to benzodiazepine-only protocols'
+- 'Step 2: Phenobarbital provides more effective symptom control and longer duration
+  of action compared to benzodiazepines alone, leading to more complete resolution
+  of withdrawal symptoms'
+- 'Step 3: Patients experience better symptomatic relief and stabilization during
+  the index ED encounter, reducing physiological need for acute medical care'
+- 'Step 4: Reduced need for return emergency care within 3 days of discharge due to
+  adequate symptom management'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Lebin et al. 2021. "Return Encounters in Emergency Department
+    Patients Treated with Phenobarbital Versus Benzodiazepines for Alcohol Withdrawal."
+    *Journal of Medical Toxicology*. https://doi.org/10.1007/s13181-021-00863-2
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.727484'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: medication_dosage
+  direction: strengthens
+  strength: moderate
+  description: Patients receiving phenobarbital were provided significantly more lorazepam
+    equivalents, suggesting more intensive symptom management may contribute to reduced
+    return visits

@@ -1,0 +1,59 @@
+id: NEW:private_liquor_store_sales_to_NEW:covid_19_infection_rate
+name: Private Liquor Store Sales → COVID-19 Infection Rate
+from_node:
+  node_id: NEW:private_liquor_store_sales
+  node_name: Private Liquor Store Sales
+to_node:
+  node_id: NEW:covid_19_infection_rate
+  node_name: COVID-19 Infection Rate
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Private liquor stores provide additional retail alcohol access beyond government stores'
+- 'Step 2: Increased private store sales contribute to higher population alcohol consumption'
+- 'Step 3: Off-premise alcohol consumption leads to at-home or informal social drinking'
+- 'Step 4: Social gatherings involving alcohol may violate physical distancing guidelines'
+- 'Step 5: COVID-19 infections increase 4 weeks following elevated private store sales (longer lag than
+  government stores)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'T. Stockwell et al. 2022. "Alcohol sales in Canadian liquor outlets as a predictor
+    of subsequent COVID‐19 infection rates: a time‐series analysis." https://doi.org/10.1111/add.16011'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not cite specific prior studies
+  - Public Health Agency of Canada (PHAC) COVID-19 surveillance data referenced
+  - Provincial government alcohol distributor sales data (Ontario, British Columbia, Nova Scotia)
+  doi: 10.1111/add.16011
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Private liquor store sales predicted COVID-19 infections 4 weeks later, with a 7.13% increase
+  per standard drink/person/week. The longer lag time compared to government stores (4 weeks vs 2 weeks)
+  may reflect different purchasing and consumption patterns among private store customers.
+quantitative_effects:
+  effect_size:
+    value: 7.13
+    type: percentage_change
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Private liquor store availability varies across Canadian provinces depending on provincial
+    alcohol retail policy
+moderators:
+- name: lag_time
+  direction: strengthens
+  strength: moderate
+  description: Private liquor store effect peaked at 4-week lag rather than 2-week lag seen with government
+    stores, possibly reflecting different consumption patterns or customer demographics
+structural_competency:
+  equity_implications: This finding illustrates how the mix of public and private alcohol retail systems
+    shapes population health outcomes. The different lag times between government and private store effects
+    suggest that retail environment characteristics (location, customer base, purchasing patterns) influence
+    how alcohol consumption translates to health outcomes. This supports structural rather than individual-level
+    interventions to address alcohol-related harms.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.121517'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

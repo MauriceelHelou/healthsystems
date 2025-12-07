@@ -1,0 +1,73 @@
+id: NEW:eating_disorder_diagnosis_to_NEW:eating_disorder_recovery
+name: Eating Disorder Diagnosis (AN, BN, BED, OSFED) → Eating Disorder Recovery Rate
+from_node:
+  node_id: NEW:eating_disorder_diagnosis
+  node_name: Eating Disorder Diagnosis (AN, BN, BED, OSFED)
+to_node:
+  node_id: NEW:eating_disorder_recovery
+  node_name: Eating Disorder Recovery Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Formal eating disorder diagnosis (AN, BN, BED, OSFED) enables identification
+  of pathological eating behaviors and associated physiological dysregulation'
+- 'Step 2: Diagnosis facilitates access to evidence-based treatments including family-based
+  therapy, cognitive-behavioral therapy, psychodynamic therapy, nutritional interventions,
+  and pharmacological treatments specific to each ED subtype'
+- 'Step 3: Treatment engagement addresses core biological mechanisms including metabolic
+  dysregulation, weight restoration (in AN), normalization of binge-purge cycles,
+  and neurobiological reward system dysfunction'
+- 'Step 4: Over time, with appropriate treatment, approximately 46% of diagnosed individuals
+  achieve overall recovery, with rates improving progressively from 42% at <2 years
+  to 67% at ≥10 years follow-up'
+evidence:
+  quality_rating: A
+  n_studies: 415
+  primary_citation: 'Marco Solmi et al. 2024. Outcomes in people with eating disorders:
+    a transdiagnostic and disorder‐specific systematic review, meta‐analysis and multivariable
+    meta‐regression analysis. World Psychiatry.'
+  supporting_citations: []
+description: This meta-analysis of 415 studies (N=88,372) demonstrates that individuals
+  with formal eating disorder diagnoses achieve overall recovery in 46% of cases,
+  with recovery rates improving substantially over time from 42% at <2 years to 67%
+  at ≥10 years. The diagnosis enables access to disorder-specific evidence-based treatments.
+  Chronicity occurs in approximately 25% of cases, and mortality is 0.4% overall (5.2
+  deaths/1,000 person-years in observational studies). Recovery rates showed no significant
+  differences among ED subtypes (AN, BN, BED, OSFED), though hospitalization rates
+  varied significantly (32% for AN vs 4% for BN).
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.46
+    type: proportion
+    ci_lower: 0.44
+    ci_upper: 0.49
+  p_value: null
+  sample_size: 88372
+moderators:
+- name: age_at_diagnosis
+  direction: strengthens
+  strength: strong
+  description: Children/adolescents had more favorable outcomes across and within
+    EDs than adults
+- name: follow_up_duration
+  direction: strengthens
+  strength: strong
+  description: 'Recovery rates increase with longer follow-up: 42% at <2 years to
+    67% at ≥10 years'
+- name: self_injurious_behaviors
+  direction: weakens
+  strength: moderate
+  description: Self-injurious behaviors associated with lower recovery rates in pooled
+    EDs
+- name: treatment_type
+  direction: strengthens
+  strength: strong
+  description: Family-based therapy, CBT, psychodynamic therapy, DBT, and nutritional
+    interventions associated with higher recovery rates across ED subtypes
+- name: sociodemographic_index
+  direction: weakens
+  strength: moderate
+  description: Higher country socio-demographic index paradoxically associated with
+    lower recovery and higher chronicity in AN

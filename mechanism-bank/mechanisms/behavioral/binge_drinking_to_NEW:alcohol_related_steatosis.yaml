@@ -1,0 +1,54 @@
+id: binge_drinking_to_NEW:alcohol_related_steatosis
+name: Binge Drinking → Alcohol-Related Steatosis
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:alcohol_related_steatosis
+  node_name: Alcohol-Related Steatosis
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Binge drinking leads to episodic high-dose alcohol consumption that exceeds
+  the liver''s metabolic capacity'
+- 'Step 2: Alcohol metabolism in hepatocytes generates acetaldehyde and increases
+  NADH/NAD+ ratio, disrupting lipid metabolism'
+- 'Step 3: Impaired fatty acid oxidation and increased lipogenesis result in triglyceride
+  accumulation within hepatocytes'
+- 'Step 4: Repeated binge episodes cause progressive hepatic steatosis (fatty liver),
+  the most common initial stage of alcohol-related liver disease'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Richard Parker 2020. "The natural history of alcohol-related liver
+    disease." Current opinion in gastroenterology.
+  supporting_citations: []
+description: Binge drinking contributes to alcohol-related steatosis through repeated
+  episodes of excessive alcohol intake that overwhelm hepatic metabolic capacity.
+  Alcohol-related steatosis is the most common stage of alcohol-related liver disease
+  (ArLD), characterized by fat accumulation in liver cells. While this stage has a
+  relatively low rate of progression to cirrhosis (approximately 3% per year), it
+  represents the foundational pathology that can advance to more severe liver disease
+  including steatohepatitis and cirrhosis.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.03
+    type: annual_progression_rate
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: obesity
+  direction: strengthens
+  strength: strong
+  description: Obesity is identified as the most common comorbid factor that lowers
+    the threshold of alcohol consumption needed to develop alcohol-related liver disease,
+    including steatosis
+- name: alcohol_consumption_threshold
+  direction: strengthens
+  strength: moderate
+  description: ArLD occurs after a threshold of alcohol consumption, with binge drinking
+    patterns contributing to exceeding this threshold

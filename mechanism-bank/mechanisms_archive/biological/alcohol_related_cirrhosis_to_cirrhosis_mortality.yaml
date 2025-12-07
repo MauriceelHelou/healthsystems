@@ -1,0 +1,44 @@
+id: alcohol_related_cirrhosis_to_cirrhosis_mortality
+name: Alcohol-Related Cirrhosis → Cirrhosis Mortality
+from_node:
+  node_id: alcohol_related_cirrhosis
+  node_name: Alcohol-Related Cirrhosis
+to_node:
+  node_id: cirrhosis_mortality
+  node_name: Cirrhosis Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Untreated alcohol use disorder leads to progression of alcohol-related
+  cirrhosis'
+- 'Step 2: Advanced cirrhosis results in liver failure, portal hypertension, and associated
+  complications'
+- 'Step 3: Continued alcohol exposure in cirrhotic patients accelerates disease progression
+  and decompensation'
+- 'Step 4: Inadequate access to multidisciplinary treatment including behavioral and
+  pharmacological interventions leads to alcohol relapse and increased mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Peng-Sheng Ting et al. 2020. "Behavioral Treatment for Patients
+    With Alcohol‐Related Liver Disease: A Primer for Hepatologists." *Clinical Liver
+    Disease*. https://doi.org/10.1002/cld.854'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.361728'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: age_group
+  direction: strengthens
+  strength: strong
+  description: Younger age groups (25-34 years) experienced more rapid increases in
+    cirrhosis mortality (10.5% annually from 2009-2016) compared to the overall population
+    increase of 18% from 2000-2013
+- name: multidisciplinary_treatment_access
+  direction: weakens
+  strength: moderate
+  description: Access to multidisciplinary treatment involving hepatologists and substance
+    abuse specialists with behavioral and pharmacological therapy can prevent alcohol
+    relapse and reduce mortality

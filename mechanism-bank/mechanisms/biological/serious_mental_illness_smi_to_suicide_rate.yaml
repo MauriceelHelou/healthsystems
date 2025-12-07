@@ -1,0 +1,50 @@
+id: serious_mental_illness_smi_to_suicide_rate
+name: Severity of Psychiatric Disorder → Suicide Mortality
+from_node:
+  node_id: serious_mental_illness_smi
+  node_name: Severity of Psychiatric Disorder
+to_node:
+  node_id: suicide_rate
+  node_name: Suicide Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Greater psychiatric disorder severity involves more pronounced neurobiological
+  dysregulation, including alterations in serotonergic, dopaminergic, and stress-response
+  systems (HPA axis dysfunction)'
+- 'Step 2: These neurobiological changes manifest as more severe symptoms including
+  hopelessness, anhedonia, impulsivity, and cognitive rigidity that reduce capacity
+  for adaptive coping'
+- 'Step 3: Increased symptom severity leads to functional impairment, social isolation,
+  and accumulated psychosocial stressors that compound biological vulnerability'
+- 'Step 4: The combination of biological dysregulation and psychosocial deterioration
+  elevates suicidal ideation and reduces inhibition against self-harm'
+- 'Step 5: More severe psychiatric illness increases likelihood of suicide attempts
+  and completed suicide through both impulsive and planned pathways'
+evidence:
+  quality_rating: A
+  n_studies: 81
+  primary_citation: 'A. Pigoni et al. 2024. Machine learning and the prediction of
+    suicide in psychiatric populations: a systematic review. Translational Psychiatry.'
+  supporting_citations: []
+description: Severity of psychiatric disorder is a robust predictor of suicide in
+  psychiatric populations. Machine learning studies consistently identify disorder
+  severity as a key feature distinguishing those at elevated suicide risk. The biological
+  pathway involves neurobiological dysregulation associated with more severe psychiatric
+  illness, including alterations in neurotransmitter systems and stress response mechanisms.
+  These biological changes compound with psychosocial deterioration to increase suicide
+  risk. Most ML prediction models achieved 70% or greater accuracy using severity
+  as a key feature.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: previous_suicide_attempts
+  direction: strengthens
+  strength: strong
+  description: Previous attempts identified as key predictor alongside disorder severity,
+    suggesting cumulative risk
+- name: pharmacological_treatment
+  direction: weakens
+  strength: moderate
+  description: Pharmacological treatments emerged as predictive feature, suggesting
+    treatment may modify the severity-suicide relationship

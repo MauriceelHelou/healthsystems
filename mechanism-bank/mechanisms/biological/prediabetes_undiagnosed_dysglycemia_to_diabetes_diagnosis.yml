@@ -1,0 +1,62 @@
+id: prediabetes_undiagnosed_dysglycemia_to_diabetes_diagnosis
+name: Prediabetes/Undiagnosed Dysglycemia → Diabetes Diagnosis
+from_node:
+  node_id: prediabetes_undiagnosed_dysglycemia
+  node_name: Prediabetes/Undiagnosed Dysglycemia
+to_node:
+  node_id: diabetes_diagnosis
+  node_name: Diabetes Diagnosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Impaired glucose regulation/prediabetes represents intermediate glycemic state with metabolic
+  changes'
+- 'Step 2: Metabolites including lactate and formiminoglutamate are significantly different between prediabetes
+  and diabetes states'
+- 'Step 3: These metabolites mediate the progression effect from baseline to follow-up at 18 and 48 months'
+- 'Step 4: Identified metabolite markers enable risk stratification for targeted intervention before progression
+  to diabetes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sapna Sharma et al. 2024. "Role of human plasma metabolites in prediabetes and type
+    2 diabetes from the IMI-DIRECT study.." https://doi.org/10.1007/s00125-024-06282-6
+  supporting_citations:
+  - IMI-DIRECT consortium longitudinal follow-up studies
+  - Prediabetes progression studies
+  - Additional citations require full-text access
+  doi: 10.1007/s00125-024-06282-6
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study identified metabolites that significantly differ between impaired glucose regulation/prediabetes
+  and type 2 diabetes states. These metabolites mediate the effect of diabetes progression from baseline
+  to follow-up, enabling identification of individuals at highest risk for progression who could benefit
+  from targeted interventions.
+quantitative_effects:
+  sample_size: 3000
+moderators:
+- name: alcohol_consumption
+  direction: strengthens
+  strength: moderate
+  description: Alcohol was adjusted for in full model, indicating its role in modifying metabolite-diabetes
+    associations
+- name: smoking_current
+  direction: strengthens
+  strength: moderate
+  description: Smoking was adjusted for in full model as a modifier of metabolite profiles and progression
+    risk
+- name: blood_pressure
+  direction: strengthens
+  strength: moderate
+  description: Blood pressure adjusted in models, indicating cardiovascular-metabolic interactions
+structural_competency:
+  equity_implications: Prediabetes prevalence is shaped by structural factors including food environment,
+    walkability, economic stress, and healthcare access for screening. Metabolite-based risk stratification
+    could enable more equitable allocation of prevention resources to communities with highest structural
+    risk. Alcohol and smoking as moderators reflect upstream social determinants.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.682836'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

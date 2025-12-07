@@ -1,0 +1,56 @@
+id: NEW:alcohol_duty_taxation_to_alcohol_induced_mortality
+name: Alcohol Duty/Taxation Level → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:alcohol_duty_taxation
+  node_name: Alcohol Duty/Taxation Level
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Increased alcohol duties raise retail prices of alcoholic beverages'
+- 'Step 2: Reduced population-level alcohol consumption due to price sensitivity'
+- 'Step 3: Decreased incidence of alcohol-related health conditions (liver disease, cardiovascular effects,
+  injuries)'
+- 'Step 4: Improved population health outcomes and reduced alcohol-induced mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. Connolly et al. 2019. "Can a policy-induced reduction in alcohol consumption improve
+    health outcomes and stimulate the UK economy?: A potential ''double dividend''." https://doi.org/10.1111/dar.12962'
+  supporting_citations:
+  - Additional citations require full-text access - abstract states 'health benefits of reducing excessive
+    alcohol consumption are well-documented and widely accepted'
+  - Previous UK alcohol impact studies referenced but not specifically cited
+  - Health-augmented Input-Output modeling framework literature
+  doi: 10.1111/dar.12962
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol taxation policy reduces excessive consumption at the population level, leading to
+  well-documented improvements in health outcomes including reduced alcohol-induced mortality, while simultaneously
+  generating economic benefits through revenue reinvestment
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: UK-specific modeling; health system characteristics and baseline alcohol consumption
+    patterns would affect magnitude of effects in other jurisdictions
+moderators:
+- name: baseline_consumption_levels
+  direction: strengthens
+  strength: moderate
+  description: Higher baseline excessive alcohol consumption would yield greater health benefits from
+    equivalent consumption reductions
+structural_competency:
+  equity_implications: This mechanism frames alcohol-related health harms as a consequence of structural
+    factors (pricing policy, market conditions) rather than individual moral failing. The policy lever
+    operates at the system level to change the environment in which consumption decisions occur, recognizing
+    that individual 'choices' are constrained by structural conditions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.629276'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

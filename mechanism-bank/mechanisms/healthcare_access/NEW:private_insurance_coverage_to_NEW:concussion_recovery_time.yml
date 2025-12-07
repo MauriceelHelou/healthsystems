@@ -1,0 +1,55 @@
+id: NEW:private_insurance_coverage_to_NEW:concussion_recovery_time
+name: Private Insurance Coverage → Concussion Recovery Time
+from_node:
+  node_id: NEW:private_insurance_coverage
+  node_name: Private Insurance Coverage
+to_node:
+  node_id: NEW:concussion_recovery_time
+  node_name: Concussion Recovery Time
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Private insurance provides greater access to specialized concussion care and follow-up services'
+- 'Step 2: Insured patients can access timely diagnostic testing and rehabilitation services'
+- 'Step 3: Comprehensive care facilitates faster clinical recovery from concussion'
+- 'Step 4: Reduced barriers to care enable adherence to treatment protocols and return-to-activity guidelines'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: 'Tamerah N Hunt et al. 2024. "The Effect of Social Determinants of Health on Clinical
+    Recovery Following Concussion: A Systematic Review.." https://doi.org/10.1123/jsr.2023-0068'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 5 high-quality studies
+    per Downs and Black Quality Index
+  - Studies evaluated using 2011 Oxford Center for Evidence-Based Medicine Guide
+  - Studies retrieved from CINAHL, MEDLINE, PsycInfo, and SPORTDiscus databases
+  doi: 10.1123/jsr.2023-0068
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2025, source is 2024'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Private insurance coverage is associated with faster clinical recovery from concussion among
+  athletes. This relationship likely operates through improved access to specialized care, diagnostic
+  services, and rehabilitation support that privately insured individuals can more readily obtain.
+moderators:
+- name: race
+  direction: strengthens
+  strength: moderate
+  description: Race appears to interact with insurance status to affect recovery speed, though results
+    were inconsistent across studies
+- name: preinjury_factors
+  direction: strengthens
+  strength: moderate
+  description: Preinjury factors potentially intersect with SDoH variables to influence recovery outcomes
+structural_competency:
+  equity_implications: This mechanism highlights how economic barriers embedded in the healthcare system
+    create differential recovery outcomes. Insurance status is a structural determinant shaped by employment,
+    income, and policy decisions rather than individual choice. The finding points to systemic inequities
+    in healthcare access that disadvantage uninsured or underinsured populations in recovering from injury.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.916145'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,54 @@
+id: sleep_duration_inadequate_to_suicidal_ideation
+name: Sleep Disturbances → Suicidal Ideation
+from_node:
+  node_id: sleep_duration_inadequate
+  node_name: Sleep Disturbances
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Inadequate sleep duration and sleep disturbances disrupt normal neurobiological
+  processes, including prefrontal cortex function and emotional regulation centers'
+- 'Step 2: Impaired sleep leads to dysregulation of mood, increased emotional reactivity,
+  and reduced cognitive capacity for problem-solving and coping'
+- 'Step 3: Chronic sleep disturbances amplify negative affect, hopelessness, and impair
+  impulse control, increasing vulnerability to suicidal ideation'
+- 'Step 4: The accumulation of sleep-related cognitive and emotional deficits manifests
+  as increased suicidal thoughts and ideation in affected adolescents'
+evidence:
+  quality_rating: A
+  n_studies: 19
+  primary_citation: 'Valentina Baldini et al. 2024. Association between sleep disturbances
+    and suicidal behavior in adolescents: a systematic review and meta-analysis. Frontiers
+    in Psychiatry.'
+  supporting_citations: []
+description: A systematic review and meta-analysis of 19 studies involving over 1.1
+  million adolescents demonstrates that sleep disturbances are significantly associated
+  with suicidal ideation. Adolescents with sleep disturbances are 2.28 times more
+  likely to experience suicidal ideation compared to controls without sleep disturbances.
+  This association was observed across multiple countries and persisted in adolescents
+  without diagnosed psychiatric disorders, suggesting sleep disturbances as an independent
+  risk factor.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.28
+    type: odds_ratio
+    ci_lower: 1.76
+    ci_upper: 2.94
+  p_value: null
+  sample_size: 1196271
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Study focused on adolescents aged 12-21 years, a particularly vulnerable
+    developmental period for both sleep issues and suicidal ideation
+- name: type_of_suicidal_behavior
+  direction: strengthens
+  strength: strong
+  description: 'Sleep disturbances showed stronger association with suicide attempts
+    (OR: 3.10) compared to suicidal ideation (OR: 2.28)'

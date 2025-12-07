@@ -1,0 +1,60 @@
+id: NEW:alcohol_venue_trading_hour_restrictions_to_violent_crime_rate_new_added_to_fill_mechanism_gap
+name: Alcohol Venue Trading Hour Restrictions → Violent Crime Rate
+from_node:
+  node_id: NEW:alcohol_venue_trading_hour_restrictions
+  node_name: Alcohol Venue Trading Hour Restrictions
+to_node:
+  node_id: violent_crime_rate_new_added_to_fill_mechanism_gap
+  node_name: Violent Crime Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Trading hour restrictions implemented to reduce alcohol-related violence'
+- 'Step 2: Despite increased preloading and intoxication at entry, patrons spend less time in entertainment
+  district'
+- 'Step 3: Crime statistics monitored before and after legislative change'
+- 'Step 4: Self-reported experiences of violence also assessed among patrons'
+- 'Step 5: No change observed in crime statistics or self-reported violence experiences'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'G. Devilly et al. 2019. "A big night out getting bigger: Alcohol consumption, arrests
+    and crowd numbers, before and after legislative change." https://doi.org/10.1371/journal.pone.0218161'
+  supporting_citations:
+  - Police-recorded assault rates compared pre/post legislation
+  - Study 2 and Study 3 included crime statistics analysis
+  - Patron self-reported violence experiences collected in surveys
+  doi: 10.1371/journal.pone.0218161
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Despite the stated policy goal of reducing alcohol-related violence in youth, the trading
+  hour restrictions showed no effect on crime statistics or self-reported experiences of violence. The
+  legislation failed to achieve its primary public health objective while increasing intoxication levels
+  through behavioral adaptation.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Crime statistics from police records in Queensland entertainment districts. No significant
+    change detected despite policy goal of violence reduction.
+moderators:
+- name: policing_intensity
+  direction: strengthens
+  strength: moderate
+  description: Police presence and enforcement in entertainment districts may moderate the relationship
+    between intoxication and violence
+- name: fear_of_violence
+  direction: weakens
+  strength: weak
+  description: Study assessed fear of violence which did not change, suggesting perception-based deterrence
+    effects were minimal
+structural_competency:
+  equity_implications: This null finding is critically important for health equity. The policy intervention
+    failed to address the structural roots of alcohol-related violence, instead focusing on supply restriction
+    alone. The authors conclude that legislation not accounting for cultural patterns (preloading) and
+    local conditions will be unsuccessful. This suggests need for multi-component interventions addressing
+    social norms, venue management practices, and community-level factors rather than simple supply restrictions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.248658'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

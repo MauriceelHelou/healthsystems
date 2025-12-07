@@ -1,0 +1,57 @@
+id: NEW:ehealth_cbti_availability_to_anxiety_disorder
+name: eHealth Cognitive Behavioral Therapy for Insomnia Availability → Anxiety Disorder
+from_node:
+  node_id: NEW:ehealth_cbti_availability
+  node_name: eHealth Cognitive Behavioral Therapy for Insomnia Availability
+to_node:
+  node_id: anxiety_disorder
+  node_name: Anxiety Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: eHealth CBTI expands access to evidence-based insomnia treatment through digital platforms'
+- 'Step 2: Treatment addresses insomnia, which shares bidirectional relationships with anxiety disorders'
+- 'Step 3: Both eCBTI and ipCBTI demonstrate statistically significant improvements in anxiety as a secondary
+  outcome'
+- 'Step 4: Improved sleep quality and reduced insomnia severity contribute to decreased anxiety symptoms'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'S. Knutzen et al. 2024. "Efficacy of eHealth Versus In-Person Cognitive Behavioral
+    Therapy for Insomnia: Systematic Review and Meta-Analysis of Equivalence." https://doi.org/10.2196/58217'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 15 RCTs
+  - Within-group analyses showed significant improvements in anxiety for both delivery formats
+  - Individual study citations available in full systematic review
+  doi: 10.2196/58217
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: The meta-analysis found that both eHealth and in-person CBTI led to statistically significant
+  improvements in anxiety as a secondary outcome. This supports eHealth delivery as a means to expand
+  access to treatment that addresses both insomnia and comorbid anxiety symptoms.
+quantitative_effects:
+  p_value: 0.05
+  sample_size: 1083
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Access to mental health treatment varies geographically, making eHealth alternatives
+    particularly relevant for underserved areas
+moderators:
+- name: treatment_duration
+  direction: strengthens
+  strength: moderate
+  description: Treatment duration may moderate the comparative efficacy of delivery formats
+structural_competency:
+  equity_implications: Anxiety disorders are more prevalent in populations facing socioeconomic stressors
+    and with limited access to mental healthcare. By demonstrating that eHealth CBTI can address anxiety
+    symptoms equivalently to in-person care, this finding supports structural interventions that could
+    reduce treatment disparities for populations with limited access to in-person mental health services.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.860103'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

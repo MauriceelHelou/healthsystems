@@ -1,0 +1,44 @@
+id: NEW:radiotherapy_pineoblastoma_to_NEW:pineoblastoma_survival
+name: Radiotherapy for Pineoblastoma → Adult Pineoblastoma Survival
+from_node:
+  node_id: NEW:radiotherapy_pineoblastoma
+  node_name: Radiotherapy for Pineoblastoma
+to_node:
+  node_id: NEW:pineoblastoma_survival
+  node_name: Adult Pineoblastoma Survival
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Adult pineoblastoma patients receive radiotherapy as part of multimodal
+  treatment following surgical resection'
+- 'Step 2: Radiotherapy targets residual tumor cells and micrometastatic disease in
+  the central nervous system'
+- 'Step 3: Radiation-induced tumor cell death reduces disease burden and prevents
+  recurrence'
+- 'Step 4: Multivariate COX analysis demonstrates radiotherapy as an independent prognostic
+  factor for improved survival (P<0.001)'
+evidence:
+  quality_rating: C
+  n_studies: 32
+  primary_citation: Xiufeng Chu et al. 2024. A systematic review of adult pineoblastoma.
+    Frontiers in oncology.
+  supporting_citations: []
+description: Systematic review of 108 adult pineoblastoma cases from 32 articles demonstrates
+  that radiotherapy is an independent factor in beneficial prognosis. Kaplan-Meier
+  survival analysis showed treatment modality including radiotherapy was significantly
+  beneficial for survival. The 5-year survival rate was 49.5% and 10-year survival
+  rate was 33.9%. Multivariate COX analysis confirmed radiotherapy as independently
+  associated with improved outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Surgical extent
+  direction: strengthens
+  strength: moderate
+  description: Gross total resection combined with radiotherapy tends to improve survival,
+    particularly within five years (P=0.079)
+- name: Chemotherapy
+  direction: strengthens
+  strength: moderate
+  description: Addition of chemotherapy to treatment modality was beneficial for survival
+    (P=0.020)

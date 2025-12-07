@@ -1,0 +1,60 @@
+id: obesity_individual_to_NEW:nafld_prevalence
+name: Obesity → Non-alcoholic fatty liver disease prevalence
+from_node:
+  node_id: obesity_individual
+  node_name: Obesity
+to_node:
+  node_id: NEW:nafld_prevalence
+  node_name: Non-alcoholic fatty liver disease prevalence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Excess adipose tissue in obesity leads to increased free fatty acid release
+  into circulation through lipolysis'
+- 'Step 2: Elevated free fatty acids are taken up by hepatocytes, exceeding the liver''s
+  capacity for oxidation and export'
+- 'Step 3: Excess lipids accumulate as triglycerides in hepatocytes (hepatic steatosis),
+  leading to NAFLD development'
+- 'Step 4: Obesity-associated insulin resistance further promotes hepatic de novo
+  lipogenesis and reduces lipid export'
+- 'Step 5: Chronic adipose tissue inflammation releases pro-inflammatory cytokines
+  that contribute to hepatic inflammation and disease progression'
+evidence:
+  quality_rating: A
+  n_studies: 237
+  primary_citation: 'Jie Li et al. 2019. Prevalence, incidence, and outcome of non-alcoholic
+    fatty liver disease in Asia, 1999-2019: a systematic review and meta-analysis.
+    The lancet. Gastroenterology & hepatology.'
+  supporting_citations: []
+description: Obesity is a major driver of non-alcoholic fatty liver disease (NAFLD),
+  which is the most prevalent chronic liver disease worldwide. This systematic review
+  of 237 studies involving over 13 million participants in Asia demonstrated that
+  NAFLD prevalence is strongly associated with obesity prevalence in the population.
+  The biological mechanism involves excess adiposity leading to increased hepatic
+  lipid accumulation through free fatty acid flux and insulin resistance-mediated
+  lipogenesis. The study identified obese individuals, particularly older men, as
+  high-risk groups requiring targeted public health interventions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 29.62
+    type: prevalence_percentage
+    ci_lower: 28.13
+    ci_upper: 31.15
+  p_value: null
+  sample_size: 13044518
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Older obese men identified as a particularly high-risk group for NAFLD
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Older age combined with obesity increases NAFLD risk
+- name: time_period
+  direction: strengthens
+  strength: strong
+  description: NAFLD prevalence has increased significantly over time (p<0.0001),
+    suggesting rising obesity rates drive increasing NAFLD burden

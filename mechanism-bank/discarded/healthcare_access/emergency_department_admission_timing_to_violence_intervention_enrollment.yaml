@@ -1,0 +1,46 @@
+id: emergency_department_admission_timing_to_violence_intervention_enrollment
+name: Emergency Department Admission Timing for Referrals → Violence Intervention
+  Program Enrollment
+from_node:
+  node_id: emergency_department_admission_timing
+  node_name: Emergency Department Admission Timing for Referrals
+to_node:
+  node_id: violence_intervention_enrollment
+  node_name: Violence Intervention Program Enrollment
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Encouraging nurses to enter HVIP consults at the time of emergency department
+  admission creates a systematic touchpoint early in the care process'
+- 'Step 2: Early initiation of referrals prevents consults from being forgotten or
+  deprioritized during busy emergency department workflow'
+- 'Step 3: Timely referrals while patients are still in the emergency department increase
+  the likelihood of patient contact and consent for program enrollment'
+- 'Step 4: Earlier connection to violence intervention specialists improves enrollment
+  rates and initiation of comprehensive services'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jay R. Watkins et al. 2021. "Assessing improvements in emergency
+    department referrals to a hospital-based violence intervention program." *Injury
+    Epidemiology*. https://doi.org/10.1186/s40621-021-00333-x
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.566165'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: emergency_department_workflow_demands
+  direction: weakens
+  strength: moderate
+  description: High patient volumes and competing clinical priorities in emergency
+    departments may reduce adherence to early referral protocols
+- name: patient_acuity
+  direction: weakens
+  strength: moderate
+  description: Severely injured patients requiring immediate medical stabilization
+    may delay referral timing despite protocol recommendations
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/emergency_department_admission_timing_to_violence_intervention_enrollment.yaml
+_category: healthcare_access

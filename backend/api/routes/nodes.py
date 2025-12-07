@@ -245,6 +245,28 @@ class FocalSubgraphResponse(BaseModel):
     stats: dict
 
 
+class CanonicalNodeResponse(BaseModel):
+    """Response schema for canonical node from node bank"""
+    id: str = Field(..., description="Node identifier (snake_case)")
+    name: str = Field(..., description="Human-readable node name")
+    scale: int = Field(..., ge=1, le=7, description="Node scale (1-7)")
+    category: str = Field(..., description="Node category")
+    node_type: Optional[str] = Field("stock", description="Node type: stock, proxy_index, crisis_endpoint")
+    unit: Optional[str] = Field(None, description="Unit of measurement")
+    description: Optional[str] = Field(None, description="Node description")
+    mechanism_count: Optional[int] = Field(None, description="Number of mechanisms referencing this node")
+
+    class Config:
+        from_attributes = True
+
+
+class NodeListResponse(BaseModel):
+    """Response schema for node list"""
+    nodes: List[CanonicalNodeResponse]
+    total: int
+    referenced_count: int = Field(..., description="Nodes referenced by at least one mechanism")
+
+
 # ==========================================
 # Helper Functions
 # ==========================================
@@ -296,9 +318,13 @@ def build_graph(db: Session, exclude_categories: Optional[List[str]] = None,
 
 def get_node_scale(node: Node) -> int:
     """
-    Determine node scale based on category.
+    Determine node scale.
 
-    7-scale taxonomy mapping:
+    Priority:
+    1. Use node.scale from database if it exists (trust the database)
+    2. Fall back to category-based inference only if scale is NULL
+
+    7-scale taxonomy mapping (fallback only):
     - political -> 1 (structural determinants - policy)
     - built_environment -> 2 (built environment & infrastructure)
     - economic, social_services -> 3 (institutional infrastructure)
@@ -307,9 +333,11 @@ def get_node_scale(node: Node) -> int:
     - healthcare_access, clinical -> 6 (intermediate pathways)
     - biological, crisis -> 7 (crisis endpoints)
     """
-    # If node has explicit scale, use it
-    # Note: scale is not in the Node model yet, so we need to infer from category
+    # If node has explicit scale in database, use it (trust the data)
+    if hasattr(node, 'scale') and node.scale is not None:
+        return node.scale
 
+    # Fall back to category-based inference only if scale is NULL
     scale_mapping = {
         'political': 1,
         'built_environment': 2,
@@ -823,6 +851,103 @@ def compute_focal_subgraph(
 # GET Endpoints
 # ==========================================
 
+@router.get("/", response_model=NodeListResponse)
+def list_nodes(
+    referenced_only: bool = Query(True, description="Only return nodes referenced by mechanisms"),
+    category: Optional[str] = Query(None, description="Filter by category"),
+    scale: Optional[int] = Query(None, ge=1, le=7, description="Filter by scale (1-7)"),
+    search: Optional[str] = Query(None, description="Search by name or ID (case-insensitive)"),
+    limit: int = Query(1000, le=2000, description="Maximum results"),
+    offset: int = Query(0, ge=0, description="Offset for pagination"),
+    db: Session = Depends(get_db)
+):
+    """
+    List canonical nodes from the node bank.
+
+    Returns nodes with their full metadata including scale, category,
+    description, and unit. By default returns only nodes referenced
+    by at least one mechanism.
+
+    Query Parameters:
+    - referenced_only: If true (default), only return nodes that appear in mechanisms
+    - category: Filter by category (built_environment, economic, political, etc.)
+    - scale: Filter by scale level (1-7)
+    - search: Search by node name or ID (case-insensitive partial match)
+    """
+    from sqlalchemy import or_, func
+
+    query = db.query(Node)
+
+    # Apply filters
+    if category:
+        query = query.filter(Node.category == category)
+    if scale:
+        query = query.filter(Node.scale == scale)
+    if search:
+        search_pattern = f"%{search}%"
+        query = query.filter(
+            or_(
+                Node.id.ilike(search_pattern),
+                Node.name.ilike(search_pattern)
+            )
+        )
+
+    # Get all matching nodes
+    all_nodes = query.all()
+
+    # Get referenced node IDs (nodes that appear in at least one mechanism)
+    from_ids = db.query(Mechanism.from_node_id).distinct()
+    to_ids = db.query(Mechanism.to_node_id).distinct()
+    referenced_node_ids = {r[0] for r in from_ids.all()} | {r[0] for r in to_ids.all()}
+
+    # Count mechanisms per node for mechanism_count field
+    mechanism_counts = {}
+    from_counts = db.query(
+        Mechanism.from_node_id,
+        func.count(Mechanism.id)
+    ).group_by(Mechanism.from_node_id).all()
+    to_counts = db.query(
+        Mechanism.to_node_id,
+        func.count(Mechanism.id)
+    ).group_by(Mechanism.to_node_id).all()
+
+    for node_id, count in from_counts:
+        mechanism_counts[node_id] = mechanism_counts.get(node_id, 0) + count
+    for node_id, count in to_counts:
+        mechanism_counts[node_id] = mechanism_counts.get(node_id, 0) + count
+
+    # Filter to referenced nodes if requested
+    if referenced_only:
+        all_nodes = [n for n in all_nodes if n.id in referenced_node_ids]
+
+    # Apply pagination
+    total = len(all_nodes)
+    paginated_nodes = all_nodes[offset:offset + limit]
+
+    # Build response
+    nodes_response = []
+    for n in paginated_nodes:
+        # Use get_node_scale for consistent scale handling
+        node_scale = get_node_scale(n)
+
+        nodes_response.append(CanonicalNodeResponse(
+            id=n.id,
+            name=n.name,
+            scale=node_scale,
+            category=n.category,
+            node_type=n.node_type or "stock",
+            unit=n.unit,
+            description=n.description,
+            mechanism_count=mechanism_counts.get(n.id, 0)
+        ))
+
+    return NodeListResponse(
+        nodes=nodes_response,
+        total=total,
+        referenced_count=len(referenced_node_ids)
+    )
+
+
 @router.get("/importance", response_model=List[NodeImportance])
 def get_node_importance(
     top_n: int = Query(20, ge=1, le=100, description="Number of top nodes to return"),
@@ -1281,3 +1406,459 @@ def get_focal_subgraph(
         )
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
+
+
+# ==========================================
+# Hierarchy API Endpoints (NEW)
+# ==========================================
+
+class HierarchyNodeResponse(BaseModel):
+    """Response schema for a node with hierarchy information"""
+    id: str
+    name: str
+    scale: int
+    category: str
+    node_type: Optional[str] = "stock"
+    unit: Optional[str] = None
+    description: Optional[str] = None
+
+    # Hierarchy fields
+    depth: int = Field(0, description="Depth in hierarchy: 0 = root/domain node")
+    primaryPath: Optional[str] = Field(None, description="Primary path: root_id/parent_id/this_id")
+    allAncestors: List[str] = Field(default_factory=list, description="All ancestor node IDs")
+    isGroupingNode: bool = Field(False, description="Whether this is a grouping/container node")
+    domains: List[str] = Field(default_factory=list, description="Domain(s) this node belongs to")
+    parentIds: List[str] = Field(default_factory=list, description="Direct parent node IDs")
+    childIds: List[str] = Field(default_factory=list, description="Direct child node IDs")
+    hasChildren: bool = Field(False, description="Whether this node has children")
+    childCount: int = Field(0, description="Number of direct children")
+
+    class Config:
+        from_attributes = True
+
+
+class HierarchyTreeNode(BaseModel):
+    """Hierarchy tree node for nested structure"""
+    id: str
+    name: str
+    scale: int
+    depth: int
+    domains: List[str]
+    isGroupingNode: bool
+    childCount: int
+    children: Optional[List["HierarchyTreeNode"]] = None
+
+    class Config:
+        from_attributes = True
+
+
+# Enable self-referencing
+HierarchyTreeNode.model_rebuild()
+
+
+class HierarchyTreeResponse(BaseModel):
+    """Response schema for hierarchy tree"""
+    roots: List[HierarchyTreeNode]
+    totalNodes: int
+    maxDepth: int
+
+
+class NodeAncestorsResponse(BaseModel):
+    """Response schema for node ancestors"""
+    nodeId: str
+    ancestors: List[HierarchyNodeResponse]
+    paths: List[List[str]] = Field(description="Multiple paths for DAG (each path is array of node IDs)")
+
+
+class NodeDescendantsResponse(BaseModel):
+    """Response schema for node descendants"""
+    nodeId: str
+    descendants: List[HierarchyNodeResponse]
+    totalCount: int
+    maxDepth: int
+
+
+class AddHierarchyRelationshipRequest(BaseModel):
+    """Request to add a parent-child relationship"""
+    parentId: str = Field(..., description="Parent node ID")
+    childId: str = Field(..., description="Child node ID")
+    relationshipType: str = Field("contains", description="Relationship type: contains, specializes, contextualizes")
+    orderIndex: int = Field(0, description="Order among siblings")
+
+
+class HierarchyRelationshipResponse(BaseModel):
+    """Response for hierarchy relationship operations"""
+    success: bool
+    message: str
+    parentId: str
+    childId: str
+
+
+def node_to_hierarchy_response(node: Node) -> HierarchyNodeResponse:
+    """Convert a Node model to HierarchyNodeResponse"""
+    parent_ids = [p.id for p in node.parents] if hasattr(node, 'parents') and node.parents else []
+    child_ids = [c.id for c in node.children] if hasattr(node, 'children') and node.children else []
+
+    # Compute domains from ancestors (root nodes at depth=0)
+    domains = node.domains if hasattr(node, 'domains') else []
+
+    return HierarchyNodeResponse(
+        id=node.id,
+        name=node.name,
+        scale=get_node_scale(node),
+        category=node.category,
+        node_type=node.node_type or "stock",
+        unit=node.unit,
+        description=node.description,
+        depth=node.depth or 0,
+        primaryPath=node.primary_path,
+        allAncestors=node.all_ancestors or [],
+        isGroupingNode=node.is_grouping_node or False,
+        domains=domains,
+        parentIds=parent_ids,
+        childIds=child_ids,
+        hasChildren=len(child_ids) > 0,
+        childCount=len(child_ids)
+    )
+
+
+@router.get("/hierarchy/roots", response_model=List[HierarchyNodeResponse])
+def get_hierarchy_roots(
+    domain: Optional[str] = Query(None, description="Filter by domain"),
+    db: Session = Depends(get_db)
+):
+    """
+    Get all root nodes (depth=0) in the hierarchy.
+
+    Root nodes are domain nodes that have no parents. These form the
+    top level of the hierarchy tree.
+
+    Query Parameters:
+    - domain: Filter by specific domain (e.g., 'healthcare_system', 'housing')
+    """
+    # Filter for actual domain root nodes (depth=0 AND is_grouping_node=True)
+    query = db.query(Node).filter(
+        Node.depth == 0,
+        Node.is_grouping_node == True
+    )
+
+    if domain:
+        # Filter by specific domain ID
+        query = query.filter(Node.id == domain)
+
+    roots = query.order_by(Node.display_order, Node.name).all()
+
+    return [node_to_hierarchy_response(node) for node in roots]
+
+
+@router.get("/hierarchy/tree", response_model=HierarchyTreeResponse)
+def get_hierarchy_tree(
+    max_depth: int = Query(3, ge=1, le=10, description="Maximum depth to traverse"),
+    domains: Optional[str] = Query(None, description="Filter by domains (comma-separated)"),
+    scales: Optional[str] = Query(None, description="Filter by scales (comma-separated: 1,2,3,4,5,6,7)"),
+    db: Session = Depends(get_db)
+):
+    """
+    Get the full hierarchy tree structure.
+
+    Returns a nested tree structure starting from root nodes (depth=0)
+    down to the specified max_depth.
+
+    Query Parameters:
+    - max_depth: Maximum depth to traverse (default 3)
+    - domains: Filter by domains (comma-separated)
+    - scales: Filter by scales (comma-separated)
+    """
+    domain_filter = domains.split(',') if domains else None
+    scale_filter = [int(s) for s in scales.split(',')] if scales else None
+
+    # Get root nodes (depth=0 AND is_grouping_node=True)
+    root_query = db.query(Node).filter(
+        Node.depth == 0,
+        Node.is_grouping_node == True
+    )
+
+    if domain_filter:
+        root_query = root_query.filter(Node.id.in_(domain_filter))
+
+    roots = root_query.order_by(Node.display_order, Node.name).all()
+
+    def build_tree_node(node: Node, current_depth: int) -> HierarchyTreeNode:
+        """Recursively build tree node structure"""
+        # Get children
+        children = []
+        if current_depth < max_depth and hasattr(node, 'children') and node.children:
+            for child in sorted(node.children, key=lambda c: (c.display_order or 0, c.name)):
+                # Apply scale filter
+                if scale_filter and get_node_scale(child) not in scale_filter:
+                    continue
+                children.append(build_tree_node(child, current_depth + 1))
+
+        return HierarchyTreeNode(
+            id=node.id,
+            name=node.name,
+            scale=get_node_scale(node),
+            depth=node.depth or 0,
+            domains=node.domains if hasattr(node, 'domains') else [],
+            isGroupingNode=node.is_grouping_node or False,
+            childCount=len(node.children) if hasattr(node, 'children') and node.children else 0,
+            children=children if children else None
+        )
+
+    tree_roots = [build_tree_node(root, 0) for root in roots]
+
+    # Calculate total nodes and max depth
+    total_nodes = 0
+    actual_max_depth = 0
+
+    def count_nodes(tree_node: HierarchyTreeNode, depth: int):
+        nonlocal total_nodes, actual_max_depth
+        total_nodes += 1
+        actual_max_depth = max(actual_max_depth, depth)
+        if tree_node.children:
+            for child in tree_node.children:
+                count_nodes(child, depth + 1)
+
+    for root in tree_roots:
+        count_nodes(root, 0)
+
+    return HierarchyTreeResponse(
+        roots=tree_roots,
+        totalNodes=total_nodes,
+        maxDepth=actual_max_depth
+    )
+
+
+@router.get("/{node_id}/ancestors", response_model=NodeAncestorsResponse)
+def get_node_ancestors(
+    node_id: str,
+    db: Session = Depends(get_db)
+):
+    """
+    Get all ancestors of a node.
+
+    Returns all parent nodes in the hierarchy, including multiple
+    paths for DAG structures where a node has multiple parents.
+    """
+    node = db.query(Node).filter(Node.id == node_id).first()
+
+    if not node:
+        raise HTTPException(status_code=404, detail=f"Node '{node_id}' not found")
+
+    # Get ancestors from all_ancestors field or compute from parents
+    ancestor_ids = node.all_ancestors or []
+
+    if ancestor_ids:
+        ancestors = db.query(Node).filter(Node.id.in_(ancestor_ids)).all()
+    else:
+        ancestors = []
+
+    # Build paths (each path is a list of node IDs from root to parent)
+    paths = []
+    if node.primary_path:
+        # Primary path: "root/parent/this" -> ["root", "parent"]
+        path_parts = node.primary_path.split('/')
+        if len(path_parts) > 1:
+            paths.append(path_parts[:-1])  # Exclude self
+
+    # For DAG, we could have multiple paths - simplified for now
+
+    return NodeAncestorsResponse(
+        nodeId=node_id,
+        ancestors=[node_to_hierarchy_response(a) for a in ancestors],
+        paths=paths
+    )
+
+
+@router.get("/{node_id}/descendants", response_model=NodeDescendantsResponse)
+def get_node_descendants(
+    node_id: str,
+    max_depth: int = Query(10, ge=1, le=20, description="Maximum depth to traverse"),
+    db: Session = Depends(get_db)
+):
+    """
+    Get all descendants of a node.
+
+    Returns all child nodes recursively up to max_depth.
+    """
+    from utils.hierarchy import get_all_descendants
+
+    node = db.query(Node).filter(Node.id == node_id).first()
+
+    if not node:
+        raise HTTPException(status_code=404, detail=f"Node '{node_id}' not found")
+
+    # Get all descendants recursively
+    descendant_ids = get_all_descendants(db, node_id, Node)
+
+    if descendant_ids:
+        descendants = db.query(Node).filter(Node.id.in_(descendant_ids)).all()
+    else:
+        descendants = []
+
+    # Calculate max depth among descendants
+    max_found_depth = 0
+    for d in descendants:
+        if d.depth and d.depth > max_found_depth:
+            max_found_depth = d.depth
+
+    return NodeDescendantsResponse(
+        nodeId=node_id,
+        descendants=[node_to_hierarchy_response(d) for d in descendants],
+        totalCount=len(descendants),
+        maxDepth=max_found_depth - (node.depth or 0)
+    )
+
+
+@router.get("/{node_id}/children", response_model=List[HierarchyNodeResponse])
+def get_node_children(
+    node_id: str,
+    db: Session = Depends(get_db)
+):
+    """
+    Get direct children of a node.
+
+    Returns only immediate children, not all descendants.
+    """
+    node = db.query(Node).filter(Node.id == node_id).first()
+
+    if not node:
+        raise HTTPException(status_code=404, detail=f"Node '{node_id}' not found")
+
+    children = node.children if hasattr(node, 'children') and node.children else []
+    children_sorted = sorted(children, key=lambda c: (c.display_order or 0, c.name))
+
+    return [node_to_hierarchy_response(child) for child in children_sorted]
+
+
+@router.get("/{node_id}/parents", response_model=List[HierarchyNodeResponse])
+def get_node_parents(
+    node_id: str,
+    db: Session = Depends(get_db)
+):
+    """
+    Get direct parents of a node.
+
+    In a DAG structure, a node can have multiple parents.
+    """
+    node = db.query(Node).filter(Node.id == node_id).first()
+
+    if not node:
+        raise HTTPException(status_code=404, detail=f"Node '{node_id}' not found")
+
+    parents = node.parents if hasattr(node, 'parents') and node.parents else []
+
+    return [node_to_hierarchy_response(parent) for parent in parents]
+
+
+@router.get("/{node_id}/hierarchy", response_model=HierarchyNodeResponse)
+def get_node_hierarchy_info(
+    node_id: str,
+    db: Session = Depends(get_db)
+):
+    """
+    Get a single node with full hierarchy information.
+
+    Returns the node with all hierarchy fields populated including
+    parents, children, ancestors, and domains.
+    """
+    node = db.query(Node).filter(Node.id == node_id).first()
+
+    if not node:
+        raise HTTPException(status_code=404, detail=f"Node '{node_id}' not found")
+
+    return node_to_hierarchy_response(node)
+
+
+@router.post("/hierarchy/relationship", response_model=HierarchyRelationshipResponse)
+def add_hierarchy_relationship(
+    request: AddHierarchyRelationshipRequest,
+    db: Session = Depends(get_db)
+):
+    """
+    Add a parent-child relationship between nodes.
+
+    Creates a new hierarchy relationship with cycle detection
+    to maintain DAG integrity.
+    """
+    from utils.hierarchy import add_parent_child_relationship
+    from models.mechanism import node_hierarchy
+
+    success, message = add_parent_child_relationship(
+        db=db,
+        parent_id=request.parentId,
+        child_id=request.childId,
+        node_model=Node,
+        node_hierarchy_table=node_hierarchy,
+        relationship_type=request.relationshipType,
+        order_index=request.orderIndex
+    )
+
+    if not success:
+        raise HTTPException(status_code=400, detail=message)
+
+    return HierarchyRelationshipResponse(
+        success=success,
+        message=message,
+        parentId=request.parentId,
+        childId=request.childId
+    )
+
+
+@router.delete("/hierarchy/relationship", response_model=HierarchyRelationshipResponse)
+def remove_hierarchy_relationship(
+    parent_id: str = Query(..., description="Parent node ID"),
+    child_id: str = Query(..., description="Child node ID"),
+    db: Session = Depends(get_db)
+):
+    """
+    Remove a parent-child relationship between nodes.
+
+    Deletes the hierarchy relationship and updates descendant
+    hierarchy fields accordingly.
+    """
+    from utils.hierarchy import remove_parent_child_relationship
+    from models.mechanism import node_hierarchy
+
+    success, message = remove_parent_child_relationship(
+        db=db,
+        parent_id=parent_id,
+        child_id=child_id,
+        node_model=Node,
+        node_hierarchy_table=node_hierarchy
+    )
+
+    if not success:
+        raise HTTPException(status_code=400, detail=message)
+
+    return HierarchyRelationshipResponse(
+        success=success,
+        message=message,
+        parentId=parent_id,
+        childId=child_id
+    )
+
+
+@router.get("/validate/{node_id}")
+def validate_node_exists(
+    node_id: str,
+    db: Session = Depends(get_db)
+):
+    """
+    Check if a node exists in the Node Bank.
+
+    Used for mechanism validation to ensure referenced nodes exist.
+    Returns 200 if exists, 404 if not.
+    """
+    node = db.query(Node).filter(Node.id == node_id).first()
+
+    if not node:
+        raise HTTPException(status_code=404, detail=f"Node '{node_id}' not found in Node Bank")
+
+    return {
+        "exists": True,
+        "nodeId": node_id,
+        "name": node.name,
+        "scale": get_node_scale(node),
+        "category": node.category
+    }

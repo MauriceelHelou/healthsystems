@@ -1,0 +1,52 @@
+id: NEW:psychotropic_analgesic_nitrous_oxide_pan_treatment_to_alcohol_withdrawal_severe_rate
+name: Psychotropic Analgesic Nitrous Oxide (PAN) Treatment → Alcohol Withdrawal Syndrome
+  Severity
+from_node:
+  node_id: NEW:psychotropic_analgesic_nitrous_oxide_pan_treatment
+  node_name: Psychotropic Analgesic Nitrous Oxide (PAN) Treatment
+to_node:
+  node_id: alcohol_withdrawal_severe_rate
+  node_name: Alcohol Withdrawal Syndrome Severity
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: PAN (psychotropic analgesic nitrous oxide) is administered to patients
+  experiencing alcohol withdrawal syndrome as an alternative to benzodiazepine treatment'
+- 'Step 2: PAN acts on neurological pathways to produce psychotropic and analgesic
+  effects, improving withdrawal symptoms more rapidly than sedative-based regimens'
+- 'Step 3: Treatment with PAN reduces the amount and duration of sedative medication
+  required to manage withdrawal symptoms'
+- 'Step 4: PAN improves psychomotor function in patients undergoing alcohol withdrawal
+  compared to standard treatments'
+- 'Step 5: The rapid therapeutic effect and reduced sedation requirements decrease
+  overall alcohol withdrawal syndrome severity, enabling faster transition to psychological
+  treatment phases'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: M A Gillman et al. 2007. Psychotropic analgesic nitrous oxide
+    for alcoholic withdrawal states. The Cochrane database of systematic reviews.
+  supporting_citations: []
+description: Psychotropic analgesic nitrous oxide (PAN) treatment reduces alcohol
+  withdrawal syndrome severity by improving symptoms more rapidly than standard benzodiazepine
+  regimens. A Cochrane systematic review of 5 RCTs (212 participants) found PAN significantly
+  improved withdrawal symptoms (RR 1.35, 95% CI 1.01-1.79), reduced sedative medication
+  requirements, and improved psychomotor function (WMD -8.71, 95% CI -13.71 to -3.71).
+  The rapid therapeutic effect allows patients to enter psychological treatment phases
+  more quickly.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.35
+    type: relative_risk
+    ci_lower: 1.01
+    ci_upper: 1.79
+  p_value: null
+  sample_size: 212
+moderators:
+- name: withdrawal_severity
+  direction: strengthens
+  strength: moderate
+  description: Evidence primarily supports effectiveness for mild to moderate alcohol
+    withdrawal states rather than severe cases

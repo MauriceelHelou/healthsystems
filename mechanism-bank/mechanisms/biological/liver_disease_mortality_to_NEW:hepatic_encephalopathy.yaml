@@ -1,0 +1,50 @@
+id: liver_disease_mortality_to_NEW:hepatic_encephalopathy
+name: Liver Disease Mortality → Hepatic Encephalopathy
+from_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+to_node:
+  node_id: NEW:hepatic_encephalopathy
+  node_name: Hepatic Encephalopathy
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Progressive liver disease (cirrhosis) leads to impaired hepatic function
+  and reduced capacity to metabolize ammonia and other neurotoxins'
+- 'Step 2: Accumulation of ammonia and other gut-derived neurotoxins in systemic circulation
+  due to portosystemic shunting and hepatocellular dysfunction'
+- 'Step 3: Neurotoxins cross the blood-brain barrier, causing astrocyte swelling,
+  neuroinflammation, and altered neurotransmission'
+- 'Step 4: Development of hepatic encephalopathy manifesting as neuropsychiatric symptoms
+  ranging from minimal (psychometric abnormalities) to overt (clinically apparent
+  cognitive dysfunction)'
+- 'Step 5: Hepatic encephalopathy contributes to increased morbidity and mortality
+  in cirrhosis patients'
+evidence:
+  quality_rating: B
+  n_studies: 11
+  primary_citation: Harry D Zacharias et al. 2019. Pharmacotherapies that specifically
+    target ammonia for the prevention and treatment of hepatic encephalopathy in adults
+    with cirrhosis. The Cochrane database of systematic reviews.
+  supporting_citations: []
+description: Hepatic encephalopathy is a common and serious complication of cirrhosis
+  that significantly contributes to liver disease mortality. The exact pathogenesis
+  involves ammonia and other neurotoxins that accumulate due to hepatic dysfunction
+  and portosystemic shunting. The condition presents on a spectrum from minimal hepatic
+  encephalopathy (detected only by psychometric testing) to overt hepatic encephalopathy
+  with clear neuropsychiatric manifestations. This Cochrane systematic review of 11
+  RCTs involving 943 participants found that hepatic encephalopathy has high associated
+  morbidity and mortality in cirrhotic patients.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: severity_of_cirrhosis
+  direction: strengthens
+  strength: strong
+  description: More advanced liver disease associated with higher risk and severity
+    of hepatic encephalopathy
+- name: blood_ammonia_levels
+  direction: strengthens
+  strength: moderate
+  description: Elevated ammonia plays a key role in pathogenesis; pharmacotherapies
+    targeting ammonia can reduce blood concentrations

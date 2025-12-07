@@ -1,0 +1,65 @@
+id: NEW:prior_deliberate_self_harm_history_to_self_harm_injury_rate
+name: Prior History of Deliberate Self-Harm → Deliberate Self-Harm Rate
+from_node:
+  node_id: NEW:prior_deliberate_self_harm_history
+  node_name: Prior History of Deliberate Self-Harm
+to_node:
+  node_id: self_harm_injury_rate
+  node_name: Deliberate Self-Harm Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Prior deliberate self-harm establishes behavioral patterns and coping mechanisms
+  that involve self-injury as a response to psychological distress'
+- 'Step 2: Previous episodes create learned behavioral pathways and reduce psychological
+  barriers to self-harm, making future episodes more likely'
+- 'Step 3: History of self-harm may be associated with underlying vulnerability factors
+  (depression, substance use) that persist and continue to drive risk'
+- 'Step 4: Individuals with prior self-harm history demonstrate nearly 4-fold increased
+  odds of subsequent deliberate self-harm episodes'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: S Challis et al. 2013. Systematic meta-analysis of the risk factors
+    for deliberate self-harm before and after treatment for first-episode psychosis.
+    Acta psychiatrica Scandinavica.
+  supporting_citations: []
+description: Prior history of deliberate self-harm is the strongest categorical predictor
+  of future deliberate self-harm, with individuals having a history demonstrating
+  nearly 4-fold increased odds of subsequent episodes. This relationship was identified
+  in a meta-analysis of first-episode psychosis patients, where 18.4% reported DSH
+  prior to treatment and 11.4% committed DSH during follow-up periods of 1-7 years.
+  The strong predictive value of prior DSH suggests behavioral reinforcement patterns
+  and persistent underlying vulnerability factors.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.94
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: expressed_suicide_ideation
+  direction: strengthens
+  strength: moderate
+  description: Expressed suicide ideation further increases risk (OR=2.34)
+- name: depressed_mood
+  direction: strengthens
+  strength: moderate
+  description: Depressed mood associated with DSH both before and after treatment
+    (SMD=0.49)
+- name: substance_use
+  direction: strengthens
+  strength: moderate
+  description: Substance use associated with increased DSH risk (OR=1.46)
+- name: alcohol_abuse
+  direction: strengthens
+  strength: moderate
+  description: Alcohol abuse associated with increased DSH risk (OR=1.68)
+- name: younger_age_of_onset
+  direction: strengthens
+  strength: weak
+  description: Younger age of onset associated with increased DSH risk (SMD=-0.28)

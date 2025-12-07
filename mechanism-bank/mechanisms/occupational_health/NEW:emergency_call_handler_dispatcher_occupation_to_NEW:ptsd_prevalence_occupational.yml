@@ -1,0 +1,65 @@
+id: NEW:emergency_call_handler_dispatcher_occupation_to_NEW:ptsd_prevalence_occupational
+name: Emergency Call-Handler and Dispatcher Occupation → PTSD Prevalence (Occupational)
+from_node:
+  node_id: NEW:emergency_call_handler_dispatcher_occupation
+  node_name: Emergency Call-Handler and Dispatcher Occupation
+to_node:
+  node_id: NEW:ptsd_prevalence_occupational
+  node_name: PTSD Prevalence (Occupational)
+direction: positive
+category: occupational_health
+mechanism_pathway:
+- 'Step 1: Emergency call-handlers and dispatchers (CHDs) receive distressing emergency calls involving
+  trauma, violence, and life-threatening situations'
+- 'Step 2: Repeated vicarious exposure to traumatic content without direct involvement creates secondary
+  traumatic stress'
+- 'Step 3: Inability to control outcomes or provide direct assistance contributes to helplessness and
+  moral distress'
+- 'Step 4: Cumulative occupational stress exposure leads to development of PTSD symptoms'
+evidence:
+  quality_rating: A
+  n_studies: 37
+  primary_citation: C Osório et al. 2025. "Systematic review and meta-analysis on the mental health of
+    emergency and urgent call-handlers and dispatchers.." https://doi.org/10.1093/occmed/kqae104
+  supporting_citations:
+  - Additional citations require full-text access - abstract references studies from Annals of Emergency
+    Dispatch and Response
+  - Studies from 10 electronic databases and grey literature included
+  - 13 articles provided quantitative information for meta-analyses
+  doi: 10.1093/occmed/kqae104
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Pooled prevalence of PTSD among emergency and urgent call-handlers and dispatchers is 17.8%,
+  indicating significant occupational mental health risk from repeated exposure to traumatic calls without
+  direct intervention capability.
+quantitative_effects:
+  effect_size:
+    value: 17.8
+    type: percentage_change
+    ci_lower: 12.4
+    ci_upper: 24.0
+  sample_size: 7759
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies included CHDs across nine different countries, suggesting international variation
+    in prevalence
+moderators:
+- name: country_of_employment
+  direction: strengthens
+  strength: moderate
+  description: Variation across nine countries may reflect differences in work conditions, support systems,
+    and healthcare access
+structural_competency:
+  equity_implications: This mechanism highlights structural occupational hazards rather than individual
+    vulnerability. The work environment itself creates pathogenic conditions through chronic exposure
+    to vicarious trauma. Interventions should focus on organizational support, staffing levels, and mandatory
+    psychological support rather than individual resilience training.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.011008'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

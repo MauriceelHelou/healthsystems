@@ -1,0 +1,45 @@
+id: NEW:ptsd_severity_to_substance_use_treatment_dropout_rate
+name: PTSD Severity → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: NEW:ptsd_severity
+  node_name: PTSD Severity
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Higher PTSD severity increases emotional dysregulation and distress intolerance,
+  making engagement with treatment protocols more challenging'
+- 'Step 2: Individuals with severe PTSD symptoms may use substances as a coping mechanism,
+  creating psychological barriers to treatment adherence'
+- 'Step 3: Trauma-related avoidance symptoms characteristic of PTSD lead to avoidance
+  of treatment settings and therapeutic processes that may trigger distress'
+- 'Step 4: The combination of PTSD symptom burden and treatment demands results in
+  higher dropout rates from substance use treatment programs'
+evidence:
+  quality_rating: A
+  n_studies: 27
+  primary_citation: Roberts et al. 2022. A systematic review and meta-analysis of
+    psychological interventions for comorbid post-traumatic stress disorder and substance
+    use disorder. European Journal of Psychotraumatology.
+  supporting_citations: []
+description: A systematic review of 27 studies found relatively high levels of dropout
+  across studies examining comorbid PTSD and substance use disorder treatment. The
+  review notes that many patients do not fully engage with treatment, particularly
+  in the context of comorbid PTSD. PTSD severity contributes to treatment dropout
+  through multiple mechanisms including avoidance symptoms, emotional dysregulation,
+  and the use of substances as a coping mechanism for trauma-related distress.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Treatment approach type
+  direction: weakens
+  strength: moderate
+  description: Incentivized attendance for trauma-focused intervention showed evidence
+    of reduced dropout compared to non-incentivized approaches
+- name: Trauma-focused vs present-focused treatment
+  direction: strengthens
+  strength: weak
+  description: Present-focused treatments may have lower dropout but also lower efficacy;
+    trauma-focused treatments may trigger more avoidance-related dropout

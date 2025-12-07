@@ -1,0 +1,55 @@
+id: alcohol_consumption_to_thyroid_autoimmunization
+name: Alcohol Consumption → Thyroid Autoimmunization (Hashimoto's Thyroiditis)
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: thyroid_autoimmunization
+  node_name: Thyroid Autoimmunization (Hashimoto's Thyroiditis)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol consumption acts as an environmental trigger against background
+  of genetic predispositions'
+- 'Step 2: Alcohol exposure contributes to accumulation of macrophages, dendritic
+  cells, and plasma cells in thyroid tissue'
+- 'Step 3: Immune dysregulation leads to decreased CD8+ T cells relative to CD4+ T
+  cells'
+- 'Step 4: Shift in T cell balance intensifies synthesis of pro-inflammatory Th1,
+  Th17, Tfh, and Tc lymphocytes while reducing regulatory T cells (Treg)'
+- 'Step 5: Pro-inflammatory cytokine production (IL-2, IL-12, IL-17, IL-21, IL-22,
+  IFN-γ, TNF-α) increases while anti-inflammatory cytokines (IL-10, IL-2) decrease,
+  triggering thyroid cell damage through pyroptosis and apoptosis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Karolina Wrońska et al. 2024. "The Role of the Immune System
+    in the Course of Hashimoto''s Thyroiditis: The Current State of Knowledge." *International
+    Journal of Molecular Sciences*. https://doi.org/10.3390/ijms25136883'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.090000'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: genetic_predisposition
+  direction: strengthens
+  strength: strong
+  description: Genetic predispositions associated with HLA-DR, CTLA-4, PTPN22, and
+    FOXP3 determine baseline susceptibility to alcohol-triggered autoimmunization
+- name: vitamin_d_deficiency
+  direction: strengthens
+  strength: moderate
+  description: Concurrent vitamin D deficiency may amplify alcohol's effects on immune
+    dysregulation
+- name: micronutrient_deficiency
+  direction: strengthens
+  strength: moderate
+  description: Deficiencies in zinc, selenium, and magnesium may potentiate alcohol's
+    immunological effects
+- name: intestinal_dysbiosis
+  direction: strengthens
+  strength: moderate
+  description: Alcohol-induced intestinal dysbiosis may facilitate inflammasome activation
+    through Gram-negative bacteria and NLRC4 pathway

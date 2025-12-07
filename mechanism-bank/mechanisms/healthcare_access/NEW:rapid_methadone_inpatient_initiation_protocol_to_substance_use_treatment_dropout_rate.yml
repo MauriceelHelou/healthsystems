@@ -1,0 +1,58 @@
+id: NEW:rapid_methadone_inpatient_initiation_protocol_to_substance_use_treatment_dropout_rate
+name: Rapid Methadone Inpatient Initiation Protocol → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: NEW:rapid_methadone_inpatient_initiation_protocol
+  node_name: Rapid Methadone Inpatient Initiation Protocol
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Hospitalization provides opportunity for OUD treatment initiation in controlled environment'
+- 'Step 2: Rapid titration achieves therapeutic dose during hospital stay rather than over weeks in outpatient
+  setting'
+- 'Step 3: Therapeutic dosing reduces withdrawal symptoms and cravings while patient is still hospitalized'
+- 'Step 4: Symptom control reduces patient-directed discharge (leaving against medical advice)'
+- 'Step 5: Retained patients can be linked to outpatient methadone continuation at discharge'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Savitha Racha et al. 2023. "Safety of rapid inpatient methadone initiation protocol:
+    A retrospective cohort study.." https://doi.org/10.2139/ssrn.4145111'
+  supporting_citations:
+  - Current methadone titration guidelines (referenced for standard 3-7 day increase intervals)
+  - Pre-fentanyl era treatment protocols (referenced as historical context)
+  - Additional citations require full-text access
+  doi: 10.2139/ssrn.4145111
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2022, source is 2023'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Only 1 of 25 patients (4%) had a patient-directed discharge during rapid inpatient methadone
+  initiation, suggesting this protocol may help retain patients in the hospital setting and facilitate
+  linkage to ongoing OUD treatment.
+quantitative_effects:
+  effect_size:
+    value: 4.0
+    type: percentage_change
+  sample_size: 25
+moderators:
+- name: hospital_length_of_stay
+  direction: strengthens
+  strength: moderate
+  description: Longer hospital stays allow more time to achieve therapeutic dose before discharge
+structural_competency:
+  equity_implications: Treatment dropout is often framed as patient non-compliance, but this mechanism
+    highlights how healthcare system structures (slow titration protocols) may inadvertently drive patients
+    away from treatment. By adapting protocols to the inpatient setting's monitoring capabilities, the
+    healthcare system can better serve patients with OUD who might otherwise leave before achieving therapeutic
+    benefit. This is particularly relevant for marginalized populations who may have fewer opportunities
+    for consistent outpatient follow-up.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.773288'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

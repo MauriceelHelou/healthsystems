@@ -1,0 +1,58 @@
+id: pretrial_diversion_programs_to_sud_treatment_entry_rate
+name: Pretrial Diversion Programs → SUD Treatment Entry Rate
+from_node:
+  node_id: pretrial_diversion_programs
+  node_name: Pretrial Diversion Programs
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Criminal justice contact creates identification opportunity for individuals with unmet treatment
+  needs'
+- 'Step 2: Diversion mechanisms at arrest, court, or sentencing stages create pathways to treatment services'
+- 'Step 3: Court-mandated or voluntary treatment options lower barriers to service entry'
+- 'Step 4: Increased treatment engagement among population otherwise unlikely to access services'
+evidence:
+  quality_rating: B
+  n_studies: 16
+  primary_citation: 'Karen P Hayhurst et al. 2015. "The effectiveness and cost-effectiveness of diversion
+    and aftercare programmes for offenders using class A drugs: a systematic review and economic evaluation.."
+    https://doi.org/10.3310/hta19060'
+  supporting_citations:
+  - UK Drug Data Warehouse statistics (cited for economic evaluation data)
+  - UK Drug Treatment Outcomes Research Study (cited for outcome data)
+  - Additional citations require full-text access
+  doi: 10.3310/hta19060
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Diversion programs increase treatment access for class A drug users by creating structured
+  pathways from criminal justice contact to substance use treatment services. The review examined programs
+  operating at all points within the criminal justice system.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Programs operate at various points within criminal justice system; UK and US systems
+    differ substantially in structure and treatment availability.
+moderators:
+- name: diversion_point
+  direction: strengthens
+  strength: moderate
+  description: Earlier diversion points (arrest vs sentencing) may facilitate faster treatment access
+    and better outcomes
+- name: mandate_type
+  direction: strengthens
+  strength: weak
+  description: Voluntary vs court-mandated vs monitored services may produce different engagement patterns
+structural_competency:
+  equity_implications: This mechanism reveals how criminal justice infrastructure can either block or
+    facilitate healthcare access. For marginalized populations whose primary system contact is through
+    policing rather than healthcare, diversion represents a structural intervention addressing healthcare
+    access inequity. Without such programs, individuals with substance use disorders face incarceration
+    rather than treatment, perpetuating health disparities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.589301'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

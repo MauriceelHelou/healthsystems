@@ -1,0 +1,134 @@
+id: industrial_facility_proximity_to_cancer_risk
+name: Industrial Facility Proximity → Cancer Risk
+from_node:
+  node_id: industrial_facility_proximity
+  node_name: Proximity to Industrial Pollution Sources
+  node_type: stock
+to_node:
+  node_id: cancer_risk
+  node_name: Cancer Risk and Incidence
+  node_type: crisis_endpoint
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Industrial facilities (refineries, chemical plants, waste sites) emit
+  air toxics and hazardous pollutants'
+- 'Step 2: Residential proximity creates chronic exposure to carcinogenic compounds
+  (benzene, formaldehyde, PAHs, heavy metals)'
+- 'Step 3: Discriminatory zoning and housing markets concentrate low-income communities
+  and communities of color near polluting facilities'
+- 'Step 4: Cumulative exposure over time increases cellular damage and cancer initiation
+  pathways'
+- 'Step 5: Elevated cancer incidence in fenceline communities reflects exposure disparities'
+evidence:
+  quality_rating: B
+  n_studies: 6
+  primary_citation: 'Jephcote, Calvin, et al. 2022. "Distributive justice in environmental
+    health hazards from industrial contamination: A systematic review of national
+    and near-national assessments of social inequalities." Social Science & Medicine
+    297: 114834.'
+  supporting_citations:
+  - 'Jephcote, Calvin, et al. 2020. "Chemical exposures, health, and environmental
+    justice in communities living on the fenceline of industry." Environmental Health
+    Perspectives 128(2): 025001.'
+  - 'Mohai, Paul, and Robin Saha. 2015. "Which came first, people or pollution? A
+    review of theory and evidence from longitudinal environmental justice studies."
+    Environmental Research Letters 10(12): 125011.'
+  - 'Bravo, Mercedes A., et al. 2016. "Racial isolation and exposure to airborne
+    particulate matter and ozone in understudied US populations." Environment International
+    92-93: 247-255.'
+  doi: 10.1016/j.socscimed.2022.114834
+  journal: Social Science & Medicine
+  year: 2022
+  fulltext:
+    available: false
+    source: null
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  cancer_risk_range:
+    high_racism_state: 48.40
+    low_racism_state: 17.87
+    ratio: 2.71
+    unit: lifetime cancer risk per million
+    description: Cancer risk from air toxics varies 2.71-fold between highest and
+      lowest structural racism states
+  exposure_disparity:
+    black_latino_excess: 50
+    white_deficit: 17
+    unit: percentage relative to consumption-generated pollution
+    description: Black and Latino populations exposed to 50%+ more pollution than
+      they generate; white populations exposed to 17% less
+  proximity_effect:
+    description: Communities within 3km of industrial facilities face elevated pollutant
+      concentrations and health risks
+    source: Jephcote et al. 2020
+  sample_size: null
+  interpretation: Industrial facility proximity creates cancer risk gradients that
+    reflect structural patterns of environmental racism, with communities of color
+    and low-income populations bearing disproportionate exposure
+last_updated: '2025-11-30'
+version: '1.0'
+description: Proximity to industrial pollution sources (refineries, chemical plants,
+  hazardous waste sites) increases cancer risk through chronic exposure to carcinogenic
+  air toxics. Environmental justice research demonstrates that polluting facilities
+  are disproportionately sited in low-income communities and communities of color
+  due to discriminatory zoning, lower land costs, and reduced political power. Cancer
+  risk varies 2.71-fold between high and low structural racism states.
+moderators:
+- name: facility_type
+  direction: varies
+  strength: strong
+  description: Chemical facilities, refineries, and hazardous waste sites pose higher
+    cancer risks than other industrial sources
+- name: regulatory_enforcement
+  direction: weakens
+  strength: moderate
+  description: Stronger environmental enforcement can reduce emissions and exposure
+- name: community_advocacy
+  direction: weakens
+  strength: moderate
+  description: Environmental justice advocacy can shift facility operations and siting
+    decisions
+- name: residential_segregation
+  direction: strengthens
+  strength: strong
+  description: Higher segregation concentrates pollution exposure in communities
+    of color
+- name: housing_market_dynamics
+  direction: strengthens
+  strength: moderate
+  description: Lower property values near facilities trap low-income residents in
+    polluted areas
+structural_competency:
+  root_cause_level: environmental_racism
+  avoids_victim_blaming: true
+  equity_implications: Industrial facility siting reflects historical and ongoing
+    environmental racism. Communities of color and low-income communities face elevated
+    cancer risk due to discriminatory zoning, housing market dynamics, and political
+    disenfranchisement that prevents effective resistance to polluting facilities.
+    Solutions require environmental justice enforcement, pollution reduction, and
+    community empowerment rather than expecting residents to relocate.
+assumptions:
+- Cancer risk assessed from EPA National Air Toxics Assessment
+- Proximity defined as residence within buffer zones of industrial facilities
+- Exposure-cancer link established for specific compounds (benzene, formaldehyde,
+  etc.)
+limitations:
+- Ecological studies cannot establish individual-level causation
+- Latency period makes cancer attribution to specific exposures difficult
+- Measurement of actual exposure (vs. proximity) limited
+- Confounding by socioeconomic factors difficult to fully address
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Industrial facility density and type varies by region, with concentration
+    in Gulf Coast, industrial Midwest, and urban areas.
+  relevant_geographies:
+  - Gulf Coast petrochemical corridor (Cancer Alley)
+  - Industrial Midwest cities
+  - Ports and rail hubs with freight pollution
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

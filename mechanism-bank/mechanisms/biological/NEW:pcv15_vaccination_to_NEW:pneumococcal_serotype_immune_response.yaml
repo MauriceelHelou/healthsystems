@@ -1,0 +1,51 @@
+id: NEW:pcv15_vaccination_to_NEW:pneumococcal_serotype_immune_response
+name: 15-Valent Pneumococcal Conjugate Vaccine (PCV15) Administration → Immune Response
+  to Pneumococcal Serotypes
+from_node:
+  node_id: NEW:pcv15_vaccination
+  node_name: 15-Valent Pneumococcal Conjugate Vaccine (PCV15) Administration
+to_node:
+  node_id: NEW:pneumococcal_serotype_immune_response
+  node_name: Immune Response to Pneumococcal Serotypes
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: PCV15 vaccine containing 15 pneumococcal polysaccharide serotypes conjugated
+  to carrier proteins is administered intramuscularly'
+- 'Step 2: Conjugated polysaccharide antigens are processed by antigen-presenting
+  cells and presented to T-helper cells, enabling T-cell dependent immune responses'
+- 'Step 3: B-cell activation occurs with T-cell help, leading to class switching and
+  production of serotype-specific IgG antibodies against all 15 pneumococcal serotypes'
+- 'Step 4: Immunological memory is established through generation of memory B-cells,
+  providing durable protection against pneumococcal serotypes including unique serotypes
+  22F and 33F'
+- 'Step 5: Serotype-specific antibody responses are generated that are non-inferior
+  to PCV13 for shared serotypes and superior for the two additional serotypes (22F
+  and 33F)'
+evidence:
+  quality_rating: A
+  n_studies: 20
+  primary_citation: Gernot Wagner et al. 2024. Immunogenicity and safety of the 15-valent
+    pneumococcal conjugate vaccine, a systematic review and meta-analysis. NPJ vaccines.
+  supporting_citations: []
+description: PCV15 administration induces robust serotype-specific immune responses
+  against 15 pneumococcal serotypes. Meta-analysis of 20 RCTs demonstrates non-inferiority
+  compared to PCV13 for 12-13 shared serotypes in both infants and adults, with significantly
+  enhanced immune responses to the additional serotypes 22F and 33F that are unique
+  to PCV15. The conjugated vaccine design enables T-cell dependent immunity with immunological
+  memory formation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: age_group
+  direction: strengthens
+  strength: moderate
+  description: Different immune response patterns observed between infants and adults,
+    with meta-analyses conducted separately for each group showing non-inferiority
+    for shared serotypes and superiority for unique serotypes 22F and 33F in both
+    populations
+- name: serotype_specificity
+  direction: strengthens
+  strength: strong
+  description: Immune responses to unique PCV15 serotypes 22F and 33F were significantly
+    higher compared to PCV13 recipients in both infants and adults

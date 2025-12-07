@@ -1,0 +1,50 @@
+id: clinical_pharmacist_integration_to_severe_withdrawal_prevention
+name: Clinical Pharmacist Integration in Alcohol Detoxification Unit → Prevention
+  of Severe Alcohol Withdrawal Complications
+from_node:
+  node_id: clinical_pharmacist_integration
+  node_name: Clinical Pharmacist Integration in Alcohol Detoxification Unit
+to_node:
+  node_id: severe_withdrawal_prevention
+  node_name: Prevention of Severe Alcohol Withdrawal Complications
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Clinical pharmacist conducts daily assessments on all alcohol detox patients
+  to identify high-risk cases (history of severe withdrawal, CIWA-Ar score ≥15, or
+  polysubstance withdrawal)'
+- 'Step 2: Pharmacist performs comprehensive evaluations including substance use history,
+  medication history, CIWA-Ar scoring, and pharmacotherapy response monitoring'
+- 'Step 3: Pharmacist initiates, modifies, or discontinues withdrawal medications
+  for high-risk patients after physician consultation, ensuring appropriate pharmacological
+  management'
+- 'Step 4: Timely referrals to substance use counselors and acute care facilities
+  (48 transfers) occur based on pharmacist assessment, preventing progression to life-threatening
+  withdrawal'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ibrahim K Muradian et al. 2021. "Clinical Pharmacist's Role in
+    an Alcohol Detox Unit in a Correctional Setting.." *Journal of pharmacy practice*.
+    https://doi.org/10.1177/0897190019888076
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.767227'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: high_risk_patient_identification
+  direction: strengthens
+  strength: strong
+  description: 282 of 1263 patients were identified as high-risk and received targeted
+    pharmacist assessment, representing concentrated resource allocation to most vulnerable
+    population
+- name: physician_collaboration
+  direction: strengthens
+  strength: moderate
+  description: Medication decisions made after discussion with physician (148 patients)
+    ensures clinical oversight while leveraging pharmacist expertise
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/clinical_pharmacist_integration_to_severe_withdrawal_prevention.yaml
+_category: healthcare_access

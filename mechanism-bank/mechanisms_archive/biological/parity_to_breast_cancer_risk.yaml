@@ -1,0 +1,35 @@
+id: parity_to_breast_cancer_risk
+name: Parity (Having Children) → Breast Cancer Risk
+from_node:
+  node_id: parity
+  node_name: Parity (Having Children)
+to_node:
+  node_id: breast_cancer_risk
+  node_name: Breast Cancer Risk
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Pregnancy induces terminal differentiation of breast epithelial cells'
+- 'Step 2: Differentiated cells are less susceptible to carcinogenic transformation'
+- 'Step 3: Pregnancy hormones promote apoptosis of cells with DNA damage'
+- 'Step 4: Long-term protective hormonal milieu reduces cumulative cancer risk'
+evidence:
+  quality_rating: C
+  n_studies: 12
+  primary_citation: Salma Nabila et al. 2024. "Differential patterns of reproductive
+    and lifestyle risk factors for breast cancer according to birth cohorts among
+    women in China, Japan and Korea." *Breast Cancer Research*. https://doi.org/10.1186/s13058-024-01766-0
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.501615'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: birth_cohort
+  direction: weakens
+  strength: strong
+  description: 'Protective effect of parity diminishes in younger cohorts. 1950s cohort:
+    HR 0.86 (0.66-1.13, non-significant) vs. older cohorts: 1940s HR 0.60 (0.49-0.73),
+    1930s HR 0.46 (0.38-0.56), 1920s HR 0.62 (0.51-0.77). The protective effect is
+    strongest in the 1930s cohort and weakest (non-significant) in the 1950s cohort.'

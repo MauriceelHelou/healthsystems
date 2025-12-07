@@ -1,0 +1,48 @@
+id: NEW:insulin_sensitizer_treatment_to_obesity_individual
+name: Insulin Sensitizer Treatment → Obesity Individual
+from_node:
+  node_id: NEW:insulin_sensitizer_treatment
+  node_name: Insulin Sensitizer Treatment
+to_node:
+  node_id: obesity_individual
+  node_name: Obesity Individual
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Insulin sensitizers administered to PCOS patients'
+- 'Step 2: Improved insulin sensitivity reduces lipogenic effects of hyperinsulinemia'
+- 'Step 3: Better metabolic regulation may support weight management'
+- 'Step 4: BMI effects measured as treatment outcome'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'Fabio Facchinetti et al. 2019. "Short-term effects of metformin and myo-inositol
+    in women with polycystic ovarian syndrome (PCOS): a meta-analysis of randomized clinical trials.."
+    https://doi.org/10.1080/09513590.2018.1540578'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 6 RCTs comparing MET to MI
+  - Studies conducted from 1994-2017 identified via MEDLINE, Cochrane Library, PubMed
+  - Individual study citations available in full-text systematic review
+  doi: 10.1080/09513590.2018.1540578
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'No significant difference between metformin and myo-inositol on BMI (SMD=-0.22, 95% CI:
+  -0.60-0.16, p=.265), indicating equivalent short-term effects on body weight in PCOS women.'
+quantitative_effects:
+  effect_size:
+    value: -0.22
+    type: standardized_mean_difference
+    ci_lower: -0.6
+    ci_upper: 0.16
+  p_value: 0.265
+  sample_size: 355
+structural_competency:
+  equity_implications: While neither treatment shows superior BMI effects, the availability of a supplement-based
+    option may improve treatment uptake and adherence, particularly in populations with limited healthcare
+    access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.987959'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

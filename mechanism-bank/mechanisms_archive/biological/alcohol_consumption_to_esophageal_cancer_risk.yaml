@@ -1,0 +1,36 @@
+id: alcohol_consumption_to_esophageal_cancer_risk
+name: Alcohol Consumption → Esophageal Cancer Risk
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: esophageal_cancer_risk
+  node_name: Esophageal Cancer Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Direct contact of alcohol with esophageal mucosa causes cellular damage
+  and inflammation'
+- 'Step 2: Acetaldehyde accumulation in esophageal tissue creates sustained carcinogenic
+  exposure'
+- 'Step 3: Alcohol depletes protective antioxidants and impairs mucosal barrier function'
+- 'Step 4: Repeated exposure leads to cellular dysplasia and increased risk of esophageal
+  adenocarcinoma and squamous cell carcinoma'
+evidence:
+  quality_rating: A
+  n_studies: null
+  primary_citation: N. Papadimitriou et al. 2021. "An umbrella review of the evidence
+    associating diet and cancer risk at 11 anatomical sites." *Nature Communications*.
+    https://doi.org/10.1038/s41467-021-24861-8
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.482140'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: tobacco_use
+  direction: strengthens
+  strength: strong
+  description: Concurrent tobacco and alcohol use has synergistic effects on esophageal
+    cancer risk through combined carcinogenic exposure

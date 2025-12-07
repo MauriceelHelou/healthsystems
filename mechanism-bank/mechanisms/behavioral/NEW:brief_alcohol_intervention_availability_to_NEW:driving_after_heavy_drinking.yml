@@ -1,0 +1,66 @@
+id: NEW:brief_alcohol_intervention_availability_to_NEW:driving_after_heavy_drinking
+name: Brief Alcohol Intervention Availability → Driving After Heavy Drinking (4+/5+ drinks)
+from_node:
+  node_id: NEW:brief_alcohol_intervention_availability
+  node_name: Brief Alcohol Intervention Availability
+to_node:
+  node_id: NEW:driving_after_heavy_drinking
+  node_name: Driving After Heavy Drinking (4+/5+ drinks)
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: College students receive brief alcohol interventions (BAIs) including Motivational Interviewing
+  with Personalized Feedback, Group MI, or stand-alone Personalized Feedback'
+- 'Step 2: Interventions increase awareness of personal alcohol consumption patterns and associated risks
+  through personalized normative feedback'
+- 'Step 3: Enhanced motivation and self-efficacy for behavior change reduces heavy episodic drinking occasions'
+- 'Step 4: Reduced frequency of heavy drinking occasions decreases opportunities for impaired driving
+  decisions'
+- 'Step 5: Lower prevalence of driving after consuming 4+/5+ drinks among intervention recipients'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: Eun‐Young Mun et al. 2021. "Do Brief Alcohol Interventions Reduce Driving After Drinking
+    Among College Students? A Two-step Meta-analysis of Individual Participant Data." https://doi.org/10.1093/alcalc/agaa146
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 15 RCTs with individual participant
+    data
+  - Studies included examined MI+PF, GMI, and PF interventions
+  - Combined sample from randomized controlled trials in college settings
+  doi: 10.1093/alcalc/agaa146
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief alcohol interventions delivered to college students reduce the risk of driving after
+  heavy drinking (4+/5+ drinks) by 19% compared to control conditions. The meta-analysis of individual
+  participant data from 15 RCTs (n=6801) found that individually delivered Motivational Interviewing with
+  Personalized Feedback was the most effective intervention format. Effects were not significant for lower
+  drinking thresholds (2+/3+ drinks).
+quantitative_effects:
+  effect_size:
+    value: 0.81
+    type: odds_ratio
+  sample_size: 6801
+moderators:
+- name: intervention_type
+  direction: strengthens
+  strength: moderate
+  description: Motivational Interviewing with Personalized Feedback (MI+PF) was comparatively more effective
+    than Personalized Feedback alone (PF) or Group Motivational Interviewing (GMI)
+- name: drinking_threshold
+  direction: strengthens
+  strength: moderate
+  description: Effect stronger for driving after 4+/5+ drinks (19% reduction) compared to 2+/3+ drinks
+    (9% reduction, non-significant)
+structural_competency:
+  equity_implications: This mechanism operates through an institutional intervention structure (college-based
+    prevention programs). The effectiveness depends on institutional capacity to deliver evidence-based
+    interventions. Equity implications include whether all students have equal access to these programs
+    and whether interventions are culturally adapted for diverse student populations. The study population
+    was 72% White and 58% first-year students, suggesting potential limitations in generalizability to
+    more diverse populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.612983'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

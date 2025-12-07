@@ -1,0 +1,45 @@
+id: alternative_aws_treatment_availability_to_treatment_conversion_to_intensive_care
+name: Alternative Treatment Options for Alcohol Withdrawal → Conversion to Higher
+  Level of Care
+from_node:
+  node_id: alternative_aws_treatment_availability
+  node_name: Alternative Treatment Options for Alcohol Withdrawal
+to_node:
+  node_id: treatment_conversion_to_intensive_care
+  node_name: Conversion to Higher Level of Care
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Gabapentin and baclofen combination provides effective symptom management
+  for mild AWS without respiratory depression risk of benzodiazepines'
+- 'Step 2: Effective alternative treatment reduces need for escalation to benzodiazepines
+  and associated intensive monitoring requirements'
+- 'Step 3: Lower escalation rates reduce transfers to higher levels of care (ICU or
+  specialized units), maintaining patients in general acute care settings'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Kristina Karapetyan et al. 2023. "Evaluation of Gabapentin and
+    Baclofen Combination for Inpatient Management of Alcohol Withdrawal Syndrome.."
+    *Federal practitioner : for the health care professionals of the VA, DoD, and
+    PHS*. https://doi.org/10.12788/fp.0362'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.747060'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: withdrawal_severity_at_presentation
+  direction: weakens
+  strength: strong
+  description: Patients presenting with moderate to severe AWS may still require benzodiazepine
+    therapy and intensive monitoring regardless of initial treatment choice
+- name: institutional_formulary_policies
+  direction: strengthens
+  strength: moderate
+  description: Healthcare systems with established protocols for gabapentin/baclofen
+    use may see greater reductions in care escalation through early intervention
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/alternative_aws_treatment_availability_to_treatment_conversion_to_intensive_care.yaml
+_category: healthcare_access

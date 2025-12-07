@@ -1,0 +1,55 @@
+id: poverty_rate_to_alcohol_use_disorder
+name: Poverty Rate → Alcohol Use Disorder
+from_node:
+  node_id: poverty_rate
+  node_name: Poverty Rate
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: High census-tract poverty concentration creates structural disadvantage in neighborhoods'
+- 'Step 2: Poverty-associated stressors including economic insecurity and limited resources increase psychosocial
+  distress'
+- 'Step 3: Elevated chronic stress may promote alcohol use as a coping mechanism'
+- 'Step 4: Sustained problematic drinking patterns increase risk of developing alcohol use disorder'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Vaeth et al. 2019. "Neighborhood factors, drinking behavior, and alcohol use disorder
+    in San Juan, Puerto Rico.." https://doi.org/10.1037/ort0000402
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior literature on neighborhood
+    disadvantage and health outcomes
+  - Additional citations require full-text access - abstract references collective efficacy literature
+  - Additional citations require full-text access - abstract references mediational model studies
+  doi: 10.1037/ort0000402
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Census-level poverty is associated with increased lifetime alcohol use disorder among women
+  in San Juan, Puerto Rico. The study found that women living in high poverty neighborhoods had higher
+  rates of lifetime AUD, though collective efficacy did not mediate this relationship.
+quantitative_effects:
+  sample_size: 1510
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted specifically in San Juan, Puerto Rico; findings may reflect unique
+    cultural and geographic context of Puerto Rican populations
+moderators:
+- name: sex_gender
+  direction: strengthens
+  strength: moderate
+  description: Women residing in high poverty areas reported higher rates of lifetime AUD, indicating
+    gender-specific vulnerability to poverty-related alcohol outcomes
+structural_competency:
+  equity_implications: This mechanism appropriately identifies poverty as a structural determinant operating
+    at the census-tract level rather than blaming individual choices. The finding highlights how neighborhood-level
+    economic disadvantage creates differential exposure to AUD risk, particularly for women. The study
+    explicitly tests structural pathways through collective efficacy, though this mediation was not supported.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.843094'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

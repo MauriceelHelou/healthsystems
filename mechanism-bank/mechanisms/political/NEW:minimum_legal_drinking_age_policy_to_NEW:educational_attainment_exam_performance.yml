@@ -1,0 +1,58 @@
+id: NEW:minimum_legal_drinking_age_policy_to_NEW:educational_attainment_exam_performance
+name: Minimum Legal Drinking Age Policy → Educational Attainment - Exam Performance
+from_node:
+  node_id: NEW:minimum_legal_drinking_age_policy
+  node_name: Minimum Legal Drinking Age Policy
+to_node:
+  node_id: NEW:educational_attainment_exam_performance
+  node_name: Educational Attainment - Exam Performance
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: MLDA increase reduces adolescent alcohol consumption by 7-17%'
+- 'Step 2: Reduced alcohol exposure protects developing brain from neurocognitive impairment'
+- 'Step 3: Preserved cognitive function enables better learning and memory consolidation'
+- 'Step 4: Improved cognitive capacity translates to enhanced academic performance'
+- 'Step 5: Exam performance improves by 4% of a standard deviation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Manuel Bagues and Carmen Villa 2025. "Minimum legal drinking age and educational outcomes.."
+    https://doi.org/10.1016/j.jhealeco.2025.103078
+  supporting_citations:
+  - Additional citations require full-text access - abstract describes staggered policy implementation
+    across Spanish regions
+  - Additional citations require full-text access - abstract references cognitive development literature
+  - Additional citations require full-text access - abstract references European youth alcohol policy
+    research
+  doi: 10.1016/j.jhealeco.2025.103078
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Raising the minimum legal drinking age from 16 to 18 improves adolescent exam performance
+  by 4% of a standard deviation, mediated through reduced alcohol consumption and protection of cognitive
+  development.
+quantitative_effects:
+  effect_size:
+    value: 0.04
+    type: standardized_mean_difference
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects estimated using staggered implementation across Spanish regions as natural
+    experiment
+moderators:
+- name: baseline_youth_drinking_rates
+  direction: strengthens
+  strength: moderate
+  description: European countries with high youth drinking rates may see larger educational benefits from
+    MLDA policies
+structural_competency:
+  equity_implications: This mechanism demonstrates how alcohol policy has cascading effects on educational
+    equity. Structural protection of adolescents from alcohol exposure promotes educational attainment,
+    with potential implications for reducing socioeconomic inequalities that correlate with both youth
+    drinking and educational outcomes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.651748'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,56 @@
+id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226_to_preterm_birth_rate
+name: Ambient PM2.5 Pollution → Preterm Birth Rate
+from_node:
+  node_id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226
+  node_name: Ambient PM2.5 Pollution
+to_node:
+  node_id: preterm_birth_rate
+  node_name: Preterm Birth Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Maternal inhalation of PM2.5 particles during pregnancy leads to systemic
+  absorption of fine particulate matter and associated toxicants into the bloodstream'
+- 'Step 2: PM2.5 exposure triggers systemic oxidative stress and inflammatory responses
+  in the maternal system, releasing pro-inflammatory cytokines'
+- 'Step 3: Inflammatory mediators and oxidative stress affect placental function,
+  potentially causing placental inflammation, vascular dysfunction, and reduced nutrient/oxygen
+  transfer'
+- 'Step 4: Placental dysfunction and systemic inflammation may trigger premature uterine
+  contractions and cervical changes through prostaglandin pathways'
+- 'Step 5: These physiological changes result in shortened gestational age and increased
+  risk of preterm birth (<37 weeks gestation)'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'R. Ghosh et al. 2021. "Ambient and household PM2.5 pollution
+    and adverse perinatal outcomes: A meta-regression and analysis of attributable
+    global burden for 204 countries and territories." PLoS Medicine.'
+  supporting_citations: []
+description: Ambient PM2.5 pollution increases preterm birth risk through maternal
+  systemic inflammation and oxidative stress pathways that affect placental function
+  and trigger premature labor. Meta-regression of 40 studies found a 12% increased
+  risk of preterm birth per 10 μg/m3 increment in ambient PM2.5. Globally, an estimated
+  35.7% of all preterm births (approximately 5.87 million infants) were attributable
+  to total PM2.5 exposure in 2019, with about one-third from ambient sources.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.12
+    type: relative_risk
+    ci_lower: 1.06
+    ci_upper: 1.19
+  p_value: null
+  sample_size: null
+moderators:
+- name: Household air pollution exposure
+  direction: strengthens
+  strength: strong
+  description: Combined ambient and household PM2.5 exposure increases total burden;
+    household air pollution dominates in low-income countries
+- name: Country income level
+  direction: strengthens
+  strength: moderate
+  description: Low- and middle-income countries experience higher burden due to combined
+    ambient and household PM2.5 exposure and higher baseline rates

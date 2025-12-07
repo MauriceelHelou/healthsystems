@@ -1,0 +1,42 @@
+id: minimum_legal_drinking_age_16_to_mortality_age_16
+name: Minimum Legal Drinking Age (MLDA) at 16 Years → All-Cause Mortality at Age 16
+from_node:
+  node_id: minimum_legal_drinking_age_16
+  node_name: Minimum Legal Drinking Age (MLDA) at 16 Years
+to_node:
+  node_id: mortality_age_16
+  node_name: All-Cause Mortality at Age 16
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Legal access to alcohol at age 16 creates discontinuous increase in alcohol
+  availability for youth'
+- 'Step 2: Concurrent timing with driving licensure creates interaction between novice
+  driving and potential alcohol consumption'
+- 'Step 3: Novice driver effect (inexperience with vehicle operation) becomes primary
+  driver of mortality risk rather than alcohol access itself'
+- 'Step 4: Increased motor vehicle crashes and traffic-related deaths occur at age
+  threshold'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Raffael Kamalow and T. Siedler 2019. "The Effects of Stepwise
+    Minimum Legal Drinking Age Legislation on Mortality: Evidence from Germany." *Social
+    Science Research Network*. https://doi.org/10.2139/ssrn.3415800'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.166936'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: novice_driver_status
+  direction: strengthens
+  strength: strong
+  description: The primary mechanism operates through novice driving inexperience
+    rather than alcohol access, with driving licensure age coinciding with MLDA threshold
+- name: alcohol_access
+  direction: strengthens
+  strength: weak
+  description: Legal access to alcohol plays only a marginal role at most in mortality
+    increases at age 16

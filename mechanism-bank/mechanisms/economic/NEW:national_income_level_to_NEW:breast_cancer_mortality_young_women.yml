@@ -1,0 +1,79 @@
+id: NEW:national_income_level_to_NEW:breast_cancer_mortality_young_women
+name: National Income Level (Country Economic Classification) → Breast Cancer Mortality in Young Women
+  (Age 20-49)
+from_node:
+  node_id: NEW:national_income_level
+  node_name: National Income Level (Country Economic Classification)
+to_node:
+  node_id: NEW:breast_cancer_mortality_young_women
+  node_name: Breast Cancer Mortality in Young Women (Age 20-49)
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher national income enables greater public investment in healthcare infrastructure and preventive
+  services'
+- 'Step 2: Increased resources support breast cancer screening programs, early detection initiatives,
+  and health promotion campaigns'
+- 'Step 3: Early diagnosis leads to identification of breast cancer at earlier, more treatable stages'
+- 'Step 4: Access to advanced treatment modalities (surgery, chemotherapy, radiation, targeted therapies)
+  improves survival outcomes'
+- 'Step 5: Reduced breast cancer mortality among young women in high-income countries'
+evidence:
+  quality_rating: B
+  n_studies: 6
+  primary_citation: 'Juliana Dalcin Donini E Silva et al. 2024. "Mortality of Young Women due to Breast
+    Cancer in Low, Middle and High-Income Countries: Systematic Literature Review and Meta-Analysis."
+    https://doi.org/10.31557/APJCP.2024.25.7.2519'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 6 articles meeting inclusion
+    criteria
+  - Data extracted from 54 countries (39 high-income, 12 upper-middle-income, 3 lower-middle-income)
+  - Two studies included in quantitative meta-analysis
+  doi: 10.31557/APJCP.2024.25.7.2519
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: DOI not found in Crossref database'
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review and meta-analysis demonstrates that breast cancer mortality among
+  young women (ages 20-49) varies inversely with national income level. High-income countries show significantly
+  declining mortality rates (10.2 per 100,000), while lower-middle-income countries have nearly double
+  the mortality rate (20.3 per 100,000). The disparity is attributed to differential investment in healthcare
+  infrastructure, screening programs, and treatment access.
+quantitative_effects:
+  effect_size:
+    value: 10.2
+    type: percentage_change
+    ci_lower: 9.8
+    ci_upper: 10.6
+  p_value: 0.05
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: 'Mortality rates vary significantly by country income classification: High-income countries:
+    10.2 per 100,000; Upper-middle-income countries: 15.5 per 100,000; Lower-middle-income countries:
+    20.3 per 100,000. Data from 54 countries across income levels.'
+moderators:
+- name: healthcare_investment_level
+  direction: strengthens
+  strength: strong
+  description: Insufficient investment in preventive measures, health promotion, early diagnosis, and
+    treatment significantly increases mortality in lower-income countries
+- name: screening_program_availability
+  direction: strengthens
+  strength: strong
+  description: Access to breast cancer screening programs enables early detection and improves survival
+    outcomes
+structural_competency:
+  equity_implications: 'This mechanism clearly traces health disparities to structural economic factors
+    at the national level rather than individual behaviors. The paper explicitly attributes mortality
+    disparities to ''insufficient investment in preventive measures, health promotion, early diagnosis,
+    and treatment'' - identifying policy and resource allocation as root causes. This has profound equity
+    implications: young women in lower-income countries face nearly twice the mortality risk due to structural
+    barriers to care, not personal choices. The mechanism highlights how global economic inequality translates
+    directly into preventable deaths.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.426053'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

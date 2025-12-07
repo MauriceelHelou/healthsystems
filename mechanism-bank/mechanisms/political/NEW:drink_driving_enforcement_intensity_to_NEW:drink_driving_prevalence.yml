@@ -1,0 +1,62 @@
+id: NEW:drink_driving_enforcement_intensity_to_NEW:drink_driving_prevalence
+name: Drink-Driving Enforcement Intensity → Drink-Driving Prevalence
+from_node:
+  node_id: NEW:drink_driving_enforcement_intensity
+  node_name: Drink-Driving Enforcement Intensity
+to_node:
+  node_id: NEW:drink_driving_prevalence
+  node_name: Drink-Driving Prevalence
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Law enforcement agencies allocate resources to drink-driving enforcement operations'
+- 'Step 2: Enforcement activities (checkpoints, patrols, random breath testing) increase probability of
+  detection for impaired drivers'
+- 'Step 3: Publicized enforcement creates awareness and perceived risk among potential drink-drivers'
+- 'Step 4: General deterrence effect reduces willingness to drive after drinking'
+- 'Step 5: Population-level reduction in drink-driving behavior'
+evidence:
+  quality_rating: A
+  n_studies: 21
+  primary_citation: 'Sharon E O''Hara et al. 2022. "Determining a dosage threshold of drink-driving enforcement
+    operations: A systematic review.." https://doi.org/10.1111/dar.13519'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review followed PRISMA guidelines
+  - Risk of bias assessed using Cochrane Collaboration Effective Practice and Organization of Care tool
+  - Risk of bias assessed using JBI checklist
+  doi: 10.1111/dar.13519
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The systematic review found that most included studies demonstrated sustained enforcement
+  was associated with reductions in drink driving behavior, though the heterogeneity in dosage measures
+  and study designs limited the ability to determine an optimal enforcement level. The review highlights
+  the need for additional research with rigorous study designs to help law enforcement agencies make evidence-based
+  resource allocation decisions.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The 21 included studies differed substantially in their measures of enforcement dosage,
+    making it difficult to synthesize results across studies and determine threshold levels.
+moderators:
+- name: study_design_rigor
+  direction: strengthens
+  strength: moderate
+  description: Due to study design limitations, a substantial percentage of studies must be considered
+    with caution; more rigorous designs with appropriate controls are needed
+- name: community_setting_complexity
+  direction: weakens
+  strength: moderate
+  description: Challenges of conducting rigorous studies in community settings affect the quality of evidence
+    for this mechanism
+structural_competency:
+  equity_implications: This mechanism frames drink-driving as a population-level phenomenon amenable to
+    structural policy intervention rather than purely individual moral failing. The review appropriately
+    focuses on how policy enforcement resources are allocated as a systems-level determinant. However,
+    the mechanism does not address potential equity concerns including differential enforcement across
+    communities, or how underlying structural factors (alcohol availability, transportation alternatives,
+    economic stress) may contribute to drink-driving behavior in the first place.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.619647'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

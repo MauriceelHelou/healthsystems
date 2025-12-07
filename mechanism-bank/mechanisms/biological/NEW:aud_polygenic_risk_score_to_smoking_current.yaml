@@ -1,0 +1,51 @@
+id: NEW:aud_polygenic_risk_score_to_smoking_current
+name: AUD Polygenic Risk Score → Current Smoking Status
+from_node:
+  node_id: NEW:aud_polygenic_risk_score
+  node_name: AUD Polygenic Risk Score
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking Status
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Higher AUD polygenic risk score reflects cumulative genetic liability for
+  alcohol use disorder, capturing variants in genes affecting reward processing, impulse
+  control, and addiction pathways'
+- 'Step 2: Shared genetic architecture between alcohol and nicotine addiction leads
+  to pleiotropic effects, where genetic variants influencing AUD risk also affect
+  smoking susceptibility'
+- 'Step 3: Common neurobiological substrates including dopaminergic reward pathways
+  and stress response systems mediate the genetic correlation between alcohol and
+  tobacco use'
+- 'Step 4: Individuals with higher AUD genetic liability show increased propensity
+  for ever smoking and greater tobacco consumption (pack years), indicating cross-substance
+  genetic risk'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: Hang Zhou et al. 2021. Genome-wide meta-analysis of alcohol use
+    disorder in East Asians. Neuropsychopharmacology.
+  supporting_citations: []
+description: AUD polygenic risk score shows significant positive association with
+  smoking status, demonstrating genetic pleiotropy between alcohol and tobacco use
+  disorders. In an independent East Asian sample (GERA cohort), higher AUD PRS was
+  associated with both ever vs. never smoking (beta=0.06, p=0.0114) and pack years
+  of smoking (beta=0.09, p=0.0452), indicating shared genetic liability for these
+  substances.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.06
+    type: beta_coefficient
+    ci_lower: null
+    ci_upper: null
+  p_value: 0.0114
+  sample_size: 4464
+moderators:
+- name: ancestry
+  direction: strengthens
+  strength: moderate
+  description: East Asian-specific genetic variants (ADH1B, ALDH2) may modify the
+    relationship between AUD genetic risk and smoking behaviors

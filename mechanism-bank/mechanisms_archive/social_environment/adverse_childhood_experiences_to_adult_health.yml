@@ -1,0 +1,110 @@
+id: adverse_childhood_experiences_to_adult_health
+name: Adverse Childhood Experiences → Adult Health Conditions
+from_node:
+  node_id: adverse_childhood_experiences
+  node_name: Adverse Childhood Experiences (ACEs)
+  node_type: stock
+to_node:
+  node_id: adult_health_conditions
+  node_name: Adult Health Conditions
+  node_type: stock
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: ACEs (abuse, neglect, household dysfunction) cause toxic stress during critical developmental
+  periods'
+- 'Step 2: Toxic stress alters brain development, HPA axis function, and immune system regulation'
+- 'Step 3: Altered stress response systems increase risk for mental health disorders and maladaptive coping'
+- 'Step 4: ACE-related trauma often leads to health risk behaviors (smoking, substance use, poor diet)'
+- 'Step 5: Cumulative biological and behavioral effects manifest as chronic disease, disability, and premature
+  mortality'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'Peterson, Cora, et al. 2023. ''Economic Burden of Health Conditions Associated With
+    Adverse Childhood Experiences Among US Adults.'' JAMA Network Open 6(12): e2346323.'
+  supporting_citations:
+  - 'Felitti, Vincent J., et al. 1998. ''Relationship of Childhood Abuse and Household Dysfunction to
+    Many of the Leading Causes of Death in Adults.'' American Journal of Preventive Medicine 14(4): 245-258.'
+  doi: 10.1001/jamanetworkopen.2023.46323
+  journal: JAMA Network Open
+  year: 2023
+  fulltext:
+    available: true
+    source: unpaywall
+    url: https://jamanetwork.com/journals/jamanetworkopen/articlepdf/2812583/peterson_2023_oi_231354_1701278614.05587.pdf
+    is_open_access: true
+    fetched_date: '2025-11-30'
+    license: cc-by
+  citation_verified: true
+quantitative_effects:
+  economic_burden:
+    annual_total: 14100000000000
+    annual_total_unit: USD
+    annual_per_person: 88000
+    lifetime_per_person: 2400000
+    lifetime_per_person_range:
+      low: 1300000
+      high: 4300000
+      low_state: North Dakota
+      high_state: Arkansas
+  population_attributable_fraction:
+    affected_population: 160000000
+    total_population: 255000000
+    fraction: 0.63
+    high_ace_fraction: 0.22
+    high_ace_burden_share: 0.58
+  interpretation: 63% of US adults have 1+ ACE; annual burden $14.1T; those with 4+ ACEs (22% of pop)
+    account for 58% of burden
+  source: BRFSS 2019-2020 (n=820,673 representing 255M adults)
+last_updated: '2025-11-30'
+version: '1.1'
+description: Adverse childhood experiences are strongly associated with adult health conditions including
+  anxiety, depression, arthritis, asthma, cancer, COPD, diabetes, heart disease, kidney disease, and stroke.
+  An estimated 63% of US adults have at least one ACE, with 22% having 4+ ACEs. The economic burden of
+  ACE-associated health conditions is $14.1 trillion annually, or $88,000 per affected adult.
+moderators:
+- name: ace_count
+  direction: strengthens
+  strength: strong
+  description: Dose-response relationship - those with 4+ ACEs have 58% of total burden
+- name: supportive_relationships
+  direction: weakens
+  strength: strong
+  description: Stable, supportive relationships in childhood buffer ACE effects
+- name: early_intervention
+  direction: weakens
+  strength: moderate
+  description: Trauma-informed care and early intervention can mitigate long-term effects
+- name: socioeconomic_resources
+  direction: weakens
+  strength: moderate
+  description: Access to healthcare, education, and economic opportunity moderates effects
+structural_competency:
+  root_cause_level: institutional
+  avoids_victim_blaming: true
+  equity_implications: ACE prevalence varies 2-3 fold across communities and is concentrated in populations
+    facing poverty, racism, and historical trauma. ACEs are not random individual events but reflect structural
+    violence, inadequate social safety nets, and intergenerational trauma. Prevention requires addressing
+    root causes including economic security, housing stability, and community resources.
+assumptions:
+- ACEs measured using CDC-Kaiser ACE questionnaire or similar validated tool
+- Health conditions include both physical and mental health outcomes
+- Lifetime per-person burden based on value of statistical life methodology
+limitations:
+- Retrospective ACE measurement subject to recall bias
+- Difficult to establish causation vs. shared underlying factors
+- Does not account for positive childhood experiences that may buffer effects
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: ACE prevalence and associated health burden vary substantially by state and community,
+    driven by poverty concentration and social determinants.
+  relevant_geographies:
+  - Lifetime economic burden per affected adult ranges from $1.3M (North Dakota) to $4.3M (Arkansas)
+  - Communities with high poverty show elevated ACE prevalence
+  - States with stronger social safety nets show lower ACE rates
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

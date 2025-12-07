@@ -1,0 +1,61 @@
+id: NEW:alcohol_relapse_post_liver_transplant_to_NEW:liver_graft_histology_damage
+name: Alcohol Relapse After Liver Transplantation → Liver Graft Histological Damage
+  (Steatosis/Fibrosis/Cirrhosis)
+from_node:
+  node_id: NEW:alcohol_relapse_post_liver_transplant
+  node_name: Alcohol Relapse After Liver Transplantation
+to_node:
+  node_id: NEW:liver_graft_histology_damage
+  node_name: Liver Graft Histological Damage (Steatosis/Fibrosis/Cirrhosis)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Patients who received liver transplantation for alcoholic cirrhosis resume
+  alcohol consumption (relapse), with annual relapse rates of approximately 4.7% for
+  any alcohol use and 2.9% for heavy alcohol use'
+- 'Step 2: Resumed alcohol consumption subjects the transplanted liver graft to direct
+  hepatotoxic effects, including oxidative stress, inflammatory responses, and metabolic
+  disruption'
+- 'Step 3: Chronic alcohol exposure leads to progressive histological damage in the
+  graft, manifesting as steatosis (fatty liver), steatohepatitis (inflammation with
+  fat), and alcoholic hepatitis'
+- 'Step 4: Continued alcohol-induced injury triggers fibrogenesis in the graft, leading
+  to advanced fibrosis and ultimately recurrent cirrhosis of the transplanted liver'
+- 'Step 5: Recurrent alcoholic cirrhosis develops in approximately 9% of biopsied
+  patients, accounting for about 20% of all deaths during follow-up after liver transplantation'
+evidence:
+  quality_rating: A
+  n_studies: 7
+  primary_citation: 'Sudha Kodali et al. 2018. Alcohol Relapse After Liver Transplantation
+    for Alcoholic Cirrhosis-Impact on Liver Graft and Patient Survival: A Meta-analysis.
+    Alcohol and alcoholism (Oxford, Oxfordshire).'
+  supporting_citations: []
+description: Meta-analysis of 7 studies demonstrates that alcohol relapse after liver
+  transplantation for alcoholic cirrhosis significantly increases the risk of graft
+  histological damage. Relapsers compared to abstainers had substantially higher odds
+  of developing graft steatosis (OR 4.1), steatohepatitis (OR 4.5), alcoholic hepatitis
+  (OR 9.3), and advanced fibrosis or cirrhosis (OR 8.4). Recurrent alcoholic cirrhosis
+  occurred in 9% of biopsied patients and was responsible for approximately 20% of
+  all deaths during follow-up.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 8.4
+    type: odds_ratio
+    ci_lower: 3.5
+    ci_upper: 20.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: Heavy vs. any alcohol use
+  direction: strengthens
+  strength: moderate
+  description: Heavy alcohol use (2.9% annual rate) likely produces more severe histological
+    damage than occasional/light use (4.7% total relapse rate), though both contribute
+    to graft injury
+- name: Duration of follow-up
+  direction: strengthens
+  strength: moderate
+  description: Longer follow-up periods (median 6 years, range 3.7-8.3 years) reveal
+    more cumulative histological damage from sustained alcohol exposure

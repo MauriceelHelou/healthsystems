@@ -1,0 +1,60 @@
+id: diagnostic_criteria_standardization_to_severe_asthma_prevalence_estimates
+name: Diagnostic Criteria Standardization → Severe Asthma Prevalence Estimates
+from_node:
+  node_id: diagnostic_criteria_standardization
+  node_name: Diagnostic Criteria Standardization
+to_node:
+  node_id: severe_asthma_prevalence_estimates
+  node_name: Severe Asthma Prevalence Estimates
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Lack of standardized diagnostic criteria creates inconsistent case definitions across healthcare
+  systems'
+- 'Step 2: Different diagnostic frameworks (GINA vs ERS/ATS) capture different populations'
+- 'Step 3: Healthcare providers apply varying thresholds for severe asthma diagnosis'
+- 'Step 4: Systematic under- or over-diagnosis occurs based on institutional protocols'
+- 'Step 5: True prevalence remains masked, preventing appropriate resource allocation'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: 'S. Manti et al.. 2024. "Epidemiology of severe asthma in children: a systematic review
+    and meta-analysis" European Respiratory Review. https://doi.org/10.1183/16000617.0095-2024 (Cited:
+    17)'
+  doi: not_provided
+  fulltext:
+    available: true
+    source: harvard_proxy
+    url: https://ezp-prod1.hul.harvard.edu/login?url=https://doi.org/not_provided
+    is_open_access: false
+    fetched_date: '2025-11-30'
+  citation_verified: false
+last_updated: '2025-11-30'
+version: '1.0'
+description: Absence of standardized diagnostic criteria creates systematic variation in severe asthma
+  identification, leading to inconsistent prevalence estimates and potentially inequitable resource distribution.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: 'Prevalence estimates varied significantly across European studies depending on diagnostic
+    criteria used (GINA: 6%; ERS/ATS: 1%; other: 3%)'
+moderators:
+- name: healthcare_system_structure
+  direction: strengthens
+  strength: moderate
+  description: Fragmented healthcare systems with multiple diagnostic protocols amplify inconsistency
+    in case identification
+- name: specialist_access
+  direction: weakens
+  strength: moderate
+  description: Better access to pediatric pulmonologists may improve diagnostic accuracy and consistency
+structural_competency:
+  equity_implications: 'This mechanism reveals how healthcare system organization and clinical guideline
+    governance affect disease recognition. Inconsistent diagnostic criteria may systematically disadvantage
+    populations with less access to specialist care who might receive delayed or missed diagnoses. Equity
+    implication: Children in under-resourced healthcare settings may be systematically under-diagnosed
+    if providers lack training in standardized criteria.'
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-17T10:23:04.620911'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

@@ -1,0 +1,66 @@
+id: substance_use_disorder_any_to_NEW:quality_of_life_mental_domain
+name: Substance Use Disorder → Mental Quality of Life
+from_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder
+to_node:
+  node_id: NEW:quality_of_life_mental_domain
+  node_name: Mental Quality of Life
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Substance use disorders create neurobiological changes affecting mood regulation,
+  cognitive function, and emotional processing'
+- 'Step 2: SUD leads to behavioral changes including social withdrawal, impaired decision-making,
+  and potential reckless or suicidal behaviors (especially with cocaine use)'
+- 'Step 3: Individuals with SUD experience high rates of comorbid mental disorders
+  and trauma symptoms that compound mental health impairment'
+- 'Step 4: Severity of substance use disorder directly correlates with worse mental
+  quality of life outcomes'
+- 'Step 5: Reduced mental QoL manifests as psychological distress, diminished life
+  satisfaction, and impaired psychological well-being'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'Bahram Armoon et al. 2022. Quality of life and its correlated
+    factors among patients with substance use disorders: a systematic review and meta-analysis.
+    Archives of Public Health.'
+  supporting_citations: []
+description: Substance use disorders are associated with significantly lower mental
+  quality of life through multiple mechanisms including neurobiological effects on
+  mood and cognition, behavioral changes leading to reckless behaviors, and high rates
+  of comorbid mental health conditions. The relationship is dose-dependent, with more
+  severe SUD associated with worse mental QoL outcomes. Social support from family
+  and friends serves as a protective factor, while cocaine use and comorbid psychiatric
+  conditions exacerbate the negative impact.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -5.44
+    type: beta_coefficient
+    ci_lower: null
+    ci_upper: null
+  p_value: 0.002
+  sample_size: 956
+moderators:
+- name: SUD severity
+  direction: strengthens
+  strength: strong
+  description: Severe substance use disorders show significantly worse mental QoL
+    (β = -5.44, p = 0.002)
+- name: Cocaine use
+  direction: strengthens
+  strength: moderate
+  description: Cocaine users were less likely to have good mental QoL (OR = 0.83,
+    95% CI = 0.75, 0.93)
+- name: Social support
+  direction: weakens
+  strength: moderate
+  description: Support from family/friends associated with better mental QoL (OR =
+    1.05, 95% CI = 1.04, 1.07)
+- name: Comorbid mental disorders
+  direction: strengthens
+  strength: strong
+  description: Those with mental disorders less likely to have good mental QoL (β
+    = -0.33, p = 0.001)

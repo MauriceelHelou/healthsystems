@@ -1,0 +1,61 @@
+id: primary_care_physician_density_to_NEW:aud_pharmacotherapy_prescription_rate
+name: Primary Care Physician Density → AUD Pharmacotherapy Prescription Rate
+from_node:
+  node_id: primary_care_physician_density
+  node_name: Primary Care Physician Density
+to_node:
+  node_id: NEW:aud_pharmacotherapy_prescription_rate
+  node_name: AUD Pharmacotherapy Prescription Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary care serves as the main point of contact for individuals with alcohol use disorders,
+  with less than 20% seeking any treatment'
+- 'Step 2: Greater primary care access increases opportunities for AUD identification and management'
+- 'Step 3: GPs can prescribe anti-craving medications (Disulfiram, Acamprosate, Naltrexone) for withdrawal
+  and craving management'
+- 'Step 4: Increased pharmacotherapy prescriptions support AUD treatment outcomes'
+evidence:
+  quality_rating: B
+  n_studies: 10
+  primary_citation: Guillou L Morgane et al. 2021. "The Place of Pharmacotherapy in Alcohol Use Disorder
+    Management in Family Practice - A Systematic Review.." https://doi.org/10.2174/1381612826666201015154051
+  supporting_citations:
+  - Studies from included review conducted in Europe (2 studies)
+  - Studies from included review conducted in North America (5 studies)
+  - Studies from included review conducted in Australia (2 studies)
+  - Additional citations require full-text access
+  doi: 10.2174/1381612826666201015154051
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Primary care is a strategic setting for AUD identification and management, yet pharmacotherapy
+  knowledge and prescription rates remain insufficient. The review found that despite international recommendations
+  for AUD pharmacotherapy, very few studies examine AUD management in primary care settings.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies conducted across multiple regions (Europe, North America, Australia, South
+    Africa) suggesting geographic variation in primary care AUD management practices
+moderators:
+- name: provider_training
+  direction: strengthens
+  strength: moderate
+  description: Training was identified as a factor facilitating pharmacotherapy prescriptions
+- name: medication_cost
+  direction: weakens
+  strength: moderate
+  description: Cost was identified as a limiting factor for pharmacotherapy prescriptions
+- name: perceived_efficacy
+  direction: strengthens
+  strength: moderate
+  description: Provider beliefs about medication efficacy influence prescription behavior
+structural_competency:
+  equity_implications: This mechanism highlights structural barriers in healthcare systems that prevent
+    adequate AUD treatment. The low treatment uptake (<20%) reflects systemic failures in healthcare organization
+    rather than individual patient choices. Lack of adapted guidelines for primary care practice represents
+    a structural gap that perpetuates treatment inequities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.262209'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

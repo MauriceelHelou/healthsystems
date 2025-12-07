@@ -1,0 +1,66 @@
+id: NEW:brief_alcohol_intervention_delivery_to_binge_drinking
+name: Brief Alcohol Intervention Delivery → Binge Drinking
+from_node:
+  node_id: NEW:brief_alcohol_intervention_delivery
+  node_name: Brief Alcohol Intervention Delivery
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare systems implement brief alcohol interventions (ABIs) in clinical settings'
+- 'Step 2: Trained practitioners deliver screening, advice, and motivational support to patients'
+- 'Step 3: Patients receive personalized feedback on alcohol consumption and associated risks'
+- 'Step 4: Increased awareness and motivation leads to behavioral modification'
+- 'Step 5: Reduction in quantity and frequency of alcohol consumption'
+evidence:
+  quality_rating: A
+  n_studies: 52
+  primary_citation: 'L. Platt et al. 2016. "How effective are brief interventions in reducing alcohol
+    consumption: do the setting, practitioner group and content matter? Findings from a systematic review
+    and metaregression analysis." https://doi.org/10.1136/bmjopen-2016-011473'
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review and meta-regression of
+    52 RCTs
+  - Studies conducted in primary care, emergency departments, and other healthcare settings
+  - Individual study citations available in full publication
+  doi: 10.1136/bmjopen-2016-011473
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief alcohol interventions delivered in healthcare settings produce small but statistically
+  significant reductions in alcohol consumption quantity. The pooled effect size of 0.15 standard deviations
+  represents a meaningful population-level impact when scaled across healthcare systems.
+quantitative_effects:
+  effect_size:
+    value: -0.15
+    type: standardized_mean_difference
+  sample_size: 29891
+moderators:
+- name: practitioner_type
+  direction: strengthens
+  strength: moderate
+  description: Interventions delivered by nurses showed larger effects on reducing quantity (d=-0.23)
+    compared to other provider types
+- name: intervention_content
+  direction: strengthens
+  strength: weak
+  description: Brief advice was most effective in reducing quantity consumed (d=-0.20), though content
+    did not significantly moderate overall effectiveness
+- name: setting
+  direction: weakens
+  strength: weak
+  description: Setting did not significantly moderate intervention effectiveness, though primary care
+    showed strongest evidence base
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare system capacity and workforce configuration
+    (particularly nursing staff) can address population alcohol consumption. The finding that setting
+    does not significantly moderate effectiveness suggests potential for expanding ABIs beyond primary
+    care to reach populations with limited primary care access. The structural implication is that healthcare
+    workforce investment in training nurses for ABI delivery could maximize population health impact.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.953186'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

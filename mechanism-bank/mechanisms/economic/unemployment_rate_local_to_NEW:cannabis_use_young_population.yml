@@ -1,0 +1,67 @@
+id: unemployment_rate_local_to_NEW:cannabis_use_young_population
+name: Unemployment Rate Local → Cannabis Use Young Population
+from_node:
+  node_id: unemployment_rate_local
+  node_name: Unemployment Rate Local
+to_node:
+  node_id: NEW:cannabis_use_young_population
+  node_name: Cannabis Use Young Population
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Economic recessions cause job losses and increased unemployment particularly affecting young
+  workers'
+- 'Step 2: Youth unemployment leads to loss of structured daily activities, income, and social networks
+  tied to employment'
+- 'Step 3: Financial strain and uncertain futures create stress and psychological distress among unemployed
+  youth'
+- 'Step 4: Cannabis, as a relatively accessible and lower-cost substance, becomes preferred coping mechanism'
+- 'Step 5: Cannabis use increases disproportionately compared to other illicit substances during recession
+  periods'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'Berta Rivera et al. 2023. "Economic recession, illicit drug use and the young population:
+    a systematic literature review and meta-analysis." https://doi.org/10.1177/17579139231180751'
+  supporting_citations:
+  - Studies from 2008-2020 period covering multiple OECD countries
+  - 17 studies specifically examining 2007 financial crisis impacts
+  - Additional citations require full-text access for specific author names
+  doi: 10.1177/17579139231180751
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The meta-analysis specifically identifies cannabis as showing the strongest countercyclical
+  relationship with economic recessions among young populations. While the overall partial correlation
+  between unemployment and drug use is 0.03, the effect is notably more pronounced for cannabis compared
+  to other illicit substances. This suggests cannabis serves as a primary substance of choice for young
+  people coping with economic hardship, likely due to its relative availability, lower cost, and social
+  acceptability compared to harder drugs.
+quantitative_effects:
+  effect_size:
+    value: 0.03
+    type: correlation
+    ci_lower: 0.0147
+    ci_upper: 0.0453
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies conducted across OECD countries with potential variation based on national
+    drug policies, labor market structures, and social safety net provisions
+moderators:
+- name: substance_type_cannabis
+  direction: strengthens
+  strength: strong
+  description: The countercyclical impact is more marked with cannabis use than with cocaine, opioids,
+    or other drugs
+structural_competency:
+  equity_implications: This mechanism highlights how economic structures and labor market conditions shape
+    substance use patterns rather than framing cannabis use as purely individual choice. The differential
+    effect by drug type suggests that economic constraints (cost, availability) interact with recession
+    impacts, meaning that addressing economic root causes through employment programs and social safety
+    nets could be more effective than punitive drug policies. Young people's disproportionate vulnerability
+    reflects their structural position in labor markets and limited wealth accumulation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.406662'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

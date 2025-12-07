@@ -1,0 +1,46 @@
+id: hypertension_diagnosis_to_acute_kidney_injury_hospitalization
+name: Arterial Hypertension → Acute Kidney Injury Hospitalization
+from_node:
+  node_id: hypertension_diagnosis
+  node_name: Arterial Hypertension
+to_node:
+  node_id: acute_kidney_injury_hospitalization
+  node_name: Acute Kidney Injury Hospitalization
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic arterial hypertension causes sustained elevated pressure in renal
+  vasculature, leading to progressive nephrosclerosis and reduced renal functional
+  reserve'
+- 'Step 2: Hypertension-induced vascular damage impairs renal autoregulation, making
+  kidneys more vulnerable to hemodynamic insults during acute illness'
+- 'Step 3: In the context of acute illness (e.g., COVID-19), pre-existing hypertensive
+  kidney damage combined with systemic inflammation, hypoxia, and hemodynamic instability
+  precipitates acute kidney injury requiring hospitalization'
+- 'Step 4: Reduced baseline glomerular filtration rate and impaired tubular function
+  in hypertensive patients lower the threshold for clinically significant AKI development'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'F. Fabrizi et al. 2020. COVID-19 and Acute Kidney Injury: A Systematic
+    Review and Meta-Analysis. Pathogens.'
+  supporting_citations: []
+description: Meta-regression analysis of 39 studies (n=25,566 patients) demonstrated
+  that arterial hypertension was significantly associated with acute kidney injury
+  occurrence in hospitalized COVID-19 patients (p < 0.001). The overall pooled AKI
+  incidence was 15.4%, with hypertension identified as an independent predictor. This
+  relationship reflects chronic hypertensive nephropathy reducing renal reserve and
+  increasing vulnerability to acute insults.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Age was significantly associated with AKI occurrence (p < 0.007), suggesting
+    older patients with hypertension may have even higher AKI risk
+- name: COVID-19 severity
+  direction: strengthens
+  strength: strong
+  description: 'Severe COVID-19 had pooled AKI incidence of 0.53 (95% CI: 0.427-0.633),
+    substantially higher than overall pooled incidence of 0.154'

@@ -1,0 +1,57 @@
+id: reentry_service_receipt_to_smoking_cessation_attempts
+name: Reentry Service Receipt → Smoking Cessation Attempts
+from_node:
+  node_id: reentry_service_receipt
+  node_name: Reentry Service Receipt
+to_node:
+  node_id: smoking_cessation_attempts
+  node_name: Smoking Cessation Attempts
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Pre-release and post-release interventions are delivered to individuals exiting smoke-free
+  prisons'
+- 'Step 2: These interventions strengthen intention to remain abstinent from tobacco'
+- 'Step 3: Integrated services connect smoking cessation with other substance use treatment'
+- 'Step 4: Social support networks for quitting are facilitated through reentry services'
+- 'Step 5: Increased likelihood of quit attempts and sustained abstinence following release'
+evidence:
+  quality_rating: B
+  n_studies: 15
+  primary_citation: Cheneal Puljević and Catherine J Segan 2019. "Systematic Review of Factors Influencing
+    Smoking Following Release From Smoke-Free Prisons.." https://doi.org/10.1093/ntr/nty088
+  supporting_citations:
+  - Additional citations require full-text access - abstract indicates 15 studies were included
+  - Studies examined prerelease intention to smoke or remain abstinent
+  - Studies examined quit attempts following postrelease smoking relapse
+  doi: 10.1093/ntr/nty088
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2018, source is 2019'
+last_updated: '2025-12-06'
+version: '2.0'
+description: The review identifies that structured reentry services incorporating smoking cessation support
+  can improve quit attempts and sustained abstinence among formerly incarcerated individuals. The combination
+  of pre-release preparation and post-release support appears critical for success.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Geographic variation likely exists in availability of reentry services and smoking
+    cessation support across different jurisdictions
+moderators:
+- name: timing_of_intervention
+  direction: strengthens
+  strength: moderate
+  description: Interventions delivered both pre- and post-release appear more effective than single-timepoint
+    interventions
+structural_competency:
+  equity_implications: This mechanism appropriately centers structural interventions (reentry services,
+    integrated treatment systems, social support facilitation) rather than individual willpower. It recognizes
+    that formerly incarcerated populations face systematic barriers to health-promoting behaviors and
+    require coordinated system-level support. The equity implications are significant given the disproportionate
+    incarceration of marginalized communities and the health disparities associated with smoking.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.705960'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

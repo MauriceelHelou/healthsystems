@@ -1,0 +1,49 @@
+id: housing_instability_to_covid_19_morbidity
+name: Housing Instability → COVID-19 Morbidity
+from_node:
+  node_id: housing_instability
+  node_name: Housing Instability
+to_node:
+  node_id: covid_19_morbidity
+  node_name: COVID-19 Morbidity
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Housing instability creates overcrowded or unstable living conditions'
+- 'Step 2: Unstable housing reduces ability to maintain social distancing and hygiene practices'
+- 'Step 3: Increased exposure to COVID-19 transmission in shared or temporary housing facilities'
+- 'Step 4: Higher rates of COVID-19 infection and severe illness outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Bartels et al. 2020. "COVID-19 Emergency Reforms in Massachusetts to Support Behavioral
+    Health Care and Reduce Mortality of People With Serious Mental Illness.." *Psychiatric Services*.
+    https://doi.org/10.1176/appi.ps.202000244
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1176/appi.ps.202000244
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '2.0'
+description: Housing instability among people with serious mental illness increases COVID-19 morbidity
+  risk through reduced ability to maintain protective behaviors and increased exposure in congregate or
+  temporary housing settings.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focuses on Massachusetts reforms, suggesting geographic variation in policy responses
+    to housing-health connections
+moderators:
+- name: serious_mental_illness
+  direction: strengthens
+  strength: strong
+  description: People with serious mental illness face compounded vulnerability due to both housing instability
+    and underlying health conditions
+structural_competency:
+  equity_implications: This mechanism traces to structural housing policies and availability of affordable
+    housing. The causal pathway avoids individual blame and focuses on how housing systems create differential
+    health risks for vulnerable populations.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.792574'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

@@ -1,0 +1,79 @@
+id: tuberculosis_incidence_to_alcohol_use_disorder
+name: Tuberculosis Incidence → Alcohol Use Disorder
+from_node:
+  node_id: tuberculosis_incidence
+  node_name: Tuberculosis Incidence
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Tuberculosis diagnosis creates significant psychological distress and social stigma'
+- 'Step 2: Chronic illness burden and lengthy treatment regimens (6+ months) increase stress and coping
+  challenges'
+- 'Step 3: Social isolation due to TB stigma may lead to maladaptive coping mechanisms including alcohol
+  use'
+- 'Step 4: Economic strain from illness-related work loss and healthcare costs contributes to psychosocial
+  vulnerability'
+- 'Step 5: High prevalence of alcohol use disorder (30%) in TB patients reflects intersection of disease
+  burden and substance use'
+evidence:
+  quality_rating: A
+  n_studies: 28
+  primary_citation: 'Mogesie Necho et al. 2021. "Prevalence and associated factors for alcohol use disorder
+    among tuberculosis patients: a systematic review and meta-analysis study.." https://doi.org/10.1186/s13011-020-00335-w'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 28 primary studies
+  - Studies from PubMed, Scopus, EMBASE, African Index Medicus databases
+  - Reference list articles on AUD prevalence and associated factors in TB patients
+  doi: 10.1186/s13011-020-00335-w
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'This systematic review and meta-analysis of 28 studies (n=30,854 TB patients) found a high
+  average prevalence of alcohol use disorder (30%, 95% CI: 24-35%) among tuberculosis patients. AUD complicates
+  TB management through poor treatment compliance and worse treatment outcomes. The relationship varies
+  by geographic region, study design, participant age, and assessment methods.'
+quantitative_effects:
+  effect_size:
+    value: 30.0
+    type: percentage_change
+    ci_lower: 24.0
+    ci_upper: 35.0
+  sample_size: 30854
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Prevalence of AUD varies across continents, suggesting structural and contextual factors
+    influence the TB-AUD relationship differently by region
+moderators:
+- name: continent
+  direction: strengthens
+  strength: moderate
+  description: AUD prevalence varies across continents, indicating geographic and regional structural
+    factors modify the relationship
+- name: mean_age
+  direction: strengthens
+  strength: moderate
+  description: Mean age of participants influences AUD prevalence in TB patients
+- name: assessment_tool
+  direction: strengthens
+  strength: moderate
+  description: Type of AUD assessment tool used affects measured prevalence rates
+- name: study_design
+  direction: strengthens
+  strength: weak
+  description: Design of studies influences reported AUD prevalence
+structural_competency:
+  equity_implications: This mechanism highlights how infectious disease burden intersects with substance
+    use disorders, reflecting structural factors including healthcare system capacity for integrated screening,
+    social stigma surrounding both TB and AUD, economic stress from chronic illness, and geographic variation
+    in healthcare resources. The finding that prevalence varies by continent suggests structural determinants
+    (healthcare access, social support systems, economic conditions) differ across regions. The call for
+    early screening and management of AUD in TB patients points to healthcare system gaps rather than
+    individual behavioral failures.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.943728'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

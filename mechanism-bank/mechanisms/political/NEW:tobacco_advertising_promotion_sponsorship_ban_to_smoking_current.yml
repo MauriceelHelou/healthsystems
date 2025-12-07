@@ -1,0 +1,66 @@
+id: NEW:tobacco_advertising_promotion_sponsorship_ban_to_smoking_current
+name: Tobacco Advertising, Promotion and Sponsorship (TAPS) Ban → Current Smoking Prevalence
+from_node:
+  node_id: NEW:tobacco_advertising_promotion_sponsorship_ban
+  node_name: Tobacco Advertising, Promotion and Sponsorship (TAPS) Ban
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking Prevalence
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: TAPS bans eliminate or reduce exposure to tobacco marketing across multiple channels (advertising,
+  promotions, sponsorships)'
+- 'Step 2: Reduced marketing exposure decreases normalization of tobacco use in the social environment'
+- 'Step 3: Lower exposure to pro-tobacco messaging reduces positive attitudes and perceived social acceptability
+  of smoking'
+- 'Step 4: Decreased marketing pressure reduces initiation among non-smokers and supports cessation among
+  current smokers'
+- 'Step 5: Population-level smoking prevalence decreases as fewer people start smoking and some quit'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: 'Christina Saad et al. 2025. "Effectiveness of tobacco advertising, promotion and
+    sponsorship bans on smoking prevalence, initiation and cessation: a systematic review and meta-analysis."
+    https://doi.org/10.1136/tc-2024-058903'
+  supporting_citations:
+  - Additional citations require full-text access - abstract reports 16 eligible studies but does not
+    name individual studies
+  - Studies evaluated using ROBINS-I tool for quality assessment
+  - Random effects meta-analyses conducted for reasonably comparable studies
+  doi: 10.1136/tc-2024-058903
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: TAPS bans are associated with a 20% lower odds of current smoking (OR=0.80, 95% CI 0.68-0.95).
+  This policy-level intervention operates by reducing population exposure to tobacco marketing, thereby
+  decreasing normalization and social acceptability of smoking.
+quantitative_effects:
+  effect_size:
+    value: 0.8
+    type: odds_ratio
+    ci_lower: 0.68
+    ci_upper: 0.95
+  heterogeneity_i_squared: 98.7
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects vary by duration of evaluation (p<0.01 in subgroup analyses), suggesting geographic
+    and temporal variation in policy implementation and enforcement across countries
+moderators:
+- name: duration_of_evaluation
+  direction: strengthens
+  strength: strong
+  description: Subgroup analyses revealed effects of TAPS bans on smoking prevalence differed significantly
+    by duration of evaluation (p<0.01), suggesting longer implementation periods may show different effects
+structural_competency:
+  equity_implications: This mechanism exemplifies structural intervention - rather than targeting individual
+    behavior change, TAPS bans modify the commercial environment that promotes tobacco use. The policy
+    addresses upstream determinants (marketing exposure) rather than downstream individual choices. High
+    heterogeneity (I²=98.7%) suggests varying policy implementation across contexts, highlighting the
+    importance of comprehensive enforcement. Many countries have yet to implement such strategies, representing
+    a structural inequity in tobacco control policy adoption.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.532553'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

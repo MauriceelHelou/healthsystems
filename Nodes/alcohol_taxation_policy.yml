@@ -1,0 +1,60 @@
+# Node Definition: Alcohol Taxation Policy
+# Scale 1 - Structural Determinants (Policy)
+
+id: alcohol_taxation_policy
+name: Alcohol Taxation Policy
+scale: 1
+category: political
+type: Policy
+
+unit: "Excise tax per standard drink (USD)"
+
+description: |
+  State and federal excise taxes on alcoholic beverages. Higher taxes increase
+  prices and reduce consumption, particularly among price-sensitive populations
+  (youth, heavy drinkers). One of the most cost-effective policy levers for
+  reducing alcohol-related harms.
+
+measurement_method: |
+  - State alcohol tax statutes
+  - Alcohol Policy Information System (APIS) database
+  - Tax Foundation compilations
+
+typical_range: "$0.02-$1.50 per standard drink (varies by state and beverage type)"
+
+data_sources:
+  - name: "Alcohol Policy Information System (APIS)"
+    url: "https://alcoholpolicy.niaaa.nih.gov"
+    availability: "Continuously updated"
+    granularity: "State-level"
+  - name: "Tax Foundation"
+    availability: "Annual"
+    granularity: "State-level"
+  - name: "Beer Institute"
+    availability: "Annual"
+    granularity: "State and federal"
+
+baseline_us: |
+  Federal excise taxes (2023):
+  - Beer: $0.05 per 12 oz
+  - Wine: $0.07 per 5 oz glass
+  - Spirits: $0.13 per 1.5 oz shot
+
+  State excise taxes vary widely (e.g., Wyoming: $0.02/beer, Tennessee: $1.29/spirits per gallon)
+
+policy_variation: |
+  - 17 states have not increased alcohol taxes since 1990 (erosion due to inflation)
+  - Some states adjust annually for inflation
+  - Differential rates for beer, wine, spirits
+  - Local option taxes in select jurisdictions
+
+evidence_for_effectiveness: |
+  - 10% increase in alcohol tax → 3-5% reduction in consumption
+  - 5-10% reduction in alcohol-related mortality
+  - Greatest impact on youth and heavy drinkers
+  - Cost-benefit ratio: $2-6 return per $1 invested (public health costs averted)
+
+limitations: |
+  - Does not capture informal economy (home brewing, cross-border purchases)
+  - Inflation erodes real tax burden over time
+  - Political resistance to tax increases

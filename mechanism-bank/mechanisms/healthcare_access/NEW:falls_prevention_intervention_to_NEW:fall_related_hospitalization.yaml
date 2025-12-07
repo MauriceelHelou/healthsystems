@@ -1,0 +1,49 @@
+id: NEW:falls_prevention_intervention_to_NEW:fall_related_hospitalization
+name: Falls Prevention Intervention → Fall-Related Hospitalization
+from_node:
+  node_id: NEW:falls_prevention_intervention
+  node_name: Falls Prevention Intervention
+to_node:
+  node_id: NEW:fall_related_hospitalization
+  node_name: Fall-Related Hospitalization
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Falls prevention interventions (exercise programs, environmental modifications,
+  medication review, vision correction, assistive devices) are implemented for adults
+  aged 65+ years'
+- 'Step 2: These interventions address modifiable risk factors including muscle weakness,
+  balance deficits, environmental hazards, polypharmacy, and visual impairment'
+- 'Step 3: Reduced frequency and severity of falls leads to fewer injurious falls
+  requiring medical attention'
+- 'Step 4: Decreased injurious falls results in reduced hospitalizations due to fall-related
+  injuries (fractures, head trauma, soft tissue injuries)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Tricco et al. 2013. "Efficacy of falls prevention interventions:
+    protocol for a systematic review and network meta-analysis." Systematic Reviews.'
+  supporting_citations: []
+description: Falls prevention interventions reduce fall-related hospitalizations by
+  addressing modifiable risk factors for falls in older adults. The protocol outlines
+  that hospitalizations due to falls is a primary outcome measure, indicating the
+  established causal pathway from intervention implementation to reduced healthcare
+  utilization through decreased fall incidence and severity.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: intervention_type
+  direction: strengthens
+  strength: moderate
+  description: Multi-component interventions combining exercise, environmental modification,
+    and medication review may be more effective than single-component interventions
+- name: care_setting
+  direction: strengthens
+  strength: moderate
+  description: Effectiveness varies across community, acute care, long-term care,
+    and rehabilitation settings
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Adults 65+ years are the target population; older age groups may have
+    different response patterns

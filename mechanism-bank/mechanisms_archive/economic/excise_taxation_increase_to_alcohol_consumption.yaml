@@ -1,0 +1,41 @@
+id: excise_taxation_increase_to_alcohol_consumption
+name: Increase in Alcohol Excise Taxation → Alcohol Consumption
+from_node:
+  node_id: excise_taxation_increase
+  node_name: Increase in Alcohol Excise Taxation
+to_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Increased excise taxation raises the retail price of alcoholic beverages'
+- 'Step 2: Higher prices reduce affordability of alcohol, particularly for price-sensitive
+  consumers'
+- 'Step 3: Reduced affordability leads to decreased purchasing and consumption of
+  alcohol at population level'
+- 'Step 4: Lower consumption decreases overall alcohol exposure and related health
+  harms'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'J. Rehm et al. 2023. "Reduction of Alcoholic Strength: Does It
+    Matter for Public Health?." *Nutrients*. https://doi.org/10.3390/nu15400910'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.099096'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: socioeconomic_status
+  direction: strengthens
+  strength: strong
+  description: Lower-income populations are more price-sensitive and would reduce
+    consumption more in response to taxation increases, though this also creates disproportionate
+    financial burden
+- name: political_feasibility
+  direction: weakens
+  strength: strong
+  description: Political resistance to large tax increases limits the magnitude of
+    taxation that can be implemented, reducing potential public health impact

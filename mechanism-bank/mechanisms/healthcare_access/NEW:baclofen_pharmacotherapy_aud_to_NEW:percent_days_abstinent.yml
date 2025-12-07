@@ -1,0 +1,57 @@
+id: NEW:baclofen_pharmacotherapy_aud_to_NEW:percent_days_abstinent
+name: Baclofen Pharmacotherapy for Alcohol Use Disorder → Percent Days Abstinent from Alcohol
+from_node:
+  node_id: NEW:baclofen_pharmacotherapy_aud
+  node_name: Baclofen Pharmacotherapy for Alcohol Use Disorder
+to_node:
+  node_id: NEW:percent_days_abstinent
+  node_name: Percent Days Abstinent from Alcohol
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Baclofen, a GABA-B receptor agonist, is prescribed at doses up to 50-60 mg/day for alcohol
+  use disorder treatment'
+- 'Step 2: GABA-B receptor activation modulates mesolimbic dopamine pathways involved in alcohol reward
+  and reinforcement'
+- 'Step 3: Reduced dopaminergic signaling in reward circuits decreases the reinforcing properties of alcohol'
+- 'Step 4: Patients experience increased ability to maintain abstinence from alcohol consumption'
+- 'Step 5: Higher percent days abstinent reflects improved AUD treatment outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Kazumasa Kotake et al. 2025. "Optimal Dose of Baclofen for the Treatment of Alcohol
+    Use Disorder: A Systematic Review and Dose-Response Meta-analysis.." https://doi.org/10.1007/s40263-025-01188-2'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 14 randomized controlled trials
+  - Studies identified through Cochrane, EMBASE, MEDLINE via PubMed, PsycINFO databases
+  - ClinicalTrials.gov and International Clinical Trials Registry Platform searches conducted April 2024
+  doi: 10.1007/s40263-025-01188-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Baclofen at doses up to 50-60 mg/day increases percent days abstinent in patients with alcohol
+  use disorder, representing a medication-assisted treatment approach that addresses the neurobiological
+  underpinnings of AUD rather than relying solely on behavioral interventions.
+quantitative_effects:
+  sample_size: 1344
+moderators:
+- name: baclofen_dose
+  direction: u_shaped
+  strength: strong
+  description: Benefits observed with increasing doses up to 50-60 mg/day; doses >60 mg/day lacked reliable
+    evaluation due to limited data
+- name: individual_patient_factors
+  direction: strengthens
+  strength: moderate
+  description: Authors recommend clinicians carefully consider individual patient factors when prescribing
+structural_competency:
+  equity_implications: This mechanism highlights the importance of healthcare system access to evidence-based
+    pharmacotherapy for AUD. Treatment availability is a structural determinant - disparities in access
+    to addiction medicine specialists, insurance coverage for AUD medications, and healthcare system capacity
+    to prescribe and monitor baclofen therapy can create inequities in treatment outcomes. The focus on
+    optimal dosing provides guidance that can improve standardization of care across healthcare settings.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.899164'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

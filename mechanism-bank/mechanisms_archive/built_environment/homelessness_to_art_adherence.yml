@@ -1,0 +1,52 @@
+id: homelessness_to_art_adherence
+name: Homelessness → Antiretroviral Therapy Adherence
+from_node:
+  node_id: homelessness
+  node_name: Homelessness
+to_node:
+  node_id: art_adherence
+  node_name: Antiretroviral Therapy Adherence
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Homelessness eliminates secure storage space for medications and medical supplies'
+- 'Step 2: Lack of stable living conditions disrupts medication schedules and routine healthcare appointments'
+- 'Step 3: Homelessness increases exposure to stigma and discrimination in healthcare settings'
+- 'Step 4: These combined factors create barriers to consistent antiretroviral therapy adherence'
+- 'Step 5: Poor ART adherence reduces likelihood of achieving viral suppression'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Apondi J Odhiambo et al. 2023. "Structural violence and the uncertainty of viral
+    undetectability for African, Caribbean and Black people living with HIV in Canada: an institutional
+    ethnography.." *International journal for equity in health*. https://doi.org/10.1186/s12939-022-01792-4'
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1186/s12939-022-01792-4
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '2.0'
+description: Homelessness creates multiple practical and social barriers that directly impede antiretroviral
+  therapy adherence among ACB people living with HIV, contributing to worse health outcomes.
+quantitative_effects:
+  sample_size: 35
+moderators:
+- name: food_insecurity
+  direction: strengthens
+  strength: moderate
+  description: Concurrent food insecurity compounds the effects of homelessness on medication adherence
+- name: financial_instability
+  direction: strengthens
+  strength: moderate
+  description: Financial instability intersects with homelessness to create multiple barriers to healthcare
+    engagement
+structural_competency:
+  equity_implications: This mechanism identifies homelessness as a structural determinant resulting from
+    broader inequities in housing policy, economic systems, and social safety nets rather than individual
+    failings. It demonstrates how lack of housing as a basic human right creates cascading health effects,
+    emphasizing the need for housing-first approaches and structural interventions.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.990600'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

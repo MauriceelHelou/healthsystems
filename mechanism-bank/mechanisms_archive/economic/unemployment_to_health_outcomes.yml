@@ -1,0 +1,94 @@
+id: unemployment_to_health_outcomes
+name: Unemployment → Health Outcomes
+from_node:
+  node_id: unemployment
+  node_name: Unemployment/Job Loss
+  node_type: stock
+to_node:
+  node_id: health_outcomes
+  node_name: Health Outcomes
+  node_type: stock
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Job loss eliminates income, creating immediate financial stress and economic insecurity'
+- 'Step 2: Loss of employer-sponsored health insurance reduces healthcare access and utilization'
+- 'Step 3: Financial strain forces trade-offs between basic needs (food, housing, medications)'
+- 'Step 4: Unemployment-related stress, loss of purpose, and social isolation impact mental health'
+- 'Step 5: Combined physical and mental health decline manifests as chronic disease, disability, and mortality'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Polanco, Boris, et al. 2024. ''Chronic health conditions and their impact on the
+    labor market: A cross-country comparison in Europe.'' SSM Population Health 26: 101666.'
+  supporting_citations:
+  - 'Roelfs, David J., et al. 2011. ''Losing life and livelihood: A systematic review and meta-analysis
+    of unemployment and all-cause mortality.'' Social Science & Medicine 72(6): 840-854.'
+  - 'Burgard, Sarah A., and Lucie Kalousova. 2015. ''Effects of the Great Recession: Health and well-being.''
+    Annual Review of Sociology 41: 181-201.'
+  doi: 10.1016/j.ssmph.2024.101666
+  journal: SSM - Population Health
+  year: 2024
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/f2/95/PMC11015523.tar.gz
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '1.0'
+description: Unemployment and job loss are associated with worse health outcomes including increased mortality,
+  chronic disease progression, and mental health disorders. Persons with chronic conditions reduce working
+  hours significantly (6.78 hours/week for men, 3.97 hours/week for women), representing substantial productivity
+  losses. The relationship is bidirectional, with health affecting employment and employment affecting
+  health.
+moderators:
+- name: health_insurance_alternatives
+  direction: weakens
+  strength: strong
+  description: Access to Medicaid, ACA marketplace, or spouse coverage mitigates insurance loss effects
+- name: unemployment_insurance
+  direction: weakens
+  strength: moderate
+  description: Adequate unemployment benefits reduce financial stress and health trade-offs
+- name: preexisting_chronic_conditions
+  direction: strengthens
+  strength: strong
+  description: Those with chronic conditions face worse outcomes from job loss due to medication needs
+- name: duration_of_unemployment
+  direction: strengthens
+  strength: strong
+  description: Long-term unemployment (>6 months) shows stronger health effects than short-term
+- name: reason_for_job_loss
+  direction: strengthens
+  strength: moderate
+  description: Involuntary job loss (layoff) shows stronger effects than voluntary separation
+structural_competency:
+  root_cause_level: economic_system
+  avoids_victim_blaming: true
+  equity_implications: Unemployment reflects labor market conditions, automation, deindustrialization,
+    and economic cycles - not individual failings. The health consequences of unemployment are predictable
+    outcomes of tying health insurance to employment and inadequate social safety net. Policies including
+    universal healthcare, robust unemployment insurance, and job guarantees address root causes.
+assumptions:
+- Unemployment defined as involuntary job loss or inability to find work
+- Health outcomes include both physical health (chronic disease, mortality) and mental health
+- Assumes baseline employed population comparison
+limitations:
+- Selection effects (unhealthy individuals more likely to become unemployed)
+- Difficult to establish causation in observational studies
+- Context-dependent effects based on social safety net strength
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Unemployment health effects vary based on social safety net strength, healthcare system,
+    and labor market conditions.
+  relevant_geographies:
+  - Countries with universal healthcare show weaker unemployment-health link
+  - US shows strong effects due to employer-sponsored insurance system
+  - Regions with high unemployment normalize joblessness, potentially buffering individual effects
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

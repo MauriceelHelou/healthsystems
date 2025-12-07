@@ -1,0 +1,56 @@
+id: sud_treatment_facility_density_to_substance_use_disorder_any
+name: SUD Treatment Facility Density → Substance Use Disorder (Any)
+from_node:
+  node_id: sud_treatment_facility_density
+  node_name: SUD Treatment Facility Density
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Limited treatment options for SUDs create barriers to care access'
+- 'Step 2: Novel treatments like ketamine may expand therapeutic options where approved'
+- 'Step 3: Increased treatment availability improves access for patients with SUDs'
+- 'Step 4: Greater treatment access reduces unmet need and improves outcomes across substance types'
+evidence:
+  quality_rating: B
+  n_studies: 14
+  primary_citation: 'Reinhard Janssen-Aguilar et al. 2025. "Role of ketamine in the treatment of substance
+    use disorders: A systematic review.." https://doi.org/10.1016/j.josat.2025.209705'
+  supporting_citations:
+  - Systematic review of 14 studies with 551 participants across multiple SUDs
+  - Studies examined alcohol, cocaine, opioid, and cannabis use disorders
+  - Evidence supports short-term benefits of ketamine for SUD treatment
+  doi: 10.1016/j.josat.2025.209705
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review highlights the limited treatment options for substance use disorders
+  and the potential role of ketamine as a novel therapeutic option. Despite global prevalence and burden
+  of SUDs, treatment options remain limited, creating structural barriers to recovery.
+quantitative_effects:
+  sample_size: 551
+moderators:
+- name: treatment_modality
+  direction: strengthens
+  strength: moderate
+  description: Combination of ketamine with psychotherapy (50% of studies) may enhance treatment effects
+    compared to pharmacological treatment alone
+- name: study_duration
+  direction: strengthens
+  strength: weak
+  description: Study endpoints ranged from less than a day to two years; longer-term outcomes require
+    further research
+structural_competency:
+  equity_implications: The paper explicitly notes that 'treatment options remain limited' for SUDs despite
+    their global prevalence and burden. This represents a structural failure in healthcare systems to
+    adequately address addiction. Ketamine's potential as a treatment option must be evaluated in the
+    context of healthcare access disparities, cost barriers, and the need for well-controlled research
+    before broader implementation. The paper appropriately calls for larger studies and assessment of
+    risks including abuse liability.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.952873'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,56 @@
+id: NEW:multidrug_resistant_organisms_to_all_cause_mortality_rate
+name: Multidrug-Resistant Organism Infection → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:multidrug_resistant_organisms
+  node_name: Multidrug-Resistant Organism Infection
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Infection with multidrug-resistant organisms (MDROs) such as Acinetobacter
+  baumannii, ESBL-producing Enterobacteriaceae, or MRSA establishes in critically
+  ill patients'
+- 'Step 2: Limited antibiotic treatment options due to resistance patterns lead to
+  delayed effective antimicrobial therapy and treatment failures'
+- 'Step 3: Prolonged infection duration results in sustained inflammatory response,
+  progressive organ dysfunction, and sepsis complications'
+- 'Step 4: Severe infections by MDR pathogens contribute to increased ICU length of
+  stay, need for mechanical ventilation, and multi-organ failure'
+- 'Step 5: Cumulative physiological stress and inadequate infection control result
+  in elevated mortality rates'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: 'R. M. Bateman et al. 2016. ''36th International Symposium on
+    Intensive Care and Emergency Medicine : Brussels, Belgium. 15-18 March 2016.''
+    Critical care (London, England).'
+  supporting_citations: []
+description: Multidrug-resistant organism infections in ICU patients are associated
+  with increased mortality through multiple mechanisms including treatment failures
+  due to limited antibiotic options, prolonged infection duration, enhanced inflammatory
+  responses, and progressive organ dysfunction. Studies from the symposium abstracts
+  document MDRO epidemiology in various ICU settings (P075-P079) and demonstrate that
+  infections caused by extensively drug-resistant bacteria, including gram-negative
+  bacilli, are associated with adverse outcomes. The use of immunomodulatory therapy
+  such as IgM-enriched immunoglobulins has shown potential to improve survival in
+  these patients.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: ICU type and patient population
+  direction: strengthens
+  strength: moderate
+  description: Surgical ICU patients and those with specific conditions (building
+    construction exposure) may have higher MDRO infection rates
+- name: Immunoglobulin therapy
+  direction: weakens
+  strength: moderate
+  description: Treatment with polyclonal IgM-enriched immunoglobulins may improve
+    outcomes in severe infections by MDR pathogens (P078)
+- name: Prior antibiotic exposure
+  direction: strengthens
+  strength: moderate
+  description: Previous antibiotic use increases risk of MDRO colonization and subsequent
+    infection

@@ -1,0 +1,61 @@
+id: fqhc_density_to_sud_medication_treatment_rate_oud
+name: FQHC Density → OUD Medication Treatment Rate
+from_node:
+  node_id: fqhc_density
+  node_name: FQHC Density
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: OUD Medication Treatment Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Greater availability of primary care facilities increases geographic access to potential OAT
+  delivery points'
+- 'Step 2: Primary care clinics may offer OAT with reduced stigma compared to specialty settings'
+- 'Step 3: Co-location with primary care facilitates management of medical comorbidities'
+- 'Step 4: Improved access may increase treatment uptake among underserved populations'
+- 'Step 5: Evidence shows OAT reduces mortality by 50% when employed'
+evidence:
+  quality_rating: A
+  n_studies: 7
+  primary_citation: Danielle Perry et al. 2025. "Opioid agonist therapy for opioid use disorder in primary
+    versus specialty care.." https://doi.org/10.1002/14651858.CD013672.pub2
+  supporting_citations:
+  - Studies from France (1 study) included in meta-analysis
+  - Studies from Ukraine (1 study) included in meta-analysis
+  - Studies from US (5 studies) included in meta-analysis
+  - Additional citations require full-text access
+  doi: 10.1002/14651858.CD013672.pub2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Expanding OAT delivery to primary care settings could address the gap between the proportion
+  of people with OUD who could benefit from OAT (with 50% mortality reduction) and those currently receiving
+  treatment. Primary care clinics are more numerous and may reduce stigma barriers to treatment.
+quantitative_effects:
+  sample_size: 1992
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Primary care access varies substantially by geography; rural areas often have fewer
+    options for both primary and specialty care
+moderators:
+- name: Primary care OUD training
+  direction: strengthens
+  strength: moderate
+  description: Effectiveness depends on primary care provider training and comfort with OUD treatment
+- name: Specialty care proximity
+  direction: strengthens
+  strength: moderate
+  description: Primary care clinics with connections to specialty OUD clinics showed positive outcomes;
+    isolated primary care may differ
+structural_competency:
+  equity_implications: The low proportion of people with OUD receiving OAT despite strong evidence of
+    benefit represents a structural failure of healthcare system design. Concentration of OUD treatment
+    in specialty settings creates geographic and stigma barriers that disproportionately affect rural
+    communities, low-income populations, and those lacking transportation. Expanding to primary care is
+    a structural intervention addressing healthcare system design rather than individual behavior change.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.510713'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

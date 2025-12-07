@@ -1,0 +1,33 @@
+id: neutralizing_antibody_generation_to_viral_containment
+name: Generation of Neutralizing Antibodies → SARS-CoV-2 Viral Containment
+from_node:
+  node_id: neutralizing_antibody_generation
+  node_name: Generation of Neutralizing Antibodies
+to_node:
+  node_id: viral_containment
+  node_name: SARS-CoV-2 Viral Containment
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Children develop adaptive immune responses following SARS-CoV-2 infection
+  or vaccination'
+- 'Step 2: B cells produce neutralizing antibodies specific to viral spike proteins'
+- 'Step 3: Neutralizing antibodies bind to virus and prevent cellular entry'
+- 'Step 4: Viral replication is controlled, reducing disease severity and transmission'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'G. Rotulo and P. Palma 2023. "Understanding COVID-19 in children:
+    immune determinants and post-infection conditions." *Pediatric Research*. https://doi.org/10.1038/s41390-023-02549-7'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.099725'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: prior_coronavirus_exposure
+  direction: strengthens
+  strength: moderate
+  description: Children with prior exposure to endemic coronaviruses may have cross-reactive
+    immune responses that enhance neutralizing antibody production

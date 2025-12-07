@@ -1,0 +1,63 @@
+id: homelessness_rate_to_NEW:covid_19_infection_risk
+name: Homelessness Rate → COVID-19 Infection Risk
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: NEW:covid_19_infection_risk
+  node_name: COVID-19 Infection Risk
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Persons experiencing homelessness lack stable housing, forcing reliance
+  on congregate shelters with high-density sleeping arrangements that facilitate respiratory
+  virus transmission'
+- 'Step 2: Homeless individuals have limited access to hygiene facilities, clean water,
+  soap, and personal protective equipment (PPE), reducing ability to implement basic
+  infection prevention measures'
+- 'Step 3: Inability to shelter-in-place or practice physical distancing due to lack
+  of private living space increases exposure to infected individuals in public spaces
+  and shared facilities'
+- 'Step 4: Higher prevalence of underlying health conditions among homeless populations
+  (respiratory disease, cardiovascular disease, compromised immune systems) increases
+  susceptibility to infection upon exposure'
+- 'Step 5: Barriers to healthcare access delay testing, diagnosis, and treatment,
+  allowing continued community transmission'
+evidence:
+  quality_rating: A
+  n_studies: 96
+  primary_citation: Corey J et al. 2022. A Scoping Review of the Health Impact of
+    the COVID-19 Pandemic on Persons Experiencing Homelessness in North America and
+    Europe. International Journal of Environmental Research and Public Health.
+  supporting_citations: []
+description: Homelessness significantly increases COVID-19 infection risk through
+  multiple interconnected pathways. Persons experiencing homelessness face heightened
+  exposure due to congregate living conditions in shelters, inability to practice
+  physical distancing, and limited access to hygiene resources and PPE. The scoping
+  review of 96 studies documented elevated SARS-CoV-2 infection rates, morbidity,
+  mortality, and hospitalization among homeless populations. Structural factors including
+  lack of stable housing, healthcare access barriers, and higher prevalence of underlying
+  health conditions compound infection vulnerability.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: shelter_type
+  direction: strengthens
+  strength: strong
+  description: Congregate shelter settings with high occupancy density significantly
+    increase transmission risk compared to individual housing or hotel programs
+- name: access_to_hygiene_facilities
+  direction: weakens
+  strength: moderate
+  description: Provision of handwashing stations, showers, and sanitation facilities
+    reduces infection risk
+- name: underlying_health_conditions
+  direction: strengthens
+  strength: strong
+  description: High prevalence of comorbidities including respiratory conditions,
+    substance use disorders, and chronic diseases increases vulnerability to infection
+- name: public_health_interventions
+  direction: weakens
+  strength: moderate
+  description: Implementation of hotel-based isolation programs, reduced shelter capacity,
+    and targeted testing mitigated infection spread

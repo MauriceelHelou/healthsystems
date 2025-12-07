@@ -1,0 +1,39 @@
+id: qualified_withdrawal_treatment_availability_to_total_hospital_days
+name: Qualified Withdrawal Treatment (QWT) Availability → Total Hospital Days
+from_node:
+  node_id: qualified_withdrawal_treatment_availability
+  node_name: Qualified Withdrawal Treatment (QWT) Availability
+to_node:
+  node_id: total_hospital_days
+  node_name: Total Hospital Days
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: QWT reduces relapse rates through extended treatment and psychosocial support'
+- 'Step 2: Lower relapse rates translate to fewer and less severe alcohol-related
+  complications requiring hospitalization'
+- 'Step 3: Reduced severity and frequency of hospitalizations decreases cumulative
+  inpatient days'
+- 'Step 4: Population-level hospital bed days decrease'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: 'Jakob Manthey et al. 2020. "The potential effects of an extended
+    alcohol withdrawal treatment programme on morbidity and mortality among inpatients
+    in the German city of Bremen: a simulation study.." *Substance abuse treatment,
+    prevention, and policy*. https://doi.org/10.1186/s13011-019-0249-7'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.762689'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: proportion_receiving_qwt
+  direction: strengthens
+  strength: strong
+  description: At 25% QWT coverage, hospital days decreased by 10%; at 50% coverage,
+    hospital days decreased by 26%, demonstrating dose-response relationship
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/qualified_withdrawal_treatment_availability_to_total_hospital_days.yaml
+_category: healthcare_access

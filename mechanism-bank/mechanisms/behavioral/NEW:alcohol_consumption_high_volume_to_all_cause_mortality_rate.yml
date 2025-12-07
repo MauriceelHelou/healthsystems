@@ -1,0 +1,44 @@
+id: NEW:alcohol_consumption_high_volume_to_all_cause_mortality_rate
+name: High Volume Alcohol Consumption → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:alcohol_consumption_high_volume
+  node_name: High Volume Alcohol Consumption
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: High-volume alcohol consumption becomes established pattern'
+- 'Step 2: Significant toxic burden on liver, cardiovascular, and immune systems'
+- 'Step 3: Increased risk of alcohol-attributable diseases and conditions'
+- 'Step 4: Substantially elevated mortality from multiple causes'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'Peter Sarich et al. 2024. "The association between alcohol consumption and all-cause
+    mortality: An umbrella review of systematic reviews using lifetime abstainers or low-volume drinkers
+    as a reference group.." https://doi.org/10.1111/add.16446'
+  supporting_citations:
+  - Additional citations require full-text access - umbrella review analyzed 25 systematic reviews
+  - All 5 included reviews found significantly increased risk at higher consumption levels
+  - RR range 1.28 to 3.70 across reviews for higher consumption levels
+  doi: 10.1111/add.16446
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: High-volume alcohol consumption is associated with 33% increased all-cause mortality risk
+  (RR=1.33) compared to occasional drinking in the low-risk-of-bias review.
+quantitative_effects:
+  effect_size:
+    value: 1.33
+    type: relative_risk
+structural_competency:
+  equity_implications: High consumption levels show clear harm across all methodological approaches, supporting
+    structural interventions like alcohol pricing policies, outlet density restrictions, and advertising
+    regulations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.286481'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

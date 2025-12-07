@@ -1,0 +1,44 @@
+id: expanded_transplant_selection_criteria_to_three_year_overall_survival
+name: Expanded Transplant Selection Criteria (UCSF, U7, Metroticket 2.0) → Three-Year
+  Overall Survival Post-Transplant
+from_node:
+  node_id: expanded_transplant_selection_criteria
+  node_name: Expanded Transplant Selection Criteria (UCSF, U7, Metroticket 2.0)
+to_node:
+  node_id: three_year_overall_survival
+  node_name: Three-Year Overall Survival Post-Transplant
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Expanded selection criteria allow more patients with hepatocellular carcinoma
+  to qualify for liver transplantation'
+- 'Step 2: Additional patients who would have been excluded under Milan criteria gain
+  access to deceased donor liver transplant'
+- 'Step 3: These expanded criteria maintain equivalent survival outcomes with minimal
+  absolute difference in 3-year overall survival (1.5%)'
+- 'Step 4: More patients receive life-saving transplantation without compromising
+  population-level outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'C. Wehrle et al. 2024. "Expanding Selection Criteria in Deceased
+    Donor Liver Transplantation for Hepatocellular Carcinoma: Long-term Follow-up
+    of a National Registry and 2 Transplant Centers." *Transplantation*. https://doi.org/10.1097/TP.0000000000005097'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.595736'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: predictive_accuracy_difference
+  direction: weakens
+  strength: weak
+  description: All criteria had similar predictive ability (AUC 0.506-0.559 and c-statistic
+    0.507-0.532), suggesting minimal difference in patient selection accuracy despite
+    expansion
+- name: candidate_expansion_rate
+  direction: strengthens
+  strength: moderate
+  description: At institutional level, U7 expanded candidacy by 13.0%, UCSF by 11.1%,
+    while maintaining statistical significance in survival prediction (p<0.001)

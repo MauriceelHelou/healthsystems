@@ -1,0 +1,37 @@
+id: alcohol_intoxication_to_risk_perception_sexual_assault
+name: Alcohol Intoxication (BAC 0.08%) → Perceived Risk and Need for Intervention
+  in Sexual Assault
+from_node:
+  node_id: alcohol_intoxication
+  node_name: Alcohol Intoxication (BAC 0.08%)
+to_node:
+  node_id: risk_perception_sexual_assault
+  node_name: Perceived Risk and Need for Intervention in Sexual Assault
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Alcohol intoxication affects cognitive assessment and judgment in social
+  drinking contexts'
+- 'Step 2: Impaired judgment reduces ability to accurately assess risk and danger
+  in observed interactions'
+- 'Step 3: Decreased risk perception leads to lower recognition of need for intervention
+  in potentially harmful situations'
+- 'Step 4: Reduced perceived need for intervention decreases likelihood of taking
+  personal responsibility for action'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Lindsay S. Ham et al. 2019. "Effect of Alcohol Intoxication on
+    Bystander Intervention in a Vignette Depiction of Sexual Assault.." *Journal of
+    Studies on Alcohol and Drugs*. https://doi.org/10.15288/JSAD.2019.80.252
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.106570'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: gender
+  direction: no_effect
+  strength: weak
+  description: Effects of intoxication on risk perception did not differ by gender

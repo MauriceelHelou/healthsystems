@@ -1,0 +1,47 @@
+id: NEW:sepsis_to_NEW:capillary_dysfunction
+name: Sepsis → Impaired Capillary Response
+from_node:
+  node_id: NEW:sepsis
+  node_name: Sepsis
+to_node:
+  node_id: NEW:capillary_dysfunction
+  node_name: Impaired Capillary Response
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Sepsis induces systemic inflammatory response with release of inflammatory
+  mediators and endothelial dysfunction'
+- 'Step 2: Inflammatory mediators impair capillary endothelial function and alter
+  microvascular blood flow regulation'
+- 'Step 3: Sepsis decreases erythrocyte oxygen-dependent ATP efflux, reducing the
+  ability of red blood cells to signal for vasodilation in hypoxic tissues'
+- 'Step 4: The combination of endothelial dysfunction and impaired erythrocyte signaling
+  results in inadequate capillary response within hypoxic capillaries'
+- 'Step 5: Impaired capillary response leads to tissue hypoxia and contributes to
+  organ dysfunction in sepsis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'R. M. Bateman et al. 2016. 36th International Symposium on Intensive
+    Care and Emergency Medicine : Brussels, Belgium. 15-18 March 2016. Critical care
+    (London, England).'
+  supporting_citations: []
+description: Sepsis impairs the capillary response within hypoxic capillaries through
+  multiple mechanisms including decreased erythrocyte oxygen-dependent ATP efflux.
+  Under normal conditions, erythrocytes release ATP in response to low oxygen tension,
+  which triggers vasodilation to increase blood flow to hypoxic tissues. In sepsis,
+  this signaling mechanism is disrupted, compromising the microcirculation's ability
+  to respond appropriately to tissue hypoxia and contributing to organ dysfunction.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Severity of sepsis
+  direction: strengthens
+  strength: moderate
+  description: More severe sepsis likely associated with greater impairment of capillary
+    response
+- name: Tissue oxygen demand
+  direction: strengthens
+  strength: moderate
+  description: Hypoxic conditions exacerbate the impaired capillary response in septic
+    patients

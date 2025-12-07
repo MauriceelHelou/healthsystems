@@ -1,0 +1,47 @@
+id: bac_limit_reduction_to_societal_crash_costs
+name: Reduction in Legal BAC Limit (from 0.08% to 0.05%) → Societal Costs of Traffic
+  Crashes
+from_node:
+  node_id: bac_limit_reduction
+  node_name: Reduction in Legal BAC Limit (from 0.08% to 0.05%)
+to_node:
+  node_id: societal_crash_costs
+  node_name: Societal Costs of Traffic Crashes
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Lower BAC limit reduces frequency of alcohol-impaired crashes through legal
+  deterrence'
+- 'Step 2: Decreased crash incidence reduces direct costs including medical expenses,
+  emergency response, property damage, and legal costs'
+- 'Step 3: Reduced fatalities and injuries decrease indirect costs including lost
+  productivity, long-term care, and quality of life losses'
+- 'Step 4: Combined reductions in direct and indirect costs lower total societal burden'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Lidia P Kostyniuk et al. 2018. "Potential effects of lowering
+    the BAC limit on injuries, fatalities, and costs.." *Journal of safety research*.
+    https://doi.org/10.1016/j.jsr.2017.12.005
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.556797'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: driver_compliance_behavior
+  direction: strengthens
+  strength: strong
+  description: Cost benefits highly sensitive to compliance, ranging from 4-16% in
+    realistic scenarios to 71-99% with complete compliance
+- name: unit_crash_costs
+  direction: strengthens
+  strength: moderate
+  description: Geographic variation in healthcare costs, wage levels, and property
+    values affect magnitude of cost savings
+- name: crash_injury_distribution
+  direction: strengthens
+  strength: moderate
+  description: Reductions in high-severity crashes produce disproportionately larger
+    cost savings due to higher unit costs of fatal and severe injury crashes

@@ -1,0 +1,58 @@
+id: binge_drinking_to_all_cause_mortality_rate
+name: Hazardous Drinking Patterns → All-Cause Mortality Rate
+from_node:
+  node_id: binge_drinking
+  node_name: Hazardous Drinking Patterns
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Hazardous drinking patterns cause repeated acute physiological stress'
+- 'Step 2: Chronic exposure damages liver, cardiovascular, and neurological systems'
+- 'Step 3: Early alcohol initiation compounds hazardous drinking effects through longer exposure duration'
+- 'Step 4: Cumulative organ damage increases premature mortality risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Horim A Hwang et al. 2025. "Age at first drink as a predictor of all-cause mortality
+    of middle-aged Koreans." https://doi.org/10.1093/ije/dyaf061
+  supporting_citations:
+  - Additional citations require full-text access - abstract references Korean National Health and Nutrition
+    Examination Survey data
+  - Additional citations require full-text access - abstract references cause-of-death statistics linkage
+  - Additional citations require full-text access - abstract references public health policy on age restrictions
+  doi: 10.1093/ije/dyaf061
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among individuals with hazardous drinking habits, early alcohol initiation (before age 19)
+  was associated with 32% higher mortality risk compared to those who initiated at age 19 or older, indicating
+  synergistic effects between drinking patterns and initiation age
+quantitative_effects:
+  effect_size:
+    value: 1.32
+    type: hazard_ratio
+    ci_lower: 1.07
+    ci_upper: 1.64
+  sample_size: 36159
+moderators:
+- name: age_at_first_drink
+  direction: strengthens
+  strength: moderate
+  description: Among hazardous drinkers, earlier age at first drink (<19) significantly amplifies mortality
+    risk compared to later initiation (≥19)
+structural_competency:
+  equity_implications: This mechanism demonstrates how structural factors (alcohol availability, marketing
+    to youth, cultural norms) that enable early initiation create long-term health consequences that are
+    amplified by subsequent hazardous drinking. Structural interventions including alcohol pricing policies,
+    marketing restrictions, and treatment access are appropriate responses rather than individual blame.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.666946'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

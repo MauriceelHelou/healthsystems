@@ -1,0 +1,63 @@
+id: hepatitis_c_treatment_completion_to_kidney_disease
+name: HCV Treatment with Direct-Acting Antivirals → Chronic Kidney Disease Progression
+from_node:
+  node_id: hepatitis_c_treatment_completion
+  node_name: HCV Treatment with Direct-Acting Antivirals
+to_node:
+  node_id: kidney_disease
+  node_name: Chronic Kidney Disease Progression
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with chronic kidney disease (CKD) receive direct-acting antiviral
+  (DAA) therapy for hepatitis C virus (HCV) infection, achieving viral eradication
+  rates greater than 95%'
+- 'Step 2: Successful HCV treatment eliminates ongoing viral-mediated inflammatory
+  processes and immune complex deposition that contribute to glomerulonephritis and
+  other HCV-associated kidney diseases'
+- 'Step 3: Eradication of HCV infection removes the independent risk factor for faster
+  CKD progression, resulting in slower decline in glomerular filtration rate (GFR)
+  after treatment compared to before treatment'
+- 'Step 4: Reduced kidney inflammation and improved metabolic parameters slow the
+  progression of chronic kidney disease toward end-stage renal disease'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'C. Gordon et al. 2019. Prevention, Diagnosis, Evaluation, and
+    Treatment of Hepatitis C Virus Infection in Chronic Kidney Disease: Synopsis of
+    the Kidney Disease: Improving Global Outcomes 2018 Clinical Practice Guideline.
+    Annals of Internal Medicine.'
+  supporting_citations: []
+description: Direct-acting antiviral treatment for hepatitis C virus achieves viral
+  eradication in over 95% of patients with chronic kidney disease. HCV infection has
+  been identified as an independent risk factor for faster CKD progression, related
+  in part to HCV-associated glomerulonephritides but also independent of this connection.
+  Studies show that successful HCV treatment results in slower decline in glomerular
+  filtration rate after treatment compared to before treatment in patients with eGFR
+  less than 60 mL/min/1.73m2, suggesting that viral eradication slows CKD progression.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.95
+    type: viral_eradication_rate
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: CKD Stage
+  direction: strengthens
+  strength: moderate
+  description: Patients with estimated GFR less than 60 mL/min/1.73m2 showed slower
+    decrease in GFR after successful HCV treatment compared to before treatment
+- name: HCV-associated glomerulonephritis
+  direction: strengthens
+  strength: strong
+  description: HCV infection is associated with several glomerulonephritides; treatment
+    of underlying HCV may provide greater benefit in these cases
+- name: Dialysis modality
+  direction: weakens
+  strength: weak
+  description: Patients on hemodialysis have higher HCV prevalence due to nosocomial
+    transmission risks, potentially complicating treatment benefits

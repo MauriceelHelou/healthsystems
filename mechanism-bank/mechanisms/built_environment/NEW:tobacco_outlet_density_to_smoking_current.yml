@@ -1,0 +1,55 @@
+id: NEW:tobacco_outlet_density_to_smoking_current
+name: Tobacco Outlet Density → Current Smoking
+from_node:
+  node_id: NEW:tobacco_outlet_density
+  node_name: Tobacco Outlet Density
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher tobacco retailer density increases physical accessibility of tobacco products'
+- 'Step 2: Greater supply creates competitive market that may reduce tobacco product costs'
+- 'Step 3: Increased visibility of tobacco products and brands raises awareness and normalizes smoking'
+- 'Step 4: Local social norms shift to favor tobacco use when retail access is ubiquitous'
+- 'Step 5: Higher rates of smoking initiation and maintenance of current smoking'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: N. Shortt et al. 2015. "A cross-sectional analysis of the relationship between tobacco
+    and alcohol outlet density and neighbourhood deprivation." https://doi.org/10.1186/s12889-015-2321-1
+  supporting_citations:
+  - Additional citations require full-text access - abstract references socio-economic gradient in tobacco-related
+    harm
+  - Additional citations require full-text access - abstract references tobacco control policy literature
+  - Additional citations require full-text access - abstract references supply-side intervention research
+  doi: 10.1186/s12889-015-2321-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher density of tobacco retail outlets per 10,000 population is associated with increased
+  tobacco accessibility, contributing to tobacco-related harm through increased supply, potential price
+  competition, brand awareness, and normalized consumption patterns.
+quantitative_effects:
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: National tobacco retailer register data for Scotland shows significant variation by
+    neighbourhood deprivation quintile
+moderators:
+- name: neighbourhood_income_deprivation
+  direction: strengthens
+  strength: strong
+  description: Most deprived quintile of neighbourhoods had highest density of tobacco outlets; least
+    deprived had lowest density (p<0.001)
+structural_competency:
+  equity_implications: This mechanism identifies the retail environment as a structural determinant of
+    smoking behavior, shifting focus from individual willpower to environmental factors. The concentration
+    of tobacco retailers in deprived areas represents a commercial determinant of health that exacerbates
+    socioeconomic inequities in smoking prevalence.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.491079'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

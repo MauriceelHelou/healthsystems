@@ -1,0 +1,44 @@
+id: NEW:high_dose_gabapentin_treatment_to_alcohol_withdrawal_severe_rate
+name: High-Dose Gabapentin Treatment → Alcohol Withdrawal Symptom Severity
+from_node:
+  node_id: NEW:high_dose_gabapentin_treatment
+  node_name: High-Dose Gabapentin Treatment
+to_node:
+  node_id: alcohol_withdrawal_severe_rate
+  node_name: Alcohol Withdrawal Symptom Severity
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: High-dose gabapentin (≥1800 mg/day) is administered to patients hospitalized
+  with alcohol withdrawal syndrome (AWS)'
+- 'Step 2: Gabapentin modulates GABAergic neurotransmission and voltage-gated calcium
+  channels, counteracting the neuronal hyperexcitability characteristic of alcohol
+  withdrawal'
+- 'Step 3: This pharmacological action reduces the severity of alcohol withdrawal
+  symptoms including anxiety, tremor, and autonomic instability'
+- 'Step 4: Reduced symptom severity leads to decreased benzodiazepine requirements
+  and potentially shorter hospital length of stay'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Alexander R. Levine et al. 2019. High‐Dose Gabapentin for the
+    Treatment of Severe Alcohol Withdrawal Syndrome: A Retrospective Cohort Analysis.
+    Pharmacotherapy.'
+  supporting_citations: []
+description: High-dose gabapentin treatment reduces alcohol withdrawal symptom severity
+  through GABAergic modulation and calcium channel effects, potentially decreasing
+  benzodiazepine requirements and improving patient outcomes during hospitalization
+  for alcohol withdrawal syndrome.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Gabapentin dose
+  direction: strengthens
+  strength: moderate
+  description: Higher doses (≥1800 mg/day) associated with greater efficacy in reducing
+    withdrawal symptoms and promoting abstinence
+- name: Severity of alcohol use disorder
+  direction: strengthens
+  strength: moderate
+  description: Patients with severe AWS may benefit more from adjunctive gabapentin
+    therapy

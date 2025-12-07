@@ -1,0 +1,53 @@
+id: NEW:blood_flow_restriction_therapy_to_NEW:muscle_hypertrophy
+name: Blood Flow Restriction Therapy with Exercise → Muscle Hypertrophy
+from_node:
+  node_id: NEW:blood_flow_restriction_therapy
+  node_name: Blood Flow Restriction Therapy with Exercise
+to_node:
+  node_id: NEW:muscle_hypertrophy
+  node_name: Muscle Hypertrophy
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Blood flow restriction creates hypoxic microenvironment in muscle tissue during exercise'
+- 'Step 2: Hypoxia stimulates cellular swelling and metabolite accumulation'
+- 'Step 3: These conditions theoretically enhance muscle protein synthesis pathways (mTOR signaling)'
+- 'Step 4: Meta-analysis reveals no significant hypertrophy benefit compared to standard exercise'
+evidence:
+  quality_rating: A
+  n_studies: 21
+  primary_citation: 'D. Khurana et al. 2023. "Blood flow restriction therapy with exercise are no better
+    than exercise alone in improving athletic performance, muscle strength, and hypertrophy: a systematic
+    review and meta-analysis." https://doi.org/10.1080/08990220.2023.2181328'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 27 studies identified, 21 analyzed
+  - Studies included randomized controlled trials from inception to April 2021
+  - Full citation details for individual RCTs require access to complete manuscript
+  doi: 10.1080/08990220.2023.2181328
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Blood flow restriction therapy with exercise does not produce greater muscle hypertrophy
+  compared to exercise alone, with confidence intervals spanning null effect at both intermediate and
+  long-term assessments.
+quantitative_effects:
+  effect_size:
+    value: -0.2
+    type: standardized_mean_difference
+    ci_lower: -0.9
+    ci_upper: 0.5
+moderators:
+- name: time_frame
+  direction: neutral
+  strength: weak
+  description: Both intermediate (SMD 0.16, 95% CI -0.31, 0.63) and long-term follow-up showed non-significant
+    effects
+structural_competency:
+  equity_implications: This finding supports equitable access to muscle-building interventions by demonstrating
+    that specialized BFRT equipment is not necessary for comparable hypertrophy outcomes, reducing barriers
+    for underserved populations who may lack access to specialized rehabilitation facilities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.095852'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

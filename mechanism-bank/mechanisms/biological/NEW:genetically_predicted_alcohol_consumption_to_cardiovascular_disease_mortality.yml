@@ -1,0 +1,58 @@
+id: NEW:genetically_predicted_alcohol_consumption_to_cardiovascular_disease_mortality
+name: Genetically Predicted Alcohol Consumption → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:genetically_predicted_alcohol_consumption
+  node_name: Genetically Predicted Alcohol Consumption
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Genetic variants (e.g., ADH1B, ALDH2) influence alcohol metabolism and consumption patterns'
+- 'Step 2: Mendelian randomization uses these variants as instrumental variables to assess causal effects'
+- 'Step 3: Systematic review finds null associations (67% of studies) for genetically predicted alcohol
+  and cardiovascular disease'
+- 'Step 4: One study on all-cause mortality reported detrimental association with alcohol consumption'
+- 'Step 5: Heterogeneity in methodology limits definitive causal conclusions'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'I. A. T. van de Luitgaarden et al. 2021. "Alcohol consumption in relation to cardiovascular
+    diseases and mortality: a systematic review of Mendelian randomization studies." https://doi.org/10.1007/s10654-021-00799-5'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review includes 24 MR studies
+  - Studies using ADH1B/ALDH2 genetic variants as instruments (multiple authors, various years)
+  - Studies examining cardiovascular outcomes and diabetes using instrumental variable analysis
+  doi: 10.1007/s10654-021-00799-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Systematic review of 24 Mendelian randomization studies examining causal relationship between
+  genetically predicted alcohol consumption and cardiometabolic outcomes. Majority (67%) of studies found
+  null associations for cardiovascular disease, 75% null for diabetes. Single study on all-cause mortality
+  found detrimental effect. Methodological heterogeneity limits definitive conclusions.
+moderators:
+- name: methodological_quality
+  direction: strengthens
+  strength: strong
+  description: Only 54% of studies validated all three key MR assumptions; higher quality studies provide
+    more reliable estimates
+- name: non_linearity_assessment
+  direction: strengthens
+  strength: moderate
+  description: Only 21% of studies assessed potential non-linear relationships; J-shaped associations
+    may be missed with linear methods
+structural_competency:
+  equity_implications: 'This MR approach attempts to address confounding that plagues observational studies
+    of alcohol and health. The null findings challenge the ''moderate drinking is protective'' narrative
+    that has been used to promote alcohol consumption. Structural factors like alcohol marketing, pricing
+    policies, and outlet density shape population-level consumption patterns that may have different effects
+    than individual genetic predisposition. Equity implications: alcohol-related harms disproportionately
+    affect lower socioeconomic groups even at similar consumption levels due to differential access to
+    healthcare and social support.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.289131'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,59 @@
+id: NEW:mixed_training_exercise_to_NEW:health_related_quality_of_life_cancer_survivors
+name: Mixed Training Exercise (Aerobic + Resistance) → Health-Related Quality of Life
+  in Cancer Survivors
+from_node:
+  node_id: NEW:mixed_training_exercise
+  node_name: Mixed Training Exercise (Aerobic + Resistance)
+to_node:
+  node_id: NEW:health_related_quality_of_life_cancer_survivors
+  node_name: Health-Related Quality of Life in Cancer Survivors
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Cancer survivors engage in mixed training exercise combining aerobic and
+  resistance components, typically at an optimal dose of approximately 970 METs-min/week'
+- 'Step 2: Combined exercise modalities produce synergistic physiological adaptations
+  including improved cardiovascular fitness, muscular strength and endurance, reduced
+  fatigue, and enhanced functional capacity'
+- 'Step 3: These physical improvements translate to enhanced ability to perform daily
+  activities, reduced cancer-related symptoms, improved body composition, and better
+  psychological well-being'
+- 'Step 4: The comprehensive physical and psychological benefits result in significant
+  improvements in health-related quality of life across multiple domains (physical,
+  emotional, social, functional)'
+evidence:
+  quality_rating: A
+  n_studies: 48
+  primary_citation: 'Zhiyu Xiong et al. 2024. Optimal exercise dose-response improves
+    health-related quality of life in cancer survivors: a systematic review and Bayesian
+    network meta-analysis of RCTs. Frontiers in oncology.'
+  supporting_citations: []
+description: 'Mixed training exercise combining aerobic and resistance components
+  demonstrates the strongest positive effect on health-related quality of life in
+  cancer survivors among all exercise modalities. A Bayesian network meta-analysis
+  of 48 RCTs with 3050 participants found that mixed training at an optimal dose of
+  970 METs-min/week produced a large effect (SMD: 0.883), surpassing aerobic exercise,
+  resistance training, and mind-body exercises alone. The dose-response relationship
+  shows optimal benefits at moderate doses with diminishing returns at higher intensities.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.883
+    type: standardized_mean_difference
+    ci_lower: 0.455
+    ci_upper: 1.345
+  p_value: null
+  sample_size: 3050
+moderators:
+- name: exercise_dose
+  direction: u_shaped
+  strength: strong
+  description: Optimal benefits observed at 970 METs-min/week for mixed training,
+    with diminishing returns beyond 1100 METs-min/week for all exercise types
+- name: exercise_type
+  direction: strengthens
+  strength: moderate
+  description: 'Mixed training emerged as the most effective modality compared to
+    aerobic exercise alone (SMD: 0.681), resistance training alone (SMD: 0.695), or
+    mind-body exercises (SMD: 0.672)'

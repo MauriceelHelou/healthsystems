@@ -1,0 +1,49 @@
+id: sleep_duration_inadequate_to_NEW:cerebral_amyloid_pathology
+name: Inadequate Sleep Duration → Cerebral Amyloid Pathology
+from_node:
+  node_id: sleep_duration_inadequate
+  node_name: Inadequate Sleep Duration
+to_node:
+  node_id: NEW:cerebral_amyloid_pathology
+  node_name: Cerebral Amyloid Pathology
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Poor sleep quality reduces glymphatic system function during sleep'
+- 'Step 2: Impaired glymphatic clearance decreases removal of metabolic waste including amyloid-beta'
+- 'Step 3: Chronic sleep disruption leads to cumulative amyloid accumulation'
+- 'Step 4: Progressive amyloid deposition creates pathological burden associated with neurodegeneration'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Julie E Oomens et al. 2025. "Associations of lifestyle factors with amyloid pathology
+    in persons without dementia." https://doi.org/10.1177/13872877251379083
+  supporting_citations:
+  - Additional citations require full-text access - this is a cross-sectional study from the Amyloid Biomarker
+    Study data pooling initiative
+  doi: 10.1177/13872877251379083
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Sleep quality is associated with cerebral amyloid pathology, with poor sleep potentially
+  impairing the brain's natural amyloid clearance mechanisms during rest.
+quantitative_effects:
+  sample_size: 11726
+moderators:
+- name: cognitive_status
+  direction: strengthens
+  strength: moderate
+  description: Study examined both NC and MCI populations, suggesting cognitive status may moderate this
+    relationship
+structural_competency:
+  equity_implications: Sleep quality is structurally determined by housing conditions (noise, crowding),
+    shift work requirements, neighborhood safety, and economic stress. Policies addressing housing quality,
+    work schedule regulations, and noise ordinances represent upstream interventions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.173538'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

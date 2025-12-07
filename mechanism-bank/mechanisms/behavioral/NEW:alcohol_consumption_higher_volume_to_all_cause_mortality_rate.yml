@@ -1,0 +1,45 @@
+id: NEW:alcohol_consumption_higher_volume_to_all_cause_mortality_rate
+name: Higher Volume Alcohol Consumption → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:alcohol_consumption_higher_volume
+  node_name: Higher Volume Alcohol Consumption
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Higher-volume (heavy) alcohol consumption patterns established'
+- 'Step 2: Severe and cumulative damage to multiple organ systems'
+- 'Step 3: Development of alcohol use disorder and alcohol-attributable conditions'
+- 'Step 4: Markedly elevated mortality risk across multiple disease categories'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'Peter Sarich et al. 2024. "The association between alcohol consumption and all-cause
+    mortality: An umbrella review of systematic reviews using lifetime abstainers or low-volume drinkers
+    as a reference group.." https://doi.org/10.1111/add.16446'
+  supporting_citations:
+  - Additional citations require full-text access - umbrella review analyzed 25 systematic reviews
+  - All 5 included reviews reported significantly increased risk (RR range 1.28-3.70)
+  - Consistent findings across reviews regardless of other methodological variations
+  doi: 10.1111/add.16446
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher-volume alcohol consumption is associated with 52% increased all-cause mortality risk
+  (RR=1.52) compared to occasional drinking in the low-risk-of-bias review.
+quantitative_effects:
+  effect_size:
+    value: 1.52
+    type: relative_risk
+structural_competency:
+  equity_implications: The substantial mortality risk at higher consumption levels supports urgent need
+    for structural interventions targeting alcohol availability, pricing, and treatment access. Equity
+    implications exist as alcohol harm disproportionately affects lower socioeconomic groups despite similar
+    or lower consumption.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.287323'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

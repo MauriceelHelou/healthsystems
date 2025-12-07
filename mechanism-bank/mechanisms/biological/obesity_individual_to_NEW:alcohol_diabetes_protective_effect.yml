@@ -1,0 +1,51 @@
+id: obesity_individual_to_NEW:alcohol_diabetes_protective_effect
+name: Obesity (Individual) → Alcohol-Diabetes Protective Effect
+from_node:
+  node_id: obesity_individual
+  node_name: Obesity (Individual)
+to_node:
+  node_id: NEW:alcohol_diabetes_protective_effect
+  node_name: Alcohol-Diabetes Protective Effect
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Overweight/obese status (BMI ≥25) creates metabolic environment with insulin resistance'
+- 'Step 2: Moderate alcohol consumption in this context may improve insulin sensitivity'
+- 'Step 3: Interaction between adiposity and alcohol metabolism creates conditions for protective effect'
+- 'Step 4: Normal weight individuals lack this metabolic substrate for alcohol''s protective mechanism'
+evidence:
+  quality_rating: A
+  n_studies: 55
+  primary_citation: 'Laura Llamosas-Falcón et al. 2023. "The Relationship Between Alcohol Consumption,
+    BMI, and Type 2 Diabetes: A Systematic Review and Dose-Response Meta-analysis.." https://doi.org/10.2337/dc23-1015'
+  supporting_citations:
+  - Additional citations require full-text access
+  - BMI-stratified subgroup analysis from systematic review
+  - Analysis specific to women with elevated BMI
+  doi: 10.2337/dc23-1015
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: BMI acts as an effect modifier in the alcohol-diabetes relationship. The protective association
+  of moderate alcohol consumption was only observed in overweight and obese women, suggesting that the
+  metabolic context of excess adiposity is necessary for the protective mechanism to operate.
+quantitative_effects:
+  sample_size: 1290628
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Effect modification by BMI was observed specifically in women
+structural_competency:
+  equity_implications: Obesity itself is a structurally determined condition, shaped by food environments,
+    built environments, economic resources, and social conditions. The finding that BMI modifies alcohol's
+    effect on diabetes risk highlights the complex interplay between multiple structural determinants
+    of health. Communities facing obesogenic environments due to food deserts, lack of safe spaces for
+    physical activity, and economic constraints experience compounded health risks. This interaction effect
+    should not be interpreted as recommending alcohol for overweight individuals, but rather illustrates
+    how structural conditions create different biological contexts for health exposures.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.320875'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

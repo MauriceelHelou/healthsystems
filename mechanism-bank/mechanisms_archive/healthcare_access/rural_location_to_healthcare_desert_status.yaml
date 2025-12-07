@@ -1,0 +1,44 @@
+id: rural_location_to_healthcare_desert_status
+name: Rural Geographic Location → Healthcare Desert Status (No Providers Within 25
+  Miles)
+from_node:
+  node_id: rural_location
+  node_name: Rural Geographic Location
+to_node:
+  node_id: healthcare_desert_status
+  node_name: Healthcare Desert Status (No Providers Within 25 Miles)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Rural areas have lower population density and smaller healthcare market
+  size'
+- 'Step 2: Economic viability of multiple healthcare facilities is limited by small
+  market'
+- 'Step 3: When nursing homes close, sparse provider network leaves large geographic
+  gaps'
+- 'Step 4: Substantial proportion of rural areas left with no PAC or LTC providers
+  within 25 miles'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Hari Sharma et al. 2024. "Nursing home closures and access to
+    post-acute care and long-term care services in rural areas.." *Journal of Rural
+    Health*. https://doi.org/10.1111/jrh.12822
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.467139'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: nursing_home_presence_history
+  direction: strengthens
+  strength: moderate
+  description: Rural ZIP codes with no nursing homes in 2018 (vs. those with recent
+    closure) had even higher distances to providers, suggesting complete absence of
+    facilities creates more severe access barriers
+- name: alternative_provider_availability
+  direction: weakens
+  strength: weak
+  description: Home health agencies and hospitals with swing beds provide some alternatives,
+    though distances remain elevated even accounting for these services

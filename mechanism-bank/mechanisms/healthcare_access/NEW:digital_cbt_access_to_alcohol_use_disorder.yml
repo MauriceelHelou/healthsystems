@@ -1,0 +1,63 @@
+id: NEW:digital_cbt_access_to_alcohol_use_disorder
+name: Digital Cognitive Behavioral Therapy Access → Alcohol Use Disorder
+from_node:
+  node_id: NEW:digital_cbt_access
+  node_name: Digital Cognitive Behavioral Therapy Access
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital CBT platforms remove geographic and transportation barriers to evidence-based AUD treatment'
+- 'Step 2: Online delivery allows flexible scheduling, reducing conflicts with work and caregiving responsibilities'
+- 'Step 3: Reduced stigma of accessing treatment privately at home increases treatment engagement'
+- 'Step 4: CBT techniques (cognitive restructuring, coping skills) are delivered to address maladaptive
+  drinking patterns'
+- 'Step 5: Sustained engagement with CBT leads to reduction in alcohol consumption and AUD symptoms'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'Ji Eun Kim et al. 2025. "Comparative effectiveness of digital versus face-to-face
+    cognitive behavioral therapy for alcohol use disorder: a systematic review and meta-analysis.." https://doi.org/10.1017/S0033291725102043'
+  supporting_citations:
+  - Additional citations require full-text access - abstract indicates 25 RCTs were included
+  - Studies identified through comprehensive PRISMA 2020 systematic search
+  - Individual RCT citations not provided in abstract
+  doi: 10.1017/S0033291725102043
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review and meta-analysis of 25 RCTs evaluated the comparative effectiveness
+  of digital versus face-to-face CBT for adults with alcohol use disorder. Digital CBT has gained prominence
+  due to access barriers and user preferences, offering a structural solution to treatment access disparities.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Digital CBT addresses geographic access barriers, suggesting greater impact in rural/underserved
+    areas with limited face-to-face treatment options
+moderators:
+- name: digital_literacy
+  direction: strengthens
+  strength: moderate
+  description: Higher digital literacy likely enhances engagement with digital CBT platforms
+- name: broadband_access
+  direction: strengthens
+  strength: strong
+  description: Reliable internet access is prerequisite for digital CBT delivery
+- name: user_preferences
+  direction: strengthens
+  strength: moderate
+  description: Abstract notes user preferences drive digital CBT adoption, suggesting treatment matching
+    improves outcomes
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to AUD treatment including geographic
+    isolation, transportation limitations, work schedule conflicts, and stigma. Digital CBT represents
+    a policy-amenable intervention that can reduce inequities in treatment access. However, effectiveness
+    may be limited by digital divide issues affecting low-income populations and rural communities with
+    poor broadband infrastructure. Equity implications include both potential to reach underserved populations
+    and risk of excluding those without digital access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.722894'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

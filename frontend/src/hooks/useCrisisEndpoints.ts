@@ -26,6 +26,10 @@ import { CrisisEndpoint } from '../types/mechanism';
 import { createGetQuery } from './utils/queryHelpers';
 import { API_ENDPOINTS } from '../utils/api';
 
+/** Strip "NEW:" prefix from node names for display */
+const stripNewPrefix = (name: string): string =>
+  name.replace(/^NEW:/i, '').trim();
+
 // ==========================================
 // Hook
 // ==========================================
@@ -52,6 +56,10 @@ export function useCrisisEndpoints(): UseQueryResult<CrisisEndpoint[], Error> {
       meta: { errorContext: 'Crisis endpoints' },
       staleTime: 10 * 60 * 1000,
       retry: 1,
+      select: (data) => data.map(endpoint => ({
+        ...endpoint,
+        label: stripNewPrefix(endpoint.label),
+      })),
     }
   );
 }

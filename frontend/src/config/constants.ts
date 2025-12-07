@@ -9,7 +9,7 @@
 export const VISUALIZATION = {
   defaultZoom: 1,
   minZoom: 0.1,
-  maxZoom: 3,
+  maxZoom: 1000,
   zoomStep: 0.1,
 
   nodeRadius: {

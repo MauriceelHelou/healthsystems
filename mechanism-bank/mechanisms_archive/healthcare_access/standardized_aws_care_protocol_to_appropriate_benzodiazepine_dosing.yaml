@@ -1,0 +1,39 @@
+id: standardized_aws_care_protocol_to_appropriate_benzodiazepine_dosing
+name: Standardized Alcohol Withdrawal Syndrome Care Protocol → Appropriate Benzodiazepine
+  Dosing
+from_node:
+  node_id: standardized_aws_care_protocol
+  node_name: Standardized Alcohol Withdrawal Syndrome Care Protocol
+to_node:
+  node_id: appropriate_benzodiazepine_dosing
+  node_name: Appropriate Benzodiazepine Dosing
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Protocol pairs objective withdrawal severity assessment (modified Minnesota
+  Detoxification Scale) with structured benzodiazepine order sets'
+- 'Step 2: Standardized dosing algorithms replace variable individual clinician judgment
+  and practice patterns'
+- 'Step 3: Symptom-triggered approach ensures medication administration matches actual
+  withdrawal severity rather than fixed schedules'
+- 'Step 4: Protocol adherence produces consistent, evidence-based benzodiazepine dosing
+  across all patients regardless of treating clinician'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jason J Heavner et al. 2018. "Implementation of an ICU-Specific
+    Alcohol Withdrawal Syndrome Management Protocol Reduces the Need for Mechanical
+    Ventilation.." *Pharmacotherapy*. https://doi.org/10.1002/phar.2127
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.777533'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: closed_icu_model
+  direction: strengthens
+  strength: moderate
+  description: Study conducted in closed MICU with dedicated intensivist oversight,
+    which may facilitate protocol adherence and standardization compared to open ICU
+    models

@@ -1,0 +1,53 @@
+id: poverty_rate_to_NEW:unmet_need_primary_care
+name: Poverty Rate → Unmet Need for Primary Care
+from_node:
+  node_id: poverty_rate
+  node_name: Poverty Rate
+to_node:
+  node_id: NEW:unmet_need_primary_care
+  node_name: Unmet Need for Primary Care
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Low income limits financial resources available for healthcare-related expenses despite universal
+  coverage'
+- 'Step 2: Indirect costs of accessing care (transportation, time off work, childcare) create barriers'
+- 'Step 3: Low-income populations face greater competing demands for basic necessities'
+- 'Step 4: Limited flexibility in work schedules reduces ability to attend appointments'
+- 'Step 5: Unmet primary care needs accumulate leading to delayed or foregone care'
+evidence:
+  quality_rating: A
+  n_studies: 46
+  primary_citation: 'Feben Alemu et al. 2024. "Social determinants of unmet need for primary care: a systematic
+    review." https://doi.org/10.1186/s13643-024-02647-5'
+  supporting_citations:
+  - Studies included in systematic review - specific citations require full-text access
+  - MEDLINE, Embase, Cochrane, Web of Science databases screened from inception to December 2023
+  - Additional citations require full-text access
+  doi: 10.1186/s13643-024-02647-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Low income is associated with increased unmet need for primary care in Canada despite universal
+  healthcare coverage, suggesting that economic barriers extend beyond direct payment for services to
+  include indirect costs and opportunity costs of accessing care.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Prevalence of unmet need varied between 6.6% and 25.2% across national studies in Canada,
+    suggesting geographic variation in how income affects access
+moderators:
+- name: having_family_physician
+  direction: weakens
+  strength: moderate
+  description: Having a family physician was negatively associated with unmet need, potentially buffering
+    the effect of low income
+structural_competency:
+  equity_implications: This mechanism demonstrates that universal healthcare coverage alone is insufficient
+    to ensure equitable access. Structural economic inequities create differential access through indirect
+    costs, work schedule constraints, and competing demands for basic necessities. The finding challenges
+    narratives that attribute healthcare non-use to individual choice or motivation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.933530'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

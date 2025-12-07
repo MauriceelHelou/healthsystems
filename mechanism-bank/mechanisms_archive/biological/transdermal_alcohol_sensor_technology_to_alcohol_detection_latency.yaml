@@ -1,0 +1,42 @@
+id: transdermal_alcohol_sensor_technology_to_alcohol_detection_latency
+name: Transdermal Alcohol Sensor Technology (Wrist-Worn) → Alcohol Detection Latency
+from_node:
+  node_id: transdermal_alcohol_sensor_technology
+  node_name: Transdermal Alcohol Sensor Technology (Wrist-Worn)
+to_node:
+  node_id: alcohol_detection_latency
+  node_name: Alcohol Detection Latency
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: New-generation wrist-worn transdermal sensors (Skyn) measure transdermal
+  alcohol concentration (TAC) through skin contact at the wrist location'
+- 'Step 2: Wrist placement provides faster transdermal alcohol detection compared
+  to ankle placement, with Skyn TAC lagging BrAC by only 24 minutes on average'
+- 'Step 3: Reduced detection latency (24 minutes vs 69 minutes for ankle monitors)
+  enables more timely identification of alcohol consumption'
+- 'Step 4: Faster detection allows for more immediate intervention opportunities to
+  prevent alcohol-impaired driving and related traffic deaths'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Catharine E. Fairbairn and Dahyeon Kang 2019. "Temporal Dynamics
+    of Transdermal Alcohol Concentration Measured via New-Generation Wrist-Worn Biosensor.."
+    *Alcoholism: Clinical and Experimental Research*. https://doi.org/10.1111/acer.14172'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.536996'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: device_placement_location
+  direction: strengthens
+  strength: strong
+  description: Wrist placement shows significantly faster TAC detection (24 min lag)
+    compared to ankle placement (69 min lag), p<0.001
+- name: device_failure_rate
+  direction: weakens
+  strength: moderate
+  description: Prototype Skyn devices showed 18-38% failure rate compared to 2% for
+    SCRAM, limiting real-world deployment reliability

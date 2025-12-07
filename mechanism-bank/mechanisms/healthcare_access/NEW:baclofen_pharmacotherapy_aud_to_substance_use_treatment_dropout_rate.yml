@@ -1,0 +1,57 @@
+id: NEW:baclofen_pharmacotherapy_aud_to_substance_use_treatment_dropout_rate
+name: Baclofen Pharmacotherapy for Alcohol Use Disorder → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: NEW:baclofen_pharmacotherapy_aud
+  node_name: Baclofen Pharmacotherapy for Alcohol Use Disorder
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Baclofen at higher doses produces adverse effects including drowsiness, sedation, somnolence,
+  and fatigue'
+- 'Step 2: These side effects impair daily functioning and quality of life during treatment'
+- 'Step 3: Patients may find side effects intolerable, particularly at higher doses'
+- 'Step 4: Increased discontinuation of treatment due to adverse events'
+- 'Step 5: Higher dropout rates compromise treatment effectiveness and recovery outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Kazumasa Kotake et al. 2025. "Optimal Dose of Baclofen for the Treatment of Alcohol
+    Use Disorder: A Systematic Review and Dose-Response Meta-analysis.." https://doi.org/10.1007/s40263-025-01188-2'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 14 randomized controlled trials
+  - Studies identified through Cochrane, EMBASE, MEDLINE via PubMed, PsycINFO databases
+  - ClinicalTrials.gov and International Clinical Trials Registry Platform searches conducted April 2024
+  doi: 10.1007/s40263-025-01188-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher baclofen doses increase treatment dropout due to adverse events, highlighting the
+  need to balance therapeutic efficacy with tolerability. The optimal dose range of 50-60 mg/day represents
+  an attempt to maximize benefits while minimizing harm.
+quantitative_effects:
+  sample_size: 1344
+moderators:
+- name: baclofen_dose
+  direction: strengthens
+  strength: strong
+  description: Higher baclofen doses increase risk of dropout due to adverse events
+- name: adverse_event_type
+  direction: strengthens
+  strength: moderate
+  description: Drowsiness, sedation, somnolence, and fatigue were commonly observed adverse events contributing
+    to dropout
+structural_competency:
+  equity_implications: Treatment retention is influenced by structural factors including patient support
+    systems, employment flexibility to manage side effects, access to follow-up care for dose adjustment,
+    and healthcare provider expertise in managing adverse events. Patients in precarious employment or
+    lacking social support may be less able to tolerate side effects, creating disparities in treatment
+    retention. Healthcare system capacity for individualized dose titration and close monitoring can mitigate
+    dropout risk.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.901548'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

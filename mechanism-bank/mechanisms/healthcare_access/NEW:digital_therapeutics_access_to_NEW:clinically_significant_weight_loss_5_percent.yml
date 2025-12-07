@@ -1,0 +1,65 @@
+id: NEW:digital_therapeutics_access_to_NEW:clinically_significant_weight_loss_5_percent
+name: Digital Therapeutics Access → Clinically Significant Weight Loss (≥5%)
+from_node:
+  node_id: NEW:digital_therapeutics_access
+  node_name: Digital Therapeutics Access
+to_node:
+  node_id: NEW:clinically_significant_weight_loss_5_percent
+  node_name: Clinically Significant Weight Loss (≥5%)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital therapeutic platforms provide continuous access to lifestyle intervention support without
+  requiring physical healthcare facility visits'
+- 'Step 2: Removal of traditional barriers (transportation, time constraints, provider availability) increases
+  intervention engagement and completion'
+- 'Step 3: Sustained engagement with digital coaching and monitoring enables achievement of clinically
+  meaningful weight loss thresholds'
+- 'Step 4: 33% of patients achieve ≥5% body weight loss, which is the threshold associated with metabolic
+  health improvements'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'S. Albhaisi et al. 2024. "Digital therapeutics lead to clinically significant body
+    weight loss in patients with metabolic dysfunction–associated steatotic liver disease: A systematic
+    review and meta-analysis." https://doi.org/10.1097/HC9.0000000000000499'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis synthesized 8 studies
+  - Standard of care comparison included traditional in-person lifestyle counseling
+  - Studies conducted across multiple clinical settings
+  doi: 10.1097/HC9.0000000000000499
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patients receiving digital therapeutic interventions are 3 times more likely to achieve clinically
+  significant weight loss (≥5%) compared to those receiving standard of care
+quantitative_effects:
+  effect_size:
+    value: 3.0
+    type: relative_risk
+    ci_lower: 1.7
+    ci_upper: 5.5
+  p_value: 0.01
+  sample_size: 1001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Authors emphasize potential global impact given billions of patients worldwide affected
+    by metabolic dysfunction-associated steatotic liver disease
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Mean age of 47 years represents middle-aged population where digital literacy may support
+    engagement
+structural_competency:
+  equity_implications: The 3-fold increased likelihood of achieving clinically significant weight loss
+    through digital therapeutics highlights how structural healthcare delivery models impact health outcomes.
+    Traditional models requiring in-person visits create systematic barriers for working populations,
+    rural residents, and those without reliable transportation. Digital delivery models can reduce these
+    structural inequities, though differential access to broadband internet and digital devices may create
+    new equity concerns that require attention.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.865281'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

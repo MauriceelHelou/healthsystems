@@ -1,0 +1,48 @@
+id: prescription_opioid_misuse_to_NEW:methadone_preference_oat
+name: Prescription Opioid Misuse → Preference for Methadone as OAT
+from_node:
+  node_id: prescription_opioid_misuse
+  node_name: Prescription Opioid Misuse
+to_node:
+  node_id: NEW:methadone_preference_oat
+  node_name: Preference for Methadone as OAT
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Non-prescribed pharmaceutical opioid use indicates ongoing opioid dependence patterns'
+- 'Step 2: Users of pharmaceutical opioids may have developed specific tolerance profiles'
+- 'Step 3: Full agonist therapy (methadone) may better match pharmacological needs of those using pharmaceutical
+  opioids'
+- 'Step 4: Treatment preference reflects experienced need for more robust opioid agonist coverage'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: M J Stowe et al. 2026. "Factors Associated With Preferences for Opioid Agonist Therapies
+    Among People Dependent on Opioids.." https://doi.org/10.1111/dar.70079
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1111/dar.70079
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2025, source is 2026'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Non-prescribed pharmaceutical opioid use was associated with over 2-fold increased odds of
+  preferring methadone over buprenorphine for OAT.
+quantitative_effects:
+  effect_size:
+    value: 2.23
+    type: odds_ratio
+    ci_lower: 1.07
+    ci_upper: 4.95
+  sample_size: 400
+structural_competency:
+  equity_implications: The association between pharmaceutical opioid misuse and methadone preference reflects
+    the broader structural issue of prescription opioid availability and subsequent dependence pathways.
+    Treatment systems must accommodate diverse pathways into opioid dependence.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.155556'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

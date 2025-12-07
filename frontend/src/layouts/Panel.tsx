@@ -19,7 +19,7 @@ interface PanelProps {
 export const Panel: React.FC<PanelProps> = ({
   title,
   icon,
-  defaultWidth = 320,
+  defaultWidth = 400,
   minWidth = 280,
   maxWidth = 480,
   resizable = true,

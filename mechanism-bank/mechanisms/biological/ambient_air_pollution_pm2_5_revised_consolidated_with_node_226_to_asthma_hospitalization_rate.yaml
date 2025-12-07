@@ -1,0 +1,55 @@
+id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226_to_asthma_hospitalization_rate
+name: Ambient Air Pollution (PM2.5) → Asthma Hospitalization Rate
+from_node:
+  node_id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226
+  node_name: Ambient Air Pollution (PM2.5)
+to_node:
+  node_id: asthma_hospitalization_rate
+  node_name: Asthma Hospitalization Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhalation of PM2.5 particles allows deep penetration into the lower respiratory
+  tract due to their small size (≤2.5 micrometers)'
+- 'Step 2: PM2.5 particles deposit in bronchial airways and alveoli, triggering local
+  inflammatory responses and oxidative stress'
+- 'Step 3: Airway inflammation leads to bronchial hyperresponsiveness, increased mucus
+  production, and airway narrowing in susceptible individuals'
+- 'Step 4: In individuals with asthma, PM2.5 exposure exacerbates underlying airway
+  inflammation and triggers acute asthma attacks'
+- 'Step 5: Severe asthma exacerbations requiring emergency care and hospitalization
+  increase following PM2.5 exposure events'
+evidence:
+  quality_rating: A
+  n_studies: 140
+  primary_citation: 'Ioana Agache et al. 2024. The impact of outdoor pollution and
+    extreme temperatures on asthma-related outcomes: A systematic review for the EAACI
+    guidelines on environmental science for allergic diseases and asthma. Allergy.'
+  supporting_citations:
+  - 'W. R. Wan Mahiyuddin et al. 2023. Cardiovascular and Respiratory Health Effects
+    of Fine Particulate Matters (PM2.5): A Review on Time Series Studies. Atmosphere.'
+description: PM2.5 exposure has a consistent positive association with asthma hospitalization
+  rates, demonstrated across multiple time-series studies globally. The association
+  between PM2.5 and respiratory health effects is stronger than for cardiovascular
+  diseases, particularly in short-term exposure studies. The mechanism involves direct
+  airway inflammation, oxidative stress, and exacerbation of underlying asthmatic
+  conditions leading to increased healthcare utilization including hospitalizations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Vulnerable populations
+  direction: strengthens
+  strength: strong
+  description: 64.5% of studies included vulnerable groups (children, elderly, those
+    with pre-existing conditions) who showed stronger associations between PM2.5 and
+    respiratory outcomes
+- name: Exposure duration
+  direction: strengthens
+  strength: moderate
+  description: Short-term exposure studies (<7 years) showed higher risks for respiratory
+    diseases compared to cardiovascular diseases
+- name: Extreme temperatures
+  direction: strengthens
+  strength: moderate
+  description: Climate change augments the impact of air pollution on asthma outcomes,
+    with extreme temperatures acting synergistically

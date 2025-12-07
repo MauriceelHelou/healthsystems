@@ -1,0 +1,54 @@
+id: telemedicine_use_to_sud_treatment_entry_rate
+name: Telemedicine Use → SUD Treatment Entry Rate
+from_node:
+  node_id: telemedicine_use
+  node_name: Telemedicine Use
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Remote/digital interventions reduce geographic and logistical barriers to accessing treatment'
+- 'Step 2: Telephone and computer-based modalities offer flexibility in scheduling and location'
+- 'Step 3: Reduced stigma associated with attending treatment facilities may increase willingness to engage'
+- 'Step 4: Increased accessibility leads to greater treatment initiation and sustained engagement'
+- 'Step 5: More individuals with alcohol/drug use disorders receive evidence-based interventions'
+evidence:
+  quality_rating: A
+  n_studies: 34
+  primary_citation: Irene Kwan et al. 2025. "How effective are remote and/or digital interventions as
+    part of alcohol and drug treatment and recovery support? A systematic review and meta-analysis.."
+    https://doi.org/10.1111/add.70021
+  supporting_citations:
+  - Review included adults diagnosed with alcohol/drug use disorder
+  - Interventions delivered by telephone or computer across 34 RCTs
+  - Studies evaluated treatment and recovery support contexts in OECD countries
+  doi: 10.1111/add.70021
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Telemedicine and digital health interventions can increase treatment accessibility for individuals
+  with alcohol and drug use disorders by reducing geographic, logistical, and stigma-related barriers
+  to care engagement.
+quantitative_effects:
+  sample_size: 6461
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Evidence from OECD countries; applicability to low-resource settings not evaluated
+moderators:
+- name: existing_in_person_care
+  direction: strengthens
+  strength: strong
+  description: Remote interventions show clearer benefits when supplementing rather than replacing in-person
+    care
+structural_competency:
+  equity_implications: This mechanism addresses healthcare access disparities rooted in geographic maldistribution
+    of SUD treatment facilities, particularly affecting rural communities and areas with treatment facility
+    shortages. Digital interventions can partially mitigate structural inequities in treatment availability,
+    though digital divide concerns require attention.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.956469'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

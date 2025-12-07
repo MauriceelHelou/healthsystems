@@ -1,0 +1,38 @@
+id: job_loss_expectations_to_household_financial_stress
+name: Job Loss Expectations → Household Financial Stress
+from_node:
+  node_id: job_loss_expectations
+  node_name: Job Loss Expectations
+to_node:
+  node_id: household_financial_stress
+  node_name: Household Financial Stress
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Workers accurately predict probability of job loss in next 12 months, particularly
+  when job loss leads to unemployment'
+- 'Step 2: Higher job loss expectations trigger precautionary financial behaviors
+  including increased savings and reduced risky asset exposure'
+- 'Step 3: Households reduce durable consumption expenditures (acquiring cheaper cars,
+  avoiding new car purchases)'
+- 'Step 4: These financial constraints and consumption restrictions create sustained
+  household financial stress'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Y. Pettinicchi and Nathanael Vellekoop 2019. "Job Loss Expectations,
+    Durable Consumption and Household Finances: Evidence from Linked Survey Data."
+    *Social Science Research Network*. https://doi.org/10.2139/SSRN.3365473'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.904136'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: unemployment_following_job_loss
+  direction: strengthens
+  strength: strong
+  description: Workers whose job loss is followed by unemployment predict job loss
+    particularly well, suggesting stronger precautionary responses and greater financial
+    stress for this subgroup

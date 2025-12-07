@@ -1,0 +1,54 @@
+id: NEW:transportation_barriers_rural_to_sud_treatment_entry_rate
+name: Transportation Barriers in Rural Areas → SUD Treatment Entry Rate
+from_node:
+  node_id: NEW:transportation_barriers_rural
+  node_name: Transportation Barriers in Rural Areas
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Rural areas have limited public transportation infrastructure'
+- 'Step 2: Individuals on community supervision in rural areas face high travel costs and time to reach
+  SUD treatment facilities'
+- 'Step 3: Transportation barriers reduce ability to attend scheduled treatment appointments'
+- 'Step 4: Reduced treatment engagement leads to lower treatment entry and adherence rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Carrie B Oser et al. 2024. "Rural and urban clinician views on COVID-19's impact on
+    substance use treatment for individuals on community supervision in Kentucky.." https://doi.org/10.1186/s40352-024-00266-9
+  supporting_citations:
+  - Additional citations require full-text access - qualitative interview study with 25 clinicians
+  doi: 10.1186/s40352-024-00266-9
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Rural transportation barriers create structural impediments to SUD treatment access for justice-involved
+  individuals, with costly travel being a significant factor in treatment engagement challenges that telehealth
+  helped address.
+quantitative_effects:
+  sample_size: 25
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Transportation barriers were identified as a rural-specific theme, with clinicians
+    noting that removal of these barriers through telehealth was a key positive lesson learned from COVID-19
+    transitions.
+moderators:
+- name: criminal_justice_involvement
+  direction: strengthens
+  strength: moderate
+  description: Individuals on probation/parole may have additional constraints on transportation access
+    and mobility that compound rural transportation barriers
+structural_competency:
+  equity_implications: This mechanism locates the source of treatment non-engagement in structural geographic
+    and infrastructure factors rather than individual motivation or compliance. The emphasis on 'costly
+    travel for rural clients' highlights economic barriers intersecting with geographic isolation. Kentucky's
+    rural Appalachian context represents an area with historically underfunded transportation and healthcare
+    infrastructure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.767566'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

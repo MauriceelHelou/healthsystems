@@ -1,0 +1,45 @@
+id: weapon_availability_environment_to_penetrating_trauma_severity
+name: Weapon Availability in Environment → Penetrating Trauma Severity
+from_node:
+  node_id: weapon_availability_environment
+  node_name: Weapon Availability in Environment
+to_node:
+  node_id: penetrating_trauma_severity
+  node_name: Penetrating Trauma Severity
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Absence of weapon prohibition zones allows knives to be carried in nightlife
+  districts'
+- 'Step 2: Glass bottles and drinkware are readily available in bars, clubs, and public
+  spaces'
+- 'Step 3: During conflicts, readily accessible weapons (knives, broken bottles, glass
+  shards) are used causing penetrating injuries'
+- 'Step 4: Weapon type determines injury severity—knives and broken glass cause deeper
+  tissue damage requiring surgical intervention'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jutta Schürmann et al. 2024. "[Development of violence-associated
+    penetrating trauma in the Düsseldorf metropolitan region over a 5-year period
+    (GewPen study)]." *Die Anaesthesiologie*. https://doi.org/10.1007/s00101-024-01420-6
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.599657'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_venue_glassware_policy
+  direction: strengthens
+  strength: strong
+  description: Use of glass bottles (18%) and glass shards (6%) as weapons directly
+    linked to availability in drinking establishments
+- name: absence_weapon_prohibition_zones
+  direction: strengthens
+  strength: strong
+  description: Knife attacks (56% of cases) enabled by lack of weapon restrictions
+    in nightlife areas
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/weapon_availability_environment_to_penetrating_trauma_severity.yaml
+_category: built_environment

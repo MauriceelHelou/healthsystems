@@ -1,0 +1,43 @@
+id: genetic_risk_aud_to_alcohol_related_disorders
+name: Genetic Risk for Alcohol Use Disorder (AUD PRS) → Alcohol-Related Disorders
+from_node:
+  node_id: genetic_risk_aud
+  node_name: Genetic Risk for Alcohol Use Disorder (AUD PRS)
+to_node:
+  node_id: alcohol_related_disorders
+  node_name: Alcohol-Related Disorders
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Genetic variants specifically associated with AUD diagnosis (distinct from
+  consumption variants) influence disorder susceptibility'
+- 'Step 2: Polygenic risk scores for AUD capture genetic liability for clinical disorder
+  independent of consumption patterns'
+- 'Step 3: AUD-specific genetic architecture operates through distinct biological
+  pathways including stress response and reward processing'
+- 'Step 4: Higher AUD genetic risk increases probability of developing clinical alcohol-related
+  disorders through mechanisms beyond heavy drinking alone'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: H. Kranzler et al. 2019. "Genome-wide association study of alcohol
+    consumption and use disorder in 274,424 individuals from multiple populations."
+    *Nature Communications*. https://doi.org/10.1038/s41467-019-09480-8
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.365317'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: heavy_drinking_exposure
+  direction: strengthens
+  strength: strong
+  description: Study concludes that heavy drinking is a key risk factor for AUD but
+    not sufficient cause, suggesting genetic risk requires environmental exposure
+    to manifest
+- name: ancestry_population
+  direction: strengthens
+  strength: moderate
+  description: Multi-ancestry sample indicates genetic architecture and PRS performance
+    may vary across populations

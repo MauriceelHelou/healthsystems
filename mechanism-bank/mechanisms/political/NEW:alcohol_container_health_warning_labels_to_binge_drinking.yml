@@ -1,0 +1,68 @@
+id: NEW:alcohol_container_health_warning_labels_to_binge_drinking
+name: Alcohol Container Health Warning Labels → Binge Drinking
+from_node:
+  node_id: NEW:alcohol_container_health_warning_labels
+  node_name: Alcohol Container Health Warning Labels
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Policy mandates enhanced health warning labels on alcohol containers with cancer warnings and
+  drinking guidelines'
+- 'Step 2: Increased consumer attention to labels raises awareness of health risks including cancer'
+- 'Step 3: Processing of health messages leads to reconsideration of drinking behaviors'
+- 'Step 4: Enhanced motivation to reduce consumption results in self-reported drinking less'
+- 'Step 5: Population-level shifts in drinking behavior reduce harmful alcohol consumption patterns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Erin Hobin et al. 2020. "Effects of strengthening alcohol labels on attention, message
+    processing, and perceived effectiveness: A quasi-experimental study in Yukon, Canada.." https://doi.org/10.1016/j.drugpo.2020.102666'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior work on alcohol labeling
+    but does not cite specific studies
+  - Prior evidence on tobacco warning labels informs alcohol label policy (referenced implicitly)
+  - Evidence on consumer awareness of alcohol harms (referenced as limited in abstract)
+  doi: 10.1016/j.drugpo.2020.102666
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Enhanced alcohol warning labels significantly increased consumer reports of drinking less
+  due to the labels, demonstrating that structural labeling interventions can influence alcohol consumption
+  behaviors at the population level.
+quantitative_effects:
+  effect_size:
+    value: 3.7
+    type: odds_ratio
+    ci_lower: 2.0
+    ci_upper: 7.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Geographic variation in alcohol labeling policies between intervention (Yukon) and
+    comparison sites in Canada
+moderators:
+- name: label_attention
+  direction: strengthens
+  strength: strong
+  description: The pathway from labels to behavior change requires attention and processing; those who
+    notice and process labels more deeply may show stronger behavior change
+- name: baseline_drinking_level
+  direction: strengthens
+  strength: moderate
+  description: Study conducted among cohort of adult drinkers; effects may vary by baseline consumption
+    patterns
+structural_competency:
+  equity_implications: This mechanism exemplifies a structural approach to alcohol harm reduction that
+    does not blame individuals for drinking. Instead, it recognizes that the commercial environment shapes
+    behavior and that policy can modify this environment to support healthier choices. The intervention
+    addresses the structural advantage that alcohol industry marketing has historically held by mandating
+    health information at point of consumption. This approach has equity implications as it reaches all
+    consumers regardless of health literacy, income, or access to health education, though effects may
+    vary across socioeconomic groups.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.183421'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

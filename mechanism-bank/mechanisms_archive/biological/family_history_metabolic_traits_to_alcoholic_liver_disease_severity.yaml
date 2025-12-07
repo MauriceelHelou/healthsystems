@@ -1,0 +1,46 @@
+id: family_history_metabolic_traits_to_alcoholic_liver_disease_severity
+name: Family History of Metabolic Traits (Diabetes, Hypertension, Obesity) → Alcoholic
+  Liver Disease Severity
+from_node:
+  node_id: family_history_metabolic_traits
+  node_name: Family History of Metabolic Traits (Diabetes, Hypertension, Obesity)
+to_node:
+  node_id: alcoholic_liver_disease_severity
+  node_name: Alcoholic Liver Disease Severity
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Family history of metabolic traits indicates genetic predisposition to
+  metabolic dysfunction including insulin resistance, lipid dysregulation, and inflammatory
+  pathways'
+- 'Step 2: Inherited genetic variants affect hepatic metabolism of alcohol and cellular
+  responses to oxidative stress even before clinical manifestation of metabolic disease'
+- 'Step 3: Genetic susceptibility combined with alcohol exposure creates heightened
+  vulnerability to hepatotoxic effects through impaired detoxification and increased
+  inflammatory responses'
+- 'Step 4: Earlier and more severe liver damage occurs in individuals with inherited
+  metabolic susceptibility even with smaller alcohol quantities and shorter exposure
+  duration'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Bhadoria et al. 2019. "Personal or family history of metabolic
+    traits predispose to higher hepatotoxic effects of alcohol." *Journal of Family
+    Medicine and Primary Care*. https://doi.org/10.4103/jfmpc.jfmpc_439_19
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.875651'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: number_of_affected_relatives
+  direction: strengthens
+  strength: moderate
+  description: Multiple family members with metabolic traits likely indicates stronger
+    genetic predisposition and greater vulnerability to alcohol hepatotoxicity
+- name: age_of_onset_in_family
+  direction: strengthens
+  strength: moderate
+  description: Earlier onset of metabolic traits in family members may indicate more
+    penetrant genetic variants with stronger effects on alcohol metabolism

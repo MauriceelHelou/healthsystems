@@ -1,0 +1,40 @@
+id: insomnia_objective_short_sleep_to_incident_cardiovascular_cerebrovascular_disease
+name: Insomnia with Objective Short Sleep Duration (<6 hours) → Incident Cardiovascular
+  and/or Cerebrovascular Disease
+from_node:
+  node_id: insomnia_objective_short_sleep
+  node_name: Insomnia with Objective Short Sleep Duration (<6 hours)
+to_node:
+  node_id: incident_cardiovascular_cerebrovascular_disease
+  node_name: Incident Cardiovascular and/or Cerebrovascular Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic insomnia combined with objectively measured short sleep duration
+  (<6 hours on polysomnography) creates a biological phenotype of severe sleep disruption'
+- 'Step 2: Persistent short sleep duration triggers physiological stress responses
+  and metabolic dysregulation, including cardiovascular system strain'
+- 'Step 3: Prolonged cardiovascular and metabolic stress increases risk for cardiometabolic
+  outcomes (hypertension, diabetes)'
+- 'Step 4: Accumulation of cardiovascular damage over 9+ years manifests as incident
+  heart disease and/or stroke'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Slobodanka Pejovic et al. 2024. "Insomnia with objective but
+    not subjective short sleep duration is associated with incident cardiovascular
+    and/or cerebrovascular disease.." *Journal of clinical sleep medicine : JCSM :
+    official publication of the American Academy of Sleep Medicine*. https://doi.org/10.5664/jcsm.11046'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.030173'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: objective_vs_subjective_sleep_measurement
+  direction: strengthens
+  strength: strong
+  description: Objective polysomnography measurement of short sleep duration (<6 hours)
+    identifies the biological phenotype associated with disease risk, while subjective
+    self-reported sleep duration shows no association with incident CBVD

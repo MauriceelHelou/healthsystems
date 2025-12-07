@@ -1,0 +1,70 @@
+id: NEW:brief_alcohol_intervention_access_to_alcohol_use_disorder
+name: Brief Alcohol Intervention Access → Alcohol Use Disorder
+from_node:
+  node_id: NEW:brief_alcohol_intervention_access
+  node_name: Brief Alcohol Intervention Access
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Brief alcohol interventions provide structured screening and early intervention before alcohol
+  misuse progresses to disorder'
+- 'Step 2: Interventions address both high-risk heavy drinkers and general population through universal
+  prevention approaches'
+- 'Step 3: Reduced drinking quantity (8% reduction) decreases cumulative alcohol exposure and associated
+  neurobiological adaptations'
+- 'Step 4: Early intervention during critical developmental periods (college years) may interrupt progression
+  to alcohol use disorder'
+- 'Step 5: However, effect decay by 9-12 months suggests sustained intervention or booster sessions needed
+  to prevent AUD development'
+evidence:
+  quality_rating: A
+  n_studies: 19
+  primary_citation: 'Eun‐Young Mun et al. 2022. "Brief Alcohol Interventions are Effective through 6 Months:
+    Findings from Marginalized Zero-inflated Poisson and Negative Binomial Models in a Two-step IPD Meta-analysis."
+    https://doi.org/10.1007/s11121-022-01420-1'
+  supporting_citations:
+  - Mun et al. (2015b). Project INTEGRATE - Individual participant data meta-analysis of brief alcohol
+    interventions.
+  - Long et al. (2014). Marginalized zero-inflated Poisson regression models.
+  - Additional citations require full-text access for specific included studies
+  doi: 10.1007/s11121-022-01420-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief alcohol interventions reduce mean alcohol consumption through 6 months, which may interrupt
+  the pathway to alcohol use disorder development. The 8% reduction in drinks, while modest, represents
+  a meaningful public health impact at population level. The decay of effects by 9-12 months highlights
+  structural need for sustained intervention delivery systems.
+quantitative_effects:
+  effect_size:
+    value: 0.92
+    type: relative_risk
+    ci_lower: 0.85
+    ci_upper: 0.99
+  sample_size: 7704
+moderators:
+- name: baseline_drinking_level
+  direction: strengthens
+  strength: moderate
+  description: Study population included mixture of high-risk individuals, occasional nondrinkers, and
+    abstainers; effects may be stronger among those with elevated baseline drinking
+- name: follow_up_duration
+  direction: weakens
+  strength: strong
+  description: No statistically significant difference at 9-12 months indicates intervention effects on
+    AUD prevention may require ongoing reinforcement
+structural_competency:
+  equity_implications: The finding that effects decay over time points to structural limitations of one-time
+    interventions and the need for sustained environmental and policy supports. Alcohol use disorder development
+    is influenced by broader structural factors including alcohol marketing, pricing policies, outlet
+    density, and social environments that are not addressed by individual-level brief interventions. The
+    predominantly White, college-attending sample reflects structural inequities in who receives preventive
+    interventions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.079965'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

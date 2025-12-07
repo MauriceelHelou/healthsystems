@@ -1,0 +1,35 @@
+id: ghb_discontinuation_to_withdrawal_syndrome
+name: GHB Discontinuation After Regular Use → GHB Withdrawal Syndrome
+from_node:
+  node_id: ghb_discontinuation
+  node_name: GHB Discontinuation After Regular Use
+to_node:
+  node_id: withdrawal_syndrome
+  node_name: GHB Withdrawal Syndrome
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Regular GHB use creates neuroadaptation in central nervous system'
+- 'Step 2: Abrupt discontinuation disrupts adapted neurotransmitter systems'
+- 'Step 3: Withdrawal syndrome manifests with patterns similar to alcohol withdrawal'
+- 'Step 4: Clinical presentation may be difficult to distinguish from other withdrawal
+  syndromes, especially when toxicological testing is unavailable or negative'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'E. Marinelli et al. 2020. "Gamma-hydroxybutyrate Abuse: Pharmacology
+    and Poisoning and Withdrawal Management." *Arhiv za Higijenu Rada i Toksikologiju*.
+    https://doi.org/10.2478/aiht-2020-71-3314'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.697838'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: toxicological_test_availability
+  direction: weakens
+  strength: strong
+  description: Unavailable or negative toxicological tests make GHB withdrawal difficult
+    to distinguish from other withdrawal syndromes, potentially delaying appropriate
+    treatment

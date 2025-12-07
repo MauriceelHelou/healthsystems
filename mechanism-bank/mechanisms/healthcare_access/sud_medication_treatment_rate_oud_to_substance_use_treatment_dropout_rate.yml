@@ -1,0 +1,60 @@
+id: sud_medication_treatment_rate_oud_to_substance_use_treatment_dropout_rate
+name: OUD Medication Treatment Rate (MAT) → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: OUD Medication Treatment Rate (MAT)
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Medication First removes prerequisite requirements for psychosocial services before medication
+  access'
+- 'Step 2: Lower barriers to entry increase immediate engagement with pharmacotherapy'
+- 'Step 3: Maintenance pharmacotherapy reduces withdrawal symptoms and cravings that often precipitate
+  dropout'
+- 'Step 4: Policy of not discontinuing medication for reasons other than harm maintains treatment continuity'
+- 'Step 5: Sustained treatment engagement improves retention rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: R. Winograd et al. 2019. "The case for a medication first approach to the treatment
+    of opioid use disorder." https://doi.org/10.1080/00952990.2019.1605372
+  supporting_citations:
+  - Decades of research on OUD pharmacotherapy (referenced in abstract)
+  - Housing First model literature (conceptual framework)
+  - Additional citations require full-text access
+  doi: 10.1080/00952990.2019.1605372
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Early implementation results show promising treatment retention outcomes when the Medication
+  First approach is used. By removing barriers to medication access and protecting against arbitrary treatment
+  discontinuation, the approach improves sustained engagement with OUD treatment.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Early results in Missouri's publicly-funded system show promising treatment retention;
+    variation expected across states with different treatment certification standards
+moderators:
+- name: provider_adoption
+  direction: strengthens
+  strength: moderate
+  description: Provider feedback has been largely favorable, facilitating implementation, though clinical-level
+    obstacles remain
+- name: system_level_barriers
+  direction: weakens
+  strength: moderate
+  description: Remaining clinical- and system-level obstacles to effective OUD treatment can undermine
+    retention benefits
+structural_competency:
+  equity_implications: Traditional treatment models often blame patients for treatment dropout when structural
+    barriers (prerequisite requirements, punitive discontinuation policies) are the actual cause. The
+    Medication First approach shifts responsibility to the treatment system to provide immediate, sustained
+    access. This parallels the Housing First model's recognition that housing instability, not individual
+    deficits, drives homelessness.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.136908'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,49 @@
+id: homelessness_to_covid_19_mortality
+name: Homelessness → COVID-19 Mortality
+from_node:
+  node_id: homelessness
+  node_name: Homelessness
+to_node:
+  node_id: covid_19_mortality
+  node_name: COVID-19 Mortality
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Homelessness creates lack of access to basic sanitation and healthcare services'
+- 'Step 2: Congregate shelter settings or street conditions increase viral transmission risk'
+- 'Step 3: Delayed healthcare seeking and treatment due to structural barriers'
+- 'Step 4: Higher rates of severe COVID-19 outcomes and mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Bartels et al. 2020. "COVID-19 Emergency Reforms in Massachusetts to Support Behavioral
+    Health Care and Reduce Mortality of People With Serious Mental Illness.." *Psychiatric Services*.
+    https://doi.org/10.1176/appi.ps.202000244
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1176/appi.ps.202000244
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '2.0'
+description: Homelessness among people with serious mental illness increases COVID-19 mortality through
+  structural barriers to healthcare access, increased viral exposure, and delayed treatment in emergency
+  situations.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Geographic variation in homeless services infrastructure and housing policies affects
+    the strength of this mechanism
+moderators:
+- name: serious_mental_illness
+  direction: strengthens
+  strength: strong
+  description: Serious mental illness compounds homelessness-related health risks through reduced access
+    to coordinated care and increased vulnerability
+structural_competency:
+  equity_implications: This mechanism directly implicates housing policy failures and inadequate social
+    safety nets as root causes of health inequities. The pathway focuses on structural barriers rather
+    than individual deficits.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.798879'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

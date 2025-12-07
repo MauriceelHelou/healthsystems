@@ -1,0 +1,34 @@
+id: alcohol_treatment_facility_density
+name: Alcohol Treatment Facility Density
+scale: 3
+domain: Healthcare Infrastructure, Substance Use
+category: healthcare_access
+stock:
+  value: 3.2
+  unit: Treatment facilities per 100,000 population
+  year: 2022
+  source: SAMHSA N-SSATS
+geographic_variation:
+  score: 4
+  level: county
+  notes: Major gaps in rural areas; concentrated in urban centers and along interstate corridors
+data_quality:
+  availability: high
+  frequency: annual
+  bias_notes: Counts facilities, not capacity; quality and services offered vary substantially
+  primary_sources:
+  - name: SAMHSA National Survey of Substance Abuse Treatment Services (N-SSATS)
+    granularity: county
+  - name: SAMHSA Behavioral Health Treatment Services Locator
+    granularity: address
+  - name: State licensing databases
+    granularity: county
+description: |-
+  Density of substance use disorder treatment facilities that provide services for alcohol use
+  disorder including outpatient counseling, intensive outpatient programs (IOP), partial
+  hospitalization, and residential treatment. Measured from SAMHSA's annual census of all
+  known treatment facilities. Low facility density creates geographic barriers to treatment
+  access, particularly in rural areas where individuals may need to travel 50+ miles for
+  specialized AUD treatment. Facility availability is a necessary but not sufficient
+  condition for treatment access.
+type: Infrastructure

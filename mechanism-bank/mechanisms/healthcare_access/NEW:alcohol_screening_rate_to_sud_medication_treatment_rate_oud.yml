@@ -1,0 +1,65 @@
+id: NEW:alcohol_screening_rate_to_sud_medication_treatment_rate_oud
+name: Alcohol Screening Rate in Primary Care → Medication-Assisted Treatment Rate
+from_node:
+  node_id: NEW:alcohol_screening_rate
+  node_name: Alcohol Screening Rate in Primary Care
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: Medication-Assisted Treatment Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Systematic alcohol screening identifies patients with alcohol use disorder (AUD) who may otherwise
+  go undetected'
+- 'Step 2: Brief interventions provide patients with information about their alcohol use and motivate
+  behavior change consideration'
+- 'Step 3: Clinicians trained in SBIRT recognize indications for medication-assisted treatment for AUD
+  (MAUD)'
+- 'Step 4: Referral to treatment pathways connect patients with AUD to appropriate pharmacotherapy options'
+- 'Step 5: Increased MAUD prescribing addresses the treatment gap for alcohol use disorder in primary
+  care settings'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Melinda M. Davis et al. 2024. "Improving screening, brief intervention and referral
+    to treatment for unhealthy alcohol use in diverse, low-resourced primary care clinics." https://doi.org/10.1186/s12913-024-11870-8
+  supporting_citations:
+  - Additional citations require full-text access - MAUD efficacy literature
+  - Additional citations require full-text access - SBIRT cascade of care studies
+  - Additional citations require full-text access - primary care alcohol treatment integration research
+  doi: 10.1186/s12913-024-11870-8
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: SBIRT implementation creates a cascade linking systematic screening to identification of
+  AUD, enabling referral to and provision of medication-assisted treatment. The study showed improved
+  performance data among clinics able to track outcomes, though barriers to MAUD implementation remained.
+quantitative_effects:
+  sample_size: 17
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Only subset of completing clinics (n=17) able to produce EHR performance data; data
+    infrastructure varies significantly across low-resourced clinic settings
+moderators:
+- name: data_extraction_capability
+  direction: strengthens
+  strength: moderate
+  description: Only clinics with adequate EHR data infrastructure could demonstrate performance improvements;
+    this represents structural variation in clinic capacity
+- name: expert_consultation_access
+  direction: strengthens
+  strength: moderate
+  description: 19% of clinics accessed expert consultation which may include guidance on MAUD prescribing
+    protocols
+structural_competency:
+  equity_implications: Low MAUD utilization in primary care represents a structural treatment gap, not
+    individual patient resistance. Barriers include inadequate clinician training, DEA waiver requirements
+    (at time of study), stigma within healthcare systems, and lack of integrated treatment pathways. The
+    intervention addresses these structural barriers through expert consultation and workflow support.
+    Health equity implications are significant as diverse, low-resourced clinics serve populations disproportionately
+    affected by alcohol-related harms but with least access to evidence-based treatment.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.973301'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,42 @@
+id: pediatric_trauma_center_admission_to_aod_screening_opportunity
+name: Adolescent Admission to Pediatric Trauma Center → AOD Screening Opportunity
+from_node:
+  node_id: pediatric_trauma_center_admission
+  node_name: Adolescent Admission to Pediatric Trauma Center
+to_node:
+  node_id: aod_screening_opportunity
+  node_name: AOD Screening Opportunity
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Traumatic injury requiring hospital admission creates a mandatory healthcare
+  system contact point for adolescents who may otherwise lack regular healthcare access'
+- 'Step 2: Trauma admission represents a ''teachable moment'' when adolescents and
+  families may be receptive to health interventions'
+- 'Step 3: Inpatient setting provides structural opportunity for systematic screening
+  implementation through admission protocols and EHR integration'
+- 'Step 4: Trauma center accreditation requirements from American College of Surgeons
+  create institutional mandate for AOD screening and intervention'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Michael J Mello et al. 2024. "Implementing Screening, Brief Interventions,
+    and Referral to Treatment at Pediatric Trauma Centers: A Step Wedge Cluster Randomized
+    Trial.." *Journal of pediatric surgery*. https://doi.org/10.1016/j.jpedsurg.2024.07.003'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.815317'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: trauma_severity
+  direction: weakens
+  strength: moderate
+  description: Adolescents with more severe injuries may be medically unable to participate
+    in screening during acute admission period
+- name: length_of_stay
+  direction: strengthens
+  strength: moderate
+  description: Longer hospital stays may provide more opportunities for screening
+    and intervention delivery

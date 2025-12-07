@@ -1,0 +1,37 @@
+id: ignition_interlock_penalty_to_alcohol_impaired_driving_behavior
+name: Ignition Interlock Device Penalty (1-year installation requirement) → Alcohol-Impaired
+  Driving Behavior
+from_node:
+  node_id: ignition_interlock_penalty
+  node_name: Ignition Interlock Device Penalty (1-year installation requirement)
+to_node:
+  node_id: alcohol_impaired_driving_behavior
+  node_name: Alcohol-Impaired Driving Behavior
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Mandatory ignition interlock device installation creates a credible threat
+  of vehicle immobilization for potential offenders'
+- 'Step 2: The psychological deterrent effect of knowing one''s vehicle will be rendered
+  inoperable for an extended period reduces perceived benefits of drunk driving'
+- 'Step 3: This general deterrence effect operates prior to any DUI conviction, influencing
+  decision-making about drinking and driving among the general population'
+- 'Step 4: Reduced frequency of alcohol-impaired driving attempts across the population'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Robert Zeithammer et al. 2025. "Assessing the Deterrent Effects
+    of Ignition Interlock Devices.." *American journal of preventive medicine*. https://doi.org/10.1016/j.amepre.2024.09.009
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.476129'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: police_enforcement_rate
+  direction: strengthens
+  strength: strong
+  description: Interlock penalty deterrent effect comparable to 20-fold increase in
+    police enforcement (from 1% to 20% chance of being caught), suggesting enforcement
+    amplifies deterrence

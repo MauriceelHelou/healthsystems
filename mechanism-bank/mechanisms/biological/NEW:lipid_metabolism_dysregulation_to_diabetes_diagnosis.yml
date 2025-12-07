@@ -1,0 +1,53 @@
+id: NEW:lipid_metabolism_dysregulation_to_diabetes_diagnosis
+name: Lipid Metabolism Dysregulation → Diabetes Diagnosis
+from_node:
+  node_id: NEW:lipid_metabolism_dysregulation
+  node_name: Lipid Metabolism Dysregulation
+to_node:
+  node_id: diabetes_diagnosis
+  node_name: Diabetes Diagnosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alterations in lipid metabolism produce changes in lysophosphatidylcholine and other lipid
+  metabolites'
+- 'Step 2: Decreased lysophosphatidylcholine a C17:0 levels indicate disrupted lipid homeostasis'
+- 'Step 3: Lipid dysregulation contributes to insulin resistance through lipotoxicity mechanisms'
+- 'Step 4: Two-sample Mendelian randomization confirms causal role of lipid metabolism in type 2 diabetes
+  development'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sapna Sharma et al. 2024. "Role of human plasma metabolites in prediabetes and type
+    2 diabetes from the IMI-DIRECT study.." https://doi.org/10.1007/s00125-024-06282-6
+  supporting_citations:
+  - Two-sample Mendelian randomization methodology studies
+  - Prior lipid-diabetes association studies
+  - Additional citations require full-text access
+  doi: 10.1007/s00125-024-06282-6
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Causal inference using Mendelian randomization with genetic variants demonstrates that lipid
+  metabolism and n-3 fatty acids play a causal role in the metabolite-to-type 2 diabetes pathway. Lysophosphatidylcholine
+  a C17:0 was significantly associated with glycemic status.
+quantitative_effects:
+  sample_size: 3000
+moderators:
+- name: fasting_hdl_cholesterol
+  direction: weakens
+  strength: moderate
+  description: Higher HDL cholesterol was adjusted for in models, suggesting protective modification
+- name: fasting_triacylglycerol
+  direction: strengthens
+  strength: moderate
+  description: Elevated triglycerides adjusted in models, indicating additive risk
+structural_competency:
+  equity_implications: Lipid metabolism is influenced by dietary fat intake, which is shaped by food environment,
+    economic resources for healthy food purchase, and cultural food practices. Structural inequities in
+    food access create differential exposure to dietary patterns that dysregulate lipid metabolism.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.680050'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,67 @@
+id: NEW:alcohol_price_tax_level_to_binge_drinking
+name: Alcohol Price/Tax Level → Binge Drinking
+from_node:
+  node_id: NEW:alcohol_price_tax_level
+  node_name: Alcohol Price/Tax Level
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher alcohol taxes and prices increase the cost of purchasing alcoholic beverages'
+- 'Step 2: Increased costs reduce affordability and purchasing power for alcohol consumption'
+- 'Step 3: Reduced affordability leads to decreased alcohol consumption, including heavy drinking episodes'
+- 'Step 4: Lower consumption rates result in reduced binge drinking prevalence across populations'
+evidence:
+  quality_rating: A
+  n_studies: 112
+  primary_citation: Z. Xuan et al. 2015. "Comment on "binge drinking and alcohol prices"." https://doi.org/10.1186/s13561-016-0082-x
+  supporting_citations:
+  - Wagenaar et al. (2009). Meta-analysis of 112 studies on alcohol price effects.
+  - Elder et al. Systematic review on alcohol tax levels and excessive drinking.
+  - Cook and Moore. Review on price increases and reduced consumption across population groups.
+  - Xuan et al. (2015). Study on comprehensive alcohol tax measures and binge drinking elasticity.
+  doi: 10.1186/s13561-016-0082-x
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2016, source is 2015'
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: A meta-analysis of 112 studies found a significant elasticity of -0.28 for heavy drinking
+  in response to alcohol prices, demonstrating that increases in alcohol prices and taxes are associated
+  with reduced binge drinking. This economic mechanism operates through affordability constraints that
+  reduce purchasing and consumption of alcohol.
+quantitative_effects:
+  effect_size:
+    value: -0.28
+    type: beta_coefficient
+moderators:
+- name: age_group
+  direction: strengthens
+  strength: moderate
+  description: Price effects apply to youth drinkers, indicating young people may be particularly price-sensitive
+- name: drinking_severity
+  direction: strengthens
+  strength: moderate
+  description: Effects persist even for heavy drinkers and alcoholics who develop cirrhosis, suggesting
+    price sensitivity across consumption spectrum
+- name: tax_measure_comprehensiveness
+  direction: strengthens
+  strength: strong
+  description: Comprehensive tax measures including specific excise and value-based taxes show more negative
+    elasticity than conventional beer excise tax alone
+structural_competency:
+  equity_implications: This mechanism focuses on population-level policy interventions (taxation) rather
+    than individual behavior change. It demonstrates how economic policy levers can reduce harmful drinking
+    patterns structurally. The evidence shows effects across demographic groups including youth, heavy
+    drinkers, and those with alcohol use disorders, suggesting universal benefit from price-based policies.
+    This approach avoids blaming individuals for alcohol problems and instead addresses the structural
+    economic accessibility of alcohol.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.265127'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

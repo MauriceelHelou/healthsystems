@@ -1,0 +1,48 @@
+id: chinese_ethnic_density_to_alcohol_related_hospitalizations
+name: Chinese Ethnic Density (Proportion of Chinese Americans in ZIP Code) → Alcohol-Related
+  Hospitalizations
+from_node:
+  node_id: chinese_ethnic_density
+  node_name: Chinese Ethnic Density (Proportion of Chinese Americans in ZIP Code)
+to_node:
+  node_id: alcohol_related_hospitalizations
+  node_name: Alcohol-Related Hospitalizations
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Higher concentrations of co-ethnic residents create stronger social networks
+  and cultural norms that discourage excessive alcohol consumption'
+- 'Step 2: Ethnic density provides social cohesion and informal social control mechanisms
+  that regulate alcohol use behaviors'
+- 'Step 3: Cultural institutions and community support systems in ethnically dense
+  areas reinforce protective cultural values regarding alcohol'
+- 'Step 4: Reduced social isolation and enhanced community belonging decrease stress-related
+  alcohol use as coping mechanism'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Meme Wang-Schweig et al. 2022. "Ethnic density effect on alcohol-related
+    hospitalizations among Chinese enclaves and ethnoburbs in California, 2007-2011.."
+    *Drug and alcohol dependence*. https://doi.org/10.1016/j.drugalcdep.2022.109276
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.879659'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: neighborhood_type_enclave_vs_ethnoburb
+  direction: strengthens
+  strength: strong
+  description: The protective effect is stronger in traditional urban Chinese enclaves
+    compared to suburban ethnoburbs, even when controlling for sociodemographic characteristics
+- name: poverty_rate
+  direction: strengthens
+  strength: moderate
+  description: Higher poverty rates in enclaves are associated with maintained protective
+    effects, while lower poverty in ethnoburbs shows attenuated protection
+- name: english_fluency_rate
+  direction: weakens
+  strength: moderate
+  description: Greater English fluency in ethnoburbs may indicate reduced cultural
+    embeddedness and weaker protective ethnic density effects

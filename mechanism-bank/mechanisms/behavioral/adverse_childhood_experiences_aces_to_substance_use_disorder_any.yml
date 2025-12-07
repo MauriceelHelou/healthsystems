@@ -1,0 +1,55 @@
+id: adverse_childhood_experiences_aces_to_substance_use_disorder_any
+name: Adverse Childhood Experiences (ACEs) → Substance Use Disorder (Any)
+from_node:
+  node_id: adverse_childhood_experiences_aces
+  node_name: Adverse Childhood Experiences (ACEs)
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Adverse childhood experiences create early-life trauma and chronic toxic stress'
+- 'Step 2: Trauma exposure disrupts development of healthy emotion regulation capacities'
+- 'Step 3: Individuals with impaired emotion regulation may use substances as a coping mechanism to manage
+  distressing emotions and trauma symptoms'
+- 'Step 4: Substance use becomes compulsive, leading to substance use disorder as a maladaptive response
+  to unresolved trauma'
+evidence:
+  quality_rating: B
+  n_studies: 13
+  primary_citation: 'Genevieve Molina and Anne Whittaker 2022. "Treatment of post-traumatic stress disorder
+    and substance use disorder in adults with a history of adverse childhood experiences: A systematic
+    review of psychological interventions.." https://doi.org/10.1016/j.dadr.2022.100028'
+  supporting_citations:
+  - Integrated cognitive behavioural therapy studies included in review
+  - Seeking Safety intervention studies included in review
+  - Studies examining comorbid PTSD-SUD in ACE populations
+  doi: 10.1016/j.dadr.2022.100028
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Adults with ACE histories develop substance use disorders through pathways involving trauma-related
+  distress and impaired emotion regulation. The review found no consistent evidence of psychological intervention
+  effects on SUD outcomes, with two studies showing small positive effects and two showing small negative
+  effects.
+moderators:
+- name: emotion_regulation
+  direction: weakens
+  strength: moderate
+  description: Emotion regulation is hypothesized as a transdiagnostic mediator; improved emotion regulation
+    may reduce substance use as a coping mechanism
+- name: ptsd_symptom_severity
+  direction: strengthens
+  strength: moderate
+  description: Higher PTSD symptom burden may drive greater substance use for self-medication
+structural_competency:
+  equity_implications: The ACE-SUD pathway reflects structural determinants including child welfare system
+    failures, poverty, family dysfunction, and community violence. Substance use as coping represents
+    a response to structurally-produced trauma rather than individual moral failing. High attrition in
+    treatment studies suggests structural barriers to care retention.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.965872'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

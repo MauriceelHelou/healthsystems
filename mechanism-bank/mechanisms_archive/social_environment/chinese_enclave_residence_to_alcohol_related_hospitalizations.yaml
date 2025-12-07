@@ -1,0 +1,48 @@
+id: chinese_enclave_residence_to_alcohol_related_hospitalizations
+name: Residence in Chinese Enclave (Urban Immigrant Neighborhood) → Alcohol-Related
+  Hospitalizations
+from_node:
+  node_id: chinese_enclave_residence
+  node_name: Residence in Chinese Enclave (Urban Immigrant Neighborhood)
+to_node:
+  node_id: alcohol_related_hospitalizations
+  node_name: Alcohol-Related Hospitalizations
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Chinese enclaves in urban areas concentrate ethnic-specific businesses,
+  religious institutions, and community organizations that provide cultural anchoring'
+- 'Step 2: Dense immigrant networks in urban enclaves facilitate social monitoring
+  and enforcement of traditional cultural norms regarding alcohol consumption'
+- 'Step 3: Higher poverty and limited English fluency in enclaves may paradoxically
+  reduce exposure to mainstream drinking cultures and alcohol marketing'
+- 'Step 4: Urban enclave spatial arrangement creates walkable communities with daily
+  face-to-face interactions that strengthen informal social control'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Meme Wang-Schweig et al. 2022. "Ethnic density effect on alcohol-related
+    hospitalizations among Chinese enclaves and ethnoburbs in California, 2007-2011.."
+    *Drug and alcohol dependence*. https://doi.org/10.1016/j.drugalcdep.2022.109276
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.880438'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: poverty_rate
+  direction: strengthens
+  strength: strong
+  description: Chinese enclaves have significantly higher poverty rates than ethnoburbs
+    (p<0.001), yet maintain stronger protective effects against alcohol-related hospitalizations
+- name: english_fluency_rate
+  direction: strengthens
+  strength: moderate
+  description: Lower English fluency in enclaves (p=0.002 difference from ethnoburbs)
+    may enhance cultural preservation and protective norms
+- name: foreign_born_proportion
+  direction: strengthens
+  strength: moderate
+  description: Similar high proportions of foreign-born residents in both enclaves
+    and ethnoburbs, but urban spatial context amplifies protective effects in enclaves

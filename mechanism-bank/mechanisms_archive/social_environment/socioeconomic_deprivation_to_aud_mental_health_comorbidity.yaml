@@ -1,0 +1,44 @@
+id: socioeconomic_deprivation_to_aud_mental_health_comorbidity
+name: Socioeconomic Deprivation (Index of Multiple Deprivation) → AUD and Mental Health
+  Comorbidity
+from_node:
+  node_id: socioeconomic_deprivation
+  node_name: Socioeconomic Deprivation (Index of Multiple Deprivation)
+to_node:
+  node_id: aud_mental_health_comorbidity
+  node_name: AUD and Mental Health Comorbidity
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Socioeconomic deprivation creates chronic stress, limited economic opportunities,
+  and restricted access to health-promoting resources'
+- 'Step 2: Deprived areas have fewer mental health services, substance use treatment
+  facilities, and preventive healthcare access'
+- 'Step 3: Structural barriers to care result in untreated or under-treated alcohol
+  use disorder and mental health conditions'
+- 'Step 4: Lack of integrated, holistic healthcare in deprived areas allows clustering
+  of AUD, mental health conditions, and chronic diseases like Type 2 diabetes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sarah Cook et al. 2024. "Is alcohol use disorder associated with
+    higher rates of depression and anxiety among people with new onset type 2 diabetes?
+    A cohort study using linked primary care data in England.." *BMC primary care*.
+    https://doi.org/10.1186/s12875-024-02628-6
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.542494'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: healthcare_access
+  direction: weakens
+  strength: strong
+  description: Better access to integrated mental health and substance use services
+    in less deprived areas may reduce clustering of comorbid conditions
+- name: ethnicity
+  direction: u_shaped
+  strength: moderate
+  description: Study adjusted for ethnicity, suggesting racial/ethnic disparities
+    intersect with socioeconomic deprivation to shape health outcomes

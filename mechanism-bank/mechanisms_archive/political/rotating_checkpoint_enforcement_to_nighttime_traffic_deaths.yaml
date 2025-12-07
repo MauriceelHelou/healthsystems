@@ -1,0 +1,41 @@
+id: rotating_checkpoint_enforcement_to_nighttime_traffic_deaths
+name: Rotating Police Checkpoint Enforcement → Nighttime Traffic Deaths
+from_node:
+  node_id: rotating_checkpoint_enforcement
+  node_name: Rotating Police Checkpoint Enforcement
+to_node:
+  node_id: nighttime_traffic_deaths
+  node_name: Nighttime Traffic Deaths
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Rotating sobriety checkpoints create unpredictable enforcement patterns
+  across geographic area'
+- 'Step 2: Sustained deterrent effect reduces drunk driving across multiple routes
+  during the learning period'
+- 'Step 3: Reduced drunk driving decreases severity and frequency of nighttime traffic
+  collisions'
+- 'Step 4: Fewer severe collisions result in lower traffic mortality rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Banerjee et al. 2019. "The Efficient Deployment of Police
+    Resources: Theory and New Evidence from a Randomized Drunk Driving Crackdown in
+    India." https://doi.org/10.3386/w26224'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.206690'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_drunk_driving_rate
+  direction: strengthens
+  strength: moderate
+  description: Higher baseline rates of drunk driving provide greater opportunity
+    for intervention impact
+- name: enforcement_intensity
+  direction: strengthens
+  strength: moderate
+  description: Cross-randomized intensity affects detection probability at each checkpoint
+    location

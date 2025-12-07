@@ -1,0 +1,58 @@
+id: hepatitis_c_prevalence_to_NEW:cirrhosis
+name: Hepatitis C Prevalence → Cirrhosis
+from_node:
+  node_id: hepatitis_c_prevalence
+  node_name: Hepatitis C Prevalence
+to_node:
+  node_id: NEW:cirrhosis
+  node_name: Cirrhosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hepatitis C virus (HCV) establishes chronic infection in hepatocytes, leading
+  to persistent viral replication and immune-mediated liver injury'
+- 'Step 2: Chronic inflammation triggers hepatic stellate cell activation and progressive
+  fibrogenesis with collagen deposition'
+- 'Step 3: Sustained fibrosis over years to decades leads to architectural distortion,
+  nodule formation, and eventual cirrhosis'
+- 'Step 4: Cirrhosis manifests with portal hypertension and hepatic dysfunction, leading
+  to complications including ascites, hepatic encephalopathy, and hepatocellular carcinoma'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'E. Tapper and N. Parikh 2023. "Diagnosis and Management of Cirrhosis
+    and Its Complications: A Review." Journal of the American Medical Association
+    (JAMA)'
+  supporting_citations: []
+description: Hepatitis C virus infection is a major etiological factor for cirrhosis,
+  accounting for approximately 41% of cirrhosis cases in the US. Chronic HCV infection
+  causes progressive liver fibrosis through persistent inflammation and immune-mediated
+  hepatocyte injury, ultimately leading to cirrhosis over 20-30 years in untreated
+  individuals. The relationship is well-established with significant overlap between
+  hepatitis C and other cirrhosis risk factors.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 41.0
+    type: prevalence_percentage
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 2200000
+moderators:
+- name: alcohol_use_disorder
+  direction: strengthens
+  strength: strong
+  description: Co-occurring alcohol use disorder (present in ~45% of cirrhosis cases)
+    accelerates progression from hepatitis C to cirrhosis
+- name: nonalcoholic_fatty_liver_disease
+  direction: strengthens
+  strength: moderate
+  description: Overlapping NAFLD (present in ~26% of cases) may compound hepatic injury
+    and accelerate fibrosis progression
+- name: antiviral_treatment
+  direction: weakens
+  strength: strong
+  description: Successful HCV treatment with direct-acting antivirals can halt progression
+    and potentially reverse early fibrosis

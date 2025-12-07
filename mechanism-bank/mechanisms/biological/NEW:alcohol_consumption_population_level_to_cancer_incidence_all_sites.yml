@@ -1,0 +1,58 @@
+id: NEW:alcohol_consumption_population_level_to_cancer_incidence_all_sites
+name: Population-Level Alcohol Consumption → Cancer Incidence (All Sites)
+from_node:
+  node_id: NEW:alcohol_consumption_population_level
+  node_name: Population-Level Alcohol Consumption
+to_node:
+  node_id: cancer_incidence_all_sites
+  node_name: Cancer Incidence (All Sites)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Population consumes alcohol at a given level'
+- 'Step 2: Alcohol (ethanol) is metabolized to acetaldehyde, a known carcinogen'
+- 'Step 3: Acetaldehyde causes DNA damage, oxidative stress, and impairs DNA repair mechanisms'
+- 'Step 4: Chronic exposure leads to increased risk of various cancers (oral cavity, pharynx, larynx,
+  esophagus, liver, colorectal, breast)'
+- 'Step 5: Population-level cancer incidence increases proportionally to consumption levels'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'P. Rovira et al. 2020. "Fewer Cancer Cases in 4 Countries of the WHO European Region
+    in 2018 through Increased Alcohol Excise Taxation: A Modelling Study." https://doi.org/10.1159/000511899'
+  supporting_citations:
+  - WHO European Region cancer prevention priorities (referenced in introduction)
+  - Established dose-response relationships for alcohol-attributable cancers (cited in methods)
+  - Additional citations require full-text access
+  doi: 10.1159/000511899
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Over 35,000 cancer cases in 2018 across the 4 countries (Germany, Italy, Kazakhstan, Sweden)
+  were attributable to alcohol consumption. Alcohol is a leading modifiable risk factor for cancer through
+  direct carcinogenic effects of acetaldehyde and other mechanisms.
+quantitative_effects:
+  effect_size:
+    value: 35000.0
+    type: risk_difference
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The highest rate of alcohol-attributable cancers was recorded in Germany and the lowest
+    in Sweden, reflecting differences in consumption patterns and baseline alcohol policies across the
+    4 countries.
+moderators:
+- name: country_consumption_patterns
+  direction: strengthens
+  strength: strong
+  description: Countries with higher per capita alcohol consumption have higher alcohol-attributable cancer
+    rates
+structural_competency:
+  equity_implications: This mechanism links population consumption levels (shaped by pricing, availability,
+    and social norms) to cancer outcomes, avoiding individual blame by framing alcohol consumption as
+    a product of structural conditions. The disparity between countries reflects different policy environments
+    rather than individual choices.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.038571'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

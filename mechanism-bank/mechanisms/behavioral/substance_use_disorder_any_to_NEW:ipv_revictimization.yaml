@@ -1,0 +1,60 @@
+id: substance_use_disorder_any_to_NEW:ipv_revictimization
+name: Alcohol and Drug Use → Intimate Partner Violence Revictimization
+from_node:
+  node_id: substance_use_disorder_any
+  node_name: Alcohol and Drug Use
+to_node:
+  node_id: NEW:ipv_revictimization
+  node_name: Intimate Partner Violence Revictimization
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol and drug use impairs judgment, risk assessment, and threat detection
+  capabilities, reducing a woman''s ability to recognize warning signs of potential
+  violence in new or ongoing relationships'
+- 'Step 2: Substance use may serve as a maladaptive coping mechanism following initial
+  IPV exposure, creating dependency that limits resources and options for leaving
+  abusive situations'
+- 'Step 3: Intoxication increases vulnerability during social interactions and may
+  attract or enable abusive partners who exploit impaired states'
+- 'Step 4: Substance use can contribute to relationship instability, conflict escalation,
+  and selection of partners with similar substance use patterns who may be more prone
+  to violence'
+- 'Step 5: The combination of impaired self-protective behaviors and increased exposure
+  to high-risk situations elevates the likelihood of experiencing repeated intimate
+  partner violence'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Ana Bellot et al. 2024. Factors Associated with Revictimization
+    in Intimate Partner Violence: A Systematic Review and Meta-Analysis. Behavioral
+    Science.'
+  supporting_citations: []
+description: A systematic review and meta-analysis of 22 studies identified alcohol
+  and drug use as a significant risk factor for intimate partner violence revictimization
+  in women. Substance use increases vulnerability through multiple pathways including
+  impaired judgment, maladaptive coping, and increased exposure to high-risk situations
+  and partners. This relationship exists alongside other significant risk factors
+  including childhood abuse, recent physical violence severity, and PTSD symptomatology.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: childhood_abuse
+  direction: strengthens
+  strength: strong
+  description: Childhood abuse was the most strongly associated risk factor for revictimization
+    and may compound the effects of substance use
+- name: severity_of_prior_violence
+  direction: strengthens
+  strength: moderate
+  description: Recent physical violence and severity of violence were significant
+    risk factors that may interact with substance use
+- name: PTSD_symptomatology
+  direction: strengthens
+  strength: moderate
+  description: PTSD symptoms were a significant risk factor and may both contribute
+    to and result from substance use as a coping mechanism
+- name: age
+  direction: weakens
+  strength: moderate
+  description: Older age was found to be a protective factor in prospective studies

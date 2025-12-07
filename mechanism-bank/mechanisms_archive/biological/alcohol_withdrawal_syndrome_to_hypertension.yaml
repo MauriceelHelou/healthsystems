@@ -1,0 +1,42 @@
+id: alcohol_withdrawal_syndrome_to_hypertension
+name: Alcohol Withdrawal Syndrome → Hypertension
+from_node:
+  node_id: alcohol_withdrawal_syndrome
+  node_name: Alcohol Withdrawal Syndrome
+to_node:
+  node_id: hypertension
+  node_name: Hypertension
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol use leads to neuroadaptive changes in the autonomic nervous
+  system and neurotransmitter regulation'
+- 'Step 2: Abrupt cessation of alcohol results in sympathetic nervous system hyperactivity
+  and catecholamine surge'
+- 'Step 3: Increased sympathetic tone and catecholamine release cause peripheral vasoconstriction
+  and increased cardiac output'
+- 'Step 4: These physiological changes manifest as elevated blood pressure during
+  the withdrawal period'
+evidence:
+  quality_rating: C
+  n_studies: 17
+  primary_citation: 'Ermal Bojdani et al. 2019. "Hypertensive Urgency and Emergency
+    in Alcohol Withdrawal: A Literature Review.." *The primary care companion for
+    CNS disorders*. https://doi.org/10.4088/PCC.19r02513'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.764893'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: time_since_cessation
+  direction: strengthens
+  strength: strong
+  description: Blood pressure is more difficult to control especially in the first
+    24 hours of withdrawal
+- name: pre_existing_treatment_resistant_hypertension
+  direction: strengthens
+  strength: strong
+  description: Patients with underlying treatment-resistant hypertension may have
+    more difficult-to-control blood pressure during withdrawal

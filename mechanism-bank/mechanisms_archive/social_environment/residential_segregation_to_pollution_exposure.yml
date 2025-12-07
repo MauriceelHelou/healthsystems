@@ -1,0 +1,133 @@
+id: residential_segregation_to_pollution_exposure
+name: Residential Segregation → Pollution Exposure Disparities
+from_node:
+  node_id: residential_segregation
+  node_name: Residential Racial Segregation
+  node_type: stock
+to_node:
+  node_id: pollution_exposure_disparity
+  node_name: Environmental Pollution Exposure Disparities
+  node_type: stock
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Historical redlining and discriminatory housing policies created racially
+  segregated residential patterns'
+- 'Step 2: Segregated neighborhoods of color were disproportionately zoned for industrial
+  use and highway placement'
+- 'Step 3: Lower property values and political power in segregated areas enabled
+  continued polluting facility siting'
+- 'Step 4: Residents of segregated neighborhoods face elevated exposure to air pollution,
+  traffic emissions, and industrial toxics'
+- 'Step 5: Pollution exposure disparities persist across generations as housing patterns
+  remain segregated'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: 'Tessum, Christopher W., et al. 2021. "PM2.5 polluters disproportionately
+    and systemically affect people of color in the United States." Science Advances
+    7(18): eabf4491.'
+  supporting_citations:
+  - 'Bravo, Mercedes A., et al. 2016. "Racial isolation and exposure to airborne
+    particulate matter and ozone in understudied US populations." Environment International
+    92-93: 247-255.'
+  - 'Mohai, Paul, and Robin Saha. 2006. "Reassessing racial and socioeconomic disparities
+    in environmental justice research." Demography 43(2): 383-399.'
+  - 'Cushing, Lara, et al. 2015. "Racial/ethnic disparities in cumulative environmental
+    health impacts in California." American Journal of Public Health 105(5): 830-836.'
+  doi: 10.1126/sciadv.abf4491
+  journal: Science Advances
+  year: 2021
+  fulltext:
+    available: true
+    source: science_advances
+    url: https://www.science.org/doi/10.1126/sciadv.abf4491
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  exposure_disparity:
+    black_latino_excess: 56
+    white_deficit: 17
+    unit: percentage relative to consumption-generated pollution
+    description: Black and Latino Americans exposed to 56% more PM2.5 pollution than
+      they generate through consumption; white Americans exposed to 17% less
+    source: Tessum et al. 2021
+  source_attribution:
+    industry: Primary source of disparity
+    agriculture: Largest absolute contributor to PM2.5
+    light_duty_vehicles: Significant contributor in urban areas
+  racial_gap_trend:
+    description: PM2.5 concentrations declined for all groups 2000-2015, but relative
+      disparities persisted
+    source: Tessum et al. 2021
+  segregation_measure:
+    description: Isolation and dissimilarity indices predict pollution exposure at
+      metro level
+  sample_size: null
+  interpretation: Residential segregation creates persistent pollution exposure disparities,
+    with Black and Latino populations exposed to over 50% more PM2.5 than they generate
+    while white populations are exposed to 17% less
+last_updated: '2025-11-30'
+version: '1.0'
+description: Residential racial segregation creates systematic disparities in environmental
+  pollution exposure. Black and Latino Americans are exposed to 56% more PM2.5 pollution
+  than they generate through consumption, while white Americans are exposed to 17%
+  less. This disparity persists despite overall air quality improvements and reflects
+  historical patterns of discriminatory zoning, redlining, and industrial facility
+  siting in segregated communities of color.
+moderators:
+- name: historical_redlining
+  direction: strengthens
+  strength: strong
+  description: Areas with historical redlining show more persistent pollution exposure
+    disparities
+- name: zoning_policy
+  direction: varies
+  strength: moderate
+  description: Exclusionary zoning can shift or concentrate pollution exposure patterns
+- name: industrial_composition
+  direction: varies
+  strength: strong
+  description: Regional industrial mix determines types and severity of pollution
+    exposures
+- name: fair_housing_enforcement
+  direction: weakens
+  strength: weak
+  description: Fair housing enforcement has not substantially reduced segregation
+    or pollution disparities
+- name: environmental_justice_policy
+  direction: weakens
+  strength: moderate
+  description: Environmental justice policies can begin to address facility siting
+    disparities
+structural_competency:
+  root_cause_level: systemic_racism
+  avoids_victim_blaming: true
+  equity_implications: Pollution exposure disparities are a direct consequence of
+    structural racism in housing, zoning, and land use policy. Solutions require
+    addressing root causes including residential integration, environmental justice
+    enforcement, pollution reduction at source, and reparative investment in overburdened
+    communities rather than expecting individuals to move or filter their air.
+assumptions:
+- Segregation measured via residential isolation and dissimilarity indices
+- Pollution exposure from EPA monitoring and modeling data
+- Consumption-based attribution assigns pollution to end consumers of goods
+limitations:
+- Aggregate data may mask within-group variation
+- Causality difficult to establish from cross-sectional patterns
+- Some disparity may reflect income/wealth rather than race directly
+- Historical context cannot be fully captured in contemporary data
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Segregation and pollution patterns vary by metro area, region,
+    and historical development patterns.
+  relevant_geographies:
+  - Industrial Midwest cities show strong segregation-pollution links
+  - California shows cumulative environmental burden disparities
+  - Southern cities show historical redlining-pollution correlations
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

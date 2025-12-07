@@ -1,0 +1,97 @@
+id: social_isolation_to_depression_prevalence
+name: Social Isolation -> Depression Prevalence
+from_node:
+  node_id: social_isolation
+  node_name: Social Isolation
+  node_type: stock
+to_node:
+  node_id: depression_prevalence
+  node_name: Depression Prevalence
+  node_type: proxy_index
+direction: positive
+category: social_environment
+mechanism_pathway:
+  - "Step 1: Social isolation (objective lack of social contacts) reduces meaningful interpersonal interactions"
+  - "Step 2: Absence of social support diminishes emotional validation and coping resources"
+  - "Step 3: Reduced social engagement limits exposure to rewarding activities and positive reinforcement"
+  - "Step 4: Chronic isolation activates stress response systems and increases rumination"
+  - "Step 5: HPA axis dysregulation and inflammation contribute to depressive neurobiological changes"
+  - "Step 6: Behavioral withdrawal and anhedonia reinforce isolation in bidirectional cycle"
+  - "Step 7: Sustained isolation manifests as major depressive disorder or persistent depressive symptoms"
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: "Zhang, Hongyu, et al. 2025. 'Association Between Social Isolation and Depression, and Sex Differences in Older Adults: A Systematic Review and Meta-Analysis.' Social Science & Medicine 365: 117658."
+  supporting_citations:
+    - "Santini, Ziggi Ivan, et al. 2020. 'Social Disconnectedness, Perceived Isolation, and Symptoms of Depression and Anxiety Among Older Americans (NSHAP): A Longitudinal Mediation Analysis.' The Lancet Public Health 5(1): e62-e70."
+    - "Ge, Lingling, et al. 2017. 'Social Isolation, Loneliness and Their Relationships With Depressive Symptoms: A Population-Based Study.' PLOS ONE 12(8): e0182145."
+    - "Wang, Feifei, et al. 2024. 'Association Between Social Isolation and Depression: Evidence From Longitudinal and Mendelian Randomization Analyses.' Journal of Affective Disorders 346: 54-62."
+  doi: "10.1016/j.socscimed.2025.117658"
+  journal: Social Science & Medicine
+  year: 2025
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 1.46
+    type: odds_ratio
+    ci_lower: 1.21
+    ci_upper: 1.77
+    ci_level: 95
+  secondary_effects:
+    - description: "Loneliness (subjective) and new onset depression"
+      value: 2.33
+      type: odds_ratio
+      ci_lower: 1.62
+      ci_upper: 3.34
+      source: "Meta-analysis of longitudinal studies"
+    - description: "Chronic social isolation predicts depression at follow-up"
+      beta: 0.037
+      p_value: "<0.001"
+      source: "ELSA cohort cross-lagged model"
+  heterogeneity_i_squared: 68.0
+  sample_size: 103408
+  interpretation: "Social isolation increases odds of depression by 46% (OR 1.46) among older adults. Subjective loneliness shows even stronger association with more than doubled odds of new-onset depression (OR 2.33). Women show stronger effects than men. Bidirectional relationship exists with depression also predicting future isolation."
+last_updated: "2025-12-01"
+version: "1.0"
+description: "Social isolation significantly increases risk of depression in older adults, with 46% higher odds of depression among isolated individuals. Meta-analysis of 11 studies involving over 103,000 older adults from 7 countries demonstrates robust association. Loneliness (subjective isolation) shows even stronger effects with more than doubled depression risk."
+moderators:
+  - name: sex
+    direction: strengthens
+    strength: moderate
+    description: "Women show stronger association between isolation and depression than men"
+  - name: age
+    direction: strengthens
+    strength: moderate
+    description: "Older adults particularly vulnerable to isolation effects"
+  - name: chronic_vs_acute
+    direction: strengthens
+    strength: strong
+    description: "Chronic sustained isolation shows stronger effects than transient isolation"
+  - name: baseline_mental_health
+    direction: strengthens
+    strength: moderate
+    description: "Those with prior depression history more vulnerable to isolation effects"
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: "Social isolation reflects structural factors beyond individual control: housing policies that separate generations, automobile-dependent urban design that limits social spaces, economic pressures that reduce time for community participation, and weakening of social institutions. Older adults, immigrants, disabled persons, and caregivers face highest isolation rates due to structural barriers. Policy interventions should address built environment, transportation, and community infrastructure rather than individual behavior change."
+assumptions:
+  - "Social isolation measured as objective network size/contacts, distinct from loneliness"
+  - "Depression measured via validated instruments (CIDI, CES-D, GDS)"
+  - "Prospective longitudinal designs address temporal ordering"
+limitations:
+  - "Bidirectional relationship (depression also causes isolation) limits causal inference"
+  - "Measurement heterogeneity across studies"
+  - "Most studies focus on older adults; generalizability to younger populations less clear"
+  - "Residual confounding by personality traits and prior mental health"
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: "Studies from 7 countries show consistent effects. Cultural differences in social expectations may modify effect magnitude. Rural areas face geographic isolation while urban areas may have social isolation despite density."
+  relevant_geographies:
+    - "Effects observed across US, UK, Europe, Asia"
+    - "Aging populations globally face increasing isolation"
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: "2025-12-01T00:00:00"
+  extraction_confidence: high
+  prompt_version: "1.0-discovery"

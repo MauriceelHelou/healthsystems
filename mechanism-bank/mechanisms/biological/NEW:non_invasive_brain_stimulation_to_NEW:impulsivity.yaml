@@ -1,0 +1,56 @@
+id: NEW:non_invasive_brain_stimulation_to_NEW:impulsivity
+name: Non-Invasive Brain Stimulation (TMS/tDCS) → Impulsivity
+from_node:
+  node_id: NEW:non_invasive_brain_stimulation
+  node_name: Non-Invasive Brain Stimulation (TMS/tDCS)
+to_node:
+  node_id: NEW:impulsivity
+  node_name: Impulsivity
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Non-invasive brain stimulation techniques (TMS/tDCS) deliver electrical
+  or magnetic fields to targeted brain regions, particularly the prefrontal cortex'
+- 'Step 2: These techniques modulate neural activity and excitability in circuits
+  associated with executive function and impulse control'
+- 'Step 3: Enhanced prefrontal cortical activity strengthens top-down inhibitory control
+  over impulsive behaviors'
+- 'Step 4: Improved impulse control manifests as reduced impulsivity scores on behavioral
+  and self-report measures'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: 'Yuri de Castro Machado et al. 2024. Effects of non-invasive brain
+    stimulation on impulsivity in patients with mental disorders: a systematic review
+    and meta-analysis of randomised clinical trials. General psychiatry.'
+  supporting_citations: []
+description: Non-invasive brain stimulation techniques (TMS and tDCS) may reduce impulsivity
+  in patients with mental disorders by modulating prefrontal cortical activity. While
+  overall meta-analytic effects for both tDCS and rTMS were not statistically significant,
+  subgroup analysis of tDCS studies using the BIS-11 showed a moderate effect favoring
+  active stimulation over sham. Evidence remains insufficient to support clinical
+  use, with variability in stimulation protocols, brain targets, and impulsivity conceptualization
+  limiting conclusions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.54
+    type: hedges_g
+    ci_lower: -0.97
+    ci_upper: -0.12
+  p_value: 0.05
+  sample_size: 655
+moderators:
+- name: Stimulation type
+  direction: strengthens
+  strength: moderate
+  description: tDCS showed more consistent effects than rTMS; tDCS on BIS-11 measure
+    showed significant improvement (g=-0.54) while overall rTMS effects were not significant
+    (g=0.21)
+- name: Outcome measurement
+  direction: strengthens
+  strength: moderate
+  description: Effects were significant when using the Barratt Impulsiveness Scale
+    version 11 (BIS-11) as the outcome measure, suggesting measurement standardization
+    matters

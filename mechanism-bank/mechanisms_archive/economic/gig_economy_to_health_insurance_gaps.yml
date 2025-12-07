@@ -1,0 +1,78 @@
+id: gig_economy_to_health_insurance_gaps
+name: Gig Economy Growth -> Health Insurance Coverage Gaps
+from_node:
+  node_id: gig_economy_growth
+  node_name: Gig Economy and Non-Standard Employment Growth
+  node_type: stock
+to_node:
+  node_id: health_insurance_gaps
+  node_name: Health Insurance Coverage Gaps
+  node_type: proxy_index
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Platform companies classify workers as independent contractors rather than employees'
+- 'Step 2: Independent contractor status excludes workers from employer-sponsored health insurance'
+- 'Step 3: Variable income makes marketplace insurance premiums unpredictable and unaffordable'
+- 'Step 4: Lack of insurance creates barriers to preventive care and chronic disease management'
+- 'Step 5: Delayed care leads to emergency department use and worse health outcomes'
+evidence:
+  quality_rating: B
+  n_studies: 8
+  primary_citation: 'Caza, Brianna B., et al. 2025. "Platform-Mediated Gig Work and Health: A Scoping Review." PMC.'
+  supporting_citations:
+  - 'European Trade Union Institute. 2021. "Exposure to psychosocial risk factors in the gig economy: a systematic review."'
+  - 'Bajwa, Uttam, et al. 2018. "The health of workers in the global gig economy." Globalization and Health 14(124).'
+  doi: null
+  journal: Various
+  year: 2025
+  citation_verified: false
+quantitative_effects:
+  effect_size:
+    value: null
+    type: null
+    ci_lower: null
+    ci_upper: null
+    ci_level: null
+  sample_size: null
+  interpretation: "Scoping review identified lack of health insurance as a primary mechanism linking gig work to health, with low wages and inconsistent hours further compounding access barriers"
+last_updated: '2025-11-30'
+version: '1.0'
+description: The growth of platform-mediated gig work creates systematic gaps in health insurance coverage by shifting employment from standard arrangements with benefits to independent contractor relationships without employer-sponsored insurance. This structural change creates barriers to preventive care, chronic disease management, and mental health treatment.
+moderators:
+- name: marketplace_subsidies
+  direction: weakens
+  strength: moderate
+  description: ACA marketplace subsidies partially offset loss of employer insurance
+- name: medicaid_expansion
+  direction: weakens
+  strength: strong
+  description: Medicaid expansion provides coverage for low-income gig workers in expansion states
+- name: portable_benefits_policies
+  direction: weakens
+  strength: moderate
+  description: Emerging portable benefits models could maintain coverage across gig assignments
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: Gig economy disproportionately employs immigrants, workers of color, and those with limited formal education who have fewer alternative employment options. Worker misclassification shifts healthcare costs from employers to workers and public programs. Policy solutions should include portable benefits, worker classification reform, and universal coverage.
+assumptions:
+- Gig economy includes platform work (rideshare, delivery, task-based) and other non-standard employment
+- Health insurance gaps measured by uninsured rate and underinsurance
+- Assumes employer-sponsored insurance as comparison baseline
+limitations:
+- Rapid policy changes (AB5, PRO Act debates) may alter classification rules
+- Some gig workers voluntarily prefer flexibility over benefits
+- Data on gig worker health insurance status is limited
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Impact varies by state Medicaid expansion status and worker classification laws
+  relevant_geographies:
+  - Non-expansion states leave more gig workers uninsured
+  - California AB5 and similar laws affect classification
+  - Urban areas have higher concentration of platform gig work
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: medium
+  prompt_version: 1.0-mvp

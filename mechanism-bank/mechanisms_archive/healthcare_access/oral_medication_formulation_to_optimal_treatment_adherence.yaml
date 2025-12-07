@@ -1,0 +1,42 @@
+id: oral_medication_formulation_to_optimal_treatment_adherence
+name: Oral Medication Formulation Requirement → Optimal Treatment Adherence (≥80%)
+from_node:
+  node_id: oral_medication_formulation
+  node_name: Oral Medication Formulation Requirement
+to_node:
+  node_id: optimal_treatment_adherence
+  node_name: Optimal Treatment Adherence (≥80%)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Oral medications (disulfiram, acamprosate, oral naltrexone) require daily
+  or multiple daily self-administration'
+- 'Step 2: Daily dosing depends on consistent pharmacy access, prescription refills,
+  and patient-managed medication routines'
+- 'Step 3: Healthcare system structures provide minimal supervision or adherence support
+  for oral formulations compared to injectable medications'
+- 'Step 4: Only 11.9-22.7% of oral medication courses achieve 80% adherence threshold,
+  limiting treatment effectiveness'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: James R Walker et al. 2019. "Adherence Across FDA-Approved Medications
+    for Alcohol Use Disorder in a Veterans Administration Population.." *Journal of
+    studies on alcohol and drugs*. https://doi.org/10.15288/jsad.2019.80.572
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.685371'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: disulfiram_versus_naltrexone
+  direction: weakens
+  strength: moderate
+  description: Disulfiram shows lowest 80% adherence achievement (11.9%) compared
+    to oral naltrexone (22.7%, p=0.004)
+- name: oral_versus_injectable
+  direction: weakens
+  strength: moderate
+  description: Injectable naltrexone achieves 80% adherence in 24.4% of courses versus
+    11.9% for disulfiram (p=0.05)

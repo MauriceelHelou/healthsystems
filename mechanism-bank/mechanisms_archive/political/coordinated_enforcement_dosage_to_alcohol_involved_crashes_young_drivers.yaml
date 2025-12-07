@@ -1,0 +1,51 @@
+id: coordinated_enforcement_dosage_to_alcohol_involved_crashes_young_drivers
+name: Intervention Dosage (Intensity of Enforcement Operations) → Alcohol-Involved
+  Motor Vehicle Crashes Among Young Drivers
+from_node:
+  node_id: coordinated_enforcement_dosage
+  node_name: Intervention Dosage (Intensity of Enforcement Operations)
+to_node:
+  node_id: alcohol_involved_crashes_young_drivers
+  node_name: Alcohol-Involved Motor Vehicle Crashes Among Young Drivers
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Higher intensity or frequency of enforcement operations was measured as
+  intervention dosage'
+- 'Step 2: Contrary to expected deterrence theory, higher dosage showed statistically
+  significant effect in unexpected direction (potentially increasing crashes)'
+- 'Step 3: Possible mechanisms include community resistance to perceived over-policing,
+  displacement of drinking/driving to less monitored times or locations, or implementation
+  quality issues at high intensity'
+- 'Step 4: Alternative explanation: cities with higher baseline crash rates may have
+  received higher dosage (reverse causation), or threshold effects where optimal enforcement
+  exists below maximum intensity'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Robert F Saltz et al. 2021. "Effects of a Community-Level Intervention
+    on Alcohol-Related Motor Vehicle Crashes in California Cities: A Randomized Trial.."
+    *American journal of preventive medicine*. https://doi.org/10.1016/j.amepre.2020.08.009'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.582005'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_enforcement_level
+  direction: weakens
+  strength: moderate
+  description: Communities with already high enforcement may experience diminishing
+    returns or negative effects from additional intensity
+- name: implementation_quality
+  direction: strengthens
+  strength: strong
+  description: Quality of enforcement operations (training, coordination, community
+    engagement) may matter more than quantity, with poor quality high-intensity enforcement
+    producing counterproductive results
+- name: community_police_relations
+  direction: weakens
+  strength: moderate
+  description: Communities with strained police relations may respond to high-intensity
+    enforcement with resistance, avoidance, or displacement rather than compliance

@@ -1,0 +1,55 @@
+id: NEW:curcumin_intake_to_NEW:proinflammatory_cytokines
+name: Curcumin Intake → Proinflammatory Cytokine Levels
+from_node:
+  node_id: NEW:curcumin_intake
+  node_name: Curcumin Intake
+to_node:
+  node_id: NEW:proinflammatory_cytokines
+  node_name: Proinflammatory Cytokine Levels
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Curcumin is absorbed and distributed to tissues including the liver, where
+  it exerts its bioactive effects'
+- 'Step 2: Curcumin acts as a free radical scavenger via its phenolic, β-diketone,
+  and methoxy groups, reducing reactive oxygen species (ROS)'
+- 'Step 3: Reduced oxidative stress leads to decreased activation of inflammatory
+  signaling pathways including NF-κB'
+- 'Step 4: Curcumin directly suppresses production and release of proinflammatory
+  cytokines (TNF-α, IL-1β, IL-6) from immune and hepatic cells'
+- 'Step 5: Additionally, curcumin inhibits PI3K/Akt pathway activation and hepatic
+  stellate cell activation, further reducing inflammatory signaling'
+- 'Step 6: Enhanced expression of antioxidant enzymes (Nrf2, SOD, CAT, GSH, GPx, GR)
+  provides sustained anti-inflammatory protection'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'M. Farzaei et al. 2018. Curcumin in Liver Diseases: A Systematic
+    Review of the Cellular Mechanisms of Oxidative Stress and Clinical Perspective.
+    Nutrients.'
+  supporting_citations: []
+description: Curcumin intake reduces proinflammatory cytokine levels through multiple
+  interconnected mechanisms. The compound acts as a direct free radical scavenger
+  through its phenolic and β-diketone groups, reducing oxidative stress that triggers
+  inflammatory cascades. It suppresses proinflammatory cytokine production by inhibiting
+  key signaling pathways including PI3K/Akt and NF-κB. Additionally, curcumin upregulates
+  endogenous antioxidant defenses (Nrf2, SOD, CAT, GSH) which provide sustained protection
+  against inflammation-inducing oxidative damage.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: oxidative_stress_level
+  direction: strengthens
+  strength: moderate
+  description: Anti-inflammatory effects of curcumin are more pronounced in conditions
+    with elevated baseline oxidative stress
+- name: liver_disease_status
+  direction: strengthens
+  strength: moderate
+  description: Effects on proinflammatory cytokines particularly evident in liver
+    disease contexts including NAFLD, fibrosis, and cirrhosis
+- name: bioavailability
+  direction: strengthens
+  strength: moderate
+  description: Curcumin has limited bioavailability; enhanced formulations may increase
+    anti-inflammatory efficacy

@@ -1,0 +1,55 @@
+id: NEW:medication_cost_barrier_to_sud_medication_treatment_rate_oud
+name: Medication Cost Barrier for Alcohol Dependence Treatment → SUD Medication Treatment Rate
+from_node:
+  node_id: NEW:medication_cost_barrier
+  node_name: Medication Cost Barrier for Alcohol Dependence Treatment
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: High prices of alcohol dependence medications create financial barriers for patients seeking
+  treatment'
+- 'Step 2: Patients unable to afford medications may forego or discontinue pharmacotherapy'
+- 'Step 3: Reduced medication uptake leads to lower overall utilization rates of evidence-based pharmacological
+  treatments'
+- 'Step 4: Lower treatment rates result in poorer outcomes for individuals with alcohol use disorder'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Roberta Agabio et al. 2021. "Use of Medications for the Treatment of Alcohol Dependence:
+    A Retrospective Study Conducted in 2011-2012.." https://doi.org/10.2174/2589977512666201228121820'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 'previous studies conducted in
+    other countries' showing lower medication use rates
+  - Study references barriers documented in prior literature on AD medication underutilization
+  - Comparison studies from other countries mentioned but not specifically cited in abstract
+  doi: 10.2174/2589977512666201228121820
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: High medication costs serve as a structural barrier preventing patients with alcohol dependence
+  from accessing pharmacotherapy, contributing to widespread underutilization of evidence-based treatments.
+quantitative_effects:
+  sample_size: 345
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study found higher medication use in Italy compared to other countries, attributed
+    to free medication access
+moderators:
+- name: free_medication_access
+  direction: strengthens
+  strength: moderate
+  description: When medications are provided free of charge, utilization rates increase substantially
+    compared to settings where cost barriers exist
+structural_competency:
+  equity_implications: This mechanism identifies cost as a systemic barrier rather than blaming individuals
+    for non-adherence. The study demonstrates that when structural barriers (cost) are removed, medication
+    uptake improves, suggesting policy interventions around medication affordability could improve treatment
+    rates.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.258047'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

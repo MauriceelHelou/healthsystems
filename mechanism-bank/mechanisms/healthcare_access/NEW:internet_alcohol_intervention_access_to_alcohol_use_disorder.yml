@@ -1,0 +1,70 @@
+id: NEW:internet_alcohol_intervention_access_to_alcohol_use_disorder
+name: Internet-Based Alcohol Intervention Access → Alcohol Use Disorder
+from_node:
+  node_id: NEW:internet_alcohol_intervention_access
+  node_name: Internet-Based Alcohol Intervention Access
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Internet-based interventions provide treatment access for problem drinkers who may not access
+  traditional healthcare services'
+- 'Step 2: Intervention reaches both regular problem drinkers (80.1% of sample, consuming 44.7 SU/week)
+  and binge-only drinkers (19.9%)'
+- 'Step 3: Treatment response defined as maintaining low-risk drinking levels (<14/21 SUs for women/men)'
+- 'Step 4: Odds of achieving treatment response more than doubled (OR=2.20) compared to controls'
+- 'Step 5: Movement to low-risk drinking patterns reduces progression to or severity of alcohol use disorder'
+evidence:
+  quality_rating: A
+  n_studies: 19
+  primary_citation: 'H. Riper et al. 2018. "Effectiveness and treatment moderators of internet interventions
+    for adult problem drinking: An individual patient data meta-analysis of 19 randomised controlled trials."
+    https://doi.org/10.1371/journal.pmed.1002714'
+  supporting_citations:
+  - Additional citations require full-text access - individual patient data from 19 RCTs analyzed
+  - Baseline data for 14,198 adult participants across multiple study populations
+  - 34.2% of participants were heavy drinkers (>35/50 SUs for women/men) at baseline
+  doi: 10.1371/journal.pmed.1002714
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Internet-based alcohol interventions more than double the odds of achieving low-risk drinking
+  levels (NNT=4.15), effectively reducing problem drinking patterns that could progress to alcohol use
+  disorder. This provides a scalable structural intervention for the treatment gap in alcohol services.
+quantitative_effects:
+  effect_size:
+    value: 2.2
+    type: odds_ratio
+    ci_lower: 1.63
+    ci_upper: 2.95
+  p_value: 0.001
+  sample_size: 8095
+moderators:
+- name: human_support
+  direction: strengthens
+  strength: strong
+  description: Human-supported interventions had OR=2.23 (95% CI 1.22-4.08) higher odds of treatment response
+    compared to automated interventions
+- name: age_over_55
+  direction: strengthens
+  strength: moderate
+  description: Older adults (>55) showed 66% higher odds of treatment response (OR=1.66)
+- name: drinking_profile
+  direction: weakens
+  strength: weak
+  description: Drinking profiles (regular vs binge-only, heavy vs non-heavy) were not significantly associated
+    with treatment outcomes
+structural_competency:
+  equity_implications: This mechanism directly addresses the structural treatment gap for problem drinking.
+    The abstract explicitly notes that face-to-face brief interventions, while effective, have 'limited
+    implementation in routine care and the community.' Internet interventions provide a structural solution
+    to this healthcare access barrier, particularly important for populations underserved by traditional
+    treatment systems. The low NNT of 4.15 indicates high population-level impact potential for this accessible
+    intervention modality.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.949226'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

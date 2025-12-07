@@ -1,0 +1,48 @@
+id: NEW:pediatric_cancer_diagnosis_to_NEW:covid_19_hospitalization_pediatric
+name: Pediatric Cancer Diagnosis → COVID-19 Hospitalization in Pediatric Patients
+from_node:
+  node_id: NEW:pediatric_cancer_diagnosis
+  node_name: Pediatric Cancer Diagnosis
+to_node:
+  node_id: NEW:covid_19_hospitalization_pediatric
+  node_name: COVID-19 Hospitalization in Pediatric Patients
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Pediatric cancer diagnosis initiates treatment protocols including chemotherapy,
+  radiation, or immunosuppressive therapies that compromise immune function'
+- 'Step 2: Cancer and its treatments cause immunosuppression, reducing the body''s
+  ability to mount effective immune responses against SARS-CoV-2 infection'
+- 'Step 3: Immunocompromised state increases vulnerability to more severe COVID-19
+  manifestations requiring hospitalization for monitoring and supportive care'
+- 'Step 4: Underlying cancer-related complications (neutropenia, lymphopenia) and
+  treatment side effects may necessitate hospitalization as a precautionary measure
+  even with mild COVID-19 symptoms'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'E. Dorantes-Acosta et al. 2021. Survival and Complications in
+    Pediatric Patients With Cancer and COVID-19: A Meta-Analysis. Frontiers in Oncology.'
+  supporting_citations: []
+description: Pediatric patients with cancer who contract COVID-19 have increased hospitalization
+  rates compared to the general pediatric population due to immunocompromised status
+  from both the malignancy and cancer treatments. However, this meta-analysis found
+  no statistically significant difference in hospitalization risk between different
+  cancer types, and overall survival remained very high (99.4%) in this population.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.94
+    type: odds_ratio
+    ci_lower: 0.48
+    ci_upper: 18.3
+  p_value: null
+  sample_size: 191
+moderators:
+- name: Cancer type (hematological vs solid tumor)
+  direction: strengthens
+  strength: weak
+  description: No statistically significant difference found between hematological
+    malignancies and solid tumors for hospitalization risk (OR=2.94, 95% CI 0.48-18.3),
+    though point estimate suggests slightly higher risk for hematological cancers

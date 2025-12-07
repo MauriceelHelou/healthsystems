@@ -1,0 +1,44 @@
+id: pandemic_alcohol_consumption_changes_to_hospital_admissions
+name: Pandemic-Era Alcohol Consumption Changes → Hospital Admissions
+from_node:
+  node_id: pandemic_alcohol_consumption_changes
+  node_name: Pandemic-Era Alcohol Consumption Changes
+to_node:
+  node_id: hospital_admissions
+  node_name: Hospital Admissions
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Increased alcohol consumption during pandemic period (2020-2021), particularly
+  among heavier drinkers'
+- 'Step 2: Elevated consumption leads to acute and chronic alcohol-related health
+  conditions'
+- 'Step 3: Health conditions require hospital treatment, resulting in increased admissions
+  over 20-year period'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: C. Angus et al. 2024. "Modelling the longer-term health and health
+    inequality impacts of changes in alcohol consumption during the COVID-19 pandemic
+    in England.." *Journal of public health*. https://doi.org/10.1093/pubmed/fdae010
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.101960'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: future_consumption_trajectory
+  direction: strengthens
+  strength: strong
+  description: If consumption remains at 2021 levels long-term, hospital admissions
+    increase to 355,832 compared to 42,677 if consumption returns to pre-pandemic
+    levels in 2022
+- name: socioeconomic_deprivation
+  direction: strengthens
+  strength: strong
+  description: Most deprived 20% of population experiences biggest increase in harm
+    across all scenarios
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/behavioral/pandemic_alcohol_consumption_changes_to_hospital_admissions.yaml
+_category: behavioral

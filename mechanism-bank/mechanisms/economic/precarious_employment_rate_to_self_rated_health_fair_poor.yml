@@ -1,0 +1,63 @@
+id: precarious_employment_rate_to_self_rated_health_fair_poor
+name: Precarious Employment Rate → Self-Rated Health Fair/Poor
+from_node:
+  node_id: precarious_employment_rate
+  node_name: Precarious Employment Rate
+to_node:
+  node_id: self_rated_health_fair_poor
+  node_name: Self-Rated Health Fair/Poor
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Persistent precarious employment (12+ months) creates chronic job insecurity and unpredictable
+  income'
+- 'Step 2: Chronic economic uncertainty activates sustained stress response and allostatic load'
+- 'Step 3: Limited access to employer-provided health benefits reduces preventive care utilization'
+- 'Step 4: Cumulative physiological and psychological stress manifests in poorer self-assessed health
+  status'
+evidence:
+  quality_rating: A
+  n_studies: 50
+  primary_citation: Andrew Pulford et al. 2022. "Does persistent precarious employment affect health outcomes
+    among working age adults? A systematic review and meta-analysis." https://doi.org/10.1136/jech-2022-219292
+  supporting_citations:
+  - Additional citations require full-text access - abstract reports 50 studies meeting inclusion criteria
+    with 29 included in meta-analyses
+  - Studies identified through systematic search of nine databases
+  - Risk of bias assessed using Effective Public Health Practice Project tool adaptation
+  doi: 10.1136/jech-2022-219292
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Persistent precarious employment lasting 12 or more months is associated with 53% increased
+  odds of poor self-rated health compared to stable employment. This relationship reflects the cumulative
+  health burden of sustained job insecurity, income volatility, and reduced access to employment-based
+  benefits.
+quantitative_effects:
+  effect_size:
+    value: 1.53
+    type: odds_ratio
+    ci_lower: 1.09
+    ci_upper: 2.14
+  heterogeneity_i_squared: 80.0
+moderators:
+- name: duration_of_precarity
+  direction: strengthens
+  strength: moderate
+  description: Study focused specifically on persistent (12+ months) precarious employment, suggesting
+    duration matters for health impact
+- name: time_lag_to_outcome
+  direction: strengthens
+  strength: moderate
+  description: Associations were strongest for outcomes with short time lags
+structural_competency:
+  equity_implications: This mechanism explicitly traces health outcomes to labor market structures and
+    employment arrangements rather than individual choices. The shift toward less secure employment forms
+    represents a structural transformation in labor markets that disproportionately affects workers with
+    less bargaining power. The authors recommend exploration of 'precautionary labour regulations and
+    employment policies' as structural interventions, appropriately locating solutions at the policy level.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.632641'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

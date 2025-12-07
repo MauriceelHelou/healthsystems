@@ -1,0 +1,33 @@
+id: detox_bed_availability
+name: Medical Detox Bed Availability
+scale: 3
+domain: Healthcare Infrastructure, Substance Use
+category: healthcare_access
+stock:
+  value: 1.8
+  unit: Medical detoxification beds per 100,000 population
+  year: 2022
+  source: SAMHSA N-SSATS, State licensing data
+geographic_variation:
+  score: 4
+  level: county
+  notes: Concentrated in urban medical centers; severe shortage in rural and underserved areas
+data_quality:
+  availability: medium
+  frequency: annual
+  bias_notes: Does not capture hospital-based medical detox; some facilities report beds not actually available
+  primary_sources:
+  - name: SAMHSA N-SSATS (detoxification service indicator)
+    granularity: state
+  - name: State Department of Health Facility Licensing
+    granularity: county
+  - name: American Hospital Association Annual Survey
+    granularity: county
+description: |-
+  Availability of medically supervised alcohol detoxification beds for managing acute alcohol
+  withdrawal, including delirium tremens (DTs) and withdrawal seizures. Medical detox requires
+  24-hour nursing care and physician oversight for benzodiazepine protocols. Severe alcohol
+  withdrawal can be life-threatening without medical management. Shortage of detox beds is
+  a major bottleneck in the treatment continuum, forcing patients to emergency departments
+  or delaying entry to residential treatment programs.
+type: Infrastructure

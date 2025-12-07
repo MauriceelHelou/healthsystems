@@ -1,0 +1,53 @@
+id: NEW:no_low_alcohol_drink_exposure_to_NEW:alcohol_craving
+name: No/Low Alcohol Drink Exposure → Alcohol Craving
+from_node:
+  node_id: NEW:no_low_alcohol_drink_exposure
+  node_name: No/Low Alcohol Drink Exposure
+to_node:
+  node_id: NEW:alcohol_craving
+  node_name: Alcohol Craving
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals with alcohol use disorder (AUD) consume no/low alcohol (NoLo) drinks'
+- 'Step 2: Sensory cues (taste, smell, appearance) of NoLo drinks mimic alcoholic beverages'
+- 'Step 3: Alcohol-related cues trigger conditioned physiological responses in individuals with AUD'
+- 'Step 4: Craving and desire to drink increase following NoLo drink consumption'
+- 'Step 5: Severity of alcohol dependence correlates with magnitude of craving response'
+evidence:
+  quality_rating: B
+  n_studies: 10
+  primary_citation: 'E. Caballeria et al. 2022. "Doctor, Can I Drink an Alcohol-Free Beer?" Low-Alcohol
+    and Alcohol-Free Drinks in People with Heavy Drinking or Alcohol Use Disorders: Systematic Review
+    of the Literature. https://doi.org/10.3390/nu14193925'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 10 studies
+  - Studies examining cue-induced craving in AUD populations
+  - Research on physiological responses to alcohol-related stimuli
+  doi: 10.3390/nu14193925
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Consumption of no/low alcohol drinks in individuals with alcohol use disorder triggers increased
+  craving and desire to drink through alcohol-related sensory cues that activate conditioned responses.
+  This effect is moderated by severity of alcohol dependence.
+moderators:
+- name: alcohol_dependence_severity
+  direction: strengthens
+  strength: strong
+  description: The increase in craving correlates with the severity of alcohol dependence - more severe
+    AUD leads to stronger craving response to NoLo drinks
+structural_competency:
+  equity_implications: This mechanism highlights how environmental factors (marketing and availability
+    of NoLo drinks as harm reduction tools) may have unintended consequences for vulnerable populations
+    with AUD. Policy implications include the need for targeted clinical guidance and potentially differentiated
+    marketing/availability strategies for populations with AUD versus general population. The mechanism
+    avoids individual blame by focusing on conditioned physiological responses rather than willpower.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.387141'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

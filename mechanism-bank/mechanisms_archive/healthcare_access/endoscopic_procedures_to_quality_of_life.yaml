@@ -1,0 +1,43 @@
+id: endoscopic_procedures_to_quality_of_life
+name: Endoscopic Procedures → Quality of Life
+from_node:
+  node_id: endoscopic_procedures
+  node_name: Endoscopic Procedures
+to_node:
+  node_id: quality_of_life
+  node_name: Quality of Life
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Chronic pancreatitis causes morphological changes and complications requiring
+  medical intervention'
+- 'Step 2: Access to endoscopic procedures (pancreatic stenting, biliary stenting,
+  ESWL) provides treatment for pancreatic tissue damage'
+- 'Step 3: Endoscopic interventions address structural complications and improve pancreatic
+  function'
+- 'Step 4: Improved functioning and reduced symptoms translate to better quality of
+  life outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Mikael Parhiala et al. 2023. "Quality of life after endoscopic
+    procedures for chronic pancreatitis: A multicentre study.." *United European gastroenterology
+    journal*. https://doi.org/10.1002/ueg2.12466'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.230158'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: need_for_subsequent_surgery
+  direction: weakens
+  strength: strong
+  description: Patients who needed later surgery (23%) had significantly more pain
+    (p=0.043) and fatigue (p=0.021), indicating endoscopic procedures were less effective
+    for this subgroup
+- name: time_since_diagnosis
+  direction: u_shaped
+  strength: moderate
+  description: Median time to endoscopic procedure was one year (range 0-39 years),
+    suggesting timing of intervention may moderate effectiveness

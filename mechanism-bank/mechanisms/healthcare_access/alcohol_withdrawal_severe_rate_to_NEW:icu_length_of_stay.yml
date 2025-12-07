@@ -1,0 +1,54 @@
+id: alcohol_withdrawal_severe_rate_to_NEW:icu_length_of_stay
+name: Alcohol Withdrawal Severe Rate → ICU Length of Stay
+from_node:
+  node_id: alcohol_withdrawal_severe_rate
+  node_name: Alcohol Withdrawal Severe Rate
+to_node:
+  node_id: NEW:icu_length_of_stay
+  node_name: ICU Length of Stay
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Severe alcohol withdrawal syndrome requires intensive medical monitoring and intervention'
+- 'Step 2: Critically ill patients with AWS experience autonomic instability, seizures, and delirium tremens'
+- 'Step 3: Complex medical management necessitates prolonged ICU-level care'
+- 'Step 4: Healthcare systems face resource utilization burden from severe AWS cases'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'E. T. Polintan et al. 2022. "Adjunctive Dexmedetomidine in Alcohol Withdrawal Syndrome:
+    A Systematic Review and Meta-analysis of Retrospective Cohort Studies and Randomized Controlled Trials."
+    https://doi.org/10.1177/10600280221130458'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Studies focused on critically ill patients with alcohol withdrawal syndrome
+  - Multiple study designs examining ICU outcomes in AWS
+  doi: 10.1177/10600280221130458
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Severe alcohol withdrawal syndrome in critically ill patients drives ICU length of stay,
+  with cohort data showing mean difference of 48.06 hours. Treatment approaches may modify this relationship.
+quantitative_effects:
+  effect_size:
+    value: 48.06
+    type: standardized_mean_difference
+    ci_lower: 37.48
+    ci_upper: 58.64
+  p_value: 0.001
+moderators:
+- name: treatment_protocol
+  direction: strengthens
+  strength: moderate
+  description: Adjunctive pharmacotherapy selection impacts ICU length of stay in severe AWS
+structural_competency:
+  equity_implications: Severe alcohol withdrawal requiring ICU care represents a failure of upstream prevention,
+    including lack of accessible alcohol use disorder treatment, harm reduction services, and community-based
+    withdrawal management. Populations with limited access to outpatient AUD treatment are more likely
+    to present in severe withdrawal crisis. The healthcare costs of ICU stays for severe AWS disproportionately
+    burden safety-net hospitals serving marginalized communities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.331232'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

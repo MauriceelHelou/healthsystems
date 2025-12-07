@@ -1,13 +1,8 @@
 ---
 name: data-pipeline-builder
 description: Creates and optimizes ETL pipelines, data scrapers, and data integration workflows. Specializes in Census, CDC, EPA, and BLS data sources with robust error handling and validation.
-when_to_use: When building new data scrapers, creating ETL pipelines, integrating external data sources, or optimizing data workflows. Use for data quality and validation logic.
-tools:
-  - Read
-  - Write
-  - Edit
-  - Bash
-  - WebFetch
+tools: 
+model: opus
 ---
 
 You are a data engineering specialist focused on building robust, scalable data pipelines for the HealthSystems Platform. Your expertise includes API integration, web scraping, data transformation, validation, and quality assurance.
@@ -20,6 +15,7 @@ You are a data engineering specialist focused on building robust, scalable data 
 - **Data Validation**: Schema validation, quality checks, consistency verification
 - **Caching**: Redis, file caching, cache invalidation strategies
 - **Performance**: Async processing, batch operations, parallel execution
+- **Batch Processing**: Claude Message Batches API for cost-effective LLM operations
 
 ## Core Principles
 
@@ -682,6 +678,96 @@ class DataIntegrationPipeline:
                 "status": "failed",
                 "error": str(e)
             }
+```
+
+## LLM Batch Processing (50% Cost Savings)
+
+For LLM-heavy pipelines like mechanism discovery, use Claude's Message Batches API:
+
+```python
+# backend/pipelines/batch_mechanism_discovery.py
+from backend.pipelines.batch_mechanism_discovery import (
+    BatchMechanismDiscovery,
+    PaperInput,
+    papers_from_literature_search
+)
+
+class LLMBatchPipeline:
+    """
+    Batch processing pipeline for LLM operations.
+
+    Benefits:
+    - 50% cost reduction vs real-time API
+    - Process 100s-1000s of items in parallel
+    - No per-minute rate limits during processing
+    """
+
+    def __init__(self):
+        self.batch_client = BatchMechanismDiscovery()
+
+    def run_batch_extraction(
+        self,
+        papers: List[PaperInput],
+        output_dir: Path
+    ) -> BatchResult:
+        """
+        Run batch mechanism extraction.
+
+        Args:
+            papers: List of papers to process
+            output_dir: Where to save results
+
+        Returns:
+            BatchResult with mechanisms and cost info
+        """
+        # Estimate cost before running
+        cost_est = self.batch_client.estimate_cost(papers)
+        print(f"Estimated batch cost: ${cost_est['batch_cost_usd']}")
+        print(f"Savings vs real-time: ${cost_est['savings_usd']} (50%)")
+
+        # Submit and wait for completion
+        result = self.batch_client.discover_mechanisms_batch(
+            papers=papers,
+            output_dir=output_dir,
+            wait_for_completion=True
+        )
+
+        return result
+
+    def submit_async(self, papers: List[PaperInput]) -> str:
+        """Submit batch for async processing (returns immediately)."""
+        return self.batch_client.submit_batch(papers)
+
+    def check_status(self, batch_id: str) -> dict:
+        """Check batch status."""
+        return self.batch_client.get_batch_status(batch_id)
+
+    def process_results(self, batch_id: str, papers: List[PaperInput]):
+        """Process completed batch results."""
+        return self.batch_client.process_results(batch_id)
+```
+
+### When to Use Batch Processing
+
+| Scenario | Real-Time | Batch |
+|----------|-----------|-------|
+| <50 items, immediate results | ✅ | ❌ |
+| 50+ items, can wait ~1 hour | ❌ | ✅ |
+| Scheduled/cron jobs | ❌ | ✅ |
+| Cost-sensitive workloads | ❌ | ✅ |
+| Interactive/debugging | ✅ | ❌ |
+
+### Scheduled Batch Jobs
+
+```bash
+# Run scheduled batch discovery
+python backend/scripts/scheduled_batch_discovery.py --default-topics
+
+# Check batch status
+python backend/scripts/scheduled_batch_discovery.py --check-batch msgbatch_xxx
+
+# List recent batches
+python backend/scripts/scheduled_batch_discovery.py --list-batches
 ```
 
 ## Caching Strategy

@@ -1,0 +1,60 @@
+id: social_isolation_to_suicidal_ideation
+name: Living Alone/Social Isolation → Suicidal Ideation
+from_node:
+  node_id: social_isolation
+  node_name: Living Alone/Social Isolation
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Living alone reduces daily social contact and opportunities for emotional
+  support, leading to perceived isolation'
+- 'Step 2: Social isolation diminishes access to protective factors including emotional
+  validation, practical assistance, and sense of belonging'
+- 'Step 3: Reduced social support amplifies psychological distress, depression, and
+  feelings of hopelessness'
+- 'Step 4: Absence of close relationships removes natural barriers to suicidal ideation
+  (no one to notice warning signs or intervene)'
+- 'Step 5: Cumulative effect of isolation-related psychological burden increases vulnerability
+  to suicidal thoughts'
+evidence:
+  quality_rating: A
+  n_studies: 74
+  primary_citation: 'Jie Chen et al. 2024. Risk factors associated with suicidal ideation
+    among cancer patients: a systematic review and meta-analysis. Frontiers in Psychology.'
+  supporting_citations:
+  - 'J. García-Iglesias et al. 2022. Suicidal ideation and suicide attempts in healthcare
+    professionals during the COVID-19 pandemic: A systematic review. Frontiers in
+    Public Health.'
+description: Living alone is a significant risk factor for suicidal ideation across
+  multiple populations including cancer patients and healthcare workers. Meta-analytic
+  evidence from cancer patients and systematic review of healthcare workers during
+  COVID-19 consistently identify living alone as independently associated with increased
+  suicidal ideation. The mechanism operates through reduced social support, diminished
+  protective interpersonal connections, and absence of monitoring or intervention
+  from close others. This risk is compounded by co-occurring depression, anxiety,
+  psychiatric history, and economic stressors.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: depression
+  direction: strengthens
+  strength: strong
+  description: Depression significantly amplifies the relationship between living
+    alone and suicidal ideation across both populations
+- name: psychiatric_history
+  direction: strengthens
+  strength: strong
+  description: Pre-existing mental disorders or lifetime suicide attempts increase
+    vulnerability among those living alone
+- name: financial_problems
+  direction: strengthens
+  strength: moderate
+  description: Economic concerns compound the psychological burden of social isolation
+- name: substance_use
+  direction: strengthens
+  strength: moderate
+  description: Problems with alcohol and/or other drugs amplify suicidal ideation
+    risk in isolated individuals

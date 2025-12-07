@@ -1,0 +1,57 @@
+id: NEW:clinical_decision_support_system_pe_to_NEW:outpatient_pe_management_rate
+name: Electronic Clinical Decision Support System for Pulmonary Embolism → Outpatient
+  Pulmonary Embolism Management Rate
+from_node:
+  node_id: NEW:clinical_decision_support_system_pe
+  node_name: Electronic Clinical Decision Support System for Pulmonary Embolism
+to_node:
+  node_id: NEW:outpatient_pe_management_rate
+  node_name: Outpatient Pulmonary Embolism Management Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Electronic CDSS is integrated into ED workflow and linked to electronic
+  health record, automatically populating patient-specific clinical variables upon
+  activation'
+- 'Step 2: CDSS calculates PE Severity Index score using validated risk-stratification
+  criteria, identifying patients with low-risk PE who may be eligible for outpatient
+  management'
+- 'Step 3: System provides risk-specific, site-of-care recommendations at the time
+  of disposition decision making, reducing physician uncertainty about safe discharge'
+- 'Step 4: Multicomponent intervention including physician education, audit and feedback,
+  and early incentives reinforces CDSS adoption and appropriate use'
+- 'Step 5: Physicians are more likely to discharge low-risk PE patients to home management
+  rather than defaulting to hospitalization, increasing outpatient management rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Vinson et al. 2018. Increasing Safe Outpatient Management of
+    Emergency Department Patients With Pulmonary Embolism. Annals of Internal Medicine.
+  supporting_citations: []
+description: Implementation of an electronic clinical decision support system integrated
+  into the ED workflow facilitates identification of patients with pulmonary embolism
+  who are eligible for safe outpatient management. The CDSS uses the validated PE
+  Severity Index combined with outpatient exclusion criteria to provide risk-specific
+  site-of-care recommendations at the point of disposition decision making. When combined
+  with physician education, audit and feedback, and existing infrastructure for timely
+  follow-up, the CDSS helps overcome perceived barriers to outpatient PE management
+  and increases the rate of home discharge for eligible patients.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Presence of onsite study champion
+  direction: strengthens
+  strength: strong
+  description: Sites with an onsite emergency physician-researcher serving as study
+    champion received structured education, ongoing promotion, and audit feedback,
+    leading to greater CDSS adoption compared to passive CDSS sites
+- name: Availability of timely postdischarge follow-up
+  direction: strengthens
+  strength: strong
+  description: Facilities with established mechanisms for expeditious follow-up (anticoagulation
+    service, primary care access) facilitate safe outpatient management
+- name: Presence of short-term observation unit
+  direction: strengthens
+  strength: moderate
+  description: 13 of 21 sites had ED-based short-term (<24-hour) observation units,
+    providing an intermediate option for outpatient-oriented care

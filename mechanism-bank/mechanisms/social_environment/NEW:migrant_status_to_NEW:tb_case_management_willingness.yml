@@ -1,0 +1,51 @@
+id: NEW:migrant_status_to_NEW:tb_case_management_willingness
+name: Migrant Population Status → Willingness to Receive TB Case Management
+from_node:
+  node_id: NEW:migrant_status
+  node_name: Migrant Population Status
+to_node:
+  node_id: NEW:tb_case_management_willingness
+  node_name: Willingness to Receive TB Case Management
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Migrant populations face structural barriers including residency restrictions and limited access
+  to local healthcare services'
+- 'Step 2: Work instability and housing insecurity reduce ability to maintain consistent healthcare relationships'
+- 'Step 3: Social marginalization and lack of trust in local healthcare systems develop'
+- 'Step 4: Willingness to engage with TB case management services from PHC workers decreases'
+evidence:
+  quality_rating: A
+  n_studies: 43
+  primary_citation: 'Xi Chen et al. 2024. "Challenge of ending TB in China: tuberculosis control in primary
+    healthcare sectors under integrated TB control model–a systematic review and meta-analysis." https://doi.org/10.1186/s12889-023-16292-5'
+  supporting_citations:
+  - Studies identifying patient characteristics as associated factors for TB control
+  - Research on migrant TB patient populations in China
+  - Additional citations require full-text access for specific study identification
+  doi: 10.1186/s12889-023-16292-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Migrant TB patients demonstrate particularly low willingness to receive case management provided
+  by healthcare workers in primary healthcare sectors, reflecting structural barriers faced by mobile
+  populations.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Low willingness to receive TB case management observed nationwide but especially among
+    migrant TB patients
+moderators:
+- name: healthcare_worker_relationship
+  direction: strengthens
+  strength: moderate
+  description: Quality of relationship with PHC workers affects willingness to receive case management
+structural_competency:
+  equity_implications: This mechanism highlights how migration policies and the hukou (household registration)
+    system create structural barriers to healthcare access for internal migrants in China. Low willingness
+    to engage with TB services is a consequence of systemic exclusion rather than individual non-compliance.
+    Addressing this requires policy changes to ensure healthcare access regardless of residency status.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.874018'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

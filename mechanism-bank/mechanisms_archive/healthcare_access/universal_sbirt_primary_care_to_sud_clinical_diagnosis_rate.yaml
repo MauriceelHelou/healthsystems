@@ -1,0 +1,47 @@
+id: universal_sbirt_primary_care_to_sud_clinical_diagnosis_rate
+name: Universal SBIRT Implementation in Primary Care → Clinical Recognition and Diagnosis
+  of Substance Use Disorders
+from_node:
+  node_id: universal_sbirt_primary_care
+  node_name: Universal SBIRT Implementation in Primary Care
+to_node:
+  node_id: sud_clinical_diagnosis_rate
+  node_name: Clinical Recognition and Diagnosis of Substance Use Disorders
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Implementation of universal SBIRT screening in primary care clinics creates
+  systematic identification processes for substance use problems in routine medical
+  encounters'
+- 'Step 2: Standardized screening tools increase healthcare provider awareness and
+  recognition of substance use disorder symptoms among patients who might otherwise
+  go undetected'
+- 'Step 3: Brief intervention protocols provide clinical framework for documenting
+  substance use concerns in medical records and claims data'
+- 'Step 4: Increased clinical recognition leads to formal DSM-IV diagnosis documentation
+  on Medicaid claims for alcohol and drug abuse or dependence'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Moberg and Jason Paltzer 2021. "Clinical Recognition of Substance
+    Use Disorders in Medicaid Primary Care Associated With Universal Screening, Brief
+    Intervention and Referral to Treatment (SBIRT)." *Journal of Studies on Alcohol
+    and Drugs*. https://doi.org/10.15288/jsad.2021.82.700
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.767964'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: medicaid_enrollment
+  direction: strengthens
+  strength: moderate
+  description: Study specifically examined low-income Medicaid population, suggesting
+    insurance coverage and claims documentation systems may facilitate diagnosis documentation
+- name: baseline_sud_prevalence
+  direction: strengthens
+  strength: weak
+  description: Baseline diagnostic rate of 9.9% for any DSM-IV substance abuse or
+    dependence increased to 12.2% at follow-up, suggesting effect builds on existing
+    recognition patterns

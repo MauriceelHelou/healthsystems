@@ -1,0 +1,55 @@
+id: NEW:saturated_fat_replacement_with_linoleic_acid_to_high_total_cholesterol
+name: Saturated Fat Replacement with Linoleic Acid → Serum Cholesterol Level
+from_node:
+  node_id: NEW:saturated_fat_replacement_with_linoleic_acid
+  node_name: Saturated Fat Replacement with Linoleic Acid
+to_node:
+  node_id: high_total_cholesterol
+  node_name: Serum Cholesterol Level
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Dietary saturated fat is replaced with linoleic acid-rich vegetable oils
+  (e.g., corn oil, polyunsaturated margarine)'
+- 'Step 2: Linoleic acid, a polyunsaturated fatty acid, upregulates LDL receptor expression
+  in the liver, increasing clearance of LDL cholesterol from circulation'
+- 'Step 3: Polyunsaturated fats also reduce hepatic VLDL production compared to saturated
+  fats'
+- 'Step 4: The combined effect results in significant reduction in serum total cholesterol
+  levels (mean change -13.8% vs -1.0% in controls)'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'Christopher E Ramsden et al. 2016. Re-evaluation of the traditional
+    diet-heart hypothesis: analysis of recovered data from Minnesota Coronary Experiment
+    (1968-73). BMJ (Clinical research ed.)'
+  supporting_citations: []
+description: Replacing dietary saturated fat with linoleic acid-rich vegetable oils
+  effectively and significantly lowers serum cholesterol levels. The Minnesota Coronary
+  Experiment demonstrated a 13.8% reduction in serum cholesterol in the intervention
+  group compared to only 1.0% in controls (P<0.001). This finding was confirmed in
+  a systematic review and meta-analysis of 5 additional randomized controlled trials
+  (total n=10,808). The cholesterol-lowering effect is robust and reproducible across
+  multiple trials, though notably, this reduction did not translate to reduced mortality
+  from coronary heart disease or all causes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -13.8
+    type: percent_change
+    ci_lower: null
+    ci_upper: null
+  p_value: 0.001
+  sample_size: 10808
+moderators:
+- name: Duration of dietary intervention
+  direction: strengthens
+  strength: moderate
+  description: Longitudinal data analyzed for participants exposed to study diets
+    for a year or more showed sustained cholesterol lowering
+- name: Age
+  direction: weakens
+  strength: weak
+  description: Study included participants aged 20-97, with subgroup analyses showing
+    variation in response

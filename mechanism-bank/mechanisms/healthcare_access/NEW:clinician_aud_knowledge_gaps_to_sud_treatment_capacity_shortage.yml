@@ -1,0 +1,51 @@
+id: NEW:clinician_aud_knowledge_gaps_to_sud_treatment_capacity_shortage
+name: Clinician Knowledge Gaps in AUD Management → SUD Treatment Capacity Shortage
+from_node:
+  node_id: NEW:clinician_aud_knowledge_gaps
+  node_name: Clinician Knowledge Gaps in AUD Management
+to_node:
+  node_id: sud_treatment_capacity_shortage
+  node_name: SUD Treatment Capacity Shortage
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Insufficient clinician knowledge about AUD creates functional shortage of treatment providers'
+- 'Step 2: Clinician discomfort leads to avoidance of AUD assessment and treatment in hepatology settings'
+- 'Step 3: Patients with cirrhosis face barriers accessing AUD treatment from their existing providers'
+- 'Step 4: De facto treatment capacity shortage despite potential provider availability'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Emily Johnson et al. 2022. "The development and evaluation of a provider-focused educational
+    intervention about alcohol use disorder in patients with cirrhosis.." https://doi.org/10.3138/canlivj-2022-0036
+  supporting_citations:
+  - Literature cited in paper establishing insufficient clinician knowledge impacts access to treatment
+  - Additional citations require full-text access
+  doi: 10.3138/canlivj-2022-0036
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2023, source is 2022'
+last_updated: '2025-12-06'
+version: '2.0'
+description: The paper establishes that insufficient clinician knowledge and comfort managing AUD impacts
+  access to treatment for patients with cirrhosis. This creates a structural barrier where patients cannot
+  access needed AUD treatment through their hepatology providers.
+quantitative_effects:
+  sample_size: 229
+moderators:
+- name: specialty_training
+  direction: strengthens
+  strength: moderate
+  description: Clinicians in specialties with less addiction medicine exposure may have greater knowledge
+    gaps
+structural_competency:
+  equity_implications: This mechanism identifies a structural root cause of treatment access disparities
+    - the failure of medical education systems to adequately prepare hepatology and primary care clinicians
+    to manage AUD. This is a system-level failure that creates inequitable access to evidence-based treatment,
+    particularly affecting populations with high rates of AUD-related liver disease.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.123941'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

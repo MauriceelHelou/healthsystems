@@ -1,0 +1,67 @@
+id: NEW:hospital_bac_evidence_collection_protocols_to_NEW:dui_dwi_conviction_rate
+name: Hospital BAC Evidence Collection Protocols → DUI/DWI Conviction Rate
+from_node:
+  node_id: NEW:hospital_bac_evidence_collection_protocols
+  node_name: Hospital BAC Evidence Collection Protocols
+to_node:
+  node_id: NEW:dui_dwi_conviction_rate
+  node_name: DUI/DWI Conviction Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Alcohol-impaired drivers involved in motor vehicle collisions are transported to hospitals/trauma
+  centers'
+- 'Step 2: Healthcare facilities have varying institutional policies for blood alcohol concentration measurement'
+- 'Step 3: Some measurements are conducted for clinical purposes only and are not legally admissible'
+- 'Step 4: Lack of standardized protocols for obtaining legally admissible BAC evidence limits prosecution'
+- 'Step 5: Without admissible evidence, drivers cannot be charged or convicted for DUI/DWI'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'Robert S Green et al. 2015. "Legal consequences for alcohol-impaired drivers injured
+    in motor vehicle collisions: A systematic review.." https://doi.org/10.1016/j.aap.2015.04.005'
+  supporting_citations:
+  - Additional citations require full-text access - heterogeneity in institutional procedures noted across
+    26 studies
+  - Variation in policies for obtaining legally admissible BAC measurements documented
+  - Studies from multiple jurisdictions showing procedural differences
+  doi: 10.1016/j.aap.2015.04.005
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The systematic review identified institutional procedures and policies for obtaining legally
+  admissible blood alcohol concentration measurements as a major source of heterogeneity affecting DUI/DWI
+  conviction rates. The wide range in conviction rates (0-85%) across 26 studies reflects these structural
+  differences in how healthcare facilities collect and handle BAC evidence.
+quantitative_effects:
+  sample_size: 4937
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Heterogeneity between institutional procedures and policies for obtaining legally admissible
+    BAC measurements was a key source of variation across studies and precluded meta-analysis. Conviction
+    rates ranged from 0% to 85% across sites.
+moderators:
+- name: Law enforcement coordination
+  direction: strengthens
+  strength: moderate
+  description: Hospitals with established protocols for coordinating with law enforcement for BAC evidence
+    collection likely have higher rates of legally admissible samples
+- name: State/provincial laws
+  direction: strengthens
+  strength: strong
+  description: Legal frameworks governing implied consent and medical evidence admissibility vary by jurisdiction
+structural_competency:
+  equity_implications: This mechanism highlights a critical structural gap at the interface of healthcare
+    and criminal justice systems. The lack of standardized protocols for obtaining legally admissible
+    BAC evidence in hospitals and trauma centers represents a systemic failure that allows the majority
+    of alcohol-impaired drivers to escape legal consequences. This is not about individual healthcare
+    provider decisions but rather about institutional policies, legal frameworks, and inter-system coordination.
+    Policy interventions could include standardized evidence collection protocols, implied consent law
+    modifications, and improved healthcare-law enforcement coordination. The equity implications include
+    potential disparities in which hospitals/jurisdictions have robust protocols, potentially creating
+    geographic inequities in DUI/DWI enforcement.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.626575'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

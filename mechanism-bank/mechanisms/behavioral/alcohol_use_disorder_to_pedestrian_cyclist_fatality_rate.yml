@@ -1,0 +1,70 @@
+id: alcohol_use_disorder_to_pedestrian_cyclist_fatality_rate
+name: Alcohol Use Disorder → Pedestrian and Cyclist Safety Fatality Rate
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: pedestrian_cyclist_fatality_rate
+  node_name: Pedestrian and Cyclist Safety Fatality Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Ethyl alcohol intoxication impairs pedestrian judgment, coordination, and reaction time'
+- 'Step 2: Impaired pedestrians are more likely to engage in risky behaviors such as crossing against
+  traffic signals or walking in traffic lanes'
+- 'Step 3: Alcohol-impaired pedestrians have reduced ability to perceive and avoid oncoming vehicles'
+- 'Step 4: Traffic crashes involving intoxicated pedestrians result in higher rates of on-scene fatalities
+  (78.95% vs lower rates for sober pedestrians)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Lasota et al. 2019. "The effect of ethyl alcohol on the severity of injuries in
+    fatal pedestrian victims of traffic crashes." https://doi.org/10.1371/journal.pone.0221749
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior research on alcohol and
+    traffic crashes
+  - Additional citations require full-text access - study methodology from Warsaw Medical University Department
+    of Forensic Medicine
+  - Additional citations require full-text access - statistical analysis methods referenced
+  doi: 10.1371/journal.pone.0221749
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The majority of fatal pedestrian victims (72.15%) were under the influence of ethyl alcohol
+  at time of crash. Intoxicated pedestrians more frequently died at the scene (78.95%), though alcohol
+  was not found to be an independent factor affecting injury severity. The study analyzed 158 fatal pedestrian
+  victims hit by passenger cars over 2009-2013 in Warsaw.
+quantitative_effects:
+  effect_size:
+    value: 72.15
+    type: percentage_change
+  sample_size: 158
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Higher percentage of pedestrian victims die on the scene in rural areas compared to
+    urban areas
+moderators:
+- name: gender
+  direction: strengthens
+  strength: strong
+  description: Significant correlation between ethyl alcohol concentration and victim gender (p<0.0001)
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Significant correlation between ethyl alcohol concentration and victim age (p=0.0026)
+- name: rural_urban_location
+  direction: strengthens
+  strength: moderate
+  description: Rural areas show higher rates of on-scene death for intoxicated pedestrian victims
+structural_competency:
+  equity_implications: 'While this study focuses on individual alcohol use, structural factors that should
+    be considered include: availability and density of alcohol outlets, pedestrian infrastructure design,
+    street lighting in areas with high alcohol consumption venues, public transportation access as alternative
+    to walking while intoxicated, and rural vs urban differences in emergency medical response times and
+    trauma care access. The gender and age disparities suggest differential vulnerability that may relate
+    to structural factors around alcohol marketing, social norms, and urban planning.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.647780'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

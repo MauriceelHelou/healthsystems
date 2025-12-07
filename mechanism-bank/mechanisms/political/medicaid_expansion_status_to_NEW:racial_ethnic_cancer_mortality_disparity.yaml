@@ -1,0 +1,54 @@
+id: medicaid_expansion_status_to_NEW:racial_ethnic_cancer_mortality_disparity
+name: Medicaid Expansion Status → Racial/Ethnic Cancer Mortality Disparity
+from_node:
+  node_id: medicaid_expansion_status
+  node_name: Medicaid Expansion Status
+to_node:
+  node_id: NEW:racial_ethnic_cancer_mortality_disparity
+  node_name: Racial/Ethnic Cancer Mortality Disparity
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Medicaid expansion increases health insurance coverage among previously
+  uninsured populations, particularly affecting racial and ethnic minority groups
+  who have historically higher uninsured rates'
+- 'Step 2: Increased insurance coverage improves access to cancer treatment, including
+  timely diagnosis, standard therapies, and supportive care for patients with advanced
+  malignancies'
+- 'Step 3: Enhanced healthcare access leads to greater reductions in cancer mortality
+  among racial/ethnic minority patients compared to White patients, thereby narrowing
+  the mortality disparity gap'
+- 'Step 4: The effect is most pronounced among patients in the lowest income quartile,
+  where Medicaid expansion eliminates or reverses the pre-existing survival disadvantage
+  experienced by minority patients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: C. Malinowski et al. 2022. Association of Medicaid Expansion With
+    Mortality Disparity by Race and Ethnicity Among Patients With De Novo Stage IV
+    Breast Cancer. JAMA Oncology.
+  supporting_citations: []
+description: Medicaid expansion is associated with a significant reduction in racial/ethnic
+  cancer mortality disparities. In states that expanded Medicaid, the survival advantage
+  previously observed for White patients compared to racial/ethnic minority patients
+  with de novo stage IV breast cancer was eliminated in the post-expansion period.
+  Minority patients experienced a greater reduction in 2-year mortality compared to
+  White patients, with the disparity-reducing effect being most pronounced among the
+  lowest income patients.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -5.5
+    type: difference_in_difference_percentage
+    ci_lower: -9.5
+    ci_upper: -1.6
+  p_value: 0.006
+  sample_size: 9322
+moderators:
+- name: Income level
+  direction: strengthens
+  strength: strong
+  description: 'Among patients in the lowest income quartile, the reduction in racial/ethnic
+    mortality disparity was substantially larger (adjusted DID: -12.8%; 95% CI: -22.2
+    to -3.5; P = .007)'

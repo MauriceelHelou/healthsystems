@@ -1,0 +1,142 @@
+id: incarceration_policy_to_community_health
+name: Mass Incarceration Policy → Community Health Outcomes
+from_node:
+  node_id: incarceration_policy
+  node_name: Mass Incarceration and Criminal Legal Policy
+  node_type: stock
+to_node:
+  node_id: community_health_outcomes
+  node_name: Community-Level Health Outcomes
+  node_type: stock
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Mass incarceration policies remove working-age adults from communities,
+  disrupting families and economic networks'
+- 'Step 2: Incarceration concentrates in low-income communities of color due to racially
+  disparate policing and sentencing'
+- 'Step 3: Community-level social capital, family stability, and economic opportunity
+  deteriorate in high-incarceration areas'
+- 'Step 4: Returning individuals face employment barriers, housing restrictions,
+  and healthcare access challenges'
+- 'Step 5: Cumulative community effects manifest as elevated chronic disease rates,
+  mental health burden, and reduced life expectancy'
+evidence:
+  quality_rating: B
+  n_studies: 11
+  primary_citation: 'Wildeman, Christopher, and Emily A. Wang. 2017. "Mass incarceration,
+    public health, and widening inequality in the USA." The Lancet 389(10077): 1464-1474.'
+  supporting_citations:
+  - 'Schnittker, Jason, Michael Massoglia, and Christopher Uggen. 2011. "Incarceration
+    and the health of the African American community." Du Bois Review 8(1): 133-141.'
+  - 'Nowotny, Kathryn M., et al. 2017. "Incarceration rates and incidence of sexually
+    transmitted infections in US counties, 2011-2016." American Journal of Public
+    Health 107(S3): S234-S240.'
+  - 'Massoglia, Michael, and William Alex Pridemore. 2015. "Incarceration and health."
+    Annual Review of Sociology 41: 291-310.'
+  doi: 10.1016/S0140-6736(17)30259-3
+  journal: The Lancet
+  year: 2017
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC5565057/
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  individual_chronic_disease:
+    heart_disease_or:
+      value: 2.14
+      type: odds_ratio
+      ci_lower: 1.25
+      ci_upper: 3.67
+      comparison: incarceration history vs. no incarceration for heart disease
+      source: NLSY 1979 cohort
+  community_level:
+    description: High-incarceration communities show elevated rates of HIV, hepatitis,
+      cardiovascular disease, and mental health conditions independent of individual
+      incarceration
+  racial_disparity:
+    black_male_lifetime_risk: 32
+    white_male_lifetime_risk: 6
+    unit: percentage
+    description: 1 in 3 Black men will be incarcerated in their lifetime vs. 1 in
+      17 white men
+  population_affected:
+    incarcerated_daily: 2300000
+    annual_releases: 10000000
+    unit: persons
+    description: Over 2.3 million incarcerated daily; 10+ million jail admissions
+      annually in US
+  sample_size: null
+  interpretation: Mass incarceration creates population health burden through both
+    individual effects on those incarcerated and community-level effects in high-incarceration
+    areas. Racial disparities mean Black communities bear disproportionate health
+    consequences.
+last_updated: '2025-11-30'
+version: '1.0'
+description: Mass incarceration policy creates population health harm through multiple
+  pathways including individual health deterioration during and after incarceration,
+  family disruption, community economic damage, and concentrated disadvantage in high-incarceration
+  areas. With 2.3 million incarcerated daily and 10+ million annual jail admissions,
+  and stark racial disparities (32% lifetime risk for Black men vs. 6% for white men),
+  mass incarceration is a structural determinant of health inequities.
+moderators:
+- name: racial_composition
+  direction: strengthens
+  strength: strong
+  description: Black and Latino communities face disproportionate incarceration rates
+    and community-level effects
+- name: decarceration_policy
+  direction: weakens
+  strength: strong
+  description: Sentencing reform, diversion programs, and decarceration can reduce
+    population harm
+- name: reentry_support
+  direction: weakens
+  strength: moderate
+  description: Comprehensive reentry services can mitigate individual and community
+    health effects
+- name: ban_the_box_policy
+  direction: weakens
+  strength: moderate
+  description: Employment anti-discrimination policies help formerly incarcerated
+    individuals
+- name: medicaid_expansion
+  direction: weakens
+  strength: moderate
+  description: Medicaid expansion improves healthcare access for returning individuals
+structural_competency:
+  root_cause_level: policy
+  avoids_victim_blaming: true
+  equity_implications: Mass incarceration is a policy-driven structural determinant
+    of health that disproportionately harms Black and low-income communities. The
+    health consequences reflect decades of racially disparate criminal legal policy
+    including the war on drugs, mandatory minimums, and aggressive policing in communities
+    of color. Addressing mass incarceration health effects requires decarceration,
+    criminal legal reform, and addressing root causes of both incarceration and health
+    inequity.
+assumptions:
+- Mass incarceration defined as historically elevated US incarceration rates since
+  1970s
+- Community health effects operate through multiple pathways beyond individual incarceration
+- Racial disparities reflect systemic racism in criminal legal system
+limitations:
+- Difficult to isolate incarceration effect from correlated disadvantages
+- Community-level effects hard to attribute causally
+- Most evidence from US context with unique incarceration patterns
+- Selection effects challenge causal inference
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Incarceration rates and community health impacts vary substantially
+    by state, county, and neighborhood.
+  relevant_geographies:
+  - Southern states have highest incarceration rates
+  - Urban neighborhoods show concentrated incarceration effects
+  - States with reform policies show improved trajectories
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

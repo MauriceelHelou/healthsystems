@@ -1,0 +1,65 @@
+id: NEW:surgical_treatment_approach_mastectomy_vs_bcs_to_NEW:five_year_disease_free_survival_breast_cancer
+name: Surgical Treatment Approach (Mastectomy vs Breast-Conserving Surgery) → Five-Year Disease-Free Survival
+  in Breast Cancer
+from_node:
+  node_id: NEW:surgical_treatment_approach_mastectomy_vs_bcs
+  node_name: Surgical Treatment Approach (Mastectomy vs Breast-Conserving Surgery)
+to_node:
+  node_id: NEW:five_year_disease_free_survival_breast_cancer
+  node_name: Five-Year Disease-Free Survival in Breast Cancer
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with locally advanced breast cancer undergo neoadjuvant chemotherapy prior to surgical
+  intervention'
+- 'Step 2: Mastectomy removes entire breast tissue including areas that may harbor residual cancer cells
+  after chemotherapy'
+- 'Step 3: More complete tissue removal reduces likelihood of local recurrence and microscopic residual
+  disease'
+- 'Step 4: Lower recurrence rates translate to longer disease-free survival periods'
+- 'Step 5: Extended disease-free intervals improve overall prognosis and quality of life'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: 'Rong Qin et al. 2024. "Survival Outcomes of Breast-Conserving Surgery Versus Mastectomy
+    in Locally Advanced Breast Cancer Following Neoadjuvant Chemotherapy: A Meta-Analysis." https://doi.org/10.1177/15330338241265030'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis pooled 10 comparative studies
+  - Studies included patients from databases including PubMed and Cochrane Library through July 2023
+  - Individual study citations not available in abstract
+  doi: 10.1177/15330338241265030
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis of 10 studies (n=5018) demonstrated that mastectomy following neoadjuvant chemotherapy
+  was associated with significantly better 5-year disease-free survival compared to breast-conserving
+  surgery (OR 3.11, 95% CI 1.80-5.38, p<0.0001) in patients with locally advanced breast cancer.
+quantitative_effects:
+  effect_size:
+    value: 3.11
+    type: odds_ratio
+    ci_lower: 1.8
+    ci_upper: 5.38
+  p_value: 0.0001
+  sample_size: 5018
+moderators:
+- name: neoadjuvant_chemotherapy_response
+  direction: strengthens
+  strength: moderate
+  description: Response to neoadjuvant chemotherapy may modify the relative benefit of surgical approach
+- name: tumor_characteristics
+  direction: strengthens
+  strength: moderate
+  description: Locally advanced tumor characteristics may make complete resection more critical for disease
+    control
+structural_competency:
+  equity_implications: Treatment decisions regarding surgical approach are influenced by structural factors
+    including healthcare system protocols, provider training and preferences, patient education and informed
+    consent processes, and access to reconstructive surgery. Racial and socioeconomic disparities in breast
+    cancer treatment patterns are well-documented, potentially leading to differential access to optimal
+    surgical approaches and subsequent survival disparities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.882671'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

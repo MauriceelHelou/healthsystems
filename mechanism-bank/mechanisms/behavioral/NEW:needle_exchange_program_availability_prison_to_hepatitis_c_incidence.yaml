@@ -1,0 +1,44 @@
+id: NEW:needle_exchange_program_availability_prison_to_hepatitis_c_incidence
+name: Needle Exchange Program Availability in Prisons → Hepatitis C Incidence
+from_node:
+  node_id: NEW:needle_exchange_program_availability_prison
+  node_name: Needle Exchange Program Availability in Prisons
+to_node:
+  node_id: hepatitis_c_incidence
+  node_name: Hepatitis C Incidence
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Prison needle exchange programs provide sterile injection equipment to
+  incarcerated persons who inject drugs'
+- 'Step 2: Access to clean needles reduces sharing of contaminated injection equipment
+  among prisoners'
+- 'Step 3: Reduced needle sharing decreases blood-to-blood contact transmission opportunities
+  for hepatitis C virus'
+- 'Step 4: Lower HCV transmission rates result in decreased hepatitis C incidence
+  within prison populations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Opitz-Welke et al. 2018. Medicine in the Penal System. Deutsches
+    Ärzteblatt International.
+  supporting_citations: []
+description: Needle exchange programs in prisons have a preventive effect on hepatitis
+  C infection by providing sterile injection equipment to incarcerated persons who
+  use drugs. This intervention addresses the extremely elevated HCV risk in prison
+  populations (48-69 times higher than general population in Germany) by interrupting
+  the primary transmission route through contaminated needles. However, these programs
+  have been discontinued in most penal facilities despite evidence of effectiveness.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: program_availability
+  direction: strengthens
+  strength: strong
+  description: Preventive effect depends on actual availability and continuation of
+    needle exchange programs in prisons
+- name: baseline_drug_use_prevalence
+  direction: strengthens
+  strength: moderate
+  description: Approximately 20% of German prisoners consume heroin; higher drug use
+    prevalence increases importance of harm reduction

@@ -1,0 +1,47 @@
+id: dental_care_access_to_hepatitis_c_treatment_completion
+name: Dental Care Access → Hepatitis C Treatment Completion
+from_node:
+  node_id: dental_care_access
+  node_name: Dental Care Access
+  _original_id: antiviral_treatment_access
+to_node:
+  node_id: hepatitis_c_treatment_completion
+  node_name: Hepatitis C Treatment Completion
+  _original_id: hcc_treatment_outcomes
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Viral etiology (predominantly hepatitis B and C) drives hepatocellular
+  carcinoma development in the study populations'
+- 'Step 2: Adjuvant antiviral treatment can reduce viral load and hepatic inflammation,
+  potentially improving liver function and reducing recurrence risk'
+- 'Step 3: Absence of reporting on antiviral treatment access suggests unmeasured
+  structural variation in comprehensive HCC care'
+- 'Step 4: Healthcare system integration determines whether patients receive both
+  cancer treatment and underlying viral disease management'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: 'Avik Majumdar et al. 2017. "Management of people with early-
+    or very early-stage hepatocellular carcinoma: an attempted network meta-analysis.."
+    *The Cochrane database of systematic reviews*. https://doi.org/10.1002/14651858.CD011650.pub2'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.641211'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: healthcare_system_integration
+  direction: strengthens
+  strength: strong
+  description: Integrated care systems that coordinate cancer treatment with viral
+    hepatitis management likely improve outcomes through comprehensive disease control
+- name: antiviral_medication_cost
+  direction: weakens
+  strength: strong
+  description: High cost of antiviral medications creates economic barriers to adjuvant
+    treatment, particularly in low-resource settings
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/antiviral_treatment_access_to_hcc_treatment_outcomes.yaml
+_category: healthcare_access

@@ -1,0 +1,59 @@
+id: NEW:e_sbirt_program_availability_to_alcohol_use_disorder
+name: Electronic Screening, Brief Intervention, and Referral to Treatment (e-SBIRT) Program Availability
+  → Alcohol Use Disorder
+from_node:
+  node_id: NEW:e_sbirt_program_availability
+  node_name: Electronic Screening, Brief Intervention, and Referral to Treatment (e-SBIRT) Program Availability
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: e-SBIRT programs screen populations for higher-risk alcohol use patterns'
+- 'Step 2: Brief electronic interventions deliver evidence-based content including motivational interviewing
+  elements'
+- 'Step 3: Intervention targets reduction in alcohol consumption frequency and quantity'
+- 'Step 4: Short-term reductions in drinking frequency may prevent progression to alcohol use disorder
+  in some cases'
+evidence:
+  quality_rating: C
+  n_studies: 10
+  primary_citation: 'Matthew Jones et al. 2024. "Electronic-Screening, Brief Intervention and Referral
+    to Treatment (e-SBIRT) for Addictive Disorders: Systematic Review and Meta-Analysis." https://doi.org/10.1177/29767342241248926'
+  supporting_citations:
+  - Research concentrated exclusively on higher-risk substance use per abstract findings
+  - No behavioral addiction studies (e.g., gambling) identified in search
+  - Studies evaluated interventions in variety of healthcare and community settings
+  doi: 10.1177/29767342241248926
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The review found no consensus regarding effectiveness of e-SBIRT for addictive disorders
+  including alcohol use disorder. While short-term reductions in drinking frequency were demonstrated,
+  these did not translate to benefits for abstinence or other clinically meaningful treatment outcomes.
+  The mechanism from intervention to disorder reduction remains theoretically plausible but empirically
+  unsupported.
+moderators:
+- name: intervention_duration_followup
+  direction: weakens
+  strength: strong
+  description: Effects limited to short-term; no demonstrated benefit for longer-term outcomes including
+    abstinence
+- name: outcome_type
+  direction: weakens
+  strength: strong
+  description: e-SBIRT not advantageous for abstinence or other treatment outcomes beyond drinking frequency
+structural_competency:
+  equity_implications: Alcohol use disorder reflects complex interactions of genetic, psychological, and
+    structural factors including alcohol availability, marketing exposure, social norms, and socioeconomic
+    stress. Technology-based screening and brief intervention represents a healthcare system response
+    that may expand access but does not address upstream structural determinants. The concentration of
+    research on 'higher-risk substance use' without addressing root causes of risk reflects a medical
+    model approach rather than structural intervention. Addressing health equity requires complementing
+    individual-level interventions with policy changes affecting alcohol pricing, availability, and marketing.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.606169'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

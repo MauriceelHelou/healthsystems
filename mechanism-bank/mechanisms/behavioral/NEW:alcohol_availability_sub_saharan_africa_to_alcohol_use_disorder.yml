@@ -1,0 +1,66 @@
+id: NEW:alcohol_availability_sub_saharan_africa_to_alcohol_use_disorder
+name: Alcohol Availability in Sub-Saharan Africa → Alcohol Use Disorder
+from_node:
+  node_id: NEW:alcohol_availability_sub_saharan_africa
+  node_name: Alcohol Availability in Sub-Saharan Africa
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol is widely available across sub-Saharan African countries with varying regulatory environments'
+- 'Step 2: Population exposure to alcohol leads to initiation and regular use patterns'
+- 'Step 3: Regular alcohol consumption progresses to problematic use patterns in vulnerable individuals'
+- 'Step 4: Alcohol use disorders develop with 12-month prevalence of 9.5% among adults and 7.7% among
+  adolescents'
+evidence:
+  quality_rating: A
+  n_studies: 141
+  primary_citation: 'Habte Belete et al. 2024. "Alcohol use and alcohol use disorders in sub-Saharan Africa:
+    A systematic review and meta-analysis.." https://doi.org/10.1111/add.16514'
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review of 141 papers
+  - Studies from Tanzania reporting highest lifetime prevalence (86.4% among adults)
+  - Studies from Zambia reporting highest 6-month prevalence among adolescents (80.6%)
+  doi: 10.1111/add.16514
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'This systematic review and meta-analysis of 141 papers documents population-level alcohol
+  use patterns across sub-Saharan Africa. Among adults, 12-month prevalence of alcohol use disorder was
+  9.5% (CI: 0.0-30.4%) and alcohol dependence was 4.3% (CI: 0.8-9.8%). Among adolescents, 12-month prevalence
+  of alcohol use disorder was 7.7% (CI: 0.0-27.8%) and alcohol dependence was 4.1% (CI: 1.4-7.9%).'
+quantitative_effects:
+  effect_size:
+    value: 9.5
+    type: percentage_change
+    ci_lower: 0.0
+    ci_upper: 30.4
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Substantial variation across countries and subregions within sub-Saharan Africa. Highest
+    lifetime prevalence (86.4%) reported in Tanzania among adults. Highest 6-month prevalence (80.6%)
+    found in Zambia among adolescents.
+moderators:
+- name: age_group
+  direction: strengthens
+  strength: moderate
+  description: Adults show higher lifetime prevalence (34.9%) compared to adolescents (23.3%), but adolescents
+    show concerning rates of alcohol use disorder (7.7%)
+- name: country_context
+  direction: strengthens
+  strength: strong
+  description: Country-level factors significantly influence prevalence, with Tanzania and Zambia showing
+    highest rates
+structural_competency:
+  equity_implications: The study highlights that comprehensive population-level data on alcohol use remain
+    scarce in numerous sub-Saharan African countries, indicating structural gaps in public health surveillance.
+    The high prevalence of alcohol use disorder among adolescents (7.7%) points to inadequate structural
+    protections for youth. Wide confidence intervals suggest heterogeneous regulatory and social environments
+    across the region affecting alcohol exposure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.089227'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

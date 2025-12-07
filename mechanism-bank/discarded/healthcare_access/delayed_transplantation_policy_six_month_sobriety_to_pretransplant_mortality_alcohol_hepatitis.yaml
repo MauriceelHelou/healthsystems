@@ -1,0 +1,46 @@
+id: delayed_transplantation_policy_six_month_sobriety_to_pretransplant_mortality_alcohol_hepatitis
+name: Delayed Liver Transplantation Policy (6-Month Sobriety Requirement) → Pre-Transplant
+  Mortality in Severe Alcohol-Associated Hepatitis
+from_node:
+  node_id: delayed_transplantation_policy_six_month_sobriety
+  node_name: Delayed Liver Transplantation Policy (6-Month Sobriety Requirement)
+to_node:
+  node_id: pretransplant_mortality_alcohol_hepatitis
+  node_name: Pre-Transplant Mortality in Severe Alcohol-Associated Hepatitis
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Policy requires 6 months of documented abstinence before patients can be
+  placed on transplant waitlist'
+- 'Step 2: Patients with severe AH (high MELD and Lille scores) experience progressive
+  liver failure during mandatory waiting period'
+- 'Step 3: Disease severity exceeds survivability threshold before transplant eligibility
+  is achieved'
+- 'Step 4: Patients die from complications of acute liver failure before receiving
+  transplant'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Brian P Lee et al. 2019. "Model to Calculate Harms and Benefits
+    of Early vs Delayed Liver Transplantation for Patients With Alcohol-Associated
+    Hepatitis.." *Gastroenterology*. https://doi.org/10.1053/j.gastro.2019.04.012
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.634828'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: meld_score
+  direction: strengthens
+  strength: strong
+  description: Higher MELD scores indicate more severe disease with lower probability
+    of surviving 6-month waiting period
+- name: lille_score
+  direction: strengthens
+  strength: strong
+  description: Higher Lille scores indicate treatment non-response and increased mortality
+    risk during waiting period
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/delayed_transplantation_policy_six_month_sobriety_to_pretransplant_mortality_alcohol_hepatitis.yaml
+_category: healthcare_access

@@ -1,0 +1,63 @@
+id: NEW:rural_residence_pwid_to_sud_medication_treatment_rate_oud
+name: Rural Residence Among People Who Inject Drugs → MOUD Treatment Rate for OUD
+from_node:
+  node_id: NEW:rural_residence_pwid
+  node_name: Rural Residence Among People Who Inject Drugs
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: MOUD Treatment Rate for OUD
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Rural regions have limited access to MOUD providers and treatment facilities'
+- 'Step 2: People who inject drugs in rural areas face geographic barriers to treatment services'
+- 'Step 3: Limited healthcare infrastructure compounds the negative effects of stimulant use on treatment
+  initiation'
+- 'Step 4: Reduced rates of MOUD initiation compared to urban populations'
+evidence:
+  quality_rating: B
+  n_studies: 2
+  primary_citation: R. Cook et al. 2023. "Estimating the impact of stimulant use on initiation of buprenorphine
+    and extended-release naltrexone in two clinical trials and real-world populations." https://doi.org/10.1186/s13722-023-00364-3
+  supporting_citations:
+  - Rural Opioids Initiative (ROI) - population data characterizing rural PWID
+  - Treatment Episodes Dataset (TEDS) - comparison population
+  - National Survey on Drug Use and Health (NSDUH) - comparison population
+  doi: 10.1186/s13722-023-00364-3
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Rural populations with high rates of injection drug use experience limited access to MOUD
+  treatment. When combined with stimulant use, these structural barriers result in a 39% reduction in
+  likelihood of initiating MOUD treatment. The effect is more pronounced than in other populations studied.
+quantitative_effects:
+  effect_size:
+    value: 0.61
+    type: hazard_ratio
+    ci_lower: 0.35
+    ci_upper: 1.06
+  p_value: 0.081
+  sample_size: 1933
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The study specifically characterized rural populations with high rates of injection
+    drug use as particularly vulnerable to treatment barriers, showing more pronounced negative effects
+    of stimulant use on MOUD initiation compared to other populations
+moderators:
+- name: stimulant_use
+  direction: strengthens
+  strength: strong
+  description: Stimulant use amplifies treatment barriers in rural PWID populations, with 39% reduction
+    in MOUD initiation
+structural_competency:
+  equity_implications: This mechanism highlights geographic inequities in substance use treatment access.
+    Rural communities face systematic underinvestment in addiction treatment infrastructure, creating
+    structural barriers to evidence-based care. The finding that stimulant use effects are amplified in
+    rural settings reflects how place-based disadvantages compound individual-level risk factors. Addressing
+    this requires policy interventions expanding MOUD availability in rural areas, including telehealth
+    services and hub-and-spoke treatment models.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.227107'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

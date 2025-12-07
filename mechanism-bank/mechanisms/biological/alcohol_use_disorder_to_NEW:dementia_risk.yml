@@ -1,0 +1,58 @@
+id: alcohol_use_disorder_to_NEW:dementia_risk
+name: Alcohol Use Disorder → Dementia Risk (Non-Alzheimer's)
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:dementia_risk
+  node_name: Dementia Risk (Non-Alzheimer's)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol misuse causes direct neurotoxic effects on brain tissue'
+- 'Step 2: Alcohol accelerates brain aging and contributes to structural brain changes'
+- 'Step 3: Cognitive impairments develop, particularly in mnemonic (memory) domains'
+- 'Step 4: Accumulated neurological damage increases risk for dementia (though not necessarily Alzheimer''s
+  disease specifically)'
+evidence:
+  quality_rating: A
+  n_studies: 400
+  primary_citation: 'N. Zahr 2024. "Alcohol Use Disorder and Dementia: A Review." https://doi.org/10.35946/arcr.v44.1.03'
+  supporting_citations:
+  - Studies spanning 1957 to 2024 across clinical diagnoses, epidemiology, neuropsychology, postmortem
+    pathology, neuroimaging, and translational research
+  - PubMed, Web of Science, and ScienceDirect database searches covering multiple disciplines
+  - Additional citations require full-text access for specific study enumeration
+  doi: 10.35946/arcr.v44.1.03
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Chronic alcohol misuse accelerates brain aging and contributes to cognitive impairments.
+  The consensus across multiple disciplines (clinical, epidemiological, neuropsychological, pathological,
+  neuroimaging, and translational studies) is that alcohol misuse increases dementia risk, though not
+  necessarily Alzheimer's disease specifically. Key distinguishing factors include the reversibility of
+  alcohol-related brain damage with abstinence versus the progressive nature of Alzheimer's, and the absence
+  of characteristic protein inclusions (present in Alzheimer's) in AUD-affected brains.
+moderators:
+- name: abstinence_from_alcohol
+  direction: weakens
+  strength: moderate
+  description: Brain damage from chronic alcohol misuse shows reversibility following abstinence, unlike
+    the degenerative and progressive course of Alzheimer's disease
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Older age is a risk factor for dementia; risk doubles every 5 years beyond age 65, with
+    approximately one-third of those older than 85 diagnosed with dementia
+structural_competency:
+  equity_implications: This mechanism highlights the importance of addressing alcohol use disorder at
+    a population health level, particularly given that current alcohol consumption among older adults
+    is significantly higher compared to previous generations. Structural interventions should focus on
+    treatment access, harm reduction, and addressing upstream determinants of alcohol misuse rather than
+    individual blame. The aging demographic shift (21.6% of Americans will be over 65 by 2040) creates
+    urgency for structural prevention approaches.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.502129'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

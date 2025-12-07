@@ -1,0 +1,65 @@
+id: NEW:muscle_mass_index_to_all_cause_mortality_rate
+name: Quantitative Muscle Mass Index → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:muscle_mass_index
+  node_name: Quantitative Muscle Mass Index
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Higher quantitative muscle mass index reflects greater skeletal muscle
+  reserves and metabolic capacity'
+- 'Step 2: Adequate muscle mass supports protein synthesis, glucose metabolism, immune
+  function, and functional independence'
+- 'Step 3: Preserved muscle mass maintains physiological resilience against catabolic
+  stressors and disease complications'
+- 'Step 4: Greater muscle reserves provide buffer against nutritional depletion and
+  systemic inflammation'
+- 'Step 5: Reduced risk of sarcopenia-related complications (infections, falls, functional
+  decline) decreases mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Xinxing Tantai et al. 2022. Effect of sarcopenia on survival
+    in patients with cirrhosis: A meta-analysis. Journal of hepatology.'
+  supporting_citations: []
+description: Higher quantitative muscle mass index (per unit increase) is associated
+  with a 5% reduction in mortality risk (aHR 0.95, 95% CI 0.93-0.98). This meta-analysis
+  of 22 studies with 6,965 cirrhosis patients demonstrates that preserved muscle mass
+  independently protects against mortality. The continuous relationship between muscle
+  mass and survival supports the biological importance of skeletal muscle as a metabolic
+  organ that provides physiological reserves, supports immune function, and maintains
+  functional capacity under disease stress.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.95
+    type: hazard_ratio
+    ci_lower: 0.93
+    ci_upper: 0.98
+  p_value: null
+  sample_size: 6965
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Association consistent across male and female patients, though sarcopenia
+    prevalence higher in males
+- name: liver_disease_etiology
+  direction: strengthens
+  strength: moderate
+  description: Association similar across different etiologies; alcohol-associated
+    liver disease shows higher sarcopenia prevalence
+- name: hepatic_dysfunction_severity
+  direction: strengthens
+  strength: moderate
+  description: Association persists across Child-Pugh grades; sarcopenia more prevalent
+    in Child-Pugh class C
+- name: sarcopenia_duration
+  direction: strengthens
+  strength: moderate
+  description: Mortality rate increased with greater severity or longer durations
+    of sarcopenia

@@ -1,0 +1,63 @@
+id: prison_incarceration_rate_to_hepatitis_c_prevalence
+name: Prison Incarceration Rate → Hepatitis C Prevalence
+from_node:
+  node_id: prison_incarceration_rate
+  node_name: Prison Incarceration Rate
+to_node:
+  node_id: hepatitis_c_prevalence
+  node_name: Hepatitis C Prevalence
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Higher prison incarceration rates increase the population exposed to congregate
+  prison settings where risk factors for HCV transmission are concentrated'
+- 'Step 2: Prison environments have elevated prevalence of injection drug use, with
+  approximately 20% of German prisoners using heroin, creating conditions for bloodborne
+  pathogen transmission'
+- 'Step 3: Inadequate harm reduction programs (needle exchange programs discontinued
+  in most facilities) and limited access to prevention services allow HCV transmission
+  to continue within prisons'
+- 'Step 4: Deficient provision of HCV treatment to incarcerated persons allows infected
+  individuals to remain untreated and potentially transmit infection'
+- 'Step 5: Upon release, formerly incarcerated individuals with untreated HCV return
+  to communities, increasing overall population prevalence (prisoners are 48-69 times
+  more likely to have HCV than general population)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Opitz-Welke et al. 2018. Medicine in the Penal System. Deutsches
+    Ärzteblatt International.
+  supporting_citations: []
+description: Prison incarceration is positively associated with hepatitis C prevalence
+  through multiple interconnected pathways. Incarcerated populations have dramatically
+  elevated HCV prevalence (48-69 times higher than general population in Germany)
+  due to concentration of high-risk behaviors including injection drug use, inadequate
+  harm reduction measures, and deficient treatment provision within penal facilities.
+  The discontinuation of needle exchange programs in most prisons removes a key preventive
+  intervention, while limited healthcare access prevents treatment of existing infections.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 48.0
+    type: prevalence_ratio
+    ci_lower: 48.0
+    ci_upper: 69.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: needle_exchange_availability
+  direction: weakens
+  strength: moderate
+  description: Provision of needles to incarcerated persons has preventive effect
+    on HCV infection, but programs have been discontinued in most facilities
+- name: injection_drug_use_prevalence
+  direction: strengthens
+  strength: strong
+  description: Higher rates of heroin use (approximately 20% in German prisons) increase
+    HCV transmission risk
+- name: HCV_treatment_access
+  direction: weakens
+  strength: moderate
+  description: Adequate provision of HCV treatment could reduce prevalence, but current
+    evidence shows deficiencies in treatment provision

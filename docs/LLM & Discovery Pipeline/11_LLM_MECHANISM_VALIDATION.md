@@ -547,19 +547,24 @@ def validate_feedback_loops(mechanisms, nodes):
 
 ### 5.3 Network Connectivity Validation
 
+> **Note**: All node references must exist in `mechanism-bank/mechanisms/canonical_nodes.json`. Node levels correspond to the scale hierarchy (1=Structural Policy, 2=Institutional, 3=Individual/Household, 4=Intermediate, 5=Crisis Endpoints).
+
 ```python
 def validate_network_connectivity(mechanisms, nodes):
     """
     Ensure all nodes reachable from intervention points
+    Node references: mechanism-bank/mechanisms/canonical_nodes.json
     """
     G = nx.DiGraph()
     for mech in mechanisms:
         G.add_edge(mech['source_node'], mech['target_node'])
-    
-    # Identify intervention nodes (Level 1-2)
+
+    # Identify intervention nodes (Scale 1-2: structural/institutional)
+    # Examples: medicaid_expansion_status, primary_care_physician_density
     intervention_nodes = [n['node_id'] for n in nodes if n['node_level'] <= 2]
-    
-    # Identify outcome nodes (Level 5)
+
+    # Identify outcome nodes (Scale 5: crisis endpoints)
+    # Examples: emergency_department_visit_rate, asthma_hospitalization_rate
     outcome_nodes = [n['node_id'] for n in nodes if n['node_level'] == 5]
     
     # Check if all outcomes reachable from interventions
@@ -980,6 +985,22 @@ def generate_bank_health_report(mechanism_bank):
 
 ---
 
-**Document Version**: 1.0  
-**Cross-References**: `[09_LLM_TOPOLOGY_DISCOVERY.md]`, `[10_LLM_EFFECT_QUANTIFICATION.md]`, `[05_MECHANISM_BANK_STRUCTURE.md]`, `[16_VALIDATION_CONTINUOUS_IMPROVEMENT.md]`  
+---
+
+## Canonical Node Reference
+
+All validation checks reference canonical nodes from `mechanism-bank/mechanisms/canonical_nodes.json`. Key node categories for validation:
+
+| Scale | Level | Examples | Validation Role |
+|-------|-------|----------|-----------------|
+| 1 | Structural Policy | `medicaid_expansion_status`, `just_cause_eviction_protection` | Intervention entry points |
+| 2 | Institutional | `primary_care_physician_density`, `emergency_department_availability` | Capacity nodes |
+| 3 | Individual/Household | `eviction_filing_rate`, `housing_cost_burden` | Intermediate states |
+| 5 | Crisis Endpoints | `emergency_department_visit_rate`, `all_cause_mortality_rate` | Outcome validation targets |
+
+---
+
+**Document Version**: 1.1
+**Cross-References**: `[09_LLM_TOPOLOGY_DISCOVERY.md]`, `[10_LLM_EFFECT_QUANTIFICATION.md]`, `[05_MECHANISM_BANK_STRUCTURE.md]`, `[16_VALIDATION_CONTINUOUS_IMPROVEMENT.md]`, `mechanism-bank/mechanisms/canonical_nodes.json`
 **Status**: Technical specification for MVP implementation
+**Last Updated**: December 2, 2025

@@ -1,0 +1,54 @@
+id: NEW:maud_side_effect_concerns_to_NEW:maud_utilization_rate
+name: Apprehensiveness About MAUD Side Effects → Medications for Alcohol Use Disorder Utilization Rate
+from_node:
+  node_id: NEW:maud_side_effect_concerns
+  node_name: Apprehensiveness About MAUD Side Effects
+to_node:
+  node_id: NEW:maud_utilization_rate
+  node_name: Medications for Alcohol Use Disorder Utilization Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients develop concerns about potential side effects before or during MAUD treatment'
+- 'Step 2: Apprehensiveness may stem from inadequate pre-treatment counseling or prior negative experiences'
+- 'Step 3: Some patients experience actual side effects that are distressing or intolerable'
+- 'Step 4: Fear or experience of side effects leads to treatment avoidance, non-adherence, or discontinuation'
+- 'Step 5: Side effect concerns contribute to low overall MAUD initiation and retention rates'
+evidence:
+  quality_rating: B
+  n_studies: 14
+  primary_citation: 'Devin C Tomlinson et al. 2025. "Patient perspectives on medications for alcohol use
+    disorder: A systematic scoping review.." https://doi.org/10.1111/acer.70022'
+  supporting_citations:
+  - Additional citations require full-text access - review identified side effect concerns as major theme
+  - Studies specifically examining naltrexone patient perspectives (n=5 studies)
+  - Studies examining disulfiram patient perspectives (n=2 studies)
+  doi: 10.1111/acer.70022
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patient apprehensiveness about or direct experience with medication side effects represents
+  a key barrier to MAUD utilization. Both anticipated and experienced adverse effects lead patients to
+  avoid, discontinue, or poorly adhere to medications for alcohol use disorder.
+moderators:
+- name: medication_type
+  direction: varies
+  strength: moderate
+  description: Different MAUD medications (naltrexone, disulfiram, acamprosate) have different side effect
+    profiles affecting patient concerns
+- name: provider_side_effect_counseling
+  direction: weakens
+  strength: moderate
+  description: Proactive discussion of expected side effects and management strategies may reduce treatment
+    avoidance
+structural_competency:
+  equity_implications: Side effect concerns reflect both biological realities and healthcare system shortcomings
+    in patient education and shared decision-making. Structural factors include limited appointment time
+    for counseling, lack of follow-up support for side effect management, and absence of patient-centered
+    treatment planning. Healthcare systems should provide adequate resources for side effect education
+    and management to improve retention.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.249698'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

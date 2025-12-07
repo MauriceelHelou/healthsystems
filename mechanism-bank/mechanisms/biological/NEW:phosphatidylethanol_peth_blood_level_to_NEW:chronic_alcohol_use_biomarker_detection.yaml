@@ -1,0 +1,55 @@
+id: NEW:phosphatidylethanol_peth_blood_level_to_NEW:chronic_alcohol_use_biomarker_detection
+name: Phosphatidylethanol (PEth) Blood Level → Chronic Alcohol Use Biomarker Detection
+from_node:
+  node_id: NEW:phosphatidylethanol_peth_blood_level
+  node_name: Phosphatidylethanol (PEth) Blood Level
+to_node:
+  node_id: NEW:chronic_alcohol_use_biomarker_detection
+  node_name: Chronic Alcohol Use Biomarker Detection
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption leads to the presence of ethanol in the bloodstream
+  over extended periods'
+- 'Step 2: Ethanol reacts with phosphatidylcholine in red blood cell membranes via
+  phospholipase D enzyme activity, producing phosphatidylethanol (PEth) as a direct
+  metabolite'
+- 'Step 3: PEth accumulates in blood due to its long half-life (approximately 4-12
+  days), with concentrations proportional to alcohol intake patterns'
+- 'Step 4: Higher PEth blood concentrations serve as a direct biomarker indicating
+  chronic excessive alcohol consumption, distinguishing heavy drinkers (>60 g/day)
+  from social drinkers'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Viel G et al. 2012. Phosphatidylethanol in Blood as a Marker
+    of Chronic Alcohol Use: A Systematic Review and Meta-Analysis. International Journal
+    of Molecular Sciences.'
+  supporting_citations: []
+description: Phosphatidylethanol (PEth) is a direct marker of chronic alcohol use
+  formed when ethanol is incorporated into phospholipids in red blood cell membranes.
+  Meta-analysis of 12 studies demonstrates that PEth blood levels effectively distinguish
+  heavy drinkers from social drinkers, with heavy drinkers showing approximately 13.5-fold
+  higher mean concentrations (3.897 μM vs 0.288 μM). The marker demonstrates good
+  clinical efficiency for detecting chronic heavy drinking patterns.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 13.53
+    type: mean_ratio
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: Daily alcohol intake level
+  direction: strengthens
+  strength: strong
+  description: Heavy drinkers (>60 g/day) show mean PEth of 3.897 μM compared to 0.288
+    μM in social drinkers (≤60 g/day), demonstrating dose-response relationship
+- name: Binge drinking patterns
+  direction: strengthens
+  strength: moderate
+  description: PEth has potential utility for identifying binge drinking behaviors
+    due to its accumulation properties

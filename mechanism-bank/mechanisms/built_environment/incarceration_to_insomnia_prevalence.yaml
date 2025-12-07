@@ -1,0 +1,52 @@
+id: incarceration_rate_to_copd_prevalence
+name: Incarceration Rate → COPD Prevalence
+from_node:
+  node_id: incarceration_rate
+  node_name: Incarceration Rate
+  _original_id: incarceration
+to_node:
+  node_id: copd_prevalence
+  node_name: COPD Prevalence
+  _original_id: insomnia_prevalence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Prison environments expose individuals to structural risk factors for insomnia
+  including noise, lack of privacy, overcrowding, and institutional schedules'
+- 'Step 2: Environmental stressors and lack of control over sleep conditions disrupt
+  circadian rhythms and sleep architecture'
+- 'Step 3: Chronic exposure to adverse sleep conditions in carceral settings leads
+  to development and maintenance of insomnia'
+- 'Step 4: Elevated prevalence rates of insomnia emerge in prison populations (26.2%-72.5%)
+  compared to general population'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'Nia Sheppard and Lee Hogan 2022. "Prevalence of insomnia and
+    poor sleep quality in the prison population: A systematic review." *Journal of
+    Sleep Research*. https://doi.org/10.1111/jsr.13677'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.025146'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: environmental_factors
+  direction: strengthens
+  strength: strong
+  description: Prison environmental factors (noise, lighting, temperature control)
+    exacerbate insomnia risk
+- name: comorbidities
+  direction: strengthens
+  strength: moderate
+  description: Presence of comorbid conditions (mental health, substance use) amplifies
+    insomnia prevalence in prison settings
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Gender differences noted as consideration affecting insomnia prevalence
+    patterns
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/incarceration_to_insomnia_prevalence.yaml
+_category: built_environment

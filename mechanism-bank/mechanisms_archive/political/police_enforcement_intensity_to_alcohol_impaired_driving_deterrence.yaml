@@ -1,0 +1,41 @@
+id: police_enforcement_intensity_to_alcohol_impaired_driving_deterrence
+name: Police Enforcement Intensity for DUI (probability of being caught) → Deterrence
+  from Alcohol-Impaired Driving
+from_node:
+  node_id: police_enforcement_intensity
+  node_name: Police Enforcement Intensity for DUI (probability of being caught)
+to_node:
+  node_id: alcohol_impaired_driving_deterrence
+  node_name: Deterrence from Alcohol-Impaired Driving
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Increased police enforcement activity raises objective probability of detecting
+  drunk drivers'
+- 'Step 2: Higher detection rates increase perceived risk of apprehension among potential
+  offenders'
+- 'Step 3: Elevated risk perception shifts cost-benefit calculation against drunk
+  driving'
+- 'Step 4: Reduced frequency of alcohol-impaired driving attempts'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Robert Zeithammer et al. 2025. "Assessing the Deterrent Effects
+    of Ignition Interlock Devices.." *American journal of preventive medicine*. https://doi.org/10.1016/j.amepre.2024.09.009
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.477428'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_enforcement_rate
+  direction: strengthens
+  strength: strong
+  description: Effects measured comparing 1% (low) to 20% (high) enforcement scenarios,
+    showing massive increase (20-fold) in deterrence with increased enforcement
+- name: penalty_severity
+  direction: strengthens
+  strength: moderate
+  description: Enforcement effectiveness amplified when combined with severe penalties
+    like interlock devices, as enforcement makes penalties credible

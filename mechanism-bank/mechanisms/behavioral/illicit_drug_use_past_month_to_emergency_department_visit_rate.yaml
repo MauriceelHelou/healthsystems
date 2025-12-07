@@ -1,0 +1,63 @@
+id: illicit_drug_use_past_month_to_emergency_department_visit_rate
+name: Illicit Drug Use → Emergency Department Visit Rate
+from_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use
+to_node:
+  node_id: emergency_department_visit_rate
+  node_name: Emergency Department Visit Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Illicit drug use (heroin, methamphetamine, crack cocaine, etc.) leads to
+  acute intoxication, overdose events, and drug-related medical emergencies requiring
+  immediate care'
+- 'Step 2: Chronic drug use causes or exacerbates physical health conditions (infections,
+  cardiovascular events, injuries) and mental health crises that necessitate emergency
+  intervention'
+- 'Step 3: Social determinants associated with drug use (unstable housing, lack of
+  primary care access, injection practices) create barriers to preventive care, channeling
+  health needs to emergency departments'
+- 'Step 4: Emergency departments become the default point of healthcare access for
+  people who use drugs, resulting in ED utilization rates 4.8 times higher than the
+  general population'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'D. Lewer et al. 2019. Frequency of health‐care utilization by
+    adults who use illicit drugs: a systematic review and meta‐analysis. Addiction.'
+  supporting_citations: []
+description: People who use illicit drugs present to emergency departments at a pooled
+  rate of 151 per 100 person-years, approximately 4.8 times more frequently than the
+  general population. This elevated utilization is driven by acute drug-related emergencies,
+  chronic health complications, co-occurring mental health conditions, and structural
+  barriers to accessing preventive primary care.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 4.8
+    type: rate_ratio
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: Unstable housing
+  direction: strengthens
+  strength: strong
+  description: Consistently associated with increased ED utilization across studies
+- name: Drug injection
+  direction: strengthens
+  strength: strong
+  description: Injection drug use was a consistent predictor of higher healthcare
+    utilization
+- name: Mental health problems
+  direction: strengthens
+  strength: strong
+  description: Co-occurring mental health conditions consistently predicted higher
+    ED use
+- name: Opioid substitution therapy
+  direction: weakens
+  strength: strong
+  description: Consistently associated with reduced ED presentation and hospital admission

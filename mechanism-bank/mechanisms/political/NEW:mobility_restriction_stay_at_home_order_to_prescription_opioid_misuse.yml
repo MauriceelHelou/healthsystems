@@ -1,0 +1,58 @@
+id: NEW:mobility_restriction_stay_at_home_order_to_prescription_opioid_misuse
+name: Mobility Restriction (Stay-at-Home Order) → Prescription Opioid Misuse
+from_node:
+  node_id: NEW:mobility_restriction_stay_at_home_order
+  node_name: Mobility Restriction (Stay-at-Home Order)
+to_node:
+  node_id: prescription_opioid_misuse
+  node_name: Prescription Opioid Misuse
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Stay-at-home orders restrict movement and access to healthcare services'
+- 'Step 2: Reduced access to pain management clinics and regular medical care'
+- 'Step 3: Increased psychological distress from isolation and economic uncertainty'
+- 'Step 4: Individuals with existing prescriptions may escalate use as coping mechanism'
+- 'Step 5: Non-medical use of prescription drugs increases during confinement period'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Soo-Hoon Lee et al. 2025. "Representative national survey on drug use during the COVID-19
+    stay-at-home order in the USA.." https://doi.org/10.1136/bmjopen-2024-086141
+  supporting_citations:
+  - Additional citations require full-text access - abstract references NIDA-Modified ASSIST Level-2 Substance
+    Use for Adult Questionnaire
+  - Additional citations require full-text access - abstract references validated mental state scales
+  - Additional citations require full-text access - abstract references Qualtrics representative panel
+    methodology
+  doi: 10.1136/bmjopen-2024-086141
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study examined non-medical use of prescription drugs as an outcome measure during COVID-19
+  stay-at-home orders. Mobility restriction was identified as a risk factor for this form of drug use,
+  with mental health conditions and demographics serving as important covariates.
+quantitative_effects:
+  sample_size: 3340
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Geographic stratification in sampling suggests regional policy variation; different
+    states had varying stringency and duration of stay-at-home orders
+moderators:
+- name: mental_health_conditions
+  direction: strengthens
+  strength: moderate
+  description: Pre-existing mental health conditions identified as important covariates that may increase
+    vulnerability to prescription drug misuse during mobility restriction
+structural_competency:
+  equity_implications: This mechanism identifies policy-level intervention (stay-at-home orders) as a
+    structural determinant of prescription drug misuse, avoiding individual blame. The structural root
+    causes include both the pandemic response policy and the pre-existing healthcare system that creates
+    conditions for prescription drug availability and inadequate pain management alternatives. Equity
+    implications include differential access to telehealth, prescription monitoring programs, and mental
+    health services during lockdown.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.670504'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,49 @@
+id: NEW:thrombocytopenia_to_alcohol_withdrawal_severe_rate
+name: Thrombocytopenia (Low Platelet Count) → Complicated Alcohol Withdrawal Syndrome
+  (Delirium Tremens/Seizures)
+from_node:
+  node_id: NEW:thrombocytopenia
+  node_name: Thrombocytopenia (Low Platelet Count)
+to_node:
+  node_id: alcohol_withdrawal_severe_rate
+  node_name: Complicated Alcohol Withdrawal Syndrome (Delirium Tremens/Seizures)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic heavy alcohol use causes direct toxic effects on bone marrow megakaryocytes,
+  leading to decreased platelet production and thrombocytopenia'
+- 'Step 2: Thrombocytopenia serves as a biomarker of severe alcohol-related hepatic
+  dysfunction and overall physiological compromise from prolonged alcohol exposure'
+- 'Step 3: The same pathophysiological processes causing thrombocytopenia (liver damage,
+  bone marrow suppression, nutritional deficiencies) indicate more severe alcohol
+  dependence and greater neuroadaptation to alcohol'
+- 'Step 4: Greater neuroadaptation and physiological compromise predispose patients
+  to more severe withdrawal manifestations including delirium tremens and withdrawal
+  seizures'
+- 'Step 5: Lower platelet counts (particularly <119k/mL) correlate with higher CIWA-Ar
+  scores and increased risk of progression from uncomplicated to complicated alcohol
+  withdrawal syndrome'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Andrzej Silczuk et al. 2019. Thrombocytopenia in Patients Hospitalized
+    for Alcohol Withdrawal Syndrome and Its Associations to Clinical Complications.
+    Alcohol and Alcoholism.
+  supporting_citations: []
+description: Thrombocytopenia (low platelet count) is a significant predictor of complicated
+  alcohol withdrawal syndrome (cAWS), including delirium tremens and withdrawal seizures.
+  In a study of 300 hospitalized AWS patients, thrombocytopenia was found in 46% of
+  all subjects but was significantly more prevalent in the complicated AWS group (107
+  of 150 cases) compared to the non-complicated group (32 of 150 cases). Patients
+  with thrombocytopenia had at least moderate AWS severity on CIWA-Ar assessment,
+  and the non-complicated group had significantly higher platelet values than the
+  complicated group. The predictive value of thrombocytopenia, particularly below
+  119k/mL, for progression to complicated AWS was confirmed.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Platelet count threshold
+  direction: strengthens
+  strength: strong
+  description: Risk of complicated AWS increases as platelet count decreases, with
+    threshold of <119k/mL identified as particularly high risk

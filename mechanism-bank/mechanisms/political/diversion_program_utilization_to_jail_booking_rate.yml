@@ -1,0 +1,60 @@
+id: diversion_program_utilization_to_jail_booking_rate
+name: Diversion Program Utilization → Jail Booking Rate
+from_node:
+  node_id: diversion_program_utilization
+  node_name: Diversion Program Utilization
+to_node:
+  node_id: jail_booking_rate
+  node_name: Jail Booking Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Police officers encounter individuals engaged in low-level, non-violent criminalized behaviors'
+- 'Step 2: LEAD program provides officers with alternative to arrest for substance use-related offenses'
+- 'Step 3: Officers refer individuals to harm reduction case management services'
+- 'Step 4: Individuals enter diversion pathway instead of jail booking process'
+- 'Step 5: Jail booking rates decrease for low-level substance-related offenses'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Meret Hofer et al. 2025. "Patching holes and bridging gaps: Implementing Law Enforcement-Assisted
+    Diversion (LEAD) in resource-scarce environments.." https://doi.org/10.1016/j.josat.2025.209751'
+  supporting_citations:
+  - Additional citations require full-text access - study references LEAD as established pre-arrest diversion
+    model
+  - Additional citations require full-text access - references prior LEAD implementation and outcomes
+    research
+  - Additional citations require full-text access - references harm reduction case management literature
+  doi: 10.1016/j.josat.2025.209751
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Law Enforcement Assisted Diversion programs provide police officers with an alternative to
+  arrest for low-level substance-related offenses, reducing jail bookings through pre-arrest diversion
+  to harm reduction services
+quantitative_effects:
+  sample_size: 49
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Implementation varied across four North Carolina LEAD sites depending on local resource
+    availability
+moderators:
+- name: community_resource_availability
+  direction: strengthens
+  strength: strong
+  description: Program success and continued officer referrals depend on availability of community resources
+    to support diverted individuals
+- name: program_fidelity
+  direction: strengthens
+  strength: moderate
+  description: High-quality implementation and fidelity to existing LEAD models enhances diversion effectiveness
+structural_competency:
+  equity_implications: This mechanism addresses the structural harm of criminalization of substance use,
+    which disproportionately impacts low-income communities and communities of color. Diversion reduces
+    criminal justice system contact, but effectiveness depends on structural investments in community
+    services
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.830600'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

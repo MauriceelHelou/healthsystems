@@ -1,0 +1,50 @@
+id: aud_treatment_access_to_liver_transplant_eligibility
+name: Access to Alcohol Use Disorder Treatment During Hospitalization → Liver Transplant
+  Eligibility
+from_node:
+  node_id: aud_treatment_access
+  node_name: Access to Alcohol Use Disorder Treatment During Hospitalization
+to_node:
+  node_id: liver_transplant_eligibility
+  node_name: Liver Transplant Eligibility
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Hospitalization for alcoholic hepatitis provides critical window for AUD
+  treatment initiation and engagement'
+- 'Step 2: Receipt of formal AUD treatment establishes documentation of addiction
+  care engagement required for transplant evaluation'
+- 'Step 3: Treatment participation demonstrates commitment to abstinence, a key criterion
+  in transplant selection protocols'
+- 'Step 4: Successful treatment engagement may reduce mandatory waiting periods and
+  accelerate transplant listing for appropriate candidates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Adam C Winters et al. 2021. "Alcohol use disorder treatment and
+    outcomes among hospitalized adults with alcoholic hepatitis.." *Drug and alcohol
+    dependence reports*. https://doi.org/10.1016/j.dadr.2021.100004
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.626384'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: transplant_center_policy
+  direction: strengthens
+  strength: strong
+  description: Transplant centers with flexible abstinence requirements and policies
+    allowing early transplant evaluation for severe alcoholic hepatitis strengthen
+    the pathway from treatment access to transplant eligibility
+- name: insurance_coverage
+  direction: strengthens
+  strength: strong
+  description: Adequate insurance coverage for both addiction treatment and transplant
+    evaluation strengthens ability to progress through transplant eligibility pathway
+- name: integrated_addiction_services
+  direction: strengthens
+  strength: moderate
+  description: Hospitals with integrated addiction medicine services facilitate seamless
+    transition from acute care to addiction treatment, strengthening documentation
+    and continuity needed for transplant evaluation

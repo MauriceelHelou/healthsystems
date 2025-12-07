@@ -1,0 +1,52 @@
+id: NEW:prior_sexual_assault_victimization_to_sexual_assault_rate
+name: Prior Sexual Assault Victimization → Sexual Assault Victimization
+from_node:
+  node_id: NEW:prior_sexual_assault_victimization
+  node_name: Prior Sexual Assault Victimization
+to_node:
+  node_id: sexual_assault_rate
+  node_name: Sexual Assault Victimization
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Prior sexual assault victimization creates psychological vulnerabilities
+  including trauma symptoms, PTSD, depression, and anxiety that may impair threat
+  detection and protective behaviors'
+- 'Step 2: Previous trauma may lead to maladaptive coping strategies such as increased
+  alcohol or substance use, which are independently associated with revictimization
+  risk'
+- 'Step 3: Prior victimization may result in altered risk perception, self-blame,
+  or relationship patterns that increase exposure to potential perpetrators'
+- 'Step 4: Perpetrators may strategically target individuals with prior victimization
+  histories, perceiving them as more vulnerable or less likely to report'
+evidence:
+  quality_rating: A
+  n_studies: 118
+  primary_citation: 'Chelsea M. Spencer et al. 2023. "Factors Correlated With Sexual
+    Assault Victimization Among College Students in the United States: A Meta-Analysis."
+    Trauma, Violence, & Abuse.'
+  supporting_citations: []
+description: Prior sexual assault victimization is one of the strongest correlates
+  of subsequent sexual assault victimization among college students. This meta-analysis
+  of 118 studies found that individuals with prior SA victimization history face significantly
+  elevated risk of revictimization, likely through multiple pathways including psychological
+  vulnerability, altered coping mechanisms, and potential perpetrator targeting behaviors.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: The meta-analysis examined gender differences in correlates; prior
+    SA victimization was among the strongest correlates overall but specific gender
+    moderation for this pathway was not detailed
+- name: mental_health_symptoms
+  direction: strengthens
+  strength: moderate
+  description: Mental health factors (trauma symptoms, depression, anxiety) that often
+    co-occur with prior victimization may compound revictimization risk
+- name: substance_use
+  direction: strengthens
+  strength: moderate
+  description: Binge drinking and drug use, which may be used as coping mechanisms
+    for prior trauma, are independently associated with SA victimization

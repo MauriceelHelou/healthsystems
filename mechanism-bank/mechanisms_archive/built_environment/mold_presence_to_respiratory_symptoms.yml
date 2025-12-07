@@ -1,0 +1,56 @@
+id: mold_presence_to_respiratory_symptoms
+name: Mold Presence in Housing -> Respiratory Symptom Days
+from_node:
+  node_id: mold_presence
+  node_name: Mold Presence in Housing
+to_node:
+  node_id: respiratory_symptoms
+  node_name: Respiratory Symptom Days
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Structural housing defects (leaks, poor ventilation) create moisture accumulation'
+- 'Step 2: Persistent moisture enables mold growth in indoor environments'
+- 'Step 3: Mold releases spores and mycotoxins into indoor air'
+- 'Step 4: Inhalation of mold spores triggers allergic and inflammatory respiratory responses'
+- 'Step 5: Sustained exposure leads to increased frequency of respiratory symptoms'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Quansah R, Jaakkola MS, Hugg TT, Heikkinen SA, Jaakkola JJ. 2012. "Residential dampness
+    and molds and the risk of developing asthma: a systematic review and meta-analysis." PLoS One 7(11):
+    e47526. https://doi.org/10.1371/journal.pone.0047526'
+  doi: 10.1371/journal.pone.0047526
+  journal: PLoS ONE
+  year: 2012
+  fulltext:
+    available: true
+    source: unpaywall
+    url: https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0047526&type=printable
+    is_open_access: true
+    fetched_date: '2025-11-30'
+    license: cc-by
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '1.0'
+description: Mold growth in housing creates a direct biological pathway to respiratory symptoms through
+  airborne exposure to allergenic and toxic compounds that trigger inflammatory responses in children's
+  airways.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects more pronounced in humid climates where mold growth is facilitated
+moderators:
+- name: climate_humidity
+  direction: strengthens
+  strength: moderate
+  description: Higher humidity levels accelerate mold growth and spore production in housing with moisture
+    problems
+structural_competency:
+  equity_implications: Mold presence reflects structural housing maintenance failures and building code
+    enforcement gaps. Low-income families lack resources for mold remediation and legal power to compel
+    landlord repairs, creating systematic exposure inequities based on class and race.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-17T10:24:30.173253'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

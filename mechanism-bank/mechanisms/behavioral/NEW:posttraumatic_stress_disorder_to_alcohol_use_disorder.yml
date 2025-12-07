@@ -1,0 +1,53 @@
+id: NEW:posttraumatic_stress_disorder_to_alcohol_use_disorder
+name: Posttraumatic Stress Disorder (PTSD) in Women → Alcohol Use Disorder
+from_node:
+  node_id: NEW:posttraumatic_stress_disorder
+  node_name: Posttraumatic Stress Disorder (PTSD) in Women
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Women experience PTSD, often from distinct trauma types including interpersonal violence and
+  sexual assault'
+- 'Step 2: PTSD symptoms lead to psychological distress and attempts at self-medication'
+- 'Step 3: Alcohol is used to manage PTSD symptoms, leading to problematic use patterns'
+- 'Step 4: Development of alcohol use disorder, though with lower relative risk compared to men'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Amstadter et al. 2022. "Testing Phenotypic Models of Posttraumatic Stress Disorder
+    and Alcohol Use Disorder Comorbidity Using Longitudinal Registry Data.." https://doi.org/10.15288/jsad.22-00209
+  supporting_citations:
+  - Additional citations require full-text access - study stratified by sex
+  - Additional citations require full-text access - Swedish National Registries methodology
+  - Additional citations require full-text access - gender differences in PTSD-AUD comorbidity literature
+  doi: 10.15288/jsad.22-00209
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2023, source is 2022'
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Among women, PTSD predicted a 4.14-fold increased risk of developing AUD (HR=4.14, 95% CI:
+  3.99-4.30), demonstrating strong support for the self-medication model in women. While the effect was
+  slightly lower than in men, it remains clinically and statistically significant.'
+quantitative_effects:
+  effect_size:
+    value: 4.14
+    type: hazard_ratio
+    ci_lower: 3.99
+    ci_upper: 4.3
+  sample_size: 1500000
+structural_competency:
+  equity_implications: Women's pathways from PTSD to AUD often involve distinct structural factors including
+    gender-based violence, workplace harassment, and domestic violence - all of which have structural
+    determinants in gender inequality, inadequate legal protections, and economic dependence. Access to
+    trauma-informed care and substance use treatment may also differ by gender due to caregiving responsibilities,
+    stigma, and healthcare system design.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.840959'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,37 @@
+id: alcohol_brief_intervention_primary_care_to_drinks_per_drinking_day
+name: Alcohol Brief Intervention in Primary Care → Drinks per Drinking Day
+from_node:
+  node_id: alcohol_brief_intervention_primary_care
+  node_name: Alcohol Brief Intervention in Primary Care
+to_node:
+  node_id: drinks_per_drinking_day
+  node_name: Drinks per Drinking Day
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Integrated healthcare system implements system-wide alcohol screening,
+  brief intervention, and referral to treatment in adult primary care'
+- 'Step 2: Patients with hypertension who screen positive for unhealthy alcohol use
+  receive brief intervention counseling during routine primary care visits'
+- 'Step 3: Brief intervention provides immediate feedback, education about health
+  risks, and motivational support to reduce drinking intensity'
+- 'Step 4: Patients modify drinking patterns, resulting in reduction of drinks consumed
+  per drinking occasion at 12-month follow-up'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'F. Chi et al. 2023. "Associations between alcohol brief intervention
+    in primary care and drinking and health outcomes in adults with hypertension and
+    type 2 diabetes: a population-based observational study." *BMJ Open*. https://doi.org/10.1136/bmjopen-2022-064088'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.761220'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: chronic_disease_type
+  direction: strengthens
+  strength: strong
+  description: Effect observed in patients with hypertension but not in patients with
+    type 2 diabetes, suggesting disease-specific responsiveness to intervention

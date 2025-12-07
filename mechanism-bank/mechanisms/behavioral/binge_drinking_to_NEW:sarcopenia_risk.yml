@@ -1,0 +1,67 @@
+id: binge_drinking_to_NEW:sarcopenia_risk
+name: Binge Drinking → Sarcopenia Risk
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:sarcopenia_risk
+  node_name: Sarcopenia Risk
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Light to moderate alcohol consumption (approximately 6.6 grams/day) may have different metabolic
+  effects than heavy consumption'
+- 'Step 2: Moderate alcohol intake may influence protein synthesis pathways and muscle metabolism differently
+  than abstinence or heavy drinking'
+- 'Step 3: J-shaped dose-response relationship suggests protective effect at low doses with nadir at 6.6g/day'
+- 'Step 4: Overall pooled analysis shows no significant association, indicating complex relationship between
+  alcohol and muscle mass'
+evidence:
+  quality_rating: A
+  n_studies: 62
+  primary_citation: 'Yun-Ling Bu et al. 2024. "The association of alcohol consumption with the risk of
+    sarcopenia: a dose-response meta-analysis." https://doi.org/10.1080/00952990.2023.2300049'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 62 studies across multiple databases
+  - Studies sourced from PubMed, Embase, Cochrane Library, Web of Science
+  - Chinese databases including Wanfang Data, Chinese BioMedical Literature, CNKI
+  doi: 10.1080/00952990.2023.2300049
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This comprehensive meta-analysis of 62 studies with 454,643 participants found no overall
+  association between alcohol consumption and sarcopenia risk (OR=0.964). However, subgroup analysis revealed
+  a protective association in men and a J-shaped dose-response curve suggesting minimal sarcopenia risk
+  at approximately 6.6g alcohol/day. Authors caution against interpreting any protective effect given
+  the overall null finding.
+quantitative_effects:
+  effect_size:
+    value: 0.964
+    type: odds_ratio
+    ci_lower: 0.912
+    ci_upper: 1.019
+  sample_size: 454643
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: In men, alcohol consumption was correlated with lower risk of sarcopenia (OR=0.763, 95%
+    CI=0.622-0.938, P=.010), while overall population showed no significant association
+- name: dose
+  direction: u_shaped
+  strength: moderate
+  description: J-shaped dose-response relationship with nadir at 6.6 grams/day showing lowest sarcopenia
+    risk (OR=0.765, 95% CI=0.608-0.957)
+structural_competency:
+  equity_implications: While this study examines individual alcohol consumption patterns rather than structural
+    determinants, the findings have implications for public health messaging about alcohol and aging.
+    The authors appropriately caution against promoting alcohol for potential muscle-protective effects
+    given the broader harms of alcohol use. Structural factors like alcohol availability, marketing, and
+    social norms around drinking among older adults could influence consumption patterns and subsequent
+    sarcopenia risk. The sex-based difference (protection in men only) may reflect differential drinking
+    patterns shaped by gender norms.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.475528'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

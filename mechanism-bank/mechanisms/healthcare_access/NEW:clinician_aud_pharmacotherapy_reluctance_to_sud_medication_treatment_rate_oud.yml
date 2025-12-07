@@ -1,0 +1,59 @@
+id: NEW:clinician_aud_pharmacotherapy_reluctance_to_sud_medication_treatment_rate_oud
+name: Clinician Reluctance to Prescribe AUD Medications → SUD Medication Treatment Rate
+from_node:
+  node_id: NEW:clinician_aud_pharmacotherapy_reluctance
+  node_name: Clinician Reluctance to Prescribe AUD Medications
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Clinicians lack confidence or training in prescribing AUD pharmacotherapy despite evidence
+  of efficacy'
+- 'Step 2: Reluctance to prescribe leads to underutilization of available FDA-approved and off-label medications'
+- 'Step 3: Patients with AUD receive psychosocial intervention alone, which has higher relapse rates'
+- 'Step 4: Population-level medication treatment rates for substance use disorders remain low'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: Youngjung Kim et al. 2018. "Practical outpatient pharmacotherapy for alcohol use disorder."
+    https://doi.org/10.7573/dic.212308
+  supporting_citations:
+  - 'Mark TL et al. (2009). Alcohol and opioid dependence medications: Prescription trends, overall and
+    by physician specialty. Drug and Alcohol Dependence.'
+  - Harris AH et al. (2012). Pharmacotherapy of alcohol use disorders in the Veterans Health Administration.
+  - 'Thomas CP et al. (2014). Medication-assisted treatment with buprenorphine: Assessing the evidence.'
+  doi: 10.7573/dic.212308
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Clinician reluctance to prescribe AUD medications represents a critical healthcare system
+  barrier. Despite medications being efficacious, safe, and cost-effective, provider-level hesitancy creates
+  a treatment gap that disproportionately affects AUD patients who could benefit from pharmacological
+  support.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Prescribing patterns likely vary by healthcare setting, specialty, and region, though
+    not explicitly quantified
+moderators:
+- name: clinical_guidelines_availability
+  direction: weakens
+  strength: moderate
+  description: Access to current treatment guidelines and practical prescribing strategies may reduce
+    clinician reluctance
+- name: outpatient_vs_inpatient_setting
+  direction: strengthens
+  strength: moderate
+  description: Outpatient settings may have less infrastructure for managing AUD pharmacotherapy, increasing
+    reluctance
+structural_competency:
+  equity_implications: This mechanism identifies the structural barrier as residing in the healthcare
+    delivery system and medical education, not in patient characteristics. The reluctance is framed as
+    a clinician/system issue that requires intervention through education, guidelines, and systems change
+    rather than patient-focused interventions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.118297'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

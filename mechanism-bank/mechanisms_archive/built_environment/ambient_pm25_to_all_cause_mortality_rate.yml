@@ -1,0 +1,108 @@
+id: ambient_pm25_to_all_cause_mortality_rate
+name: Ambient PM2.5 Concentration -> All-Cause Mortality Rate
+from_node:
+  node_id: ambient_pm25
+  node_name: Ambient PM2.5 Concentration
+  node_type: stock
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+  node_type: crisis_endpoint
+direction: positive
+category: built_environment
+mechanism_pathway:
+  - "Step 1: Fine particulate matter (PM2.5 <2.5 micrometers) from combustion, traffic, industry enters respiratory system"
+  - "Step 2: PM2.5 penetrates deep into alveoli and crosses into bloodstream"
+  - "Step 3: Systemic inflammation triggered by particle deposition and oxidative stress"
+  - "Step 4: Chronic inflammation accelerates atherosclerosis and cardiovascular disease progression"
+  - "Step 5: Pulmonary inflammation impairs lung function and increases respiratory disease risk"
+  - "Step 6: Elevated mortality from cardiovascular events (MI, stroke), respiratory failure, and lung cancer"
+evidence:
+  quality_rating: A
+  n_studies: 107
+  primary_citation: "Chen, Jie, and Gerard Hoek. 2020. 'Long-term Exposure to PM and All-Cause and Cause-Specific Mortality: A Systematic Review and Meta-Analysis.' Environment International 143: 105974."
+  supporting_citations:
+    - "Huangfu, Peijue, and Richard Atkinson. 2020. 'Long-term exposure to NO2 and O3 and all-cause and respiratory mortality: A systematic review and meta-analysis.' Environment International 144: 105998."
+    - "World Health Organization. 2024. 'Long-Term Exposure to Particulate Matter and Mortality: An Update of the WHO Global Air Quality Guidelines Systematic Review and Meta-Analysis.' International Journal of Public Health 69: 1607683."
+    - "Burnett, Richard, et al. 2018. 'Global Estimates of Mortality Associated With Long-Term Exposure to Outdoor Fine Particulate Matter.' PNAS 115(38): 9592-9597."
+    - "Park, Jeongmin, et al. 2025. 'A Systematic Review and Meta-Analysis on Long-Term Exposure to Particulate Matter and All-Cause and Cause-Specific Mortality in the Asia-Pacific States.' Journal of Korean Medical Science 40(15): e156."
+  doi: "10.1016/j.envint.2020.105974"
+  journal: Environment International
+  year: 2020
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 1.08
+    type: relative_risk
+    ci_lower: 1.06
+    ci_upper: 1.09
+    ci_level: 95
+  per_unit: "per 10 micrograms/m3 PM2.5"
+  secondary_effects:
+    - description: "Cardiovascular disease mortality"
+      value: 1.11
+      type: relative_risk
+      ci_lower: 1.09
+      ci_upper: 1.14
+      source: "Meta-analysis of 22 studies"
+    - description: "Respiratory disease mortality"
+      value: 1.09
+      type: relative_risk
+      ci_lower: 1.05
+      ci_upper: 1.13
+      source: "Meta-analysis of 12 studies"
+    - description: "Lung cancer mortality"
+      value: 1.12
+      type: relative_risk
+      ci_lower: 1.08
+      ci_upper: 1.16
+      source: "Meta-analysis of 15 studies"
+  heterogeneity_i_squared: 89.0
+  sample_size: 25000000
+  interpretation: "Each 10 micrograms/m3 increase in long-term PM2.5 exposure increases all-cause mortality risk by 8% (RR 1.08). Cardiovascular mortality shows 11% increase, respiratory mortality 9% increase, and lung cancer mortality 12% increase. Effects persist at levels below WHO guidelines (10 micrograms/m3)."
+last_updated: "2025-12-01"
+version: "1.0"
+description: "Long-term exposure to ambient fine particulate matter (PM2.5) increases all-cause mortality through cardiovascular, respiratory, and carcinogenic pathways. WHO-commissioned systematic review of 107 predominantly cohort studies found consistent 8% mortality increase per 10 micrograms/m3, with effects observed even below current air quality guidelines."
+moderators:
+  - name: baseline_exposure_level
+    direction: strengthens
+    strength: strong
+    description: "Higher baseline PM2.5 levels show steeper mortality gradients"
+  - name: age
+    direction: strengthens
+    strength: moderate
+    description: "Elderly populations show stronger mortality associations"
+  - name: cardiovascular_comorbidity
+    direction: strengthens
+    strength: strong
+    description: "Existing CVD amplifies mortality risk from PM2.5"
+  - name: socioeconomic_status
+    direction: strengthens
+    strength: moderate
+    description: "Lower SES populations face higher exposure and greater vulnerability"
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: "PM2.5 exposure is inequitably distributed by race and income due to historical zoning, redlining, and industrial siting decisions. Black and Latino communities face 28-56% higher PM2.5 exposure than white communities in the US. Environmental justice requires addressing root causes of disparate exposure through policy interventions including zoning reform, industrial regulation, and clean energy transitions."
+assumptions:
+  - "Linear dose-response relationship (may underestimate effects at low levels)"
+  - "PM2.5 composition varies by source but effects are broadly consistent"
+  - "Cohort follow-up adequately captures long-term exposure effects"
+limitations:
+  - "High heterogeneity (I-squared 89%) across studies"
+  - "Ecological fallacy possible in area-level exposure assessment"
+  - "Confounding by co-pollutants (NO2, O3) difficult to isolate"
+  - "Indoor air quality not captured in ambient monitoring"
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: "PM2.5 levels and composition vary substantially by region based on sources (traffic, industry, agriculture, wildfires). Urban areas typically higher than rural. Western US increasingly affected by wildfire smoke. Effects observed across North America, Europe, and Asia-Pacific."
+  relevant_geographies:
+    - "California Central Valley (agriculture + traffic)"
+    - "Northeast corridor (traffic + industry)"
+    - "Western states (increasing wildfire contribution)"
+    - "Industrial regions worldwide"
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: "2025-12-01T00:00:00"
+  extraction_confidence: high
+  prompt_version: "1.0-discovery"

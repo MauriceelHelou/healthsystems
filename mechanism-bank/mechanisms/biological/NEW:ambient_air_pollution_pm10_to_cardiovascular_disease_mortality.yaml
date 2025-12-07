@@ -1,0 +1,64 @@
+id: NEW:ambient_air_pollution_pm10_to_cardiovascular_disease_mortality
+name: Ambient Air Pollution (PM10) → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:ambient_air_pollution_pm10
+  node_name: Ambient Air Pollution (PM10)
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhalation of PM10 particulate matter deposits in the respiratory tract,
+  with smaller particles reaching deep lung tissue'
+- 'Step 2: Particles trigger local and systemic inflammatory responses, oxidative
+  stress, and release of pro-inflammatory cytokines'
+- 'Step 3: Systemic inflammation promotes endothelial dysfunction, increased blood
+  viscosity, and enhanced coagulation'
+- 'Step 4: These cardiovascular stressors increase risk of acute cardiac events including
+  myocardial infarction, arrhythmias, and heart failure exacerbation'
+- 'Step 5: Acute cardiovascular events lead to increased cardiovascular mortality,
+  particularly in vulnerable populations'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Lei Zhao et al. 2017. Association between air pollution and cardiovascular
+    mortality in China: a systematic review and meta-analysis. OncoTarget.'
+  supporting_citations: []
+description: Meta-analysis of 30 studies demonstrates that acute exposure to PM10
+  is significantly associated with increased cardiovascular mortality in China. Each
+  10 μg/m3 increase in PM10 concentration is associated with a 0.39% excess risk of
+  cardiovascular mortality. The association is strongest at lag 0-1 days, suggesting
+  acute pathophysiological effects. Vulnerable subpopulations include females, elderly
+  (≥65 years), and those exposed during cooler temperatures.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.39
+    type: excess_risk_percent_per_10ug_m3
+    ci_lower: 0.26
+    ci_upper: 0.53
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Female sex associated with greater cardiovascular mortality risk from
+    PM10 exposure
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Age ≥65 years associated with greater cardiovascular mortality risk
+    compared to younger individuals
+- name: temperature
+  direction: strengthens
+  strength: moderate
+  description: Lower/cool temperatures associated with greater cardiovascular mortality
+    risk from PM10 exposure
+- name: exposure_duration
+  direction: strengthens
+  strength: moderate
+  description: Longer duration of exposure (lag 0-1 day) showed strongest associations
+    with cardiovascular mortality

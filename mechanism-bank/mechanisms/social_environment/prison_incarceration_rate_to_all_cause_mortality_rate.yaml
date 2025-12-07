@@ -1,0 +1,56 @@
+id: prison_incarceration_rate_to_all_cause_mortality_rate
+name: Imprisonment → All-Cause Mortality
+from_node:
+  node_id: prison_incarceration_rate
+  node_name: Imprisonment
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Imprisonment exposes individuals to extreme social exclusion, marginalization,
+  and concentrated health risks within correctional facilities'
+- 'Step 2: During and after incarceration, individuals experience elevated rates of
+  substance use disorders, mental health conditions, infectious diseases (HIV, Hepatitis
+  C, tuberculosis), and chronic conditions'
+- 'Step 3: Post-release period carries exceptionally high mortality risk due to disrupted
+  healthcare access, social support loss, housing instability, and overdose vulnerability'
+- 'Step 4: Cumulative health burdens and barriers to reintegration result in substantially
+  elevated standardized mortality ratios compared to general population'
+evidence:
+  quality_rating: A
+  n_studies: 92
+  primary_citation: 'Robert W Aldridge et al. 2018. Morbidity and mortality in homeless
+    individuals, prisoners, sex workers, and individuals with substance use disorders
+    in high-income countries: a systematic review and meta-analysis. Lancet (London,
+    England)'
+  supporting_citations: []
+description: This systematic review and meta-analysis of 337 studies found that imprisoned
+  individuals experience extreme health inequities, with all-cause standardized mortality
+  ratios significantly increased in 99% of 92 extracted datapoints. The pooled SMR
+  of 11.86 indicates imprisoned individuals have nearly 12 times the mortality risk
+  compared to the general population, driven by concentrated exposure to poverty,
+  marginalization, multimorbidity, substance use, infectious disease, and barriers
+  to healthcare access.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 11.86
+    type: standardized_mortality_ratio
+    ci_lower: 10.42
+    ci_upper: 13.3
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: The relative effect of exclusion on mortality is greater in female
+    individuals than male individuals
+- name: overlapping marginalized status
+  direction: strengthens
+  strength: strong
+  description: Individuals with overlapping experiences of homelessness, substance
+    use disorders, and sex work experience compounded mortality risk

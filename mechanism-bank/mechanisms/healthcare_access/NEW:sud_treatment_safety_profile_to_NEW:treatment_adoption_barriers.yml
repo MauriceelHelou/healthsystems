@@ -1,0 +1,55 @@
+id: NEW:sud_treatment_safety_profile_to_NEW:treatment_adoption_barriers
+name: AUD Medication Safety in Cirrhosis → Treatment Adoption Barriers for AUD in Liver Disease
+from_node:
+  node_id: NEW:sud_treatment_safety_profile
+  node_name: AUD Medication Safety in Cirrhosis
+to_node:
+  node_id: NEW:treatment_adoption_barriers
+  node_name: Treatment Adoption Barriers for AUD in Liver Disease
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Evidence demonstrates that MAUD medications have acceptable safety profiles in cirrhosis patients'
+- 'Step 2: Only 3% of serious adverse events (5 of 165) were possibly or probably related to study medications'
+- 'Step 3: Safety evidence reduces provider hesitancy to prescribe AUD medications in liver disease patients'
+- 'Step 4: Reduced barriers enable greater treatment adoption and access for underserved population'
+evidence:
+  quality_rating: B
+  n_studies: 8
+  primary_citation: 'J. Gratacós-Ginés et al. 2023. "Medications for alcohol use disorder promote abstinence
+    in alcohol-associated cirrhosis: Results from a systematic review and meta-analysis." https://doi.org/10.1097/HEP.0000000000000570'
+  supporting_citations:
+  - 8 studies total included for safety analysis (4 cohort studies, 4 RCTs)
+  - Baclofen safety data (6 studies)
+  - Additional citations require full-text access for specific author/year details
+  doi: 10.1097/HEP.0000000000000570
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The meta-analysis demonstrates that medications for alcohol use disorder have a good safety
+  profile in patients with cirrhosis, with only 3% of serious adverse events possibly or probably related
+  to study medications. This safety evidence is critical for overcoming structural barriers to treatment
+  adoption, as provider concerns about hepatotoxicity have historically limited prescribing of AUD medications
+  in liver disease patients.
+quantitative_effects:
+  effect_size:
+    value: 3.0
+    type: percentage_change
+  sample_size: 165
+moderators:
+- name: specific_medication_used
+  direction: unknown
+  strength: moderate
+  description: Different MAUD medications may have different safety profiles in cirrhosis; baclofen was
+    most studied (6 of 8 studies)
+structural_competency:
+  equity_implications: This finding addresses a structural knowledge gap that has perpetuated health inequities.
+    Patients with alcohol-associated liver disease have been systematically excluded from AUD treatment
+    due to perceived (but often unsubstantiated) safety concerns. The evidence of safety creates an opportunity
+    to address structural barriers through updated clinical guidelines, provider education, and policy
+    changes that ensure equitable access to effective AUD treatment regardless of liver disease status.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.281689'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

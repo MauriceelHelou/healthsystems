@@ -1,0 +1,56 @@
+id: diabetes_diagnosis_to_NEW:lean_nafld
+name: Type 2 Diabetes Mellitus Diagnosis → Nonalcoholic Fatty Liver Disease in Lean
+  Individuals
+from_node:
+  node_id: diabetes_diagnosis
+  node_name: Type 2 Diabetes Mellitus Diagnosis
+to_node:
+  node_id: NEW:lean_nafld
+  node_name: Nonalcoholic Fatty Liver Disease in Lean Individuals
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Type 2 diabetes mellitus creates a state of insulin resistance and hyperinsulinemia
+  that affects hepatic lipid metabolism even in individuals without obesity'
+- 'Step 2: Insulin resistance promotes de novo lipogenesis in the liver while simultaneously
+  impairing fatty acid oxidation, leading to intrahepatic triglyceride accumulation'
+- 'Step 3: The metabolic dysfunction associated with T2DM (dyslipidemia, hyperglycemia)
+  drives hepatic steatosis development independent of overall body mass index'
+- 'Step 4: Accumulated hepatic fat triggers inflammatory pathways and oxidative stress,
+  potentially progressing to nonalcoholic steatohepatitis and fibrosis in lean individuals'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'M. Long et al. 2022. AGA Clinical Practice Update: Diagnosis
+    and Management of Nonalcoholic Fatty Liver Disease in Lean Individuals: Expert
+    Review. Gastroenterology.'
+  supporting_citations: []
+description: Type 2 diabetes mellitus is a significant risk factor for nonalcoholic
+  fatty liver disease in lean individuals (BMI <25 kg/m2 for non-Asians, <23 kg/m2
+  for Asians). The AGA Clinical Practice Update recommends screening for NAFLD in
+  T2DM patients over 40 years and emphasizes that T2DM should prompt consideration
+  of NAFLD even in lean individuals. An estimated 7-20% of NAFLD cases occur in lean
+  individuals, and T2DM is a key metabolic comorbidity driving this condition. Lean
+  individuals with NAFLD face increased cardiovascular, liver, and all-cause mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: ethnicity
+  direction: strengthens
+  strength: moderate
+  description: Asian populations may have higher susceptibility to lean NAFLD at lower
+    BMI thresholds, requiring different diagnostic cutoffs
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Screening for NAFLD recommended in T2DM patients older than 40 years,
+    suggesting age modifies risk
+- name: dyslipidemia
+  direction: strengthens
+  strength: moderate
+  description: Co-existing dyslipidemia in T2DM patients increases NAFLD risk in lean
+    individuals
+- name: hypertension
+  direction: strengthens
+  strength: moderate
+  description: Comorbid hypertension compounds metabolic risk for lean NAFLD development

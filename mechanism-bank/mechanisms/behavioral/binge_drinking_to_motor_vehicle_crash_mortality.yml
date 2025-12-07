@@ -1,0 +1,61 @@
+id: binge_drinking_to_motor_vehicle_crash_mortality
+name: Binge Drinking → Motor Vehicle Crash Mortality
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: motor_vehicle_crash_mortality
+  node_name: Motor Vehicle Crash Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Acute alcohol intoxication impairs pedestrian judgment and road-crossing behavior'
+- 'Step 2: Alcohol reduces protective reflexes and ability to respond to oncoming traffic'
+- 'Step 3: Intoxicated pedestrians sustain more severe traumatic injuries upon vehicle impact'
+- 'Step 4: Severity of injuries leads to fatal outcomes, particularly in vulnerable populations (women,
+  elderly)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Lasota et al. 2020. "Effects of ethyl alcohol on injuries severity according to
+    injury severity scales in pedestrian fatal injury in traffic crashes." https://doi.org/10.1080/17457300.2019.1665551
+  supporting_citations:
+  - Additional citations require full-text access - abstract references forensic medicine data sources
+  - Injury severity scale validation studies (ISS, NISS, LTI, ICISS referenced)
+  - Warsaw Medical University forensic autopsy data 2009-2013
+  doi: 10.1080/17457300.2019.1665551
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2019, source is 2020'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol intoxication among pedestrians contributes to fatal traffic crash outcomes by increasing
+  the severity of injuries sustained. The study of 200 fatal pedestrian victims hit by passenger cars
+  found that alcohol concentration significantly affects injury severity, with more pronounced effects
+  when using comprehensive injury severity scales and among female victims.
+quantitative_effects:
+  sample_size: 200
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Female pedestrians show stronger association between alcohol concentration and injury severity
+    compared to males
+- name: injury_scale_type
+  direction: strengthens
+  strength: moderate
+  description: Scales that incorporate more risk factors (LTI, ICISS) show stronger alcohol-severity relationships
+    than ISS and NISS
+structural_competency:
+  equity_implications: 'Structural factors underlying this mechanism include: alcohol availability and
+    pricing policies that influence intoxication prevalence, built environment features (sidewalk completeness,
+    pedestrian crossings, street lighting) that fail to protect vulnerable road users, transportation
+    policy that necessitates pedestrian travel in car-centric environments, and lack of safe sobering
+    facilities or transportation alternatives. The gender disparity suggests need for sex-specific approaches
+    to road safety policy and emergency trauma care systems.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.646594'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

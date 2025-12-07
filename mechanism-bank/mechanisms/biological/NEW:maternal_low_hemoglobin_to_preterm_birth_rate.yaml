@@ -1,0 +1,52 @@
+id: NEW:maternal_low_hemoglobin_to_preterm_birth_rate
+name: Maternal Low Hemoglobin Concentration (<110 g/L) → Preterm Birth Rate
+from_node:
+  node_id: NEW:maternal_low_hemoglobin
+  node_name: Maternal Low Hemoglobin Concentration (<110 g/L)
+to_node:
+  node_id: preterm_birth_rate
+  node_name: Preterm Birth Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Low maternal hemoglobin concentration (<110 g/L) reduces oxygen-carrying
+  capacity of maternal blood, leading to tissue hypoxia'
+- 'Step 2: Chronic hypoxia triggers oxidative stress and inflammatory responses in
+  the placenta and uterine environment'
+- 'Step 3: Placental dysfunction and inflammatory mediators activate premature uterine
+  contractions and cervical ripening'
+- 'Step 4: These physiological changes precipitate preterm labor and delivery before
+  37 weeks gestation'
+evidence:
+  quality_rating: A
+  n_studies: 148
+  primary_citation: 'M. Young et al. 2023. Maternal low and high hemoglobin concentrations
+    and associations with adverse maternal and infant health outcomes: an updated
+    global systematic review and meta-analysis. BMC Pregnancy and Childbirth.'
+  supporting_citations: []
+description: Low maternal hemoglobin concentration (<110 g/L) during pregnancy is
+  significantly associated with increased risk of preterm birth. This meta-analysis
+  of 148 studies found that maternal anemia at any time point in pregnancy increases
+  odds of preterm birth by 35%. The association is stronger when assessed earlier
+  in pregnancy and with more severe anemia.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.35
+    type: odds_ratio
+    ci_lower: 1.29
+    ci_upper: 1.42
+  p_value: null
+  sample_size: null
+moderators:
+- name: Timing of hemoglobin assessment
+  direction: strengthens
+  strength: moderate
+  description: Stronger associations were noted earlier in pregnancy for low Hb and
+    adverse birth outcomes including preterm birth
+- name: Severity of anemia (lower Hb cutoffs)
+  direction: strengthens
+  strength: moderate
+  description: Lower hemoglobin cutoffs were associated with greater odds of poor
+    outcomes

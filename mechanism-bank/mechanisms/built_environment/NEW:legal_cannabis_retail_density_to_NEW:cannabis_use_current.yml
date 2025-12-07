@@ -1,0 +1,62 @@
+id: NEW:legal_cannabis_retail_density_to_NEW:cannabis_use_current
+name: Legal Cannabis Retail Density → Current Cannabis Use
+from_node:
+  node_id: NEW:legal_cannabis_retail_density
+  node_name: Legal Cannabis Retail Density
+to_node:
+  node_id: NEW:cannabis_use_current
+  node_name: Current Cannabis Use
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Legalization enables establishment of licensed cannabis retail outlets in communities'
+- 'Step 2: Higher density of retail outlets increases geographic proximity and convenience of access'
+- 'Step 3: Reduced travel distance and time barriers lower transaction costs for obtaining cannabis'
+- 'Step 4: Increased visibility and normalization of cannabis retail presence may reduce perceived risk'
+- 'Step 5: Combined accessibility and normalization leads to increased cannabis consumption rates'
+evidence:
+  quality_rating: B
+  n_studies: 13
+  primary_citation: 'Jakob Manthey et al. 2023. "The impact of legal cannabis availability on cannabis
+    use and health outcomes: A systematic review.." https://doi.org/10.1016/j.drugpo.2023.104039'
+  supporting_citations:
+  - Studies from Western US states examining recreational cannabis markets (2012-2022)
+  - Research utilizing longitudinal, cross-sectional, and repeated cross-sectional designs
+  - Additional citations require full-text access for specific study identification
+  doi: 10.1016/j.drugpo.2023.104039
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Systematic review of 13 studies (n=333,550 participants) found that increased availability
+  of legal cannabis, measured by proximity or density of retail outlets, is consistently linked to increased
+  current cannabis use in both adults and adolescents.
+quantitative_effects:
+  sample_size: 333550
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: All studies were conducted in North America, with the majority from Western US states.
+    Geographic variation in regulatory frameworks and baseline cannabis exposure likely influences effects.
+moderators:
+- name: prior_cannabis_exposure
+  direction: strengthens
+  strength: strong
+  description: Groups who have been least exposed to cannabis before legalization are most susceptible
+    to increased availability - the positive correlation is most pronounced among those less exposed before
+    legalization
+- name: age_group
+  direction: strengthens
+  strength: moderate
+  description: Effects observed in both adults and adolescents, suggesting availability impacts multiple
+    age groups
+structural_competency:
+  equity_implications: This mechanism highlights how commercial environment and regulatory policy shape
+    substance use patterns at the population level. The finding that previously less-exposed groups are
+    most affected by increased availability suggests structural vulnerability - those without prior access
+    networks become newly exposed through commercial infrastructure. Policy implications point to restricting
+    retail density, especially in densely populated areas, as a structural intervention rather than individual
+    behavior change.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.443968'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

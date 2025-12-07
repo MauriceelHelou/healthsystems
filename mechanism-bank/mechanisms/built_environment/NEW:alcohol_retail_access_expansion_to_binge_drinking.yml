@@ -1,0 +1,61 @@
+id: NEW:alcohol_retail_access_expansion_to_binge_drinking
+name: Alcohol Retail Access Expansion → Binge Drinking
+from_node:
+  node_id: NEW:alcohol_retail_access_expansion
+  node_name: Alcohol Retail Access Expansion
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Privatization increases the number and types of retail outlets selling liquor'
+- 'Step 2: Greater physical availability reduces travel time and effort to obtain alcohol'
+- 'Step 3: Expanded hours of sale at private retailers increase temporal access'
+- 'Step 4: Increased household liquor stockpiling facilitates higher consumption occasions'
+- 'Step 5: Population-level increases in liquor purchasing may translate to increased binge drinking episodes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Sarah Beth L Barnett et al. 2020. "Washington''s privatization of liquor: effects
+    on household alcohol purchases from Initiative 1183.." https://doi.org/10.1111/add.14875'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references opposing effects of increased
+    access vs. new fees
+  - Additional citations require full-text access - abstract references Nielsen Consumer Panel methodology
+  - Additional citations require full-text access - abstract references 31-month post-policy observation
+    period
+  doi: 10.1111/add.14875
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study demonstrates that increased alcohol retail access through privatization leads to
+  substantial increases in household alcohol purchases (82% increase in liquor, 26% increase in total
+  ethanol), which represents a proximate pathway to potential increases in harmful drinking patterns including
+  binge drinking
+quantitative_effects:
+  effect_size:
+    value: 82.0
+    type: percentage_change
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study limited to metropolitan and surrounding areas; effects in rural areas with different
+    baseline access may vary
+moderators:
+- name: prior_consumption_level
+  direction: u_shaped
+  strength: strong
+  description: Low and moderate purchasers showed increased ethanol consumption while high purchasers
+    decreased, suggesting access expansion may differentially affect population subgroups
+structural_competency:
+  equity_implications: This mechanism connects the built environment (alcohol retail density and access)
+    to health-relevant behaviors without placing blame on individuals. The policy choice to privatize
+    creates population-level exposure changes. The finding that low/moderate purchasers increased while
+    high purchasers decreased suggests complex equity implications - expanding access may recruit new
+    or occasional drinkers while potentially not increasing consumption among already heavy users
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.189426'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

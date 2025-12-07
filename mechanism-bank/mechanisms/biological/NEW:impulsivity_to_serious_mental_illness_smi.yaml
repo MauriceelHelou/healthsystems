@@ -1,0 +1,54 @@
+id: NEW:impulsivity_to_serious_mental_illness_smi
+name: Impulsivity → Serious Mental Illness
+from_node:
+  node_id: NEW:impulsivity
+  node_name: Impulsivity
+to_node:
+  node_id: serious_mental_illness_smi
+  node_name: Serious Mental Illness
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Impulsivity is associated with altered prefrontal cortex function and reduced
+  executive control, which are shared neural substrates with serious mental illnesses'
+- 'Step 2: Impulsive behavior patterns may exacerbate symptoms and reduce treatment
+  adherence in individuals with mental disorders'
+- 'Step 3: The bidirectional relationship between impulsivity and mental disorders
+  is evidenced by the prevalence of impulsivity as a transdiagnostic feature across
+  multiple serious mental illnesses including substance use disorders, ADHD, and bipolar
+  disorder'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: 'Yuri de Castro Machado et al. 2024. Effects of non-invasive brain
+    stimulation on impulsivity in patients with mental disorders: a systematic review
+    and meta-analysis of randomised clinical trials. General psychiatry.'
+  supporting_citations: []
+description: This meta-analysis demonstrates that impulsivity is a core feature across
+  multiple serious mental illnesses, with 18 RCTs examining brain stimulation interventions
+  targeting impulsivity in psychiatric populations. The study confirms the biological
+  link between prefrontal cortex function, impulsivity, and mental disorders. While
+  the evidence for treatment efficacy is mixed, the consistent presence of impulsivity
+  across mental disorder populations supports the positive association between impulsivity
+  and serious mental illness.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.54
+    type: hedges_g
+    ci_lower: -0.97
+    ci_upper: -0.12
+  p_value: 0.05
+  sample_size: 655
+moderators:
+- name: Stimulation type
+  direction: strengthens
+  strength: moderate
+  description: tDCS showed a trend toward improvement in impulsivity (g=-0.54) compared
+    to rTMS which did not show significant effects (g=0.21)
+- name: Measurement instrument
+  direction: strengthens
+  strength: moderate
+  description: Effects were more consistent when using Barratt Impulsiveness Scale
+    version 11 as the outcome measure

@@ -1,0 +1,55 @@
+id: NEW:postnatal_care_timing_to_neonatal_mortality
+name: Timing of Postnatal Care Visits → Neonatal Mortality
+from_node:
+  node_id: NEW:postnatal_care_timing
+  node_name: Timing of Postnatal Care Visits
+to_node:
+  node_id: neonatal_mortality
+  node_name: Neonatal Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Neonatal mortality risk is highest in the first 24 hours (38.8% of deaths)
+  and first week (71.7% of deaths), with different causes predominating at different
+  times'
+- 'Step 2: Early postnatal care visits (particularly within first 24-48 hours) enable
+  detection and management of birth asphyxia, which causes 68.1% of day-1 deaths'
+- 'Step 3: Postnatal visits during days 2-7 allow identification and treatment of
+  severe infections, responsible for 48.1% of deaths in this period'
+- 'Step 4: Later postnatal visits (days 8-28) enable prevention and management of
+  diarrheal diseases, which account for 62.7% of late neonatal deaths'
+- 'Step 5: Appropriately timed postnatal care visits aligned with cause-specific mortality
+  patterns reduce overall neonatal mortality by addressing threats at their peak occurrence'
+evidence:
+  quality_rating: A
+  n_studies: 51
+  primary_citation: 'J. Dol et al. 2022. "Timing of neonatal mortality and severe
+    morbidity during the postnatal period: a systematic review." JBI Evidence Synthesis.'
+  supporting_citations: []
+description: Systematic review of 51 studies with over 6.7 million live births demonstrates
+  that neonatal mortality is concentrated in the early postnatal period, with 39.5%
+  of deaths on day 1 and 71.7% in the first week. Cause-specific patterns show birth
+  asphyxia dominates day-1 deaths, severe infections peak during days 2-7, and diarrheal
+  diseases cause most deaths in days 8-28. This evidence establishes that appropriately
+  timed postnatal care visits - particularly early visits within the first 24-48 hours
+  and first week - can reduce neonatal mortality by enabling timely detection and
+  management of the predominant causes at each time point.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: gestational_age
+  direction: strengthens
+  strength: moderate
+  description: Preterm infants require more specialized care; review focused on general
+    neonatal population but acknowledged mixed samples including both preterm and
+    full-term infants
+- name: cause_of_death
+  direction: strengthens
+  strength: strong
+  description: 'Different causes predominate at different times: birth asphyxia on
+    day 1 (68.1%), severe infection days 2-7 (48.1%), diarrhea days 8-28 (62.7%)'
+- name: timing_of_visit
+  direction: strengthens
+  strength: strong
+  description: Visits aligned with high-risk periods (especially first 24 hours and
+    first week) have greatest potential impact given mortality concentration

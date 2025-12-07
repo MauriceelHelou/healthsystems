@@ -1,0 +1,43 @@
+id: NEW:dexmedetomidine_adjunctive_therapy_to_NEW:hypotension_adverse_event
+name: Dexmedetomidine Adjunctive Therapy → Hypotension Adverse Event
+from_node:
+  node_id: NEW:dexmedetomidine_adjunctive_therapy
+  node_name: Dexmedetomidine Adjunctive Therapy
+to_node:
+  node_id: NEW:hypotension_adverse_event
+  node_name: Hypotension Adverse Event
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Dexmedetomidine acts as a selective alpha-2 adrenergic receptor agonist
+  in the central nervous system'
+- 'Step 2: Alpha-2 receptor activation in the brainstem reduces sympathetic outflow
+  and decreases catecholamine release'
+- 'Step 3: Reduced sympathetic tone leads to decreased peripheral vascular resistance'
+- 'Step 4: Combined effects of reduced cardiac output and vasodilation result in hypotension
+  as an adverse event'
+evidence:
+  quality_rating: B
+  n_studies: 6
+  primary_citation: 'Marco Fiore et al. 2024. Dexmedetomidine as Adjunctive Therapy
+    for the Treatment of Alcohol Withdrawal Syndrome: A Systematic Review and Meta-Analysis.
+    Pharmaceuticals (Basel, Switzerland).'
+  supporting_citations: []
+description: Dexmedetomidine, when used as adjunctive therapy for alcohol withdrawal
+  syndrome, increases the risk of hypotension as an adverse event. This occurs through
+  its alpha-2 adrenergic agonist mechanism, which reduces sympathetic nervous system
+  activity and leads to decreased vascular resistance and blood pressure. This systematic
+  review and meta-analysis included 6 studies examining this secondary outcome.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: baseline_blood_pressure
+  direction: strengthens
+  strength: moderate
+  description: Patients with lower baseline blood pressure may be more susceptible
+    to dexmedetomidine-induced hypotension
+- name: concurrent_medications
+  direction: strengthens
+  strength: moderate
+  description: Concurrent use of other sedatives or antihypertensive agents may potentiate
+    hypotensive effects

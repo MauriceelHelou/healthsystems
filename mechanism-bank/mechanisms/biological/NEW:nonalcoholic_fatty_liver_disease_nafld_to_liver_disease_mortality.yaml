@@ -1,0 +1,62 @@
+id: NEW:nonalcoholic_fatty_liver_disease_nafld_to_liver_disease_mortality
+name: Nonalcoholic Fatty Liver Disease (NAFLD) → Liver Disease Mortality
+from_node:
+  node_id: NEW:nonalcoholic_fatty_liver_disease_nafld
+  node_name: Nonalcoholic Fatty Liver Disease (NAFLD)
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: NAFLD initiates hepatic steatosis with fat accumulation in liver cells,
+  triggering inflammatory responses and oxidative stress'
+- 'Step 2: Chronic hepatic inflammation leads to progressive fibrosis, with documented
+  incidence of 49.0 per 1,000 person-years for fibrosis progression'
+- 'Step 3: Continued fibrosis advances to cirrhosis (incidence 10.9 per 1,000 person-years),
+  with decompensated cirrhosis rates increasing over time'
+- 'Step 4: Advanced liver disease may progress to hepatocellular carcinoma (incidence
+  3.39 per 1,000 person-years) or require liver transplant (incidence 12.0 per 1,000
+  person-years)'
+- 'Step 5: Terminal liver complications result in liver-related mortality at an incidence
+  of 3.10 per 1,000 person-years'
+evidence:
+  quality_rating: A
+  n_studies: 79
+  primary_citation: 'M. Le et al. 2024. Global incidence of adverse clinical events
+    in non-alcoholic fatty liver disease: A systematic review and meta-analysis. Clinical
+    and Molecular Hepatology.'
+  supporting_citations: []
+description: NAFLD progresses through a well-documented cascade of liver damage leading
+  to mortality. This meta-analysis of 79 studies (1,377,466 persons) quantified incidence
+  rates showing liver-related mortality at 3.10 per 1,000 person-years, with intermediate
+  events including fibrosis progression (49.0), cirrhosis (10.9), HCC (3.39), and
+  liver transplant (12.0) per 1,000 person-years. The overall incidence of liver-related
+  events was 24.3 per 1,000 person-years.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.1
+    type: incidence_rate_per_1000_person_years
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 1377466
+moderators:
+- name: NASH status
+  direction: strengthens
+  strength: moderate
+  description: Biopsy-proven NASH had significantly higher incidence of HCC compared
+    to non-NASH (P=0.043), suggesting NASH accelerates progression to severe liver
+    outcomes
+- name: Geographic region
+  direction: strengthens
+  strength: moderate
+  description: North America and Europe show higher mortality rates; Western Pacific/Southeast
+    Asia shows higher HCC rates
+- name: Time period
+  direction: strengthens
+  strength: weak
+  description: Increasing rates of decompensated cirrhosis over time suggest worsening
+    liver-related outcomes in recent periods

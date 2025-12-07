@@ -1,0 +1,65 @@
+id: NEW:brief_alcohol_intervention_primary_care_to_alcohol_induced_mortality
+name: Brief Alcohol Intervention in Primary Care → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:brief_alcohol_intervention_primary_care
+  node_name: Brief Alcohol Intervention in Primary Care
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Systematic screening in primary care identifies excessive drinkers before severe health consequences
+  develop'
+- 'Step 2: Brief interventions reduce weekly alcohol consumption by approximately 20 grams'
+- 'Step 3: Sustained reduction in consumption decreases risk of alcohol-related liver disease, cardiovascular
+  events, and cancer'
+- 'Step 4: Early intervention prevents progression from hazardous drinking to alcohol dependence'
+- 'Step 5: Reduced cumulative alcohol exposure over time decreases alcohol-induced mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 69
+  primary_citation: Eileen Fs Kaner et al. 2018. "Effectiveness of brief alcohol interventions in primary
+    care populations.." https://doi.org/10.1002/14651858.CD004148.pub4
+  supporting_citations:
+  - Cochrane Collaboration systematic review methodology
+  - Studies indexed in MEDLINE and 12 additional bibliographic databases
+  - Additional citations require full-text access for specific study identification
+  doi: 10.1002/14651858.CD004148.pub4
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief alcohol interventions in primary care settings reduce weekly alcohol consumption, which
+  over time decreases cumulative exposure to alcohol and associated mortality risks. The intervention
+  targets hazardous and harmful drinkers before they develop severe alcohol-related conditions that contribute
+  to mortality.
+quantitative_effects:
+  effect_size:
+    value: -20.0
+    type: standardized_mean_difference
+    ci_lower: -28.0
+    ci_upper: -12.0
+  sample_size: 33642
+  heterogeneity_i_squared: 73.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The abstract notes excessive drinking is 'a significant cause of mortality, morbidity
+    and social problems in many countries,' indicating global relevance of this mechanism
+moderators:
+- name: baseline_consumption_level
+  direction: strengthens
+  strength: moderate
+  description: Higher baseline consumption (mean 244 g/week in study populations) may indicate greater
+    potential mortality risk reduction from intervention
+structural_competency:
+  equity_implications: 'This mechanism connects healthcare system structure to population-level mortality
+    outcomes. The structural availability and accessibility of primary care determines population exposure
+    to this evidence-based intervention. Health equity implications are significant: communities with
+    inadequate primary care infrastructure may experience higher alcohol-induced mortality due to missed
+    intervention opportunities. This represents a systemic rather than individual-level determinant of
+    alcohol-related death.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.038592'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -235,7 +235,7 @@ class MechanismDeduplicator:
 
         try:
             response = self.client.messages.create(
-                model="claude-sonnet-4-20250514",
+                model="claude-opus-4-5-20251101",
                 max_tokens=2000,
                 temperature=0,
                 messages=[{"role": "user", "content": prompt}]

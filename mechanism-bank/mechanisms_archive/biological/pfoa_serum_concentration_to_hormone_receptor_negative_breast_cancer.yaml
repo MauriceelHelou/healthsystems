@@ -1,0 +1,39 @@
+id: pfoa_serum_concentration_to_hormone_receptor_negative_breast_cancer
+name: Serum Perfluorooctanoate (PFOA) Concentration → Hormone Receptor Negative Breast
+  Cancer (ER-/PR-)
+from_node:
+  node_id: pfoa_serum_concentration
+  node_name: Serum Perfluorooctanoate (PFOA) Concentration
+to_node:
+  node_id: hormone_receptor_negative_breast_cancer
+  node_name: Hormone Receptor Negative Breast Cancer (ER-/PR-)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: PFOA disrupts cellular pathways independent of classical hormone receptor
+  signaling'
+- 'Step 2: Widespread environmental contamination from industrial sources leads to
+  population-level exposure through water and food'
+- 'Step 3: PFOA may affect oxidative stress, inflammation, and DNA damage pathways'
+- 'Step 4: Non-hormonal carcinogenic mechanisms promote hormone receptor-negative
+  tumor development'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'V. Chang et al. 2023. "Serum perfluorooctane sulfonate and perfluorooctanoate
+    and risk of postmenopausal breast cancer according to hormone receptor status:
+    An analysis in the Prostate, Lung, Colorectal and Ovarian Cancer Screening Trial."
+    *International Journal of Cancer*. https://doi.org/10.1002/ijc.34487'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.491155'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: hormone_receptor_status
+  direction: strengthens
+  strength: moderate
+  description: PFOA showed positive associations specifically with ER-, PR-, ER+/PR-,
+    and ER-/PR- tumors in upper quartiles, suggesting distinct mechanism from PFOS
+    that operates independent of hormone receptor pathways

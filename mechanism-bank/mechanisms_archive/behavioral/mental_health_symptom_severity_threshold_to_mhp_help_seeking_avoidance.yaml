@@ -1,0 +1,39 @@
+id: mental_health_symptom_severity_threshold_to_mhp_help_seeking_avoidance
+name: Mental Health Symptom Severity Above Clinical Threshold (GHQ≥2) → Avoidance
+  of Mental Health Professional Help-Seeking
+from_node:
+  node_id: mental_health_symptom_severity_threshold
+  node_name: Mental Health Symptom Severity Above Clinical Threshold (GHQ≥2)
+to_node:
+  node_id: mhp_help_seeking_avoidance
+  node_name: Avoidance of Mental Health Professional Help-Seeking
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Mental health symptoms exceeding clinical threshold (GHQ≥2) indicate probable
+  psychiatric morbidity requiring professional intervention'
+- 'Step 2: In India context, crossing this threshold activates additional barriers
+  including increased stigma recognition and fear of professional consequences'
+- 'Step 3: Medical students above threshold may fear documentation in health records
+  and impact on career advancement'
+- 'Step 4: These structural and professional risks create avoidance of formal mental
+  health services despite clinical need'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Genis Seera et al. 2020. "Help-seeking behaviors for mental health
+    problems in medical students: Studies in Thailand and India.." *Asian journal
+    of psychiatry*. https://doi.org/10.1016/j.ajp.2020.102453'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.457294'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: country_india
+  direction: strengthens
+  strength: strong
+  description: The threshold effect was statistically significant only in India site,
+    suggesting country-specific structural and cultural factors related to mental
+    health stigma and professional consequences

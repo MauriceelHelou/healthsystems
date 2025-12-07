@@ -1,0 +1,64 @@
+id: sud_treatment_facility_density_to_sud_medication_treatment_rate_oud
+name: SUD Treatment Facility Density → SUD Medication Treatment Rate (OUD)
+from_node:
+  node_id: sud_treatment_facility_density
+  node_name: SUD Treatment Facility Density
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate (OUD)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Public health department implements demonstration project to expand XR-NTX access across treatment
+  facilities'
+- 'Step 2: Training and resources provided to treatment providers in 6 of 8 Service Planning Areas'
+- 'Step 3: Increased availability of FDA-approved medication-assisted treatment at SUD facilities'
+- 'Step 4: Patients with opioid use disorder gain access to evidence-based pharmacotherapy'
+- 'Step 5: Higher rates of medication-assisted treatment engagement among eligible patients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sarah J Cousins et al. 2016. "A demonstration project implementing extended-release
+    naltrexone in Los Angeles County.." https://doi.org/10.1080/08897077.2015.1052868
+  supporting_citations:
+  - Additional citations require full-text access - abstract references FDA approval and prior demonstration
+    projects with parolees/probationers
+  - Reference to similar demonstration projects in community settings mentioned in abstract
+  - UCLA Integrated Substance Abuse Programs collaboration referenced
+  doi: 10.1080/08897077.2015.1052868
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: A public health demonstration project in Los Angeles County expanded access to extended-release
+  naltrexone (XR-NTX) through collaboration between the Department of Public Health and UCLA. Implementation
+  across multiple Service Planning Areas increased medication availability for patients with opioid and
+  alcohol use disorders, with 609 patients receiving treatment over 3 years.
+quantitative_effects:
+  sample_size: 609
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: XR-NTX was accessed by providers in 6 of 8 Service Planning Areas of Los Angeles County,
+    indicating geographic variation in implementation and access across the county
+moderators:
+- name: substance_use_severity
+  direction: strengthens
+  strength: moderate
+  description: XR-NTX recipients reported more severe substance use histories compared to general LA County
+    SUD patients, suggesting the intervention reached higher-need populations
+- name: criminal_justice_involvement
+  direction: weakens
+  strength: moderate
+  description: Study showed higher cessation rates and lower average doses compared to similar projects
+    with parolees/probationers, suggesting non-justice-involved populations may have different retention
+    patterns
+structural_competency:
+  equity_implications: This mechanism demonstrates how public health infrastructure and inter-agency collaboration
+    can expand access to evidence-based addiction treatment. The geographic variation (6 of 8 Service
+    Planning Areas reached) highlights structural disparities in treatment availability. The focus on
+    system-level implementation rather than individual patient factors appropriately frames addiction
+    treatment as a healthcare access issue requiring structural solutions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.793013'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

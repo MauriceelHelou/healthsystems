@@ -1,0 +1,61 @@
+id: NEW:obstructive_sleep_apnea_severity_to_heart_disease_prevalence
+name: Obstructive Sleep Apnea Severity (AHI) → Heart Disease Prevalence
+from_node:
+  node_id: NEW:obstructive_sleep_apnea_severity
+  node_name: Obstructive Sleep Apnea Severity (AHI)
+to_node:
+  node_id: heart_disease_prevalence
+  node_name: Heart Disease Prevalence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Obstructive sleep apnea causes repeated upper airway obstruction during sleep'
+- 'Step 2: Airway obstruction leads to intermittent hypoxia and hypercapnia'
+- 'Step 3: Intermittent hypoxia triggers oxidative stress and systemic inflammation'
+- 'Step 4: Repeated arousal from sleep activates sympathetic nervous system and increases blood pressure
+  variability'
+- 'Step 5: Chronic exposure to these physiological stressors promotes atherosclerosis and cardiovascular
+  disease'
+evidence:
+  quality_rating: A
+  n_studies: 3
+  primary_citation: 'M. Sánchez-de-la-Torre et al. 2023. "Adherence to CPAP Treatment and the Risk of
+    Recurrent Cardiovascular Events: A Meta-Analysis.." https://doi.org/10.1001/jama.2023.17465'
+  supporting_citations:
+  - SAVE Trial (NCT00738179). Sleep Apnea Cardiovascular Endpoints Study.
+  - ISAACC Trial (NCT01335087). Impact of Sleep Apnea Syndrome in the Evolution of Acute Coronary Syndrome.
+  - RICCADSA Trial (NCT00519597). Randomized Intervention with CPAP in Coronary Artery Disease and Sleep
+    Apnea.
+  doi: 10.1001/jama.2023.17465
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study population had moderate-to-severe obstructive sleep apnea (mean AHI 31.2 events/hour)
+  and established cardiovascular disease, with 71% having hypertension. OSA contributes to cardiovascular
+  risk through mechanisms including intermittent hypoxia, oxidative stress, sympathetic activation, and
+  inflammation.
+quantitative_effects:
+  sample_size: 4186
+moderators:
+- name: Body mass index
+  direction: strengthens
+  strength: moderate
+  description: Mean BMI of 28.9 in study population; obesity is both a risk factor for OSA and cardiovascular
+    disease
+- name: Hypertension prevalence
+  direction: strengthens
+  strength: strong
+  description: 71% of participants had hypertension, a key intermediary between OSA and cardiovascular
+    outcomes
+structural_competency:
+  equity_implications: 'OSA prevalence and severity are influenced by structural determinants including:
+    obesity rates shaped by food environments and built environment factors affecting physical activity;
+    occupational exposures affecting respiratory health; access to diagnostic sleep studies which may
+    be limited by insurance coverage, specialist availability, and geographic factors; and socioeconomic
+    factors affecting sleep quality and duration. Underdiagnosis of OSA is common, particularly in underserved
+    communities with limited access to sleep medicine services.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.877715'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

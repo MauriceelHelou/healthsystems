@@ -1,0 +1,63 @@
+id: criminal_justice_system_contact_any_revised_to_alcohol_use_disorder
+name: Criminal Justice System Contact → Alcohol Use Disorder
+from_node:
+  node_id: criminal_justice_system_contact_any_revised
+  node_name: Criminal Justice System Contact
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Justice involvement creates multiple stressors including legal uncertainty, employment barriers,
+  and housing instability that promote alcohol use as coping mechanism'
+- 'Step 2: Community supervision requirements (meetings, reporting) conflict with treatment schedules
+  and employment, limiting treatment access'
+- 'Step 3: Stigma associated with justice involvement reduces help-seeking behavior and healthcare engagement'
+- 'Step 4: Lack of targeted interventions for this population perpetuates hazardous alcohol use patterns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Anna Harrison et al. 2022. "Using Social Media to Engage Justice-Involved Young Adults
+    in Digital Health Interventions for Substance Use: Pilot Feasibility Survey Study." https://doi.org/10.2196/37609'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not provide specific prior study citations
+  - Background literature on hazardous alcohol use in justice populations referenced but not specifically
+    cited
+  - Treatment engagement disparities literature referenced but not specifically cited
+  doi: 10.2196/37609
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among justice-involved young adults, 51.9% reported hazardous alcohol use. The structural
+  barriers created by justice system involvement contribute to low treatment engagement (only 21.4% in
+  current treatment), perpetuating alcohol use disorders.
+quantitative_effects:
+  effect_size:
+    value: 51.9
+    type: percentage_change
+  sample_size: 131
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: National recruitment suggests variation across states with different alcohol policies
+    and justice system structures
+moderators:
+- name: treatment_engagement_status
+  direction: strengthens
+  strength: strong
+  description: 78.6% not currently in treatment despite hazardous use, indicating treatment disengagement
+    amplifies the relationship
+structural_competency:
+  equity_implications: This mechanism emphasizes that hazardous alcohol use among justice-involved young
+    adults is not simply individual behavior but results from structural barriers to care created by the
+    justice system itself. The finding that most are supervised in the community - not incarcerated -
+    highlights how punitive community supervision creates treatment access barriers while maintaining
+    exposure to substances.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.777607'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

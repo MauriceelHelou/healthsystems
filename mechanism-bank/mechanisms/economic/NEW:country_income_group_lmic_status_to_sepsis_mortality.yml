@@ -1,0 +1,72 @@
+id: NEW:country_income_group_lmic_status_to_sepsis_mortality
+name: Country Income Group (LMIC Status) → Sepsis Mortality
+from_node:
+  node_id: NEW:country_income_group_lmic_status
+  node_name: Country Income Group (LMIC Status)
+to_node:
+  node_id: sepsis_mortality
+  node_name: Sepsis Mortality
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Lower national income level correlates with reduced healthcare system infrastructure and resource
+  availability'
+- 'Step 2: Limited access to advanced critical care equipment (mechanical ventilation, ICU beds) constrains
+  treatment options'
+- 'Step 3: Higher fluid volume resuscitation in resource-limited settings leads to fluid overload without
+  adequate support mechanisms'
+- 'Step 4: Fluid overload causes pulmonary edema and organ congestion that cannot be managed with unavailable
+  ventilatory support'
+- 'Step 5: Increased mortality results from inability to manage complications of aggressive fluid resuscitation'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'S. Gendreau et al. 2024. "Geo-Economic Influence on the Effect of Fluid Volume for
+    Sepsis Resuscitation: A Meta-Analysis.." https://doi.org/10.1164/rccm.202309-1617OC'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 29 RCTs
+  - Studies from LMICs included in analysis (specific citations in full text)
+  - Studies from HICs included in analysis (specific citations in full text)
+  doi: 10.1164/rccm.202309-1617OC
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: In sepsis resuscitation, higher fluid volume strategies are associated with increased mortality
+  specifically in low-and middle-income countries (OR 1.47), while showing no effect in high-income countries
+  (OR 1.00). This differential effect is mediated by resource constraints, particularly limited access
+  to mechanical ventilation needed to manage fluid overload complications.
+quantitative_effects:
+  effect_size:
+    value: 1.47
+    type: odds_ratio
+    ci_lower: 1.14
+    ci_upper: 1.9
+  p_value: 0.01
+  sample_size: 11798
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect of higher fluid volume on mortality significantly differs between LMICs (OR
+    1.47, harmful) and HICs (OR 1.00, neutral), with p=0.01 for subgroup differences. Baseline mortality
+    also higher in LMICs (37%) vs HICs (29%).
+moderators:
+- name: mechanical_ventilation_access
+  direction: weakens
+  strength: strong
+  description: Access to mechanical ventilation significantly modifies the effect - higher fluid volumes
+    only increased mortality in settings with limited access to mechanical ventilation (OR 1.45 vs 1.09,
+    p=0.02)
+- name: country_income_level
+  direction: strengthens
+  strength: strong
+  description: LMIC setting significantly strengthens the harmful effect of higher fluid volumes on mortality
+structural_competency:
+  equity_implications: This mechanism demonstrates how global economic inequities produce differential
+    health outcomes even when the same clinical intervention is applied. The harm is not due to patient
+    characteristics or provider decisions, but to structural resource constraints that make guideline-concordant
+    care developed in HICs potentially harmful in LMICs. This highlights the need for context-specific
+    clinical guidelines that account for healthcare system capacity rather than universal protocols.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.422427'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

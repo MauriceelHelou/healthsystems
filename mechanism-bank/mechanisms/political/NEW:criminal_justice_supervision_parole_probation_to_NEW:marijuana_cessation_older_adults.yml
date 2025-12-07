@@ -1,0 +1,52 @@
+id: NEW:criminal_justice_supervision_parole_probation_to_NEW:marijuana_cessation_older_adults
+name: Parole/Probation Status → Marijuana Cessation Among Older Adults
+from_node:
+  node_id: NEW:criminal_justice_supervision_parole_probation
+  node_name: Parole/Probation Status
+to_node:
+  node_id: NEW:marijuana_cessation_older_adults
+  node_name: Marijuana Cessation Among Older Adults
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Older adults on parole or probation face legal consequences for marijuana use'
+- 'Step 2: Drug testing and supervision requirements create enforcement mechanisms'
+- 'Step 3: Fear of incarceration or probation violation motivates cessation'
+- 'Step 4: Criminal justice supervision increases likelihood of transitioning from use to nonuse'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Namkee G Choi and Diana M DiNitto 2021. "Marijuana use/nonuse among those aged 50+:
+    comparisons of use-to-nonuse, initiation/reinitiation, and continued use over 24 months.." https://doi.org/10.1080/13607863.2020.1732292'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 2015-2017 National Survey on Drug
+    Use and Health as data source
+  doi: 10.1080/13607863.2020.1732292
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2020, source is 2021'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Parole/probation status was associated with higher likelihood of use-to-nonuse among older
+  adults, indicating that criminal justice supervision creates structural pressure for marijuana cessation
+  through surveillance and legal consequences.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects likely vary by state marijuana laws and local enforcement practices
+moderators:
+- name: state_marijuana_policy
+  direction: weakens
+  strength: moderate
+  description: In states with legalized marijuana, parole/probation supervision may have less impact on
+    cessation
+structural_competency:
+  equity_implications: This mechanism illustrates how the criminal justice system functions as a structural
+    determinant of substance use behavior. The finding raises equity concerns as criminal justice involvement
+    disproportionately affects marginalized communities. Cessation driven by surveillance rather than
+    treatment may not reflect meaningful recovery.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.790672'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,36 @@
+id: pregnancy_status_to_osa_risk
+name: Pregnancy Status → OSA Risk and Severity
+from_node:
+  node_id: pregnancy_status
+  node_name: Pregnancy Status
+to_node:
+  node_id: osa_risk
+  node_name: OSA Risk and Severity
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Pregnancy induces significant physiological changes including weight gain
+  and fluid retention'
+- 'Step 2: Hormonal changes during pregnancy affect respiratory drive and upper airway
+  dimensions'
+- 'Step 3: Increased abdominal pressure and supine positioning difficulties affect
+  sleep architecture'
+- 'Step 4: These pregnancy-related changes increase risk and severity of OSA'
+evidence:
+  quality_rating: B
+  n_studies: 145
+  primary_citation: 2024. "[Expert consensus on the diagnosis and treatment of obstructive
+    sleep apnea in women].." *Zhonghua jie he he hu xi za zhi = Zhonghua jiehe he
+    huxi zazhi = Chinese journal of tuberculosis and respiratory diseases*. https://doi.org/10.3760/cma.j.cn112147-20240206-00072
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.048079'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: gestational_stage
+  direction: strengthens
+  strength: moderate
+  description: OSA risk and severity likely increase as pregnancy progresses due to
+    cumulative physiological changes

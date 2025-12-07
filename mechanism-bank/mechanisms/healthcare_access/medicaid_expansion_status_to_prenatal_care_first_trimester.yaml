@@ -1,0 +1,41 @@
+id: medicaid_expansion_status_to_prenatal_care_first_trimester
+name: ACA Medicaid Expansion → Prenatal Care First Trimester
+from_node:
+  node_id: medicaid_expansion_status
+  node_name: ACA Medicaid Expansion
+to_node:
+  node_id: prenatal_care_first_trimester
+  node_name: Prenatal Care First Trimester
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: ACA Medicaid expansion increases eligibility for low-income adults regardless
+  of pregnancy or parental status, expanding insurance access before and during pregnancy'
+- 'Step 2: Expanded coverage increases preconception Medicaid enrollment and reduces
+  uninsurance rates among women of reproductive age'
+- 'Step 3: Women with continuous insurance coverage are more likely to establish care
+  with providers and seek prenatal care earlier in pregnancy'
+- 'Step 4: Reduced insurance churn and improved coverage continuity facilitates first
+  trimester prenatal care attendance, particularly among racial and ethnic minority
+  populations'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'M. Bellerose et al. 2022. The ACA Medicaid Expansion And Perinatal
+    Insurance, Health Care Use, And Health Outcomes: A Systematic Review. Health Affairs.'
+  supporting_citations: []
+description: The ACA Medicaid expansion increased Medicaid eligibility for low-income
+  adults, leading to improved preconception and postpartum coverage with corresponding
+  declines in uninsurance. While overall evidence for increased perinatal health care
+  use was limited, some studies found reduced racial and ethnic disparities in prenatal
+  visit attendance rates, suggesting the expansion facilitated earlier and more consistent
+  prenatal care access particularly for underserved populations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: race_ethnicity
+  direction: strengthens
+  strength: moderate
+  description: Some studies reported reduced racial and ethnic disparities in rates
+    of prenatal visit attendance, suggesting stronger effects for historically marginalized
+    populations

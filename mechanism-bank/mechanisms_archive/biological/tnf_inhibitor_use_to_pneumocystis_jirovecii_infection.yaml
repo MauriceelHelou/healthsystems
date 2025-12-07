@@ -1,0 +1,39 @@
+id: tnf_inhibitor_use_to_pneumocystis_jirovecii_infection
+name: TNF Inhibitor Use → Pneumocystis jirovecii Infection
+from_node:
+  node_id: tnf_inhibitor_use
+  node_name: TNF Inhibitor Use
+to_node:
+  node_id: pneumocystis_jirovecii_infection
+  node_name: Pneumocystis jirovecii Infection
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: TNF inhibitors reduce the magnitude of innate immune responses in patients
+  with autoimmune conditions'
+- 'Step 2: Immunosuppression creates vulnerability to opportunistic fungal pathogens'
+- 'Step 3: Pneumocystis jirovecii accounts for 20% of all non-viral infections in
+  TNF inhibitor recipients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ryan Ha et al. 2022. "Increased susceptibility to pneumonia due
+    to tumour necrosis factor inhibition and prospective immune system rescue via
+    immunotherapy." *Frontiers in Cellular and Infection Microbiology*. https://doi.org/10.3389/fcimb.2022.980868
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.080191'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: monoclonal_antibody_type
+  direction: strengthens
+  strength: strong
+  description: Monoclonal antibody-based TNF inhibitors show stronger immunosuppression
+    than receptor-based alternatives
+- name: concurrent_corticosteroids
+  direction: strengthens
+  strength: moderate
+  description: Combined use of corticosteroids with TNF inhibitors compounds immunosuppressive
+    effects

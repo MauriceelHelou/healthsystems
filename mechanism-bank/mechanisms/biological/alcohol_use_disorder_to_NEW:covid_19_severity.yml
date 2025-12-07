@@ -1,0 +1,69 @@
+id: alcohol_use_disorder_to_NEW:covid_19_severity
+name: Alcohol Use Disorder → COVID-19 Severity
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:covid_19_severity
+  node_name: COVID-19 Severity
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption impairs innate and adaptive immune function'
+- 'Step 2: Immunosuppression reduces capacity to mount effective antiviral response'
+- 'Step 3: Compromised pulmonary defense mechanisms increase viral replication in respiratory tract'
+- 'Step 4: Heightened inflammatory response leads to more severe COVID-19 disease manifestations'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Baozhu Wei et al. 2023. "Impact of alcohol consumption on coronavirus disease 2019
+    severity: A systematic review and meta‐analysis." https://doi.org/10.1002/jmv.28547'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 40 studies with 1,697,683 COVID-19
+    individuals
+  - Studies included Brown, American, and European population cohorts
+  - Studies examining drinking history and current drinking status
+  doi: 10.1002/jmv.28547
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This meta-analysis of 40 studies with nearly 1.7 million COVID-19 individuals demonstrates
+  that alcohol consumption significantly increases COVID-19 severity. Individuals with drinking history
+  had 23% higher risk of severe COVID-19 and 32% higher risk of ICU admission. The mechanism operates
+  through alcohol's immunosuppressive effects on pulmonary and systemic immune defenses.
+quantitative_effects:
+  effect_size:
+    value: 1.23
+    type: relative_risk
+    ci_lower: 1.02
+    ci_upper: 1.48
+  p_value: 0.03
+  sample_size: 5399
+  heterogeneity_i_squared: 38.4
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: 'Effects varied by population: Brown drinkers (RR=1.58), American drinkers (RR=1.51),
+    European drinkers (RR=2.04) showed different risk profiles for COVID-19 severity outcomes'
+moderators:
+- name: drinking_pattern
+  direction: strengthens
+  strength: strong
+  description: Excessive drinkers showed particularly high risk of COVID-19 hospitalization compared to
+    moderate or former drinkers
+- name: current_vs_former_drinking
+  direction: strengthens
+  strength: moderate
+  description: Current drinkers had increased risk of symptomatic COVID-19 compared to those with only
+    drinking history
+structural_competency:
+  equity_implications: 'This mechanism has important structural dimensions: alcohol availability policies,
+    marketing regulations, and socioeconomic factors that influence drinking patterns are modifiable structural
+    determinants. Communities with higher alcohol outlet density and fewer alcohol control policies may
+    face disproportionate COVID-19 severity burden. The finding challenges misinformation that alcohol
+    could protect against COVID-19, which may have been more prevalent in communities with less health
+    information access.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.318148'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

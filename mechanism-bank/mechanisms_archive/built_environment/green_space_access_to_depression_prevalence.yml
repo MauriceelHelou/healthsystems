@@ -1,0 +1,89 @@
+id: green_space_access_to_depression_prevalence
+name: Green Space Access -> Depression Prevalence
+from_node:
+  node_id: green_space_access
+  node_name: Green Space Access
+  node_type: stock
+to_node:
+  node_id: depression_prevalence
+  node_name: Depression Prevalence
+  node_type: crisis_endpoint
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Residential proximity to green spaces (parks, urban forests, gardens) increases exposure to natural environments'
+- 'Step 2: Green space exposure reduces cortisol levels and physiological stress responses through attention restoration and stress reduction pathways'
+- 'Step 3: Parks and green spaces facilitate physical activity, social interaction, and community cohesion'
+- 'Step 4: Natural environments provide respite from urban stressors (noise, crowding, air pollution) that contribute to mental health burden'
+- 'Step 5: Cumulative exposure to green spaces through multiple pathways reduces risk of depression and anxiety disorders'
+evidence:
+  quality_rating: A
+  n_studies: 35
+  primary_citation: 'Zhang, Yimin, Tongyan Wu, Hao Yu, Jianfei Fu, Jin Xu, Liya Liu, Chunlan Tang, and Zhen Li. 2024. "Green spaces exposure and the risk of common psychiatric disorders: A meta-analysis." SSM - Population Health 25: 101630.'
+  supporting_citations:
+  - 'Gascon, Mireia, et al. 2015. "Mental health benefits of long-term exposure to residential green and blue spaces: A systematic review." International Journal of Environmental Research and Public Health 12(4): 4354-4379.'
+  - 'Bowler, Diana E., et al. 2010. "A systematic review of evidence for the added benefits to health of exposure to natural environments." BMC Public Health 10: 456.'
+  - 'Van den Berg, Agnes E., et al. 2015. "Green space as a buffer between stressful life events and health." Social Science & Medicine 128: 266-274.'
+  doi: 10.1016/j.ssmph.2024.101630
+  journal: SSM - Population Health
+  year: 2024
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 0.89
+    type: odds_ratio
+    ci_lower: 0.86
+    ci_upper: 0.93
+    ci_level: 95
+  interpretation: 'Greater green space exposure was associated with 11% reduced odds of depression (OR=0.89, 95% CI: 0.86-0.93). Effects were also significant for anxiety (OR=0.94), schizophrenia (OR=0.74), and ADHD (OR=0.89)'
+  sample_size: 1500000
+  heterogeneity_notes: 'Meta-analysis included 35 studies with substantial heterogeneity; NDVI-based measures showed stronger associations than binary park proximity measures'
+last_updated: '2025-11-30'
+version: '1.0'
+description: Exposure to green spaces is consistently associated with reduced risk of depression and other psychiatric disorders. A 2024 meta-analysis of 35 studies found that green space exposure was associated with 11% reduced odds of depression, 6% reduced odds of anxiety, and 26% reduced odds of schizophrenia. Mechanisms include stress reduction, physical activity promotion, social interaction facilitation, and air quality improvement. Effects are particularly strong for vegetated spaces measured by NDVI rather than simple park proximity.
+moderators:
+- name: green_space_quality
+  direction: strengthens
+  strength: moderate
+  description: Higher quality, well-maintained green spaces show stronger mental health benefits
+- name: measurement_method
+  direction: varies
+  strength: moderate
+  description: NDVI-based measures show stronger associations than binary park proximity
+- name: urbanicity
+  direction: strengthens
+  strength: moderate
+  description: Effects may be stronger in urban areas with higher baseline stress and less nature exposure
+- name: socioeconomic_status
+  direction: strengthens
+  strength: strong
+  description: Low-income populations may benefit more from green space access, though they have less access
+- name: duration_exposure
+  direction: strengthens
+  strength: moderate
+  description: Longer duration of residence near green space shows stronger protective effects
+structural_competency:
+  root_cause_level: built_environment_structural
+  avoids_victim_blaming: true
+  equity_implications: Green space access is inequitably distributed by race and income due to historical disinvestment, redlining, and unequal urban planning. Low-income communities and communities of color have less park access (43% of low-income vs 62% of high-income). Structural interventions include park investment in underserved areas, urban greening programs, and equitable land use planning.
+assumptions:
+- Assumes green space exposure occurs through residential proximity
+- Assumes multiple pathways (stress, physical activity, social) contribute to effects
+- Assumes dose-response relationship with greater exposure yielding greater benefit
+limitations:
+- Most studies are cross-sectional, limiting causal inference
+- Selection bias possible (mentally healthier people may choose to live near parks)
+- Green space quality and type not always measured
+- Confounding by neighborhood socioeconomic characteristics
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Green space distribution varies dramatically by neighborhood income and racial composition
+  relevant_geographies:
+  - Urban areas show stronger effects due to higher baseline stress
+  - Low-income neighborhoods have less green space access
+  - Climate affects green space availability and usability
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

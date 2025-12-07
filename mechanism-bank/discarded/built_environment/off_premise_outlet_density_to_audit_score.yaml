@@ -1,0 +1,41 @@
+id: off_premise_outlet_density_to_audit_score
+name: Off-Premise Alcohol Outlet Density → AUDIT Score (Alcohol Use Disorders)
+from_node:
+  node_id: off_premise_outlet_density
+  node_name: Off-Premise Alcohol Outlet Density
+to_node:
+  node_id: audit_score
+  node_name: AUDIT Score (Alcohol Use Disorders)
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Off-premise outlet density does not directly affect AUDIT scores when area
+  income is controlled'
+- 'Step 2: The relationship between outlets and alcohol problems is confounded by
+  neighborhood economic characteristics'
+- 'Step 3: Prior associations between outlet density and problems may reflect underlying
+  socioeconomic segregation'
+- 'Step 4: Area income, not outlet availability, is the primary structural determinant
+  of alcohol use disorders'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'C. Mair et al. 2020. "Microecological Relationships Between Area
+    Income, Off-Premise Alcohol Outlet Density, Drinking Patterns, and Alcohol Use
+    Disorders: The East Bay Neighborhoods Study.." *Alcoholism: Clinical and Experimental
+    Research*. https://doi.org/10.1111/acer.14387'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:04.997409'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: area_median_household_income
+  direction: strengthens
+  strength: strong
+  description: When stratifying by area income, off-premise outlet density showed
+    no significant association with AUDIT scores, indicating income is a key confounder
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/off_premise_outlet_density_to_audit_score.yaml
+_category: built_environment

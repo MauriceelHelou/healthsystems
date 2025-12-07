@@ -1,0 +1,57 @@
+id: NEW:mind_body_exercise_to_NEW:health_related_quality_of_life_cancer_survivors
+name: Mind-Body Exercise (Tai Chi, Qigong, Yoga) → Health-Related Quality of Life
+  in Cancer Survivors
+from_node:
+  node_id: NEW:mind_body_exercise
+  node_name: Mind-Body Exercise (Tai Chi, Qigong, Yoga)
+to_node:
+  node_id: NEW:health_related_quality_of_life_cancer_survivors
+  node_name: Health-Related Quality of Life in Cancer Survivors
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Cancer survivors engage in mind-body exercises such as Tai Chi, Qigong,
+  or Yoga at an optimal dose of approximately 390 METs-min/week'
+- 'Step 2: These practices integrate physical movement with mindfulness, breathing
+  techniques, and meditation, addressing both physical and psychological dimensions
+  of well-being'
+- 'Step 3: The combined physical-mental engagement reduces stress, improves emotional
+  regulation, enhances physical function, and decreases cancer-related fatigue and
+  anxiety'
+- 'Step 4: These improvements across multiple domains lead to significant enhancement
+  in overall health-related quality of life in cancer survivors'
+evidence:
+  quality_rating: A
+  n_studies: 48
+  primary_citation: 'Zhiyu Xiong et al. 2024. "Optimal exercise dose-response improves
+    health-related quality of life in cancer survivors: a systematic review and Bayesian
+    network meta-analysis of RCTs." Frontiers in oncology.'
+  supporting_citations: []
+description: 'Mind-body exercises including Tai Chi, Qigong, and Yoga demonstrate
+  significant positive effects on health-related quality of life in cancer survivors.
+  Based on a Bayesian network meta-analysis of 48 RCTs involving 3050 cancer survivors,
+  the optimal dose for mind-body exercises is 390 METs-min/week, yielding a standardized
+  mean difference of 0.672 (95% CrI: 0.259-1.087). This represents a moderate-to-large
+  effect size, indicating clinically meaningful improvements in HRQoL.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.672
+    type: standardized_mean_difference
+    ci_lower: 0.259
+    ci_upper: 1.087
+  p_value: null
+  sample_size: 3050
+moderators:
+- name: exercise_dose
+  direction: u_shaped
+  strength: strong
+  description: Optimal dose for mind-body exercise is approximately 390 METs-min/week,
+    with diminishing returns observed at higher doses across all exercise types
+- name: exercise_type
+  direction: strengthens
+  strength: moderate
+  description: 'Mixed training shows slightly stronger effects (SMD: 0.883) compared
+    to mind-body exercise alone (SMD: 0.672), though mind-body exercise remains highly
+    effective'

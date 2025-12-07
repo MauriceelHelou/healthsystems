@@ -1,0 +1,61 @@
+id: NEW:primary_care_workflow_compatibility_to_alcohol_use_disorder
+name: Primary Care Workflow Compatibility for AUD Treatment → Alcohol Use Disorder
+from_node:
+  node_id: NEW:primary_care_workflow_compatibility
+  node_name: Primary Care Workflow Compatibility for AUD Treatment
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Existing primary care workflows and visit structures are not designed for AUD assessment and
+  treatment'
+- 'Step 2: Time constraints and competing clinical priorities limit provider capacity for AUD intervention'
+- 'Step 3: AUD pharmacotherapy requires follow-up and monitoring that disrupts standard visit patterns'
+- 'Step 4: Incompatibility reduces provider willingness and ability to address AUD'
+- 'Step 5: Patients with AUD in primary care settings go unidentified or untreated'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'H. Hagedorn et al. 2019. "Implementing alcohol use disorder pharmacotherapy in primary
+    care settings: a qualitative analysis of provider-identified barriers and impact on implementation
+    outcomes." https://doi.org/10.1186/s13722-019-0151-7'
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1186/s13722-019-0151-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The structural incompatibility between standard primary care workflows and the requirements
+  of AUD pharmacotherapy creates a barrier to treatment access. Primary care visit structures, time allocations,
+  and care processes were not designed to accommodate substance use disorder treatment, leaving patients
+  with AUD without access to evidence-based care even when presenting to healthcare settings.
+quantitative_effects:
+  sample_size: 24
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Site-specific barriers included limited priority of addressing AUD in primary care
+    and limited available resources, varying across the three VHA facilities studied
+moderators:
+- name: clinical_champion_availability
+  direction: strengthens
+  strength: moderate
+  description: Local clinical champions trained to provide consultation can help overcome workflow barriers
+    by providing implementation and clinical support
+- name: external_facilitation
+  direction: strengthens
+  strength: moderate
+  description: External facilitation from project teams can help adapt implementation strategies to local
+    workflows
+structural_competency:
+  equity_implications: This mechanism identifies how healthcare delivery system design creates barriers
+    to care access. The issue is not patient help-seeking behavior but rather how healthcare institutions
+    have organized care delivery in ways that exclude certain conditions from routine treatment. Redesigning
+    primary care to integrate AUD treatment requires structural changes to visit lengths, reimbursement
+    models, and care team composition.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.113663'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

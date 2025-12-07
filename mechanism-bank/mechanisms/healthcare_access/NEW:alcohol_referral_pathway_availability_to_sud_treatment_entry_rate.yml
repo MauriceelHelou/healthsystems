@@ -1,0 +1,54 @@
+id: NEW:alcohol_referral_pathway_availability_to_sud_treatment_entry_rate
+name: Alcohol Treatment Referral Pathway Availability → SUD Treatment Entry Rate
+from_node:
+  node_id: NEW:alcohol_referral_pathway_availability
+  node_name: Alcohol Treatment Referral Pathway Availability
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Timely referral pathways enable emergency department providers to connect patients with alcohol
+  treatment'
+- 'Step 2: Well-funded treatment services increase capacity to accept referrals from emergency settings'
+- 'Step 3: Streamlined referral processes reduce patient loss during care transitions'
+- 'Step 4: Increased treatment entry rates improve population-level alcohol use disorder outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'H. Blake et al. 2023. "Attitudes and current practice in alcohol screening, brief
+    intervention, and referral for treatment among staff working in urgent and emergency settings: An
+    open, cross-sectional international survey." https://doi.org/10.1371/journal.pone.0291573'
+  supporting_citations:
+  - Additional citations require full-text access - abstract describes lack of timely referral pathways
+    as key barrier
+  - Study recommends improved alcohol referral pathways to better funded services
+  - International survey of urgent/emergency care workers
+  doi: 10.1371/journal.pone.0291573
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Availability of timely referral pathways from emergency settings to alcohol treatment services
+  directly affects rates of treatment entry for individuals with alcohol use problems identified during
+  urgent care encounters.
+quantitative_effects:
+  sample_size: 362
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Referral pathway availability and funding levels vary by geographical region
+moderators:
+- name: treatment_service_funding
+  direction: strengthens
+  strength: strong
+  description: Better funded alcohol treatment services improve referral pathway effectiveness
+structural_competency:
+  equity_implications: This mechanism highlights healthcare system infrastructure rather than patient
+    compliance. The study identifies lack of timely referral pathways as a structural barrier that prevents
+    care continuity. Inadequate funding for treatment services is a policy failure that creates systemic
+    gaps in the alcohol care continuum.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.061928'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

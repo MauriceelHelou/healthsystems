@@ -1,0 +1,46 @@
+id: NEW:accumbal_glycine_levels_to_NEW:accumbal_dopamine_levels
+name: Nucleus Accumbens Glycine Levels → Nucleus Accumbens Dopamine Levels
+from_node:
+  node_id: NEW:accumbal_glycine_levels
+  node_name: Nucleus Accumbens Glycine Levels
+to_node:
+  node_id: NEW:accumbal_dopamine_levels
+  node_name: Nucleus Accumbens Dopamine Levels
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Elevated extracellular glycine in nucleus accumbens activates glycine receptors (GlyR)'
+- 'Step 2: GlyR activation modulates dopaminergic neurotransmission in the mesolimbic pathway'
+- 'Step 3: Dopamine levels are elevated in a subpopulation of animals (dopamine responders)'
+- 'Step 4: Individual variability in dopamine response suggests heterogeneous receptor sensitivity'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Y. Olsson et al. 2020. "Effects of systemic glycine on accumbal glycine and dopamine
+    levels and ethanol intake in male Wistar rats." https://doi.org/10.1007/s00702-020-02284-x
+  supporting_citations:
+  - Additional citations require full-text access - abstract references GlyR involvement in dopamine release
+  - Abstract references prior work establishing GlyR role in basal and ethanol-induced dopamine release
+  - Abstract references GlyT-1 inhibitor studies showing similar mechanisms
+  doi: 10.1007/s00702-020-02284-x
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Elevated glycine levels in the nucleus accumbens modulate dopamine release through glycine
+  receptor activation, though response varies by individual, with only a subpopulation showing dopamine
+  elevation.
+moderators:
+- name: dopamine_responder_status
+  direction: strengthens
+  strength: strong
+  description: Only a subpopulation of animals (dopamine responders) showed elevated accumbal dopamine
+    levels after glycine treatment, indicating individual biological variability in response
+structural_competency:
+  equity_implications: Individual biological variability in treatment response has implications for personalized
+    medicine approaches. Ensuring equitable access to pharmacogenomic testing and tailored treatments
+    is essential for health equity.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.141148'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

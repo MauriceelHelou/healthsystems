@@ -1,0 +1,63 @@
+id: NEW:medications_for_alcohol_use_disorder_maud_to_alcohol_use_disorder
+name: Medications for Alcohol Use Disorder (MAUD) → Alcohol Use Disorder
+from_node:
+  node_id: NEW:medications_for_alcohol_use_disorder_maud
+  node_name: Medications for Alcohol Use Disorder (MAUD)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: MAUD (naltrexone or acamprosate) is prescribed to patients with diagnosed
+  alcohol use disorder'
+- 'Step 2: Naltrexone blocks opioid receptors, reducing the rewarding effects of alcohol
+  and decreasing cravings; acamprosate modulates glutamate neurotransmission, reducing
+  withdrawal symptoms and alcohol craving'
+- 'Step 3: Reduced cravings and diminished rewarding effects lead to decreased alcohol
+  consumption and improved ability to maintain abstinence'
+- 'Step 4: Sustained reduction in alcohol use improves clinical outcomes including
+  survival, particularly in patients with alcohol-associated complications such as
+  cirrhosis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Rabiee et al. 2023. Medications for alcohol use disorder improve
+    survival in patients with hazardous drinking and alcohol-associated cirrhosis.
+    Hepatology Communications.
+  supporting_citations: []
+description: Medications for Alcohol Use Disorder (MAUD), including naltrexone and
+  acamprosate, are highly effective pharmacological interventions that reduce alcohol
+  consumption and support abstinence in patients with AUD. These medications work
+  through distinct neurobiological mechanisms to reduce cravings and the rewarding
+  effects of alcohol. In a large retrospective cohort study of patients with alcohol-associated
+  cirrhosis, MAUD exposure was associated with a 20% reduction in all-cause mortality
+  compared to no MAUD exposure, demonstrating the clinical effectiveness of these
+  medications in reducing harmful alcohol use behaviors.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.8
+    type: hazard_ratio
+    ci_lower: 0.67
+    ci_upper: 0.97
+  p_value: 0.024
+  sample_size: 9131
+moderators:
+- name: Duration of MAUD exposure
+  direction: strengthens
+  strength: moderate
+  description: 39% of patients had MAUD exposure >3 months; longer duration likely
+    associated with better outcomes
+- name: Cirrhosis decompensation history
+  direction: weakens
+  strength: moderate
+  description: History of cirrhosis decompensation was the strongest negative predictor
+    of MAUD prescription, suggesting reduced utilization in sicker patients
+- name: Concurrent depression diagnosis
+  direction: strengthens
+  strength: weak
+  description: Concurrent depression diagnosis was associated with higher likelihood
+    of MAUD prescription, potentially indicating better engagement with mental health
+    services

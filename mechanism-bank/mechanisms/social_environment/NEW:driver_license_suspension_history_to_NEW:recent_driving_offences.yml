@@ -1,0 +1,59 @@
+id: NEW:driver_license_suspension_history_to_NEW:recent_driving_offences
+name: History of Driver License Suspension → Recent Driving Offences
+from_node:
+  node_id: NEW:driver_license_suspension_history
+  node_name: History of Driver License Suspension
+to_node:
+  node_id: NEW:recent_driving_offences
+  node_name: Recent Driving Offences
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Previous license suspensions indicate prior involvement with legal/regulatory systems around
+  driving'
+- 'Step 2: Suspension history may reflect ongoing risk patterns or limited alternative transport options'
+- 'Step 3: Those with suspension history continue to drive due to treatment access needs despite legal
+  barriers'
+- 'Step 4: History of suspension showed 8.95 times higher odds of recent driving offences'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Daniel T Winter et al. 2025. "Understanding issues of driving safety and transport
+    utilisation among clients receiving opioid agonist treatment: a cross-sectional survey in New South
+    Wales, Australia.." https://doi.org/10.1071/PY25035'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references driving offence history literature
+  - Additional citations require full-text access - abstract references license suspension and recidivism
+    literature
+  - Additional citations require full-text access - abstract references transport barriers and treatment
+    access literature
+  doi: 10.1071/PY25035
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: OAT clients with history of license suspension showed dramatically higher odds of recent
+  driving offences, suggesting a cyclical pattern where legal penalties fail to address underlying transport
+  needs.
+quantitative_effects:
+  effect_size:
+    value: 8.95
+    type: odds_ratio
+    ci_lower: 5.38
+    ci_upper: 14.9
+  sample_size: 482
+moderators:
+- name: sex_male
+  direction: strengthens
+  strength: moderate
+  description: Male participants had 1.87 times higher odds of recent driving offences
+structural_competency:
+  equity_implications: License suspension as punishment fails to address the structural need for transport
+    to access mandated treatment. This creates a catch-22 where clients must choose between treatment
+    compliance and legal compliance. The punitive approach criminalizes those already marginalized by
+    addiction rather than providing transport solutions. Gender differences (males 1.87x higher odds)
+    may reflect differential enforcement or transport access patterns.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.163734'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

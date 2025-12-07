@@ -1,0 +1,58 @@
+id: NEW:buprenorphine_naloxone_combination_treatment_to_neonatal_abstinence_syndrome_nas
+name: Buprenorphine-Naloxone Combination Treatment During Pregnancy → Neonatal Abstinence Syndrome (NAS)
+from_node:
+  node_id: NEW:buprenorphine_naloxone_combination_treatment
+  node_name: Buprenorphine-Naloxone Combination Treatment During Pregnancy
+to_node:
+  node_id: neonatal_abstinence_syndrome_nas
+  node_name: Neonatal Abstinence Syndrome (NAS)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Pregnant individuals with opioid use disorder receive buprenorphine-naloxone combination treatment'
+- 'Step 2: Naloxone component has limited oral bioavailability, reducing systemic opioid exposure when
+  taken as prescribed'
+- 'Step 3: Potentially different pharmacokinetic profile leads to altered fetal opioid exposure patterns'
+- 'Step 4: Reduced or modified in utero opioid exposure decreases severity of neonatal withdrawal symptoms'
+- 'Step 5: Lower rates of neonatal abstinence syndrome requiring treatment in exposed infants'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Loreen Straub et al. 2024. "Comparative Safety of In Utero Exposure to Buprenorphine
+    Combined With Naloxone vs Buprenorphine Alone.." https://doi.org/10.1001/jama.2024.11501
+  supporting_citations:
+  - Additional citations require full-text access - Abstract references limited perinatal safety data
+    on combination product
+  - Additional citations require full-text access - Study builds on existing buprenorphine monotherapy
+    pregnancy research
+  - Additional citations require full-text access - Medicaid utilization data from 2000-2018 analyzed
+  doi: 10.1001/jama.2024.11501
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Prenatal exposure to buprenorphine combined with naloxone was associated with a 23% lower
+  risk of neonatal abstinence syndrome compared to buprenorphine alone (absolute risk 37.4% vs 55.8%).
+quantitative_effects:
+  effect_size:
+    value: 0.77
+    type: relative_risk
+    ci_lower: 0.7
+    ci_upper: 0.84
+  sample_size: 8695
+moderators:
+- name: Medicaid insurance status
+  direction: strengthens
+  strength: moderate
+  description: Study population limited to Medicaid beneficiaries, who may have different characteristics
+    than privately insured populations
+structural_competency:
+  equity_implications: This mechanism highlights how medication formulation policies and treatment guidelines
+    create structural barriers for pregnant individuals with OUD. Historical restriction of combination
+    product in pregnancy limited treatment options. Expanding safe treatment options addresses structural
+    healthcare access inequities for this vulnerable population. Medicaid population focus reveals safety
+    data for economically disadvantaged pregnant individuals.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.683981'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

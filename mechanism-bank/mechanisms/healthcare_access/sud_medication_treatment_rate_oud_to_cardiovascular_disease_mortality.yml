@@ -1,0 +1,53 @@
+id: sud_medication_treatment_rate_oud_to_cardiovascular_disease_mortality
+name: OUD Medication Treatment Rate → Cardiovascular Disease Mortality
+from_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: OUD Medication Treatment Rate
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: People receiving OAT face high risk of cardiovascular comorbidities'
+- 'Step 2: Integration of exercise programs within OAT settings provides accessible intervention'
+- 'Step 3: Structured exercise improves aerobic fitness and cardiovascular health markers'
+- 'Step 4: Improved cardiovascular fitness reduces risk of cardiovascular disease and mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Einar Furulund et al. 2025. "Integrating an exercise program into opioid agonist
+    therapy: a pilot study on feasibility, fitness improvements, and participation challenges.." https://doi.org/10.1186/s13722-025-00583-w'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references cardiovascular disorders in OAT
+    populations
+  - Additional citations require full-text access - abstract references health disparities in OAT populations
+  - Additional citations require full-text access - abstract references exercise to reduce health disparities
+  doi: 10.1186/s13722-025-00583-w
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: DOI not found in Crossref database'
+last_updated: '2025-12-06'
+version: '2.0'
+description: People receiving OAT face elevated cardiovascular risk; integrating exercise programs into
+  OAT may help reduce health disparities by improving cardiovascular fitness through accessible, clinic-based
+  interventions.
+quantitative_effects:
+  sample_size: 22
+moderators:
+- name: exercise_adherence
+  direction: strengthens
+  strength: strong
+  description: Higher exercise adherence would likely yield greater cardiovascular benefits; current 28%
+    attendance limits impact
+structural_competency:
+  equity_implications: This mechanism addresses the structural inequity of elevated cardiovascular risk
+    in OAT populations by proposing system-level integration of exercise into existing healthcare infrastructure.
+    It recognizes that individual-level exercise recommendations are insufficient without structural support
+    systems that make participation accessible and feasible for this marginalized population.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.836887'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

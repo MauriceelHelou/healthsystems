@@ -1,0 +1,52 @@
+id: NEW:cirrhosis_to_liver_disease_mortality
+name: Cirrhosis → Liver Disease Mortality
+from_node:
+  node_id: NEW:cirrhosis
+  node_name: Cirrhosis
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Cirrhosis causes progressive liver fibrosis and architectural distortion,
+  leading to portal hypertension and hepatocellular dysfunction'
+- 'Step 2: Portal hypertension leads to development of complications including ascites
+  (median survival 1.1 years), hepatic encephalopathy (median survival 0.92 years),
+  variceal bleeding, and hepatorenal syndrome (median survival <2 weeks)'
+- 'Step 3: Cirrhosis increases risk of hepatocellular carcinoma (1-4% annual incidence)
+  with 5-year survival of approximately 20%'
+- 'Step 4: Decompensated cirrhosis with multiple complications leads to progressive
+  multi-organ failure and death from liver disease'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'E. Tapper and N. Parikh 2023. Diagnosis and Management of Cirrhosis
+    and Its Complications: A Review. Journal of the American Medical Association (JAMA)'
+  supporting_citations: []
+description: Cirrhosis directly causes liver disease mortality through progressive
+  hepatocellular dysfunction and portal hypertension, leading to life-threatening
+  complications. Age-adjusted mortality from cirrhosis increased from 14.9 to 21.9
+  per 100,000 between 2010-2021. Median survival following onset of ascites is 1.1
+  years and hepatic encephalopathy is 0.92 years. Hepatorenal syndrome carries median
+  survival of less than 2 weeks. Annual hepatocellular carcinoma incidence of 1-4%
+  with 5-year survival of approximately 20% further contributes to mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: decompensation_status
+  direction: strengthens
+  strength: strong
+  description: Approximately 40% of cirrhosis patients are diagnosed at decompensation;
+    onset of hepatic encephalopathy or ascites dramatically reduces survival to less
+    than 1-2 years
+- name: etiology
+  direction: strengthens
+  strength: moderate
+  description: Alcohol use disorder (45%), nonalcoholic fatty liver disease (26%),
+    and hepatitis C (41%) are major causes that may overlap and influence progression
+- name: hepatocellular_carcinoma_development
+  direction: strengthens
+  strength: strong
+  description: Annual HCC incidence of 1-4% with 5-year survival of approximately
+    20% significantly increases mortality risk

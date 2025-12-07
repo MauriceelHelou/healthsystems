@@ -1,0 +1,67 @@
+id: NEW:alcohol_demand_intensity_to_alcohol_use_disorder
+name: Alcohol Demand Intensity (Consumption When Free) → Alcohol Use Disorder
+from_node:
+  node_id: NEW:alcohol_demand_intensity
+  node_name: Alcohol Demand Intensity (Consumption When Free)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Higher alcohol demand intensity reflects elevated subjective value placed on alcohol consumption'
+- 'Step 2: Elevated demand creates stronger motivation to consume alcohol even during recovery attempts'
+- 'Step 3: This heightened reinforcing value of alcohol predicts relapse to heavy drinking in subsequent
+  time periods'
+- 'Step 4: Heavy drinking episodes reinforce and further elevate alcohol demand through neuroadaptation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Cheong et al. 2022. "Bidirectional prospective associations between behavioral
+    economic indicators and drinking patterns during alcohol use disorder natural recovery attempts.."
+    https://doi.org/10.1037/adb0000859
+  supporting_citations:
+  - Additional citations require full-text access - abstract references behavioral economic (BE) theory
+    as foundational framework
+  - Additional citations require full-text access - abstract mentions prior cross-sectional research support
+  - Additional citations require full-text access - longitudinal methodology builds on prior recovery
+    attempt literature
+  doi: 10.1037/adb0000859
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2023, source is 2022'
+last_updated: '2025-12-06'
+version: '2.0'
+description: This prospective longitudinal study demonstrates bidirectional associations between alcohol
+  demand intensity (measured via alcohol purchase task - consumption when drinks are free) and drinking
+  patterns during natural recovery attempts. Higher demand at Quarter 1 distinguished heavy drinkers from
+  abstainers at Quarter 2, and heavy drinking at Quarter 2 predicted higher demand at Quarter 3, which
+  then predicted heavy drinking at Quarter 4.
+quantitative_effects:
+  p_value: 0.05
+  sample_size: 191
+moderators:
+- name: drinking_status_prior_quarter
+  direction: strengthens
+  strength: moderate
+  description: Heavy drinking in prior quarter increased alcohol demand intensity in subsequent quarter,
+    creating a bidirectional reinforcement cycle
+- name: time_since_recovery_attempt
+  direction: strengthens
+  strength: moderate
+  description: Effects observed across quarters 1-4, suggesting sustained predictive relationship over
+    12-month follow-up period
+structural_competency:
+  equity_implications: 'While this study focuses on individual-level behavioral economic indicators, the
+    findings have structural implications: alcohol pricing policies that increase cost may reduce demand
+    intensity; availability of alcohol (e.g., outlet density, pricing) shapes the environment in which
+    demand translates to consumption. The ''natural recovery'' framing (without treatment) highlights
+    how lack of access to treatment services may leave individuals more vulnerable to demand-driven relapse.
+    Equity implications include differential access to recovery support services and treatment resources
+    across communities.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.796782'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

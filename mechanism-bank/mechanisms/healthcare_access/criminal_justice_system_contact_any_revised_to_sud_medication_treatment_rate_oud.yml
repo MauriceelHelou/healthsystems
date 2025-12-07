@@ -1,0 +1,96 @@
+id: criminal_justice_system_contact_any_revised_to_sud_medication_treatment_rate_oud
+name: Criminal Justice System Contact → OUD Medication Treatment Rate
+from_node:
+  node_id: criminal_justice_system_contact_any_revised
+  node_name: Criminal Justice System Contact
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: OUD Medication Treatment Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Criminal justice system involvement results in referral to substance use treatment programs'
+- 'Step 2: Justice system referrals are predominantly directed to abstinence-based programs rather than
+  evidence-based medication treatment'
+- 'Step 3: Fewer than 6% of criminal justice-referred cases receive opioid agonist treatment (OAT)'
+- 'Step 4: Lack of OAT access leads to reduced treatment retention and higher relapse rates'
+- 'Step 5: Reduced access to effective treatment perpetuates the cycle of substance use and re-incarceration'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Wendy P. Guastaferro et al. 2022. "Opioid Agonist Treatment Recipients within Criminal
+    Justice-Involved Populations." https://doi.org/10.1080/10826084.2022.2034869
+  supporting_citations:
+  - Additional citations require full-text access - abstract references strong evidence for OAT effectiveness
+    in reducing overdose
+  - Additional citations require full-text access - abstract references evidence for improving treatment
+    retention
+  - Additional citations require full-text access - abstract references prior studies on justice-involved
+    populations and SUD
+  doi: 10.1080/10826084.2022.2034869
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Criminal justice referral to substance use treatment creates a structural barrier to evidence-based
+  opioid agonist treatment (OAT). Despite strong evidence that OAT is effective in reducing overdose,
+  increasing treatment retention, and improving physical health outcomes, fewer than 6% of criminal justice-referred
+  cases received OAT as part of their treatment plan. This represents a systemic failure to integrate
+  criminal justice with public health approaches to substance use disorder.
+quantitative_effects:
+  effect_size:
+    value: 6.0
+    type: percentage_change
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Those living in the Northeast were more likely to receive OAT, indicating significant
+    regional variation in treatment access
+moderators:
+- name: geographic_region
+  direction: strengthens
+  strength: moderate
+  description: Northeast region associated with higher likelihood of OAT receipt compared to other regions
+- name: insurance_status
+  direction: strengthens
+  strength: moderate
+  description: Government health insurance associated with higher likelihood of OAT receipt
+- name: substance_use_severity
+  direction: strengthens
+  strength: moderate
+  description: Daily substance use associated with higher likelihood of OAT receipt
+- name: psychiatric_comorbidity
+  direction: strengthens
+  strength: moderate
+  description: Comorbid psychiatric problems associated with higher likelihood of OAT receipt
+- name: prior_treatment_history
+  direction: strengthens
+  strength: moderate
+  description: Prior treatment associated with higher likelihood of OAT receipt
+- name: sex
+  direction: strengthens
+  strength: weak
+  description: Females more likely to receive OAT than males
+- name: ethnicity
+  direction: strengthens
+  strength: weak
+  description: Latinos more likely to receive OAT
+- name: age
+  direction: strengthens
+  strength: weak
+  description: Older individuals more likely to receive OAT
+- name: housing_status
+  direction: strengthens
+  strength: weak
+  description: Those living independently more likely to receive OAT
+structural_competency:
+  equity_implications: This mechanism exemplifies how the criminal justice system's approach to substance
+    use disorder creates structural barriers to effective healthcare. The punitive orientation of the
+    justice system toward abstinence-based treatment rather than evidence-based medication treatment reflects
+    systemic stigma against medication-assisted treatment. This structural barrier disproportionately
+    affects already marginalized populations who are overrepresented in the criminal justice system, perpetuating
+    health disparities. The solution requires policy-level integration of criminal justice and public
+    health systems rather than individual-level interventions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.564443'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,47 @@
+id: cancer_history_to_NEW:covid_19_hospitalized_mortality
+name: Malignancies/Cancer History → COVID-19 Hospitalized Patient Mortality
+from_node:
+  node_id: cancer_history
+  node_name: Malignancies/Cancer History
+to_node:
+  node_id: NEW:covid_19_hospitalized_mortality
+  node_name: COVID-19 Hospitalized Patient Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Cancer and cancer treatments (chemotherapy, radiation, immunotherapy) cause
+  immunosuppression, reducing the body''s ability to mount effective antiviral responses
+  against SARS-CoV-2'
+- 'Step 2: Immunocompromised state leads to impaired viral clearance, allowing prolonged
+  viral replication and higher viral loads'
+- 'Step 3: Cancer patients often have systemic inflammation and compromised organ
+  function, increasing vulnerability to COVID-19-related complications such as cytokine
+  storm and multi-organ failure'
+- 'Step 4: These factors combined result in more severe disease progression and increased
+  mortality risk in hospitalized COVID-19 patients with malignancies'
+evidence:
+  quality_rating: A
+  n_studies: 87
+  primary_citation: 'G. Corona et al. 2021. "Diabetes is most important cause for
+    mortality in COVID-19 hospitalized patients: Systematic review and meta-analysis."
+    Reviews in Endocrine & Metabolic Disorders.'
+  supporting_citations: []
+description: Malignancies/cancer history is identified as a significant predictor
+  of mortality in COVID-19 hospitalized patients. This systematic review and meta-analysis
+  of 87 studies found that after adjustment for confounders, malignancies ranked as
+  the third strongest predictor of mortality (after diabetes mellitus and chronic
+  obstructive pulmonary disease). The effect operates through immunosuppression from
+  both the cancer itself and its treatments, leading to impaired viral defense mechanisms.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Malignancies as a predictor of mortality operated in an age-dependent
+    manner, with older patients showing stronger associations
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: The relationship between malignancies and mortality was sex-dependent
+    based on adjusted analyses

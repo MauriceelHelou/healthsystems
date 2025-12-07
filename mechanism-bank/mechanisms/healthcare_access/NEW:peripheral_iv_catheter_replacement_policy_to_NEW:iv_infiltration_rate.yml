@@ -1,0 +1,46 @@
+id: NEW:peripheral_iv_catheter_replacement_policy_to_NEW:iv_infiltration_rate
+name: Peripheral IV Catheter Replacement Policy (Routine vs Clinically-Indicated) → IV Infiltration Rate
+from_node:
+  node_id: NEW:peripheral_iv_catheter_replacement_policy
+  node_name: Peripheral IV Catheter Replacement Policy (Routine vs Clinically-Indicated)
+to_node:
+  node_id: NEW:iv_infiltration_rate
+  node_name: IV Infiltration Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Routine replacement policy mandates catheter changes at fixed intervals'
+- 'Step 2: Newer catheters may have better vessel wall integrity and less mechanical irritation'
+- 'Step 3: Reduced time for catheter dislodgement or vessel wall erosion'
+- 'Step 4: Lower rates of fluid extravasation into surrounding tissues'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: Joan Webster et al. 2019. "Clinically-indicated replacement versus routine replacement
+    of peripheral venous catheters.." https://doi.org/10.1002/14651858.CD007798.pub5
+  supporting_citations:
+  - Six trials assessing infiltration (7123 participants)
+  - Additional citations require full-text access
+  doi: 10.1002/14651858.CD007798.pub5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Routine replacement probably reduces infiltration compared with clinically-indicated change
+  (RR 1.16, 95% CI 1.06-1.26). Infiltration rates: routine replacement 747/3638 (20.5%) vs clinically-indicated
+  834/3485 (23.9%)'
+quantitative_effects:
+  effect_size:
+    value: 1.16
+    type: relative_risk
+    ci_lower: 1.06
+    ci_upper: 1.26
+  sample_size: 7123
+structural_competency:
+  equity_implications: 'This represents a trade-off in healthcare policy: routine replacement reduces
+    infiltration but at increased cost and patient discomfort. Decision-making must weigh clinical significance
+    of infiltration against resource utilization.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.913471'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

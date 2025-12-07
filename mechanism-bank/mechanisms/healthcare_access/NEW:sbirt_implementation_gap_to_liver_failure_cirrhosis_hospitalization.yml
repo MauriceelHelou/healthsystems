@@ -1,0 +1,61 @@
+id: NEW:sbirt_implementation_gap_to_liver_failure_cirrhosis_hospitalization
+name: SBIRT Implementation Gap in Alcohol-Related Liver Disease → Liver Failure/Cirrhosis Hospitalization
+from_node:
+  node_id: NEW:sbirt_implementation_gap
+  node_name: SBIRT Implementation Gap in Alcohol-Related Liver Disease
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Failure/Cirrhosis Hospitalization
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare system fails to universally implement SBIRT protocols for patients with alcohol-associated
+  liver disease (only 51.7% of AAH, 23.7% of DARLC patients received intervention)'
+- 'Step 2: Patients discharged without addiction treatment referral lack connection to outpatient alcohol
+  use disorder services'
+- 'Step 3: Absence of treatment continuity results in return to pre-hospitalization drinking patterns'
+- 'Step 4: Continued alcohol use causes ongoing hepatic injury and disease progression'
+- 'Step 5: Progressive liver damage leads to recurrent decompensation requiring rehospitalization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Dennis Wang and M. Puglia 2023. "Inpatient Screening, Brief Intervention, and Referral
+    to Treatment for Alcohol Use Disorder in Patients Admitted with Alcohol-associated Liver Disease Is
+    Not Universally Implemented in Practice, But Can Reduce Readmissions for Alcohol-associated Hepatitis."
+    https://doi.org/10.1093/jcag/gwad048
+  supporting_citations:
+  - Additional citations require full-text access - abstract references multidisciplinary approach requirements
+  - Additional citations require full-text access - abstract does not cite specific prior implementation
+    studies
+  - Additional citations require full-text access - abstract does not reference guidelines on addiction
+    integration
+  doi: 10.1093/jcag/gwad048
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'The study documents a major implementation gap: less than half of actively drinking patients
+  hospitalized for alcohol-associated hepatitis received SBIRT intervention, and less than a quarter of
+  those with decompensated cirrhosis received it. This structural failure in healthcare delivery perpetuates
+  cycles of hospitalization by missing critical opportunities for addiction treatment linkage.'
+quantitative_effects:
+  sample_size: 297
+moderators:
+- name: diagnosis_severity
+  direction: weakens
+  strength: moderate
+  description: Patients with more advanced disease (DARLC vs AAH) received SBIRT at even lower rates (23.7%
+    vs 51.7%), potentially reflecting provider nihilism about addiction treatment benefit in advanced
+    disease
+structural_competency:
+  equity_implications: 'This mechanism exemplifies structural determinants of health through healthcare
+    system organization. The implementation gap is a system-level failure, not a patient-level one. Structural
+    factors that may contribute include: lack of addiction medicine consultation services, absence of
+    standardized SBIRT protocols, provider training gaps, stigma toward addiction within hepatology/gastroenterology,
+    and resource constraints. The disparity in SBIRT rates between AAH and DARLC patients (51.7% vs 23.7%)
+    may reflect implicit biases about treatment futility in advanced disease, representing a form of structural
+    discrimination against patients with more severe presentations.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.068962'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,47 @@
+id: sports_participation_frequency_to_adolescent_alcohol_use
+name: Sports Participation Frequency → Adolescent Alcohol Use
+from_node:
+  node_id: sports_participation_frequency
+  node_name: Sports Participation Frequency
+to_node:
+  node_id: adolescent_alcohol_use
+  node_name: Adolescent Alcohol Use
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Higher sports participation frequency among postmillennial adolescents
+  provides structured leisure time and alternative social contexts'
+- 'Step 2: Structured sports activities compete with unstructured leisure time traditionally
+  associated with alcohol experimentation'
+- 'Step 3: Despite initial lower alcohol use, adolescents with highest sports frequency
+  show steeper increases over time, potentially due to evolving social norms in sports
+  contexts'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'G. Brunborg et al. 2022. "Sports participation and alcohol use
+    revisited: A longitudinal study of Norwegian postmillennial adolescents.." *Journal
+    des adolescens*. https://doi.org/10.1002/jad.12048'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.292721'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: initial_sports_frequency_level
+  direction: u_shaped
+  strength: moderate
+  description: Adolescents with highest initial sports frequency showed slightly lower
+    initial alcohol use (b=-0.06, p=.351) but steeper increases over time with quadratic
+    curvature (b=0.09, p=.004), suggesting complex temporal dynamics
+- name: time_varying_confounders
+  direction: weakens
+  strength: weak
+  description: After adjusting for time-varying confounders (parental cohabitation,
+    unstructured leisure time, sensation-seeking, behavioral problems), the association
+    between change in sports practice and change in alcohol use became weak or non-significant
+    (b=-0.03, p=.065)
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/social_environment/sports_participation_frequency_to_adolescent_alcohol_use.yaml
+_category: social_environment

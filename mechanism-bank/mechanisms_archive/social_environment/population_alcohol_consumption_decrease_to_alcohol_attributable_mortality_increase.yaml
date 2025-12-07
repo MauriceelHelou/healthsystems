@@ -1,0 +1,45 @@
+id: population_alcohol_consumption_decrease_to_alcohol_attributable_mortality_increase
+name: Overall Population Alcohol Consumption Decrease → 100% Alcohol-Attributable
+  Mortality Increase
+from_node:
+  node_id: population_alcohol_consumption_decrease
+  node_name: Overall Population Alcohol Consumption Decrease
+to_node:
+  node_id: alcohol_attributable_mortality_increase
+  node_name: 100% Alcohol-Attributable Mortality Increase
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: During COVID-19 pandemic, overall population alcohol consumption decreases
+  (due to closed venues, reduced social gatherings, economic constraints)'
+- 'Step 2: Despite overall decrease, consumption polarizes - light/moderate drinkers
+  reduce consumption while heaviest drinkers increase consumption'
+- 'Step 3: Fully alcohol-attributable mortality is driven primarily by heavy drinking
+  patterns, not population average consumption'
+- 'Step 4: Increased heavy drinking among high-risk subgroup leads to increased mortality
+  despite decreased population-level consumption, revealing paradoxical inverse relationship'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jürgen Rehm et al. 2024. "Trends of fully alcohol-attributable
+    mortality rates before and during COVID-19 in the Baltic and other European countries."
+    *Scandinavian Journal of Public Health*. https://doi.org/10.1177/14034948241280772
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.065927'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: drinking_pattern_polarization
+  direction: strengthens
+  strength: strong
+  description: Greater polarization between light/moderate drinkers (decreasing) and
+    heavy drinkers (increasing) strengthens the paradoxical inverse relationship between
+    population consumption and mortality
+- name: crisis_severity
+  direction: strengthens
+  strength: moderate
+  description: More severe crisis conditions may intensify polarization, with stress-related
+    increases in heavy drinking offsetting venue-closure-related decreases in social
+    drinking

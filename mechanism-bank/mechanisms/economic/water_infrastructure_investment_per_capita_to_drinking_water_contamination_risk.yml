@@ -1,0 +1,54 @@
+id: water_infrastructure_investment_per_capita_to_drinking_water_contamination_risk
+name: Water Infrastructure Investment Per Capita → Drinking Water Contamination Risk
+from_node:
+  node_id: water_infrastructure_investment_per_capita
+  node_name: Water Infrastructure Investment Per Capita
+to_node:
+  node_id: drinking_water_contamination_risk
+  node_name: Drinking Water Contamination Risk
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Inadequate investment in water treatment infrastructure limits capacity to remove heavy metals
+  from source water'
+- 'Step 2: Aging or absent treatment systems fail to achieve regulatory standards for contaminant removal'
+- 'Step 3: Rural and underserved communities receive less infrastructure investment'
+- 'Step 4: Populations served by underfunded water systems experience chronic exposure to elevated heavy
+  metal concentrations'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Nilufar Marufi et al. 2022. "Carcinogenic and non-carcinogenic human health risk
+    assessments of heavy metals contamination in drinking water supplies in Iran: a systematic review."
+    https://doi.org/10.1515/reveh-2022-0060'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Review notes this is a particular concern for developing countries
+  - Studies from multiple Iranian cities and villages included
+  doi: 10.1515/reveh-2022-0060
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The review explicitly notes that heavy metal contamination in drinking water is 'a big concern
+  for humankind, particularly in developing countries,' implicating infrastructure investment as a structural
+  driver of contamination risk.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Variation between cities and villages suggests differential infrastructure investment
+    affects contamination levels
+moderators:
+- name: urbanicity
+  direction: strengthens
+  strength: moderate
+  description: Rural villages may receive less water infrastructure investment than urban centers, creating
+    differential exposure risk
+structural_competency:
+  equity_implications: Water infrastructure investment is a fundamental structural determinant shaped
+    by economic development, political priorities, and resource allocation decisions. Communities lacking
+    economic or political power to secure infrastructure investment face systematic exposure to contaminated
+    water. This creates environmental injustice along economic and geographic lines.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.399009'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

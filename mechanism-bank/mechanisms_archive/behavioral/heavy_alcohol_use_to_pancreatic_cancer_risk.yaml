@@ -1,0 +1,41 @@
+id: heavy_alcohol_use_to_pancreatic_cancer_risk
+name: Heavy Alcohol Use → Pancreatic Cancer Risk
+from_node:
+  node_id: heavy_alcohol_use
+  node_name: Heavy Alcohol Use
+to_node:
+  node_id: pancreatic_cancer_risk
+  node_name: Pancreatic Cancer Risk
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Heavy alcohol consumption causes direct toxic damage to pancreatic acinar
+  cells through ethanol metabolites (acetaldehyde)'
+- 'Step 2: Chronic alcohol exposure promotes inflammation and oxidative stress in
+  pancreatic tissue, leading to chronic pancreatitis'
+- 'Step 3: Repeated cycles of pancreatic inflammation and cellular damage create an
+  environment conducive to genetic mutations and cellular transformation'
+- 'Step 4: Accumulated DNA damage and dysregulation of cell growth pathways increase
+  risk of malignant transformation to pancreatic cancer'
+evidence:
+  quality_rating: C
+  n_studies: null
+  primary_citation: 'Carl Bryce and Merima Bucaj 2024. "Pancreatic Cancer: Rapid Evidence
+    Review.." *American family physician*.'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.211365'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: chronic_pancreatitis_history
+  direction: strengthens
+  strength: strong
+  description: History of chronic pancreatitis (often alcohol-induced) significantly
+    amplifies pancreatic cancer risk through persistent inflammation
+- name: smoking_status
+  direction: strengthens
+  strength: moderate
+  description: Combined tobacco and heavy alcohol use likely has synergistic effects
+    on pancreatic cancer risk through multiple carcinogenic pathways

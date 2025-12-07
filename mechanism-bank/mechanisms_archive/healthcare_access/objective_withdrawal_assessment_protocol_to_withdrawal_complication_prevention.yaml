@@ -1,0 +1,43 @@
+id: objective_withdrawal_assessment_protocol_to_withdrawal_complication_prevention
+name: Objective Withdrawal Symptom Assessment Protocol → Prevention of Severe Withdrawal
+  Complications
+from_node:
+  node_id: objective_withdrawal_assessment_protocol
+  node_name: Objective Withdrawal Symptom Assessment Protocol
+to_node:
+  node_id: withdrawal_complication_prevention
+  node_name: Prevention of Severe Withdrawal Complications
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Standardized CIWA-Ar assessment tool provides objective measurement of
+  withdrawal severity at regular intervals'
+- 'Step 2: Threshold-based medication administration (diazepam 20mg when CIWA-Ar ≥10)
+  prevents progression to severe withdrawal'
+- 'Step 3: Continuous monitoring in CDU setting enables rapid detection and treatment
+  of escalating symptoms'
+- 'Step 4: Structured protocol with clear escalation criteria (15% required ≥100mg
+  cumulative dose) ensures adequate treatment intensity while maintaining safety'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Muhammad Fahmi Ismail et al. 2018. "Symptom-triggered therapy
+    for assessment and management of alcohol withdrawal syndrome in the emergency
+    department short-stay clinical decision unit." *Emergency Medicine Journal*. https://doi.org/10.1136/emermed-2017-206997
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.714185'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: presentation_acuity
+  direction: strengthens
+  strength: moderate
+  description: 41% presented with collapse or seizure indicating severe withdrawal;
+    early identification enables immediate intensive treatment
+- name: thiamine_administration
+  direction: strengthens
+  strength: moderate
+  description: Parenteral thiamine receipt (documented in dataset) addresses nutritional
+    deficiency and prevents Wernicke-Korsakoff syndrome

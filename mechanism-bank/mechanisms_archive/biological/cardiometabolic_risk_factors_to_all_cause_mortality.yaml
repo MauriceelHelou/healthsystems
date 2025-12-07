@@ -1,0 +1,41 @@
+id: cardiometabolic_risk_factors_to_all_cause_mortality
+name: Cardiometabolic Risk Factors → All-Cause Mortality
+from_node:
+  node_id: cardiometabolic_risk_factors
+  node_name: Cardiometabolic Risk Factors
+to_node:
+  node_id: all_cause_mortality
+  node_name: All-Cause Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Presence of cardiometabolic risk factors (obesity, type 2 diabetes, hypertension)
+  creates systemic metabolic dysfunction'
+- 'Step 2: Metabolic dysfunction contributes to hepatic steatosis and progression
+  of liver disease'
+- 'Step 3: Combined burden of cardiometabolic conditions and liver disease increases
+  overall mortality risk through cardiovascular events, liver-related complications,
+  and metabolic sequelae'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Zobair M Younossi et al. 2024. "Clinical profiles and mortality
+    rates are similar for metabolic dysfunction-associated steatotic liver disease
+    and non-alcoholic fatty liver disease.." *Journal of hepatology*. https://doi.org/10.1016/j.jhep.2024.01.014
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.620597'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: MASLD individuals were older than NAFLD-only individuals, contributing
+    to slightly higher mortality risk
+- name: number_of_cardiometabolic_factors
+  direction: strengthens
+  strength: moderate
+  description: 82.51% of participants had at least one cardiometabolic criterion,
+    with presence of multiple factors likely increasing mortality risk

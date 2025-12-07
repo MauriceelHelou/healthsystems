@@ -1,0 +1,71 @@
+id: NEW:wine_consumption_to_NEW:coronary_heart_disease_incidence
+name: Wine Consumption → Coronary Heart Disease Incidence
+from_node:
+  node_id: NEW:wine_consumption
+  node_name: Wine Consumption
+to_node:
+  node_id: NEW:coronary_heart_disease_incidence
+  node_name: Coronary Heart Disease Incidence
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Wine consumption introduces bioactive compounds including polyphenols and antioxidants'
+- 'Step 2: These compounds reduce oxidative modification of LDL cholesterol, a key step in atherogenesis'
+- 'Step 3: Anti-thrombotic effects reduce platelet aggregation and thrombus formation in coronary arteries'
+- 'Step 4: Vasodilatory effects improve coronary blood flow and reduce myocardial ischemia risk'
+- 'Step 5: Combined effects result in reduced coronary heart disease incidence'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Maribel Lucerón-Lucas-Torres et al. 2023. "Association between Wine Consumption with
+    Cardiovascular Disease and Cardiovascular Mortality: A Systematic Review and Meta-Analysis." https://doi.org/10.3390/nu15122785'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 25 studies total
+  - Meta-analysis pooled 22 studies for quantitative synthesis
+  - Search conducted across multiple databases from inception to March 2023
+  doi: 10.3390/nu15122785
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'The strongest protective association was observed for coronary heart disease (RR=0.76, 95%
+  CI: 0.69-0.84). This represents a 24% risk reduction associated with wine consumption compared to non-consumption
+  or lower consumption categories. The effect showed robustness across different demographic subgroups
+  analyzed.'
+quantitative_effects:
+  effect_size:
+    value: 0.76
+    type: relative_risk
+    ci_lower: 0.69
+    ci_upper: 0.84
+moderators:
+- name: age
+  direction: strengthens
+  strength: weak
+  description: Participant mean age did not significantly modify the wine-CHD association
+- name: sex_proportion_female
+  direction: strengthens
+  strength: weak
+  description: Sex distribution in study samples did not affect the observed relationship
+- name: smoking_current
+  direction: weakens
+  strength: moderate
+  description: Smoking status was examined as potential confounder/modifier
+- name: vulnerable_populations
+  direction: weakens
+  strength: strong
+  description: Authors explicitly caution that wine consumption may be harmful for individuals vulnerable
+    due to age, medication use, or existing pathologies
+structural_competency:
+  equity_implications: 'This finding must be interpreted within structural contexts: (1) Access to wine
+    is shaped by economic resources, neighborhood alcohol retail environment, and cultural factors; (2)
+    The ''sick quitter'' phenomenon may bias estimates if former drinkers with poor health are categorized
+    as non-drinkers; (3) Vulnerable populations including those with alcohol use disorder, certain medications,
+    liver disease, or pregnancy may experience net harm from any alcohol consumption; (4) Structural interventions
+    should focus on addressing cardiovascular disease through proven methods (tobacco control, food environment,
+    healthcare access) rather than promoting alcohol consumption; (5) Marketing of potential health benefits
+    could disproportionately harm communities already experiencing alcohol-related health disparities.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.310963'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

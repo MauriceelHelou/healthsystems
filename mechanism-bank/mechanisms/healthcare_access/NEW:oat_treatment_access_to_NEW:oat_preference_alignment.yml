@@ -1,0 +1,55 @@
+id: NEW:oat_treatment_access_to_NEW:oat_preference_alignment
+name: Opioid Agonist Therapy Treatment Access → OAT Preference-Treatment Alignment
+from_node:
+  node_id: NEW:oat_treatment_access
+  node_name: Opioid Agonist Therapy Treatment Access
+to_node:
+  node_id: NEW:oat_preference_alignment
+  node_name: OAT Preference-Treatment Alignment
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Expanded access to diverse OAT options enables treatment matching'
+- 'Step 2: Patients receiving preferred medication type show higher satisfaction'
+- 'Step 3: Higher proportion of buprenorphine recipients (92%) preferred their current medication compared
+  to methadone recipients (77%)'
+- 'Step 4: Preference-aligned treatment may improve retention and outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: M J Stowe et al. 2026. "Factors Associated With Preferences for Opioid Agonist Therapies
+    Among People Dependent on Opioids.." https://doi.org/10.1111/dar.70079
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1111/dar.70079
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2025, source is 2026'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among those receiving OAT, a significantly higher proportion of buprenorphine recipients
+  (92%) preferred their current medication compared to methadone recipients (77%), suggesting differential
+  satisfaction and potential need for expanded treatment options.
+quantitative_effects:
+  sample_size: 400
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study notes need for expanded access to OAT in Australia, suggesting geographic variation
+    in treatment availability
+moderators:
+- name: current_oat_type
+  direction: strengthens
+  strength: strong
+  description: 92% of current buprenorphine recipients preferred their medication vs 77% of methadone
+    recipients
+structural_competency:
+  equity_implications: This mechanism highlights structural barriers to patient-centered care in OAT.
+    When healthcare systems limit medication options, patients may receive treatments that do not align
+    with their preferences, potentially affecting engagement and outcomes. The study calls for expanded
+    take-home options and treatment variety as structural solutions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.156523'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

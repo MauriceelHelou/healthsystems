@@ -1,0 +1,57 @@
+id: NEW:unhealthy_commodity_commercial_availability_to_all_cause_mortality_rate
+name: Unhealthy Commodity Commercial Availability → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:unhealthy_commodity_commercial_availability
+  node_name: Unhealthy Commodity Commercial Availability
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Commercial markets make attractive but harmful commodities widely available'
+- 'Step 2: Consumer exposure to alcohol, tobacco, drugs, processed foods, and gambling increases'
+- 'Step 3: Population-level consumption of harmful commodities rises with availability'
+- 'Step 4: Increased consumption leads to addiction, chronic disease, and mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Robin Room 2025. "Attractive but Harmful Commodities: Looking Across Unhealthy Commodities
+    to Improve Public Health Responses.." https://doi.org/10.1002/puh2.70117'
+  supporting_citations:
+  - Additional citations require full-text access - paper synthesizes across tobacco, alcohol, drugs,
+    food, gambling
+  - Historical prohibition examples referenced
+  - Cross-commodity public health thinking discussed
+  doi: 10.1002/puh2.70117
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'The paper identifies a common mechanism across unhealthy commodities: commercial availability
+  drives population-level harm, and control measures that restrict availability reduce these harms'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Paper explicitly notes that histories of markets and controls vary across commodities
+    and jurisdictions, with different regulatory regimes for different products in different places
+moderators:
+- name: commodity_type
+  direction: strengthens
+  strength: moderate
+  description: Tobacco and alcohol have historically faced more controls than sugar and processed foods
+    until recent years
+- name: regulatory_history
+  direction: weakens
+  strength: moderate
+  description: Commodities with longer regulatory histories (tobacco) show greater harm reduction
+structural_competency:
+  equity_implications: This mechanism exemplifies the commercial determinants of health framework. The
+    paper explicitly calls for 'looking across what have been separate fields of action and experience'
+    to learn from effective controls. This structural approach recognizes that harm arises from commercial
+    systems rather than individual consumer weakness, and that policy responses must target these systems.
+    The historical variation in regulation (few limits on sugar until recently) demonstrates how commercial
+    interests shape regulatory environments.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.229716'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

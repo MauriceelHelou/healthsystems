@@ -1,0 +1,55 @@
+id: proximity_to_chw_to_chw_service_utilization
+name: Proximity to Community Health Worker (<3 km) → Utilization of Community Health
+  Worker Services for Febrile Children
+from_node:
+  node_id: proximity_to_chw
+  node_name: Proximity to Community Health Worker (<3 km)
+to_node:
+  node_id: chw_service_utilization
+  node_name: Utilization of Community Health Worker Services for Febrile Children
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Shorter geographic distance to CHW reduces travel time and transportation
+  barriers for caregivers with febrile children'
+- 'Step 2: Reduced travel burden increases feasibility of seeking care promptly when
+  child develops fever symptoms'
+- 'Step 3: Greater accessibility makes CHW the practical first point of consultation
+  compared to more distant health facilities'
+- 'Step 4: Increased utilization of CHW services enables earlier malaria treatment
+  for under-five children'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Micheal Mazzi et al. 2018. "Proximity to a community health worker
+    is associated with utilization of malaria treatment services in the community
+    among under-five children: a cross-sectional study in rural Uganda.." *International
+    Health*. https://doi.org/10.1093/inthealth/ihy069'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.475038'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: trust_in_chw_services
+  direction: strengthens
+  strength: strong
+  description: Trust in CHW services showed very strong association with utilization
+    (aOR=7.8, p<0.001), suggesting that proximity alone insufficient without community
+    confidence in service quality
+- name: household_asset_index
+  direction: strengthens
+  strength: moderate
+  description: Lower asset index associated with higher CHW utilization (aOR=1.9,
+    p=0.02), indicating distance effects may be stronger for poorer households with
+    fewer transportation options
+- name: maternal_decision_making
+  direction: strengthens
+  strength: moderate
+  description: Mother being the decision maker for site of first consultation associated
+    with higher CHW utilization (aOR=1.9, p=0.01), suggesting gendered patterns in
+    how proximity affects care-seeking
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/proximity_to_chw_to_chw_service_utilization.yaml
+_category: healthcare_access

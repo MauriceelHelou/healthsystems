@@ -78,7 +78,13 @@
         "biological",
         "behavioral"
       ],
-      "description": "Primary category of the mechanism"
+      "description": "Primary category of the mechanism (deprecated - use domains)"
+    },
+    "hierarchy_level": {
+      "type": "string",
+      "enum": ["leaf", "parent", "cross"],
+      "default": "leaf",
+      "description": "Hierarchy level: 'leaf' connects specific nodes, 'parent' connects abstract nodes, 'cross' spans hierarchy levels"
     },
     "mechanism_pathway": {
       "type": "array",

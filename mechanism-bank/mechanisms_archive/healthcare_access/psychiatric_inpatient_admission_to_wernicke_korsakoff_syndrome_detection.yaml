@@ -1,0 +1,44 @@
+id: psychiatric_inpatient_admission_to_wernicke_korsakoff_syndrome_detection
+name: Psychiatric Inpatient Admission → Wernicke-Korsakoff Syndrome Detection
+from_node:
+  node_id: psychiatric_inpatient_admission
+  node_name: Psychiatric Inpatient Admission
+to_node:
+  node_id: wernicke_korsakoff_syndrome_detection
+  node_name: Wernicke-Korsakoff Syndrome Detection
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Psychiatric inpatient settings provide structured environment for comprehensive
+  medical evaluation and observation'
+- 'Step 2: Implementation of systematic two-stage screening protocols enables identification
+  of patients meeting Caine criteria (nutritional deficiency, delirium/memory impairment,
+  cerebellar dysfunction, oculomotor abnormalities)'
+- 'Step 3: Screening identifies 12% prevalence of Caine-positive WKS among psychiatric
+  admissions, much higher than would be detected using classic triad criteria (encephalopathy,
+  ataxia, ophthalmoplegia)'
+- 'Step 4: Early detection enables prompt high-dose thiamine treatment initiation,
+  preventing progression to irreversible neurological damage'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Shihong Lin et al. 2020. "Prevalence and Improvement of Caine-Positive
+    Wernicke-Korsakoff Syndrome in Psychiatric Inpatient Admissions.." *Psychosomatics*.
+    https://doi.org/10.1016/j.psym.2019.08.002
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.350907'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: implementation_of_systematic_screening
+  direction: strengthens
+  strength: strong
+  description: Quality improvement evaluation with two-stage screening protocol enables
+    detection of cases that would be missed using classic diagnostic criteria
+- name: use_of_caine_criteria_vs_classic_triad
+  direction: strengthens
+  strength: strong
+  description: Only 16% of autopsy-confirmed WKS cases exhibit all three classic signs;
+    Caine criteria (2+ of 4 signs) captures more cases

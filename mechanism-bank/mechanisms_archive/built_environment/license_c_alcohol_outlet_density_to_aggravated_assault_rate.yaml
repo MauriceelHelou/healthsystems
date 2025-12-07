@@ -1,0 +1,39 @@
+id: license_c_alcohol_outlet_density_to_aggravated_assault_rate
+name: License C Alcohol Outlet Density (Combined On and Off Premises Establishments)
+  → Aggravated Assault Rate
+from_node:
+  node_id: license_c_alcohol_outlet_density
+  node_name: License C Alcohol Outlet Density (Combined On and Off Premises Establishments)
+to_node:
+  node_id: aggravated_assault_rate
+  node_name: Aggravated Assault Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of combined on and off premises alcohol establishments increases
+  alcohol availability and consumption in geographically concentrated areas'
+- 'Step 2: Establishments become congregation points that increase population density
+  and social interactions involving alcohol consumption'
+- 'Step 3: Alcohol consumption impairs judgment and increases aggressive behavior,
+  while congregation points create more opportunities for interpersonal conflict'
+- 'Step 4: These factors combine to increase the rate of aggravated assaults in areas
+  with higher License C outlet density'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Lardier et al. 2021. "A Spatial Analysis of Alcohol Outlet
+    Density Type, Abandoned Properties, and Police Calls on Aggravated Assault Rates
+    in a Northeastern U.S. City." *Substance Use & Misuse*. https://doi.org/10.1080/10826084.2021.1942053
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.093710'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: neighborhood_disadvantage
+  direction: strengthens
+  strength: moderate
+  description: The abstract notes that disadvantaged urban communities are particularly
+    affected, suggesting the relationship between alcohol outlets and assault may
+    be stronger in geographically dense, poor, and socially isolated communities

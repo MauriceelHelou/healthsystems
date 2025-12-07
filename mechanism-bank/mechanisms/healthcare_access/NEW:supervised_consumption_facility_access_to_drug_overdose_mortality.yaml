@@ -1,0 +1,45 @@
+id: NEW:supervised_consumption_facility_access_to_drug_overdose_mortality
+name: Supervised Consumption Facility Access → Drug Overdose Mortality
+from_node:
+  node_id: NEW:supervised_consumption_facility_access
+  node_name: Supervised Consumption Facility Access
+to_node:
+  node_id: drug_overdose_mortality
+  node_name: Drug Overdose Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Supervised consumption facilities provide sterile, monitored environments
+  where people who use drugs can consume pre-obtained substances under clinical supervision'
+- 'Step 2: Trained staff monitor for signs of overdose and can immediately intervene
+  with naloxone administration, oxygen, and other emergency responses'
+- 'Step 3: Rapid on-site intervention prevents fatal overdose outcomes that would
+  occur in unsupervised settings where help may not be available'
+- 'Step 4: Facilities also connect clients to addiction treatment services and healthcare,
+  potentially reducing long-term overdose risk through treatment engagement'
+evidence:
+  quality_rating: A
+  n_studies: 442
+  primary_citation: 'O. Magwood et al. 2020. The effectiveness of substance use interventions
+    for homeless and vulnerably housed persons: A systematic review of systematic
+    reviews on supervised consumption facilities, managed alcohol programs, and pharmacological
+    agents for opioid use disorder. PLoS ONE.'
+  supporting_citations: []
+description: Supervised consumption facilities significantly decrease lethal overdoses
+  by providing immediate medical intervention during overdose events and connecting
+  clients to care. Evidence from a systematic review of systematic reviews (30 reviews,
+  442 primary studies) demonstrates that these facilities reduce fatal overdose outcomes
+  and other high-risk behaviors without significant harms.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: housing_status
+  direction: strengthens
+  strength: moderate
+  description: Homeless and vulnerably housed populations may benefit more as they
+    have fewer safe spaces for substance use and less access to emergency response
+- name: access_to_care
+  direction: strengthens
+  strength: moderate
+  description: Facilities improve access to care beyond overdose prevention, potentially
+    enhancing overall health outcomes and treatment engagement

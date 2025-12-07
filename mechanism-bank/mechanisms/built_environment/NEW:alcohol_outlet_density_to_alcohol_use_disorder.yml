@@ -1,0 +1,59 @@
+id: NEW:alcohol_outlet_density_to_alcohol_use_disorder
+name: Alcohol Outlet Density → Alcohol Use Disorder
+from_node:
+  node_id: NEW:alcohol_outlet_density
+  node_name: Alcohol Outlet Density
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of alcohol outlets increases physical availability and accessibility of alcohol
+  in neighborhoods'
+- 'Step 2: Increased competition among retailers creates a competitive local market that reduces product
+  costs'
+- 'Step 3: Greater visibility of alcohol products raises awareness of alcohol brands and normalizes consumption'
+- 'Step 4: Local social norms shift to favor alcohol consumption when outlets are ubiquitous'
+- 'Step 5: Increased alcohol consumption leads to higher rates of alcohol use disorder'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: N. Shortt et al. 2015. "A cross-sectional analysis of the relationship between tobacco
+    and alcohol outlet density and neighbourhood deprivation." https://doi.org/10.1186/s12889-015-2321-1
+  supporting_citations:
+  - Additional citations require full-text access - abstract references existing literature on socio-economic
+    gradient in alcohol-related harm
+  - Additional citations require full-text access - abstract references prior research on availability
+    and consumption relationship
+  - Additional citations require full-text access - abstract references supply-side intervention literature
+  doi: 10.1186/s12889-015-2321-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher density of alcohol outlets per 10,000 population is associated with increased alcohol
+  availability, which contributes to alcohol-related harm through multiple pathways including increased
+  supply, lower prices through competition, enhanced brand awareness, and normalization of consumption.
+quantitative_effects:
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study covers all of Scotland using small neighbourhood-level analysis (datazones);
+    significant variation found by neighbourhood deprivation quintile
+moderators:
+- name: neighbourhood_income_deprivation
+  direction: strengthens
+  strength: strong
+  description: Most deprived quintile of neighbourhoods had highest density of off-sales alcohol outlets;
+    least deprived had lowest density
+structural_competency:
+  equity_implications: This mechanism explicitly traces alcohol-related health inequities to structural
+    factors - the spatial distribution of retail outlets - rather than individual choice. The paper demonstrates
+    that deprived communities face disproportionate exposure to alcohol retail environments, creating
+    a structural pathway to health inequity. Policy implications focus on supply-side interventions rather
+    than individual behavior change.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.488827'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

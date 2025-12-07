@@ -1,0 +1,56 @@
+id: NEW:convalescent_plasma_treatment_to_NEW:mechanical_ventilation_use
+name: Convalescent Plasma Treatment for COVID-19 → Mechanical Ventilation Use
+from_node:
+  node_id: NEW:convalescent_plasma_treatment
+  node_name: Convalescent Plasma Treatment for COVID-19
+to_node:
+  node_id: NEW:mechanical_ventilation_use
+  node_name: Mechanical Ventilation Use
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Convalescent plasma provides passive antibody therapy'
+- 'Step 2: Antibodies may modulate immune response and viral replication'
+- 'Step 3: Theoretical prevention of respiratory deterioration requiring ventilation'
+- 'Step 4: Meta-analysis showed non-significant trend toward reduced ventilation (RR 0.76)'
+- 'Step 5: Wide confidence intervals indicate substantial uncertainty'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'P. Janiaud et al. 2021. "Association of Convalescent Plasma Treatment With Clinical
+    Outcomes in Patients With COVID-19: A Systematic Review and Meta-analysis.." https://doi.org/10.1001/jama.2021.2747'
+  supporting_citations:
+  - Four peer-reviewed RCTs included in primary analysis
+  - Cochrane COVID-19 trial registry
+  - Living Overview of Evidence platform studies
+  - Additional citations require full-text access
+  doi: 10.1001/jama.2021.2747
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among peer-reviewed RCTs, the summary RR for mechanical ventilation use was 0.76 (95% CI
+  0.20-2.87), with an absolute risk difference of -2.56% (95% CI -13.16% to 8.05%). The wide confidence
+  intervals and low certainty of evidence indicate no significant benefit was demonstrated.
+quantitative_effects:
+  effect_size:
+    value: 0.76
+    type: relative_risk
+    ci_lower: 0.2
+    ci_upper: 2.87
+  sample_size: 1060
+moderators:
+- name: evidence_precision
+  direction: weakens
+  strength: strong
+  description: Low certainty of evidence due to imprecision with very wide confidence intervals crossing
+    null
+structural_competency:
+  equity_implications: Mechanical ventilation represents a critical healthcare resource that was severely
+    strained during COVID-19 surges. Access to ventilators and ICU beds varied substantially by geographic
+    region, hospital capacity, and healthcare system funding—structural factors that affected COVID-19
+    outcomes inequitably.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.869984'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

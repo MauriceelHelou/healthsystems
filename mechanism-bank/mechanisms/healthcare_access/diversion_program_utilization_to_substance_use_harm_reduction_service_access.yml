@@ -1,0 +1,56 @@
+id: diversion_program_utilization_to_substance_use_harm_reduction_service_access
+name: Criminal Justice Diversion Program Participation → Substance Use Harm Reduction Service Access
+from_node:
+  node_id: diversion_program_utilization
+  node_name: Criminal Justice Diversion Program Participation
+to_node:
+  node_id: substance_use_harm_reduction_service_access
+  node_name: Substance Use Harm Reduction Service Access
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Criminal justice diversion programs redirect individuals from incarceration to treatment'
+- 'Step 2: Treatment engagement creates opportunity for comprehensive health education'
+- 'Step 3: OEND programs can be integrated into addiction treatment settings'
+- 'Step 4: Systematic naloxone education and distribution can occur at treatment entry'
+- 'Step 5: Increased harm reduction knowledge and naloxone access reduces overdose mortality risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: R. Gicquelais et al. 2019. "Justice involvement patterns, overdose experiences, and
+    naloxone knowledge among men and women in criminal justice diversion addiction treatment." https://doi.org/10.1186/s12954-019-0317-3
+  supporting_citations:
+  - Additional citations require full-text access - abstract references diversion program effectiveness
+    literature
+  - Additional citations require full-text access - abstract references OEND integration in treatment
+    settings
+  - Additional citations require full-text access - abstract references post-treatment overdose risk literature
+  doi: 10.1186/s12954-019-0317-3
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Criminal justice diversion programs represent a structural opportunity to provide overdose
+  education and naloxone distribution (OEND) to high-risk individuals, as all participants showed high
+  propensity for overdose exposure (68% personal, 79% witnessed) regardless of justice involvement pattern,
+  yet only 56% had basic naloxone knowledge.
+quantitative_effects:
+  sample_size: 514
+moderators:
+- name: justice_involvement_pattern
+  direction: u_shaped
+  strength: weak
+  description: Both high involvement (younger first arrest, more lifetime arrests) and low involvement
+    (older first arrest, more recent arrests) classes showed similar low naloxone knowledge, indicating
+    universal need for OEND
+structural_competency:
+  equity_implications: This mechanism identifies diversion programs as a critical structural intervention
+    point. The study demonstrates that the population entering these programs has substantial unmet harm
+    reduction needs regardless of their justice involvement history. The conclusion that 'all PWUO in
+    criminal justice diversion programs could benefit from OEND' represents a policy-actionable finding
+    that shifts responsibility from individuals to systems. The structure of diversion programs can be
+    modified to include systematic OEND as standard care.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.554516'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

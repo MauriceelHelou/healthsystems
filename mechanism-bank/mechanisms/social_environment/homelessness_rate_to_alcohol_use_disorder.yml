@@ -1,0 +1,58 @@
+id: homelessness_rate_to_alcohol_use_disorder
+name: Homelessness Rate → Alcohol Use Disorder
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Adolescent homelessness removes protective factors including stable family environment and
+  adult supervision'
+- 'Step 2: Street environments and unstable housing situations increase exposure to alcohol use and access'
+- 'Step 3: Chronic stress, trauma, and mental health symptoms associated with homelessness drive self-medication
+  behaviors'
+- 'Step 4: Lack of healthcare access prevents early intervention for problematic alcohol use patterns'
+- 'Step 5: Alcohol use disorder develops as coping mechanism becomes entrenched without treatment availability'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: 'David Borkenhagen et al. 2025. "Prevalence of Mental Health and Substance Use Disorders
+    Among Adolescents Experiencing Homelessness: A Systematic Review.." https://doi.org/10.1007/s10597-025-01492-7'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 2 studies meeting criteria
+  - Earlier versions of DSM and ICD diagnostic classifications referenced
+  - Studies using validated diagnostic measures in homeless adolescent populations
+  doi: 10.1007/s10597-025-01492-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol abuse disorder affected 38% of homeless adolescents, representing the third most
+  common disorder identified. This reflects how housing instability creates structural conditions that
+  dramatically elevate alcohol use disorder risk in adolescent populations.
+quantitative_effects:
+  effect_size:
+    value: 38.0
+    type: percentage_change
+    ci_lower: 28.0
+    ci_upper: 48.0
+  sample_size: 226
+moderators:
+- name: pre_existing_mental_health_disorders
+  direction: strengthens
+  strength: strong
+  description: Co-occurring mental health disorders increase vulnerability to alcohol use disorder among
+    homeless adolescents
+structural_competency:
+  equity_implications: High alcohol use disorder prevalence among homeless youth reflects structural determinants
+    including inadequate youth housing programs, insufficient mental health services, and lack of early
+    intervention systems. The mechanism avoids individual blame by recognizing that housing instability
+    creates environments conducive to alcohol misuse. Equity considerations include that youth of color
+    and LGBTQ+ youth face higher homelessness rates and thus greater exposure to this risk pathway.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.513157'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

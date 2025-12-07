@@ -1,0 +1,44 @@
+id: NEW:alcohol_consumption_medium_volume_to_all_cause_mortality_rate
+name: Medium Volume Alcohol Consumption → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:alcohol_consumption_medium_volume
+  node_name: Medium Volume Alcohol Consumption
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Medium-volume alcohol consumption patterns established in population'
+- 'Step 2: Chronic alcohol exposure causes cumulative organ damage (liver, cardiovascular, neurological)'
+- 'Step 3: Dose-response relationship emerges with increasing consumption levels'
+- 'Step 4: All-cause mortality risk increases monotonically with consumption volume'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'Peter Sarich et al. 2024. "The association between alcohol consumption and all-cause
+    mortality: An umbrella review of systematic reviews using lifetime abstainers or low-volume drinkers
+    as a reference group.." https://doi.org/10.1111/add.16446'
+  supporting_citations:
+  - Additional citations require full-text access - umbrella review analyzed 25 systematic reviews
+  - One low-risk-of-bias review provided primary effect estimates
+  - 17 of 20 excluded reviews showed methodological bias from sick-quitter effect
+  doi: 10.1111/add.16446
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Medium-volume alcohol consumption is associated with 13% increased all-cause mortality risk
+  (RR=1.13) compared to occasional drinking in the methodologically rigorous low-risk-of-bias review.
+quantitative_effects:
+  effect_size:
+    value: 1.13
+    type: relative_risk
+structural_competency:
+  equity_implications: The monotonic dose-response relationship challenges structural messaging and policies
+    that normalize 'moderate' drinking. This has implications for alcohol taxation, availability policies,
+    and public health messaging.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.285415'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

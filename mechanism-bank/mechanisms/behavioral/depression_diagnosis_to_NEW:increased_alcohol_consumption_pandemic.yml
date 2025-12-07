@@ -1,0 +1,60 @@
+id: depression_diagnosis_to_NEW:increased_alcohol_consumption_pandemic
+name: Depression Diagnosis → Increased Alcohol Consumption During Pandemic
+from_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+to_node:
+  node_id: NEW:increased_alcohol_consumption_pandemic
+  node_name: Increased Alcohol Consumption During Pandemic
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Pre-existing depression creates vulnerability to stress-induced coping behaviors'
+- 'Step 2: Pandemic disrupts mental health treatment access and social support systems'
+- 'Step 3: Current depression symptoms compound with pandemic-related stressors'
+- 'Step 4: Alcohol used as self-medication for depression and anxiety symptoms'
+- 'Step 5: Among binge drinkers, this leads to increased alcohol consumption patterns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Weerakoon et al. 2020. "Longer time spent at home during COVID-19 pandemic is associated
+    with binge drinking among US adults." https://doi.org/10.1080/00952990.2020.1832508
+  supporting_citations:
+  - Additional citations require full-text access - abstract references relationship between depression
+    and alcohol consumption
+  - Reference to COVID-19 pandemic exacerbating mental health stressors
+  - Reference to prior research on pandemic-related stress and substance use
+  doi: 10.1080/00952990.2020.1832508
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Binge drinkers with a previous diagnosis of depression and current depression symptoms had
+  1.77 times greater odds of increased alcohol consumption during the pandemic compared to those reporting
+  no depression. This highlights the compounding effect of mental health conditions on alcohol use during
+  periods of structural disruption.
+quantitative_effects:
+  effect_size:
+    value: 1.77
+    type: odds_ratio
+    ci_lower: 1.16
+    ci_upper: 2.73
+  sample_size: 1982
+moderators:
+- name: binge_drinking_status
+  direction: strengthens
+  strength: strong
+  description: Effect observed specifically among binge drinkers - 60% of binge drinkers increased consumption
+    compared to 28% of non-binge drinkers
+structural_competency:
+  equity_implications: This mechanism illustrates health inequity where those with pre-existing mental
+    health vulnerabilities experience disproportionate impacts from structural disruptions. The pathway
+    reflects inadequate mental health infrastructure that fails to maintain continuity of care during
+    crises, forcing vulnerable individuals toward maladaptive coping. Rather than blaming individual choices,
+    this highlights systemic failures in mental health support systems and the need for integrated behavioral
+    health responses during public health emergencies. Equity implications are significant for populations
+    with limited mental health access pre-pandemic.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.030614'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

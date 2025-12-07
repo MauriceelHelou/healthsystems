@@ -1,0 +1,53 @@
+id: NEW:brief_intervention_single_session_to_alcohol_use_disorder
+name: Brief Intervention Single Session → Alcohol Use Disorder
+from_node:
+  node_id: NEW:brief_intervention_single_session
+  node_name: Brief Intervention Single Session
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Brief interventions delivered in single face-to-face sessions represent the most commonly studied
+  approach in the literature'
+- 'Step 2: Single session provides opportunity for screening, feedback, and initial motivation enhancement'
+- 'Step 3: Limited intensity may provide less sustained behavior change support compared to multiple sessions'
+- 'Step 4: Effect on harmful alcohol use is present but smaller than more intensive approaches'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'Chia Jie Tan et al. 2023. "Comparative effectiveness of psychosocial interventions
+    in adults with harmful use of alcohol: a systematic review and network meta-analysis.." https://doi.org/10.1111/add.16187'
+  supporting_citations:
+  - Six studies in the network meta-analysis examined brief interventions delivered once via face-to-face
+    sessions
+  - Eleven TIP (theme, intensity, provider/platform) features were included in the network meta-analysis
+  - Evidence certainty for most treatment comparisons was low per CINeMA assessment
+  doi: 10.1111/add.16187
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief interventions delivered in single face-to-face sessions were the most commonly studied
+  approach (6 of 19 studies) in the systematic review. While these represent pragmatic, accessible interventions,
+  the network meta-analysis suggested they are less effective than more intensive combined multi-session
+  approaches for reducing harmful alcohol consumption.
+quantitative_effects:
+  sample_size: 7149
+moderators:
+- name: intervention_intensity
+  direction: weakens
+  strength: moderate
+  description: Single session delivery associated with smaller effects compared to multiple session approaches
+structural_competency:
+  equity_implications: Brief single-session interventions are often implemented due to healthcare system
+    constraints including limited time, funding, and workforce capacity rather than optimal patient outcomes.
+    The finding that more intensive interventions are more effective highlights how healthcare system
+    resource allocation decisions affect treatment effectiveness. Populations served by under-resourced
+    healthcare systems may receive only brief interventions, resulting in suboptimal outcomes and perpetuating
+    health disparities in alcohol-related harms.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.005361'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

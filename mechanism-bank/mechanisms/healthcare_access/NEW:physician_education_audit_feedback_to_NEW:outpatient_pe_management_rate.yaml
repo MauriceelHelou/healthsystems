@@ -1,0 +1,60 @@
+id: NEW:physician_education_audit_feedback_to_NEW:outpatient_pe_management_rate
+name: Physician Education and Audit Feedback Intervention → Outpatient Pulmonary Embolism
+  Management Rate
+from_node:
+  node_id: NEW:physician_education_audit_feedback
+  node_name: Physician Education and Audit Feedback Intervention
+to_node:
+  node_id: NEW:outpatient_pe_management_rate
+  node_name: Outpatient Pulmonary Embolism Management Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Study champions provide structured in-person education to emergency department
+  and hospitalist physicians about evidence-based outpatient PE management, the validated
+  PE Severity Index risk stratification tool, and clinical decision support system
+  (CDSS) availability'
+- 'Step 2: Ongoing promotional activities including educational reviews, department-wide
+  emails with monthly enrollment reports, comparison of CDSS use rates across sites,
+  and recognition of physicians with high enrollment reinforce behavior change'
+- 'Step 3: Weekly audit and feedback emails to individual physicians notify CDSS activators
+  with thank-you notes and remind non-activators of missed opportunities and study
+  objectives'
+- 'Step 4: Small gift card incentives for first enrollments provide early motivation
+  for behavior adoption'
+- 'Step 5: Increased physician awareness, knowledge, and engagement with evidence-based
+  risk stratification leads to greater identification of PE patients eligible for
+  safe outpatient management rather than hospitalization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Vinson et al. 2018. Increasing Safe Outpatient Management of
+    Emergency Department Patients With Pulmonary Embolism. Annals of Internal Medicine.
+  supporting_citations: []
+description: A multicomponent intervention combining physician education, audit and
+  feedback, early incentives, and clinical decision support system access increases
+  the rate of outpatient management for emergency department patients with pulmonary
+  embolism. Study champions provide structured education about evidence-based outpatient
+  PE management and the PE Severity Index, while ongoing audit and feedback through
+  weekly emails and monthly comparison reports reinforce behavior change among emergency
+  physicians.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Presence of onsite study champion
+  direction: strengthens
+  strength: strong
+  description: Intervention sites were selected based on having an onsite emergency
+    physician-researcher to serve as study champion; sites without champions (even
+    with CDSS access) showed minimal use
+- name: Availability of clinical decision support system
+  direction: strengthens
+  strength: moderate
+  description: Web-based CDSS integrated into EHR workflow facilitated identification
+    of patients eligible for outpatient care using PE Severity Index and exclusion
+    criteria
+- name: Established timely follow-up mechanisms
+  direction: strengthens
+  strength: moderate
+  description: Pre-existing expeditious postdischarge follow-up with anticoagulation
+    service and primary care was essential infrastructure for safe outpatient management

@@ -1,0 +1,64 @@
+id: NEW:chronic_ethanol_neuroinflammation_to_alcohol_use_disorder
+name: Chronic Ethanol-Induced Oxidative Stress and Neuroinflammation → Maintenance
+  of Chronic Alcohol Intake
+from_node:
+  node_id: NEW:chronic_ethanol_neuroinflammation
+  node_name: Chronic Ethanol-Induced Oxidative Stress and Neuroinflammation
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Maintenance of Chronic Alcohol Intake
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic ethanol intake promotes lipopolysaccharide (LPS) diffusion from
+  the gut into systemic circulation, triggering neuroinflammatory cascades'
+- 'Step 2: Oxygen radicals generated from catechol/salsolinol oxidation contribute
+  to oxidative stress in brain tissue'
+- 'Step 3: Oxidative stress and neuroinflammation potentiate each other, creating
+  a self-reinforcing cycle that perpetuates alcohol-seeking behavior'
+- 'Step 4: This neurobiological state maintains chronic alcohol intake independent
+  of the initial acetaldehyde-mediated reinforcement mechanisms'
+- 'Step 5: Interventions targeting oxidative stress (N-acetyl cysteine, 60-70% reduction)
+  and neuroinflammation (mesenchymal stem cells) effectively reduce maintenance of
+  chronic intake and relapse'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Y. Israel et al. 2017. Acquisition, Maintenance and Relapse-Like
+    Alcohol Drinking: Lessons from the UChB Rat Line. Frontiers in Behavioral Neuroscience.'
+  supporting_citations: []
+description: Chronic ethanol consumption induces a self-perpetuating cycle of oxidative
+  stress and neuroinflammation that maintains alcohol intake independently of initial
+  reinforcement mechanisms. This process involves gut-derived LPS translocation and
+  reactive oxygen species from salsolinol oxidation. The oxidative stress-neuroinflammation
+  axis potentiates itself, creating neurobiological conditions that sustain chronic
+  drinking behavior. Crucially, while acetaldehyde/salsolinol drive acquisition of
+  alcohol intake, maintenance depends on these oxidative-inflammatory mechanisms,
+  as demonstrated by the marked effectiveness of antioxidant (NAC) and anti-inflammatory
+  (MSC) interventions in reducing chronic intake.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.65
+    type: percent_reduction
+    ci_lower: 0.6
+    ci_upper: 0.7
+  p_value: null
+  sample_size: null
+moderators:
+- name: Antioxidant administration (NAC)
+  direction: weakens
+  strength: strong
+  description: N-acetyl cysteine administration reduced chronic ethanol maintenance
+    by 60-70% without affecting initial intake
+- name: Anti-inflammatory intervention (MSCs)
+  direction: weakens
+  strength: strong
+  description: Mesenchymal stem cell administration inhibited chronic intake maintenance
+    and reduced relapse-like drinking by up to 85% for 40 days
+- name: Withdrawal duration
+  direction: weakens
+  strength: moderate
+  description: Prolonged ethanol withdrawal partially returns the requirement for
+    acetaldehyde synthesis, suggesting neuroadaptation reversal

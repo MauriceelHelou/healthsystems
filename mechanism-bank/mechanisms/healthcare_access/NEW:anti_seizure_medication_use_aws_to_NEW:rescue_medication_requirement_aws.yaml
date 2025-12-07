@@ -1,0 +1,53 @@
+id: NEW:anti_seizure_medication_use_aws_to_NEW:rescue_medication_requirement_aws
+name: Anti-Seizure Medication Use in Alcohol Withdrawal Syndrome → Rescue Medication
+  Requirement in AWS
+from_node:
+  node_id: NEW:anti_seizure_medication_use_aws
+  node_name: Anti-Seizure Medication Use in Alcohol Withdrawal Syndrome
+to_node:
+  node_id: NEW:rescue_medication_requirement_aws
+  node_name: Rescue Medication Requirement in AWS
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Anti-seizure medications (ASMs) are administered as primary treatment for
+  alcohol withdrawal syndrome (AWS) instead of benzodiazepines'
+- 'Step 2: ASMs demonstrate inferior efficacy in controlling AWS symptoms compared
+  to benzodiazepines, the current standard of care'
+- 'Step 3: Inadequate symptom control with ASMs leads to breakthrough withdrawal symptoms
+  requiring additional pharmacological intervention'
+- 'Step 4: Patients on ASMs have significantly higher odds (OR: 3.50) of requiring
+  rescue medications to manage uncontrolled AWS symptoms'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'Jou-Yin Lai et al. 2021. The Effectiveness and Tolerability of
+    Anti-Seizure Medication in Alcohol Withdrawal Syndrome: A Systematic Review, Meta-Analysis
+    and GRADE of the evidence. Addiction.'
+  supporting_citations: []
+description: Anti-seizure medication use in alcohol withdrawal syndrome is associated
+  with a 3.5-fold increase in the odds of requiring rescue medications compared to
+  benzodiazepine treatment. This systematic review and meta-analysis of 24 RCTs (n=2223)
+  found no evidence supporting ASMs as first-line treatment for AWS, with significantly
+  higher rescue medication requirements indicating inferior symptom control.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.5
+    type: odds_ratio
+    ci_lower: 1.32
+    ci_upper: 9.28
+  p_value: 0.012
+  sample_size: 2223
+moderators:
+- name: Comparison group
+  direction: strengthens
+  strength: strong
+  description: The increased rescue medication requirement is specifically observed
+    when ASMs are compared to benzodiazepines rather than placebo
+- name: Study recency
+  direction: weakens
+  strength: moderate
+  description: Majority of included studies were conducted before 2000, potentially
+    limiting applicability to current clinical practice

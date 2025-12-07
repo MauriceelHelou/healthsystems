@@ -1,0 +1,46 @@
+id: noise_exposure_to_NEW:diabetes_incidence
+name: Road Traffic Noise Exposure → Diabetes Mellitus Incidence
+from_node:
+  node_id: noise_exposure
+  node_name: Road Traffic Noise Exposure
+to_node:
+  node_id: NEW:diabetes_incidence
+  node_name: Diabetes Mellitus Incidence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Chronic road traffic noise exposure activates physiological stress response systems'
+- 'Step 2: Sustained cortisol elevation and sympathetic activation impair glucose metabolism'
+- 'Step 3: Insulin resistance develops through chronic metabolic stress'
+- 'Step 4: Progression from normal glucose tolerance to prediabetes and diabetes occurs'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: 'D. Vienneau et al. 2024. "Long-term exposure to transportation noise and diabetes
+    mellitus mortality: a national cohort study and updated meta-analysis." https://doi.org/10.1186/s12940-024-01084-0'
+  supporting_citations:
+  - Meta-analysis of 10 incidence studies for road traffic noise
+  - Previous evidence showing associations with cardio-metabolic diseases
+  - Additional citations require full-text access
+  doi: 10.1186/s12940-024-01084-0
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis of 10 studies examining road traffic noise and diabetes incidence demonstrates
+  a 7% increased risk per 10 dB increase in noise exposure. This effect size is consistent with the mortality
+  findings, supporting a causal pathway from noise to diabetes development.
+quantitative_effects:
+  effect_size:
+    value: 1.07
+    type: relative_risk
+    ci_lower: 1.05
+    ci_upper: 1.09
+structural_competency:
+  equity_implications: The consistency between incidence and mortality associations strengthens the evidence
+    for a causal relationship and supports policy action to reduce transportation noise exposure, particularly
+    in communities with high chronic disease burden.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.416651'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

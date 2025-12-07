@@ -1,0 +1,64 @@
+id: NEW:brief_alcohol_intervention_general_medical_setting_to_binge_drinking
+name: Brief Alcohol Intervention in General Medical Settings → Alcohol Use (Binge
+  Drinking)
+from_node:
+  node_id: NEW:brief_alcohol_intervention_general_medical_setting
+  node_name: Brief Alcohol Intervention in General Medical Settings
+to_node:
+  node_id: binge_drinking
+  node_name: Alcohol Use (Binge Drinking)
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Patients presenting in general medical settings (primary care, outpatient
+  clinics) are screened for alcohol use, identifying those with hazardous drinking
+  patterns including binge drinking'
+- 'Step 2: Brief interventions (typically 5-30 minutes) are delivered by healthcare
+  providers, employing motivational interviewing techniques, personalized feedback,
+  and goal-setting to enhance motivation for behavior change'
+- 'Step 3: The medical setting context leverages the ''teachable moment'' when patients
+  may be more receptive to health behavior advice from trusted healthcare providers'
+- 'Step 4: Patients develop increased awareness of drinking patterns, associated health
+  risks, and strategies for reducing consumption'
+- 'Step 5: Behavioral change results in reduced alcohol consumption, equivalent to
+  approximately one fewer drinking day per month, thereby reducing binge drinking
+  episodes'
+evidence:
+  quality_rating: A
+  n_studies: 111
+  primary_citation: 'E. Tanner‐Smith et al. 2021. Effects of brief substance use interventions
+    delivered in general medical settings: a systematic review and meta-analysis.
+    Addiction.'
+  supporting_citations: []
+description: Alcohol-targeted brief interventions delivered in general medical settings
+  produce small but beneficial reductions in alcohol consumption. The meta-analysis
+  of 111 trials found a significant effect (Hedges' g = 0.17) when interventions were
+  delivered in general medical settings specifically. This effect size translates
+  to approximately one fewer drinking day per month. The mechanism operates through
+  screening, brief counseling, and leveraging the trusted healthcare provider relationship
+  to motivate behavior change. Notably, interventions delivered in emergency departments
+  showed inconclusive effects, suggesting the general medical setting context is a
+  key moderator.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.17
+    type: hedges_g
+    ci_lower: 0.1
+    ci_upper: 0.24
+  p_value: null
+  sample_size: 62263
+moderators:
+- name: delivery_setting
+  direction: strengthens
+  strength: strong
+  description: Brief interventions delivered in general medical settings (primary
+    care, outpatient) showed significant beneficial effects on alcohol use (g=0.17),
+    while those delivered in emergency department/trauma centers showed inconclusive
+    effects (g=0.05)
+- name: provider_type
+  direction: strengthens
+  strength: moderate
+  description: For drug-targeted interventions, delivery by general practitioners
+    yielded larger improvements (g=0.19); similar patterns may apply to alcohol interventions

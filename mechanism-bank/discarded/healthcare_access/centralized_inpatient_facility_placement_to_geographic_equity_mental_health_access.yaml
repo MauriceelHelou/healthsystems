@@ -1,0 +1,47 @@
+id: centralized_inpatient_facility_placement_to_geographic_equity_mental_health_access
+name: Centralized Inpatient Mental Health Facility Placement → Geographic Equity in
+  Mental Health Access
+from_node:
+  node_id: centralized_inpatient_facility_placement
+  node_name: Centralized Inpatient Mental Health Facility Placement
+to_node:
+  node_id: geographic_equity_mental_health_access
+  node_name: Geographic Equity in Mental Health Access
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Inpatient mental health services can be centrally located without creating
+  significant distance decay effects for most psychiatric conditions'
+- 'Step 2: The acute nature of inpatient admissions and legal obligations for care
+  provision override typical geographic barriers'
+- 'Step 3: Centralized placement allows resource concentration and efficiency without
+  substantially impacting utilization patterns for most disorders'
+- 'Step 4: Geographic equity in inpatient access is maintained despite centralization,
+  except for specific conditions like organic mental disorders'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'N. Stulz et al. 2018. "The gravitational force of mental health
+    services: distance decay effects in a rural Swiss service area." *BMC Health Services
+    Research*. https://doi.org/10.1186/s12913-018-2888-1'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.485115'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: mental_disorder_type
+  direction: weakens
+  strength: moderate
+  description: Exception observed for organic mental disorders where distance effects
+    persist even for inpatient care, indicating some diagnostic categories remain
+    sensitive to geographic barriers
+- name: service_acuity_level
+  direction: strengthens
+  strength: strong
+  description: High acuity and often involuntary nature of inpatient psychiatric admissions
+    reduces sensitivity to geographic distance for most conditions
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/centralized_inpatient_facility_placement_to_geographic_equity_mental_health_access.yaml
+_category: healthcare_access

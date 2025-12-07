@@ -1,0 +1,52 @@
+id: sud_medication_treatment_rate_oud_to_emergency_department_visit_rate
+name: Opioid Substitution Therapy → Emergency Department Visit Rate
+from_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: Opioid Substitution Therapy
+to_node:
+  node_id: emergency_department_visit_rate
+  node_name: Emergency Department Visit Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Opioid substitution therapy (OST) such as methadone or buprenorphine stabilizes
+  opioid-dependent individuals by providing controlled, long-acting opioid agonists'
+- 'Step 2: OST reduces illicit opioid use, injection drug use, and associated high-risk
+  behaviors that lead to medical emergencies'
+- 'Step 3: Stabilized patients experience fewer overdoses, infections, and acute withdrawal
+  episodes that would otherwise require emergency care'
+- 'Step 4: OST programs often connect patients with primary care and preventive services,
+  shifting care from emergency to routine settings'
+- 'Step 5: Reduced frequency of acute drug-related crises leads to decreased emergency
+  department presentations'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'D. Lewer et al. 2019. Frequency of health‐care utilization by
+    adults who use illicit drugs: a systematic review and meta‐analysis. Addiction.'
+  supporting_citations: []
+description: A systematic review and meta-analysis of 25 studies examining ED utilization
+  found that opioid substitution therapy was consistently associated with reduced
+  emergency department presentation among people who use illicit drugs. People who
+  use drugs have ED visit rates approximately 4.8 times higher than the general population
+  (151 per 100 person-years), and OST provides a mechanism to reduce this disparity
+  by stabilizing patients, reducing acute drug-related emergencies, and connecting
+  them with routine healthcare.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Housing stability
+  direction: strengthens
+  strength: moderate
+  description: Unstable housing is a predictor of increased healthcare utilization;
+    OST effectiveness may be moderated by housing status
+- name: Drug injection
+  direction: strengthens
+  strength: moderate
+  description: Drug injection is associated with higher ED utilization; OST may have
+    greater impact among those who inject
+- name: Mental health problems
+  direction: weakens
+  strength: moderate
+  description: Co-occurring mental health problems are associated with higher healthcare
+    utilization and may reduce OST effectiveness in lowering ED visits

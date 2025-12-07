@@ -1,0 +1,87 @@
+id: school_funding_to_educational_attainment
+name: School Funding Equity -> Educational Attainment
+from_node:
+  node_id: school_funding_equity
+  node_name: School Funding Equity and Adequacy
+  node_type: stock
+to_node:
+  node_id: educational_attainment
+  node_name: Educational Attainment Level
+  node_type: stock
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: School finance reforms increase per-pupil spending in low-income districts'
+- 'Step 2: Additional resources enable smaller class sizes, better facilities, and more experienced teachers'
+- 'Step 3: Improved school quality increases student engagement and reduces dropout rates'
+- 'Step 4: Higher graduation rates and educational attainment follow from sustained investment'
+- 'Step 5: Long-term gains persist into adulthood through higher earnings and reduced poverty'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Jackson, C. Kirabo, Rucker C. Johnson, and Claudia Persico. 2016. "The Effects of School Spending on Educational and Economic Outcomes: Evidence from School Finance Reforms." Quarterly Journal of Economics 131(1): 157-218.'
+  supporting_citations:
+  - 'Lafortune, Julien, Jesse Rothstein, and Diane Whitmore Schanzenbach. 2018. "School Finance Reform and the Distribution of Student Achievement." American Economic Journal: Applied Economics 10(2): 1-26.'
+  - 'Darling-Hammond, Linda. 1998. "Inequality in Teaching and Schooling: How Opportunity Is Rationed to Students of Color in America." National Academy Press.'
+  doi: 10.1093/qje/qjv036
+  journal: Quarterly Journal of Economics
+  year: 2016
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 10
+    type: percentage_change
+    ci_lower: null
+    ci_upper: null
+    ci_level: null
+  sample_size: null
+  interpretation: "A 10% increase in per-pupil spending each year for all 12 years of public school leads to 0.43 additional years of education, 9.5% higher earnings, and 6.8 percentage-point reduction in adult poverty for low-income children"
+  additional_effects:
+  - metric: Attainment gap elimination threshold
+    value: 25
+    type: percentage_change
+    notes: "A 25% increase in spending over all school-age years is sufficient to eliminate the attainment gap between low- and high-income children"
+  - metric: High school graduation rate increase
+    value: null
+    type: percentage_change
+    notes: "Spending increases significantly raised high school graduation rates for low-income children"
+last_updated: '2025-11-30'
+version: '1.0'
+description: School finance reforms that increase per-pupil spending for low-income districts produce significant long-term improvements in educational attainment, earnings, and poverty reduction. Effects are concentrated among children from low-income families, with a 25% spending increase sufficient to eliminate attainment gaps between low- and high-income children.
+moderators:
+- name: baseline_funding_level
+  direction: strengthens
+  strength: strong
+  description: Effects larger in districts with lower baseline per-pupil spending
+- name: spending_duration
+  direction: strengthens
+  strength: strong
+  description: Cumulative effects across all school years are larger than single-year effects
+- name: income_level
+  direction: strengthens
+  strength: strong
+  description: Low-income students benefit most from spending increases
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: School funding tied to local property taxes perpetuates wealth-based educational inequality. Historical redlining and segregation created property value disparities that translate into school funding gaps. School finance litigation and reform can redistribute resources but requires sustained political commitment. Federal Title I funding partially addresses but does not eliminate inequities.
+assumptions:
+- School funding measured as per-pupil expenditure adjusted for cost differences
+- Educational attainment measured as completed years of schooling
+- Effects operate through school quality improvements
+limitations:
+- Political resistance to school finance reform may limit implementation
+- Spending alone may not improve outcomes without effective resource allocation
+- Private school and homeschool options may attenuate public school investment effects
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Impact varies by state school finance system and baseline funding levels
+  relevant_geographies:
+  - States with court-ordered finance reform show larger impacts
+  - Low-wealth rural districts benefit from state-level equalization
+  - Urban districts with concentrated poverty need additional resources
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

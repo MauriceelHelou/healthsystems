@@ -1,0 +1,51 @@
+id: alcohol_outlet_hours_restriction_to_violent_crime_rate
+name: Alcohol Outlet Hours Restriction → Violent Crime Rate
+from_node:
+  node_id: alcohol_outlet_hours_restriction
+  node_name: Alcohol Outlet Hours Restriction
+to_node:
+  node_id: violent_crime_rate
+  node_name: Violent Crime Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Statutory reduction in bar/tavern operating hours (from 20 to 13 hours
+  per day) decreases temporal availability of alcohol sales'
+- 'Step 2: Reduced late-night alcohol availability limits congregation of people during
+  high-risk hours (8pm-4am)'
+- 'Step 3: Decreased late-night alcohol consumption and social congregation reduces
+  opportunities for violence-triggering interactions'
+- 'Step 4: Lower density of intoxicated individuals in public spaces during late-night
+  hours reduces violent crime incidents (homicide, robbery, assault, rape)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Erika M Rosen et al. 2024. "Interrupted Time Series Analysis of
+    Bar/Tavern Closing Hours and Violent Crime.." *JAMA Internal Medicine*. https://doi.org/10.1001/jamainternmed.2024.0255
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.059392'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: temporal_pattern
+  direction: strengthens
+  strength: strong
+  description: No immediate level change observed in first month after implementation,
+    but sustained slope decrease of 23% per year after initial month, suggesting cumulative
+    effects over time
+- name: baseline_neighborhood_characteristics
+  direction: strengthens
+  strength: moderate
+  description: Control areas were matched on baseline crime rate, alcohol outlet density,
+    and neighborhood disadvantage score, suggesting the effect operates independently
+    of these structural factors
+- name: spatial_proximity_to_outlets
+  direction: strengthens
+  strength: strong
+  description: Effects measured within 800-ft buffer around bars/taverns, indicating
+    localized geographic concentration of crime reduction near alcohol outlets
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/alcohol_outlet_hours_restriction_to_violent_crime_rate.yaml
+_category: political

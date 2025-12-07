@@ -1,0 +1,56 @@
+id: NEW:veteran_healthcare_system_status_to_NEW:ptsd_sud_treatment_response
+name: Veteran Healthcare System Status → PTSD-SUD Treatment Response
+from_node:
+  node_id: NEW:veteran_healthcare_system_status
+  node_name: Veteran Healthcare System Status
+to_node:
+  node_id: NEW:ptsd_sud_treatment_response
+  node_name: PTSD-SUD Treatment Response
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Veteran status confers eligibility for VA healthcare system with specialized trauma services'
+- 'Step 2: Military service experiences create specific trauma profiles and help-seeking patterns'
+- 'Step 3: VA system culture and peer veteran presence may enhance treatment engagement'
+- 'Step 4: Veterans demonstrate stronger response to trauma-focused psychotherapy for alcohol outcomes
+  compared to civilians receiving similar treatments'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Shannon M Blakey et al. 2025. "Treatment for co-occurring posttraumatic stress disorder
+    and substance use disorders among veterans and civilians: A test of causally moderated comparative
+    effectiveness.." https://doi.org/10.1037/tra0002043'
+  supporting_citations:
+  - Additional citations require full-text access - abstract specifically references epidemiological research
+    suggesting veteran status relates to differential treatment response
+  - Additional citations require full-text access - abstract references qualitative research on veteran
+    status and PTSD+SUD treatment
+  - Additional citations require full-text access - abstract notes this is first study to examine moderating
+    effect of veteran status on PTSD+SUD treatment
+  doi: 10.1037/tra0002043
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Veteran status serves as a causal moderator of treatment effectiveness for co-occurring PTSD
+  and SUD. Veterans showed stronger beneficial effects from trauma-focused psychotherapy (both PTSD-focused
+  and integrated PTSD+SUD) compared to treatment as usual for alcohol use severity outcomes. This moderation
+  effect was specific to alcohol outcomes and was not observed for PTSD symptoms or drug use severity.
+moderators:
+- name: treatment_type
+  direction: strengthens
+  strength: moderate
+  description: Veteran status moderation effect was specific to alcohol use outcomes when receiving trauma-focused
+    treatments vs treatment as usual; no differential effect found for PTSD or drug use outcomes
+structural_competency:
+  equity_implications: This mechanism identifies veteran status as a structural factor influencing treatment
+    response, likely reflecting differences in healthcare system access, trauma type, military culture,
+    and treatment context. Rather than individual-level differences, this points to how social and institutional
+    structures (military service, VA healthcare system) shape treatment outcomes. Equity implications
+    include recognizing that civilians with similar co-occurring conditions may lack access to the integrated,
+    trauma-informed care systems available to veterans, potentially explaining differential outcomes.
+    Policy should focus on extending veteran-level trauma services to civilian populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.892259'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

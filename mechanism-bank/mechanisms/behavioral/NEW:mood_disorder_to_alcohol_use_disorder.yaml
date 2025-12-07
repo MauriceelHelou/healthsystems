@@ -1,0 +1,49 @@
+id: NEW:mood_disorder_to_alcohol_use_disorder
+name: Mood Disorder (Depression) → Alcohol Use Disorder
+from_node:
+  node_id: NEW:mood_disorder
+  node_name: Mood Disorder (Depression)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals experience mood disorders (depression) characterized by persistent
+  negative affect, anhedonia, and emotional dysregulation'
+- 'Step 2: Affected individuals may engage in alcohol use as a coping mechanism (self-medication)
+  to temporarily alleviate depressive symptoms'
+- 'Step 3: Repeated alcohol use for mood regulation leads to neurobiological adaptations
+  and increased tolerance, driving escalating consumption patterns'
+- 'Step 4: Progressive alcohol dependence develops, meeting criteria for alcohol use
+  disorder, with the association showing a twofold increase in odds'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'Jo-Anne Puddephatt et al. 2021. Associations of common mental
+    disorder with alcohol use in the adult general population: a systematic review
+    and meta‐analysis. Addiction.'
+  supporting_citations: []
+description: Individuals with mood disorders (depression) have approximately twice
+  the odds of reporting alcohol use disorder compared to those without mood disorders.
+  This meta-analysis of 17 studies with over 382,000 participants demonstrates a robust
+  association between depression and AUD in the general adult population. The relationship
+  likely operates through self-medication pathways where individuals use alcohol to
+  cope with depressive symptoms, leading to progressive dependence.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.0
+    type: odds_ratio
+    ci_lower: 1.62
+    ci_upper: 2.47
+  p_value: null
+  sample_size: 382201
+moderators:
+- name: CMD type
+  direction: strengthens
+  strength: moderate
+  description: Odds of AUD were similar across mood disorders (OR=2.00) and anxiety/phobic
+    disorders (OR=1.94), suggesting consistent associations regardless of specific
+    CMD type

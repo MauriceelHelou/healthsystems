@@ -1,0 +1,51 @@
+id: NEW:alcohol_outlet_density_to_binge_drinking
+name: Alcohol Outlet Density → Alcohol Consumption
+from_node:
+  node_id: NEW:alcohol_outlet_density
+  node_name: Alcohol Outlet Density
+to_node:
+  node_id: binge_drinking
+  node_name: Alcohol Consumption
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher alcohol outlet density increases physical availability and convenience
+  of purchasing alcohol in a geographic area'
+- 'Step 2: Increased availability reduces barriers to alcohol acquisition including
+  travel time and effort, making impulsive and excessive purchasing easier'
+- 'Step 3: Greater outlet density often leads to competitive pricing and promotional
+  activities, further incentivizing consumption'
+- 'Step 4: Normalized presence of alcohol outlets in the environment creates social
+  cues that reinforce drinking behavior'
+- 'Step 5: Reduced constraints on availability facilitate binge drinking patterns,
+  particularly during evening and late-night hours'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Fone et al. 2012. Change in alcohol outlet density and alcohol-related
+    harm to population health (CHALICE). BMC Public Health.
+  supporting_citations: []
+description: Higher density of alcohol outlets in a community increases the availability
+  and accessibility of alcohol, which facilitates higher rates of alcohol consumption
+  including binge drinking. The CHALICE study protocol examines this relationship
+  using a natural experiment design in Wales, measuring changes in outlet density
+  against consumption patterns from Welsh Health Surveys. The study uses network analysis
+  methods to estimate outlet density exposure at individual and small-area levels.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: outlet_type
+  direction: strengthens
+  strength: moderate
+  description: Different outlet types (on-premise vs off-premise) may have differential
+    effects on consumption patterns
+- name: socioeconomic_deprivation
+  direction: strengthens
+  strength: moderate
+  description: Study explicitly assesses impact on health inequalities, suggesting
+    deprivation may modify the relationship
+- name: time_of_day
+  direction: strengthens
+  strength: moderate
+  description: Midnight to 6am periods specifically measured for A&E attendance, indicating
+    temporal variation in harm

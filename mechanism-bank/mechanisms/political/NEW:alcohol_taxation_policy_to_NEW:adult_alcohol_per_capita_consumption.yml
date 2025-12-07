@@ -1,0 +1,48 @@
+id: NEW:alcohol_taxation_policy_to_NEW:adult_alcohol_per_capita_consumption
+name: Alcohol Taxation Policy (Reduced Affordability) → Adult Alcohol Per Capita Consumption
+from_node:
+  node_id: NEW:alcohol_taxation_policy
+  node_name: Alcohol Taxation Policy (Reduced Affordability)
+to_node:
+  node_id: NEW:adult_alcohol_per_capita_consumption
+  node_name: Adult Alcohol Per Capita Consumption
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Policy increases taxation on alcoholic beverages, reducing affordability'
+- 'Step 2: Higher prices at point of sale create economic barriers to purchasing alcohol'
+- 'Step 3: Population-level purchasing behavior shifts toward reduced alcohol acquisition'
+- 'Step 4: Aggregate adult alcohol per capita consumption decreases'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: Jürgen Rehm et al. 2022. "Do alcohol control policies have the predicted effects on
+    consumption? An analysis of the Baltic countries and Poland 2000-2020.." https://doi.org/10.1016/j.drugalcdep.2022.109682
+  supporting_citations:
+  - World Health Organization. Best buys and other recommended interventions for the prevention and control
+    of noncommunicable diseases.
+  - Additional citations require full-text access for specific prior studies on WHO best buys
+  - Additional citations require full-text access for Baltic/Polish alcohol policy literature
+  doi: 10.1016/j.drugalcdep.2022.109682
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Taxation increases that reduce alcohol affordability were associated with an average reduction
+  of 0.83 litres of pure alcohol per capita per year in the same year across four northeastern European
+  Union countries. This represents a WHO 'best buy' alcohol control policy that worked as postulated.
+quantitative_effects:
+  effect_size:
+    value: -0.83
+    type: beta_coefficient
+    ci_lower: -1.21
+    ci_upper: -0.41
+structural_competency:
+  equity_implications: This mechanism demonstrates how fiscal policy operates at the population level
+    to reduce alcohol consumption without targeting individual behavior. The structural intervention (taxation)
+    modifies the economic environment, making alcohol less accessible regardless of individual choices.
+    This approach avoids individual blame by addressing upstream determinants of consumption patterns.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.582430'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,60 @@
+id: low_household_income_to_asthma_prevalence
+name: Low Household Income → Asthma Prevalence
+from_node:
+  node_id: low_household_income
+  node_name: Low Household Income
+to_node:
+  node_id: asthma_prevalence
+  node_name: Asthma Prevalence
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Low household income limits financial resources available for housing maintenance and repair'
+- 'Step 2: Inability to afford repairs leads to deteriorating housing conditions including moisture, mold,
+  and structural problems'
+- 'Step 3: Poor housing quality creates indoor air quality problems and allergen exposure'
+- 'Step 4: Chronic exposure to poor indoor air quality and allergens triggers and exacerbates respiratory
+  conditions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sharlene D Newman et al. 2024. "The effect of the housing crisis in the Alabama Black
+    Belt on respiratory health.." *Frontiers in allergy*. https://doi.org/10.3389/falgy.2024.1413171
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.3389/falgy.2024.1413171
+  citation_verified: true
+  journal: Frontiers in Allergy
+  year: 2024
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/44/f7/PMC11371704.tar.gz
+    is_open_access: true
+    fetched_date: '2025-11-30'
+last_updated: '2025-11-30'
+version: '2.0'
+description: Lower household income is associated with increased prevalence of asthma through pathways
+  involving housing quality deterioration and indoor environmental exposures
+quantitative_effects:
+  sample_size: 253
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted specifically in Alabama Black Belt counties, a historically disadvantaged
+    rural region
+moderators:
+- name: housing_type
+  direction: strengthens
+  strength: moderate
+  description: Manufactured homes, which comprised over half of homes in the study, may have particular
+    vulnerability to deterioration and indoor air quality issues
+structural_competency:
+  equity_implications: This mechanism demonstrates how economic inequality directly translates to health
+    disparities through housing pathways. The concentration of low-income households in the Alabama Black
+    Belt reflects historical patterns of racial and economic marginalization. The mechanism avoids individual
+    blame and focuses on systemic economic constraints that limit housing options.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T18:40:50.699391'
+  extraction_confidence: medium
+  prompt_version: 2.0-citation-verified

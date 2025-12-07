@@ -1,0 +1,59 @@
+id: NEW:bar_pub_density_to_NEW:driving_under_influence_rate
+name: Bar/Pub Density → Driving Under the Influence Rate
+from_node:
+  node_id: NEW:bar_pub_density
+  node_name: Bar/Pub Density
+to_node:
+  node_id: NEW:driving_under_influence_rate
+  node_name: Driving Under the Influence Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher bar/pub density increases geographic concentration of alcohol consumption venues'
+- 'Step 2: Patrons consume alcohol at on-premise establishments during weekend evening hours'
+- 'Step 3: Limited transportation alternatives in many neighborhoods necessitate driving'
+- 'Step 4: Intoxicated patrons leave establishments and operate motor vehicles'
+- 'Step 5: DUI incidents increase in Census block groups with greater bar/pub concentrations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'P. Gruenewald et al. 2023. "Micro-temporal analyses of crime related to alcohol outlets:
+    A comparison of outcomes over weekday, weekend, daytime and nighttime hours.." https://doi.org/10.1111/dar.13644'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior statistical associations
+    across neighbourhoods
+  - Study methodology builds on ecological analyses of outlet-crime relationships
+  - Bayesian space-time models referenced from prior methodological literature
+  doi: 10.1111/dar.13644
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Areas with greater densities of bars/pubs experience more driving under the influence incidents,
+  particularly during weekend evening hours. The temporal pattern aligns with peak alcohol sales periods
+  at these establishments.
+quantitative_effects:
+  sample_size: 336
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in Oakland, California with 336 Census block groups; effects observed
+    specifically during weekend evening hours
+moderators:
+- name: time_of_week
+  direction: strengthens
+  strength: strong
+  description: Weekend evening hours showed strongest associations compared to weekday or daytime periods
+- name: time_of_day
+  direction: strengthens
+  strength: strong
+  description: Nighttime hours showed stronger effects than daytime hours
+structural_competency:
+  equity_implications: This mechanism highlights how the built environment configuration of alcohol outlets,
+    combined with transportation infrastructure limitations, creates structural conditions for impaired
+    driving. Solutions should focus on outlet regulation, transportation alternatives, and neighborhood
+    planning rather than solely individual deterrence. Areas with fewer transportation options may face
+    greater DUI burden, creating equity concerns.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.082128'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

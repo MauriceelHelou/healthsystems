@@ -1,0 +1,60 @@
+id: smoking_current_to_NEW:alcohol_related_liver_disease_prevalence
+name: Current Smoking → Alcohol Related Liver Disease Prevalence
+from_node:
+  node_id: smoking_current
+  node_name: Current Smoking
+to_node:
+  node_id: NEW:alcohol_related_liver_disease_prevalence
+  node_name: Alcohol Related Liver Disease Prevalence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Smoking frequently co-occurs with heavy alcohol consumption as part of
+  a clustered risk behavior pattern, leading to combined exposure in the ARLD population'
+- 'Step 2: Smoking induces oxidative stress and inflammation in the liver, which compounds
+  the hepatotoxic effects of alcohol metabolism'
+- 'Step 3: The synergistic effects of smoking and alcohol consumption accelerate liver
+  damage progression, fibrosis, and cirrhosis development'
+- 'Step 4: Approximately 59.5% of ARLD patients are current or former smokers, indicating
+  a strong behavioral association and potential causal pathway contributing to ARLD
+  prevalence'
+evidence:
+  quality_rating: A
+  n_studies: 353
+  primary_citation: 'Xuanxuan Niu et al. 2023. Global prevalence, incidence, and outcomes
+    of alcohol related liver diseases: a systematic review and meta-analysis. BMC
+    Public Health.'
+  supporting_citations: []
+description: Current smoking is strongly associated with alcohol-related liver disease
+  prevalence, with 59.5% of ARLD patients being current or former smokers. This association
+  operates through behavioral clustering of risk factors (smoking and heavy drinking
+  commonly co-occur), as well as biological synergy where smoking-induced oxidative
+  stress compounds alcohol-mediated hepatotoxicity, accelerating progression to cirrhosis
+  and other severe liver outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 59.5
+    type: prevalence_proportion
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: ARLD prevalence in males (2.9%) is substantially higher than females
+    (0.5%), and smoking rates tend to be higher in males, potentially amplifying the
+    association
+- name: drinking_duration
+  direction: strengthens
+  strength: strong
+  description: 54.8% of ARLD population had been drinking for >20 years; longer duration
+    of combined smoking and drinking exposure increases liver disease risk
+- name: hepatitis_virus_coinfection
+  direction: strengthens
+  strength: moderate
+  description: 18.7% of ARLD patients had hepatitis virus coinfection, which combined
+    with smoking further accelerates liver damage

@@ -1,0 +1,52 @@
+id: NEW:housing_first_intervention_to_inpatient_admission_rate
+name: Housing First Intervention → Hospitalization Rate
+from_node:
+  node_id: NEW:housing_first_intervention
+  node_name: Housing First Intervention
+to_node:
+  node_id: inpatient_admission_rate
+  node_name: Hospitalization Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Housing First programs provide rapid access to permanent, non-abstinence-contingent
+  housing for homeless individuals'
+- 'Step 2: Stable housing reduces exposure to environmental hazards, violence, infectious
+  disease, and extreme weather that contribute to acute health crises'
+- 'Step 3: Having a stable address facilitates engagement with primary care and outpatient
+  services, enabling preventive care and chronic disease management'
+- 'Step 4: Improved living conditions allow for proper medication storage, rest, nutrition,
+  and hygiene that support health maintenance'
+- 'Step 5: Reduced acute health crises and better access to outpatient care decreases
+  the need for emergency hospitalization'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Baxter AJ, et al. 2019. Effects of Housing First approaches on
+    health and well-being of adults who are homeless or at risk of homelessness: systematic
+    review and meta-analysis of randomised controlled trials. Journal of Epidemiology
+    and Community Health.'
+  supporting_citations: []
+description: Housing First interventions reduce hospitalization rates among homeless
+  individuals by providing stable housing that decreases environmental health risks,
+  enables better chronic disease management, and facilitates access to outpatient
+  care. The meta-analysis of 4 RCTs found that intervention groups experienced significantly
+  fewer hospitalizations (IRR=0.76, 95% CI 0.70-0.83) compared to control groups,
+  representing a 24% reduction in hospitalization rates.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.76
+    type: incidence_rate_ratio
+    ci_lower: 0.7
+    ci_upper: 0.83
+  p_value: null
+  sample_size: null
+moderators:
+- name: substance_use_status
+  direction: strengthens
+  strength: moderate
+  description: Housing First does not require abstinence from substance use, which
+    may particularly benefit those with substance use disorders who would otherwise
+    be excluded from conditional housing programs

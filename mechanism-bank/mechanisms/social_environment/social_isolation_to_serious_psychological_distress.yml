@@ -1,0 +1,56 @@
+id: social_isolation_to_serious_psychological_distress
+name: Social Isolation → Serious Psychological Distress
+from_node:
+  node_id: social_isolation
+  node_name: Social Isolation
+to_node:
+  node_id: serious_psychological_distress
+  node_name: Serious Psychological Distress
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Pandemic control measures mandate physical distancing and lockdowns'
+- 'Step 2: Social connections and support networks are disrupted'
+- 'Step 3: Reduced social interaction diminishes emotional support availability'
+- 'Step 4: Loneliness and isolation compound existing stressors'
+- 'Step 5: Cumulative social isolation contributes to serious psychological distress'
+evidence:
+  quality_rating: A
+  n_studies: 27
+  primary_citation: 'Ismail Hosen et al. 2021. "Prevalence and risk factors of the symptoms of depression,
+    anxiety, and stress during the COVID-19 pandemic in Bangladesh: a systematic review and meta-analysis.."
+    https://doi.org/10.1017/gmh.2021.49'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Social factors analyzed as risk factors in included studies
+  - Impact of lockdown measures on mental health examined across studies
+  doi: 10.1017/gmh.2021.49
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Social isolation resulting from pandemic control measures contributed to psychological distress
+  in the Bangladeshi population, as documented in the systematic review of risk factors for depression,
+  anxiety, and stress.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Social isolation impacts may vary by urban vs rural settings and strength of pre-existing
+    community ties in Bangladesh
+moderators:
+- name: digital_connectivity
+  direction: weakens
+  strength: moderate
+  description: Access to digital communication technology may partially mitigate isolation effects
+- name: household_composition
+  direction: weakens
+  strength: moderate
+  description: Multi-generational households may provide social buffer during lockdowns
+structural_competency:
+  equity_implications: Social isolation during the pandemic reflects structural policy decisions about
+    disease control that disproportionately affected those without digital access, in crowded housing,
+    or dependent on in-person social support. The mechanism avoids blaming individuals for isolation by
+    emphasizing policy and infrastructure determinants.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.349145'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

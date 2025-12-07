@@ -1,0 +1,51 @@
+id: alcohol_use_disorder_to_alcohol_withdrawal_severe_rate
+name: Alcohol Use Disorder → Severe Alcohol Withdrawal Rate (DT/Severe Withdrawal per 100k)
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: alcohol_withdrawal_severe_rate
+  node_name: Severe Alcohol Withdrawal Rate (DT/Severe Withdrawal per 100k)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol abuse leads to neuroadaptation in the central nervous system'
+- 'Step 2: Prolonged alcohol exposure causes downregulation of GABA receptors'
+- 'Step 3: Abrupt cessation of alcohol removes inhibitory effects on the CNS'
+- 'Step 4: Unopposed excitatory neurotransmission leads to alcohol withdrawal syndrome'
+- 'Step 5: Severe cases can progress to delirium tremens requiring ICU admission'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Zaryab Umar et al. 2023. "Phenobarbital and Alcohol Withdrawal Syndrome: A Systematic
+    Review and Meta-Analysis." https://doi.org/10.7759/cureus.33695'
+  supporting_citations:
+  - Literature on GABA receptor downregulation in chronic alcohol use
+  - Studies on benzodiazepine resistance mechanisms in AUD patients
+  - ICU admission criteria studies for alcohol withdrawal syndrome
+  doi: 10.7759/cureus.33695
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Chronic alcohol abuse leads to GABA receptor downregulation, which is a key biological mechanism
+  underlying alcohol withdrawal syndrome and benzodiazepine resistance. This neuroadaptation explains
+  why standard treatments may fail in severe cases.
+moderators:
+- name: chronicity_of_alcohol_use
+  direction: strengthens
+  strength: strong
+  description: Longer duration and higher intensity of alcohol use leads to greater GABA receptor downregulation
+    and more severe withdrawal
+structural_competency:
+  equity_implications: Alcohol use disorder has clear structural determinants including alcohol outlet
+    density, advertising exposure, economic stress, and lack of accessible treatment. The progression
+    to severe withdrawal requiring ICU care often reflects structural failures in earlier intervention,
+    including lack of access to outpatient detoxification services, substance use treatment deserts, and
+    healthcare discrimination against people with AUD. The healthcare system burden is substantial - AWS
+    significantly impacts healthcare spending and contributes to morbidity and mortality, disproportionately
+    affecting communities with limited healthcare infrastructure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.343767'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

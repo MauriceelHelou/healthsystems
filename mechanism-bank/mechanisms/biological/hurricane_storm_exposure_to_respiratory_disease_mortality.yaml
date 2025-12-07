@@ -1,0 +1,58 @@
+id: hurricane_storm_exposure_to_respiratory_disease_mortality
+name: Hurricane/Storm Exposure → Respiratory Disease Mortality/Hospitalization
+from_node:
+  node_id: hurricane_storm_exposure
+  node_name: Hurricane/Storm Exposure
+to_node:
+  node_id: respiratory_disease_mortality
+  node_name: Respiratory Disease Mortality/Hospitalization
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hurricane/storm exposure generates environmental hazards including flooding,
+  structural damage, and disruption of infrastructure'
+- 'Step 2: Flooding and water damage promote mold growth and release of environmental
+  allergens and irritants into indoor and outdoor air'
+- 'Step 3: Storm damage releases particulate matter, dust, debris, and construction-related
+  pollutants into the air'
+- 'Step 4: Displacement and shelter conditions expose populations to crowding, poor
+  ventilation, and increased respiratory pathogen transmission'
+- 'Step 5: Healthcare system disruption limits access to respiratory medications,
+  oxygen therapy, and acute care services'
+- 'Step 6: These combined exposures exacerbate pre-existing respiratory conditions
+  (COPD, asthma) and trigger new respiratory illness, leading to increased hospitalizations
+  and mortality'
+evidence:
+  quality_rating: A
+  n_studies: 71
+  primary_citation: 'Wenzhong Huang et al. 2023. Health Effects of Cyclones: A Systematic
+    Review and Meta-Analysis of Epidemiological Studies. Environmental Health Perspectives.'
+  supporting_citations: []
+description: Hurricane and storm exposure significantly increases respiratory disease
+  hospitalizations through multiple biological pathways including post-storm environmental
+  contamination (mold, particulate matter, allergens), disruption of healthcare access
+  and medication availability, and crowded shelter conditions promoting respiratory
+  pathogen transmission. Meta-analysis of 71 studies found a statistically significant
+  15% increased risk of respiratory disease hospitalizations following cyclone exposure,
+  with COPD patients experiencing a 26% increased hospitalization risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.15
+    type: relative_risk
+    ci_lower: 1.13
+    ci_upper: 1.18
+  p_value: null
+  sample_size: null
+moderators:
+- name: Cyclone intensity
+  direction: strengthens
+  strength: strong
+  description: High-amplitude cyclones (Saffir-Simpson category 4-5, e.g., Hurricanes
+    Katrina and Sandy) showed more consistent elevated risks
+- name: Pre-existing respiratory conditions
+  direction: strengthens
+  strength: strong
+  description: 'COPD hospitalizations showed higher relative risk (RR 1.26, 95% CI:
+    1.05-1.50) compared to general respiratory disease hospitalizations'

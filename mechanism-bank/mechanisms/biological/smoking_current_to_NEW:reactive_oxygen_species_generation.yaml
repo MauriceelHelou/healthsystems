@@ -1,0 +1,48 @@
+id: smoking_current_to_NEW:reactive_oxygen_species_generation
+name: Current Smoking → Reactive Oxygen Species Generation
+from_node:
+  node_id: smoking_current
+  node_name: Current Smoking
+to_node:
+  node_id: NEW:reactive_oxygen_species_generation
+  node_name: Reactive Oxygen Species Generation
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Tobacco smoke contains numerous chemical compounds that are metabolized
+  within cells, particularly hepatic cells'
+- 'Step 2: Metabolism of tobacco compounds through xenobiotic metabolic pathways (involving
+  enzymes like CYP2E1) generates reactive oxygen species (ROS) as byproducts'
+- 'Step 3: Excessive ROS generation exposes cellular DNA to continuous oxidative stress'
+- 'Step 4: Sustained oxidative stress leads to DNA damage and triggers protective
+  repair machinery (ATM, ATR, H2AX, MRN complex)'
+- 'Step 5: Chronic ROS generation can also activate or repress epigenetic elements
+  affecting gene expression and contributing to cellular dysfunction'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Abdul Anvesh Mansoori and Subodh Kumar Jain 2015. "Molecular
+    Links between Alcohol and Tobacco Induced DNA Damage, Gene Polymorphisms and Patho-physiological
+    Consequences: A Systematic Review of Hepatic Carcinogenesis." Asian Pacific Journal
+    of Cancer Prevention.'
+  supporting_citations: []
+description: Current smoking promotes the generation of reactive oxygen species within
+  cells through the metabolism of tobacco compounds via xenobiotic metabolic pathways.
+  This excessive ROS generation exposes cellular DNA to continuous oxidative stress,
+  leading to DNA damage and activation of repair mechanisms. Genetic polymorphisms
+  in metabolic enzymes can influence individual susceptibility to tobacco-induced
+  ROS generation and subsequent pathological consequences.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: genetic_polymorphisms
+  direction: strengthens
+  strength: moderate
+  description: Polymorphisms in genes involved in xenobiotic metabolism (ADH, ALDH,
+    CYP2E1, GSTT1, GSTP1, GSTM1) affect susceptibility to ROS-induced damage and disease
+    outcomes
+- name: concurrent_alcohol_use
+  direction: strengthens
+  strength: strong
+  description: Combined alcohol and tobacco use synergistically increases ROS generation
+    and oxidative stress

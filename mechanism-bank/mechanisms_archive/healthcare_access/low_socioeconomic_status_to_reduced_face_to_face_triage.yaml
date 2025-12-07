@@ -1,0 +1,44 @@
+id: low_socioeconomic_status_to_reduced_face_to_face_triage
+name: Low Socioeconomic Status (Low Education and Income) → Reduced Face-to-Face Medical
+  Contact After Telephone Triage
+from_node:
+  node_id: low_socioeconomic_status
+  node_name: Low Socioeconomic Status (Low Education and Income)
+to_node:
+  node_id: reduced_face_to_face_triage
+  node_name: Reduced Face-to-Face Medical Contact After Telephone Triage
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Low SES callers may communicate symptoms differently or less assertively
+  during telephone triage due to health literacy differences and structural barriers
+  to healthcare navigation'
+- 'Step 2: Healthcare providers may unconsciously interpret symptoms from low SES
+  callers as less urgent due to implicit bias or communication barriers'
+- 'Step 3: Triage algorithms and clinical decision-making may not adequately account
+  for social determinants that affect symptom presentation'
+- 'Step 4: Low SES callers are less frequently triaged to face-to-face medical contact
+  despite potentially equal or greater medical need'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: H. Gamst-Jensen et al. 2021. "Socioeconomic inequality in telephone
+    triage on triage response, hospitalization and 30-day mortality.." *European Journal
+    of Public Health*. https://doi.org/10.1093/eurpub/ckaa242
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.948269'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: healthcare_system_type
+  direction: strengthens
+  strength: moderate
+  description: Universal healthcare systems with telephone triage gatekeeper functions
+    may amplify or reduce SES-based disparities depending on training and protocols
+- name: health_literacy
+  direction: strengthens
+  strength: strong
+  description: Lower health literacy among low SES populations may compound communication
+    barriers during telephone triage

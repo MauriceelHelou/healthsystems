@@ -1,0 +1,56 @@
+id: NEW:adolescent_alcohol_screening_ed_to_NEW:at_risk_alcohol_use_identification
+name: Adolescent Alcohol Screening in Emergency Departments → At-Risk Alcohol Use
+  Identification
+from_node:
+  node_id: NEW:adolescent_alcohol_screening_ed
+  node_name: Adolescent Alcohol Screening in Emergency Departments
+to_node:
+  node_id: NEW:at_risk_alcohol_use_identification
+  node_name: At-Risk Alcohol Use Identification
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Adolescents presenting to emergency departments for any reason are offered
+  a brief self-completed alcohol screening questionnaire (AUDIT-C)'
+- 'Step 2: The AUDIT-C screening tool with an optimal cut-off point of ≥3 effectively
+  identifies adolescents who are at risk of alcohol-related problems'
+- 'Step 3: ED-based screening captures a population with high prevalence of at-risk
+  alcohol consumption (15% prevalence), including those not accessing other healthcare
+  settings'
+- 'Step 4: Systematic screening in EDs enables identification of at-risk drinking
+  patterns before progression to more severe alcohol use disorders'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'P. Deluca et al. 2020. Screening and brief interventions for
+    adolescent alcohol use disorders presenting through emergency departments: a research
+    programme including two RCTs. Programme Grants for Applied Research, Vol. 8, No.
+    2'
+  supporting_citations: []
+description: Emergency department-based screening using the AUDIT-C questionnaire
+  effectively identifies at-risk alcohol use among adolescents. A prevalence study
+  of 5,376 adolescents (mean age 13.0 years) found that 15% met criteria for at-risk
+  alcohol consumption using an AUDIT-C cut-off of ≥3. The ED setting provides a unique
+  opportunity to reach adolescents who may not be engaged with other healthcare services,
+  enabling early identification of risky drinking patterns.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.15
+    type: prevalence
+    ci_lower: 0.14
+    ci_upper: 0.16
+  p_value: null
+  sample_size: 5376
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Prevalence of alcohol consumption increases steadily from age 12-17,
+    with at-risk drinking identification rates higher among older adolescents
+- name: early onset of drinking
+  direction: strengthens
+  strength: moderate
+  description: Earlier onset of drinking was associated with poorer health and social
+    functioning, making screening more critical for early-onset drinkers

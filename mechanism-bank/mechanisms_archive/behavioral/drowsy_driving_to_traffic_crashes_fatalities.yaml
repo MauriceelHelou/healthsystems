@@ -1,0 +1,41 @@
+id: drowsy_driving_to_traffic_crashes_fatalities
+name: Drowsy Driving (Driver Fatigue) → Traffic Crashes and Fatalities
+from_node:
+  node_id: drowsy_driving
+  node_name: Drowsy Driving (Driver Fatigue)
+to_node:
+  node_id: traffic_crashes_fatalities
+  node_name: Traffic Crashes and Fatalities
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Driver fatigue manifests as micro-sleep episodes and reduced alertness
+  during driving'
+- 'Step 2: Micro-sleep causes momentary lapses where driver loses awareness of road
+  conditions'
+- 'Step 3: Loss of vehicle control during micro-sleep episodes or delayed reactions
+  from fatigue lead to crashes'
+- 'Step 4: Drowsiness-related crashes result in injuries and fatalities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Pranay Sharma and Naveksha Sood 2020. "Application of IoT and
+    Machine Learning for Real-time Driver Monitoring and Assisting Device." *International
+    Conference on Computing Communication and Networking Technologies*. https://doi.org/10.1109/ICCCNT49239.2020.9225387
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.456679'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: real_time_monitoring_technology
+  direction: weakens
+  strength: strong
+  description: Machine learning-based drowsiness detection systems can alert fatigued
+    drivers before crashes occur
+- name: occupational_driving_hours_regulations
+  direction: weakens
+  strength: moderate
+  description: Policies limiting driving hours for commercial drivers reduce fatigue
+    exposure

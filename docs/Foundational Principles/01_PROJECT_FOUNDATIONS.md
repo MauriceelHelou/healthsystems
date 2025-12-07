@@ -155,8 +155,11 @@ $50B+ annual spending across state health, housing, labor, and education budgets
 **What**: Network of ~400 nodes representing structural conditions, intermediate states, and health outcomes, connected by ~2000 empirically-grounded mechanisms.
 
 **How It Works**:
-- Nodes = stocks (measurable quantities): "Housing Quality" (index 0-1), "Eviction Risk" (annual rate), "ED Utilization" (visits/year)
-- Edges = mechanisms (causal relationships): "Eviction → Healthcare Discontinuity → ED Visits"
+- Nodes = stocks (measurable quantities) from canonical inventory (~840 nodes in `mechanism-bank/mechanisms/canonical_nodes.json`):
+  - `housing_quality_index_revised_consolidated` (Index 0-1)
+  - `eviction_filing_rate` (filings per 100 renter households)
+  - `emergency_department_visit_rate` (visits per 1,000 population)
+- Edges = mechanisms (causal relationships): `eviction_filing_rate` → `emergency_department_visit_rate`
 - Each mechanism has:
   - Functional form (sigmoid, linear, threshold, etc.)
   - **Direction (positive/negative) from literature synthesis** ← MVP scope
@@ -458,7 +461,7 @@ Mechanisms operate simultaneously at three scales:
 
 **Time Horizon**: 2-10 years for policy change  
 **Intervention Type**: Legislative change, ballot initiatives, litigation  
-**Example**: Pass state Medicaid expansion → 250,000 newly insured → reduced care avoidance → 12,000 ED visits prevented annually
+**Example**: `medicaid_expansion_status` = 1 (expanded) → `uninsured_rate` decreases → `primary_care_visit_rate` increases → `emergency_department_visit_rate` decreases
 
 #### **Scale 2: Institutional (Local Implementation)**
 - Hospital integration level (coordinated vs. fragmented care systems)
@@ -467,9 +470,9 @@ Mechanisms operate simultaneously at three scales:
 - Real estate practice norms (discriminatory patterns)
 - Healthcare provider behavior (bias, cultural competency)
 
-**Time Horizon**: 1-5 years for institutional change  
-**Intervention Type**: Organizational capacity building, training, coordination infrastructure  
-**Example**: Integrate CHWs into primary care clinics → 2.1× effect vs. standalone programs → 35% improvement in healthcare continuity
+**Time Horizon**: 1-5 years for institutional change
+**Intervention Type**: Organizational capacity building, training, coordination infrastructure
+**Example**: Increase `primary_care_physician_density` → `preventable_hospitalization_individual` decreases (effect moderated by `medicaid_expansion_status`)
 
 #### **Scale 3: Individual/Household (Lived Experience)**
 - Stress exposure (chronic, toxic)
@@ -478,9 +481,9 @@ Mechanisms operate simultaneously at three scales:
 - Social support networks
 - Health behaviors (shaped by access and structural conditions)
 
-**Time Horizon**: Months to years for individual health change  
-**Intervention Type**: Direct services, case management, mutual aid  
-**Example**: Provide rental assistance → housing stability → reduced stress → improved medication adherence → 8% reduction in hospitalizations
+**Time Horizon**: Months to years for individual health change
+**Intervention Type**: Direct services, case management, mutual aid
+**Example**: `housing_cost_burden` decreases → `eviction_filing_rate` decreases → stress reduction → `preventable_hospitalization_individual` decreases
 
 ### Critical Insight: Multi-Scale Interdependence
 
@@ -787,11 +790,13 @@ Individual-level interventions (CHWs, case management) only work when embedded i
 - [02_METHODOLOGICAL_INTEGRATION.md] - Deep dive on SD + SEM + Bayesian synthesis
 - [03_SYSTEM_ARCHITECTURE_OVERVIEW.md] - Technical system design
 - [15_USER_INTERFACE_WORKFLOWS.md] - Detailed user interaction specifications
+- [Canonical Nodes] `mechanism-bank/mechanisms/canonical_nodes.json` - All 840 node definitions
+- [Node Specifications] `Nodes/COMPLETE_NODE_INVENTORY.md` - Full node specifications with scales and domains
 
-**Last Reviewed**: November 15, 2025  
-**Next Review**: May 15, 2026 (6-month cycle for foundational documents)
+**Last Reviewed**: December 2, 2025
+**Next Review**: June 2, 2026 (6-month cycle for foundational documents)
 
-**Maintainers**: Technical Architecture Team  
+**Maintainers**: Technical Architecture Team
 **Contributors**: Domain experts in public health, systems dynamics, equity research
 
 ---

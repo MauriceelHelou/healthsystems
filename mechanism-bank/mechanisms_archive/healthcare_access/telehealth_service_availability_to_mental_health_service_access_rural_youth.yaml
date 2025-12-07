@@ -1,0 +1,49 @@
+id: telehealth_service_availability_to_mental_health_service_access_rural_youth
+name: Telehealth Service Availability → Mental Health Service Access for Rural Youth
+from_node:
+  node_id: telehealth_service_availability
+  node_name: Telehealth Service Availability
+to_node:
+  node_id: mental_health_service_access_rural_youth
+  node_name: Mental Health Service Access for Rural Youth
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Telehealth infrastructure provides alternative delivery mechanism for mental
+  health services to geographically isolated youth'
+- 'Step 2: Digital service delivery reduces need for physical travel and associated
+  costs/time burdens'
+- 'Step 3: Increased service access options particularly beneficial in situations
+  of large travel distances'
+- 'Step 4: Youth utilize telehealth as adjunct to face-to-face services, filling gaps
+  when in-person attendance is not feasible'
+evidence:
+  quality_rating: C
+  n_studies: 4
+  primary_citation: 'E. Mseke et al. 2023. "A systematic review of the preferences
+    of rural and remote youth for mental health service access: Telehealth versus
+    face-to-face consultation.." *The Australian journal of rural health*. https://doi.org/10.1111/ajr.12961'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.478745'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: travel_distance_to_services
+  direction: strengthens
+  strength: strong
+  description: Larger travel times increase the value and utilization of telehealth
+    services as an important adjunct, making geographic distance a key moderator of
+    telehealth's role in service access
+- name: preference_for_face_to_face_care
+  direction: weakens
+  strength: moderate
+  description: Youth preference for in-person consultation limits telehealth's role
+    to adjunct rather than primary service delivery mode, constraining its impact
+    on access
+- name: digital_infrastructure_availability
+  direction: strengthens
+  strength: strong
+  description: Adequate broadband internet and technology access in rural areas is
+    necessary for telehealth to function as an access facilitator

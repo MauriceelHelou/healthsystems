@@ -2,11 +2,14 @@
 
 This directory contains the automated mechanism discovery pipeline for the HealthSystems Platform MVP.
 
+> **Full Documentation**: See `docs/LLM & Discovery Pipeline/MECHANISM_DISCOVERY_PIPELINE.md` for comprehensive technical details, architecture diagrams, and troubleshooting guides.
+
 ## Overview
 
 The pipeline automates the discovery of causal mechanisms from scientific literature using:
 - **Literature search**: Semantic Scholar + PubMed APIs
 - **LLM extraction**: Claude Sonnet 4.5 for topology and direction extraction
+- **Citation validation**: Crossref API for DOI verification
 - **Validation**: Structural competency checks and quality filters
 - **Output**: YAML files for the mechanism bank
 
@@ -16,14 +19,22 @@ The pipeline automates the discovery of causal mechanisms from scientific litera
 
 ### Core Modules
 
-- **`llm_mechanism_discovery.py`**: Claude API integration for extracting mechanisms from paper abstracts
-- **`literature_search.py`**: Semantic Scholar and PubMed search integration
-- **`end_to_end_discovery.py`**: Complete pipeline combining search + extraction + validation
+| File | Purpose |
+|------|---------|
+| `literature_search.py` | Semantic Scholar and PubMed API integration |
+| `llm_mechanism_discovery.py` | Claude API for mechanism extraction |
+| `end_to_end_discovery.py` | Complete pipeline (search → extract → validate → save) |
+| `mechanism_deduplication.py` | Deduplication logic for similar mechanisms |
 
-### Usage
+### Related Files
 
-- Run demos and tests directly from the module files
-- Import classes for custom workflows
+| File | Purpose |
+|------|---------|
+| `../utils/citation_validation.py` | DOI verification via Crossref |
+| `../scripts/validate_mechanism_schema.py` | Schema compliance checking |
+| `../scripts/extract_quantitative_effects.py` | Effect size extraction |
+| `../config/schema_config.py` | Centralized schema constants |
+| `../agents/mechanism_validator.py` | Comprehensive validation agent |
 
 ---
 

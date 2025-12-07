@@ -1,0 +1,327 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Quantitative Effects Schema",
+  "description": "Schema for capturing quantitative effect data from mechanism discovery. This data is stored alongside MVP mechanisms for future quantification phases.",
+  "type": "object",
+  "required": ["mechanism_id", "effects"],
+  "properties": {
+    "mechanism_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "description": "ID linking to the mechanism YAML file"
+    },
+    "extraction_metadata": {
+      "type": "object",
+      "properties": {
+        "extracted_by": {
+          "type": "string",
+          "description": "LLM model or human extractor"
+        },
+        "extraction_date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_papers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "DOIs or citations of source papers"
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        }
+      }
+    },
+    "effects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/effect_measure"
+      },
+      "description": "All quantitative effect measures found for this mechanism"
+    },
+    "moderator_effects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/moderator_effect"
+      },
+      "description": "Quantitative effects of moderating factors"
+    },
+    "progression_rates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/progression_rate"
+      },
+      "description": "Disease/outcome progression rates and timelines"
+    },
+    "geographic_variation": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/geographic_effect"
+      },
+      "description": "Quantified geographic variation in effect"
+    },
+    "population_subgroups": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/subgroup_effect"
+      },
+      "description": "Effect variation across population subgroups"
+    }
+  },
+  "definitions": {
+    "effect_measure": {
+      "type": "object",
+      "required": ["measure_type", "value"],
+      "properties": {
+        "measure_type": {
+          "type": "string",
+          "enum": [
+            "odds_ratio",
+            "relative_risk",
+            "hazard_ratio",
+            "risk_difference",
+            "percentage_change",
+            "percentage_increase",
+            "percentage_decrease",
+            "risk_reduction",
+            "absolute_risk",
+            "incidence_rate_ratio",
+            "prevalence_ratio",
+            "beta_coefficient",
+            "correlation",
+            "standardized_mean_difference",
+            "number_needed_to_treat",
+            "number_needed_to_harm",
+            "fold_change",
+            "attributable_fraction",
+            "population_attributable_fraction"
+          ],
+          "description": "Type of effect measure"
+        },
+        "value": {
+          "type": "number",
+          "description": "Point estimate of the effect"
+        },
+        "lower_ci": {
+          "type": "number",
+          "description": "Lower bound of 95% confidence interval"
+        },
+        "upper_ci": {
+          "type": "number",
+          "description": "Upper bound of 95% confidence interval"
+        },
+        "ci_level": {
+          "type": "number",
+          "default": 95,
+          "description": "Confidence interval level (default 95%)"
+        },
+        "p_value": {
+          "type": "number",
+          "description": "P-value if available"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Unit of measurement (e.g., 'percent', 'per 100,000', 'years')"
+        },
+        "exposure": {
+          "type": "string",
+          "description": "Description of exposure/independent variable"
+        },
+        "outcome": {
+          "type": "string",
+          "description": "Description of outcome/dependent variable"
+        },
+        "comparison": {
+          "type": "string",
+          "description": "Reference group or comparison (e.g., 'vs. non-drinkers')"
+        },
+        "population": {
+          "type": "string",
+          "description": "Study population"
+        },
+        "timeframe": {
+          "type": "string",
+          "description": "Time period for effect (e.g., '5-year', 'lifetime')"
+        },
+        "study_design": {
+          "type": "string",
+          "enum": ["meta_analysis", "systematic_review", "cohort", "case_control", "cross_sectional", "rct", "ecological"],
+          "description": "Study design that generated this estimate"
+        },
+        "n_studies": {
+          "type": "integer",
+          "description": "Number of studies (for meta-analyses)"
+        },
+        "sample_size": {
+          "type": "integer",
+          "description": "Total sample size"
+        },
+        "heterogeneity_i2": {
+          "type": "number",
+          "description": "I² heterogeneity statistic for meta-analyses"
+        },
+        "citation": {
+          "type": "string",
+          "description": "Source citation"
+        },
+        "doi": {
+          "type": "string",
+          "pattern": "^10\\.\\d{4,}/.+$",
+          "description": "DOI of source"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional context or caveats"
+        }
+      }
+    },
+    "moderator_effect": {
+      "type": "object",
+      "required": ["moderator_name", "effect_modification"],
+      "properties": {
+        "moderator_name": {
+          "type": "string",
+          "description": "Name of moderating factor"
+        },
+        "moderator_type": {
+          "type": "string",
+          "enum": ["genetic", "demographic", "behavioral", "environmental", "clinical", "policy", "socioeconomic"],
+          "description": "Category of moderator"
+        },
+        "effect_modification": {
+          "type": "string",
+          "enum": ["strengthens", "weakens", "reverses", "threshold", "u_shaped"],
+          "description": "How moderator affects the main effect"
+        },
+        "effect_size": {
+          "type": "number",
+          "description": "Quantified effect modification (e.g., 2.0 for doubles effect)"
+        },
+        "effect_size_type": {
+          "type": "string",
+          "enum": ["multiplicative", "additive", "percentage_change", "risk_reduction"],
+          "description": "How to interpret effect_size"
+        },
+        "range_low": {
+          "type": "number",
+          "description": "Lower bound of effect range"
+        },
+        "range_high": {
+          "type": "number",
+          "description": "Upper bound of effect range"
+        },
+        "population": {
+          "type": "string"
+        },
+        "citation": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "progression_rate": {
+      "type": "object",
+      "required": ["stage_from", "stage_to"],
+      "properties": {
+        "stage_from": {
+          "type": "string",
+          "description": "Starting stage/condition"
+        },
+        "stage_to": {
+          "type": "string",
+          "description": "Ending stage/condition"
+        },
+        "percentage": {
+          "type": "number",
+          "description": "Percentage that progress"
+        },
+        "timeframe": {
+          "type": "string",
+          "description": "Time period (e.g., '10-20 years')"
+        },
+        "timeframe_years_low": {
+          "type": "number"
+        },
+        "timeframe_years_high": {
+          "type": "number"
+        },
+        "population": {
+          "type": "string"
+        },
+        "conditions": {
+          "type": "string",
+          "description": "Conditions for this rate (e.g., 'with continued drinking')"
+        },
+        "citation": {
+          "type": "string"
+        }
+      }
+    },
+    "geographic_effect": {
+      "type": "object",
+      "properties": {
+        "comparison_type": {
+          "type": "string",
+          "enum": ["between_countries", "within_country", "urban_rural", "regional", "state_level", "county_level"],
+          "description": "Type of geographic comparison"
+        },
+        "variation_magnitude": {
+          "type": "number",
+          "description": "Fold-difference (e.g., 4.0 for 4-fold variation)"
+        },
+        "high_region": {
+          "type": "string",
+          "description": "Region/area with highest effect"
+        },
+        "low_region": {
+          "type": "string",
+          "description": "Region/area with lowest effect"
+        },
+        "notes": {
+          "type": "string"
+        },
+        "citation": {
+          "type": "string"
+        }
+      }
+    },
+    "subgroup_effect": {
+      "type": "object",
+      "properties": {
+        "subgroup": {
+          "type": "string",
+          "description": "Population subgroup"
+        },
+        "comparison_group": {
+          "type": "string",
+          "description": "Reference/comparison population"
+        },
+        "effect_ratio": {
+          "type": "number",
+          "description": "Effect multiplier vs comparison group"
+        },
+        "range_low": {
+          "type": "number"
+        },
+        "range_high": {
+          "type": "number"
+        },
+        "absolute_rate": {
+          "type": "number",
+          "description": "Absolute rate in subgroup"
+        },
+        "rate_unit": {
+          "type": "string",
+          "description": "Unit for absolute rate (e.g., 'per 100,000')"
+        },
+        "citation": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

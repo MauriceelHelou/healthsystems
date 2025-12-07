@@ -1,0 +1,52 @@
+id: educational_attainment_hs_to_cardiovascular_disease_mortality
+name: Educational Attainment (Less than HS) → Cardiovascular Disease Mortality
+from_node:
+  node_id: educational_attainment_hs
+  node_name: Educational Attainment (Less than HS)
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Lower educational attainment is associated with reduced health literacy'
+- 'Step 2: Limited understanding of heart failure symptoms, medication importance, and self-management
+  strategies'
+- 'Step 3: Decreased ability to navigate complex healthcare systems and communicate with providers'
+- 'Step 4: Lower likelihood of receiving and adhering to guideline-directed medical therapy'
+- 'Step 5: Increased mortality from heart failure and cardiovascular disease'
+evidence:
+  quality_rating: A
+  n_studies: 59
+  primary_citation: 'K. Enard et al. 2023. "Influence of Social Determinants of Health on Heart Failure
+    Outcomes: A Systematic Review." https://doi.org/10.1161/JAHA.122.026590'
+  supporting_citations:
+  - Studies examining education/health literacy effects on HF mortality (k=29 examining mortality/survival)
+  - Studies using EMR data linked with national surveys to assess education
+  - Additional citations require full-text access for specific author names
+  doi: 10.1161/JAHA.122.026590
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Education and health literacy were commonly examined SDoH in studies of heart failure mortality
+  and survival, with lower educational attainment generally associated with worse outcomes
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Education measures varied across studies from years of schooling to categorical attainment
+    levels
+moderators:
+- name: health_literacy
+  direction: strengthens
+  strength: strong
+  description: Health literacy mediates much of the education-mortality relationship
+structural_competency:
+  equity_implications: Educational attainment reflects structural inequities in school funding, neighborhood
+    segregation, and intergenerational poverty rather than individual capability. The mechanism appropriately
+    identifies health literacy as a pathway shaped by educational access, which is structurally determined.
+    Interventions should focus on health system accommodation of varying literacy levels rather than expecting
+    individuals to change.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.941755'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

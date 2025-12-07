@@ -1,0 +1,57 @@
+id: NEW:brief_alcohol_intervention_pregnancy_to_prenatal_substance_exposure
+name: Brief Alcohol Intervention for Pregnant Women → Prenatal Substance Exposure
+from_node:
+  node_id: NEW:brief_alcohol_intervention_pregnancy
+  node_name: Brief Alcohol Intervention for Pregnant Women
+to_node:
+  node_id: prenatal_substance_exposure
+  node_name: Prenatal Substance Exposure
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare providers deliver brief interventions during prenatal care'
+- 'Step 2: Interventions include screening, education about fetal alcohol spectrum disorder risks'
+- 'Step 3: Pregnant women reduce or eliminate alcohol consumption'
+- 'Step 4: Reduced prenatal alcohol exposure decreases risk of FASD and other adverse neonatal outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'Svetlana Popova et al. 2023. "Effectiveness of brief alcohol interventions for pregnant
+    women: a systematic literature review and meta-analysis.." https://doi.org/10.1186/s12884-023-05344-8'
+  supporting_citations:
+  - Centre for Evidence-based Medicine Oxford critical appraisal tool for RCTs (1)
+  - GRADE (Grading of Recommendations Assessment, Development and Evaluation) (2)
+  - Additional citations require full-text access - abstract references studies from 1987-2021
+  doi: 10.1186/s12884-023-05344-8
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief alcohol interventions reduce prenatal alcohol exposure by increasing abstinence rates
+  during pregnancy, thereby decreasing risk of Fetal Alcohol Spectrum Disorder (FASD) and other adverse
+  neonatal outcomes.
+quantitative_effects:
+  effect_size:
+    value: 1.56
+    type: odds_ratio
+    ci_lower: 1.15
+    ci_upper: 2.13
+  sample_size: 2620
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Evidence from high-income countries only; effectiveness may vary by healthcare system
+    structure
+moderators:
+- name: intervention_setting
+  direction: unknown
+  strength: moderate
+  description: Studies conducted in various settings; setting may moderate effectiveness
+structural_competency:
+  equity_implications: FASD is entirely preventable through elimination of prenatal alcohol exposure.
+    This mechanism highlights the importance of universal screening and intervention programs integrated
+    into prenatal care systems. The structural approach focuses on healthcare system capacity rather than
+    blaming individual pregnant women.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.009974'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,50 @@
+id: substance_use_disorders_to_dementia_risk
+name: Substance Use Disorders → Alzheimer's Disease and Related Dementias (ADRD) Risk
+from_node:
+  node_id: substance_use_disorders
+  node_name: Substance Use Disorders
+to_node:
+  node_id: dementia_risk
+  node_name: Alzheimer's Disease and Related Dementias (ADRD) Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Substance use disorders are prevalent among Veterans experiencing homelessness
+  and housing instability'
+- 'Step 2: Chronic substance use causes direct neurotoxic effects on brain tissue
+  and cognitive function'
+- 'Step 3: Substance use disorders co-occur with other medical and psychiatric conditions,
+  creating cumulative health burden'
+- 'Step 4: Combined effects of neurotoxicity and multimorbidity accelerate cognitive
+  decline and dementia onset'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Roncarati et al. 2023. "Risk of Dementia among Veterans Experiencing
+    Homelessness and Housing Instability." *Journal of The American Geriatrics Society*.
+    https://doi.org/10.1111/jgs.18680
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.330433'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: homelessness_status
+  direction: strengthens
+  strength: strong
+  description: Substance use disorders in context of homelessness create compounded
+    dementia risk
+- name: older_age
+  direction: strengthens
+  strength: strong
+  description: Aging populations with substance use disorders show accelerated cognitive
+    decline
+- name: psychiatric_comorbidity
+  direction: strengthens
+  strength: moderate
+  description: Co-occurring psychiatric and substance use disorders compound cognitive
+    risk
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/substance_use_disorders_to_dementia_risk.yaml
+_category: biological

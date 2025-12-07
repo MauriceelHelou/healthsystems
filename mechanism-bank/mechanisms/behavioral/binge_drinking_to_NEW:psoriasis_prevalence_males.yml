@@ -1,0 +1,58 @@
+id: binge_drinking_to_NEW:psoriasis_prevalence_males
+name: Binge Drinking → Psoriasis Prevalence in Males
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:psoriasis_prevalence_males
+  node_name: Psoriasis Prevalence in Males
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Higher alcohol consumption levels among males lead to greater cumulative exposure'
+- 'Step 2: Male-specific hormonal interactions with alcohol metabolism may enhance inflammatory responses'
+- 'Step 3: Alcohol-induced oxidative stress and immune activation preferentially affects male skin physiology'
+- 'Step 4: Chronic inflammation triggers psoriatic disease initiation and progression'
+evidence:
+  quality_rating: A
+  n_studies: 48
+  primary_citation: 'Jeeyu Choi et al. 2024. "Dose‐response analysis between alcohol consumption and psoriasis:
+    A systematic review and meta‐analysis." https://doi.org/10.1111/ddg.15380'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 48 studies across 24 countries
+  - Studies included 3 cohort studies and 5 case-control studies for dose-response analysis
+  - Total sample of 1,702,847 individuals across included studies
+  doi: 10.1111/ddg.15380
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Sex-stratified analysis showing significantly elevated psoriasis risk among male alcohol
+  consumers with 84% increased odds compared to non-consumers. The association in females was not statistically
+  significant (OR 1.22, 95% CI 0.97-1.54), indicating important sex-based differences in alcohol-psoriasis
+  relationship.
+quantitative_effects:
+  effect_size:
+    value: 1.84
+    type: odds_ratio
+    ci_lower: 1.13
+    ci_upper: 3.01
+  sample_size: 1702847
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies conducted across 24 countries with sex-stratified analyses
+moderators:
+- name: alcohol_dose
+  direction: strengthens
+  strength: strong
+  description: Dose-response relationship with 4% increase in OR per gram of daily alcohol intake
+structural_competency:
+  equity_implications: 'Sex differences in alcohol-related health outcomes reflect intersecting structural
+    factors: gendered social norms around drinking, occupational exposure patterns, differential access
+    to healthcare and early intervention, and biological differences in alcohol metabolism. Male-dominated
+    occupational contexts often normalize higher alcohol consumption, while men may face barriers to seeking
+    help for both alcohol use and skin conditions due to masculinity norms.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.307118'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

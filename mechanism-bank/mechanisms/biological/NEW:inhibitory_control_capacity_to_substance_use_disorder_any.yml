@@ -1,0 +1,60 @@
+id: NEW:inhibitory_control_capacity_to_substance_use_disorder_any
+name: Inhibitory Control Capacity → Substance Use Disorder (Any)
+from_node:
+  node_id: NEW:inhibitory_control_capacity
+  node_name: Inhibitory Control Capacity
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhibitory control capacity determines ability to resist immediate impulses and cravings for
+  substance use'
+- 'Step 2: Stronger inhibitory control enables individuals to override automatic approach behaviors toward
+  substances'
+- 'Step 3: This relationship is moderated by underlying white matter integrity - stronger inhibition is
+  most protective when neural infrastructure is intact'
+- 'Step 4: For individuals with highest white matter integrity (FA values), strong inhibitory control
+  translates to lowest probability of substance use in daily life'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Valentine Chirokoff et al. 2024. "Multi‐level prediction of substance use: Interaction
+    of white matter integrity, resting‐state connectivity and inhibitory control measured repeatedly in
+    every‐day life." https://doi.org/10.1111/adb.13400'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior work on inhibition deficits
+    in substance use disorders
+  - Additional citations require full-text access - abstract references disrupted connectivity in white
+    matter pathways
+  - Additional citations require full-text access - abstract references interaction effects between biomarkers
+    and behavioral measures
+  doi: 10.1111/adb.13400
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Stronger inhibitory control (measured via Stroop task in daily life) predicts lower probability
+  of substance use, but this relationship is moderated by white matter integrity. The protective effect
+  of inhibition is most pronounced for individuals with the highest white matter integrity in anterior
+  brain systems.
+quantitative_effects:
+  sample_size: 38
+moderators:
+- name: white_matter_integrity_anterior_brain
+  direction: strengthens
+  strength: strong
+  description: White matter integrity in anterior brain regions moderates the link between inhibitory
+    control and substance use. The protective effect of strong inhibitory control against substance use
+    is greatest when white matter integrity is highest (highest FA values).
+structural_competency:
+  equity_implications: This mechanism reveals how neurobiological vulnerability interacts with cognitive
+    control. Structural factors affecting brain health (chronic stress from poverty, environmental toxin
+    exposure, lack of treatment access, historical trauma) can compromise white matter integrity and reduce
+    the protective capacity of inhibitory control. Equity implications include differential access to
+    interventions that support neural recovery and cognitive rehabilitation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.155972'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

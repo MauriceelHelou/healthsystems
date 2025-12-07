@@ -1,0 +1,56 @@
+id: hiv_status_diagnosed_to_suicidal_ideation
+name: HIV diagnosis status → Suicidal ideation
+from_node:
+  node_id: hiv_status_diagnosed
+  node_name: HIV diagnosis status
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal ideation
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: HIV diagnosis leads to activation of chronic immune response and systemic
+  inflammation, with elevated pro-inflammatory cytokines (IL-6, TNF-α, IL-1β) that
+  can cross the blood-brain barrier'
+- 'Step 2: Neuroinflammation affects neurotransmitter systems, particularly serotonergic
+  and dopaminergic pathways, contributing to mood dysregulation and depressive symptoms'
+- 'Step 3: HIV can directly affect the central nervous system through viral proteins
+  and HIV-associated neurocognitive changes, potentially affecting brain regions involved
+  in emotional regulation'
+- 'Step 4: Chronic inflammation and neurological changes, combined with the psychological
+  burden of living with HIV, manifest as significantly elevated rates of suicidal
+  ideation (40% prevalence in MSM living with HIV vs. 21% in general MSM population)'
+evidence:
+  quality_rating: A
+  n_studies: 31
+  primary_citation: 'Elham Nouri et al. 2023. The global prevalence of suicidal ideation
+    and suicide attempts among men who have sex with men: a systematic review and
+    meta-analysis. European Journal of Medical Research.'
+  supporting_citations: []
+description: HIV diagnosis is associated with substantially elevated suicidal ideation,
+  with prevalence of 40% among MSM living with HIV compared to 21% in the general
+  MSM population. The biological pathway involves chronic immune activation, neuroinflammation,
+  and potential direct CNS effects of HIV, which dysregulate mood-related neurotransmitter
+  systems and affect brain regions involved in emotional processing, culminating in
+  increased suicidal ideation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 40.0
+    type: prevalence_percentage
+    ci_lower: 35.0
+    ci_upper: 45.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: HIV serostatus
+  direction: strengthens
+  strength: strong
+  description: MSM living with HIV showed substantially higher prevalence of suicidal
+    ideation (40%) compared to MSM overall (21%), representing nearly double the prevalence
+- name: geographic_region
+  direction: strengthens
+  strength: moderate
+  description: European MSM showed higher suicidal ideation prevalence, while American
+    MSM showed higher suicide attempt rates

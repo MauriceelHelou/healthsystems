@@ -1,0 +1,61 @@
+id: NEW:biomarker_feedback_intervention_to_binge_drinking
+name: Biomarker-Based Feedback Intervention for Alcohol Use → Binge Drinking
+from_node:
+  node_id: NEW:biomarker_feedback_intervention
+  node_name: Biomarker-Based Feedback Intervention for Alcohol Use
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare systems integrate biomarker testing (liver injury markers, fibrosis tests) into
+  routine alcohol care'
+- 'Step 2: Clinicians provide personalized advice to patients based on objective biomarker results showing
+  liver damage'
+- 'Step 3: Tangible biological evidence of harm increases patient perception of risk and severity'
+- 'Step 4: Enhanced risk perception motivates behavior change and reduction in alcohol consumption'
+- 'Step 5: Sustained reduction in weekly alcohol intake reduces binge drinking episodes'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: 'Mohsan Subhani et al. 2021. "Does Advice Based on Biomarkers of Liver Injury or Non-Invasive
+    Tests of Liver Fibrosis Impact High-Risk Drinking Behaviour: A Systematic Review With Meta-analysis.."
+    https://doi.org/10.1093/alcalc/agaa143'
+  supporting_citations:
+  - Studies included 14 randomized controlled trials and 2 observational studies (specific citations require
+    full-text access)
+  - Additional citations require full-text access for individual RCT details
+  - Additional citations require full-text access for observational study details
+  doi: 10.1093/alcalc/agaa143
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Adding advice based on biomarkers of liver injury or non-invasive tests of liver fibrosis
+  to routine care significantly reduces weekly alcohol consumption by 74.4 g/week compared to standard
+  care without biomarker feedback.
+quantitative_effects:
+  effect_size:
+    value: -74.4
+    type: standardized_mean_difference
+    ci_lower: -126.1
+    ci_upper: -22.6
+  p_value: 0.005
+  sample_size: 3763
+moderators:
+- name: Type of biomarker used
+  direction: strengthens
+  strength: moderate
+  description: Both liver injury biomarkers and non-invasive liver fibrosis tests showed effectiveness,
+    though specific comparative efficacy not detailed
+structural_competency:
+  equity_implications: This mechanism addresses healthcare system-level intervention rather than individual
+    blame. The structural component involves integrating biomarker testing into routine alcohol care protocols,
+    making early identification and personalized intervention accessible as part of standard healthcare
+    delivery. The effectiveness depends on healthcare system capacity to implement such screening and
+    counseling, highlighting structural barriers in healthcare access and quality.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.015810'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

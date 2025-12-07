@@ -1,0 +1,62 @@
+id: binge_drinking_to_liver_failure_cirrhosis_hospitalization
+name: Binge Drinking → Liver Failure/Cirrhosis Hospitalization
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Failure/Cirrhosis Hospitalization
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Higher alcohol consumption (80g/day) causes accelerated hepatotoxic damage'
+- 'Step 2: Oxidative stress and mitochondrial dysfunction in hepatocytes'
+- 'Step 3: Chronic inflammation triggers progressive hepatic fibrogenesis'
+- 'Step 4: Development of cirrhosis and end-stage liver disease'
+- 'Step 5: Increased morbidity and mortality requiring hospitalization'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'Laura Llamosas-Falcón et al. 2022. "Sex-specific association between alcohol consumption
+    and liver cirrhosis: An updated systematic review and meta-analysis." https://doi.org/10.3389/fgstr.2022.1005729'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes 24 longitudinal and case-control
+    studies
+  - Studies included examined ICD-8/ICD-9 code 571 and ICD-10 codes K70, K73, K74
+  - Pooled analysis from PubMed/Medline and Embase databases
+  doi: 10.3389/fgstr.2022.1005729
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Heavy alcohol consumption at 80g/day is associated with nearly 8-fold increased risk of liver
+  cirrhosis in males. The relationship is non-linear, with risk accelerating at higher consumption levels.
+  This systematic review pooled data from over 3 million participants with over 8,500 liver cirrhosis
+  cases.
+quantitative_effects:
+  effect_size:
+    value: 7.93
+    type: relative_risk
+    ci_lower: 7.12
+    ci_upper: 8.83
+  sample_size: 3037329
+moderators:
+- name: biological_sex
+  direction: strengthens
+  strength: strong
+  description: At 80g/day consumption, females show dramatically higher risk (RR 23.32) compared to males
+    (RR 7.93)
+- name: dose_level
+  direction: strengthens
+  strength: strong
+  description: Non-linear dose-response relationship shows exponentially increasing risk at higher consumption
+    levels
+structural_competency:
+  equity_implications: Structural determinants of heavy alcohol consumption include alcohol marketing,
+    outlet density, pricing policies, occupational stress, economic insecurity, and limited access to
+    treatment services. The dramatic sex differences in vulnerability suggest need for sex-specific clinical
+    guidelines and prevention policies that account for differential biological susceptibility.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.302134'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

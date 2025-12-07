@@ -1,0 +1,75 @@
+id: NEW:integrated_cognitive_behavioral_intervention_to_substance_use_disorder_any
+name: Integrated Cognitive-Behavioral Intervention (CBI) → Substance Use Disorder Any
+from_node:
+  node_id: NEW:integrated_cognitive_behavioral_intervention
+  node_name: Integrated Cognitive-Behavioral Intervention (CBI)
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder Any
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individuals with co-occurring alcohol/drug use disorder (AOD) and mental health disorder (MHD)
+  receive integrated cognitive-behavioral intervention'
+- 'Step 2: Integrated treatment addresses both conditions simultaneously rather than sequentially or separately'
+- 'Step 3: Cognitive restructuring and behavioral skills training target substance use triggers and mental
+  health symptoms'
+- 'Step 4: Reduced substance use outcomes, though effect size is small and non-significant for AOD outcomes
+  alone'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Kahini Mehta et al. 2021. "Cognitive-Behavioral Interventions Targeting Alcohol or
+    Other Drug Use and Co-Occurring Mental Health Disorders: A Meta-Analysis.." https://doi.org/10.1093/alcalc/agab016'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 15 clinical trials across 18 study
+    sites/arms
+  - Studies targeting alcohol use and/or post-traumatic stress disorder showed most promising effects
+  - Studies comparing integrated CBI to single-disorder interventions (typically AOD-only) showed stronger
+    effects
+  doi: 10.1093/alcalc/agab016
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Integrated cognitive-behavioral interventions for individuals with co-occurring alcohol/other
+  drug use disorder and mental health disorder show small effects (g=0.188) on substance use outcomes,
+  though not statistically significant (p=0.061). High heterogeneity (I²=86%) indicates substantial variability
+  across studies.
+quantitative_effects:
+  effect_size:
+    value: 0.188
+    type: standardized_mean_difference
+  p_value: 0.061
+  heterogeneity_i_squared: 86.0
+moderators:
+- name: contrast_condition_type
+  direction: strengthens
+  strength: moderate
+  description: Effect magnitude varied by type of contrast condition - integrated CBI + usual care vs
+    usual care only showed different effects than integrated CBI vs single-disorder intervention
+- name: follow_up_time_point
+  direction: strengthens
+  strength: moderate
+  description: Effects varied between post-treatment and 3-6 month follow-up, with more promising effects
+    at follow-up
+- name: primary_diagnosis_type
+  direction: strengthens
+  strength: moderate
+  description: Effect magnitude varied by primary AOD/MHD diagnosis; interventions targeting alcohol use
+    and/or PTSD showed most promising effects
+- name: study_quality
+  direction: strengthens
+  strength: moderate
+  description: For AOD outcomes, greater effects were observed in higher quality studies
+structural_competency:
+  equity_implications: This mechanism highlights importance of integrated healthcare delivery systems
+    that address co-occurring conditions simultaneously rather than requiring individuals to navigate
+    separate treatment systems. The small effect sizes may reflect structural barriers including fragmented
+    healthcare systems, inadequate insurance coverage for integrated treatment, and workforce shortages
+    in dual-diagnosis care. Equitable access to integrated behavioral health services is a structural
+    determinant of recovery outcomes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.843084'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

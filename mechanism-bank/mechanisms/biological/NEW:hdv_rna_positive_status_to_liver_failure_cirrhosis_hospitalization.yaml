@@ -1,0 +1,52 @@
+id: NEW:hdv_rna_positive_status_to_liver_failure_cirrhosis_hospitalization
+name: Hepatitis Delta Virus RNA Positive Status → Liver Cirrhosis Hospitalization
+from_node:
+  node_id: NEW:hdv_rna_positive_status
+  node_name: Hepatitis Delta Virus RNA Positive Status
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Cirrhosis Hospitalization
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hepatitis Delta Virus (HDV) requires Hepatitis B Virus (HBV) surface antigen
+  (HBsAg) for its replication and assembly, establishing co-infection or superinfection
+  in HBV-positive individuals'
+- 'Step 2: Active HDV replication (indicated by HDV RNA positive status) causes direct
+  hepatocyte injury and triggers robust inflammatory responses in the liver'
+- 'Step 3: Persistent HDV-mediated inflammation accelerates hepatic fibrogenesis through
+  activation of hepatic stellate cells and excessive extracellular matrix deposition'
+- 'Step 4: Progressive fibrosis leads to architectural distortion and nodular regeneration
+  characteristic of cirrhosis'
+- 'Step 5: Compensated cirrhosis progresses to decompensated cirrhosis with portal
+  hypertension and hepatic dysfunction, requiring hospitalization for complications
+  such as ascites, variceal bleeding, or hepatic encephalopathy'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Robert G. Gish et al. 2023. Association of hepatitis delta virus
+    with liver morbidity and mortality: A systematic literature review and meta-analysis.
+    Hepatology.'
+  supporting_citations: []
+description: 'Patients with detectable HDV RNA have a significantly greater risk of
+  progressing to cirrhosis compared to HDV RNA-negative patients. The meta-analysis
+  found HDV RNA positivity associated with a 74% increased risk of compensated cirrhosis
+  (RR: 1.74, 95% CI: 1.24-2.45) and a nearly 4-fold increased risk of decompensated
+  cirrhosis (HR: 3.82, 95% CI: 1.60-9.10). This reflects the aggressive nature of
+  HDV co-infection in accelerating liver disease progression in HBV-infected individuals.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.82
+    type: hazard_ratio
+    ci_lower: 1.6
+    ci_upper: 9.1
+  p_value: null
+  sample_size: null
+moderators:
+- name: Cirrhosis stage
+  direction: strengthens
+  strength: strong
+  description: 'Risk is elevated for both compensated cirrhosis (RR: 1.74) and decompensated
+    cirrhosis (HR: 3.82), with decompensated cirrhosis showing stronger association'

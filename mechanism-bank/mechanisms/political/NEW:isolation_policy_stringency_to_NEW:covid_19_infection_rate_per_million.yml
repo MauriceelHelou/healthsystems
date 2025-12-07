@@ -1,0 +1,74 @@
+id: NEW:isolation_policy_stringency_to_NEW:covid_19_infection_rate_per_million
+name: Isolation Policy Stringency → COVID-19 Infection Rate Per Million Population
+from_node:
+  node_id: NEW:isolation_policy_stringency
+  node_name: Isolation Policy Stringency
+to_node:
+  node_id: NEW:covid_19_infection_rate_per_million
+  node_name: COVID-19 Infection Rate Per Million Population
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Government implements early and aggressive isolation/quarantine policies restricting population
+  movement'
+- 'Step 2: Reduced person-to-person contact decreases opportunities for viral transmission'
+- 'Step 3: Lower effective reproduction number (below R0 of 3.05) limits exponential spread'
+- 'Step 4: Standardized infection rate per million population decreases'
+- 'Step 5: Healthcare system capacity remains within manageable range'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'J. Dong et al. 2020. "A Validation Study for the Successful Isolation Policy in China:
+    a Meta-Analysis in COVID-19." https://doi.org/10.1101/2020.04.15.20065102'
+  supporting_citations:
+  - WHO estimates of R0 referenced as comparison baseline
+  - Prior R0 estimates ranging from 1.95 to 6.49 from multiple studies synthesized
+  - Comparative data from China, Italy, and United States referenced for policy effectiveness
+  doi: 10.1101/2020.04.15.20065102
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: Unexpected error: list index out of range'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis establishing R0 of 3.05 for COVID-19 demonstrates that early and aggressive
+  isolation policies (as implemented in China) were substantially more effective at controlling viral
+  spread compared to permissive measures (as initially implemented in Italy and the United States). The
+  standardized infection rate per million population serves as an index of isolation policy effectiveness.
+quantitative_effects:
+  effect_size:
+    value: 3.05
+    type: beta_coefficient
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Substantial geographic variation observed between China (early aggressive isolation),
+    Italy (permissive early measures), and United States (permissive early measures). Chinese policy was
+    substantially more effective in controlling infection spread.
+moderators:
+- name: timing_of_policy_implementation
+  direction: strengthens
+  strength: strong
+  description: Early implementation of isolation measures was associated with substantially greater effectiveness
+    compared to delayed implementation
+- name: policy_stringency_level
+  direction: strengthens
+  strength: strong
+  description: More aggressive/strict isolation policies showed greater effectiveness than permissive
+    measures
+- name: national_health_capacity
+  direction: strengthens
+  strength: moderate
+  description: Healthcare system capacity determines whether infection severity status exceeds manageable
+    range
+structural_competency:
+  equity_implications: This mechanism appropriately places responsibility on governmental policy decisions
+    rather than individual compliance. The structural determinant is the political decision to implement
+    isolation policies and the timing/stringency of those policies. Differential outcomes between countries
+    reflect policy choices, not individual behaviors. Equity implications include that populations in
+    countries with delayed or weak policy responses experienced greater disease burden regardless of individual
+    protective behaviors.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.601418'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

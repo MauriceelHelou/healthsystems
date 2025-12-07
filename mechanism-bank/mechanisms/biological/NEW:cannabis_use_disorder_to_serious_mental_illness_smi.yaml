@@ -1,0 +1,57 @@
+id: NEW:cannabis_use_disorder_to_serious_mental_illness_smi
+name: Cannabis Use Disorder → Serious Mental Illness
+from_node:
+  node_id: NEW:cannabis_use_disorder
+  node_name: Cannabis Use Disorder
+to_node:
+  node_id: serious_mental_illness_smi
+  node_name: Serious Mental Illness
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Cannabis use disorder involves chronic exposure to cannabinoids, particularly
+  THC, which binds to CB1 receptors in the brain'
+- 'Step 2: Chronic cannabinoid exposure disrupts the endocannabinoid system, affecting
+  dopaminergic and glutamatergic neurotransmission in brain regions involved in psychosis
+  and mood regulation'
+- 'Step 3: These neurobiological changes, combined with potential genetic vulnerabilities,
+  increase susceptibility to developing serious mental illnesses including schizophrenia,
+  psychotic disorders, and severe mood disorders'
+evidence:
+  quality_rating: A
+  n_studies: 37
+  primary_citation: K. Kozak et al. 2021. A systematic review and meta-analysis of
+    sex differences in cannabis use disorder amongst people with comorbid mental illness.
+    The American Journal of Drug and Alcohol Abuse.
+  supporting_citations: []
+description: Cannabis use disorder is strongly associated with serious mental illness,
+  particularly schizophrenia and psychotic disorders. A systematic review of 37 studies
+  found high rates of comorbid CUD among individuals with mental illness, with males
+  showing 2.6 times higher odds of having CUD comorbid with schizophrenia compared
+  to females. The relationship appears bidirectional, with mental illness increasing
+  CUD risk in females for most conditions except psychotic disorders and depression.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.6
+    type: odds_ratio
+    ci_lower: 2.5
+    ci_upper: 2.7
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Males are approximately 2.6 times more likely than females to have
+    CUD comorbid with schizophrenia and other psychotic disorders. However, among
+    females, mental illness generally increases the likelihood of having CUD, suggesting
+    bidirectional vulnerability patterns that differ by sex.
+- name: type_of_mental_illness
+  direction: strengthens
+  strength: moderate
+  description: The association between CUD and SMI varies by diagnosis type - strongest
+    for schizophrenia and psychotic disorders (OR ~2.6), moderate for mood and substance
+    use disorders (OR 1-2.2), and reversed for anxiety and antisocial personality
+    disorder

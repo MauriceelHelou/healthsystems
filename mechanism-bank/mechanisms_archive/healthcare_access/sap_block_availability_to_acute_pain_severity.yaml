@@ -1,0 +1,44 @@
+id: sap_block_availability_to_acute_pain_severity
+name: Availability of Serratus Anterior Plane Block in Emergency Department → Acute
+  Pain Severity Following Rib Fractures
+from_node:
+  node_id: sap_block_availability
+  node_name: Availability of Serratus Anterior Plane Block in Emergency Department
+to_node:
+  node_id: acute_pain_severity
+  node_name: Acute Pain Severity Following Rib Fractures
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Emergency department implementation of SAP block as pain management intervention
+  provides regional anesthesia option for chest trauma patients'
+- 'Step 2: SAP block performed by emergency physicians delivers local anesthetic to
+  serratus anterior plane, blocking intercostal nerve transmission'
+- 'Step 3: Nerve blockade reduces nociceptive signaling from fractured ribs to central
+  nervous system'
+- 'Step 4: Reduced pain severity measured at 3, 6, and 18 hours post-intervention
+  compared to standard therapy alone'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'S. Serra et al. 2024. "Efficacy and safety of the serratus anterior
+    plane block (SAP block) for pain management in patients with multiple rib fractures
+    in the emergency department: a retrospective study." *European Journal of Trauma
+    and Emergency Surgery*. https://doi.org/10.1007/s00068-024-02597-6'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.566971'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: injury_severity_score
+  direction: weakens
+  strength: moderate
+  description: Median injury severity score of 16 and thoracic trauma severity score
+    of 8 may moderate effectiveness of pain relief
+- name: time_since_block
+  direction: weakens
+  strength: moderate
+  description: Pain relief demonstrated at 3, 6, and 18 hours but temporal decline
+    suggests waning effectiveness of single block

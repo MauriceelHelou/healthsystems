@@ -1,0 +1,52 @@
+id: NEW:gross_domestic_product_per_capita_to_NEW:age_of_people_who_inject_drugs
+name: Gross Domestic Product Per Capita → Age of People Who Inject Drugs
+from_node:
+  node_id: NEW:gross_domestic_product_per_capita
+  node_name: Gross Domestic Product Per Capita
+to_node:
+  node_id: NEW:age_of_people_who_inject_drugs
+  node_name: Age of People Who Inject Drugs
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher national GDP reflects longer-term economic development and demographic transitions'
+- 'Step 2: More developed economies have aging PWID populations who initiated use in earlier decades'
+- 'Step 3: Economic development may be associated with harm reduction keeping PWID alive longer'
+- 'Step 4: Older median age of PWID population reflects survival and established drug use epidemics'
+evidence:
+  quality_rating: A
+  n_studies: 741
+  primary_citation: 'Lindsey A Hines et al. 2020. "Associations between national development indicators
+    and the age profile of people who inject drugs: results from a global systematic review and meta-analysis.."
+    https://doi.org/10.1016/S2214-109X(19)30462-0'
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review of 741 studies across
+    93 countries
+  - World Bank national development indicators were used as data source
+  - DerSimonian-Laird methodology applied for meta-analysis
+  doi: 10.1016/S2214-109X(19)30462-0
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher GDP per capita at the country level is associated with older median age of people
+  who inject drugs, with each $1000 GDP increase corresponding to 0.13 years older median age.
+quantitative_effects:
+  effect_size:
+    value: 0.13
+    type: beta_coefficient
+    ci_lower: 0.06
+    ci_upper: 0.2
+  p_value: 0.0001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Substantial regional variation observed; regions with younger PWID populations (e.g.,
+    eastern Europe at 43.4% aged ≤25) had low coverage of blood-borne virus prevention interventions
+structural_competency:
+  equity_implications: National wealth and economic development shape the demographics of drug-using populations
+    through structural forces including healthcare access, survival rates, and historical patterns of
+    drug market development. This is not about individual choice but macroeconomic determinants.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.356116'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,53 @@
+id: reduced_face_to_face_triage_to_thirty_day_mortality
+name: Reduced Face-to-Face Medical Contact After Telephone Triage → 30-Day Mortality
+  After Medical Helpline Call
+from_node:
+  node_id: reduced_face_to_face_triage
+  node_name: Reduced Face-to-Face Medical Contact After Telephone Triage
+to_node:
+  node_id: thirty_day_mortality
+  node_name: 30-Day Mortality After Medical Helpline Call
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Telephone triage decision against face-to-face contact prevents direct
+  physical examination and diagnostic testing'
+- 'Step 2: Serious conditions requiring immediate intervention may be missed or underestimated
+  without in-person assessment'
+- 'Step 3: Delayed diagnosis and treatment initiation allows disease progression during
+  critical time windows'
+- 'Step 4: Patients with unrecognized serious conditions deteriorate at home without
+  appropriate medical monitoring'
+- 'Step 5: Increased risk of mortality within 30 days due to missed or delayed critical
+  interventions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: H. Gamst-Jensen et al. 2021. "Socioeconomic inequality in telephone
+    triage on triage response, hospitalization and 30-day mortality.." *European Journal
+    of Public Health*. https://doi.org/10.1093/eurpub/ckaa242
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.949914'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: condition_severity
+  direction: strengthens
+  strength: strong
+  description: More severe or acute conditions have greater mortality risk when face-to-face
+    assessment is delayed or denied
+- name: triage_nurse_experience
+  direction: weakens
+  strength: moderate
+  description: More experienced triage nurses may better identify high-risk cases
+    by telephone, reducing mortality from missed face-to-face assessments
+- name: access_to_primary_care
+  direction: weakens
+  strength: moderate
+  description: Strong primary care relationships may provide alternative pathways
+    for evaluation when telephone triage does not recommend face-to-face contact
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/reduced_face_to_face_triage_to_thirty_day_mortality.yaml
+_category: healthcare_access

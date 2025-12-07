@@ -1,0 +1,63 @@
+id: NEW:aud_pharmacotherapy_availability_to_alcohol_use_disorder
+name: AUD Pharmacotherapy Availability → Alcohol Use Disorder
+from_node:
+  node_id: NEW:aud_pharmacotherapy_availability
+  node_name: AUD Pharmacotherapy Availability
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Laboratory trials screen medications for efficacy using cue-exposure paradigms'
+- 'Step 2: Medication-related reductions in cue-reactivity serve as early efficacy signals'
+- 'Step 3: Successful laboratory screening informs medications development pipeline'
+- 'Step 4: Effective medications become available for clinical AUD treatment'
+- 'Step 5: Access to effective pharmacotherapy reduces AUD severity and relapse risk'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'Lindsay R Meredith et al. 2023. "Testing pharmacotherapies for alcohol use disorder
+    with cue exposure paradigms: A systematic review and quantitative synthesis of human laboratory trial
+    methodology.." https://doi.org/10.1111/acer.15143'
+  supporting_citations:
+  - 19 different medications tested across 36 trials in systematic review
+  - 8 pharmacotherapies demonstrated efficacy on cue-induced craving outcomes
+  - Additional citations require full-text access for specific medication trial identification
+  doi: 10.1111/acer.15143
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'The review identified that 8 pharmacotherapies demonstrated small-to-medium effects (Cohen''s
+  d range: |0.24 - 0.64|) on reducing cue-induced craving compared to placebo across 28 randomized trials.
+  These laboratory findings inform the medications development pipeline for AUD treatment, with the upper
+  effect size of 0.64 representing the strongest medication effects observed.'
+quantitative_effects:
+  effect_size:
+    value: 0.64
+    type: standardized_mean_difference
+  sample_size: 1640
+moderators:
+- name: paradigm_design_heterogeneity
+  direction: weakens
+  strength: moderate
+  description: Heterogeneous cue exposure design, parameter testing, and outcome reporting across trials
+    may limit comparability and medication development efficiency
+- name: outcome_reporting_quality
+  direction: weakens
+  strength: moderate
+  description: Relatively few trials included means for craving by medication condition in text (k=7)
+    or figure (k=18), limiting meta-analytic precision
+structural_competency:
+  equity_implications: The pathway from medication development to AUD treatment involves multiple structural
+    factors including research funding allocation, pharmaceutical development incentives, FDA approval
+    processes, insurance coverage decisions, and healthcare system capacity for addiction treatment. Inequities
+    in access to AUD pharmacotherapy reflect broader disparities in substance use treatment access, with
+    underserved populations facing greater barriers to medication-assisted treatment. The review's focus
+    on standardizing methodology aims to accelerate medication development, which could ultimately improve
+    treatment access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.440534'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

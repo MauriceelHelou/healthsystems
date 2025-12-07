@@ -1,0 +1,57 @@
+id: NEW:pnpla3_rs738409_g_allele_to_NEW:alcoholic_liver_disease_risk
+name: PNPLA3 rs738409 G Allele (I148M Variant) → Alcoholic Liver Disease Risk
+from_node:
+  node_id: NEW:pnpla3_rs738409_g_allele
+  node_name: PNPLA3 rs738409 G Allele (I148M Variant)
+to_node:
+  node_id: NEW:alcoholic_liver_disease_risk
+  node_name: Alcoholic Liver Disease Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: The PNPLA3 rs738409 C>G polymorphism results in an isoleucine to methionine
+  substitution at position 148 (I148M) in the adiponutrin/PNPLA3 protein'
+- 'Step 2: The I148M variant impairs the normal lipase activity of PNPLA3, reducing
+  its ability to hydrolyze triglycerides in hepatocytes'
+- 'Step 3: Impaired lipid metabolism leads to increased hepatic lipid accumulation
+  and steatosis, particularly under conditions of alcohol exposure'
+- 'Step 4: The combination of alcohol-induced hepatotoxicity and genetically-impaired
+  lipid handling creates synergistic hepatocellular stress and inflammation'
+- 'Step 5: Progressive liver injury through an additive genetic model leads to increased
+  risk of alcoholic liver disease, particularly alcoholic liver cirrhosis'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: 'A-J Chamorro et al. 2014. Systematic review with meta-analysis:
+    the I148M variant of patatin-like phospholipase domain-containing 3 gene (PNPLA3)
+    is significantly associated with alcoholic liver cirrhosis. Alimentary pharmacology
+    & therapeutics.'
+  supporting_citations: []
+description: The PNPLA3 rs738409 G allele (I148M variant) significantly increases
+  the risk of alcoholic liver disease, particularly alcoholic liver cirrhosis. This
+  meta-analysis of 11 studies (3,495 ALD patients and 5,038 controls) demonstrates
+  a clear association following an additive genetic model, where homozygous GG carriers
+  have over 4-fold increased odds of alcoholic liver cirrhosis compared to CC carriers,
+  while heterozygous GC carriers have approximately 2-fold increased risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 4.3
+    type: odds_ratio
+    ci_lower: 3.25
+    ci_upper: 5.69
+  p_value: 1.0e-05
+  sample_size: 8533
+moderators:
+- name: genotype_dosage
+  direction: strengthens
+  strength: strong
+  description: Additive genetic model observed - GG homozygotes show stronger association
+    (OR 4.30) compared to GC heterozygotes (OR 1.91), suggesting dose-dependent effect
+    of G allele
+- name: disease_severity
+  direction: strengthens
+  strength: strong
+  description: Association is strongest and most consistent for alcoholic liver cirrhosis
+    compared to other forms of alcoholic liver disease

@@ -1,0 +1,56 @@
+id: NEW:integrated_cognitive_behavioral_therapy_icbt_to_NEW:ptsd_severity
+name: Integrated Cognitive Behavioral Therapy (ICBT) → PTSD Severity
+from_node:
+  node_id: NEW:integrated_cognitive_behavioral_therapy_icbt
+  node_name: Integrated Cognitive Behavioral Therapy (ICBT)
+to_node:
+  node_id: NEW:ptsd_severity
+  node_name: PTSD Severity
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: ICBT integrates trauma-focused cognitive behavioral techniques with substance
+  use disorder treatment components, addressing both conditions simultaneously'
+- 'Step 2: Cognitive restructuring components help patients identify and modify maladaptive
+  trauma-related cognitions and beliefs that maintain PTSD symptoms'
+- 'Step 3: Behavioral interventions target avoidance patterns and substance use as
+  maladaptive coping strategies, replacing them with healthier coping skills'
+- 'Step 4: Integrated approach addresses the bidirectional relationship between PTSD
+  and substance use, preventing substance use from interfering with trauma processing'
+- 'Step 5: Reduction in PTSD symptom severity as measured by standardized assessments
+  post-treatment'
+evidence:
+  quality_rating: A
+  n_studies: 27
+  primary_citation: N. Roberts et al. 2022. A systematic review and meta-analysis
+    of psychological interventions for comorbid post-traumatic stress disorder and
+    substance use disorder. European Journal of Psychotraumatology.
+  supporting_citations: []
+description: Integrated Cognitive Behavioral Therapy (ICBT) demonstrates a modest
+  but significant negative effect on PTSD severity in individuals with comorbid PTSD
+  and substance use disorder. The meta-analysis found a standardized mean difference
+  of -0.33, indicating that ICBT reduces PTSD symptoms compared to control conditions.
+  This effect was specific to ICBT among cognitive restructuring interventions, suggesting
+  its integrated approach targeting both conditions simultaneously provides added
+  benefit for PTSD outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.33
+    type: standardized_mean_difference
+    ci_lower: -0.62
+    ci_upper: -0.04
+  p_value: null
+  sample_size: null
+moderators:
+- name: treatment_engagement
+  direction: strengthens
+  strength: strong
+  description: High dropout rates across studies indicate that treatment effects are
+    stronger among those who complete treatment; many patients do not fully engage
+- name: comorbid_substance_use_disorder
+  direction: weakens
+  strength: moderate
+  description: Presence of comorbid SUD complicates treatment and may attenuate effects
+    on PTSD severity compared to PTSD-only populations

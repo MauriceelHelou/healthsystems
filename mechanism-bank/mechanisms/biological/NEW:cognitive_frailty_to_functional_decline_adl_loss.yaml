@@ -1,0 +1,57 @@
+id: NEW:cognitive_frailty_to_functional_decline_adl_loss
+name: Cognitive Frailty → Functional Decline ADL Loss
+from_node:
+  node_id: NEW:cognitive_frailty
+  node_name: Cognitive Frailty
+to_node:
+  node_id: functional_decline_adl_loss
+  node_name: Functional Decline ADL Loss
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Cognitive frailty represents the co-occurrence of physical frailty and
+  mild cognitive impairment, creating a synergistic vulnerability state in older adults'
+- 'Step 2: Physical frailty components (weakness, slowness, exhaustion, low activity,
+  weight loss) directly impair capacity for performing activities of daily living'
+- 'Step 3: Cognitive impairment compromises executive function, planning, sequencing,
+  and memory required for complex ADL tasks'
+- 'Step 4: The combined physical-cognitive burden creates multiplicative effects on
+  functional capacity, as cognitive deficits impair compensatory strategies for physical
+  limitations'
+- 'Step 5: Progressive decline in both domains leads to accelerated disability and
+  loss of independence in basic and instrumental ADLs'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Baoyu Chen et al. 2022. Impact of frailty, mild cognitive impairment
+    and cognitive frailty on adverse health outcomes among community-dwelling older
+    adults: A systematic review and meta-analysis. Frontiers in Medicine.'
+  supporting_citations: []
+description: 'Cognitive frailty, the combination of physical frailty and mild cognitive
+  impairment, dramatically increases the risk of disability and functional decline.
+  This meta-analysis of 22 cohort studies found that cognitive frailty was associated
+  with an 11-fold increased risk of disability compared to robust older adults (RR
+  = 11.32, 95% CI: 4.14-30.97). This effect is substantially larger than physical
+  frailty alone (RR = 5.91 for disability), indicating synergistic effects between
+  physical and cognitive decline on functional outcomes.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 11.32
+    type: relative_risk
+    ci_lower: 4.14
+    ci_upper: 30.97
+  p_value: null
+  sample_size: 71544
+moderators:
+- name: frailty_severity
+  direction: strengthens
+  strength: strong
+  description: Full frailty (vs pre-frailty) combined with cognitive impairment produces
+    stronger disability risk
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Studies included older adults with mean ages ranging from 65.1 to 93.6
+    years, suggesting age-related vulnerability

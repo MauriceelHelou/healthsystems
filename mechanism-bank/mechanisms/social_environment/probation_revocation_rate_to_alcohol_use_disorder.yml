@@ -1,0 +1,50 @@
+id: probation_revocation_rate_to_alcohol_use_disorder
+name: Probation System Contact → Alcohol Use Disorder
+from_node:
+  node_id: probation_revocation_rate
+  node_name: Probation System Contact
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Probation populations show 53-69% alcohol use disorder prevalence'
+- 'Step 2: Community supervision creates ongoing stress and surveillance'
+- 'Step 3: Alcohol-related probation violations may lead to incarceration rather than treatment'
+- 'Step 4: Limited integration of evidence-based AUD treatment within probation services'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: Dorothy Newbury-Birch et al. 2016. "A rapid systematic review of what we know about
+    alcohol use disorders and brief interventions in the criminal justice system.." https://doi.org/10.1108/IJPH-08-2015-0024
+  supporting_citations:
+  - UK probation service prevalence studies 2000-2014
+  - Studies using validated AUDIT screening tool
+  - Additional citations require full-text access
+  doi: 10.1108/IJPH-08-2015-0024
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: In UK probation settings, 53-69% of individuals screened positive for alcohol use disorder,
+  highlighting the community supervision system as another point where AUD prevalence far exceeds general
+  population rates.
+quantitative_effects:
+  effect_size:
+    value: 69.0
+    type: percentage_change
+    ci_lower: 53.0
+    ci_upper: 69.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: UK probation setting data
+structural_competency:
+  equity_implications: Probation could serve as a community-based intervention point for AUD, but the
+    review found limited evidence for brief intervention effectiveness in this setting. This represents
+    a structural gap where the criminal justice system identifies but fails to effectively treat alcohol
+    disorders.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.542944'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

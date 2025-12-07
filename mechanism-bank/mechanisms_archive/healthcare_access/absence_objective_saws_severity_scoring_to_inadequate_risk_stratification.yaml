@@ -1,0 +1,43 @@
+id: absence_objective_saws_severity_scoring_to_inadequate_risk_stratification
+name: Absence of Objective SAWS Severity Scoring Systems → Inadequate Risk Stratification
+  and Treatment Intensity
+from_node:
+  node_id: absence_objective_saws_severity_scoring
+  node_name: Absence of Objective SAWS Severity Scoring Systems
+to_node:
+  node_id: inadequate_risk_stratification
+  node_name: Inadequate Risk Stratification and Treatment Intensity
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: No validated objective severity scoring systems exist for acutely ill patients
+  with SAWS'
+- 'Step 2: Clinicians cannot accurately risk-stratify patients or determine appropriate
+  treatment intensity'
+- 'Step 3: Some patients receive insufficient treatment while others receive excessive
+  interventions'
+- 'Step 4: Increased risk of both under-treatment complications and over-treatment
+  adverse events'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'T. Steel et al. 2021. "Research Needs for Inpatient Management
+    of Severe Alcohol Withdrawal Syndrome: An Official American Thoracic Society Research
+    Statement." *American Journal of Respiratory and Critical Care Medicine*. https://doi.org/10.1164/rccm.202108-1845ST'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.719035'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: electronic_health_record_availability
+  direction: weakens
+  strength: moderate
+  description: EHR data could be harnessed to develop objective scoring systems and
+    identify risk factors
+- name: critical_illness_severity
+  direction: strengthens
+  strength: strong
+  description: Lack of objective scoring is particularly problematic for the most
+    critically ill patients where treatment decisions are most consequential

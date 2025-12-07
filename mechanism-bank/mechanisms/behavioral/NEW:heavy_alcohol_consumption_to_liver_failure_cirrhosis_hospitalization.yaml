@@ -1,0 +1,55 @@
+id: NEW:heavy_alcohol_consumption_to_liver_failure_cirrhosis_hospitalization
+name: Heavy Alcohol Consumption (>110g/day) → Liver Failure/Cirrhosis Hospitalization
+from_node:
+  node_id: NEW:heavy_alcohol_consumption
+  node_name: Heavy Alcohol Consumption (>110g/day)
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Failure/Cirrhosis Hospitalization
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Chronic heavy alcohol consumption (>110g/day) leads to repeated hepatotoxic
+  insults as ethanol and its metabolite acetaldehyde damage hepatocytes'
+- 'Step 2: Sustained hepatocellular injury triggers inflammatory responses, oxidative
+  stress, and activation of hepatic stellate cells'
+- 'Step 3: Progressive fibrosis develops as collagen deposition replaces functional
+  liver tissue over years of heavy drinking'
+- 'Step 4: Continued alcohol exposure leads to advanced fibrosis progressing to cirrhosis
+  with loss of hepatic architecture and function'
+- 'Step 5: Decompensated cirrhosis manifests as liver failure requiring hospitalization
+  for complications (ascites, variceal bleeding, hepatic encephalopathy)'
+evidence:
+  quality_rating: A
+  n_studies: 38
+  primary_citation: 'Gro Askgaard et al. 2019. Opportunities to Prevent Alcoholic
+    Liver Cirrhosis in High-Risk Populations: A Systematic Review With Meta-Analysis.
+    The American journal of gastroenterology.'
+  supporting_citations: []
+description: Heavy alcohol consumption (>110g/day) is strongly associated with alcoholic
+  liver cirrhosis and subsequent hospitalization. A systematic review with meta-analysis
+  of 38 studies (N=120,928) found that 45% of alcoholic liver cirrhosis patients consumed
+  >110g alcohol/day, significantly higher than general population consumption levels.
+  Alcohol-problem cohorts demonstrated high-risk status with cirrhosis incidence of
+  7-16% over 8-12 years of follow-up.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.45
+    type: proportion
+    ci_lower: 0.34
+    ci_upper: 0.56
+  p_value: null
+  sample_size: 120928
+moderators:
+- name: Duration of heavy drinking
+  direction: strengthens
+  strength: strong
+  description: Incidence of alcoholic liver cirrhosis ranges from 7-16% after 8-12
+    years in alcohol-problem cohorts, indicating cumulative exposure effect
+- name: Previous alcohol-related healthcare contact
+  direction: strengthens
+  strength: moderate
+  description: 40-61% of alcoholic liver cirrhosis patients had previous alcohol-related
+    healthcare contacts, suggesting escalating severity pattern

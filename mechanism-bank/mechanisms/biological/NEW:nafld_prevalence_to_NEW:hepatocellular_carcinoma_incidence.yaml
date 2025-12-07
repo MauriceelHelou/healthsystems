@@ -1,0 +1,68 @@
+id: NEW:nafld_prevalence_to_NEW:hepatocellular_carcinoma_incidence
+name: Non-alcoholic fatty liver disease prevalence → Hepatocellular carcinoma incidence
+from_node:
+  node_id: NEW:nafld_prevalence
+  node_name: Non-alcoholic fatty liver disease prevalence
+to_node:
+  node_id: NEW:hepatocellular_carcinoma_incidence
+  node_name: Hepatocellular carcinoma incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: NAFLD develops due to hepatic fat accumulation exceeding 5% of liver weight
+  in the absence of significant alcohol consumption, driven by metabolic dysfunction
+  including insulin resistance and obesity'
+- 'Step 2: Chronic hepatic steatosis progresses to non-alcoholic steatohepatitis (NASH)
+  with inflammation, hepatocyte injury, and oxidative stress'
+- 'Step 3: Persistent inflammation and hepatocyte damage trigger fibrogenic pathways,
+  leading to progressive liver fibrosis and cirrhosis'
+- 'Step 4: The chronically inflamed and fibrotic liver microenvironment promotes genomic
+  instability, aberrant cell proliferation, and impaired tumor suppression mechanisms'
+- 'Step 5: Accumulated genetic mutations and epigenetic alterations in hepatocytes
+  lead to malignant transformation and development of hepatocellular carcinoma'
+evidence:
+  quality_rating: A
+  n_studies: 237
+  primary_citation: 'Jie Li et al. 2019. Prevalence, incidence, and outcome of non-alcoholic
+    fatty liver disease in Asia, 1999-2019: a systematic review and meta-analysis.
+    The lancet. Gastroenterology & hepatology.'
+  supporting_citations: []
+description: Non-alcoholic fatty liver disease (NAFLD) increases the incidence of
+  hepatocellular carcinoma through a progressive pathway involving chronic hepatic
+  inflammation, steatohepatitis, fibrosis, and eventual cirrhosis. This systematic
+  review and meta-analysis of 237 studies encompassing over 13 million participants
+  in Asia demonstrated that NAFLD patients have an annual hepatocellular carcinoma
+  incidence rate of 1.8 cases per 1000 person-years. The rising prevalence of NAFLD
+  over time (from 25% to 34% between 1999-2017) indicates an increasing burden of
+  NAFLD-related hepatocellular carcinoma.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.8
+    type: incidence_rate
+    ci_lower: 0.8
+    ci_upper: 3.1
+  p_value: null
+  sample_size: 13044518
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Older individuals with NAFLD are at higher risk for hepatocellular
+    carcinoma development
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Male sex is associated with higher risk of NAFLD-related hepatocellular
+    carcinoma
+- name: obesity
+  direction: strengthens
+  strength: strong
+  description: Obesity is a key driver of NAFLD progression and increases hepatocellular
+    carcinoma risk
+- name: time_period
+  direction: strengthens
+  strength: moderate
+  description: NAFLD prevalence increased significantly over time (25.28% in 1999-2005
+    to 33.90% in 2012-2017), suggesting increasing HCC burden

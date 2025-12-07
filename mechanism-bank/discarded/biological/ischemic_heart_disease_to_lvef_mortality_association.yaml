@@ -1,0 +1,45 @@
+id: ischemic_heart_disease_to_lvef_mortality_association
+name: Ischemic Heart Disease Etiology → Strength of LVEF-Mortality Association
+from_node:
+  node_id: ischemic_heart_disease
+  node_name: Ischemic Heart Disease Etiology
+to_node:
+  node_id: lvef_mortality_association
+  node_name: Strength of LVEF-Mortality Association
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: In ischemic heart disease, reduced LVEF reflects extent of myocardial infarction
+  and non-viable scar tissue'
+- 'Step 2: Ischemic cardiomyopathy is associated with ongoing coronary insufficiency
+  and risk of recurrent ischemic events'
+- 'Step 3: Progressive ischemia-driven ventricular remodeling creates substrate for
+  ventricular arrhythmias'
+- 'Step 4: Combined effects of reduced contractility, recurrent ischemia, and arrhythmia
+  risk create strong continuous relationship between lower LVEF and mortality in ischemic
+  HF'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Darryl P Leong et al. 2025. "The risk of death according to left
+    ventricular ejection fraction and right ventricular dilatation in 17 321 adults
+    with heart failure from 40 high-, middle- and low-income countries - A Global
+    Congestive Heart Failure (G-CHF) study.." *European journal of heart failure*.
+    https://doi.org/10.1002/ejhf.3550
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.467087'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: heart_failure_etiology
+  direction: strengthens
+  strength: strong
+  description: Significant interaction between HF etiology and LVEF-mortality relationship
+    (p=0.0010). In ischemic HF and idiopathic dilated cardiomyopathy, continuous inverse
+    association between LVEF and mortality was observed, but not in hypertensive,
+    valvular, or other HF types.
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/ischemic_heart_disease_to_lvef_mortality_association.yaml
+_category: biological

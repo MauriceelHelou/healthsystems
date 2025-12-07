@@ -1,0 +1,46 @@
+id: drought_exposure_to_acute_pancreatitis
+name: Drought Exposure → Acute Pancreatitis
+from_node:
+  node_id: drought_exposure
+  node_name: Drought Exposure
+  _original_id: antimicrobial_drug_exposure
+to_node:
+  node_id: acute_pancreatitis
+  node_name: Acute Pancreatitis
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Prescription and administration of antimicrobial drugs for infectious disease
+  treatment'
+- 'Step 2: Drug-induced biochemical or immunologic reactions affecting pancreatic
+  tissue'
+- 'Step 3: Activation of digestive enzymes within pancreatic tissue through drug-mediated
+  mechanisms'
+- 'Step 4: Development of acute pancreatic inflammation and clinical acute pancreatitis'
+evidence:
+  quality_rating: A
+  n_studies: 51
+  primary_citation: 'Angelo Del Gaudio et al. 2023. "Drug-Induced Acute Pancreatitis
+    in Adults: Focus on Antimicrobial and Antiviral Drugs, a Narrative Review." *Antibiotics*.
+    https://doi.org/10.3390/antibiotics12101495'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.174295'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: drug_type
+  direction: strengthens
+  strength: strong
+  description: 'Specific antimicrobial drugs show stronger associations: didanosine,
+    protease inhibitors, and metronidazole have the most evidence of correlation with
+    acute pancreatitis compared to other antimicrobial agents'
+- name: rechallenge_positive
+  direction: strengthens
+  strength: strong
+  description: Positive rechallenge (recurrence of pancreatitis upon drug re-administration)
+    strengthens causal inference for specific drug-pancreatitis associations
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/antimicrobial_drug_exposure_to_acute_pancreatitis.yaml
+_category: healthcare_access

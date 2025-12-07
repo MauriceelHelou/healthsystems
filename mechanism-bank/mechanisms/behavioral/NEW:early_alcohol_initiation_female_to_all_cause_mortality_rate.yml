@@ -1,0 +1,55 @@
+id: NEW:early_alcohol_initiation_female_to_all_cause_mortality_rate
+name: Early Alcohol Initiation in Females → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:early_alcohol_initiation_female
+  node_name: Early Alcohol Initiation in Females
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Females have different alcohol metabolism due to lower body water content and different enzyme
+  activity'
+- 'Step 2: Same alcohol doses produce higher blood alcohol concentrations and greater tissue exposure
+  in females'
+- 'Step 3: Early initiation during adolescence may have greater impact on female physiology'
+- 'Step 4: Cumulative alcohol-related damage is accelerated, leading to substantially elevated mortality
+  risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Horim A Hwang et al. 2025. "Age at first drink as a predictor of all-cause mortality
+    of middle-aged Koreans." https://doi.org/10.1093/ije/dyaf061
+  supporting_citations:
+  - Additional citations require full-text access - abstract references Korean National Health and Nutrition
+    Examination Survey data
+  - Additional citations require full-text access - abstract references cause-of-death statistics linkage
+  - Additional citations require full-text access - abstract references public health policy on age restrictions
+  doi: 10.1093/ije/dyaf061
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Female drinkers who initiated alcohol before age 19 had double the mortality risk (102% increase)
+  compared to female lifetime abstainers, indicating significantly stronger effects in women than the
+  overall population
+quantitative_effects:
+  effect_size:
+    value: 2.02
+    type: hazard_ratio
+    ci_lower: 1.26
+    ci_upper: 3.25
+  sample_size: 36159
+structural_competency:
+  equity_implications: This sex-stratified finding highlights the need for gender-responsive alcohol policy.
+    Structural factors including changing gender norms around alcohol consumption, targeted marketing
+    to women, and lack of sex-specific prevention messaging contribute to this disparity. Public health
+    interventions should address the differential vulnerability of women to early alcohol initiation effects.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.668054'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

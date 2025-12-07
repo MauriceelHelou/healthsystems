@@ -1,0 +1,68 @@
+id: NEW:alcohol_cup_pricing_at_parties_to_binge_drinking
+name: Alcohol Cup Pricing at Off-Campus Parties → Binge Drinking
+from_node:
+  node_id: NEW:alcohol_cup_pricing_at_parties
+  node_name: Alcohol Cup Pricing at Off-Campus Parties
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Off-campus parties offer refillable cups allowing unlimited alcohol access for a single price'
+- 'Step 2: Lower cup prices (≤$5) result in 75%+ likelihood of purchase, creating high accessibility'
+- 'Step 3: The ''bottomless cup'' model eliminates per-drink cost barriers, encouraging continued consumption'
+- 'Step 4: Maximum expenditure willingness predicts both alcohol consumption quantity and alcohol-related
+  consequences'
+- 'Step 5: Higher prices ($10+) reduce purchase probability to ~47%, potentially limiting consumption'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Mikayla N Morrell et al. 2020. "The behavioral economics of the bottomless cup: The
+    effects of alcohol cup price on consumption in college students.." https://doi.org/10.1037/pha0000360'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references Alcohol Purchase Task (APT) methodology
+  - Additional citations require full-text access - abstract references behavioral economic parameters
+    literature
+  - Additional citations require full-text access - abstract references high-risk drinking situations
+    research
+  doi: 10.1037/pha0000360
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2021, source is 2020'
+last_updated: '2025-12-06'
+version: '2.0'
+description: This study demonstrates that pricing structures at unregulated off-campus college parties
+  function as a structural determinant of binge drinking. The 'bottomless cup' model, where a single payment
+  grants unlimited refills, removes ongoing cost barriers to consumption. Behavioral economic analysis
+  shows that cup prices below $5 maintain high purchase probability (75%+), while prices at $10 reduce
+  participation to 47%. The structural availability and pricing of alcohol in unregulated settings shapes
+  consumption patterns independently of individual intentions.
+quantitative_effects:
+  effect_size:
+    value: 75.0
+    type: percentage_change
+moderators:
+- name: cup_price_threshold
+  direction: weakens
+  strength: strong
+  description: At cup prices of $10, purchase probability drops from 75% to approximately 47%, suggesting
+    price thresholds that significantly reduce demand
+- name: maximum_expenditure_willingness
+  direction: strengthens
+  strength: moderate
+  description: Higher maximum expenditure on CPPT uniquely predicts greater alcohol consumption and consequences
+    beyond other behavioral economic measures
+structural_competency:
+  equity_implications: This mechanism appropriately focuses on the structural pricing environment rather
+    than blaming individual students for drinking. The study identifies how economic incentive structures
+    at unregulated parties promote heavy drinking. Equity implications include that students with fewer
+    financial resources may be more price-sensitive, while the unregulated nature of off-campus parties
+    represents a gap in institutional alcohol policy coverage. Addressing this requires structural interventions
+    targeting party economics and regulation, not individual behavior change campaigns.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.251123'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

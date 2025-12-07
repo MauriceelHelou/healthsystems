@@ -1,0 +1,62 @@
+id: incarceration_rate_to_substance_use_disorder_any
+name: Incarceration Rate → Substance Use Disorder (Any)
+from_node:
+  node_id: incarceration_rate
+  node_name: Incarceration Rate
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: High incarceration rates result in large populations of individuals with substance use histories
+  being concentrated in prisons'
+- 'Step 2: Limited treatment availability within correctional systems means many do not receive adequate
+  care'
+- 'Step 3: Incarceration disrupts existing treatment relationships and community support systems'
+- 'Step 4: Post-release individuals face barriers to treatment access, housing, and employment that perpetuate
+  substance use'
+- 'Step 5: Cyclical pattern of substance use, crime, and reincarceration persists'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: M. Doyle et al. 2019. "A systematic review of evaluations of prison‐based alcohol
+    and other drug use behavioural treatment for men." https://doi.org/10.1111/1753-6405.12884
+  supporting_citations:
+  - Additional citations require full-text access
+  - Literature on substance use prevalence in incarcerated populations
+  - Studies on reentry challenges and substance use relapse
+  doi: 10.1111/1753-6405.12884
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The review highlights that alcohol and other drug use history is common among incarcerated
+  men and often linked to their crimes. This suggests a bidirectional relationship where incarceration
+  concentrates individuals with substance use disorders while the carceral experience may perpetuate these
+  conditions without adequate treatment.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Incarceration rates and treatment availability vary significantly across jurisdictions
+moderators:
+- name: availability_of_prison_treatment_programs
+  direction: weakens
+  strength: moderate
+  description: When prison-based treatment programs are available and effective, the positive relationship
+    between incarceration and persistent substance use may be attenuated
+- name: reentry_services
+  direction: weakens
+  strength: strong
+  description: Comprehensive reentry services including continued substance use treatment can moderate
+    the harmful effects of incarceration on substance use outcomes
+structural_competency:
+  equity_implications: 'This mechanism centers structural factors rather than individual blame. Mass incarceration
+    as policy creates conditions that perpetuate substance use disorders by: disrupting community ties,
+    creating barriers to employment and housing upon release, and substituting punishment for treatment.
+    The review''s focus on men in prison also highlights gendered dimensions of incarceration and substance
+    use. Racial and economic disparities in incarceration mean these harms are not equally distributed
+    across populations.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.681048'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

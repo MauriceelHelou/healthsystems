@@ -1,0 +1,42 @@
+id: injectable_medication_formulation_to_aud_medication_adherence
+name: Injectable Extended-Release Naltrexone Formulation → Alcohol Use Disorder Medication
+  Adherence
+from_node:
+  node_id: injectable_medication_formulation
+  node_name: Injectable Extended-Release Naltrexone Formulation
+to_node:
+  node_id: aud_medication_adherence
+  node_name: Alcohol Use Disorder Medication Adherence
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Injectable formulation eliminates daily dosing burden compared to oral
+  medications'
+- 'Step 2: Monthly administration reduces opportunity for missed doses and decision
+  fatigue'
+- 'Step 3: Healthcare system-delivered injections create structural adherence support
+  through scheduled appointments'
+- 'Step 4: Sustained medication levels from extended-release formulation maintain
+  therapeutic coverage'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Hayden Stewart et al. 2021. "Veteran adherence to oral versus
+    injectable AUD medication treatment.." *The mental health clinician*. https://doi.org/10.9740/mhc.2021.05.194
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.679337'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: medication_type_comparison
+  direction: strengthens
+  strength: strong
+  description: XR naltrexone showed significantly higher adherence versus oral naltrexone
+    at all time points and versus disulfiram at 3, 6, and 9 months
+- name: acamprosate_comparison
+  direction: weakens
+  strength: moderate
+  description: XR naltrexone adherence was not significantly different from acamprosate
+    at any time point

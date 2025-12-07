@@ -1,0 +1,74 @@
+id: NEW:alcohol_excise_taxation_rate_to_cancer_incidence_all_sites
+name: Alcohol Excise Taxation Rate → Cancer Incidence (All Sites)
+from_node:
+  node_id: NEW:alcohol_excise_taxation_rate
+  node_name: Alcohol Excise Taxation Rate
+to_node:
+  node_id: cancer_incidence_all_sites
+  node_name: Cancer Incidence (All Sites)
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Government implements increased excise duties on alcoholic beverages (20%, 50%, or 100% increase
+  modeled)'
+- 'Step 2: Tax increase translates fully into higher consumer prices'
+- 'Step 3: Price increase reduces population alcohol consumption via demand elasticity'
+- 'Step 4: Reduced consumption decreases population exposure to alcohol''s carcinogenic effects'
+- 'Step 5: Fewer alcohol-attributable cancer cases develop at the population level'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'P. Rovira et al. 2020. "Fewer Cancer Cases in 4 Countries of the WHO European Region
+    in 2018 through Increased Alcohol Excise Taxation: A Modelling Study." https://doi.org/10.1159/000511899'
+  supporting_citations:
+  - Finland excise taxation levels used for sensitivity analysis (referenced in methods)
+  - WHO cancer prevention framework (referenced in introduction)
+  - Additional citations require full-text access
+  doi: 10.1159/000511899
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This modelling study demonstrates that increasing alcohol excise taxation by 100% could prevent
+  3-7% of all alcohol-attributable cancer cases across 4 European countries. If these countries adopted
+  Finnish-level excise taxes, Germany alone would see 1,600 fewer cancer cases annually. This represents
+  a significant population-level prevention strategy.
+quantitative_effects:
+  effect_size:
+    value: 7.0
+    type: percentage_change
+    ci_lower: 3.0
+    ci_upper: 7.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: A 100% increase in excise taxation would avert 3-7% of alcohol-attributable cancers
+    depending on the country. Adopting Finnish-level taxation would yield even greater reductions, with
+    Germany alone experiencing 1,600 fewer cancer cases in one year.
+moderators:
+- name: magnitude_of_tax_increase
+  direction: strengthens
+  strength: strong
+  description: Larger tax increases (100% vs 20% vs 50%) produce proportionally greater reductions in
+    cancer cases
+- name: baseline_national_tax_rate
+  direction: strengthens
+  strength: strong
+  description: Countries with lower baseline taxation (e.g., Germany, Italy) have greater potential for
+    cancer reduction compared to countries with already high taxes (Sweden)
+- name: beverage_specific_taxation
+  direction: strengthens
+  strength: moderate
+  description: The model used beverage-specific taxation, acknowledging that different beverages may have
+    different price elasticities and cancer risk profiles
+structural_competency:
+  equity_implications: 'This mechanism exemplifies structural competency by identifying fiscal policy
+    as a powerful lever for population health improvement. Rather than targeting individual drinking behaviors,
+    it addresses the commercial determinants of health through pricing policy. The analysis highlights
+    equity implications: countries with weaker alcohol policies (lower taxes) bear a higher burden of
+    alcohol-attributable cancers. The finding that heavy drinkers are less price-elastic raises equity
+    concerns about whether taxation alone adequately protects the most vulnerable populations who may
+    need additional treatment and support services.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.039698'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

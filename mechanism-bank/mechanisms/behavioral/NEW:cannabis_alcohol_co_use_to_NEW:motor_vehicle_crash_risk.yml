@@ -1,0 +1,56 @@
+id: NEW:cannabis_alcohol_co_use_to_NEW:motor_vehicle_crash_risk
+name: Cannabis and Alcohol Co-Use → Motor Vehicle Crash Risk
+from_node:
+  node_id: NEW:cannabis_alcohol_co_use
+  node_name: Cannabis and Alcohol Co-Use
+to_node:
+  node_id: NEW:motor_vehicle_crash_risk
+  node_name: Motor Vehicle Crash Risk
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Prior use of cannabis results in detectable THC in body fluids'
+- 'Step 2: Concurrent alcohol consumption produces measurable blood alcohol concentration'
+- 'Step 3: Meta-analysis of exacerbation odds ratios examined whether combined effects exceed additive
+  model'
+- 'Step 4: Evidence fails to support synergistic or multiplicative interaction between substances on crash
+  risk'
+- 'Step 5: Observed effects appear consistent with independent rather than exacerbated risk profiles'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: M. White and N. Burns 2023. "Does the co-use of cannabis exacerbate the effect of
+    alcohol on the risk of crashing? A systematic review and meta-analysis." https://doi.org/10.1177/20503245231177334
+  supporting_citations:
+  - Studies from systematic literature search identifying 17 epidemiological studies of cannabis and crash
+    risk
+  - 12 studies investigating joint effects of cannabis and alcohol on crash risk (specific citations require
+    full-text access)
+  - First review by same authors examining cannabis alone and crash risk (companion paper, citation requires
+    full-text access)
+  doi: 10.1177/20503245231177334
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review and meta-analysis examined whether co-use of cannabis exacerbates
+  the effect of alcohol on motor vehicle crash risk. Analyzing 12 epidemiological studies that investigated
+  joint effects, the meta-analysis of exacerbation odds ratios found no credible evidence that cannabis
+  co-use amplifies alcohol's crash risk. This null finding is important for policy as it suggests combined
+  substance effects may not be synergistic.
+moderators:
+- name: alcohol_presence
+  direction: strengthens
+  strength: moderate
+  description: The review specifically examined whether cannabis exacerbates alcohol's effect on crash
+    risk, but found no credible evidence of exacerbation
+structural_competency:
+  equity_implications: This finding has structural policy implications for impaired driving laws and substance
+    use regulations. Understanding that combined cannabis-alcohol effects may not be synergistic informs
+    evidence-based policy development. From an equity perspective, drug testing policies that assume multiplicative
+    effects could disproportionately penalize certain populations. The focus on epidemiological evidence
+    rather than individual blame aligns with structural approaches to traffic safety policy.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.239116'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

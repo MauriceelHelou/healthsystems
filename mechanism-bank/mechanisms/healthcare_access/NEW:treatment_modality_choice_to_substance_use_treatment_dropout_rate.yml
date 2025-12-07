@@ -1,0 +1,53 @@
+id: NEW:treatment_modality_choice_to_substance_use_treatment_dropout_rate
+name: AUD Treatment Modality Options → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: NEW:treatment_modality_choice
+  node_name: AUD Treatment Modality Options
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Availability of both digital and face-to-face CBT options increases treatment modality choices'
+- 'Step 2: Patient-treatment matching based on preferences and circumstances improves engagement'
+- 'Step 3: Digital option reduces logistical barriers that contribute to treatment dropout'
+- 'Step 4: Flexibility in treatment delivery accommodates diverse life circumstances'
+- 'Step 5: Better treatment fit leads to improved retention and reduced dropout rates'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'Ji Eun Kim et al. 2025. "Comparative effectiveness of digital versus face-to-face
+    cognitive behavioral therapy for alcohol use disorder: a systematic review and meta-analysis.." https://doi.org/10.1017/S0033291725102043'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Abstract notes 'user preferences' as factor in digital CBT prominence
+  - 25 RCTs included comparing treatment modalities
+  doi: 10.1017/S0033291725102043
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The availability of multiple treatment delivery modalities (digital and face-to-face CBT)
+  may improve treatment retention by allowing better patient-treatment matching based on individual circumstances
+  and preferences.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Urban areas may have both options available while rural areas may rely primarily on
+    digital delivery
+moderators:
+- name: socioeconomic_status
+  direction: weakens
+  strength: moderate
+  description: Lower SES populations may face barriers to both modalities - transportation costs for face-to-face,
+    technology costs for digital
+structural_competency:
+  equity_implications: Treatment system design that offers multiple evidence-based modalities addresses
+    structural inequities in access. Policy decisions about insurance coverage for digital health interventions,
+    telehealth parity laws, and broadband infrastructure investment all influence whether patients can
+    exercise meaningful choice in treatment modality. A health equity approach requires ensuring both
+    modalities are accessible across socioeconomic and geographic contexts.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.725558'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

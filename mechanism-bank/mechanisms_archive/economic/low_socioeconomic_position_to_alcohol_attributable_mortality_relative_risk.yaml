@@ -1,0 +1,43 @@
+id: low_socioeconomic_position_to_alcohol_attributable_mortality_relative_risk
+name: Low Socioeconomic Position → Alcohol-Attributable Mortality (Relative Risk)
+from_node:
+  node_id: low_socioeconomic_position
+  node_name: Low Socioeconomic Position
+to_node:
+  node_id: alcohol_attributable_mortality_relative_risk
+  node_name: Alcohol-Attributable Mortality (Relative Risk)
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Low socioeconomic position creates multiple structural disadvantages including
+  limited healthcare access, economic stress, and reduced social capital'
+- 'Step 2: These structural factors increase relative vulnerability to alcohol-related
+  harm through reduced protective resources and increased exposure to risk environments'
+- 'Step 3: Younger populations with low SEP face particularly elevated relative risks
+  due to fewer established protective factors and greater susceptibility to alcohol-related
+  acute harms'
+- 'Step 4: The relative disadvantage manifests as elevated hazard ratios across all
+  age groups, with strongest effects at younger ages'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Alessandra T Andreacchi et al. 2025. "Socioeconomic inequities
+    in alcohol-attributable mortality by sex/gender and age in Canada: a 13-year population-representative
+    cohort study.." *American journal of epidemiology*. https://doi.org/10.1093/aje/kwae385'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.960888'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sex_gender
+  direction: strengthens
+  strength: weak
+  description: Relative SEP inequities (hazard ratios) were similar in women and men,
+    unlike absolute measures where men showed greater inequities
+- name: younger_age
+  direction: strengthens
+  strength: strong
+  description: Greater hazard ratios at younger ages, indicating higher relative vulnerability
+    among youth with low SEP despite lower absolute mortality rates

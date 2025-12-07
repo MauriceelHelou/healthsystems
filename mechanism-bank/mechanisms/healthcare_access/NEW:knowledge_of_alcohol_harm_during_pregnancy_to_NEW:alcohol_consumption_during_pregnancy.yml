@@ -1,0 +1,63 @@
+id: NEW:knowledge_of_alcohol_harm_during_pregnancy_to_NEW:alcohol_consumption_during_pregnancy
+name: Knowledge of Harmful Effects of Alcohol Consumption During Pregnancy → Alcohol Consumption During
+  Pregnancy
+from_node:
+  node_id: NEW:knowledge_of_alcohol_harm_during_pregnancy
+  node_name: Knowledge of Harmful Effects of Alcohol Consumption During Pregnancy
+to_node:
+  node_id: NEW:alcohol_consumption_during_pregnancy
+  node_name: Alcohol Consumption During Pregnancy
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Health education programs and prenatal care provide information about alcohol''s harmful effects
+  on fetal development'
+- 'Step 2: Women who access prenatal care receive counseling about alcohol risks'
+- 'Step 3: Knowledge acquisition leads to informed decision-making about alcohol avoidance'
+- 'Step 4: Increased awareness results in reduced alcohol consumption during pregnancy'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Alemu Earsido Addila et al. 2020. "Alcohol consumption and its associated factors
+    among pregnant women in Sub-Saharan Africa: a systematic review and meta-analysis'' as given in the
+    submission system." https://doi.org/10.1186/s13011-020-00269-3'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 37 studies in qualitative synthesis
+  - Studies from various Sub-Saharan African countries included in the systematic review
+  - Primary studies accessed through PubMed, CINAHL, Cochrane Library, PsycINFO databases
+  doi: 10.1186/s13011-020-00269-3
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Knowledge of the harmful effects of alcohol consumption during pregnancy is strongly protective,
+  with informed women having 64% lower odds of consuming alcohol during pregnancy compared to those without
+  such knowledge.
+quantitative_effects:
+  effect_size:
+    value: 0.36
+    type: odds_ratio
+    ci_lower: 0.29
+    ci_upper: 0.45
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Knowledge levels likely vary by country based on health education infrastructure and
+    prenatal care access
+moderators:
+- name: prenatal_care_access
+  direction: strengthens
+  strength: strong
+  description: Access to quality prenatal care increases opportunities for health education
+- name: educational_attainment
+  direction: strengthens
+  strength: moderate
+  description: Higher education may facilitate knowledge retention and behavior change
+structural_competency:
+  equity_implications: This mechanism demonstrates how structural factors like health education systems,
+    prenatal care accessibility, and public health messaging infrastructure determine whether pregnant
+    women receive critical information. The burden of knowledge gaps falls disproportionately on women
+    with limited healthcare access, reflecting structural inequities in health education delivery.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.269174'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

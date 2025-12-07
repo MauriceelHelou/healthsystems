@@ -1,0 +1,40 @@
+id: safety_net_policy_implementation_to_kidney_transplant_waiting_time
+name: Safety Net Policy for Kidney After Liver Transplantation → Waiting Time to Kidney
+  Transplantation
+from_node:
+  node_id: safety_net_policy_implementation
+  node_name: Safety Net Policy for Kidney After Liver Transplantation
+to_node:
+  node_id: kidney_transplant_waiting_time
+  node_name: Waiting Time to Kidney Transplantation
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: UNOS establishes safety net policy with set criteria for offering kidney
+  transplantation to patients who developed end-stage renal disease 60-365 days after
+  liver transplant'
+- 'Step 2: Policy creates priority allocation pathway for kidney transplant recipients
+  who experienced acute kidney injury requiring dialysis within 60 days before or
+  after liver transplant'
+- 'Step 3: Standardized criteria reduce waiting time through preferential organ allocation
+  to safety net eligible candidates'
+- 'Step 4: Median waiting time decreases from 2827 days to 324 days after policy implementation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Homkrailas et al. 2021. "Kidney utilization and outcomes of
+    liver transplant recipients who were listed for kidney after liver transplant
+    after the implementation of safety net policy." *Clinical Transplantation*. https://doi.org/10.1111/ctr.14522
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.617611'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: time_since_liver_transplant
+  direction: strengthens
+  strength: strong
+  description: Policy specifically targets patients who developed end-stage renal
+    disease between 60-365 days after liver transplant, creating strongest benefit
+    for this time window

@@ -1,0 +1,44 @@
+id: incarceration_status_to_moud_treatment_access
+name: Incarceration Status → Medications for Opioid Use Disorder (MOUD) Access
+from_node:
+  node_id: incarceration_status
+  node_name: Incarceration Status
+to_node:
+  node_id: moud_treatment_access
+  node_name: Medications for Opioid Use Disorder (MOUD) Access
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Carceral facilities implement medication-assisted treatment programs providing
+  MOUD (buprenorphine or methadone) to incarcerated individuals with opioid use disorder'
+- 'Step 2: Incarceration creates a controlled healthcare environment where systematic
+  screening and treatment initiation can occur'
+- 'Step 3: Individuals who may have faced barriers to MOUD access in community settings
+  gain structured access to treatment during incarceration'
+- 'Step 4: Treatment is provided through institutional medical records and healthcare
+  delivery systems within correctional facilities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Justin Berk et al. 2025. "Racial Differences in Medications for
+    Opioid Use Disorder Initiation in a Carceral Setting.." *Substance use & addiction
+    journal*. https://doi.org/10.1177/29767342241273417
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.378595'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: race
+  direction: strengthens
+  strength: moderate
+  description: Race interacts with MOUD initiation status to influence treatment type
+    preference, with non-White individuals more likely to choose buprenorphine when
+    initiating treatment during incarceration compared to White counterparts
+- name: prior_treatment_status
+  direction: strengthens
+  strength: moderate
+  description: Whether treatment was initiated during incarceration versus continued
+    from community significantly moderates the relationship between race and MOUD
+    type selection

@@ -1,0 +1,83 @@
+id: NEW:alcohol_outlet_hours_of_operation_to_violent_crime_rate_new_added_to_fill_mechanism_gap
+name: Alcohol Outlet Hours of Operation → Violent Crime Rate
+from_node:
+  node_id: NEW:alcohol_outlet_hours_of_operation
+  node_name: Alcohol Outlet Hours of Operation
+to_node:
+  node_id: violent_crime_rate_new_added_to_fill_mechanism_gap
+  node_name: Violent Crime Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Extended hours of alcohol sales (20 hours/day) increase the temporal window during which patrons
+  can purchase and consume alcohol at bars/taverns'
+- 'Step 2: Late-night alcohol availability leads to increased intoxication among patrons during high-risk
+  nighttime hours (8 PM to 4 AM)'
+- 'Step 3: Intoxicated individuals congregating around alcohol outlets during late-night hours increases
+  interpersonal conflicts and reduces inhibition'
+- 'Step 4: The geographic concentration of intoxicated individuals near bars/taverns creates hotspots
+  for violent encounters including assault, robbery, and homicide'
+- 'Step 5: Reducing hours of sale (from 20 to 13 hours/day) decreases the density of violent crime incidents
+  within proximity (800 ft) of alcohol outlets'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Erika M Rosen et al. 2024. "Interrupted Time Series Analysis of Bar/Tavern Closing
+    Hours and Violent Crime.." https://doi.org/10.1001/jamainternmed.2024.0255
+  supporting_citations:
+  - Additional citations require full-text access - abstract references established literature on alcohol
+    outlets attracting crime during late-night hours
+  - Maryland Senate Bill 571 (SB571) policy documentation
+  - Prior ecological studies on alcohol outlet density and crime (referenced in background)
+  doi: 10.1001/jamainternmed.2024.0255
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Maryland Senate Bill 571 reduced bar/tavern selling hours from 20 to 13 hours per day (6
+  AM-2 AM changed to 9 AM-10 PM) in one Baltimore neighborhood. Compared to control neighborhoods, the
+  treatment area showed a 23% per year reduction in violent crime density (annualized IRR 0.77) within
+  800 feet of bars/taverns during nighttime hours (8 PM-4 AM). Similar reductions were observed for homicides
+  and assaults specifically. The effect was sustained over time (slope change) rather than immediate (level
+  change).
+quantitative_effects:
+  effect_size:
+    value: 0.77
+    type: relative_risk
+    ci_lower: 0.6
+    ci_upper: 0.98
+  p_value: 0.04
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect was specific to the treatment neighborhood in Baltimore subject to SB571; control
+    neighborhoods with similar baseline characteristics did not show the same reduction. Geographic specificity
+    was within 800-ft buffer around bars/taverns.
+moderators:
+- name: baseline_crime_rate
+  direction: strengthens
+  strength: moderate
+  description: Treatment and control areas were matched on mean baseline crime rate, suggesting the policy
+    effect may be most detectable in areas with similar baseline violent crime levels
+- name: alcohol_outlet_density
+  direction: strengthens
+  strength: moderate
+  description: Areas with higher alcohol outlet density may show greater effects from hours-of-sale restrictions
+    due to concentration of exposure
+- name: neighborhood_disadvantage
+  direction: strengthens
+  strength: moderate
+  description: Study matched on neighborhood disadvantage score; effects may differ in neighborhoods with
+    varying levels of socioeconomic disadvantage
+structural_competency:
+  equity_implications: This mechanism exemplifies structural intervention by targeting the built environment
+    and regulatory policy rather than individual behavior. The policy reduces opportunities for alcohol-related
+    violence by restricting commercial hours of operation rather than attempting to change individual
+    drinking behavior. This approach acknowledges that violent crime near alcohol outlets is a predictable
+    consequence of the physical and temporal availability of alcohol, not merely individual moral failing.
+    The findings have equity implications as alcohol outlets are often concentrated in disadvantaged neighborhoods,
+    meaning policies restricting hours of sale could disproportionately benefit communities most burdened
+    by violence.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.063153'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

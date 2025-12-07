@@ -1,0 +1,49 @@
+id: alcohol_use_disorder_to_alzheimer_s_dementia_mortality
+name: Alcohol Use Disorder → Alzheimer's/Dementia Mortality
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: alzheimer_s_dementia_mortality
+  node_name: Alzheimer's/Dementia Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol misuse causes brain damage and accelerates aging'
+- 'Step 2: Cognitive impairments develop including memory deficits'
+- 'Step 3: Dementia risk increases (though mechanism differs from Alzheimer''s pathology)'
+- 'Step 4: Increased dementia burden contributes to mortality (note: alcohol increases dementia risk but
+  not necessarily Alzheimer''s disease specifically)'
+evidence:
+  quality_rating: A
+  n_studies: 400
+  primary_citation: 'N. Zahr 2024. "Alcohol Use Disorder and Dementia: A Review." https://doi.org/10.35946/arcr.v44.1.03'
+  supporting_citations:
+  - Epidemiological studies on alcohol and dementia risk
+  - Postmortem pathology comparing AUD and Alzheimer's brains
+  - Translational animal model studies on amyloid, neurofibrillary tangles, α-synuclein, and presenilin
+  doi: 10.35946/arcr.v44.1.03
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'The review concludes that while alcohol misuse increases dementia risk, it does not necessarily
+  increase Alzheimer''s disease risk specifically. Key distinctions include: (1) reversibility of alcohol-related
+  brain damage with abstinence vs. progressive Alzheimer''s course, and (2) absence of characteristic
+  protein inclusions (amyloid, neurofibrillary tangles) in AUD-affected brains that are hallmarks of Alzheimer''s
+  pathology.'
+moderators:
+- name: protein_inclusion_pathology
+  direction: weakens
+  strength: strong
+  description: Characteristic protein inclusions present in Alzheimer's brains are absent in AUD brains,
+    suggesting distinct pathological mechanisms despite shared cognitive outcomes
+structural_competency:
+  equity_implications: This nuanced finding has important implications for public health messaging and
+    intervention design. Structural approaches to reducing alcohol-related dementia should focus on treatment
+    access and harm reduction, recognizing that unlike Alzheimer's, alcohol-related cognitive decline
+    may be reversible. The distinction matters for healthcare resource allocation and policy priorities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.506000'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

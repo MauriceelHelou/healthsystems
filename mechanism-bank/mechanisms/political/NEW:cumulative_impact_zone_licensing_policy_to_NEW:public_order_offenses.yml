@@ -1,0 +1,62 @@
+id: NEW:cumulative_impact_zone_licensing_policy_to_NEW:public_order_offenses
+name: Cumulative Impact Zone Licensing Policy → Public Order Offenses
+from_node:
+  node_id: NEW:cumulative_impact_zone_licensing_policy
+  node_name: Cumulative Impact Zone Licensing Policy
+to_node:
+  node_id: NEW:public_order_offenses
+  node_name: Public Order Offenses
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Cumulative impact zone policies restrict temporal and spatial alcohol availability'
+- 'Step 2: Reduced outlet density and operating hours limit opportunities for public alcohol consumption'
+- 'Step 3: Lower alcohol availability decreases public intoxication and associated antisocial behavior'
+- 'Step 4: Public order offense rates decline as alcohol-related public nuisance decreases'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: F. Vocht et al. 2016. "Testing the impact of local alcohol licencing policies on reported
+    crime rates in England." https://doi.org/10.1136/jech-2016-207753
+  supporting_citations:
+  - Additional citations require full-text access - abstract references public nuisance and antisocial
+    behaviour but does not cite specific prior studies
+  doi: 10.1136/jech-2016-207753
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Licensing policies aimed at restricting spatial and temporal alcohol availability were associated
+  with faster declines in public order offenses. Areas with intense policies saw declines of approximately
+  1.7 per 1000 population compared to 1.0 per 1000 in passive policy areas during 2009-2013.
+quantitative_effects:
+  sample_size: 284
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Analysis conducted across 284 English lower tier local authorities with varying policy
+    intensity levels
+moderators:
+- name: policy_intensity
+  direction: strengthens
+  strength: strong
+  description: High-intensity policy areas showed public order offense decline of 1.7 per 1000 compared
+    to 1.0 per 1000 in passive areas
+- name: outlet_density
+  direction: strengthens
+  strength: moderate
+  description: Analysis controlled for outlet density, suggesting policy effects operate through mechanisms
+    beyond simple outlet counts
+- name: alcohol_related_hospital_admissions
+  direction: strengthens
+  strength: moderate
+  description: Baseline alcohol-related hospital admissions were included as a control, indicating areas
+    with higher alcohol problems at baseline
+structural_competency:
+  equity_implications: This mechanism demonstrates how regulatory policy can address public disorder through
+    environmental change rather than increased policing or criminalization of individuals. By modifying
+    the alcohol environment, the policy addresses root causes of antisocial behavior while avoiding punitive
+    approaches that disproportionately affect marginalized populations who may use public spaces for drinking.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.214920'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

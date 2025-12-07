@@ -1,0 +1,62 @@
+id: NEW:alcohol_retail_price_to_binge_drinking
+name: Alcohol Retail Price → Binge Drinking
+from_node:
+  node_id: NEW:alcohol_retail_price
+  node_name: Alcohol Retail Price
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher alcohol retail prices (resulting from tax pass-through) increase the economic cost of
+  alcohol consumption'
+- 'Step 2: Price elasticity of demand causes reduction in quantity of alcohol purchased, particularly
+  among price-sensitive populations'
+- 'Step 3: Reduced purchasing translates to decreased consumption frequency and volume, including reduced
+  binge drinking episodes'
+- 'Step 4: The effectiveness of this mechanism depends on the completeness of tax pass-through to retail
+  prices'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Jon P. Nelson and John R. Moran 2019. "Effects of Alcohol Taxation on Prices: A Systematic
+    Review and Meta-Analysis of Pass-Through Rates." https://doi.org/10.1515/bejeap-2019-0134'
+  supporting_citations:
+  - Broader alcohol policy literature on price elasticity of alcohol demand
+  - Studies on optimal taxation and incidence referenced in the review
+  - Additional citations require full-text access
+  doi: 10.1515/bejeap-2019-0134
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This mechanism links alcohol pricing (as influenced by taxation and pass-through rates) to
+  alcohol consumption behaviors. The meta-analysis findings on pass-through rates are essential for understanding
+  the full causal chain from tax policy to health outcomes via pricing mechanisms.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Price effects on consumption vary by country due to different tax structures, market
+    conditions, and cultural factors affecting alcohol consumption patterns
+moderators:
+- name: beverage_type
+  direction: strengthens
+  strength: moderate
+  description: Different beverages have different pass-through rates, affecting the strength of price
+    signals to consumers - beer shows strongest overshifting
+- name: income_level
+  direction: strengthens
+  strength: strong
+  description: Lower-income populations are more price-sensitive, meaning price increases have stronger
+    effects on their consumption behavior
+structural_competency:
+  equity_implications: 'This mechanism traces how structural economic policy (taxation) affects health
+    behaviors through market-mediated price signals. It avoids individual blame by recognizing that consumption
+    patterns are shaped by economic accessibility. However, there are equity concerns: regressive taxation
+    effects mean lower-income populations bear proportionally higher costs, even as they may experience
+    greater health benefits from reduced consumption. Optimal policy design must balance public health
+    goals with economic justice considerations.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.231544'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

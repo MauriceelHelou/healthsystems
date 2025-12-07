@@ -1,0 +1,38 @@
+id: alcohol_consumption_to_breast_cancer_risk
+name: Alcohol Consumption → Breast Cancer Risk
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: breast_cancer_risk
+  node_name: Breast Cancer Risk
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption increases acetaldehyde exposure and oxidative stress
+  in breast tissue'
+- 'Step 2: Alcohol modulates estrogen metabolism and increases circulating estrogen
+  levels'
+- 'Step 3: Elevated estrogen promotes cellular proliferation and DNA damage in breast
+  tissue'
+- 'Step 4: Cumulative DNA damage and hormonal stimulation increase breast cancer risk'
+evidence:
+  quality_rating: C
+  n_studies: 12
+  primary_citation: Salma Nabila et al. 2024. "Differential patterns of reproductive
+    and lifestyle risk factors for breast cancer according to birth cohorts among
+    women in China, Japan and Korea." *Breast Cancer Research*. https://doi.org/10.1186/s13058-024-01766-0
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.500267'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: birth_cohort
+  direction: strengthens
+  strength: strong
+  description: 'Association only statistically significant in 1950s birth cohort (HR
+    1.22 [1.01-1.48]) compared to earlier cohorts (1940s: HR 1.15 [0.96-1.38]; 1930s:
+    HR 1.10 [0.90-1.33]; 1920s: HR 1.07 [0.91-1.26]). Younger cohorts show stronger
+    alcohol-cancer associations.'

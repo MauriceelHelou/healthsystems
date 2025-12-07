@@ -1,0 +1,38 @@
+id: qualified_withdrawal_treatment_availability_to_all_cause_hospitalization_rate
+name: Qualified Withdrawal Treatment (QWT) Availability → All-Cause Hospitalization
+  Rate
+from_node:
+  node_id: qualified_withdrawal_treatment_availability
+  node_name: Qualified Withdrawal Treatment (QWT) Availability
+to_node:
+  node_id: all_cause_hospitalization_rate
+  node_name: All-Cause Hospitalization Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: QWT''s extended duration and psychosocial components improve treatment
+  outcomes and reduce relapse rates'
+- 'Step 2: Reduced relapse to problematic alcohol use decreases acute intoxication
+  episodes and withdrawal complications'
+- 'Step 3: Lower rates of alcohol-related complications reduce need for emergency
+  and inpatient medical care'
+- 'Step 4: Overall hospitalization burden decreases across the population'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: 'Jakob Manthey et al. 2020. "The potential effects of an extended
+    alcohol withdrawal treatment programme on morbidity and mortality among inpatients
+    in the German city of Bremen: a simulation study.." *Substance abuse treatment,
+    prevention, and policy*. https://doi.org/10.1186/s13011-019-0249-7'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.761999'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: proportion_receiving_qwt
+  direction: strengthens
+  strength: strong
+  description: At 25% QWT coverage, hospitalizations decreased by 9%; at 50% coverage,
+    hospitalizations decreased by 23%, showing dose-response effect

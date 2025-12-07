@@ -1,0 +1,48 @@
+id: tuberculosis_incidence_to_depression_diagnosis
+name: Tuberculosis Incidence → Depression Diagnosis
+from_node:
+  node_id: tuberculosis_incidence
+  node_name: Tuberculosis Incidence
+  _original_id: tuberculosis_infection
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+  _original_id: depression_anxiety
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Tuberculosis creates chronic infectious disease burden with systemic inflammation'
+- 'Step 2: TB diagnosis initiates prolonged treatment with social and economic disruptions'
+- 'Step 3: Chronic illness, treatment side effects, and social stigma increase psychological
+  distress'
+- 'Step 4: Bidirectional relationship develops where TB worsens mental health and
+  mental health affects TB outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 100
+  primary_citation: 'André Janse van Rensburg et al. 2020. "Comorbidities between
+    tuberculosis and common mental disorders: a scoping review of epidemiological
+    patterns and person-centred care interventions from low-to-middle income and BRICS
+    countries." *Infectious Diseases of Poverty*. https://doi.org/10.1186/s40249-019-0619-4'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.518289'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: gender
+  direction: strengthens
+  strength: strong
+  description: Women in general had worse mental health outcomes in context of TB
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Older age associated with pronounced TB and mental disorder comorbidity
+- name: prior_mental_health_history
+  direction: strengthens
+  strength: strong
+  description: History of mental illness associated with pronounced comorbidity
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/tuberculosis_infection_to_depression_anxiety.yaml
+_category: biological

@@ -1,0 +1,49 @@
+id: incarceration_history_to_housing_instability
+name: Previous Incarceration → Housing Instability
+from_node:
+  node_id: incarceration_history
+  node_name: Previous Incarceration
+to_node:
+  node_id: housing_instability
+  node_name: Housing Instability
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Criminal record creates legal barriers to accessing rental housing and public housing programs'
+- 'Step 2: Incarceration disrupts prior housing arrangements and social support networks'
+- 'Step 3: Stigma and discrimination from landlords limit available housing options'
+- 'Step 4: Reduced employment opportunities post-incarceration decrease financial capacity for stable
+  housing'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'R. Marcus et al. 2021. "Characteristics of Adults With Diagnosed HIV Who Experienced
+    Housing Instability: Findings From the Centers for Disease Control and Prevention Medical Monitoring
+    Project, United States, 2018." *Journal of the Association of Nurses in AIDS Care*. https://doi.org/10.1097/JNC.0000000000000314'
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1097/JNC.0000000314
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: DOI not found in Crossref database'
+last_updated: '2025-11-30'
+version: '2.0'
+description: Previous incarceration is associated with increased likelihood of housing instability among
+  adults with HIV
+quantitative_effects:
+  sample_size: 4050
+moderators:
+- name: poverty_status
+  direction: strengthens
+  strength: strong
+  description: Economic disadvantage compounds the housing barriers created by incarceration history
+structural_competency:
+  equity_implications: Traces housing instability to criminal justice policies and practices that create
+    structural barriers to housing access post-incarceration. Highlights systemic rather than individual
+    factors in housing outcomes.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.870475'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

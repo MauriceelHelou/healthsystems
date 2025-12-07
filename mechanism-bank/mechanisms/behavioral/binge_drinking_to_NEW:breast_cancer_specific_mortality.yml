@@ -1,0 +1,55 @@
+id: binge_drinking_to_NEW:breast_cancer_specific_mortality
+name: Binge Drinking → Breast Cancer-Specific Mortality
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:breast_cancer_specific_mortality
+  node_name: Breast Cancer-Specific Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption during pre-diagnosis period may affect tumor biology and treatment response'
+- 'Step 2: Ethanol metabolites can cause oxidative stress and cellular damage'
+- 'Step 3: Alcohol may affect immune function and tumor surveillance'
+- 'Step 4: Meta-analysis demonstrates no significant association with breast cancer-specific mortality'
+evidence:
+  quality_rating: A
+  n_studies: 19
+  primary_citation: 'T. Nomura et al. 2023. "Alcohol consumption and breast cancer prognosis after breast
+    cancer diagnosis: a systematic review and meta‑analysis of the Japanese Breast Cancer Society Clinical
+    Practice Guideline, 2022 edition." https://doi.org/10.1007/s12282-023-01455-4'
+  supporting_citations:
+  - 19 studies assessed pre-diagnosis alcohol consumption and breast cancer-related mortality
+  - 9 studies assessed post-diagnosis alcohol consumption and breast cancer-related mortality
+  - Additional citations require full-text access
+  doi: 10.1007/s12282-023-01455-4
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Pre-diagnosis alcohol consumption was not significantly associated with breast cancer-related
+  mortality (RR 1.02, 95% CI 0.93-1.11, p=0.69) based on 19 cohort studies with 12,209 breast cancer deaths.
+quantitative_effects:
+  effect_size:
+    value: 1.02
+    type: relative_risk
+    ci_lower: 0.93
+    ci_upper: 1.11
+  p_value: 0.69
+  sample_size: 12209
+moderators:
+- name: timing_of_alcohol_consumption
+  direction: strengthens
+  strength: weak
+  description: Post-diagnosis alcohol consumption showed similar null effect (RR 0.96, 95% CI 0.77-1.19,
+    p=0.70)
+structural_competency:
+  equity_implications: This finding is important for health equity as it suggests that breast cancer patients
+    who consumed alcohol should not be blamed for their cancer outcomes. While alcohol prevention policies
+    are important for primary cancer prevention, the prognosis after diagnosis appears independent of
+    prior alcohol use.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.293250'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,71 @@
+id: NEW:community_based_hcv_intervention_to_hepatitis_c_treatment_completion
+name: Community-Based HCV Assessment and Treatment → Hepatitis C Treatment Completion
+from_node:
+  node_id: NEW:community_based_hcv_intervention
+  node_name: Community-Based HCV Assessment and Treatment
+to_node:
+  node_id: hepatitis_c_treatment_completion
+  node_name: Hepatitis C Treatment Completion
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Community-based interventions bring HCV screening, assessment, and treatment
+  services directly to people who are homeless, eliminating transportation and accessibility
+  barriers to traditional healthcare settings'
+- 'Step 2: Integrated services including mental health support and peer mentorship
+  address psychosocial barriers that typically impede treatment engagement in marginalized
+  populations'
+- 'Step 3: Sustained engagement through community-based care enables completion of
+  direct-acting antiviral (DAA) treatment regimens, resulting in high sustained virological
+  response (SVR) rates'
+- 'Step 4: Community setting facilitates continuity of care and reduces loss to follow-up
+  that commonly occurs when homeless populations must navigate traditional healthcare
+  systems'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'A Hashim et al. 2021. Community-Based Assessment and Treatment
+    of Hepatitis C Virus-Related Liver Disease, Injecting Drug and Alcohol Use Amongst
+    People Who Are Homeless: A Systematic Review and Meta-Analysis. The International
+    journal on drug policy.'
+  supporting_citations: []
+description: Community-based HCV assessment and treatment interventions significantly
+  improve hepatitis C treatment completion rates among people who are homeless. This
+  systematic review of 39 studies (n=13,918) found that intention-to-treat SVR rates
+  with direct-acting antivirals in community settings ranged from 82-92%, reaching
+  92% in studies exclusively including homeless populations. Two RCTs demonstrated
+  that community-based interventions incorporating mental health support and peer
+  mentorship significantly increased linkage to care (p=0.04), treatment initiation
+  (p=0.005), and SVR achievement (p=0.018) compared to standard care approaches.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 92.0
+    type: percentage_SVR
+    ci_lower: 82.0
+    ci_upper: 92.0
+  p_value: 0.018
+  sample_size: 13918
+moderators:
+- name: Mental health intervention component
+  direction: strengthens
+  strength: strong
+  description: RCT evidence showed community-based mental health interventions significantly
+    increased linkage to care and treatment completion (p=0.04 for linkage, p=0.005
+    for treatment)
+- name: Peer mentor support
+  direction: strengthens
+  strength: strong
+  description: Peer mentorship in community settings significantly improved SVR rates
+    (p=0.018) in RCT evidence
+- name: Injection drug use status
+  direction: weakens
+  strength: moderate
+  description: Active injection drug use (prevalence 7-73% across studies) may complicate
+    treatment adherence, though SVR rates remained high
+- name: Alcohol use
+  direction: weakens
+  strength: moderate
+  description: High alcohol use prevalence (4-97% across studies, 59% in homeless-only
+    studies) represents a barrier; notably no studies provided alcohol use interventions

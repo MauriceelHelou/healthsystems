@@ -26,6 +26,21 @@ import {
 import { createPostMutation } from './utils/queryHelpers';
 import { API_ENDPOINTS } from '../utils/api';
 
+/** Strip "NEW:" prefix from node names for display */
+const stripNewPrefix = (name: string): string =>
+  name.replace(/^NEW:/i, '').trim();
+
+/** Transform API response to strip NEW: prefix from labels */
+function transformResponse(response: CrisisSubgraphResponse): CrisisSubgraphResponse {
+  return {
+    ...response,
+    nodes: response.nodes.map(node => ({
+      ...node,
+      label: stripNewPrefix(node.label),
+    })),
+  };
+}
+
 // ==========================================
 // Hook
 // ==========================================
@@ -72,6 +87,9 @@ export function useCrisisSubgraph(): UseMutationResult<
         errorContext: 'Crisis subgraph',
       },
       onSuccess: (data, variables) => {
+        // Transform response to strip NEW: prefix
+        const transformedData = transformResponse(data);
+
         // Cache with query key based on request parameters
         const queryKey = [
           'crisis-subgraph',
@@ -80,21 +98,24 @@ export function useCrisisSubgraph(): UseMutationResult<
           (variables as any).minStrength,
         ];
 
-        queryClient.setQueryData(queryKey, data);
+        queryClient.setQueryData(queryKey, transformedData);
       },
       retry: 1,
       retryDelay: 1000,
     }
   );
 
-  // Wrap to transform request before sending
+  // Wrap to transform request before sending and response after receiving
   return {
     ...mutation,
+    // Transform data in the result
+    data: mutation.data ? transformResponse(mutation.data) : undefined,
     mutate: (variables: CrisisSubgraphRequest, options?: any) => {
       mutation.mutate(transformRequest(variables), options);
     },
     mutateAsync: async (variables: CrisisSubgraphRequest, options?: any) => {
-      return mutation.mutateAsync(transformRequest(variables), options);
+      const result = await mutation.mutateAsync(transformRequest(variables), options);
+      return transformResponse(result);
     },
   } as UseMutationResult<CrisisSubgraphResponse, Error, CrisisSubgraphRequest>;
 }

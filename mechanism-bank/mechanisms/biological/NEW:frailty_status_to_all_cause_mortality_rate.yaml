@@ -1,0 +1,49 @@
+id: NEW:frailty_status_to_all_cause_mortality_rate
+name: Frailty Status → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:frailty_status
+  node_name: Frailty Status
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Frailty represents a state of decreased physiological reserve characterized
+  by sarcopenia, immune dysfunction, neuroendocrine dysregulation, and chronic low-grade
+  inflammation'
+- 'Step 2: These physiological deficits reduce the body''s capacity to maintain homeostasis
+  and respond to acute stressors such as infections, injuries, or surgical procedures'
+- 'Step 3: Frail individuals experience increased susceptibility to adverse health
+  events including falls, bone fractures, disability, dementia, and hospitalization'
+- 'Step 4: The accumulation of these adverse health outcomes, combined with reduced
+  recovery capacity and increased vulnerability to complications, leads to significantly
+  elevated mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'Wen Chu et al. 2021. Adverse Health Effects of Frailty: Systematic
+    Review and Meta-Analysis of Middle-Aged and Older Adults With Implications for
+    Evidence-Based Practice. Worldviews on Evidence-Based Nursing.'
+  supporting_citations: []
+description: This meta-analysis of 29 prospective studies demonstrates that frailty
+  significantly increases all-cause mortality risk in middle-aged and older adults.
+  Frailty, characterized by accumulated physiological deficits, leads to vulnerability
+  across multiple organ systems, increasing susceptibility to falls, fractures, disability,
+  dementia, and hospitalization, which collectively contribute to elevated mortality.
+  The relationship shows a gradient effect with frail individuals at highest risk
+  compared to prefrail and robust groups.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Frailty stage
+  direction: strengthens
+  strength: strong
+  description: Frail groups had significantly higher mortality risk compared to prefrail
+    groups, and prefrail had higher risk than robust groups, indicating dose-response
+    relationship
+- name: Age
+  direction: strengthens
+  strength: moderate
+  description: Effects observed in both middle-aged and older adults, with frailty
+    assessment particularly relevant in aging populations

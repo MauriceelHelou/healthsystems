@@ -1,0 +1,76 @@
+id: NEW:primary_care_brief_intervention_drug_misuse_to_illicit_drug_use_past_month
+name: Primary Care Brief Intervention for Drug Misuse → Illicit Drug Use Past Month
+from_node:
+  node_id: NEW:primary_care_brief_intervention_drug_misuse
+  node_name: Primary Care Brief Intervention for Drug Misuse
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use Past Month
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary care facilities integrate drug misuse screening into routine care delivery'
+- 'Step 2: Screening identifies individuals with at-risk or problematic drug use patterns'
+- 'Step 3: Brief intervention provides structured counseling focused on reducing drug use'
+- 'Step 4: Patient receives motivational feedback and personalized strategies for behavior change'
+- 'Step 5: Drug use frequency and severity decrease following intervention'
+evidence:
+  quality_rating: C
+  n_studies: 0
+  primary_citation: 'E. Sahker et al. 2020. "Efficacy of brief intervention for drug misuse in primary
+    care facilities: systematic review and meta-analysis protocol." https://doi.org/10.1136/bmjopen-2019-036633'
+  supporting_citations:
+  - Additional citations require full-text access - this is a protocol paper describing planned methodology
+  - Studies to be identified through searches in CENTRAL, Embase, MEDLINE and PsycINFO
+  - Reference lists from www.clinicaltrials.gov and existing studies to be reviewed
+  doi: 10.1136/bmjopen-2019-036633
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review and meta-analysis protocol aims to determine whether brief interventions
+  delivered in primary care settings can effectively reduce drug misuse, as measured by drug use frequency
+  scores and severity scores at 4-8 months follow-up. The review will synthesize evidence from randomized
+  controlled trials comparing brief intervention to no intervention, minimal screening/assessment, or
+  usual care.
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Planned subgroup analysis will examine whether intervention efficacy varies by patient
+    age
+- name: sex_gender
+  direction: strengthens
+  strength: moderate
+  description: Planned subgroup analysis will examine whether intervention efficacy varies by sex/gender
+- name: race_ethnicity
+  direction: strengthens
+  strength: moderate
+  description: Planned subgroup analysis will examine whether intervention efficacy varies by race/ethnicity
+- name: insurance_status
+  direction: strengthens
+  strength: moderate
+  description: Planned subgroup analysis will examine whether intervention efficacy varies by percent
+    insured
+- name: baseline_severity
+  direction: weakens
+  strength: moderate
+  description: Planned subgroup analysis will examine whether intervention efficacy varies by baseline
+    severity of drug misuse
+- name: primary_drug_type
+  direction: strengthens
+  strength: moderate
+  description: Planned subgroup analysis will examine whether intervention efficacy varies by primary
+    drug misused
+structural_competency:
+  equity_implications: This mechanism addresses healthcare system capacity to integrate substance use
+    screening and intervention into primary care, which represents a structural approach to drug misuse
+    prevention. Primary care integration reduces barriers to substance use services by embedding them
+    in settings with broad population reach. Equity implications are explicitly addressed through planned
+    subgroup analyses by race/ethnicity and insurance status, recognizing that access to quality primary
+    care varies significantly by social position. The approach shifts burden from individual help-seeking
+    to system-level screening, reducing stigma barriers.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.965211'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

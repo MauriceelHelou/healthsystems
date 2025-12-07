@@ -1,0 +1,52 @@
+id: alcohol_use_disorder_to_emergency_department_visit_rate
+name: Alcohol Use Disorder → Emergency Department Visit Rate
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: emergency_department_visit_rate
+  node_name: Emergency Department Visit Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals with alcohol use disorder experience acute intoxication episodes,
+  withdrawal symptoms, and alcohol-related injuries requiring immediate medical attention'
+- 'Step 2: Chronic alcohol use leads to medical complications including liver disease,
+  gastrointestinal bleeding, infections, and trauma that necessitate emergency care'
+- 'Step 3: Individuals with alcohol use disorder often lack regular primary care access
+  and use ED as their primary healthcare source, resulting in higher ED utilization
+  rates'
+- 'Step 4: Alcohol-related presentations contribute up to one-third of ED visits among
+  vulnerable populations, with repeat visits common due to ongoing substance use'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'N. Vohra et al. 2022. Homelessness and the use of Emergency Department
+    as a source of healthcare: a systematic review. International Journal of Emergency
+    Medicine.'
+  supporting_citations: []
+description: Alcohol use disorder significantly increases emergency department visit
+  rates through multiple pathways including acute intoxication episodes, withdrawal
+  emergencies, alcohol-related injuries, and chronic medical complications. A systematic
+  review of 36 studies found that alcohol-related diagnoses contributed up to one-third
+  of ED visits among vulnerable populations. The relationship is particularly pronounced
+  among persons experiencing homelessness who use EDs as their primary healthcare
+  source, with visit rates 1.63 to 18.75 times higher than general populations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: housing_status
+  direction: strengthens
+  strength: strong
+  description: Persons experiencing homelessness with alcohol use disorder have significantly
+    elevated ED visit rates compared to housed populations (rate ratio 1.63 to 18.75)
+- name: polysubstance_use
+  direction: strengthens
+  strength: moderate
+  description: Combined alcohol and substance use disorders increase ED presentations,
+    with substance poisoning contributing up to a quarter of visits
+- name: access_to_primary_care
+  direction: weakens
+  strength: moderate
+  description: When integrated care pathways exist, reliance on ED as primary healthcare
+    source decreases

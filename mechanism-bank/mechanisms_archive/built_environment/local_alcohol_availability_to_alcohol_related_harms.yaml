@@ -1,0 +1,42 @@
+id: local_alcohol_availability_to_alcohol_related_harms
+name: Local Alcohol Availability → Alcohol-Related Harms
+from_node:
+  node_id: local_alcohol_availability
+  node_name: Local Alcohol Availability
+to_node:
+  node_id: alcohol_related_harms
+  node_name: Alcohol-Related Harms
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: High alcohol availability increases opportunities for alcohol access and
+  purchase'
+- 'Step 2: Increased access leads to higher rates of alcohol consumption at individual
+  and population levels'
+- 'Step 3: Greater consumption increases risk exposure for acute harms (injuries,
+  violence) and chronic conditions (liver disease, cancer)'
+- 'Step 4: Population-level increases in consumption translate to elevated rates of
+  alcohol-related morbidity and mortality'
+evidence:
+  quality_rating: B
+  n_studies: 34
+  primary_citation: 'E. Dimova et al. 2023. "Exploring the influence of local alcohol
+    availability on drinking norms and practices: A qualitative scoping review." *Drug
+    and Alcohol Review*. https://doi.org/10.1111/dar.13596'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.051746'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: permissive_drinking_environment
+  direction: strengthens
+  strength: strong
+  description: Environments where drinking is normalized and socially accepted amplify
+    the relationship between availability and harms
+- name: socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Disadvantaged communities may experience concentrated outlet density
+    and differential vulnerability to alcohol-related harms

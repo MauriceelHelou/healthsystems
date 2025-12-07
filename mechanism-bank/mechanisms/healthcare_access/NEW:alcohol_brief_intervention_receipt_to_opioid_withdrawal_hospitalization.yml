@@ -1,0 +1,54 @@
+id: NEW:alcohol_brief_intervention_receipt_to_opioid_withdrawal_hospitalization
+name: Alcohol-Related Brief Intervention Receipt → Opioid-Related Hospitalization
+from_node:
+  node_id: NEW:alcohol_brief_intervention_receipt
+  node_name: Alcohol-Related Brief Intervention Receipt
+to_node:
+  node_id: opioid_withdrawal_hospitalization
+  node_name: Opioid-Related Hospitalization
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Systematic alcohol screening in primary care identifies patients at elevated polysubstance
+  risk'
+- 'Step 2: Brief intervention creates opportunity for health behavior discussion and referral to additional
+  services'
+- 'Step 3: Reduced opioid prescribing and OUD incidence among those receiving intervention'
+- 'Step 4: Lower overall opioid exposure reduces risk of opioid-related medical emergencies'
+- 'Step 5: Decreased opioid-related hospitalizations including overdose and withdrawal complications'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Dan V. Blalock et al. 2024. "Associations Between a Primary Care-Delivered Alcohol-Related
+    Brief Intervention and Subsequent Opioid-Related Outcomes.." https://doi.org/10.1176/appi.ajp.20230683
+  supporting_citations:
+  - Additional citations require full-text access - abstract references emergency health care utilization
+    literature
+  - Additional citations require full-text access - abstract references overdose mortality literature
+  - Additional citations require full-text access - abstract references VA clinical protocol literature
+  doi: 10.1176/appi.ajp.20230683
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Veterans with positive AUDIT-C screens who did NOT receive an alcohol-related brief intervention
+  showed 19% higher odds of opioid-related hospitalization, though this finding was not statistically
+  significant (95% CI included 1.0). The direction of effect is consistent with the cascade model from
+  prescriptions through OUD to hospitalizations.
+quantitative_effects:
+  effect_size:
+    value: 1.19
+    type: odds_ratio
+    ci_lower: 0.99
+    ci_upper: 1.44
+  sample_size: 63804
+structural_competency:
+  equity_implications: The cascade from unhealthy alcohol use through opioid prescription to hospitalization
+    reflects how healthcare system contact points can either perpetuate or interrupt cycles of substance-related
+    harm. The VA's systematic screening approach represents a structural intervention that, when fully
+    implemented, may reduce downstream acute care utilization and associated costs. The non-significant
+    finding for hospitalization may reflect lower statistical power due to rare outcome (0.8% incidence).
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.985977'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

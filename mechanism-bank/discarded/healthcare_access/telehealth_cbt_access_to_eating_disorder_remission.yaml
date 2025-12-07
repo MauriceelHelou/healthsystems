@@ -1,0 +1,50 @@
+id: telehealth_cbt_access_to_eating_disorder_remission
+name: Telehealth-Delivered Cognitive Behavioral Therapy Access → Eating Disorder Remission
+from_node:
+  node_id: telehealth_cbt_access
+  node_name: Telehealth-Delivered Cognitive Behavioral Therapy Access
+to_node:
+  node_id: eating_disorder_remission
+  node_name: Eating Disorder Remission
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Videoconferencing-based CBT delivery removes geographic and transportation
+  barriers to specialized eating disorder treatment'
+- 'Step 2: Enhanced CBT protocol targets maladaptive eating behaviors and cognitive
+  patterns associated with night-eating syndrome and binge-eating disorder'
+- 'Step 3: Tailored intervention addressing comorbid insomnia alongside eating disorder
+  symptoms allows comprehensive treatment of interconnected conditions'
+- 'Step 4: Patient achieves abstinence from binge eating and scores below clinical
+  cut-points on eating disorder measures post-treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Bernou Melisse and Teresa Arora 2024. "Cognitive behavioral therapy-enhanced
+    through videoconferencing for night eating syndrome, binge-eating disorder and
+    comorbid insomnia: a Case Report.." *Journal of eating disorders*. https://doi.org/10.1186/s40337-024-01131-8'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.040542'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: comorbid_insomnia
+  direction: strengthens
+  strength: moderate
+  description: Integration of CBT-Insomnia interventions throughout treatment course
+    appeared necessary for addressing interconnected sleep and eating disorder symptoms
+- name: treatment_history
+  direction: weakens
+  strength: moderate
+  description: Patient had history of multiple previous treatments, bariatric surgery,
+    and alcohol addiction, suggesting greater treatment resistance
+- name: childhood_trauma
+  direction: weakens
+  strength: moderate
+  description: History of childhood trauma and personality disorder traits may complicate
+    treatment response and contribute to symptom shifts
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/telehealth_cbt_access_to_eating_disorder_remission.yaml
+_category: healthcare_access

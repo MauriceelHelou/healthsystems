@@ -1,0 +1,89 @@
+id: incarceration_rate_to_community_health_outcomes
+name: Incarceration Rate -> Community Health Outcomes
+from_node:
+  node_id: incarceration_rate
+  node_name: Incarceration Rate
+  node_type: policy
+to_node:
+  node_id: community_health_outcomes
+  node_name: Community Health Outcomes
+  node_type: crisis_endpoint
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: High incarceration rates remove working-age adults from communities, disrupting family and economic structures'
+- 'Step 2: Families of incarcerated individuals face economic hardship, housing instability, and stress'
+- 'Step 3: Children with incarcerated parents experience trauma, adverse childhood experiences, and developmental impacts'
+- 'Step 4: Communities with high incarceration rates face reduced social capital, civic engagement, and economic vitality'
+- 'Step 5: Cumulative individual, family, and community impacts manifest as elevated mortality, chronic disease, and mental health burden'
+evidence:
+  quality_rating: B
+  n_studies: 20
+  primary_citation: 'Wildeman, Christopher, and Emily A. Wang. 2017. "Mass incarceration, public health, and widening inequality in the USA." Lancet 389(10077): 1464-1474.'
+  supporting_citations:
+  - 'National Academies of Sciences, Engineering, and Medicine. 2017. "The Effects of Incarceration and Reentry on Community Health and Well-Being." Washington, DC: The National Academies Press.'
+  - 'Massoglia, Michael, and William Alex Pridemore. 2015. "Incarceration and Health." Annual Review of Sociology 41: 291-310.'
+  - 'Binswanger, Ingrid A., et al. 2007. "Release from prison--a high risk of death for former inmates." New England Journal of Medicine 356(2): 157-165.'
+  doi: 10.1016/S0140-6736(17)30259-3
+  journal: The Lancet
+  year: 2017
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 1.03
+    type: relative_risk
+    ci_lower: null
+    ci_upper: null
+    ci_level: 95
+  interpretation: 'Counties with higher incarceration rates have 3% higher mortality rates compared to communities with low incarceration rates. NYC neighborhood studies found high-incarceration areas had elevated diabetes rates, psychiatric hospitalizations, infant mortality, and premature mortality. US life expectancy would have increased 51.1% more and infant mortality fallen 39.6% more from 1983-2005 if incarceration had remained at mid-1980s levels'
+  sample_size: 330000000
+  heterogeneity_notes: 'Effects concentrated in Black communities due to racial disparities in incarceration; 1 in 4 Black children vs 1 in 25 White children born in 1990 had an incarcerated parent'
+last_updated: '2025-11-30'
+version: '1.0'
+description: Mass incarceration is a major social determinant of health affecting individuals, families, and communities. Counties with high incarceration rates have 3% higher mortality rates. NYC neighborhoods with high incarceration have elevated rates of diabetes, psychiatric hospitalizations, infant mortality, and premature mortality. Effects operate through multiple pathways including disruption of families, economic hardship, intergenerational trauma, and community destabilization. The disproportionate incarceration of Black men creates racial health disparities transmitted across generations.
+moderators:
+- name: racial_composition
+  direction: strengthens
+  strength: strong
+  description: Effects concentrated in Black communities due to disparate incarceration rates
+- name: poverty_rate
+  direction: strengthens
+  strength: strong
+  description: High-poverty communities face compounded effects of incarceration
+- name: incarceration_concentration
+  direction: strengthens
+  strength: strong
+  description: Geographically concentrated incarceration in specific neighborhoods amplifies community-level effects
+- name: reentry_support
+  direction: weakens
+  strength: moderate
+  description: Reentry programs and services may mitigate some health impacts
+- name: family_support_policies
+  direction: weakens
+  strength: moderate
+  description: Policies supporting families of incarcerated individuals may buffer some effects
+structural_competency:
+  root_cause_level: criminal_justice_structural
+  avoids_victim_blaming: true
+  equity_implications: Mass incarceration is a policy choice that disproportionately impacts Black communities. One in four Black children born in 1990 had an incarcerated parent vs one in 25 White children. Health disparities from incarceration represent intergenerational transmission of structural racism. Solutions include decarceration, sentencing reform, and investment in community health rather than prisons.
+assumptions:
+- Assumes incarceration causes health effects beyond selection of unhealthy individuals into prison
+- Assumes community-level effects beyond individual prisoner health
+- Assumes current US incarceration rate is abnormally high (5x OECD average)
+limitations:
+- Difficult to establish causation given confounding factors
+- Selection effects (individuals who become incarcerated may have worse baseline health)
+- Community-level studies cannot isolate individual pathways
+- Limited ability to study counterfactual of lower incarceration rates
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Incarceration rates vary dramatically by state and are highly concentrated in specific neighborhoods
+  relevant_geographies:
+  - Southern states have highest incarceration rates
+  - Urban Black neighborhoods face concentrated incarceration effects
+  - Rural communities face different reentry challenges
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

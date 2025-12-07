@@ -1,0 +1,43 @@
+id: NEW:social_determinants_of_health_composite_to_food_insecurity_rate
+name: Social Determinants of Health → Food Insecurity
+from_node:
+  node_id: NEW:social_determinants_of_health_composite
+  node_name: Social Determinants of Health
+to_node:
+  node_id: food_insecurity_rate
+  node_name: Food Insecurity
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Adverse social determinants of health including low socioeconomic status,
+  limited education, unstable housing, and lack of economic resources constrain household
+  financial capacity'
+- 'Step 2: Limited financial resources force households to make trade-offs between
+  food expenditures and other essential needs (housing, utilities, healthcare)'
+- 'Step 3: These resource constraints result in inability to consistently obtain nutritious
+  food, leading to food insecurity which disproportionately affects socioeconomically
+  disadvantaged households'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Kristen L. Flint et al. 2020. Emerging trends and the clinical
+    impact of food insecurity in patients with diabetes. Journal of Diabetes.
+  supporting_citations: []
+description: Social determinants of health, particularly socioeconomic disadvantage,
+  directly contribute to food insecurity through resource constraints that prevent
+  consistent access to nutritious food. This relationship is well-established and
+  disproportionately impacts vulnerable populations including those with chronic diseases.
+  Community and individual level factors both contribute to this relationship.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: chronic_disease_status
+  direction: strengthens
+  strength: moderate
+  description: Presence of chronic diseases including diabetes mellitus increases
+    vulnerability to food insecurity among those with adverse social determinants
+- name: socioeconomic_disadvantage
+  direction: strengthens
+  strength: strong
+  description: Food insecurity disproportionately affects socioeconomically disadvantaged
+    households, indicating SES is a key driver

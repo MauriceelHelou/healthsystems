@@ -1,0 +1,42 @@
+id: polygenic_risk_smoking_initiation_to_smoking_status
+name: Polygenic Risk Score for Smoking Initiation → Smoking Status (Current Smoker
+  vs Never Smoker)
+from_node:
+  node_id: polygenic_risk_smoking_initiation
+  node_name: Polygenic Risk Score for Smoking Initiation
+to_node:
+  node_id: smoking_status
+  node_name: Smoking Status (Current Smoker vs Never Smoker)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Genetic variants associated with smoking initiation aggregate into a polygenic
+  risk score that reflects inherited biological predisposition'
+- 'Step 2: These genetic variants influence neurobiological pathways including nicotinic
+  acetylcholine receptors and dopaminergic reward systems'
+- 'Step 3: Individuals with higher PRS have increased biological susceptibility to
+  initiate and maintain smoking behavior'
+- 'Step 4: The polygenic risk translates into observable smoking status differences
+  in the population'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jerome C Foo et al. 2024. "Polygenic risk scores for nicotine
+    use and family history of smoking are associated with smoking behaviour.." *Drug
+    and alcohol dependence*. https://doi.org/10.1016/j.drugalcdep.2024.112415
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.885055'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: parental_smoking_history
+  direction: strengthens
+  strength: moderate
+  description: Family history of smoking shows partial overlap with PRS but also independent
+    additive effects, suggesting both genetic transmission and environmental exposure
+    pathways
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/polygenic_risk_smoking_initiation_to_smoking_status.yaml
+_category: biological

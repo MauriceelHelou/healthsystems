@@ -1,0 +1,72 @@
+id: NEW:time_restricted_eating_intervention_to_obesity_individual
+name: Time-Restricted Eating Intervention → Obesity (Individual BMI ≥30)
+from_node:
+  node_id: NEW:time_restricted_eating_intervention
+  node_name: Time-Restricted Eating Intervention
+to_node:
+  node_id: obesity_individual
+  node_name: Obesity (Individual BMI ≥30)
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Time-restricted eating (TRE) limits the daily eating window to 4-8 hours, creating a prolonged
+  fasting period'
+- 'Step 2: Extended fasting periods enhance metabolic flexibility and shift energy utilization toward
+  fat oxidation'
+- 'Step 3: Circadian alignment of feeding patterns optimizes hormonal regulation including insulin sensitivity'
+- 'Step 4: Reduced caloric intake often naturally accompanies restricted eating windows'
+- 'Step 5: Sustained TRE intervention (≥8 weeks) leads to significant reductions in body weight and fat
+  mass'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: 'Xin Jin et al. 2024. "Counting hours or calories? Metabolic regulatory role of time-restricted
+    eating in adults with overweight and obesity: a systematic review and meta-analysis." https://doi.org/10.1080/10408398.2024.2382344'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes 23 randomized and non-randomized
+    clinical trials
+  - Studies included participants with overweight/obesity examining body weight, body composition and
+    cardiometabolic parameters
+  - Research spans publications indexed in PubMed, Embase and Cochrane Central Register through October
+    2022
+  doi: 10.1080/10408398.2024.2382344
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Time-restricted eating interventions with 4-8 hour feeding windows lead to significant reductions
+  in body weight in adults with overweight and obesity. The meta-analysis of 23 studies with 1867 participants
+  found that TRE is an effective approach for weight loss, with optimal effects observed using an 8-hour
+  eating window with morning timing for at least 8 weeks.
+quantitative_effects:
+  sample_size: 1867
+moderators:
+- name: feeding_window_duration
+  direction: strengthens
+  strength: strong
+  description: 4-8 hour feeding windows showed significant weight and fat mass reduction effects
+- name: eating_timing_strategy
+  direction: strengthens
+  strength: moderate
+  description: Morning eating strategy was identified as more effective compared to late eating strategies
+- name: intervention_duration
+  direction: strengthens
+  strength: strong
+  description: Interventions of at least 8 weeks duration showed significant effects on body weight and
+    fat mass
+- name: energy_restriction_combination
+  direction: strengthens
+  strength: moderate
+  description: TRE maintained significant weight-loss effects even when energy restriction was applied
+    to both intervention and control groups
+structural_competency:
+  equity_implications: 'While TRE is framed as an individual behavior change, structural factors shape
+    feasibility: work schedules, food environment timing, shift work policies, and access to meal preparation
+    facilities all influence ability to implement TRE. Populations with irregular work hours, food insecurity,
+    or lack of kitchen access may face barriers to TRE adherence. Policy interventions supporting regular
+    work schedules and workplace meal facilities could improve TRE accessibility across socioeconomic
+    groups.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.085556'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

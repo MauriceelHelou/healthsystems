@@ -1,0 +1,57 @@
+id: NEW:smartphone_tablet_exposure_children_to_physical_activity_insufficient
+name: Smartphone and Tablet Exposure in Children → Insufficient Physical Activity
+from_node:
+  node_id: NEW:smartphone_tablet_exposure_children
+  node_name: Smartphone and Tablet Exposure in Children
+to_node:
+  node_id: physical_activity_insufficient
+  node_name: Insufficient Physical Activity
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Children spend time using smartphones and tablets'
+- 'Step 2: Screen time displaces opportunities for active play and movement'
+- 'Step 3: Sedentary entertainment reduces motivation for physical activity'
+- 'Step 4: Cumulative displacement leads to insufficient physical activity levels'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'E. Bacil et al. 2024. "Exposure to Smartphones and Tablets, Physical Activity and
+    Sleep in Children From 5 to 10 Years Old: A Systematic Review and Meta-Analysis." https://doi.org/10.1177/08901171241242556'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 17 studies included
+  - Studies identified from 2396 potentially relevant papers meeting inclusion criteria
+  - Observational studies from indexed journals in Portuguese, English, and Spanish
+  doi: 10.1177/08901171241242556
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Children with shorter smartphone and tablet usage were 1.19 times more likely to be physically
+  active (OR = 1.19; 95%CI = 1.03-1.37). This inverse association suggests device use competes with physical
+  activity, though the effect size is smaller than for sleep outcomes.
+quantitative_effects:
+  effect_size:
+    value: 1.19
+    type: odds_ratio
+    ci_lower: 1.03
+    ci_upper: 1.37
+moderators:
+- name: access_to_recreation_facilities
+  direction: weakens
+  strength: moderate
+  description: Greater access to parks and recreation may buffer the sedentary effects of device use
+- name: neighborhood_safety
+  direction: strengthens
+  strength: moderate
+  description: Unsafe neighborhoods may increase indoor screen use as alternative to outdoor play
+structural_competency:
+  equity_implications: Physical activity in children is constrained by built environment factors including
+    park access, sidewalk availability, neighborhood safety, and school recess policies. Device use may
+    be a response to inadequate safe spaces for active play, particularly in lower-income neighborhoods.
+    Interventions must address both screen time and structural barriers to physical activity to avoid
+    placing blame on families without resources for alternatives.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.108069'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

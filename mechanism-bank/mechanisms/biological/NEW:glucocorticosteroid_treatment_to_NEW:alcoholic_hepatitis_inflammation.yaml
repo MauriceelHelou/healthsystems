@@ -1,0 +1,57 @@
+id: NEW:glucocorticosteroid_treatment_to_NEW:alcoholic_hepatitis_inflammation
+name: Glucocorticosteroid Treatment → Alcoholic Hepatitis Inflammation
+from_node:
+  node_id: NEW:glucocorticosteroid_treatment
+  node_name: Glucocorticosteroid Treatment
+to_node:
+  node_id: NEW:alcoholic_hepatitis_inflammation
+  node_name: Alcoholic Hepatitis Inflammation
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Glucocorticosteroids are administered orally or parenterally to patients
+  with alcoholic hepatitis'
+- 'Step 2: Glucocorticosteroids bind to glucocorticoid receptors and exert anti-inflammatory
+  effects by suppressing pro-inflammatory cytokine production and immune cell activation'
+- 'Step 3: The theoretical reduction in necroinflammation characteristic of alcoholic
+  hepatitis should reduce liver damage and improve outcomes'
+- 'Step 4: However, clinical evidence shows no significant effect on mortality, serious
+  adverse events, or liver-related outcomes, suggesting the anti-inflammatory mechanism
+  may be insufficient to alter disease course'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: Chavdar S Pavlov et al. 2017. Glucocorticosteroids for people
+    with alcoholic hepatitis. The Cochrane database of systematic reviews.
+  supporting_citations: []
+description: Glucocorticosteroids are theoretically used as anti-inflammatory drugs
+  for alcoholic hepatitis, targeting the necroinflammation characteristic of the disease.
+  This Cochrane systematic review of 15 randomized clinical trials (1861 participants)
+  found no evidence of benefit for glucocorticosteroids compared to placebo or no
+  intervention on all-cause mortality (RR 0.90, 95% CI 0.70-1.15), serious adverse
+  events (RR 1.05, 95% CI 0.85-1.29), or liver-related mortality (RR 0.89, 95% CI
+  0.69-1.14). While the biological mechanism of anti-inflammatory action is well-established,
+  clinical evidence does not support meaningful reduction in inflammation-related
+  outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.9
+    type: relative_risk
+    ci_lower: 0.7
+    ci_upper: 1.15
+  p_value: null
+  sample_size: 1861
+moderators:
+- name: disease_severity
+  direction: weakens
+  strength: moderate
+  description: Maddrey's score stratifies patients into mild (<32) and severe (≥32)
+    alcoholic hepatitis; potential differential effects by severity could not be confirmed
+    due to inadequate individual participant data
+- name: alcohol_abstinence
+  direction: strengthens
+  strength: moderate
+  description: Alcoholic hepatitis can resolve with alcohol abstinence; treatment
+    effects may vary based on continued alcohol use

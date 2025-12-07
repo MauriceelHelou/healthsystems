@@ -1,0 +1,55 @@
+id: NEW:aud_population_prevalence_to_NEW:screening_false_positive_rate
+name: Population-Level AUD Prevalence → Screening False Positive Rate
+from_node:
+  node_id: NEW:aud_population_prevalence
+  node_name: Population-Level AUD Prevalence
+to_node:
+  node_id: NEW:screening_false_positive_rate
+  node_name: Screening False Positive Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Population-level AUD prevalence determines the prior probability of disease in screening populations'
+- 'Step 2: In low-prevalence settings, even highly specific tests produce proportionally more false positives'
+- 'Step 3: Higher false-positive rates increase number needed to screen (NNS) to treat one true case'
+- 'Step 4: Resources are diverted to follow-up of false positives, reducing system efficiency'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'S. Lange et al. 2019. "Facilitating Screening and Brief Interventions in Primary
+    Care: A Systematic Review and Meta‐Analysis of the AUDIT as an Indicator of Alcohol Use Disorders."
+    https://doi.org/10.1111/acer.14171'
+  supporting_citations:
+  - Global Information System on Alcohol and Health (GISAH) ecological data used for country-level estimates
+  - Additional citations require full-text access
+  - Meta-regression models constructed from 36 studies across multiple databases
+  doi: 10.1111/acer.14171
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study calculated the number of people needed to be screened to treat one individual with
+  AUD for all countries globally, demonstrating that low-prevalence populations require screening many
+  more people and experience higher proportions of false positives. This has significant resource allocation
+  implications for primary care screening programs.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Number of people needed to be screened to treat 1 individual with AUD was estimated
+    for all countries globally using data from the Global Information System on Alcohol and Health, demonstrating
+    substantial international variation.
+moderators:
+- name: specificity_threshold
+  direction: weakens
+  strength: moderate
+  description: Using a specificity of 0.95 still results in varying numbers needed to screen across different
+    prevalence settings
+structural_competency:
+  equity_implications: This mechanism reveals how universal screening recommendations may create structural
+    inefficiencies and potential harms in certain populations. Low-prevalence populations (including women
+    as a group) experience disproportionate burden from false-positive results, which can lead to unnecessary
+    medical follow-up, stigma, and resource misallocation. This represents a structural healthcare policy
+    issue where one-size-fits-all screening guidelines fail to account for population heterogeneity.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.982127'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

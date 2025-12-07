@@ -1,0 +1,51 @@
+id: supersized_alcopop_availability_to_bac_underestimation
+name: Supersized Alcopop Availability → Blood Alcohol Concentration Underestimation
+from_node:
+  node_id: supersized_alcopop_availability
+  node_name: Supersized Alcopop Availability
+to_node:
+  node_id: bac_underestimation
+  node_name: Blood Alcohol Concentration Underestimation
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Supersized alcopops contain large quantities of alcohol in single-serving
+  containers that resemble non-alcoholic beverages in volume'
+- 'Step 2: Young adults use visual cues from container size to estimate alcohol content,
+  similar to how they would estimate beer consumption'
+- 'Step 3: Lack of clear product labeling obscures the actual number of standard drinks
+  contained in supersized alcopop cans'
+- 'Step 4: Students significantly underestimate their BAC from consuming supersized
+  alcopops compared to equivalent volumes of beer'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'M. Rossheim et al. 2018. "College Students'' Underestimation
+    of Blood Alcohol Concentration from Hypothetical Consumption of Supersized Alcopops:
+    Results from a Cluster‐Randomized Classroom Study." *Alcoholism: Clinical and
+    Experimental Research*. https://doi.org/10.1111/acer.13764'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.538524'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: number_of_drinks_consumed
+  direction: strengthens
+  strength: strong
+  description: 'BAC underestimation increases with number of supersized alcopop cans:
+    0.04 g/dl for 1 can, 0.09 g/dl for 2 cans, and 0.13 g/dl for 3 cans'
+- name: body_weight
+  direction: strengthens
+  strength: moderate
+  description: BAC calculations are based on body weight, suggesting underestimation
+    varies by individual physiology
+- name: biological_sex
+  direction: strengthens
+  strength: moderate
+  description: BAC calculations are based on sex, suggesting differential underestimation
+    by gender
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/social_environment/supersized_alcopop_availability_to_bac_underestimation.yaml
+_category: social_environment

@@ -1,0 +1,46 @@
+id: homelessness_to_injector_mortality
+name: Homelessness → Mortality Among People Who Inject Drugs
+from_node:
+  node_id: homelessness
+  node_name: Homelessness
+to_node:
+  node_id: injector_mortality
+  node_name: Mortality Among People Who Inject Drugs
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Lack of stable housing creates exposure to unsafe drug use environments
+  without access to sterile equipment or overdose prevention resources'
+- 'Step 2: Homelessness reduces access to healthcare services, drug treatment programs,
+  and harm reduction initiatives'
+- 'Step 3: Unstable living conditions increase social isolation and reduce likelihood
+  of supervision during drug use, preventing timely overdose intervention'
+- 'Step 4: These structural barriers collectively increase risk of fatal poisoning
+  from opioids and polydrug use'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Therese M Lynn et al. 2018. "Trends in Injector Deaths in Ireland,
+    as Recorded by the National Drug-Related Deaths Index, 1998-2014.." *Journal of
+    studies on alcohol and drugs*.
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.391178'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: urban_residence
+  direction: strengthens
+  strength: strong
+  description: Dublin city/county accounted for 69% of injector deaths, indicating
+    urban areas with higher homelessness rates experience concentrated mortality
+- name: polydrug_use
+  direction: strengthens
+  strength: strong
+  description: 62% of poisoning deaths involved polydrug use with opioids, which may
+    be more common among homeless populations without stable environments to manage
+    drug use
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/social_environment/homelessness_to_injector_mortality.yaml
+_category: social_environment

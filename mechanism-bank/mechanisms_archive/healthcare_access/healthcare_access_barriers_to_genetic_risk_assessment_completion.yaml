@@ -1,0 +1,49 @@
+id: healthcare_access_barriers_to_genetic_risk_assessment_completion
+name: Healthcare Access Barriers → Genetic Risk Assessment Completion
+from_node:
+  node_id: healthcare_access_barriers
+  node_name: Healthcare Access Barriers
+to_node:
+  node_id: genetic_risk_assessment_completion
+  node_name: Genetic Risk Assessment Completion
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare access barriers (including literacy limitations, language barriers,
+  and limited healthcare system navigation capacity) disproportionately impact underserved
+  populations'
+- 'Step 2: These barriers prevent detailed family history collection in primary care
+  settings, which is necessary for hereditary cancer risk assessment'
+- 'Step 3: Without adequate family history collection, risk assessment for hereditary
+  cancer syndromes cannot be completed'
+- 'Step 4: This creates a roadblock that prevents appropriate genetics referral and
+  cascade to preventive care for hereditary conditions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Kathleen F. Mittendorf et al. 2022. "Literacy-adapted, electronic
+    family history assessment for genetics referral in primary care: patient user
+    insights from qualitative interviews." *Hereditary Cancer in Clinical Practice*.
+    https://doi.org/10.1186/s13053-022-00231-3'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.865877'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: literacy_level
+  direction: strengthens
+  strength: strong
+  description: Lower literacy levels strengthen the barrier effect, as family history
+    tools require reading comprehension and health literacy
+- name: language_barriers
+  direction: strengthens
+  strength: strong
+  description: Language barriers strengthen the negative effect on completing genetic
+    risk assessments
+- name: literacy_adapted_tool_use
+  direction: weakens
+  strength: moderate
+  description: Use of literacy-adapted, electronic tools can mitigate some of the
+    access barriers

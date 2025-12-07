@@ -1,0 +1,60 @@
+id: NEW:hiv_related_stigma_to_anxiety_disorder
+name: HIV-Related Stigma → Anxiety Disorder
+from_node:
+  node_id: NEW:hiv_related_stigma
+  node_name: HIV-Related Stigma
+to_node:
+  node_id: anxiety_disorder
+  node_name: Anxiety Disorder
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: People living with HIV (PLWH) experience stigma from healthcare providers, communities, and
+  structural discrimination'
+- 'Step 2: Stigma intersects with existing structural inequalities and cultural discrimination'
+- 'Step 3: HIV-related stigma creates chronic psychological stress and emotional distress'
+- 'Step 4: Chronic stress and social marginalization contribute to anxiety symptom development'
+- 'Step 5: Anxiety disorders manifest at higher rates among stigmatized PLWH'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Bahram Armoon et al. 2022. "HIV related stigma associated with social support, alcohol
+    use disorders, depression, anxiety, and suicidal ideation among people living with HIV: a systematic
+    review and meta-analysis." https://doi.org/10.1186/s13033-022-00527-w'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 22 studies with 9548 participants
+  - Studies published between January 1992 and August 2020 from PubMed, Scopus, Web of Sciences, PsycInfo,
+    SciELO and Cochrane library
+  - Studies measuring stigma among PLWH examining mental health outcomes
+  doi: 10.1186/s13033-022-00527-w
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: PLWH who had been diagnosed with anxiety were 1.89 times more likely to report HIV-related
+  stigma. The relationship reflects how structural stigma and discrimination against PLWH creates chronic
+  stress that manifests as anxiety disorders.
+quantitative_effects:
+  effect_size:
+    value: 1.89
+    type: odds_ratio
+  sample_size: 9548
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies included in meta-analysis came from multiple countries with varying cultural
+    contexts and structural inequalities affecting stigma experiences
+moderators:
+- name: social_support
+  direction: weakens
+  strength: moderate
+  description: Higher levels of social support were associated with lower likelihood of reporting HIV-related
+    stigma, suggesting protective buffering effect
+structural_competency:
+  equity_implications: This mechanism traces HIV-related anxiety to structural stigma rather than individual
+    vulnerability. The paper explicitly notes that stigma intersects with structural inequalities and
+    healthcare provider discrimination, emphasizing systemic rather than individual-level causes. Interventions
+    should target structural stigma reduction and mental health support systems.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.988861'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,45 @@
+id: alcohol_outlet_density_3km_to_depression_risk
+name: Alcohol Outlet Density within 3 km → Risk of Depression
+from_node:
+  node_id: alcohol_outlet_density_3km
+  node_name: Alcohol Outlet Density within 3 km
+to_node:
+  node_id: depression_risk
+  node_name: Risk of Depression
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher outlet density may indicate more commercial activity and neighborhood
+  vitality'
+- 'Step 2: Commercial activity creates social gathering places and opportunities for
+  social interaction'
+- 'Step 3: Increased social connection and reduced isolation may provide protective
+  mental health effects'
+- 'Step 4: However, mechanism unclear and may reflect unmeasured confounding or reverse
+  causation requiring further research'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Karen E Lamb et al. 2017. "Associations between access to alcohol
+    outlets and alcohol intake and depressive symptoms in women from socioeconomically
+    disadvantaged neighbourhoods in Australia.." *BMC public health*. https://doi.org/10.1186/s12889-017-4022-4
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.045827'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: distance_threshold
+  direction: strengthens
+  strength: strong
+  description: Association only present at 3 km distance, not at immediate 0.4 km
+    proximity
+- name: neighborhood_disadvantage
+  direction: u_shaped
+  strength: moderate
+  description: Effect observed in disadvantaged neighborhoods where commercial activity
+    may be particularly important for social infrastructure
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/alcohol_outlet_density_3km_to_depression_risk.yaml
+_category: built_environment

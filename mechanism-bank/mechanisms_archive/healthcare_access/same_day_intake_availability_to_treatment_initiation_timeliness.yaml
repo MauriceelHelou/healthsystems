@@ -1,0 +1,36 @@
+id: same_day_intake_availability_to_treatment_initiation_timeliness
+name: Limited Same-Day Intake Availability → Timely Treatment Initiation for OUD
+from_node:
+  node_id: same_day_intake_availability
+  node_name: Limited Same-Day Intake Availability
+to_node:
+  node_id: treatment_initiation_timeliness
+  node_name: Timely Treatment Initiation for OUD
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Only 52% of clinics accepting pregnant patients offer same-day intake services'
+- 'Step 2: Delay between seeking treatment and receiving care creates opportunities
+  for treatment disengagement'
+- 'Step 3: Pregnant patients facing waitlists or appointment delays may lose motivation
+  or encounter competing barriers'
+- 'Step 4: Delayed treatment initiation prolongs opioid exposure during critical fetal
+  development periods'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Ashley C. Lensch et al. 2021. "Pregnant Patients Using Opioids:
+    Treatment Access Barriers in the Age of COVID-19." *Journal of addiction medicine*.
+    https://doi.org/10.1097/ADM.0000000000000826'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.704635'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: pregnancy_stage
+  direction: strengthens
+  strength: strong
+  description: Later in pregnancy, delays in treatment initiation have more immediate
+    health consequences

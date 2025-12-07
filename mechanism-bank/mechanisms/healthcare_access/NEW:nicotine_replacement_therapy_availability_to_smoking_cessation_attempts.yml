@@ -1,0 +1,48 @@
+id: NEW:nicotine_replacement_therapy_availability_to_smoking_cessation_attempts
+name: Nicotine Replacement Therapy Availability → Smoking Cessation Attempts
+from_node:
+  node_id: NEW:nicotine_replacement_therapy_availability
+  node_name: Nicotine Replacement Therapy Availability
+to_node:
+  node_id: smoking_cessation_attempts
+  node_name: Smoking Cessation Attempts
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare systems provide access to nicotine replacement therapy products'
+- 'Step 2: NRT partially addresses nicotine withdrawal during quit attempts'
+- 'Step 3: Reduced withdrawal symptoms support continued abstinence'
+- 'Step 4: However, NRT is less effective than nicotine EC for maintaining abstinence'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: Nicola Lindson et al. 2025. "Electronic cigarettes for smoking cessation.." https://doi.org/10.1002/14651858.CD010216.pub10
+  supporting_citations:
+  - 9 RCTs comparing nicotine EC to NRT included in pooled analysis
+  - Total of 2703 participants in EC vs NRT comparisons
+  - Additional citations require full-text access
+  doi: 10.1002/14651858.CD010216.pub10
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: NRT serves as a comparator showing lower effectiveness than nicotine EC for smoking cessation.
+  The inverse of the primary finding (RR 1.55 favoring EC) indicates NRT is approximately 35% less effective
+  than EC for achieving smoking abstinence at 6+ months.
+quantitative_effects:
+  effect_size:
+    value: 0.65
+    type: relative_risk
+    ci_lower: 0.53
+    ci_upper: 0.78
+  sample_size: 2703
+  heterogeneity_i_squared: 0.0
+structural_competency:
+  equity_implications: NRT access is mediated by healthcare system coverage, pharmacy availability, and
+    affordability. Insurance coverage policies for NRT vs EC vary substantially and create differential
+    access. Low-income smokers may have limited access to either cessation aid depending on Medicaid coverage
+    and local policies.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.878762'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

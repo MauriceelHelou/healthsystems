@@ -1,0 +1,52 @@
+id: glucocorticoid_use_to_acute_pancreatitis
+name: Glucocorticoid Use → Acute Pancreatitis
+from_node:
+  node_id: glucocorticoid_use
+  node_name: Glucocorticoid Use
+to_node:
+  node_id: acute_pancreatitis
+  node_name: Acute Pancreatitis
+direction: 'null'
+category: biological
+mechanism_pathway:
+- 'Step 1: Genetic variants associated with glucocorticoid use were used as instrumental
+  variables to assess causal relationship'
+- 'Step 2: Mendelian randomization analysis tested whether genetically predicted glucocorticoid
+  use affects pancreatitis risk through biological pathways'
+- 'Step 3: Multiple MR methods (IVW, MR-Egger, weighted median) consistently found
+  no causal effect across European, East Asian, and Finnish populations'
+- 'Step 4: Analysis adjusted for confounders including alcohol consumption, BMI, cholelithiasis,
+  and C-reactive protein levels'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'Wenfeng Lin et al. 2024. "The causality between use of glucocorticoids
+    and risk of pancreatitis: a Mendelian randomization study.." *Frontiers in immunology*.
+    https://doi.org/10.3389/fimmu.2024.1420840'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.201248'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_consumption
+  direction: 'null'
+  strength: moderate
+  description: Multivariable MR analysis adjusted for alcohol consumption as a potential
+    confounder, but null association persisted after adjustment
+- name: body_mass_index
+  direction: 'null'
+  strength: moderate
+  description: BMI was included as covariate in multivariable analysis but did not
+    modify the null association
+- name: cholelithiasis
+  direction: 'null'
+  strength: moderate
+  description: Presence of gallstones adjusted for in multivariable model without
+    changing null finding
+- name: c_reactive_protein
+  direction: 'null'
+  strength: moderate
+  description: Inflammatory marker CRP levels adjusted for without modifying the null
+    association

@@ -1,0 +1,62 @@
+id: NEW:minimum_unit_pricing_alcohol_to_liver_failure_cirrhosis_hospitalization
+name: Minimum Unit Pricing for Alcohol → Alcohol-Related Liver Disease Hospitalization
+from_node:
+  node_id: NEW:minimum_unit_pricing_alcohol
+  node_name: Minimum Unit Pricing for Alcohol
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Alcohol-Related Liver Disease Hospitalization
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Minimum unit pricing (MUP) establishes a legally required floor price per
+  unit of alcohol, increasing the cost of the cheapest alcohol products'
+- 'Step 2: Price increases disproportionately affect heavy drinkers who tend to purchase
+  cheaper, high-strength alcohol products'
+- 'Step 3: Reduced affordability leads to decreased alcohol consumption, particularly
+  among the heaviest consumers from the most deprived groups'
+- 'Step 4: Sustained reduction in alcohol consumption decreases cumulative hepatotoxic
+  exposure to the liver over time'
+- 'Step 5: Reduced hepatotoxic burden leads to decreased progression of alcohol-related
+  liver disease and reduced need for hospitalization (with a 2-3 year lag for chronic
+  conditions)'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'T. Maharaj et al. 2023. Impact of minimum unit pricing on alcohol-related
+    hospital outcomes: systematic review. BMJ Open.'
+  supporting_citations: []
+description: Minimum unit pricing for alcohol reduces alcohol-related liver disease
+  hospitalizations by establishing a price floor that disproportionately increases
+  costs for heavy drinkers of cheap, high-strength products. This systematic review
+  of 22 studies (6 natural experiments and 16 modelling studies) found that MUP reduces
+  chronic alcohol-related admissions by 4-9% annually, with effects appearing 2-3
+  years after implementation. The Bradford Hill Criteria analysis inferred a 'moderate-to-strong'
+  causal link between MUP and reduced alcohol-related hospitalization.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 6.5
+    type: percentage_reduction
+    ci_lower: 4.0
+    ci_upper: 9.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: Socioeconomic deprivation
+  direction: strengthens
+  strength: strong
+  description: MUP disproportionately targets heaviest consumers from most deprived
+    groups who are at greatest risk of alcohol harms, potentially reducing health
+    inequalities
+- name: Time since implementation
+  direction: strengthens
+  strength: moderate
+  description: Chronic alcohol-related admissions including liver disease show a lag
+    of 2-3 years before reductions are observed, while acute admissions respond immediately
+- name: Condition chronicity
+  direction: strengthens
+  strength: moderate
+  description: Chronic alcohol-related admissions show larger reductions (4-9% annually)
+    compared to acute admissions (2-9%)

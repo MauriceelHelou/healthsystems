@@ -1,0 +1,57 @@
+id: NEW:social_determinants_of_health_composite_to_emergency_department_visit_rate
+name: Social Determinants of Health (homelessness, housing instability, socioeconomic
+  factors) → Emergency Department Utilization
+from_node:
+  node_id: NEW:social_determinants_of_health_composite
+  node_name: Social Determinants of Health (homelessness, housing instability, socioeconomic
+    factors)
+to_node:
+  node_id: emergency_department_visit_rate
+  node_name: Emergency Department Utilization
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Individuals experiencing homelessness, housing instability, and adverse
+  socioeconomic conditions face barriers to accessing routine primary care and preventive
+  health services'
+- 'Step 2: Lack of stable housing compromises ability to manage chronic conditions,
+  store medications, maintain hygiene, and recover from illness'
+- 'Step 3: Social determinants create conditions that increase risk of acute health
+  crises including infections, injuries, mental health emergencies, and substance
+  use complications'
+- 'Step 4: Emergency departments serve as safety-net providers for uninsured and underinsured
+  populations who cannot access or afford other healthcare settings'
+- 'Step 5: Accumulated unmet health needs and social instability lead to higher frequency
+  of ED visits for both emergent and non-emergent conditions'
+evidence:
+  quality_rating: A
+  n_studies: 410
+  primary_citation: Ruhee Shah et al. 2020. A Scoping Review of Current Social Emergency
+    Medicine Research. Western Journal of Emergency Medicine.
+  supporting_citations: []
+description: Social determinants of health including homelessness, housing instability,
+  and socioeconomic factors significantly influence emergency department utilization
+  patterns. A scoping review of 590 relevant social emergency medicine publications
+  (410 observational studies, 58 interventional studies, 26 systematic reviews) found
+  that substantial research documents how social determinants drive ED utilization,
+  with the ED serving as a critical safety-net healthcare access point for vulnerable
+  populations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: pediatric_population
+  direction: strengthens
+  strength: moderate
+  description: Up to 42% of publications in some topic areas focused on children or
+    pediatric ED, suggesting social determinants may have particularly strong effects
+    on ED utilization among youth
+- name: insurance_status
+  direction: strengthens
+  strength: strong
+  description: Socioeconomic disparities that predispose ED patients to adverse outcomes
+    are well-documented in the literature
+- name: racial_disparities
+  direction: strengthens
+  strength: strong
+  description: Many publications describe racial disparities known to predispose ED
+    patients to adverse outcomes

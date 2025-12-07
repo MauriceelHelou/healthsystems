@@ -1,0 +1,52 @@
+id: poverty_rate_to_NEW:health_service_access_barriers
+name: Poverty Rate → Health Service Access Barriers
+from_node:
+  node_id: poverty_rate
+  node_name: Poverty Rate
+to_node:
+  node_id: NEW:health_service_access_barriers
+  node_name: Health Service Access Barriers
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Low socioeconomic status creates financial barriers to accessing health services'
+- 'Step 2: Disadvantaged adolescents face compounded barriers including stigma associated with seeking
+  behavioral health services'
+- 'Step 3: Limited resources reduce ability to travel to health services or pay for prevention programs'
+- 'Step 4: Cumulative barriers result in disadvantaged adolescents experiencing disproportionate chronic
+  disease burden'
+evidence:
+  quality_rating: B
+  n_studies: 14
+  primary_citation: Lyra Egan et al. 2023. "A Systematic Review of eHealth Interventions Among Adolescents
+    of Low Socioeconomic and Geographically Remote Backgrounds in Preventing Poor Diet, Alcohol Use, Tobacco
+    Smoking and Vaping." https://doi.org/10.1007/s40894-023-00210-2
+  supporting_citations:
+  - Review identifies social, structural, and economical barriers to health that uniquely affect low SES
+    adolescents
+  - Stigma, access, and affordability identified as key barriers explaining health disadvantage
+  - Additional citations require full-text access
+  doi: 10.1007/s40894-023-00210-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Low socioeconomic status creates structural barriers to health services including affordability
+  and stigma, which partially explain why disadvantaged adolescents experience disproportionate chronic
+  disease burden and greater engagement in risk behaviors
+quantitative_effects:
+  sample_size: 7170
+moderators:
+- name: geographic_remoteness
+  direction: strengthens
+  strength: strong
+  description: Geographic remoteness compounds SES barriers to create multiplicative disadvantage
+structural_competency:
+  equity_implications: This mechanism explicitly identifies structural and economic barriers as root causes
+    of health inequities among adolescents. The framework avoids individual blame by recognizing that
+    engagement in risk behaviors is partially explained by lack of access to prevention services due to
+    structural factors beyond individual control.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.720805'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,58 @@
+id: NEW:covid_19_infection_to_cardiovascular_disease_mortality
+name: COVID-19 Infection → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:covid_19_infection
+  node_name: COVID-19 Infection
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: SARS-CoV-2 virus binds to and downregulates ACE2 receptors on cardiac and
+  vascular endothelial cells'
+- 'Step 2: Downregulation of ACE2 leads to endothelial dysfunction and impaired vascular
+  homeostasis'
+- 'Step 3: COVID-19 infection triggers a hyperinflammatory state with elevated pro-inflammatory
+  cytokines (cytokine storm)'
+- 'Step 4: The inflammatory cascade promotes a pro-coagulant status increasing thrombosis
+  risk'
+- 'Step 5: Combined effects lead to myocardial injury evidenced by elevated cardiac
+  biomarkers (troponin I, NT-proBNP)'
+- 'Step 6: Acute coronary syndromes (including myocardial infarction) occur at higher
+  rates during and after COVID-19 infection'
+- 'Step 7: Patients with COVID-19 and acute myocardial infarction experience significantly
+  higher mortality (10-76%) compared to non-COVID AMI patients (4.6-7%)'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Marius Rus et al. 2024. Acute Myocardial Infarction during the
+    COVID-19 Pandemic: Long-Term Outcomes and Prognosis—A Systematic Review. Life.'
+  supporting_citations: []
+description: COVID-19 infection increases cardiovascular disease mortality through
+  multiple interconnected biological mechanisms. The SARS-CoV-2 virus causes downregulation
+  of ACE2 receptors, leading to endothelial dysfunction. The infection triggers a
+  hyperinflammatory state with elevated cytokines and creates a pro-coagulant status
+  that increases thrombosis risk. These factors combine to cause direct myocardial
+  injury, evidenced by elevated cardiac biomarkers. COVID-19 survivors show increased
+  risk of cardiovascular events even after the acute phase. Mortality rates for AMI
+  patients with COVID-19 (10-76%) are dramatically higher than for non-COVID AMI patients
+  (4.6-7%).
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: acute_phase_status
+  direction: strengthens
+  strength: strong
+  description: Risk of acute coronary syndromes is greater during the acute phase
+    of COVID-19 infection
+- name: cardiac_biomarker_elevation
+  direction: strengthens
+  strength: strong
+  description: Increased values of myocardial biomarkers (troponin I, NT-proBNP) are
+    predictive of poor outcomes and respiratory failure
+- name: treatment_delay
+  direction: strengthens
+  strength: moderate
+  description: Prolonged symptom-to-first-medical-contact time and longer door-to-balloon
+    time during pandemic worsened outcomes

@@ -1,0 +1,68 @@
+id: NEW:alcohol_related_liver_disease_prevalence_to_liver_disease_mortality
+name: Alcohol Related Liver Disease Prevalence → Liver Disease Mortality
+from_node:
+  node_id: NEW:alcohol_related_liver_disease_prevalence
+  node_name: Alcohol Related Liver Disease Prevalence
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption causes direct hepatotoxic injury to liver cells,
+  leading to a spectrum of alcohol-related liver diseases (ARLD) including fatty liver,
+  alcoholic hepatitis, and cirrhosis'
+- 'Step 2: Progressive liver damage leads to fibrosis and cirrhosis (comprising 32.9%
+  of ARLD spectrum), with associated complications including ascites (25.1% prevalence
+  in ARLD population)'
+- 'Step 3: Advanced liver disease results in liver failure, portal hypertension, and
+  hepatocellular carcinoma, leading to liver-related mortality (21.6% liver-specific
+  mortality rate among ARLD patients)'
+- 'Step 4: Overall mortality among ARLD patients reaches 23.9%, reflecting both direct
+  liver-related deaths and systemic complications of chronic liver disease'
+evidence:
+  quality_rating: A
+  n_studies: 372
+  primary_citation: 'Xuanxuan Niu et al. 2023. Global prevalence, incidence, and outcomes
+    of alcohol related liver diseases: a systematic review and meta-analysis. BMC
+    Public Health.'
+  supporting_citations: []
+description: 'Alcohol-related liver disease (ARLD) directly leads to liver disease
+  mortality through progressive hepatic injury. This systematic review of 372 studies
+  found that ARLD has a global prevalence of 4.8%, with alcoholic liver cirrhosis
+  comprising the highest proportion (32.9%) of the disease spectrum. The mortality
+  burden is substantial: overall mortality among ARLD patients is 23.9%, with liver-specific
+  mortality at 21.6%. Disease progression is driven by chronic alcohol exposure, with
+  patients typically having >20 years of heavy drinking (average 146.6 g/day). Complications
+  such as ascites affect 25.1% of patients, reflecting advanced liver decompensation.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 21.6
+    type: mortality_rate_percent
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Male prevalence (2.9%) significantly higher than female (0.5%), indicating
+    higher risk in males
+- name: drinking_duration
+  direction: strengthens
+  strength: strong
+  description: 54.8% of ARLD patients had drinking history >20 years, with average
+    daily intake of 146.6 g/d
+- name: smoking_status
+  direction: strengthens
+  strength: moderate
+  description: 59.5% of ARLD patients were current or former smokers, potentially
+    accelerating liver damage
+- name: hepatitis_coinfection
+  direction: strengthens
+  strength: moderate
+  description: 18.7% of ARLD patients had hepatitis virus coinfection, compounding
+    liver injury

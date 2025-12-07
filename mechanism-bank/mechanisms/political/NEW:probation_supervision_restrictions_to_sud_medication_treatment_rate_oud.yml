@@ -1,0 +1,62 @@
+id: NEW:probation_supervision_restrictions_to_sud_medication_treatment_rate_oud
+name: Probation Supervision Restrictions on Medication Access → Medication Treatment Rate for OUD
+from_node:
+  node_id: NEW:probation_supervision_restrictions
+  node_name: Probation Supervision Restrictions on Medication Access
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: Medication Treatment Rate for OUD
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Probation departments establish regulations that prohibit or restrict client use of certain
+  FDA-approved medications for OUD'
+- 'Step 2: Probation officers lack training and guidance on medication-assisted treatment options'
+- 'Step 3: Organizational barriers prevent referrals to appropriate medication-based treatment'
+- 'Step 4: Probation clients with OUD cannot access evidence-based pharmacological treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jessica Reichert and Lily Gleicher 2019. "Probation clients' barriers to access and
+    use of opioid use disorder medications." https://doi.org/10.1186/s40352-019-0089-6
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior evidence on medication effectiveness
+    but does not cite specific studies
+  doi: 10.1186/s40352-019-0089-6
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Probation departments create structural barriers to medication-assisted treatment for opioid
+  use disorder through organizational regulations, lack of staff training, and negative attitudes toward
+  medications, preventing clients from accessing FDA-approved treatments despite strong evidence of effectiveness.
+quantitative_effects:
+  sample_size: 26
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focused on Illinois probation departments, noting variations in regulations set
+    by organization or jurisdiction that prohibit client use of medications
+moderators:
+- name: medication_type
+  direction: strengthens
+  strength: moderate
+  description: Probation department leaders were less open to methadone referrals compared to buprenorphine
+    or naltrexone, suggesting differential barriers by medication type
+- name: staff_training_level
+  direction: weakens
+  strength: moderate
+  description: Lack of medical personnel experience and need for guidance on medications increases barriers;
+    training could reduce them
+structural_competency:
+  equity_implications: This mechanism highlights how criminal justice system policies and practices create
+    health inequities for justice-involved populations. The barriers are structural (organizational regulations,
+    lack of institutional training, cost) rather than individual failings. Probation clients face differential
+    access to evidence-based healthcare due to their criminal justice status, representing a form of structural
+    discrimination that affects a disproportionately low-income and minority population.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.213115'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

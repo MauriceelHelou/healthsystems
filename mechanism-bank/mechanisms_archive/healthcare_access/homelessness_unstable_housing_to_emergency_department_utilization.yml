@@ -1,0 +1,48 @@
+id: homelessness_unstable_housing_to_emergency_department_utilization
+name: Homelessness and Unstable Housing → Emergency Department Utilization
+from_node:
+  node_id: homelessness_unstable_housing
+  node_name: Homelessness and Unstable Housing
+to_node:
+  node_id: emergency_department_utilization
+  node_name: Emergency Department Utilization
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Housing instability reduces access to routine and preventive cardiovascular care'
+- 'Step 2: Lack of stable housing complicates medication management and adherence for cardiovascular conditions'
+- 'Step 3: Delayed or inadequate routine care leads to acute exacerbations of cardiovascular disease'
+- 'Step 4: Emergency departments become primary source of care due to barriers accessing routine services'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Lara J Sokoloff et al. 2024. "Association of Homelessness and Unstable Housing With
+    Cardiovascular Care Utilization Among Veterans.." *Circulation. Cardiovascular quality and outcomes*.
+    https://doi.org/10.1161/CIRCOUTCOMES.124.010993
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1161/CIRCOUTCOMES.124.010993
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '2.0'
+description: Veterans experiencing homelessness and unstable housing had higher rates of all-cause and
+  cardiovascular emergency department visits, indicating use of emergency services as primary care access
+  point.
+quantitative_effects:
+  sample_size: 1357973
+moderators:
+- name: cardiovascular_disease_burden
+  direction: strengthens
+  strength: strong
+  description: Veterans with preexisting cardiovascular disease have higher baseline risk for acute complications
+    when preventive care is disrupted
+structural_competency:
+  equity_implications: This mechanism demonstrates how housing instability forces individuals into costly,
+    inappropriate healthcare utilization patterns. The shift from preventive to emergency care reflects
+    structural failures in both housing and healthcare systems, creating inefficient resource use while
+    perpetuating health inequities.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.934869'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

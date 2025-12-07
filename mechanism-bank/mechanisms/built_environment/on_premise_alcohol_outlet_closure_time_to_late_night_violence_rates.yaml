@@ -1,0 +1,52 @@
+id: on_premise_alcohol_outlet_closure_time_to_workplace_violence_rate
+name: On-Premise Alcohol Outlet Closure Time → Workplace Violence Rate
+from_node:
+  node_id: on_premise_alcohol_outlet_closure_time
+  node_name: On-Premise Alcohol Outlet Closure Time
+to_node:
+  node_id: workplace_violence_rate
+  node_name: Workplace Violence Rate
+  _original_id: late_night_violence_rates
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Later closure times for bars and hotels create extended periods when large
+  numbers of intoxicated patrons congregate in entertainment districts'
+- 'Step 2: Spatial concentration of intoxicated individuals in areas with multiple
+  licensed venues increases density of potential violence incidents'
+- 'Step 3: Late-night hours combined with alcohol intoxication create environmental
+  conditions where interpersonal conflicts more readily escalate to violence'
+- 'Step 4: Prolonged operation into early morning hours (after 2-3:30am) maintains
+  high-risk environments during peak violence times'
+evidence:
+  quality_rating: A
+  n_studies: 7
+  primary_citation: 'C. Wilkinson et al. 2016. "Impacts of changes to trading hours
+    of liquor licences on alcohol-related harm: a systematic review 2005-2015.." *Public
+    Health Research & Practice*. https://doi.org/10.17061/phrp2641644'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.064037'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: entertainment_district_density
+  direction: strengthens
+  strength: strong
+  description: Areas with higher concentrations of licensed venues (Kings Cross, Sydney
+    CBD) show stronger effects due to spatial concentration of intoxicated individuals
+- name: urban_setting
+  direction: strengthens
+  strength: moderate
+  description: City-center entertainment districts versus suburban or regional settings
+    may show differential violence patterns related to patron density and transport
+    access
+- name: study_design_quality
+  direction: strengthens
+  strength: strong
+  description: Robust, well-designed Australian studies using quasi-experimental methods
+    provide stronger evidence than observational studies
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/on_premise_alcohol_outlet_closure_time_to_late_night_violence_rates.yaml
+_category: built_environment

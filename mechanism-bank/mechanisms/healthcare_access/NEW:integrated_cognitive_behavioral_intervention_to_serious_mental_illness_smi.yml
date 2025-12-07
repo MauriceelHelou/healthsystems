@@ -1,0 +1,64 @@
+id: NEW:integrated_cognitive_behavioral_intervention_to_serious_mental_illness_smi
+name: Integrated Cognitive-Behavioral Intervention (CBI) → Serious Mental Illness (SMI)
+from_node:
+  node_id: NEW:integrated_cognitive_behavioral_intervention
+  node_name: Integrated Cognitive-Behavioral Intervention (CBI)
+to_node:
+  node_id: serious_mental_illness_smi
+  node_name: Serious Mental Illness (SMI)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individuals with co-occurring substance use and mental health disorders receive integrated
+  cognitive-behavioral intervention'
+- 'Step 2: Treatment simultaneously addresses interrelated symptoms of both conditions'
+- 'Step 3: Cognitive and behavioral techniques reduce mental health symptom severity'
+- 'Step 4: Statistically significant improvement in mental health disorder outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Kahini Mehta et al. 2021. "Cognitive-Behavioral Interventions Targeting Alcohol or
+    Other Drug Use and Co-Occurring Mental Health Disorders: A Meta-Analysis.." https://doi.org/10.1093/alcalc/agab016'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 15 clinical trials across 18 study
+    sites/arms
+  - Studies included various mental health disorder diagnoses including PTSD
+  - Study quality was not related to effect size variability for MHD outcomes
+  doi: 10.1093/alcalc/agab016
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Integrated cognitive-behavioral interventions show small but statistically significant effects
+  (g=0.169, p=0.024) on mental health disorder symptoms among individuals with co-occurring substance
+  use disorders. Moderate heterogeneity (I²=58%) suggests variability but less than for substance use
+  outcomes.
+quantitative_effects:
+  effect_size:
+    value: 0.169
+    type: standardized_mean_difference
+  p_value: 0.024
+  heterogeneity_i_squared: 58.0
+moderators:
+- name: contrast_condition_type
+  direction: strengthens
+  strength: moderate
+  description: Effect magnitude varied by comparison condition type
+- name: follow_up_time_point
+  direction: strengthens
+  strength: moderate
+  description: Effects varied between post-treatment and 3-6 month follow-up assessments
+- name: primary_diagnosis_type
+  direction: strengthens
+  strength: moderate
+  description: Interventions targeting PTSD showed particularly promising effects
+structural_competency:
+  equity_implications: This finding underscores the structural need for healthcare systems that provide
+    integrated rather than siloed care. The historical separation of mental health and substance use treatment
+    systems creates barriers for individuals with co-occurring conditions, often resulting in treatment
+    gaps and poorer outcomes. Addressing this requires policy changes in healthcare financing, workforce
+    training, and service delivery models.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.844760'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

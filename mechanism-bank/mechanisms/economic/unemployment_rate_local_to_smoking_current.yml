@@ -1,0 +1,59 @@
+id: unemployment_rate_local_to_smoking_current
+name: Unemployment Rate → Current Smoking
+from_node:
+  node_id: unemployment_rate_local
+  node_name: Unemployment Rate
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Unemployment creates economic hardship and loss of employer-sponsored resources'
+- 'Step 2: Financial stress and uncertainty generate chronic psychological distress'
+- 'Step 3: Loss of workplace social networks reduces access to health-promoting social norms'
+- 'Step 4: Smoking serves as stress-coping mechanism and may be more accessible than other coping resources'
+- 'Step 5: Reduced access to smoking cessation programs (often employer-sponsored) limits quit attempts'
+evidence:
+  quality_rating: A
+  n_studies: 52
+  primary_citation: 'S. Amiri 2021. "Smoking and alcohol use in unemployed populations: a systematic review
+    and meta-analysis." https://doi.org/10.1080/10550887.2021.1981124'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 52 cross-sectional and cohort studies
+    from 2004-2021
+  - Studies retrieved from PubMed database (2004-2021)
+  - Studies retrieved from Scopus database (1996-2021)
+  doi: 10.1080/10550887.2021.1981124
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Unemployment increases the likelihood of smoking by 43%. This systematic review and meta-analysis
+  of 52 studies demonstrates a stronger association between unemployment and smoking compared to alcohol
+  use. The mechanism reflects how economic instability drives tobacco use as a stress-coping behavior
+  while simultaneously reducing access to cessation resources typically provided through employment.
+quantitative_effects:
+  effect_size:
+    value: 1.43
+    type: odds_ratio
+    ci_lower: 1.13
+    ci_upper: 1.81
+moderators:
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Subgroup analyses were performed for men and women separately, suggesting gender may moderate
+    the unemployment-smoking relationship
+structural_competency:
+  equity_implications: 'This mechanism traces smoking behavior to its structural economic roots rather
+    than framing it as purely individual choice. Unemployed populations face compounded disadvantage:
+    greater stress driving tobacco use plus reduced access to employer-sponsored health programs and cessation
+    support. Policy implications include maintaining health insurance during unemployment, expanding public
+    cessation programs, and addressing root causes of unemployment. The finding that unemployment has
+    even stronger effects on smoking (OR 1.43) than alcohol (OR 1.25) suggests tobacco-specific vulnerabilities
+    in unemployed populations.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.323164'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

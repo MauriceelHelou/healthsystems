@@ -1,0 +1,53 @@
+id: NEW:harm_reduction_housing_to_hiv_incidence
+name: Harm Reduction Housing → HIV Incidence
+from_node:
+  node_id: NEW:harm_reduction_housing
+  node_name: Harm Reduction Housing
+to_node:
+  node_id: hiv_incidence
+  node_name: HIV Incidence
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Harm reduction housing provides stable environment for consistent harm reduction service access'
+- 'Step 2: On-site or easily accessible syringe exchange reduces needle sharing and injection-related
+  HIV transmission risk'
+- 'Step 3: Housing stability enables regular HIV testing and early diagnosis'
+- 'Step 4: Stable housing facilitates antiretroviral therapy initiation and adherence, reducing community
+  viral load'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Traci C Green et al. 2025. "Study Protocol on Rapid Measurement of Novel Harm Reduction
+    Housing on HIV Risk, Treatment Uptake, Drug Use, and Supply.." https://doi.org/10.1177/29767342251341706
+  supporting_citations:
+  - Prior Rapid Assessment of Consumer Knowledge (RACK) findings referenced in protocol
+  - Additional citations require full-text access
+  doi: 10.1177/29767342251341706
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Harm reduction housing models that integrate services for people who use drugs may reduce
+  HIV risk through improved access to sterile injection equipment, HIV testing, and treatment adherence
+  support.
+quantitative_effects:
+  sample_size: 106
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focused on Boston's Mass and Cass area which has experienced concentrated HIV
+    risk among people who inject drugs
+moderators:
+- name: harm_reduction_service_availability
+  direction: strengthens
+  strength: strong
+  description: The study specifically inventories harm reduction services to measure exposure, indicating
+    service availability is key moderator
+structural_competency:
+  equity_implications: This mechanism recognizes that HIV risk among people who inject drugs is driven
+    by structural factors including homelessness, criminalization, and lack of harm reduction services
+    rather than individual behavior choices.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.839103'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

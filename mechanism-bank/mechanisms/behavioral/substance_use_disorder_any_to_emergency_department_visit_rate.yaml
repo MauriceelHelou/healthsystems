@@ -1,0 +1,50 @@
+id: substance_use_disorder_any_to_emergency_department_visit_rate
+name: Substance Use Disorder → Emergency Department Visit Rate
+from_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder
+to_node:
+  node_id: emergency_department_visit_rate
+  node_name: Emergency Department Visit Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Substance use disorder leads to acute intoxication episodes, overdoses,
+  and substance poisoning requiring emergency medical intervention'
+- 'Step 2: Chronic substance use causes medical complications (infections, organ damage,
+  withdrawal symptoms) that manifest as emergencies'
+- 'Step 3: Individuals with substance use disorders often lack regular primary care
+  access, leading to reliance on ED as primary healthcare source'
+- 'Step 4: Substance-related injuries (accidents, violence, falls) result in ED visits
+  for trauma care'
+- 'Step 5: Repeated cycles of use, complications, and acute presentations drive elevated
+  ED utilization rates'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'Vohra N et al. 2022. Homelessness and the use of Emergency Department
+    as a source of healthcare: a systematic review. International Journal of Emergency
+    Medicine.'
+  supporting_citations: []
+description: 'Substance use disorder drives elevated emergency department utilization
+  through multiple pathways: acute intoxication and overdose requiring emergency intervention,
+  substance poisoning, chronic health complications from ongoing use, withdrawal syndromes,
+  and substance-related injuries. Up to one-third of ED visits among vulnerable populations
+  are alcohol-related, and up to one-quarter involve substance poisoning. This systematic
+  review of 36 studies demonstrates that substance use is a dominant driver of ED
+  presentations, particularly among marginalized populations who lack alternative
+  healthcare access.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: housing_status
+  direction: strengthens
+  strength: strong
+  description: Homelessness significantly amplifies the relationship between substance
+    use and ED utilization, with persons experiencing homelessness showing rate ratios
+    of 1.63 to 18.75 compared to non-homeless populations
+- name: type_of_substance
+  direction: strengthens
+  strength: moderate
+  description: Alcohol-related diagnoses contributed up to a third of ED visits, while
+    substance poisoning contributed up to a quarter of visits

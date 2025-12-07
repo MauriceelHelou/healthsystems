@@ -1,0 +1,54 @@
+id: NEW:alcohol_consumption_level_to_alcohol_induced_mortality
+name: Alcohol Consumption Level → Alcohol Use Disorder Mortality
+from_node:
+  node_id: NEW:alcohol_consumption_level
+  node_name: Alcohol Consumption Level
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol Use Disorder Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Higher levels of alcohol consumption create physiological dependence and
+  neuroadaptive changes in the brain''s reward and stress systems'
+- 'Step 2: Continued heavy drinking exponentially increases the risk of developing
+  alcohol use disorder (AUD), with fourfold risk at 20g/day and sevenfold at 40g/day
+  compared to non-drinkers'
+- 'Step 3: AUD leads to progressive organ damage, particularly affecting liver (cirrhosis,
+  hepatitis), cardiovascular system, and neurological function'
+- 'Step 4: Individuals with AUD face compounding health risks from chronic heavy drinking,
+  withdrawal complications, and associated comorbidities'
+- 'Step 5: These cumulative effects result in significantly elevated mortality risk,
+  approximately fourfold at 40g/day consumption, through 100% alcohol-attributable
+  causes including alcoholic liver disease, alcohol poisoning, and alcohol-related
+  cardiomyopathy'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: 'Tessa Carr et al. 2024. The risk relationships between alcohol
+    consumption, alcohol use disorder and alcohol use disorder mortality: A systematic
+    review and meta-analysis. Addiction.'
+  supporting_citations: []
+description: 'Systematic review and meta-analysis establishing an exponential positive
+  dose-response relationship between alcohol consumption levels and alcohol use disorder
+  mortality. At moderate consumption (20g/day, approximately one large beer), mortality
+  risk doubles compared to non-drinkers. At 40g/day (four standard drinks), the risk
+  of AUD mortality increases approximately fourfold (RR=3.94, 95% CI: 3.53-4.40).
+  The mortality rate among AUD patients was estimated at 3.13 per 1000 person-years.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.94
+    type: relative_risk
+    ci_lower: 3.53
+    ci_upper: 4.4
+  p_value: null
+  sample_size: null
+moderators:
+- name: consumption_level
+  direction: strengthens
+  strength: strong
+  description: The relationship is exponential - risk increases dramatically with
+    higher consumption levels. At 20g/day the AUD mortality risk is approximately
+    double that of non-drinkers; at 40g/day it is approximately fourfold

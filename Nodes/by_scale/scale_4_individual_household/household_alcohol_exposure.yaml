@@ -1,0 +1,33 @@
+id: household_alcohol_exposure
+name: Household Alcohol Exposure
+scale: 4
+domain: Family Environment, Substance Use
+category: social_environment
+stock:
+  value: 18.2
+  unit: Percent of households with at least one heavy drinker
+  year: 2022
+  source: NSDUH, NESARC-III
+geographic_variation:
+  score: 3
+  level: state
+  notes: Varies by region, urbanicity, and socioeconomic factors
+data_quality:
+  availability: medium
+  frequency: annual
+  bias_notes: Self-report subject to social desirability bias; heavy drinking often underreported
+  primary_sources:
+  - name: SAMHSA National Survey on Drug Use and Health (NSDUH)
+    granularity: state
+  - name: National Epidemiologic Survey on Alcohol and Related Conditions (NESARC-III)
+    granularity: national
+  - name: CDC Behavioral Risk Factor Surveillance System (BRFSS)
+    granularity: state
+description: |-
+  Percentage of households in which at least one adult member engages in heavy drinking
+  (defined as 5+ drinks on same occasion on 5+ days in past month for men, 4+ for women).
+  Household alcohol exposure affects all members through secondhand effects including
+  domestic violence, child neglect, economic strain, and modeling of drinking behavior.
+  Children in households with parental heavy drinking have elevated risk for adverse
+  childhood experiences (ACEs), mental health problems, and future AUD development.
+type: Rate

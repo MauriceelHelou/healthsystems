@@ -1,0 +1,61 @@
+id: NEW:hepatitis_b_vaccination_program_to_liver_disease_mortality
+name: Hepatitis B Vaccination Program → Liver Disease Mortality
+from_node:
+  node_id: NEW:hepatitis_b_vaccination_program
+  node_name: Hepatitis B Vaccination Program
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: National hepatitis B vaccination programs are implemented, targeting newborns
+  and high-risk populations'
+- 'Step 2: Vaccination prevents hepatitis B virus (HBV) infection by inducing protective
+  antibodies'
+- 'Step 3: Reduced HBV infection rates decrease the prevalence of chronic hepatitis
+  B in the population'
+- 'Step 4: Lower chronic hepatitis B prevalence results in fewer cases of liver cirrhosis
+  development'
+- 'Step 5: Decreased liver cirrhosis incidence leads to reduced liver disease mortality
+  rates over time'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Rezaei N et al. 2019. Liver cirrhosis mortality at national and
+    provincial levels in Iran between 1990 and 2015: A meta regression analysis. PLoS
+    ONE.'
+  supporting_citations: []
+description: National hepatitis B vaccination programs reduce liver disease mortality
+  by preventing chronic HBV infection, which is a major cause of liver cirrhosis.
+  In Iran, a temporal pattern of increasing then decreasing cirrhosis mortality (peaking
+  around 2002, then declining through 2015) was attributed to the national hepatitis
+  B vaccination program. Hepatitis B and C account for over 60% of liver cirrhosis
+  deaths, with hepatitis B contributing four times more mortality than hepatitis C.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -64.53
+    type: percentage_change
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Liver cirrhosis mortality in elder patients was 12 times higher than
+    in younger patients, indicating age is a critical modifier of disease burden
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Over the 26-year study period, liver cirrhosis mortality in males increased
+    more than in females
+- name: etiology
+  direction: strengthens
+  strength: strong
+  description: More than 60% of liver cirrhosis mortality cases were caused by hepatitis
+    B and C infection, with hepatitis B mortality rate four times higher than hepatitis
+    C

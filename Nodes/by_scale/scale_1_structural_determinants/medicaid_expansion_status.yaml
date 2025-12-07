@@ -1,0 +1,26 @@
+id: medicaid_expansion_status
+name: Medicaid Expansion Status
+scale: 1
+domain: Healthcare System
+category: healthcare_access
+stock:
+  value: TBD
+  unit: Binary (0=not expanded, 1=expanded)
+  year: 2024
+  source: TBD - needs population from authoritative source
+geographic_variation:
+  score: 2
+  level: state
+  notes: State-level policy variation
+data_quality:
+  availability: high
+  frequency: periodic
+  bias_notes: Standard survey/administrative data limitations apply
+  primary_sources:
+  - name: CMS Medicare/Medicaid Data
+    granularity: county
+  - name: HRSA Area Health Resources Files
+    granularity: county
+description: |-
+  Policy indicator measuring medicaid expansion status. Measured in Binary (0=not expanded, 1=expanded). Part of the Healthcare System domain.
+type: Policy

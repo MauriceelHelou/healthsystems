@@ -1,0 +1,74 @@
+id: NEW:motivational_interviewing_intervention_to_substance_use_disorder_any
+name: Motivational Interviewing Intervention → Substance Use Disorder (Any)
+from_node:
+  node_id: NEW:motivational_interviewing_intervention
+  node_name: Motivational Interviewing Intervention
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Motivational interviewing (MI) provides a client-centered therapeutic approach that creates
+  an atmosphere of acceptance and compassion'
+- 'Step 2: MI explores the individual''s own reasons for change and helps resolve ambivalence about substance
+  use'
+- 'Step 3: This process strengthens intrinsic motivation and commitment to behavior change goals'
+- 'Step 4: Enhanced motivation translates to reduced substance use behaviors compared to no intervention'
+evidence:
+  quality_rating: A
+  n_studies: 93
+  primary_citation: Rosemarie Schwenker et al. 2023. "Motivational interviewing for substance use reduction.."
+    https://doi.org/10.1002/14651858.CD008063.pub3
+  supporting_citations:
+  - Smedslund et al. (2011). Cochrane Database of Systematic Reviews - Original version of this review
+  - Additional citations require full-text access - Review included 93 RCTs with 22,776 participants
+  - Studies conducted in inpatient/outpatient clinics, universities, army recruitment centres, veterans'
+    health centres, and prisons
+  doi: 10.1002/14651858.CD008063.pub3
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Motivational interviewing, a client-centered counseling approach, demonstrates small to moderate
+  effectiveness in reducing substance use compared to no intervention, particularly in the short-term.
+  This systematic review of 93 RCTs with 22,776 participants found MI may reduce substance use up to short
+  follow-up periods when compared to no intervention.
+quantitative_effects:
+  effect_size:
+    value: 0.48
+    type: standardized_mean_difference
+    ci_lower: 0.07
+    ci_upper: 0.89
+  sample_size: 22776
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies conducted across diverse settings including universities, army recruitment
+    centres, veterans' health centres, prisons, and clinical settings (inpatient and outpatient), suggesting
+    geographic and institutional variation
+moderators:
+- name: comparison_condition
+  direction: weakens
+  strength: strong
+  description: MI effect is stronger vs. no intervention (SMD 0.48) but may make little to no difference
+    compared to treatment as usual or other active interventions
+- name: follow_up_duration
+  direction: weakens
+  strength: moderate
+  description: Effects may diminish over time; strongest evidence is post-intervention to short follow-up,
+    with different patterns at medium and long-term follow-up
+- name: intervention_fidelity
+  direction: strengthens
+  strength: moderate
+  description: Quality of MI implementation matters - authors note importance of counselors adhering to
+    and reporting quality conditions
+structural_competency:
+  equity_implications: While MI is an individual-level intervention, its availability is structurally
+    determined by healthcare system access, treatment facility density, and workforce training capacity.
+    The diverse settings studied (prisons, veterans' centers, clinics) reflect how structural factors
+    determine access to evidence-based behavioral interventions. Equity implications include differential
+    access to MI-trained providers across communities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.698488'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

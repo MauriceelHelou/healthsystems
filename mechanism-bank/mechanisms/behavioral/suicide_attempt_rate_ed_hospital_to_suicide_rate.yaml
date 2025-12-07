@@ -1,0 +1,63 @@
+id: suicide_attempt_rate_ed_hospital_to_suicide_rate
+name: Suicidal Behaviour (Prior Attempt) → Suicide Rate
+from_node:
+  node_id: suicide_attempt_rate_ed_hospital
+  node_name: Suicidal Behaviour (Prior Attempt)
+to_node:
+  node_id: suicide_rate
+  node_name: Suicide Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Prior suicide attempt establishes a behavioral pattern and demonstrates
+  capacity for self-directed lethal behavior, lowering psychological barriers to future
+  attempts'
+- 'Step 2: Neurobiological and psychological changes from prior attempt (e.g., acquired
+  capability for suicide, habituation to fear of death) increase vulnerability to
+  lethal means during subsequent crises'
+- 'Step 3: Prior attempt serves as strongest behavioral predictor of future suicidal
+  behavior, with each subsequent attempt potentially escalating in lethality until
+  death by suicide occurs'
+evidence:
+  quality_rating: A
+  n_studies: 132
+  primary_citation: M. Large et al. 2020. Is suicidal behaviour a stronger predictor
+    of later suicide than suicidal ideation? A systematic review and meta-analysis.
+    Australian and New Zealand journal of psychiatry (Print)
+  supporting_citations:
+  - 'A. Pigoni et al. 2024. Machine learning and the prediction of suicide in psychiatric
+    populations: a systematic review. Translational Psychiatry'
+description: 'Prior suicide attempt is a moderately strong predictor of subsequent
+  death by suicide (OR=4.09, 95% CI: 3.05-5.49). This behavioral marker represents
+  both a direct risk factor and an indicator of underlying vulnerability. Meta-analytic
+  evidence from 51 studies confirms this association is robust across settings and
+  diagnostic categories. Machine learning studies in psychiatric populations consistently
+  identify previous attempts as one of the most important predictive features for
+  suicide outcomes, with prediction models incorporating prior attempts typically
+  achieving 70% or greater accuracy.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 4.09
+    type: odds_ratio
+    ci_lower: 3.05
+    ci_upper: 5.49
+  p_value: null
+  sample_size: null
+moderators:
+- name: psychiatric_setting
+  direction: strengthens
+  strength: moderate
+  description: Association remains significant in both psychiatric and non-psychiatric
+    populations, though psychiatric populations show concentrated risk
+- name: severity_of_disorder
+  direction: strengthens
+  strength: moderate
+  description: ML studies identified severity of psychiatric disorder as key feature
+    enhancing predictive accuracy when combined with prior attempts
+- name: pharmacological_treatment
+  direction: weakens
+  strength: weak
+  description: Pharmacological treatments emerged as moderating factor in ML prediction
+    models

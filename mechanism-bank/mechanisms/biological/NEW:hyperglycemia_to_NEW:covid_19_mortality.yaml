@@ -1,0 +1,59 @@
+id: NEW:hyperglycemia_to_NEW:covid_19_mortality
+name: Hyperglycemia (High Blood Glucose) → COVID-19 Mortality
+from_node:
+  node_id: NEW:hyperglycemia
+  node_name: Hyperglycemia (High Blood Glucose)
+to_node:
+  node_id: NEW:covid_19_mortality
+  node_name: COVID-19 Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hyperglycemia (elevated blood glucose levels) creates a pro-inflammatory
+  state and impairs immune function, reducing the body''s ability to mount an effective
+  response against SARS-CoV-2 infection'
+- 'Step 2: High blood glucose promotes viral replication and glycosylation of ACE2
+  receptors, potentially enhancing viral entry and cellular damage in respiratory
+  and other organ systems'
+- 'Step 3: Hyperglycemia contributes to endothelial dysfunction and a hypercoagulable
+  state, increasing risk of acute respiratory distress syndrome (ARDS), acute cardiac
+  injury, and acute kidney injury'
+- 'Step 4: These complications lead to progression from non-critical to critical COVID-19,
+  increased need for ICU admission and mechanical ventilation, and ultimately higher
+  mortality rates'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'M. Lee et al. 2020. Effects of hyperglycaemia on complications
+    of COVID-19: A meta-analysis of observational studies. Diabetes, obesity and metabolism.'
+  supporting_citations: []
+description: Meta-analysis of 8 observational studies (n=2729) found that hyperglycemic
+  COVID-19 patients, regardless of diabetes status, had significantly higher mortality
+  (17% vs normoglycemic patients), greater ICU admission rates (11%), higher need
+  for ventilation (23%), and increased risk of severe complications including ARDS
+  (15%), acute cardiac injury (14%), and acute kidney injury (5%). The association
+  persisted in both diabetic and non-diabetic populations, emphasizing that elevated
+  blood glucose itself is a critical prognostic factor.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.17
+    type: proportion
+    ci_lower: 0.1
+    ci_upper: 0.25
+  p_value: null
+  sample_size: 2729
+moderators:
+- name: diabetes_status
+  direction: strengthens
+  strength: moderate
+  description: Diabetic patients with hyperglycemia showed 16% mortality rate compared
+    to 5% in non-diabetic hyperglycemic patients, though both groups had elevated
+    risk compared to normoglycemic patients
+- name: glycemic_control
+  direction: weakens
+  strength: strong
+  description: Diabetic COVID-19 patients with controlled blood glucose had significantly
+    better outcomes than those with hyperglycemia, suggesting glycemic control as
+    a modifiable risk factor

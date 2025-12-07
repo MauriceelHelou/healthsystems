@@ -1,0 +1,55 @@
+id: NEW:birth_asphyxia_to_neonatal_mortality
+name: Birth Asphyxia → Neonatal Mortality
+from_node:
+  node_id: NEW:birth_asphyxia
+  node_name: Birth Asphyxia
+to_node:
+  node_id: neonatal_mortality
+  node_name: Neonatal Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Birth asphyxia occurs when the neonate experiences oxygen deprivation during
+  or immediately after birth, resulting in hypoxia and hypercapnia'
+- 'Step 2: Oxygen deprivation leads to rapid cellular injury, particularly affecting
+  highly metabolically active tissues including the brain, heart, and kidneys'
+- 'Step 3: Hypoxic-ischemic injury triggers multi-organ failure, neurological damage,
+  and metabolic acidosis within hours of birth'
+- 'Step 4: Without immediate resuscitation and supportive care, the cascade of cellular
+  damage results in neonatal death, predominantly within the first 24 hours of life'
+evidence:
+  quality_rating: A
+  n_studies: 48
+  primary_citation: 'J. Dol et al. 2022. Timing of neonatal mortality and severe morbidity
+    during the postnatal period: a systematic review. JBI Evidence Synthesis.'
+  supporting_citations: []
+description: Birth asphyxia is the leading cause of neonatal mortality on the first
+  day of life, accounting for 68.1% of day-1 deaths. This systematic review of 48
+  studies with over 6.7 million live births and 47,551 neonatal deaths demonstrates
+  that 38.8% of all neonatal deaths occur within the first 24 hours, with birth asphyxia
+  being the primary driver of this early mortality. The biological mechanism involves
+  acute oxygen deprivation leading to rapid multi-organ failure, particularly affecting
+  the brain and cardiovascular system, resulting in death if not immediately addressed
+  through resuscitation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 68.1
+    type: proportion
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 6760731
+moderators:
+- name: timing_after_birth
+  direction: weakens
+  strength: strong
+  description: Birth asphyxia accounts for 68.1% of deaths on day 1, but its proportional
+    contribution decreases substantially in subsequent days as other causes (infection,
+    diarrhea) become predominant
+- name: access_to_resuscitation
+  direction: weakens
+  strength: strong
+  description: Availability of immediate neonatal resuscitation and emergency obstetric
+    care can significantly reduce mortality from birth asphyxia

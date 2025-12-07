@@ -6,101 +6,102 @@ This directory contains comprehensive documentation organized by major architect
 
 ```
 docs/
-├── Foundational Principles/
-├── Core Technical Architecture/
-├── LLM & Discovery Pipeline/
-├── Geographic & Contextual Adaptation/
-├── Implementation & Operations/
-└── Phase 2 - Quantification/
+├── Foundational Principles/     # Core concepts and theoretical frameworks
+├── Core Technical Architecture/ # System design, schemas, APIs
+├── LLM & Discovery Pipeline/    # Mechanism discovery with Semantic Scholar + Claude
+├── Design/                      # UI/UX design system and mockups
+├── Deployment/                  # Railway deployment guides
+├── Implementation & Operations/ # DevOps, CI/CD, monitoring
+├── Phase 2 - Quantification/    # Effect size extraction (future)
+├── nodes/                       # Node inventory and consolidation
+└── API_INTEGRATION_GUIDE.md     # API reference
 ```
+
+## Key Documents
+
+### Mechanism Discovery (Start Here)
+- **[MECHANISM_DISCOVERY_PIPELINE.md](LLM%20%26%20Discovery%20Pipeline/MECHANISM_DISCOVERY_PIPELINE.md)** - Complete guide to automated literature-driven mechanism extraction using Semantic Scholar + PubMed + Claude
+
+### Core Architecture
+- **[05_MECHANISM_BANK_STRUCTURE.md](Core%20Technical%20Architecture/05_MECHANISM_BANK_STRUCTURE.md)** - Mechanism schema, functional forms, moderators
+- **[04_STOCK_FLOW_PARADIGM.md](Core%20Technical%20Architecture/04_STOCK_FLOW_PARADIGM.md)** - Node/stock specifications
+
+### Implementation
+- **[backend/pipelines/README.md](../backend/pipelines/README.md)** - Pipeline code documentation
+- **[backend/config/schema_config.py](../backend/config/schema_config.py)** - Centralized schema constants
+
+---
 
 ## Directory Purposes
 
 ### 1. Foundational Principles
-Core concepts, theoretical frameworks, and guiding principles that underpin the HealthSystems Platform.
+Core concepts, theoretical frameworks, and guiding principles.
 
-**Suggested content:**
-- Structural determinants of health framework
-- Systems thinking approach
-- Evidence hierarchy and quality standards
-- Ethical guidelines and principles
-- Theoretical foundations
+**Contents:**
+- Project foundations and navigation index
+- Methodological integration
+- System architecture overview
 
 ---
 
 ### 2. Core Technical Architecture
 System design, technology stack, and architectural patterns.
 
-**Suggested content:**
-- System architecture diagrams
-- Technology stack specifications
-- Database schemas and data models
-- API specifications (REST/GraphQL)
-- Security architecture
-- Deployment architecture
-- Scalability and performance considerations
+**Contents:**
+- Stock-flow paradigm (node specifications)
+- Mechanism bank structure
+- Equilibrium calculation engine
+- Time simulation framework
 
 ---
 
 ### 3. LLM & Discovery Pipeline
-AI/ML integration, mechanism discovery, and natural language processing components.
+AI/ML integration, mechanism discovery, and validation.
 
-**Suggested content:**
-- LLM integration architecture
-- Mechanism discovery algorithms
-- Literature mining and evidence extraction
-- Natural language query processing
-- AI-assisted mechanism validation
-- Prompt engineering strategies
-- Model selection and evaluation
+**Contents:**
+- **MECHANISM_DISCOVERY_PIPELINE.md** - Unified discovery documentation
+- **11_LLM_MECHANISM_VALIDATION.md** - Validation framework
+
+**Implementation:**
+- `backend/pipelines/literature_search.py` - Semantic Scholar + PubMed APIs
+- `backend/pipelines/llm_mechanism_discovery.py` - Claude extraction
+- `backend/pipelines/end_to_end_discovery.py` - Complete pipeline
 
 ---
 
-### 4. Geographic & Contextual Adaptation
-Methods for adapting mechanisms to specific geographic and demographic contexts.
+### 4. Design
+UI/UX design system, component library, and mockups.
 
-**Suggested content:**
-- Contextual moderator specifications
-- Geographic data integration (Census, CDC, EPA, BLS)
-- Data scraping and ETL pipelines
-- Spatial analysis methods
-- Temporal adaptation strategies
-- Cross-geography validation
-- **[Phase 2]** Bayesian weighting methodology (see Phase 2 directory)
+**Contents:**
+- Design system principles
+- Dashboard layout
+- Systems map visualization
+- Component library
 
 ---
 
 ### 5. Implementation & Operations
-Practical guides for development, deployment, and ongoing operations.
+Practical guides for development, deployment, and operations.
 
-**Suggested content:**
-- Development setup and workflows
-- CI/CD pipeline documentation
-- Testing strategies and procedures
-- Deployment guides (staging, production)
-- Monitoring and observability
-- Incident response procedures
-- Maintenance and update protocols
-- User support documentation
+**Contents:**
+- Computational infrastructure
+- Deployment guides
 
 ---
 
 ### 6. Phase 2 - Quantification
 Deferred capabilities for effect size quantification and Bayesian inference.
 
-**⚠️ Note**: This directory contains specifications for **Phase 2 only**. MVP (Phase 1) focuses on topology and direction discovery without numerical quantification.
+**⚠️ Note**: Phase 2 content. MVP focuses on topology and direction discovery.
 
-**Content:**
-- Effect size translation methods (Document 08)
-- LLM effect quantification pipeline (Document 10)
-- Bayesian methodology extraction (Document 02B - to be created)
+**Contents:**
+- Effect size translation methods
+- LLM effect quantification pipeline
 - Meta-analytic pooling specifications
-- Uncertainty propagation methods
-- Migration path from MVP to Phase 2
 
-**Purpose**: Clearly separates topology discovery (MVP) from quantification capabilities (Phase 2), allowing focused implementation while maintaining complete technical specifications.
+**Note**: Quantitative effect data is currently extracted by `backend/scripts/extract_quantitative_effects.py` and stored in `mechanism-bank/quantitative_effects.json` for future use.
 
-**See**: [Phase 2 - Quantification/README.md](Phase%202%20-%20Quantification/README.md) for complete rationale and implementation plan.
+**See**: [Phase 2 - Quantification/README.md](Phase%202%20-%20Quantification/README.md)
 
 ---
 

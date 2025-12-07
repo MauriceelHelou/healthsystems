@@ -1,0 +1,54 @@
+id: traumatic_brain_injury_tbi_hospitalization_to_unemployment_rate_local
+name: Traumatic Brain Injury (TBI) Hospitalization → Unemployment Rate
+from_node:
+  node_id: traumatic_brain_injury_tbi_hospitalization
+  node_name: Traumatic Brain Injury (TBI) Hospitalization
+to_node:
+  node_id: unemployment_rate_local
+  node_name: Unemployment Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Moderate to severe traumatic brain injury causes persistent cognitive, physical, and behavioral
+  impairments'
+- 'Step 2: Cognitive deficits (memory, attention, executive function) reduce capacity for workplace demands'
+- 'Step 3: Physical impairments and fatigue limit ability to perform job-related tasks'
+- 'Step 4: Employers may lack accommodations or understanding of TBI-related disabilities'
+- 'Step 5: Survivors face barriers to maintaining or obtaining competitive employment, resulting in unemployment'
+evidence:
+  quality_rating: A
+  n_studies: 38
+  primary_citation: 'M. Gormley et al. 2019. "Long-term employment outcomes following moderate to severe
+    traumatic brain injury: a systematic review and meta-analysis." https://doi.org/10.1080/02699052.2019.1658222'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not list individual included studies
+  - 35 studies reported post-injury employment prevalence
+  - 6 studies reported job stability outcomes
+  doi: 10.1080/02699052.2019.1658222
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Moderate to severe traumatic brain injury substantially reduces post-injury employment, with
+  only 42.2% of survivors employed post-injury. This reflects the disabling effects of TBI on cognitive
+  and physical function necessary for competitive employment.
+quantitative_effects:
+  effect_size:
+    value: 42.2
+    type: percentage_change
+moderators:
+- name: time_since_injury
+  direction: strengthens
+  strength: moderate
+  description: 'Employment prevalence increases over time: 34.9% at 1 year, 42.1% up to 5 years, 49.9%
+    beyond 5 years, suggesting recovery and adaptation improve employment outcomes'
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare system capacity for rehabilitation, workplace
+    accommodation policies, disability employment support systems, and social safety nets determine employment
+    outcomes following TBI. The burden falls disproportionately on populations with higher TBI rates (young
+    males, those in manual labor occupations, lower socioeconomic groups) and those with less access to
+    comprehensive rehabilitation services.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.892647'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

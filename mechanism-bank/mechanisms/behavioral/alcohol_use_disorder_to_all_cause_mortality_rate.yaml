@@ -1,0 +1,94 @@
+id: alcohol_use_disorder_to_all_cause_mortality_rate
+name: Alcohol Use Disorder → All-Cause Mortality Rate
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol use disorder leads to chronic heavy alcohol consumption, causing
+  direct toxic effects on multiple organ systems including the liver, cardiovascular
+  system, gastrointestinal tract, and central nervous system'
+- 'Step 2: Prolonged alcohol exposure results in increased risk of cardiovascular
+  disease (leading cause of death), liver cirrhosis, gastrointestinal diseases, and
+  alcohol-related cancers'
+- 'Step 3: AUD impairs immune function and increases susceptibility to infections
+  (including COVID-19 severity), respiratory diseases, and complications from other
+  illnesses'
+- 'Step 4: Behavioral consequences of AUD including impaired judgment, risk-taking,
+  and psychiatric comorbidities lead to elevated rates of unnatural deaths (accidents,
+  suicides, violence)'
+- 'Step 5: These combined pathophysiological and behavioral effects result in significantly
+  elevated all-cause mortality rates 3-4 times higher than the general population'
+evidence:
+  quality_rating: A
+  n_studies: 159
+  primary_citation: 'Roerecke M, Rehm J. Alcohol use disorders and mortality: a systematic
+    review and meta-analysis. Addiction. 2013;108(9):1562-1578.'
+  supporting_citations:
+  - 'Abdul-Kareem Abdul-Rahman et al. 2018. All-Cause and Cause-Specific Mortality
+    Rates of Patients Treated for Alcohol Use Disorders: A Meta-Analysis. Substance
+    Abuse.'
+  - 'Kuitunen-Paul S, Roerecke M. 2018. Alcohol Use Disorders Identification Test
+    (AUDIT) and mortality risk: a systematic review and meta-analysis. Journal of
+    epidemiology and community health.'
+  - 'Laramée P et al. 2015. Risk of All-Cause Mortality in Alcohol-Dependent Individuals:
+    A Systematic Literature Review and Meta-Analysis. EBioMedicine.'
+  - 'Hjemsæter AJ et al. 2019. Mortality, cause of death and risk factors in patients
+    with alcohol use disorder alone or poly-substance use disorders: a 19-year prospective
+    cohort study. BMC Psychiatry.'
+  - 'Bailey K et al. 2022. COVID-19 patients with documented alcohol use disorder
+    or alcohol-related complications are more likely to be hospitalized and have higher
+    all-cause mortality. Alcoholism: Clinical and Experimental Research.'
+description: Alcohol use disorder significantly increases all-cause mortality through
+  multiple interconnected pathways. Meta-analyses consistently demonstrate that individuals
+  with AUD have 3-4 times higher mortality risk compared to the general population.
+  The most common causes of death include cardiovascular disease, gastrointestinal
+  diseases (particularly liver cirrhosis), unnatural deaths (accidents, suicide, violence),
+  neoplasms, and respiratory diseases. The mortality burden is particularly severe
+  among younger individuals and women. Recent evidence also shows AUD increases severity
+  and mortality from infectious diseases like COVID-19. Importantly, reducing alcohol
+  consumption can significantly mitigate mortality risk even without achieving complete
+  abstinence.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.45
+    type: relative_risk
+    ci_lower: 2.96
+    ci_upper: 4.02
+  p_value: 0.0001
+  sample_size: 853722
+moderators:
+- name: age
+  direction: weakens
+  strength: strong
+  description: Younger individuals with AUD show markedly higher relative mortality
+    risk (9-fold in men ≤40 years, 13-fold in women ≤40 years) compared to older individuals
+    (still 2-fold at 60+ years)
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Women with AUD have generally higher relative mortality risks than
+    men (RR 4.57 vs 3.38 in clinical samples)
+- name: treatment_status
+  direction: strengthens
+  strength: moderate
+  description: People in clinical treatment settings show substantially higher mortality
+    risk than those identified in population surveys, likely reflecting more severe
+    AUD
+- name: alcohol_consumption_reduction
+  direction: weakens
+  strength: strong
+  description: Alcohol-dependent individuals who reduce consumption show significantly
+    lower mortality than those continuing heavy drinking, even if abstinence is not
+    achieved
+- name: poly_substance_use
+  direction: strengthens
+  strength: moderate
+  description: Patients with poly-substance use disorders have different mortality
+    patterns with more overdose deaths compared to alcohol-only AUD

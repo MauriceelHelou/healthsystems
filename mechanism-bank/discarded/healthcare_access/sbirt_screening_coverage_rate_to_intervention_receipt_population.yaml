@@ -1,0 +1,47 @@
+id: sbirt_screening_coverage_rate_to_intervention_receipt_population
+name: SBIRT Screening Coverage Rate in Primary Healthcare → Population Proportion
+  Receiving Brief Intervention or Referral to Treatment
+from_node:
+  node_id: sbirt_screening_coverage_rate
+  node_name: SBIRT Screening Coverage Rate in Primary Healthcare
+to_node:
+  node_id: intervention_receipt_population
+  node_name: Population Proportion Receiving Brief Intervention or Referral to Treatment
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary healthcare systems implement systematic alcohol screening protocols
+  at specified coverage rates'
+- 'Step 2: Screening identifies patients with risky drinking patterns who would otherwise
+  remain undetected'
+- 'Step 3: Positive screens trigger clinical pathways for brief intervention or referral
+  to treatment'
+- 'Step 4: Higher screening coverage directly increases the absolute number and proportion
+  of population receiving evidence-based interventions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Manthey et al. 2021. "Can alcohol consumption in Germany be
+    reduced by alcohol screening, brief intervention and referral to treatment in
+    primary health care? Results of a simulation study." *medRxiv*. https://doi.org/10.1101/2021.05.18.21257405
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.756312'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_screening_rate
+  direction: strengthens
+  strength: strong
+  description: Starting from very low baseline (2.9%), increasing to 50% screening
+    coverage resulted in intervention receipt rising from 2.4% to 21% of adult population
+    over 10 years
+- name: time_period
+  direction: strengthens
+  strength: moderate
+  description: Ten-year simulation period allows cumulative reach to population, as
+    individuals may be screened multiple times across PHC encounters
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/sbirt_screening_coverage_rate_to_intervention_receipt_population.yaml
+_category: healthcare_access

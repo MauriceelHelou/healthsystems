@@ -1,0 +1,42 @@
+id: NEW:hyperglycemia_to_NEW:covid_19_icu_admission
+name: Hyperglycemia (High Blood Glucose) → COVID-19 ICU Admission
+from_node:
+  node_id: NEW:hyperglycemia
+  node_name: Hyperglycemia (High Blood Glucose)
+to_node:
+  node_id: NEW:covid_19_icu_admission
+  node_name: COVID-19 ICU Admission
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hyperglycemia impairs immune function, including reduced neutrophil chemotaxis,
+  phagocytosis, and bactericidal activity, compromising the body''s ability to fight
+  SARS-CoV-2 infection'
+- 'Step 2: Elevated blood glucose creates a pro-inflammatory state and enhances viral
+  replication, leading to more severe COVID-19 disease progression'
+- 'Step 3: Hyperglycemia promotes endothelial dysfunction and a hypercoagulable state,
+  contributing to multi-organ complications including acute respiratory distress syndrome'
+- 'Step 4: The combination of impaired immune response, increased inflammation, and
+  end-organ damage results in disease severity requiring intensive care unit admission'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'M. Lee et al. 2020. Effects of hyperglycaemia on complications
+    of COVID-19: A meta-analysis of observational studies. Diabetes, obesity and metabolism.'
+  supporting_citations: []
+description: 'Meta-analysis of 8 observational studies including 1,447 hyperglycemic
+  and 1,282 normoglycemic COVID-19 patients demonstrated that hyperglycemia is associated
+  with increased ICU admission rates. Among all hyperglycemic patients, 11% required
+  ICU admission (CI: 0.05-0.19). Non-diabetic patients with hyperglycemia had higher
+  risk of ICU admission compared to normoglycemic patients. The analysis supports
+  hyperglycemia as a predisposing factor for severe COVID-19 outcomes requiring intensive
+  care.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Diabetes status
+  direction: strengthens
+  strength: moderate
+  description: Among diabetic COVID-19 patients with hyperglycemia, 15% required ICU
+    admission compared to 5% in non-diabetic hyperglycemic patients, suggesting diabetes
+    status may modify the relationship between hyperglycemia and ICU admission

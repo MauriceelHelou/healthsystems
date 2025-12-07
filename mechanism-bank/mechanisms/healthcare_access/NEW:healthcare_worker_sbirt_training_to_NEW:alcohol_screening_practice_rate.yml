@@ -1,0 +1,55 @@
+id: NEW:healthcare_worker_sbirt_training_to_NEW:alcohol_screening_practice_rate
+name: Healthcare Worker SBIRT Training Availability → Alcohol Screening Practice Rate in Emergency Settings
+from_node:
+  node_id: NEW:healthcare_worker_sbirt_training
+  node_name: Healthcare Worker SBIRT Training Availability
+to_node:
+  node_id: NEW:alcohol_screening_practice_rate
+  node_name: Alcohol Screening Practice Rate in Emergency Settings
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: SBIRT education and training programs build provider knowledge and skills'
+- 'Step 2: Access to high-quality SBIRT resources supports implementation in practice'
+- 'Step 3: Clear guidelines and policies provide institutional support for screening activities'
+- 'Step 4: Trained providers are more likely to screen patients for alcohol problems systematically'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'H. Blake et al. 2023. "Attitudes and current practice in alcohol screening, brief
+    intervention, and referral for treatment among staff working in urgent and emergency settings: An
+    open, cross-sectional international survey." https://doi.org/10.1371/journal.pone.0291573'
+  supporting_citations:
+  - Study identifies lack of knowledge and training on SBIRT as key barrier
+  - UEC workers advocate for SBIRT education/training/resources
+  - Additional citations require full-text access
+  doi: 10.1371/journal.pone.0291573
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Availability of SBIRT training and education for emergency department workers directly affects
+  rates of alcohol screening practice, with lack of training identified as a major barrier to implementation.
+quantitative_effects:
+  sample_size: 362
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Training availability and practice patterns vary by occupation and region
+moderators:
+- name: resource_availability
+  direction: strengthens
+  strength: moderate
+  description: Access to high-quality SBIRT resources enhances training effectiveness
+- name: institutional_guidelines
+  direction: strengthens
+  strength: moderate
+  description: Clear policies and guidelines support translation of training to practice
+structural_competency:
+  equity_implications: This mechanism addresses workforce development as a structural determinant of preventive
+    care delivery. The gap between provider willingness (most believe SBIRT is appropriate) and practice
+    (fewer actually screen) indicates systemic training deficits rather than individual resistance. Investment
+    in healthcare workforce capacity is a policy lever for improving alcohol prevention.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.063114'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

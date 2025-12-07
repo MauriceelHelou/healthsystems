@@ -1,0 +1,60 @@
+id: dietary_intake_to_cancer_incidence
+name: Dietary Intake Patterns → Cancer Incidence
+from_node:
+  node_id: dietary_intake
+  node_name: Dietary Intake Patterns
+to_node:
+  node_id: cancer_incidence
+  node_name: Cancer Incidence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Specific dietary patterns in Sub-Saharan Africa expose populations to carcinogenic
+  compounds or create nutrient deficiencies'
+- 'Step 2: Dietary exposures interact with biological pathways to promote cellular
+  transformation and tumor development'
+- 'Step 3: Accumulated dietary risk factors contribute to cancer development, particularly
+  esophageal, colorectal, and breast cancers'
+evidence:
+  quality_rating: C
+  n_studies: 19
+  primary_citation: 'Galya Bigman et al. 2022. "Dietary Intake and Cancer in Sub-Saharan
+    Africa: A Critical Review of Epidemiological Studies.." *Nutrition and cancer*.
+    https://doi.org/10.1080/01635581.2022.2032217'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.508263'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: total_energy_intake
+  direction: strengthens
+  strength: moderate
+  description: Total energy intake was identified as an important unmeasured confounder
+    that could modify diet-cancer relationships
+- name: multivitamin_intake
+  direction: weakens
+  strength: moderate
+  description: Multivitamin supplementation may buffer against dietary carcinogenic
+    exposures but was not adequately measured
+- name: body_fat_measures
+  direction: strengthens
+  strength: moderate
+  description: Body composition interacts with dietary intake to influence cancer
+    risk but was inadequately assessed
+- name: physical_activity
+  direction: weakens
+  strength: moderate
+  description: Physical activity may modify dietary cancer risk but was not consistently
+    measured as a confounder
+- name: smoking
+  direction: strengthens
+  strength: strong
+  description: Tobacco use interacts with dietary factors in carcinogenesis but was
+    not adequately controlled in most studies
+- name: alcohol_consumption
+  direction: strengthens
+  strength: strong
+  description: Alcohol consumption synergistically increases cancer risk with dietary
+    factors but was inadequately measured as a confounder in most studies

@@ -1,0 +1,57 @@
+id: NEW:mobile_health_app_use_to_NEW:hospital_length_of_stay
+name: Mobile Health App Use for Postdischarge Monitoring → Hospital Length of Stay
+from_node:
+  node_id: NEW:mobile_health_app_use
+  node_name: Mobile Health App Use for Postdischarge Monitoring
+to_node:
+  node_id: NEW:hospital_length_of_stay
+  node_name: Hospital Length of Stay
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Mobile health apps provide patient education materials and daily postdischarge
+  questionnaires that enhance patient understanding of recovery expectations and warning
+  signs'
+- 'Step 2: Real-time patient-provider chat functionality enables continuous monitoring
+  and early identification of recovery concerns without requiring in-person visits'
+- 'Step 3: Enhanced communication reduces patient anxiety about discharge timing,
+  allowing clinicians to confidently discharge patients earlier knowing remote monitoring
+  is available'
+- 'Step 4: Early identification and management of postdischarge concerns prevents
+  complications that would otherwise require extended hospitalization or readmission'
+- 'Step 5: The combination of patient empowerment through education and accessible
+  provider communication reduces average hospital length of stay'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jules Eustache et al. 2021. A Mobile Phone App Improves Patient-Physician
+    Communication and Reduces Emergency Department Visits After Colorectal Surgery.
+    Diseases of the Colon & Rectum.
+  supporting_citations: []
+description: Mobile health app use for postdischarge monitoring is associated with
+  a 1.62-day reduction in hospital length of stay after major elective colorectal
+  surgery. The app comprised patient education material, daily questionnaires assessing
+  postdischarge recovery, and patient-provider chat function. Enhanced postdischarge
+  monitoring and patient-provider communication likely enable earlier discharge decisions
+  by providing clinicians confidence in remote patient monitoring capabilities.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -1.62
+    type: mean_difference_days
+    ci_lower: null
+    ci_upper: null
+  p_value: 0.011
+  sample_size: 350
+moderators:
+- name: app_usability
+  direction: strengthens
+  strength: moderate
+  description: 88% of patients reported the app improved their ability to communicate
+    with their surgeon, suggesting high usability may enhance the effect
+- name: enhanced_recovery_pathway
+  direction: strengthens
+  strength: moderate
+  description: All patients were managed according to an enhanced recovery pathway,
+    which may amplify benefits of mobile app monitoring

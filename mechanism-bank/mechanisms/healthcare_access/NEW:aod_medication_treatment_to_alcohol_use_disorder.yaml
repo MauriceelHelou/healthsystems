@@ -1,0 +1,50 @@
+id: NEW:aod_medication_treatment_to_alcohol_use_disorder
+name: Alcohol/Other Drug Use Disorder Medication → Alcohol Use Severity
+from_node:
+  node_id: NEW:aod_medication_treatment
+  node_name: Alcohol/Other Drug Use Disorder Medication
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Severity
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individuals with alcohol use disorder receive pharmacologic treatment (e.g.,
+  naltrexone, acamprosate, disulfiram) targeting neurobiological mechanisms of addiction'
+- 'Step 2: AOD medications reduce cravings, block rewarding effects of alcohol, or
+  create aversive reactions to alcohol consumption'
+- 'Step 3: Pharmacologic intervention leads to decreased alcohol consumption and reduced
+  alcohol use severity at end of treatment'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'Denise A. Hien et al. 2023. "Project harmony: A systematic review
+    and network meta-analysis of psychotherapy and pharmacologic trials for comorbid
+    posttraumatic stress, alcohol, and other drug use disorders." Psychological bulletin.'
+  supporting_citations: []
+description: Network meta-analysis of 24 RCTs found that AOD medication treatment
+  significantly reduces alcohol use severity compared to placebo (SMD = -0.36). Effects
+  were stronger when AOD medication was combined with trauma-focused psychotherapy
+  (SMD = -0.50 vs placebo, SMD = -0.81 vs trauma-focused therapy + placebo), particularly
+  in populations with comorbid PTSD.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.36
+    type: standardized_mean_difference
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: Combination with trauma-focused psychotherapy
+  direction: strengthens
+  strength: strong
+  description: Trauma-focused psychotherapy combined with AOD medication showed larger
+    effects (SMD = -0.50 to -0.81) compared to medication alone (SMD = -0.36)
+- name: Comorbid PTSD
+  direction: weakens
+  strength: moderate
+  description: Individuals with co-occurring PTSD and AOD may require integrated treatment
+    approaches for optimal outcomes

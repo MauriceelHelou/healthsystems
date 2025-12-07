@@ -1,0 +1,42 @@
+id: hepatic_encephalopathy_progression_to_mortality_rate
+name: Hepatic Encephalopathy Progression → Mortality Rate
+from_node:
+  node_id: hepatic_encephalopathy_progression
+  node_name: Hepatic Encephalopathy Progression
+to_node:
+  node_id: mortality_rate
+  node_name: Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Progressive hepatic encephalopathy stages represent worsening neuropsychiatric
+  dysfunction and hepatic decompensation'
+- 'Step 2: Higher consumption of alcohol drives continued hepatocyte destruction and
+  prevents liver regeneration'
+- 'Step 3: Advanced HE stages are associated with severe metabolic derangements, cerebral
+  edema, and multi-organ dysfunction'
+- 'Step 4: Increased progression through HE stages leads to rising mortality rates
+  due to hepatic failure and neurological complications'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Prabhudas Nelaturi et al. 2024. "Alcoholism and Socioeconomic
+    Status among Patients with Hepatic Encephalopathy in Association with Increased
+    Mortality.." *Addiction & health*. https://doi.org/10.34172/ahj.2024.1467
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.423111'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_consumption_continuation
+  direction: strengthens
+  strength: strong
+  description: Higher consumption of alcohol during HE progression directly contributes
+    to increased mortality rate
+- name: socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Lower and middle-income classes with limited access to specialized
+    hepatology care and liver transplantation face higher mortality risk

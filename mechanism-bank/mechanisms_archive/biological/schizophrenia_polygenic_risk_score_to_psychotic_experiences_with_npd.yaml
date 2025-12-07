@@ -1,0 +1,47 @@
+id: schizophrenia_polygenic_risk_score_to_psychotic_experiences_with_npd
+name: Schizophrenia Polygenic Risk Score → Psychotic Experiences with Non-Psychotic
+  Disorder
+from_node:
+  node_id: schizophrenia_polygenic_risk_score
+  node_name: Schizophrenia Polygenic Risk Score
+to_node:
+  node_id: psychotic_experiences_with_npd
+  node_name: Psychotic Experiences with Non-Psychotic Disorder
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Higher schizophrenia polygenic risk score (PRS-Sz) increases genetic vulnerability
+  to psychosis'
+- 'Step 2: PRS-Sz is differentially associated with psychotic experiences that co-occur
+  with non-psychotic disorders (PE+NPD)'
+- 'Step 3: This genetic vulnerability interacts with environmental risks and NPD presence
+  to create clinically significant risk states'
+- 'Step 4: PE+NPD represents a more severe phenotype than PE-only, characterized by
+  poor functioning and increased service use'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Laila Hasmi et al. 2021. "What makes the psychosis ''clinical
+    high risk'' state risky: psychosis itself or the co-presence of a non-psychotic
+    disorder?." *Epidemiology and psychiatric sciences*. https://doi.org/10.1017/S204579602100041X'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.903470'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: non_psychotic_disorder_presence
+  direction: strengthens
+  strength: strong
+  description: PRS-Sz more strongly associated with PE+NPD compared to PE-only, suggesting
+    genetic risk is more relevant when NPD is present
+- name: environmental_risks
+  direction: strengthens
+  strength: moderate
+  description: Environmental risks interact with genetic vulnerability in the PE+NPD
+    phenotype
+- name: family_history_psychosis
+  direction: strengthens
+  strength: moderate
+  description: Positive family history co-occurs with PRS-Sz in characterizing PE+NPD

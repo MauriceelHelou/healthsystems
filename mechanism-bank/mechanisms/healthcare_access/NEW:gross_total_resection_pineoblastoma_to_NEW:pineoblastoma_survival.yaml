@@ -1,0 +1,49 @@
+id: NEW:gross_total_resection_pineoblastoma_to_NEW:pineoblastoma_survival
+name: Gross Total Resection of Pineoblastoma → Adult Pineoblastoma Survival
+from_node:
+  node_id: NEW:gross_total_resection_pineoblastoma
+  node_name: Gross Total Resection of Pineoblastoma
+to_node:
+  node_id: NEW:pineoblastoma_survival
+  node_name: Adult Pineoblastoma Survival
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Gross total resection (GTR) achieves complete surgical removal of the pineoblastoma
+  tumor mass from the pineal region'
+- 'Step 2: Complete tumor removal eliminates the primary source of malignant cells,
+  reducing tumor burden and potential for local progression'
+- 'Step 3: GTR provides better conditions for adjuvant therapies (radiotherapy and
+  chemotherapy) by minimizing residual disease that could serve as a nidus for recurrence'
+- 'Step 4: Reduced tumor burden translates to improved survival outcomes compared
+  to subtotal resection or no surgery, particularly within the first five years post-diagnosis'
+evidence:
+  quality_rating: B
+  n_studies: 32
+  primary_citation: Xiufeng Chu et al. 2024. A systematic review of adult pineoblastoma.
+    Frontiers in oncology.
+  supporting_citations: []
+description: Gross total resection of adult pineoblastoma is associated with improved
+  survival compared to subtotal resection or no surgery. Kaplan-Meier analysis across
+  108 cases from 32 studies demonstrated significant survival benefit (P=0.018) over
+  a 10-year follow-up period. While multivariate COX analysis showed GTR tends to
+  improve survival within five years (P=0.079), the combination of GTR with radiotherapy
+  and chemotherapy provides the best prognostic outcomes for this rare CNS malignancy.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Time since diagnosis
+  direction: weakens
+  strength: moderate
+  description: GTR benefit tends to be more pronounced within five years (P=0.079
+    in multivariate analysis); long-term benefit may be less distinct
+- name: Adjuvant radiotherapy
+  direction: strengthens
+  strength: strong
+  description: Radiotherapy is an independent beneficial prognostic factor (P<0.001)
+    and likely synergizes with GTR for optimal survival outcomes
+- name: Adjuvant chemotherapy
+  direction: strengthens
+  strength: moderate
+  description: Chemotherapy was beneficial for survival (P=0.020) and may enhance
+    GTR effectiveness

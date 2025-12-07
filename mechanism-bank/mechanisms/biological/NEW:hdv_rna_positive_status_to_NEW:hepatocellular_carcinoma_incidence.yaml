@@ -1,0 +1,51 @@
+id: NEW:hdv_rna_positive_status_to_NEW:hepatocellular_carcinoma_incidence
+name: Hepatitis Delta Virus RNA Positive Status → Hepatocellular Carcinoma Incidence
+from_node:
+  node_id: NEW:hdv_rna_positive_status
+  node_name: Hepatitis Delta Virus RNA Positive Status
+to_node:
+  node_id: NEW:hepatocellular_carcinoma_incidence
+  node_name: Hepatocellular Carcinoma Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Active HDV replication (HDV RNA+ status) in hepatocytes leads to persistent
+  and severe hepatic inflammation compared to HBV monoinfection'
+- 'Step 2: Chronic inflammation accelerates hepatocyte damage, oxidative stress, and
+  compensatory cellular proliferation'
+- 'Step 3: Progressive liver fibrosis develops more rapidly, leading to compensated
+  and then decompensated cirrhosis'
+- 'Step 4: The cirrhotic microenvironment with ongoing inflammation, regenerative
+  nodule formation, and genomic instability promotes hepatocarcinogenesis'
+- 'Step 5: Increased rate of hepatocellular carcinoma (HCC) development in HDV RNA+
+  patients compared to HDV RNA- patients'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Robert G. Gish et al. 2023. "Association of hepatitis delta virus
+    with liver morbidity and mortality: A systematic literature review and meta-analysis."
+    Hepatology.'
+  supporting_citations: []
+description: 'Hepatitis Delta Virus RNA positive status is significantly associated
+  with increased risk of hepatocellular carcinoma in patients co-infected with HBV.
+  A meta-analysis of 12 studies found that HDV RNA+ patients have nearly 3-fold higher
+  risk of HCC (HR 2.97, 95% CI: 1.87-4.70) compared to HDV RNA- patients. This increased
+  risk is mediated through accelerated liver disease progression, with HDV RNA+ status
+  also associated with higher rates of compensated cirrhosis, decompensated cirrhosis,
+  liver transplantation, and liver-related mortality.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.97
+    type: hazard_ratio
+    ci_lower: 1.87
+    ci_upper: 4.7
+  p_value: null
+  sample_size: null
+moderators:
+- name: Cirrhosis status
+  direction: strengthens
+  strength: strong
+  description: Progression through compensated cirrhosis (RR 1.74) to decompensated
+    cirrhosis (HR 3.82) represents an intermediate pathway that amplifies HCC risk

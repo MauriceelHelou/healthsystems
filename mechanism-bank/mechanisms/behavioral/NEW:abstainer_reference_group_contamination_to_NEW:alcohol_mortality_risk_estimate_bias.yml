@@ -1,0 +1,55 @@
+id: NEW:abstainer_reference_group_contamination_to_NEW:alcohol_mortality_risk_estimate_bias
+name: Contaminated Abstainer Reference Groups (Including Former/Occasional Drinkers) → Biased Alcohol-Mortality
+  Risk Estimates
+from_node:
+  node_id: NEW:abstainer_reference_group_contamination
+  node_name: Contaminated Abstainer Reference Groups (Including Former/Occasional Drinkers)
+to_node:
+  node_id: NEW:alcohol_mortality_risk_estimate_bias
+  node_name: Biased Alcohol-Mortality Risk Estimates
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Studies include former drinkers (who may have quit due to illness) in abstainer reference groups'
+- 'Step 2: Former drinkers have elevated mortality risk due to prior alcohol-related health damage or
+  underlying conditions'
+- 'Step 3: Inclusion of occasional drinkers misclassifies light consumers as abstainers'
+- 'Step 4: Contaminated reference groups artificially inflate abstainer mortality rates'
+- 'Step 5: This creates spurious appearance of protective effect for low-volume drinkers (RR=0.84 vs true
+  RR≈0.98)'
+evidence:
+  quality_rating: A
+  n_studies: 107
+  primary_citation: Tim R Stockwell et al. 2024. "Why do only some cohort studies find health benefits
+    from low volume alcohol use? A systematic review and meta-analysis of study characteristics that may
+    bias mortality risk estimates.." https://doi.org/10.15288/jsad.23-00283
+  supporting_citations:
+  - Systematic review identified this as key methodological flaw across 107 studies
+  - Studies with proper exclusion criteria showed RR=0.98 (0.87-1.11)
+  - Studies without proper exclusion showed RR=0.84 (0.79-0.89)
+  doi: 10.15288/jsad.23-00283
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The 'sick quitter' bias occurs when former drinkers who quit due to health problems are included
+  in abstainer reference groups, artificially inflating abstainer mortality rates and making moderate
+  drinkers appear healthier by comparison. This methodological artifact has profoundly influenced alcohol
+  epidemiology and public health messaging.
+quantitative_effects:
+  effect_size:
+    value: 0.84
+    type: relative_risk
+    ci_lower: 0.79
+    ci_upper: 0.89
+  sample_size: 4838825
+structural_competency:
+  equity_implications: 'This bias has structural implications: it has been used to justify policies and
+    guidelines that normalize alcohol consumption. The persistence of this methodological flaw across
+    decades of research suggests potential conflicts of interest in alcohol research funding. Correcting
+    this bias is essential for equitable public health policy that does not differentially harm populations
+    with higher alcohol-related risks.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.237962'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

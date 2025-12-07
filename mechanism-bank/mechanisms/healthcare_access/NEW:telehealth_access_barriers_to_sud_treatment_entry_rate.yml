@@ -1,0 +1,53 @@
+id: NEW:telehealth_access_barriers_to_sud_treatment_entry_rate
+name: Telehealth Access Barriers → SUD Treatment Entry Rate
+from_node:
+  node_id: NEW:telehealth_access_barriers
+  node_name: Telehealth Access Barriers
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: COVID-19 pandemic disrupted in-person treatment services for AUD/PAU'
+- 'Step 2: Virtual care implemented as alternative but accessibility not universal'
+- 'Step 3: Digital divide and technological barriers prevent some populations from accessing telehealth'
+- 'Step 4: Populations without telehealth access experience reduced treatment utilization'
+evidence:
+  quality_rating: C
+  n_studies: 0
+  primary_citation: 'D. Wolfe et al. 2022. "Service-level barriers to and facilitators of access to services
+    for the treatment of alcohol use disorder and problematic alcohol use: protocol for a scoping review."
+    https://doi.org/10.1136/bmjopen-2022-064578'
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1136/bmjopen-2022-064578
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The COVID-19 pandemic necessitated a shift to virtual care for AUD/PAU treatment services.
+  However, the abstract explicitly notes that 'accessibility was not universal,' indicating structural
+  barriers to telehealth access that differentially affect certain populations.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Telehealth accessibility varies by geographic location, socioeconomic status, and digital
+    infrastructure availability
+moderators:
+- name: digital_literacy
+  direction: weakens
+  strength: moderate
+  description: Low digital literacy compounds barriers to accessing virtual care services
+- name: broadband_access
+  direction: weakens
+  strength: strong
+  description: Lack of reliable internet access prevents utilization of telehealth services
+structural_competency:
+  equity_implications: This mechanism highlights how the digital divide creates inequitable access to
+    care during public health emergencies. The shift to virtual care, while necessary, may have exacerbated
+    existing inequities for populations without reliable internet, digital devices, or digital literacy
+    skills. This is a structural barrier rooted in infrastructure and economic inequities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.711028'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

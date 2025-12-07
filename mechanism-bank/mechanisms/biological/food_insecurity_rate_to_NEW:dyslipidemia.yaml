@@ -1,0 +1,49 @@
+id: food_insecurity_rate_to_NEW:dyslipidemia
+name: Food Insecurity → Dyslipidemia
+from_node:
+  node_id: food_insecurity_rate
+  node_name: Food Insecurity
+to_node:
+  node_id: NEW:dyslipidemia
+  node_name: Dyslipidemia
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Food insecurity leads to constrained food budgets, forcing reliance on
+  cheaper, energy-dense, nutrient-poor foods high in refined carbohydrates and unhealthy
+  fats'
+- 'Step 2: Irregular eating patterns and cyclical food availability during food-insecure
+  periods may dysregulate lipid metabolism'
+- 'Step 3: Chronic stress from food insecurity activates hypothalamic-pituitary-adrenal
+  axis, potentially affecting lipid profiles through cortisol-mediated pathways'
+- 'Step 4: Limited healthcare access among food-insecure populations may delay diagnosis
+  and management of dyslipidemia, though quantitative laboratory evidence for the
+  association remains inconclusive'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: Daniel J. Arenas et al. 2022. A Systematic Review and Meta-Analysis
+    of Food Insecurity and Dyslipidemia. Journal of the American Board of Family Medicine.
+  supporting_citations: []
+description: This systematic review and meta-analysis examined the relationship between
+  food insecurity and dyslipidemia across cross-sectional studies. While theoretical
+  mechanisms suggest food insecurity could lead to dyslipidemia through poor diet
+  quality and metabolic stress, the quantitative evidence from laboratory assessments
+  did not demonstrate significantly elevated odds of abnormal lipid measurements among
+  food-insecure individuals. However, food-insecure patients were more likely to self-report
+  prior dyslipidemia diagnoses, suggesting potential measurement or healthcare access
+  differences.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: self_report_vs_laboratory_measurement
+  direction: strengthens
+  strength: moderate
+  description: Food-insecure patients were more likely to self-report previous diagnoses
+    of dyslipidemia compared to food-secure individuals, while laboratory measurements
+    showed no significant differences
+- name: covariate_adjustment
+  direction: weakens
+  strength: moderate
+  description: Unadjusted analyses showed no significant standardized mean differences
+    in lipid measurements between groups

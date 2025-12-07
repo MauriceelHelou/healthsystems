@@ -1,0 +1,47 @@
+id: prison_concentration_sud_to_alcohol_use_disorder_prison
+name: Concentration of SUDs in Prison Populations → Alcohol Use Disorder in Prison
+  Populations
+from_node:
+  node_id: prison_concentration_sud
+  node_name: Concentration of SUDs in Prison Populations
+to_node:
+  node_id: alcohol_use_disorder_prison
+  node_name: Alcohol Use Disorder in Prison Populations
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Criminal justice policies criminalize behaviors associated with alcohol
+  use disorders (public intoxication, alcohol-related violence, driving violations)'
+- 'Step 2: Individuals with alcohol use disorders face barriers to community-based
+  treatment due to cost, stigma, and limited service availability'
+- 'Step 3: Untreated alcohol use disorders contribute to behaviors that increase criminal
+  justice contact'
+- 'Step 4: Prison systems concentrate individuals with alcohol use disorders without
+  providing adequate treatment infrastructure or post-release continuity of care'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Anne Bukten et al. 2024. "The prevalence of substance use disorders
+    among people in Norwegian, Danish and Swedish prisons: A multi-annual cohort study,
+    2010-19.." *Addiction (Abingdon, England)*. https://doi.org/10.1111/add.16477'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.393276'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_policy_stringency
+  direction: strengthens
+  strength: moderate
+  description: Countries with more punitive responses to alcohol-related offenses
+    may show higher concentration of alcohol use disorders in prison populations
+- name: community_treatment_availability
+  direction: weakens
+  strength: moderate
+  description: Greater availability and accessibility of community-based alcohol treatment
+    services may reduce criminal justice involvement for individuals with alcohol
+    use disorders
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/social_environment/prison_concentration_sud_to_alcohol_use_disorder_prison.yaml
+_category: social_environment

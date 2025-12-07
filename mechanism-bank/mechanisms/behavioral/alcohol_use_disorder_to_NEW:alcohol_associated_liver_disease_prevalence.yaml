@@ -1,0 +1,56 @@
+id: alcohol_use_disorder_to_NEW:alcohol_associated_liver_disease_prevalence
+name: Alcohol Use Disorder → Alcohol-Associated Liver Disease Prevalence
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:alcohol_associated_liver_disease_prevalence
+  node_name: Alcohol-Associated Liver Disease Prevalence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals with alcohol use disorder (AUD) engage in chronic, excessive
+  alcohol consumption that exceeds safe drinking thresholds'
+- 'Step 2: Prolonged alcohol exposure causes direct hepatotoxic effects, leading to
+  hepatocyte damage, oxidative stress, and inflammatory responses in the liver'
+- 'Step 3: Initial liver damage manifests as alcohol-associated fatty liver (steatosis),
+  which can progress through continued alcohol exposure'
+- 'Step 4: Persistent alcohol consumption in AUD leads to progressive liver injury
+  including steatohepatitis, fibrosis, and ultimately cirrhosis'
+- 'Step 5: The sustained pattern of heavy drinking characteristic of AUD dramatically
+  increases the prevalence of alcohol-associated liver disease compared to general
+  populations'
+evidence:
+  quality_rating: A
+  n_studies: 35
+  primary_citation: 'Sachin Amonker et al. 2023. Prevalence of alcohol-associated
+    liver disease: a systematic review and meta-analysis. Hepatology Communications.'
+  supporting_citations: []
+description: Alcohol use disorder is strongly associated with alcohol-associated liver
+  disease prevalence. A systematic review and meta-analysis of 35 studies found that
+  51.0% of individuals with AUD have alcohol-associated liver disease, compared to
+  only 3.5% in unselected populations. This represents an approximately 15-fold higher
+  prevalence in AUD populations. The prevalence of alcohol-associated cirrhosis was
+  12.9% in AUD groups compared to 0.3% in general populations, representing a 43-fold
+  increase.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 51.0
+    type: prevalence_percentage
+    ci_lower: 11.1
+    ci_upper: 89.3
+  p_value: null
+  sample_size: 513278
+moderators:
+- name: healthcare_setting
+  direction: strengthens
+  strength: strong
+  description: 'Prevalence varies dramatically by setting: 51.0% in AUD populations
+    vs 3.5% in unselected populations vs 2.6% in primary care'
+- name: disease_severity
+  direction: strengthens
+  strength: moderate
+  description: Cirrhosis prevalence in AUD populations (12.9%) is markedly higher
+    than in general populations (0.3%) or primary care (1.7%)

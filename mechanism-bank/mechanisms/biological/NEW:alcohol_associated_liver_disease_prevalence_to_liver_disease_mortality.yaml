@@ -1,0 +1,57 @@
+id: NEW:alcohol_associated_liver_disease_prevalence_to_liver_disease_mortality
+name: Alcohol-Associated Liver Disease Prevalence → Liver Disease Mortality
+from_node:
+  node_id: NEW:alcohol_associated_liver_disease_prevalence
+  node_name: Alcohol-Associated Liver Disease Prevalence
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption leads to alcohol-associated liver disease (ALD),
+  including fatty liver, alcoholic hepatitis, and fibrosis'
+- 'Step 2: Progressive liver damage from continued alcohol exposure leads to development
+  of alcohol-associated cirrhosis in a subset of patients (prevalence 0.3% in general
+  population, up to 12.9% in those with alcohol use disorder)'
+- 'Step 3: Cirrhosis and advanced liver disease result in liver failure, portal hypertension,
+  hepatic encephalopathy, and increased susceptibility to hepatocellular carcinoma'
+- 'Step 4: These end-stage complications of ALD directly contribute to premature mortality,
+  with ALD identified as a common cause of premature death'
+evidence:
+  quality_rating: A
+  n_studies: 35
+  primary_citation: 'Sachin Amonker et al. 2023. Prevalence of alcohol-associated
+    liver disease: a systematic review and meta-analysis. Hepatology Communications.'
+  supporting_citations: []
+description: Alcohol-associated liver disease (ALD) is established as a common cause
+  of morbidity and premature mortality. This systematic review of 35 studies covering
+  513,278 individuals demonstrates that while ALD prevalence is relatively low in
+  general populations (3.5%) and primary care (2.6%), it is extremely high among those
+  with alcohol use disorder (51.0%). Similarly, alcohol-associated cirrhosis, which
+  carries high mortality risk, affects 0.3% of general populations but 12.9% of those
+  with AUD. The progressive nature of ALD from fatty liver to cirrhosis represents
+  the biological pathway through which alcohol exposure ultimately leads to liver
+  disease mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 51.0
+    type: prevalence_percentage
+    ci_lower: 11.1
+    ci_upper: 89.3
+  p_value: null
+  sample_size: 513278
+moderators:
+- name: alcohol_use_disorder_status
+  direction: strengthens
+  strength: strong
+  description: Prevalence of ALD dramatically higher in patients with alcohol use
+    disorder (51.0%) compared to general population (3.5%) or primary care (2.6%);
+    cirrhosis prevalence 12.9% in AUD vs 0.3% in general population
+- name: healthcare_setting
+  direction: strengthens
+  strength: moderate
+  description: Detection rates vary by setting - targeted case-finding in at-risk
+    populations more effective than universal screening

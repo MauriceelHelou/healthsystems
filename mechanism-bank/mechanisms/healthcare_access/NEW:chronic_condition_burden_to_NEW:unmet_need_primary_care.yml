@@ -1,0 +1,51 @@
+id: NEW:chronic_condition_burden_to_NEW:unmet_need_primary_care
+name: Chronic Condition Burden → Unmet Need for Primary Care
+from_node:
+  node_id: NEW:chronic_condition_burden
+  node_name: Chronic Condition Burden
+to_node:
+  node_id: NEW:unmet_need_primary_care
+  node_name: Unmet Need for Primary Care
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Chronic conditions increase frequency of healthcare needs and complexity of care'
+- 'Step 2: Multiple conditions require coordination across specialists, increasing system navigation burden'
+- 'Step 3: Higher healthcare utilization needs strain individual capacity and resources'
+- 'Step 4: Complex care needs may exceed available appointment availability and provider capacity'
+- 'Step 5: Gap between care needs and system capacity manifests as unmet primary care needs'
+evidence:
+  quality_rating: A
+  n_studies: 46
+  primary_citation: 'Feben Alemu et al. 2024. "Social determinants of unmet need for primary care: a systematic
+    review." https://doi.org/10.1186/s13643-024-02647-5'
+  supporting_citations:
+  - Studies included in systematic review - specific citations require full-text access
+  - MEDLINE, Embase, Cochrane, Web of Science databases screened from inception to December 2023
+  - Additional citations require full-text access
+  doi: 10.1186/s13643-024-02647-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Individuals with chronic conditions have higher rates of unmet primary care needs, reflecting
+  a mismatch between complex healthcare needs and system capacity to deliver accessible, coordinated care.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Heterogeneous findings across studies suggest variation may depend on local healthcare
+    system capacity and organization
+moderators:
+- name: usual_source_of_care
+  direction: weakens
+  strength: moderate
+  description: Having a family physician was negatively associated with unmet need, potentially providing
+    better care coordination for chronic conditions
+structural_competency:
+  equity_implications: This finding reveals how healthcare system design fails to adequately serve those
+    with the greatest needs. The association between chronic conditions and unmet need reflects structural
+    inadequacies in care coordination, appointment availability, and system navigation support rather
+    than individual failure to seek care.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.935587'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

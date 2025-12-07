@@ -1,0 +1,37 @@
+id: psychiatric_intervention_to_liver_cirrhosis_incidence
+name: Psychiatric Intervention (Consultation or Medication) → Incidence of Liver Cirrhosis
+from_node:
+  node_id: psychiatric_intervention
+  node_name: Psychiatric Intervention (Consultation or Medication)
+to_node:
+  node_id: liver_cirrhosis_incidence
+  node_name: Incidence of Liver Cirrhosis
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Psychiatric intervention provides pharmacological and therapeutic management
+  of alcohol use disorder'
+- 'Step 2: Effective treatment reduces frequency and quantity of alcohol consumption'
+- 'Step 3: Decreased cumulative alcohol exposure reduces chronic hepatocyte injury
+  and inflammation'
+- 'Step 4: Reduced hepatic stellate cell activation and collagen deposition slow fibrosis
+  progression'
+- 'Step 5: Decreased fibrosis advancement reduces incidence of cirrhosis development'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Keungmo Yang et al. 2024. "The prognostic impact of psychiatric
+    intervention on alcohol-associated liver disease: The UK Biobank cohort study.."
+    *Clinical and molecular hepatology*. https://doi.org/10.3350/cmh.2024.0278'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.407121'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_disease_severity
+  direction: strengthens
+  strength: moderate
+  description: Subgroup analyses showed consistent benefit across different patient
+    populations, suggesting intervention effective at various disease stages

@@ -1,0 +1,41 @@
+id: fda_approved_medication_access_to_heavy_drinking_relapse_risk
+name: Access to FDA-Approved Medications for Alcohol Use Disorder → Heavy Drinking
+  Relapse Risk
+from_node:
+  node_id: fda_approved_medication_access
+  node_name: Access to FDA-Approved Medications for Alcohol Use Disorder
+to_node:
+  node_id: heavy_drinking_relapse_risk
+  node_name: Heavy Drinking Relapse Risk
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: FDA-approved medications are prescribed as part of comprehensive AUD treatment'
+- 'Step 2: Medications modulate neurobiological pathways involved in alcohol craving
+  and reward'
+- 'Step 3: Pharmacotherapy reduces physiological drive to return to heavy drinking
+  patterns'
+- 'Step 4: Risk of relapse to heavy drinking decreases compared to behavioral therapy
+  alone'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Barbara J Mason and Charles J Heyser 2021. "Alcohol Use Disorder:
+    The Role of Medication in Recovery.." *Alcohol research : current reviews*. https://doi.org/10.35946/arcr.v41.1.07'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.676415'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: concurrent_behavioral_therapy
+  direction: strengthens
+  strength: strong
+  description: Evidence-based behavioral therapy combined with medication produces
+    greater reduction in relapse risk than either intervention alone
+- name: medication_adherence_support
+  direction: strengthens
+  strength: moderate
+  description: Structural supports for medication adherence (e.g., integrated care
+    coordination, pharmacy access) enhance relapse prevention benefits

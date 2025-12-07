@@ -1,0 +1,46 @@
+id: monthly_medication_expenses_to_healthcare_service_underutilization
+name: Monthly CAD Medication Expenses >Rs4000 → Healthcare Service Underutilization
+from_node:
+  node_id: monthly_medication_expenses
+  node_name: Monthly CAD Medication Expenses >Rs4000
+to_node:
+  node_id: healthcare_service_underutilization
+  node_name: Healthcare Service Underutilization
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher medication expenses indicate more intensive pharmacological management
+  of CAD, suggesting more severe disease or more comprehensive treatment protocols'
+- 'Step 2: Patients spending more on medications are likely engaged with healthcare
+  system and receiving ongoing medical guidance about treatment importance'
+- 'Step 3: Higher treatment investment creates economic incentive to maintain regular
+  healthcare contact to maximize benefit from medication expenditure'
+- 'Step 4: Regular healthcare engagement ensures continuity of care and adequate service
+  utilization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Neeraj Vinod Mohandas et al. 2024. "Healthcare service utilisation
+    among adults with coronary artery disease in rural Aluva, South India: a community-based
+    cross-sectional study.." *BMJ open*. https://doi.org/10.1136/bmjopen-2024-084468'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.490627'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: socioeconomic_status
+  direction: strengthens
+  strength: strong
+  description: Ability to afford Rs4000+ monthly medication expenses reflects higher
+    SES, which may also enable better healthcare access through multiple pathways
+    including transportation, time flexibility, and health literacy
+- name: insurance_coverage
+  direction: strengthens
+  strength: moderate
+  description: Insurance coverage may enable higher medication spending while also
+    facilitating regular healthcare visits
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/economic/monthly_medication_expenses_to_healthcare_service_underutilization.yaml
+_category: economic

@@ -1,0 +1,59 @@
+id: NEW:brain_acetaldehyde_synthesis_to_NEW:ethanol_reinforcing_effects
+name: Brain Acetaldehyde Synthesis (Catalase-Mediated Ethanol Oxidation) → Ethanol
+  Reinforcing Effects and Acquisition of Alcohol Intake
+from_node:
+  node_id: NEW:brain_acetaldehyde_synthesis
+  node_name: Brain Acetaldehyde Synthesis (Catalase-Mediated Ethanol Oxidation)
+to_node:
+  node_id: NEW:ethanol_reinforcing_effects
+  node_name: Ethanol Reinforcing Effects and Acquisition of Alcohol Intake
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Ethanol enters the brain and is oxidized by catalase enzyme to produce
+  acetaldehyde intracerebrally'
+- 'Step 2: Brain acetaldehyde binds non-enzymatically to dopamine, forming salsolinol
+  (specifically the R-salsolinol enantiomer)'
+- 'Step 3: Salsolinol is self-administered by animals and generates marked sensitization
+  to the motivational effects of ethanol'
+- 'Step 4: This acetaldehyde-salsolinol pathway mediates 80-95% of ethanol''s reinforcing
+  effects and promotes acquisition of alcohol intake and binge-like drinking behavior'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: 'Y. Israel et al. 2017. Acquisition, Maintenance and Relapse-Like
+    Alcohol Drinking: Lessons from the UChB Rat Line. Frontiers in Behavioral Neuroscience.'
+  supporting_citations: []
+description: Catalase-mediated oxidation of ethanol in the brain produces acetaldehyde,
+  which is an absolute requirement (accounting for 80-95% of the effect) for rats
+  to display ethanol's reinforcing properties and initiate chronic alcohol intake.
+  Acetaldehyde non-enzymatically binds to dopamine forming salsolinol, which generates
+  sensitization to ethanol's motivational effects and promotes binge-like drinking.
+  This mechanism is specific to the acquisition phase of alcohol drinking behavior.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 87.5
+    type: percentage_contribution
+    ci_lower: 80.0
+    ci_upper: 95.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: Genetic predisposition to alcohol intake
+  direction: strengthens
+  strength: strong
+  description: UChB rats bred for high-ethanol intake show particularly robust acetaldehyde-mediated
+    reinforcement effects
+- name: Salsolinol enantiomer specificity
+  direction: strengthens
+  strength: strong
+  description: Only R-salsolinol enantiomer, not S-salsolinol, accounts for the motivational
+    and binge-promoting effects
+- name: Duration of alcohol exposure
+  direction: weakens
+  strength: moderate
+  description: Inhibition of brain acetaldehyde synthesis does not influence maintenance
+    of chronic ethanol intake, though prolonged withdrawal partly returns the requirement
+    for acetaldehyde

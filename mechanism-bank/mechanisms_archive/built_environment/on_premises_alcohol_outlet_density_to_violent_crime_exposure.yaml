@@ -1,0 +1,44 @@
+id: on_premises_alcohol_outlet_density_to_violent_crime_exposure
+name: On-Premises Alcohol Outlet Density → Exposure to Violent Crime
+from_node:
+  node_id: on_premises_alcohol_outlet_density
+  node_name: On-Premises Alcohol Outlet Density
+to_node:
+  node_id: violent_crime_exposure
+  node_name: Exposure to Violent Crime
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of on-premises alcohol outlets concentrates alcohol availability
+  in specific geographic areas'
+- 'Step 2: Concentrated alcohol availability increases nighttime foot traffic and
+  congregation of intoxicated individuals in public spaces'
+- 'Step 3: Increased presence of intoxicated individuals in concentrated areas creates
+  opportunities for interpersonal conflicts and aggression'
+- 'Step 4: Geographic concentration of these interactions increases the spatial exposure
+  to violent crime incidents in the neighborhood'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Xingyou Zhang et al. 2015. "Changes in Density of On-Premises
+    Alcohol Outlets and Impact on Violent Crime, Atlanta, Georgia, 1997–2007." *Preventing
+    Chronic Disease*. https://doi.org/10.5888/pcd12.140317
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.097053'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_outlet_density
+  direction: strengthens
+  strength: strong
+  description: The effect appears strongest in areas with initially high density of
+    alcohol outlets, as evidenced by the more dramatic impact in Buckhead which had
+    high baseline density compared to areas with lower baseline density
+- name: policy_intervention_timing
+  direction: strengthens
+  strength: moderate
+  description: Active regulatory efforts to reduce outlet density (as occurred in
+    Buckhead 2003-2007) appear to strengthen the protective effect compared to passive
+    density changes

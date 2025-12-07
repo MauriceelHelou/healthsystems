@@ -1,0 +1,59 @@
+id: NEW:biomarker_based_liver_advice_to_NEW:gamma_glutamyl_transferase_ggt_levels
+name: Advice Based on Liver Biomarkers/Non-Invasive Fibrosis Tests → Gamma-Glutamyl
+  Transferase (GGT) Levels
+from_node:
+  node_id: NEW:biomarker_based_liver_advice
+  node_name: Advice Based on Liver Biomarkers/Non-Invasive Fibrosis Tests
+to_node:
+  node_id: NEW:gamma_glutamyl_transferase_ggt_levels
+  node_name: Gamma-Glutamyl Transferase (GGT) Levels
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Patients with high-risk drinking behavior receive personalized advice based
+  on their liver biomarker results (including GGT levels) or non-invasive fibrosis
+  tests during clinical encounters'
+- 'Step 2: Presentation of objective biomarker evidence of liver injury increases
+  patient awareness and motivation for behavior change through enhanced understanding
+  of personal health consequences'
+- 'Step 3: Motivated patients reduce alcohol consumption (mean reduction of 74.4 g/week
+  compared to controls)'
+- 'Step 4: Reduced alcohol intake decreases hepatocellular stress and enzyme induction
+  in the liver'
+- 'Step 5: Lower hepatic stress results in decreased GGT synthesis and release from
+  hepatocytes, leading to measurable reductions in serum GGT levels'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: 'Mohsan Subhani et al. 2021. Does Advice Based on Biomarkers of
+    Liver Injury or Non-Invasive Tests of Liver Fibrosis Impact High-Risk Drinking
+    Behaviour: A Systematic Review With Meta-analysis. Alcohol and alcoholism (Oxford,
+    Oxfordshire)'
+  supporting_citations: []
+description: 'Biomarker-based liver advice reduces GGT levels through a behavioral
+  pathway: personalized feedback about liver injury biomarkers motivates patients
+  to reduce alcohol consumption, which in turn reduces hepatic stress and decreases
+  GGT enzyme production and release. Meta-analysis of 14 RCTs and 2 observational
+  studies demonstrated a mean reduction of 19.7 IU/L in GGT levels in intervention
+  groups compared to controls.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -19.7
+    type: mean_difference
+    ci_lower: -33.1
+    ci_upper: -6.4
+  p_value: 0.004
+  sample_size: 3763
+moderators:
+- name: baseline_alcohol_consumption
+  direction: strengthens
+  strength: moderate
+  description: Higher baseline alcohol consumption likely associated with greater
+    potential for GGT reduction following intervention
+- name: study_design
+  direction: strengthens
+  strength: moderate
+  description: Quality of included studies was moderate for RCTs and high for observational
+    studies, suggesting robust intervention effects

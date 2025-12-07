@@ -1,0 +1,53 @@
+id: poverty_rate_to_NEW:pediatric_trauma_care_access
+name: Poverty Rate → Pediatric Trauma Care Access
+from_node:
+  node_id: poverty_rate
+  node_name: Poverty Rate
+to_node:
+  node_id: NEW:pediatric_trauma_care_access
+  node_name: Pediatric Trauma Care Access
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Low socioeconomic status is associated with residence in areas with fewer healthcare resources'
+- 'Step 2: Poverty creates barriers to healthcare access including lack of insurance and transportation'
+- 'Step 3: Low-income families may face delays in seeking care due to cost concerns'
+- 'Step 4: Reduced access to timely and comprehensive trauma care services after pediatric injury'
+evidence:
+  quality_rating: C
+  n_studies: 0
+  primary_citation: 'Janyce Eunice Gnanvi et al. 2024. "Social determinants of health and disparities
+    in pediatric trauma care: protocol for a systematic review and meta-analysis." https://doi.org/10.1186/s13643-024-02510-7'
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review protocol
+  - PROGRESS-Plus framework explicitly includes socioeconomic status as SDH factor
+  - Cochrane methodology cited for systematic review approach
+  doi: 10.1186/s13643-024-02510-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Socioeconomic status affects children's access to trauma care after injury, with lower-income
+  children facing greater barriers to receiving timely and appropriate care.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Socioeconomic disparities in healthcare access vary by state Medicaid policies and
+    local healthcare infrastructure
+moderators:
+- name: insurance_coverage
+  direction: weakens
+  strength: strong
+  description: Public insurance coverage (Medicaid, CHIP) may buffer effects of poverty on healthcare
+    access
+- name: safety_net_hospital_presence
+  direction: weakens
+  strength: moderate
+  description: Availability of safety-net hospitals providing care regardless of ability to pay
+structural_competency:
+  equity_implications: This mechanism attributes disparities to structural economic factors and healthcare
+    financing rather than individual behaviors. The focus is on how poverty creates systemic barriers
+    to accessing needed care.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.929637'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

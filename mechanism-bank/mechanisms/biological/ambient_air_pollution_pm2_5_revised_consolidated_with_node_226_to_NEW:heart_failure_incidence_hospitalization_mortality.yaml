@@ -1,0 +1,61 @@
+id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226_to_NEW:heart_failure_incidence_hospitalization_mortality
+name: Ambient Air Pollution (PM2.5) → Heart Failure Incidence, Hospitalization, and
+  Mortality
+from_node:
+  node_id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226
+  node_name: Ambient Air Pollution (PM2.5)
+to_node:
+  node_id: NEW:heart_failure_incidence_hospitalization_mortality
+  node_name: Heart Failure Incidence, Hospitalization, and Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhalation of PM2.5 particles leads to pulmonary and systemic inflammation
+  through oxidative stress and activation of inflammatory pathways'
+- 'Step 2: Systemic inflammation promotes endothelial dysfunction, atherosclerosis
+  progression, and autonomic nervous system imbalance'
+- 'Step 3: These cardiovascular stressors increase myocardial workload, impair cardiac
+  function, and exacerbate existing cardiac conditions'
+- 'Step 4: Cumulative cardiovascular damage results in increased heart failure incidence,
+  hospitalizations, and mortality, with both acute (short-term) and chronic (long-term)
+  exposure contributing to risk'
+evidence:
+  quality_rating: A
+  n_studies: 100
+  primary_citation: 'Yanhui Jia et al. 2023. Effect of Air Pollution on Heart Failure:
+    Systematic Review and Meta-Analysis. Environmental Health Perspectives.'
+  supporting_citations: []
+description: This meta-analysis of 100 studies from 20 countries demonstrates that
+  both short-term and long-term PM2.5 exposure significantly increases the risk of
+  heart failure outcomes including incidence, hospitalization, and mortality. Short-term
+  exposure showed a 1.8% increased risk per 10 μg/m³ increment in PM2.5, while long-term
+  exposure demonstrated a substantially larger 74.8% increased risk per 10 μg/m³ increment.
+  The biological mechanisms involve PM2.5-induced systemic inflammation, oxidative
+  stress, endothelial dysfunction, and autonomic imbalance that collectively impair
+  cardiac function and promote heart failure development and progression.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.748
+    type: relative_risk
+    ci_lower: 1.112
+    ci_upper: 2.747
+  p_value: null
+  sample_size: null
+moderators:
+- name: Country income level
+  direction: strengthens
+  strength: moderate
+  description: Associations were stronger in low- and middle-income countries compared
+    to high-income countries
+- name: Exposure duration
+  direction: strengthens
+  strength: strong
+  description: Long-term exposure showed stronger associations (RR=1.748) compared
+    to short-term exposure (RR=1.018 per 10 μg/m³)
+- name: Lag time
+  direction: strengthens
+  strength: weak
+  description: For short-term exposure, associations were stronger when exposure was
+    considered over lag 0-1 days rather than lag 0 only

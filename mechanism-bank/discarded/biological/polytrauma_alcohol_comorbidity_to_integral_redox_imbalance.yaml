@@ -1,0 +1,46 @@
+id: polytrauma_alcohol_comorbidity_to_integral_redox_imbalance
+name: Polytrauma Combined with Alcohol Withdrawal Syndrome → Integral Redox State
+  Imbalance
+from_node:
+  node_id: polytrauma_alcohol_comorbidity
+  node_name: Polytrauma Combined with Alcohol Withdrawal Syndrome
+to_node:
+  node_id: integral_redox_imbalance
+  node_name: Integral Redox State Imbalance
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Polytrauma independently generates pronounced oxidative stress through
+  tissue injury, hypoxia, and inflammation'
+- 'Step 2: Alcohol withdrawal syndrome adds reactive oxygen species generation and
+  antioxidant depletion'
+- 'Step 3: Combined pathology creates more pronounced violations of integral redox
+  state than either condition alone'
+- 'Step 4: Synergistic oxidative damage affects multiple organ systems requiring intensive
+  management'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S Dubivska et al. 2023. "STUDY OF THE PROCESSES OF LIPID PEROXIDATION,
+    THE STATE OF THE ANTIOXIDANT SYSTEM IN PATIENTS WITH POLYTRAUMA AND ALCOHOL ANAMNESIS.."
+    *Georgian medical news*.
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.744188'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: trauma_severity
+  direction: strengthens
+  strength: strong
+  description: More severe polytrauma (thoracic, abdominal, multiple fractures) creates
+    greater oxidative stress burden that compounds alcohol-related pathology
+- name: sedation_management
+  direction: weakens
+  strength: moderate
+  description: Appropriate sedation and intensive care management may partially mitigate
+    redox imbalance, though effects persist through day 7
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/polytrauma_alcohol_comorbidity_to_integral_redox_imbalance.yaml
+_category: biological

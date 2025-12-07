@@ -1,0 +1,61 @@
+id: homelessness_rate_to_NEW:mental_disorder_prevalence_homeless
+name: Homelessness Rate → Mental Disorder Prevalence in Homeless Population
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: NEW:mental_disorder_prevalence_homeless
+  node_name: Mental Disorder Prevalence in Homeless Population
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Homelessness exposes individuals to chronic environmental stressors including
+  lack of stable shelter, food insecurity, and physical danger'
+- 'Step 2: These stressors exacerbate pre-existing mental health vulnerabilities and
+  trigger new-onset psychiatric conditions through chronic stress pathways'
+- 'Step 3: Lack of access to mental healthcare, social support networks, and substance
+  treatment services perpetuates and worsens psychiatric morbidity'
+- 'Step 4: Substance use disorders develop or worsen as coping mechanisms for street
+  life conditions, creating comorbidity with other mental disorders'
+- 'Step 5: The resulting high prevalence of mental disorders (76.2% any current mental
+  disorder) becomes characteristic of homeless populations'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'Gutwinski S et al. 2021. The prevalence of mental disorders among
+    homeless people in high-income countries: An updated systematic review and meta-regression
+    analysis. PLoS Medicine.'
+  supporting_citations: []
+description: Homelessness is associated with extremely high prevalence of mental disorders,
+  with 76.2% of homeless individuals meeting criteria for any current mental disorder.
+  The most prevalent conditions are alcohol use disorders (36.7%), drug use disorders
+  (21.7%), schizophrenia spectrum disorders (12.4%), and major depression (12.6%).
+  The relationship reflects both selection effects (mental illness increasing risk
+  of homelessness) and causation (homelessness precipitating or exacerbating mental
+  illness through stress, trauma, and lack of access to care).
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 76.2
+    type: prevalence_percent
+    ci_lower: 64.0
+    ci_upper: 86.6
+  p_value: null
+  sample_size: 8049
+moderators:
+- name: sex_distribution
+  direction: strengthens
+  strength: moderate
+  description: Sex distribution of participants partially explained heterogeneity
+    in prevalence rates across studies
+- name: sampling_method
+  direction: strengthens
+  strength: moderate
+  description: Different sampling methods contributed to variation in estimated prevalence
+    rates
+- name: study_location
+  direction: strengthens
+  strength: moderate
+  description: Geographic location contributed to heterogeneity in prevalence estimates
+    across high-income countries

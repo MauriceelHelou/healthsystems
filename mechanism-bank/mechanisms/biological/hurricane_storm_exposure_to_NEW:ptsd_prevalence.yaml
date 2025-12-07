@@ -1,0 +1,45 @@
+id: hurricane_storm_exposure_to_NEW:ptsd_prevalence
+name: Hurricane/Storm Exposure → Post-Traumatic Stress Disorder Prevalence
+from_node:
+  node_id: hurricane_storm_exposure
+  node_name: Hurricane/Storm Exposure
+to_node:
+  node_id: NEW:ptsd_prevalence
+  node_name: Post-Traumatic Stress Disorder Prevalence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hurricane/storm exposure creates acute traumatic experiences including
+  life-threatening situations, witnessing destruction, injury, or death of others,
+  and loss of home/possessions'
+- 'Step 2: These traumatic experiences trigger acute stress responses involving hyperactivation
+  of the hypothalamic-pituitary-adrenal (HPA) axis and sympathetic nervous system'
+- 'Step 3: In vulnerable individuals, the traumatic memories become consolidated in
+  a maladaptive manner, leading to persistent re-experiencing symptoms, avoidance
+  behaviors, negative alterations in cognition/mood, and hyperarousal'
+- 'Step 4: Post-disaster stressors (displacement, resource loss, community disruption)
+  prolong and compound initial trauma, increasing risk of chronic PTSD development'
+evidence:
+  quality_rating: A
+  n_studies: 71
+  primary_citation: 'Wenzhong Huang et al. 2023. Health Effects of Cyclones: A Systematic
+    Review and Meta-Analysis of Epidemiological Studies. Environmental Health Perspectives.'
+  supporting_citations: []
+description: Systematic review and meta-analysis of 71 studies found consistently
+  elevated risks of PTSD following cyclone/hurricane exposure. Mental disorders, especially
+  PTSD, were among the health outcomes most frequently studied and showed robust positive
+  associations with cyclone exposure. The evidence was particularly strong for high-amplitude
+  cyclones such as Hurricanes Katrina and Sandy.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: cyclone_intensity
+  direction: strengthens
+  strength: strong
+  description: High-amplitude cyclones (category 4-5) show consistently elevated risks
+    of PTSD compared to lower intensity storms
+- name: income_level
+  direction: strengthens
+  strength: moderate
+  description: Low and middle-income countries/regions may face greater mental health
+    impacts due to limited resources, though more research is needed in these areas

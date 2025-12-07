@@ -1,0 +1,37 @@
+id: polygenic_risk_score_aud_to_alcohol_use_disorder_diagnosis
+name: Polygenic Risk Score for Alcohol Use Disorder → Alcohol Use Disorder Diagnosis
+from_node:
+  node_id: polygenic_risk_score_aud
+  node_name: Polygenic Risk Score for Alcohol Use Disorder
+to_node:
+  node_id: alcohol_use_disorder_diagnosis
+  node_name: Alcohol Use Disorder Diagnosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Polygenic risk scores derived from European ancestry populations reflect
+  genetic architecture specific to this population group'
+- 'Step 2: Genetic variants affecting AUD risk operate through biological pathways
+  including dopaminergic reward systems and alcohol metabolism'
+- 'Step 3: In individuals with positive family history (FH+), PRS captures additional
+  genetic risk beyond family environmental factors'
+- 'Step 4: Independent association suggests genetic risk contributes to AUD even among
+  those already exposed to familial environmental risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'D. Lai et al. 2022. "Evaluating risk for alcohol use disorder:
+    Polygenic risk scores and family history.." *Alcoholism: Clinical and Experimental
+    Research*. https://doi.org/10.1111/acer.14772'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.858362'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: positive_family_history
+  direction: strengthens
+  strength: moderate
+  description: Among those with positive family history (FH+), top decile PRS still
+    conferred OR=1.86, indicating genetic risk operates even in high-risk family environments

@@ -1,0 +1,55 @@
+id: unemployment_rate_local_to_NEW:alcohol_abstinence
+name: Unemployment Rate → Alcohol Abstinence
+from_node:
+  node_id: unemployment_rate_local
+  node_name: Unemployment Rate
+to_node:
+  node_id: NEW:alcohol_abstinence
+  node_name: Alcohol Abstinence
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Long-term unemployment reduces disposable income available for alcohol purchases'
+- 'Step 2: Social exclusion from workplace reduces exposure to drinking-related social activities'
+- 'Step 3: Loss of employment may be associated with declining health status leading to medical abstinence'
+- 'Step 4: Abstinence may also reflect ''sick quitter'' phenomenon where health deterioration precedes
+  unemployment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Lluís Mangot-Sala et al. 2022. "Disentangling the association between alcohol consumption
+    and employment status: causation, selection or confounding?." https://doi.org/10.1093/eurpub/ckac141'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references abstainer subgroup literature
+  - Additional citations require full-text access - abstract notes abstainers often disregarded in literature
+  - Additional citations require full-text access
+  doi: 10.1093/eurpub/ckac141
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Long-term unemployment increases the likelihood of alcohol abstinence, which may reflect
+  economic constraints on alcohol purchasing, health-related cessation, or social withdrawal. This finding
+  highlights the importance of examining abstainers as a distinct category rather than combining with
+  moderate drinkers.
+quantitative_effects:
+  effect_size:
+    value: 0.27
+    type: beta_coefficient
+    ci_lower: 0.11
+    ci_upper: 0.44
+  sample_size: 138875
+moderators:
+- name: unemployment_duration
+  direction: strengthens
+  strength: strong
+  description: Long-term unemployment (≥6 months) shows significant effect while short-term does not
+structural_competency:
+  equity_implications: This mechanism reveals the heterogeneous effects of unemployment on alcohol consumption
+    patterns. Abstinence in the context of unemployment may not represent improved health but rather economic
+    deprivation or health deterioration - an important equity consideration that challenges simple interpretations
+    of abstinence as protective.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.034116'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

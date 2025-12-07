@@ -1,0 +1,39 @@
+id: maud_underutilization_to_preventable_mortality_cirrhosis
+name: Systemic MAUD Underutilization → Preventable Mortality in Alcohol-Associated
+  Cirrhosis
+from_node:
+  node_id: maud_underutilization
+  node_name: Systemic MAUD Underutilization
+to_node:
+  node_id: preventable_mortality_cirrhosis
+  node_name: Preventable Mortality in Alcohol-Associated Cirrhosis
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Only 9.7% of patients with alcohol-associated cirrhosis and high-risk alcohol
+  use receive MAUD despite evidence of efficacy'
+- 'Step 2: Structural barriers including lack of provider training, prescribing authority
+  restrictions, and inadequate integration of addiction treatment into hepatology
+  prevent wider adoption'
+- 'Step 3: Patients continue hazardous alcohol use without evidence-based pharmacotherapy'
+- 'Step 4: Continued alcohol consumption drives cirrhosis progression, decompensation,
+  and mortality'
+- 'Step 5: Population-level excess mortality occurs due to treatment gap'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Rabiee et al. 2023. "Medications for alcohol use disorder improve
+    survival in patients with hazardous drinking and alcohol-associated cirrhosis."
+    *Hepatology Communications*. https://doi.org/10.1097/HC9.0000000000000093
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.337473'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: healthcare_system_type
+  direction: strengthens
+  strength: moderate
+  description: Veterans Affairs system may have better MAUD access than fragmented
+    private insurance markets, suggesting even lower utilization in other contexts

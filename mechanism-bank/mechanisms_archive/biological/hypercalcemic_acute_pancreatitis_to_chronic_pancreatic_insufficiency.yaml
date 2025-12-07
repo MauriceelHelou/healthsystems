@@ -1,0 +1,40 @@
+id: hypercalcemic_acute_pancreatitis_to_chronic_pancreatic_insufficiency
+name: Hypercalcemic Acute Pancreatitis → Chronic Pancreatic Insufficiency
+from_node:
+  node_id: hypercalcemic_acute_pancreatitis
+  node_name: Hypercalcemic Acute Pancreatitis
+to_node:
+  node_id: chronic_pancreatic_insufficiency
+  node_name: Chronic Pancreatic Insufficiency
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Severe acute pancreatitis from hypercalcemia causes extensive pancreatic
+  necrosis and inflammation'
+- 'Step 2: Repeated or severe pancreatic injury leads to fibrosis and permanent destruction
+  of pancreatic parenchyma'
+- 'Step 3: Loss of functional pancreatic tissue results in inadequate production of
+  digestive enzymes (exocrine insufficiency) and insulin/glucagon (endocrine insufficiency)'
+evidence:
+  quality_rating: C
+  n_studies: 4
+  primary_citation: 'Fakhrddine Amri et al. 2024. "Acute pancreatitis related to hypercalcemia
+    as initial manifestation of cancer: About 4 cases.." *Radiology case reports*.
+    https://doi.org/10.1016/j.radcr.2023.11.017'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.224826'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: severity_of_initial_pancreatitis
+  direction: strengthens
+  strength: strong
+  description: More severe acute pancreatitis episodes likely increase risk of progression
+    to chronic insufficiency
+- name: timely_hypercalcemia_correction
+  direction: weakens
+  strength: moderate
+  description: Early recognition and correction of hypercalcemia may prevent severe
+    pancreatic damage and reduce risk of chronic sequelae

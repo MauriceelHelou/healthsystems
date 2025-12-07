@@ -1,0 +1,49 @@
+id: NEW:high_dose_gabapentin_treatment_to_NEW:benzodiazepine_requirements_aws
+name: High-Dose Gabapentin Treatment → Benzodiazepine Requirements for Alcohol Withdrawal
+from_node:
+  node_id: NEW:high_dose_gabapentin_treatment
+  node_name: High-Dose Gabapentin Treatment
+to_node:
+  node_id: NEW:benzodiazepine_requirements_aws
+  node_name: Benzodiazepine Requirements for Alcohol Withdrawal
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: High-dose gabapentin (≥1200mg/day) is administered to patients hospitalized
+  with severe alcohol withdrawal syndrome (AWS)'
+- 'Step 2: Gabapentin modulates calcium channels and enhances GABAergic neurotransmission,
+  providing anticonvulsant and anxiolytic effects that address core AWS pathophysiology'
+- 'Step 3: The GABAergic effects of gabapentin partially substitute for the sedative-hypnotic
+  action typically provided by benzodiazepines in AWS management'
+- 'Step 4: Patients receiving high-dose gabapentin demonstrate reduced severity of
+  alcohol withdrawal symptoms including anxiety, tremor, and autonomic instability'
+- 'Step 5: The reduction in withdrawal symptom severity translates to decreased need
+  for as-needed (PRN) benzodiazepine dosing and lower total benzodiazepine requirements
+  during hospitalization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Alexander R. Levine et al. 2019. High‐Dose Gabapentin for the
+    Treatment of Severe Alcohol Withdrawal Syndrome: A Retrospective Cohort Analysis.
+    Pharmacotherapy.'
+  supporting_citations: []
+description: High-dose gabapentin treatment reduces benzodiazepine requirements in
+  patients hospitalized with severe alcohol withdrawal syndrome. Gabapentin's GABAergic
+  and calcium channel modulating properties address withdrawal pathophysiology, decreasing
+  symptom severity and the need for benzodiazepine-based symptom management. This
+  represents a benzodiazepine-sparing approach that may reduce risks associated with
+  high-dose benzodiazepine use including respiratory depression and prolonged sedation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: AWS severity
+  direction: strengthens
+  strength: moderate
+  description: Study specifically examined patients with severe AWS, where gabapentin-sparing
+    effects on benzodiazepines may be more pronounced
+- name: Gabapentin dose
+  direction: strengthens
+  strength: moderate
+  description: Higher doses of gabapentin (high-dose defined in study) associated
+    with greater efficacy in reducing benzodiazepine requirements compared to lower
+    doses

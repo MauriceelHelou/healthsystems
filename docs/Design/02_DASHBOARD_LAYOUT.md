@@ -116,8 +116,9 @@ This document defines the overall layout architecture for the HealthSystems dash
 
 3. **Node Library**
    - Icon: Library/collection
-   - Searchable list of all 400 nodes
+   - Searchable list of all ~840 canonical nodes (from `mechanism-bank/mechanisms/canonical_nodes.json`)
    - Table/card view toggle
+   - Filter by scale (1-5) and domain
 
 4. **Evidence Base**
    - Icon: Document/citation

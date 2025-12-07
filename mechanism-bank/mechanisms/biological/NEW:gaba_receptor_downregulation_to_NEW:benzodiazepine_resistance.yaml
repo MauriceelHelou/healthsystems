@@ -1,0 +1,53 @@
+id: NEW:gaba_receptor_downregulation_to_NEW:benzodiazepine_resistance
+name: GABA Receptor Downregulation → Benzodiazepine Treatment Resistance
+from_node:
+  node_id: NEW:gaba_receptor_downregulation
+  node_name: GABA Receptor Downregulation
+to_node:
+  node_id: NEW:benzodiazepine_resistance
+  node_name: Benzodiazepine Treatment Resistance
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol exposure causes adaptive downregulation of GABA-A receptors
+  in the central nervous system'
+- 'Step 2: Reduced GABA receptor density and sensitivity diminishes the binding sites
+  available for benzodiazepine action'
+- 'Step 3: Benzodiazepines, which work by potentiating GABA-A receptor activity, have
+  reduced efficacy due to fewer functional receptors'
+- 'Step 4: This leads to benzodiazepine resistance, requiring higher doses or alternative
+  treatments (e.g., phenobarbital) for alcohol withdrawal syndrome management'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Zaryab Umar et al. 2023. Phenobarbital and Alcohol Withdrawal
+    Syndrome: A Systematic Review and Meta-Analysis. Cureus.'
+  supporting_citations: []
+description: Chronic alcohol abuse leads to adaptive downregulation of GABA-A receptors
+  in the central nervous system. Since benzodiazepines exert their therapeutic effect
+  by potentiating GABA-A receptor activity, the reduction in receptor density and
+  function significantly diminishes benzodiazepine efficacy. This neuroadaptation
+  results in benzodiazepine resistance in patients with alcohol use disorder, often
+  necessitating alternative treatments such as phenobarbital for managing alcohol
+  withdrawal syndrome.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -2.6
+    type: mean_difference
+    ci_lower: -4.48
+    ci_upper: -0.72
+  p_value: 0.007
+  sample_size: null
+moderators:
+- name: Severity of alcohol withdrawal syndrome
+  direction: strengthens
+  strength: moderate
+  description: More severe AWS cases with greater GABA receptor downregulation show
+    increased benzodiazepine resistance, requiring alternative treatments like phenobarbital
+- name: Duration of chronic alcohol use
+  direction: strengthens
+  strength: moderate
+  description: Longer duration of alcohol abuse leads to more pronounced GABA receptor
+    downregulation and greater benzodiazepine resistance

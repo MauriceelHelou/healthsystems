@@ -1,0 +1,54 @@
+id: NEW:obot_program_access_to_sud_medication_treatment_rate_oud
+name: Office-Based Opioid Treatment (OBOT) Program Access → Medication Treatment Rate for OUD
+from_node:
+  node_id: NEW:obot_program_access
+  node_name: Office-Based Opioid Treatment (OBOT) Program Access
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: Medication Treatment Rate for OUD
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Limited geographic availability of OBOT programs in underserved neighborhoods and suburban
+  settings creates structural barriers to care'
+- 'Step 2: Patients face transportation, scheduling, and practical challenges accessing distant treatment
+  facilities'
+- 'Step 3: Reduced OBOT access leads to suboptimal follow-up with referrals and lower treatment engagement'
+- 'Step 4: Decreased retention in medication-assisted treatment for opioid use disorder'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: B. Tofighi et al. 2019. "Patient Barriers and Facilitators to Medications for Opioid
+    Use Disorder in Primary Care." https://doi.org/10.1080/10826084.2019.1653324
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1080/10826084.2019.1653324
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Geographic maldistribution of office-based opioid treatment programs creates structural barriers
+  to medication-assisted treatment, particularly affecting underserved and suburban communities
+quantitative_effects:
+  sample_size: 23
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study specifically identified limited access to OBOT programs in underserved neighborhoods
+    and suburban settings as a barrier
+moderators:
+- name: neighborhood_socioeconomic_status
+  direction: weakens
+  strength: moderate
+  description: Underserved neighborhoods have reduced OBOT program availability, exacerbating access barriers
+- name: urban_suburban_location
+  direction: weakens
+  strength: moderate
+  description: Suburban settings also face limited OBOT access compared to urban centers
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare system infrastructure and geographic distribution
+    of treatment resources create inequitable access to evidence-based OUD treatment. The barrier is structural
+    (location of services) rather than individual (patient motivation or compliance).
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.228310'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

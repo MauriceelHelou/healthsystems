@@ -1,0 +1,51 @@
+id: energy_poverty_to_housing_thermal_quality
+name: Energy Poverty → Cold and Damp Housing Conditions
+from_node:
+  node_id: energy_poverty
+  node_name: Energy Poverty
+to_node:
+  node_id: housing_thermal_quality
+  node_name: Cold and Damp Housing Conditions
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Limited financial resources restrict ability to afford adequate heating'
+- 'Step 2: Inadequate heating combined with poor insulation maintains cold, damp conditions'
+- 'Step 3: Structural housing inadequacies persist despite intervention efforts'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Elinor Chisholm et al. 2024. ""Freedom to move through the house": How a healthy
+    housing initiative improves quality of life in Aotearoa New Zealand.." *Australian and New Zealand
+    journal of public health*. https://doi.org/10.1016/j.anzjph.2024.100190'
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1016/j.anzjph.2024.100190
+  citation_verified: true
+  journal: Australian and New Zealand Journal of Public Health
+  year: 2024
+  fulltext:
+    available: true
+    source: openalex
+    url: https://doi.org/10.1016/j.anzjph.2024.100190
+    is_open_access: true
+    fetched_date: '2025-11-30'
+    license: gold
+last_updated: '2025-11-30'
+version: '2.0'
+description: Energy poverty perpetuates poor housing thermal conditions despite housing intervention efforts
+quantitative_effects:
+  sample_size: 20
+moderators:
+- name: structural_housing_inadequacies
+  direction: strengthens
+  strength: strong
+  description: Underlying structural housing problems compound energy poverty effects
+structural_competency:
+  equity_implications: Identifies energy poverty as a structural barrier that limits effectiveness of
+    housing interventions, demonstrating need for broader economic policy approaches
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T18:40:50.697004'
+  extraction_confidence: medium
+  prompt_version: 2.0-citation-verified

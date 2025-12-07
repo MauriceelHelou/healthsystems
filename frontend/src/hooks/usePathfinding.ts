@@ -23,6 +23,10 @@ import { Category, EvidenceQuality } from '../types/mechanism';
 import { createPostMutation } from './utils/queryHelpers';
 import { API_ENDPOINTS } from '../utils/api';
 
+/** Strip "NEW:" prefix from node names for display */
+const stripNewPrefix = (name: string): string =>
+  name.replace(/^NEW:/i, '').trim();
+
 // ==========================================
 // Types
 // ==========================================
@@ -124,6 +128,22 @@ function transformRequest(request: PathfindingRequest) {
 }
 
 /**
+ * Transform API response to strip NEW: prefix from labels
+ */
+function transformResponse(response: PathfindingResponse): PathfindingResponse {
+  return {
+    ...response,
+    paths: response.paths.map(path => ({
+      ...path,
+      nodeDetails: path.nodeDetails.map(node => ({
+        ...node,
+        label: stripNewPrefix(node.label),
+      })),
+    })),
+  };
+}
+
+/**
  * Hook for pathfinding between nodes
  *
  * Uses React Query's useMutation for on-demand pathfinding queries.
@@ -152,6 +172,9 @@ export function usePathfinding(): UseMutationResult<
         errorContext: 'Pathfinding',
       },
       onSuccess: (data, variables) => {
+        // Transform response to strip NEW: prefix
+        const transformedData = transformResponse(data);
+
         // Cache with query key based on request parameters
         const queryKey = [
           'pathfinding',
@@ -161,21 +184,24 @@ export function usePathfinding(): UseMutationResult<
           (variables as any).max_depth,
         ];
 
-        queryClient.setQueryData(queryKey, data);
+        queryClient.setQueryData(queryKey, transformedData);
       },
       retry: 1,
       retryDelay: 1000,
     }
   );
 
-  // Wrap to transform request before sending
+  // Wrap to transform request before sending and response after receiving
   return {
     ...mutation,
+    // Transform data in the result
+    data: mutation.data ? transformResponse(mutation.data) : undefined,
     mutate: (variables: PathfindingRequest, options?: any) => {
       mutation.mutate(transformRequest(variables), options);
     },
     mutateAsync: async (variables: PathfindingRequest, options?: any) => {
-      return mutation.mutateAsync(transformRequest(variables), options);
+      const result = await mutation.mutateAsync(transformRequest(variables), options);
+      return transformResponse(result);
     },
   } as UseMutationResult<PathfindingResponse, Error, PathfindingRequest>;
 }

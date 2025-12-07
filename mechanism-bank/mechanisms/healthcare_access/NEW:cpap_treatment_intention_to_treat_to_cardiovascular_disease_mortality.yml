@@ -1,0 +1,61 @@
+id: NEW:cpap_treatment_intention_to_treat_to_cardiovascular_disease_mortality
+name: CPAP Treatment Assignment (Intention-to-Treat) → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:cpap_treatment_intention_to_treat
+  node_name: CPAP Treatment Assignment (Intention-to-Treat)
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with obstructive sleep apnea and cardiovascular disease are randomized to CPAP vs
+  usual care'
+- 'Step 2: Low average adherence (mean 3.1 hours/day) in CPAP group limits therapeutic exposure'
+- 'Step 3: Insufficient treatment duration fails to adequately prevent nocturnal hypoxemia and sympathetic
+  activation'
+- 'Step 4: Persistent pathophysiological effects of poorly controlled OSA continue despite treatment assignment'
+- 'Step 5: No meaningful difference in cardiovascular event risk observed between groups'
+evidence:
+  quality_rating: A
+  n_studies: 3
+  primary_citation: 'M. Sánchez-de-la-Torre et al. 2023. "Adherence to CPAP Treatment and the Risk of
+    Recurrent Cardiovascular Events: A Meta-Analysis.." https://doi.org/10.1001/jama.2023.17465'
+  supporting_citations:
+  - SAVE Trial (NCT00738179). Sleep Apnea Cardiovascular Endpoints Study.
+  - ISAACC Trial (NCT01335087). Impact of Sleep Apnea Syndrome in the Evolution of Acute Coronary Syndrome.
+  - RICCADSA Trial (NCT00519597). Randomized Intervention with CPAP in Coronary Artery Disease and Sleep
+    Apnea.
+  doi: 10.1001/jama.2023.17465
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: In intention-to-treat analysis, assignment to CPAP treatment showed no effect on major adverse
+  cardiac and cerebrovascular events compared to usual care (HR 1.01, 95% CI 0.87-1.17). This null finding
+  is attributed to suboptimal treatment adherence in the CPAP group, with mean use of only 3.1 hours/day,
+  below the 4-hour threshold associated with cardiovascular benefit.
+quantitative_effects:
+  effect_size:
+    value: 1.01
+    type: hazard_ratio
+    ci_lower: 0.87
+    ci_upper: 1.17
+  sample_size: 4186
+moderators:
+- name: Mean CPAP adherence
+  direction: weakens
+  strength: strong
+  description: Low mean adherence of 3.1 hours/day in the treatment group explains null findings; adherence
+    below therapeutic threshold negates potential benefits
+structural_competency:
+  equity_implications: 'The null intention-to-treat result underscores that healthcare interventions cannot
+    be evaluated in isolation from structural factors affecting implementation. Poor CPAP adherence reflects
+    systemic issues including: inadequate patient education and training, limited access to mask fitting
+    and troubleshooting support, financial barriers to equipment maintenance and replacement, and insufficient
+    follow-up within healthcare systems. These structural barriers disproportionately affect vulnerable
+    populations, potentially widening health disparities even when treatments are nominally available.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.876491'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

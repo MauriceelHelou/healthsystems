@@ -1,0 +1,32 @@
+id: dyslipidemia_to_diabetic_peripheral_neuropathy
+name: Dyslipidemia → Diabetic Peripheral Neuropathy (DPN)
+from_node:
+  node_id: dyslipidemia
+  node_name: Dyslipidemia
+to_node:
+  node_id: diabetic_peripheral_neuropathy
+  node_name: Diabetic Peripheral Neuropathy (DPN)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Dyslipidemia creates metabolic dysfunction in patients with type 2 diabetes'
+- 'Step 2: Metabolic dysfunction leads to damage of C and Aδ nerve fibers'
+- 'Step 3: Initial demyelination and remyelination of large nerve fibers occurs'
+- 'Step 4: Distal-to-proximal axonal loss develops with characteristic symptoms'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'M. Chang and Seoyon Yang 2023. "Diabetic peripheral neuropathy
+    essentials: a narrative review.." *Annals of Palliative Medicine*. https://doi.org/10.21037/apm-22-693'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.258590'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: diabetes_type
+  direction: strengthens
+  strength: strong
+  description: Dyslipidemia is identified as the primary cause specifically in type
+    2 diabetes patients

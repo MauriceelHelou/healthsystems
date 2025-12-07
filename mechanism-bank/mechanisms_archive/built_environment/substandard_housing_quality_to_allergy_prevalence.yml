@@ -1,0 +1,59 @@
+id: substandard_housing_quality_to_allergy_prevalence
+name: Substandard Housing Quality → Allergy Prevalence
+from_node:
+  node_id: substandard_housing_quality
+  node_name: Substandard Housing Quality
+to_node:
+  node_id: allergy_prevalence
+  node_name: Allergy Prevalence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Substandard housing conditions include inadequate ventilation, moisture problems, and structural
+  defects'
+- 'Step 2: These conditions promote growth of allergens such as mold, dust mites, and pest infestations'
+- 'Step 3: Residents experience chronic exposure to indoor allergens due to compromised housing envelope'
+- 'Step 4: Sustained allergen exposure triggers allergic sensitization and ongoing allergic reactions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sharlene D Newman et al. 2024. "The effect of the housing crisis in the Alabama Black
+    Belt on respiratory health.." *Frontiers in allergy*. https://doi.org/10.3389/falgy.2024.1413171
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.3389/falgy.2024.1413171
+  citation_verified: true
+  journal: Frontiers in Allergy
+  year: 2024
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/44/f7/PMC11371704.tar.gz
+    is_open_access: true
+    fetched_date: '2025-11-30'
+last_updated: '2025-11-30'
+version: '2.0'
+description: Poor housing quality directly increases allergy prevalence through increased indoor allergen
+  exposure and compromised indoor environmental conditions
+quantitative_effects:
+  sample_size: 253
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects concentrated in rural Alabama Black Belt communities with high prevalence of
+    aging manufactured homes
+moderators:
+- name: home_age
+  direction: strengthens
+  strength: moderate
+  description: Aging manufactured homes are particularly susceptible to deterioration and may have higher
+    rates of housing quality problems
+structural_competency:
+  equity_implications: This mechanism highlights how housing as a structural determinant directly impacts
+    health outcomes. The prevalence of substandard housing in the Alabama Black Belt reflects broader
+    patterns of disinvestment and structural inequality in rural communities. The focus on housing quality
+    avoids individual behavioral explanations and addresses environmental determinants of health.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T18:40:50.702593'
+  extraction_confidence: medium
+  prompt_version: 2.0-citation-verified

@@ -1,0 +1,64 @@
+id: NEW:periodontal_disease_to_all_cause_mortality_rate
+name: Periodontal Disease → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:periodontal_disease
+  node_name: Periodontal Disease
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Periodontal disease causes chronic oral infection with persistent inflammation
+  and bacterial burden in the oral cavity'
+- 'Step 2: Systemic dissemination of oral pathogens and inflammatory mediators occurs
+  through bacteremia and cytokine release into the bloodstream'
+- 'Step 3: Chronic systemic inflammation promotes atherosclerosis, endothelial dysfunction,
+  and cardiovascular damage over time'
+- 'Step 4: Increased risk of major adverse cardiovascular events (MACEs), coronary
+  heart disease, myocardial infarction, stroke, and cardiac death'
+- 'Step 5: Elevated cardiovascular mortality and other systemic complications contribute
+  to increased all-cause mortality'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'Xiangyu Guo et al. 2023. Periodontal disease and subsequent risk
+    of cardiovascular outcome and all-cause mortality: A meta-analysis of prospective
+    studies. PLoS ONE.'
+  supporting_citations: []
+description: 'Periodontal disease is associated with a 31% increased risk of all-cause
+  mortality (RR: 1.31, 95% CI: 1.07-1.61). This meta-analysis of 39 cohort studies
+  with over 4.3 million individuals demonstrates that chronic periodontal infection
+  leads to systemic inflammation and increased cardiovascular risk, which in turn
+  elevates overall mortality risk. The association appears robust across sensitivity
+  analyses.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.31
+    type: relative_risk
+    ci_lower: 1.07
+    ci_upper: 1.61
+  p_value: 0.01
+  sample_size: 4389263
+moderators:
+- name: Geographic region
+  direction: strengthens
+  strength: moderate
+  description: Regional differences affect the strength of association between periodontal
+    disease and mortality outcomes
+- name: Periodontal disease definition
+  direction: strengthens
+  strength: moderate
+  description: Different definitions and severity classifications of periodontal disease
+    influence effect estimates
+- name: Follow-up duration
+  direction: strengthens
+  strength: moderate
+  description: Longer follow-up periods may capture more mortality events and affect
+    risk estimates
+- name: Study quality
+  direction: strengthens
+  strength: moderate
+  description: Higher quality studies may provide more accurate effect estimates

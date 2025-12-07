@@ -1,0 +1,43 @@
+id: alcohol_control_policy_reduced_availability_to_alcohol_attributable_mortality_males
+name: Alcohol Control Policy - Reduced Availability → Alcohol-Attributable Mortality
+  in Males
+from_node:
+  node_id: alcohol_control_policy_reduced_availability
+  node_name: Alcohol Control Policy - Reduced Availability
+to_node:
+  node_id: alcohol_attributable_mortality_males
+  node_name: Alcohol-Attributable Mortality in Males
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Alcohol control policies restrict the physical and temporal availability
+  of alcohol through regulatory measures'
+- 'Step 2: Reduced availability decreases population-level alcohol access and consumption'
+- 'Step 3: Lower alcohol consumption reduces acute and chronic alcohol-related health
+  conditions'
+- 'Step 4: Decreased burden of alcohol-related diseases results in lower fully alcohol-attributable
+  mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'R. Radišauskas et al. 2023. "Alcohol-attributable mortality and
+    alcohol control policy in the Baltic Countries and Poland in 2001–2020: an interrupted
+    time-series analysis." *Substance Abuse Treatment, Prevention, and Policy*. https://doi.org/10.1186/s13011-023-00574-7'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.077110'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: The policy effect was stronger for females (10.77% reduction) compared
+    to males (7.60% reduction)
+- name: baseline_mortality_rate
+  direction: strengthens
+  strength: moderate
+  description: Baltic countries had significantly higher baseline alcohol-attributable
+    mortality compared to Poland, suggesting greater potential for policy impact in
+    high-burden settings

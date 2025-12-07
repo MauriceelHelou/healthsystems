@@ -1,0 +1,44 @@
+id: medication_assisted_treatment_type_to_substance_use_disorder_recovery_trajectory
+name: Type of Medication-Assisted Treatment Available → Substance Use Disorder Recovery
+  Trajectory
+from_node:
+  node_id: medication_assisted_treatment_type
+  node_name: Type of Medication-Assisted Treatment Available
+to_node:
+  node_id: substance_use_disorder_recovery_trajectory
+  node_name: Substance Use Disorder Recovery Trajectory
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Different medication formulations (extended-release vs. oral, agonist vs.
+  antagonist) have distinct pharmacological profiles affecting adherence and efficacy'
+- 'Step 2: Structural factors including formulary inclusion, insurance coverage, and
+  provider training determine which medications are accessible in specific geographic
+  areas'
+- 'Step 3: Communities with access to multiple medication options can match patients
+  to optimal treatment based on clinical needs and preferences'
+- 'Step 4: Availability of effective medication options improves composite recovery
+  outcomes including abstinence, employment, and criminal justice involvement'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Paul Crits-Christoph et al. 2016. "A Naturalistic Evaluation of
+    Extended-Release Naltrexone in Clinical Practice in Missouri.." *Journal of substance
+    abuse treatment*. https://doi.org/10.1016/j.jsat.2016.07.014
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.693763'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: substance_type
+  direction: strengthens
+  strength: strong
+  description: Medication effectiveness varies by primary substance (alcohol vs. opioids),
+    with different optimal treatments for each condition
+- name: medication_formulation
+  direction: strengthens
+  strength: strong
+  description: Extended-release formulations consistently outperformed oral formulations
+    across both alcohol and opioid samples

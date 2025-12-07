@@ -1,0 +1,47 @@
+id: NEW:opioid_use_disorder_patient_stigmatization_to_sud_medication_treatment_rate_oud
+name: OUD Patient Stigmatization → SUD Medication Treatment Rate (OUD)
+from_node:
+  node_id: NEW:opioid_use_disorder_patient_stigmatization
+  node_name: OUD Patient Stigmatization
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate (OUD)
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Non-waivered NPs/PAs express concerns about buprenorphine affecting their patient mix'
+- 'Step 2: These concerns reflect stigmatization of patients with opioid use disorder'
+- 'Step 3: Provider stigma creates reluctance to obtain waiver and prescribe buprenorphine'
+- 'Step 4: Reduced provider willingness limits treatment capacity'
+- 'Step 5: Stigma-driven provider avoidance reduces access to evidence-based OUD treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: B. Andraka-Christou et al. 2022. "Perceptions of buprenorphine barriers and efficacy
+    among nurse practitioners and physician assistants." https://doi.org/10.1186/s13722-022-00321-6
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1186/s13722-022-00321-6
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Provider stigmatization of OUD patients, manifested as concerns about how treating OUD patients
+  will affect practice patient mix, creates barriers to providers obtaining waivers and prescribing buprenorphine
+quantitative_effects:
+  sample_size: 240
+moderators:
+- name: waiver_status
+  direction: strengthens
+  strength: moderate
+  description: Non-waivered practitioners were more likely than waivered practitioners to have concerns
+    about patient mix, suggesting stigma as barrier to obtaining waiver
+structural_competency:
+  equity_implications: This mechanism identifies institutionalized stigma within healthcare as a structural
+    barrier. Provider concerns about 'patient mix' reflect broader societal stigmatization of people with
+    OUD that becomes embedded in clinical practice decisions. Addressing this requires systemic anti-stigma
+    interventions in healthcare education and practice culture, not individual blame.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.243109'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

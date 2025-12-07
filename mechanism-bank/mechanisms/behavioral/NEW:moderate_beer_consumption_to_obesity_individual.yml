@@ -1,0 +1,44 @@
+id: NEW:moderate_beer_consumption_to_obesity_individual
+name: Moderate Beer Consumption → Obesity (Individual)
+from_node:
+  node_id: NEW:moderate_beer_consumption
+  node_name: Moderate Beer Consumption
+to_node:
+  node_id: obesity_individual
+  node_name: Obesity (Individual)
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Beer is consumed in moderation (amount not explicitly defined)'
+- 'Step 2: Moderate consumption does not substantially alter caloric balance'
+- 'Step 3: Body composition remains largely unaffected'
+- 'Step 4: No significant impact on obesity risk observed'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: Jaison L Wynne and Patrick B Wilson 2021. "Got Beer? A Systematic Review of Beer and
+    Exercise.." https://doi.org/10.1123/ijsnem.2021-0064
+  supporting_citations:
+  - Studies examining body composition with moderate alcohol intake
+  - Research on caloric balance and alcohol consumption
+  - Additional citations require full-text access
+  doi: 10.1123/ijsnem.2021-0064
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: When consumed in moderation, beer does not appear to significantly affect body composition
+  in exercising individuals.
+moderators:
+- name: consumption_level
+  direction: u_shaped
+  strength: moderate
+  description: Effects on body composition likely differ at higher consumption levels
+structural_competency:
+  equity_implications: Definition of 'moderation' is socially and culturally constructed and varies across
+    contexts. Structural factors including marketing, pricing, and availability influence consumption
+    levels. Study populations were primarily male, limiting generalizability.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.973856'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,82 @@
+id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226_to_respiratory_disease_mortality
+name: Ambient Air Pollution (PM2.5) → Respiratory Disease Mortality
+from_node:
+  node_id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226
+  node_name: Ambient Air Pollution (PM2.5)
+to_node:
+  node_id: respiratory_disease_mortality
+  node_name: Respiratory Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhalation of PM2.5 particles which penetrate deep into the respiratory
+  tract due to their small aerodynamic diameter (<2.5 μm)'
+- 'Step 2: Deposition of particles in the bronchioles and alveoli triggers local inflammatory
+  responses and oxidative stress in lung tissue'
+- 'Step 3: Chronic or repeated exposure leads to airway inflammation, impaired mucociliary
+  clearance, and exacerbation of existing respiratory conditions (COPD, asthma, pneumonia)'
+- 'Step 4: Systemic inflammatory responses and compromised respiratory function increase
+  susceptibility to respiratory infections and acute respiratory failure'
+- 'Step 5: Progressive respiratory dysfunction and acute exacerbations lead to increased
+  respiratory disease mortality'
+evidence:
+  quality_rating: A
+  n_studies: 933
+  primary_citation: Cong Liu et al. 2019. Ambient Particulate Air Pollution and Daily
+    Mortality in 652 Cities. New England Journal of Medicine.
+  supporting_citations:
+  - 'W. R. Wan Mahiyuddin et al. 2023. Cardiovascular and Respiratory Health Effects
+    of Fine Particulate Matters (PM2.5): A Review on Time Series Studies. Atmosphere.'
+  - 'R. Atkinson et al. 2014. Epidemiological time series studies of PM2.5 and daily
+    mortality and hospital admissions: a systematic review and meta-analysis. Thorax.'
+  - 'Qian Liu et al. 2017. Effect of exposure to ambient PM2.5 pollution on the risk
+    of respiratory tract diseases: a meta-analysis of cohort studies. Journal of Biomedical
+    Research.'
+  - 'K. K. Mokoena et al. 2019. Ambient air pollution and respiratory mortality in
+    Xi''an, China: a time-series analysis. Respiratory Research.'
+description: PM2.5 exposure is consistently and independently associated with increased
+  respiratory disease mortality across global populations. A 10 μg/m3 increase in
+  PM2.5 is associated with approximately 0.68-0.74% increase in daily respiratory
+  mortality in multi-city studies, with respiratory mortality effects generally stronger
+  than cardiovascular effects in short-term exposure studies. The association persists
+  after adjustment for gaseous pollutants (SO2, O3) in multi-pollutant models. Evidence
+  from 652 cities across 24 countries demonstrates a consistent concentration-response
+  relationship with no apparent safe threshold, supporting causal inference for the
+  PM2.5-respiratory mortality relationship.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.74
+    type: percent_increase_per_10_ug_m3
+    ci_lower: 0.53
+    ci_upper: 0.95
+  p_value: null
+  sample_size: 652
+moderators:
+- name: Age
+  direction: strengthens
+  strength: strong
+  description: Children and elderly (≥65 years) show stronger associations with respiratory
+    mortality and morbidity. Children showed significant increases in wheezing (8.2%),
+    cough (7.5%), and lower respiratory illness (15.3%).
+- name: Baseline PM2.5 concentration
+  direction: strengthens
+  strength: moderate
+  description: Associations stronger at lower annual mean PM concentrations, with
+    steeper concentration-response slopes at lower PM levels, suggesting no safe threshold.
+- name: Temperature
+  direction: strengthens
+  strength: moderate
+  description: Higher annual mean temperatures associated with stronger PM2.5-mortality
+    associations.
+- name: Traffic-related pollution source
+  direction: strengthens
+  strength: moderate
+  description: Traffic-related PM2.5 showed greater risk of respiratory tract diseases
+    compared to non-traffic-related air pollution.
+- name: Exposure duration
+  direction: strengthens
+  strength: moderate
+  description: Short-term studies (<7 years) showed respiratory diseases with higher
+    risks compared to cardiovascular diseases.

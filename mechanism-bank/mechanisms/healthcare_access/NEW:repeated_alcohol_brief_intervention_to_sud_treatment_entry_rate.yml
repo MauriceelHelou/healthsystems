@@ -1,0 +1,57 @@
+id: NEW:repeated_alcohol_brief_intervention_to_sud_treatment_entry_rate
+name: Repeated Alcohol Brief Intervention → SUD Treatment Entry Rate
+from_node:
+  node_id: NEW:repeated_alcohol_brief_intervention
+  node_name: Repeated Alcohol Brief Intervention
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients without AUD diagnosis receive multiple brief interventions over time'
+- 'Step 2: Repeated clinical encounters signal persistent unhealthy alcohol use requiring escalation'
+- 'Step 3: Multiple BIs may increase patient readiness for change through accumulated exposure to health
+  messaging'
+- 'Step 4: Repeated interventions may trigger provider recognition of need for specialty referral'
+- 'Step 5: Greater likelihood of specialty treatment engagement among those receiving multiple BIs'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Madeline C. Frost et al. 2019. "Documented brief intervention associated with reduced
+    linkage to specialty addictions treatment in a national sample of VA patients with unhealthy alcohol
+    use with and without alcohol use disorders.." https://doi.org/10.1111/add.14836
+  supporting_citations:
+  - Studies on motivational interviewing and repeated contacts (citation requires full-text access)
+  - Research on stepped care models in addiction treatment (citation requires full-text access)
+  - VA implementation studies on alcohol screening (citation requires full-text access)
+  doi: 10.1111/add.14836
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among patients without an AUD diagnosis, documentation of more than one brief intervention
+  was associated with a 75% increase in likelihood of receiving specialty treatment compared to no BI,
+  suggesting repeated interventions may function as intended in the stepped care model for this subgroup.
+quantitative_effects:
+  effect_size:
+    value: 1.75
+    type: relative_risk
+    ci_lower: 1.68
+    ci_upper: 1.83
+moderators:
+- name: alcohol_use_disorder_diagnosis_absence
+  direction: strengthens
+  strength: strong
+  description: This positive effect of repeated BI was observed only among patients WITHOUT AUD diagnosis;
+    effect among those with AUD not separately reported for repeated BI
+structural_competency:
+  equity_implications: This finding suggests that when healthcare systems provide sustained, repeated
+    engagement rather than one-time interventions, the stepped care model may function as intended. This
+    has implications for healthcare system design - single-encounter interventions may be insufficient,
+    and systems should build in mechanisms for repeated engagement and follow-up. The differential effect
+    by diagnosis status suggests need for tailored intervention pathways based on clinical severity.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.051752'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

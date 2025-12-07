@@ -1,0 +1,58 @@
+id: NEW:childhood_socioeconomic_advantage_to_obesity_individual
+name: Childhood Socioeconomic Advantage → Obesity (Individual)
+from_node:
+  node_id: NEW:childhood_socioeconomic_advantage
+  node_name: Childhood Socioeconomic Advantage
+to_node:
+  node_id: obesity_individual
+  node_name: Obesity (Individual)
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Advantaged childhood socioeconomic status provides greater access to calorie-dense foods and
+  reduced physical labor requirements'
+- 'Step 2: Children from advantaged backgrounds in China''s historical context were more likely to be
+  overweight due to food abundance'
+- 'Step 3: Overweight status in childhood creates metabolic and behavioral patterns that persist'
+- 'Step 4: The probability of remaining overweight into older age increases for those with advantaged
+  childhood SES'
+- 'Step 5: Results in higher obesity prevalence among those with advantaged childhood backgrounds who
+  were overweight as children'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Tao-Jie Zhou et al. 2022. "Childhood Socioeconomic Status and Late-Adulthood Health
+    Outcomes in China: A Life-Course Perspective." https://doi.org/10.1007/s12061-022-09489-5'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references CHARLS nationally representative
+    survey
+  - Life-course perspective literature on obesity trajectories
+  - Studies on childhood overweight and adult health outcomes
+  doi: 10.1007/s12061-022-09489-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: For individuals who were overweight in childhood, advantaged socioeconomic status appears
+  to increase the probability of remaining overweight in older age, representing a context-specific reversal
+  of typical SES-health gradients
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: This relationship is specific to China's context where childhood overweight was associated
+    with socioeconomic advantage, which may differ from Western contexts where obesity is often associated
+    with disadvantage
+moderators:
+- name: childhood_overweight_status
+  direction: strengthens
+  strength: strong
+  description: The positive effect of advantaged SES on later-life obesity is contingent on being overweight
+    in childhood; this moderates the typically protective effect of high SES
+structural_competency:
+  equity_implications: This finding highlights how structural conditions operate differently across contexts.
+    In China's developmental history, food access was a marker of privilege, creating paradoxical health
+    effects. This underscores the importance of context-specific structural analysis rather than universal
+    assumptions about SES-health relationships.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.638541'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

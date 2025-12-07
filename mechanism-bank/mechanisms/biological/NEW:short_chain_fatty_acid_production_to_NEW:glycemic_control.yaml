@@ -1,0 +1,63 @@
+id: NEW:short_chain_fatty_acid_production_to_NEW:glycemic_control
+name: Short Chain Fatty Acid Production (SCFAs) → Glycemic Control
+from_node:
+  node_id: NEW:short_chain_fatty_acid_production
+  node_name: Short Chain Fatty Acid Production (SCFAs)
+to_node:
+  node_id: NEW:glycemic_control
+  node_name: Glycemic Control
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Dietary fiber undergoes microbial fermentation in the gastrointestinal
+  tract, producing short-chain fatty acids (SCFAs) including acetate, propionate,
+  and butyrate'
+- 'Step 2: SCFAs, particularly acetate (as found in vinegar), interact with metabolic
+  pathways involved in glucose homeostasis'
+- 'Step 3: Vinegar consumption specifically demonstrates acute reduction in postprandial
+  glucose response, though isolated SCFAs (acetate, propionate, butyrate) show no
+  significant effect on blood glucose or insulin when administered directly'
+- 'Step 4: The glucose-lowering effects appear most pronounced in individuals with
+  impaired glucose tolerance or type 2 diabetes, suggesting context-dependent mechanisms'
+evidence:
+  quality_rating: A
+  n_studies: 46
+  primary_citation: 'Anna Cherta-Murillo et al. 2022. The effects of SCFAs on glycemic
+    control in humans: a systematic review and meta-analysis. American Journal of
+    Clinical Nutrition.'
+  supporting_citations: []
+description: This systematic review and meta-analysis of 46 studies (n=913) examined
+  the effects of SCFAs on glycemic control. Vinegar intake significantly decreased
+  acute glucose response in both metabolically unhealthy (SMD -0.53) and healthy individuals
+  (SMD -0.27). However, isolated SCFAs (acetate, propionate, butyrate) administered
+  directly showed no significant effects on blood glucose or insulin. The evidence
+  suggests that while fiber-derived SCFAs may contribute to glycemic benefits, the
+  relationship is complex and may depend on the source and context of SCFA delivery
+  rather than direct SCFA supplementation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.53
+    type: standard_mean_difference
+    ci_lower: -0.92
+    ci_upper: -0.14
+  p_value: null
+  sample_size: 913
+moderators:
+- name: Metabolic health status
+  direction: strengthens
+  strength: moderate
+  description: Effect of vinegar on glucose response stronger in individuals with
+    impaired glucose tolerance or type 2 diabetes (SMD -0.53) compared to healthy
+    volunteers (SMD -0.27)
+- name: SCFA source/type
+  direction: weakens
+  strength: strong
+  description: Vinegar showed significant effects while isolated acetate, propionate,
+    butyrate, and mixed SCFAs showed no significant effects on blood glucose or insulin
+- name: Intervention duration
+  direction: weakens
+  strength: moderate
+  description: Acute effects observed for vinegar; chronic propionate studies showed
+    no significant effect

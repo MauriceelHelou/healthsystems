@@ -1,0 +1,48 @@
+id: covid_19_pandemic_to_alcohol_related_mortality
+name: COVID-19 Pandemic → Alcohol-Related Mortality
+from_node:
+  node_id: covid_19_pandemic
+  node_name: COVID-19 Pandemic
+to_node:
+  node_id: alcohol_related_mortality
+  node_name: Alcohol-Related Mortality
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: COVID-19 pandemic created widespread social disruption, economic stress,
+  social isolation, and disruption of addiction treatment services'
+- 'Step 2: Increased psychological distress and reduced access to recovery support
+  services led to increased alcohol consumption and relapse among individuals with
+  AUD'
+- 'Step 3: Healthcare system strain during pandemic reduced access to acute medical
+  care for alcohol-related complications'
+- 'Step 4: Combined effects of increased alcohol use and reduced medical access led
+  to dramatic rise in alcohol-related deaths'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'J. Suzuki et al. 2022. "Digitally Assisted Peer Recovery Coach
+    to Facilitate Linkage to Outpatient Treatment Following Inpatient Alcohol Withdrawal
+    Treatment: Proof-of-Concept Pilot Study." *JMIR Formative Research*. https://doi.org/10.2196/43304'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.710996'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: lockdown_stringency
+  direction: strengthens
+  strength: moderate
+  description: Stricter lockdown policies may have intensified social isolation and
+    reduced access to in-person recovery support services
+- name: economic_support_programs
+  direction: weakens
+  strength: moderate
+  description: Robust economic support programs during pandemic may have buffered
+    some of the economic stress contributing to increased alcohol use
+- name: telehealth_expansion
+  direction: weakens
+  strength: weak
+  description: Rapid expansion of telehealth may have maintained some access to addiction
+    treatment services, though not for all populations

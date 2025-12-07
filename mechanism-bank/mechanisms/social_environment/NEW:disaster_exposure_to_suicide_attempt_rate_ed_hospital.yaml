@@ -1,0 +1,50 @@
+id: NEW:disaster_exposure_to_suicide_attempt_rate_ed_hospital
+name: Disaster and Mass Casualty Incident Exposure → Suicide Attempt Rate
+from_node:
+  node_id: NEW:disaster_exposure
+  node_name: Disaster and Mass Casualty Incident Exposure
+to_node:
+  node_id: suicide_attempt_rate_ed_hospital
+  node_name: Suicide Attempt Rate
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Exposure to disasters and mass casualty incidents causes physical, economic,
+  and social injuries to affected populations'
+- 'Step 2: These injuries lead to development of mental disorders including anxiety,
+  stress, and depression'
+- 'Step 3: Persistent psychological distress and mental health deterioration increase
+  suicidal ideation'
+- 'Step 4: Elevated suicidal ideation translates into increased suicide attempt behaviors,
+  with prevalence of 8.8% among disaster-exposed populations'
+evidence:
+  quality_rating: A
+  n_studies: 33
+  primary_citation: 'Arezoo Karimi et al. 2021. Prevalence of Suicidal Ideation and
+    Suicide Attempts after Disaster and Mass Casualty Incidents in the World: A Systematic
+    Review and Meta-Analysis. Iranian Journal of Psychiatry.'
+  supporting_citations: []
+description: 'Systematic review and meta-analysis of 33 studies (n=61,180) demonstrates
+  that exposure to disasters and mass casualty incidents is associated with elevated
+  suicide attempt rates. The pooled prevalence of suicide attempts after disaster
+  exposure was 8.8% (95% CI: 6.6%-11.0%), while suicidal ideation prevalence was 12.9%.
+  The mechanism operates through physical, economic, and social injuries that trigger
+  mental health disorders including anxiety, stress, and depression, which subsequently
+  increase suicidal behaviors.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 8.8
+    type: prevalence_percentage
+    ci_lower: 6.6
+    ci_upper: 11.0
+  p_value: null
+  sample_size: 61180
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Females show approximately three times higher prevalence of suicidal
+    ideation compared to males (15.8% vs 10.6%), suggesting sex is a significant moderator
+    of disaster-related suicidal behaviors

@@ -1,0 +1,41 @@
+id: delayed_diagnosis_aald_to_advanced_aald_presentation
+name: Delayed Diagnosis of AALD → Advanced Stage AALD at Presentation
+from_node:
+  node_id: delayed_diagnosis_aald
+  node_name: Delayed Diagnosis of AALD
+to_node:
+  node_id: advanced_aald_presentation
+  node_name: Advanced Stage AALD at Presentation
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Lack of early screening and noninvasive testing prevents identification
+  of early-stage AALD'
+- 'Step 2: Absence of red flag recognition (low albumin, low platelet count, raised
+  transaminases) allows silent disease progression'
+- 'Step 3: Patients present only when symptomatic with advanced fibrosis or cirrhosis'
+- 'Step 4: Late-stage presentation results in higher morbidity and mortality due to
+  limited treatment options'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Saggere Muralikrishna Shasthry and Shiv Kumar Sarin 2024. "Alcohol-Associated
+    Liver Diseases: Spectrum, Nomenclature, and Definitions.." *Clinics in liver disease*.
+    https://doi.org/10.1016/j.cld.2024.06.003'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.392197'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: healthcare_access
+  direction: weakens
+  strength: strong
+  description: Access to algorithmic approaches using noninvasive tests can enable
+    early diagnosis and prevent progression to advanced disease
+- name: availability_noninvasive_testing
+  direction: weakens
+  strength: strong
+  description: Availability of enhanced liver fibrosis score, elastography, and fibrosis-4
+    scores enables earlier detection before advanced stages

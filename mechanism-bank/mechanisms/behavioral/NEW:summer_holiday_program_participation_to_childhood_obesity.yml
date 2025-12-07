@@ -1,0 +1,64 @@
+id: NEW:summer_holiday_program_participation_to_childhood_obesity
+name: Summer Holiday Program Participation → Childhood Obesity
+from_node:
+  node_id: NEW:summer_holiday_program_participation
+  node_name: Summer Holiday Program Participation
+to_node:
+  node_id: childhood_obesity
+  node_name: Childhood Obesity
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Summer holiday programs increase physical activity and reduce sedentary behavior'
+- 'Step 2: Increased energy expenditure from structured activities during program participation'
+- 'Step 3: Prevention of accelerated weight gain that typically occurs during summer months when children
+  are out of school'
+- 'Step 4: Maintenance of healthier body composition through sustained physical activity and structured
+  routines'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: 'Emily Eglitis et al. 2024. "Health effects of children''s summer holiday programs:
+    a systematic review and meta-analysis." https://doi.org/10.1186/s12966-024-01658-8'
+  supporting_citations:
+  - Additional citations require full-text access - abstract reports 10 studies (2 RCTs, 8 non-randomized
+    controlled trials) but does not name specific included studies
+  - Studies included children aged 5-18 years with programs of at least 5 days duration
+  - Search conducted across MEDLINE, JBI, PsychINFO, Embase, ERIC and Scopus databases
+  doi: 10.1186/s12966-024-01658-8
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Summer holiday programs demonstrate a significant small effect on improving adiposity measures
+  in school-aged children (g=-0.25). Programs help maintain healthy body weight during summer months when
+  children typically experience accelerated weight gain due to reduced structure and physical activity.
+quantitative_effects:
+  effect_size:
+    value: -0.25
+    type: standardized_mean_difference
+    ci_lower: -0.39
+    ci_upper: -0.1
+  sample_size: 1446
+moderators:
+- name: child_sociodemographic_characteristics
+  direction: strengthens
+  strength: weak
+  description: No significant differential effects by child sociodemographic characteristics were detected
+- name: program_characteristics
+  direction: strengthens
+  strength: weak
+  description: No significant differential effects by program characteristics were detected
+structural_competency:
+  equity_implications: This mechanism addresses the 'summer slide' in health that disproportionately affects
+    children from disadvantaged backgrounds who may lack access to structured activities, safe outdoor
+    spaces, and nutritious meals during summer vacation. Summer programs represent a structural intervention
+    that can reduce health disparities by providing equal access to health-promoting environments regardless
+    of family resources.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.867334'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

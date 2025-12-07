@@ -1,0 +1,48 @@
+id: poverty_rate_to_NEW:alcohol_outlet_density
+name: Poverty Rate → Alcohol Outlet Density
+from_node:
+  node_id: poverty_rate
+  node_name: Poverty Rate
+to_node:
+  node_id: NEW:alcohol_outlet_density
+  node_name: Alcohol Outlet Density
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Areas with higher income deprivation have lower commercial rents and property values'
+- 'Step 2: Lower barriers to entry attract retail establishments selling alcohol'
+- 'Step 3: Less political power in deprived communities to oppose alcohol outlet licensing'
+- 'Step 4: Licensing policies may not adequately consider cumulative impact in deprived areas'
+- 'Step 5: Result is higher concentration of alcohol outlets in deprived neighbourhoods'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: N. Shortt et al. 2015. "A cross-sectional analysis of the relationship between tobacco
+    and alcohol outlet density and neighbourhood deprivation." https://doi.org/10.1186/s12889-015-2321-1
+  supporting_citations:
+  - Additional citations require full-text access - abstract references neighbourhood deprivation measurement
+  - Additional citations require full-text access - abstract references alcohol licensing policy
+  - Additional citations require full-text access - abstract references health inequalities framework
+  doi: 10.1186/s12889-015-2321-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Neighbourhood-level income deprivation is positively associated with both off-sales and on-sales
+  alcohol outlet density, with the most deprived quintile having highest densities and the least deprived
+  having lowest densities.
+quantitative_effects:
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Linear relationship observed across deprivation quintiles in Scotland; effect consistent
+    for both off-sales and on-sales alcohol outlets
+structural_competency:
+  equity_implications: This mechanism reveals how economic deprivation shapes the built environment in
+    ways that perpetuate health inequities. The concentration of alcohol retail in poor areas is not random
+    but reflects structural economic and political processes. Policy interventions should address licensing
+    policies and their differential impact on deprived communities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.492128'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

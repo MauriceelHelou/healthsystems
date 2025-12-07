@@ -1,0 +1,60 @@
+id: NEW:calorie_labeling_policy_food_to_NEW:energy_consumption_food
+name: Calorie Labeling Policy for Food → Energy Consumed from Food
+from_node:
+  node_id: NEW:calorie_labeling_policy_food
+  node_name: Calorie Labeling Policy for Food
+to_node:
+  node_id: NEW:energy_consumption_food
+  node_name: Energy Consumed from Food
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Calorie labeling policies mandate display of energy information on menus and food products'
+- 'Step 2: Consumers see calorie information when selecting food items'
+- 'Step 3: Selection of lower-calorie food options leads to reduced energy available for consumption'
+- 'Step 4: Consumers may also moderate portion consumption based on calorie awareness'
+- 'Step 5: Total energy consumed from food decreases at population level'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: Natasha Clarke et al. 2025. "Calorie (energy) labelling for changing selection and
+    consumption of food or alcohol.." https://doi.org/10.1002/14651858.CD014845.pub2
+  supporting_citations:
+  - Additional citations require full-text access - this is a Cochrane systematic review
+  - 8 randomized studies with 10 comparisons included for consumption outcome
+  - Studies drawn from larger pool of 25 included studies across multiple countries
+  doi: 10.1002/14651858.CD014845.pub2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Calorie labeling of food may lead to a larger reduction in energy consumed compared to energy
+  selected. For an average 600 kcal meal, adults exposed to calorie labeling consume approximately 35
+  kcal less (5.9% reduction). However, this evidence is of lower certainty compared to selection outcomes.
+quantitative_effects:
+  effect_size:
+    value: -0.19
+    type: standardized_mean_difference
+    ci_lower: -0.33
+    ci_upper: -0.05
+  sample_size: 2134
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies primarily conducted in high-income countries. Evidence for consumption outcome
+    is less extensive than for selection outcome.
+moderators:
+- name: socioeconomic_status
+  direction: unknown
+  strength: moderate
+  description: Potential effect modification by SES identified as priority for further research; current
+    evidence predominantly from high-SES populations.
+structural_competency:
+  equity_implications: The consumption effect is larger than the selection effect, suggesting calorie
+    labeling may influence both what people choose and how much they eat. This structural intervention
+    operates at the environmental level, potentially creating population-wide health benefits when applied
+    at scale. The low-certainty evidence rating reflects fewer studies and potential for bias, requiring
+    cautious interpretation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.403373'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

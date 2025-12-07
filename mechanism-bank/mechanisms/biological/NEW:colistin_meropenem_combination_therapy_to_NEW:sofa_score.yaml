@@ -1,0 +1,57 @@
+id: NEW:colistin_meropenem_combination_therapy_to_NEW:sofa_score
+name: Colistin Plus Meropenem Combination Therapy → Sequential Organ Failure Assessment
+  Score
+from_node:
+  node_id: NEW:colistin_meropenem_combination_therapy
+  node_name: Colistin Plus Meropenem Combination Therapy
+to_node:
+  node_id: NEW:sofa_score
+  node_name: Sequential Organ Failure Assessment Score
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Colistin and meropenem act synergistically against multidrug-resistant
+  gram-negative bacteria causing nosocomial pneumonia through complementary mechanisms
+  - colistin disrupts bacterial outer membrane integrity while meropenem inhibits
+  cell wall synthesis'
+- 'Step 2: Enhanced bacterial clearance reduces the systemic inflammatory response
+  and bacterial burden in the lungs and bloodstream'
+- 'Step 3: Decreased infection severity leads to reduced organ dysfunction across
+  multiple systems (respiratory, cardiovascular, hepatic, renal, coagulation, neurological)'
+- 'Step 4: Improvement in organ function is reflected in lower Sequential Organ Failure
+  Assessment (SOFA) scores, indicating better clinical outcomes'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: Hazhir Moradi et al. 2024. Systematic review and meta-analysis
+    of colistin plus meropenem therapy for the treatment of nosocomial pneumonia.
+    Iranian journal of microbiology.
+  supporting_citations: []
+description: Colistin plus meropenem combination therapy significantly reduces Sequential
+  Organ Failure Assessment (SOFA) scores compared to other colistin-based treatments
+  in patients with nosocomial pneumonia caused by multidrug-resistant gram-negative
+  bacteria. This meta-analysis of 5 studies with 991 patients demonstrated a statistically
+  significant reduction in SOFA scores (OR = -0.28, 95% CI = -0.44 to -0.11, p = 0.001),
+  indicating improved organ function with the combination therapy.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.28
+    type: standardized_mean_difference
+    ci_lower: -0.44
+    ci_upper: -0.11
+  p_value: 0.001
+  sample_size: 991
+moderators:
+- name: baseline_comorbidity_burden
+  direction: weakens
+  strength: moderate
+  description: Higher Charlson Comorbidity Index scores were associated with the combination
+    therapy group, suggesting patients with more comorbidities may still benefit but
+    baseline severity may moderate treatment effects
+- name: pathogen_susceptibility
+  direction: strengthens
+  strength: moderate
+  description: Effectiveness likely depends on susceptibility patterns of causative
+    gram-negative organisms to the combination therapy

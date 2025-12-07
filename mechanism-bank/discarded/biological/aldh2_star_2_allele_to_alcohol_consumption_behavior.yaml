@@ -1,0 +1,49 @@
+id: aldh2_star_2_allele_to_alcohol_consumption_behavior
+name: ALDH2*2 Genetic Variant (rs671 A Allele) → Alcohol Consumption Behavior
+from_node:
+  node_id: aldh2_star_2_allele
+  node_name: ALDH2*2 Genetic Variant (rs671 A Allele)
+to_node:
+  node_id: alcohol_consumption_behavior
+  node_name: Alcohol Consumption Behavior
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: The ALDH2*2 allele (rs671 G>A mutation) produces a deficient aldehyde dehydrogenase
+  enzyme'
+- 'Step 2: Deficient ALDH2 enzyme leads to accumulation of acetaldehyde when alcohol
+  is consumed'
+- 'Step 3: Acetaldehyde accumulation causes unpleasant flushing reactions and discomfort'
+- 'Step 4: This aversive physiological response serves as a biological deterrent to
+  alcohol consumption'
+- 'Step 5: Individuals with ALDH2*2 allele demonstrate lower hazardous drinking scores
+  (AUDIT < 8 vs ≥ 8)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Chih-Lang Lin et al. 2021. "The Aldehyde Dehydrogenase ALDH2*2
+    Allele, Associated with Alcohol Drinking Behavior, Dates Back to Prehistoric Times."
+    *Biomolecules*. https://doi.org/10.3390/biom11091376
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.003416'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: genetic_ancestry
+  direction: strengthens
+  strength: strong
+  description: This mechanism is specific to populations of East Asian ancestry where
+    the ALDH2*2 allele is present. The allele is virtually absent in non-Asian populations,
+    making this a population-specific protective factor.
+- name: homozygous_vs_heterozygous
+  direction: strengthens
+  strength: strong
+  description: Homozygous ALDH2*2 carriers (n=13 in Keelung, n=175 in Guangzhou) likely
+    experience stronger protective effects against alcohol consumption compared to
+    heterozygous carriers (n=81 in Keelung), though specific effect sizes not provided
+    in abstract.
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/aldh2_star_2_allele_to_alcohol_consumption_behavior.yaml
+_category: biological

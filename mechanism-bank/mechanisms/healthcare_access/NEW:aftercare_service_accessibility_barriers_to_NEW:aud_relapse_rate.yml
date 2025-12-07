@@ -1,0 +1,56 @@
+id: NEW:aftercare_service_accessibility_barriers_to_NEW:aud_relapse_rate
+name: Aftercare Service Accessibility Barriers → AUD Relapse Rate
+from_node:
+  node_id: NEW:aftercare_service_accessibility_barriers
+  node_name: Aftercare Service Accessibility Barriers
+to_node:
+  node_id: NEW:aud_relapse_rate
+  node_name: AUD Relapse Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individuals discharged from AUD treatment programs require continuing care to maintain recovery'
+- 'Step 2: Structural barriers (geographic access, transportation, scheduling, stigma) limit access to
+  in-person aftercare interventions'
+- 'Step 3: Lack of continuing care leaves individuals without support during vulnerable post-treatment
+  period'
+- 'Step 4: Absence of ongoing support and monitoring increases probability of relapse'
+evidence:
+  quality_rating: B
+  n_studies: 11
+  primary_citation: Luana Lenzi et al. 2025. "Digital interventions for supporting alcohol abstinence
+    in aftercare - a systematic review.." https://doi.org/10.1016/j.invent.2025.100832
+  supporting_citations:
+  - Additional citations require full-text access - systematic review identifies lack of continuing care
+    as common relapse factor
+  - Studies documenting barriers to in-person intervention access post-AUD treatment
+  - Research on relapse patterns following AUD treatment discharge
+  doi: 10.1016/j.invent.2025.100832
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Relapse is common among individuals with AUD following discharge from treatment programs,
+  often attributed to lack of continuing care and barriers to accessing in-person interventions. This
+  structural barrier to healthcare access perpetuates the cycle of AUD relapse.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Barriers to in-person interventions likely vary significantly by geographic location,
+    with rural and underserved areas having fewer treatment options and greater access barriers
+moderators:
+- name: digital_access
+  direction: weakens
+  strength: moderate
+  description: Availability of digital interventions may partially mitigate the effect of physical access
+    barriers on relapse risk
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare system structure creates inequitable outcomes.
+    The concentration of addiction treatment services in urban areas, combined with transportation barriers,
+    work schedule conflicts, and stigma associated with attending in-person treatment, creates structural
+    obstacles that disproportionately affect low-income individuals, those in rural areas, and those facing
+    employment instability. The burden of accessing care is placed on vulnerable individuals rather than
+    addressed through systemic changes to service delivery models.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.727797'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

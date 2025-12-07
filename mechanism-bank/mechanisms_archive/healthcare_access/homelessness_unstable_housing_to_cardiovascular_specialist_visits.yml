@@ -1,0 +1,54 @@
+id: homelessness_unstable_housing_to_cardiovascular_specialist_visits
+name: Homelessness and Unstable Housing → Cardiovascular Specialist Visits
+from_node:
+  node_id: homelessness_unstable_housing
+  node_name: Homelessness and Unstable Housing
+to_node:
+  node_id: cardiovascular_specialist_visits
+  node_name: Cardiovascular Specialist Visits
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Housing instability creates additional barriers to accessing specialized cardiovascular care
+  requiring referrals and coordination'
+- 'Step 2: Unstable housing disrupts continuity of care relationships necessary for specialist referrals'
+- 'Step 3: Administrative barriers increase when patients lack stable addresses for appointment scheduling
+  and communication'
+- 'Step 4: Reduced access to cardiovascular specialists limits specialized interventions and disease management'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Lara J Sokoloff et al. 2024. "Association of Homelessness and Unstable Housing With
+    Cardiovascular Care Utilization Among Veterans.." *Circulation. Cardiovascular quality and outcomes*.
+    https://doi.org/10.1161/CIRCOUTCOMES.124.010993
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1161/CIRCOUTCOMES.124.010993
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '2.0'
+description: Veterans experiencing homelessness and unstable housing had 14.1% fewer visits with cardiovascular
+  disease-related specialists, indicating substantial barriers to accessing specialized care.
+quantitative_effects:
+  effect_size:
+    value: 14.1
+    type: percentage_change
+    ci_lower: 12.5
+    ci_upper: 15.8
+  sample_size: 1357973
+moderators:
+- name: cardiovascular_disease_severity
+  direction: strengthens
+  strength: strong
+  description: Veterans with preexisting cardiovascular disease have greater need for specialist care,
+    making access barriers more impactful
+structural_competency:
+  equity_implications: This mechanism demonstrates how housing policy failures and inadequate social safety
+    nets create cascading effects on healthcare access. The larger effect size for specialist visits compared
+    to general outpatient visits reflects how housing instability disproportionately affects access to
+    more complex, coordinated care services.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.929098'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

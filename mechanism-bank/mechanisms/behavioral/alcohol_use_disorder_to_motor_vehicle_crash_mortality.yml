@@ -1,0 +1,74 @@
+id: alcohol_use_disorder_to_motor_vehicle_crash_mortality
+name: Alcohol Use Disorder → Motor Vehicle Crash Mortality
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: motor_vehicle_crash_mortality
+  node_name: Motor Vehicle Crash Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption leads to elevated blood alcohol concentration (BAC) levels'
+- 'Step 2: Higher BAC impairs cognitive function, reaction time, and motor coordination'
+- 'Step 3: Impaired driving capacity increases crash risk with approximately exponential relationship
+  to BAC level'
+- 'Step 4: Higher severity crashes result in increased mortality outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 60
+  primary_citation: A. Høye and Ingeborg Storesund Hesjevoll 2023. "Alcohol and driving—How bad is the
+    combination? A meta-analysis." https://doi.org/10.1080/15389588.2023.2204984
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis synthesized 60 studies with 393 effect
+    estimates
+  - Studies from Nordic countries showed stronger effects than other regions
+  - Studies using hospital data and non-crash-involved control groups included in analysis
+  doi: 10.1080/15389588.2023.2204984
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis of 60 studies examining the association between blood alcohol concentration
+  (BAC) and road safety outcomes found that alcohol impairment substantially increases crash risk, injury
+  severity, and driver culpability. The dose-response relationship is approximately exponential, meaning
+  risk accelerates dramatically at higher BAC levels.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The relationship between BAC and crash/injury outcomes is stronger in Nordic countries
+    than in other countries, possibly because of the relatively low level of drunk driving in these countries
+moderators:
+- name: BAC level
+  direction: strengthens
+  strength: strong
+  description: The effect of BAC on crash and injury risk is stronger at higher BAC levels; relationship
+    is approximately exponential
+- name: Outcome severity
+  direction: strengthens
+  strength: strong
+  description: Effects are stronger for more serious outcomes (severe injury/death vs minor crashes)
+- name: Geographic region
+  direction: strengthens
+  strength: moderate
+  description: Nordic countries show stronger effects, possibly due to lower baseline drunk driving rates
+    making impaired drivers more conspicuous
+- name: Data source (hospital data)
+  direction: weakens
+  strength: moderate
+  description: Studies based on hospital data find smaller effects on average
+- name: Control group type
+  direction: weakens
+  strength: moderate
+  description: Studies using non-crash-involved control groups find smaller effects on average
+structural_competency:
+  equity_implications: 'While this mechanism involves individual behavior (drinking and driving), structural
+    factors shape exposure: alcohol availability policies, public transportation access, land use patterns
+    requiring vehicle dependency, enforcement policies, and cultural norms around drinking vary geographically.
+    The finding that Nordic countries show stronger effects may reflect stricter alcohol policies and
+    better public transit reducing baseline drunk driving rates. Equity implications include that communities
+    with fewer transit options, higher alcohol outlet density, or less DUI enforcement may have higher
+    population-level risk.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.624861'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

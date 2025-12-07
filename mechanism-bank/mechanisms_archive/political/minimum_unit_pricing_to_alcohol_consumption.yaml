@@ -1,0 +1,38 @@
+id: minimum_unit_pricing_to_alcohol_consumption
+name: Minimum Unit Pricing (MUP) → Alcohol Consumption
+from_node:
+  node_id: minimum_unit_pricing
+  node_name: Minimum Unit Pricing (MUP)
+to_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: MUP sets a floor price per unit of pure alcohol (e.g., Int$ 0.90/10g),
+  preventing sale below this threshold'
+- 'Step 2: MUP disproportionately affects cheap, high-strength alcohol products by
+  raising their minimum price'
+- 'Step 3: Consumers of low-cost, high-volume alcohol face largest price increases
+  and reduced affordability'
+- 'Step 4: Price increases reduce purchasing and consumption, particularly among price-sensitive
+  heavy drinkers who favor cheap alcohol'
+evidence:
+  quality_rating: B
+  n_studies: 36
+  primary_citation: 'Carolin Kilian et al. 2023. "Reducing alcohol use through alcohol
+    control policies in the general population and population subgroups: a systematic
+    review and meta-analysis.." *EClinicalMedicine*. https://doi.org/10.1016/j.eclinm.2023.101996'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.156387'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: income_level
+  direction: strengthens
+  strength: strong
+  description: Pricing policies including MUP resulted in greater consumption changes
+    among low-income alcohol users who are more likely to purchase cheap alcohol products
+    directly targeted by MUP

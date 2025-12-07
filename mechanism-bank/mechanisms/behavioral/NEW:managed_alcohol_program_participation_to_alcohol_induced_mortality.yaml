@@ -1,0 +1,55 @@
+id: NEW:managed_alcohol_program_participation_to_alcohol_induced_mortality
+name: Managed Alcohol Program Participation → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:managed_alcohol_program_participation
+  node_name: Managed Alcohol Program Participation
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals with severe alcohol use disorder (AUD) experiencing homelessness
+  enroll in managed alcohol programs (MAPs) that provide regular, controlled doses
+  of alcohol'
+- 'Step 2: Regulated alcohol administration reduces consumption of non-beverage alcohol
+  (e.g., mouthwash, hand sanitizer) and prevents dangerous binge drinking episodes'
+- 'Step 3: Structured program environment provides concurrent access to housing, healthcare
+  services, and social supports that address co-occurring health conditions'
+- 'Step 4: Reduced exposure to hazardous drinking patterns and improved access to
+  medical care decreases risk of acute alcohol poisoning, withdrawal seizures, and
+  other alcohol-induced fatal events'
+- 'Step 5: Stabilized living conditions and harm reduction approach lead to decreased
+  alcohol-induced mortality among program participants'
+evidence:
+  quality_rating: A
+  n_studies: 32
+  primary_citation: S. Smith-Bernardin et al. 2022. Scoping review of managed alcohol
+    programs. Harm Reduction Journal.
+  supporting_citations: []
+description: Managed alcohol programs (MAPs) are harm reduction interventions that
+  provide regular, controlled doses of alcohol to individuals with severe alcohol
+  use disorder experiencing homelessness. By regulating alcohol consumption and providing
+  structured support including housing and social services, MAPs reduce dangerous
+  drinking patterns (including consumption of non-beverage alcohol), prevent acute
+  alcohol toxicity events, and improve access to healthcare, thereby decreasing alcohol-induced
+  mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: housing_status
+  direction: strengthens
+  strength: strong
+  description: MAPs specifically target individuals experiencing homelessness who
+    have failed conventional abstinence-based treatment; effects strongest in this
+    population
+- name: severity_of_alcohol_use_disorder
+  direction: strengthens
+  strength: strong
+  description: Programs designed for individuals with severe AUD who have been unsuccessful
+    with conventional modalities focused on abstinence
+- name: concurrent_social_services
+  direction: strengthens
+  strength: moderate
+  description: MAPs that provide additional resources such as housing and other social
+    services show better client outcomes

@@ -1,0 +1,56 @@
+id: adverse_childhood_experiences_aces_to_homelessness_rate
+name: Adverse Childhood Experiences (ACEs) → Homelessness Rate
+from_node:
+  node_id: adverse_childhood_experiences_aces
+  node_name: Adverse Childhood Experiences (ACEs)
+to_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Adverse childhood events including physical, emotional, and sexual abuse create developmental
+  trauma'
+- 'Step 2: Neglect and extreme social disadvantage limit educational and economic opportunities'
+- 'Step 3: Trauma contributes to poor mental health and difficulty maintaining employment and relationships'
+- 'Step 4: Accumulated disadvantage increases risk of housing instability and homelessness in adulthood'
+evidence:
+  quality_rating: A
+  n_studies: 34
+  primary_citation: 'Chris O''Leary et al. 2024. "The effectiveness of abstinence-based and harm reduction-based
+    interventions in reducing problematic substance use in adults who are experiencing homelessness in
+    high income countries: A systematic review and meta-analysis: A systematic review.." https://doi.org/10.1002/cl2.1396'
+  supporting_citations:
+  - Studies on adverse childhood events in homeless populations included in systematic review
+  - Research on life course pathways to homelessness
+  - Evidence on trauma histories among homeless adults
+  doi: 10.1002/cl2.1396
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Adverse childhood experiences including abuse, neglect, and extreme social disadvantage are
+  common precursors to adult homelessness, representing early life structural disadvantage that accumulates
+  over the life course
+quantitative_effects:
+  sample_size: 15255
+moderators:
+- name: social_support
+  direction: weakens
+  strength: moderate
+  description: Social support networks may buffer the pathway from ACEs to homelessness
+- name: self_esteem
+  direction: weakens
+  strength: weak
+  description: Abstract notes low self-esteem as common among homeless populations, suggesting it mediates
+    pathway from ACEs
+structural_competency:
+  equity_implications: This mechanism traces homelessness to its structural roots in childhood adversity
+    and social disadvantage, avoiding individual blame. The concentration of ACEs among homeless populations
+    reflects intergenerational transmission of structural disadvantage. Equity implications include that
+    children in poverty, in foster care, or in households affected by violence face higher ACE exposure
+    and subsequent homelessness risk, creating racialized and class-based patterns of housing instability.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.752243'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

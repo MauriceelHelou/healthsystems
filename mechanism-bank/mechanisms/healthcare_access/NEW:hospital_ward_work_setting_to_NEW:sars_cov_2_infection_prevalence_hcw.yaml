@@ -1,0 +1,62 @@
+id: NEW:hospital_ward_work_setting_to_NEW:sars_cov_2_infection_prevalence_hcw
+name: Work Setting in Hospitalization/Non-Emergency Wards → SARS-CoV-2 Infection Prevalence
+  in Healthcare Workers
+from_node:
+  node_id: NEW:hospital_ward_work_setting
+  node_name: Work Setting in Hospitalization/Non-Emergency Wards
+to_node:
+  node_id: NEW:sars_cov_2_infection_prevalence_hcw
+  node_name: SARS-CoV-2 Infection Prevalence in Healthcare Workers
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare workers (HCWs) assigned to hospitalization/non-emergency wards
+  have prolonged and repeated contact with admitted patients, many of whom may be
+  infected with SARS-CoV-2'
+- 'Step 2: Non-emergency ward settings may have less stringent infection control protocols
+  compared to dedicated COVID-19 units or ICUs, as patients may not initially present
+  with typical respiratory symptoms'
+- 'Step 3: Extended patient interactions during routine care activities (medication
+  administration, vital signs, hygiene assistance) increase cumulative exposure time
+  to potentially infectious droplets and aerosols'
+- 'Step 4: Unrecognized COVID-19 cases in general wards may lead to inadequate PPE
+  use and infection prevention measures, facilitating viral transmission to HCWs'
+- 'Step 5: The concentration of COVID-19 positive HCWs in hospitalization/non-emergency
+  wards (43% of all positive cases) demonstrates elevated infection prevalence in
+  this work setting'
+evidence:
+  quality_rating: A
+  n_studies: 97
+  primary_citation: 'S. Gómez-Ochoa et al. 2020. COVID-19 in Healthcare Workers: A
+    Living Systematic Review and Meta-analysis of Prevalence, Risk Factors, Clinical
+    Characteristics, and Outcomes. American Journal of Epidemiology.'
+  supporting_citations: []
+description: Working in hospitalization/non-emergency wards is associated with elevated
+  SARS-CoV-2 infection prevalence among healthcare workers. A systematic review and
+  meta-analysis of 97 studies including 230,398 HCWs found that 43% of COVID-19 positive
+  medical personnel were working in hospitalization/non-emergency wards during screening,
+  making this the most common work setting among infected HCWs. This elevated prevalence
+  likely reflects prolonged patient contact, potential for unrecognized COVID-19 cases
+  in general ward populations, and possibly less rigorous infection control compared
+  to dedicated COVID-19 units.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 43.0
+    type: prevalence_percentage
+    ci_lower: 28.0
+    ci_upper: 59.0
+  p_value: null
+  sample_size: 230398
+moderators:
+- name: healthcare_worker_role
+  direction: strengthens
+  strength: moderate
+  description: Nurses were the most frequently affected personnel (48%), suggesting
+    role-specific exposure patterns within ward settings
+- name: symptom_presentation
+  direction: strengthens
+  strength: moderate
+  description: 40% of RT-PCR positive HCWs were asymptomatic at diagnosis, suggesting
+    undetected transmission chains within ward environments

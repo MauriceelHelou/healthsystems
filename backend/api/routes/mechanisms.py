@@ -46,8 +46,10 @@ class MechanismListItem(BaseModel):
     name: str
     from_node_id: str
     from_node_name: str
+    from_node_scale: int  # Scale of from_node (1-7)
     to_node_id: str
     to_node_name: str
+    to_node_scale: int  # Scale of to_node (1-7)
     direction: str
     category: str
     evidence_quality: str
@@ -110,8 +112,10 @@ def list_mechanisms(
             name=m.name,
             from_node_id=m.from_node_id,
             from_node_name=m.from_node.name if m.from_node else m.from_node_id,
+            from_node_scale=m.from_node.scale if m.from_node else 4,  # Default to scale 4 if node not found
             to_node_id=m.to_node_id,
             to_node_name=m.to_node.name if m.to_node else m.to_node_id,
+            to_node_scale=m.to_node.scale if m.to_node else 4,  # Default to scale 4 if node not found
             direction=m.direction,
             category=m.category,
             evidence_quality=m.evidence_quality
@@ -202,9 +206,9 @@ def get_stats(db: Session = Depends(get_db)):
 # Utility: Load mechanisms from YAML files
 # ==========================================
 
-def get_node_scale_from_category(category: str) -> int:
+def get_node_scale_from_category(category: str, node_name: str = "") -> int:
     """
-    Determine node scale based on category.
+    Determine node scale based on category and node name patterns.
 
     7-scale taxonomy mapping:
     - political -> 1 (structural determinants - policy)
@@ -212,9 +216,47 @@ def get_node_scale_from_category(category: str) -> int:
     - economic, social_services -> 3 (institutional infrastructure)
     - social_environment, economic_individual -> 4 (individual/household conditions)
     - behavioral, psychosocial -> 5 (individual behaviors & psychosocial)
-    - healthcare_access, clinical -> 6 (intermediate pathways)
+    - healthcare_access -> varies by node type (see below)
+    - clinical -> 6 (intermediate pathways)
     - biological, crisis -> 7 (crisis endpoints)
+
+    Pattern-based overrides (applied regardless of category):
+    - Treatment/medication nodes -> Scale 5 (individual behaviors)
+    - Infrastructure/facility nodes -> Scale 3 (institutional)
     """
+    if node_name:
+        name_lower = node_name.lower()
+
+        # Treatment/medication keywords → Scale 5 (individual behaviors)
+        # Check these FIRST regardless of category - treatments are always Scale 5
+        treatment_keywords = [
+            'gabapentin', 'naltrexone', 'disulfiram', 'acamprosate',
+            'baclofen', 'topiramate', 'pharmacotherapy', 'medication',
+            ' therapy', 'counseling', 'detox protocol', 'rehab',
+            'recovery program', 'maud', ' mat '
+        ]
+        # More specific treatment patterns that should be Scale 5
+        if any(kw in name_lower for kw in treatment_keywords):
+            return 5
+        # "treatment" alone needs more context - check it's not infrastructure
+        if 'treatment' in name_lower:
+            infrastructure_check = ['facility', 'center', 'capacity', 'availability', 'density']
+            if not any(kw in name_lower for kw in infrastructure_check):
+                return 5
+
+        # Infrastructure/facilities → Scale 3 (institutional)
+        # Only for healthcare_access category
+        if category == 'healthcare_access':
+            infrastructure_keywords = [
+                'facility', 'clinic', 'center', 'density', 'capacity',
+                'availability', 'provider', 'workforce', 'bed', 'unit',
+                'access', 'coverage', 'insurance'
+            ]
+            if any(kw in name_lower for kw in infrastructure_keywords):
+                return 3
+            # Default healthcare_access without specific patterns → Scale 6
+            return 6
+
     scale_mapping = {
         'political': 1,
         'built_environment': 2,
@@ -369,12 +411,13 @@ def load_mechanisms_from_yaml(db: Session = Depends(get_db)):
             from_node = db.query(Node).filter(Node.id == data['from_node']['node_id']).first()
             if not from_node:
                 category = data.get('category', 'unknown')
+                from_node_name = data['from_node']['node_name']
                 from_node = Node(
                     id=data['from_node']['node_id'],
-                    name=data['from_node']['node_name'],
+                    name=from_node_name,
                     node_type='stock',  # Default, can be updated later
                     category=category,
-                    scale=get_node_scale_from_category(category)
+                    scale=get_node_scale_from_category(category, from_node_name)
                 )
                 db.add(from_node)
                 db.flush()  # Flush immediately to avoid duplicate key errors
@@ -382,12 +425,13 @@ def load_mechanisms_from_yaml(db: Session = Depends(get_db)):
             to_node = db.query(Node).filter(Node.id == data['to_node']['node_id']).first()
             if not to_node:
                 category = data.get('category', 'unknown')
+                to_node_name = data['to_node']['node_name']
                 to_node = Node(
                     id=data['to_node']['node_id'],
-                    name=data['to_node']['node_name'],
+                    name=to_node_name,
                     node_type='stock',  # Default
                     category=category,
-                    scale=get_node_scale_from_category(category)
+                    scale=get_node_scale_from_category(category, to_node_name)
                 )
                 db.add(to_node)
                 db.flush()  # Flush immediately to avoid duplicate key errors

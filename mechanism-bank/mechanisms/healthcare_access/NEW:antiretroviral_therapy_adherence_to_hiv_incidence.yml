@@ -1,0 +1,58 @@
+id: NEW:antiretroviral_therapy_adherence_to_hiv_incidence
+name: Antiretroviral Therapy Adherence → HIV Incidence
+from_node:
+  node_id: NEW:antiretroviral_therapy_adherence
+  node_name: Antiretroviral Therapy Adherence
+to_node:
+  node_id: hiv_incidence
+  node_name: HIV Incidence
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: High population-level ART adherence leads to widespread viral suppression'
+- 'Step 2: Individuals with undetectable viral load have effectively no risk of sexual transmission (U=U)'
+- 'Step 3: Reduced community viral load decreases probability of transmission during potential exposure
+  events'
+- 'Step 4: New HIV infection rates decline at the population level'
+evidence:
+  quality_rating: A
+  n_studies: 53
+  primary_citation: 'Jessica de Mattos Costa et al. 2018. "Adherence to antiretroviral therapy for HIV/AIDS
+    in Latin America and the Caribbean: Systematic review and meta-analysis.." https://doi.org/10.1002/jia2.25066'
+  supporting_citations:
+  - Additional citations require full-text access - analysis covered 25 Latin American and Caribbean countries
+  - Studies analyzed 22,603 people living with HIV
+  - Individual study citations available in full-text systematic review
+  doi: 10.1002/jia2.25066
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The abstract explicitly states that optimal ART adherence decreases HIV transmission rates.
+  With regional adherence at 70%, suboptimal adherence at the population level may limit the effectiveness
+  of treatment as prevention strategies in Latin America and Caribbean.
+quantitative_effects:
+  effect_size:
+    value: 70.0
+    type: percentage_change
+    ci_lower: 63.0
+    ci_upper: 76.0
+  sample_size: 22603
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Transmission reduction effects likely vary across the 25 countries studied based on
+    local adherence rates and epidemic characteristics
+moderators:
+- name: population_coverage
+  direction: strengthens
+  strength: strong
+  description: Treatment as prevention effectiveness depends on proportion of PLWH on ART achieving adherence
+structural_competency:
+  equity_implications: HIV transmission prevention through treatment adherence requires structural investment
+    in healthcare systems, not just individual behavior change. The 70% adherence rate reflects healthcare
+    system capacity and socioeconomic conditions that create barriers to optimal treatment outcomes, perpetuating
+    transmission in structurally disadvantaged communities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.362872'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

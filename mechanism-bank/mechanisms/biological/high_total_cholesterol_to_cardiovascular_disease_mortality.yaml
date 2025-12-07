@@ -1,0 +1,57 @@
+id: high_total_cholesterol_to_cardiovascular_disease_mortality
+name: Serum Cholesterol Level → Coronary Heart Disease Mortality
+from_node:
+  node_id: high_total_cholesterol
+  node_name: Serum Cholesterol Level
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Coronary Heart Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Elevated serum cholesterol levels lead to increased deposition of cholesterol
+  in arterial walls'
+- 'Step 2: Cholesterol accumulation promotes the development of atherosclerotic plaques
+  in coronary arteries'
+- 'Step 3: Progressive atherosclerosis leads to narrowing of coronary arteries and
+  increased risk of plaque rupture'
+- 'Step 4: Plaque rupture or severe stenosis can result in myocardial infarction and
+  coronary heart disease mortality'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'Christopher E Ramsden et al. 2016. Re-evaluation of the traditional
+    diet-heart hypothesis: analysis of recovered data from Minnesota Coronary Experiment
+    (1968-73). BMJ (Clinical research ed.)'
+  supporting_citations: []
+description: 'The traditional diet-heart hypothesis posits that elevated serum cholesterol
+  contributes to coronary heart disease mortality through atherosclerotic processes.
+  However, this meta-analysis and recovered RCT data challenge the simplistic interpretation:
+  while higher serum cholesterol is associated with coronary atherosclerosis, the
+  intervention that lowered serum cholesterol by 13.8% showed a 22% higher risk of
+  death per 30 mg/dL reduction. This suggests the mechanism linking cholesterol to
+  CHD mortality is more complex than direct causation, and that not all cholesterol-lowering
+  approaches translate to mortality benefit.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.22
+    type: hazard_ratio
+    ci_lower: 1.14
+    ci_upper: 1.32
+  p_value: 0.001
+  sample_size: 10808
+moderators:
+- name: Age
+  direction: strengthens
+  strength: moderate
+  description: Study included participants aged 20-97; subgroup analyses were prespecified
+    but did not show mortality benefit in any age group
+- name: Type of dietary fat replacement
+  direction: weakens
+  strength: moderate
+  description: Replacement of saturated fat with linoleic acid-rich vegetable oil
+    lowered serum cholesterol but paradoxically did not reduce CHD mortality, suggesting
+    the relationship between cholesterol lowering and mortality may depend on the
+    mechanism of cholesterol reduction

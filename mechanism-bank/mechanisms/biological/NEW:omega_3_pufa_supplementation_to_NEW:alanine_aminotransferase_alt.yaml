@@ -1,0 +1,52 @@
+id: NEW:omega_3_pufa_supplementation_to_NEW:alanine_aminotransferase_alt
+name: Omega-3 PUFA Supplementation → Alanine Aminotransferase (ALT)
+from_node:
+  node_id: NEW:omega_3_pufa_supplementation
+  node_name: Omega-3 PUFA Supplementation
+to_node:
+  node_id: NEW:alanine_aminotransferase_alt
+  node_name: Alanine Aminotransferase (ALT)
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Omega-3 PUFAs (EPA and DHA) are incorporated into hepatocyte cell membranes
+  following supplementation'
+- 'Step 2: Omega-3 PUFAs activate peroxisome proliferator-activated receptors (PPARs),
+  particularly PPAR-alpha, which regulate lipid metabolism and reduce hepatic lipogenesis'
+- 'Step 3: Reduced hepatic fat accumulation and decreased oxidative stress lead to
+  diminished hepatocellular injury'
+- 'Step 4: With less hepatocyte damage, there is reduced release of ALT enzyme into
+  the bloodstream, resulting in lower serum ALT levels'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Tarique Aziz et al. 2024. Effectiveness of Omega-3 Polyunsaturated
+    Fatty Acids in Non-alcoholic Fatty Liver Disease: A Systematic Review and Meta-Analysis.
+    Cureus.'
+  supporting_citations: []
+description: Omega-3 PUFA supplementation significantly reduces serum ALT levels,
+  a marker of hepatocellular injury. This meta-analysis of 15 studies demonstrated
+  a mean reduction of 2.12 U/L in ALT levels among NAFLD patients receiving omega-3
+  supplementation. The mechanism involves reduced hepatic lipogenesis, decreased oxidative
+  stress, and improved liver function through PPAR activation pathways.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -2.12
+    type: mean_difference
+    ci_lower: -3.36
+    ci_upper: -0.87
+  p_value: null
+  sample_size: null
+moderators:
+- name: NAFLD severity
+  direction: strengthens
+  strength: moderate
+  description: Effects may be more pronounced in patients with non-alcoholic fatty
+    liver disease compared to healthy populations
+- name: Species
+  direction: strengthens
+  strength: moderate
+  description: Animal models showed significant reductions in ALT and other liver
+    enzymes, suggesting consistent biological effect across species

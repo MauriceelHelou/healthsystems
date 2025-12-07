@@ -1,0 +1,41 @@
+id: off_label_aud_medications_to_alcohol_consumption_reduction
+name: Off-Label AUD Medications Access → Reduction in Alcohol Consumption
+from_node:
+  node_id: off_label_aud_medications
+  node_name: Off-Label AUD Medications Access
+to_node:
+  node_id: alcohol_consumption_reduction
+  node_name: Reduction in Alcohol Consumption
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Off-label medications (gabapentin, baclofen, topiramate) modulate neurotransmitter
+  systems dysregulated by chronic alcohol use'
+- 'Step 2: Neurochemical modulation reduces alcohol craving, withdrawal symptoms,
+  and reinforcement'
+- 'Step 3: Symptom reduction and decreased reinforcement support reduced alcohol consumption'
+- 'Step 4: When accessible and prescribed, off-label medications provide additional
+  treatment options for AUD'
+evidence:
+  quality_rating: C
+  n_studies: 3
+  primary_citation: 'Henry R Kranzler and Emily E Hartwell 2023. "Medications for
+    treating alcohol use disorder: A narrative review.." *Alcohol, clinical & experimental
+    research*. https://doi.org/10.1111/acer.15118'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.671675'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: insurance_coverage
+  direction: strengthens
+  strength: strong
+  description: Off-label medication coverage by insurance is highly variable and may
+    significantly limit access compared to FDA-approved options
+- name: provider_knowledge
+  direction: strengthens
+  strength: moderate
+  description: Provider familiarity and comfort with off-label prescribing for AUD
+    affects medication availability

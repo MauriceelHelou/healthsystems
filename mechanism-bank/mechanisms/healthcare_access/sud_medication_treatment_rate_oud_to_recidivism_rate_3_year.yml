@@ -1,0 +1,80 @@
+id: sud_medication_treatment_rate_oud_to_recidivism_rate_3_year
+name: OUD Medication Treatment Rate (Extended Release Naltrexone) → Recidivism Rate (3-Year)
+from_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: OUD Medication Treatment Rate (Extended Release Naltrexone)
+to_node:
+  node_id: recidivism_rate_3_year
+  node_name: Recidivism Rate (3-Year)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Criminal justice-involved individuals with OUD receive extended-release naltrexone (XR-NTX)
+  as medication for opioid use disorder'
+- 'Step 2: XR-NTX reduces opioid use through opioid receptor antagonism but does not address underlying
+  social determinants'
+- 'Step 3: Structural factors including stigma, lack of employment, housing instability, and criminal
+  record barriers persist despite medication treatment'
+- 'Step 4: These unaddressed structural determinants continue to drive criminal justice involvement regardless
+  of medication status'
+- 'Step 5: No significant difference in arrest incidence between XR-NTX and treatment as usual groups'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: William E Soares et al. 2019. "Incidence of future arrests in adults involved in the
+    criminal justice system with opioid use disorder receiving extended release naltrexone compared to
+    treatment as usual.." https://doi.org/10.1016/j.drugalcdep.2018.10.035
+  supporting_citations:
+  - Additional citations require full-text access - this abstract references a 'published randomized trial'
+    but does not provide specific citations
+  - Study methodology suggests prior literature on MOUD and criminal justice outcomes
+  - References to concerns regarding diversion and stigma limiting CJS treatment suggest prior policy
+    literature
+  doi: 10.1016/j.drugalcdep.2018.10.035
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This randomized trial found no significant difference in arrest incidence between criminal
+  justice-involved individuals with OUD who received extended-release naltrexone (47.6%) versus treatment
+  as usual (42.5%). Despite XR-NTX's efficacy in reducing opioid use, it alone was insufficient to reduce
+  criminal recidivism, highlighting that medication treatment without addressing structural determinants
+  (employment, housing, stigma, criminal record barriers) does not reduce justice involvement.
+quantitative_effects:
+  effect_size:
+    value: 1.38
+    type: odds_ratio
+    ci_lower: 0.85
+    ci_upper: 2.22
+  p_value: 0.37
+  sample_size: 300
+moderators:
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Analysis controlled for gender as a potential confounder in the relationship
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Age was controlled for in multivariable models as a potential modifier
+- name: previous_criminal_activity
+  direction: strengthens
+  strength: strong
+  description: Prior criminal history controlled for as a key predictor of future arrests
+- name: non_opioid_drug_use
+  direction: strengthens
+  strength: moderate
+  description: Use of non-opioid drugs was controlled for, suggesting polysubstance use may independently
+    predict recidivism
+structural_competency:
+  equity_implications: This study demonstrates that biomedical interventions alone (medication for OUD)
+    are insufficient to address complex social outcomes like criminal recidivism. The finding that XR-NTX
+    reduces opioid use but not arrests points to the critical role of structural determinants beyond substance
+    use in driving criminal justice involvement. The paper notes that stigma and concerns about diversion
+    limit treatment access in CJS populations, reflecting systemic barriers. Addressing recidivism requires
+    comprehensive reentry support including housing, employment, and addressing the collateral consequences
+    of criminal records - not just medication.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.577819'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

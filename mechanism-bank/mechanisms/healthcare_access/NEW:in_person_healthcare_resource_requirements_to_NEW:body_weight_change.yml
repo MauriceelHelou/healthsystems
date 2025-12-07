@@ -1,0 +1,65 @@
+id: NEW:in_person_healthcare_resource_requirements_to_NEW:body_weight_change
+name: In-Person Healthcare Resource Requirements → Body Weight Change
+from_node:
+  node_id: NEW:in_person_healthcare_resource_requirements
+  node_name: In-Person Healthcare Resource Requirements
+to_node:
+  node_id: NEW:body_weight_change
+  node_name: Body Weight Change
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Traditional in-person lifestyle counseling programs require significant healthcare system resources
+  and infrastructure'
+- 'Step 2: Resource-intensive requirements create access barriers for patients in underserved areas or
+  those facing time and transportation constraints'
+- 'Step 3: Limited access results in inability of most patients to achieve clinically significant weight
+  loss'
+- 'Step 4: Structural barriers to in-person care perpetuate weight-related health conditions at population
+  level'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'S. Albhaisi et al. 2024. "Digital therapeutics lead to clinically significant body
+    weight loss in patients with metabolic dysfunction–associated steatotic liver disease: A systematic
+    review and meta-analysis." https://doi.org/10.1097/HC9.0000000000000499'
+  supporting_citations:
+  - Abstract explicitly states most patients are unable to achieve clinically significant weight loss
+    with traditional in-person approaches
+  - Standard of care comparison groups demonstrated inferior outcomes
+  - Authors identify barriers inherent to traditional resource-heavy in-person programs
+  doi: 10.1097/HC9.0000000000000499
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Traditional resource-heavy in-person lifestyle counseling approaches create structural barriers
+  that prevent most patients with metabolic dysfunction-associated steatotic liver disease from achieving
+  clinically significant weight loss
+quantitative_effects:
+  sample_size: 1001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Resource requirements create differential access across geographic areas with varying
+    healthcare infrastructure
+moderators:
+- name: healthcare_system_capacity
+  direction: weakens
+  strength: strong
+  description: Areas with greater healthcare capacity may have reduced barriers to in-person programs
+- name: rural_urban_location
+  direction: strengthens
+  strength: strong
+  description: Rural areas with fewer healthcare resources face greater barriers to in-person lifestyle
+    programs
+structural_competency:
+  equity_implications: This mechanism explicitly identifies structural healthcare system factors as barriers
+    to health improvement. The paper frames the failure of traditional approaches not as individual patient
+    non-compliance but as inherent structural limitations of resource-intensive care models. This structural
+    competency perspective recognizes that healthcare delivery systems themselves can perpetuate health
+    inequities when they require resources (time, transportation, provider availability) that are inequitably
+    distributed across populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.867565'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

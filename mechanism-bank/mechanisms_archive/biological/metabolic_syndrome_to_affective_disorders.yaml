@@ -1,0 +1,57 @@
+id: metabolic_syndrome_to_affective_disorders
+name: Metabolic Syndrome → Affective Disorders (Unipolar and Bipolar)
+from_node:
+  node_id: metabolic_syndrome
+  node_name: Metabolic Syndrome
+to_node:
+  node_id: affective_disorders
+  node_name: Affective Disorders (Unipolar and Bipolar)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Metabolic syndrome creates systemic physiological dysregulation including
+  central obesity, dyslipidemia, hypertension, and insulin resistance'
+- 'Step 2: Metabolic syndrome is associated with low-grade systemic inflammation as
+  evidenced by altered inflammatory markers'
+- 'Step 3: Chronic low-grade inflammation and metabolic dysfunction disrupt neurobiological
+  processes and neurotransmitter systems'
+- 'Step 4: These biological alterations increase vulnerability to developing affective
+  disorders, acting as a risk factor prior to disorder onset'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ninja Meinhard Ottesen et al. 2020. "Are remitted affective disorders
+    and familial risk of affective disorders associated with metabolic syndrome, inflammation
+    and oxidative stress? - a monozygotic twin study.." *Psychological medicine*.
+    https://doi.org/10.1017/S003329171900182X
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.940353'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: familial_genetic_risk
+  direction: strengthens
+  strength: strong
+  description: High-risk twins (unaffected co-twins with familial risk) showed 15%
+    MetS prevalence compared to 2.5% in low-risk twins, suggesting genetic predisposition
+    moderates the relationship
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Sex was included as a covariate in adjusted analyses, suggesting it
+    moderates the MetS-affective disorder relationship
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Age was included as a covariate in adjusted analyses
+- name: smoking
+  direction: strengthens
+  strength: moderate
+  description: Smoking was included as a covariate in adjusted analyses, suggesting
+    lifestyle factors moderate the relationship
+- name: alcohol_consumption
+  direction: strengthens
+  strength: moderate
+  description: Alcohol consumption was included as a covariate in adjusted analyses

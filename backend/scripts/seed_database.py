@@ -42,7 +42,7 @@ class DatabaseSeeder:
         """Initialize seeder with database connection."""
         self.database_url = database_url or os.getenv(
             "DATABASE_URL",
-            "postgresql://localhost/healthsystems"
+            "sqlite:///./healthsystems.db"
         )
 
         # Create engine
@@ -62,10 +62,26 @@ class DatabaseSeeder:
         # Track unique nodes
         self.nodes_cache: Dict[str, Node] = {}
 
-    def init_tables(self):
+    def init_tables(self, drop_existing: bool = False):
         """Create all database tables."""
+        from sqlalchemy import text
+        if drop_existing:
+            logger.info("Dropping existing database tables...")
+            # Drop all indexes first via raw SQL for SQLite
+            with self.engine.connect() as conn:
+                # Get all user indexes
+                result = conn.execute(
+                    text("SELECT name FROM sqlite_master WHERE type='index' AND name LIKE 'ix_%'")
+                )
+                for row in result:
+                    try:
+                        conn.execute(text(f"DROP INDEX IF EXISTS {row[0]}"))
+                    except Exception:
+                        pass
+                conn.commit()
+            Base.metadata.drop_all(bind=self.engine)
         logger.info("Creating database tables...")
-        Base.metadata.create_all(bind=self.engine)
+        Base.metadata.create_all(bind=self.engine, checkfirst=True)
         logger.info("Database tables created successfully")
 
     def load_mechanism_files(self) -> List[Path]:
@@ -240,6 +256,27 @@ class DatabaseSeeder:
         # Default to positive
         return 'positive'
 
+    def parse_date(self, date_value) -> Optional[datetime]:
+        """Parse date string to datetime object."""
+        if not date_value:
+            return None
+
+        if isinstance(date_value, datetime):
+            return date_value
+
+        if isinstance(date_value, str):
+            try:
+                # Try parsing ISO format (YYYY-MM-DD or YYYY-MM-DDTHH:MM:SS)
+                if 'T' in date_value:
+                    return datetime.fromisoformat(date_value.replace('Z', '+00:00'))
+                else:
+                    return datetime.strptime(date_value, '%Y-%m-%d')
+            except:
+                logger.warning(f"Could not parse date: {date_value}")
+                return None
+
+        return None
+
     def create_mechanism(self, session: Session, mech_data: Dict) -> Optional[Mechanism]:
         """Create mechanism from YAML data."""
         try:
@@ -278,7 +315,7 @@ class DatabaseSeeder:
                 mechanism_pathway=mech_data.get('mechanism_pathway', []),
                 evidence_quality=evidence.get('quality_rating', 'C'),
                 evidence_n_studies=evidence.get('n_studies', 1),
-                evidence_primary_citation=evidence.get('citation', 'No citation provided').strip(),
+                evidence_primary_citation=evidence.get('primary_citation', evidence.get('citation', 'No citation provided')).strip(),
                 evidence_supporting_citations=evidence.get('supporting_citations', []),
                 evidence_doi=evidence.get('doi'),
                 varies_by_geography=mech_data.get('varies_by_geography', False),
@@ -289,7 +326,7 @@ class DatabaseSeeder:
                 structural_competency_avoids_victim_blaming=mech_data.get('structural_competency', {}).get('avoids_victim_blaming', True),
                 structural_competency_equity_implications=mech_data.get('structural_competency', {}).get('equity_implications'),
                 version=str(mech_data.get('version', '1.0')),
-                last_updated=mech_data.get('last_updated'),
+                last_updated=self.parse_date(mech_data.get('last_updated')),
                 validated_by=mech_data.get('validated_by', []),
                 description=mech_data.get('description', '').strip(),
                 assumptions=mech_data.get('assumptions', []),
@@ -402,11 +439,11 @@ def main():
     # Initialize seeder
     seeder = DatabaseSeeder()
 
-    # Create tables
-    seeder.init_tables()
+    # Create tables (drop existing to handle schema changes)
+    seeder.init_tables(drop_existing=True)
 
     # Seed data
-    stats = seeder.seed(skip_if_data_exists=True)
+    stats = seeder.seed(skip_if_data_exists=False)
 
     if stats['mechanisms_created'] > 0 or stats['nodes_created'] > 0:
         logger.info("Database seeded successfully!")

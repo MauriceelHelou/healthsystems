@@ -1,0 +1,41 @@
+id: increasing_vehicle_density_to_traffic_fatalities
+name: Increasing Number of Vehicles on Roads → Traffic Fatalities
+from_node:
+  node_id: increasing_vehicle_density
+  node_name: Increasing Number of Vehicles on Roads
+to_node:
+  node_id: traffic_fatalities
+  node_name: Traffic Fatalities
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Rapid increase in vehicle numbers creates higher traffic density on existing
+  road infrastructure'
+- 'Step 2: Higher traffic density increases exposure risk and potential points of
+  contact between vehicles'
+- 'Step 3: Combined with inadequate enforcement, dense traffic creates more opportunities
+  for crashes when drivers make errors'
+- 'Step 4: Increased crash frequency leads to higher rates of traffic-related fatalities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Pranay Sharma and Naveksha Sood 2020. "Application of IoT and
+    Machine Learning for Real-time Driver Monitoring and Assisting Device." *International
+    Conference on Computing Communication and Networking Technologies*. https://doi.org/10.1109/ICCCNT49239.2020.9225387
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.455243'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: road_infrastructure_capacity
+  direction: weakens
+  strength: strong
+  description: Adequate road infrastructure and capacity can accommodate vehicle growth
+    with lower crash risk
+- name: traffic_enforcement_level
+  direction: weakens
+  strength: moderate
+  description: Strong enforcement can mitigate risks from increased vehicle density
+    by controlling dangerous behaviors

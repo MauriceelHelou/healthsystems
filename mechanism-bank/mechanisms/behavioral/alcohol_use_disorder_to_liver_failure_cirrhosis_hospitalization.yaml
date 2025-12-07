@@ -1,0 +1,71 @@
+id: alcohol_use_disorder_to_liver_failure_cirrhosis_hospitalization
+name: Alcohol Use Disorder → Liver Disease Progression (Decompensated Cirrhosis)
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Disease Progression (Decompensated Cirrhosis)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption in AUD leads to direct hepatotoxicity through
+  ethanol metabolism, generating acetaldehyde and reactive oxygen species that cause
+  oxidative stress and hepatocyte damage'
+- 'Step 2: Sustained alcohol exposure triggers abnormal lipid metabolism (steatosis),
+  endoplasmic reticulum stress, and multiple forms of cell death including apoptosis,
+  necroptosis, and ferroptosis'
+- 'Step 3: Alcohol disrupts intestinal microbiota (dysbiosis), increasing gut permeability
+  and allowing bacterial endotoxins to reach the liver, activating hepatic immune
+  responses and inflammation'
+- 'Step 4: Chronic inflammation leads to progressive hepatic fibrosis as stellate
+  cells are activated and deposit excessive collagen in liver tissue'
+- 'Step 5: Continued alcohol exposure accelerates fibrosis to cirrhosis; in patients
+  with co-existing conditions like HCV, AUD synergistically worsens disease progression
+  to decompensated cirrhosis with complications including ascites, variceal bleeding,
+  and hepatic encephalopathy'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: Laura Llamosas-Falcón et al. 2020. "Alcohol use disorders and
+    the risk of progression of liver disease in people with hepatitis C virus infection
+    – a systematic review." Substance Abuse Treatment, Prevention, and Policy.
+  supporting_citations:
+  - 'Xiao Hong et al. 2024. "Alcohol-related liver disease (ALD): current perspectives
+    on pathogenesis, therapeutic strategies, and animal models." Frontiers in Pharmacology.'
+description: Alcohol Use Disorder substantially increases the risk of progression
+  to decompensated liver cirrhosis through multiple interconnected pathways. The meta-analysis
+  of 11 studies (n=286,641) found that AUD diagnosis was associated with a 3.3-fold
+  increased risk of decompensated cirrhosis in HCV-infected individuals, with approximately
+  35-39% of cases attributable to AUD. The pathogenic mechanisms include direct hepatotoxicity
+  from ethanol metabolites, oxidative stress, abnormal lipid metabolism, endoplasmic
+  reticulum stress, multiple forms of programmed cell death, intestinal microbiota
+  dysbiosis leading to increased gut permeability, and chronic hepatic inflammation
+  resulting in progressive fibrosis and eventual cirrhosis.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.3
+    type: relative_risk
+    ci_lower: 1.8
+    ci_upper: 4.8
+  p_value: null
+  sample_size: 286641
+moderators:
+- name: HCV co-infection
+  direction: strengthens
+  strength: strong
+  description: AUD interacts synergistically with chronic HCV infection to accelerate
+    liver disease progression; 35-39% of decompensated cirrhosis cases in HCV patients
+    are attributable to AUD
+- name: Abstinence
+  direction: weakens
+  strength: strong
+  description: Abstinence from alcohol is the primary therapeutic intervention that
+    can halt or slow progression of alcohol-related liver disease
+- name: Intestinal microbiota status
+  direction: strengthens
+  strength: moderate
+  description: Gut dysbiosis exacerbates liver injury through increased endotoxin
+    translocation and hepatic immune activation

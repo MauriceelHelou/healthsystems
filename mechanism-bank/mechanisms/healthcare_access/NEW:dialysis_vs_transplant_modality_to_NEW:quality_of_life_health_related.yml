@@ -1,0 +1,49 @@
+id: NEW:dialysis_vs_transplant_modality_to_NEW:quality_of_life_health_related
+name: Dialysis Treatment Modality (vs Transplant) → Health-Related Quality of Life
+from_node:
+  node_id: NEW:dialysis_vs_transplant_modality
+  node_name: Dialysis Treatment Modality (vs Transplant)
+to_node:
+  node_id: NEW:quality_of_life_health_related
+  node_name: Health-Related Quality of Life
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Dialysis requires multiple sessions per week with significant time burden'
+- 'Step 2: Dialysis patients experience more physical symptoms and dietary restrictions than transplant
+  recipients'
+- 'Step 3: Vascular access complications and infections create additional health burdens'
+- 'Step 4: Reduced flexibility in daily scheduling limits participation in normal life activities'
+- 'Step 5: Dialysis patients have substantially worse quality of life than transplant recipients'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: Alexander J Hamilton et al. 2017. "Sociodemographic, Psychologic Health, and Lifestyle
+    Outcomes in Young Adults on Renal Replacement Therapy.." https://doi.org/10.2215/CJN.04760517
+  supporting_citations:
+  - Seven studies examining quality of life in dialysis patients
+  - Nine studies examining quality of life in transplant patients
+  - Additional citations require full-text access for specific included study details
+  doi: 10.2215/CJN.04760517
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Young adults on dialysis have more than twice the quality of life decrement compared to transplant
+  recipients, both measured against healthy peers.
+quantitative_effects:
+  effect_size:
+    value: -1.01
+    type: standardized_mean_difference
+    ci_lower: -1.32
+    ci_upper: -0.7
+  sample_size: 15575
+structural_competency:
+  equity_implications: Access to kidney transplantation is not equitable - organ allocation systems, geographic
+    proximity to transplant centers, socioeconomic factors affecting ability to navigate waitlist requirements,
+    and racial disparities in transplant access all contribute to differential treatment modality assignment.
+    These structural factors perpetuate health inequities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.369016'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

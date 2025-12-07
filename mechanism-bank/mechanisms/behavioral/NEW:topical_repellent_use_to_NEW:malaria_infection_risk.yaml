@@ -1,0 +1,61 @@
+id: NEW:topical_repellent_use_to_NEW:malaria_infection_risk
+name: Topical Repellent Use → Malaria Infection Risk
+from_node:
+  node_id: NEW:topical_repellent_use
+  node_name: Topical Repellent Use
+to_node:
+  node_id: NEW:malaria_infection_risk
+  node_name: Malaria Infection Risk
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals apply topical repellents containing active ingredients (e.g.,
+  DEET, picaridin) to exposed skin surfaces'
+- 'Step 2: Repellent chemicals create a vapor barrier that interferes with mosquito
+  host-seeking behavior by disrupting olfactory receptors'
+- 'Step 3: Anopheles mosquitoes are deterred from landing on and biting treated skin
+  surfaces during outdoor activities or sleeping hours'
+- 'Step 4: Reduced human-vector contact decreases the probability of infectious Plasmodium
+  sporozoite transmission from infected mosquitoes'
+- 'Step 5: Lower sporozoite inoculation rates result in reduced malaria infection
+  incidence at the individual and population level'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'L. Messenger et al. 2023. Vector control for malaria prevention
+    during humanitarian emergencies: a systematic review and meta-analysis. Lancet
+    Global Health.'
+  supporting_citations: []
+description: Topical repellents provide personal protection against malaria-transmitting
+  Anopheles mosquitoes by creating a chemical barrier that deters mosquito landing
+  and biting. A systematic review and meta-analysis of vector control interventions
+  during humanitarian emergencies found that topical repellent use was associated
+  with a 42% reduction in malaria infection risk (RR 0.58, 95% CI 0.35-0.97) with
+  moderate certainty evidence. This protective effect operates through reduced human-vector
+  contact, thereby decreasing opportunities for Plasmodium parasite transmission.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.58
+    type: relative_risk
+    ci_lower: 0.35
+    ci_upper: 0.97
+  p_value: null
+  sample_size: 616611
+moderators:
+- name: Emergency phase
+  direction: strengthens
+  strength: moderate
+  description: Evidence gathered from chronic emergency settings; effectiveness in
+    acute phase emergencies remains to be evaluated
+- name: Compliance and reapplication
+  direction: strengthens
+  strength: moderate
+  description: Regular and correct application of topical repellents is necessary
+    to maintain protective efficacy
+- name: Vector biting behavior
+  direction: strengthens
+  strength: moderate
+  description: Topical repellents may be particularly effective against outdoor-biting
+    or early-evening biting mosquitoes not targeted by bed nets

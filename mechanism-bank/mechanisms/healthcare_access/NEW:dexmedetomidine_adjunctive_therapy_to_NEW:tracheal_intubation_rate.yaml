@@ -1,0 +1,50 @@
+id: NEW:dexmedetomidine_adjunctive_therapy_to_NEW:tracheal_intubation_rate
+name: Dexmedetomidine Adjunctive Therapy → Tracheal Intubation Rate
+from_node:
+  node_id: NEW:dexmedetomidine_adjunctive_therapy
+  node_name: Dexmedetomidine Adjunctive Therapy
+to_node:
+  node_id: NEW:tracheal_intubation_rate
+  node_name: Tracheal Intubation Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Dexmedetomidine is administered as adjunctive therapy alongside standard
+  benzodiazepine treatment for alcohol withdrawal syndrome (AWS)'
+- 'Step 2: Dexmedetomidine provides sedation and controls autonomic hyperactivity
+  without causing respiratory depression, unlike benzodiazepines'
+- 'Step 3: The absence of respiratory depression theoretically reduces the need for
+  airway protection and mechanical ventilation'
+- 'Step 4: Reduced respiratory compromise may decrease the clinical indication for
+  tracheal intubation in AWS patients'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'Marco Fiore et al. 2024. Dexmedetomidine as Adjunctive Therapy
+    for the Treatment of Alcohol Withdrawal Syndrome: A Systematic Review and Meta-Analysis.
+    Pharmaceuticals (Basel, Switzerland).'
+  supporting_citations: []
+description: 'This systematic review and meta-analysis of 8 studies examined whether
+  dexmedetomidine as adjunctive therapy reduces tracheal intubation rates in patients
+  with alcohol withdrawal syndrome. The meta-analysis found a non-statistically significant
+  trend toward reduced intubation (RR: 0.57, 95% CI: 0.25-1.3), suggesting dexmedetomidine
+  may reduce intubation risk by approximately 43%, though the confidence interval
+  includes null effect. The theoretical mechanism is that dexmedetomidine provides
+  sedation without respiratory depression, potentially reducing the need for airway
+  protection.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.57
+    type: relative_risk
+    ci_lower: 0.25
+    ci_upper: 1.3
+  p_value: null
+  sample_size: null
+moderators:
+- name: AWS severity
+  direction: strengthens
+  strength: moderate
+  description: Dexmedetomidine is typically used in cases where benzodiazepines alone
+    are inadequate in controlling persistent autonomic hyperactivity or anxiety

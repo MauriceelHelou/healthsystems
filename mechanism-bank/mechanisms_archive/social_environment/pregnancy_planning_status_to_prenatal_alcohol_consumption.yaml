@@ -1,0 +1,36 @@
+id: pregnancy_planning_status_to_prenatal_alcohol_consumption
+name: Unplanned Pregnancy → Alcohol Consumption During Pregnancy
+from_node:
+  node_id: pregnancy_planning_status
+  node_name: Unplanned Pregnancy
+to_node:
+  node_id: prenatal_alcohol_consumption
+  node_name: Alcohol Consumption During Pregnancy
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Unplanned pregnancy reduces opportunities for preconception health behavior
+  modification and counseling'
+- 'Step 2: Women with unplanned pregnancies may not recognize pregnancy early in gestation,
+  continuing pre-pregnancy drinking patterns'
+- 'Step 3: Lack of pregnancy planning reduces engagement with prenatal care and health
+  education about alcohol risks'
+- 'Step 4: Continued alcohol consumption during pregnancy increases risk of fetal
+  alcohol exposure'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jozef Zahumensky et al. 2024. "Risk factors for self-reported
+    alcohol consumption during pregnancy.." *Bratislavske lekarske listy*. https://doi.org/10.4149/BLL_2024_101
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.668246'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: pre_pregnancy_abstinence
+  direction: weakens
+  strength: strong
+  description: 'Complete abstinence before pregnancy provides strong protection (RR:
+    0.03) against drinking during pregnancy'

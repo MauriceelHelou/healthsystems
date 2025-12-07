@@ -1,0 +1,55 @@
+id: NEW:digital_health_intervention_access_to_NEW:alcohol_per_drinking_day_grams
+name: Digital Health Intervention Access → Alcohol Per Drinking Day (Grams)
+from_node:
+  node_id: NEW:digital_health_intervention_access
+  node_name: Digital Health Intervention Access
+to_node:
+  node_id: NEW:alcohol_per_drinking_day_grams
+  node_name: Alcohol Per Drinking Day (Grams)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital interventions provide real-time monitoring of consumption amounts'
+- 'Step 2: Feedback mechanisms help users set and track drink limits per occasion'
+- 'Step 3: Strategies for pacing, alternating with non-alcoholic beverages, and recognizing intoxication
+  are delivered'
+- 'Step 4: Reduced quantity consumed on days when drinking occurs'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: 'Ivneet Sohi et al. 2023. "Digital interventions for reducing alcohol use in general
+    populations: An updated systematic review and meta-analysis.." https://doi.org/10.1111/acer.15175'
+  supporting_citations:
+  - Studies measuring grams per drinking day outcome
+  - 2017 systematic review baseline
+  - Additional citations require full-text access
+  doi: 10.1111/acer.15175
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Digital interventions reduce alcohol consumption per drinking day by approximately 3.89
+  grams (95% CI: 0.40-7.38). The wider confidence interval suggests greater heterogeneity across studies
+  for this outcome. Notably, this effect was not observed in the student subpopulation.'
+quantitative_effects:
+  effect_size:
+    value: -3.89
+    type: standardized_mean_difference
+    ci_lower: 0.4
+    ci_upper: 7.38
+moderators:
+- name: student_population
+  direction: weakens
+  strength: moderate
+  description: No significant reduction in quantity per drinking day was observed among students specifically,
+    unlike other outcomes
+structural_competency:
+  equity_implications: This outcome reflects harm reduction on drinking occasions, which is important
+    for reducing acute alcohol-related harms like injuries and violence. The lack of effect in students
+    may reflect different drinking patterns (e.g., social binge drinking) that require tailored intervention
+    approaches. This highlights the need for structurally-informed interventions that account for context-specific
+    drinking cultures.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.261589'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,87 @@
+id: sud_medication_treatment_rate_oud_to_opioid_overdose_mortality
+name: Opioid Agonist Treatment (OAT) Receipt → Drug-Related Mortality
+from_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: Opioid Agonist Treatment (OAT) Receipt
+to_node:
+  node_id: opioid_overdose_mortality
+  node_name: Drug-Related Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Opioid agonist treatment (OAT) with methadone or buprenorphine provides
+  stable opioid receptor occupancy, reducing cravings and withdrawal symptoms'
+- 'Step 2: Stable receptor occupancy increases opioid tolerance, reducing the euphoric
+  effects of illicit opioids and decreasing the likelihood of illicit opioid use'
+- 'Step 3: Reduced illicit opioid use decreases exposure to contaminated or unpredictably
+  potent street drugs (e.g., fentanyl-adulterated substances)'
+- 'Step 4: Regular engagement with OAT programs connects patients to healthcare systems,
+  enabling overdose prevention education and naloxone distribution'
+- 'Step 5: Supervised medication administration in some programs reduces risk of diversion
+  and ensures consistent dosing, preventing accidental overdose from dose fluctuations'
+- 'Step 6: The cumulative effect is substantially reduced drug-related mortality during
+  active OAT engagement, with highest risk during treatment transitions (initiation
+  and cessation)'
+evidence:
+  quality_rating: A
+  n_studies: 509
+  primary_citation: 'Thomas Santo et al. 2021. Association of Opioid Agonist Treatment
+    With All-Cause Mortality and Specific Causes of Death Among People With Opioid
+    Dependence: A Systematic Review and Meta-analysis. JAMA psychiatry.'
+  supporting_citations:
+  - 'Jun Ma et al. 2019. Effects of medication-assisted treatment on mortality among
+    opioids users: a systematic review and meta-analysis. Molecular psychiatry.'
+  - 'O. Magwood et al. 2020. The effectiveness of substance use interventions for
+    homeless and vulnerably housed persons: A systematic review of systematic reviews
+    on supervised consumption facilities, managed alcohol programs, and pharmacological
+    agents for opioid use disorder. PLoS ONE.'
+  - Colin D Buzza et al. 2019. A Mobile Buprenorphine Treatment Program for Homeless
+    Patients With Opioid Use Disorder. Psychiatric Services.
+description: Opioid agonist treatment (OAT) with methadone or buprenorphine is strongly
+  associated with reduced drug-related mortality among people with opioid dependence.
+  Meta-analyses show that drug-related mortality during OAT is approximately 59% lower
+  than during periods not receiving treatment (RR 0.41). Untreated individuals have
+  8-fold higher overdose mortality compared to those in treatment. This protective
+  effect is mediated through stabilized opioid receptor activity, reduced illicit
+  drug use, and connection to healthcare services. The effect is consistent across
+  demographic subgroups but varies critically by treatment phase, with elevated risk
+  during methadone initiation and particularly high risk in the 4 weeks following
+  treatment cessation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.41
+    type: rate_ratio
+    ci_lower: 0.33
+    ci_upper: 0.52
+  p_value: null
+  sample_size: 753486
+moderators:
+- name: treatment_phase
+  direction: u_shaped
+  strength: strong
+  description: First 4 weeks of methadone treatment shows doubled mortality risk compared
+    to stable treatment; 4 weeks post-cessation shows 6-fold increased mortality risk.
+    Buprenorphine does not show elevated risk during initiation.
+- name: medication_type
+  direction: strengthens
+  strength: moderate
+  description: Buprenorphine shows stronger protective effect (RR 0.34) compared to
+    methadone (RR 0.47) for all-cause mortality, and buprenorphine lacks the elevated
+    induction period risk
+- name: retention_duration
+  direction: strengthens
+  strength: strong
+  description: Retention in OAT over 1 year associated with lower mortality rate (1.62
+    per 100 PY) compared to retention ≤1 year (5.31 per 100 PY)
+- name: incarceration_status
+  direction: strengthens
+  strength: strong
+  description: OAT during and after incarceration shows particularly strong protective
+    effects (RR 0.06 during, RR 0.09 post-release)
+- name: housing_status
+  direction: weakens
+  strength: moderate
+  description: Homeless populations face additional barriers to accessing and maintaining
+    OAT, requiring mobile and low-barrier program designs to achieve benefits

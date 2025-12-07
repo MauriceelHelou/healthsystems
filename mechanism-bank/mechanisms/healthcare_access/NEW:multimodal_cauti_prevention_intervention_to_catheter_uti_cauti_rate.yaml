@@ -1,0 +1,67 @@
+id: NEW:multimodal_cauti_prevention_intervention_to_catheter_uti_cauti_rate
+name: Multimodal CAUTI Prevention Intervention (STRIVE) → Catheter-Associated Urinary
+  Tract Infection Rate
+from_node:
+  node_id: NEW:multimodal_cauti_prevention_intervention
+  node_name: Multimodal CAUTI Prevention Intervention (STRIVE)
+to_node:
+  node_id: catheter_uti_cauti_rate
+  node_name: Catheter-Associated Urinary Tract Infection Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: CDC-funded STRIVE initiative implements multimodal hospital-level intervention
+  targeting hospitals with elevated HAI rates using the Targeted Assessment for Prevention
+  (TAP) strategy'
+- 'Step 2: Hospitals complete ICAR/PCA self-assessment tools to identify gaps in infection
+  prevention and control (IPC) practices specific to CAUTI prevention'
+- 'Step 3: Web-based education modules provide training on foundational infection
+  control (hand hygiene, personal protective equipment), catheter insertion/maintenance
+  protocols, and appropriate catheter use criteria'
+- 'Step 4: State-level partners (hospital associations, health departments) provide
+  external facilitation, technical assistance, and coaching to support implementation'
+- 'Step 5: Culture change strategies address staff engagement, competency-based training,
+  audits, and feedback mechanisms to sustain prevention practices'
+- 'Step 6: Improved implementation of evidence-based bladder bundle interventions,
+  aseptic insertion techniques, and reduced inappropriate catheter utilization leads
+  to decreased CAUTI rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Meddings J, et al. 2019. Quantitative Results of a National Intervention
+    to Prevent Hospital-Acquired Catheter-Associated Urinary Tract Infection. Annals
+    of Internal Medicine.
+  supporting_citations: []
+description: The CDC STRIVE initiative is a multimodal, externally-facilitated quality
+  improvement intervention that reduces CAUTI rates through comprehensive infection
+  prevention strategies. The intervention combines self-assessment tools, web-based
+  education, state-level external facilitation, and culture change strategies to improve
+  implementation of evidence-based catheter care practices. Meta-analytic evidence
+  from multifaceted interventions shows a pooled CAUTI incidence rate ratio of 0.54
+  (46% reduction) compared to standard care.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.54
+    type: incidence_rate_ratio
+    ci_lower: 0.45
+    ci_upper: 0.66
+  p_value: null
+  sample_size: null
+moderators:
+- name: hospital_setting
+  direction: strengthens
+  strength: moderate
+  description: Non-ICU settings demonstrated greater improvement in CAUTI rates compared
+    to ICU settings during baseline period
+- name: hospital_type
+  direction: strengthens
+  strength: weak
+  description: Critical access hospitals (≤25 beds, rural/remote locations) may have
+    different implementation challenges than larger acute care facilities
+- name: baseline_hai_burden
+  direction: strengthens
+  strength: moderate
+  description: Hospitals with higher baseline infection rates (worst tertile) were
+    targeted, potentially showing greater absolute reductions

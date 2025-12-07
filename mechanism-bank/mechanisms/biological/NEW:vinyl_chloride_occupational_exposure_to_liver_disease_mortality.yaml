@@ -1,0 +1,54 @@
+id: NEW:vinyl_chloride_occupational_exposure_to_liver_disease_mortality
+name: Occupational Vinyl Chloride Exposure → Liver Disease Mortality (Cirrhosis)
+from_node:
+  node_id: NEW:vinyl_chloride_occupational_exposure
+  node_name: Occupational Vinyl Chloride Exposure
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality (Cirrhosis)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Workers are exposed to vinyl chloride monomer through inhalation in occupational
+  settings such as polyvinyl chloride (PVC) manufacturing plants'
+- 'Step 2: Vinyl chloride is metabolized in the liver to reactive intermediates (chloroethylene
+  oxide and chloroacetaldehyde) that cause hepatotoxic damage'
+- 'Step 3: Chronic hepatotoxicity leads to progressive liver fibrosis and hepatic
+  stellate cell activation'
+- 'Step 4: Continued exposure results in development of cirrhosis, with potential
+  multiplicative interaction with alcohol consumption accelerating disease progression'
+- 'Step 5: Advanced cirrhosis leads to liver failure and increased mortality from
+  liver disease'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Marcello Lotti 2017. "Do occupational exposures to vinyl chloride
+    cause hepatocellular carcinoma and cirrhosis?" Liver international : official
+    journal of the International Association for the Study of the Liver.'
+  supporting_citations: []
+description: Occupational exposure to vinyl chloride is associated with increased
+  mortality from cirrhosis, based on evidence from large multicentre cohort studies.
+  The European cohort study and a subcohort reported excess risk of cirrhosis mortality
+  among vinyl chloride workers, though a meta-analysis did not confirm this excess.
+  The relationship appears to be modified by alcohol consumption, with a multiplicative
+  interaction effect. Pathology reports indicate that cirrhosis may develop after
+  high exposures to vinyl chloride, though the evidence is more contested than for
+  angiosarcoma (the hallmark vinyl chloride-related cancer).
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Alcohol consumption
+  direction: strengthens
+  strength: strong
+  description: Evidence suggests a multiplicative effect of vinyl chloride exposure
+    with alcohol consumption on cirrhosis risk
+- name: Cumulative exposure level
+  direction: strengthens
+  strength: moderate
+  description: Higher cumulative exposures to vinyl chloride associated with greater
+    liver disease risk
+- name: Duration of employment
+  direction: strengthens
+  strength: moderate
+  description: Longer duration of employment in vinyl chloride-exposed occupations
+    increases risk

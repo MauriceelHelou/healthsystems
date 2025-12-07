@@ -1,0 +1,43 @@
+id: population_alcohol_consumption_to_alcohol_related_health_harms
+name: Population-Level Alcohol Consumption → Alcohol-Related Health and Social Harms
+from_node:
+  node_id: population_alcohol_consumption
+  node_name: Population-Level Alcohol Consumption
+to_node:
+  node_id: alcohol_related_health_harms
+  node_name: Alcohol-Related Health and Social Harms
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Elevated population-level alcohol consumption increases prevalence of heavy
+  drinking episodes and chronic high-risk consumption patterns'
+- 'Step 2: Higher consumption levels lead to increased incidence of acute harms (injuries,
+  violence) and chronic conditions (liver disease, cancer, cardiovascular disease)'
+- 'Step 3: Social harms accumulate including family disruption, workplace impacts,
+  and broader community effects'
+- 'Step 4: Overall burden of alcohol-related mortality, morbidity, and social harm
+  increases at population level'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: M. Lesch and J. Mccambridge 2022. "Understanding the Political
+    Organization and Tactics of the Alcohol Industry in Ireland 2009–2018." *Journal
+    of Studies on Alcohol and Drugs*. https://doi.org/10.15288/jsad.2022.83.574
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.985406'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: socioeconomic_disadvantage
+  direction: strengthens
+  strength: strong
+  description: Lower socioeconomic groups experience greater alcohol-related harm
+    at equivalent or lower consumption levels due to cumulative disadvantage, reduced
+    access to healthcare, and compounding risk factors
+- name: healthcare_access
+  direction: weakens
+  strength: moderate
+  description: Better access to preventive care and treatment services can mitigate
+    some health harms associated with alcohol consumption

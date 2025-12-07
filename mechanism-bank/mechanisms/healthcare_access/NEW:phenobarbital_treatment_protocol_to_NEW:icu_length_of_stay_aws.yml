@@ -1,0 +1,58 @@
+id: NEW:phenobarbital_treatment_protocol_to_NEW:icu_length_of_stay_aws
+name: Phenobarbital Treatment Protocol for Alcohol Withdrawal → ICU Length of Stay for Alcohol Withdrawal
+  Syndrome
+from_node:
+  node_id: NEW:phenobarbital_treatment_protocol
+  node_name: Phenobarbital Treatment Protocol for Alcohol Withdrawal
+to_node:
+  node_id: NEW:icu_length_of_stay_aws
+  node_name: ICU Length of Stay for Alcohol Withdrawal Syndrome
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Severe alcohol withdrawal syndrome requires intensive care unit admission'
+- 'Step 2: Phenobarbital provides GABA-A receptor modulation for patients resistant to benzodiazepines'
+- 'Step 3: More effective symptom control may reduce need for prolonged ICU-level monitoring'
+- 'Step 4: Trend toward reduced ICU length of stay, though not statistically significant'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Zaryab Umar et al. 2023. "Phenobarbital and Alcohol Withdrawal Syndrome: A Systematic
+    Review and Meta-Analysis." https://doi.org/10.7759/cureus.33695'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references studies included in meta-analysis
+    but does not name them specifically
+  - Studies on ICU management protocols for alcohol withdrawal
+  - Studies measuring Clinical Institute Withdrawal Assessment scores
+  doi: 10.7759/cureus.33695
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Phenobarbital treatment shows a trend toward reduced ICU length of stay (mean difference
+  -1.17 days) compared to benzodiazepines, but this did not reach statistical significance (P=0.07). High
+  heterogeneity across studies limits conclusions.
+quantitative_effects:
+  effect_size:
+    value: -1.17
+    type: standardized_mean_difference
+    ci_lower: -1.17
+    ci_upper: 0.09
+  p_value: 0.07
+  heterogeneity_i_squared: 77.0
+moderators:
+- name: study_heterogeneity
+  direction: weakens
+  strength: strong
+  description: Considerable heterogeneity (I²=77%, P=0.002) indicates substantial variation in effect
+    across studies, weakening confidence in pooled estimate
+structural_competency:
+  equity_implications: ICU capacity is a structural healthcare resource that is often strained, particularly
+    in underserved communities. Interventions that reduce ICU utilization for alcohol withdrawal could
+    free resources for other critical care needs. However, the high heterogeneity suggests that institutional
+    factors, protocols, and patient populations significantly influence outcomes, highlighting the need
+    for context-specific implementation strategies.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.341082'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

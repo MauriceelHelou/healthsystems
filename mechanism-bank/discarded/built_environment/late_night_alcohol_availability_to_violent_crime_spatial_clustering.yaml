@@ -1,0 +1,51 @@
+id: late_night_alcohol_availability_to_violent_crime_spatial_clustering
+name: Late-Night Alcohol Availability → Violent Crime Spatial Clustering
+from_node:
+  node_id: late_night_alcohol_availability
+  node_name: Late-Night Alcohol Availability
+to_node:
+  node_id: violent_crime_spatial_clustering
+  node_name: Violent Crime Spatial Clustering
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Bars/taverns operating during late-night hours (particularly after 10pm
+  until early morning) create geographic focal points for social congregation'
+- 'Step 2: These outlets concentrate people in public spaces during hours associated
+  with higher rates of alcohol consumption and intoxication'
+- 'Step 3: Spatial clustering of intoxicated individuals around alcohol outlets increases
+  density of potential violence-triggering interpersonal interactions'
+- 'Step 4: Violent crimes (homicide, robbery, assault, rape) cluster within 800-ft
+  buffer zones around alcohol outlets during late-night hours (8pm-4am)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Erika M Rosen et al. 2024. "Interrupted Time Series Analysis of
+    Bar/Tavern Closing Hours and Violent Crime.." *JAMA Internal Medicine*. https://doi.org/10.1001/jamainternmed.2024.0255
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.061780'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_outlet_density
+  direction: strengthens
+  strength: strong
+  description: Treatment neighborhood had 26 bars/taverns while control areas had
+    41, suggesting outlet density moderates the spatial concentration effect
+- name: neighborhood_disadvantage
+  direction: strengthens
+  strength: moderate
+  description: Control neighborhoods were matched on neighborhood disadvantage score,
+    suggesting this structural factor may moderate the relationship between alcohol
+    availability and crime clustering
+- name: temporal_window
+  direction: strengthens
+  strength: strong
+  description: Effects specifically measured during 8pm-4am window, indicating late-night
+    hours significantly strengthen the relationship between alcohol outlets and violent
+    crime
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/late_night_alcohol_availability_to_violent_crime_spatial_clustering.yaml
+_category: built_environment

@@ -6,7 +6,7 @@ posterior mechanism weights with uncertainty quantification.
 """
 
 import numpy as np
-from typing import Dict, Tuple, Any, Optional
+from typing import Dict, Tuple, Any, Optional, List
 import logging
 
 logger = logging.getLogger(__name__)

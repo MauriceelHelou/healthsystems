@@ -1,0 +1,57 @@
+id: NEW:tb_control_intervention_strategies_to_NEW:tb_treatment_compliance
+name: TB Control Intervention Strategies (Online and Offline) → TB Treatment Compliance
+from_node:
+  node_id: NEW:tb_control_intervention_strategies
+  node_name: TB Control Intervention Strategies (Online and Offline)
+to_node:
+  node_id: NEW:tb_treatment_compliance
+  node_name: TB Treatment Compliance
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: PHC sectors implement online and offline interventions to support TB patients'
+- 'Step 2: Interventions provide education, reminders, and support for medication adherence'
+- 'Step 3: Patient engagement with treatment protocols increases through structured support'
+- 'Step 4: Treatment compliance improves, leading to better TB outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 43
+  primary_citation: 'Xi Chen et al. 2024. "Challenge of ending TB in China: tuberculosis control in primary
+    healthcare sectors under integrated TB control model–a systematic review and meta-analysis." https://doi.org/10.1186/s12889-023-16292-5'
+  supporting_citations:
+  - Studies on strategies promoting TB control services in PHC sectors (primarily conducted in East China)
+  - Meta-analysis of intervention effectiveness studies
+  - Additional citations require full-text access for specific study identification
+  doi: 10.1186/s12889-023-16292-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Implementation of structured online and offline TB control interventions by primary healthcare
+  sectors significantly improves patient treatment compliance, with a pooled odds ratio of 7.81 (95% CI:
+  3.08-19.19).'
+quantitative_effects:
+  effect_size:
+    value: 7.81
+    type: odds_ratio
+    ci_lower: 3.08
+    ci_upper: 19.19
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Most studies on intervention strategies were conducted in East China, limiting generalizability
+    to other regions
+moderators:
+- name: intervention_type
+  direction: strengthens
+  strength: strong
+  description: Both online and offline interventions demonstrated effectiveness in improving treatment
+    compliance
+structural_competency:
+  equity_implications: This mechanism demonstrates that treatment compliance is not simply an individual
+    choice but is strongly influenced by the availability and quality of structural supports provided
+    by healthcare systems. Improving compliance requires system-level investments in intervention programs
+    rather than blaming patients for non-adherence.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.871732'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

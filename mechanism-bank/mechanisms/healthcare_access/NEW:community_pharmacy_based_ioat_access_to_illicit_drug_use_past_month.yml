@@ -1,0 +1,66 @@
+id: NEW:community_pharmacy_based_ioat_access_to_illicit_drug_use_past_month
+name: Community Pharmacy-Based Injectable Opioid Agonist Treatment Access → Illicit Drug Use Past Month
+from_node:
+  node_id: NEW:community_pharmacy_based_ioat_access
+  node_name: Community Pharmacy-Based Injectable Opioid Agonist Treatment Access
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use Past Month
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Community pharmacy-based model expands geographic and temporal access to injectable opioid
+  agonist treatment (iOAT)'
+- 'Step 2: Flexible dosing times and co-location with other pharmacy services reduces structural barriers
+  to treatment engagement'
+- 'Step 3: Regular supervised injection of prescribed opioids satisfies opioid dependence without requiring
+  illicit drug acquisition'
+- 'Step 4: Participants report 76% reduction in illicit opioid use and 45% reduction in other illicit
+  substance use'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Tamara Mihic et al. 2025. "Community Pharmacy-Based Injectable Opioid Agonist Treatment:
+    Findings From a Canadian Pilot Program.." https://doi.org/10.1111/dar.70062'
+  supporting_citations:
+  - Additional citations require full-text access - this abstract references oral OAT as comparator but
+    does not cite specific studies
+  doi: 10.1111/dar.70062
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Community pharmacy-based injectable opioid agonist treatment provides a novel, lower-barrier
+  model for delivering evidence-based OUD treatment, resulting in substantial self-reported reductions
+  in illicit opioid use among individuals who inject opioids and have not responded to oral treatment
+  options.
+quantitative_effects:
+  effect_size:
+    value: 76.0
+    type: percentage_change
+  sample_size: 51
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Pilot program conducted specifically in Vancouver, Canada; generalizability to other
+    geographic contexts requires further study
+moderators:
+- name: prior_oral_oat_non_response
+  direction: strengthens
+  strength: strong
+  description: Program specifically targets individuals who have not responded to or do not prefer oral
+    OAT, suggesting greater benefit for treatment-resistant populations
+- name: overdose_history
+  direction: strengthens
+  strength: moderate
+  description: Most participants had multiple previous overdoses, indicating high-risk population with
+    greater potential for harm reduction benefit
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to OUD treatment including limited
+    treatment availability, rigid dosing schedules, and fragmented healthcare services. By embedding iOAT
+    in community pharmacies, the model reduces geographic and temporal access barriers that disproportionately
+    affect marginalized populations. The approach avoids individual blame by recognizing that treatment
+    non-response to oral OAT reflects medication-patient mismatch rather than personal failure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.809074'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

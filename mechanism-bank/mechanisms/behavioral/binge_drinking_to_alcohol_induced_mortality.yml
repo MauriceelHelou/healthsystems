@@ -1,0 +1,61 @@
+id: binge_drinking_to_alcohol_induced_mortality
+name: Binge Drinking → Alcohol-Induced Mortality
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Chronic heavy alcohol consumption causes cumulative organ damage to liver, cardiovascular system,
+  and brain'
+- 'Step 2: Development of alcohol-related diseases including cirrhosis, cardiomyopathy, and alcohol-related
+  cancers'
+- 'Step 3: Acute alcohol toxicity events and complications from withdrawal in dependent individuals'
+- 'Step 4: Progressive multi-system organ failure leads to premature mortality from 100% alcohol-attributable
+  causes'
+evidence:
+  quality_rating: B
+  n_studies: 7
+  primary_citation: 'Tessa Carr et al. 2024. "The risk relationships between alcohol consumption, alcohol
+    use disorder and alcohol use disorder mortality: A systematic review and meta-analysis.." https://doi.org/10.1111/add.16456'
+  supporting_citations:
+  - Studies from high-income countries meeting inclusion criteria (2000-2022)
+  - Studies from Brazil meeting inclusion criteria for qualitative synthesis
+  - Two primary US data sources analyzed
+  - Additional citations require full-text access
+  doi: 10.1111/add.16456
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher levels of alcohol consumption exponentially increase the risk of dying from alcohol
+  use disorder or 100% alcohol-attributable causes. At four standard drinks per day, mortality risk is
+  fourfold compared to non-drinkers. Even at 20g/day, mortality risk approximately doubles.
+quantitative_effects:
+  effect_size:
+    value: 3.94
+    type: relative_risk
+    ci_lower: 3.53
+    ci_upper: 4.4
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies from high-income countries and Brazil; mortality rates may vary by healthcare
+    system quality and access to treatment services
+moderators:
+- name: consumption_level
+  direction: strengthens
+  strength: strong
+  description: Risk relationship is exponential - at 4 standard drinks/day mortality risk is fourfold;
+    at 20g/day mortality risk approximately doubles compared to non-drinkers
+structural_competency:
+  equity_implications: Alcohol-related mortality is shaped by structural factors including healthcare
+    access for treatment of AUD and alcohol-related diseases, availability of medication-assisted treatment,
+    insurance coverage for substance use treatment, and social support systems. Lower-income individuals
+    and communities of color face greater barriers to treatment access, contributing to mortality disparities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.280302'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

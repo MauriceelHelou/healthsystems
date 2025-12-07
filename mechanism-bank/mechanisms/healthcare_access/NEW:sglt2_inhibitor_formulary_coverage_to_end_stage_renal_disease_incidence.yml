@@ -1,0 +1,54 @@
+id: NEW:sglt2_inhibitor_formulary_coverage_to_end_stage_renal_disease_incidence
+name: SGLT2 Inhibitor Formulary Coverage → End-Stage Renal Disease Incidence
+from_node:
+  node_id: NEW:sglt2_inhibitor_formulary_coverage
+  node_name: SGLT2 Inhibitor Formulary Coverage
+to_node:
+  node_id: end_stage_renal_disease_incidence
+  node_name: End-Stage Renal Disease Incidence
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Health systems include SGLT2 inhibitors in standard formularies for CKD treatment'
+- 'Step 2: Cost-effectiveness evidence supports payer coverage decisions'
+- 'Step 3: Patients receive SGLT2 inhibitors as part of standard care protocols'
+- 'Step 4: Treatment slows GFR decline and reduces proteinuria'
+- 'Step 5: Fewer patients progress to dialysis-dependent end-stage renal disease'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: 'Anh Thi Ngoc Toan et al. 2024. "Cost-effectiveness of sodium-glucose cotransporter
+    2 inhibitors in the treatment of chronic kidney disease: a systematic review." https://doi.org/10.1080/14737167.2024.2420654'
+  supporting_citations:
+  - Model-based cost-utility studies evaluating Empagliflozin (n=3)
+  - Model-based cost-utility studies evaluating Canagliflozin (n=3)
+  - Model-based cost-utility studies evaluating Dapagliflozin (n=8)
+  doi: 10.1080/14737167.2024.2420654
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Health system adoption of SGLT2 inhibitors as cost-effective or cost-saving treatment options
+  influences population-level progression to end-stage renal disease by enabling broader access to nephroprotective
+  therapies.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Economic evaluations were conducted across multiple countries with varying healthcare
+    systems and cost structures
+moderators:
+- name: health_system_perspective
+  direction: strengthens
+  strength: strong
+  description: When analyzed from health system perspective in high-income countries, SGLT2 inhibitors
+    with SoC were cost-saving for CKD patients with T2D
+structural_competency:
+  equity_implications: This mechanism addresses structural healthcare policy decisions that determine
+    medication access. Cost-effectiveness evidence influences formulary decisions, which in turn affect
+    population health outcomes. Disparities in healthcare infrastructure, insurance coverage, and pharmaceutical
+    pricing policies create inequitable access to these treatments across and within countries. The economic
+    burden of CKD disproportionately affects lower-income populations who may face greater barriers to
+    accessing optimal treatment.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.926965'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

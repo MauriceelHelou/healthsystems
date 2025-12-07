@@ -1,0 +1,56 @@
+id: alcohol_use_disorder_to_NEW:lh_levels_male
+name: Alcohol Use Disorder → Luteinizing Hormone Levels in Males
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:lh_levels_male
+  node_name: Luteinizing Hormone Levels in Males
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol overuse suppresses testicular testosterone production'
+- 'Step 2: Reduced testosterone triggers negative feedback disruption'
+- 'Step 3: The pituitary responds with altered LH secretion patterns'
+- 'Step 4: Feedback changes in LH levels occur as a compensatory mechanism'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'M. Moosazadeh et al. 2024. "Association of the Effect of Alcohol Consumption on Luteinizing
+    Hormone (LH), Follicle-Stimulating Hormone (FSH), and Testosterone Hormones in Men: A Systematic Review
+    and Meta-Analysis." https://doi.org/10.4103/ijpvm.ijpvm_81_24'
+  supporting_citations:
+  - Additional citations require full-text access - 17 studies met inclusion criteria
+  - Systematic review of observational studies on alcohol and male sex hormones
+  - Analysis using STATA version 11
+  doi: 10.4103/ijpvm.ijpvm_81_24
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'The pooled analysis showed a small positive association between alcohol exposure and LH
+  levels (SMD 0.04, 95% CI: 0.00-0.12), which approached statistical significance. The authors specifically
+  note feedback changes in LH levels among those with alcohol use disorder, suggesting compensatory pituitary
+  responses to alcohol-induced testosterone suppression.'
+quantitative_effects:
+  effect_size:
+    value: 0.04
+    type: standardized_mean_difference
+    ci_lower: 0.0
+    ci_upper: 0.12
+moderators:
+- name: alcohol_use_disorder_status
+  direction: strengthens
+  strength: moderate
+  description: The abstract notes 'associated feedback changes in LH levels' specifically in individuals
+    with alcohol use disorder, suggesting more pronounced effects in this population
+structural_competency:
+  equity_implications: The HPT axis disruption seen in alcohol use disorder reflects the cumulative biological
+    burden of chronic alcohol exposure. Structural factors including lack of treatment access, inadequate
+    mental health services, economic instability, and community-level alcohol availability contribute
+    to the development and persistence of alcohol use disorder. Addressing these upstream determinants
+    is essential for preventing the downstream hormonal and reproductive health consequences.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.312487'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

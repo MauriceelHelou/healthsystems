@@ -1,0 +1,44 @@
+id: legal_bac_limit_reduction_to_dwi_prevalence
+name: Legal Blood Alcohol Concentration Limit Reduction (0.05 to 0.03 mg/mL) → Driving
+  While Intoxicated (DWI) Prevalence
+from_node:
+  node_id: legal_bac_limit_reduction
+  node_name: Legal Blood Alcohol Concentration Limit Reduction (0.05 to 0.03 mg/mL)
+to_node:
+  node_id: dwi_prevalence
+  node_name: Driving While Intoxicated (DWI) Prevalence
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Lowered legal BAC threshold intensifies enforcement and penalties for impaired
+  driving'
+- 'Step 2: Heightened awareness of legal consequences influences driver decision-making
+  about alcohol consumption'
+- 'Step 3: Reduced frequency and quantity of alcohol consumption among drivers who
+  previously drove at higher BAC levels'
+- 'Step 4: Decreased proportion of drivers with severe intoxication (BAC ≥0.05) involved
+  in traffic crashes requiring hospitalization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Chun-Ying Huang et al. 2020. "Effect of Lowering the Blood Alcohol
+    Concentration Limit to 0.03 Among Hospitalized Trauma Patients in Southern Taiwan:
+    A Cross-Sectional Analysis." *Risk Management and Healthcare Policy*. https://doi.org/10.2147/RMHP.S250734'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.520685'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: enforcement_intensity
+  direction: strengthens
+  strength: moderate
+  description: Effectiveness of legal BAC limits depends on consistent enforcement
+    through sobriety checkpoints, police resources, and judicial follow-through
+- name: alcohol_dependence_severity
+  direction: weakens
+  strength: strong
+  description: Individuals with severe alcohol use disorders may be less responsive
+    to legal deterrents and require clinical interventions rather than solely punitive
+    measures

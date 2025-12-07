@@ -1,0 +1,58 @@
+id: NEW:alcohol_outlet_density_residential_area_to_NEW:adolescent_lifetime_alcohol_consumption
+name: Alcohol Outlet Density in Residential Area (200m) → Adolescent Lifetime Alcohol Consumption
+from_node:
+  node_id: NEW:alcohol_outlet_density_residential_area
+  node_name: Alcohol Outlet Density in Residential Area (200m)
+to_node:
+  node_id: NEW:adolescent_lifetime_alcohol_consumption
+  node_name: Adolescent Lifetime Alcohol Consumption
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Residential proximity to alcohol outlets creates cumulative exposure during formative developmental
+  years'
+- 'Step 2: Environmental availability shapes social norms around alcohol use in the community'
+- 'Step 3: Higher outlet density facilitates initial experimentation and onset of alcohol use'
+- 'Step 4: Family income levels (71% lived in families with income up to five minimum wages) may correlate
+  with neighborhood outlet density patterns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: B. R. Carvalho et al. 2020. "Is alcohol outlet density in the residential area associated
+    with alcohol consumption among adolescents?." https://doi.org/10.1590/1980-549720200089
+  supporting_citations:
+  - Additional citations require full-text access - study references prior literature on alcohol outlet
+    density and consumption patterns
+  - Additional citations require full-text access - study references WHO recommendations on alcohol availability
+  - Additional citations require full-text access - study references Brazilian national survey data
+  doi: 10.1590/1980-549720200089
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study found a lifetime alcohol consumption prevalence of 57% among adolescents aged 14-17
+  years. While the association between outlet density and lifetime consumption was explored, the significant
+  findings were specific to current consumption. The high lifetime prevalence reflects the broader environmental
+  context of alcohol availability.
+quantitative_effects:
+  sample_size: 601
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Lifetime prevalence of 57% in this Brazilian urban sample; prevalence rates vary substantially
+    across geographic and cultural contexts
+moderators:
+- name: family_income
+  direction: strengthens
+  strength: moderate
+  description: 71% of adolescents lived in families with income up to five minimum wages; analysis adjusted
+    for family factors suggesting socioeconomic context matters
+structural_competency:
+  equity_implications: The high prevalence of lifetime alcohol consumption (57%) among this urban Brazilian
+    adolescent population reflects structural factors including alcohol outlet distribution, economic
+    contexts (majority low-income families), and regulatory environments. The study's adjustment for individual
+    and family factors isolates the independent contribution of neighborhood-level alcohol availability,
+    emphasizing the structural nature of this determinant.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.475174'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

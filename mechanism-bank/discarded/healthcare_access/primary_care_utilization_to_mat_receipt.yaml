@@ -1,0 +1,47 @@
+id: primary_care_utilization_to_mat_receipt
+name: Primary Care Provider Utilization → Medication-Assisted Treatment Receipt
+from_node:
+  node_id: primary_care_utilization
+  node_name: Primary Care Provider Utilization
+to_node:
+  node_id: mat_receipt
+  node_name: Medication-Assisted Treatment Receipt
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary care providers in rural areas offer more geographically proximate
+  access points than specialized MAT clinics (median 4.2 miles to nearest PCP-MAT
+  prescriber)'
+- 'Step 2: Regular PCP visits create opportunities for OUD screening, diagnosis, and
+  treatment initiation within established patient-provider relationships'
+- 'Step 3: PCPs who provide MAT can integrate OUD treatment into ongoing primary care,
+  reducing need for separate specialty referrals'
+- 'Step 4: Reduced travel burden and integrated care model increases likelihood of
+  MAT initiation and sustained engagement'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Evan S Cole et al. 2019. "The Role of Primary Care in Improving
+    Access to Medication-Assisted Treatment for Rural Medicaid Enrollees with Opioid
+    Use Disorder.." *Journal of general internal medicine*. https://doi.org/10.1007/s11606-019-04943-6
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.501885'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: pcp_mat_prescribing_capability
+  direction: strengthens
+  strength: strong
+  description: Among enrollees diagnosed with OUD during PCP visit, 50.8% received
+    MAT and 67.6% of those received it from their PCP, demonstrating PCPs' critical
+    role in rural MAT delivery
+- name: frequency_of_pcp_visits
+  direction: strengthens
+  strength: moderate
+  description: Enrollees with OUD had high PCP utilization (4.1 visits per person-year),
+    providing multiple intervention opportunities
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/primary_care_utilization_to_mat_receipt.yaml
+_category: healthcare_access

@@ -1,0 +1,50 @@
+id: platelet_hdl_ratio_to_hypertension
+name: Platelet to High-Density Lipoprotein Cholesterol Ratio (PHR) → Hypertension
+from_node:
+  node_id: platelet_hdl_ratio
+  node_name: Platelet to High-Density Lipoprotein Cholesterol Ratio (PHR)
+to_node:
+  node_id: hypertension
+  node_name: Hypertension
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Elevated platelet counts indicate increased inflammatory response and platelet
+  activation, while low HDL-C reflects metabolic dysregulation'
+- 'Step 2: Combined PHR elevation signals concurrent inflammatory and metabolic pathways
+  that promote endothelial dysfunction'
+- 'Step 3: Endothelial dysfunction and vascular inflammation impair nitric oxide production
+  and increase vascular resistance'
+- 'Step 4: Increased vascular resistance and reduced vascular compliance lead to elevated
+  blood pressure and hypertension'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Jia Chen et al. 2024. "Association between platelet to high-density
+    lipoprotein cholesterol ratio (PHR) and hypertension: evidence from NHANES 2005-2018.."
+    *Lipids in health and disease*. https://doi.org/10.1186/s12944-024-02342-3'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.475985'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: phr_threshold
+  direction: strengthens
+  strength: strong
+  description: When PHR is below 280, the risk of hypertension increases proportionally
+    with PHR, suggesting a dose-response relationship up to this threshold
+- name: race
+  direction: u_shaped
+  strength: moderate
+  description: Analysis adjusted for race as a covariate, suggesting potential differential
+    effects by racial/ethnic groups
+- name: socioeconomic_status
+  direction: u_shaped
+  strength: moderate
+  description: Family Poverty Income Ratio (PIR) and education level were adjusted
+    as covariates, indicating potential modification by socioeconomic factors
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/platelet_hdl_ratio_to_hypertension.yaml
+_category: biological

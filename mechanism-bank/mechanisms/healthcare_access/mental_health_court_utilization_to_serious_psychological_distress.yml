@@ -1,0 +1,57 @@
+id: mental_health_court_utilization_to_serious_psychological_distress
+name: Mental Health Court Utilization → Serious Psychological Distress
+from_node:
+  node_id: mental_health_court_utilization
+  node_name: Mental Health Court Utilization
+to_node:
+  node_id: serious_psychological_distress
+  node_name: Serious Psychological Distress
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Mental health court provides structured pathway to behavioral health treatment for justice-involved
+  individuals'
+- 'Step 2: MISSION-CJ delivers integrated services addressing mental health, substance use, and criminal
+  justice risk factors'
+- 'Step 3: Community wraparound services maintain engagement and address barriers to care'
+- 'Step 4: Participants demonstrate significant reduction in behavioral health symptoms at 6 months'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'D. Pinals et al. 2019. "Implementation of MISSION-Criminal Justice in a Treatment
+    Court: Preliminary Outcomes Among Individuals With Co-occurring Disorders.." https://doi.org/10.1176/appi.ps.201800570'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not provide specific prior study citations
+  - Mental health court outcomes literature
+  - Integrated treatment for co-occurring disorders literature
+  doi: 10.1176/appi.ps.201800570
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Mental health court with MISSION-CJ intervention significantly improved behavioral health
+  symptoms among individuals with co-occurring disorders, 91% of whom had experienced depression.
+quantitative_effects:
+  p_value: 0.006
+  sample_size: 97
+moderators:
+- name: baseline depression prevalence
+  direction: strengthens
+  strength: strong
+  description: 91% of participants had experienced depression, indicating high baseline symptom burden
+    with substantial room for improvement
+- name: gender
+  direction: strengthens
+  strength: weak
+  description: Primarily male sample; gender may influence treatment response though direction unclear
+    from this study
+structural_competency:
+  equity_implications: This mechanism illustrates how structural barriers to mental healthcare for justice-involved
+    individuals can be addressed through court-based diversion programs. The high prevalence of depression
+    (91%) reflects the mental health burden among incarcerated populations, which is often undertreated
+    in correctional settings. By creating structural pathways to care outside incarceration, mental health
+    courts address systemic failures in providing adequate mental healthcare to justice-involved populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.559182'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

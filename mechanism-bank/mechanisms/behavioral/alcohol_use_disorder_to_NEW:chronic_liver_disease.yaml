@@ -1,0 +1,51 @@
+id: alcohol_use_disorder_to_NEW:chronic_liver_disease
+name: Alcohol Use Disorder → Chronic Liver Disease
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:chronic_liver_disease
+  node_name: Chronic Liver Disease
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption leads to repeated hepatotoxic exposure as ethanol
+  and its metabolite acetaldehyde directly damage hepatocytes'
+- 'Step 2: Sustained alcohol-induced liver injury triggers inflammatory responses,
+  oxidative stress, and hepatic stellate cell activation'
+- 'Step 3: Progressive fibrosis develops from repeated cycles of liver damage and
+  repair, eventually leading to cirrhosis and chronic liver disease'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'B. T. Tesfaye et al. 2021. Chronic Liver Disease in Ethiopia
+    with a Particular Focus on the Etiological Spectrums: A Systematic Review and
+    Meta-Analysis of Observational Studies. Canadian Journal of Gastroenterology and
+    Hepatology.'
+  supporting_citations: []
+description: Alcohol is the second most common cause of chronic liver disease in Ethiopia,
+  accounting for an estimated 17% of CLD cases. Chronic alcohol consumption causes
+  direct hepatotoxicity through ethanol and acetaldehyde metabolites, leading to progressive
+  liver damage, fibrosis, and ultimately cirrhosis. This meta-analysis of 12 observational
+  studies demonstrates a significant contribution of alcohol to the CLD burden.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 17.0
+    type: pooled_proportion_percent
+    ci_lower: 9.0
+    ci_upper: 25.0
+  p_value: 0.001
+  sample_size: null
+moderators:
+- name: viral hepatitis co-infection
+  direction: strengthens
+  strength: strong
+  description: Concurrent hepatitis B or C infection alongside alcohol use accelerates
+    liver damage progression
+- name: duration and intensity of alcohol use
+  direction: strengthens
+  strength: strong
+  description: Longer duration and higher quantities of alcohol consumption increase
+    risk of developing chronic liver disease

@@ -1,0 +1,57 @@
+id: NEW:dietary_linoleic_acid_intake_to_heart_disease_prevalence
+name: Dietary Linoleic Acid (Omega-6) Intake → Coronary Heart Disease Mortality
+from_node:
+  node_id: NEW:dietary_linoleic_acid_intake
+  node_name: Dietary Linoleic Acid (Omega-6) Intake
+to_node:
+  node_id: heart_disease_prevalence
+  node_name: Coronary Heart Disease Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Dietary substitution of saturated fats with omega-6 linoleic acid (from
+  sources like safflower oil and polyunsaturated margarine) increases tissue concentration
+  of linoleic acid'
+- 'Step 2: Increased linoleic acid may promote oxidation of LDL cholesterol and increase
+  oxidative stress, potentially contributing to atherosclerotic plaque instability'
+- 'Step 3: Pro-inflammatory metabolites derived from linoleic acid (eicosanoids) may
+  enhance inflammatory processes in coronary arteries'
+- 'Step 4: These combined effects may accelerate coronary heart disease progression
+  and increase mortality risk in individuals with existing coronary disease'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'Christopher E Ramsden et al. 2013. Use of dietary linoleic acid
+    for secondary prevention of coronary heart disease and death: evaluation of recovered
+    data from the Sydney Diet Heart Study and updated meta-analysis. BMJ (Clinical
+    research ed.).'
+  supporting_citations: []
+description: Substituting dietary saturated fats with omega-6 linoleic acid (primarily
+  from safflower oil) was associated with increased coronary heart disease mortality
+  in a randomized controlled trial of men with prior coronary events. The Sydney Diet
+  Heart Study showed a 74% increased risk of CHD death in the intervention group.
+  An updated meta-analysis of linoleic acid intervention trials showed a non-significant
+  trend toward increased CHD mortality (HR 1.33, 95% CI 0.99-1.79, P=0.06), challenging
+  the widely held assumption that polyunsaturated fat substitution for saturated fat
+  reduces cardiovascular risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.74
+    type: hazard_ratio
+    ci_lower: 1.04
+    ci_upper: 2.92
+  p_value: 0.04
+  sample_size: 458
+moderators:
+- name: Pre-existing coronary heart disease
+  direction: strengthens
+  strength: strong
+  description: The study population consisted of men with recent coronary events (secondary
+    prevention), suggesting the harmful effect may be more pronounced in those with
+    existing cardiovascular disease
+- name: Sex
+  direction: strengthens
+  strength: moderate
+  description: Study limited to men aged 30-59 years; generalizability to women uncertain

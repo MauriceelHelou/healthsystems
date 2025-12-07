@@ -1,0 +1,43 @@
+id: per_capita_income_to_maternal_mortality_ratio
+name: Per Capita Income → Maternal Mortality Ratio
+from_node:
+  node_id: per_capita_income
+  node_name: Per Capita Income
+to_node:
+  node_id: maternal_mortality_ratio
+  node_name: Maternal Mortality Ratio
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Per capita income in adjusted model reflects state-level economic capacity
+  controlling for other socioeconomic factors'
+- 'Step 2: Economic resources enable sustainable investment in maternal health systems
+  and emergency obstetric infrastructure'
+- 'Step 3: Higher income facilitates better transportation networks, reducing geographic
+  barriers to emergency maternal care'
+- 'Step 4: Economic development supports training and retention of skilled healthcare
+  providers in maternal health services'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Maria do Socorro Candeira Costa and Francisco Winter dos Santos
+    Figueiredo 2021. "Relationship between income inequality, socioeconomic development,
+    vulnerability index, and maternal mortality in Brazil, 2017." *BMC Public Health*.
+    https://doi.org/10.1186/s12889-021-11861-y
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.933083'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: human_development_index
+  direction: strengthens
+  strength: weak
+  description: Higher overall human development may amplify the protective effect
+    of income through synergies with education and health system development
+- name: gini_index_income_inequality
+  direction: weakens
+  strength: moderate
+  description: Greater income inequality may reduce the population-level health benefits
+    of higher average per capita income by concentrating resources among wealthy populations

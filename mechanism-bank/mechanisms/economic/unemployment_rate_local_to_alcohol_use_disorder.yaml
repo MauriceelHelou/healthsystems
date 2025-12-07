@@ -1,0 +1,47 @@
+id: unemployment_rate_local_to_alcohol_use_disorder
+name: Unemployment Rate → Alcohol Use Disorder
+from_node:
+  node_id: unemployment_rate_local
+  node_name: Unemployment Rate
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Job loss or unemployment creates economic stress and financial uncertainty
+  at the individual level'
+- 'Step 2: Unemployment triggers psychological distress including stress, depression,
+  and anxiety due to loss of income, social status, and daily structure'
+- 'Step 3: Individuals may turn to alcohol as a coping mechanism to manage negative
+  emotional states and psychological distress'
+- 'Step 4: Increased alcohol consumption over time can lead to patterns of binge drinking
+  and eventual alcohol dependency or alcohol use disorder diagnosis'
+- 'Step 5: Note: Long-term unemployment (>1 year) may paradoxically reduce consumption
+  due to severe financial constraints limiting ability to purchase alcohol'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'N. Y. Nkomo and Eyitayo Francis Adanlawo 2024. "The impact of
+    unemployment on alcohol consumption: A panel data analysis." International journal
+    of innovative research and scientific studies.'
+  supporting_citations: []
+description: Unemployment positively impacts alcohol consumption, binge drinking,
+  and alcohol addiction/dependency diagnosis. The relationship operates through psychological
+  mechanisms where job loss creates stress and mental health problems that increase
+  vulnerability to problematic drinking. However, the relationship is moderated by
+  unemployment duration, with very long-term unemployment potentially reducing consumption
+  due to financial constraints.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Gender-specific effects were examined, suggesting differential impacts
+    of unemployment on alcohol consumption between men and women
+- name: duration of unemployment
+  direction: u_shaped
+  strength: moderate
+  description: Being unemployed for more than a year causes people to consume less
+    alcohol, possibly due to financial stress limiting purchasing ability

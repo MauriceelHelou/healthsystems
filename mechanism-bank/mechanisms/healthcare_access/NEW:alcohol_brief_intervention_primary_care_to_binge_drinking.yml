@@ -1,0 +1,60 @@
+id: NEW:alcohol_brief_intervention_primary_care_to_binge_drinking
+name: Alcohol Brief Intervention in Primary Care → Binge Drinking/Heavy Drinking Days
+from_node:
+  node_id: NEW:alcohol_brief_intervention_primary_care
+  node_name: Alcohol Brief Intervention in Primary Care
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking/Heavy Drinking Days
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: System-wide implementation of alcohol screening, brief intervention, and referral to treatment
+  (SBIRT) in primary care settings identifies patients with unhealthy alcohol use'
+- 'Step 2: Brief intervention provides counseling and education about alcohol-related health risks within
+  routine care visits'
+- 'Step 3: Patients with hypertension who receive brief intervention reduce their drinks per drinking
+  day and drinks per week'
+- 'Step 4: Reduced alcohol consumption leads to decreased heavy drinking episodes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'F. Chi et al. 2023. "Associations between alcohol brief intervention in primary care
+    and drinking and health outcomes in adults with hypertension and type 2 diabetes: a population-based
+    observational study." https://doi.org/10.1136/bmjopen-2022-064088'
+  supporting_citations:
+  - Additional citations require full-text access - this is a population-based observational study using
+    electronic health records from an integrated healthcare system
+  - Study references prior SBIRT implementation research in adult primary care settings
+  - Study builds on evidence for alcohol brief intervention effectiveness in primary care populations
+  doi: 10.1136/bmjopen-2022-064088
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among patients with hypertension who screened positive for unhealthy alcohol use, those who
+  received alcohol brief intervention had a modest but significant additional reduction of 0.06 drinks
+  per drinking day compared to those who did not receive the intervention.
+quantitative_effects:
+  effect_size:
+    value: -0.06
+    type: beta_coefficient
+    ci_lower: -0.11
+    ci_upper: -0.01
+  sample_size: 72979
+moderators:
+- name: chronic_condition_type
+  direction: strengthens
+  strength: strong
+  description: Effect observed for patients with hypertension but NOT for patients with type 2 diabetes,
+    suggesting condition-specific responsiveness to brief intervention
+structural_competency:
+  equity_implications: This mechanism highlights the structural importance of healthcare system-level
+    implementation of alcohol screening and intervention. The system-wide SBIRT program represents a structural
+    approach that embeds intervention into routine care rather than relying on individual initiative.
+    The differential effects by condition type (hypertension vs. diabetes) point to the need for tailored
+    structural approaches across diverse patient populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.988260'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

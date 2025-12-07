@@ -1,0 +1,46 @@
+id: NEW:individual_based_substance_treatment_to_substance_use_disorder_any
+name: Individual-Based Substance Use Treatment → Substance Use Disorder (Any)
+from_node:
+  node_id: NEW:individual_based_substance_treatment
+  node_name: Individual-Based Substance Use Treatment
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individual-based treatment (IBT) focuses on the person with substance use disorder alone'
+- 'Step 2: Patient develops coping skills and motivation for change'
+- 'Step 3: Treatment does not directly address relationship dynamics or partner involvement'
+- 'Step 4: Recovery depends primarily on individual resources and willpower'
+- 'Step 5: Less robust effect on substance use frequency compared to couple-based approaches'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Yuqi Song et al. 2022. "The Effect of Behavior Couples Therapy on Alcohol and Drug
+    Use Disorder: a Systematic Review and Meta-Analysis.." https://doi.org/10.1093/alcalc/agac053'
+  supporting_citations:
+  - Additional citations require full-text access
+  - BCT compared directly to IBT in subset of studies
+  - 'Effect size difference: BCT superior by g=0.23'
+  doi: 10.1093/alcalc/agac053
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: When BCT is directly compared to individual-based treatment (IBT), BCT shows superior effectiveness
+  in reducing substance use frequency (g=0.23). This suggests that treatment modality structure - specifically
+  the inclusion of intimate partners - is an important factor in treatment effectiveness.
+quantitative_effects:
+  effect_size:
+    value: 0.23
+    type: standardized_mean_difference
+structural_competency:
+  equity_implications: The inferiority of individual-based treatment highlights a structural critique
+    of healthcare systems that default to individual-level interventions. Treatment systems that fail
+    to offer couple-based options may inadvertently limit recovery outcomes. Access to BCT may be systematically
+    limited for marginalized populations, creating treatment inequities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.455767'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

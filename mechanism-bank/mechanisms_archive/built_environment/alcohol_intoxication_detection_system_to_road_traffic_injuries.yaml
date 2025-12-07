@@ -1,0 +1,45 @@
+id: alcohol_intoxication_detection_system_to_road_traffic_injuries
+name: Real-time Alcohol Intoxication Detection System → Road Traffic Injuries and
+  Deaths
+from_node:
+  node_id: alcohol_intoxication_detection_system
+  node_name: Real-time Alcohol Intoxication Detection System
+to_node:
+  node_id: road_traffic_injuries
+  node_name: Road Traffic Injuries and Deaths
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: In-vehicle camera-based ML system detects blood alcohol concentration (BAC)
+  at critical thresholds (≥0.05 g/dL WHO legal limit) with 75% accuracy through facial
+  features'
+- 'Step 2: Real-time detection of alcohol impairment enables immediate intervention
+  to prevent impaired drivers from operating vehicles'
+- 'Step 3: Prevention of drunk driving reduces alcohol-related road accidents, which
+  contribute significantly to global burden of road injuries'
+- 'Step 4: Reduction in drunk driving incidents decreases traffic fatalities and serious
+  injuries'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ensiyeh Keshtkaran et al. 2024. "Estimating Blood Alcohol Level
+    Through Facial Features for Driver Impairment Assessment." *IEEE Workshop/Winter
+    Conference on Applications of Computer Vision*. https://doi.org/10.1109/WACV57701.2024.00448
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.523799'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: bac_detection_threshold
+  direction: strengthens
+  strength: strong
+  description: System can detect subtle alcohol intoxication as low as 0.05 g/dL (WHO
+    recommended legal limit), enabling earlier intervention at lower impairment levels
+- name: detection_accuracy
+  direction: strengthens
+  strength: moderate
+  description: System achieves 75% accuracy in detecting alcohol intoxication, with
+    effectiveness depending on model performance across three levels (sober, low,
+    severe impairment)

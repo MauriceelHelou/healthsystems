@@ -1,0 +1,51 @@
+id: NEW:malnutrition_ald_to_liver_disease_mortality
+name: Malnutrition in Alcoholic Liver Disease → Liver Disease Mortality
+from_node:
+  node_id: NEW:malnutrition_ald
+  node_name: Malnutrition in Alcoholic Liver Disease
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption leads to inadequate dietary intake, impaired
+  nutrient absorption and digestion, and abnormal ethanol-lipid metabolism interactions'
+- 'Step 2: Protein-energy malnutrition develops with increased skeletal and visceral
+  protein catabolism, leading to sarcopenia and muscle wasting'
+- 'Step 3: Vitamin and trace element deficiencies accumulate, causing anemia and altered
+  cognitive status'
+- 'Step 4: As ALD progresses to cirrhosis, malnutrition exacerbates complications
+  including ascites and hepatic encephalopathy'
+- 'Step 5: The combined effects of sarcopenia, impaired immune function, and liver
+  failure complications increase mortality risk in ALD patients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Tadokoro T et al. 2023. Nutritional Support for Alcoholic Liver
+    Disease. Nutrients.
+  supporting_citations: []
+description: Malnutrition is a common and prognostically significant finding in alcoholic
+  liver disease. The etiology is multifactorial including inadequate dietary intake,
+  impaired absorption and digestion, increased protein catabolism, and abnormal ethanol-lipid
+  metabolism. As ALD progresses to cirrhosis, protein-energy malnutrition and sarcopenia
+  become more prevalent, contributing to complications such as ascites and hepatic
+  encephalopathy that increase mortality risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: disease_progression_stage
+  direction: strengthens
+  strength: strong
+  description: As ALD progresses to cirrhosis, malnutrition becomes more severe and
+    more strongly associated with poor outcomes
+- name: metabolic_syndrome_comorbidity
+  direction: strengthens
+  strength: moderate
+  description: Patients with both ALD and metabolic syndrome require individualized
+    nutritional therapy to avoid both under- and overnutrition
+- name: sarcopenia_presence
+  direction: strengthens
+  strength: strong
+  description: Sarcopenia as a manifestation of protein-energy malnutrition is a key
+    driver of poor prognosis

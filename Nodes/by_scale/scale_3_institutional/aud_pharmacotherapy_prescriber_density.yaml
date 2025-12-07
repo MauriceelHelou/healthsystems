@@ -1,0 +1,34 @@
+id: aud_pharmacotherapy_prescriber_density
+name: AUD Pharmacotherapy Prescriber Density
+scale: 3
+domain: Healthcare Infrastructure, Substance Use Treatment
+category: healthcare_access
+stock:
+  value: 2.1
+  unit: Prescribers actively prescribing AUD medications per 100,000 population
+  year: 2022
+  source: Medicare Part D prescriber data, IQVIA
+geographic_variation:
+  score: 4
+  level: county
+  notes: Concentrated among addiction specialists in urban areas; primary care prescribing remains low
+data_quality:
+  availability: medium
+  frequency: annual
+  bias_notes: Based on claims data; does not capture cash-pay prescriptions or VA system
+  primary_sources:
+  - name: CMS Medicare Part D Prescriber Public Use File
+    granularity: provider
+  - name: IQVIA National Prescription Audit
+    granularity: state
+  - name: State Prescription Drug Monitoring Programs
+    granularity: county
+description: |-
+  Density of healthcare providers actively prescribing FDA-approved medications for alcohol
+  use disorder: naltrexone (oral and extended-release injectable Vivitrol), acamprosate
+  (Campral), and disulfiram (Antabuse). Unlike opioid treatment, these medications do not
+  require special waiver or certification. Despite strong evidence, medications for AUD are
+  drastically underutilized - only ~9% of those with AUD receive any medication. Barriers
+  include provider unfamiliarity, patient preference, lack of integration with behavioral
+  treatment, and insufficient insurance coverage.
+type: Infrastructure

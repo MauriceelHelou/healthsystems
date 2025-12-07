@@ -1,0 +1,40 @@
+id: area_income_level_to_covid19_mortality_rate
+name: Area-Level Income → COVID-19 Mortality Rate
+from_node:
+  node_id: area_income_level
+  node_name: Area-Level Income
+to_node:
+  node_id: covid19_mortality_rate
+  node_name: COVID-19 Mortality Rate
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher income areas have greater economic resources enabling pandemic mitigation
+  strategies including ability to work from home, access to protective equipment,
+  and physical distancing capacity'
+- 'Step 2: Income enables access to higher quality healthcare including private insurance,
+  proximity to well-resourced medical facilities, and ability to seek early treatment'
+- 'Step 3: Higher income neighborhoods have better built environment features including
+  lower density housing, more space for isolation, and reduced crowding that limits
+  viral transmission'
+- 'Step 4: Economic resources provide buffer against occupational exposure through
+  ability to avoid essential worker roles and access paid leave during illness'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Farzaneh Khayat et al. 2021. "COVID-19 and health inequality:
+    the nexus of race, income and mortality in New York City." *International Journal
+    of Human Rights in Healthcare*. https://doi.org/10.1108/IJHRH-05-2021-0110'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.952204'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: racial_composition
+  direction: strengthens
+  strength: strong
+  description: Income effects interact with racial segregation patterns, as low-income
+    areas with higher proportions of Black and Hispanic residents face compounded
+    structural vulnerabilities

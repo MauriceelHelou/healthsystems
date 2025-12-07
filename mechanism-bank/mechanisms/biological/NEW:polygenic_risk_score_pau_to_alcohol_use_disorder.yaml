@@ -1,0 +1,41 @@
+id: NEW:polygenic_risk_score_pau_to_alcohol_use_disorder
+name: Polygenic Risk Score for Problematic Alcohol Use → Alcohol Use Disorder
+from_node:
+  node_id: NEW:polygenic_risk_score_pau
+  node_name: Polygenic Risk Score for Problematic Alcohol Use
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Polygenic risk scores aggregate the effects of 110 identified independent
+  risk variants associated with problematic alcohol use across multiple ancestries'
+- 'Step 2: These genetic variants influence gene expression and chromatin interactions
+  in brain tissues, affecting neural pathways related to reward, impulse control,
+  and addiction vulnerability'
+- 'Step 3: Prioritized genes through brain tissue analysis contribute to neurobiological
+  susceptibility for alcohol-related behaviors and dependence'
+- 'Step 4: Cumulative genetic liability indexed by PRS increases individual risk for
+  developing alcohol use disorder through these biological mechanisms'
+evidence:
+  quality_rating: A
+  n_studies: 85
+  primary_citation: Hang Zhou et al. 2023. Multi-ancestry study of the genetics of
+    problematic alcohol use in over 1 million individuals. Nature Medicine.
+  supporting_citations: []
+description: Polygenic risk scores for problematic alcohol use capture cumulative
+  genetic liability across 110 independent risk variants identified in a multi-ancestry
+  GWAS of over 1 million individuals. These variants influence brain gene expression
+  and chromatin interactions, creating neurobiological vulnerability that increases
+  risk for alcohol use disorder. The genetic architecture shows high cross-ancestral
+  similarity, and cross-ancestry PRS demonstrate improved predictive validity for
+  AUD risk in independent samples.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Ancestry/Population
+  direction: strengthens
+  strength: moderate
+  description: Cross-ancestry PRS improves prediction compared to single-ancestry
+    scores, though performance may vary across populations

@@ -1,0 +1,58 @@
+id: NEW:alcohol_attributable_neurological_disease_comorbidity_to_sud_medication_treatment_rate_oud
+name: Alcohol-Attributable Neurological Disease Comorbidity → AUD Pharmacotherapy Receipt Rate
+from_node:
+  node_id: NEW:alcohol_attributable_neurological_disease_comorbidity
+  node_name: Alcohol-Attributable Neurological Disease Comorbidity
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: AUD Pharmacotherapy Receipt Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Chronic alcohol use causes neurological complications including neuropathy, cognitive impairment,
+  and seizure disorders'
+- 'Step 2: Healthcare providers may have concerns about CNS-active medications in neurologically compromised
+  patients'
+- 'Step 3: Perceived complexity of managing multiple neurological conditions may deter medication initiation'
+- 'Step 4: Specialist fragmentation between neurology and addiction medicine creates care gaps'
+- 'Step 5: Patients with neurological damage from alcohol receive reduced access to medications that could
+  prevent further harm'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Månsson et al. 2024. "Pharmacotherapy for alcohol use disorder among adults with
+    medical disorders in Sweden." https://doi.org/10.1186/s13722-024-00471-9
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior research on AUD pharmacotherapy
+    barriers
+  - Additional citations require full-text access - abstract references literature on neurological comorbidities
+    in AUD
+  - Additional citations require full-text access - abstract references specialist care utilization patterns
+  doi: 10.1186/s13722-024-00471-9
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patients with AUD and neurological complications have 48% lower odds of receiving pharmacotherapy
+  for AUD compared to those without neurological comorbidities, indicating systematic undertreatment.
+quantitative_effects:
+  effect_size:
+    value: 0.52
+    type: odds_ratio
+    ci_lower: 0.48
+    ci_upper: 0.56
+  sample_size: 132728
+moderators:
+- name: contraindication_status
+  direction: weakens
+  strength: moderate
+  description: Clinical contraindications do not fully account for reduced prescription rates
+structural_competency:
+  equity_implications: The finding demonstrates how healthcare systems fail to provide integrated care
+    for patients with substance use disorders and their medical sequelae. The structural separation of
+    addiction medicine from other specialties, combined with potential prescriber uncertainty about complex
+    patients, creates treatment gaps that perpetuate health inequities among the most vulnerable AUD patients.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.146238'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

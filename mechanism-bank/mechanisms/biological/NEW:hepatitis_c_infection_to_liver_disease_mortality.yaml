@@ -1,0 +1,46 @@
+id: NEW:hepatitis_c_infection_to_liver_disease_mortality
+name: Hepatitis C Infection → Liver Disease Mortality
+from_node:
+  node_id: NEW:hepatitis_c_infection
+  node_name: Hepatitis C Infection
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hepatitis C virus (HCV) infection establishes chronic infection in the
+  liver, leading to persistent hepatic inflammation'
+- 'Step 2: Chronic inflammation causes progressive hepatocyte damage and fibrosis
+  development over years to decades'
+- 'Step 3: Continued fibrosis leads to liver cirrhosis, with loss of functional liver
+  tissue and hepatic decompensation'
+- 'Step 4: Cirrhosis complications (portal hypertension, hepatic encephalopathy, hepatocellular
+  carcinoma) result in increased mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'N. Rezaei et al. 2019. Liver cirrhosis mortality at national
+    and provincial levels in Iran between 1990 and 2015: A meta regression analysis.
+    PLoS ONE.'
+  supporting_citations: []
+description: Hepatitis C infection is a major contributor to liver cirrhosis mortality,
+  accounting for a substantial portion of cirrhosis deaths alongside hepatitis B.
+  In Iran, more than 60% of liver cirrhosis mortality cases at national level are
+  caused by hepatitis B and C infection combined, with hepatitis B mortality rate
+  being approximately four times higher than hepatitis C. The progression from HCV
+  infection to mortality occurs through chronic liver inflammation, fibrosis, and
+  eventual cirrhosis with life-threatening complications.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Liver cirrhosis mortality in elderly patients was 12 times higher than
+    in younger patients at national level in 2015
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Over 26 years, liver cirrhosis mortality in males increased more than
+    in females

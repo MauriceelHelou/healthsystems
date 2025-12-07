@@ -1,0 +1,49 @@
+id: NEW:vinegar_acetic_acid_intake_to_NEW:acute_glucose_response
+name: Vinegar (Acetic Acid) Intake → Acute Glucose Response
+from_node:
+  node_id: NEW:vinegar_acetic_acid_intake
+  node_name: Vinegar (Acetic Acid) Intake
+to_node:
+  node_id: NEW:acute_glucose_response
+  node_name: Acute Glucose Response
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Vinegar containing acetic acid is consumed orally, typically with or before
+  a carbohydrate-containing meal'
+- 'Step 2: Acetic acid may delay gastric emptying, slowing the rate of carbohydrate
+  absorption in the small intestine'
+- 'Step 3: Acetic acid may inhibit disaccharidase activity in the intestinal brush
+  border, reducing carbohydrate digestion'
+- 'Step 4: These mechanisms result in a blunted postprandial glucose response, reducing
+  the acute glucose peak following meal consumption'
+evidence:
+  quality_rating: A
+  n_studies: 46
+  primary_citation: 'Anna Cherta-Murillo et al. 2022. The effects of SCFAs on glycemic
+    control in humans: a systematic review and meta-analysis. American Journal of
+    Clinical Nutrition.'
+  supporting_citations: []
+description: Vinegar intake acutely decreases the postprandial glucose response in
+  both healthy individuals and those with impaired glucose tolerance or type 2 diabetes.
+  A systematic review and meta-analysis of 46 studies found that vinegar significantly
+  reduced acute glucose response, with stronger effects observed in metabolically
+  unhealthy populations. The mechanism likely involves acetic acid's effects on gastric
+  emptying and carbohydrate digestion/absorption.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.53
+    type: standard_mean_difference
+    ci_lower: -0.92
+    ci_upper: -0.14
+  p_value: null
+  sample_size: 253
+moderators:
+- name: Metabolic health status
+  direction: strengthens
+  strength: moderate
+  description: Effect was stronger in individuals with impaired glucose tolerance
+    or type 2 diabetes (SMD -0.53, n=67) compared to healthy volunteers (SMD -0.27,
+    n=186)

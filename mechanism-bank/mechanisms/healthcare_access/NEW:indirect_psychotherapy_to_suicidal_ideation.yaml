@@ -1,0 +1,51 @@
+id: NEW:indirect_psychotherapy_to_suicidal_ideation
+name: Indirect Psychotherapy (targeting depression/other MH) → Suicidal Ideation
+from_node:
+  node_id: NEW:indirect_psychotherapy
+  node_name: Indirect Psychotherapy (targeting depression/other MH)
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individuals receive psychotherapy targeting primary mental health conditions
+  such as depression, anxiety, or personality disorders rather than suicidal ideation
+  directly'
+- 'Step 2: Treatment of underlying mental health conditions reduces symptom severity,
+  improves emotional regulation, and enhances coping mechanisms'
+- 'Step 3: Improvement in primary mental health conditions leads to downstream reductions
+  in suicidal ideation as a secondary outcome, even without explicit suicide-focused
+  intervention'
+- 'Step 4: This indirect pathway provides an alternative treatment route for individuals
+  who may not seek or accept direct suicide prevention services'
+evidence:
+  quality_rating: A
+  n_studies: 147
+  primary_citation: 'W. van Ballegooijen et al. 2024. Suicidal Ideation and Suicide
+    Attempts After Direct or Indirect Psychotherapy: A Systematic Review and Meta-Analysis.
+    JAMA psychiatry.'
+  supporting_citations: []
+description: Indirect psychotherapy targeting mental health conditions other than
+  suicidal ideation (such as depression or personality disorders) demonstrates a significant
+  negative association with suicidal ideation outcomes. Meta-analytic evidence from
+  147 randomized clinical trials shows that indirect psychotherapy reduces suicidal
+  ideation with a moderate effect size (Hedges g = -0.30), comparable to direct suicide-focused
+  interventions. This suggests that treating underlying mental health conditions can
+  effectively reduce suicidal ideation as a secondary benefit.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.3
+    type: hedges_g
+    ci_lower: -0.42
+    ci_upper: -0.18
+  p_value: null
+  sample_size: 11001
+moderators:
+- name: treatment_approach
+  direction: strengthens
+  strength: moderate
+  description: Direct psychotherapy showed slightly larger effect (g=-0.39) compared
+    to indirect (g=-0.30), but both approaches were effective

@@ -1,0 +1,66 @@
+id: NEW:periodontal_disease_to_stroke_incidence
+name: Periodontal Disease → Stroke Incidence
+from_node:
+  node_id: NEW:periodontal_disease
+  node_name: Periodontal Disease
+to_node:
+  node_id: stroke_incidence
+  node_name: Stroke Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Periodontal disease causes chronic oral bacterial infection and inflammation
+  in gum tissues'
+- 'Step 2: Periodontal pathogens and inflammatory mediators enter the systemic circulation
+  through compromised oral tissues'
+- 'Step 3: Systemic inflammation promotes endothelial dysfunction, atherosclerosis
+  progression, and increased thrombotic risk'
+- 'Step 4: Atherosclerotic changes in cerebral vasculature combined with increased
+  clotting tendency elevate stroke risk'
+- 'Step 5: Individuals with periodontal disease experience 26% increased risk of stroke
+  compared to those without'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'Xiangyu Guo et al. 2023. Periodontal disease and subsequent risk
+    of cardiovascular outcome and all-cause mortality: A meta-analysis of prospective
+    studies. PLoS ONE.'
+  supporting_citations: []
+description: This meta-analysis of 39 prospective cohort studies with over 4.3 million
+  individuals demonstrates that periodontal disease is significantly associated with
+  a 26% increased risk of stroke. The biological mechanism involves chronic oral infection
+  leading to systemic inflammation, which promotes atherosclerosis and thrombotic
+  processes affecting cerebral vasculature. While the precise mechanistic link requires
+  further elucidation, the consistent epidemiological association supports periodontal
+  disease as a modifiable risk factor for stroke.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.26
+    type: relative_risk
+    ci_lower: 1.15
+    ci_upper: 1.37
+  p_value: 0.001
+  sample_size: 4389263
+moderators:
+- name: geographic_region
+  direction: varies
+  strength: moderate
+  description: Association strength affected by region of study
+- name: study_design
+  direction: varies
+  strength: moderate
+  description: Different study designs show varying effect estimates
+- name: periodontal_disease_definition
+  direction: varies
+  strength: moderate
+  description: Different definitions of periodontal disease affect reported associations
+- name: follow_up_duration
+  direction: varies
+  strength: weak
+  description: Longer follow-up periods may show different risk estimates
+- name: study_quality
+  direction: varies
+  strength: moderate
+  description: Higher quality studies may show more precise estimates

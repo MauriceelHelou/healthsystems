@@ -1,0 +1,50 @@
+id: NEW:cognitive_behavioral_therapy_for_comorbid_aud_depression_to_alcohol_use_disorder
+name: Cognitive Behavioral Therapy for Comorbid AUD-Depression → Alcohol Use
+from_node:
+  node_id: NEW:cognitive_behavioral_therapy_for_comorbid_aud_depression
+  node_name: Cognitive Behavioral Therapy for Comorbid AUD-Depression
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: CBT teaches cognitive restructuring techniques to identify and challenge
+  maladaptive thought patterns that trigger both depressive symptoms and alcohol use'
+- 'Step 2: Patients develop behavioral activation skills and alternative coping strategies
+  to replace alcohol use as a mechanism for managing negative affect and depression'
+- 'Step 3: Enhanced self-monitoring and problem-solving skills help patients recognize
+  high-risk situations for drinking and implement relapse prevention strategies'
+- 'Step 4: Addressing the bidirectional relationship between depression and alcohol
+  use simultaneously reduces the reinforcing cycle where each condition exacerbates
+  the other'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'S. Grant et al. 2021. Clinical interventions for adults with
+    comorbid alcohol use and depressive disorders: A systematic review and network
+    meta-analysis. PLoS Medicine.'
+  supporting_citations: []
+description: Cognitive behavioral therapy for adults with comorbid alcohol use disorder
+  and depression produces a small but significant reduction in alcohol use. The network
+  meta-analysis of 36 RCTs found that CBT adjunctive to treatment as usual demonstrated
+  greater benefit than no additional treatment for reducing alcohol use (SMD = -0.25).
+  The effect on alcohol use was smaller than the effect on depressive symptoms, suggesting
+  CBT's impact on drinking may partially operate through improving depression.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.25
+    type: standardized_mean_difference
+    ci_lower: -0.47
+    ci_upper: -0.04
+  p_value: 0.021
+  sample_size: 2729
+moderators:
+- name: Comorbid depression severity
+  direction: strengthens
+  strength: moderate
+  description: CBT showed stronger effects on depressive symptoms (SMD = -0.84) than
+    on alcohol use (SMD = -0.25), suggesting that addressing depression may be a primary
+    mechanism

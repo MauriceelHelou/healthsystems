@@ -1,0 +1,56 @@
+id: NEW:time_spent_at_home_covid19_to_binge_drinking
+name: Time Spent at Home During COVID-19 Pandemic → Binge Drinking
+from_node:
+  node_id: NEW:time_spent_at_home_covid19
+  node_name: Time Spent at Home During COVID-19 Pandemic
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: COVID-19 shelter-in-place orders and pandemic restrictions increase time
+  spent at home'
+- 'Step 2: Extended home confinement introduces and exacerbates stressors including
+  job loss, social isolation, and poor mental health'
+- 'Step 3: Increased stress exposure combined with reduced access to normal coping
+  mechanisms and social support leads to maladaptive coping behaviors'
+- 'Step 4: Greater accessibility to alcohol at home and reduced social monitoring
+  increases opportunity for excessive drinking'
+- 'Step 5: These combined factors result in increased odds of binge drinking behavior,
+  with each additional week at home further elevating risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Weerakoon et al. 2020. "Longer time spent at home during COVID-19
+    pandemic is associated with binge drinking among US adults." The American Journal
+    of Drug and Alcohol Abuse.
+  supporting_citations: []
+description: For every 1-week increase in time spent at home during the COVID-19 pandemic,
+  there was 1.19 times greater odds of binge drinking after adjusting for sociodemographics.
+  The study found that 34% of participants reported binge drinking during the pandemic,
+  and binge drinkers were more likely to have increased their alcohol consumption
+  (60%) compared to non-binge drinkers (28%). This association reflects the unintended
+  health consequences of pandemic-related social restrictions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.19
+    type: odds_ratio
+    ci_lower: 1.06
+    ci_upper: 1.34
+  p_value: null
+  sample_size: 1982
+moderators:
+- name: depression
+  direction: strengthens
+  strength: moderate
+  description: 'Binge drinkers with previous diagnosis of depression and current depression
+    symptoms had 1.77 times greater odds of increased alcohol consumption compared
+    to those with no depression (95% CI: 1.16-2.73)'
+- name: sex
+  direction: strengthens
+  strength: weak
+  description: Sample was 69% female and 31% male, though specific sex-based moderation
+    not explicitly reported

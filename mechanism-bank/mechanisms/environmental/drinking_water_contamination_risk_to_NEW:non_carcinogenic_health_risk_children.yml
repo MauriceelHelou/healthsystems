@@ -1,0 +1,61 @@
+id: drinking_water_contamination_risk_to_NEW:non_carcinogenic_health_risk_children
+name: Drinking Water Contamination Risk → Non-Carcinogenic Health Risk in Children
+from_node:
+  node_id: drinking_water_contamination_risk
+  node_name: Drinking Water Contamination Risk
+to_node:
+  node_id: NEW:non_carcinogenic_health_risk_children
+  node_name: Non-Carcinogenic Health Risk in Children
+direction: positive
+category: environmental
+mechanism_pathway:
+- 'Step 1: Heavy metals including Cd, As, Cr, Pb, and Li exceed permissible WHO limits in drinking water'
+- 'Step 2: Children consume contaminated water with higher dose-to-body-weight ratio than adults'
+- 'Step 3: Cadmium bioaccumulates and damages renal tubular function, bone density, and developmental
+  processes'
+- 'Step 4: Chronic low-level exposure produces non-carcinogenic toxic effects including nephrotoxicity,
+  neurotoxicity, and developmental delays'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Nilufar Marufi et al. 2022. "Carcinogenic and non-carcinogenic human health risk
+    assessments of heavy metals contamination in drinking water supplies in Iran: a systematic review."
+    https://doi.org/10.1515/reveh-2022-0060'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 40 articles
+  - WHO drinking water quality standards referenced
+  - Iranian Standard 1053 for drinking water quality referenced
+  doi: 10.1515/reveh-2022-0060
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Children face differential non-carcinogenic health risks from heavy metal contaminated drinking
+  water, with cadmium posing the highest hazard quotient. The ranking of metal toxicity differs between
+  children (Cd>As>Cr>Pb>Li) and adults (As>Cr>Pb>Fe=Zn=Cu>Cd), indicating age-specific vulnerability patterns.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Hazard Quotient (HQ) and Hazard Index (HI) values varied significantly by location;
+    most cities and villages showed HQ<1 indicating acceptable non-carcinogenic risk, but some locations
+    exceeded safe thresholds
+moderators:
+- name: heavy_metal_type
+  direction: strengthens
+  strength: strong
+  description: 'For children, cadmium poses highest non-carcinogenic risk (HQ ranking: Cd>As>Cr>Pb>Li),
+    while for adults arsenic poses the greatest risk (As>Cr>Pb>Fe=Zn=Cu>Cd)'
+- name: rural_vs_urban
+  direction: strengthens
+  strength: moderate
+  description: Study examined both cities and villages, suggesting variation in water treatment infrastructure
+    affects exposure levels
+structural_competency:
+  equity_implications: Children's heightened vulnerability to heavy metal exposure through drinking water
+    represents an environmental justice issue. Developing country status correlates with less stringent
+    water infrastructure investment, creating disproportionate exposure for vulnerable populations. This
+    is a failure of structural protections (water treatment, regulation, monitoring) rather than individual
+    choice.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.396766'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

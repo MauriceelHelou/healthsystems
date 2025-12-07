@@ -1,0 +1,283 @@
+{
+  "name": "alcohol_node_pair_discovery",
+  "version": "2.1",
+  "description": "Node-pair driven mechanism discovery for alcohol-related pathways with keyword expansion",
+  "node_source": "nodes/by_scale/",
+  "budget": {
+    "max_usd": 25.0,
+    "max_pairs": 50
+  },
+  "node_keywords": {
+    "alcohol_taxation": ["alcohol tax", "excise tax", "minimum unit pricing", "alcohol price policy", "alcohol duty", "beverage tax"],
+    "binge_drinking": ["heavy episodic drinking", "excessive drinking", "alcohol intoxication", "heavy drinking episode", "hazardous drinking"],
+    "alcohol_use_disorder": ["AUD", "alcohol dependence", "alcoholism", "alcohol addiction", "problem drinking", "alcohol abuse"],
+    "liver_cirrhosis_hospitalization_rate": ["cirrhosis hospitalization", "alcoholic liver disease admission", "liver disease hospitalization", "hepatic cirrhosis"],
+    "alcohol_outlet_density": ["alcohol availability", "liquor store density", "bar density", "off-premise outlet", "on-premise outlet", "alcohol retail density"],
+    "alcohol_advertising_density": ["alcohol marketing", "alcohol promotion", "beverage advertising", "alcohol media exposure"],
+    "early_onset_drinking": ["underage drinking", "adolescent alcohol use", "youth drinking initiation", "early alcohol initiation"],
+    "alcohol_advertising_restriction_policy": ["alcohol marketing ban", "advertising restriction", "alcohol promotion regulation"],
+    "alcohol_treatment_facility_density": ["AUD treatment access", "addiction treatment center", "substance abuse treatment facility", "alcohol rehab access"],
+    "aud_treatment_engagement_rate": ["treatment initiation", "treatment entry", "AUD treatment uptake", "alcohol treatment engagement"],
+    "alcohol_abstinence_rate": ["sobriety rate", "recovery rate", "alcohol cessation", "sustained abstinence"],
+    "detox_bed_availability": ["detoxification capacity", "medical detox access", "withdrawal management beds"],
+    "alcohol_withdrawal_hospitalization_rate": ["alcohol withdrawal syndrome", "AWS hospitalization", "delirium tremens admission"],
+    "recovery_housing_capacity": ["sober living", "transitional housing", "Oxford house", "recovery residence"],
+    "sbirt_program_capacity": ["screening brief intervention", "alcohol screening", "brief alcohol intervention", "SBIRT implementation"],
+    "dui_law_stringency": ["drunk driving law", "DWI policy", "blood alcohol limit", "impaired driving legislation", "BAC limit"],
+    "drinking_and_driving_behavior": ["drunk driving", "impaired driving", "DUI", "DWI", "alcohol-impaired driving"],
+    "alcohol_sales_hours_restriction": ["trading hours", "closing time policy", "alcohol sales restriction", "hours of sale"],
+    "alcohol_warning_label_policy": ["health warning label", "alcohol labeling", "beverage warning"],
+    "alcohol_risk_awareness": ["alcohol harm perception", "drinking risk knowledge", "alcohol health literacy"],
+    "medicaid_sud_treatment_coverage": ["Medicaid SUD benefit", "public insurance addiction coverage", "Medicaid AUD treatment"],
+    "aud_pharmacotherapy_prescriber_density": ["naltrexone prescriber", "acamprosate prescriber", "disulfiram provider", "AUD medication provider"],
+    "aud_mat_receipt_rate": ["medication-assisted treatment", "MAT for alcohol", "pharmacotherapy utilization", "AUD medication use"],
+    "heavy_alcohol_use": ["heavy drinking", "chronic alcohol consumption", "high-risk drinking", "excessive alcohol use"],
+    "liver_function_alt_elevated": ["elevated ALT", "liver enzymes", "hepatic function test", "transaminase elevation"],
+    "parental_aud_exposure_childhood": ["parental alcoholism", "family alcohol exposure", "children of alcoholics", "COA"],
+    "family_history_aud": ["family history alcoholism", "genetic risk AUD", "familial alcohol disorder"],
+    "alcohol_affordability_burden": ["alcohol price", "relative alcohol cost", "affordability index"],
+    "prenatal_alcohol_exposure_prevalence": ["drinking during pregnancy", "maternal alcohol use", "prenatal drinking"],
+    "fetal_alcohol_spectrum_disorder_rate": ["FASD", "fetal alcohol syndrome", "FAS prevalence"],
+    "wernicke_korsakoff_syndrome_rate": ["WKS", "thiamine deficiency encephalopathy", "alcohol-related dementia", "Korsakoff psychosis"],
+    "aa_na_meeting_density": ["Alcoholics Anonymous", "12-step meeting", "mutual aid group", "AA meeting access"],
+    "alcohol_outlet_density_regulation": ["zoning restriction", "outlet cap policy", "alcohol licensing regulation"],
+    "alcohol_poisoning_ed_visit_rate": ["alcohol overdose", "acute intoxication ED", "ethanol poisoning"]
+  },
+  "node_pairs": [
+    {
+      "from_node_id": "alcohol_taxation",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_taxation",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_taxation",
+      "to_node_id": "liver_cirrhosis_hospitalization_rate",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_outlet_density",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "built_environment"
+    },
+    {
+      "from_node_id": "alcohol_outlet_density",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "built_environment"
+    },
+    {
+      "from_node_id": "alcohol_advertising_density",
+      "to_node_id": "early_onset_drinking",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "built_environment"
+    },
+    {
+      "from_node_id": "alcohol_advertising_restriction_policy",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_treatment_facility_density",
+      "to_node_id": "aud_treatment_engagement_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "alcohol_treatment_facility_density",
+      "to_node_id": "alcohol_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "detox_bed_availability",
+      "to_node_id": "alcohol_withdrawal_hospitalization_rate",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "recovery_housing_capacity",
+      "to_node_id": "alcohol_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "sbirt_program_capacity",
+      "to_node_id": "aud_treatment_engagement_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "dui_law_stringency",
+      "to_node_id": "drinking_and_driving_behavior",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_sales_hours_restriction",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_warning_label_policy",
+      "to_node_id": "alcohol_risk_awareness",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "political"
+    },
+    {
+      "from_node_id": "medicaid_sud_treatment_coverage",
+      "to_node_id": "aud_treatment_engagement_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "aud_pharmacotherapy_prescriber_density",
+      "to_node_id": "aud_mat_receipt_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "alcohol_use_disorder",
+      "to_node_id": "liver_cirrhosis_hospitalization_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "binge_drinking",
+      "to_node_id": "alcohol_poisoning_ed_visit_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "heavy_alcohol_use",
+      "to_node_id": "liver_function_alt_elevated",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "early_onset_drinking",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "parental_aud_exposure_childhood",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "social_environment"
+    },
+    {
+      "from_node_id": "family_history_aud",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "alcohol_affordability_burden",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "economic"
+    },
+    {
+      "from_node_id": "prenatal_alcohol_exposure_prevalence",
+      "to_node_id": "fetal_alcohol_spectrum_disorder_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "alcohol_use_disorder",
+      "to_node_id": "wernicke_korsakoff_syndrome_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "aud_treatment_engagement_rate",
+      "to_node_id": "alcohol_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "aud_mat_receipt_rate",
+      "to_node_id": "alcohol_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "aa_na_meeting_density",
+      "to_node_id": "alcohol_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "social_environment"
+    },
+    {
+      "from_node_id": "alcohol_outlet_density_regulation",
+      "to_node_id": "alcohol_outlet_density",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "political"
+    }
+  ],
+  "search_config": {
+    "papers_per_pair": 30,
+    "min_papers_required": 3,
+    "year_range": [2010, 2025],
+    "prioritize_meta_analyses": true,
+    "use_node_keywords": true,
+    "search_templates": [
+      "{from_keywords} AND {to_keywords} AND (systematic review OR meta-analysis)",
+      "{from_keywords} AND {to_keywords} AND (cohort OR longitudinal OR RCT)",
+      "{from_node_name} {to_node_name} causal effect"
+    ]
+  },
+  "llm_config": {
+    "model": "claude-sonnet-4-20250514",
+    "consolidate_papers": true,
+    "min_citations_per_mechanism": 3,
+    "force_mechanism_if_no_evidence": false,
+    "return_null_if_insufficient_evidence": true,
+    "only_use_existing_nodes": true
+  },
+  "output_config": {
+    "mechanism_bank_path": "mechanism-bank/mechanisms/",
+    "report_path": "backend/reports/",
+    "validation_required": true
+  }
+}

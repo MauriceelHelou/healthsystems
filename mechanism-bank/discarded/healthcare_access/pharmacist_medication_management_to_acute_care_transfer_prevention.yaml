@@ -1,0 +1,49 @@
+id: pharmacist_medication_management_to_acute_care_transfer_prevention
+name: Pharmacist-Led Withdrawal Medication Management → Prevention of Acute Care Facility
+  Transfers
+from_node:
+  node_id: pharmacist_medication_management
+  node_name: Pharmacist-Led Withdrawal Medication Management
+to_node:
+  node_id: acute_care_transfer_prevention
+  node_name: Prevention of Acute Care Facility Transfers
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Pharmacist initiates, modifies, or discontinues withdrawal medications
+  in 148 of 282 assessed high-risk patients, optimizing pharmacotherapy timing and
+  dosing'
+- 'Step 2: Systematic CIWA-Ar monitoring by trained pharmacist enables early detection
+  of inadequate medication response before progression to medical emergency'
+- 'Step 3: Proactive medication adjustments prevent escalation of withdrawal symptoms
+  that would otherwise require higher-level acute care intervention'
+- 'Step 4: Only 48 of 1,263 patients (3.8%) required transfer to acute care facilities,
+  suggesting majority of withdrawal managed successfully within correctional healthcare
+  setting'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ibrahim K Muradian et al. 2021. "Clinical Pharmacist's Role in
+    an Alcohol Detox Unit in a Correctional Setting.." *Journal of pharmacy practice*.
+    https://doi.org/10.1177/0897190019888076
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.768924'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: early_risk_identification
+  direction: strengthens
+  strength: strong
+  description: Identification of high-risk patients early in admission process (282
+    of 1,263) enables preemptive intervention before crisis development
+- name: medication_authority_scope
+  direction: strengthens
+  strength: moderate
+  description: Pharmacist authority to initiate, modify, and discontinue medications
+    (after physician discussion) enables responsive clinical management without administrative
+    delays
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/pharmacist_medication_management_to_acute_care_transfer_prevention.yaml
+_category: healthcare_access

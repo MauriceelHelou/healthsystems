@@ -1,0 +1,61 @@
+id: binge_drinking_to_alcohol_use_disorder
+name: Binge Drinking → Alcohol Use Disorder
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Higher levels of alcohol consumption lead to neuroadaptive changes in the brain''s reward and
+  stress systems'
+- 'Step 2: Repeated exposure causes tolerance development requiring increased consumption for same effect'
+- 'Step 3: Neurobiological changes in dopamine and GABA systems create physical and psychological dependence'
+- 'Step 4: Progressive loss of control over drinking behavior leads to clinical alcohol use disorder diagnosis'
+evidence:
+  quality_rating: B
+  n_studies: 7
+  primary_citation: 'Tessa Carr et al. 2024. "The risk relationships between alcohol consumption, alcohol
+    use disorder and alcohol use disorder mortality: A systematic review and meta-analysis.." https://doi.org/10.1111/add.16456'
+  supporting_citations:
+  - Studies from high-income countries meeting inclusion criteria (2000-2022)
+  - Studies from Brazil meeting inclusion criteria for qualitative synthesis
+  - Two primary US data sources analyzed
+  - Additional citations require full-text access
+  doi: 10.1111/add.16456
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher levels of alcohol consumption exponentially increase the risk of developing alcohol
+  use disorder. At an average consumption of four standard drinks (40g pure alcohol) per day, the risk
+  of developing AUD was increased sevenfold compared with current non-drinkers. Even moderate consumption
+  of 20g/day (about one large beer) nearly triples the risk.
+quantitative_effects:
+  effect_size:
+    value: 7.14
+    type: relative_risk
+    ci_lower: 5.13
+    ci_upper: 9.93
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies limited to high-income countries and Brazil; geographic variation in alcohol
+    consumption patterns and AUD diagnostic practices may affect generalizability
+moderators:
+- name: consumption_level
+  direction: strengthens
+  strength: strong
+  description: Risk relationship is exponential - at 4 standard drinks/day (40g alcohol) risk is 7-fold
+    compared to non-drinkers; at 20g/day risk is nearly 3-fold
+structural_competency:
+  equity_implications: While framed as individual consumption, alcohol availability is shaped by structural
+    factors including alcohol outlet density, pricing policies, marketing regulations, and socioeconomic
+    conditions. Communities with higher outlet density and fewer alcohol control policies have higher
+    consumption rates. Equity implications include differential exposure to alcohol marketing and availability
+    in lower-income and minority communities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.279154'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

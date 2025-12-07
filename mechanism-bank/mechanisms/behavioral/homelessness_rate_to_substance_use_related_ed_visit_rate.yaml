@@ -1,0 +1,55 @@
+id: homelessness_rate_to_substance_use_related_ed_visit_rate
+name: Homelessness Rate → Substance Use Related ED Visit Rate
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: substance_use_related_ed_visit_rate
+  node_name: Substance Use Related ED Visit Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Persons experiencing homelessness (PEH) lack stable housing and face chronic
+  stressors including exposure to violence, trauma, and lack of safe spaces, which
+  increases vulnerability to substance use as a coping mechanism'
+- 'Step 2: PEH have limited access to primary care and preventive health services,
+  making the ED their primary or only source of healthcare'
+- 'Step 3: Substance use among PEH leads to acute medical emergencies including alcohol-related
+  diagnoses (up to one-third of ED visits) and substance poisoning (up to one-quarter
+  of ED visits)'
+- 'Step 4: PEH visit EDs at significantly higher rates than housed populations (rate
+  ratio 1.63 to 18.75), with substance-related presentations dominating these visits'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'N. Vohra et al. 2022. Homelessness and the use of Emergency Department
+    as a source of healthcare: a systematic review. International Journal of Emergency
+    Medicine.'
+  supporting_citations: []
+description: Homelessness significantly increases substance use-related ED visits
+  through multiple pathways. Persons experiencing homelessness use EDs as their primary
+  healthcare source due to lack of access to preventive care. Substance-related presentations,
+  including alcohol-related diagnoses (up to one-third) and substance poisoning (up
+  to one-quarter), dominate ED visits by this population. PEH visit EDs at rates 1.63
+  to 18.75 times higher than housed populations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 18.75
+    type: rate_ratio
+    ci_lower: 1.63
+    ci_upper: 18.75
+  p_value: null
+  sample_size: null
+moderators:
+- name: country_setting
+  direction: strengthens
+  strength: moderate
+  description: Study setting and country-specific healthcare access patterns significantly
+    influence ED utilization rates
+- name: data_collection_methods
+  direction: strengthens
+  strength: weak
+  description: Different disease classification and data collection methods across
+    studies contribute to variation in reported outcomes

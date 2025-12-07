@@ -1,0 +1,48 @@
+id: alcohol_consumption_volume_to_alcohol_related_liver_disease_risk
+name: Alcohol Consumption Volume → Alcohol-Related Liver Disease Risk
+from_node:
+  node_id: alcohol_consumption_volume
+  node_name: Alcohol Consumption Volume
+to_node:
+  node_id: alcohol_related_liver_disease_risk
+  node_name: Alcohol-Related Liver Disease Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Increasing alcohol consumption creates dose-dependent hepatotoxic exposure
+  through acetaldehyde accumulation and oxidative stress'
+- 'Step 2: Chronic alcohol exposure triggers hepatic steatosis (fatty liver) as the
+  initial pathological response to sustained metabolic stress'
+- 'Step 3: Continued alcohol consumption promotes inflammatory cascades leading to
+  hepatic fibrosis and progressive scarring of liver tissue'
+- 'Step 4: Exponential relationship between consumption and risk means that higher
+  consumption levels dramatically accelerate progression to cirrhosis and hepatocellular
+  carcinoma'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: R. Buchanan and J. Sinclair 2020. "Alcohol use disorder and the
+    liver.." *Addiction*. https://doi.org/10.1111/add.15204
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.346819'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: genetic_factors
+  direction: strengthens
+  strength: moderate
+  description: Genetic variants in alcohol metabolism enzymes and immune response
+    genes modify individual susceptibility to hepatotoxicity at given consumption
+    levels
+- name: social_deprivation
+  direction: strengthens
+  strength: moderate
+  description: Social deprivation increases vulnerability to liver damage through
+    nutritional deficiencies, comorbid conditions, and delayed medical care
+- name: lifestyle_factors
+  direction: strengthens
+  strength: moderate
+  description: Other lifestyle factors such as diet quality, physical activity, and
+    smoking status influence liver disease progression independent of alcohol volume

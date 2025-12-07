@@ -1,0 +1,57 @@
+id: NEW:prior_radiation_treatment_to_NEW:positive_surgical_margins
+name: Prior Radiation Treatment to Head and Neck → Positive Surgical Margins Rate
+from_node:
+  node_id: NEW:prior_radiation_treatment
+  node_name: Prior Radiation Treatment to Head and Neck
+to_node:
+  node_id: NEW:positive_surgical_margins
+  node_name: Positive Surgical Margins Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Prior radiation therapy to the head and neck region causes fibrosis and
+  scarring of irradiated tissues, altering normal tissue planes and architecture'
+- 'Step 2: Radiation-induced changes obscure the visual and tactile distinction between
+  tumor tissue and surrounding normal tissue, making intraoperative margin assessment
+  more difficult'
+- 'Step 3: Tissue fibrosis and altered vascularity from prior radiation impair the
+  surgeon''s ability to achieve adequate tumor clearance during salvage surgery'
+- 'Step 4: The compromised tissue quality in previously irradiated fields leads to
+  higher rates of positive surgical margins (19.4% in salvage cohorts vs. comparable
+  rates in primary surgery with risk ratio of 1.08)'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Sahil Goel et al. 2025. Is transoral robotic surgery useful as
+    a salvage technique in head and neck cancers: a systematic review and meta analysis.
+    Head & neck.'
+  supporting_citations: []
+description: Prior radiation treatment to the head and neck creates tissue fibrosis,
+  scarring, and altered tissue planes that compromise a surgeon's ability to distinguish
+  tumor from normal tissue during salvage surgery. This meta-analysis of 15 studies
+  with 515 patients found positive surgical margins occurred in 19.4% of salvage cases
+  in previously irradiated fields, with a risk ratio of 1.08 compared to primary (non-irradiated)
+  head and neck cancer surgery, suggesting a modest increase in positive margin rates
+  attributable to prior radiation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.08
+    type: relative_risk
+    ci_lower: 0.66
+    ci_upper: 1.75
+  p_value: null
+  sample_size: 515
+moderators:
+- name: HPV status
+  direction: strengthens
+  strength: moderate
+  description: Authors note HPV status as a confounding factor that needs to be addressed
+    in future studies, suggesting it may modify the relationship between prior radiation
+    and surgical outcomes
+- name: Prior adjuvant therapy
+  direction: strengthens
+  strength: moderate
+  description: Additional prior adjuvant therapies beyond radiation may compound tissue
+    changes affecting margin outcomes

@@ -1,0 +1,54 @@
+id: NEW:alcohol_sales_ban_enforcement_failure_to_NEW:open_bar_party_attendance
+name: Failure to Enforce Alcohol Sales Ban to Minors → Open Bar Party Attendance
+from_node:
+  node_id: NEW:alcohol_sales_ban_enforcement_failure
+  node_name: Failure to Enforce Alcohol Sales Ban to Minors
+to_node:
+  node_id: NEW:open_bar_party_attendance
+  node_name: Open Bar Party Attendance
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Laws prohibiting alcohol sales to minors exist but are not properly enforced'
+- 'Step 2: Commercial establishments operate open bar events without age verification'
+- 'Step 3: Minors can easily access venues selling unlimited alcohol'
+- 'Step 4: Lack of consequences for vendors perpetuates availability to youth'
+- 'Step 5: Adolescents attend these events at high rates (17.1% in past year)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Mariana G R Santos et al. 2023. "Factors associated with attending "open bar" parties
+    amongst early adolescents.." https://doi.org/10.1016/j.drugpo.2022.103947
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1016/j.drugpo.2022.103947
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Failure to enforce existing laws prohibiting alcohol sales to minors enables widespread adolescent
+  attendance at open bar parties where intoxication is common
+quantitative_effects:
+  effect_size:
+    value: 17.1
+    type: percentage_change
+  sample_size: 5213
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study explicitly notes that the ban on selling alcohol to minors has not been properly
+    enforced in Brazil
+moderators:
+- name: household_wealth
+  direction: strengthens
+  strength: moderate
+  description: Wealthier adolescents had higher attendance rates, suggesting economic access facilitates
+    participation
+structural_competency:
+  equity_implications: This is a clear structural mechanism - the root cause is regulatory failure, not
+    individual youth behavior. The paper explicitly calls for legislation to restrict alcohol promotions
+    and advertising to be implemented and effectively monitored. Equity implications include differential
+    enforcement patterns that may vary by neighborhood socioeconomic status.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.580577'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

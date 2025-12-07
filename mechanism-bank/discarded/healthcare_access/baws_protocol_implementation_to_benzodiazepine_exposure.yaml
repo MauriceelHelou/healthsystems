@@ -1,0 +1,47 @@
+id: baws_protocol_implementation_to_benzodiazepine_exposure
+name: Brief Alcohol Withdrawal Scale (BAWS) Protocol Implementation → Benzodiazepine
+  Exposure
+from_node:
+  node_id: baws_protocol_implementation
+  node_name: Brief Alcohol Withdrawal Scale (BAWS) Protocol Implementation
+to_node:
+  node_id: benzodiazepine_exposure
+  node_name: Benzodiazepine Exposure
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Implementation of standardized 5-item BAWS protocol provides structured
+  symptom-triggered assessment framework'
+- 'Step 2: Abbreviated assessment scale enables efficient clinical monitoring while
+  maintaining accuracy'
+- 'Step 3: Symptom-triggered approach ensures benzodiazepines administered only when
+  withdrawal symptoms meet threshold criteria'
+- 'Step 4: Most patients receive minimal or no benzodiazepines (median 0 lorazepam
+  equivalents) due to protocol-driven conservative prescribing'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Brian K Lindner et al. 2019. "Evaluation of the Brief Alcohol
+    Withdrawal Scale Protocol at an Academic Medical Center.." *Journal of addiction
+    medicine*. https://doi.org/10.1097/ADM.0000000000000510
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.724710'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: icu_admission_status
+  direction: weakens
+  strength: moderate
+  description: ICU patients experienced more severe withdrawal but received the same
+    cumulative benzodiazepine dose as non-ICU patients, suggesting protocol may not
+    fully account for acuity differences
+- name: baseline_withdrawal_severity
+  direction: strengthens
+  strength: strong
+  description: Patients who received benzodiazepines received median 4 lorazepam equivalents,
+    indicating protocol appropriately identifies those requiring treatment
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/baws_protocol_implementation_to_benzodiazepine_exposure.yaml
+_category: healthcare_access

@@ -1,0 +1,49 @@
+id: NEW:place_of_residence_rural_urban_to_NEW:pediatric_trauma_care_access
+name: Place of Residence (Rural vs Urban) → Pediatric Trauma Care Access
+from_node:
+  node_id: NEW:place_of_residence_rural_urban
+  node_name: Place of Residence (Rural vs Urban)
+to_node:
+  node_id: NEW:pediatric_trauma_care_access
+  node_name: Pediatric Trauma Care Access
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Rural place of residence is associated with greater geographic distance to pediatric trauma
+  centers'
+- 'Step 2: Increased distance leads to longer emergency medical transport times'
+- 'Step 3: Delayed access to specialized pediatric trauma care after injury occurs'
+- 'Step 4: Potential for worse health outcomes due to delayed definitive treatment'
+evidence:
+  quality_rating: C
+  n_studies: 0
+  primary_citation: 'Janyce Eunice Gnanvi et al. 2024. "Social determinants of health and disparities
+    in pediatric trauma care: protocol for a systematic review and meta-analysis." https://doi.org/10.1186/s13643-024-02510-7'
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review protocol
+  - PROGRESS-Plus framework referenced for SDH categorization
+  - Cochrane methodology cited for systematic review approach
+  doi: 10.1186/s13643-024-02510-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Place of residence affects children's access to trauma care after injury, with rural residents
+  potentially facing greater barriers to accessing specialized pediatric trauma services.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Rural vs urban residence is explicitly identified as a PROGRESS-Plus factor; geographic
+    variation in trauma care access is a core focus of the review
+moderators:
+- name: trauma_system_regionalization
+  direction: weakens
+  strength: moderate
+  description: Well-organized regional trauma systems may mitigate rural-urban disparities
+structural_competency:
+  equity_implications: This mechanism focuses on structural geographic factors rather than individual
+    choices. Health system organization and resource distribution create disparities in trauma care access
+    that disproportionately affect rural populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.927596'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

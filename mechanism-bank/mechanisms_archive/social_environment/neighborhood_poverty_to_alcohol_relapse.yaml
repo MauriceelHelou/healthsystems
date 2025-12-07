@@ -1,0 +1,42 @@
+id: neighborhood_poverty_to_alcohol_relapse
+name: Neighborhood Poverty → Alcohol Relapse/Rising Dependence
+from_node:
+  node_id: neighborhood_poverty
+  node_name: Neighborhood Poverty
+to_node:
+  node_id: alcohol_relapse
+  node_name: Alcohol Relapse/Rising Dependence
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Neighborhood poverty concentrates social and economic stressors that limit
+  recovery resources'
+- 'Step 2: Poverty-affected neighborhoods have fewer treatment facilities, recovery
+  support services, and prosocial activities'
+- 'Step 3: Economic strain and limited opportunities increase psychological distress
+  and undermine motivation for sustained sobriety'
+- 'Step 4: These combined structural disadvantages increase likelihood of relapse
+  trajectory versus stable recovery'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. Karriker-Jaffe et al. 2020. "Testing a Socioecological Model
+    of Relapse and Recovery from Alcohol Problems." *Substance abuse : research and
+    treatment*. https://doi.org/10.1177/1178221820933631'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.866388'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcoholics_anonymous_involvement
+  direction: weakens
+  strength: moderate
+  description: Greater AA involvement can buffer against poverty-related relapse risk
+    by providing social support and structured recovery activities
+- name: social_network_heavy_drinker_affiliation
+  direction: strengthens
+  strength: strong
+  description: Continued affiliation with heavy drinkers in poverty neighborhoods
+    compounds relapse risk through social modeling and access to alcohol

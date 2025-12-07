@@ -1,0 +1,49 @@
+id: transplant_center_elt_policies_to_mortality_severe_ald
+name: Transplant Center Early Liver Transplant Policies → Mortality from Severe Alcohol-Associated
+  Liver Disease
+from_node:
+  node_id: transplant_center_elt_policies
+  node_name: Transplant Center Early Liver Transplant Policies
+to_node:
+  node_id: mortality_severe_ald
+  node_name: Mortality from Severe Alcohol-Associated Liver Disease
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Centers establish policies regarding early liver transplant for patients
+  with severe alcohol-associated liver disease and <6 months predicted survival'
+- 'Step 2: 96.4% of centers consider ELT when patients have <6 months survival without
+  transplant, providing access to life-saving intervention'
+- 'Step 3: All responding centers now evaluate patients for ELT regardless of traditional
+  6-month abstinence requirements'
+- 'Step 4: Expanded transplant access for critically ill patients directly prevents
+  death from severe ALD'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Mitchell et al. 2023. "Transplant Center Attitudes Toward Early
+    Liver Transplant for Alcohol-associated Liver Disease." *Transplantation Direct*.
+    https://doi.org/10.1097/TXD.0000000000001532
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.598958'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: patient_survival_prioritization
+  direction: strengthens
+  strength: strong
+  description: 57.1% of directors indicated patient survival as important factor for
+    ELT candidate listing, prioritizing life-saving intervention
+- name: graft_survival_concerns
+  direction: weakens
+  strength: moderate
+  description: 37.5% indicated graft survival as important factor, with concerns about
+    organ allocation potentially limiting ELT access for some patients
+- name: low_relapse_risk_emphasis
+  direction: weakens
+  strength: moderate
+  description: 55.4% indicated low risk of relapse as important factor, potentially
+    creating barriers for patients perceived as higher relapse risk despite lack of
+    evidence that 6-month abstinence predicts relapse

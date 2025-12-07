@@ -1,0 +1,33 @@
+id: alcohol_sales_hours_restriction
+name: Alcohol Sales Hours Restriction
+scale: 1
+domain: Policy, Public Health
+category: political
+stock:
+  value: 4.5
+  unit: Index 0-10 (restrictiveness of operating hour limits)
+  year: 2023
+  source: NIAAA APIS, DISCUS State Law Summary
+geographic_variation:
+  score: 4
+  level: state
+  notes: High variation; some states allow 24-hour sales, others restrict Sunday sales or late-night hours
+data_quality:
+  availability: high
+  frequency: annual
+  bias_notes: On-premise vs off-premise rules differ; local ordinances may further restrict
+  primary_sources:
+  - name: NIAAA Alcohol Policy Information System (APIS)
+    granularity: state
+  - name: Distilled Spirits Council State Law Summary
+    granularity: state
+  - name: National Conference of State Legislatures (NCSL)
+    granularity: state
+description: |-
+  Measures the restrictiveness of state laws governing hours and days of alcohol sales for both
+  on-premise (bars, restaurants) and off-premise (liquor stores, grocery) establishments. Includes
+  Sunday sales prohibitions (blue laws), late-night/early-morning cutoff times, and holiday
+  restrictions. Higher scores indicate more restricted hours. Research shows later closing times
+  are associated with increased alcohol consumption, violence, and drunk driving incidents.
+  Many states have moved toward liberalization in recent decades.
+type: Policy

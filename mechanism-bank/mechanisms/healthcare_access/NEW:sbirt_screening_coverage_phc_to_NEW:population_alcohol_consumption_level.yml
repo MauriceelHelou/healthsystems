@@ -1,0 +1,79 @@
+id: NEW:sbirt_screening_coverage_phc_to_NEW:population_alcohol_consumption_level
+name: SBIRT Screening Coverage in Primary Health Care → Population-Level Alcohol Consumption
+from_node:
+  node_id: NEW:sbirt_screening_coverage_phc
+  node_name: SBIRT Screening Coverage in Primary Health Care
+to_node:
+  node_id: NEW:population_alcohol_consumption_level
+  node_name: Population-Level Alcohol Consumption
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary health care settings implement systematic alcohol use screening programs (SBIRT)'
+- 'Step 2: Higher screening coverage identifies greater proportion of risky drinkers in the population'
+- 'Step 3: Identified risky drinkers receive brief intervention (BI) or referral to treatment (RT)'
+- 'Step 4: Brief interventions provide motivational counseling and feedback on drinking patterns'
+- 'Step 5: Population-level alcohol consumption decreases as more individuals reduce drinking following
+  intervention'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Manthey et al. 2021. "Can alcohol consumption in Germany be reduced by alcohol
+    screening, brief intervention and referral to treatment in primary health care? Results of a simulation
+    study." https://doi.org/10.1101/2021.05.18.21257405
+  supporting_citations:
+  - Meta-analyses on brief intervention effect sizes (referenced in methods for model parameters)
+  - German survey data on alcohol consumption patterns (2009 baseline)
+  - Additional citations require full-text access for specific meta-analysis sources
+  doi: 10.1101/2021.05.18.21257405
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: Unexpected error: list index out of range'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Simulation modeling demonstrates that increasing SBIRT (Screening, Brief Intervention, and
+  Referral to Treatment) coverage in German primary health care from the current 2.9% to 50% of patients
+  would result in 21% of adult residents receiving intervention over 10 years, leading to 12% lower population-level
+  alcohol consumption. The model uses effect sizes from meta-analyses to estimate intervention impact
+  on individual drinking behavior.
+quantitative_effects:
+  effect_size:
+    value: 12.0
+    type: percentage_change
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study is specific to Germany; authors note the open-access simulation model can be
+    applied to other settings, suggesting geographic variation in effects based on local context and healthcare
+    systems
+moderators:
+- name: screening_coverage_rate
+  direction: strengthens
+  strength: strong
+  description: Screening coverage rates below 10% were not found to have measurable effect on drinking
+    levels. At 50% coverage, 21% of adults would receive intervention, yielding 12% population-level reduction
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Simulation modeled population by sex, suggesting differential effects by gender
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Simulation modeled population by age group
+- name: educational_status
+  direction: strengthens
+  strength: moderate
+  description: Simulation modeled population by educational status, capturing socioeconomic variation
+structural_competency:
+  equity_implications: This mechanism highlights healthcare system infrastructure as a structural determinant
+    of population health. The current low screening rate (2.9%) represents a system-level failure rather
+    than individual behavior. The intervention works through healthcare access and delivery systems, emphasizing
+    that reducing alcohol harm requires structural changes in how primary care is delivered. The model
+    accounts for socioeconomic factors (education) that influence both access to care and drinking patterns.
+    High coverage may only be achievable long-term, requiring complementary policy approaches for immediate
+    impact.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.055280'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

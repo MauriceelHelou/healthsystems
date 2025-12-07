@@ -27,13 +27,15 @@ class TestMechanismsListEndpoint:
             id="node1",
             name="Housing Quality",
             node_type="stock",
-            category="built_environment"
+            category="built_environment",
+            scale=4
         )
         node2 = Node(
             id="node2",
             name="Asthma Incidence",
             node_type="stock",
-            category="health_outcome"
+            category="health_outcome",
+            scale=7
         )
         test_db.add(node1)
         test_db.add(node2)
@@ -68,9 +70,9 @@ class TestMechanismsListEndpoint:
     def test_filter_by_category(self, client: TestClient, test_db: Session):
         """Test filtering mechanisms by category."""
         # Create nodes
-        node1 = Node(id="node1", name="Node 1", node_type="stock", category="test")
-        node2 = Node(id="node2", name="Node 2", node_type="stock", category="test")
-        node3 = Node(id="node3", name="Node 3", node_type="stock", category="test")
+        node1 = Node(id="node1", name="Node 1", node_type="stock", category="test", scale=4)
+        node2 = Node(id="node2", name="Node 2", node_type="stock", category="test", scale=4)
+        node3 = Node(id="node3", name="Node 3", node_type="stock", category="test", scale=4)
         test_db.add_all([node1, node2, node3])
 
         # Create mechanisms with different categories
@@ -113,8 +115,8 @@ class TestMechanismsListEndpoint:
     def test_filter_by_direction(self, client: TestClient, test_db: Session):
         """Test filtering mechanisms by direction."""
         # Create nodes
-        node1 = Node(id="node1", name="Node 1", node_type="stock", category="test")
-        node2 = Node(id="node2", name="Node 2", node_type="stock", category="test")
+        node1 = Node(id="node1", name="Node 1", node_type="stock", category="test", scale=4)
+        node2 = Node(id="node2", name="Node 2", node_type="stock", category="test", scale=4)
         test_db.add_all([node1, node2])
 
         # Create mechanisms with different directions
@@ -157,7 +159,7 @@ class TestMechanismsListEndpoint:
     def test_pagination(self, client: TestClient, test_db: Session):
         """Test pagination with limit and offset."""
         # Create nodes
-        nodes = [Node(id=f"node{i}", name=f"Node {i}", node_type="stock", category="test") for i in range(3)]
+        nodes = [Node(id=f"node{i}", name=f"Node {i}", node_type="stock", category="test", scale=4) for i in range(3)]
         test_db.add_all(nodes)
 
         # Create multiple mechanisms
@@ -209,13 +211,15 @@ class TestMechanismDetailEndpoint:
             id="node1",
             name="Housing Quality",
             node_type="stock",
-            category="built_environment"
+            category="built_environment",
+            scale=4
         )
         node2 = Node(
             id="node2",
             name="Asthma Incidence",
             node_type="stock",
-            category="health_outcome"
+            category="health_outcome",
+            scale=7
         )
         test_db.add_all([node1, node2])
 
@@ -291,7 +295,7 @@ class TestStatsEndpoint:
     def test_stats_with_data(self, client: TestClient, test_db: Session):
         """Test statistics with data."""
         # Create nodes
-        nodes = [Node(id=f"node{i}", name=f"Node {i}", node_type="stock", category="test") for i in range(3)]
+        nodes = [Node(id=f"node{i}", name=f"Node {i}", node_type="stock", category="test", scale=4) for i in range(3)]
         test_db.add_all(nodes)
 
         # Create mechanisms with different categories and directions

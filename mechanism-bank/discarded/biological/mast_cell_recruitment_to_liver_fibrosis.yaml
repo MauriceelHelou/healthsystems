@@ -1,0 +1,44 @@
+id: mast_cell_recruitment_to_liver_fibrosis
+name: Hepatic Mast Cell Recruitment and Activation → Hepatic Fibrosis
+from_node:
+  node_id: mast_cell_recruitment
+  node_name: Hepatic Mast Cell Recruitment and Activation
+to_node:
+  node_id: liver_fibrosis
+  node_name: Hepatic Fibrosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Activated mast cells release profibrotic mediators including TGF-β1'
+- 'Step 2: TGF-β1 activates the Smad2/3 signaling pathway in hepatic stellate cells'
+- 'Step 3: Smad2/3 activation promotes collagen synthesis and extracellular matrix
+  deposition'
+- 'Step 4: Mast cells also activate HIF-1α/VEGF pathway promoting angiogenesis and
+  fibrosis progression'
+- 'Step 5: Accumulated collagen deposition results in hepatic fibrosis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Mingkang Zhang et al. 2024. "Recruitment or activation of mast
+    cells in the liver aggravates the accumulation of fibrosis in carbon tetrachloride-induced
+    liver injury.." *Molecular immunology*. https://doi.org/10.1016/j.molimm.2024.04.009
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.425184'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: mast_cell_stabilizers
+  direction: weakens
+  strength: strong
+  description: Sodium cromoglycate (SCG) and ketotifen (KET) inhibit mast cell degranulation,
+    thereby reducing TGF-β1/Smad2/3 and HIF-1α/VEGF pathway activation
+- name: antioxidant_capacity
+  direction: weakens
+  strength: moderate
+  description: Enhanced Nrf2/HO-1 pathway activation and increased GSH, GSH-Px, and
+    GR levels reduce oxidative stress and attenuate fibrosis progression
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/mast_cell_recruitment_to_liver_fibrosis.yaml
+_category: biological

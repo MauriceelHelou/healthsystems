@@ -1,0 +1,69 @@
+id: NEW:alcohol_availability_containment_to_alcohol_induced_mortality
+name: Alcohol Availability Containment → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:alcohol_availability_containment
+  node_name: Alcohol Availability Containment
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Licensing restrictions contain alcohol outlet density and operating hours in local areas'
+- 'Step 2: Reduced physical and temporal availability decreases population-level alcohol access'
+- 'Step 3: Decreased access reduces aggregate alcohol consumption at population level'
+- 'Step 4: Lower population consumption reduces alcohol-attributable morbidity and mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'R. O''Donnell et al. 2022. "How public health teams navigate their different roles
+    in alcohol premises licensing: ExILEnS multistakeholder interview findings." https://doi.org/10.3310/xcuw1239'
+  supporting_citations:
+  - Abstract references 'international evidence on the links between availability and alcohol-related
+    harms'
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  doi: 10.3310/xcuw1239
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'The study documents that public health stakeholders taking a ''challenging'' approach focus
+  on reducing alcohol availability to reduce health harms, citing international evidence on availability-harm
+  links. However, the study critically notes that current licensing systems structurally limit effectiveness:
+  alcohol availability may be contained but cannot be reduced because existing licensed premises cannot
+  be closed solely on availability grounds. This represents a fundamental structural constraint on public
+  health action within current policy frameworks.'
+quantitative_effects:
+  sample_size: 53
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The study notes regional variation across England and Scotland and urban/rural differences
+    in how licensing policies operate and in public health engagement approaches
+moderators:
+- name: licensing_system_structure
+  direction: weakens
+  strength: strong
+  description: Current licensing systems can contain but not reduce availability - existing businesses
+    cannot be closed on availability grounds, limiting public health impact
+- name: public_health_engagement_approach
+  direction: strengthens
+  strength: moderate
+  description: Challenging approaches that focus on availability reduction may be more effective than
+    supportive approaches focused on responsible retailing
+structural_competency:
+  equity_implications: 'This mechanism appropriately identifies alcohol availability as a structural determinant
+    of population health, consistent with evidence that environmental alcohol access shapes consumption
+    patterns independent of individual choices. The study identifies a critical structural barrier: licensing
+    systems are designed primarily to regulate business operations rather than to optimize population
+    health. The inability to reduce (versus contain) availability represents a policy design flaw from
+    a public health perspective. Equity implications include differential alcohol outlet density in lower-income
+    and minority neighborhoods, which current licensing systems may perpetuate even with public health
+    engagement.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.196101'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,64 @@
+id: NEW:brief_intervention_cannabis_access_to_NEW:cannabis_use_disorder_symptoms
+name: Brief Intervention for Cannabis Use Access → Cannabis Use Disorder Symptoms
+from_node:
+  node_id: NEW:brief_intervention_cannabis_access
+  node_name: Brief Intervention for Cannabis Use Access
+to_node:
+  node_id: NEW:cannabis_use_disorder_symptoms
+  node_name: Cannabis Use Disorder Symptoms
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Brief interventions (1-2 sessions) delivered primarily in-person reach non-treatment-seeking
+  emerging adults'
+- 'Step 2: Motivational interviewing techniques enhance intrinsic motivation for behavior change'
+- 'Step 3: Single-session format reduces barriers to engagement (time, cost, stigma)'
+- 'Step 4: Targeted cannabis-specific content addresses use patterns and consequences'
+- 'Step 5: Reduction in symptoms of cannabis use disorder at 1-3 months post-intervention'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'Jillian Halladay et al. 2019. "Brief interventions for cannabis use in emerging adults:
+    A systematic review, meta-analysis, and evidence map.." https://doi.org/10.1016/j.drugalcdep.2019.107565'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 26 primary studies with 6318
+    participants
+  - Studies included motivational interventions for emerging adults aged 15-30
+  - Primary studies compared brief interventions to passive control conditions
+  doi: 10.1016/j.drugalcdep.2019.107565
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief interventions (1-2 sessions) focusing exclusively on cannabis use among non-treatment-seeking
+  emerging adults (ages 15-30) result in small but significant reductions in cannabis use disorder symptoms
+  at 1-3 months post-intervention compared to passive controls.
+quantitative_effects:
+  effect_size:
+    value: -0.14
+    type: standardized_mean_difference
+    ci_lower: -0.26
+    ci_upper: -0.01
+  sample_size: 6318
+moderators:
+- name: treatment_seeking_status
+  direction: weakens
+  strength: moderate
+  description: Participants were typically not seeking treatment, which may moderate intervention effects
+    compared to treatment-seeking populations
+- name: intervention_format
+  direction: strengthens
+  strength: weak
+  description: Most interventions were motivational, single sessions, and delivered in person - format
+    consistency may affect generalizability
+structural_competency:
+  equity_implications: This mechanism reflects healthcare system accessibility - brief interventions reduce
+    structural barriers to care (time, multiple appointments, cost) for emerging adults who may not otherwise
+    seek treatment. The finding that effects occur in non-treatment-seeking populations highlights how
+    lowering structural barriers to intervention access can reach underserved populations. However, evidence
+    quality is low, and few studies addressed concurrent psychiatric conditions, which may reflect healthcare
+    system fragmentation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.101728'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

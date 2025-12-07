@@ -1,0 +1,62 @@
+id: NEW:alcohol_access_time_restriction_to_binge_drinking
+name: Alcohol Access Time Restriction → Binge Drinking
+from_node:
+  node_id: NEW:alcohol_access_time_restriction
+  node_name: Alcohol Access Time Restriction
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Shortened time windows for alcohol access (e.g., ''happy hour'' promotions) create temporal
+  scarcity of drinking opportunity'
+- 'Step 2: Temporal scarcity drives compensatory ''front-loading'' behavior - rapid consumption of alcohol
+  in the initial minutes of access'
+- 'Step 3: Front-loading increases drinking rate and total alcohol consumed within compressed timeframes'
+- 'Step 4: Accelerated consumption leads to higher peak blood alcohol concentrations and binge-level intake'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Flores-Bonilla et al. 2021. "Shortening time for access to alcohol drives up front-loading
+    behavior, bringing consumption in male rats to the level of females." https://doi.org/10.1186/s13293-021-00395-y
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not contain referenced prior studies
+  doi: 10.1186/s13293-021-00395-y
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This animal model study demonstrates that compressing alcohol access time from 30 to 15 minutes
+  significantly increases front-loading drinking behavior, resulting in higher total alcohol consumption.
+  This models the 'happy hour' effect where time-limited drinking promotions may drive faster, more dangerous
+  drinking patterns.
+quantitative_effects:
+  sample_size: 16
+moderators:
+- name: biological_sex
+  direction: strengthens
+  strength: strong
+  description: Females show higher baseline front-loading behavior; compressed access windows eliminated
+    sex differences by increasing male consumption to female levels
+- name: effort_required_for_access
+  direction: weakens
+  strength: moderate
+  description: Increasing effort from FR1 to FR3 reduced front-loading behavior, particularly in males,
+    leading to similar consumption levels between sexes
+- name: time_of_day
+  direction: strengthens
+  strength: moderate
+  description: Sex differences in consumption most pronounced in late phase of dark cycle when operant
+    effort was minimal
+structural_competency:
+  equity_implications: This mechanism has important policy implications for alcohol regulation. Happy
+    hour promotions and time-limited drink specials represent structural incentives that drive rapid consumption
+    patterns. The finding that compressed access windows increased consumption suggests that policies
+    permitting or promoting time-limited alcohol deals may contribute to harmful drinking patterns. The
+    sex difference findings indicate women may be more vulnerable to front-loading behavior at baseline,
+    while men may be more susceptible to promotional incentives that compress drinking windows.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.242220'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

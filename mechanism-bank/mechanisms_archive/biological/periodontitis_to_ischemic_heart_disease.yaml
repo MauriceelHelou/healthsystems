@@ -1,0 +1,48 @@
+id: periodontitis_to_ischemic_heart_disease
+name: Periodontitis → Ischemic Heart Disease
+from_node:
+  node_id: periodontitis
+  node_name: Periodontitis
+to_node:
+  node_id: ischemic_heart_disease
+  node_name: Ischemic Heart Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic periodontal infection creates sustained inflammatory state with
+  elevated cytokines (IL-6, TNF-α, CRP)'
+- 'Step 2: Pathogenic oral bacteria (Porphyromonas gingivalis, Aggregatibacter actinomycetemcomitans)
+  translocate to vascular tissues'
+- 'Step 3: Bacterial components and inflammatory mediators accelerate coronary atherosclerosis
+  and plaque instability'
+- 'Step 4: Atherosclerotic narrowing and plaque rupture lead to angina and myocardial
+  infarction'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Byun et al. 2020. "Cross-Sectional Analysis of the Association
+    between Periodontitis and Cardiovascular Disease Using the Korean Genome and Epidemiology
+    Study Data." *International Journal of Environmental Research and Public Health*.
+    https://doi.org/10.3390/ijerph17145237
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.432537'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: smoking_habit
+  direction: strengthens
+  strength: strong
+  description: Smoking independently damages vascular endothelium and exacerbates
+    periodontal disease, creating multiplicative cardiovascular risk
+- name: diabetes_mellitus
+  direction: strengthens
+  strength: moderate
+  description: Diabetes impairs immune response to periodontal infection and accelerates
+    atherosclerosis through hyperglycemia-induced endothelial injury
+- name: hyperlipidemia
+  direction: strengthens
+  strength: moderate
+  description: Lipid abnormalities combined with inflammation accelerate coronary
+    artery disease progression

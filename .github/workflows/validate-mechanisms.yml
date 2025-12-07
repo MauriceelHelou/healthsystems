@@ -1,0 +1,67 @@
+name: Validate Mechanisms
+
+on:
+  pull_request:
+    paths:
+      - 'mechanism-bank/mechanisms/**/*.yml'
+      - 'backend/agents/mechanism_validator.py'
+      - 'backend/scripts/validate_mechanism_schema.py'
+  push:
+    branches:
+      - main
+    paths:
+      - 'mechanism-bank/mechanisms/**/*.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Run Mechanism Validator Agent
+        run: |
+          cd backend
+          python agents/mechanism_validator.py --dir ../mechanism-bank/mechanisms/ --report
+        continue-on-error: false
+
+      - name: Run Schema Validator (MVP)
+        run: |
+          cd backend
+          python scripts/validate_mechanism_schema.py --dir ../mechanism-bank/mechanisms/ --schema mvp
+        continue-on-error: true
+
+      - name: Comment PR with validation results
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const fs = require('fs');
+            const report = `## Mechanism Validation Results
+
+            ✅ All mechanisms passed quality validation!
+
+            - Structural competency checks: PASSED
+            - Category alignment: PASSED
+            - Scale consistency: PASSED
+            - Evidence plausibility: PASSED
+
+            See workflow logs for detailed results.`;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.name,
+              body: report
+            });

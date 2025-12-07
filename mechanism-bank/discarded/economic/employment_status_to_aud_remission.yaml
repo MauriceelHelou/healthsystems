@@ -1,0 +1,47 @@
+id: employment_status_to_aud_remission
+name: Employment Status → Alcohol Use Disorder Remission
+from_node:
+  node_id: employment_status
+  node_name: Employment Status
+to_node:
+  node_id: aud_remission
+  node_name: Alcohol Use Disorder Remission
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Employment provides economic stability and resources necessary to access
+  and maintain addiction treatment'
+- 'Step 2: Work environments create structured daily routines and time-use patterns
+  that reduce opportunities for alcohol use'
+- 'Step 3: Employment status generates social capital, workplace relationships, and
+  sense of purpose that support recovery motivation'
+- 'Step 4: Income from employment enables access to healthcare, medications, and recovery
+  support services'
+- 'Step 5: Employment creates social identity and self-efficacy that counteract stigma
+  and hopelessness associated with addiction'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'S. Kinreich et al. 2021. "Predicting alcohol use disorder remission:
+    a longitudinal multimodal multi-featured machine learning approach." *Translational
+    Psychiatry*. https://doi.org/10.1038/s41398-021-01281-2'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.850901'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Employment status was identified as discriminative feature particularly
+    in male prediction models
+- name: ancestry
+  direction: strengthens
+  strength: strong
+  description: Employment status was particularly discriminative in African ancestry
+    male group model achieving highest accuracy of 86.04%
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/economic/employment_status_to_aud_remission.yaml
+_category: economic

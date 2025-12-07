@@ -1,0 +1,66 @@
+id: binge_drinking_to_NEW:core_body_temperature_during_heat_exposure
+name: Binge Drinking → Core Body Temperature During Heat Exposure
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:core_body_temperature_during_heat_exposure
+  node_name: Core Body Temperature During Heat Exposure
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol consumption causes peripheral vasodilation, increasing skin blood flow'
+- 'Step 2: Increased cutaneous blood flow facilitates heat dissipation from the body surface'
+- 'Step 3: Enhanced heat loss through the skin results in lower core body temperature during heat exposure'
+- 'Step 4: This effect was observed across moderate alcohol doses (average 0.68 g/kg) in controlled heat
+  environments'
+evidence:
+  quality_rating: B
+  n_studies: 8
+  primary_citation: 'Nathan B. Morris et al. 2024. "The effect of alcohol consumption on human physiological
+    and perceptual responses to heat stress: a systematic scoping review." https://doi.org/10.1186/s12940-024-01113-y'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 8 studies meeting inclusion criteria
+  - Studies employed randomized or crossover-control designs with volume-matched non-alcoholic beverage
+    controls
+  - Studies conducted in air or water temperatures >28°C with passive rest or exercise protocols
+  doi: 10.1186/s12940-024-01113-y
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Contrary to current heat-health public guidance, this systematic review of 8 controlled studies
+  found that moderate alcohol consumption (average 0.68 g/kg) lowered core body temperature in 3 of 4
+  studies measuring this outcome during heat exposure in young healthy males. This appears to occur through
+  alcohol-induced peripheral vasodilation enhancing heat dissipation.
+quantitative_effects:
+  sample_size: 93
+moderators:
+- name: alcohol_dose
+  direction: strengthens
+  strength: moderate
+  description: Average dose of 0.68 g/kg; higher doses may produce different effects on thermoregulation
+- name: duration_of_heat_exposure
+  direction: weakens
+  strength: moderate
+  description: Average heat exposure was only 70 minutes; longer exposures may reveal different physiological
+    responses
+- name: age_and_health_status
+  direction: weakens
+  strength: strong
+  description: Studies only included young healthy males; effects may differ substantially in elderly,
+    those with chronic conditions, or women
+structural_competency:
+  equity_implications: This finding challenges existing public health messaging about alcohol and heat
+    risk. Current heat-health advisories warning against alcohol consumption during heat events may be
+    based on limited evidence. However, the evidence base is severely limited to young healthy males with
+    moderate alcohol doses and short heat exposures - populations least vulnerable to heat-related morbidity/mortality.
+    Structural determinants including access to cooling, housing quality, and occupational heat exposure
+    may interact with alcohol consumption in ways not captured by these controlled studies. Equity implications
+    are significant as heat vulnerability is concentrated among elderly, those with chronic conditions,
+    outdoor workers, and people without access to air conditioning - populations not represented in this
+    evidence base.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.296361'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

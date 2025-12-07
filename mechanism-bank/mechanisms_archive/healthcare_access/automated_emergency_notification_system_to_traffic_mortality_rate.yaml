@@ -1,0 +1,47 @@
+id: automated_emergency_notification_system_to_traffic_mortality_rate
+name: Automated Emergency Notification System for Impaired Drivers → Traffic-Related
+  Mortality Rate
+from_node:
+  node_id: automated_emergency_notification_system
+  node_name: Automated Emergency Notification System for Impaired Drivers
+to_node:
+  node_id: traffic_mortality_rate
+  node_name: Traffic-Related Mortality Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: IoT system detects alcohol intoxication combined with physiological impairment
+  (abnormal heart rate or drowsiness) in driver'
+- 'Step 2: System automatically sends real-time alerts via mobile app to pre-designated
+  contacts (family, friends) and nearest law enforcement'
+- 'Step 3: Rapid notification enables intervention before driving occurs or facilitates
+  quick response if driver is in distress'
+- 'Step 4: Earlier intervention and assistance reduces likelihood of fatal crashes
+  and enables medical help for impaired individuals'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: V. V. et al. 2020. "Internet of Things(IoT) Based Multilevel Drunken
+    Driving Detection and Prevention System Using Raspberry Pi 3." *arXiv.org*. https://doi.org/10.31227/osf.io/bycjn
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.450141'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: social_network_availability
+  direction: strengthens
+  strength: strong
+  description: Effectiveness depends on driver having designated contacts (family,
+    friends, well-wishers) who can respond to alerts and provide assistance
+- name: law_enforcement_response_time
+  direction: strengthens
+  strength: moderate
+  description: Proximity to and response capacity of law enforcement affects speed
+    of intervention, likely varying between urban and rural settings
+- name: mobile_network_coverage
+  direction: strengthens
+  strength: strong
+  description: System requires cellular or Wi-Fi connectivity to transmit alerts,
+    creating geographic disparities in coverage

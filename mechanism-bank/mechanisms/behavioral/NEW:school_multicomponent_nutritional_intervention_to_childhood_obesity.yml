@@ -1,0 +1,61 @@
+id: NEW:school_multicomponent_nutritional_intervention_to_childhood_obesity
+name: School-Based Multicomponent Nutritional Intervention → Childhood Obesity
+from_node:
+  node_id: NEW:school_multicomponent_nutritional_intervention
+  node_name: School-Based Multicomponent Nutritional Intervention
+to_node:
+  node_id: childhood_obesity
+  node_name: Childhood Obesity
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Multicomponent nutritional interventions in schools combine nutrition education, environmental
+  changes (e.g., healthier cafeteria options), and policy modifications'
+- 'Step 2: These comprehensive approaches create supportive environments that reinforce healthy eating
+  behaviors across multiple settings within the school'
+- 'Step 3: Improved dietary behaviors including increased fruit/vegetable intake and reduced fat consumption
+  lead to better energy balance'
+- 'Step 4: Sustained healthier dietary patterns reduce excess caloric intake and prevent overweight/obesity
+  development'
+evidence:
+  quality_rating: A
+  n_studies: 51
+  primary_citation: 'E. Nury et al. 2022. "Effects of nutritional intervention strategies in the primary
+    prevention of overweight and obesity in school settings: systematic review and network meta-analysis."
+    https://doi.org/10.1136/bmjmed-2022-000346'
+  supporting_citations:
+  - Additional citations require full-text access - this meta-analysis included 51 cluster randomized
+    controlled trials
+  - Studies included were cluster RCTs with generally healthy school students aged 4-18 years
+  - Network meta-analysis included seven intervention nodes comparing nutritional intervention strategies
+  doi: 10.1136/bmjmed-2022-000346
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: School-based multicomponent nutritional interventions reduce the prevalence of overweight
+  among children and adolescents with an odds ratio of 0.66, representing a 34% reduction in overweight
+  prevalence compared to usual practice controls.
+quantitative_effects:
+  effect_size:
+    value: 0.66
+    type: odds_ratio
+    ci_lower: 0.55
+    ci_upper: 0.8
+  sample_size: 75954
+moderators:
+- name: intervention_type
+  direction: strengthens
+  strength: moderate
+  description: Multicomponent interventions ranked most effective for reducing BMI (P score 0.76) compared
+    to single-component interventions
+structural_competency:
+  equity_implications: This mechanism addresses structural determinants by modifying the school food environment
+    rather than solely relying on individual behavior change. Schools are universal institutions that
+    reach children regardless of socioeconomic status, making school-based interventions potentially equity-promoting.
+    However, implementation quality may vary by school resources, potentially affecting disadvantaged
+    schools disproportionately.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.590978'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,41 @@
+id: nyca_score_implementation_to_transplant_access_equity
+name: Implementation of NYCA Score for HCC Selection → Equitable Access to Liver Transplantation
+from_node:
+  node_id: nyca_score_implementation
+  node_name: Implementation of NYCA Score for HCC Selection
+to_node:
+  node_id: transplant_access_equity
+  node_name: Equitable Access to Liver Transplantation
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: NYCA score incorporating AFP-R demonstrates superior discrimination (C-statistic
+  0.66) compared to Milan Criteria (0.59) and French-AFP (0.57)'
+- 'Step 2: Net reclassification index shows NYCA improves patient categorization by
+  8.1 vs Milan, 12.9 vs French-AFP, and 10.1 vs Metroticket 2.0'
+- 'Step 3: Implementation would safely expand access to 453 of 545 patients (83.1%)
+  currently excluded by Milan Criteria who have >75% 5-year recurrence-free survival'
+- 'Step 4: Similar expansions possible for 69.2% excluded by French-AFP and 76.1%
+  excluded by Metroticket 2.0'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: K. Halazun et al. 2021. "Dynamic α-Fetoprotein Response and Outcomes
+    After Liver Transplant for Hepatocellular Carcinoma.." *JAMA Surgery*. https://doi.org/10.1001/jamasurg.2021.0954
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.613953'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: current_selection_criteria_type
+  direction: strengthens
+  strength: strong
+  description: Greatest benefit seen for patients excluded by restrictive morphology-based
+    criteria, with net reclassification improvement of 12.9 vs French-AFP model
+- name: healthcare_system_resources
+  direction: strengthens
+  strength: moderate
+  description: AFP testing is widely available and cost-effective, making implementation
+    feasible across diverse healthcare systems

@@ -1,0 +1,42 @@
+id: depression_symptoms_midlife_to_incident_hypercholesterolemia
+name: Depression Symptoms in Midlife → Incident Hypercholesterolemia
+from_node:
+  node_id: depression_symptoms_midlife
+  node_name: Depression Symptoms in Midlife
+to_node:
+  node_id: incident_hypercholesterolemia
+  node_name: Incident Hypercholesterolemia
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Depression symptoms activate chronic stress response systems affecting
+  lipid metabolism regulation'
+- 'Step 2: HPA axis dysregulation and inflammatory processes alter hepatic lipid processing
+  over decades'
+- 'Step 3: Stress-related hormones influence LDL receptor expression and cholesterol
+  synthesis'
+- 'Step 4: Progressive metabolic dysregulation leads to clinically elevated cholesterol
+  levels requiring diagnosis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Hillary L Ditmars et al. 2022. "Associations between depression
+    and cardiometabolic health: A 27-year longitudinal study.." *Psychological medicine*.
+    https://doi.org/10.1017/S003329172000505X'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.909332'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: somatic_depression_symptoms
+  direction: strengthens
+  strength: strong
+  description: Association disappeared when somatic symptoms excluded, indicating
+    somatic manifestations of depression drive the cholesterol relationship
+- name: polygenic_risk_hypercholesterolemia
+  direction: weakens
+  strength: moderate
+  description: Genetic risk was controlled for, indicating depression effect operates
+    through environmental/biological pathways beyond genetic predisposition

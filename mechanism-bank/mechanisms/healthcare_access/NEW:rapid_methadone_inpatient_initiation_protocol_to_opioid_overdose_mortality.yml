@@ -1,0 +1,66 @@
+id: NEW:rapid_methadone_inpatient_initiation_protocol_to_opioid_overdose_mortality
+name: Rapid Methadone Inpatient Initiation Protocol → Opioid Overdose Mortality
+from_node:
+  node_id: NEW:rapid_methadone_inpatient_initiation_protocol
+  node_name: Rapid Methadone Inpatient Initiation Protocol
+to_node:
+  node_id: opioid_overdose_mortality
+  node_name: Opioid Overdose Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Inpatient settings allow for continuous monitoring of patients during methadone initiation'
+- 'Step 2: Rapid titration (30mg initial dose with 10mg daily increases to 60mg) achieves therapeutic
+  levels faster than outpatient guidelines'
+- 'Step 3: Faster achievement of therapeutic dose accounts for increased opioid tolerance in the fentanyl
+  era'
+- 'Step 4: Therapeutic methadone levels reduce illicit opioid use and craving'
+- 'Step 5: Reduced illicit opioid use decreases risk of fatal overdose'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Savitha Racha et al. 2023. "Safety of rapid inpatient methadone initiation protocol:
+    A retrospective cohort study.." https://doi.org/10.2139/ssrn.4145111'
+  supporting_citations:
+  - Current methadone titration guidelines (referenced for 15-40mg initial doses and slow increases)
+  - Pre-fentanyl era outpatient guidelines (referenced as basis for current recommendations)
+  - Additional citations require full-text access
+  doi: 10.2139/ssrn.4145111
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2022, source is 2023'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Rapid inpatient methadone initiation protocol (30mg initial with 10mg daily increases to
+  60mg) demonstrated safety with zero in-hospital or 30-day post-discharge overdoses or deaths in 25 hospitalized
+  patients with moderate to severe OUD, suggesting monitored inpatient settings can safely accelerate
+  methadone titration to therapeutic doses.
+quantitative_effects:
+  effect_size:
+    value: 0.0
+    type: risk_difference
+  sample_size: 25
+moderators:
+- name: inpatient_monitoring_capacity
+  direction: strengthens
+  strength: strong
+  description: Hospital inpatient settings with capacity for increased monitoring enable safer rapid titration
+    compared to outpatient settings
+- name: fentanyl_era_tolerance
+  direction: strengthens
+  strength: moderate
+  description: Patients in the fentanyl era have higher opioid tolerance, making rapid titration both
+    safer and more necessary to achieve therapeutic effect
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to effective OUD treatment. Traditional
+    outpatient guidelines create structural delays in achieving therapeutic methadone doses, which may
+    contribute to treatment dropout and continued illicit opioid use. Inpatient initiation represents
+    a healthcare system-level intervention that can overcome these barriers, particularly important for
+    populations with limited outpatient follow-up capacity or unstable housing. The fentanyl era has fundamentally
+    changed the risk landscape, making structural adaptation of treatment protocols necessary.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.772013'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,54 @@
+id: drug_decriminalization_defelonization_status_to_NEW:legal_system_sud_treatment_referrals
+name: Drug Decriminalization/Defelonization Status → Legal System SUD Treatment Referrals
+from_node:
+  node_id: drug_decriminalization_defelonization_status
+  node_name: Drug Decriminalization/Defelonization Status
+to_node:
+  node_id: NEW:legal_system_sud_treatment_referrals
+  node_name: Legal System SUD Treatment Referrals
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Policy changes reduce criminal penalties for substance use and possession'
+- 'Step 2: Fewer individuals enter the criminal justice system for drug-related offenses'
+- 'Step 3: Reduced criminal justice involvement decreases court-mandated treatment referrals'
+- 'Step 4: Overall proportion of legal system referrals to specialty SUD treatment declines'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Carrie E Fry et al. 2024. "Changes in legal referrals to specialty substance use disorder
+    treatment from 2015-2019.." https://doi.org/10.1186/s40352-024-00297-2
+  supporting_citations:
+  - Additional citations require full-text access - abstract references dramatic policy landscape changes
+  - Additional citations require full-text access - study design examines temporal changes 2015-2019
+  - Additional citations require full-text access - references future investigations of policy effects
+  doi: 10.1186/s40352-024-00297-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The dramatic policy landscape changes around substance use from 2015-2019 appear to have
+  reduced the proportion of legal system referrals to specialty SUD treatment (p<0.001). This likely reflects
+  decriminalization efforts and reduced prosecution of drug offenses.
+quantitative_effects:
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Policy changes vary substantially by state; national trends reflect aggregate of diverse
+    policy environments
+moderators:
+- name: substance_type
+  direction: strengthens
+  strength: moderate
+  description: Cannabis policy changes (legalization/decriminalization) particularly affect legal referrals
+    for cannabis use, which declined during study period
+structural_competency:
+  equity_implications: This mechanism illustrates how policy reform shapes pathways to treatment. While
+    reduced criminalization is generally positive for health equity, it raises questions about ensuring
+    adequate voluntary treatment access when coercive pathways diminish. The study notes need for future
+    research on policy change effects, highlighting the importance of maintaining treatment access while
+    reducing punitive approaches.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.760648'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

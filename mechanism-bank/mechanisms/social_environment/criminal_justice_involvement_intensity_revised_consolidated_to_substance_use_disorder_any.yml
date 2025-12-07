@@ -1,0 +1,51 @@
+id: criminal_justice_involvement_intensity_revised_consolidated_to_substance_use_disorder_any
+name: Criminal Justice Involvement Intensity → Substance Use Disorder (Any)
+from_node:
+  node_id: criminal_justice_involvement_intensity_revised_consolidated
+  node_name: Criminal Justice Involvement Intensity
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Individuals with criminal-legal system involvement have elevated rates of substance use disorders'
+- 'Step 2: Jails and probation/parole systems serve as points of contact for identifying treatment needs'
+- 'Step 3: Limited data-driven decision-making capacity in these settings results in inadequate service
+  coordination'
+- 'Step 4: Fragmented care perpetuates substance use disorders among justice-involved populations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Maji Hailemariam et al. 2025. "Use of data-driven decision-making among agencies
+    serving individuals with criminal-legal system involvement: a qualitative study.." https://doi.org/10.1186/s12913-025-13385-2'
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1186/s12913-025-13385-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Criminal justice system involvement is associated with substance use disorders, and inadequate
+  data infrastructure in justice settings limits effective intervention and care coordination
+quantitative_effects:
+  sample_size: 68
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: County-level variation in agency capacity to address substance use needs among justice-involved
+    populations
+moderators:
+- name: community_treatment_agency_capacity
+  direction: weakens
+  strength: moderate
+  description: Strong community substance use treatment agencies can mitigate gaps in criminal justice
+    system capacity
+structural_competency:
+  equity_implications: This mechanism recognizes that substance use disorders among justice-involved individuals
+    reflect structural factors including inadequate treatment infrastructure, criminalization of substance
+    use, and systemic barriers to care. The focus is appropriately on system capacity rather than individual
+    pathology. Racial and socioeconomic disparities in criminal justice involvement compound these effects.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.821034'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,40 @@
+id: hospital_mandated_abstinence_to_acute_alcohol_withdrawal
+name: Hospital-Mandated Abstinence → Acute Alcohol Withdrawal
+from_node:
+  node_id: hospital_mandated_abstinence
+  node_name: Hospital-Mandated Abstinence
+to_node:
+  node_id: acute_alcohol_withdrawal
+  node_name: Acute Alcohol Withdrawal
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Orthopaedic patients with alcohol dependence are admitted to hospital setting
+  where alcohol access is restricted'
+- 'Step 2: Abrupt cessation of chronic alcohol intake triggers neuroadaptive withdrawal
+  syndrome'
+- 'Step 3: Acute withdrawal manifests with potentially fatal complications including
+  seizures, delirium tremens, and cardiovascular instability requiring clinical management'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Zamorano et al. 2019. "Perioperative Management of the Orthopaedic
+    Patient and Alcohol Use, Abuse, and Withdrawal.." *Journal of the American Academy
+    of Orthopaedic Surgeons*. https://doi.org/10.5435/JAAOS-D-17-00708
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.731103'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: screening_and_diagnostic_tools
+  direction: weakens
+  strength: moderate
+  description: Appropriate screening and diagnostic assessment can identify at-risk
+    patients and enable early intervention to prevent severe withdrawal complications
+- name: therapeutic_management_protocols
+  direction: weakens
+  strength: strong
+  description: Evidence-based therapeutic interventions including benzodiazepine protocols
+    can safely manage withdrawal and prevent fatal outcomes

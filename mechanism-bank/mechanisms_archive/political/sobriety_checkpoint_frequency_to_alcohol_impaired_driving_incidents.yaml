@@ -1,0 +1,41 @@
+id: sobriety_checkpoint_frequency_to_alcohol_impaired_driving_incidents
+name: Sobriety Checkpoint Frequency → Alcohol-Impaired Driving Incidents
+from_node:
+  node_id: sobriety_checkpoint_frequency
+  node_name: Sobriety Checkpoint Frequency
+to_node:
+  node_id: alcohol_impaired_driving_incidents
+  node_name: Alcohol-Impaired Driving Incidents
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Frequent sobriety checkpoints increase the perceived risk of apprehension
+  among potential impaired drivers through direct enforcement presence'
+- 'Step 2: Higher perceived risk creates a general deterrent effect in the community,
+  reducing decisions to drive while impaired'
+- 'Step 3: Reduced impaired driving behavior leads to fewer alcohol-impaired driving
+  incidents and associated injuries/fatalities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Angela H Eichelberger and Anne T McCartt 2016. "Impaired driving
+    enforcement practices among state and local law enforcement agencies in the United
+    States.." *Journal of safety research*. https://doi.org/10.1016/j.jsr.2016.06.003
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.588160'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: checkpoint_frequency
+  direction: strengthens
+  strength: strong
+  description: Monthly or more frequent checkpoints (14% of agencies) likely produce
+    stronger deterrent effects than infrequent checkpoints due to sustained perceived
+    risk
+- name: state_legal_framework
+  direction: strengthens
+  strength: strong
+  description: States where sobriety checkpoints are legally permitted (38 states)
+    enable this enforcement mechanism, while 12 states lack this policy tool

@@ -1,0 +1,50 @@
+id: peripheral_nerve_injury_to_voluntary_physical_activity_suppression
+name: Peripheral Nerve Injury (Chronic Constriction Injury) → Voluntary Physical Activity
+  Suppression
+from_node:
+  node_id: peripheral_nerve_injury
+  node_name: Peripheral Nerve Injury (Chronic Constriction Injury)
+to_node:
+  node_id: voluntary_physical_activity_suppression
+  node_name: Voluntary Physical Activity Suppression
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Peripheral nerve injury (unilateral sciatic chronic constriction injury)
+  initiates neuroinflammatory processes at multiple sites along the neuraxis'
+- 'Step 2: Injury activates NLRP3 inflammasomes and consequent inflammatory cascades
+  through TLR4 and P2X7 receptor signaling'
+- 'Step 3: Neuroinflammation at the injured scionic nerve, dorsal root ganglia, spinal
+  cord, and potentially higher levels creates sustained neuropathic pain'
+- 'Step 4: Persistent neuropathic pain and inflammatory processes suppress active
+  phase voluntary wheel running distance and speed throughout the 7-week observation
+  period'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Suzanne M Green-Fulgham et al. 2022. "Suppression of active phase
+    voluntary wheel running in male rats by unilateral chronic constriction injury:
+    Enduring therapeutic effects of a brief treatment of morphine combined with TLR4
+    or P2X7 antagonists.." *Journal of neuroscience research*. https://doi.org/10.1002/jnr.24645'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.305522'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: morphine_tlr4_antagonist_cotreatment
+  direction: weakens
+  strength: strong
+  description: Co-administration of morphine with TLR4 antagonist ((+)-naloxone) returned
+    running behavior of CCI rats to sham levels through 5+ weeks after dosing ceased
+- name: morphine_p2x7_antagonist_cotreatment
+  direction: weakens
+  strength: strong
+  description: Co-administration of morphine with P2X7 antagonist (A438079) returned
+    running behavior of CCI rats to sham levels through 5+ weeks after dosing ceased
+- name: morphine_alone
+  direction: strengthens
+  strength: moderate
+  description: Brief course of morphine alone amplified neuroinflammatory processes
+    and showed effect only in sham rats, not improving CCI rats' running behavior

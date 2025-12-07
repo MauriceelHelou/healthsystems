@@ -1,0 +1,51 @@
+id: NEW:recorded_alcohol_sales_to_NEW:total_alcohol_consumption
+name: Recorded Alcohol Sales → Total Alcohol Consumption
+from_node:
+  node_id: NEW:recorded_alcohol_sales
+  node_name: Recorded Alcohol Sales
+to_node:
+  node_id: NEW:total_alcohol_consumption
+  node_name: Total Alcohol Consumption
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Recorded alcohol sales serve as a proxy measure for legal alcohol purchases'
+- 'Step 2: Reductions in recorded sales indicate decreased population-level purchasing of alcohol'
+- 'Step 3: Lower purchasing translates to reduced availability and consumption of alcohol in households'
+- 'Step 4: Population-level consumption decreases, though some substitution to unrecorded sources may
+  occur'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'I. Rossow 2021. "The alcohol advertising ban in Norway: Effects on recorded alcohol
+    sales.." https://doi.org/10.1111/dar.13289'
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1111/dar.13289
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study suggests that reduced recorded alcohol sales reflect a protective effect by reducing
+  total alcohol consumption at the population level. However, the authors note uncertainty due to possible
+  effects of unrecorded alcohol consumption, indicating that the relationship between sales data and actual
+  consumption is not perfectly direct.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Relationship between recorded sales and total consumption varies by country based on
+    availability of unrecorded alcohol sources, cross-border shopping, and informal production
+moderators:
+- name: unrecorded_alcohol_availability
+  direction: weakens
+  strength: moderate
+  description: Greater availability of unrecorded alcohol may lead to substitution effects, weakening
+    the relationship between recorded sales and actual consumption
+structural_competency:
+  equity_implications: This mechanism highlights how market-level measures (recorded sales) can serve
+    as indicators of population health behaviors. The acknowledgment of unrecorded consumption reflects
+    understanding of how regulatory environments may shift rather than eliminate harmful behaviors, particularly
+    for populations with access to alternative alcohol sources.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.495519'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,46 @@
+id: alcohol_intoxication_to_head_trauma_injury_severity
+name: Alcohol Intoxication → Head Trauma and Injury Severity
+from_node:
+  node_id: alcohol_intoxication
+  node_name: Alcohol Intoxication
+to_node:
+  node_id: head_trauma_injury_severity
+  node_name: Head Trauma and Injury Severity
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol intoxication impairs motor coordination, balance, and protective
+  reflexes, increasing vulnerability to head injuries during violent confrontations'
+- 'Step 2: Intoxicated individuals are more likely to fall or be unable to protect
+  themselves during assault, resulting in direct head trauma'
+- 'Step 3: Head injuries were the most common injury type in the violence group, requiring
+  significantly more surgical wound care'
+- 'Step 4: Alcohol intoxication complicates clinical assessment because mental status
+  changes may be attributed to intoxication rather than brain injury, potentially
+  delaying diagnosis and treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Jason-Alexander Hörauf et al. 2023. "Saturday Night Fever: Interpersonal
+    Violence as a Reason for Presentation in a University Emergency Department.."
+    *International journal of environmental research and public health*. https://doi.org/10.3390/ijerph20054552'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.627014'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: concomitant_alcohol_intoxication
+  direction: strengthens
+  strength: strong
+  description: Alcohol intoxication increases both injury severity and diagnostic
+    complexity, as mental status abnormalities may mask underlying brain injury
+- name: head_injury_location
+  direction: strengthens
+  strength: strong
+  description: Head was the most common injury location in violence group, suggesting
+    systematic targeting or vulnerability of this region during intoxicated violence
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/alcohol_intoxication_to_head_trauma_injury_severity.yaml
+_category: biological

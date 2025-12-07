@@ -1,0 +1,51 @@
+id: NEW:sdoh_multiple_exposures_to_NEW:medical_device_transplant_success
+name: Multiple SDoH Risk Factor Exposure → Medical Device and Transplant Success
+from_node:
+  node_id: NEW:sdoh_multiple_exposures
+  node_name: Multiple SDoH Risk Factor Exposure
+to_node:
+  node_id: NEW:medical_device_transplant_success
+  node_name: Medical Device and Transplant Success
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with multiple SDoH risk factors face compounded barriers to healthcare access'
+- 'Step 2: Reduced likelihood of referral for advanced heart failure therapies due to implicit bias'
+- 'Step 3: Lower rates of pre-transplant optimization and device candidacy evaluation'
+- 'Step 4: Poorer post-operative follow-up due to transportation, housing, and economic barriers'
+- 'Step 5: Decreased success rates of cardiac devices and transplantation'
+evidence:
+  quality_rating: B
+  n_studies: 8
+  primary_citation: 'K. Enard et al. 2023. "Influence of Social Determinants of Health on Heart Failure
+    Outcomes: A Systematic Review." https://doi.org/10.1161/JAHA.122.026590'
+  supporting_citations:
+  - Studies examining SDoH and medical device/transplant outcomes (k=8)
+  - Studies using disease registries to assess advanced therapy outcomes
+  - Additional citations require full-text access for specific author names
+  doi: 10.1161/JAHA.122.026590
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Eight studies examined how SDoH affect success of medical devices and cardiac transplantation,
+  with studies using multiple SDoH variables to capture cumulative disadvantage
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies used 1-9 SDoH as primary independent variables with 0-7 as controls, creating
+    substantial heterogeneity
+moderators:
+- name: number_of_sdoh_factors
+  direction: strengthens
+  strength: strong
+  description: Greater number of SDoH exposures compounds negative effects on outcomes
+structural_competency:
+  equity_implications: This mechanism highlights how structural barriers compound to create disparities
+    in access to life-saving advanced therapies. The review notes that transplant and device candidacy
+    decisions may be influenced by SDoH factors, raising equity concerns about whether these decisions
+    reflect true clinical criteria or structural bias. Interventions must address systemic barriers to
+    transplant access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.942932'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

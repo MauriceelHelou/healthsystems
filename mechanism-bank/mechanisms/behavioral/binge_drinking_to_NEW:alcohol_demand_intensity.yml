@@ -1,0 +1,57 @@
+id: binge_drinking_to_NEW:alcohol_demand_intensity
+name: Binge Drinking → Alcohol Demand Intensity (Consumption When Free)
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:alcohol_demand_intensity
+  node_name: Alcohol Demand Intensity (Consumption When Free)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Heavy drinking episodes produce neuroadaptive changes in reward circuitry'
+- 'Step 2: These neurobiological changes increase the reinforcing value of alcohol'
+- 'Step 3: Elevated reinforcing value manifests as higher demand intensity on behavioral economic measures'
+- 'Step 4: This creates a self-reinforcing cycle where drinking increases demand which promotes further
+  drinking'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Cheong et al. 2022. "Bidirectional prospective associations between behavioral
+    economic indicators and drinking patterns during alcohol use disorder natural recovery attempts.."
+    https://doi.org/10.1037/adb0000859
+  supporting_citations:
+  - Additional citations require full-text access - abstract references behavioral economic theory
+  - Additional citations require full-text access - cross-sectional research support mentioned
+  - Additional citations require full-text access - methodological basis in alcohol purchase task literature
+  doi: 10.1037/adb0000859
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2023, source is 2022'
+last_updated: '2025-12-06'
+version: '2.0'
+description: The bidirectional nature of the association shows that heavy drinking in one quarter predicted
+  higher alcohol demand intensity in the subsequent quarter. This supports behavioral economic theory
+  that alcohol consumption reinforces and elevates the subjective value of alcohol, creating vulnerability
+  to continued problematic use.
+quantitative_effects:
+  p_value: 0.05
+  sample_size: 191
+moderators:
+- name: drinking_pattern_severity
+  direction: strengthens
+  strength: moderate
+  description: Heavy drinking (vs. moderate drinking or abstinence) more strongly predicted subsequent
+    elevated demand intensity
+structural_competency:
+  equity_implications: 'This reverse pathway has implications for structural interventions: reducing alcohol
+    availability and marketing exposure during early recovery could help break the demand-consumption
+    cycle. Communities with higher alcohol outlet density and aggressive alcohol marketing may create
+    environments that accelerate this reinforcement cycle, particularly for those attempting natural recovery
+    without treatment support.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.798071'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

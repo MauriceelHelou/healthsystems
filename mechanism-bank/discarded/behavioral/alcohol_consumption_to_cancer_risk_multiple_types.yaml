@@ -1,0 +1,40 @@
+id: alcohol_consumption_to_cancer_risk_multiple_types
+name: Alcohol Consumption → Cancer Risk (Multiple Types)
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: cancer_risk_multiple_types
+  node_name: Cancer Risk (Multiple Types)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol is metabolized to acetaldehyde, a carcinogenic compound that damages
+  DNA and proteins'
+- 'Step 2: Chronic alcohol exposure increases oxidative stress and impairs DNA repair
+  mechanisms'
+- 'Step 3: Alcohol disrupts hormone metabolism, particularly sex steroid hormones
+  that influence cancer development'
+- 'Step 4: Alcohol consumption increases systemic inflammation and compromises immune
+  surveillance of cancer cells'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Molly Went et al. 2023. "Risk factors for eight common cancers
+    revealed from a phenome-wide Mendelian randomisation analysis of 378,142 cases
+    and 485,715 controls.." *Research square*. https://doi.org/10.21203/rs.3.rs-2587058/v1
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.505614'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: cancer_type
+  direction: strengthens
+  strength: moderate
+  description: Alcohol effects may vary by cancer type, with some cancers showing
+    stronger associations than others
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/behavioral/alcohol_consumption_to_cancer_risk_multiple_types.yaml
+_category: behavioral

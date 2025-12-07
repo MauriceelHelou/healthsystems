@@ -1,0 +1,60 @@
+id: NEW:gambling_participation_adult_to_NEW:problematic_gambling_prevalence
+name: Adult Gambling Participation → Problematic Gambling Prevalence
+from_node:
+  node_id: NEW:gambling_participation_adult
+  node_name: Adult Gambling Participation
+to_node:
+  node_id: NEW:problematic_gambling_prevalence
+  node_name: Problematic Gambling Prevalence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Gambling becomes normalized and widely accessible in society'
+- 'Step 2: 46.2% of adults participate in gambling activities'
+- 'Step 3: Gambling industry targeting and product design promote continued engagement'
+- 'Step 4: A subset of gamblers progress to problematic gambling (1.41% of adults)'
+evidence:
+  quality_rating: A
+  n_studies: 366
+  primary_citation: 'Lucy T Tran et al. 2024. "The prevalence of gambling and problematic gambling: a
+    systematic review and meta-analysis." https://doi.org/10.1016/S2468-2667(24)00126-9'
+  supporting_citations:
+  - Review registered on PROSPERO (CRD42021251835)
+  - Data extracted using bespoke Microsoft Access database from 380 unique representative samples
+  - Australian National Health and Medical Research Council funded study
+  doi: 10.1016/S2468-2667(24)00126-9
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: The systematic review found 1.41% (95% CI 1.06-1.84) of adults globally meet criteria for
+  problematic gambling. This represents a substantial public health burden given the association between
+  gambling and multiple health harms identified in the paper.
+quantitative_effects:
+  effect_size:
+    value: 1.41
+    type: percentage_change
+    ci_lower: 1.06
+    ci_upper: 1.84
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Global estimate derived from 68 countries and territories with population-weighted
+    methodology
+moderators:
+- name: sex_gender
+  direction: strengthens
+  strength: moderate
+  description: Men have higher gambling rates (49.1%) vs women (37.4%), suggesting potential gender differences
+    in problematic gambling
+structural_competency:
+  equity_implications: The paper explicitly frames problematic gambling as a public health issue requiring
+    governmental regulation rather than individual-level interventions. The call for strict regulation
+    acknowledges that industry practices and regulatory environments are key structural determinants of
+    population-level harm.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.168946'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

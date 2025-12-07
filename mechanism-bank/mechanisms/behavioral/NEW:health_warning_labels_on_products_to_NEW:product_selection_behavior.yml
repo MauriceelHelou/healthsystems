@@ -1,0 +1,64 @@
+id: NEW:health_warning_labels_on_products_to_NEW:product_selection_behavior
+name: Health Warning Labels on Food and Alcohol Products → Product Selection Behavior
+from_node:
+  node_id: NEW:health_warning_labels_on_products
+  node_name: Health Warning Labels on Food and Alcohol Products
+to_node:
+  node_id: NEW:product_selection_behavior
+  node_name: Product Selection Behavior
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Health warning labels are placed on food and alcohol products at point of selection'
+- 'Step 2: Visual and textual warnings communicate health risks to consumers at decision-making moment'
+- 'Step 3: Risk information activates cognitive processing of potential health consequences'
+- 'Step 4: Increased awareness of harms shifts product preferences away from labeled items'
+- 'Step 5: Consumers are 26% less likely to select products displaying health warning labels'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Natasha Clarke et al. 2019. "Impact of Image-and-text and Text-only Health Warning
+    Labels on Selection and Consumption of Food and Alcohol Products: Systematic Review with Meta-analysis."
+    https://doi.org/10.31234/osf.io/jt52m'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references systematic review with meta-analysis
+    of 14 studies (3 on alcohol, 11 on food)
+  - Studies included randomised or quasi-randomised controlled trials on HWLs
+  - Evidence base draws on tobacco control research demonstrating HWL effectiveness
+  doi: 10.31234/osf.io/jt52m
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: Unexpected error: list index out of range'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Health warning labels placed on food and alcohol products reduce consumer selection of those
+  products. Meta-analysis of 12 comparisons from 9 studies found participants were 26% less likely to
+  choose a product displaying a health warning label compared to no-label controls.
+quantitative_effects:
+  effect_size:
+    value: 0.74
+    type: relative_risk
+    ci_lower: 0.68
+    ci_upper: 0.8
+  sample_size: 12635
+moderators:
+- name: label_type_image_vs_text
+  direction: strengthens
+  strength: moderate
+  description: Image-and-text HWLs showed larger effect (RR=0.65, 95% CI 0.54-0.80) compared to text-only
+    HWLs (RR=0.79, 95% CI 0.74-0.85), though difference was not statistically significant
+structural_competency:
+  equity_implications: This mechanism represents a structural/policy intervention that modifies the choice
+    environment rather than relying on individual willpower or education alone. Warning labels function
+    as an upstream policy tool that can be mandated through regulation, similar to tobacco control policies.
+    The intervention operates at the population level by changing the informational environment at point
+    of purchase, potentially reducing inequities by providing standardized health information regardless
+    of individual health literacy or access to health education. However, current evidence is limited
+    to experimental settings and may not fully capture real-world effectiveness or differential impacts
+    across socioeconomic groups.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.379005'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

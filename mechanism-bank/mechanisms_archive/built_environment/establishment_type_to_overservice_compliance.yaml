@@ -1,0 +1,37 @@
+id: establishment_type_to_overservice_compliance
+name: Type of Licensed Alcohol Establishment → Compliance with Overservice Prevention
+from_node:
+  node_id: establishment_type
+  node_name: Type of Licensed Alcohol Establishment
+to_node:
+  node_id: overservice_compliance
+  node_name: Compliance with Overservice Prevention
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Different types of licensed establishments (bars, restaurants, venues)
+  have varying business models and profit structures related to alcohol sales'
+- 'Step 2: Establishment type influences staffing patterns, management oversight,
+  and corporate policies around alcohol service'
+- 'Step 3: Structural characteristics of establishment type (e.g., lighting, seating
+  arrangements, service model) affect servers'' ability to assess patron intoxication'
+- 'Step 4: Establishments with certain structural features demonstrate differential
+  rates of serving apparently intoxicated customers'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: David B Buller et al. 2024. "Sales to Apparently Intoxicated Customers
+    in Three States With Different Histories of Responsible Beverage Service Training.."
+    *Journal of studies on alcohol and drugs*. https://doi.org/10.15288/jsad.23-00258
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.613416'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: business_model_alcohol_dependency
+  direction: weakens
+  strength: moderate
+  description: Establishments more dependent on alcohol sales for revenue may face
+    greater financial pressure to overserve

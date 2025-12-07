@@ -1,0 +1,42 @@
+id: alcohol_detox_protocol_implementation_to_alcohol_related_readmissions
+name: Alcohol Detoxification Protocol Implementation → Alcohol-Related Disorder Readmissions
+from_node:
+  node_id: alcohol_detox_protocol_implementation
+  node_name: Alcohol Detoxification Protocol Implementation
+to_node:
+  node_id: alcohol_related_readmissions
+  node_name: Alcohol-Related Disorder Readmissions
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Standardized protocol connects patients with substance abuse treatment
+  programs during the detoxification process'
+- 'Step 2: E-consult assesses patient interest in ongoing treatment and facilitates
+  appropriate follow-up care linkages'
+- 'Step 3: Comprehensive medication management (including gabapentin) may reduce withdrawal
+  severity and relapse risk'
+- 'Step 4: Coordinated care pathway reduces likelihood of repeat emergency presentations
+  and readmissions for alcohol withdrawal'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: James A Hall et al. 2020. "The alcohol detoxification protocol
+    and creation of the e-consult at Central Texas Veterans health care system.."
+    *Proceedings (Baylor University. Medical Center)*. https://doi.org/10.1080/08998280.2020.1727707
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.757824'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: substance_abuse_treatment_capacity
+  direction: strengthens
+  strength: strong
+  description: Availability of substance abuse treatment programs to which patients
+    can be referred strengthens the reduction in readmissions
+- name: continuity_of_care
+  direction: strengthens
+  strength: moderate
+  description: Successful linkage to ongoing follow-up care after detoxification reduces
+    readmission risk

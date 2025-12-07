@@ -1,0 +1,42 @@
+id: hospitalization_for_aud_to_maud_treatment_initiation
+name: Hospitalization with Alcohol Use Disorder Diagnosis → Initiation of Evidence-Based
+  Addiction Treatment
+from_node:
+  node_id: hospitalization_for_aud
+  node_name: Hospitalization with Alcohol Use Disorder Diagnosis
+to_node:
+  node_id: maud_treatment_initiation
+  node_name: Initiation of Evidence-Based Addiction Treatment
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Hospitalization creates a ''captive'' healthcare encounter for patients
+  who may not otherwise seek addiction treatment'
+- 'Step 2: Medical admission provides an opportunity for comprehensive assessment
+  and diagnosis of alcohol use disorder'
+- 'Step 3: Hospital setting allows for medically supervised withdrawal management
+  and MAUD initiation'
+- 'Step 4: Inpatient treatment initiation can serve as gateway to ongoing outpatient
+  addiction care for patients with limited healthcare access'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sumeet Singh-Tan et al. 2023. "Addiction Consult Service and Inpatient
+    Outcomes Among Patients with Alcohol Use Disorder." *Journal of general internal
+    medicine*. https://doi.org/10.1007/s11606-023-08202-7
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.719387'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: presence_of_addiction_consultation_service
+  direction: strengthens
+  strength: strong
+  description: The presence of specialized ACS dramatically increases the likelihood
+    that hospitalization opportunity is leveraged for MAUD initiation (from 0.9% to
+    33.0% for inpatient, 1.9% to 41.4% at discharge)
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/hospitalization_for_aud_to_maud_treatment_initiation.yaml
+_category: healthcare_access

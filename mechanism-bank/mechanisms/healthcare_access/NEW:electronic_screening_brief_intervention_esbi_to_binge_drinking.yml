@@ -1,0 +1,52 @@
+id: NEW:electronic_screening_brief_intervention_esbi_to_binge_drinking
+name: Electronic Screening and Brief Intervention (e-SBI) → Binge Drinking
+from_node:
+  node_id: NEW:electronic_screening_brief_intervention_esbi
+  node_name: Electronic Screening and Brief Intervention (e-SBI)
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: e-SBI identifies patients with binge drinking patterns in trauma settings'
+- 'Step 2: Electronic tools provide standardized assessment of drinking frequency and quantity'
+- 'Step 3: Brief intervention targets specific risk behaviors including binge drinking'
+- 'Step 4: Personalized feedback addresses patterns of excessive consumption'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Matthew Woliansky et al. 2025. "Review article: Electronic screening and brief intervention
+    for alcohol-related trauma: A systematic review and meta-analysis.." https://doi.org/10.1111/1742-6723.14506'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 4 RCTs included in meta-analysis
+  - Bayesian meta-analysis methodology employed
+  - Quality assessment utilized Cochrane risk of bias tool
+  doi: 10.1111/1742-6723.14506
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-12-06'
+version: '2.0'
+description: e-SBI shows uncertain effects on binge drinking among trauma patients. While the intervention
+  targets this risk behavior, heterogeneity in how binge drinking was measured across the 4 RCTs limits
+  confidence in the effect.
+quantitative_effects:
+  sample_size: 2641
+moderators:
+- name: outcome_measurement_standardization
+  direction: weakens
+  strength: moderate
+  description: Lack of standardized outcome measurements contributed to uncertainties in binge drinking
+    outcomes
+structural_competency:
+  equity_implications: The uncertainty in binge drinking outcomes highlights the need for standardized
+    approaches in health systems. Structural factors including inconsistent measurement practices and
+    varying definitions of binge drinking across healthcare systems create barriers to understanding intervention
+    effectiveness, particularly for populations with different drinking norms.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.082482'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

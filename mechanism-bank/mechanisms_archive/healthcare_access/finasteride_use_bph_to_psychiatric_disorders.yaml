@@ -1,0 +1,42 @@
+id: finasteride_use_bph_to_psychiatric_disorders
+name: Finasteride Use for Benign Prostatic Hyperplasia → Psychiatric Disorders
+from_node:
+  node_id: finasteride_use_bph
+  node_name: Finasteride Use for Benign Prostatic Hyperplasia
+to_node:
+  node_id: psychiatric_disorders
+  node_name: Psychiatric Disorders
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Finasteride 5mg daily inhibits 5-alpha reductase, reducing DHT for prostate
+  symptom management'
+- 'Step 2: Altered androgen metabolism affects neurosteroid synthesis in older adults'
+- 'Step 3: Age-related differences in neuroplasticity and receptor sensitivity may
+  buffer psychiatric effects'
+- 'Step 4: Overall psychiatric disorder incidence remains similar to age-matched controls
+  despite drug exposure'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Anna Lyakhovitsky et al. 2024. "The risk of psychiatric disorders
+    in finasteride users with benign prostatic hyperplasia and androgenetic alopecia:
+    A population-based case-control study.." *The Australasian journal of dermatology*.
+    https://doi.org/10.1111/ajd.14359'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.553436'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: age
+  direction: weakens
+  strength: strong
+  description: BPH patients had mean age 61.5 years versus AGA patients at 31.4 years;
+    older age associated with no significant psychiatric risk increase
+- name: finasteride_dose
+  direction: weakens
+  strength: weak
+  description: BPH patients received 5mg daily versus 1mg for AGA, but showed lower
+    psychiatric risk despite higher dose

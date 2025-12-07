@@ -1,0 +1,34 @@
+id: parental_aud_exposure_childhood
+name: Parental AUD Exposure (Childhood)
+scale: 4
+domain: Family Environment, Adverse Childhood Experiences
+category: social_environment
+stock:
+  value: 12.5
+  unit: Percent of children living with parent who has AUD
+  year: 2022
+  source: NSDUH, NESARC, ACEs studies
+geographic_variation:
+  score: 3
+  level: state
+  notes: Varies with adult AUD prevalence; higher in areas with elevated substance use
+data_quality:
+  availability: medium
+  frequency: annual
+  bias_notes: Often calculated from adult AUD rates and household composition; direct child surveys limited
+  primary_sources:
+  - name: SAMHSA NSDUH (parent AUD status with children)
+    granularity: state
+  - name: National Survey of Children's Health (NSCH)
+    granularity: state
+  - name: Adverse Childhood Experiences (ACE) studies
+    granularity: state
+description: |-
+  Percentage of children (under 18) currently living in a household with at least
+  one parent or caregiver meeting criteria for alcohol use disorder. Parental AUD
+  is a recognized Adverse Childhood Experience (ACE) with lasting impacts on child
+  development, mental health, academic achievement, and future substance use risk.
+  Approximately 1 in 8 children in the US live with a parent with past-year AUD.
+  These children experience elevated rates of neglect, abuse, household chaos, and
+  intergenerational transmission of alcohol problems.
+type: Rate

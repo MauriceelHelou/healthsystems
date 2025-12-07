@@ -1,0 +1,62 @@
+id: NEW:abandoned_property_count_to_NEW:aggravated_assault_rate
+name: Abandoned Property Density → Aggravated Assault Rate
+from_node:
+  node_id: NEW:abandoned_property_count
+  node_name: Abandoned Property Density
+to_node:
+  node_id: NEW:aggravated_assault_rate
+  node_name: Aggravated Assault Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Abandoned and vacant properties signal neighborhood disinvestment and reduced informal social
+  control'
+- 'Step 2: Physical disorder creates opportunities for criminal activity and reduces natural surveillance'
+- 'Step 3: Abandoned properties may attract illicit activities including drug use and dealing'
+- 'Step 4: Reduced collective efficacy and increased opportunity structures lead to higher rates of interpersonal
+  violence'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Lardier et al. 2021. "A Spatial Analysis of Alcohol Outlet Density Type, Abandoned
+    Properties, and Police Calls on Aggravated Assault Rates in a Northeastern U.S. City." https://doi.org/10.1080/10826084.2021.1942053
+  supporting_citations:
+  - Additional citations require full-text access - abstract references ecological structure research
+  - Community-based research on neighborhood effects cited in background
+  - Spatial analysis literature on physical disorder and violence
+  doi: 10.1080/10826084.2021.1942053
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Abandoned property count is positively associated with aggravated assault rates, with each
+  additional abandoned property associated with a 28% increase in assault incidence. This reflects how
+  physical disorder and neighborhood disinvestment create conditions conducive to violence.
+quantitative_effects:
+  effect_size:
+    value: 1.28
+    type: incidence_rate_ratio
+    ci_lower: 1.01
+    ci_upper: 2.01
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Abandoned properties cluster in historically disinvested urban neighborhoods; effects
+    may vary by city context and housing market conditions
+moderators:
+- name: neighborhood_poverty
+  direction: strengthens
+  strength: moderate
+  description: Abandoned properties concentrate in poor communities due to historical disinvestment
+- name: social_isolation
+  direction: strengthens
+  strength: moderate
+  description: Socially isolated communities have fewer resources to address physical disorder
+structural_competency:
+  equity_implications: Abandoned properties result from structural forces including redlining, deindustrialization,
+    and housing market failures—not individual negligence. The concentration of abandonment in specific
+    neighborhoods reflects racialized disinvestment. Addressing abandoned properties through housing policy
+    represents a structural violence prevention strategy.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.480985'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

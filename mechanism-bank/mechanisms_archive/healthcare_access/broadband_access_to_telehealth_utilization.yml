@@ -1,0 +1,89 @@
+id: broadband_access_to_telehealth_utilization
+name: Broadband Access -> Telehealth Utilization
+from_node:
+  node_id: broadband_infrastructure_investment
+  node_name: Broadband Infrastructure Investment
+  node_type: policy
+to_node:
+  node_id: telehealth_utilization
+  node_name: Telehealth Utilization
+  node_type: intermediate_pathway
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Broadband infrastructure investment expands high-speed internet availability to underserved areas'
+- 'Step 2: Increased broadband availability enables households to establish reliable internet connections'
+- 'Step 3: Reliable internet connectivity makes video-based telehealth visits technically feasible'
+- 'Step 4: Telehealth becomes viable option for healthcare access, particularly in areas with provider shortages'
+- 'Step 5: Populations with broadband access can substitute telehealth for in-person visits when appropriate, improving healthcare utilization'
+evidence:
+  quality_rating: B
+  n_studies: 6
+  primary_citation: 'Pandit, Ambrish A., Ruchira V. Mahashabde, Clare C. Brown, Mahip Acharya, Catherine C. Shoults, Hari Eswaran, and Corey J. Hayes. 2023. "Association between broadband capacity and telehealth utilization among Medicare Fee-for-service beneficiaries during the COVID-19 pandemic." Journal of Telemedicine and Telecare.'
+  supporting_citations:
+  - 'Pierce, Ryan P., and John J. Stevermer. 2020. "Disparities in use of telehealth at the onset of the COVID-19 public health emergency." Journal of Telemedicine and Telecare 29(1): 1-9.'
+  - 'Webber, Elizabeth C., et al. 2022. "The Association of Broadband Internet Access and Telemedicine Utilization in rural Western Tennessee: an observational study." BMC Health Services Research 21: 765.'
+  - 'SAMHSA. 2024. "Digital Access: A Super Determinant of Health."'
+  doi: 10.1177/1357633X231166026
+  journal: Journal of Telemedicine and Telecare
+  year: 2023
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 1.54
+    type: percentage_change
+    ci_lower: null
+    ci_upper: null
+    ci_level: 95
+  interpretation: 'A 1 standard deviation (39.02%) increase in broadband access was associated with a 1.54 percentage point increase in telehealth utilization among Medicare beneficiaries. Counties with highest broadband availability had 47% higher telehealth utilization compared to counties with lowest availability'
+  sample_size: 35000000
+  heterogeneity_notes: 'Effects were significant after adjusting for county-level characteristics; rural designation was independently associated with lower telehealth use (-1.96 pp)'
+last_updated: '2025-11-30'
+version: '1.0'
+description: Broadband internet access is a critical infrastructure requirement for telehealth utilization. During the COVID-19 pandemic, counties with higher broadband availability had substantially higher rates of telehealth use (47% higher in highest vs. lowest quintile). A standard deviation increase in broadband access was associated with a 1.54 percentage point increase in telehealth utilization among Medicare beneficiaries. Broadband has been identified as a "super determinant" of health that enables access to healthcare services, particularly for rural and underserved populations facing provider shortages.
+moderators:
+- name: rural_urban_status
+  direction: strengthens
+  strength: strong
+  description: Rural areas have lower broadband availability and lower telehealth use; infrastructure investment effects larger in rural areas
+- name: digital_literacy
+  direction: strengthens
+  strength: moderate
+  description: Broadband access only enables telehealth if users have skills to utilize technology
+- name: device_ownership
+  direction: strengthens
+  strength: strong
+  description: Broadband requires computing device; smartphone-only access may limit telehealth functionality
+- name: age
+  direction: weakens
+  strength: moderate
+  description: Older adults may face additional barriers to telehealth adoption beyond broadband access
+- name: telehealth_policy
+  direction: strengthens
+  strength: moderate
+  description: Telehealth reimbursement parity and licensure policies enable provider offering of services
+structural_competency:
+  root_cause_level: infrastructure_structural
+  avoids_victim_blaming: true
+  equity_implications: Digital divide reflects structural underinvestment in broadband infrastructure for rural and low-income communities. An estimated 19 million Americans lack reliable broadband access. Telehealth disparities are not individual technology failures but infrastructure policy choices. Federal broadband investment (IIJA 2021) represents structural intervention to address this determinant.
+assumptions:
+- Assumes telehealth is clinically appropriate alternative for some care
+- Assumes providers offer telehealth services when patients have access
+- Assumes broadband speed is sufficient for video visits
+limitations:
+- COVID-19 pandemic context may not generalize to post-pandemic
+- Cross-sectional design limits causal inference
+- Broadband access does not address all telehealth barriers (digital literacy, device ownership)
+- Telehealth not appropriate for all healthcare needs
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Broadband availability varies dramatically between urban, suburban, and rural areas
+  relevant_geographies:
+  - Rural areas face greatest broadband gaps and would benefit most from infrastructure investment
+  - Tribal areas have particularly low broadband availability
+  - Low-income urban areas may have infrastructure but affordability barriers
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

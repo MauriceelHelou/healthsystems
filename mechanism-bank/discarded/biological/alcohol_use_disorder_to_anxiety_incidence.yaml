@@ -1,0 +1,47 @@
+id: alcohol_use_disorder_to_anxiety_incidence
+name: Alcohol Use Disorder (AUD) → Anxiety Incidence
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder (AUD)
+to_node:
+  node_id: anxiety_incidence
+  node_name: Anxiety Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption disrupts GABA and glutamate neurotransmitter
+  systems that regulate anxiety and stress response'
+- 'Step 2: Alcohol withdrawal states create hyperarousal and anxiety symptoms due
+  to central nervous system adaptations'
+- 'Step 3: Type 2 diabetes diagnosis introduces additional health-related stress and
+  uncertainty for individuals with AUD'
+- 'Step 4: Combined disease burden, neurobiological vulnerability, and pre-existing
+  mental health conditions increase risk of anxiety disorders'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sarah Cook et al. 2024. "Is alcohol use disorder associated with
+    higher rates of depression and anxiety among people with new onset type 2 diabetes?
+    A cohort study using linked primary care data in England.." *BMC primary care*.
+    https://doi.org/10.1186/s12875-024-02628-6
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.541712'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: history_mental_health_condition
+  direction: weakens
+  strength: moderate
+  description: After adjustment for history of mental health condition, the IRR reduced
+    from 2.08 to 1.48, showing that pre-existing mental health vulnerabilities partially
+    mediate the AUD-anxiety relationship
+- name: socioeconomic_deprivation
+  direction: strengthens
+  strength: moderate
+  description: Index of Multiple Deprivation was included as confounder, suggesting
+    deprivation may modify the relationship between AUD and anxiety
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/alcohol_use_disorder_to_anxiety_incidence.yaml
+_category: biological

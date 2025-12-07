@@ -1,0 +1,47 @@
+id: NEW:cochlear_implantation_to_NEW:health_service_utilization
+name: Cochlear Implantation → Health Service Utilization
+from_node:
+  node_id: NEW:cochlear_implantation
+  node_name: Cochlear Implantation
+to_node:
+  node_id: NEW:health_service_utilization
+  node_name: Health Service Utilization
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Cochlear implantation restores functional hearing in adults with severe-to-profound
+  hearing loss'
+- 'Step 2: Improved hearing ability reduces communication barriers and enhances self-management
+  of health conditions'
+- 'Step 3: Better hearing leads to reduced need for prescription medications (particularly
+  for comorbid conditions like depression/anxiety associated with hearing loss)'
+- 'Step 4: Improved health status and self-efficacy decrease frequency of surgical
+  interventions and audiological visits'
+- 'Step 5: Overall reduction in healthcare service utilization including hospital
+  admissions, emergency department presentations, and GP visits'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: 'Tolesa Bekele Okuba et al. 2023. Cochlear implantation impact
+    on health service utilisation and social outcomes: a systematic review. BMC Health
+    Services Research.'
+  supporting_citations: []
+description: Cochlear implantation in adults with hearing loss leads to reduced health
+  service utilization. A systematic review of 9 studies examining health service utilization
+  found that 5 out of 9 studies (55.6%) demonstrated benefits including reduced prescription
+  medication use, fewer surgical interventions, and decreased audiological visits.
+  The mechanism operates through restored hearing function enabling better self-management,
+  reduced comorbidity burden, and decreased need for ongoing medical interventions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Time since implantation
+  direction: strengthens
+  strength: moderate
+  description: Benefits in health service utilization tend to accumulate over time
+    post-implantation
+- name: Baseline hearing disability severity
+  direction: strengthens
+  strength: moderate
+  description: Those with greater pre-implant hearing disability may experience larger
+    reductions in healthcare utilization

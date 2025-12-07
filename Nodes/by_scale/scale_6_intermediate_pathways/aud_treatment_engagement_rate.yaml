@@ -1,0 +1,34 @@
+id: aud_treatment_engagement_rate
+name: AUD Treatment Engagement Rate
+scale: 6
+domain: Healthcare Utilization, Substance Use Treatment
+category: healthcare_access
+stock:
+  value: 7.6
+  unit: Percent of those with AUD receiving any treatment in past year
+  year: 2022
+  source: SAMHSA NSDUH, TEDS
+geographic_variation:
+  score: 4
+  level: state
+  notes: Range from ~5% to 12%; higher in states with expanded Medicaid and treatment infrastructure
+data_quality:
+  availability: high
+  frequency: annual
+  bias_notes: Treatment receipt underestimated; does not capture quality or adequacy of treatment
+  primary_sources:
+  - name: SAMHSA NSDUH (treatment gap analysis)
+    granularity: state
+  - name: Treatment Episode Data Set (TEDS)
+    granularity: state
+  - name: National Drug Abuse Treatment System Survey (NDATSS)
+    granularity: national
+description: |-
+  Percentage of individuals meeting DSM-5 criteria for alcohol use disorder who received
+  any form of specialty substance use treatment in the past year. The treatment gap for
+  AUD remains enormous - only 7-8% receive treatment despite effective interventions
+  existing. This intermediate pathway indicator measures the proportion entering the
+  treatment cascade. Treatment includes outpatient counseling, intensive outpatient,
+  residential/inpatient, medication-assisted treatment, and hospital-based detox.
+  Improving this rate requires addressing stigma, awareness, access, and affordability barriers.
+type: Rate

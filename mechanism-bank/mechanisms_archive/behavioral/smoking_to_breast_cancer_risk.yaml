@@ -1,0 +1,39 @@
+id: smoking_to_breast_cancer_risk
+name: Smoking Status → Breast Cancer Risk
+from_node:
+  node_id: smoking
+  node_name: Smoking Status
+to_node:
+  node_id: breast_cancer_risk
+  node_name: Breast Cancer Risk
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Tobacco smoke contains carcinogenic compounds including polycyclic aromatic
+  hydrocarbons and nitrosamines'
+- 'Step 2: Carcinogens are absorbed and circulated to breast tissue, causing DNA adduct
+  formation'
+- 'Step 3: Tobacco-related compounds induce oxidative stress and impair DNA repair
+  mechanisms'
+- 'Step 4: Accumulated genetic damage increases malignant transformation of breast
+  cells'
+evidence:
+  quality_rating: C
+  n_studies: 12
+  primary_citation: Salma Nabila et al. 2024. "Differential patterns of reproductive
+    and lifestyle risk factors for breast cancer according to birth cohorts among
+    women in China, Japan and Korea." *Breast Cancer Research*. https://doi.org/10.1186/s13058-024-01766-0
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.500935'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: birth_cohort
+  direction: strengthens
+  strength: strong
+  description: 'Smoking association only statistically significant in 1950s birth
+    cohort (HR 1.45 [1.14-1.84]) compared to earlier cohorts (1940s: HR 1.25 [0.99-1.58];
+    1930s: HR 1.06 [0.85-1.32]; 1920s: HR 0.86 [0.69-1.08]). Effect size progressively
+    increases with younger birth cohorts.'

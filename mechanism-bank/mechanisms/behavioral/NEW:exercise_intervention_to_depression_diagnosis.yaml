@@ -1,0 +1,69 @@
+id: NEW:exercise_intervention_to_depression_diagnosis
+name: Exercise Intervention (Walking/Jogging, Yoga, Strength Training) → Depression
+  Diagnosis
+from_node:
+  node_id: NEW:exercise_intervention
+  node_name: Exercise Intervention (Walking/Jogging, Yoga, Strength Training)
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Structured exercise interventions (walking/jogging, yoga, strength training)
+  are prescribed to individuals meeting clinical criteria for major depressive disorder'
+- 'Step 2: Regular physical activity triggers neurobiological changes including increased
+  endorphin release, enhanced neurotransmitter regulation (serotonin, norepinephrine,
+  dopamine), and reduced inflammation markers'
+- 'Step 3: Exercise promotes neuroplasticity and hippocampal neurogenesis, improving
+  cognitive function and emotional regulation'
+- 'Step 4: Behavioral activation through exercise combats social withdrawal and provides
+  structured activity, sense of accomplishment, and potential social engagement'
+- 'Step 5: Cumulative physiological and psychological benefits lead to clinically
+  meaningful reductions in depressive symptoms, with intensity-dependent effects (higher
+  intensity yields greater benefits)'
+evidence:
+  quality_rating: A
+  n_studies: 218
+  primary_citation: 'M. Noetel et al. 2024. "Effect of exercise for depression: systematic
+    review and network meta-analysis of randomised controlled trials." British medical
+    journal.'
+  supporting_citations: []
+description: A comprehensive network meta-analysis of 218 randomized controlled trials
+  (14,170 participants) demonstrates that exercise interventions produce moderate
+  reductions in depression compared to active controls. Walking/jogging showed the
+  strongest effects (Hedges' g = -0.62), followed by yoga (g = -0.55) and strength
+  training (g = -0.49). Effects were dose-dependent, with higher intensity exercise
+  producing greater benefits. Yoga and strength training demonstrated the highest
+  acceptability among participants. The evidence supports exercise as a core treatment
+  for depression alongside psychotherapy and antidepressants.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.62
+    type: hedges_g
+    ci_lower: -0.8
+    ci_upper: -0.45
+  p_value: null
+  sample_size: 14170
+moderators:
+- name: exercise_intensity
+  direction: strengthens
+  strength: strong
+  description: Effects of exercise were proportional to the intensity prescribed -
+    more intense exercise produced greater reductions in depression
+- name: exercise_modality
+  direction: strengthens
+  strength: moderate
+  description: Walking/jogging (g=-0.62), yoga (g=-0.55), and strength training (g=-0.49)
+    showed stronger effects than mixed aerobic exercises (g=-0.43)
+- name: baseline_depression_severity
+  direction: strengthens
+  strength: weak
+  description: Exercise appeared equally effective for people with different baseline
+    levels of depression
+- name: comorbidities
+  direction: strengthens
+  strength: weak
+  description: Exercise appeared equally effective for people with and without comorbidities

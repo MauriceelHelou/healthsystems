@@ -1,0 +1,56 @@
+id: NEW:transcranial_magnetic_stimulation_treatment_to_alcohol_use_disorder
+name: Transcranial Magnetic Stimulation Treatment (iTBS) → Alcohol Use Disorder
+from_node:
+  node_id: NEW:transcranial_magnetic_stimulation_treatment
+  node_name: Transcranial Magnetic Stimulation Treatment (iTBS)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Intermittent theta burst stimulation (iTBS) is delivered to the left dorsolateral prefrontal
+  cortex (DLPFC)'
+- 'Step 2: Stimulation modulates neural circuits involved in executive function and reward processing'
+- 'Step 3: Reduced alcohol cue-reactivity in brain regions including insula and thalamus'
+- 'Step 4: Decreased anhedonia symptoms improve mood regulation'
+- 'Step 5: Lower likelihood of relapse within 3 months post-treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Claudia B. Padula et al. 2024. "A pilot, randomized clinical trial: Left dorsolateral
+    prefrontal cortex intermittent theta burst stimulation improves treatment outcomes in veterans with
+    alcohol use disorder.." https://doi.org/10.1111/acer.15224'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior TMS research in AUD but
+    does not cite specific studies
+  doi: 10.1111/acer.15224
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Active iTBS to the left DLPFC reduced the likelihood of alcohol relapse within 3 months compared
+  to sham treatment, with an odds ratio of 12.0 indicating substantially lower relapse risk in the treatment
+  group (n=8) versus sham group (n=9).
+quantitative_effects:
+  effect_size:
+    value: 12.0
+    type: odds_ratio
+  sample_size: 17
+moderators:
+- name: veteran_status
+  direction: strengthens
+  strength: moderate
+  description: Study specifically recruited veterans with AUD, who may have unique treatment needs and
+    responses due to military service-related factors
+structural_competency:
+  equity_implications: This mechanism relates to healthcare access and availability of novel evidence-based
+    treatments for AUD. Veterans represent a population with elevated AUD risk due to structural factors
+    including combat exposure, reintegration challenges, and service-related trauma. The development and
+    accessibility of effective treatments like iTBS could address health inequities if made available
+    through VA healthcare systems. However, access to specialized neuromodulation treatments may be limited
+    by geographic availability, healthcare infrastructure, and insurance coverage.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.731575'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

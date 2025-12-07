@@ -1,0 +1,50 @@
+id: early_liver_transplantation_policy_to_life_expectancy_alcohol_associated_hepatitis
+name: Early Liver Transplantation Policy (Without Sobriety Requirement) → Life Expectancy
+  in Severe Alcohol-Associated Hepatitis
+from_node:
+  node_id: early_liver_transplantation_policy
+  node_name: Early Liver Transplantation Policy (Without Sobriety Requirement)
+to_node:
+  node_id: life_expectancy_alcohol_associated_hepatitis
+  node_name: Life Expectancy in Severe Alcohol-Associated Hepatitis
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Early transplantation policy eliminates 6-month mandatory sobriety waiting
+  period before waitlist placement'
+- 'Step 2: Patients with severe AH (high MELD and Lille scores) receive liver transplant
+  before disease progression leads to death'
+- 'Step 3: Transplantation replaces failing liver, preventing mortality from acute
+  liver failure'
+- 'Step 4: Survival extends across all post-transplant alcohol use scenarios including
+  abstinence, slip, and sustained use'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Brian P Lee et al. 2019. "Model to Calculate Harms and Benefits
+    of Early vs Delayed Liver Transplantation for Patients With Alcohol-Associated
+    Hepatitis.." *Gastroenterology*. https://doi.org/10.1053/j.gastro.2019.04.012
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.633997'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: lille_score
+  direction: strengthens
+  strength: strong
+  description: Net increase in life expectancy from early transplantation was highest
+    for patients with Lille scores of 0.50-0.82, indicating disease severity moderates
+    benefit
+- name: meld_score
+  direction: strengthens
+  strength: strong
+  description: Net increase in life expectancy from early transplantation was highest
+    for patients with MELD scores of 32 or more, indicating greater benefit for sicker
+    patients
+- name: post_transplant_alcohol_use
+  direction: weakens
+  strength: strong
+  description: Sustained alcohol use after transplantation reduced but did not eliminate
+    benefits of early transplantation

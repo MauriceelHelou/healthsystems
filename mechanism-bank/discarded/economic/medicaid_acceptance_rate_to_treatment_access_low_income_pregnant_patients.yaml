@@ -1,0 +1,45 @@
+id: medicaid_acceptance_rate_to_treatment_access_low_income_pregnant_patients
+name: Low Medicaid Acceptance Rate at OUD Clinics → Treatment Access for Low-Income
+  Pregnant Patients
+from_node:
+  node_id: medicaid_acceptance_rate
+  node_name: Low Medicaid Acceptance Rate at OUD Clinics
+to_node:
+  node_id: treatment_access_low_income_pregnant_patients
+  node_name: Treatment Access for Low-Income Pregnant Patients
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Only 55% of clinics treating pregnant patients accept Medicaid as payment'
+- 'Step 2: Low-income pregnant patients with OUD who rely on Medicaid face limited
+  clinic options'
+- 'Step 3: Economic barriers restrict access to medication-assisted treatment for
+  economically disadvantaged pregnant patients'
+- 'Step 4: Financial exclusion from treatment increases health risks and perpetuates
+  socioeconomic health disparities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Ashley C. Lensch et al. 2021. "Pregnant Patients Using Opioids:
+    Treatment Access Barriers in the Age of COVID-19." *Journal of addiction medicine*.
+    https://doi.org/10.1097/ADM.0000000000000826'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.703177'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: private_insurance_acceptance
+  direction: weakens
+  strength: moderate
+  description: 77% of clinics accept private insurance, creating class-based disparities
+    in treatment access
+- name: self_pay_acceptance
+  direction: weakens
+  strength: weak
+  description: 95% accept self-pay, but this option is economically inaccessible for
+    low-income pregnant patients
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/economic/medicaid_acceptance_rate_to_treatment_access_low_income_pregnant_patients.yaml
+_category: economic

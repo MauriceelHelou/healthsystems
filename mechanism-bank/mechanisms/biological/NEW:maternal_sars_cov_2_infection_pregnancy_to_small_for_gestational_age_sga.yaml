@@ -1,0 +1,45 @@
+id: NEW:maternal_sars_cov_2_infection_pregnancy_to_small_for_gestational_age_sga
+name: Maternal SARS-CoV-2 Infection During Pregnancy → Small for Gestational Age
+from_node:
+  node_id: NEW:maternal_sars_cov_2_infection_pregnancy
+  node_name: Maternal SARS-CoV-2 Infection During Pregnancy
+to_node:
+  node_id: small_for_gestational_age_sga
+  node_name: Small for Gestational Age
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Maternal SARS-CoV-2 infection triggers systemic inflammatory response with
+  elevated cytokines and inflammatory markers during pregnancy'
+- 'Step 2: Placental inflammation and potential vascular dysfunction occur, including
+  possible ACE2 receptor-mediated effects on placental tissue'
+- 'Step 3: Compromised uteroplacental blood flow and nutrient transfer capacity reduce
+  fetal nutrient and oxygen delivery'
+- 'Step 4: Fetal growth restriction develops, resulting in birth weight below the
+  10th percentile for gestational age (SGA status)'
+evidence:
+  quality_rating: A
+  n_studies: 204
+  primary_citation: 'S. Sturrock et al. 2023. Neonatal outcomes and indirect consequences
+    following maternal SARS-CoV-2 infection in pregnancy: a systematic review. BMJ
+    Open.'
+  supporting_citations: []
+description: This systematic review of 204 studies including 45,646 infants across
+  36 countries found that small for gestational age status was more common in infants
+  born following maternal SARS-CoV-2 infection during pregnancy, particularly in larger
+  studies. The biological pathway likely involves maternal immune activation, placental
+  inflammation, and subsequent impairment of fetal growth.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: timing_of_infection
+  direction: strengthens
+  strength: weak
+  description: Limited evidence available for first trimester infections (only 17
+    studies addressed early pregnancy), suggesting potential variation by timing of
+    infection during pregnancy
+- name: study_size
+  direction: strengthens
+  strength: moderate
+  description: Larger studies more consistently showed increased SGA status following
+    maternal SARS-CoV-2 infection

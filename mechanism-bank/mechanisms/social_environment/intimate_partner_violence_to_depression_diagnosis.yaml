@@ -1,0 +1,70 @@
+id: intimate_partner_violence_to_depression_diagnosis
+name: Intimate Partner Violence → Depression
+from_node:
+  node_id: intimate_partner_violence
+  node_name: Intimate Partner Violence
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Women experience intimate partner violence (physical, psychological, and/or
+  sexual abuse) from a current or former partner'
+- 'Step 2: IPV exposure triggers chronic stress responses, trauma, feelings of helplessness,
+  and erosion of self-worth and social support'
+- 'Step 3: Sustained psychological distress, social isolation, and trauma symptoms
+  develop in response to ongoing or past violence'
+- 'Step 4: These factors culminate in increased risk of major depressive disorder,
+  with bidirectional reinforcement where depression may increase vulnerability to
+  continued IPV'
+evidence:
+  quality_rating: A
+  n_studies: 244
+  primary_citation: 'S. White et al. 2023. Global Prevalence and Mental Health Outcomes
+    of Intimate Partner Violence Among Women: A Systematic Review and Meta-Analysis.
+    Trauma, Violence, & Abuse.'
+  supporting_citations:
+  - 'Cory N. Spencer et al. 2023. Health effects associated with exposure to intimate
+    partner violence against women and childhood sexual abuse: a Burden of Proof study.
+    Nature Medicine.'
+  - 'Loraine J Bacchus et al. 2018. Recent intimate partner violence against women
+    and health: a systematic review and meta-analysis of cohort studies. BMJ open.'
+description: Strong and consistent evidence from multiple meta-analyses demonstrates
+  that intimate partner violence significantly increases the risk of depression among
+  women. The pooled odds ratios range from 1.76 for recent IPV exposure to 2.04-3.14
+  across different IPV types. The burden of proof analysis confirmed a moderate association
+  with 63% increased risk of major depressive disorder. The relationship appears bidirectional,
+  with depression also potentially increasing vulnerability to continued IPV. Evidence
+  supports both immediate and long-term depressive consequences of IPV exposure.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.04
+    type: odds_ratio
+    ci_lower: 1.63
+    ci_upper: 3.14
+  p_value: null
+  sample_size: 250599
+moderators:
+- name: Type of IPV
+  direction: strengthens
+  strength: moderate
+  description: Different forms of IPV (physical, psychological, sexual) showed varying
+    associations with depression, with ORs ranging from 2.04 to 3.14
+- name: Population setting
+  direction: strengthens
+  strength: moderate
+  description: Clinical and help-seeking populations showed different prevalence patterns
+    compared to community samples
+- name: Timing of exposure
+  direction: strengthens
+  strength: moderate
+  description: Recent IPV (past 12 months) showed temporal relationship with subsequent
+    depressive symptoms (OR 1.76), suggesting both immediate and longer-term effects
+- name: Pregnancy status
+  direction: strengthens
+  strength: moderate
+  description: Perinatal women showed highest prevalence of lifetime physical IPV,
+    suggesting increased vulnerability during pregnancy

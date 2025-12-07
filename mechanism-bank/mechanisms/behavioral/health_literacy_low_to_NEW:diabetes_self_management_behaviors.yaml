@@ -1,0 +1,56 @@
+id: health_literacy_low_to_NEW:diabetes_self_management_behaviors
+name: Low Health Literacy → Diabetes Self-Management Behaviors
+from_node:
+  node_id: health_literacy_low
+  node_name: Low Health Literacy
+to_node:
+  node_id: NEW:diabetes_self_management_behaviors
+  node_name: Diabetes Self-Management Behaviors
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Low health literacy limits individuals'' ability to comprehend health information,
+  including diabetes education materials, medication instructions, and dietary guidelines'
+- 'Step 2: Reduced comprehension impairs acquisition of diabetes knowledge and understanding
+  of self-care activities such as glucose monitoring, medication adherence, diet management,
+  and physical activity'
+- 'Step 3: Without adequate understanding, patients struggle to perform essential
+  self-management behaviors consistently, leading to poorer diabetes self-care and
+  suboptimal glycemic control'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Butayeva J et al. 2023. The impact of health literacy interventions
+    on glycemic control and self‐management outcomes among type 2 diabetes mellitus:
+    A systematic review. Journal of Diabetes.'
+  supporting_citations: []
+description: Low health literacy negatively impacts diabetes self-management behaviors
+  by limiting patients' ability to understand and apply essential diabetes care information.
+  This systematic review of 15 RCTs demonstrated that health literacy-driven interventions
+  significantly improved both glycemic control (HbA1c) and self-management outcomes,
+  confirming that health literacy is a primary driver of self-management activities.
+  The inverse relationship indicates that individuals with low health literacy have
+  diminished capacity to engage in effective self-care behaviors.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: diabetes_duration
+  direction: strengthens
+  strength: moderate
+  description: Health literacy interventions yielded better improvement in self-management
+    among people with longer diabetes duration (more than 7 years)
+- name: intervention_delivery_mode
+  direction: strengthens
+  strength: moderate
+  description: Telephone-based interventions were particularly effective for improving
+    self-management skills
+- name: healthcare_setting
+  direction: strengthens
+  strength: moderate
+  description: Hospital settings achieved better glycemic control compared to outpatient
+    settings
+- name: intervention_provider
+  direction: strengthens
+  strength: moderate
+  description: Community health worker-led interventions were effective for diabetes
+    knowledge and self-care behaviors

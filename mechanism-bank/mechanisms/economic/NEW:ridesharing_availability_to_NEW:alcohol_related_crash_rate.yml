@@ -1,0 +1,68 @@
+id: NEW:ridesharing_availability_to_NEW:alcohol_related_crash_rate
+name: Ridesharing Service Availability → Alcohol-Related Motor Vehicle Crash Rate
+from_node:
+  node_id: NEW:ridesharing_availability
+  node_name: Ridesharing Service Availability
+to_node:
+  node_id: NEW:alcohol_related_crash_rate
+  node_name: Alcohol-Related Motor Vehicle Crash Rate
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Ridesharing services are introduced but require credit card payment and smartphone access'
+- 'Step 2: Low socioeconomic municipalities have lower rates of credit card ownership and technology adoption'
+- 'Step 3: Residents in these areas cannot access ridesharing as alternative to driving after drinking'
+- 'Step 4: Existing transportation barriers persist or worsen, potentially leading to maintained or increased
+  alcohol-related crashes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Carola A. Blazquez et al. 2021. "Differential impacts of ridesharing on alcohol-related
+    crashes by socioeconomic municipalities: rate of technology adoption matters." https://doi.org/10.1186/s12889-021-12066-z'
+  supporting_citations:
+  - Studies examining ridesharing effects on alcohol-related crashes in United States, United Kingdom,
+    Brazil, and Chile (referenced in abstract)
+  - Chile's Road Safety Commission data (referenced as data source)
+  - Additional citations require full-text access
+  doi: 10.1186/s12889-021-12066-z
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: In low socioeconomic municipalities, the introduction of Uber was not associated with crash
+  reductions and showed a non-significant trend toward increased alcohol-related crashes (RR=1.10, 95%
+  CI 0.97-1.23). This suggests that when ridesharing services are structurally inaccessible due to payment
+  and technology barriers, the intervention provides no harm reduction benefit and may coincide with other
+  factors affecting crash rates.
+quantitative_effects:
+  effect_size:
+    value: 1.1
+    type: relative_risk
+    ci_lower: 0.97
+    ci_upper: 1.23
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect observed specifically in low socioeconomic municipalities in Santiago, Chile.
+    Authors note this finding requires further study and may be related to other phenomena.
+moderators:
+- name: public_transit_availability
+  direction: weakens
+  strength: moderate
+  description: Less access to public transport services in low socioeconomic jurisdictions may contribute
+    to continued reliance on personal vehicles
+- name: alcohol_sales_patterns
+  direction: strengthens
+  strength: weak
+  description: Authors suggest potential increases in alcohol sales and consumption as alternative explanation
+    requiring further study
+structural_competency:
+  equity_implications: This finding highlights how market-based solutions to public health problems can
+    widen existing inequities. The inability of low-income populations to access ridesharing services
+    reflects broader patterns of financial exclusion (unbanked/underbanked status, lack of credit access)
+    and digital divide. The structural barrier is not individual failure to use available services, but
+    systemic exclusion from service access. Policy responses should address these root causes through
+    cash payment options, subsidized access, or enhanced public transit in underserved areas.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.642889'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

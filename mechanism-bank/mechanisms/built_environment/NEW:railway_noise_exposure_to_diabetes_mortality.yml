@@ -1,0 +1,50 @@
+id: NEW:railway_noise_exposure_to_diabetes_mortality
+name: Railway Noise Exposure → Diabetes Mellitus Mortality
+from_node:
+  node_id: NEW:railway_noise_exposure
+  node_name: Railway Noise Exposure
+to_node:
+  node_id: diabetes_mortality
+  node_name: Diabetes Mellitus Mortality
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Chronic residential exposure to railway noise disrupts sleep patterns and causes intermittent
+  arousal'
+- 'Step 2: Sleep disruption and chronic stress response activate neuroendocrine pathways'
+- 'Step 3: Metabolic dysregulation develops through insulin resistance and glucose intolerance mechanisms'
+- 'Step 4: Progressive metabolic dysfunction contributes to diabetes and its complications'
+- 'Step 5: Diabetes-related complications increase mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'D. Vienneau et al. 2024. "Long-term exposure to transportation noise and diabetes
+    mellitus mortality: a national cohort study and updated meta-analysis." https://doi.org/10.1186/s12940-024-01084-0'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 5 studies for railway noise
+  - Swiss National Cohort study (2001-2015) with 4.14 million adults
+  - Multi-exposure Cox regression models adjusting for road traffic and aircraft noise
+  doi: 10.1186/s12940-024-01084-0
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Long-term exposure to railway noise shows a statistically significant association with diabetes
+  mortality, with a 2% increase in hazard per 10 dB increase. Unlike road traffic noise, no threshold
+  effect was observed, suggesting even lower levels of railway noise may contribute to risk.
+quantitative_effects:
+  effect_size:
+    value: 1.02
+    type: hazard_ratio
+    ci_lower: 1.01
+    ci_upper: 1.03
+  sample_size: 4140000
+structural_competency:
+  equity_implications: Railway infrastructure placement often follows historical patterns that concentrated
+    industrial and transportation corridors near working-class neighborhoods. The lack of a threshold
+    effect for railway noise suggests that current approaches to noise mitigation may not adequately address
+    cumulative exposures from multiple transportation sources.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.414622'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

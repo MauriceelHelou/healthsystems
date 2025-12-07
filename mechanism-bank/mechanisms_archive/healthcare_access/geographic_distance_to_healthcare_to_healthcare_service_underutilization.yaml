@@ -1,0 +1,44 @@
+id: geographic_distance_to_healthcare_to_healthcare_service_underutilization
+name: Geographic Distance to Healthcare Facilities (>20 km) → Healthcare Service Underutilization
+from_node:
+  node_id: geographic_distance_to_healthcare
+  node_name: Geographic Distance to Healthcare Facilities (>20 km)
+to_node:
+  node_id: healthcare_service_underutilization
+  node_name: Healthcare Service Underutilization
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Living more than 20 km from healthcare facilities creates substantial travel
+  time and transportation cost barriers for patients with coronary artery disease
+  requiring regular follow-up care'
+- 'Step 2: Geographic distance increases the logistical burden of attending routine
+  medical appointments, particularly for elderly patients or those with limited mobility'
+- 'Step 3: Transportation barriers and time costs lead to missed appointments and
+  reduced frequency of healthcare visits'
+- 'Step 4: Reduced contact with healthcare system results in inadequate monitoring
+  of CAD, medication management gaps, and missed opportunities for preventive interventions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Neeraj Vinod Mohandas et al. 2024. "Healthcare service utilisation
+    among adults with coronary artery disease in rural Aluva, South India: a community-based
+    cross-sectional study.." *BMJ open*. https://doi.org/10.1136/bmjopen-2024-084468'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.488332'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: rural_geographic_context
+  direction: strengthens
+  strength: strong
+  description: Rural setting with limited healthcare facility density and potentially
+    inadequate public transportation infrastructure amplifies the barrier effect of
+    distance
+- name: age_and_mobility
+  direction: strengthens
+  strength: moderate
+  description: Mean age of 65 years suggests elderly population with potentially limited
+    mobility, making distance a greater barrier

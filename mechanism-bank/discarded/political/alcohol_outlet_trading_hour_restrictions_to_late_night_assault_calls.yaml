@@ -1,0 +1,52 @@
+id: alcohol_outlet_trading_hour_restrictions_to_late_night_assault_calls
+name: Alcohol Outlet Trading Hour Restrictions (On-Premises) → Late-Night Police Calls
+  for Assault (4am-6am)
+from_node:
+  node_id: alcohol_outlet_trading_hour_restrictions
+  node_name: Alcohol Outlet Trading Hour Restrictions (On-Premises)
+to_node:
+  node_id: late_night_assault_calls
+  node_name: Late-Night Police Calls for Assault (4am-6am)
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: National maximum trading hour restrictions prohibit 24-hour trading by
+  on-premises outlets (bars/nightclubs), limiting hours to between 8am and 4am'
+- 'Step 2: Trading hour restrictions reduce alcohol availability during late-night
+  hours (4am-6am), even when only 6% of bars/nightclubs were affected due to difference
+  between licensed and actual trading hours'
+- 'Step 3: Reduced late-night alcohol availability decreases the number of intoxicated
+  individuals in public spaces during early morning hours'
+- 'Step 4: Fewer intoxicated individuals during late-night hours reduces opportunities
+  and contexts for violent altercations'
+- 'Step 5: Police calls for service for assaults between 4am-6am decrease gradually
+  over time following implementation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'T. Huckle et al. 2020. "National trading hour restrictions reduced
+    late-night violence even though the impact of the law change on the ground was
+    minimal.." *Alcoholism: Clinical and Experimental Research*. https://doi.org/10.1111/acer.14285'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.056841'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: proportion_of_outlets_affected
+  direction: strengthens
+  strength: strong
+  description: Only 6% of bars/nightclubs were actually affected by the restrictions
+    because most did not trade as long as their licensed hours permitted. Despite
+    minimal ground-level impact, late-night violence still decreased, suggesting even
+    small changes in alcohol availability can have disproportionate effects on violence.
+- name: time_of_night
+  direction: strengthens
+  strength: strong
+  description: The effect was specific to the 4am-6am time period (late-night) that
+    corresponded to the new restricted hours for on-premises outlets. No effect was
+    found for overall night-time violence (9pm-6am), demonstrating temporal specificity.
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/alcohol_outlet_trading_hour_restrictions_to_late_night_assault_calls.yaml
+_category: political

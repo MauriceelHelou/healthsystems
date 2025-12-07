@@ -1,0 +1,74 @@
+id: NEW:primary_care_alcohol_screening_to_binge_drinking
+name: Primary Care Alcohol Screening (AUDIT-C) → Binge Drinking
+from_node:
+  node_id: NEW:primary_care_alcohol_screening
+  node_name: Primary Care Alcohol Screening (AUDIT-C)
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary care screening with AUDIT-C identifies patients with hazardous drinking patterns'
+- 'Step 2: Screening alone (without intervention) may prompt patient self-reflection on drinking behavior'
+- 'Step 3: Both intervention and control groups showed similar alcohol consumption at follow-up, suggesting
+  screening itself has an effect'
+- 'Step 4: Assessment reactivity - the act of being screened may influence behavior regardless of subsequent
+  intervention'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Ryuhei So et al. 2025. "Effectiveness of screening and ultra-brief intervention for
+    hazardous drinking in primary care: pragmatic cluster randomised controlled trial.." https://doi.org/10.1136/bmj-2024-083985'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior work on screening and brief
+    intervention but does not cite specific studies
+  - AUDIT-C (Alcohol Use Disorders Identification Test-Consumption) validation studies referenced implicitly
+  - UMIN Clinical Trials Registry UMIN000051388
+  doi: 10.1136/bmj-2024-083985
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This pragmatic cluster RCT found no evidence that a doctor-delivered ultra-brief intervention
+  (<1 minute) for hazardous drinking was more effective than simplified AUDIT-C screening alone in reducing
+  alcohol consumption at 24 weeks. Both groups showed similar total alcohol consumption (~1000-1050 g/4
+  weeks), with a negligible effect size (Hedges' g = 0.02). The null finding suggests that within primary
+  care settings without existing alcohol intervention infrastructure, screening alone may produce similar
+  outcomes to screening plus minimal intervention.
+quantitative_effects:
+  effect_size:
+    value: 0.02
+    type: standardized_mean_difference
+    ci_lower: -0.1
+    ci_upper: 0.14
+  p_value: 0.75
+  sample_size: 1133
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in Japan; results may not generalize to other healthcare systems or
+    cultural contexts regarding alcohol use
+moderators:
+- name: baseline_healthcare_setting
+  direction: weakens
+  strength: moderate
+  description: Clinics that did not provide routine screening and brief intervention were selected, potentially
+    representing settings less equipped for alcohol interventions
+- name: sex_specific_thresholds
+  direction: strengthens
+  strength: weak
+  description: Different AUDIT-C thresholds used for men (≥5) and women (≥4) to identify hazardous drinking,
+    acknowledging biological differences in alcohol metabolism
+structural_competency:
+  equity_implications: 'This study highlights structural factors in healthcare delivery: (1) The intervention
+    was designed to be implementable in busy primary care settings (<1 minute), acknowledging time constraints
+    in healthcare systems; (2) The study selected clinics without routine alcohol screening, revealing
+    gaps in healthcare infrastructure for addressing hazardous drinking; (3) The null finding does not
+    indicate that hazardous drinking cannot be addressed, but rather that structural investment in more
+    intensive interventions may be needed; (4) Healthcare system capacity (availability of treatment and
+    self-help groups) was a consideration in clinic selection, highlighting how structural supports influence
+    intervention effectiveness.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.235894'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

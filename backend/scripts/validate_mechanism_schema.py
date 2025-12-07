@@ -1,21 +1,25 @@
 """
 Mechanism Schema Validator
 
-Validates mechanism YAML files against the schema defined in:
-05_MECHANISM_BANK_STRUCTURE.md
+Validates mechanism YAML files against both MVP and quantified schemas.
+
+Supports two schema types:
+1. MVP Schema (qualitative): mechanism_pathway, evidence, moderators
+2. Quantified Schema: functional_form, parameters, effect sizes
 
 Checks for:
-- Required fields (from_node, to_node, functional_form, etc.)
+- Required fields based on schema type
 - Bidirectional encoding (direction field)
-- Parameter structure (alpha, L, k, x0 for sigmoid, etc.)
-- Moderator structure (policy, demographic, geographic, implementation)
+- Evidence structure and quality ratings
+- Moderator structure (for MVP: name, direction, strength)
+- Parameter structure (for quantified: alpha, L, k, x0, etc.)
 - Version control and lineage
 - Parameter bounds and plausibility
-- Evidence structure
 
 Usage:
   python validate_mechanism_schema.py --file mechanism.yml
   python validate_mechanism_schema.py --dir mechanism-bank/mechanisms/
+  python validate_mechanism_schema.py --dir mechanism-bank/mechanisms/ --schema mvp
 """
 
 from typing import Dict, List, Tuple, Optional
@@ -36,11 +40,22 @@ class ValidationResult:
 
 class MechanismSchemaValidator:
     """
-    Validates mechanism YAML files against 05_MECHANISM_BANK_STRUCTURE.md schema.
+    Validates mechanism YAML files against both MVP and quantified schemas.
     """
 
-    # Required top-level fields
-    REQUIRED_FIELDS = [
+    # Required fields for MVP schema (qualitative)
+    REQUIRED_FIELDS_MVP = [
+        'from_node',
+        'to_node',
+        'category',
+        'description',
+        'direction',
+        'mechanism_pathway',
+        'evidence'
+    ]
+
+    # Required fields for quantified schema
+    REQUIRED_FIELDS_QUANTIFIED = [
         'from_node_id',
         'to_node_id',
         'category',
@@ -76,14 +91,21 @@ class MechanismSchemaValidator:
     # Valid evidence quality grades
     VALID_EVIDENCE_GRADES = ['A', 'B', 'C', 'D']
 
-    def __init__(self, strict: bool = False):
+    # Valid hierarchy levels
+    VALID_HIERARCHY_LEVELS = ['leaf', 'parent', 'cross']
+
+    def __init__(self, strict: bool = False, schema_type: str = 'auto', valid_node_ids: set = None):
         """
         Initialize validator.
 
         Args:
             strict: If True, warnings are treated as errors
+            schema_type: 'mvp', 'quantified', or 'auto' (auto-detect)
+            valid_node_ids: Set of valid node IDs for referential integrity checks
         """
         self.strict = strict
+        self.schema_type = schema_type
+        self.valid_node_ids = valid_node_ids or set()
 
     def validate(self, mechanism: Dict) -> ValidationResult:
         """
@@ -99,10 +121,126 @@ class MechanismSchemaValidator:
         warnings = []
         info = []
 
+        # Detect schema type
+        detected_schema = self._detect_schema_type(mechanism)
+        info.append(f"Schema type: {detected_schema}")
+
+        if self.schema_type != 'auto' and self.schema_type != detected_schema:
+            warnings.append(
+                f"Expected {self.schema_type} schema but detected {detected_schema}"
+            )
+
+        # Route to appropriate validator
+        if detected_schema == 'mvp':
+            return self._validate_mvp_schema(mechanism, errors, warnings, info)
+        elif detected_schema == 'quantified':
+            return self._validate_quantified_schema(mechanism, errors, warnings, info)
+        else:
+            errors.append("Cannot determine schema type (no mechanism_pathway or functional_form)")
+            return ValidationResult(valid=False, errors=errors, warnings=warnings, info=info)
+
+    def _detect_schema_type(self, mechanism: Dict) -> str:
+        """
+        Detect whether this is an MVP or quantified schema.
+
+        Returns:
+            'mvp', 'quantified', or 'unknown'
+        """
+        has_pathway = 'mechanism_pathway' in mechanism
+        has_functional_form = 'functional_form' in mechanism
+
+        if has_pathway and not has_functional_form:
+            return 'mvp'
+        elif has_functional_form and not has_pathway:
+            return 'quantified'
+        elif has_functional_form and has_pathway:
+            return 'quantified'  # Quantified schema can optionally have pathway
+        else:
+            return 'unknown'
+
+    def _validate_mvp_schema(
+        self,
+        mechanism: Dict,
+        errors: List[str],
+        warnings: List[str],
+        info: List[str]
+    ) -> ValidationResult:
+        """Validate mechanism using MVP qualitative schema"""
+
         # 1. Check required fields
-        missing_fields = self._check_required_fields(mechanism)
-        if missing_fields:
-            errors.extend([f"Missing required field: {field}" for field in missing_fields])
+        for field in self.REQUIRED_FIELDS_MVP:
+            if field not in mechanism:
+                errors.append(f"Missing required MVP field: {field}")
+
+        # If critical fields missing, cannot continue
+        if not mechanism.get('from_node') or not mechanism.get('to_node'):
+            return ValidationResult(valid=False, errors=errors, warnings=warnings, info=info)
+
+        # 2. Validate direction
+        direction = mechanism.get('direction', '')
+        if direction not in ['positive', 'negative']:
+            errors.append(f"Invalid direction '{direction}'. Must be 'positive' or 'negative'")
+
+        # 3. Validate mechanism_pathway
+        pathway = mechanism.get('mechanism_pathway', [])
+        if not isinstance(pathway, list):
+            errors.append("mechanism_pathway must be a list of steps")
+        elif len(pathway) < 2:
+            warnings.append(f"mechanism_pathway has only {len(pathway)} step(s), recommend 2-5 steps")
+        elif len(pathway) > 7:
+            warnings.append(f"mechanism_pathway has {len(pathway)} steps, recommend simplifying to 2-5 key steps")
+
+        # 4. Validate evidence structure
+        ev_errors, ev_warnings = self._validate_mvp_evidence(mechanism)
+        errors.extend(ev_errors)
+        warnings.extend(ev_warnings)
+
+        # 5. Validate moderators (if present)
+        if 'moderators' in mechanism:
+            mod_errors, mod_warnings = self._validate_mvp_moderators(mechanism)
+            errors.extend(mod_errors)
+            warnings.extend(mod_warnings)
+
+        # 6. Validate hierarchy_level (if present)
+        hier_errors, hier_warnings = self._validate_hierarchy_level(mechanism)
+        errors.extend(hier_errors)
+        warnings.extend(hier_warnings)
+
+        # 7. Validate node references exist (if valid_node_ids provided)
+        node_errors = self._validate_node_references(mechanism)
+        errors.extend(node_errors)
+
+        # 8. Check for version and last_updated
+        if 'version' not in mechanism:
+            warnings.append("Missing 'version' field (recommended)")
+        if 'last_updated' not in mechanism:
+            warnings.append("Missing 'last_updated' field (recommended)")
+
+        # Determine validity
+        valid = len(errors) == 0
+        if self.strict and warnings:
+            valid = False
+
+        return ValidationResult(
+            valid=valid,
+            errors=errors,
+            warnings=warnings,
+            info=info
+        )
+
+    def _validate_quantified_schema(
+        self,
+        mechanism: Dict,
+        errors: List[str],
+        warnings: List[str],
+        info: List[str]
+    ) -> ValidationResult:
+        """Validate mechanism using quantified schema (original logic)"""
+
+        # 1. Check required fields
+        for field in self.REQUIRED_FIELDS_QUANTIFIED:
+            if field not in mechanism:
+                errors.append(f"Missing required quantified field: {field}")
 
         # If critical fields missing, cannot continue validation
         if not mechanism.get('functional_form') or not mechanism.get('from_node_id'):
@@ -348,6 +486,125 @@ class MechanismSchemaValidator:
 
         return warnings
 
+
+    def _validate_mvp_evidence(self, mechanism: Dict) -> Tuple[List[str], List[str]]:
+        """Validate evidence structure for MVP schema"""
+        errors = []
+        warnings = []
+        
+        evidence = mechanism.get('evidence', {})
+        
+        if not isinstance(evidence, dict):
+            errors.append('evidence must be a dictionary')
+            return errors, warnings
+            
+        # Check quality rating
+        quality = evidence.get('quality_rating', '')
+        if quality not in self.VALID_EVIDENCE_GRADES:
+            errors.append(f"Invalid evidence quality_rating '{quality}'. Must be A, B, C, or D")
+            
+        # Check n_studies
+        if 'n_studies' not in evidence:
+            warnings.append('Missing n_studies in evidence')
+        else:
+            n_studies = evidence.get('n_studies', 0)
+            if not isinstance(n_studies, int) or n_studies < 0:
+                errors.append(f"n_studies must be a non-negative integer, got: {n_studies}")
+                
+        # Check primary_citation
+        if 'primary_citation' not in evidence:
+            warnings.append('Missing primary_citation in evidence')
+            
+        return errors, warnings
+        
+    def _validate_mvp_moderators(self, mechanism: Dict) -> Tuple[List[str], List[str]]:
+        """Validate moderators for MVP schema"""
+        errors = []
+        warnings = []
+        
+        moderators = mechanism.get('moderators', [])
+        
+        if not isinstance(moderators, list):
+            errors.append('moderators must be a list')
+            return errors, warnings
+            
+        for i, mod in enumerate(moderators):
+            if not isinstance(mod, dict):
+                errors.append(f'Moderator {i} is not a dictionary')
+                continue
+                
+            # Check required fields
+            if 'name' not in mod:
+                errors.append(f'Moderator {i} missing name')
+            if 'direction' not in mod:
+                errors.append(f'Moderator {i} missing direction')
+            else:
+                direction = mod.get('direction', '')
+                if direction not in ['strengthens', 'weakens', 'u_shaped']:
+                    errors.append(f'Moderator {i} invalid direction: {direction}')
+                    
+            if 'strength' not in mod:
+                warnings.append(f'Moderator {i} missing strength')
+            else:
+                strength = mod.get('strength', '')
+                if strength not in ['weak', 'moderate', 'strong']:
+                    warnings.append(f'Moderator {i} strength should be weak/moderate/strong')
+
+        return errors, warnings
+
+    def _validate_hierarchy_level(self, mechanism: Dict) -> Tuple[List[str], List[str]]:
+        """Validate hierarchy_level field."""
+        errors = []
+        warnings = []
+
+        hierarchy_level = mechanism.get('hierarchy_level')
+
+        if hierarchy_level is None:
+            # hierarchy_level is optional, defaults to 'leaf'
+            warnings.append("Missing 'hierarchy_level' field (will default to 'leaf')")
+        elif hierarchy_level not in self.VALID_HIERARCHY_LEVELS:
+            errors.append(
+                f"Invalid hierarchy_level '{hierarchy_level}'. "
+                f"Must be one of: {', '.join(self.VALID_HIERARCHY_LEVELS)}"
+            )
+
+        return errors, warnings
+
+    def _validate_node_references(self, mechanism: Dict) -> List[str]:
+        """
+        Validate that mechanism nodes exist in the node bank.
+
+        This is the referential integrity check - mechanisms cannot
+        reference nodes that don't exist.
+        """
+        errors = []
+
+        # Skip if no valid_node_ids provided
+        if not self.valid_node_ids:
+            return errors
+
+        # Extract from_node ID
+        from_node = mechanism.get('from_node', {})
+        from_node_id = from_node.get('node_id') if isinstance(from_node, dict) else None
+        if not from_node_id:
+            from_node_id = mechanism.get('from_node_id')
+
+        # Extract to_node ID
+        to_node = mechanism.get('to_node', {})
+        to_node_id = to_node.get('node_id') if isinstance(to_node, dict) else None
+        if not to_node_id:
+            to_node_id = mechanism.get('to_node_id')
+
+        # Validate from_node exists
+        if from_node_id and from_node_id not in self.valid_node_ids:
+            errors.append(f"from_node '{from_node_id}' does not exist in Node Bank")
+
+        # Validate to_node exists
+        if to_node_id and to_node_id not in self.valid_node_ids:
+            errors.append(f"to_node '{to_node_id}' does not exist in Node Bank")
+
+        return errors
+
     def _validate_bounds(self, mechanism: Dict) -> List[str]:
         """Validate parameter bounds and plausibility."""
         warnings = []
@@ -513,6 +770,48 @@ class MechanismSchemaValidator:
                     print(f"  - {Path(filepath).name}: {len(result.errors)} errors")
 
 
+def load_node_ids_from_yaml(node_bank_path: Path) -> set:
+    """Load valid node IDs from YAML node bank files."""
+    valid_ids = set()
+
+    if not node_bank_path.exists():
+        return valid_ids
+
+    if node_bank_path.is_file():
+        # Single file
+        try:
+            with open(node_bank_path, 'r', encoding='utf-8') as f:
+                data = yaml.safe_load(f)
+                if isinstance(data, list):
+                    for node in data:
+                        if isinstance(node, dict) and 'id' in node:
+                            valid_ids.add(node['id'])
+                elif isinstance(data, dict):
+                    nodes = data.get('nodes', [])
+                    for node in nodes:
+                        if isinstance(node, dict) and 'id' in node:
+                            valid_ids.add(node['id'])
+        except Exception:
+            pass
+    else:
+        # Directory - find all YAML files
+        yaml_files = list(node_bank_path.rglob('*.yml')) + list(node_bank_path.rglob('*.yaml'))
+        for yaml_file in yaml_files:
+            try:
+                with open(yaml_file, 'r', encoding='utf-8') as f:
+                    data = yaml.safe_load(f)
+                    if isinstance(data, dict) and 'id' in data:
+                        valid_ids.add(data['id'])
+                    elif isinstance(data, list):
+                        for item in data:
+                            if isinstance(item, dict) and 'id' in item:
+                                valid_ids.add(item['id'])
+            except Exception:
+                continue
+
+    return valid_ids
+
+
 def main():
     """Command-line interface for validator."""
     parser = argparse.ArgumentParser(
@@ -533,10 +832,32 @@ def main():
         action='store_true',
         help='Treat warnings as errors'
     )
+    parser.add_argument(
+        '--node-bank',
+        type=str,
+        help='Path to node bank directory for referential integrity validation'
+    )
+    parser.add_argument(
+        '--schema',
+        type=str,
+        choices=['auto', 'mvp', 'quantified'],
+        default='auto',
+        help='Schema type to validate against (default: auto-detect)'
+    )
 
     args = parser.parse_args()
 
-    validator = MechanismSchemaValidator(strict=args.strict)
+    # Load valid node IDs if node-bank provided
+    valid_node_ids = set()
+    if args.node_bank:
+        valid_node_ids = load_node_ids_from_yaml(Path(args.node_bank))
+        print(f"Loaded {len(valid_node_ids)} node IDs from node bank")
+
+    validator = MechanismSchemaValidator(
+        strict=args.strict,
+        schema_type=args.schema,
+        valid_node_ids=valid_node_ids
+    )
 
     if args.file:
         filepath = Path(args.file)

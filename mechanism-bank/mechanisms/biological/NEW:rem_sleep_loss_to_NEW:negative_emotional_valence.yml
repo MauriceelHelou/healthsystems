@@ -1,0 +1,56 @@
+id: NEW:rem_sleep_loss_to_NEW:negative_emotional_valence
+name: Rapid Eye Movement (REM) Sleep Loss → Increased Negative Emotional Valence Response
+from_node:
+  node_id: NEW:rem_sleep_loss
+  node_name: Rapid Eye Movement (REM) Sleep Loss
+to_node:
+  node_id: NEW:negative_emotional_valence
+  node_name: Increased Negative Emotional Valence Response
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Selective loss of REM sleep disrupts emotion regulation processes that occur during this sleep
+  stage'
+- 'Step 2: REM sleep normally facilitates processing of emotional experiences and reduces negative affect'
+- 'Step 3: Without adequate REM, individuals report greater negative valence in response to emotional
+  stimuli'
+- 'Step 4: This pattern differs significantly from slow wave sleep loss, indicating REM-specific emotional
+  functions'
+evidence:
+  quality_rating: A
+  n_studies: 154
+  primary_citation: 'Cara A. Palmer et al. 2024. "0183 Sleep Loss and Emotion: A Systematic Review and
+    Meta-Analysis of over Fifty Years of Experimental Research." https://doi.org/10.1093/sleep/zsae067.0183'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Studies examining REM vs slow wave sleep deprivation included in meta-analysis
+  - Differential effects by sleep stage type reported
+  doi: 10.1093/sleep/zsae067.0183
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Loss of REM sleep specifically increases reports of negative emotional valence in response
+  to emotional stimuli (SMD=0.35, p=.023), an effect not seen with slow wave sleep loss (SMD=0.09, p=.088).
+  This highlights the unique role of REM sleep in emotional regulation.
+quantitative_effects:
+  effect_size:
+    value: 0.35
+    type: standardized_mean_difference
+  p_value: 0.023
+  sample_size: 5717
+moderators:
+- name: type_of_sleep_stage_restricted
+  direction: strengthens
+  strength: strong
+  description: REM sleep loss (SMD=0.35, p=.023) produced significantly greater negative valence responses
+    compared to slow wave sleep loss (SMD=0.09, p=.088)
+structural_competency:
+  equity_implications: REM sleep occurs predominantly in later sleep cycles, meaning those who must cut
+    sleep short (due to work schedules, caregiving, or economic pressures) disproportionately lose REM
+    sleep. This creates a specific pathway through which structural time poverty translates to emotional
+    dysregulation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.114535'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

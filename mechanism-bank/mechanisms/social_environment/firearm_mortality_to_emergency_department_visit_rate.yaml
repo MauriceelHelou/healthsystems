@@ -1,0 +1,52 @@
+id: firearm_mortality_to_emergency_department_visit_rate
+name: Firearm Violence → Emergency Department Utilization
+from_node:
+  node_id: firearm_mortality
+  node_name: Firearm Violence
+to_node:
+  node_id: emergency_department_visit_rate
+  node_name: Emergency Department Utilization
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Firearm violence incidents result in acute traumatic injuries requiring
+  immediate emergency medical care'
+- 'Step 2: Gunshot wound victims are transported to emergency departments for stabilization
+  and treatment of potentially life-threatening injuries'
+- 'Step 3: Secondary ED utilization occurs as victims return for follow-up care, wound
+  complications, and treatment of psychological trauma'
+- 'Step 4: Community-level firearm violence exposure increases ED visits for related
+  mental health crises, anxiety, and trauma responses among witnesses and community
+  members'
+- 'Step 5: Areas with higher firearm violence rates experience sustained elevated
+  ED utilization patterns affecting both direct victims and affected populations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ruhee Shah et al. 2020. "A Scoping Review of Current Social Emergency
+    Medicine Research." Western Journal of Emergency Medicine.
+  supporting_citations: []
+description: Firearm violence directly increases emergency department utilization
+  through acute traumatic injury care needs. The scoping review identified firearm
+  violence as a rapidly growing area of social emergency medicine research, with studies
+  documenting the relationship between firearm injuries and ED visits. The influence
+  of social determinants on ED utilization patterns was noted across multiple topic
+  areas including firearm violence.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: pediatric_population
+  direction: strengthens
+  strength: moderate
+  description: 42% of firearm violence research in EDs involved children or pediatric
+    EDs, suggesting significant impact on youth populations
+- name: socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Social determinants of health influence both firearm violence exposure
+    and ED utilization patterns
+- name: racial_disparities
+  direction: strengthens
+  strength: moderate
+  description: Publications frequently described racial disparities that predispose
+    ED patients to adverse outcomes related to firearm violence

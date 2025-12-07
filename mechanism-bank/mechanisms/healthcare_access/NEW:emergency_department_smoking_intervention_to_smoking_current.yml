@@ -1,0 +1,52 @@
+id: NEW:emergency_department_smoking_intervention_to_smoking_current
+name: Emergency Department Smoking Intervention → Current Smoking
+from_node:
+  node_id: NEW:emergency_department_smoking_intervention
+  node_name: Emergency Department Smoking Intervention
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Emergency department visit provides opportunity for tobacco use screening'
+- 'Step 2: Brief smoking cessation intervention delivered during acute care encounter'
+- 'Step 3: Health education and motivational support increase readiness to quit'
+- 'Step 4: Connections to cessation resources and pharmacotherapy facilitated'
+- 'Step 5: Smoking rates decrease in intervention recipients'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'Emma J Adams et al. 2023. "Effectiveness and implementation of interventions for
+    health promotion in urgent and emergency care settings: an umbrella review.." https://doi.org/10.1186/s12873-023-00798-7'
+  supporting_citations:
+  - Additional citations require full-text access - 3 systematic reviews on smoking interventions identified
+  - Additional citations require full-text access - all 3 reviews focused on effectiveness outcomes
+  - Additional citations require full-text access - no implementation reviews for smoking interventions
+    found
+  doi: 10.1186/s12873-023-00798-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Smoking cessation interventions delivered in emergency care settings show evidence of reducing
+  smoking rates, particularly in short-term follow-up and specific population groups. However, evidence
+  base is more limited compared to alcohol interventions.
+moderators:
+- name: population_subgroup
+  direction: strengthens
+  strength: moderate
+  description: Effectiveness demonstrated particularly in specific population groups
+- name: follow_up_duration
+  direction: weakens
+  strength: moderate
+  description: Effects more evident in short-term; long-term effectiveness uncertain
+structural_competency:
+  equity_implications: Emergency departments serve as critical access points for populations with limited
+    primary care access, including those with lower socioeconomic status who have higher smoking prevalence.
+    Embedding cessation interventions in acute care represents a structural approach to health promotion
+    that addresses healthcare access disparities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.087190'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

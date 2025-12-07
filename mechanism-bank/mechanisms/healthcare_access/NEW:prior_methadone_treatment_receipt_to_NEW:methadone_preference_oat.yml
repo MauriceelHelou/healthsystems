@@ -1,0 +1,64 @@
+id: NEW:prior_methadone_treatment_receipt_to_NEW:methadone_preference_oat
+name: Prior Methadone Treatment Receipt → Preference for Methadone as OAT
+from_node:
+  node_id: NEW:prior_methadone_treatment_receipt
+  node_name: Prior Methadone Treatment Receipt
+to_node:
+  node_id: NEW:methadone_preference_oat
+  node_name: Preference for Methadone as OAT
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Prior exposure to methadone treatment creates familiarity with medication effects and dosing
+  protocols'
+- 'Step 2: Positive treatment experiences reinforce preference for known medication'
+- 'Step 3: Healthcare system structures that limit initial OAT options constrain future preferences'
+- 'Step 4: Patient preference for methadone perpetuated through treatment history shapes future treatment-seeking
+  behavior'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: M J Stowe et al. 2026. "Factors Associated With Preferences for Opioid Agonist Therapies
+    Among People Dependent on Opioids.." https://doi.org/10.1111/dar.70079
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1111/dar.70079
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2025, source is 2026'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Prior receipt of methadone treatment was the strongest independent correlate of preferring
+  methadone over buprenorphine for opioid agonist therapy, with over 6-fold increased odds. This reflects
+  how initial healthcare system treatment pathways shape long-term patient preferences.
+quantitative_effects:
+  effect_size:
+    value: 6.54
+    type: odds_ratio
+    ci_lower: 2.66
+    ci_upper: 17.91
+  sample_size: 400
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted across Australia (excluding Tasmania) through snowball sampling, suggesting
+    geographic variation in treatment access and preferences
+moderators:
+- name: past_month_heroin_use
+  direction: strengthens
+  strength: moderate
+  description: Current heroin use independently associated with methadone preference (aOR 1.78)
+- name: non_prescribed_pharmaceutical_opioid_use
+  direction: strengthens
+  strength: moderate
+  description: Non-prescribed pharmaceutical opioid use associated with methadone preference (aOR 2.23)
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare system structures that determine initial
+    OAT access shape patient preferences long-term. If methadone is more accessible or more commonly prescribed
+    initially, it creates path dependency in treatment preferences. The study emphasizes need for expanded
+    access to diverse OAT options to align treatment with patient preferences rather than system constraints.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.153229'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

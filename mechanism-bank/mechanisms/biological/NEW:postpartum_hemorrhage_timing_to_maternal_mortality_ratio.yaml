@@ -1,0 +1,62 @@
+id: NEW:postpartum_hemorrhage_timing_to_maternal_mortality_ratio
+name: Postpartum Hemorrhage (Day 1) → Maternal Mortality Ratio
+from_node:
+  node_id: NEW:postpartum_hemorrhage_timing
+  node_name: Postpartum Hemorrhage (Day 1)
+to_node:
+  node_id: maternal_mortality_ratio
+  node_name: Maternal Mortality Ratio
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Postpartum hemorrhage occurs predominantly within the first 24 hours after
+  delivery, typically due to uterine atony, retained placental tissue, genital tract
+  trauma, or coagulation disorders'
+- 'Step 2: Rapid and severe blood loss leads to hypovolemic shock, with the average
+  woman losing critical blood volume within minutes to hours without intervention'
+- 'Step 3: Inadequate or delayed access to emergency obstetric care (blood transfusion,
+  uterotonic drugs, surgical intervention) during this critical window results in
+  irreversible organ damage and death'
+- 'Step 4: The concentration of hemorrhage-related deaths on day 1 (79.1% of all PPH
+  deaths) demonstrates the acute, time-sensitive nature of this pathway to maternal
+  mortality'
+evidence:
+  quality_rating: A
+  n_studies: 32
+  primary_citation: 'Dol J et al. 2022. Timing of maternal mortality and severe morbidity
+    during the postpartum period: a systematic review. JBI Evidence Synthesis.'
+  supporting_citations: []
+description: Postpartum hemorrhage occurring on the first day after delivery is the
+  single largest contributor to maternal mortality during the postpartum period. This
+  systematic review of 32 studies found that 79.1% of all deaths due to postpartum
+  hemorrhage occurred on day 1, far exceeding other causes. The biological pathway
+  involves rapid blood loss leading to hypovolemic shock, with death occurring within
+  hours without appropriate emergency intervention. This concentration of mortality
+  on day 1 underscores the critical importance of skilled birth attendance and immediate
+  postpartum monitoring.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 79.1
+    type: proportion
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: Access to emergency obstetric care
+  direction: weakens
+  strength: strong
+  description: Timely access to blood transfusion, uterotonic medications, and surgical
+    interventions significantly reduces the conversion of PPH to maternal death
+- name: Country income level
+  direction: strengthens
+  strength: moderate
+  description: Lower-income settings have higher case fatality rates from PPH due
+    to delays in receiving appropriate care
+- name: Time to intervention
+  direction: strengthens
+  strength: strong
+  description: Delays in recognition and treatment of PPH substantially increase mortality
+    risk given the rapid progression of hypovolemic shock

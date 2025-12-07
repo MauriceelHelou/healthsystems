@@ -1,0 +1,59 @@
+id: NEW:medication_formulary_availability_to_sud_medication_treatment_rate_oud
+name: Availability of Alcohol Dependence Medications in Formulary → SUD Medication Treatment Rate
+from_node:
+  node_id: NEW:medication_formulary_availability
+  node_name: Availability of Alcohol Dependence Medications in Formulary
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Limited number of approved/available medications for alcohol dependence restricts treatment
+  options'
+- 'Step 2: Different medications work for different patient populations; limited options reduce likelihood
+  of finding effective treatment'
+- 'Step 3: Availability of substitution therapy options (e.g., GHB in Italy) expands the pool of treatable
+  patients'
+- 'Step 4: Greater medication variety enables personalized treatment matching and higher overall utilization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Roberta Agabio et al. 2021. "Use of Medications for the Treatment of Alcohol Dependence:
+    A Retrospective Study Conducted in 2011-2012.." https://doi.org/10.2174/2589977512666201228121820'
+  supporting_citations:
+  - Additional citations require full-text access - abstract notes 'limited number of available medications'
+    as documented barrier
+  - Reference to GHB (gamma-hydroxybutyrate) as substitution therapy available in Italian context
+  - Comparison with countries having fewer medication options showing lower utilization
+  doi: 10.2174/2589977512666201228121820
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The range of medications approved and available for alcohol dependence treatment varies by
+  jurisdiction. Greater medication availability, including substitution therapies like GHB, enables higher
+  treatment rates.
+quantitative_effects:
+  effect_size:
+    value: 34.3
+    type: percentage_change
+  sample_size: 345
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Italy has GHB available as substitution therapy, which is not available in many other
+    countries; 34.3% of patients used GHB
+moderators:
+- name: medication_regulatory_approval
+  direction: strengthens
+  strength: strong
+  description: Regulatory decisions about which medications are approved and available directly determine
+    treatment options
+structural_competency:
+  equity_implications: Medication availability is determined by regulatory policy and healthcare system
+    decisions, not individual choices. This mechanism shows how pharmaceutical policy directly shapes
+    treatment access and outcomes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.260168'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

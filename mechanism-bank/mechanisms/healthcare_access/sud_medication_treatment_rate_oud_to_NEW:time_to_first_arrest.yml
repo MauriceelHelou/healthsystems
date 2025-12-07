@@ -1,0 +1,47 @@
+id: sud_medication_treatment_rate_oud_to_NEW:time_to_first_arrest
+name: OUD Medication Treatment Rate (Extended Release Naltrexone) → Time to First Arrest
+from_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: OUD Medication Treatment Rate (Extended Release Naltrexone)
+to_node:
+  node_id: NEW:time_to_first_arrest
+  node_name: Time to First Arrest
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: XR-NTX administered to criminal justice-involved individuals with OUD upon release'
+- 'Step 2: Medication blocks opioid effects but does not provide comprehensive reentry support'
+- 'Step 3: Structural barriers (housing instability, unemployment, lack of social support) remain unaddressed'
+- 'Step 4: No significant difference in time to first arrest between treatment groups'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: William E Soares et al. 2019. "Incidence of future arrests in adults involved in the
+    criminal justice system with opioid use disorder receiving extended release naltrexone compared to
+    treatment as usual.." https://doi.org/10.1016/j.drugalcdep.2018.10.035
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1016/j.drugalcdep.2018.10.035
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Time to first arrest did not significantly differ between XR-NTX and TAU groups (adjusted
+  HR 1.35, CI 0.96-1.89), indicating that medication treatment for OUD does not delay recidivism without
+  addressing broader structural determinants of criminal justice involvement.
+quantitative_effects:
+  effect_size:
+    value: 1.35
+    type: hazard_ratio
+    ci_lower: 0.96
+    ci_upper: 1.89
+  sample_size: 300
+structural_competency:
+  equity_implications: The lack of effect on time to arrest further supports the conclusion that addressing
+    opioid use alone through pharmacotherapy is insufficient. Criminal justice involvement is driven by
+    multiple structural factors including poverty, lack of opportunity, and systemic marginalization that
+    persist regardless of medication status.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.579392'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

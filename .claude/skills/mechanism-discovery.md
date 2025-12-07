@@ -1,401 +1,362 @@
 # Mechanism Discovery Skill
 
-You are conducting literature synthesis to discover and formalize causal mechanisms for the HealthSystems Platform mechanism bank.
+You are conducting automated literature synthesis to discover and formalize causal mechanisms for the HealthSystems Platform mechanism bank.
 
-## Objective
+> **Full Documentation**: See `docs/LLM & Discovery Pipeline/MECHANISM_DISCOVERY_PIPELINE.md` for complete technical details.
 
-Transform academic literature into structured, version-controlled mechanism YAML files that link structural interventions to health outcomes with quantified effect sizes.
+## Pipeline Overview
 
-## Workflow
-
-### 1. Literature Search
-
-**Use MCP servers** to search academic databases:
-
-1. **Initial broad search**:
-   - Query Semantic Scholar: `[intervention type] AND [outcome type] AND (meta-analysis OR systematic review OR RCT)`
-   - Example: `housing quality improvement AND respiratory health AND (meta-analysis OR systematic review)`
-
-2. **Refine search** based on results:
-   - Filter by publication date (prefer recent)
-   - Filter by study type (prefer meta-analyses, systematic reviews)
-   - Filter by population (prefer structural interventions, not individual behavior)
-
-3. **Extract candidate papers**:
-   - Get DOI, title, authors, year
-   - Get abstract
-   - Get study type
-   - Get sample size if available
-
-4. **Present to user** for selection:
-   ```
-   📚 Found 15 relevant papers:
-
-   [1] Sandel et al. (2010) - Meta-analysis - 12 RCTs
-       "Housing Interventions and Control of Asthma-Related Indoor Biologic Agents"
-       DOI: 10.1097/PHH.0b013e3181ddcbd9
-       Effect: 15% reduction in asthma symptoms (pooled OR: 0.85, 95% CI: 0.75-0.95)
-
-   [2] Krieger et al. (2002) - Systematic review - 18 studies
-       "Housing and Health: Time Again for Public Health Action"
-       DOI: 10.2105/AJPH.92.5.758
-       Effect: Variable, multiple pathways identified
-
-   [3] Thomson et al. (2013) - Cochrane review - 8 RCTs
-       "Housing improvements for health and associated socio-economic outcomes"
-       DOI: 10.1002/14651858.CD008657.pub2
-       Effect: Moderate evidence for respiratory health improvement
-
-   Select papers to include (e.g., "1,3"): _
-   ```
-
-### 2. Effect Size Extraction
-
-For each selected paper:
-
-1. **Read abstract and methods** (via MCP fetch if full-text available)
-
-2. **Extract statistical information**:
-   - Effect size measure (OR, RR, Cohen's d, correlation, mean difference)
-   - Point estimate
-   - Confidence interval (95% preferred)
-   - Sample size
-   - Population characteristics
-   - Follow-up duration
-
-3. **Convert to common metric** (log ratio for health outcomes):
-   - Odds ratio → log(OR)
-   - Risk ratio → log(RR)
-   - Rate ratio → log(RR)
-   - Cohen's d → correlation → log(OR) approximation
-   - Note: Use standard conversions, document in `effect_size_derivation`
-
-4. **Meta-analysis** (if multiple studies selected):
-   - Pool effect sizes using inverse-variance weighting
-   - Calculate pooled CI
-   - Assess heterogeneity (I² statistic if reported)
-   - Note: For initial mechanism, simple pooling is acceptable; sophisticated meta-analysis can be Phase 2
-
-5. **Document uncertainty**:
-   - If only one study: Use reported CI
-   - If multiple studies: Use pooled CI
-   - If CI not available: Estimate from p-value or SE
-   - If no uncertainty available: Flag as limitation
-
-### 3. Moderator Identification
-
-Analyze the literature for factors that modify effect size:
-
-1. **Policy environment moderators**:
-   - Enforcement strength (weak vs. strong code enforcement)
-   - Funding availability (subsidies, vouchers)
-   - Legal protections (tenant rights, anti-discrimination)
-   - Examples from papers: "Effects stronger in cities with rigorous enforcement"
-
-2. **Demographic moderators**:
-   - Age (children, elderly)
-   - Race/ethnicity (structural racism, environmental justice)
-   - Income (low-income more affected)
-   - Pre-existing conditions (baseline health status)
-   - Examples: "Larger effects in households with children"
-
-3. **Geographic moderators**:
-   - Climate (humidity, temperature)
-   - Urban vs. rural
-   - Region (policy variation)
-   - Environmental exposures (air quality, pollution)
-   - Examples: "Greater impact in humid climates due to mold"
-
-4. **Implementation moderators**:
-   - Intervention intensity (comprehensive vs. partial)
-   - Quality/fidelity
-   - Duration
-   - Examples: "Complete remediation more effective than partial"
-
-5. **For each moderator, document**:
-   - Factor name
-   - Effect direction (positive = amplifies effect, negative = dampens effect)
-   - Rationale with citation
-
-### 4. Intervention & Outcome Specification
-
-**Intervention details**:
-- Type (structured taxonomy: housing_quality, labor_standards, food_access, etc.)
-- Description (clear, specific)
-- Target population (who receives intervention)
-- Typical implementation (how it's delivered in practice)
-- Scale: structural (federal/state policy), institutional (local/organizational), individual
-
-**Outcome details**:
-- Type (structured taxonomy: respiratory_health, mental_health, cardiovascular, etc.)
-- Measurement (specific metrics)
-- Timeframe (when effects are observed)
-
-**Ensure structural competency**:
-- Focus on structural/institutional interventions (not individual behavior)
-- Frame intervention as addressing systems/policies, not personal choices
-- Avoid victim-blaming language
-
-### 5. Evidence Quality Assessment
-
-Assign quality tier (A/B/C):
-
-**A-tier:**
-- Meta-analysis or systematic review with ≥5 studies
-- Clear effect size with narrow CI
-- Low heterogeneity
-- High-quality individual studies (RCTs, large cohorts)
-- Consistent findings across studies
-
-**B-tier:**
-- Systematic review with <5 studies
-- Single large, well-designed study (RCT, cohort)
-- Moderate heterogeneity
-- Reasonable effect size precision
-
-**C-tier:**
-- Single small study
-- Observational study with limitations
-- Wide CI or high uncertainty
-- Inconsistent findings
-- Preliminary evidence
-
-Document rationale for tier assignment.
-
-### 6. Citation Formatting
-
-Format all citations in Chicago style:
-
-**Format:**
 ```
-Last name, First name, et al. "Article Title." Journal Name Volume, no. Issue (Year): Pages.
+Topic Query → Literature Search → LLM Extraction → Quantitative Effects → Validation → YAML Output
 ```
 
-**Examples:**
-```
-Sandel, Megan, et al. "Housing Interventions and Control of Asthma-Related Indoor Biologic Agents: A Review of the Evidence." Journal of Public Health Management and Practice 16, no. 5 (2010): S11-S20.
+## Key Components
+
+| Component | Implementation | Purpose |
+|-----------|----------------|---------|
+| Literature Search | `backend/pipelines/literature_search.py` | Semantic Scholar + PubMed APIs |
+| LLM Extraction | `backend/pipelines/llm_mechanism_discovery.py` | Claude mechanism extraction |
+| Full Pipeline | `backend/pipelines/end_to_end_discovery.py` | End-to-end workflow |
+| Citation Validation | `backend/utils/citation_validation.py` | Crossref DOI verification |
+| Schema Validation | `backend/scripts/validate_mechanism_schema.py` | Schema compliance |
+| Schema Config | `backend/config/schema_config.py` | Centralized constants |
+
+## Quick Start
+
+### Option 1: Full Pipeline (Recommended)
+
+```python
+from backend.pipelines.end_to_end_discovery import EndToEndDiscoveryPipeline
+
+pipeline = EndToEndDiscoveryPipeline(pubmed_email="your@email.com")
+
+mechanisms = pipeline.discover_mechanisms_for_topic(
+    topic_query="food insecurity diabetes chronic disease",
+    max_papers=10,
+    year_range=(2015, 2024),
+    min_citations=10,
+    focus_area="economic determinants of health"
+)
+
+pipeline.save_mechanisms()
+pipeline.print_summary()
 ```
 
-Include DOI when available:
+### Option 2: Step-by-Step
+
+```python
+# Step 1: Literature Search
+from backend.pipelines.literature_search import LiteratureSearchAggregator
+
+aggregator = LiteratureSearchAggregator(pubmed_email="your@email.com")
+papers = aggregator.search(
+    query="housing quality respiratory health meta-analysis",
+    limit_per_source=15,
+    year_range=(2015, 2024),
+    min_citations=5
+)
+
+# Step 2: LLM Extraction
+from backend.pipelines.llm_mechanism_discovery import LLMMechanismDiscovery
+
+discovery = LLMMechanismDiscovery()
+for paper in papers:
+    mechanisms = discovery.extract_mechanisms_from_paper(
+        paper_abstract=paper.abstract,
+        paper_title=paper.title,
+        paper_doi=paper.doi,
+        paper_citation=paper.citation,
+        focus_area="housing to health"
+    )
 ```
-doi: 10.1097/PHH.0b013e3181ddcbd9
+
+## Search Query Best Practices
+
+**Good Queries**:
+```
+housing quality respiratory health asthma
+eviction housing displacement emergency department
+food insecurity diabetes chronic disease meta-analysis
+medicaid expansion health outcomes mortality
+community health workers healthcare access
+incarceration criminal legal system chronic disease
 ```
 
-Classify study type:
-- `meta_analysis`
-- `systematic_review`
-- `randomized_controlled_trial`
-- `cohort_study`
-- `case_control_study`
-- `cross_sectional_study`
-- `review`
+**Bad Queries** (avoid):
+```
+# Too broad
+health outcomes
 
-### 7. YAML Generation
+# Too narrow
+specific-author-name-2022-study
 
-Generate mechanism file following schema exactly:
+# Full sentences (use keywords instead)
+"What is the relationship between housing and health?"
+```
+
+## Quantitative Effect Extraction
+
+**CRITICAL**: All mechanisms should include quantitative effects when available.
+
+### Effect Size Types
+
+| Type | Use Case | Example |
+|------|----------|---------|
+| `odds_ratio` | Case-control studies | OR 3.29 (CI: 2.46-4.40) |
+| `relative_risk` | Cohort studies | RR 1.45 (CI: 1.20-1.75) |
+| `hazard_ratio` | Survival analysis | HR 2.14 (CI: 1.25-3.67) |
+| `percentage_change` | Continuous outcomes | -0.47% A1C reduction |
+| `incidence_rate_ratio` | Rate comparisons | IRR 1.30 (CI: 1.17-1.46) |
+| `standardized_mean_difference` | Cohen's d | d = 0.52 |
+| `beta_coefficient` | Regression | β = -0.15 |
+
+### YAML Format
 
 ```yaml
-id: [intervention]_[outcome]_v1
-version: 1.0
-metadata:
-  created_date: [YYYY-MM-DD]
-  last_updated: [YYYY-MM-DD]
-  created_by: [name or "LLM-assisted synthesis"]
-  status: active
-
-mechanism:
-  name: [Intervention] → [Outcome]
-  description: |
-    [2-3 sentence description of causal pathway]
-
-  scale: [structural | institutional | individual]
-
-  intervention:
-    type: [taxonomy_term]
-    description: [detailed description]
-    target_population: [who receives intervention]
-    typical_implementation: [how it's delivered]
-
-  outcome:
-    type: [taxonomy_term]
-    measurement: [specific metrics]
-    timeframe: [when effects observed]
-
-effect_size:
-  estimate:
-    value: [numeric]
-    unit: [log_rate_ratio | log_odds_ratio | correlation | standardized_mean_difference]
-    interpretation: [plain language explanation]
-
-  uncertainty:
-    ci_lower: [numeric]
-    ci_upper: [numeric]
-    confidence_level: [0.95 typical]
-
-  functional_form: [linear | log | threshold | dose_response]
-
-moderators:
-  policy_environment:
-    - factor: [factor_name]
-      effect_direction: [positive | negative]
-      rationale: [explanation with citation]
-
-  demographic:
-    - factor: [factor_name]
-      effect_direction: [positive | negative]
-      rationale: [explanation with citation]
-
-  geographic:
-    - factor: [factor_name]
-      effect_direction: [positive | negative]
-      rationale: [explanation with citation]
-
-  implementation:
-    - factor: [factor_name]
-      effect_direction: [positive | negative]
-      rationale: [explanation with citation]
-
-evidence:
-  quality_tier: [A | B | C]
-
-  citations:
-    - citation: |
-        [Chicago-style citation]
-      doi: [DOI if available]
-      study_type: [taxonomy_term]
-
-  effect_size_derivation: |
-    [Detailed explanation of how effect size was calculated,
-     including any conversions, pooling methods, or approximations]
-
-notes: |
-  [Additional context, caveats, equity considerations,
-   structural competency notes, future research needs]
+quantitative_effects:
+  effect_size:
+    value: 3.29
+    type: odds_ratio
+    ci_lower: 2.46
+    ci_upper: 4.40
+    ci_level: 95
+  sample_size: 1953636
+  heterogeneity_i_squared: 82.5
+  interpretation: "Food insecurity increases odds of psychological distress by 229%"
 ```
 
-### 8. Validation & Review
+## Evidence Quality Grades
 
-1. **Schema validation**:
-   ```bash
-   python mechanism-bank/scripts/validate_mechanisms.py [file]
-   ```
-   Fix any schema errors.
+| Grade | Criteria | Study Count |
+|-------|----------|-------------|
+| **A** | Meta-analysis or systematic review with 5+ high-quality studies | 5-100 |
+| **B** | 3-4 studies or systematic review with moderate evidence | 3-10 |
+| **C** | 1-2 studies or limited/emerging evidence | 1-4 |
 
-2. **Plausibility checks**:
-   - Effect sizes in reasonable range (-5 to 5 for log ratios, -1 to 1 for correlations)
-   - CI makes sense (lower < upper, contains point estimate)
-   - Moderators have clear rationale
-   - Citations properly formatted
+**IMPORTANT**: Grade D does not exist. All mechanisms require at least C-level evidence.
 
-3. **Structural competency review**:
-   - Does mechanism focus on structural/institutional change?
-   - Are moderators framed structurally (policy, resources) not individually (behavior)?
-   - Does description avoid victim-blaming?
-   - Are equity considerations explicit?
+## Valid Categories
 
-4. **Expert review checklist** (present to user):
-   ```
-   ✓ Effect size plausible given literature
-   ✓ Uncertainty appropriately quantified
-   ✓ Moderators have strong rationale
-   ✓ Citations complete and accurate
-   ✓ Structural competency alignment
-   ✓ Equity considerations addressed
-   ✓ Functional form appropriate
-   ✓ Schema validation passed
+- `built_environment` - Housing, air quality, transportation infrastructure
+- `social_environment` - Social support, community cohesion, family dynamics
+- `economic` - Income, employment, food security, financial strain
+- `political` - Policy, legislation, regulation, political participation
+- `biological` - Physiological pathways, genetics, biomarkers
+- `behavioral` - Health behaviors (MUST have structural context)
+- `healthcare_access` - Insurance, providers, services, geographic access
 
-   Ready to commit? (y/n)
-   ```
+## Structural Competency Guidelines
 
-### 9. Version Control
+### Good Mechanisms (Structural Focus)
 
-1. **Save YAML file**:
-   - Path: `mechanism-bank/mechanisms/[id].yaml`
-   - Naming: Use mechanism ID as filename
+```yaml
+# Policy → Outcomes
+from_node: medicaid_expansion_policy
+to_node: healthcare_access
+mechanism_pathway:
+  - "State-level policy decision expands eligibility"
+  - "More residents qualify for coverage"
+  - "Insurance removes financial barrier to care"
 
-2. **Git commit**:
-   ```bash
-   git add mechanism-bank/mechanisms/[id].yaml
-   git commit -m "mechanism: add [intervention] → [outcome] (v1)
+# Economic Systems → Health
+from_node: food_insecurity
+to_node: diabetes_outcomes
+mechanism_pathway:
+  - "Household food insecurity forces trade-offs between food and medications"
+  - "Limited budgets result in calorie-dense but nutrient-poor foods"
+  - "Chronic stress from food uncertainty elevates cortisol"
+  - "Poor glycemic control leads to diabetes complications"
+```
 
-   - Effect size: [value] ([CI])
-   - Quality tier: [A/B/C]
-   - Sources: [N] papers ([study types])
-   - LLM-assisted synthesis from [database] search
+### Bad Mechanisms (Individual Blame) - AVOID
 
-   Co-Authored-By: Claude <noreply@anthropic.com>"
-   ```
+```yaml
+# ❌ Blames individual behavior
+from_node: health_literacy
+to_node: medication_adherence
+# Missing: educational inequality, healthcare system complexity
 
-3. **Update mechanism catalog**:
-   - Suggest running `/docs-sync mechanisms`
+# ❌ Victim-blaming framing
+from_node: patient_compliance
+to_node: health_outcomes
+# Missing: systemic barriers to care
 
----
+# ❌ Individual behavior focus without structural context
+from_node: exercise_behavior
+to_node: obesity
+# Missing: built environment, food access, time poverty
+```
 
-## Special Cases
+## Full YAML Output Schema
 
-### No Effect Sizes Available
+```yaml
+id: from_node_to_node
+name: Source Node → Target Node
+from_node:
+  node_id: snake_case_id
+  node_name: Human Readable Name
+  node_type: stock | proxy_index | crisis_endpoint
+to_node:
+  node_id: snake_case_id
+  node_name: Human Readable Name
+  node_type: stock | proxy_index | crisis_endpoint
+direction: positive | negative
+category: built_environment | social_environment | economic | political | biological | behavioral | healthcare_access
+mechanism_pathway:
+  - "Step 1: Initial cause leads to intermediate effect"
+  - "Step 2: Intermediate effect produces downstream change"
+  - "Step 3: Downstream change results in final outcome"
+evidence:
+  quality_rating: A | B | C
+  n_studies: <number>
+  primary_citation: "Chicago-style citation"
+  supporting_citations:
+    - "Additional citation 1"
+    - "Additional citation 2"
+  doi: "10.xxxx/xxxxx"
+  journal: "Journal Name"
+  year: 2024
+  fulltext:
+    available: true | false
+    source: pubmed_central | doi | other
+    url: "URL if available"
+    is_open_access: true | false
+  citation_verified: true | false
+quantitative_effects:
+  effect_size:
+    value: <number>
+    type: odds_ratio | relative_risk | hazard_ratio | percentage_change | incidence_rate_ratio | standardized_mean_difference | beta_coefficient
+    ci_lower: <number>
+    ci_upper: <number>
+    ci_level: 95
+  sample_size: <number>
+  heterogeneity_i_squared: <number or null>
+  interpretation: "Plain language interpretation"
+last_updated: "YYYY-MM-DD"
+version: "1.0"
+description: "Detailed mechanism description"
+moderators:
+  - name: moderator_name
+    direction: strengthens | weakens
+    strength: weak | moderate | strong
+    description: "How this moderator affects the mechanism"
+structural_competency:
+  root_cause_level: policy | economic_system | spatial_arrangement | institutional | interpersonal
+  avoids_victim_blaming: true
+  equity_implications: "Description of equity considerations"
+assumptions:
+  - "Key assumption 1"
+  - "Key assumption 2"
+limitations:
+  - "Limitation 1"
+  - "Limitation 2"
+spatial_variation:
+  varies_by_geography: true | false
+  variation_notes: "Description of geographic variation"
+  relevant_geographies:
+    - "Geography 1 with specific pattern"
+    - "Geography 2 with different pattern"
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: "YYYY-MM-DDTHH:MM:SS"
+  extraction_confidence: high | medium | low
+  prompt_version: "1.0-mvp"
+```
 
-If literature has qualitative findings but no quantified effect sizes:
-1. Flag as C-tier
-2. Estimate plausible range based on similar mechanisms
-3. Document limitation clearly in `effect_size_derivation`
-4. Note need for future quantification
+## Validation
 
-### Conflicting Evidence
+### Automated Schema Validation
 
-If studies show conflicting results:
-1. Document heterogeneity
-2. Use conservative (smaller) effect size
-3. Widen confidence interval to reflect uncertainty
-4. Lower quality tier (B or C)
-5. Note conflict in `notes` section
+```bash
+cd mechanism-bank
+python ../backend/scripts/validate_mechanism_schema.py
+```
 
-### Mechanism Variants
+### Citation Validation
 
-If evidence suggests context-specific mechanisms (e.g., rural vs. urban):
-1. Create base mechanism (v1)
-2. Suggest creating variants (v1_rural, v1_urban) with different effect sizes
-3. Document relationship in `notes`
+```python
+from backend.utils.citation_validation import CitationValidator
 
----
+validator = CitationValidator()
+is_valid, metadata = validator.verify_doi("10.1186/s40795-024-00922-1")
+citation = validator.format_chicago_citation(metadata)
+```
 
-## Output to User
+### Quantitative Effect Verification
 
-At each stage, provide clear summaries:
+For high-stakes mechanisms, verify effects independently:
+1. Look up the DOI via Crossref or PubMed
+2. Fetch the source paper abstract/full text
+3. Confirm effect size matches reported values
+4. Check CI bounds and sample size accuracy
 
-1. **After literature search**: Table of papers with effect sizes
-2. **After extraction**: Summary of pooled effect size
-3. **After moderator identification**: List of moderators with rationale
-4. **Before generation**: Preview of key mechanism details
-5. **After validation**: Checklist of quality checks
-6. **After commit**: Confirmation with file path and next steps
+## Environment Variables
 
----
+```bash
+# Required
+export ANTHROPIC_API_KEY="your_api_key_here"
 
-## Integration with /mechanism Command
+# Optional (higher Semantic Scholar rate limits)
+export SEMANTIC_SCHOLAR_API_KEY="your_key_here"
 
-This skill is designed to work with `/mechanism create`. The command handles:
-- User interaction
-- File I/O
-- Git operations
-- Validation scripts
+# Recommended (NCBI best practice)
+export PUBMED_EMAIL="your_email@example.com"
+```
 
-This skill provides:
-- Literature search strategy
-- Effect size extraction logic
-- Moderator identification framework
-- Quality assessment criteria
-- YAML structure guidance
+## Batch Discovery Example
 
----
+```python
+topics = [
+    ("housing quality respiratory health", "built_environment"),
+    ("eviction health emergency department", "economic"),
+    ("food insecurity diabetes", "economic"),
+    ("incarceration chronic disease", "social_environment"),
+    ("adverse childhood experiences adult health", "social_environment"),
+    ("transportation barriers healthcare", "healthcare_access"),
+    ("unemployment health outcomes", "economic"),
+    ("medicaid expansion health", "political"),
+]
 
-## Equity & Structural Competency
+all_mechanisms = []
+for query, category in topics:
+    mechanisms = pipeline.discover_mechanisms_for_topic(
+        topic_query=query,
+        max_papers=10,
+        focus_area=category
+    )
+    all_mechanisms.extend(mechanisms)
 
-Throughout the process, maintain focus on:
+pipeline.discovered_mechanisms = all_mechanisms
+pipeline.save_mechanisms()
+```
 
-1. **Structural interventions**: Policy, institutional, environmental changes (not individual behavior)
-2. **Equity lens**: Explicitly identify differential effects by race, income, geography
-3. **Power & resources**: Frame moderators in terms of structural factors (enforcement, funding) not individual factors (compliance, motivation)
-4. **Avoid harm**: Do not create mechanisms that could be used to justify victim-blaming or punitive policies
+## Troubleshooting
 
-If a proposed mechanism doesn't align with structural competency principles, explain why and suggest reframing or declining to add it.
+| Problem | Cause | Solution |
+|---------|-------|----------|
+| No papers found | Query too specific | Use keywords, widen year range |
+| Error extracting | API key missing | Check `$ANTHROPIC_API_KEY` |
+| Schema validation failed | Missing fields | Run validation to see errors |
+| Low-quality extractions | Low-impact papers | Increase `min_citations` |
+| Missing quantitative effects | Abstract lacks data | Search for meta-analyses |
+
+## Output Locations
+
+```
+mechanism-bank/mechanisms/
+├── built_environment/      # Housing, air quality, transportation
+├── social_environment/     # Social support, community, family
+├── economic/               # Income, employment, food security
+├── political/              # Policy, legislation, regulation
+├── biological/             # Physiological pathways
+├── behavioral/             # Health behaviors (with structural context)
+└── healthcare_access/      # Insurance, providers, services
+```
+
+## Related Resources
+
+- **Full Documentation**: `docs/LLM & Discovery Pipeline/MECHANISM_DISCOVERY_PIPELINE.md`
+- **Schema Definition**: `mechanism-bank/schemas/mechanism_schema_mvp.json`
+- **Schema Config**: `backend/config/schema_config.py`
+- **Mechanism Validator Agent**: `.claude/agents/mechanism-validator.md`
+- **Mechanism Command**: `.claude/commands/mechanism.md`

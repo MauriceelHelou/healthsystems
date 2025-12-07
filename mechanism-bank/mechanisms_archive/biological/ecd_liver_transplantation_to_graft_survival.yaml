@@ -1,0 +1,41 @@
+id: ecd_liver_transplantation_to_graft_survival
+name: ECD Liver Transplantation in High Acuity Recipients → Graft Survival
+from_node:
+  node_id: ecd_liver_transplantation
+  node_name: ECD Liver Transplantation in High Acuity Recipients
+to_node:
+  node_id: graft_survival
+  node_name: Graft Survival
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: ECD livers (despite age >60, HCV+, prolonged ischemia, or steatosis) provide
+  functional hepatic tissue replacement'
+- 'Step 2: Although ECD grafts show higher maximal transaminases and early allograft
+  dysfunction rates, these represent transient physiologic stress'
+- 'Step 3: Grafts recover sufficient function to maintain long-term viability without
+  significant differences in rejection rates'
+- 'Step 4: Comparable graft survival achieved between ECD and standard liver recipients
+  over 5-year follow-up period'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jacob Guorgui et al. 2021. "The Utility of Extended Criteria Donor
+    Livers in High Acuity Liver Transplant Recipients." *The American surgeon*. https://doi.org/10.1177/00031348211024658
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.616905'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: recipient_meld_score
+  direction: weakens
+  strength: weak
+  description: Higher acuity recipients may have reduced physiologic reserve, but
+    outcomes remained comparable suggesting minimal effect modification
+- name: post_transplant_management
+  direction: strengthens
+  strength: moderate
+  description: Intensive post-operative care may mitigate early allograft dysfunction
+    and support comparable long-term graft survival

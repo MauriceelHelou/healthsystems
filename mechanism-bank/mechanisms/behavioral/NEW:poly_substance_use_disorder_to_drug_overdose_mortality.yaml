@@ -1,0 +1,53 @@
+id: NEW:poly_substance_use_disorder_to_drug_overdose_mortality
+name: Poly-Substance Use Disorder → Drug Overdose Mortality
+from_node:
+  node_id: NEW:poly_substance_use_disorder
+  node_name: Poly-Substance Use Disorder
+to_node:
+  node_id: drug_overdose_mortality
+  node_name: Drug Overdose Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals with poly-substance use disorders engage in concurrent use
+  of multiple substances (e.g., opioids, benzodiazepines, stimulants, alcohol), creating
+  complex pharmacological interactions'
+- 'Step 2: Combined substance effects potentiate respiratory depression, cardiovascular
+  stress, and central nervous system toxicity beyond what single substances would
+  cause'
+- 'Step 3: Unpredictable drug interactions and tolerance variations across multiple
+  substances increase risk of accidental overdose'
+- 'Step 4: Poly-substance users experience significantly higher overdose mortality
+  rates compared to those with single substance use disorders (33% vs 9% of deaths
+  from overdose)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Arne Jan Hjemsæter et al. 2019. "Mortality, cause of death and
+    risk factors in patients with alcohol use disorder alone or poly-substance use
+    disorders: a 19-year prospective cohort study." BMC Psychiatry.'
+  supporting_citations: []
+description: Poly-substance use disorder substantially increases drug overdose mortality
+  risk compared to single-substance use disorders. In a 19-year prospective cohort
+  study, patients with poly-substance use disorders died from overdoses at nearly
+  four times the rate of those with alcohol use disorder alone (33% vs 9% of deaths,
+  p=0.002). The combined use of multiple substances creates dangerous pharmacological
+  interactions and unpredictable toxicity profiles that elevate fatal overdose risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Older age associated with increased risk of death, with differential
+    effects between poly-substance users and alcohol-only users (interaction p=0.041)
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Men showed significantly stronger association between age and death
+    risk compared to women (interaction p=0.011)
+- name: affective disorder
+  direction: weakens
+  strength: moderate
+  description: 'Lifetime affective disorder at baseline associated with lower risk
+    of death (HR 0.58, 95% CI: 0.37-0.91)'

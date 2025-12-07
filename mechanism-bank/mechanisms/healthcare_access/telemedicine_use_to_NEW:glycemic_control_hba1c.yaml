@@ -1,0 +1,75 @@
+id: telemedicine_use_to_NEW:glycemic_control_hba1c
+name: Telemedicine Use → Glycemic Control (HbA1c Levels)
+from_node:
+  node_id: telemedicine_use
+  node_name: Telemedicine Use
+to_node:
+  node_id: NEW:glycemic_control_hba1c
+  node_name: Glycemic Control (HbA1c Levels)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Telemedicine platforms enable remote monitoring of blood glucose levels
+  and facilitate more frequent data transmission between patients and healthcare providers'
+- 'Step 2: Increased patient-provider communication allows for timely medication dose
+  adjustments, individualized assessments, and real-time feedback on glycemic management'
+- 'Step 3: Enhanced accessibility to diabetes care, especially via smartphone apps,
+  promotes better self-management behaviors and adherence to treatment protocols'
+- 'Step 4: Continuous monitoring and skill-building interventions through telemedicine
+  lead to modest but significant reductions in HbA1c levels compared to usual care'
+evidence:
+  quality_rating: A
+  n_studies: 58
+  primary_citation: 'Kun Zhang et al. 2023. Telemedicine in Improving Glycemic Control
+    Among Children and Adolescents With Type 1 Diabetes Mellitus: Systematic Review
+    and Meta-Analysis. Journal of Medical Internet Research.'
+  supporting_citations:
+  - 'Shaun Wen Huey Lee et al. 2017. Telemedicine for the Management of Glycemic Control
+    and Clinical Outcomes of Type 1 Diabetes Mellitus: A Systematic Review and Meta-Analysis
+    of Randomized Controlled Studies. Frontiers in Pharmacology.'
+description: Telemedicine interventions for Type 1 diabetes management produce modest
+  but statistically significant reductions in HbA1c levels compared to usual care.
+  Meta-analytic evidence from 58 RCTs demonstrates that remote monitoring, digital
+  communication platforms, and telemedicine-enabled care coordination improve glycemic
+  control, particularly when incorporating medication adjustments, smartphone-based
+  communication, and individualized feedback. The effect is more pronounced in younger
+  patients and during shorter intervention periods, suggesting telemedicine may be
+  most effective as an adjunct to initiate improved diabetes management.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.22
+    type: mean_difference
+    ci_lower: -0.33
+    ci_upper: -0.1
+  p_value: 0.001
+  sample_size: 1704
+moderators:
+- name: Age group
+  direction: strengthens
+  strength: moderate
+  description: Effect was greater in children (MD -0.41) compared to adolescents
+- name: Study duration
+  direction: strengthens
+  strength: moderate
+  description: Studies lasting <6 months showed greater effects (MD -0.32) than longer
+    studies
+- name: Communication modality
+  direction: strengthens
+  strength: strong
+  description: Smartphone app-based communication showed stronger effects (MD -0.37)
+- name: Medication dose adjustment
+  direction: strengthens
+  strength: moderate
+  description: Interventions including medication dose adjustment were more effective
+    (MD -0.25)
+- name: Baseline HbA1c
+  direction: strengthens
+  strength: moderate
+  description: Patients with higher baseline HbA1c (≥9%) showed larger improvements
+- name: Intervention components
+  direction: strengthens
+  strength: moderate
+  description: Interventions with individualized assessments, audit with feedback,
+    and skill building were more effective

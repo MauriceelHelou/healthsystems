@@ -1,0 +1,50 @@
+id: adverse_childhood_experiences_aces_to_suicide_attempt_rate_ed_hospital
+name: Adverse Childhood Experiences (ACEs) → Suicide Attempt Rate
+from_node:
+  node_id: adverse_childhood_experiences_aces
+  node_name: Adverse Childhood Experiences (ACEs)
+to_node:
+  node_id: suicide_attempt_rate_ed_hospital
+  node_name: Suicide Attempt Rate
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Adverse childhood experiences (childhood trauma, abuse, neglect) create
+  lasting psychological vulnerabilities and disrupt healthy emotional development'
+- 'Step 2: These historical interpersonal factors contribute to the development of
+  personality disorders and other mental health conditions'
+- 'Step 3: Individuals with ACEs and resultant personality pathology may develop maladaptive
+  coping mechanisms including substance use'
+- 'Step 4: The combination of early trauma, personality dysfunction, and comorbid
+  substance use facilitates ideation-to-enaction processes'
+- 'Step 5: These cumulative risk factors significantly elevate the likelihood of suicide
+  attempts'
+evidence:
+  quality_rating: A
+  n_studies: 34
+  primary_citation: 'Heather McClelland et al. 2023. Suicide Risk in Personality Disorders:
+    A Systematic Review. Current Psychiatry Reports.'
+  supporting_citations: []
+description: This systematic review of 34 studies identifies historical interpersonal
+  factors, specifically childhood trauma (a core component of ACEs), as commonly associated
+  with suicide attempt and death outcomes. The review found that childhood trauma
+  contributes to personality disorder development, which in turn substantially elevates
+  suicide risk compared to populations without personality disorders or with other
+  mental health conditions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Personality disorder presence
+  direction: strengthens
+  strength: strong
+  description: Suicide risk is particularly elevated in people with personality disorders
+    compared to those with no or other mental health diagnoses
+- name: Drug and alcohol use
+  direction: strengthens
+  strength: moderate
+  description: Substance use commonly associated with suicide-related outcomes in
+    those with childhood trauma history
+- name: Interpersonal support
+  direction: weakens
+  strength: moderate
+  description: Interventions providing interpersonal support may reduce suicide attempts

@@ -1,0 +1,60 @@
+id: NEW:digital_health_intervention_access_to_sud_treatment_entry_rate
+name: Digital Health Intervention Access → Substance Use Disorder Treatment Entry Rate
+from_node:
+  node_id: NEW:digital_health_intervention_access
+  node_name: Digital Health Intervention Access
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: Substance Use Disorder Treatment Entry Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital health interventions (telehealth, mobile apps) reduce geographic and physical barriers
+  to accessing treatment facilities'
+- 'Step 2: Reduced psychosocial barriers (stigma, anonymity concerns) through remote delivery increases
+  willingness to seek treatment'
+- 'Step 3: Improved treatment accessibility leads to higher rates of SUD treatment initiation and engagement'
+- 'Step 4: Continued access during crises (e.g., COVID-19 quarantine) maintains treatment continuity'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: Harrison Jordan et al. 2023. "A Comprehensive Literature Review of Digital Health
+    Interventions in the Treatment of Substance Use Disorder With Special Focus on Mobile Applications."
+    https://doi.org/10.7759/cureus.47639
+  supporting_citations:
+  - Agency of Healthcare Research and Quality (AHRQ) analysis on DHIs for SUD
+  - PubMed database studies on telehealth for substance use disorders
+  - Additional citations require full-text access
+  doi: 10.7759/cureus.47639
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Digital health interventions including telehealth and mobile applications improve access
+  to substance use disorder treatment by reducing geographic, logistical, and psychosocial barriers. This
+  is particularly critical during healthcare disruptions like COVID-19.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: COVID-19 pandemic differentially impacted clinic capacity by region; rural areas may
+    have greater benefit from telehealth due to existing treatment access barriers
+moderators:
+- name: clinician_involvement_in_dhi_development
+  direction: strengthens
+  strength: strong
+  description: Study found lack of clinician involvement in app development limited clinical utility;
+    greater clinician engagement improves DHI effectiveness
+- name: mode_of_delivery
+  direction: strengthens
+  strength: moderate
+  description: Mobile phone apps identified as most appropriate delivery mode for SUD patients compared
+    to other digital platforms
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to healthcare access rather than individual
+    behavior. Limited clinic capacity during COVID-19 represents a systemic healthcare infrastructure
+    failure that disproportionately affected patients with SUD. The lack of clinician involvement in app
+    development reflects broader healthcare system fragmentation between technology development and clinical
+    care delivery.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.753449'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

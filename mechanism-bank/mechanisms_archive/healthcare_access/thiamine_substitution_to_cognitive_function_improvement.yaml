@@ -1,0 +1,47 @@
+id: thiamine_substitution_to_cognitive_function_improvement
+name: Thiamine Substitution (Oral or IV) → Cognitive Function Improvement
+from_node:
+  node_id: thiamine_substitution
+  node_name: Thiamine Substitution (Oral or IV)
+to_node:
+  node_id: cognitive_function_improvement
+  node_name: Cognitive Function Improvement
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Thiamine supplementation restores blood TPP levels in patients with alcohol
+  use disorder'
+- 'Step 2: Increased TPP availability restores thiamine-dependent enzymatic function
+  in brain tissue'
+- 'Step 3: Neuronal energy metabolism and glucose utilization normalize in cognitive
+  brain regions'
+- 'Step 4: Cognitive performance, particularly memory function, improves as neuronal
+  function is restored'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Stephan Listabarth et al. 2023. "Can thiamine substitution restore
+    cognitive function in alcohol use disorder?." *Alcohol and alcoholism (Oxford,
+    Oxfordshire)*. https://doi.org/10.1093/alcalc/agad017
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.341978'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: extent_of_tpp_response
+  direction: strengthens
+  strength: moderate
+  description: Association found between magnitude of TPP increase and performance
+    improvement in memory tasks
+- name: wernicke_korsakoff_syndrome_absence
+  direction: strengthens
+  strength: strong
+  description: Thiamine substitution more effective at preventing cognitive decline
+    in absence of established Wernicke-Korsakoff Syndrome
+- name: route_of_administration
+  direction: weakens
+  strength: weak
+  description: Cognitive improvement independent of substitution regime (oral vs IV),
+    suggesting route does not moderate effect

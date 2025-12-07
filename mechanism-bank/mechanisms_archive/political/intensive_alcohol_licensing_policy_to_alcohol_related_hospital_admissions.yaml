@@ -1,0 +1,49 @@
+id: intensive_alcohol_licensing_policy_to_alcohol_related_hospital_admissions
+name: Intensive Alcohol Licensing Policy (Cumulative Impact Zones + License Denials)
+  → Alcohol-Related Hospital Admissions
+from_node:
+  node_id: intensive_alcohol_licensing_policy
+  node_name: Intensive Alcohol Licensing Policy (Cumulative Impact Zones + License
+    Denials)
+to_node:
+  node_id: alcohol_related_hospital_admissions
+  node_name: Alcohol-Related Hospital Admissions
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Local authorities implement intensive licensing policies including cumulative
+  impact zones that restrict the density of alcohol outlets in specific geographic
+  areas'
+- 'Step 2: Licensing enforcement agencies decline new premises licenses, reducing
+  the physical availability of alcohol retail locations'
+- 'Step 3: Reduced alcohol outlet density decreases population-level access to alcohol
+  and modifies the drinking environment'
+- 'Step 4: Lower alcohol availability and environmental modifications lead to reduced
+  alcohol consumption at the population level'
+- 'Step 5: Decreased alcohol consumption results in fewer acute and chronic alcohol-related
+  health conditions requiring hospitalization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: F de Vocht et al. 2016. "Measurable effects of local alcohol licensing
+    policies on population health in England.." *Journal of epidemiology and community
+    health*. https://doi.org/10.1136/jech-2015-206040
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.093212'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: licensing_policy_intensity
+  direction: strengthens
+  strength: strong
+  description: An exposure-response relationship was observed where areas with more
+    intense licensing policies (high vs medium vs low vs passive) showed progressively
+    stronger reductions in alcohol-related hospital admissions, demonstrating a dose-response
+    relationship
+- name: deprivation_level
+  direction: strengthens
+  strength: moderate
+  description: Population deprivation data were controlled for in analyses, suggesting
+    the mechanism may operate differently across socioeconomic contexts

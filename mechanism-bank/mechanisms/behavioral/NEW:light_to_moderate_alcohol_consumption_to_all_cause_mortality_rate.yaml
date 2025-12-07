@@ -1,0 +1,47 @@
+id: NEW:light_to_moderate_alcohol_consumption_to_all_cause_mortality_rate
+name: Light-to-Moderate Alcohol Consumption → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:light_to_moderate_alcohol_consumption
+  node_name: Light-to-Moderate Alcohol Consumption
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Light-to-moderate alcohol consumption (typically defined as up to 1-2 drinks
+  per day) may confer protective effects through multiple biological pathways'
+- 'Step 2: Moderate alcohol intake has been associated with improved lipid profiles,
+  including increased HDL cholesterol, and reduced inflammatory markers'
+- 'Step 3: In the context of non-alcoholic fatty liver disease (NAFLD), light-to-moderate
+  drinking may influence liver disease progression and associated mortality outcomes'
+- 'Step 4: The cumulative effect of these pathways may contribute to reduced all-cause
+  mortality in light-to-moderate drinkers compared to abstainers, though confounding
+  and reverse causation remain concerns'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: 'Magherman L et al. 2023. Meta-analysis: The impact of light-to-moderate
+    alcohol consumption on progressive non-alcoholic fatty liver disease. Alimentary
+    Pharmacology and Therapeutics.'
+  supporting_citations: []
+description: This meta-analysis examined the relationship between light-to-moderate
+  alcohol consumption and outcomes in patients with non-alcoholic fatty liver disease,
+  including mortality. The study synthesized evidence from multiple studies to assess
+  whether low levels of alcohol intake influence disease progression and mortality
+  in this population. The direction suggests potential protective associations, though
+  the relationship remains complex and subject to methodological concerns including
+  the 'sick quitter' effect.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Baseline liver disease status
+  direction: weakens
+  strength: moderate
+  description: The relationship between light-to-moderate alcohol and mortality may
+    differ based on presence and severity of NAFLD
+- name: Drinking pattern
+  direction: strengthens
+  strength: moderate
+  description: Regular moderate consumption patterns may have different effects than
+    episodic drinking within the same weekly total

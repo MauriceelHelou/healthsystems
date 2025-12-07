@@ -1,0 +1,43 @@
+id: chest_trauma_admission_to_multiple_rib_fractures
+name: Chest Trauma Requiring Emergency Department Admission → Multiple Rib Fractures
+from_node:
+  node_id: chest_trauma_admission
+  node_name: Chest Trauma Requiring Emergency Department Admission
+to_node:
+  node_id: multiple_rib_fractures
+  node_name: Multiple Rib Fractures
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Severe and frequent chest trauma events result in emergency department
+  admission'
+- 'Step 2: Traumatic forces to thorax cause multiple rib fractures (study population
+  median thoracic trauma severity score of 8)'
+- 'Step 3: Multiple rib fractures create acute injury requiring pain management and
+  respiratory support'
+- 'Step 4: Patients admitted to Sub-intensive Care Unit for monitoring and treatment
+  of multiple rib fractures'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'S. Serra et al. 2024. "Efficacy and safety of the serratus anterior
+    plane block (SAP block) for pain management in patients with multiple rib fractures
+    in the emergency department: a retrospective study." *European Journal of Trauma
+    and Emergency Surgery*. https://doi.org/10.1007/s00068-024-02597-6'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.569266'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: trauma_mechanism
+  direction: strengthens
+  strength: strong
+  description: High-energy trauma mechanisms increase likelihood of multiple versus
+    single rib fractures
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Median age 62 years suggests older adults may be more vulnerable to
+    multiple fractures from chest trauma

@@ -1,0 +1,46 @@
+id: NEW:peripheral_iv_catheter_replacement_policy_to_all_cause_mortality_rate
+name: Peripheral IV Catheter Replacement Policy (Clinically-Indicated vs Routine) → All-Cause Mortality
+  Rate
+from_node:
+  node_id: NEW:peripheral_iv_catheter_replacement_policy
+  node_name: Peripheral IV Catheter Replacement Policy (Clinically-Indicated vs Routine)
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Catheter replacement policy determines infection and complication risk'
+- 'Step 2: Bloodstream infections if untreated can lead to sepsis'
+- 'Step 3: Sepsis can result in multi-organ failure and death'
+- 'Step 4: No clear difference in mortality observed between replacement strategies'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Joan Webster et al. 2019. "Clinically-indicated replacement versus routine replacement
+    of peripheral venous catheters.." https://doi.org/10.1002/14651858.CD007798.pub5
+  supporting_citations:
+  - One trial (3283 participants) reported mortality
+  - Additional citations require full-text access
+  doi: 10.1002/14651858.CD007798.pub5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: No clear difference in mortality when clinically-indicated removal was compared with routine
+  removal (RR 1.06, 95% CI 0.27-4.23). Evidence is of low certainty due to very serious imprecision.
+quantitative_effects:
+  effect_size:
+    value: 1.06
+    type: relative_risk
+    ci_lower: 0.27
+    ci_upper: 4.23
+  sample_size: 3283
+structural_competency:
+  equity_implications: This critical patient outcome shows no difference between policies, suggesting
+    that the less resource-intensive clinically-indicated approach does not compromise patient safety
+    at the most fundamental level.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.915257'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

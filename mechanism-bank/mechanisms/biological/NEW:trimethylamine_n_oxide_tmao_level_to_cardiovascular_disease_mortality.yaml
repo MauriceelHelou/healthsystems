@@ -1,0 +1,69 @@
+id: NEW:trimethylamine_n_oxide_tmao_level_to_cardiovascular_disease_mortality
+name: Trimethylamine N-oxide (TMAO) Level → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:trimethylamine_n_oxide_tmao_level
+  node_name: Trimethylamine N-oxide (TMAO) Level
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Gut microbiota metabolize dietary nutrients (choline, carnitine, betaine)
+  to produce trimethylamine (TMA), which is then oxidized to TMAO in the liver'
+- 'Step 2: Elevated circulating TMAO concentrations promote systemic inflammation,
+  as evidenced by positive correlations with inflammatory biomarkers'
+- 'Step 3: TMAO accumulation is associated with impaired kidney function (negative
+  correlation with GFR), creating a bidirectional kidney-heart damage pathway'
+- 'Step 4: Chronic inflammation and vascular dysfunction contribute to atherosclerosis
+  progression and cardiovascular damage'
+- 'Step 5: These cumulative effects increase the risk of cardiovascular mortality,
+  particularly in vulnerable populations such as CKD patients'
+evidence:
+  quality_rating: A
+  n_studies: 21
+  primary_citation: 'Yachun Li et al. 2023. Gut microbiota-derived trimethylamine
+    N-oxide is associated with the risk of all-cause and cardiovascular mortality
+    in patients with chronic kidney disease: a systematic review and dose-response
+    meta-analysis. Annals medicus.'
+  supporting_citations: []
+description: Elevated circulating TMAO concentrations, derived from gut microbiota
+  metabolism of dietary precursors, increase cardiovascular mortality risk through
+  mechanisms involving systemic inflammation and kidney-heart crosstalk. Meta-analysis
+  of 21 studies (n=15,637) demonstrates a linear dose-response relationship, with
+  highest TMAO levels associated with 72% increased cardiovascular mortality risk
+  in non-black dialysis CKD patients. The pathway involves TMAO-induced inflammation
+  and vascular dysfunction, with effects modulated by kidney function and racial/ethnic
+  background.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.72
+    type: relative_risk
+    ci_lower: 1.19
+    ci_upper: 2.47
+  p_value: 0.004
+  sample_size: 15637
+moderators:
+- name: dialysis_status
+  direction: strengthens
+  strength: moderate
+  description: Non-dialysis CKD patients and dialysis patients show different risk
+    profiles; non-black dialysis patients show strongest association with cardiovascular
+    mortality
+- name: race_ethnicity
+  direction: weakens
+  strength: strong
+  description: Black dialysis patients show no significant association between TMAO
+    and cardiovascular mortality, unlike non-black patients
+- name: kidney_function
+  direction: strengthens
+  strength: strong
+  description: Lower GFR strongly correlates with higher TMAO (r=-0.49), amplifying
+    cardiovascular risk in CKD populations
+- name: inflammation
+  direction: strengthens
+  strength: moderate
+  description: TMAO positively correlates with inflammatory markers (r=0.43), suggesting
+    inflammation mediates cardiovascular effects

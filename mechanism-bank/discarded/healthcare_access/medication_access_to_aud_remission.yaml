@@ -1,0 +1,45 @@
+id: medication_access_to_aud_remission
+name: Medication Access → Alcohol Use Disorder Remission
+from_node:
+  node_id: medication_access
+  node_name: Medication Access
+to_node:
+  node_id: aud_remission
+  node_name: Alcohol Use Disorder Remission
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Access to medications (likely pharmacotherapy for AUD such as naltrexone,
+  acamprosate, or disulfiram) reduces physiological cravings and withdrawal symptoms'
+- 'Step 2: Medications modify neurobiological reward pathways and reduce reinforcing
+  effects of alcohol consumption'
+- 'Step 3: Medication access requires healthcare system engagement, creating structured
+  treatment relationships and monitoring'
+- 'Step 4: Pharmacological treatment support enables individuals to engage more effectively
+  in behavioral and social recovery interventions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'S. Kinreich et al. 2021. "Predicting alcohol use disorder remission:
+    a longitudinal multimodal multi-featured machine learning approach." *Translational
+    Psychiatry*. https://doi.org/10.1038/s41398-021-01281-2'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.851665'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Medication was identified as discriminative feature in sex-stratified
+    prediction models
+- name: ancestry
+  direction: strengthens
+  strength: moderate
+  description: Medication use contributed to prediction accuracy particularly in African
+    ancestry male models
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/medication_access_to_aud_remission.yaml
+_category: healthcare_access

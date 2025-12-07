@@ -1,0 +1,50 @@
+id: NEW:cognitive_performance_general_intelligence_to_alcohol_use_disorder
+name: Cognitive Performance (General Intelligence/IQ) → Alcohol Use Disorder
+from_node:
+  node_id: NEW:cognitive_performance_general_intelligence
+  node_name: Cognitive Performance (General Intelligence/IQ)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Genetic instruments for cognitive performance used in Mendelian randomization framework'
+- 'Step 2: Genetic variants influence cognitive performance independent of confounding environmental factors'
+- 'Step 3: These same genetic influences have downstream effects on AUD susceptibility through shared
+  biological pathways'
+- 'Step 4: MR analysis suggests causal effect of lower cognitive performance on increased AUD risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Andrea Johansson Capusan et al. 2025. "Measures of General Intelligence and Risk for
+    Alcohol Use Disorder.." https://doi.org/10.1001/jamapsychiatry.2025.2689
+  supporting_citations:
+  - GWAS of cognitive performance (n=257,481) used as genetic instrument
+  - GWAS of AUD (total n=753,248; cases=113,325) used as outcome
+  - FinnGen AUD GWAS (total n=500,348; cases=20,597) used for replication
+  doi: 10.1001/jamapsychiatry.2025.2689
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Mendelian randomization analysis provides evidence for a causal relationship between lower
+  cognitive performance and increased alcohol use disorder risk (β=0.11, SE=0.02, p=2.6×10⁻¹²). This approach
+  uses genetic variants as instrumental variables to reduce confounding bias inherent in observational
+  studies.
+quantitative_effects:
+  effect_size:
+    value: 0.11
+    type: beta_coefficient
+  p_value: 2.6e-12
+  sample_size: 753248
+structural_competency:
+  equity_implications: The MR finding strengthens causal inference but must be interpreted within structural
+    context. Cognitive performance is shaped by structural factors including educational access, nutrition,
+    environmental exposures, and healthcare quality. The genetic pathway likely interacts with these structural
+    determinants. Policy implications include investing in early childhood development and education as
+    upstream prevention for AUD.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.996782'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

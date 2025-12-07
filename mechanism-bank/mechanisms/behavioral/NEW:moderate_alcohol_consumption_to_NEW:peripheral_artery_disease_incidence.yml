@@ -1,0 +1,58 @@
+id: NEW:moderate_alcohol_consumption_to_NEW:peripheral_artery_disease_incidence
+name: Moderate Alcohol Consumption → Peripheral Artery Disease Incidence
+from_node:
+  node_id: NEW:moderate_alcohol_consumption
+  node_name: Moderate Alcohol Consumption
+to_node:
+  node_id: NEW:peripheral_artery_disease_incidence
+  node_name: Peripheral Artery Disease Incidence
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Moderate alcohol consumption influences lipid metabolism and may improve HDL cholesterol levels'
+- 'Step 2: Potential anti-inflammatory and antithrombotic effects at moderate doses'
+- 'Step 3: Preserved vascular function and reduced oxidative stress at moderate intake levels'
+- 'Step 4: Lower atherosclerotic burden in peripheral arterial circulation'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'S. Yuan et al. 2024. "Association between alcohol consumption and peripheral artery
+    disease: two de novo prospective cohorts and a systematic review with meta-analysis." https://doi.org/10.1093/eurjpc/zwae142'
+  supporting_citations:
+  - Swedish cohort study (n=70,116) - prospective cohort from Yuan et al. 2024
+  - UK Biobank cohort (n=405,406) - prospective cohort from Yuan et al. 2024
+  - Additional citations require full-text access for complete list of studies included in systematic
+    review
+  doi: 10.1093/eurjpc/zwae142
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Moderate alcohol consumption was associated with a 19% reduced risk of PAD compared to non/never
+  drinkers (RR 0.81, 95% CI 0.74-0.90). The U-shaped relationship indicates optimal cardiovascular protection
+  at lower consumption levels.
+quantitative_effects:
+  effect_size:
+    value: 0.81
+    type: relative_risk
+    ci_lower: 0.74
+    ci_upper: 0.9
+  sample_size: 475522
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: U-shaped association observed in both Swedish and British cohorts with consistent patterns
+moderators:
+- name: consumption_threshold
+  direction: u_shaped
+  strength: strong
+  description: Protection strongest at lower consumption levels; benefits attenuate and reverse as consumption
+    approaches heavy drinking threshold
+structural_competency:
+  equity_implications: The U-shaped relationship between alcohol and PAD reflects complex biological dose-response
+    dynamics. Policy implications must balance potential cardiovascular benefits against known harms of
+    alcohol including addiction, liver disease, and social harms. Structural interventions should focus
+    on harm reduction rather than promoting consumption.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.300562'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

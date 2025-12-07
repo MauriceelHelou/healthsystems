@@ -1,0 +1,42 @@
+id: alcohol_consumption_to_head_neck_cancer_risk
+name: Alcohol Consumption → Head and Neck Cancer Risk
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: head_neck_cancer_risk
+  node_name: Head and Neck Cancer Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol makes direct contact with oral and pharyngeal mucosa, causing chronic
+  irritation and inflammation'
+- 'Step 2: Acetaldehyde produced by oral microbiota and salivary glands reaches high
+  concentrations in oral cavity'
+- 'Step 3: DNA adducts form in epithelial cells of mouth, throat, and larynx, leading
+  to mutations'
+- 'Step 4: Sustained carcinogenic exposure and impaired immune surveillance increase
+  risk of squamous cell carcinoma in head and neck region'
+evidence:
+  quality_rating: A
+  n_studies: null
+  primary_citation: N. Papadimitriou et al. 2021. "An umbrella review of the evidence
+    associating diet and cancer risk at 11 anatomical sites." *Nature Communications*.
+    https://doi.org/10.1038/s41467-021-24861-8
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.482732'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: tobacco_use
+  direction: strengthens
+  strength: strong
+  description: Tobacco and alcohol have multiplicative effects on head and neck cancer
+    risk through combined carcinogenic mechanisms
+- name: oral_hygiene
+  direction: weakens
+  strength: moderate
+  description: Poor oral hygiene increases acetaldehyde production by oral bacteria,
+    amplifying alcohol-related carcinogenic effects

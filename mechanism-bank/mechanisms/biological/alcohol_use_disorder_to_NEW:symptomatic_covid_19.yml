@@ -1,0 +1,49 @@
+id: alcohol_use_disorder_to_NEW:symptomatic_covid_19
+name: Alcohol Use Disorder → Symptomatic COVID-19 Infection
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:symptomatic_covid_19
+  node_name: Symptomatic COVID-19 Infection
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Current alcohol use suppresses Type I interferon response to viral infection'
+- 'Step 2: Impaired early antiviral response allows higher viral replication'
+- 'Step 3: Increased viral load triggers symptomatic inflammatory response'
+- 'Step 4: Higher likelihood of developing clinically apparent COVID-19 disease'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Baozhu Wei et al. 2023. "Impact of alcohol consumption on coronavirus disease 2019
+    severity: A systematic review and meta‐analysis." https://doi.org/10.1002/jmv.28547'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 40 studies
+  - Studies distinguishing current from former drinkers
+  - Studies examining symptomatic vs asymptomatic COVID-19
+  doi: 10.1002/jmv.28547
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Current drinkers demonstrated increased risk of developing symptomatic COVID-19 infection.
+  This suggests that active alcohol consumption at the time of viral exposure impairs the early immune
+  response needed to control infection and prevent symptom development.
+quantitative_effects:
+  sample_size: 1697683
+moderators:
+- name: timing_of_drinking
+  direction: strengthens
+  strength: moderate
+  description: Current drinkers showed elevated risk of symptomatic COVID-19 specifically, distinguishing
+    from historical drinking exposure
+structural_competency:
+  equity_implications: This finding highlights the importance of pandemic-era alcohol policies. Decisions
+    to keep liquor stores open as 'essential businesses' and changes in alcohol delivery regulations during
+    lockdowns had public health implications. The link between current drinking and symptomatic infection
+    suggests that pandemic alcohol policies were themselves structural determinants of COVID-19 outcomes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.323166'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

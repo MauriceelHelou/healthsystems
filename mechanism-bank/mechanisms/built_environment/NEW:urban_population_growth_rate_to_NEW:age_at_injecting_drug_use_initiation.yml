@@ -1,0 +1,51 @@
+id: NEW:urban_population_growth_rate_to_NEW:age_at_injecting_drug_use_initiation
+name: Urban Population Growth Rate → Age at Injecting Drug Use Initiation
+from_node:
+  node_id: NEW:urban_population_growth_rate
+  node_name: Urban Population Growth Rate
+to_node:
+  node_id: NEW:age_at_injecting_drug_use_initiation
+  node_name: Age at Injecting Drug Use Initiation
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher urban population growth reflects rapid urbanization and demographic transitions'
+- 'Step 2: Rapidly urbanizing areas may have different social structures and drug market dynamics'
+- 'Step 3: Urban growth contexts may delay initiation of injecting due to different drug availability
+  or social conditions'
+- 'Step 4: Older age at initiation in rapidly urbanizing contexts reflects structural protective factors'
+evidence:
+  quality_rating: A
+  n_studies: 741
+  primary_citation: 'Lindsey A Hines et al. 2020. "Associations between national development indicators
+    and the age profile of people who inject drugs: results from a global systematic review and meta-analysis.."
+    https://doi.org/10.1016/S2214-109X(19)30462-0'
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review of 741 studies across
+    93 countries
+  - World Bank national development indicators were used as data source
+  - DerSimonian-Laird methodology applied for meta-analysis
+  doi: 10.1016/S2214-109X(19)30462-0
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher urban population growth is associated with older age at initiation of injecting drug
+  use, with each 1% annual urban population change corresponding to 1.40 years older age at initiation.
+quantitative_effects:
+  effect_size:
+    value: 1.4
+    type: beta_coefficient
+    ci_lower: 0.41
+    ci_upper: 2.4
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect observed at country level across 93 countries with varying urbanization patterns
+structural_competency:
+  equity_implications: Urbanization patterns reflect macroeconomic and demographic forces that shape drug
+    use initiation pathways. This structural perspective identifies how built environment and population
+    dynamics influence substance use patterns beyond individual vulnerability.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.357155'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

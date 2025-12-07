@@ -1,0 +1,63 @@
+id: NEW:alcohol_excise_tax_rate_to_alcohol_induced_mortality
+name: Alcohol Excise Tax Rate → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:alcohol_excise_tax_rate
+  node_name: Alcohol Excise Tax Rate
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Alcohol excise tax increases implemented as public health policy'
+- 'Step 2: Tax increases pass through to retail prices (full shifting for wine/spirits, overshifting for
+  beer)'
+- 'Step 3: Higher prices reduce per capita alcohol consumption through demand elasticity'
+- 'Step 4: Reduced consumption decreases cumulative alcohol exposure and related organ damage'
+- 'Step 5: Population-level reduction in alcohol-induced mortality including liver disease, alcohol poisoning,
+  and alcohol-attributable cancers'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Jon P. Nelson and John R. Moran 2019. "Effects of Alcohol Taxation on Prices: A Systematic
+    Review and Meta-Analysis of Pass-Through Rates." https://doi.org/10.1515/bejeap-2019-0134'
+  supporting_citations:
+  - Studies referenced in review regarding optimal taxation policy
+  - Research on tax incidence across alcohol beverage types
+  - Additional citations require full-text access
+  doi: 10.1515/bejeap-2019-0134
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This comprehensive mechanism traces the causal pathway from alcohol taxation policy through
+  market pass-through mechanisms to population health outcomes. The meta-analysis finding that taxes are
+  fully or over-shifted to prices is critical for understanding policy effectiveness in reducing alcohol-related
+  mortality.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Pass-through rates and consequently mortality effects vary by country context as indicated
+    by the multi-country data coverage in the review
+moderators:
+- name: beverage_preference_patterns
+  direction: strengthens
+  strength: moderate
+  description: In populations with high beer consumption, the overshifting of beer taxes may produce stronger
+    price signals and greater mortality reduction effects
+- name: baseline_consumption_levels
+  direction: strengthens
+  strength: moderate
+  description: Populations with higher baseline consumption may experience greater absolute reductions
+    in mortality from tax-induced consumption decreases
+structural_competency:
+  equity_implications: 'This mechanism exemplifies structural intervention - using fiscal policy to modify
+    the economic environment in which alcohol consumption decisions occur. It addresses root causes of
+    alcohol-related mortality rather than targeting individual drinkers. The policy approach has equity
+    implications: while taxes are regressive in absolute terms, the health benefits may be progressive
+    if lower-income populations experience greater consumption reductions and consequently greater mortality
+    reductions. Policy design should consider minimum unit pricing as a complement to taxation to enhance
+    equity.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.233908'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

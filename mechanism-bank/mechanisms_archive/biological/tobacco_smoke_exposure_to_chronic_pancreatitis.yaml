@@ -1,0 +1,40 @@
+id: tobacco_smoke_exposure_to_chronic_pancreatitis
+name: Tobacco Smoke Exposure → Chronic Pancreatitis
+from_node:
+  node_id: tobacco_smoke_exposure
+  node_name: Tobacco Smoke Exposure
+to_node:
+  node_id: chronic_pancreatitis
+  node_name: Chronic Pancreatitis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Tobacco smoke contains multiple toxic compounds that enter systemic circulation
+  and reach pancreatic tissue'
+- 'Step 2: Tobacco toxins directly damage pancreatic cells and promote oxidative stress
+  and inflammation'
+- 'Step 3: Chronic exposure leads to progressive pancreatic fibrosis and loss of function'
+- 'Step 4: Tobacco exposure may interact synergistically with other risk factors including
+  alcohol and genetic susceptibilities'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: F. Weiss et al. 2019. "Etiology and Risk Factors of Acute and
+    Chronic Pancreatitis." *Visceral Medicine*. https://doi.org/10.1159/000499138
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.149931'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_consumption
+  direction: strengthens
+  strength: strong
+  description: Genetic traits when combined with environmental toxins including both
+    tobacco and alcohol compound the chance of developing disease
+- name: genetic_risk_factors
+  direction: strengthens
+  strength: strong
+  description: Multiple or accumulating risk factors including genetic susceptibilities
+    combined with tobacco exposure increase disease risk

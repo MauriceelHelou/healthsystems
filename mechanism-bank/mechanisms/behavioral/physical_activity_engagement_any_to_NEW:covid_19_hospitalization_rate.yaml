@@ -1,0 +1,55 @@
+id: physical_activity_engagement_any_to_NEW:covid_19_hospitalization_rate
+name: Physical Activity Engagement → COVID-19 Hospitalization Rate
+from_node:
+  node_id: physical_activity_engagement_any
+  node_name: Physical Activity Engagement
+to_node:
+  node_id: NEW:covid_19_hospitalization_rate
+  node_name: COVID-19 Hospitalization Rate
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Regular physical activity engagement prior to COVID-19 infection improves
+  baseline cardiovascular and respiratory fitness'
+- 'Step 2: Physical activity enhances immune function through improved circulation,
+  reduced chronic inflammation, and better immune cell activity'
+- 'Step 3: Exercise reduces comorbidity risk factors (obesity, diabetes, hypertension)
+  that are associated with severe COVID-19 outcomes'
+- 'Step 4: Improved physiological resilience allows the body to better tolerate and
+  respond to SARS-CoV-2 infection'
+- 'Step 5: Reduced severity of COVID-19 symptoms and disease progression decreases
+  likelihood of requiring hospitalization'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'M. Rahmati et al. 2022. Baseline physical activity is associated
+    with reduced mortality and disease outcomes in COVID‐19: A systematic review and
+    meta‐analysis. Reviews in Medical Virology.'
+  supporting_citations: []
+description: A meta-analysis of 12 studies involving over 1.25 million COVID-19 patients
+  found that physically active individuals had a 42% lower risk of hospitalization
+  compared to inactive individuals. The protective effect was even stronger for those
+  engaging in resistance exercise, who showed a 73% reduction in hospitalization risk.
+  Physical activity prior to infection appears to provide substantial protection against
+  severe COVID-19 outcomes requiring hospitalization.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.58
+    type: relative_risk
+    ci_lower: 0.46
+    ci_upper: 0.73
+  p_value: 0.001
+  sample_size: 1256609
+moderators:
+- name: exercise_type
+  direction: strengthens
+  strength: strong
+  description: Resistance exercise showed stronger protective effect for hospitalization
+    (RR=0.27, 95% CI 0.15-0.49) compared to overall physical activity
+- name: endurance_exercise
+  direction: strengthens
+  strength: moderate
+  description: Endurance exercise was particularly protective against mortality (RR=0.41,
+    95% CI 0.23-0.74)

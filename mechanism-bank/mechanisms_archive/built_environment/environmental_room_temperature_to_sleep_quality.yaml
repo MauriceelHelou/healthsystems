@@ -1,0 +1,41 @@
+id: environmental_room_temperature_to_sleep_quality
+name: Environmental Room Temperature → Sleep Quality
+from_node:
+  node_id: environmental_room_temperature
+  node_name: Environmental Room Temperature
+to_node:
+  node_id: sleep_quality
+  node_name: Sleep Quality
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Suboptimal room temperature disrupts thermoregulation needed for sleep
+  initiation and maintenance'
+- 'Step 2: Temperature dysregulation interferes with normal sleep architecture and
+  circadian rhythm alignment'
+- 'Step 3: Poor environmental temperature control reduces sleep efficiency, increases
+  wake after sleep onset, and prolongs sleep latency'
+- 'Step 4: Accumulated sleep disruption results in poor overall sleep quality and
+  self-reported dissatisfaction with sleep experience'
+evidence:
+  quality_rating: C
+  n_studies: null
+  primary_citation: 'Kathy L Nelson et al. 2022. "Sleep quality: An evolutionary concept
+    analysis.." *Nursing forum*. https://doi.org/10.1111/nuf.12659'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.068693'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: housing_quality
+  direction: strengthens
+  strength: strong
+  description: Poor housing quality with inadequate insulation or climate control
+    systems amplifies the negative impact of environmental temperature on sleep quality
+- name: economic_access_to_utilities
+  direction: strengthens
+  strength: strong
+  description: Limited economic resources to pay for heating/cooling creates greater
+    exposure to suboptimal temperatures, particularly affecting low-income populations

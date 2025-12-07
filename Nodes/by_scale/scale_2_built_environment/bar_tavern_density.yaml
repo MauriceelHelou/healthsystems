@@ -1,0 +1,33 @@
+id: bar_tavern_density
+name: Bar/Tavern Density
+scale: 2
+domain: Built Environment, Public Health
+category: built_environment
+stock:
+  value: 4.8
+  unit: On-premise drinking establishments per square mile (urban areas)
+  year: 2022
+  source: US Census County Business Patterns NAICS 7224
+geographic_variation:
+  score: 5
+  level: county
+  notes: Highly concentrated in urban entertainment districts; near-zero in many rural and suburban areas
+data_quality:
+  availability: high
+  frequency: annual
+  bias_notes: Classification varies (full-service restaurants with bars vs dedicated drinking establishments)
+  primary_sources:
+  - name: US Census Bureau County Business Patterns (NAICS 7224 - Drinking Places)
+    granularity: county
+  - name: State Alcohol Beverage Control On-Premise License Data
+    granularity: county
+  - name: Yelp/Google Places API (supplemental)
+    granularity: neighborhood
+description: |-
+  Density of on-premise drinking establishments (bars, taverns, pubs, nightclubs) per geographic
+  area, specifically measuring venues whose primary business is alcohol sales for on-site consumption.
+  Distinct from restaurants that serve alcohol. Higher bar density is associated with increased
+  binge drinking, alcohol-related assaults, and impaired driving incidents. Entertainment districts
+  with high bar concentration are hotspots for alcohol-related emergency department visits.
+  Spatial clustering creates multiplicative effects on alcohol-related harms.
+type: Infrastructure

@@ -1,0 +1,68 @@
+id: uninsured_rate_to_NEW:metastatic_breast_cancer_mortality
+name: Uninsured Rate → Metastatic Breast Cancer Mortality
+from_node:
+  node_id: uninsured_rate
+  node_name: Uninsured Rate
+to_node:
+  node_id: NEW:metastatic_breast_cancer_mortality
+  node_name: Metastatic Breast Cancer Mortality
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Higher uninsured rates create financial barriers to healthcare access,
+  preventing or delaying initial cancer screening and diagnostic services'
+- 'Step 2: Lack of insurance coverage limits access to timely oncology care, appropriate
+  treatment regimens, and supportive services for patients diagnosed with metastatic
+  breast cancer'
+- 'Step 3: Reduced access to comprehensive cancer treatment (chemotherapy, targeted
+  therapy, hormonal therapy, radiation) leads to suboptimal disease management'
+- 'Step 4: Inadequate follow-up care and symptom management results in increased disease
+  progression and complications'
+- 'Step 5: These barriers culminate in higher mortality rates among metastatic breast
+  cancer patients, with disproportionate impact on racial/ethnic minorities and low-income
+  populations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: C. Malinowski et al. 2022. Association of Medicaid Expansion With
+    Mortality Disparity by Race and Ethnicity Among Patients With De Novo Stage IV
+    Breast Cancer. JAMA Oncology.
+  supporting_citations: []
+description: Higher uninsured rates are associated with increased mortality among
+  patients with metastatic (de novo stage IV) breast cancer. Evidence from the National
+  Cancer Database demonstrates that prior to Medicaid expansion, uninsured and racial/ethnic
+  minority patients had significantly worse survival outcomes. The 2-year mortality
+  rate decreased from 45.6% to 35.8% among minority patients following expansion,
+  with mortality disparities between racial groups eliminated after insurance coverage
+  was expanded. This indicates that lack of insurance coverage directly contributes
+  to excess mortality in metastatic breast cancer through reduced access to appropriate
+  oncologic care.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.22
+    type: hazard_ratio
+    ci_lower: 1.1
+    ci_upper: 1.35
+  p_value: 0.006
+  sample_size: 9322
+moderators:
+- name: Race/Ethnicity
+  direction: strengthens
+  strength: strong
+  description: Racial/ethnic minority patients experienced greater benefit from insurance
+    expansion (adjusted DID -5.5% reduction in 2-year mortality disparity); preexpansion
+    HR 1.22 for minorities vs whites eliminated postexpansion
+- name: Income Level
+  direction: strengthens
+  strength: strong
+  description: Among lowest income quartile patients, racial/ethnic minorities had
+    even greater mortality reduction (adjusted DID -12.8%), suggesting insurance access
+    is particularly critical for low-income populations
+- name: Medicaid Expansion Status
+  direction: weakens
+  strength: strong
+  description: Medicaid expansion eliminated survival disparities; preexpansion minority
+    aHR 1.22 became postexpansion aHR 0.96, demonstrating insurance coverage reduces
+    the uninsured-mortality relationship

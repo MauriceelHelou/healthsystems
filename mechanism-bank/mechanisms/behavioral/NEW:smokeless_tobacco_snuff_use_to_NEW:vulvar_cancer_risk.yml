@@ -1,0 +1,65 @@
+id: NEW:smokeless_tobacco_snuff_use_to_NEW:vulvar_cancer_risk
+name: Smokeless Tobacco (Snuff) Use → Vulvar Cancer Risk
+from_node:
+  node_id: NEW:smokeless_tobacco_snuff_use
+  node_name: Smokeless Tobacco (Snuff) Use
+to_node:
+  node_id: NEW:vulvar_cancer_risk
+  node_name: Vulvar Cancer Risk
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Intravaginal snuff use is a cultural practice among some African women'
+- 'Step 2: Direct exposure of vulvar and vaginal mucosa to tobacco carcinogens'
+- 'Step 3: Local carcinogenic effects promote epithelial cell transformation'
+- 'Step 4: Increased risk of vulvar cancer development'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Melitah Motlhale et al. 2025. "Smokeless tobacco (snuff) and site-specific cancer
+    risks in adult Black South African women: Findings from the Johannesburg Cancer Study.." https://doi.org/10.1002/ijc.35293'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Prior studies on intravaginal tobacco use practices in African populations
+  - Literature on local carcinogenic effects of tobacco exposure
+  doi: 10.1002/ijc.35293
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Current smokeless tobacco use was associated with increased vulvar cancer risk among never-smokers,
+  with over two-fold elevated odds. The plausible mechanism involves intravaginal snuff use, a cultural
+  practice that directly exposes genital tissue to carcinogens.
+quantitative_effects:
+  effect_size:
+    value: 2.1
+    type: odds_ratio
+    ci_lower: 1.25
+    ci_upper: 3.5
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Association observed in subgroup analysis restricted to never-smokers comparing current
+    versus never snuff users
+moderators:
+- name: smoking_status
+  direction: strengthens
+  strength: strong
+  description: Association was statistically significant only in never-smokers, suggesting confounding
+    by smoking in main analysis
+- name: current_vs_ever_use
+  direction: strengthens
+  strength: moderate
+  description: Effect stronger for current users compared to ever users
+structural_competency:
+  equity_implications: This mechanism reflects culturally embedded practices specific to African women.
+    The intravaginal use of snuff is a practice that requires culturally sensitive public health approaches
+    rather than stigmatization. Structural factors including limited sexual health education, poverty,
+    and restricted access to healthcare services contribute to the persistence of potentially harmful
+    practices. Interventions must engage community leaders and address social determinants.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.675456'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

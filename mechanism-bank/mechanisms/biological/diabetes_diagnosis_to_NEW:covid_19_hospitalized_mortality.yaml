@@ -1,0 +1,55 @@
+id: diabetes_diagnosis_to_NEW:covid_19_hospitalized_mortality
+name: Diabetes Mellitus → COVID-19 Hospitalized Patient Mortality
+from_node:
+  node_id: diabetes_diagnosis
+  node_name: Diabetes Mellitus
+to_node:
+  node_id: NEW:covid_19_hospitalized_mortality
+  node_name: COVID-19 Hospitalized Patient Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Diabetes mellitus creates chronic hyperglycemic state that impairs immune
+  function and promotes systemic inflammation'
+- 'Step 2: Impaired immune response leads to reduced lymphocyte count (lymphopenia)
+  and compromised viral clearance in COVID-19 infection'
+- 'Step 3: Diabetes-associated endothelial dysfunction and hypercoagulable state contribute
+  to reduced platelet count and elevated D-dimer levels'
+- 'Step 4: These combined factors (immune dysfunction, inflammation, and coagulopathy)
+  increase risk of severe COVID-19 complications including acute respiratory distress
+  syndrome'
+- 'Step 5: The synergistic effects of metabolic dysregulation and COVID-19-induced
+  pathology result in increased mortality risk in hospitalized patients'
+evidence:
+  quality_rating: A
+  n_studies: 87
+  primary_citation: 'G. Corona et al. 2021. Diabetes is most important cause for mortality
+    in COVID-19 hospitalized patients: Systematic review and meta-analysis. Reviews
+    in Endocrine & Metabolic Disorders.'
+  supporting_citations: []
+description: This systematic review and meta-analysis of 87 studies (35,486 patients,
+  5,867 deaths) found that diabetes mellitus was the best predictor of mortality in
+  COVID-19 hospitalized patients after adjustment for confounders. The relationship
+  operates through multiple biological pathways including immune dysfunction (reduced
+  lymphocyte count), coagulation abnormalities (reduced platelet count, increased
+  D-dimer), and metabolic dysregulation. The effect was age- and sex-dependent, and
+  varied by geographic region.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Diabetes was the best predictor of mortality in an age-dependent manner
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Diabetes was the best predictor of mortality in a sex-dependent manner
+- name: chronic pulmonary obstructive disease
+  direction: strengthens
+  strength: moderate
+  description: COPD was the second strongest predictor of mortality after diabetes
+- name: malignancies
+  direction: strengthens
+  strength: moderate
+  description: Cancer comorbidity contributed to increased mortality risk

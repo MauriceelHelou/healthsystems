@@ -2,6 +2,10 @@ import { UseQueryResult } from '@tanstack/react-query';
 import { createGetQuery } from './utils/queryHelpers';
 import { API_ENDPOINTS } from '../utils/api';
 
+/** Strip "NEW:" prefix from node names for display */
+const stripNewPrefix = (name: string): string =>
+  name.replace(/^NEW:/i, '').trim();
+
 export interface PathwaySummary {
   pathwayId: string;
   title: string;
@@ -55,6 +59,11 @@ export function usePathways(
     {
       meta: { errorContext: 'Pathways' },
       staleTime: 5 * 60 * 1000,
+      select: (data) => data.map(pathway => ({
+        ...pathway,
+        fromNodeLabel: stripNewPrefix(pathway.fromNodeLabel),
+        toNodeLabel: stripNewPrefix(pathway.toNodeLabel),
+      })),
     }
   );
 }
@@ -68,6 +77,11 @@ export function usePathwayDetail(
     {
       enabled: !!pathwayId,
       meta: { errorContext: 'Pathway detail' },
+      select: (data) => ({
+        ...data,
+        fromNodeLabel: stripNewPrefix(data.fromNodeLabel),
+        toNodeLabel: stripNewPrefix(data.toNodeLabel),
+      }),
     }
   );
 }

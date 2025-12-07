@@ -1,0 +1,53 @@
+id: NEW:polysubstance_use_to_NEW:adverse_substance_use_outcomes
+name: Polysubstance Use → Adverse Substance Use Outcomes
+from_node:
+  node_id: NEW:polysubstance_use
+  node_name: Polysubstance Use
+to_node:
+  node_id: NEW:adverse_substance_use_outcomes
+  node_name: Adverse Substance Use Outcomes
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Polysubstance use involves synergistic effects of multiple substances increasing physiological
+  burden'
+- 'Step 2: Combined substance use elevates overdose risk and complicates withdrawal management'
+- 'Step 3: Treatment for polysubstance use is more complex and has lower success rates'
+- 'Step 4: Syndemic interaction with criminal justice involvement amplifies adverse outcomes'
+evidence:
+  quality_rating: B
+  n_studies: 18
+  primary_citation: A. Jones et al. 2023. "The role of polysubstance use on criminal justice involvement
+    in the United States." https://doi.org/10.1097/YCO.0000000000000873
+  supporting_citations:
+  - Studies on latent patterns of polysubstance use identified in the review
+  - Research on differential associations with adverse substance use outcomes
+  - Studies across various criminal justice populations (adults, pregnant women, youth)
+  doi: 10.1097/YCO.0000000000000873
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Polysubstance use produces differential associations with adverse substance use outcomes,
+  with the syndemic nature of the relationship with criminal justice involvement amplifying negative health
+  consequences
+moderators:
+- name: criminal_justice_involvement
+  direction: strengthens
+  strength: strong
+  description: Criminal justice involvement amplifies adverse outcomes through syndemic interaction with
+    polysubstance use
+- name: population_vulnerability
+  direction: strengthens
+  strength: moderate
+  description: Pregnant women and youth show particular vulnerability to adverse outcomes from polysubstance
+    use
+structural_competency:
+  equity_implications: The syndemic framework used in this paper explicitly recognizes that adverse outcomes
+    result from intersecting social conditions rather than individual choices. The paper calls for attention
+    to social determinants of health, acknowledging structural root causes. Limited research on interventions
+    reflects structural neglect of this population.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.562477'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

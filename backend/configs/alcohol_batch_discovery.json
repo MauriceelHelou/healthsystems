@@ -1,0 +1,152 @@
+{
+  "name": "alcohol_mechanisms_batch_v1",
+  "description": "Massive batch discovery for alcohol-related mechanisms with Scale 1-3 focus",
+  "version": "1.0",
+  "created": "2025-12-06",
+
+  "budget": {
+    "max_usd": 25.00,
+    "max_papers": 2000,
+    "cost_model": "batch_api_50_percent_savings"
+  },
+
+  "extraction_settings": {
+    "minimum_supporting_citations": 3,
+    "validate_canonical_nodes": true,
+    "strict_citation_validation": true,
+    "year_range": [2015, 2025],
+    "search_priority": ["meta-analysis", "systematic review", "RCT", "cohort study"],
+    "scale_focus": [1, 2, 3],
+    "canonical_nodes_path": "nodes/canonical_nodes.json"
+  },
+
+  "target_yields": {
+    "total_mechanisms": {"min": 150, "max": 200},
+    "quality_a_percent": {"min": 50, "max": 60},
+    "quality_b_percent": {"min": 30, "max": 40},
+    "quality_c_percent": {"max": 10}
+  },
+
+  "search_queries": {
+    "priority_1_policy_alcohol": [
+      "alcohol taxation policy meta-analysis systematic review",
+      "alcohol excise tax consumption mortality systematic review",
+      "minimum unit pricing alcohol systematic review meta-analysis",
+      "alcohol warning label effectiveness policy meta-analysis",
+      "alcohol marketing regulation policy outcomes systematic review",
+      "alcohol outlet density zoning policy health outcomes",
+      "alcohol advertising ban policy effectiveness",
+      "drink driving policy intervention meta-analysis",
+      "alcohol age restriction policy health outcomes"
+    ],
+
+    "priority_2_institutional_alcohol": [
+      "alcohol treatment access barriers systematic review",
+      "substance use disorder treatment capacity outcomes",
+      "integrated behavioral health alcohol outcomes meta-analysis",
+      "AUD treatment stigma health system systematic review",
+      "alcohol brief intervention primary care meta-analysis",
+      "screening brief intervention alcohol meta-analysis",
+      "alcohol use disorder pharmacotherapy access",
+      "naltrexone acamprosate treatment access barriers"
+    ],
+
+    "priority_3_economic_housing": [
+      "housing instability alcohol use disorder meta-analysis",
+      "eviction alcohol consumption systematic review",
+      "unemployment alcohol use meta-analysis systematic review",
+      "job insecurity heavy drinking systematic review",
+      "economic recession alcohol mortality meta-analysis",
+      "poverty alcohol use disorder systematic review",
+      "income inequality alcohol consumption meta-analysis",
+      "homelessness alcohol use disorder systematic review"
+    ],
+
+    "priority_4_criminal_justice": [
+      "incarceration alcohol use disorder systematic review",
+      "criminal justice diversion alcohol treatment outcomes",
+      "drug court alcohol recidivism meta-analysis",
+      "DUI DWI policy enforcement effectiveness meta-analysis",
+      "sobriety checkpoint alcohol crash meta-analysis",
+      "prison alcohol treatment outcomes systematic review",
+      "probation parole alcohol use disorder treatment"
+    ],
+
+    "priority_5_bidirectional": [
+      "alcohol use disorder unemployment bidirectional",
+      "heavy drinking housing loss systematic review",
+      "AUD treatment employment outcomes meta-analysis",
+      "alcohol recovery social determinants systematic review",
+      "alcohol use disorder social support meta-analysis",
+      "binge drinking job loss causation"
+    ],
+
+    "priority_6_policy_strengthening": [
+      "alcohol taxation price elasticity meta-analysis",
+      "alcohol outlet density crime violence meta-analysis",
+      "alcohol hours sales restriction meta-analysis",
+      "alcohol monopoly state control outcomes",
+      "alcohol licensing policy public health",
+      "happy hour ban alcohol consumption"
+    ]
+  },
+
+  "canonical_nodes_alcohol_relevant": {
+    "scale_1_policy": [
+      "alcohol_taxation",
+      "alcohol_taxation_policy",
+      "alcohol_warning_label_policy",
+      "alcohol_warning_label_implementation",
+      "drug_decriminalization_defelonization_status",
+      "mandatory_minimum_sentencing_prevalence",
+      "medicaid_expansion_status"
+    ],
+    "scale_2_built_environment": [
+      "alcohol_outlet_opening_hours",
+      "alcohol_availability_social_environment"
+    ],
+    "scale_3_institutional": [
+      "alcohol_other_drug_treatment_access_barriers",
+      "alcohol_policy_effectiveness",
+      "cash_bail_reform_status"
+    ],
+    "scale_4_individual_household": [
+      "housing_instability",
+      "eviction_filing_fee",
+      "just_cause_eviction_protection",
+      "job_quality_index",
+      "precarious_employment_rate",
+      "felon_disenfranchisement_stringency",
+      "violent_crime_rate"
+    ],
+    "scale_5_behavioral": [
+      "heavy_alcohol_use",
+      "hazardous_drinking",
+      "alcohol_consumption",
+      "alcohol_related_hookup_behavior",
+      "binge_drinking",
+      "alcohol_use_disorder"
+    ],
+    "scale_6_7_outcomes": [
+      "liver_cirrhosis_hospitalization_rate",
+      "alcoholic_liver_disease_mortality",
+      "emergency_department_visit_rate",
+      "all_cause_mortality_rate",
+      "alcohol_poisoning_ed_visit_rate"
+    ]
+  },
+
+  "output": {
+    "mechanisms_dir": "mechanism-bank/mechanisms",
+    "reports_dir": "backend/reports",
+    "papers_cache_dir": "backend/data",
+    "report_filename_template": "alcohol_discovery_report_{date}.json"
+  },
+
+  "rate_limits": {
+    "semantic_scholar_requests_per_minute": 10,
+    "pubmed_requests_per_second": 3,
+    "batch_api_max_requests": 100000,
+    "batch_api_poll_interval_seconds": 60
+  }
+}

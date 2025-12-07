@@ -1,0 +1,59 @@
+id: NEW:hiv_related_stigma_to_depression_diagnosis
+name: HIV-Related Stigma → Depression Diagnosis
+from_node:
+  node_id: NEW:hiv_related_stigma
+  node_name: HIV-Related Stigma
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: PLWH face stigma from healthcare systems, social networks, and institutional discrimination'
+- 'Step 2: Stigma creates shame, emotional distress, and social isolation'
+- 'Step 3: HIV/AIDS characterized as traumatic experience compounds psychological burden'
+- 'Step 4: Chronic stigma exposure disrupts social support networks and self-efficacy'
+- 'Step 5: Depression develops as a result of sustained psychological burden and social marginalization'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Bahram Armoon et al. 2022. "HIV related stigma associated with social support, alcohol
+    use disorders, depression, anxiety, and suicidal ideation among people living with HIV: a systematic
+    review and meta-analysis." https://doi.org/10.1186/s13033-022-00527-w'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 22 studies with 9548 participants
+  - Studies published between January 1992 and August 2020 from PubMed, Scopus, Web of Sciences, PsycInfo,
+    SciELO and Cochrane library
+  - Studies measuring stigma among PLWH examining mental health outcomes
+  doi: 10.1186/s13033-022-00527-w
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: PLWH diagnosed with depression were 1.61 times more likely to report HIV-related stigma.
+  Depression emerges from the chronic psychological burden of experiencing structural discrimination and
+  social marginalization.
+quantitative_effects:
+  effect_size:
+    value: 1.61
+    type: odds_ratio
+  sample_size: 9548
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Cultural differences in stigma expression and measurement across included studies;
+    random effects model used to account for heterogeneity
+moderators:
+- name: social_support
+  direction: weakens
+  strength: moderate
+  description: Higher social support levels protect against stigma reporting and may buffer depression
+    development
+structural_competency:
+  equity_implications: The mechanism emphasizes that depression among PLWH stems from structural stigma,
+    discrimination by healthcare providers, and intersection with broader structural inequalities - not
+    individual psychological weakness. The paper recommends interventions targeting mental health at structural
+    level and practitioner-provided social support.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.990046'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

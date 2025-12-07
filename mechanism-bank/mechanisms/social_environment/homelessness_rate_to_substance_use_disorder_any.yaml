@@ -1,0 +1,67 @@
+id: homelessness_rate_to_substance_use_disorder_any
+name: Homelessness Rate → Substance Use Disorder (Any)
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Homelessness creates extreme chronic stress through exposure to violence,
+  lack of safety, uncertainty about basic needs (shelter, food), and social marginalization'
+- 'Step 2: Individuals experiencing homelessness have limited access to healthy coping
+  mechanisms, mental health services, and social support networks'
+- 'Step 3: Substance use emerges as a coping mechanism for trauma, physical discomfort
+  (cold, pain), mental health symptoms, and the daily hardships of street life'
+- 'Step 4: The homeless environment facilitates substance access and normalized use
+  through peer networks and lack of structured daily activities'
+- 'Step 5: Once substance use begins, homelessness creates barriers to recovery including
+  lack of stable housing required for treatment programs, no safe storage for medications,
+  and continued exposure to substance-using environments'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'S. Gutwinski et al. 2021. "The prevalence of mental disorders
+    among homeless people in high-income countries: An updated systematic review and
+    meta-regression analysis." PLoS Medicine.'
+  supporting_citations:
+  - Julia Corey et al. 2022. "A Scoping Review of the Health Impact of the COVID-19
+    Pandemic on Persons Experiencing Homelessness in North America and Europe." International
+    Journal of Environmental Research and Public Health.
+description: Meta-analytic evidence from 39 studies demonstrates extremely high prevalence
+  of substance use disorders among homeless populations in high-income countries.
+  Alcohol use disorders affect 36.7% and drug use disorders affect 21.7% of homeless
+  individuals, compared to general population rates of approximately 5-10%. The COVID-19
+  pandemic exacerbated these disparities by disrupting access to treatment services
+  and creating additional stressors for persons experiencing homelessness. The bidirectional
+  relationship is acknowledged, but homelessness creates and sustains conditions that
+  promote substance use initiation and progression while creating substantial barriers
+  to recovery.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 36.7
+    type: prevalence_percentage
+    ci_lower: 27.7
+    ci_upper: 46.2
+  p_value: null
+  sample_size: 8049
+moderators:
+- name: sex_distribution
+  direction: strengthens
+  strength: moderate
+  description: Sex distribution of participants partially explained heterogeneity
+    in substance use disorder prevalence among homeless populations
+- name: sampling_method
+  direction: strengthens
+  strength: moderate
+  description: Different sampling approaches (shelter-based vs. street-based) yielded
+    different prevalence estimates
+- name: substance_type
+  direction: strengthens
+  strength: strong
+  description: Alcohol use disorders more prevalent (36.7%) than drug use disorders
+    (21.7%) among homeless populations

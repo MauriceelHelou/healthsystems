@@ -1,0 +1,46 @@
+id: banking_access_unbanked_rate_to_NEW:ridesharing_utilization
+name: Banking Access (Unbanked Rate) → Ridesharing Service Utilization
+from_node:
+  node_id: banking_access_unbanked_rate
+  node_name: Banking Access (Unbanked Rate)
+to_node:
+  node_id: NEW:ridesharing_utilization
+  node_name: Ridesharing Service Utilization
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Ridesharing services require credit card or digital payment methods for transactions'
+- 'Step 2: Populations with limited banking access lack credit cards needed for ridesharing'
+- 'Step 3: Lack of payment access prevents utilization of ridesharing services regardless of availability'
+- 'Step 4: Unable to use ridesharing, individuals must rely on personal vehicles even when impaired'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Carola A. Blazquez et al. 2021. "Differential impacts of ridesharing on alcohol-related
+    crashes by socioeconomic municipalities: rate of technology adoption matters." https://doi.org/10.1186/s12889-021-12066-z'
+  supporting_citations:
+  - Studies examining ridesharing effects on alcohol-related crashes in United States, United Kingdom,
+    Brazil, and Chile (referenced in abstract)
+  - Additional citations require full-text access
+  doi: 10.1186/s12889-021-12066-z
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The authors interpret the differential ridesharing effect on alcohol-related crashes by socioeconomic
+  status as reflecting disparities in credit card access. Uber's requirement for credit card payment creates
+  a structural barrier that excludes populations without banking access from utilizing harm reduction
+  benefits of ridesharing.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Authors interpret differential effects between high and low socioeconomic municipalities
+    as reflecting credit card access disparities.
+structural_competency:
+  equity_implications: This mechanism identifies financial exclusion as a critical mediator of health
+    intervention effectiveness. Lack of banking access is not an individual choice but reflects structural
+    barriers in the financial system that disproportionately affect low-income and marginalized populations.
+    Addressing alcohol-related crash disparities requires attention to these upstream economic determinants.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.644292'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

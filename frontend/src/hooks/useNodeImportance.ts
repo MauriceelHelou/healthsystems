@@ -21,6 +21,10 @@ import { Category, NodeScale } from '../types/mechanism';
 import { createGetQuery } from './utils/queryHelpers';
 import { API_ENDPOINTS } from '../utils/api';
 
+/** Strip "NEW:" prefix from node names for display */
+const stripNewPrefix = (name: string): string =>
+  name.replace(/^NEW:/i, '').trim();
+
 // ==========================================
 // Types
 // ==========================================
@@ -134,10 +138,14 @@ export function useNodeImportance(
     }
   );
 
-  // Transform response to return just the nodes array
+  // Transform response to return just the nodes array with stripped labels
   const transformedData = useMemo(() => {
     if (!result.data) return undefined;
-    return result.data.nodes || (result.data as unknown as NodeImportance[]);
+    const nodes = result.data.nodes || (result.data as unknown as NodeImportance[]);
+    return nodes.map(node => ({
+      ...node,
+      label: stripNewPrefix(node.label),
+    }));
   }, [result.data]);
 
   return {

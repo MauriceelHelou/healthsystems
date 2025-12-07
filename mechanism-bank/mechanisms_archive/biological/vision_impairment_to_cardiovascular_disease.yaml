@@ -1,0 +1,40 @@
+id: vision_impairment_to_cardiovascular_disease
+name: Vision Impairment → Cardiovascular Disease
+from_node:
+  node_id: vision_impairment
+  node_name: Vision Impairment
+to_node:
+  node_id: cardiovascular_disease
+  node_name: Cardiovascular Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Vision impairment creates structural barriers to physical activity, access
+  to healthy food, and preventive healthcare engagement'
+- 'Step 2: These barriers lead to higher prevalence of multiple CVD risk factors including
+  obesity, hypertension, high cholesterol, diabetes, smoking, and excessive alcohol
+  intake'
+- 'Step 3: Limited access to vision-adapted healthcare interventions means risk factors
+  are less effectively managed in people with VI'
+- 'Step 4: Accumulation of poorly controlled risk factors increases cardiovascular
+  disease incidence through biological pathways (atherosclerosis, hypertension, metabolic
+  dysfunction)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Isabel Mendez et al. 2022. "Cardiovascular Disease Risk Factors
+    in US Adults With Vision Impairment." *Preventing Chronic Disease*. https://doi.org/10.5888/pcd19.220027
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.431047'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: multiple_risk_factor_clustering
+  direction: strengthens
+  strength: strong
+  description: The presence of multiple elevated risk factors (smoking aPR=1.40, physical
+    inactivity aPR=1.14, excessive alcohol aPR=1.29, obesity aPR=1.28, hypertension
+    aPR=1.29, high cholesterol aPR=1.21, diabetes aPR=1.54) creates synergistic effects
+    that amplify CVD risk

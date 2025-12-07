@@ -1,0 +1,61 @@
+id: NEW:military_service_status_to_suicidal_ideation
+name: Military Service (Active or Veteran) → Suicidal Ideation
+from_node:
+  node_id: NEW:military_service_status
+  node_name: Military Service (Active or Veteran)
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Military service exposes individuals to unique stressors including combat
+  exposure, trauma, separation from family, and high-pressure operational environments'
+- 'Step 2: These occupational stressors contribute to elevated rates of psychological
+  distress, depression (23% in active military, 20% in veterans), and mental health
+  challenges'
+- 'Step 3: The combination of trauma exposure, depression, and potential barriers
+  to seeking mental health care (stigma, access issues) leads to elevated suicidal
+  ideation with 11% pooled prevalence in military populations'
+- 'Step 4: Co-occurring substance use further amplifies risk, with suicidal ideation
+  reaching 18% in drug-using military personnel and 9% in those consuming alcohol'
+evidence:
+  quality_rating: A
+  n_studies: 45
+  primary_citation: 'Yousef Moradi et al. 2021. The global prevalence of depression,
+    suicide ideation, and attempts in the military forces: a systematic review and
+    Meta-analysis of cross sectional studies. BMC Psychiatry.'
+  supporting_citations: []
+description: Military service, whether active duty or veteran status, is associated
+  with an 11% prevalence of suicidal ideation based on a global meta-analysis of cross-sectional
+  studies. This elevated risk is mediated through high rates of depression (20-23%),
+  exposure to combat trauma, and occupational stressors unique to military environments.
+  The relationship is substantially stronger among those with co-occurring substance
+  use disorders.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.11
+    type: prevalence
+    ci_lower: 0.1
+    ci_upper: 0.13
+  p_value: null
+  sample_size: null
+moderators:
+- name: Substance use (drugs)
+  direction: strengthens
+  strength: strong
+  description: Drug-using military personnel showed 18% prevalence of suicidal ideation
+    compared to 11% overall
+- name: Alcohol consumption
+  direction: weakens
+  strength: weak
+  description: Military personnel consuming alcohol showed slightly lower suicidal
+    ideation prevalence (9%) compared to overall military population
+- name: Service status (active vs veteran)
+  direction: strengthens
+  strength: weak
+  description: Both active and veteran status associated with elevated risk; veterans
+    showed slightly lower depression prevalence (20% vs 23%) but require continued
+    monitoring

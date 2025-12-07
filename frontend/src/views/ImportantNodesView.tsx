@@ -12,7 +12,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { useNodeImportance, formatImportanceScore, sortNodeImportance, calculateImportanceStats } from '../hooks/useNodeImportance';
-import { Category, NodeScale, NodeImportance } from '../types/mechanism';
+import { NodeScale, NodeImportance } from '../types/mechanism';
 import { CategoryBadge } from '../components/domain/CategoryBadge';
 import { useGraphStateStore } from '../stores/graphStateStore';
 
@@ -24,7 +24,6 @@ type SortField = keyof NodeImportance;
 type SortDirection = 'asc' | 'desc';
 
 interface FilterState {
-  categories: Category[];
   scales: NodeScale[];
   minConnections: number;
 }
@@ -40,7 +39,6 @@ export const ImportantNodesView: React.FC = () => {
   // Local state
   const [topN, setTopN] = useState<number>(20);
   const [filters, setFilters] = useState<FilterState>({
-    categories: [],
     scales: [],
     minConnections: 0,
   });
@@ -55,7 +53,6 @@ export const ImportantNodesView: React.FC = () => {
     refetch,
   } = useNodeImportance({
     topN,
-    categories: filters.categories.length > 0 ? filters.categories : undefined,
     scales: filters.scales.length > 0 ? filters.scales : undefined,
     minConnections: filters.minConnections > 0 ? filters.minConnections : undefined,
   });
@@ -98,15 +95,6 @@ export const ImportantNodesView: React.FC = () => {
     }
   };
 
-  const handleCategoryFilter = (category: Category) => {
-    setFilters(prev => ({
-      ...prev,
-      categories: prev.categories.includes(category)
-        ? prev.categories.filter(c => c !== category)
-        : [...prev.categories, category],
-    }));
-  };
-
   const handleScaleFilter = (scale: NodeScale) => {
     setFilters(prev => ({
       ...prev,
@@ -118,7 +106,6 @@ export const ImportantNodesView: React.FC = () => {
 
   const handleClearFilters = () => {
     setFilters({
-      categories: [],
       scales: [],
       minConnections: 0,
     });
@@ -309,7 +296,7 @@ export const ImportantNodesView: React.FC = () => {
           </div>
 
           {/* Clear Filters */}
-          {(filters.categories.length > 0 || filters.scales.length > 0 || filters.minConnections > 0) && (
+          {(filters.scales.length > 0 || filters.minConnections > 0) && (
             <div className="flex items-end">
               <button
                 onClick={handleClearFilters}
@@ -321,37 +308,13 @@ export const ImportantNodesView: React.FC = () => {
           )}
         </div>
 
-        {/* Category Filters */}
-        <div className="mt-4">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Filter by Category
-          </label>
-          <div className="flex flex-wrap gap-2">
-            {(['economic', 'healthcare_access', 'social_environment', 'built_environment', 'political', 'behavioral', 'biological'] as Category[]).map(
-              category => (
-                <button
-                  key={category}
-                  onClick={() => handleCategoryFilter(category)}
-                  className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                    filters.categories.includes(category)
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                  }`}
-                >
-                  {category.replace('_', ' ')}
-                </button>
-              )
-            )}
-          </div>
-        </div>
-
         {/* Scale Filters */}
         <div className="mt-4">
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Filter by Scale
           </label>
           <div className="flex flex-wrap gap-2">
-            {([1, 3, 4, 6, 7] as NodeScale[]).map(scale => (
+            {([1, 2, 3, 4, 5, 6, 7] as NodeScale[]).map(scale => (
               <button
                 key={scale}
                 onClick={() => handleScaleFilter(scale)}

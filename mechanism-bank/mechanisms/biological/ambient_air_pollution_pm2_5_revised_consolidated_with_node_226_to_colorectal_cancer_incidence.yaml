@@ -1,0 +1,58 @@
+id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226_to_colorectal_cancer_incidence
+name: Ambient Air Pollution PM2.5 → Colorectal Cancer Incidence
+from_node:
+  node_id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226
+  node_name: Ambient Air Pollution PM2.5
+to_node:
+  node_id: colorectal_cancer_incidence
+  node_name: Colorectal Cancer Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhalation of PM2.5 particles leads to systemic distribution of particulate
+  matter and associated chemical components throughout the body via the bloodstream'
+- 'Step 2: PM2.5 and its constituents (including polycyclic aromatic hydrocarbons,
+  heavy metals, and other carcinogens) reach the gastrointestinal tract through systemic
+  circulation and potentially through mucociliary clearance and swallowing'
+- 'Step 3: Oxidative stress and chronic inflammation are induced in colorectal tissue
+  by PM2.5 components, leading to DNA damage, epigenetic alterations, and disruption
+  of cellular repair mechanisms'
+- 'Step 4: Sustained inflammatory response and oxidative damage promote genomic instability
+  and cellular proliferation in colorectal epithelium'
+- 'Step 5: Accumulation of genetic mutations and epigenetic changes over time increases
+  the probability of malignant transformation and colorectal cancer development'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: 'N. Pritchett et al. 2022. Exposure to Outdoor Particulate Matter
+    Air Pollution and Risk of Gastrointestinal Cancers in Adults: A Systematic Review
+    and Meta-Analysis of Epidemiologic Evidence. Environmental Health Perspectives.'
+  supporting_citations: []
+description: 'A systematic review and meta-analysis of 13 studies found that PM2.5
+  exposure is associated with a 35% increased risk of colorectal cancer (RR=1.35,
+  95% CI: 1.08-1.62). All included studies identified an increased risk for colorectal
+  cancer, making it one of the most robust associations among gastrointestinal cancers
+  examined. The biological plausibility is supported by known mechanisms of PM2.5-induced
+  systemic inflammation, oxidative stress, and carcinogenic effects of PM constituents
+  on gastrointestinal tissues.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.35
+    type: relative_risk
+    ci_lower: 1.08
+    ci_upper: 1.62
+  p_value: null
+  sample_size: null
+moderators:
+- name: PM exposure assessment method
+  direction: strengthens
+  strength: moderate
+  description: Different PM exposure assessment approaches may impact observed associations;
+    more accurate exposure assessment may reveal stronger relationships
+- name: PM chemical composition
+  direction: strengthens
+  strength: moderate
+  description: Specific chemical components of PM may have differential carcinogenic
+    effects on colorectal tissue

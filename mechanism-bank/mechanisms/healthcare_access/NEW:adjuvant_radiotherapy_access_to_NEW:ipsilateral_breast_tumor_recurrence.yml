@@ -1,0 +1,47 @@
+id: NEW:adjuvant_radiotherapy_access_to_NEW:ipsilateral_breast_tumor_recurrence
+name: Access to Adjuvant Radiotherapy After Breast-Conserving Surgery → Ipsilateral Breast Tumor Recurrence
+from_node:
+  node_id: NEW:adjuvant_radiotherapy_access
+  node_name: Access to Adjuvant Radiotherapy After Breast-Conserving Surgery
+to_node:
+  node_id: NEW:ipsilateral_breast_tumor_recurrence
+  node_name: Ipsilateral Breast Tumor Recurrence
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: After breast-conserving surgery, microscopic residual disease may remain in breast tissue'
+- 'Step 2: Adjuvant radiotherapy delivers targeted ionizing radiation to remaining breast tissue'
+- 'Step 3: Radiation induces DNA damage and apoptosis in residual abnormal cells'
+- 'Step 4: Elimination of microscopic disease reduces risk of both invasive and non-invasive ipsilateral
+  recurrence'
+evidence:
+  quality_rating: A
+  n_studies: 33
+  primary_citation: 'Qian Chen et al. 2024. "Outcomes from low-risk ductal carcinoma in situ: a systematic
+    review and meta-analysis." https://doi.org/10.1007/s10549-024-07473-w'
+  supporting_citations:
+  - Studies within meta-analysis comparing BCS alone vs BCS with radiotherapy
+  - Additional citations require full-text access for specific trial identifiers
+  - Evidence base includes observational studies primarily
+  doi: 10.1007/s10549-024-07473-w
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: In patients who underwent breast-conserving surgery for low-risk DCIS, additional radiotherapy
+  significantly reduced the risk of ipsilateral breast tumor events (IBTE). However, radiotherapy did
+  not reduce the risk of contralateral breast cancer (CBC), suggesting its effect is localized to the
+  treated breast.
+quantitative_effects:
+  sample_size: 47696
+structural_competency:
+  equity_implications: Access to adjuvant radiotherapy depends on healthcare infrastructure including
+    radiation oncology facilities, which are often concentrated in urban centers. Rural populations and
+    those without comprehensive cancer centers may face barriers to receiving guideline-concordant treatment.
+    Transportation burden, treatment duration (typically 3-6 weeks of daily treatments), and insurance
+    coverage for radiation therapy represent structural determinants of whether patients receive this
+    survival-improving intervention.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.889453'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

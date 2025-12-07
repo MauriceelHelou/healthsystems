@@ -1,0 +1,52 @@
+id: alcohol_outlet_data_discrepancy_to_alcohol_intervention_effectiveness
+name: Alcohol Outlet Data Discrepancy Between Sources → Alcohol Intervention and Policy
+  Effectiveness
+from_node:
+  node_id: alcohol_outlet_data_discrepancy
+  node_name: Alcohol Outlet Data Discrepancy Between Sources
+to_node:
+  node_id: alcohol_intervention_effectiveness
+  node_name: Alcohol Intervention and Policy Effectiveness
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Inaccurate alcohol outlet data undermines ability to identify high-density
+  areas for targeted interventions'
+- 'Step 2: Policy decisions based on flawed data may miss critical outlets or misallocate
+  enforcement resources'
+- 'Step 3: Research studies using different data sources produce non-comparable estimates
+  of outlet density and effects'
+- 'Step 4: Community organizations lack reliable information to advocate for zoning
+  changes or licensing restrictions'
+- 'Step 5: Systematic data gaps in low-income areas mean these communities receive
+  less effective alcohol harm reduction despite potentially greater need'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Adam J. Milam et al. 2020. "Discrepancies in Local, State, and
+    National Alcohol Outlet Listings: Implications for Research and Interventions."
+    *Substance Use & Misuse*. https://doi.org/10.1080/10826084.2020.1817080'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.878837'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: neighborhood_poverty
+  direction: strengthens
+  strength: strong
+  description: Data discrepancies are 5-fold higher in low-income areas (IR=4.990),
+    meaning intervention effectiveness is most compromised in communities facing greatest
+    alcohol-related harm
+- name: rural_location
+  direction: strengthens
+  strength: strong
+  description: Non-urban areas show 62% more data discrepancies, undermining intervention
+    capacity in rural communities already facing healthcare access barriers
+- name: state_data_systems
+  direction: weakens
+  strength: strong
+  description: States with integrated data systems (like Oregon) show minimal discrepancies,
+    demonstrating that policy investment in data infrastructure can enable effective
+    interventions across all communities

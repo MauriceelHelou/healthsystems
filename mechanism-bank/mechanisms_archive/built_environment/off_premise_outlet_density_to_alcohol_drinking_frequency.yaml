@@ -1,0 +1,38 @@
+id: off_premise_outlet_density_to_alcohol_drinking_frequency
+name: Off-Premise Alcohol Outlet Density → Alcohol Drinking Frequency
+from_node:
+  node_id: off_premise_outlet_density
+  node_name: Off-Premise Alcohol Outlet Density
+to_node:
+  node_id: alcohol_drinking_frequency
+  node_name: Alcohol Drinking Frequency
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: High off-premise outlet density may indicate areas with different socioeconomic
+  or demographic characteristics'
+- 'Step 2: These areas may have different social patterns around alcohol procurement
+  and consumption'
+- 'Step 3: Higher outlet density may be associated with lower-income areas where drinking
+  frequency is lower despite availability'
+- 'Step 4: Contextual factors related to outlet density location (not density itself)
+  influence drinking patterns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'C. Mair et al. 2020. "Microecological Relationships Between Area
+    Income, Off-Premise Alcohol Outlet Density, Drinking Patterns, and Alcohol Use
+    Disorders: The East Bay Neighborhoods Study.." *Alcoholism: Clinical and Experimental
+    Research*. https://doi.org/10.1111/acer.14387'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:04.996736'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: area_median_household_income
+  direction: strengthens
+  strength: strong
+  description: Area income had stronger and more consistent associations with drinking
+    patterns than outlet density, suggesting income moderates retail environment effects

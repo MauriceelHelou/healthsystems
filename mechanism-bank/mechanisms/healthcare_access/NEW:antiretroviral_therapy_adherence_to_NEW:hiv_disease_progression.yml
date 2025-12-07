@@ -1,0 +1,59 @@
+id: NEW:antiretroviral_therapy_adherence_to_NEW:hiv_disease_progression
+name: Antiretroviral Therapy Adherence → HIV Disease Progression
+from_node:
+  node_id: NEW:antiretroviral_therapy_adherence
+  node_name: Antiretroviral Therapy Adherence
+to_node:
+  node_id: NEW:hiv_disease_progression
+  node_name: HIV Disease Progression
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Adequate antiretroviral therapy adherence maintains drug levels to suppress viral replication'
+- 'Step 2: Viral suppression prevents ongoing destruction of CD4+ T cells'
+- 'Step 3: Preserved immune function prevents opportunistic infections and AIDS-defining conditions'
+- 'Step 4: Disease progression to advanced HIV/AIDS stages is slowed or prevented'
+evidence:
+  quality_rating: A
+  n_studies: 53
+  primary_citation: 'Jessica de Mattos Costa et al. 2018. "Adherence to antiretroviral therapy for HIV/AIDS
+    in Latin America and the Caribbean: Systematic review and meta-analysis.." https://doi.org/10.1002/jia2.25066'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 53 studies from 25 Latin American
+    and Caribbean countries
+  - Studies published between 2005 and 2016
+  - Individual study citations available in full-text systematic review
+  doi: 10.1002/jia2.25066
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The meta-analysis establishes that optimal ART adherence slows HIV disease progression. With
+  only 70% adherence observed across the region, many patients may experience accelerated disease progression
+  due to suboptimal viral suppression.
+quantitative_effects:
+  effect_size:
+    value: 70.0
+    type: percentage_change
+    ci_lower: 63.0
+    ci_upper: 76.0
+  sample_size: 22603
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Setting-specific factors across 25 Latin American and Caribbean countries influence
+    adherence and likely disease progression outcomes
+moderators:
+- name: regional_healthcare_infrastructure
+  direction: strengthens
+  strength: moderate
+  description: Variable healthcare system capacity across Latin American and Caribbean countries affects
+    ability to support adherence
+structural_competency:
+  equity_implications: Disease progression in HIV is directly tied to healthcare system capacity to support
+    medication adherence. Structural factors including healthcare access, medication supply chains, and
+    social determinants unique to Latin American and Caribbean settings create differential vulnerability
+    to disease progression that cannot be attributed to individual behavior alone.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.361718'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

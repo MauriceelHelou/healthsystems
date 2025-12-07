@@ -1,0 +1,59 @@
+id: telemedicine_use_to_depression_diagnosis
+name: Telemedicine Use → Depression Diagnosis
+from_node:
+  node_id: telemedicine_use
+  node_name: Telemedicine Use
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Telemedicine-delivered AUD intervention removes access barriers to integrated behavioral health
+  treatment'
+- 'Step 2: CBT component addresses cognitive patterns underlying both AUD and comorbid depression'
+- 'Step 3: Reduced alcohol consumption decreases alcohol-induced depressive symptoms'
+- 'Step 4: Regular therapeutic contact through m-health platform provides ongoing mental health support'
+- 'Step 5: Depression symptom severity reduced from moderately severe to mild range'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Glasner et al. 2022. "Feasibility, Acceptability, and Preliminary Outcomes of an
+    Integrated Telemedicine Intervention Combining Naltrexone and Cognitive Behavioral Therapy for Alcohol
+    Use Disorder." https://doi.org/10.1089/tmr.2022.0029
+  supporting_citations:
+  - Additional citations require full-text access - comorbidity of AUD and depression discussed in background
+  - Additional citations require full-text access - CBT efficacy for depression mentioned implicitly
+  - Additional citations require full-text access - secondary mental health outcomes literature referenced
+  doi: 10.1089/tmr.2022.0029
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The integrated telemedicine AUD intervention produced significant reductions in depressive
+  symptom severity (t[22]=5.39, p<0.001), with symptoms decreasing from the moderately severe range at
+  baseline to the mild range at treatment-end, demonstrating the mental health co-benefits of accessible
+  integrated behavioral health treatment.
+quantitative_effects:
+  p_value: 0.001
+  sample_size: 23
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Mental health provider shortages vary geographically; telemedicine may particularly
+    benefit those in mental health deserts
+moderators:
+- name: baseline_depression_severity
+  direction: strengthens
+  strength: moderate
+  description: Participants started at moderately severe depression levels, allowing greater room for
+    improvement
+structural_competency:
+  equity_implications: This mechanism highlights how structural barriers to behavioral health care perpetuate
+    comorbid mental health conditions. By addressing AUD and depression simultaneously through an accessible
+    telehealth platform, the intervention circumvents the fragmented care system that often fails to address
+    co-occurring disorders. This is particularly relevant for populations facing mental health provider
+    shortages.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.220224'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,78 @@
+id: NEW:brief_intervention_for_alcohol_use_to_binge_drinking
+name: Brief Intervention for Harmful/Hazardous Alcohol Use → Binge Drinking
+from_node:
+  node_id: NEW:brief_intervention_for_alcohol_use
+  node_name: Brief Intervention for Harmful/Hazardous Alcohol Use
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare systems implement screening and brief intervention protocols in primary care settings'
+- 'Step 2: Brief interventions provide structured counseling that increases awareness of harmful drinking
+  patterns'
+- 'Step 3: Motivational interviewing techniques enhance readiness to change drinking behavior'
+- 'Step 4: Patients reduce hazardous and harmful alcohol consumption following intervention'
+- 'Step 5: Short-term reduction in alcohol risk scores as measured by standardized screening instruments'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Abhishek Ghosh et al. 2021. "Efficacy of Brief Intervention for harmful and hazardous
+    alcohol use: a systematic review and meta-analysis of studies from Low Middle-Income countries.."
+    https://doi.org/10.1111/add.15613'
+  supporting_citations:
+  - Additional citations require full-text access - abstract notes 7 of 14 studies from South Africa
+  - Studies identified from four electronic databases focusing on LMIC settings
+  - Individual RCT citations require full-text access
+  doi: 10.1111/add.15613
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief interventions for harmful and hazardous alcohol use show small but significant short-term
+  effects in reducing alcohol consumption in LMIC settings, with effects most pronounced when delivered
+  as single sessions by nurses in primary care contexts.
+quantitative_effects:
+  effect_size:
+    value: -0.34
+    type: standardized_mean_difference
+  p_value: 0.04
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Seven of 14 studies were from South Africa; the review specifically focused on Low
+    and Middle-Income Countries (LMIC) which have disproportionately higher alcohol-attributable disease
+    burden
+moderators:
+- name: intervention_duration
+  direction: weakens
+  strength: strong
+  description: Single session interventions (g=-0.55, P<0.001) showed significantly better outcomes than
+    multiple sessions (g=-0.03, P=0.85), suggesting brief interventions are more effective than extended
+    ones
+- name: provider_type
+  direction: strengthens
+  strength: moderate
+  description: Nurse-delivered brief interventions (g=-0.44, P=0.02) showed better results than interventions
+    delivered by others (g=-0.14, P=0.66)
+- name: time_since_intervention
+  direction: weakens
+  strength: strong
+  description: Effects were significant at 3 months but did not persist at 6-month (g=-0.06, P=0.68) or
+    12-month follow-up (g=0.15, P=0.41)
+- name: age_group
+  direction: strengthens
+  strength: weak
+  description: Outcomes were similar for young adults and middle-aged people, suggesting age does not
+    moderate effectiveness
+structural_competency:
+  equity_implications: This mechanism addresses structural healthcare access in LMIC where primary prevention
+    resources are minimal. The finding that nurse-delivered interventions are effective is particularly
+    important for resource-limited settings where specialist providers are scarce. The focus on LMIC highlights
+    how structural healthcare inequities between high-income and low/middle-income countries affect alcohol
+    intervention capacity. The lack of sustained effects suggests need for structural changes in follow-up
+    care systems.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.992927'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

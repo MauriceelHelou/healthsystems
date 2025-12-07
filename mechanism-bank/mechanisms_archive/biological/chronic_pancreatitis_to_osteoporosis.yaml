@@ -1,0 +1,50 @@
+id: chronic_pancreatitis_to_osteoporosis
+name: Chronic Pancreatitis → Osteoporosis
+from_node:
+  node_id: chronic_pancreatitis
+  node_name: Chronic Pancreatitis
+to_node:
+  node_id: osteoporosis
+  node_name: Osteoporosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic pancreatitis causes destruction of pancreatic exocrine tissue and
+  reduced enzyme secretion'
+- 'Step 2: Pancreatic insufficiency leads to fat malabsorption and steatorrhea'
+- 'Step 3: Malabsorption of fat-soluble vitamins (D and K) impairs calcium homeostasis
+  and bone formation'
+- 'Step 4: Chronic nutritional deficiencies and inflammation promote progressive bone
+  loss leading to osteoporosis'
+evidence:
+  quality_rating: B
+  n_studies: 17
+  primary_citation: 'Daryl Ramai et al. 2023. "Prevalence of Osteopathy in Chronic
+    Pancreatitis: A Systematic Review and Meta-Analysis.." *Clinical and translational
+    gastroenterology*. https://doi.org/10.14309/ctg.0000000000000623'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.235472'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: decreased_vitamin_d_levels
+  direction: strengthens
+  strength: strong
+  description: Vitamin D deficiency directly impairs calcium absorption and bone mineralization
+- name: decreased_vitamin_k_levels
+  direction: strengthens
+  strength: strong
+  description: Vitamin K deficiency impairs bone protein synthesis and increases fracture
+    risk
+- name: decreased_fecal_elastase
+  direction: strengthens
+  strength: strong
+  description: Low fecal elastase indicates severe pancreatic insufficiency and greater
+    malabsorption severity
+- name: smoking
+  direction: strengthens
+  strength: moderate
+  description: Smoking associated with both pancreatitis progression and independent
+    bone loss

@@ -1,0 +1,56 @@
+id: NEW:digital_intervention_access_aftercare_to_alcohol_use_disorder
+name: Digital Intervention Access for Aftercare → Alcohol Use Disorder
+from_node:
+  node_id: NEW:digital_intervention_access_aftercare
+  node_name: Digital Intervention Access for Aftercare
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital interventions (apps, text messages, wireless breathalysers) provide accessible continuing
+  care following AUD treatment discharge'
+- 'Step 2: Reduced barriers to accessing in-person interventions through remote support mechanisms'
+- 'Step 3: Continuous monitoring and support helps maintain abstinence behaviors'
+- 'Step 4: Some digital tools (text messages, apps) show potential to prolong abstinence periods'
+evidence:
+  quality_rating: B
+  n_studies: 11
+  primary_citation: Luana Lenzi et al. 2025. "Digital interventions for supporting alcohol abstinence
+    in aftercare - a systematic review.." https://doi.org/10.1016/j.invent.2025.100832
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 11 studies across databases
+  - Studies using smartphone apps for abstinence support (2 studies with significant results)
+  - Studies using supportive text messages for abstinence support (2 studies with significant results)
+  doi: 10.1016/j.invent.2025.100832
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Digital interventions may overcome barriers to continuing care after AUD treatment discharge.
+  Four of 11 studies (2 apps, 2 text message interventions) showed statistically significant results in
+  prolonging abstinence, though overall evidence remains insufficient to support efficacy.
+moderators:
+- name: intervention_type
+  direction: strengthens
+  strength: moderate
+  description: Apps and supportive text messages showed statistically significant results in prolonging
+    abstinence, while other modalities (wireless breathalysers, telephone-based support, e-books) did
+    not demonstrate significant effects
+- name: cue_exposure_therapy_approach
+  direction: weakens
+  strength: strong
+  description: CET app intervention found increased relapse rates in all groups, suggesting this specific
+    therapeutic approach delivered digitally may be counterproductive
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to healthcare access that affect AUD
+    treatment continuity. Many individuals with AUD face geographic isolation, transportation barriers,
+    stigma, and scheduling conflicts that prevent access to in-person aftercare. Digital interventions
+    represent a structural solution that could reduce inequities in treatment access. However, effectiveness
+    may be moderated by digital divide issues affecting lower-income populations, older adults, and rural
+    communities who may have limited smartphone access or digital literacy.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.726628'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

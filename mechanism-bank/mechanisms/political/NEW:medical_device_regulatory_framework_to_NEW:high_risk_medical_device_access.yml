@@ -1,0 +1,62 @@
+id: NEW:medical_device_regulatory_framework_to_NEW:high_risk_medical_device_access
+name: Medical Device Regulatory Framework Stringency → High-Risk Medical Device Access
+from_node:
+  node_id: NEW:medical_device_regulatory_framework
+  node_name: Medical Device Regulatory Framework Stringency
+to_node:
+  node_id: NEW:high_risk_medical_device_access
+  node_name: High-Risk Medical Device Access
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: European Medical Device Regulation raises clinical evaluation standards for marketing authorization
+  of high-risk medical devices'
+- 'Step 2: Notified Bodies impose restrictions or limitations on certificates of conformity for devices
+  with incomplete evidence'
+- 'Step 3: Manufacturers face higher barriers to market entry without conditional approval pathways'
+- 'Step 4: Reduced availability of promising high-risk medical devices to patients who may benefit'
+evidence:
+  quality_rating: B
+  n_studies: 8
+  primary_citation: '2024. "Regulatory perspectives on post-market evidence generation schemes for high-risk
+    medical devices: a systematic review." https://doi.org/10.1080/14737167.2024.2431234'
+  supporting_citations:
+  - Documents from USA FDA conditional approval schemes reviewed
+  - Documents from Health Canada conditional approval schemes reviewed
+  - Documents from China NMPA conditional approval schemes reviewed
+  doi: 10.1080/14737167.2024.2431234
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review examines how regulatory frameworks for high-risk medical devices create
+  structural barriers to patient access. The European Medical Device Regulation has increased clinical
+  evidence requirements, and unlike USA, China, and Canada which have conditional approval schemes allowing
+  market access while generating additional evidence, Europe relies on certificate restrictions. This
+  regulatory structure affects which devices reach patients and when.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The paper explicitly compares regulatory approaches across United States, China, Canada,
+    and Europe, finding that conditional approval pathways exist in USA, China, and Canada but Europe
+    relies on restrictions/limitations to certificates instead.
+moderators:
+- name: regulatory_jurisdiction
+  direction: strengthens
+  strength: strong
+  description: Different jurisdictions have varying conditional approval mechanisms - USA, China, and
+    Canada have explicit conditional approval pathways while Europe uses certificate restrictions
+- name: evidence_generation_requirements
+  direction: strengthens
+  strength: moderate
+  description: Post-market evidence generation requirements influence the pathway from approval to full
+    market access
+structural_competency:
+  equity_implications: This mechanism identifies how regulatory policy structures create differential
+    access to medical innovations. The focus is appropriately on structural/policy factors rather than
+    individual choices. The equity implication is that patients in different jurisdictions may have differential
+    access to promising medical devices based solely on where they live, which represents a structural
+    determinant of healthcare access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.433186'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

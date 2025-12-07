@@ -1,0 +1,53 @@
+id: NEW:sbirt_intervention_receipt_to_illicit_drug_use_past_month
+name: SBIRT Intervention Receipt in Emergency Department → Illicit Drug Use Past Month
+from_node:
+  node_id: NEW:sbirt_intervention_receipt
+  node_name: SBIRT Intervention Receipt in Emergency Department
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use Past Month
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Emergency department patients are screened using validated instruments
+  to identify risky alcohol and/or illicit drug use behaviors'
+- 'Step 2: Trained bilingual/bicultural Health Educators deliver brief motivational
+  interventions matched to patient risk level during a ''teachable moment'' when patients
+  may be more receptive'
+- 'Step 3: Motivational interviewing techniques enhance patient readiness for change
+  and strengthen commitment to reduce substance use'
+- 'Step 4: Patients with higher risk levels receive referral to treatment services
+  for additional support'
+- 'Step 5: Behavior change occurs post-intervention, resulting in reduced past-month
+  illicit drug use at 6-month follow-up'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Woodruff et al. 2013. "Evaluation of California's Alcohol and
+    Drug Screening and Brief Intervention Project for Emergency Department Patients."
+    Western Journal of Emergency Medicine.
+  supporting_citations: []
+description: SBIRT services provided in emergency department settings are associated
+  with modest reductions in self-reported past-month illicit drug use. The intervention
+  capitalizes on the 'teachable moment' of an ED visit when patients may be more open
+  to feedback about risky behaviors. Brief motivational interventions delivered by
+  trained health educators, matched to patient risk level, facilitate behavior change.
+  Effects were demonstrated using generalized linear mixed models with intention-to-treat
+  analysis at 6-month follow-up.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Men showed more positive change compared to women
+- name: baseline_risk_status
+  direction: strengthens
+  strength: moderate
+  description: Those at relatively higher risk status showed more positive change
+    versus lower risk individuals
+- name: polysubstance_use
+  direction: weakens
+  strength: moderate
+  description: Those with only one substance of misuse showed more positive change
+    versus those misusing both alcohol and illicit drugs

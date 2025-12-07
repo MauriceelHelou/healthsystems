@@ -1,0 +1,56 @@
+id: NEW:malnutrition_older_adults_to_functional_decline_adl_loss
+name: Malnutrition in Older Adults → Functional Decline and ADL Loss
+from_node:
+  node_id: NEW:malnutrition_older_adults
+  node_name: Malnutrition in Older Adults
+to_node:
+  node_id: functional_decline_adl_loss
+  node_name: Functional Decline and ADL Loss
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Malnutrition leads to inadequate protein and caloric intake, resulting
+  in muscle protein breakdown and sarcopenia (loss of muscle mass and strength)'
+- 'Step 2: Reduced muscle mass and strength impairs physical capacity, balance, and
+  mobility, particularly following acute events like hip fractures'
+- 'Step 3: Compromised nutritional status delays tissue healing and recovery, prolonging
+  rehabilitation periods'
+- 'Step 4: Malnutrition increases risk of complications including delirium, which
+  further disrupts functional recovery'
+- 'Step 5: Combined effects result in declined mobility (41% increased risk) and transfer
+  to more supported living arrangements (218% increased risk), indicating loss of
+  independence in activities of daily living'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'M. Chiavarini et al. 2024. Malnutrition-Related Health Outcomes
+    in Older Adults with Hip Fractures: A Systematic Review and Meta-Analysis. Nutrients.'
+  supporting_citations: []
+description: Malnutrition in older adults, particularly those experiencing hip fractures,
+  significantly increases the risk of functional decline and loss of independence
+  in activities of daily living. This meta-analysis of 14 studies found that malnourished
+  older adults have 41% higher odds of declined mobility and 218% higher odds of requiring
+  transfer to more supported living arrangements at 1 year post-fracture. The mechanism
+  operates through sarcopenia, impaired healing, and increased complications including
+  delirium.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.41
+    type: odds_ratio
+    ci_lower: 1.14
+    ci_upper: 1.75
+  p_value: 0.05
+  sample_size: null
+moderators:
+- name: Time since hip fracture
+  direction: strengthens
+  strength: moderate
+  description: Effects of malnutrition on adverse outcomes increase over time, with
+    risk of any adverse outcome increasing from 70% at 1 month to 250% at 1 year
+- name: Delirium occurrence
+  direction: strengthens
+  strength: strong
+  description: Malnutrition increases delirium risk by 275%, which further compounds
+    functional decline

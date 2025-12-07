@@ -42,6 +42,26 @@ Interactive AI-assisted wizard to create new mechanism YAML files:
 ---
 
 ```bash
+/mechanism discover <topic>
+```
+Automated literature-driven mechanism discovery using the full pipeline:
+- Semantic Scholar + PubMed literature search
+- LLM-powered mechanism extraction
+- Citation validation via Crossref
+- Quantitative effect extraction (OR, RR, HR, etc.)
+- Schema validation
+
+**Example:**
+```bash
+/mechanism discover food insecurity diabetes
+/mechanism discover incarceration chronic disease
+```
+
+**Full Documentation:** `docs/LLM & Discovery Pipeline/MECHANISM_DISCOVERY_PIPELINE.md`
+
+---
+
+```bash
 /mechanism validate [file]
 ```
 Run validation scripts on mechanism YAML files.
@@ -229,23 +249,37 @@ Skills are specialized AI capabilities for complex workflows.
 
 ### Mechanism Discovery Skill
 
-**Purpose:** End-to-end literature synthesis → mechanism creation workflow.
+**Purpose:** Automated literature synthesis → mechanism creation using the full discovery pipeline.
+
+**Pipeline Architecture:**
+```
+Topic Query → Literature Search → LLM Extraction → Quantitative Effects → Validation → YAML Output
+```
 
 **Workflow:**
-1. Literature search (via MCP servers)
-2. Effect size extraction
-3. Moderator identification
-4. YAML generation with schema validation
-5. Quality assessment
-6. Version control
+1. Literature search (Semantic Scholar + PubMed APIs)
+2. LLM-powered mechanism extraction (Claude)
+3. Quantitative effect extraction (OR, RR, HR, percentage change)
+4. Citation validation (Crossref DOI verification)
+5. YAML generation with schema validation
+6. Structural competency review
+7. Version control
 
-**Invoked by:** `/mechanism create` command
+**Invoked by:** `/mechanism discover` and `/mechanism create` commands
 
 **Key features:**
-- Meta-analytic pooling of effect sizes
+- Automated literature aggregation from multiple sources
+- Effect size extraction with confidence intervals
+- Citation verification via Crossref API
 - Structural competency enforcement
-- Equity considerations
-- Evidence quality tiering (A/B/C)
+- Evidence quality tiering (A/B/C only - NO grade D)
+- Equity-centered analysis
+
+**Implementation Files:**
+- Agent: `.claude/agents/mechanism-discovery.md`
+- Skill: `.claude/skills/mechanism-discovery.md`
+- Pipeline: `backend/pipelines/end_to_end_discovery.py`
+- Documentation: `docs/LLM & Discovery Pipeline/MECHANISM_DISCOVERY_PIPELINE.md`
 
 ### Structural Competency Skill
 
@@ -639,6 +673,47 @@ For issues or questions:
 
 ---
 
+---
+
+## 🔐 Authentication Configuration
+
+This project uses **Team plan by default** with easy fallback to API key when needed.
+
+### Current Setup
+
+Authentication is configured via `settings.local.json` which dynamically reads from `api_key.txt` if it exists, otherwise uses Team plan.
+
+### Switching Between Team Plan and API Key
+
+**Default: Team Plan (current)**
+- By default, `.claude/api_key.txt` does NOT exist
+- Claude Code uses Team plan authentication through Claude.ai
+- No files to manage!
+
+**When Team Plan runs out → Switch to API:**
+1. Create `.claude/api_key.txt` with your API key:
+   ```bash
+   echo sk-ant-api03-YOUR-KEY-HERE > .claude/api_key.txt
+   ```
+   Or restore the backup:
+   ```bash
+   mv .claude/api_key.txt.backup .claude/api_key.txt
+   ```
+2. Claude Code will automatically use API authentication
+
+**When API runs out → Switch back to Team Plan:**
+```bash
+mv .claude/api_key.txt .claude/api_key.txt.backup
+```
+
+### Security Notes
+- `.claude/api_key.txt` is gitignored and will NOT be committed
+- `.claude/settings.local.json` is gitignored and will NOT be committed
+- Never commit API keys to version control
+- Your backed-up API key is stored in `.claude/api_key.txt.backup` (also gitignored)
+
+---
+
 **Version:** 1.0 (Phase 1 Foundation)
-**Last Updated:** 2025-11-16
+**Last Updated:** 2025-11-24
 **Maintained by:** HealthSystems Platform Team

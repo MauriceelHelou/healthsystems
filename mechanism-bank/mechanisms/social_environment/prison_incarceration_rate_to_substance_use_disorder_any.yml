@@ -1,0 +1,59 @@
+id: prison_incarceration_rate_to_substance_use_disorder_any
+name: Prison Incarceration Rate → Substance Use Disorder (Any)
+from_node:
+  node_id: prison_incarceration_rate
+  node_name: Prison Incarceration Rate
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Structural factors including poverty, housing instability, and limited economic opportunity
+  increase vulnerability to drug use disorders'
+- 'Step 2: Drug policy and enforcement patterns disproportionately criminalize substance use in marginalized
+  communities'
+- 'Step 3: Inadequate community mental health and substance use treatment infrastructure leaves individuals
+  without alternatives to the criminal justice system'
+- 'Step 4: Drug use disorders are concentrated among newly incarcerated populations, with prevalence at
+  least as high as AUD in men and higher in women'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'Seena Fazel et al. 2017. "Substance use disorders in prisoners: an updated systematic
+    review and meta-regression analysis in recently incarcerated men and women.." https://doi.org/10.1111/add.13877'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis synthesized 24 studies using DSM/ICD
+    diagnostic criteria
+  - Studies utilized clinical interviews or validated diagnostic instruments
+  - Research spans 1966-2015 across 10 countries
+  doi: 10.1111/add.13877
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis found drug use disorder prevalence at least as high as alcohol use disorder
+  (24%) in incarcerated men, and higher in incarcerated women. This concentration reflects structural
+  pathways whereby drug policy criminalizes addiction rather than treating it as a health condition.
+quantitative_effects:
+  sample_size: 18388
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Multi-country study (10 countries) indicates variation in drug use disorder prevalence
+    among prisoners across geographic contexts
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Drug use disorder prevalence was higher in incarcerated women compared to men, suggesting
+    gender-specific pathways to incarceration involving substance use
+structural_competency:
+  equity_implications: The finding that drug use disorders are at least as prevalent as AUD (and higher
+    in women) highlights how drug enforcement policies funnel individuals with substance use problems
+    into the criminal justice system. Women's higher rates may reflect gendered pathways including trauma,
+    economic marginalization, and relationships with drug-involved partners. Structural reforms including
+    decriminalization and treatment expansion could redirect these populations to health services.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.537318'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

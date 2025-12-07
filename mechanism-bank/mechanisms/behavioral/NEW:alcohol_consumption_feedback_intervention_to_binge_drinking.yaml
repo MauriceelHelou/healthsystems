@@ -1,0 +1,55 @@
+id: NEW:alcohol_consumption_feedback_intervention_to_binge_drinking
+name: Alcohol Consumption Feedback Intervention → Binge Drinking
+from_node:
+  node_id: NEW:alcohol_consumption_feedback_intervention
+  node_name: Alcohol Consumption Feedback Intervention
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Young adults with hazardous drinking receive automated text message interventions
+  providing feedback on their alcohol consumption patterns on typical drinking days'
+- 'Step 2: Feedback on actual drinking amounts increases self-awareness and conscious
+  reflection on drinking behavior, enabling individuals to recognize discrepancies
+  between actual and intended consumption'
+- 'Step 3: Enhanced awareness facilitates behavioral self-regulation and motivation
+  to reduce excessive drinking episodes'
+- 'Step 4: Sustained engagement with consumption feedback over 12 weeks leads to durable
+  reductions in binge drinking days'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'B. Suffoletto et al. 2022. Effects of text message interventions
+    with different behavior change techniques on alcohol consumption among young adults:
+    A 5-arm randomized controlled trial. Addiction.'
+  supporting_citations: []
+description: Automated text message interventions providing feedback on alcohol consumption
+  significantly reduce binge drinking days among non-treatment seeking young adults
+  with hazardous drinking. The USE intervention (alcohol consumption feedback) decreased
+  mean binge drinking days from 3.3 to 2.9 at 3 months compared to the control condition
+  where binge drinking increased from 2.7 to 3.4 days. Effects persisted at 6-month
+  follow-up.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.38
+    type: beta_coefficient
+    ci_lower: -0.62
+    ci_upper: -0.14
+  p_value: null
+  sample_size: 1141
+moderators:
+- name: combination_with_other_techniques
+  direction: strengthens
+  strength: moderate
+  description: Combining alcohol consumption feedback with goal support and pre-drinking
+    cognition feedback (COMBO condition) produced larger effect sizes (beta=-0.52)
+    compared to consumption feedback alone (beta=-0.38)
+- name: time_since_intervention
+  direction: strengthens
+  strength: weak
+  description: Effects were durable at 6-month follow-up, suggesting sustained behavioral
+    change

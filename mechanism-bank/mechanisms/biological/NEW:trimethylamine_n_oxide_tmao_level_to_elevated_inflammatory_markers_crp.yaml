@@ -1,0 +1,64 @@
+id: NEW:trimethylamine_n_oxide_tmao_level_to_elevated_inflammatory_markers_crp
+name: Trimethylamine N-oxide (TMAO) Level → Elevated Inflammatory Markers (CRP)
+from_node:
+  node_id: NEW:trimethylamine_n_oxide_tmao_level
+  node_name: Trimethylamine N-oxide (TMAO) Level
+to_node:
+  node_id: elevated_inflammatory_markers_crp
+  node_name: Elevated Inflammatory Markers (CRP)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Gut microbiota metabolize dietary precursors (choline, carnitine, betaine)
+  to produce trimethylamine (TMA)'
+- 'Step 2: TMA is absorbed into circulation and oxidized by hepatic flavin-containing
+  monooxygenases (FMO3) to form TMAO'
+- 'Step 3: Elevated circulating TMAO activates pro-inflammatory signaling pathways
+  in endothelial cells and immune cells'
+- 'Step 4: TMAO promotes NLRP3 inflammasome activation and NF-κB signaling, leading
+  to increased production of inflammatory cytokines'
+- 'Step 5: Sustained inflammatory activation results in elevated systemic inflammatory
+  markers including C-reactive protein (CRP)'
+evidence:
+  quality_rating: A
+  n_studies: 21
+  primary_citation: 'Yachun Li et al. 2023. Gut microbiota-derived trimethylamine
+    N-oxide is associated with the risk of all-cause and cardiovascular mortality
+    in patients with chronic kidney disease: a systematic review and dose-response
+    meta-analysis. Annals medicus.'
+  supporting_citations: []
+description: Elevated circulating TMAO levels are positively correlated with inflammatory
+  biomarkers in patients with chronic kidney disease. This meta-analysis of 21 studies
+  demonstrated a moderate positive correlation (r=0.43) between TMAO and inflammation
+  markers in non-dialysis CKD patients. TMAO, a gut microbiota-derived metabolite,
+  promotes systemic inflammation through activation of pro-inflammatory pathways,
+  contributing to the increased cardiovascular and all-cause mortality risk observed
+  in CKD populations with elevated TMAO.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.43
+    type: correlation_coefficient
+    ci_lower: 0.03
+    ci_upper: 0.84
+  p_value: 0.036
+  sample_size: 15637
+moderators:
+- name: dialysis_status
+  direction: strengthens
+  strength: moderate
+  description: The correlation between TMAO and inflammatory markers was specifically
+    verified in non-dialysis CKD patients; dialysis may alter the relationship
+- name: race
+  direction: weakens
+  strength: strong
+  description: Black populations showed no significant association between TMAO and
+    mortality outcomes, suggesting potential differences in the TMAO-inflammation-disease
+    pathway
+- name: kidney_function_GFR
+  direction: strengthens
+  strength: strong
+  description: TMAO has strong negative correlation with GFR (r=-0.49), indicating
+    impaired kidney clearance amplifies TMAO accumulation and potentially its inflammatory
+    effects

@@ -1,0 +1,56 @@
+id: homelessness_rate_to_mental_healthcare_access
+name: Homelessness Rate → Mental Healthcare Access
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: mental_healthcare_access
+  node_name: Mental Healthcare Access
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Persons experiencing homelessness face systemic barriers to accessing healthcare
+  services including lack of stable address, identification documents, and insurance
+  coverage'
+- 'Step 2: Shelter closures, social distancing requirements, and service disruptions
+  reduce availability of walk-in and outreach mental health services that homeless
+  populations rely upon'
+- 'Step 3: Competing survival priorities (food, shelter, safety) take precedence over
+  seeking mental healthcare, further reducing engagement with available services'
+- 'Step 4: Stigma, distrust of healthcare systems, and lack of culturally competent
+  services create additional barriers to mental healthcare utilization among homeless
+  individuals'
+- 'Step 5: Gaps in mental health support services for homeless populations persist
+  and widen, resulting in unmet mental health needs and deteriorating mental health
+  outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 96
+  primary_citation: Julia Corey et al. 2022. A Scoping Review of the Health Impact
+    of the COVID-19 Pandemic on Persons Experiencing Homelessness in North America
+    and Europe. International Journal of Environmental Research and Public Health.
+  supporting_citations: []
+description: Higher homelessness rates are associated with reduced access to mental
+  healthcare services. Persons experiencing homelessness face multiple structural
+  barriers to mental healthcare including lack of stable address, insurance, transportation,
+  and competing survival needs. The scoping review identified gaps in access to mental
+  health support as a key concern, with pandemic conditions exacerbating existing
+  disparities in service availability and utilization.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: pandemic_conditions
+  direction: strengthens
+  strength: strong
+  description: COVID-19 pandemic exacerbated existing barriers to mental healthcare
+    access through service disruptions, shelter closures, and reduced outreach capacity
+- name: housing_status
+  direction: strengthens
+  strength: moderate
+  description: Unsheltered individuals face greater barriers than those in temporary
+    shelters or transitional housing
+- name: substance_use
+  direction: strengthens
+  strength: moderate
+  description: Co-occurring substance use disorders further complicate access to mental
+    healthcare services

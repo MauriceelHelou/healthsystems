@@ -1,0 +1,54 @@
+id: NEW:psychotherapy_any_to_suicide_attempt_rate_ed_hospital
+name: Psychotherapy (Direct or Indirect) → Suicide Attempt Rate
+from_node:
+  node_id: NEW:psychotherapy_any
+  node_name: Psychotherapy (Direct or Indirect)
+to_node:
+  node_id: suicide_attempt_rate_ed_hospital
+  node_name: Suicide Attempt Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individuals with mental health problems (depression, personality disorders,
+  suicidal ideation) engage in psychotherapy, either directly targeting suicidal thoughts/behaviors
+  or indirectly addressing underlying conditions'
+- 'Step 2: Psychotherapy provides cognitive and behavioral skills including emotion
+  regulation, distress tolerance, problem-solving, and challenging maladaptive thought
+  patterns'
+- 'Step 3: Both direct interventions (targeting suicide specifically) and indirect
+  interventions (treating underlying mental health conditions) reduce psychological
+  distress and hopelessness'
+- 'Step 4: Reduced psychological distress, improved coping mechanisms, and treatment
+  of underlying conditions decrease the likelihood of suicide attempts'
+evidence:
+  quality_rating: A
+  n_studies: 147
+  primary_citation: 'W. van Ballegooijen et al. 2024. Suicidal Ideation and Suicide
+    Attempts After Direct or Indirect Psychotherapy: A Systematic Review and Meta-Analysis.
+    JAMA psychiatry.'
+  supporting_citations: []
+description: A comprehensive meta-analysis of 147 randomized clinical trials with
+  11,001 participants demonstrates that psychotherapy, whether directly targeting
+  suicidal thoughts and behaviors or indirectly addressing underlying mental health
+  conditions, significantly reduces the incidence of suicide attempts. Direct psychotherapy
+  showed a 28% reduction in suicide attempts (RR 0.72, 95% CI 0.62-0.84), while indirect
+  psychotherapy showed a 32% reduction (RR 0.68, 95% CI 0.48-0.95). This suggests
+  that expanding access to mental health treatment broadly, not just suicide-specific
+  interventions, can effectively reduce suicide attempts.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.72
+    type: relative_risk
+    ci_lower: 0.62
+    ci_upper: 0.84
+  p_value: null
+  sample_size: 11001
+moderators:
+- name: therapy_approach
+  direction: neutral
+  strength: weak
+  description: Both direct psychotherapy (RR 0.72) and indirect psychotherapy (RR
+    0.68) showed similar effect sizes for reducing suicide attempts, suggesting treatment
+    approach does not substantially moderate effectiveness

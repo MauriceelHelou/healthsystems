@@ -1,0 +1,62 @@
+id: poor_housing_quality_to_pediatric_asthma_incidence
+name: Poor Housing Quality → Pediatric Asthma Incidence
+from_node:
+  node_id: poor_housing_quality
+  node_name: Poor Housing Quality
+to_node:
+  node_id: pediatric_asthma_incidence
+  node_name: Pediatric Asthma Incidence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Poor housing quality creates multiple indoor environmental hazards (dampness, mold, inadequate
+  ventilation, pest infestations)'
+- 'Step 2: These hazards degrade indoor air quality through allergen accumulation and respiratory irritants'
+- 'Step 3: Children experience chronic exposure to airborne allergens and irritants in their primary living
+  environment'
+- 'Step 4: Repeated respiratory system exposure triggers inflammatory responses and airway hyperresponsiveness'
+- 'Step 5: Sustained inflammation leads to asthma development and increased exacerbation frequency'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'T. Simoneau, J. Gaffin. 2023. "Socioeconomic determinants of asthma health" Current
+    Opinion in Pediatrics. https://doi.org/10.1097/MOP.0000000000001235 (Cited: 9)'
+  doi: 10.1097/mop.0000000000001235
+  journal: Current Opinion in Pediatrics
+  year: 2023
+  fulltext:
+    available: true
+    source: unpaywall
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10160003/pdf/nihms-1874440.pdf
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '1.0'
+description: Poor housing quality creates multiple indoor environmental hazards that degrade air quality
+  and trigger asthma development in children through chronic allergen and irritant exposure.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects most pronounced in humid climates where mold growth is enhanced by environmental
+    conditions
+moderators:
+- name: building_age_pre_1978
+  direction: strengthens
+  strength: strong
+  description: Older buildings have accumulated environmental hazards and may lack modern ventilation
+    systems, amplifying indoor air quality problems
+- name: humid_climate
+  direction: strengthens
+  strength: moderate
+  description: High humidity promotes mold growth and dust mite proliferation, increasing allergen exposure
+    in poor-quality housing
+structural_competency:
+  equity_implications: This mechanism reflects how housing policy failures (weak building codes, insufficient
+    inspection enforcement, lack of remediation funding) create health inequities. Low-income families
+    are disproportionately exposed to poor housing quality due to residential segregation and limited
+    housing options. This represents environmental injustice, not individual choice.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-17T10:23:35.030180'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

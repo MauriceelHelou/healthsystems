@@ -1,0 +1,49 @@
+id: NEW:intravenous_racemic_ketamine_treatment_to_suicidal_ideation
+name: Intravenous Racemic Ketamine Treatment → Suicidal Ideation
+from_node:
+  node_id: NEW:intravenous_racemic_ketamine_treatment
+  node_name: Intravenous Racemic Ketamine Treatment
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Intravenous racemic ketamine is administered to patients experiencing suicidal
+  ideation, typically in clinical/hospital settings'
+- 'Step 2: Ketamine acts as an NMDA receptor antagonist and modulates glutamatergic
+  neurotransmission, producing rapid neurobiological effects'
+- 'Step 3: These neurobiological changes result in rapid reduction of suicidal ideation
+  within 72 hours of administration'
+- 'Step 4: The effect is superior to control drugs (placebo or midazolam) with minor
+  and transient adverse events'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'F. Jollant et al. 2023. Ketamine and esketamine in suicidal thoughts
+    and behaviors: a systematic review. Therapeutic Advances in Psychopharmacology.'
+  supporting_citations: []
+description: Systematic review evidence demonstrates that intravenous racemic ketamine
+  produces rapid reduction in suicidal ideation within 72 hours compared to control
+  drugs. The treatment shows a favorable short-term benefit-risk balance with minor
+  and transient adverse events. However, evidence is limited to short-term effects,
+  primarily in patients with affective disorders, and mechanisms of action on suicidal
+  ideation remain incompletely understood.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: placebo_effect
+  direction: weakens
+  strength: moderate
+  description: Large placebo effects observed when studying suicidal ideation reduction
+    may attenuate measured treatment effects
+- name: dissociative_effects
+  direction: strengthens
+  strength: weak
+  description: Dissociative effects may affect blinding quality, potentially inflating
+    perceived treatment effects
+- name: administration_route
+  direction: strengthens
+  strength: strong
+  description: Intravenous racemic ketamine shows superiority over controls, while
+    intranasal esketamine did not differ from placebo in large-scale studies

@@ -1,7 +1,7 @@
 # Node and System Definitions
 
-**Version:** 1.1
-**Last Updated:** 2025-11-19
+**Version:** 2.0
+**Last Updated:** 2025-12-06
 **Purpose:** Foundational framework defining nodes, systems, and organizational principles for the HealthSystems Platform
 
 ---
@@ -13,10 +13,11 @@
 3. [What is NOT a Node?](#what-is-not-a-node)
 4. [Scale Hierarchy](#scale-hierarchy)
 5. [Domain Taxonomy](#domain-taxonomy)
-6. [Measurement Principles](#measurement-principles)
-7. [Relationship to Mechanisms and Interventions](#relationship-to-mechanisms-and-interventions)
-8. [Node Specification Standards](#node-specification-standards)
-9. [Examples and Edge Cases](#examples-and-edge-cases)
+6. [Node Hierarchy System](#node-hierarchy-system)
+7. [Measurement Principles](#measurement-principles)
+8. [Relationship to Mechanisms and Interventions](#relationship-to-mechanisms-and-interventions)
+9. [Node Specification Standards](#node-specification-standards)
+10. [Examples and Edge Cases](#examples-and-edge-cases)
 
 ---
 
@@ -593,6 +594,73 @@ Domains represent **substantive areas of the health system** and cut across scal
 - **Individual:** Voter registration, turnout, civic participation
 - **Intermediate:** Political efficacy, collective action
 - **Crisis:** Disenfranchisement, civic disempowerment
+
+---
+
+## Node Hierarchy System
+
+### Overview
+
+In addition to the **Scale** (1-7) and **Domain** organization, nodes are organized in a **hierarchical DAG (Directed Acyclic Graph)** structure that represents specificity/abstraction levels:
+
+- **Horizontal axis**: Scale 1-7 (causal distance from outcomes)
+- **Vertical axis**: Domain (thematic area)
+- **Depth axis**: Specificity hierarchy (general → specific)
+
+### Hierarchy Concepts
+
+| Concept | Meaning |
+|---------|---------|
+| **Domain** | Root node (depth=0) representing one of the 17 thematic areas |
+| **Depth** | Levels of specificity: 0 = root/domain, 1+ = increasingly specific |
+| **Parent node** | More abstract/general concept |
+| **Child node** | More specific instantiation |
+| **DAG structure** | Nodes can have multiple parents (e.g., `alcohol_use_disorder` under both `behavioral_health` AND `healthcare_system`) |
+
+### Example: Hierarchy Within Scale 7
+
+```
+alcohol_use_disorder (general concept)
+├── binge_drinking (specific pattern)
+│   ├── weekend_binge_drinking (more specific)
+│   └── holiday_binge_drinking (more specific)
+├── chronic_heavy_drinking (specific pattern)
+└── alcohol_dependence_with_withdrawal (specific pattern)
+```
+
+All of these are at **Scale 7 (Crisis)** but at different **depths** in the hierarchy.
+
+### Mechanism Hierarchy Levels
+
+Mechanisms that connect nodes are tagged with a **hierarchy_level**:
+
+| Level | Description | Example |
+|-------|-------------|---------|
+| **leaf** | Connects specific nodes (default) | `binge_drinking → alcohol_poisoning` |
+| **parent** | Connects abstract/general nodes | `substance_use_disorder → liver_disease` |
+| **cross** | Spans hierarchy levels | `alcohol_policy (parent) → binge_drinking (child)` |
+
+### Visibility Rules
+
+| Viewing Mode | What's Visible |
+|--------------|----------------|
+| Parent node collapsed | Only mechanisms at that parent level |
+| Parent node expanded | Parent's mechanisms + all children visible |
+| Child node selected | Only mechanisms at that child level |
+
+**Key principle**: Mechanisms don't automatically aggregate up. If you want a mechanism at the parent level, you define it explicitly.
+
+### Domains as Root Nodes
+
+The 17 domains are implemented as **root nodes (depth=0)** in the hierarchy. A node's domain(s) are determined by its ancestry:
+
+```python
+# A node can belong to multiple domains via DAG ancestry
+alcohol_use_disorder.domains
+# Returns: ["behavioral_health", "healthcare_system"]
+```
+
+This replaces the deprecated `category` field with a computed `domains` property that accurately reflects multi-domain membership.
 
 ---
 

@@ -1,0 +1,63 @@
+id: NEW:abstinence_based_substance_use_treatment_to_substance_use_disorder_any
+name: Abstinence-Based Substance Use Treatment → Substance Use Disorder (Any)
+from_node:
+  node_id: NEW:abstinence_based_substance_use_treatment
+  node_name: Abstinence-Based Substance Use Treatment
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Abstinence-based interventions require complete cessation of substance use as treatment goal'
+- 'Step 2: These interventions may include residential treatment, 12-step programs, or contingency management
+  requiring abstinence'
+- 'Step 3: For homeless populations, abstinence requirements may create barriers to treatment engagement
+  and retention'
+- 'Step 4: Meta-analysis shows abstinence-based approaches produce similar outcomes to treatment as usual
+  for this population'
+evidence:
+  quality_rating: A
+  n_studies: 34
+  primary_citation: 'Chris O''Leary et al. 2024. "The effectiveness of abstinence-based and harm reduction-based
+    interventions in reducing problematic substance use in adults who are experiencing homelessness in
+    high income countries: A systematic review and meta-analysis: A systematic review.." https://doi.org/10.1002/cl2.1396'
+  supporting_citations:
+  - Studies from the Homelessness Effectiveness Studies Evidence and Gaps Maps (EGM) 4th edition
+  - Grey evidence identified through calls and hand-searching key journals
+  - Relevant systematic reviews unpacked for additional studies
+  doi: 10.1002/cl2.1396
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Abstinence-based interventions for adults experiencing homelessness do not demonstrate significantly
+  better outcomes compared to treatment as usual, though effectiveness varies by specific intervention
+  type
+quantitative_effects:
+  sample_size: 15255
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Evidence base primarily from United States and Canada, with only one study from outside
+    these countries
+moderators:
+- name: specific_intervention_type
+  direction: strengthens
+  strength: moderate
+  description: Some individual abstinence-based interventions are more effective than others
+- name: housing_stability
+  direction: strengthens
+  strength: moderate
+  description: Substance dependency creates barriers to successful transition to stable housing, suggesting
+    housing-first approaches may moderate effectiveness
+structural_competency:
+  equity_implications: The lack of differential effectiveness between abstinence and harm reduction approaches
+    for homeless populations points to the need for structural interventions addressing root causes. The
+    abstract notes that homeless individuals use substances to cope with street living stress, stay warm,
+    and block traumatic memories - suggesting that substance use is a structural symptom of housing instability,
+    trauma, and social disadvantage rather than simply an individual behavior problem. Treatment approaches
+    that don't address these structural factors may have limited effectiveness.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.748793'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,39 @@
+id: alcohol_consumption_to_mortality
+name: Alcohol Consumption → All-Cause Mortality
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: mortality
+  node_name: All-Cause Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption affects multiple organ systems including liver, cardiovascular
+  system, and nervous system'
+- 'Step 2: Chronic alcohol exposure leads to development of alcohol-attributable diseases
+  including cirrhosis, cancers, and cardiovascular diseases'
+- 'Step 3: These diseases contribute to premature mortality across populations'
+evidence:
+  quality_rating: B
+  n_studies: 63
+  primary_citation: 'Ariel Esteban Bardach et al. 2019. "Alcohol consumption''s attributable
+    disease burden and cost-effectiveness of targeted public health interventions:
+    a systematic review of mathematical models." *BMC Public Health*. https://doi.org/10.1186/s12889-019-7771-4'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.119869'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_alcohol_consumption_level
+  direction: strengthens
+  strength: strong
+  description: Higher baseline consumption levels increase the attributable mortality
+    burden from alcohol
+- name: local_disease_patterns
+  direction: strengthens
+  strength: moderate
+  description: Local prevalence of alcohol-sensitive diseases (e.g., liver disease,
+    certain cancers) moderates the mortality impact

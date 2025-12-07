@@ -1,0 +1,61 @@
+id: NEW:alcohol_outlet_density_to_alcohol_induced_mortality
+name: Alcohol Outlet Density → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:alcohol_outlet_density
+  node_name: Alcohol Outlet Density
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher alcohol outlet density increases physical availability of alcohol products'
+- 'Step 2: Competitive retail environment drives down prices, making alcohol more affordable'
+- 'Step 3: Increased exposure to alcohol marketing and brands normalizes heavy consumption'
+- 'Step 4: Higher population-level alcohol consumption leads to increased alcohol-related disease'
+- 'Step 5: Chronic alcohol-related conditions contribute to alcohol-induced mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: N. Shortt et al. 2015. "A cross-sectional analysis of the relationship between tobacco
+    and alcohol outlet density and neighbourhood deprivation." https://doi.org/10.1186/s12889-015-2321-1
+  supporting_citations:
+  - Additional citations require full-text access - abstract references socio-economic gradient in alcohol-related
+    disease
+  - Additional citations require full-text access - abstract references supply-side public health interventions
+  - Additional citations require full-text access - abstract references health inequalities literature
+  doi: 10.1186/s12889-015-2321-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The concentration of alcohol outlets in deprived neighbourhoods contributes to the social
+  gradient in alcohol-related mortality by creating differential exposure to alcohol availability based
+  on socioeconomic status of the area.
+quantitative_effects:
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Positive linear relationship between neighbourhood deprivation and off-sales alcohol
+    outlet density across Scotland; spatial patterning creates differential exposure by socioeconomic
+    status
+moderators:
+- name: neighbourhood_income_deprivation
+  direction: strengthens
+  strength: strong
+  description: Off-sales alcohol outlet density shows strong positive linear relationship with neighbourhood
+    deprivation (p<0.001)
+- name: outlet_type
+  direction: strengthens
+  strength: moderate
+  description: Off-sales outlets show stronger deprivation gradient than on-sales; least deprived had
+    lowest density of both types
+structural_competency:
+  equity_implications: This mechanism demonstrates how the built environment creates health inequities
+    through spatial patterning of harmful commodity retail. The social gradient in alcohol outlet density
+    mirrors and likely contributes to the social gradient in alcohol-related disease, representing a structural
+    determinant that operates at the community rather than individual level.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.489936'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,59 @@
+id: substance_use_disorder_any_to_all_cause_mortality_rate
+name: Substance Use Disorder → All-Cause Mortality
+from_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Substance use disorders lead to direct physiological harm through toxic
+  effects of substances on vital organs (liver, heart, brain, lungs)'
+- 'Step 2: Injection drug use and risky behaviors associated with substance use increase
+  risk of infectious disease transmission (HIV, hepatitis C, bacterial infections)'
+- 'Step 3: Substance use disorders impair judgment and increase risk-taking behaviors,
+  leading to overdoses, accidents, and injuries'
+- 'Step 4: Social marginalization reduces access to healthcare, stable housing, and
+  social support systems'
+- 'Step 5: Co-occurring mental health conditions and multimorbidity compound health
+  risks and reduce treatment engagement'
+- 'Step 6: Cumulative physiological damage, delayed healthcare seeking, and acute
+  events (overdose) result in dramatically elevated mortality rates'
+evidence:
+  quality_rating: A
+  n_studies: 92
+  primary_citation: 'Robert W Aldridge et al. 2018. "Morbidity and mortality in homeless
+    individuals, prisoners, sex workers, and individuals with substance use disorders
+    in high-income countries: a systematic review and meta-analysis." Lancet (London,
+    England).'
+  supporting_citations: []
+description: Individuals with substance use disorders in high-income countries experience
+  dramatically elevated all-cause mortality with a standardized mortality ratio of
+  11.86 (95% CI 10.42-13.30), indicating nearly 12 times higher mortality compared
+  to the general population. This elevated mortality reflects extreme health inequities
+  driven by direct physiological harm from substances, increased infectious disease
+  risk, overdose deaths, social marginalization limiting healthcare access, and multimorbidity.
+  The effect was consistent across 99% of 92 extracted datapoints.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 11.86
+    type: standardized_mortality_ratio
+    ci_lower: 10.42
+    ci_upper: 13.3
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: The relative effect of exclusion (including substance use disorder)
+    was greater in female individuals than male individuals
+- name: social_exclusion_overlap
+  direction: strengthens
+  strength: strong
+  description: Overlapping populations (homeless, imprisoned, sex workers) experience
+    compounded health inequities

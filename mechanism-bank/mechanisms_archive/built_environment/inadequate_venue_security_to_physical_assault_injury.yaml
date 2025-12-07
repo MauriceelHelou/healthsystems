@@ -1,0 +1,40 @@
+id: inadequate_venue_security_to_physical_assault_injury
+name: Inadequate Venue Security → Physical Assault Injury
+from_node:
+  node_id: inadequate_venue_security
+  node_name: Inadequate Venue Security
+to_node:
+  node_id: physical_assault_injury
+  node_name: Physical Assault Injury
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Festive venues lack adequate security measures to detect and prevent needle
+  pricking'
+- 'Step 2: Over half of patients (>50%) displayed physical examination findings consistent
+  with needle pricking, primarily on arms'
+- 'Step 3: Assailants can operate with impunity in crowded venues without detection'
+- 'Step 4: Victims sustain physical injury from needle pricking and psychological
+  trauma from assault'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Clément Harmel et al. 2024. "Suspicion of needle pricking/spiking
+    in 2022 in Paris, France, an observational study from the Department of Forensic
+    Medicine.." *Journal of forensic and legal medicine*. https://doi.org/10.1016/j.jflm.2024.102739
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.591026'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: venue_crowding
+  direction: strengthens
+  strength: strong
+  description: Crowded festive venues enable assailants to approach victims undetected
+- name: time_to_examination
+  direction: weakens
+  strength: moderate
+  description: Physical evidence of needle pricking may fade over time, affecting
+    detection rates

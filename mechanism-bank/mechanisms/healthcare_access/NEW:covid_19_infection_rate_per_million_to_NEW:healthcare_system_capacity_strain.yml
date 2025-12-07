@@ -1,0 +1,56 @@
+id: NEW:covid_19_infection_rate_per_million_to_NEW:healthcare_system_capacity_strain
+name: COVID-19 Infection Rate Per Million Population → Healthcare System Capacity Strain
+from_node:
+  node_id: NEW:covid_19_infection_rate_per_million
+  node_name: COVID-19 Infection Rate Per Million Population
+to_node:
+  node_id: NEW:healthcare_system_capacity_strain
+  node_name: Healthcare System Capacity Strain
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Higher standardized infection rates increase total number of symptomatic cases requiring care'
+- 'Step 2: Healthcare facilities experience increased patient volume'
+- 'Step 3: When infection severity status exceeds national health capacity thresholds, system strain occurs'
+- 'Step 4: Reduced ability to provide adequate care for COVID-19 and non-COVID patients'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'J. Dong et al. 2020. "A Validation Study for the Successful Isolation Policy in China:
+    a Meta-Analysis in COVID-19." https://doi.org/10.1101/2020.04.15.20065102'
+  supporting_citations:
+  - Analysis of whether infectious severity status exceeds national health capacity across countries
+  - Comparative analysis of healthcare system responses in China, Italy, and United States
+  - WHO baseline estimates referenced for global comparison
+  doi: 10.1101/2020.04.15.20065102
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: Unexpected error: list index out of range'
+last_updated: '2025-12-06'
+version: '2.0'
+description: The standardized infection rate per million population can be used to determine whether current
+  infectious severity exceeds national health capacity. Higher infection rates, especially when uncontrolled
+  due to inadequate isolation policies, lead to healthcare system strain.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Healthcare capacity thresholds vary by country, with the standardized infection rate
+    serving as an indicator of whether current infection levels exceed national capacity to provide adequate
+    care.
+moderators:
+- name: baseline_healthcare_infrastructure
+  direction: weakens
+  strength: moderate
+  description: Countries with greater baseline healthcare capacity have higher thresholds before system
+    strain occurs
+structural_competency:
+  equity_implications: This mechanism highlights how public health infrastructure and healthcare system
+    capacity are structural determinants that mediate the relationship between policy effectiveness and
+    health outcomes. Populations in countries with lower baseline healthcare capacity or delayed policy
+    responses face compounded vulnerability. The analysis avoids blaming individuals for healthcare system
+    failures.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.602838'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

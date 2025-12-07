@@ -1,0 +1,57 @@
+id: NEW:combined_trauma_therapy_aod_medication_to_alcohol_use_disorder
+name: Trauma-Focused Psychotherapy + AOD Medication → Alcohol Use Severity
+from_node:
+  node_id: NEW:combined_trauma_therapy_aod_medication
+  node_name: Trauma-Focused Psychotherapy + AOD Medication
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Severity
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Trauma-focused psychotherapy addresses underlying PTSD symptoms that often
+  co-occur with and drive alcohol use as a self-medication strategy'
+- 'Step 2: AOD medication (e.g., naltrexone, acamprosate) directly targets neurobiological
+  pathways involved in alcohol craving and reward, reducing physiological drive to
+  drink'
+- 'Step 3: The combined approach simultaneously treats both the psychological trauma
+  triggers and the pharmacological dependency mechanisms'
+- 'Step 4: Integrated treatment prevents the cycle where untreated PTSD symptoms lead
+  to relapse, while medication supports abstinence during psychological processing'
+- 'Step 5: Synergistic effects result in significantly greater reduction in alcohol
+  use severity compared to either treatment modality alone or placebo conditions'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'Denise A. Hien et al. 2023. "Project harmony: A systematic review
+    and network meta-analysis of psychotherapy and pharmacologic trials for comorbid
+    posttraumatic stress, alcohol, and other drug use disorders." Psychological bulletin.'
+  supporting_citations: []
+description: Combined trauma-focused psychotherapy with AOD medication demonstrates
+  superior efficacy in reducing alcohol use severity compared to single-modality treatments
+  or placebo. The network meta-analysis of 24 RCTs found large effect sizes (SMD =
+  -0.81 vs placebo medication conditions), indicating that addressing both PTSD symptoms
+  through psychotherapy and alcohol craving/reward mechanisms through medication produces
+  synergistic benefits for individuals with comorbid PTSD and alcohol use disorder.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.81
+    type: standardized_mean_difference
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: Comparison condition
+  direction: strengthens
+  strength: strong
+  description: Effect size largest when compared to trauma-focused psychotherapy +
+    placebo medication (SMD = -0.81), followed by PTSD medication alone (SMD = -0.53)
+    and placebo medication (SMD = -0.50)
+- name: Treatment retention
+  direction: weakens
+  strength: moderate
+  description: Authors note retention as a limitation in existing studies, suggesting
+    attrition may moderate treatment effectiveness

@@ -1,0 +1,50 @@
+id: NEW:pediatric_cancer_diagnosis_to_NEW:covid_19_mortality_pediatric
+name: Pediatric Cancer Diagnosis → COVID-19 Mortality in Pediatric Cancer Patients
+from_node:
+  node_id: NEW:pediatric_cancer_diagnosis
+  node_name: Pediatric Cancer Diagnosis
+to_node:
+  node_id: NEW:covid_19_mortality_pediatric
+  node_name: COVID-19 Mortality in Pediatric Cancer Patients
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Pediatric cancer diagnosis leads to initiation of immunosuppressive treatments
+  including chemotherapy, radiation, and/or stem cell transplantation'
+- 'Step 2: Cancer treatments and the malignancy itself compromise immune system function,
+  reducing ability to mount effective antiviral responses'
+- 'Step 3: Immunocompromised state increases vulnerability to SARS-CoV-2 infection
+  complications'
+- 'Step 4: Despite theoretical increased risk, meta-analysis evidence shows overall
+  survival of 99.4% with mortality of only 0.6% in pediatric cancer patients with
+  COVID-19'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'E. Dorantes-Acosta et al. 2021. Survival and Complications in
+    Pediatric Patients With Cancer and COVID-19: A Meta-Analysis. Frontiers in Oncology.'
+  supporting_citations: []
+description: Meta-analysis of 15 studies with 191 pediatric cancer patients with COVID-19
+  found very high survival rates (99.4%) with only 0.6% mortality. While biological
+  plausibility exists for increased vulnerability due to immunosuppression from cancer
+  and its treatment, empirical evidence suggests pediatric cancer patients may have
+  lower COVID-19 mortality risk than initially hypothesized. Cancer type (hematological
+  vs solid tumor) did not significantly affect outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.6
+    type: mortality_percentage
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 191
+moderators:
+- name: Cancer type (hematological vs solid tumor)
+  direction: neutral
+  strength: weak
+  description: No statistically significant differences found between hematological
+    malignancies and solid tumors for hospitalization (OR=2.94, 95% CI 0.48-18.3),
+    ICU admission (OR=1.42, 95% CI 0.35-5.81), or ventilatory support (OR=0.68, 95%
+    CI 0.14-3.35)

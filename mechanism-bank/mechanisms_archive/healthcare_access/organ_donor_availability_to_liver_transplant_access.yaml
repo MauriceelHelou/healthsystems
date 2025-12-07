@@ -1,0 +1,40 @@
+id: organ_donor_availability_to_liver_transplant_access
+name: Limited Availability of Organ Donors → Access to Urgent Liver Transplantation
+from_node:
+  node_id: organ_donor_availability
+  node_name: Limited Availability of Organ Donors
+to_node:
+  node_id: liver_transplant_access
+  node_name: Access to Urgent Liver Transplantation
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Limited organ donor availability creates scarcity in the transplant system'
+- 'Step 2: Scarcity necessitates strict patient selection criteria for transplant
+  eligibility'
+- 'Step 3: Only 0-10% of ACLF-2 and ACLF-3 patients receive transplantation despite
+  being the main effective treatment'
+- 'Step 4: Reduced transplant access increases mortality among eligible ACLF patients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sophie-Caroline Sacleux and Faouzi Saliba 2023. "How to Optimize
+    the Results of Liver Transplantation for Acute-on-Chronic Liver Failure.." *Life
+    (Basel, Switzerland)*. https://doi.org/10.3390/life13051152
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.622843'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: patient_selection_criteria
+  direction: weakens
+  strength: strong
+  description: Careful selection excluding major comorbidities (older age, addiction
+    criteria, severe malnutrition) can improve outcomes but further restricts access
+- name: transplant_center_experience
+  direction: strengthens
+  strength: moderate
+  description: Several transplant centers with improved protocols show >83% 1-year
+    post-transplant survival, suggesting center-level variation in access and outcomes

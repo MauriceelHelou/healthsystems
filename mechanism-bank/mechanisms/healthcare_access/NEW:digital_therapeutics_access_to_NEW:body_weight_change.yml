@@ -1,0 +1,70 @@
+id: NEW:digital_therapeutics_access_to_NEW:body_weight_change
+name: Digital Therapeutics Access → Body Weight Change
+from_node:
+  node_id: NEW:digital_therapeutics_access
+  node_name: Digital Therapeutics Access
+to_node:
+  node_id: NEW:body_weight_change
+  node_name: Body Weight Change
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital therapeutic platforms deliver lifestyle intervention programs remotely, removing geographic
+  and scheduling barriers inherent to traditional in-person programs'
+- 'Step 2: Increased accessibility enables consistent engagement with dietary modification and physical
+  activity guidance regardless of location or healthcare resource availability'
+- 'Step 3: Sustained behavioral support through digital platforms promotes adherence to weight loss interventions
+  over 4-24 month periods'
+- 'Step 4: Consistent lifestyle modification results in clinically significant body weight reduction in
+  patients with metabolic dysfunction'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'S. Albhaisi et al. 2024. "Digital therapeutics lead to clinically significant body
+    weight loss in patients with metabolic dysfunction–associated steatotic liver disease: A systematic
+    review and meta-analysis." https://doi.org/10.1097/HC9.0000000000000499'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 8 studies with 1001 patients
+  - Studies ranged from 4 to 24 months in intervention length
+  - Comparison groups received standard of care lifestyle counseling
+  doi: 10.1097/HC9.0000000000000499
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Digital therapeutic lifestyle interventions achieve statistically significant absolute weight
+  loss of 3.4 kg compared to standard of care in patients with metabolic dysfunction-associated steatotic
+  liver disease
+quantitative_effects:
+  effect_size:
+    value: -3.4
+    type: standardized_mean_difference
+    ci_lower: -4.8
+    ci_upper: -2.0
+  p_value: 0.01
+  sample_size: 1001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Digital therapeutics offer promise to benefit billions of patients worldwide, suggesting
+    global applicability and potential to address geographic healthcare disparities
+moderators:
+- name: intervention_duration
+  direction: strengthens
+  strength: moderate
+  description: Interventions ranged from 4 to 24 months, with longer durations potentially allowing for
+    greater weight loss
+- name: baseline_bmi
+  direction: strengthens
+  strength: moderate
+  description: Mean BMI of 33.2 kg/m² indicates obese population where digital therapeutics showed effectiveness
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to healthcare access. Traditional
+    in-person lifestyle counseling programs are resource-heavy and often inaccessible to populations in
+    healthcare deserts, those with inflexible work schedules, or those facing transportation barriers.
+    Digital therapeutics represent a scalable intervention that can reduce health inequities by democratizing
+    access to evidence-based weight management programs regardless of geographic location or socioeconomic
+    constraints.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.863793'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

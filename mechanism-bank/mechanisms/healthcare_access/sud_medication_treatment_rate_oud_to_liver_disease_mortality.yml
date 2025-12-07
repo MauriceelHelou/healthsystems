@@ -1,0 +1,56 @@
+id: sud_medication_treatment_rate_oud_to_liver_disease_mortality
+name: Medications for Alcohol Use Disorder (MAUD) Treatment → Liver Disease Mortality
+from_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: Medications for Alcohol Use Disorder (MAUD) Treatment
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with alcohol-associated cirrhosis receive evidence-based pharmacological treatment
+  for AUD'
+- 'Step 2: MAUD promotes alcohol abstinence (32% increase compared to placebo/standard care)'
+- 'Step 3: Sustained abstinence halts ongoing alcohol-induced hepatotoxicity and allows hepatic regeneration'
+- 'Step 4: Prevention of further liver damage reduces progression to decompensated cirrhosis and liver
+  failure'
+- 'Step 5: Reduced liver disease progression decreases liver-related mortality'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'J. Gratacós-Ginés et al. 2023. "Medications for alcohol use disorder promote abstinence
+    in alcohol-associated cirrhosis: Results from a systematic review and meta-analysis." https://doi.org/10.1097/HEP.0000000000000570'
+  supporting_citations:
+  - Baclofen RCT studies included in meta-analysis
+  - Fecal microbiota transplant study referenced (n=1)
+  - Additional citations require full-text access for specific author/year details
+  doi: 10.1097/HEP.0000000000000570
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: By promoting alcohol abstinence through pharmacological intervention, MAUD indirectly reduces
+  liver disease progression and mortality in patients with alcohol-associated cirrhosis. Alcohol abstinence
+  is the cornerstone of treatment for alcohol-related liver disease, and this study demonstrates that
+  MAUD provides an effective tool to achieve this goal in a population where treatment options have been
+  historically limited.
+quantitative_effects:
+  sample_size: 794
+moderators:
+- name: baseline_liver_disease_severity
+  direction: weakens
+  strength: moderate
+  description: Patients with more advanced liver disease (decompensated cirrhosis) may have less hepatic
+    regenerative capacity, potentially weakening the mortality benefit of abstinence
+structural_competency:
+  equity_implications: This mechanism addresses structural inequities in treatment access for patients
+    with concurrent AUD and liver disease. Historically, these patients have been undertreated due to
+    concerns about hepatotoxicity of AUD medications and exclusion from clinical trials. The good safety
+    profile demonstrated (only 5 of 165 serious adverse events possibly medication-related) supports expanding
+    access to these treatments. Structural barriers to address include provider education, insurance coverage
+    for MAUD in liver disease settings, and integration of addiction medicine into hepatology care pathways.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.280523'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

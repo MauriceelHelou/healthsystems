@@ -1,0 +1,71 @@
+id: drug_court_participation_to_recidivism_rate_3_year
+name: Drug Court Participation → Recidivism Rate (3-Year)
+from_node:
+  node_id: drug_court_participation
+  node_name: Drug Court Participation
+to_node:
+  node_id: recidivism_rate_3_year
+  node_name: Recidivism Rate (3-Year)
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Juvenile drug treatment courts (JDTCs) enroll youth with substance use issues into structured
+  court supervision programs'
+- 'Step 2: During court supervision, participants receive monitoring, treatment services, and judicial
+  oversight'
+- 'Step 3: Active supervision reduces opportunity and incentive for reoffending during the program period'
+- 'Step 4: General recidivism decreases during court supervision compared to traditional juvenile adjudication'
+evidence:
+  quality_rating: A
+  n_studies: 55
+  primary_citation: 'E. Tanner‐Smith et al. 2023. "Examining the Effects of Juvenile Drug Treatment Courts:
+    A Systematic Review and Meta-Analysis." https://doi.org/10.1177/00938548231208208'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis synthesized 55 eligible samples
+  - Studies providing data from 12,310 participants across U.S.-based JDTCs
+  - Controlled evaluations comparing JDTCs to traditional juvenile adjudication
+  doi: 10.1177/00938548231208208
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Juvenile drug treatment courts show modest beneficial effects on general recidivism during
+  court supervision (OR=1.38, 95% CI [1.03, 1.84]), but these effects do not persist after program completion.
+  The overall certainty of evidence was low or very low. Implementation quality and matching treatment
+  to youth needs appear critical for effectiveness.
+quantitative_effects:
+  effect_size:
+    value: 1.38
+    type: odds_ratio
+    ci_lower: 1.03
+    ci_upper: 1.84
+  sample_size: 12310
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focused on U.S.-based JDTCs; variability in effects noted across programs, suggesting
+    implementation differences across jurisdictions
+moderators:
+- name: program_supervision_period
+  direction: weakens
+  strength: strong
+  description: Effects are limited to the court supervision period and do not persist after program completion
+- name: treatment_needs_matching
+  direction: strengthens
+  strength: moderate
+  description: Correlational analyses suggest JDTCs may be more effective when program enrollment and
+    service provision are better tailored to youth's treatment needs
+- name: implementation_fidelity
+  direction: strengthens
+  strength: moderate
+  description: Implementation failures may explain minimal to no effects on postprogram recidivism
+structural_competency:
+  equity_implications: This mechanism addresses how the criminal justice system's structural response
+    to youth substance use affects recidivism outcomes. JDTCs represent an alternative to punitive approaches,
+    attempting to address underlying substance use issues. However, the lack of sustained effects post-program
+    suggests structural limitations in how these courts connect youth to ongoing community supports. Equity
+    implications include concerns about whether all youth have equal access to high-quality JDTC programs
+    and whether implementation failures disproportionately affect certain communities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.590447'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,49 @@
+id: housing_instability_to_mental_health_outcomes
+name: Housing Instability → Mental Health Outcomes
+from_node:
+  node_id: housing_instability
+  node_name: Housing Instability
+to_node:
+  node_id: mental_health_outcomes
+  node_name: Mental Health Outcomes
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Housing instability creates chronic stress from uncertainty about shelter and safety'
+- 'Step 2: Frequent relocations disrupt social support networks and community connections'
+- 'Step 3: Unstable housing conditions often involve overcrowding, noise, and poor living conditions'
+- 'Step 4: Chronic stress and social isolation contribute to deteriorating mental health outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'R. Marcus et al. 2021. "Characteristics of Adults With Diagnosed HIV Who Experienced
+    Housing Instability: Findings From the Centers for Disease Control and Prevention Medical Monitoring
+    Project, United States, 2018." *Journal of the Association of Nurses in AIDS Care*. https://doi.org/10.1097/JNC.0000000000000314'
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1097/JNC.0000000314
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: DOI not found in Crossref database'
+last_updated: '2025-11-30'
+version: '2.0'
+description: Housing instability is associated with poorer mental health outcomes among adults with diagnosed
+  HIV, independent of homelessness status
+quantitative_effects:
+  sample_size: 4050
+moderators:
+- name: hiv_status
+  direction: strengthens
+  strength: moderate
+  description: Mental health impacts may be amplified among people living with HIV due to additional stress
+    of managing chronic illness
+structural_competency:
+  equity_implications: Links housing policy and availability to mental health through built environment
+    pathways. Recognizes housing as a social determinant rather than focusing on individual mental health
+    management.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.860461'
+  extraction_confidence: medium
+  prompt_version: 2.0-citation-verified

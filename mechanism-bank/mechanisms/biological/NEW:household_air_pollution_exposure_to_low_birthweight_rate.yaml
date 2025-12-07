@@ -1,0 +1,57 @@
+id: NEW:household_air_pollution_exposure_to_low_birthweight_rate
+name: Household Air Pollution Exposure → Low Birthweight Rate
+from_node:
+  node_id: NEW:household_air_pollution_exposure
+  node_name: Household Air Pollution Exposure
+to_node:
+  node_id: low_birthweight_rate
+  node_name: Low Birthweight Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Pregnant women in households using solid biomass fuels (wood, dung, crop
+  residues, charcoal) for cooking are exposed to high levels of particulate matter
+  (PM2.5), carbon monoxide, and other combustion byproducts'
+- 'Step 2: Inhaled pollutants cross the placental barrier and/or induce systemic maternal
+  inflammation and oxidative stress, reducing oxygen delivery to the fetus'
+- 'Step 3: Chronic hypoxia, oxidative damage, and inflammatory responses impair placental
+  function and fetal nutrient/oxygen transfer'
+- 'Step 4: Restricted fetal growth results in increased risk of low birthweight (<2500g)
+  at delivery'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'K. Woolley et al. 2022. Effectiveness of interventions to reduce
+    household air pollution from solid biomass fuels and improve maternal and child
+    health outcomes in low- and middle-income countries: A systematic review and meta-analysis.
+    Indoor Air: International Journal of Indoor Environment and Health.'
+  supporting_citations: []
+description: 'Household air pollution from solid biomass fuel combustion exposes pregnant
+  women to harmful particulate matter and gases that impair fetal development through
+  mechanisms including maternal systemic inflammation, oxidative stress, and reduced
+  placental oxygen transfer. A meta-analysis of 4 intervention studies found that
+  reducing HAP exposure through improved cookstoves significantly decreased the odds
+  of low birthweight (OR: 0.73, 95% CI: 0.61-0.87), confirming the causal pathway
+  from HAP exposure to increased LBW risk.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.73
+    type: odds_ratio
+    ci_lower: 0.61
+    ci_upper: 0.87
+  p_value: null
+  sample_size: 3456
+moderators:
+- name: intervention_type
+  direction: weakens
+  strength: moderate
+  description: Improved cookstove (ICS) interventions that reduce HAP exposure are
+    associated with reduced risk of low birthweight, suggesting exposure level moderates
+    the relationship
+- name: duration_of_exposure
+  direction: strengthens
+  strength: moderate
+  description: Longer cumulative exposure during pregnancy likely strengthens the
+    adverse effect on birthweight

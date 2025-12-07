@@ -1,0 +1,49 @@
+id: NEW:renal_replacement_therapy_status_to_unemployment_rate_local
+name: Renal Replacement Therapy Status → Unemployment Rate
+from_node:
+  node_id: NEW:renal_replacement_therapy_status
+  node_name: Renal Replacement Therapy Status
+to_node:
+  node_id: unemployment_rate_local
+  node_name: Unemployment Rate
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: RRT requires significant time commitment for treatment sessions, medical appointments, and
+  recovery'
+- 'Step 2: Physical limitations and fatigue from kidney disease reduce work capacity'
+- 'Step 3: Employer accommodation for flexible scheduling may be limited or unavailable'
+- 'Step 4: Educational disruption during childhood kidney disease may limit credential attainment'
+- 'Step 5: Young adults on RRT face structural barriers to workforce participation resulting in higher
+  unemployment'
+evidence:
+  quality_rating: A
+  n_studies: 7
+  primary_citation: Alexander J Hamilton et al. 2017. "Sociodemographic, Psychologic Health, and Lifestyle
+    Outcomes in Young Adults on Renal Replacement Therapy.." https://doi.org/10.2215/CJN.04760517
+  supporting_citations:
+  - Studies comparing employment outcomes in RRT patients to general population (7 studies in meta-analysis)
+  - Cross-sectional studies of sociodemographic outcomes
+  - Additional citations require full-text access for specific included study details
+  doi: 10.2215/CJN.04760517
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Young adults on renal replacement therapy are 89% more likely to be unemployed compared to
+  healthy peers, reflecting structural barriers to workforce participation.
+quantitative_effects:
+  effect_size:
+    value: 1.89
+    type: relative_risk
+    ci_lower: 1.47
+    ci_upper: 2.44
+  sample_size: 15575
+structural_competency:
+  equity_implications: Employment disparities reflect inadequate workplace accommodations, disability
+    policy limitations, and healthcare system fragmentation that fails to support vocational rehabilitation
+    for young chronic disease patients. This perpetuates economic insecurity and health inequities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.366164'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

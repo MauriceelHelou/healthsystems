@@ -1,0 +1,52 @@
+id: glucocorticoid_use_to_chronic_pancreatitis
+name: Glucocorticoid Use → Chronic Pancreatitis
+from_node:
+  node_id: glucocorticoid_use
+  node_name: Glucocorticoid Use
+to_node:
+  node_id: chronic_pancreatitis
+  node_name: Chronic Pancreatitis
+direction: 'null'
+category: biological
+mechanism_pathway:
+- 'Step 1: Genetic variants associated with glucocorticoid use served as instrumental
+  variables to assess causal relationship with chronic pancreatitis'
+- 'Step 2: Mendelian randomization analysis tested whether genetically predicted glucocorticoid
+  use affects chronic pancreatitis development'
+- 'Step 3: Multiple MR approaches (IVW, MR-Egger, weighted median) consistently demonstrated
+  no causal effect'
+- 'Step 4: Findings replicated across European ancestry, East Asian, and Finnish populations
+  with adjustment for alcohol and other confounders'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'Wenfeng Lin et al. 2024. "The causality between use of glucocorticoids
+    and risk of pancreatitis: a Mendelian randomization study.." *Frontiers in immunology*.
+    https://doi.org/10.3389/fimmu.2024.1420840'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.202106'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_consumption
+  direction: 'null'
+  strength: moderate
+  description: Alcohol consumption adjusted in multivariable MR analysis; null association
+    between glucocorticoids and chronic pancreatitis persisted regardless of alcohol
+    exposure
+- name: body_mass_index
+  direction: 'null'
+  strength: moderate
+  description: BMI included as covariate but did not modify the null association with
+    chronic pancreatitis
+- name: cholelithiasis
+  direction: 'null'
+  strength: moderate
+  description: Gallstone disease adjusted for without altering null finding for chronic
+    pancreatitis
+- name: c_reactive_protein
+  direction: 'null'
+  strength: moderate
+  description: Systemic inflammation marker CRP adjusted without changing null association

@@ -1,0 +1,85 @@
+id: transit_access_to_emergency_department_visits
+name: Transit Access -> Emergency Department Visits
+from_node:
+  node_id: transit_job_accessibility
+  node_name: Transit Job Accessibility
+  node_type: stock
+to_node:
+  node_id: emergency_department_visits
+  node_name: Emergency Department Visits (Avoidable)
+  node_type: crisis_endpoint
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Poor public transit access creates transportation barriers to routine and preventive healthcare'
+- 'Step 2: Transportation barriers lead to missed appointments, delayed care, and deferred preventive services'
+- 'Step 3: Delayed care results in unmanaged chronic conditions and health needs that escalate'
+- 'Step 4: Escalated health conditions eventually require emergency intervention rather than routine care'
+- 'Step 5: Emergency department becomes the access point of last resort for care that could have been provided in primary care settings'
+evidence:
+  quality_rating: B
+  n_studies: 8
+  primary_citation: 'Rosenbloom, Sandra. 2021. "SURTCOM 23-17: Impacts of Transit on Health in Rural and Small Urban Areas." Upper Great Plains Transportation Institute.'
+  supporting_citations:
+  - 'Solomon, Eli M., et al. 2020. "Impact of Transportation Interventions on Health Care Outcomes: A Systematic Review." Medical Care 58(4): 384-391.'
+  - 'Starbird, Laura E., et al. 2019. "A systematic review of interventions to minimize transportation barriers among people with chronic diseases." Journal of Community Health 44(2): 400-411.'
+  - 'Syed, Samina T., et al. 2013. "Traveling Towards Disease: Transportation Barriers to Health Care Access." Journal of Community Health 38(5): 976-993.'
+  doi: null
+  journal: Upper Great Plains Transportation Institute
+  year: 2021
+  citation_verified: false
+quantitative_effects:
+  effect_size:
+    value: null
+    type: null
+    ci_lower: null
+    ci_upper: null
+    ci_level: null
+  interpretation: 'Missing a trip for routine care or preventive services often results in a medical trip that is costlier than the trip that was missed. Access to non-emergency medical transportation (NEMT) has potential to reduce emergency room and hospital expenditures through increased preventive care'
+  sample_size: null
+  heterogeneity_notes: 'Systematic review found evidence that transportation assistance improves utilization but limited rigorous evaluation of ED reduction specifically; economic modeling suggests cost-effectiveness'
+last_updated: '2025-11-30'
+version: '1.0'
+description: Poor transit access is associated with increased avoidable emergency department utilization. When transportation barriers prevent routine care, health conditions worsen and eventually require emergency intervention. The relationship operates through delayed preventive care, poor chronic disease management, and reduced access to primary care. NEMT programs have potential to reduce ED visits by enabling access to routine care, though rigorous evidence on ED reduction is limited.
+moderators:
+- name: chronic_disease_status
+  direction: strengthens
+  strength: strong
+  description: People with chronic conditions are most affected by transportation barriers to routine care
+- name: nemt_availability
+  direction: weakens
+  strength: moderate
+  description: Medicaid NEMT benefits reduce transportation barriers for covered populations
+- name: primary_care_availability
+  direction: weakens
+  strength: moderate
+  description: Effects smaller when primary care is available even without transportation intervention
+- name: healthcare_system_integration
+  direction: weakens
+  strength: moderate
+  description: Integrated care systems may better accommodate transportation challenges
+structural_competency:
+  root_cause_level: built_environment_structural
+  avoids_victim_blaming: true
+  equity_implications: Avoidable ED use reflects systemic barriers to primary care access, not patient preferences. Transportation infrastructure investment decisions, healthcare facility siting, and NEMT policy determine who can access routine care. Low-income communities face multiple barriers including transit availability, cost, and time.
+assumptions:
+- Assumes ED visits substitute for unavailable primary care
+- Assumes transportation barrier is primary driver (vs. other access barriers)
+- Assumes ambulatory care sensitive conditions represent avoidable ED use
+limitations:
+- Limited rigorous evidence specifically on transit-ED relationship
+- ED use has multiple determinants beyond transportation
+- Difficult to isolate transportation effect from other socioeconomic factors
+- NEMT interventions may have limited effect without addressing other barriers
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Transit availability and healthcare accessibility vary dramatically by geography
+  relevant_geographies:
+  - Rural areas face most severe transportation barriers
+  - Urban areas may have transit but healthcare facilities may not be transit-accessible
+  - Suburban areas often lack both transit and walkable healthcare access
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: moderate
+  prompt_version: 1.0-mvp

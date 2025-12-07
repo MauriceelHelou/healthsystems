@@ -1,0 +1,51 @@
+id: NEW:routine_outcome_monitoring_feedback_to_substance_use_disorder_any
+name: Routine Outcome Monitoring and Feedback in AOD Treatment → Substance Use Disorder (Any)
+from_node:
+  node_id: NEW:routine_outcome_monitoring_feedback
+  node_name: Routine Outcome Monitoring and Feedback in AOD Treatment
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: ROM systems track substance use outcomes during AOD treatment'
+- 'Step 2: Feedback identifies clients who are off-track in their recovery trajectory'
+- 'Step 3: Clinicians can intensify or modify treatment for off-track clients based on objective data'
+- 'Step 4: Early intervention for deteriorating clients prevents treatment failure'
+- 'Step 5: Substance use outcomes improve, particularly among off-track clients'
+evidence:
+  quality_rating: B
+  n_studies: 10
+  primary_citation: India Cordony et al. 2023. "A systematic review on the effect of routine outcome monitoring
+    and feedback on client outcomes in alcohol and other drug treatment." https://doi.org/10.1111/dar.13742
+  supporting_citations:
+  - Additional citations require full-text access - systematic review methodology referenced
+  - Five randomized controlled trials included in review
+  - Five pre-post within-subjects designs included in review
+  doi: 10.1111/dar.13742
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: ROM feedback may reduce substance use outcomes in AOD treatment, though evidence is limited.
+  Only one of six high-quality studies found significant reductions in substance use, specifically among
+  off-track clients.
+moderators:
+- name: client_trajectory_status
+  direction: strengthens
+  strength: strong
+  description: Only 1 of 6 good/fair quality studies found significant substance use reductions, and this
+    effect was limited to off-track clients
+structural_competency:
+  equity_implications: The limited evidence for substance use outcomes highlights the complexity of addiction
+    treatment and the need for systems-level quality improvement. The finding that off-track clients benefit
+    most suggests ROM can help address healthcare system gaps in identifying and responding to clients
+    at risk of treatment failure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.672631'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

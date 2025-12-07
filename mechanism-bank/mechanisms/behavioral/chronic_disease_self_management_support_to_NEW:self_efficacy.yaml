@@ -1,0 +1,52 @@
+id: chronic_disease_self_management_support_to_NEW:self_efficacy
+name: Chronic Disease Self-Management Support → Self-Efficacy
+from_node:
+  node_id: chronic_disease_self_management_support
+  node_name: Chronic Disease Self-Management Support
+to_node:
+  node_id: NEW:self_efficacy
+  node_name: Self-Efficacy
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Chronic disease self-management interventions provide patients with structured
+  education, skills training, and support for managing their health conditions'
+- 'Step 2: Through skill-building activities and guided practice, patients develop
+  confidence in their ability to perform disease management tasks such as medication
+  adherence, symptom monitoring, and lifestyle modifications'
+- 'Step 3: Repeated successful experiences with self-management behaviors reinforce
+  patients'' belief in their capabilities, leading to improved self-efficacy'
+- 'Step 4: Enhanced self-efficacy enables patients to better adapt to disease-related
+  challenges and maintain self-management behaviors over time'
+evidence:
+  quality_rating: A
+  n_studies: 34
+  primary_citation: 'Yanfang Huang et al. 2024. The Effect of Self-Management on Patients
+    with Chronic Diseases: A Systematic Review and Meta-Analysis. Healthcare.'
+  supporting_citations: []
+description: Self-management interventions for chronic diseases significantly improve
+  patients' self-efficacy compared to usual care. A meta-analysis of 34 studies involving
+  7,603 patients demonstrated a moderate positive effect (SMD 0.405, 95% CI 0.19-0.62,
+  p<0.001), indicating that structured self-management support helps patients build
+  confidence in their ability to manage their health conditions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.405
+    type: standardized_mean_difference
+    ci_lower: 0.19
+    ci_upper: 0.62
+  p_value: 0.001
+  sample_size: 7603
+moderators:
+- name: Follow-up duration
+  direction: strengthens
+  strength: moderate
+  description: Subgroup analysis showed heterogeneity reduced significantly when accounting
+    for follow-up time, suggesting intervention duration may moderate effects
+- name: Age
+  direction: strengthens
+  strength: moderate
+  description: Studies with mean age greater than 60 years showed more effective improvements
+    in some outcomes

@@ -1,0 +1,58 @@
+id: substance_use_disorder_any_to_homelessness_rate
+name: Substance Use Disorder Any → Homelessness Rate
+from_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder Any
+to_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Substance use disorders impair cognitive functioning, decision-making capacity,
+  and impulse control, leading to difficulties maintaining employment and stable income'
+- 'Step 2: Financial instability from job loss, combined with potential expenditure
+  on substances, depletes resources needed for housing costs (rent, utilities, deposits)'
+- 'Step 3: Substance use disorders strain social relationships and support networks,
+  reducing access to informal housing assistance from family and friends'
+- 'Step 4: Behavioral consequences of substance use (legal issues, evictions, housing
+  rule violations) create barriers to obtaining and maintaining stable housing'
+- 'Step 5: The 44% prevalence of any substance use disorder among homeless populations
+  indicates a strong bidirectional relationship where substance use both precedes
+  and follows housing loss'
+evidence:
+  quality_rating: A
+  n_studies: 85
+  primary_citation: 'Rebecca Barry et al. 2024. "Prevalence of Mental Health Disorders
+    Among Individuals Experiencing Homelessness: A Systematic Review and Meta-Analysis."
+    JAMA psychiatry.'
+  supporting_citations: []
+description: Substance use disorders significantly increase the risk of homelessness
+  through multiple interconnected pathways including employment instability, financial
+  depletion, social network erosion, and housing access barriers. This meta-analysis
+  of 85 studies found that 44% of people experiencing homelessness have any substance
+  use disorder, substantially higher than general population rates. The relationship
+  is likely bidirectional, with substance use both contributing to housing loss and
+  potentially developing or worsening after becoming homeless.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 44.0
+    type: prevalence_percentage
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 48414
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Male individuals exhibited significantly higher lifetime prevalence
+    of mental health disorders (86%) compared to female individuals (69%), suggesting
+    sex-based differences in vulnerability pathways
+- name: comorbid_mental_disorders
+  direction: strengthens
+  strength: strong
+  description: 67% current and 77% lifetime prevalence of mental health disorders
+    among homeless populations indicates high comorbidity that may compound risks

@@ -1,0 +1,57 @@
+id: hiv_status_diagnosed_to_tuberculosis_incidence
+name: HIV Status (Diagnosed) → Tuberculosis Incidence
+from_node:
+  node_id: hiv_status_diagnosed
+  node_name: HIV Status (Diagnosed)
+to_node:
+  node_id: tuberculosis_incidence
+  node_name: Tuberculosis Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: HIV infection causes progressive immunodeficiency through CD4+ T-cell depletion'
+- 'Step 2: Weakened cell-mediated immunity impairs containment of latent Mycobacterium tuberculosis'
+- 'Step 3: Prison environments with overcrowding and poor ventilation facilitate TB transmission'
+- 'Step 4: Increased susceptibility leads to higher rates of active TB disease among HIV-positive prisoners'
+evidence:
+  quality_rating: A
+  n_studies: 46
+  primary_citation: 'Chantal L Edge et al. 2016. "Prisoners co-infected with tuberculosis and HIV: a systematic
+    review.." https://doi.org/10.7448/IAS.19.1.20960'
+  supporting_citations:
+  - Studies from 41 papers reporting incidence/prevalence estimates as cited in systematic review
+  - 9 papers providing treatment outcome data as cited in systematic review
+  - Additional citations require full-text access for specific study identification
+  doi: 10.7448/IAS.19.1.20960
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Prisoners infected with HIV are at significantly elevated risk of developing tuberculosis,
+  with relative risks ranging from 2.0 to 10.75. This systematic review of 46 papers documents the high
+  burden of HIV/TB co-infection in prison populations worldwide.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Co-infection prevalence ranged from 2.4% to 73.1% across different prisons and countries;
+    relative risks ranged from 2.0 to 10.75; some studies reported no significant association between
+    HIV and TB
+moderators:
+- name: prison_setting_country
+  direction: strengthens
+  strength: strong
+  description: Magnitude of risk varies significantly between different prisons and countries
+- name: background_tb_prevalence
+  direction: strengthens
+  strength: moderate
+  description: Areas with higher community TB prevalence likely show stronger associations in prison populations
+structural_competency:
+  equity_implications: This mechanism reflects structural determinants including mass incarceration policies
+    that concentrate vulnerable populations, inadequate healthcare infrastructure in prisons, and systemic
+    neglect of prison health. The prison environment itself - characterized by overcrowding, poor ventilation,
+    and limited healthcare access - creates conditions that amplify the biological vulnerability of HIV-positive
+    individuals to TB infection. Equity implications are significant as incarcerated populations are disproportionately
+    from marginalized racial/ethnic and socioeconomic groups.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.711745'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

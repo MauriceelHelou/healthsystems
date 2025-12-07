@@ -1,0 +1,44 @@
+id: NEW:post_release_period_to_drug_overdose_mortality
+name: Recent Release from Prison → Drug Overdose Mortality
+from_node:
+  node_id: NEW:post_release_period
+  node_name: Recent Release from Prison
+to_node:
+  node_id: drug_overdose_mortality
+  node_name: Drug Overdose Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: During incarceration, individuals with opioid or other substance dependencies
+  experience reduced or eliminated drug use, leading to decreased physiological tolerance
+  to substances'
+- 'Step 2: Upon release from prison, formerly incarcerated individuals often return
+  to environments with drug availability and limited support systems, increasing likelihood
+  of substance use resumption'
+- 'Step 3: Return to pre-incarceration drug use quantities with significantly reduced
+  tolerance results in dramatically elevated risk of fatal drug intoxication/overdose'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Opitz-Welke et al. 2018. "Medicine in the Penal System." Deutsches
+    Ärzteblatt International.
+  supporting_citations: []
+description: Persons recently released from prison have above average mortality, largely
+  due to drug intoxication. This elevated risk stems from tolerance loss during incarceration
+  combined with return to substance use at pre-incarceration levels. The review highlights
+  deficiencies in substitution treatment provision both during incarceration and in
+  outpatient care after release, which could mitigate this risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Opioid substitution treatment during incarceration
+  direction: weakens
+  strength: moderate
+  description: Access to and continuation of opioid maintenance treatment during incarceration
+    may reduce post-release overdose risk by maintaining tolerance and continuity
+    of care
+- name: Pre-incarceration heroin use
+  direction: strengthens
+  strength: strong
+  description: Approximately 20% of German prisoners consume heroin; those with prior
+    opioid use are at highest risk for post-release overdose due to tolerance loss

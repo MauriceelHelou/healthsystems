@@ -1,0 +1,42 @@
+id: dui_conviction_iid_mandate_to_impaired_driving_prevention
+name: DUI Conviction with Ignition Interlock Device Mandate → Prevention of Impaired
+  Driving Episodes
+from_node:
+  node_id: dui_conviction_iid_mandate
+  node_name: DUI Conviction with Ignition Interlock Device Mandate
+to_node:
+  node_id: impaired_driving_prevention
+  node_name: Prevention of Impaired Driving Episodes
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: State policy mandates installation of alcohol ignition interlock devices
+  for drivers convicted of DUI'
+- 'Step 2: IID requires breath samples before vehicle ignition; car will not start
+  if BAC exceeds predetermined limit (.025)'
+- 'Step 3: Technological barrier prevents vehicle operation when driver is impaired'
+- 'Step 4: Physical inability to start vehicle reduces rates of drinking and driving
+  among high-risk populations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Michael Scherer et al. 2022. "Examining the role of trauma in
+    alcohol interlock performance: A structural pathway analysis.." *Traffic injury
+    prevention*. https://doi.org/10.1080/15389588.2022.2046270'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.487768'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: trauma_informed_treatment_integration
+  direction: strengthens
+  strength: strong
+  description: IID effectiveness may be enhanced when combined with trauma-informed
+    substance use treatment addressing root causes
+- name: device_cost_barriers
+  direction: weakens
+  strength: moderate
+  description: Financial barriers to device installation and maintenance may reduce
+    policy effectiveness for low-income offenders

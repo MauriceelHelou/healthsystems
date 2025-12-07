@@ -1,0 +1,76 @@
+id: NEW:sobriety_checkpoint_frequency_to_NEW:alcohol_involved_motor_vehicle_crashes
+name: Sobriety Checkpoint Frequency → Alcohol-Involved Motor Vehicle Crashes
+from_node:
+  node_id: NEW:sobriety_checkpoint_frequency
+  node_name: Sobriety Checkpoint Frequency
+to_node:
+  node_id: NEW:alcohol_involved_motor_vehicle_crashes
+  node_name: Alcohol-Involved Motor Vehicle Crashes
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Police conduct random breath testing checkpoints at various locations throughout the community'
+- 'Step 2: Checkpoints create both actual detection risk and perceived risk of apprehension for impaired
+  drivers'
+- 'Step 3: General deterrence effect reduces decisions to drive after drinking alcohol at the population
+  level'
+- 'Step 4: Reduced alcohol-impaired driving leads to fewer alcohol-involved motor vehicle crashes'
+- 'Step 5: Protective effect persists for approximately one week following checkpoint implementation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: C. Morrison et al. 2021. "Alcohol-Involved Motor Vehicle Crashes and the Size and
+    Duration of Random Breath Testing Checkpoints.." https://doi.org/10.1111/acer.14583
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior empirical and theoretical
+    support for sobriety checkpoints as interventions
+  - Queensland Police Service data (2012-2018) - administrative data source for breath testing operations
+  - Prior checkpoint effectiveness literature referenced in abstract as providing 'strong empirical and
+    theoretical support'
+  doi: 10.1111/acer.14583
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Each additional 10 sobriety checkpoints conducted per week was associated with a 12% decrease
+  in alcohol-involved motor vehicle crash incidence at a 1-week lag (IRR=0.88; 95% CI: 0.80-0.97). Over
+  the 6.5-year study period in Brisbane, Australia, 2,069 checkpoints were conducted and 3,420 alcohol-related
+  crashes occurred. Checkpoint characteristics (size and duration) did not modify this relationship, suggesting
+  the presence of checkpoints matters more than their intensity.'
+quantitative_effects:
+  effect_size:
+    value: 0.88
+    type: relative_risk
+    ci_lower: 0.8
+    ci_upper: 0.97
+  sample_size: 3420
+moderators:
+- name: checkpoint_size
+  direction: neutral
+  strength: weak
+  description: Number of police officers/breath testing devices at checkpoints did not differentially
+    affect the association with crash reduction - larger checkpoints were not more effective than smaller
+    ones
+- name: checkpoint_duration
+  direction: neutral
+  strength: weak
+  description: Duration of checkpoint operation (range 3-8 hours) did not differentially affect the association
+    with crash reduction - longer checkpoints were not more effective than shorter ones
+- name: time_lag
+  direction: weakens
+  strength: moderate
+  description: Protective effect observed at 1-week lag but not at 2-week lag, indicating deterrence effect
+    diminishes over time without continued enforcement presence
+structural_competency:
+  equity_implications: This mechanism represents a structural/policy intervention (police checkpoint enforcement)
+    rather than individual behavior change. The intervention works through environmental modification
+    (creating detection risk) rather than targeting individual decision-making in isolation. The finding
+    that checkpoint size and duration don't matter suggests resource-efficient deployment is possible,
+    which has equity implications for communities with fewer law enforcement resources. The structural
+    approach addresses impaired driving through systematic deterrence rather than individual responsibility
+    messaging alone. However, checkpoint placement decisions may have differential impacts across communities,
+    and enforcement-based approaches can have disparate racial/ethnic impacts that require monitoring.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.639597'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

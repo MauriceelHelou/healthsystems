@@ -1,0 +1,65 @@
+id: diversion_program_utilization_to_illicit_drug_use_past_month
+name: Diversion Program Utilization → Illicit Drug Use Past Month
+from_node:
+  node_id: diversion_program_utilization
+  node_name: Diversion Program Utilization
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use Past Month
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Criminal justice system identifies individuals with class A drug use (opiates, cocaine, methamphetamine)'
+- 'Step 2: Diversion programs redirect offenders from incarceration to treatment services'
+- 'Step 3: Treatment engagement addresses underlying substance use disorder through clinical intervention'
+- 'Step 4: Reduced drug use outcomes observed through sustained treatment contact'
+evidence:
+  quality_rating: B
+  n_studies: 16
+  primary_citation: 'Karen P Hayhurst et al. 2015. "The effectiveness and cost-effectiveness of diversion
+    and aftercare programmes for offenders using class A drugs: a systematic review and economic evaluation.."
+    https://doi.org/10.3310/hta19060'
+  supporting_citations:
+  - UK Drug Data Warehouse statistics (cited for economic evaluation data)
+  - UK Drug Treatment Outcomes Research Study (cited for outcome data)
+  - Additional citations require full-text access - abstract references 16 included effectiveness studies
+  doi: 10.3310/hta19060
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Diversion programs that redirect class A drug-using offenders from the criminal justice system
+  to treatment show potential small impact on reducing primary drug use. The odds ratio of 1.68 suggests
+  diversion participants are 68% more likely to reduce primary drug use compared to non-diverted individuals,
+  though evidence quality is limited.
+quantitative_effects:
+  effect_size:
+    value: 1.68
+    type: odds_ratio
+    ci_lower: 1.12
+    ci_upper: 2.53
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Nearly all participants (99.6%) were American (Californian) methamphetamine users,
+    limiting transfer of conclusions to UK context. Geographic transferability explicitly questioned.
+moderators:
+- name: drug_type
+  direction: strengthens
+  strength: moderate
+  description: Most evidence pertains to methamphetamine users; effects may differ for opiate/crack/powder
+    cocaine users typical in UK
+- name: study_quality
+  direction: weakens
+  strength: strong
+  description: Poor methodological quality, high attrition rates, retrospective data collection, limited
+    follow-up, no random allocation, and publication bias limit confidence
+structural_competency:
+  equity_implications: This mechanism addresses structural factors by examining how criminal justice policy
+    alternatives (diversion vs incarceration) affect health outcomes. Rather than blaming individuals
+    for drug use, it examines how systemic responses to substance use can either perpetuate harm through
+    incarceration or facilitate recovery through treatment access. The policy-level intervention recognizes
+    that incarceration fails to address underlying health needs and may worsen outcomes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.585534'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

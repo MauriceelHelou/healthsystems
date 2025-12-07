@@ -1,0 +1,47 @@
+id: food_insecurity_rate_to_NEW:glycemic_control_poor
+name: Food Insecurity → Poor Glycemic Control
+from_node:
+  node_id: food_insecurity_rate
+  node_name: Food Insecurity
+to_node:
+  node_id: NEW:glycemic_control_poor
+  node_name: Poor Glycemic Control
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Food insecurity creates inability to consistently obtain nutritious food,
+  forcing reliance on cheaper, energy-dense, nutrient-poor foods high in refined carbohydrates'
+- 'Step 2: Inconsistent food availability disrupts regular eating patterns and meal
+  timing, making diabetes self-management difficult'
+- 'Step 3: Competition between food costs and medication costs may lead to medication
+  non-adherence or rationing among those with diabetes'
+- 'Step 4: Chronic stress from food insecurity activates physiological stress responses
+  that elevate blood glucose levels'
+- 'Step 5: Combined dietary, behavioral, and physiological factors result in elevated
+  HbA1c levels and poor glycemic control outcomes'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: Kristen L. Flint et al. 2020. Emerging trends and the clinical
+    impact of food insecurity in patients with diabetes. Journal of Diabetes.
+  supporting_citations: []
+description: Food insecurity is consistently associated with worse glycemic control
+  among individuals with diabetes compared to food secure individuals. The relationship
+  operates through multiple pathways including dietary quality compromises, disrupted
+  eating patterns, medication-food tradeoffs, and chronic stress. However, the exact
+  mechanisms remain unclear as interventional studies that effectively reduced food
+  insecurity showed variable outcomes on glycemic control, suggesting the relationship
+  is complex and multifactorial.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Socioeconomic status
+  direction: strengthens
+  strength: strong
+  description: Food insecurity disproportionately affects socioeconomically disadvantaged
+    households, amplifying the relationship with poor glycemic control
+- name: Community-level factors
+  direction: strengthens
+  strength: moderate
+  description: Community-level factors interact with individual-level factors to impact
+    glycemic control outcomes in food insecure populations

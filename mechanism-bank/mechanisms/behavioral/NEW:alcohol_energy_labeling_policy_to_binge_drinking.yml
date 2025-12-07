@@ -1,0 +1,55 @@
+id: NEW:alcohol_energy_labeling_policy_to_binge_drinking
+name: Alcohol Energy (Calorie) Labeling Policy → Binge Drinking
+from_node:
+  node_id: NEW:alcohol_energy_labeling_policy
+  node_name: Alcohol Energy (Calorie) Labeling Policy
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Energy labeling policy mandates calorie information on alcoholic beverages'
+- 'Step 2: Consumers become aware of high caloric content in alcoholic drinks'
+- 'Step 3: Knowledge of caloric content theoretically influences drinking decisions'
+- 'Step 4: Potential reduction in alcohol consumption through informed choice'
+- 'Step 5: However, current evidence shows no demonstrated effect on consumption behavior'
+evidence:
+  quality_rating: C
+  n_studies: 6
+  primary_citation: 'E. Robinson et al. 2021. "Alcohol, calories, and obesity: A rapid systematic review
+    and meta‐analysis of consumer knowledge, support, and behavioral effects of energy labeling on alcoholic
+    drinks." https://doi.org/10.1111/obr.13198'
+  supporting_citations:
+  - Six studies examining effect of energy labeling on consumption behavior
+  - Studies used proxy outcome measures rather than actual consumption
+  - No studies conducted in real-world settings
+  doi: 10.1111/obr.13198
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Six studies examined whether energy labeling affects alcohol consumption behavior, but found
+  no evidence of beneficial effect. However, evidence quality is very low due to methodological limitations
+  - no real-world studies, proxy outcomes, and low quality designs create high uncertainty about true
+  policy effects.
+moderators:
+- name: study_methodological_quality
+  direction: weakens
+  strength: strong
+  description: Majority of studies were of low methodological quality and used proxy outcome measures,
+    creating high uncertainty
+- name: study_setting
+  direction: weakens
+  strength: strong
+  description: No studies were conducted in real-world settings, limiting generalizability of findings
+structural_competency:
+  equity_implications: The lack of evidence for behavioral effects should not be interpreted as policy
+    failure, but as evidence gap. Structural interventions like labeling address information asymmetries
+    created by industry practices and regulatory gaps. The absence of real-world studies reflects research
+    infrastructure limitations, not necessarily policy ineffectiveness. Further research in naturalistic
+    settings is needed before drawing conclusions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.399923'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

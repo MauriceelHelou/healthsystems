@@ -1,0 +1,46 @@
+id: NEW:radiofrequency_ablation_vs_percutaneous_injection_to_all_cause_mortality_rate
+name: Radiofrequency Ablation vs Percutaneous Injection Therapy → All-Cause Mortality
+  Rate
+from_node:
+  node_id: NEW:radiofrequency_ablation_vs_percutaneous_injection
+  node_name: Radiofrequency Ablation vs Percutaneous Injection Therapy
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Radiofrequency ablation delivers thermal energy directly to hepatocellular
+  carcinoma tumors, causing more complete coagulative necrosis compared to percutaneous
+  injection therapies (acetic acid or alcohol injection)'
+- 'Step 2: More complete tumor ablation with radiofrequency results in lower rates
+  of local tumor recurrence and residual viable tumor tissue'
+- 'Step 3: Reduced tumor burden and recurrence leads to improved liver function preservation
+  and delayed disease progression'
+- 'Step 4: These factors translate into reduced all-cause mortality at maximal follow-up
+  compared to percutaneous acetic acid or alcohol injection therapies'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Avik Majumdar et al. 2017. Management of people with early- or
+    very early-stage hepatocellular carcinoma: an attempted network meta-analysis.
+    The Cochrane database of systematic reviews.'
+  supporting_citations: []
+description: Radiofrequency ablation is associated with lower all-cause mortality
+  compared to percutaneous injection therapies (acetic acid injection and alcohol
+  injection) in people with early-stage hepatocellular carcinoma who are not eligible
+  for surgery. This Cochrane systematic review of 14 trials (2,494 participants) found
+  that all-cause mortality at maximal follow-up was higher with percutaneous acetic
+  acid injection and percutaneous alcohol injection than with radiofrequency ablation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: surgical_eligibility
+  direction: strengthens
+  strength: moderate
+  description: The mortality benefit of radiofrequency ablation over percutaneous
+    injection was specifically demonstrated in patients not eligible for surgery
+- name: liver_cirrhosis_status
+  direction: weakens
+  strength: weak
+  description: Most participants had cirrhotic livers which may affect treatment outcomes

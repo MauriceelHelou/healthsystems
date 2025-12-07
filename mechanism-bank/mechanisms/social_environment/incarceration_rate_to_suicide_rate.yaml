@@ -1,0 +1,57 @@
+id: incarceration_rate_to_suicide_rate
+name: Incarceration Rate → Suicide Rate
+from_node:
+  node_id: incarceration_rate
+  node_name: Incarceration Rate
+to_node:
+  node_id: suicide_rate
+  node_name: Suicide Rate
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Higher incarceration rates result in more individuals experiencing imprisonment
+  and subsequent release into the community'
+- 'Step 2: Incarceration exposes individuals to trauma, disrupts social bonds, employment,
+  and housing stability, and concentrates psychiatric vulnerability'
+- 'Step 3: The transition period after release creates acute vulnerability due to
+  loss of structured support, stigma, social isolation, and barriers to accessing
+  mental health services'
+- 'Step 4: These compounded stressors and psychiatric risk factors substantially elevate
+  suicide risk among formerly incarcerated individuals compared to the general population'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'E. Janca et al. 2022. Sex differences in suicide, suicidal ideation,
+    and self-harm after release from incarceration: a systematic review and meta-analysis.
+    Social Psychiatry and Psychiatric Epidemiology.'
+  supporting_citations: []
+description: People released from incarceration are greater than seven times more
+  likely to die by suicide than the general population (SMR 7.4). The pooled crude
+  mortality rate for suicide was 114.5 per 100,000 person-years in non-sex stratified
+  samples. This elevated risk reflects the cumulative impact of pre-existing vulnerabilities,
+  traumatic experiences during incarceration, and severe social and economic disruptions
+  following release. The suicide rate after release exceeds that during incarceration,
+  highlighting the critical vulnerability of the reentry period.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 7.4
+    type: standardized_mortality_ratio
+    ci_lower: 5.4
+    ci_upper: 9.4
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Women released from incarceration have approximately 3 times higher
+    elevation in suicide risk (SMR 14.9) compared to men (SMR 4.6) relative to general
+    population rates
+- name: time_since_release
+  direction: strengthens
+  strength: strong
+  description: The rate of suicide is higher after release from incarceration than
+    during incarceration, indicating the post-release transition period is particularly
+    high-risk

@@ -1,0 +1,45 @@
+id: racial_minority_status_to_vha_homeless_program_utilization
+name: Racial Minority Status (Non-White) → VHA Homeless Program Utilization
+from_node:
+  node_id: racial_minority_status
+  node_name: Racial Minority Status (Non-White)
+to_node:
+  node_id: vha_homeless_program_utilization
+  node_name: VHA Homeless Program Utilization
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Racial minority veterans experience higher rates of housing instability
+  due to structural inequities'
+- 'Step 2: Greater housing need among racial minority veterans increases necessity
+  for homeless services'
+- 'Step 3: VHA homeless programs provide accessible safety net services regardless
+  of race'
+- 'Step 4: Higher need translates to higher utilization without apparent access barriers
+  in this veteran population'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Montgomery et al. 2020. "Housing Instability and Homeless
+    Program Use Among Veterans: The Intersection of Race, Sex, and Homelessness."
+    *Housing Policy Debate*. https://doi.org/10.1080/10511482.2020.1712613'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.312068'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: housing_instability_severity
+  direction: strengthens
+  strength: strong
+  description: Higher baseline housing instability among racial minorities directly
+    increases need for and use of homeless programs
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Effect operates across sex categories, though women have lower baseline
+    housing instability rates
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/racial_minority_status_to_vha_homeless_program_utilization.yaml
+_category: healthcare_access

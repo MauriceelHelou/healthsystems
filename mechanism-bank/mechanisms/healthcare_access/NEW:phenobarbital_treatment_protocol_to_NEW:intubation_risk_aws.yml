@@ -1,0 +1,63 @@
+id: NEW:phenobarbital_treatment_protocol_to_NEW:intubation_risk_aws
+name: Phenobarbital Treatment Protocol for Alcohol Withdrawal → Intubation Risk in Alcohol Withdrawal
+  Syndrome
+from_node:
+  node_id: NEW:phenobarbital_treatment_protocol
+  node_name: Phenobarbital Treatment Protocol for Alcohol Withdrawal
+to_node:
+  node_id: NEW:intubation_risk_aws
+  node_name: Intubation Risk in Alcohol Withdrawal Syndrome
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Severe alcohol withdrawal can lead to respiratory compromise requiring intubation'
+- 'Step 2: Phenobarbital may provide more effective control of severe withdrawal symptoms'
+- 'Step 3: Better symptom control may reduce progression to respiratory failure'
+- 'Step 4: Trend toward reduced intubation rates, though not statistically significant'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Zaryab Umar et al. 2023. "Phenobarbital and Alcohol Withdrawal Syndrome: A Systematic
+    Review and Meta-Analysis." https://doi.org/10.7759/cureus.33695'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references multiple studies on phenobarbital
+    safety profile
+  - Studies measuring intubation as a complication endpoint in AWS
+  - Studies comparing adverse events between treatment protocols
+  doi: 10.7759/cureus.33695
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Phenobarbital treatment shows a trend toward approximately 48% reduced risk of intubation
+  (RR=0.52) compared to benzodiazepine treatment, but this did not reach statistical significance (P=0.08).
+  Very high heterogeneity (I²=80%) limits interpretation.
+quantitative_effects:
+  effect_size:
+    value: 0.52
+    type: relative_risk
+    ci_lower: 0.25
+    ci_upper: 1.08
+  p_value: 0.08
+  heterogeneity_i_squared: 80.0
+moderators:
+- name: study_heterogeneity
+  direction: weakens
+  strength: strong
+  description: Considerable heterogeneity (I²=80%, P=0.0001) indicates major variation across studies,
+    limiting confidence in the pooled estimate
+- name: withdrawal_severity
+  direction: strengthens
+  strength: moderate
+  description: Patients with more severe withdrawal may benefit more from phenobarbital's mechanism of
+    action
+structural_competency:
+  equity_implications: Intubation and mechanical ventilation represent significant healthcare resource
+    utilization and carry risks of complications. Structural factors influencing access to appropriate
+    AWS treatment, including availability of addiction medicine specialists and standardized protocols,
+    may affect intubation rates. Populations with limited healthcare access may present later with more
+    severe withdrawal, increasing intubation risk regardless of treatment protocol.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.342263'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

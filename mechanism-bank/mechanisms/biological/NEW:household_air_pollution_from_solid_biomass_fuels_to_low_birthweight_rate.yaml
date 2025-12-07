@@ -1,0 +1,54 @@
+id: NEW:household_air_pollution_from_solid_biomass_fuels_to_low_birthweight_rate
+name: Household Air Pollution from Solid Biomass Fuels → Low Birthweight Rate
+from_node:
+  node_id: NEW:household_air_pollution_from_solid_biomass_fuels
+  node_name: Household Air Pollution from Solid Biomass Fuels
+to_node:
+  node_id: low_birthweight_rate
+  node_name: Low Birthweight Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Combustion of solid biomass fuels (wood, charcoal, dung, crop residues)
+  for cooking, heating, and lighting releases fine particulate matter (PM2.5), carbon
+  monoxide (CO), polycyclic aromatic hydrocarbons, and other toxic pollutants into
+  the household environment'
+- 'Step 2: Pregnant women in low- and middle-income countries experience high exposure
+  levels due to time spent near cooking fires and poorly ventilated housing conditions'
+- 'Step 3: Inhaled pollutants cross the placental barrier and enter fetal circulation,
+  while carbon monoxide binds to hemoglobin reducing oxygen delivery to the fetus'
+- 'Step 4: Systemic inflammation, oxidative stress, and impaired placental function
+  result from chronic pollutant exposure during pregnancy'
+- 'Step 5: These physiological disruptions lead to intrauterine growth restriction
+  and reduced fetal development, resulting in low birthweight (<2500g)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. Woolley et al. 2021. Effectiveness of interventions to reduce
+    household air pollution from solid biomass fuels and improve maternal and child
+    health outcomes in low- and middle-income countries: a systematic review protocol.
+    Systematic Reviews.'
+  supporting_citations: []
+description: Household air pollution from solid biomass fuel combustion exposes pregnant
+  women to high levels of fine particulate matter and carbon monoxide, which impair
+  fetal oxygen delivery and placental function through inflammatory and oxidative
+  stress pathways, leading to intrauterine growth restriction and low birthweight
+  outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: housing ventilation
+  direction: weakens
+  strength: moderate
+  description: Improved ventilation reduces indoor pollutant concentrations and exposure
+    levels
+- name: fuel transition interventions
+  direction: weakens
+  strength: moderate
+  description: Transition to cleaner fuels reduces harmful emissions and associated
+    health risks
+- name: time spent near cooking source
+  direction: strengthens
+  strength: moderate
+  description: Women who spend more time cooking or near cooking areas have higher
+    cumulative exposure

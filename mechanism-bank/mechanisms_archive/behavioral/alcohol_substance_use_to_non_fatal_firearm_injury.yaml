@@ -1,0 +1,47 @@
+id: alcohol_substance_use_to_non_fatal_firearm_injury
+name: Alcohol/Substance Use → Non-fatal Firearm Injury
+from_node:
+  node_id: alcohol_substance_use
+  node_name: Alcohol/Substance Use
+to_node:
+  node_id: non_fatal_firearm_injury
+  node_name: Non-fatal Firearm Injury
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol and substance use impairs cognitive function, decision-making capacity,
+  and impulse control'
+- 'Step 2: Impaired judgment increases engagement in or escalation of conflicts and
+  confrontations'
+- 'Step 3: Reduced inhibition and altered perception of risk increase likelihood of
+  firearm-involved incidents'
+- 'Step 4: Combination of impairment and firearm access results in non-fatal firearm
+  injuries'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Akshaya Bhagavathula et al. 2025. "Trends and Disparities in Non-fatal
+    Firearm Injuries among Working-Age Adults in the United States, 2000-2021.." *Journal
+    of community health*. https://doi.org/10.1007/s10900-024-01431-9
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.582707'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: race_ethnicity
+  direction: strengthens
+  strength: strong
+  description: Non-Hispanic Blacks represent 48.8% of all firearm injuries, suggesting
+    differential exposure to circumstances involving alcohol/substance use and firearms
+- name: male_sex
+  direction: strengthens
+  strength: strong
+  description: Males account for 85.7% of firearm injuries, indicating higher exposure
+    to alcohol/substance-involved firearm incidents
+- name: weekday_occurrence
+  direction: strengthens
+  strength: moderate
+  description: 63.7% of incidents occurred on weekdays, suggesting temporal patterns
+    in alcohol/substance-related firearm injuries

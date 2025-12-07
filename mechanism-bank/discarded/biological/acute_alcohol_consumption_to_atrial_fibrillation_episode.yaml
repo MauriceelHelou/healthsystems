@@ -1,0 +1,47 @@
+id: acute_alcohol_consumption_to_atrial_fibrillation_episode
+name: Acute Alcohol Consumption → Atrial Fibrillation Episode
+from_node:
+  node_id: acute_alcohol_consumption
+  node_name: Acute Alcohol Consumption
+to_node:
+  node_id: atrial_fibrillation_episode
+  node_name: Atrial Fibrillation Episode
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol consumption leads to detectable blood alcohol concentration in
+  the bloodstream'
+- 'Step 2: Elevated blood alcohol levels create acute electrophysiological changes
+  in cardiac tissue'
+- 'Step 3: These changes alter atrial electrical conduction and increase atrial ectopy'
+- 'Step 4: Disrupted electrical activity triggers discrete atrial fibrillation episodes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: G. Marcus et al. 2021. "Acute Consumption of Alcohol and Discrete
+    Atrial Fibrillation Events." *Annals of Internal Medicine*. https://doi.org/10.7326/M21-0228
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.307515'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: dose_response_relationship
+  direction: strengthens
+  strength: strong
+  description: Higher alcohol doses show greater odds of AF episodes - 2 or more drinks
+    associated with OR 3.58 (CI 1.63-7.89) compared to single drink OR 2.02
+- name: time_window_exposure
+  direction: strengthens
+  strength: moderate
+  description: Recent consumption (preceding 4 hours) shows stronger association;
+    total alcohol exposure over 12 hours also significant (OR 1.14 per 4.7% increase)
+- name: peak_blood_alcohol_concentration
+  direction: strengthens
+  strength: moderate
+  description: Higher peak blood alcohol concentration associated with increased odds
+    (OR 1.38 per 0.1% increase in BAC)
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/acute_alcohol_consumption_to_atrial_fibrillation_episode.yaml
+_category: biological

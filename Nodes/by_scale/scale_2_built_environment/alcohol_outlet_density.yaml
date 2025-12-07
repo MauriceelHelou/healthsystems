@@ -1,0 +1,35 @@
+id: alcohol_outlet_density
+name: Alcohol Outlet Density
+scale: 2
+domain: Built Environment, Public Health
+category: built_environment
+stock:
+  value: 15.3
+  unit: Licensed alcohol outlets per 10,000 population
+  year: 2022
+  source: US Census County Business Patterns, State Licensing Boards
+geographic_variation:
+  score: 5
+  level: county
+  notes: Extreme variation from rural areas (<5/10k) to urban entertainment districts (>50/10k)
+data_quality:
+  availability: high
+  frequency: annual
+  bias_notes: Counts may not capture unlicensed sales; on-premise vs off-premise breakdown varies by source
+  primary_sources:
+  - name: US Census Bureau County Business Patterns (NAICS 4453, 7224, 7225)
+    granularity: county
+  - name: State Alcohol Beverage Control Boards
+    granularity: county
+  - name: SAMHSA Behavioral Health Barometer
+    granularity: state
+  - name: CDC Alcohol Outlet Density Mapper
+    granularity: county
+description: |-
+  Physical count of licensed alcohol retail establishments per 10,000 population including both
+  off-premise outlets (liquor stores, convenience stores, grocery stores, NAICS 4453) and on-premise
+  outlets (bars, restaurants, clubs, NAICS 7224/7225). Higher outlet density consistently associated
+  with increased alcohol consumption, alcohol-related violence, motor vehicle crashes, and health
+  disparities. Outlet density is often higher in low-income and minority neighborhoods, contributing
+  to health inequities. This is a key built environment exposure for alcohol-related harm.
+type: Infrastructure

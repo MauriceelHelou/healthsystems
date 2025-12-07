@@ -1,0 +1,48 @@
+id: NEW:fetal_alcohol_spectrum_disorder_fasd_to_probation_revocation_rate
+name: Fetal Alcohol Spectrum Disorder (FASD) → Probation Revocation Rate
+from_node:
+  node_id: NEW:fetal_alcohol_spectrum_disorder_fasd
+  node_name: Fetal Alcohol Spectrum Disorder (FASD)
+to_node:
+  node_id: probation_revocation_rate
+  node_name: Probation Revocation Rate
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: FASD causes deficits in executive functioning and adaptive functioning'
+- 'Step 2: Executive dysfunction impairs ability to plan, organize, and follow complex probation requirements'
+- 'Step 3: Memory deficits lead to forgetting appointments and compliance deadlines'
+- 'Step 4: Court ordered treatment completion problems arise due to cognitive and adaptive challenges'
+- 'Step 5: These functional impairments result in technical probation and parole violations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Jerrod Brown et al. 2020. "Suggestibility and confabulation among individuals with
+    Fetal Alcohol Spectrum Disorder: A review for criminal justice, forensic mental health, and legal
+    interviewers.." https://doi.org/10.1016/j.ijlp.2020.101646'
+  supporting_citations:
+  - Additional citations require full-text access - this is a narrative review article
+  - Review synthesizes literature on FASD and criminal justice interactions
+  - Specific primary study citations not provided in abstract
+  doi: 10.1016/j.ijlp.2020.101646
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Individuals with FASD experience higher rates of probation and parole violations due to executive
+  functioning and adaptive deficits that impair their ability to comply with complex supervision requirements.
+moderators:
+- name: fasd_informed_supervision
+  direction: weakens
+  strength: moderate
+  description: Probation and parole supervision that accounts for FASD-related deficits can reduce technical
+    violations through appropriate accommodations
+structural_competency:
+  equity_implications: The probation and parole system's standard requirements assume neurotypical functioning
+    and do not accommodate neurodevelopmental disabilities like FASD. This structural mismatch criminalizes
+    disability-related behaviors rather than providing appropriate support, perpetuating cycles of incarceration
+    for individuals whose prenatal environment was shaped by structural determinants of maternal health.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.784904'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

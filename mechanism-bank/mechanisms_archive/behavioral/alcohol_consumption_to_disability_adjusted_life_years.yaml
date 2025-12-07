@@ -1,0 +1,42 @@
+id: alcohol_consumption_to_disability_adjusted_life_years
+name: Alcohol Consumption → Disability-Adjusted Life Years (DALYs)
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: disability_adjusted_life_years
+  node_name: Disability-Adjusted Life Years (DALYs)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption leads to both fatal and non-fatal health consequences
+  across multiple disease categories'
+- 'Step 2: Non-fatal consequences include alcohol use disorders, injuries, and chronic
+  diseases that cause ongoing disability'
+- 'Step 3: Years lived with disability (YLD) combined with years of life lost (YLL)
+  from premature mortality generate substantial DALY burden'
+- 'Step 4: Mathematical models aggregate these impacts to estimate total population-level
+  disease burden'
+evidence:
+  quality_rating: B
+  n_studies: 63
+  primary_citation: 'Ariel Esteban Bardach et al. 2019. "Alcohol consumption''s attributable
+    disease burden and cost-effectiveness of targeted public health interventions:
+    a systematic review of mathematical models." *BMC Public Health*. https://doi.org/10.1186/s12889-019-7771-4'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.120511'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: population_age_structure
+  direction: strengthens
+  strength: moderate
+  description: Younger populations may have higher injury-related DALYs, while older
+    populations may have higher chronic disease DALYs from alcohol
+- name: healthcare_system_quality
+  direction: weakens
+  strength: moderate
+  description: Better healthcare systems may reduce disability duration and severity,
+    lowering DALYs even at similar consumption levels

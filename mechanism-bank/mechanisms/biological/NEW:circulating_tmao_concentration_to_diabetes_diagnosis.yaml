@@ -1,0 +1,46 @@
+id: NEW:circulating_tmao_concentration_to_diabetes_diagnosis
+name: Circulating Trimethylamine-N-oxide (TMAO) Concentration → Diabetes Diagnosis
+from_node:
+  node_id: NEW:circulating_tmao_concentration
+  node_name: Circulating Trimethylamine-N-oxide (TMAO) Concentration
+to_node:
+  node_id: diabetes_diagnosis
+  node_name: Diabetes Diagnosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Dietary intake of choline, L-carnitine, and betaine from foods like red
+  meat, eggs, and fish provides substrates for gut microbiota metabolism'
+- 'Step 2: Gut microbiota convert these dietary nutrients to trimethylamine (TMA),
+  which is absorbed into the bloodstream'
+- 'Step 3: TMA is oxidized to trimethylamine-N-oxide (TMAO) in the liver by flavin-containing
+  monooxygenase 3 (FMO3)'
+- 'Step 4: Elevated circulating TMAO promotes insulin resistance through inflammatory
+  pathways and oxidative stress'
+- 'Step 5: TMAO may impair glucose tolerance and beta-cell function, contributing
+  to development of diabetes mellitus'
+evidence:
+  quality_rating: A
+  n_studies: 82
+  primary_citation: 'Doudou Li et al. 2022. Gut microbiota–derived metabolite trimethylamine-N-oxide
+    and multiple health outcomes: an umbrella review and updated meta-analysis. American
+    Journal of Clinical Nutrition.'
+  supporting_citations: []
+description: Circulating TMAO, a gut microbiota-derived metabolite produced from dietary
+  choline and carnitine, is positively associated with diabetes mellitus risk. This
+  umbrella review and meta-analysis found highly suggestive evidence supporting this
+  association. TMAO may contribute to diabetes through mechanisms involving insulin
+  resistance, inflammation, and impaired glucose metabolism.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: dietary_pattern
+  direction: strengthens
+  strength: moderate
+  description: Higher intake of red meat, eggs, and other choline/carnitine-rich foods
+    increases TMAO production and may strengthen the association with diabetes
+- name: gut_microbiome_composition
+  direction: strengthens
+  strength: moderate
+  description: Individual variation in gut microbiota composition affects TMA production
+    capacity and subsequent TMAO levels

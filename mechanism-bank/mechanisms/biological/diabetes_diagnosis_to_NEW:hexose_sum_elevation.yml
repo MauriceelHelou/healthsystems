@@ -1,0 +1,43 @@
+id: diabetes_diagnosis_to_NEW:hexose_sum_elevation
+name: Diabetes Diagnosis → Hexose Sum Elevation
+from_node:
+  node_id: diabetes_diagnosis
+  node_name: Diabetes Diagnosis
+to_node:
+  node_id: NEW:hexose_sum_elevation
+  node_name: Hexose Sum Elevation
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Type 2 diabetes causes persistent hyperglycemia and dysregulated glucose homeostasis'
+- 'Step 2: Elevated blood glucose increases circulating hexose (glucose and related sugars) concentrations'
+- 'Step 3: Mendelian randomization confirms reverse causation: diabetes causes hexose elevation, not vice
+  versa'
+- 'Step 4: Sum of hexoses serves as a biomarker consequence rather than cause of diabetes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sapna Sharma et al. 2024. "Role of human plasma metabolites in prediabetes and type
+    2 diabetes from the IMI-DIRECT study.." https://doi.org/10.1007/s00125-024-06282-6
+  supporting_citations:
+  - Two-sample Mendelian randomization methodology studies
+  - Glycemic biomarker studies
+  - Additional citations require full-text access
+  doi: 10.1007/s00125-024-06282-6
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Causal inference using genetic variants demonstrates that the sum of hexoses is causally
+  downstream of type 2 diabetes (type 2 diabetes-to-metabolite direction), distinguishing this from metabolites
+  that causally contribute to diabetes development.
+quantitative_effects:
+  sample_size: 3000
+structural_competency:
+  equity_implications: Understanding causal direction is critical for intervention design. This finding
+    suggests hexose elevation is a consequence of diabetes rather than a modifiable upstream cause, redirecting
+    intervention focus to upstream structural factors affecting lipid and BCAA metabolism.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.681114'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

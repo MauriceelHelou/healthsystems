@@ -1,0 +1,69 @@
+id: carbon_pricing_cap_and_trade_policy_to_NEW:greenhouse_gas_emissions
+name: Carbon Pricing/Cap and Trade Policy → Greenhouse Gas Emissions
+from_node:
+  node_id: carbon_pricing_cap_and_trade_policy
+  node_name: Carbon Pricing/Cap and Trade Policy
+to_node:
+  node_id: NEW:greenhouse_gas_emissions
+  node_name: Greenhouse Gas Emissions
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Carbon pricing policies (carbon taxes or emissions trading systems) establish a monetary cost
+  on greenhouse gas emissions'
+- 'Step 2: Economic actors internalize the external costs of carbon emissions through increased prices
+  for carbon-intensive activities'
+- 'Step 3: Higher costs incentivize firms to reduce emissions through technological innovation, fuel switching,
+  and efficiency improvements'
+- 'Step 4: Reduced emissions lead to immediate and substantial decreases in greenhouse gas output at the
+  policy jurisdiction level'
+evidence:
+  quality_rating: A
+  n_studies: 80
+  primary_citation: Niklas Döbbeling-Hildebrandt et al. 2024. "Systematic review and meta-analysis of
+    ex-post evaluations on the effectiveness of carbon pricing." https://doi.org/10.1038/s41467-024-48512-w
+  supporting_citations:
+  - Additional citations require full-text access - this meta-analysis synthesized 483 effect sizes from
+    80 causal ex-post evaluations
+  - Studies covered 21 carbon pricing schemes globally
+  - Machine-learning assisted systematic review methodology employed
+  doi: 10.1038/s41467-024-48512-w
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Carbon pricing policies yield immediate and substantial emission reductions of 5-21% across
+  implemented schemes globally. This meta-analysis of 80 causal evaluations covering 21 carbon pricing
+  schemes demonstrates consistent effectiveness despite generally low price levels.
+quantitative_effects:
+  effect_size:
+    value: -13.0
+    type: percentage_change
+    ci_lower: -21.0
+    ci_upper: -5.0
+  sample_size: 483
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect sizes ranged from -5% to -21% across 21 different carbon pricing schemes globally.
+    After correcting for publication bias, range is -4% to -15%.
+moderators:
+- name: carbon_price_level
+  direction: strengthens
+  strength: moderate
+  description: Despite low price levels in most instances, significant emissions reductions were still
+    achieved, suggesting even modest pricing has effects
+- name: policy_scheme_type
+  direction: strengthens
+  strength: moderate
+  description: At least 17 of 21 reviewed schemes showed statistically significant emissions reductions,
+    indicating scheme design matters
+structural_competency:
+  equity_implications: This mechanism addresses climate change through policy-level intervention rather
+    than individual behavior change. Carbon pricing represents a structural approach that changes economic
+    incentives across entire systems. Climate-related health impacts disproportionately affect low-income
+    communities and communities of color through increased heat exposure, air pollution, and climate disasters.
+    Reducing emissions through structural policy addresses root causes of environmental health inequities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.252461'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,61 @@
+id: alcohol_use_disorder_to_NEW:invasive_mechanical_ventilation_covid_19
+name: Alcohol Use Disorder → Invasive Mechanical Ventilation for COVID-19
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:invasive_mechanical_ventilation_covid_19
+  node_name: Invasive Mechanical Ventilation for COVID-19
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol use damages alveolar epithelium and impairs surfactant production'
+- 'Step 2: Compromised alveolar-capillary barrier increases susceptibility to acute lung injury'
+- 'Step 3: Impaired mucociliary clearance allows greater viral load accumulation in lower airways'
+- 'Step 4: Severe acute respiratory distress syndrome develops requiring mechanical ventilation'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Baozhu Wei et al. 2023. "Impact of alcohol consumption on coronavirus disease 2019
+    severity: A systematic review and meta‐analysis." https://doi.org/10.1002/jmv.28547'
+  supporting_citations:
+  - European cohort studies included in meta-analysis (n=261,437)
+  - Additional citations require full-text access
+  - Studies examining invasive mechanical ventilation outcomes
+  doi: 10.1002/jmv.28547
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'European drinkers showed a 104% increased risk of requiring invasive mechanical ventilation
+  for COVID-19 (RR=2.04, 95% CI: 1.96-2.13). This was the largest effect size observed in the meta-analysis,
+  with no statistical heterogeneity across included studies, indicating highly consistent findings.'
+quantitative_effects:
+  effect_size:
+    value: 2.04
+    type: relative_risk
+    ci_lower: 1.96
+    ci_upper: 2.13
+  p_value: 0.001
+  sample_size: 261437
+  heterogeneity_i_squared: 0.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: European drinkers showed the strongest effect (RR=2.04) for invasive mechanical ventilation,
+    with no heterogeneity (I²=0.0%)
+moderators:
+- name: geographic_region
+  direction: strengthens
+  strength: strong
+  description: European populations showed doubled risk of requiring mechanical ventilation compared to
+    non-drinkers
+structural_competency:
+  equity_implications: The doubled risk of requiring mechanical ventilation among European drinkers reflects
+    the accumulated physiological damage from alcohol consumption patterns shaped by cultural norms, pricing
+    policies, and alcohol industry influence. Healthcare system capacity for mechanical ventilation varied
+    significantly during pandemic surges, meaning this alcohol-related vulnerability had differential
+    consequences based on where individuals lived and received care.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.321750'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,103 @@
+id: stigma_to_treatment_avoidance
+name: Alcohol Use Disorder Stigma → Treatment Avoidance
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+  node_type: stock
+to_node:
+  node_id: sud_treatment_dropout_rate
+  node_name: SUD Treatment Dropout Rate
+  node_type: crisis_endpoint
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Societal stigma frames addiction as moral failing and character weakness rather than medical
+  condition'
+- 'Step 2: Internalized stigma and shame create reluctance to disclose drinking problems or seek help'
+- 'Step 3: Fear of social consequences (job loss, child custody, criminal justice involvement) delays
+  treatment seeking'
+- 'Step 4: Stigma in healthcare settings produces judgmental provider interactions and punitive rather
+  than therapeutic approaches'
+- 'Step 5: Negative treatment experiences and ongoing stigma lead to dropout, with average time from problem
+  recognition to treatment seeking of 8-10 years'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: 'K. Moore et al.. 2020. "Risk Factors for Self-stigma among Incarcerated Women with
+    Alcohol Use Disorder." Stigma and health. https://doi.org/10.1037/SAH0000182 (Cited: 13)'
+  supporting_citations:
+  - 'Room, Robin, Jürgen Rehm, Maria Lucia O. Trotter, Annette Paglia, and Sheree Üstün. 2001. "Cross-cultural
+    views on stigma valuation parity and societal values towards disability." In Disability and Culture:
+    Universalism and Diversity, ed. T.B. Üstün et al., 247-291. Seattle: Hogrefe and Huber.'
+  - 'Glass, Joseph E., Katharine A. Bradley, Gwen T. Lapham, et al. 2016. "Use of brief interventions
+    in primary care and specialty addiction services." Journal of General Internal Medicine 31(3): 315-322.'
+  doi: 10.1177/1529100614531398
+  journal: Psychological Science in the Public Interest
+  year: 2014
+  fulltext:
+    available: true
+    source: core
+    url: https://api.core.ac.uk/v3/outputs/108463818/download
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '1.0'
+description: Stigma toward alcohol use disorder creates major barriers to treatment through internalized
+  shame, fear of social consequences, discriminatory healthcare experiences, and delayed help-seeking.
+moderators:
+- name: healthcare_setting_culture
+  direction: u_shaped
+  strength: moderate
+  description: Stigma-free, harm reduction-oriented settings increase engagement while judgmental settings
+    increase dropout
+- name: racial_ethnic_identity
+  direction: strengthens
+  strength: moderate
+  description: Communities of color face compounded stigma from both addiction and racism, creating additional
+    treatment barriers
+- name: professional_occupation
+  direction: strengthens
+  strength: moderate
+  description: Professionals fear license consequences and career damage, delaying treatment until late-stage
+    disease
+- name: public_awareness_campaigns
+  direction: weakens
+  strength: weak
+  description: Anti-stigma campaigns showing addiction as medical condition modestly reduce treatment
+    barriers
+structural_competency:
+  root_cause_level: institutional
+  avoids_victim_blaming: true
+  equity_implications: 'Addiction stigma is not natural but socially constructed and maintained through
+    institutional practices. Media representations, punitive drug policies, and medical training perpetuate
+    moral framing. Stigma operates as social control, especially targeting marginalized communities where
+    substance use is criminalized rather than medicalized. The white middle class accesses private compassionate
+    treatment while communities of color face criminalization for the same behaviors. Criminal records
+    from addiction create permanent stigma blocking employment and housing. Health insurance discrimination
+    makes addiction treatment less accessible than other medical care. High treatment dropout reflects
+    systemic creation and maintenance of stigma, not individual shame. Reducing stigma requires policy
+    transformation: decriminalization, parity enforcement, anti-discrimination laws, medical education
+    reform, and media accountability.'
+assumptions:
+- Stigma encompasses public attitudes, self-stigma, and structural discrimination
+- Treatment avoidance includes both never seeking care and early dropout
+- Mechanism operates through psychological (shame) and practical (discrimination) barriers
+limitations:
+- Other barriers (cost, access, childcare) also contribute to treatment avoidance
+- Stigma levels vary across cultures and communities
+- Some individuals seek treatment despite stigma; protective factors matter
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Stigma and treatment avoidance vary by community norms, healthcare culture, and criminalization
+    approaches
+  relevant_geographies:
+  - Rural and conservative communities often have stronger addiction stigma and lower treatment utilization
+  - Areas with harm reduction services and drug decriminalization show reduced stigma barriers
+  - Communities with medication-assisted treatment (MAT) availability show better engagement
+  - Regions with punitive drug courts increase stigma and coerced rather than voluntary treatment
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

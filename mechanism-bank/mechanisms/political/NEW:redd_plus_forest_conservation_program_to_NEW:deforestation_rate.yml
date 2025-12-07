@@ -1,0 +1,72 @@
+id: NEW:redd_plus_forest_conservation_program_to_NEW:deforestation_rate
+name: REDD+ Forest Conservation Program Implementation → Deforestation Rate
+from_node:
+  node_id: NEW:redd_plus_forest_conservation_program
+  node_name: REDD+ Forest Conservation Program Implementation
+to_node:
+  node_id: NEW:deforestation_rate
+  node_name: Deforestation Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: REDD+ programs establish performance-based payment mechanisms for reduced emissions from deforestation'
+- 'Step 2: Financial incentives are provided to landowners and communities for maintaining forest cover'
+- 'Step 3: Conditionality mechanisms link payments to verified forest conservation outcomes'
+- 'Step 4: Forest monitoring and enforcement activities increase oversight of land use'
+- 'Step 5: Deforestation rates decrease modestly in targeted areas compared to counterfactual scenarios'
+evidence:
+  quality_rating: A
+  n_studies: 32
+  primary_citation: Sven Wunder et al. 2024. "Modest forest and welfare gains from initiatives for reduced
+    emissions from deforestation and forest degradation." https://doi.org/10.1038/s43247-024-01541-1
+  supporting_citations:
+  - 26 primary forest-related studies included in meta-analysis (specific citations require full-text
+    access)
+  - Studies using counterfactual-based evidence methods referenced in Theory of Change analysis
+  - Additional citations require full-text access
+  doi: 10.1038/s43247-024-01541-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis of 32 quantitative studies found that REDD+ initiatives for reduced emissions
+  from deforestation and forest degradation produced moderately positive but limited environmental impacts
+  on forest conservation. Average environmental impacts were positively significant yet comparable to
+  impacts from other conservation tools. Effectiveness was constrained by adverse spatial targeting, inadequate
+  funding, and weak enforcement of conditionality requirements.
+quantitative_effects:
+  sample_size: 26
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Environmental additionality was likely restricted by project proponents' adverse spatial
+    targeting of low-threat areas, suggesting geographic variation in program effectiveness based on baseline
+    deforestation risk
+moderators:
+- name: spatial_targeting_strategy
+  direction: weakens
+  strength: moderate
+  description: Adverse spatial targeting of low-threat areas reduced environmental additionality, as programs
+    were often implemented where deforestation pressure was already low
+- name: carbon_market_funding
+  direction: weakens
+  strength: moderate
+  description: Scarce funding flows from carbon markets limited the scale and intensity of program implementation
+- name: conditionality_enforcement
+  direction: weakens
+  strength: moderate
+  description: Ill-enforced conditionality probably also limited impacts on forest conservation outcomes
+- name: program_duration
+  direction: weakens
+  strength: moderate
+  description: Environmental impacts were mostly impermanent over time, suggesting limited long-term effectiveness
+structural_competency:
+  equity_implications: This mechanism addresses structural environmental policy interventions rather than
+    individual behavior. The analysis reveals how program design choices (spatial targeting, funding mechanisms,
+    conditionality enforcement) create structural limitations on effectiveness. The finding that programs
+    were often implemented in low-threat areas reflects institutional incentives and political economy
+    factors that shape where conservation efforts are directed, potentially bypassing areas with highest
+    deforestation pressure that may also have most vulnerable populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.608875'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

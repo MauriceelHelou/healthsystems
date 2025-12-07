@@ -1,0 +1,57 @@
+id: NEW:cognitive_frailty_to_all_cause_mortality_rate
+name: Cognitive Frailty → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:cognitive_frailty
+  node_name: Cognitive Frailty
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Cognitive frailty represents the co-occurrence of physical frailty (reduced
+  strength, endurance, physical function) and mild cognitive impairment without dementia'
+- 'Step 2: The combined syndrome leads to impaired self-care capacity, reduced ability
+  to manage chronic conditions, medication non-adherence, and decreased healthcare
+  utilization efficiency'
+- 'Step 3: Physical frailty components contribute to sarcopenia, immune dysfunction,
+  and reduced physiological reserve, while cognitive impairment affects decision-making
+  and risk awareness'
+- 'Step 4: This dual vulnerability accelerates functional decline, increases susceptibility
+  to acute illness, falls, and hospitalization'
+- 'Step 5: The synergistic effect of physical and cognitive decline results in significantly
+  elevated mortality risk compared to either condition alone'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Baoyu Chen et al. 2022. Impact of frailty, mild cognitive impairment
+    and cognitive frailty on adverse health outcomes among community-dwelling older
+    adults: A systematic review and meta-analysis. Frontiers in Medicine.'
+  supporting_citations: []
+description: Cognitive frailty, defined as the simultaneous presence of physical frailty
+  and mild cognitive impairment (excluding dementia), significantly increases all-cause
+  mortality risk in community-dwelling older adults. This meta-analysis of 22 cohort
+  studies found that cognitive frailty was associated with a 2.41-fold increased risk
+  of mortality compared to robust elders, demonstrating a stronger effect than either
+  frailty (RR=2.11) or mild cognitive impairment with pre-frailty (RR=1.74) alone.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.41
+    type: relative_risk
+    ci_lower: 1.97
+    ci_upper: 2.94
+  p_value: null
+  sample_size: 71544
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Mean age in included studies ranged from 65.1 to 93.6 years; older
+    populations may have higher baseline risk
+- name: severity of frailty
+  direction: strengthens
+  strength: moderate
+  description: Full cognitive frailty showed higher mortality risk (RR=2.41) compared
+    to mild cognitive impairment with pre-frailty (RR=1.74) or pre-frailty alone (RR=1.29)

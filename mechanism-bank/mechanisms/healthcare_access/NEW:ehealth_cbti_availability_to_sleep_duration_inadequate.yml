@@ -1,0 +1,70 @@
+id: NEW:ehealth_cbti_availability_to_sleep_duration_inadequate
+name: eHealth Cognitive Behavioral Therapy for Insomnia Availability → Inadequate Sleep Duration
+from_node:
+  node_id: NEW:ehealth_cbti_availability
+  node_name: eHealth Cognitive Behavioral Therapy for Insomnia Availability
+to_node:
+  node_id: sleep_duration_inadequate
+  node_name: Inadequate Sleep Duration
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: eHealth delivery of CBTI (eCBTI) expands access beyond traditional in-person therapy through
+  telephone, videoconference, web-based programs, and mobile apps'
+- 'Step 2: Expanded access reduces barriers related to geographic distance, scheduling constraints, and
+  healthcare provider shortages'
+- 'Step 3: Patients receive evidence-based cognitive behavioral therapy addressing dysfunctional sleep
+  beliefs, sleep restriction, and stimulus control'
+- 'Step 4: Treatment leads to improvements in sleep quality and duration equivalent to in-person delivery'
+- 'Step 5: Statistically significant reductions in insomnia severity and inadequate sleep duration'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'S. Knutzen et al. 2024. "Efficacy of eHealth Versus In-Person Cognitive Behavioral
+    Therapy for Insomnia: Systematic Review and Meta-Analysis of Equivalence." https://doi.org/10.2196/58217'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 15 RCTs comparing eCBTI to ipCBTI
+  - Studies included telephone-delivered, videoconference-delivered, and fully automated web-based interventions
+  - Individual study citations available in full systematic review
+  doi: 10.2196/58217
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review and meta-analysis of 15 RCTs (N=1083) found that electronically delivered
+  CBTI (via telephone, videoconference, web-based programs, or mobile apps) was statistically equivalent
+  to in-person CBTI for most sleep and nonsleep outcomes. While conventional comparisons showed small
+  effect sizes favoring in-person delivery, equivalence testing demonstrated clinical equivalence, supporting
+  eHealth as a viable alternative to expand access to insomnia treatment.
+quantitative_effects:
+  p_value: 0.05
+  sample_size: 1083
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The study specifically addresses limited accessibility to in-person CBTI as a rationale
+    for eHealth alternatives, suggesting geographic variation in access to traditional insomnia treatment
+moderators:
+- name: treatment_duration
+  direction: strengthens
+  strength: moderate
+  description: Heterogeneity analyses identified treatment duration as a potential moderator of differences
+    in treatment efficacy between delivery formats
+- name: dropout_rates
+  direction: weakens
+  strength: moderate
+  description: Higher dropout rates identified as potential moderator that may impact comparative efficacy
+    between eCBTI and ipCBTI
+structural_competency:
+  equity_implications: This mechanism addresses a critical structural barrier to mental health treatment
+    - geographic and logistical access to specialized therapists. By demonstrating equivalence of eHealth
+    delivery, the study provides evidence supporting policy and healthcare system changes that could reduce
+    disparities in insomnia treatment access. Populations in rural areas, those with transportation barriers,
+    or those with scheduling constraints due to work or caregiving could benefit from expanded eHealth
+    options. The structural focus is on healthcare delivery systems rather than individual behavior change.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.858697'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

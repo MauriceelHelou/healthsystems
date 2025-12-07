@@ -1,0 +1,48 @@
+id: correctional_setting_incarceration_to_alcohol_withdrawal_risk
+name: Incarceration in Correctional Setting → Risk of Alcohol Withdrawal Syndrome
+from_node:
+  node_id: correctional_setting_incarceration
+  node_name: Incarceration in Correctional Setting
+to_node:
+  node_id: alcohol_withdrawal_risk
+  node_name: Risk of Alcohol Withdrawal Syndrome
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individuals with chronic alcohol use are abruptly separated from alcohol
+  access upon incarceration, forcing immediate cessation without voluntary tapering'
+- 'Step 2: Newly incarcerated inmates enter a controlled environment where alcohol
+  is unavailable, triggering physiological withdrawal responses within hours to days'
+- 'Step 3: Without adequate medical infrastructure, inmates experience unchecked withdrawal
+  symptoms ranging from mild (tremors, anxiety) to severe (seizures, delirium tremens)'
+- 'Step 4: High-volume intake (average 97 admissions per week to ADU) in large jail
+  systems (18,000 inmates) concentrates withdrawal risk in populations with limited
+  healthcare access pre-incarceration'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ibrahim K Muradian et al. 2021. "Clinical Pharmacist's Role in
+    an Alcohol Detox Unit in a Correctional Setting.." *Journal of pharmacy practice*.
+    https://doi.org/10.1177/0897190019888076
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.768048'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: history_of_severe_withdrawal
+  direction: strengthens
+  strength: strong
+  description: Patients with prior severe withdrawal episodes face substantially elevated
+    risk during subsequent incarceration-induced cessation
+- name: polysubstance_use
+  direction: strengthens
+  strength: strong
+  description: Concurrent withdrawal from multiple substances (polysubstance withdrawal)
+    increases complexity and severity of withdrawal syndrome
+- name: specialized_adu_availability
+  direction: weakens
+  strength: strong
+  description: Presence of dedicated alcohol detoxification unit with clinical staff
+    reduces progression to severe complications

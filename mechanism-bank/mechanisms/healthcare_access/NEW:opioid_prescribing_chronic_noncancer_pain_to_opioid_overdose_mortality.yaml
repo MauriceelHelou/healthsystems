@@ -1,0 +1,54 @@
+id: NEW:opioid_prescribing_chronic_noncancer_pain_to_opioid_overdose_mortality
+name: Opioid Prescribing for Chronic Noncancer Pain → Opioid Overdose Mortality
+from_node:
+  node_id: NEW:opioid_prescribing_chronic_noncancer_pain
+  node_name: Opioid Prescribing for Chronic Noncancer Pain
+to_node:
+  node_id: opioid_overdose_mortality
+  node_name: Opioid Overdose Mortality
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with chronic noncancer pain receive opioid prescriptions as part
+  of pain management protocols'
+- 'Step 2: Long-term opioid use leads to tolerance development, potentially requiring
+  higher doses for pain relief'
+- 'Step 3: Higher doses and prolonged exposure increase the risk of respiratory depression
+  and accidental overdose'
+- 'Step 4: Some patients may develop opioid use disorder, leading to misuse of prescribed
+  opioids or transition to illicit opioids'
+- 'Step 5: Overdose events occur due to excessive opioid accumulation, drug interactions,
+  or use of high-potency opioids'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: 'Sarah Larney et al. 2020. "All-Cause and Overdose Mortality Risk
+    Among People Prescribed Opioids: A Systematic Review and Meta-analysis." Pain
+    medicine (Malden, Mass.)'
+  supporting_citations: []
+description: This meta-analysis of 13 cohorts (n=6,029,810) found a pooled overdose
+  crude mortality rate of 1.1 per 1000 person-years among people prescribed opioids,
+  with substantial heterogeneity across studies. The all-cause mortality rate was
+  28.8 per 1000 person-years. The review highlights methodological limitations in
+  ascertaining opioid indications and exposure levels, complicating precise risk estimation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.1
+    type: crude_mortality_rate_per_1000_person_years
+    ci_lower: 0.4
+    ci_upper: 3.4
+  p_value: null
+  sample_size: 6029810
+moderators:
+- name: Opioid dose
+  direction: strengthens
+  strength: moderate
+  description: Higher opioid doses are associated with increased overdose risk, though
+    poorly ascertained in included studies
+- name: Duration of opioid use
+  direction: strengthens
+  strength: moderate
+  description: Chronic use implies longer exposure periods increasing cumulative overdose
+    risk

@@ -1,0 +1,55 @@
+id: NEW:lsd_assisted_therapy_to_alcohol_use_disorder
+name: LSD-Assisted Therapy → Alcohol Use Disorder
+from_node:
+  node_id: NEW:lsd_assisted_therapy
+  node_name: LSD-Assisted Therapy
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: LSD administered in controlled therapeutic setting under clinical supervision'
+- 'Step 2: Psychedelic experience facilitates introspection and emotional processing related to alcohol
+  dependence'
+- 'Step 3: Therapeutic integration sessions help consolidate insights and behavioral change'
+- 'Step 4: Enhanced likelihood of achieving abstinence or substantial reduction in drinking'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'Dakota J. Sicignano et al. 2023. "The impact of psychedelics on patients with alcohol
+    use disorder: a systematic review with meta-analysis." https://doi.org/10.1080/03007995.2023.2296968'
+  supporting_citations:
+  - LSD trial 1 (1966-1970 era)
+  - LSD trial 2 (1966-1970 era)
+  - LSD trial 3 (1966-1970 era)
+  doi: 10.1080/03007995.2023.2296968
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'In randomized, double-blind, placebo-controlled trials specifically examining LSD, the odds
+  of achieving abstinence or substantial reduction in drinking were 1.99 times higher with LSD compared
+  to placebo. When expanded to include 5 controlled trials without strict blinding requirements, OR was
+  1.79 (95% CI: 1.36-2.34).'
+quantitative_effects:
+  effect_size:
+    value: 1.99
+    type: odds_ratio
+    ci_lower: 1.1
+    ci_upper: 3.61
+moderators:
+- name: blinding_and_placebo_control
+  direction: strengthens
+  strength: moderate
+  description: 'Relaxing inclusion to include non-double-blind trials increased sample (n=5) but showed
+    similar effect (OR 1.79, 95% CI: 1.36-2.34)'
+structural_competency:
+  equity_implications: The scheduling of LSD as a controlled substance with no accepted medical use has
+    created decades-long barriers to researching this potentially effective treatment. This regulatory
+    structure disproportionately affects populations with limited access to emerging treatments and clinical
+    trials. Policy reform regarding psychedelic scheduling is a structural determinant of treatment access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.295530'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,49 @@
+id: food_insecurity_rate_to_obesity_individual
+name: Food Insecurity → Obesity/Overweight
+from_node:
+  node_id: food_insecurity_rate
+  node_name: Food Insecurity
+to_node:
+  node_id: obesity_individual
+  node_name: Obesity/Overweight
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Food insecurity creates economic constraints that limit access to healthy,
+  nutrient-dense foods, which tend to be more expensive than calorie-dense, processed
+  alternatives'
+- 'Step 2: Individuals experiencing food insecurity engage in compensatory eating
+  behaviors, including overconsumption during periods of food availability (feast-famine
+  cycles) and preference for high-calorie, shelf-stable foods'
+- 'Step 3: Chronic stress from food insecurity triggers physiological responses including
+  elevated cortisol, which promotes fat storage and increases appetite for energy-dense
+  comfort foods'
+- 'Step 4: These behavioral and physiological adaptations lead to energy imbalance
+  and weight gain, particularly manifesting as overweight/obesity in adults, especially
+  women'
+evidence:
+  quality_rating: A
+  n_studies: 50
+  primary_citation: 'Jennifer Te Vazquez et al. 2021. "Food Insecurity and Cardiometabolic
+    Conditions: a Review of Recent Research." Current nutrition reports.'
+  supporting_citations: []
+description: Food insecurity is associated with greater prevalence of overweight/obesity
+  in adults, with the association being especially strong for women. This comprehensive
+  review of 50 studies (35 adult studies and 15 child studies) published between 2017-2020
+  found robust evidence for this relationship in adults, while findings in children
+  were more nuanced and often did not show significant associations, potentially because
+  metabolic conditions had not yet developed.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: The association between food insecurity and overweight/obesity is especially
+    pronounced in women compared to men
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: The association is more robust in adults than in children, likely due
+    to insufficient time for conditions to develop in younger populations and different
+    life course trajectories

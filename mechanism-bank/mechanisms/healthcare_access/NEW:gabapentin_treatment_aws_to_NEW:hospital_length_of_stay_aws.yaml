@@ -1,0 +1,48 @@
+id: NEW:gabapentin_treatment_aws_to_NEW:hospital_length_of_stay_aws
+name: Gabapentin Treatment for Acute Alcohol Withdrawal Syndrome → Hospital Length
+  of Stay for Alcohol Withdrawal
+from_node:
+  node_id: NEW:gabapentin_treatment_aws
+  node_name: Gabapentin Treatment for Acute Alcohol Withdrawal Syndrome
+to_node:
+  node_id: NEW:hospital_length_of_stay_aws
+  node_name: Hospital Length of Stay for Alcohol Withdrawal
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Gabapentin is administered to hospitalized patients experiencing acute
+  alcohol withdrawal syndrome (AWS), often as adjunctive therapy to benzodiazepines'
+- 'Step 2: Gabapentin''s antiepileptic mechanism of action modulates GABA and glutamate
+  systems, potentially accelerating resolution of withdrawal symptoms particularly
+  in severe AWS cases'
+- 'Step 3: Faster symptom resolution and reduced need for additional benzodiazepines
+  may enable earlier medical stabilization'
+- 'Step 4: In specific subgroups (severe AWS patients and those receiving gabapentin
+  without benzodiazepines), this leads to significantly decreased hospital length
+  of stay'
+evidence:
+  quality_rating: B
+  n_studies: 8
+  primary_citation: 'Anna G Mattle et al. 2022. Gabapentin to treat acute alcohol
+    withdrawal in hospitalized patients: A systematic review and meta-analysis. Drug
+    and alcohol dependence.'
+  supporting_citations: []
+description: A systematic review and meta-analysis of 8 retrospective studies (n=2030)
+  found no significant overall difference in hospital length of stay between gabapentin-treated
+  and benzodiazepine-treated patients with acute alcohol withdrawal syndrome. However,
+  subgroup analyses revealed significant LOS reductions in gabapentin-treated patients
+  among severe AWS cases (p=0.04) and those receiving gabapentin without benzodiazepines
+  (p<0.001). These subgroup findings were based on limited studies (1-2 studies each).
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: AWS severity
+  direction: strengthens
+  strength: moderate
+  description: Subgroup analysis of severe AWS patients showed significant decrease
+    in LOS (p=0.04) with gabapentin treatment
+- name: Gabapentin monotherapy vs adjunctive
+  direction: strengthens
+  strength: strong
+  description: Patients receiving only gabapentin without benzodiazepines showed significantly
+    decreased LOS (p<0.001) compared to benzodiazepine group

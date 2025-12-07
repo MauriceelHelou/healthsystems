@@ -1,0 +1,62 @@
+id: NEW:outpatient_pe_management_rate_to_hospitalization_past_year
+name: Outpatient Pulmonary Embolism Management Rate → Hospitalization Rate
+from_node:
+  node_id: NEW:outpatient_pe_management_rate
+  node_name: Outpatient Pulmonary Embolism Management Rate
+to_node:
+  node_id: hospitalization_past_year
+  node_name: Hospitalization Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Implementation of clinical decision support systems (CDSS) integrated with
+  electronic health records helps emergency physicians identify low-risk pulmonary
+  embolism patients eligible for outpatient management using validated risk-stratification
+  tools like the PE Severity Index'
+- 'Step 2: Eligible low-risk PE patients are discharged home with anticoagulation
+  therapy (warfarin with enoxaparin bridging) instead of being admitted, with timely
+  follow-up care coordinated through anticoagulation services and primary care providers'
+- 'Step 3: Safe outpatient management of PE reduces unnecessary hospitalizations for
+  patients who do not require inpatient care, decreasing overall hospitalization rates
+  without increasing adverse outcomes'
+- 'Step 4: Systematic support for outpatient PE management through physician education,
+  audit and feedback, and care pathway modifications increases the proportion of eligible
+  patients managed as outpatients from baseline rates of 1-8% toward higher rates
+  seen in other settings (up to 50%)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Vinson et al. 2018. Increasing Safe Outpatient Management of
+    Emergency Department Patients With Pulmonary Embolism. Annals of Internal Medicine.
+  supporting_citations: []
+description: Higher rates of outpatient management for eligible pulmonary embolism
+  patients reduce hospitalizations by avoiding unnecessary inpatient admissions. Evidence
+  shows that up to 50% of acute PE patients can be safely managed as outpatients using
+  validated risk-stratification tools, yet most centers hospitalize these patients
+  at rates of 92-99%. Implementing clinical decision support systems combined with
+  physician education and timely follow-up care enables identification and safe discharge
+  of low-risk PE patients, reducing hospitalization rates without increasing adverse
+  outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Clinical decision support system availability
+  direction: strengthens
+  strength: strong
+  description: Electronic CDSS integrated into ED workflow significantly facilitates
+    identification of eligible patients for outpatient management
+- name: Timely follow-up care availability
+  direction: strengthens
+  strength: strong
+  description: Expeditious postdischarge follow-up with anticoagulation services and
+    primary care is essential for safe outpatient PE management
+- name: Physician education and audit feedback
+  direction: strengthens
+  strength: moderate
+  description: Structured education, physician-specific feedback, and study champion
+    involvement increase adoption of outpatient management protocols
+- name: Observation unit availability
+  direction: strengthens
+  strength: moderate
+  description: Short-term (<24-hour) ED-based observation units provide intermediate
+    option between full hospitalization and direct home discharge

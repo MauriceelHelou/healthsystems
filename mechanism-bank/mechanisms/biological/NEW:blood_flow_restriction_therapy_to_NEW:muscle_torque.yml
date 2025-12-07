@@ -1,0 +1,51 @@
+id: NEW:blood_flow_restriction_therapy_to_NEW:muscle_torque
+name: Blood Flow Restriction Therapy with Exercise → Muscle Torque
+from_node:
+  node_id: NEW:blood_flow_restriction_therapy
+  node_name: Blood Flow Restriction Therapy with Exercise
+to_node:
+  node_id: NEW:muscle_torque
+  node_name: Muscle Torque
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Blood flow restriction during resistance exercise limits venous return'
+- 'Step 2: Limited blood flow theoretically enhances fast-twitch muscle fiber recruitment'
+- 'Step 3: Enhanced fiber recruitment proposed to improve torque-generating capacity'
+- 'Step 4: Meta-analysis shows no significant torque improvements versus exercise alone'
+evidence:
+  quality_rating: A
+  n_studies: 21
+  primary_citation: 'D. Khurana et al. 2023. "Blood flow restriction therapy with exercise are no better
+    than exercise alone in improving athletic performance, muscle strength, and hypertrophy: a systematic
+    review and meta-analysis." https://doi.org/10.1080/08990220.2023.2181328'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 27 studies identified, 21 analyzed
+  - Studies included randomized controlled trials from inception to April 2021
+  - Full citation details for individual RCTs require access to complete manuscript
+  doi: 10.1080/08990220.2023.2181328
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Blood flow restriction therapy with exercise shows no significant improvement in muscle torque
+  compared to exercise alone, with high heterogeneity evidenced by wide confidence intervals.
+quantitative_effects:
+  effect_size:
+    value: -0.54
+    type: standardized_mean_difference
+    ci_lower: -1.19
+    ci_upper: 0.12
+moderators:
+- name: time_frame
+  direction: neutral
+  strength: moderate
+  description: Intermediate (SMD 0.90, 95% CI -1.01, 2.81) and long-term effects both showed wide confidence
+    intervals crossing null
+structural_competency:
+  equity_implications: The null finding suggests that functional strength outcomes can be achieved with
+    standard exercise, which has implications for rehabilitation accessibility in resource-limited settings.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.096983'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,58 @@
+id: NEW:emergency_department_alcohol_brief_intervention_to_alcohol_use_disorder
+name: Emergency Department Alcohol Brief Intervention → Alcohol Use Disorder
+from_node:
+  node_id: NEW:emergency_department_alcohol_brief_intervention
+  node_name: Emergency Department Alcohol Brief Intervention
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Emergency department serves as point of contact for populations with limited healthcare access'
+- 'Step 2: Screening identifies individuals with hazardous drinking patterns or early-stage alcohol problems'
+- 'Step 3: Brief intervention provides structured feedback and motivation for behavior change'
+- 'Step 4: Referral to treatment connects individuals to specialized alcohol treatment services'
+- 'Step 5: Early intervention prevents progression to more severe alcohol use disorder'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Emma J Adams et al. 2023. "Effectiveness and implementation of interventions for
+    health promotion in urgent and emergency care settings: an umbrella review.." https://doi.org/10.1186/s12873-023-00798-7'
+  supporting_citations:
+  - Additional citations require full-text access - 15 reviews on alcohol interventions identified
+  - Additional citations require full-text access - 13 reviews focused on effectiveness outcomes
+  - Additional citations require full-text access - 2 reviews focused on implementation aspects
+  doi: 10.1186/s12873-023-00798-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol brief interventions and SBIRT delivered in emergency care settings reduce alcohol-related
+  outcomes by providing a healthcare access point for under-served populations. Review evidence supports
+  effectiveness though with heterogeneity across study designs and populations.
+moderators:
+- name: staff_type
+  direction: strengthens
+  strength: weak
+  description: Interventions delivered by wide range of staff with substantial variation in training and
+    approach
+- name: patient_acceptability
+  direction: strengthens
+  strength: moderate
+  description: Alcohol brief interventions appear acceptable to UEC patients
+- name: clinician_barriers
+  direction: weakens
+  strength: moderate
+  description: Clinicians face barriers in delivering interventions including time constraints and lack
+    of training
+structural_competency:
+  equity_implications: This mechanism represents a structural approach to addressing alcohol use by leveraging
+    healthcare system touchpoints rather than relying on individual help-seeking. Implementation challenges
+    highlight need for systemic changes including increased training, integration into service delivery,
+    and supportive policy frameworks. The focus on under-served populations explicitly addresses health
+    equity.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.085905'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

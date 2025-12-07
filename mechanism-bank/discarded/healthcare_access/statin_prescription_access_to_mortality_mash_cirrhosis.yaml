@@ -1,0 +1,52 @@
+id: statin_prescription_access_to_mortality_mash_cirrhosis
+name: Statin Prescription Access → Mortality in MASH Cirrhosis Patients
+from_node:
+  node_id: statin_prescription_access
+  node_name: Statin Prescription Access
+to_node:
+  node_id: mortality_mash_cirrhosis
+  node_name: Mortality in MASH Cirrhosis Patients
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Statin therapy is historically underutilized in patients with chronic liver
+  disease, creating a treatment gap'
+- 'Step 2: Active statin prescription at time of liver transplant evaluation provides
+  pharmacological benefit in metabolic dysfunction-associated steatohepatitis'
+- 'Step 3: Statins reduce inflammation and fibrosis progression in MASH cirrhosis
+  through lipid-lowering and pleiotropic effects'
+- 'Step 4: Reduced disease progression and cardiovascular complications lower mortality
+  risk in decompensated MASH patients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Katherine M Cooper et al. 2025. "Statin Therapy is Associated
+    With Lower Risk of Mortality Among Liver Transplant Candidates With Metabolic
+    Dysfunction-associated Steatohepatitis.." *Journal of clinical and experimental
+    hepatology*. https://doi.org/10.1016/j.jceh.2024.102427
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.379470'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: cirrhosis_etiology
+  direction: strengthens
+  strength: strong
+  description: Statin benefit specific to MASH cirrhosis (mortality 16% vs 35%) but
+    associated with increased mortality in non-MASH cirrhosis, particularly high-MELD-Na
+    patients
+- name: disease_severity_meld_na
+  direction: weakens
+  strength: strong
+  description: High MELD-Na scores associated with increased mortality risk with statin
+    use in non-MASH cirrhosis patients
+- name: metabolic_comorbidity_profile
+  direction: strengthens
+  strength: moderate
+  description: Statin users were older, had higher BMI, and more coronary artery disease;
+    benefit appears strongest in metabolic dysfunction context
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/statin_prescription_access_to_mortality_mash_cirrhosis.yaml
+_category: healthcare_access

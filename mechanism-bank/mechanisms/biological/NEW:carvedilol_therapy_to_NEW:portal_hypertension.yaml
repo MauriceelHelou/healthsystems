@@ -1,0 +1,55 @@
+id: NEW:carvedilol_therapy_to_NEW:portal_hypertension
+name: Carvedilol Therapy → Portal Hypertension
+from_node:
+  node_id: NEW:carvedilol_therapy
+  node_name: Carvedilol Therapy
+to_node:
+  node_id: NEW:portal_hypertension
+  node_name: Portal Hypertension
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Carvedilol acts as a non-selective β-blocker, blocking both β1 and β2 adrenergic
+  receptors, reducing cardiac output and splanchnic blood flow'
+- 'Step 2: Carvedilol''s intrinsic α1-adrenergic blocking activity produces vasodilatory
+  effects that ameliorate hepatic vascular resistance'
+- 'Step 3: The reduction in hepatic vascular resistance directly targets a major mechanism
+  of portal hypertension in early cirrhosis'
+- 'Step 4: Combined reduction in splanchnic inflow and hepatic vascular resistance
+  leads to decreased portal venous pressure'
+- 'Step 5: Lower portal pressure reduces risk of decompensation events (variceal bleeding,
+  ascites) in patients with clinically significant portal hypertension'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: Càndid Villanueva et al. 2022. Carvedilol reduces the risk of
+    decompensation and mortality in patients with compensated cirrhosis in a competing-risk
+    meta-analysis. Journal of hepatology.
+  supporting_citations: []
+description: 'Carvedilol therapy reduces portal hypertension through a dual mechanism:
+  non-selective β-blockade decreases cardiac output and splanchnic blood flow, while
+  its intrinsic α1-blocking vasodilatory activity reduces hepatic vascular resistance.
+  This competing-risk meta-analysis of 4 RCTs (352 patients) demonstrated that carvedilol
+  significantly reduced risk of decompensation (SHR 0.506) and improved survival in
+  patients with compensated cirrhosis and clinically significant portal hypertension.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.506
+    type: hazard_ratio
+    ci_lower: 0.289
+    ci_upper: 0.887
+  p_value: 0.017
+  sample_size: 352
+moderators:
+- name: Compensated vs decompensated cirrhosis
+  direction: strengthens
+  strength: strong
+  description: Evidence specifically supports effectiveness in compensated cirrhosis
+    patients with clinically significant portal hypertension (CSPH)
+- name: Stage of portal hypertension
+  direction: strengthens
+  strength: moderate
+  description: Carvedilol's vasodilatory activity is particularly effective in early
+    cirrhosis where hepatic vascular resistance is a major mechanism

@@ -1,0 +1,51 @@
+id: NEW:stable_housing_status_to_NEW:psychiatric_substance_service_use
+name: Stable Housing Status → Psychiatric and Substance Service Use
+from_node:
+  node_id: NEW:stable_housing_status
+  node_name: Stable Housing Status
+to_node:
+  node_id: NEW:psychiatric_substance_service_use
+  node_name: Psychiatric and Substance Service Use
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Individuals experiencing homelessness obtain stable housing through various
+  pathways including Housing First programs or other housing interventions'
+- 'Step 2: Stable housing provides environmental stability that may have ameliorative
+  effects on mental health, reducing symptom severity and crisis episodes'
+- 'Step 3: Reduced psychiatric symptom burden decreases the perceived need for psychiatric
+  and substance use services'
+- 'Step 4: Additionally, services may be more accessible and actively sought during
+  periods of homelessness when individuals are in contact with shelter systems and
+  outreach programs'
+- 'Step 5: The combination of improved mental health stability and reduced accessibility/outreach
+  results in decreased utilization of psychiatric and substance services among stably
+  housed individuals'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Olubunmi O Asana et al. 2018. "Associations of Alcohol Use Disorder,
+    Alcohol Use, Housing, and Service Use in A Homeless Sample of 255 Individuals
+    Followed over 2 Years." Substance Abuse.
+  supporting_citations: []
+description: A 2-year prospective longitudinal study of 255 homeless individuals found
+  that stable housing was negatively associated with psychiatric and substance service
+  use. The authors propose that obtaining housing may have ameliorative effects on
+  mental health, thereby diminishing the perceived need for psychiatric services.
+  Additionally, services may be more accessible during homelessness when individuals
+  are in contact with shelter and outreach systems. This finding supports Housing
+  First policy approaches by demonstrating that housing stability does not increase
+  substance use risk while potentially reducing service dependency.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: alcohol_use_disorder_status
+  direction: strengthens
+  strength: moderate
+  description: Lifetime alcohol use disorder was positively associated with substance
+    and medical service use, potentially modifying the housing-service use relationship
+- name: time_since_housing
+  direction: strengthens
+  strength: weak
+  description: The association patterns differed between first and second year of
+    follow-up, suggesting temporal dynamics in service utilization after housing

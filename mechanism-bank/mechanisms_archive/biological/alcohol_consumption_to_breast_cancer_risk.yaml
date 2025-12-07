@@ -1,0 +1,43 @@
+id: alcohol_consumption_to_breast_cancer_risk
+name: Alcohol Consumption → Breast Cancer Risk
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: breast_cancer_risk
+  node_name: Breast Cancer Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol consumption increases circulating estrogen and other hormones'
+- 'Step 2: Acetaldehyde (alcohol metabolite) damages DNA and impairs DNA repair'
+- 'Step 3: Alcohol increases oxidative stress and production of reactive oxygen species
+  in breast tissue'
+- 'Step 4: Chronic exposure promotes cellular proliferation and inhibits apoptosis
+  in breast cells'
+- 'Step 5: Accumulated DNA damage and hormonal stimulation increase probability of
+  malignant transformation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Kristen Foley et al. 2024. "Recalibrating temporalities of risk:
+    alcohol consumption and breast cancer risk for Australian women pre-midlife before
+    and during COVID-19." *Health, Risk &amp; Society*. https://doi.org/10.1080/13698575.2024.2318545'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.486628'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: life_stage
+  direction: strengthens
+  strength: moderate
+  description: Pre-midlife women (25-44) may have heightened biological susceptibility
+    during periods of hormonal activity and breast tissue development
+- name: structural_factors_enabling_consumption
+  direction: strengthens
+  strength: strong
+  description: Structural conditions that increase alcohol consumption frequency or
+    quantity (e.g., pandemic stressors, gendered labor burdens) increase cumulative
+    exposure and cancer risk

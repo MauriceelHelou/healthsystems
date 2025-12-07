@@ -1,0 +1,42 @@
+id: NEW:lichen_sclerosus_diagnosis_to_NEW:skin_neoplasm_risk
+name: Lichen Sclerosus Diagnosis → Skin Neoplasm Risk
+from_node:
+  node_id: NEW:lichen_sclerosus_diagnosis
+  node_name: Lichen Sclerosus Diagnosis
+to_node:
+  node_id: NEW:skin_neoplasm_risk
+  node_name: Skin Neoplasm Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Lichen sclerosus causes chronic inflammation of affected skin tissue, primarily
+  in genital regions (77% females, 99% males)'
+- 'Step 2: Persistent inflammatory microenvironment leads to ongoing tissue damage,
+  cellular turnover, and DNA damage accumulation'
+- 'Step 3: Chronic inflammation and tissue remodeling create conditions favorable
+  for malignant transformation, increasing skin neoplasm risk as a documented complication'
+evidence:
+  quality_rating: A
+  n_studies: 900
+  primary_citation: 'Santina Conte et al. 2025. Clinical presentations and complications
+    of lichen sclerosus: A systematic review. Journal der Deutschen Dermatologischen
+    Gesellschaft = Journal of the German Society of Dermatology : JDDG'
+  supporting_citations: []
+description: This systematic review of 900 studies identified skin neoplasms as a
+  documented complication of lichen sclerosus. The chronic inflammatory nature of
+  LS, characterized by pigmentary changes, architectural alterations, atrophy, and
+  ongoing tissue damage, creates a pro-oncogenic microenvironment that increases the
+  risk of malignant transformation in affected tissues.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Anatomical localization and clinical presentations differ between sexes,
+    with 2795 complications reported in women vs 769 in men
+- name: anatomical_location
+  direction: strengthens
+  strength: strong
+  description: Genital localization predominates (77% females, 99% males), which may
+    influence neoplasm risk given tissue-specific carcinogenic pathways

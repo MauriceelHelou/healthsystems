@@ -1,0 +1,42 @@
+id: driver_bac_level_to_crash_risk
+name: Driver Blood Alcohol Concentration Level → Risk of Crash Involvement
+from_node:
+  node_id: driver_bac_level
+  node_name: Driver Blood Alcohol Concentration Level
+to_node:
+  node_id: crash_risk
+  node_name: Risk of Crash Involvement
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Elevated BAC impairs neurological function including reaction time, judgment,
+  and motor coordination'
+- 'Step 2: Impaired cognitive and physical function reduces ability to perceive hazards
+  and respond appropriately'
+- 'Step 3: Decreased hazard perception and response capacity increases probability
+  of crash involvement'
+- 'Step 4: Relative risk increases systematically with BAC level'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Lidia P Kostyniuk et al. 2018. "Potential effects of lowering
+    the BAC limit on injuries, fatalities, and costs.." *Journal of safety research*.
+    https://doi.org/10.1016/j.jsr.2017.12.005
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.557854'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: bac_level_threshold
+  direction: strengthens
+  strength: strong
+  description: Relative risk of crash involvement increases exponentially at higher
+    BAC levels; even modest BAC levels (0.05%-0.08%) show elevated risk compared to
+    zero BAC
+- name: driver_tolerance
+  direction: weakens
+  strength: weak
+  description: Chronic alcohol users may show reduced impairment at given BAC levels,
+    though still at elevated crash risk

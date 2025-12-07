@@ -1,0 +1,58 @@
+id: NEW:telemedicine_addiction_consultation_access_to_sud_treatment_entry_rate
+name: Telemedicine Addiction Medicine Consultation Access → SUD Treatment Entry Rate
+from_node:
+  node_id: NEW:telemedicine_addiction_consultation_access
+  node_name: Telemedicine Addiction Medicine Consultation Access
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Telemedicine consultations provide addiction medicine expertise to primary care settings where
+  patients already receive care'
+- 'Step 2: Consultations help identify patients appropriate for specialty addiction treatment'
+- 'Step 3: Consultants facilitate warm handoffs and referral coordination to specialty treatment programs'
+- 'Step 4: Reduced barriers to specialty treatment referral increase patient initiation of specialty addiction
+  treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Leibowitz et al. 2020. "A Telemedicine Approach to Increase Treatment of Alcohol
+    Use Disorder in Primary Care: A Pilot Feasibility Study." https://doi.org/10.1097/ADM.0000000000000666'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references low treatment rates for AUD as
+    a public health concern
+  doi: 10.1097/ADM.0000000000000666
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patients receiving telemedicine consultations showed higher specialty treatment initiation
+  rates (34.4%) compared to non-recipients (19.7%, p<0.05). This suggests telemedicine consultations can
+  bridge the gap between primary care identification and specialty treatment engagement.
+quantitative_effects:
+  effect_size:
+    value: 34.4
+    type: percentage_change
+  p_value: 0.05
+  sample_size: 703
+moderators:
+- name: immediacy_of_consultation
+  direction: strengthens
+  strength: moderate
+  description: Users identified immediacy as the most useful aspect of the service, suggesting real-time
+    access strengthens effectiveness
+structural_competency:
+  equity_implications: This mechanism addresses the structural fragmentation between primary care and
+    specialty addiction treatment systems. The intervention creates a pathway that addresses system-level
+    barriers including lack of referral coordination, limited PCP knowledge of specialty services, and
+    disconnection between healthcare settings. The finding that few people with AUD receive treatment
+    reflects healthcare system failures, not individual patient deficits.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.133428'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,56 @@
+id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226_to_tuberculosis_incidence
+name: Ambient Air Pollution PM2.5 → Pulmonary Tuberculosis Incidence
+from_node:
+  node_id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226
+  node_name: Ambient Air Pollution PM2.5
+to_node:
+  node_id: tuberculosis_incidence
+  node_name: Pulmonary Tuberculosis Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhalation of PM2.5 particles deposits fine particulate matter deep into
+  the lower respiratory tract and alveoli due to their small size (≤2.5 micrometers)'
+- 'Step 2: PM2.5 exposure causes oxidative stress and inflammatory responses in pulmonary
+  tissue, impairing local immune defenses including alveolar macrophage function'
+- 'Step 3: Compromised pulmonary immune function reduces the ability to contain Mycobacterium
+  tuberculosis infection, either increasing susceptibility to new infection or promoting
+  reactivation of latent tuberculosis'
+- 'Step 4: Chronic inflammation and epithelial damage from sustained PM2.5 exposure
+  creates a permissive environment for bacterial proliferation and disease progression
+  to active pulmonary tuberculosis'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: C. A. Dimala and Benjamin Momo Kadia 2022. "A systematic review
+    and meta-analysis on the association between ambient air pollution and pulmonary
+    tuberculosis." Scientific Reports.
+  supporting_citations: []
+description: 'This meta-analysis of 6 studies examining PM2.5 and pulmonary tuberculosis
+  incidence found that for every 10 μg/m³ increment in PM2.5 concentration, there
+  was a 12% increase in PTB incidence (aRR = 1.12, 95% CI: 1.06-1.19). The biological
+  mechanism involves PM2.5-induced pulmonary inflammation, oxidative stress, and impairment
+  of alveolar macrophage function, which collectively compromise the lung''s ability
+  to defend against Mycobacterium tuberculosis infection. No association was found
+  between PM2.5 and TB-related mortality or hospital admissions.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.12
+    type: relative_risk
+    ci_lower: 1.06
+    ci_upper: 1.19
+  p_value: 0.001
+  sample_size: 437255
+moderators:
+- name: Geographic region
+  direction: strengthens
+  strength: moderate
+  description: Evidence predominantly from Asian countries with high TB burden and
+    air pollution levels; effect may be more pronounced in these settings
+- name: Exposure duration
+  direction: strengthens
+  strength: moderate
+  description: Chronic exposure likely has cumulative immunosuppressive effects on
+    pulmonary defenses

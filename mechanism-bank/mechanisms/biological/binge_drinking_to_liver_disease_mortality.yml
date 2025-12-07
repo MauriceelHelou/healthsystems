@@ -1,0 +1,51 @@
+id: binge_drinking_to_liver_disease_mortality
+name: Binge Drinking → Liver Disease Mortality
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol exposure causes cumulative hepatocellular damage'
+- 'Step 2: Development of alcoholic liver disease spectrum (steatosis to cirrhosis)'
+- 'Step 3: Cirrhosis leads to complications including hepatocellular carcinoma, variceal bleeding, hepatorenal
+  syndrome'
+- 'Step 4: Decompensated liver disease results in death'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'Laura Llamosas-Falcón et al. 2022. "Sex-specific association between alcohol consumption
+    and liver cirrhosis: An updated systematic review and meta-analysis." https://doi.org/10.3389/fgstr.2022.1005729'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes 24 longitudinal and case-control
+    studies
+  - Studies included examined ICD-8/ICD-9 code 571 and ICD-10 codes K70, K73, K74
+  - Pooled analysis from PubMed/Medline and Embase databases
+  doi: 10.3389/fgstr.2022.1005729
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol consumption is associated with increased liver cirrhosis mortality, with females
+  showing higher vulnerability than males at equivalent consumption levels. The study found that additional
+  analyses confirmed the sex-specific pattern for mortality outcomes specifically.
+quantitative_effects:
+  sample_size: 3037329
+moderators:
+- name: biological_sex
+  direction: strengthens
+  strength: strong
+  description: Females showed higher risk for both morbidity and mortality from liver cirrhosis compared
+    to males at equivalent alcohol consumption levels
+structural_competency:
+  equity_implications: Mortality disparities from alcohol-related liver disease reflect intersecting structural
+    factors including access to hepatology care, liver transplant equity, healthcare system navigation
+    barriers, insurance coverage, and socioeconomic factors affecting early detection and treatment. Sex-based
+    differences in mortality risk require sex-specific prevention guidelines and treatment protocols.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.303215'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

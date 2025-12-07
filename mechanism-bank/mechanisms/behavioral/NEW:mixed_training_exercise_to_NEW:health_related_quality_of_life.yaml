@@ -1,0 +1,59 @@
+id: NEW:mixed_training_exercise_to_NEW:health_related_quality_of_life
+name: Mixed Training Exercise → Health-Related Quality of Life
+from_node:
+  node_id: NEW:mixed_training_exercise
+  node_name: Mixed Training Exercise
+to_node:
+  node_id: NEW:health_related_quality_of_life
+  node_name: Health-Related Quality of Life
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Mixed training exercise combines aerobic and resistance training modalities,
+  engaging multiple physiological systems simultaneously including cardiovascular,
+  musculoskeletal, and neuromuscular systems'
+- 'Step 2: The combined exercise approach at optimal dose (~970 METs-min/week) induces
+  comprehensive physiological adaptations including improved cardiorespiratory fitness,
+  muscular strength, endurance, and body composition'
+- 'Step 3: These physical improvements translate to enhanced functional capacity,
+  reduced fatigue, and improved ability to perform daily activities'
+- 'Step 4: Psychological benefits emerge including improved mood, reduced anxiety
+  and depression, enhanced self-efficacy and body image'
+- 'Step 5: The synergistic combination of physical and psychological improvements
+  results in significantly enhanced health-related quality of life, with mixed training
+  demonstrating the strongest effect among exercise modalities'
+evidence:
+  quality_rating: A
+  n_studies: 48
+  primary_citation: 'Zhiyu Xiong et al. 2024. "Optimal exercise dose-response improves
+    health-related quality of life in cancer survivors: a systematic review and Bayesian
+    network meta-analysis of RCTs." Frontiers in oncology.'
+  supporting_citations: []
+description: 'Mixed training exercise, combining aerobic and resistance components,
+  demonstrates the strongest positive effect on health-related quality of life among
+  cancer survivors. At an optimal dose of approximately 970 METs-min/week, mixed training
+  produces a large standardized effect (SMD: 0.883), outperforming single-modality
+  exercise interventions. The combined approach addresses multiple dimensions of quality
+  of life through comprehensive physical and psychological adaptations.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.883
+    type: standardized_mean_difference
+    ci_lower: 0.455
+    ci_upper: 1.345
+  p_value: null
+  sample_size: 3050
+moderators:
+- name: exercise_dose
+  direction: u_shaped
+  strength: strong
+  description: Optimal dose for mixed training is 970 METs-min/week, with diminishing
+    returns observed beyond 1,100 METs-min/week across all exercise types
+- name: exercise_type
+  direction: strengthens
+  strength: moderate
+  description: 'Mixed training shows superior effects (SMD: 0.883) compared to aerobic
+    exercise (SMD: 0.681), resistance training (SMD: 0.695), and mind-body exercises
+    (SMD: 0.672)'

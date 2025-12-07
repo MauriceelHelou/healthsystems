@@ -1,0 +1,55 @@
+id: NEW:malnutrition_older_adults_to_NEW:delirium_postoperative
+name: Malnutrition in Older Adults → Postoperative Delirium
+from_node:
+  node_id: NEW:malnutrition_older_adults
+  node_name: Malnutrition in Older Adults
+to_node:
+  node_id: NEW:delirium_postoperative
+  node_name: Postoperative Delirium
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Malnutrition in older adults leads to deficiencies in essential nutrients
+  including B vitamins, amino acids, and micronutrients critical for neurotransmitter
+  synthesis and brain function'
+- 'Step 2: Protein-energy malnutrition compromises immune function and increases systemic
+  inflammation, elevating pro-inflammatory cytokines that can cross the blood-brain
+  barrier'
+- 'Step 3: Nutritional deficits impair the brain''s metabolic reserve and capacity
+  to maintain homeostasis during the physiological stress of surgery'
+- 'Step 4: The combination of surgical stress, anesthesia, and diminished neurological
+  resilience due to malnutrition precipitates acute brain dysfunction manifesting
+  as postoperative delirium'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'M. Chiavarini et al. 2024. Malnutrition-Related Health Outcomes
+    in Older Adults with Hip Fractures: A Systematic Review and Meta-Analysis. Nutrients.'
+  supporting_citations: []
+description: Malnutrition in older adults significantly increases the risk of postoperative
+  delirium following hip fracture surgery. A meta-analysis of 14 studies found that
+  malnourished older patients had 275% increased odds of developing delirium (OR =
+  2.75, 95% CI 1.80-4.18). The mechanism involves nutritional deficiencies impairing
+  neurotransmitter synthesis, increasing systemic inflammation, and reducing the brain's
+  metabolic reserve to cope with surgical stress.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.75
+    type: odds_ratio
+    ci_lower: 1.8
+    ci_upper: 4.18
+  p_value: 0.05
+  sample_size: null
+moderators:
+- name: Nutritional assessment tool used
+  direction: strengthens
+  strength: moderate
+  description: Studies used validated tools including MNA, GNRI, PNI, and CONUT scores
+    to assess malnutrition status
+- name: Time since fracture/surgery
+  direction: strengthens
+  strength: moderate
+  description: Risk of adverse outcomes including delirium was particularly elevated
+    at 1 month post-fracture

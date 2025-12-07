@@ -1,0 +1,40 @@
+id: cardiac_arrest_to_esophageal_ischemia
+name: Cardiac Arrest → Esophageal Ischemia
+from_node:
+  node_id: cardiac_arrest
+  node_name: Cardiac Arrest
+to_node:
+  node_id: esophageal_ischemia
+  node_name: Esophageal Ischemia
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Cardiac arrest causes cessation of effective circulation and global tissue
+  hypoperfusion'
+- 'Step 2: Esophageal mucosa, being particularly vulnerable to ischemic injury, experiences
+  hypoxic damage'
+- 'Step 3: Prolonged ischemia combined with pre-existing vascular compromise leads
+  to mucosal necrosis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Erik Roman-Pognuz et al. 2024. "Acute esophageal necrosis following
+    cardiac arrest: A rare and lethal syndrome with diagnostic challenges.." *International
+    journal of surgery case reports*. https://doi.org/10.1016/j.ijscr.2024.109751'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.416169'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: pre_existing_cirrhosis
+  direction: strengthens
+  strength: strong
+  description: Pre-existing liver cirrhosis and compromised vascular perfusion increase
+    vulnerability to ischemic injury following cardiac arrest
+- name: chronic_alcoholism
+  direction: strengthens
+  strength: moderate
+  description: History of alcoholism contributes to cirrhosis and overall physiological
+    vulnerability to ischemic events

@@ -1,0 +1,61 @@
+id: NEW:lay_counsellor_mental_health_interventions_to_depression_diagnosis
+name: Lay Counsellor Mental Health Interventions → Depression Diagnosis
+from_node:
+  node_id: NEW:lay_counsellor_mental_health_interventions
+  node_name: Lay Counsellor Mental Health Interventions
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Professionally trained lay counsellors are deployed in community settings addressing mental
+  health workforce shortages'
+- 'Step 2: Lay counsellors deliver structured interventions targeting depressive symptoms'
+- 'Step 3: Community-based approach reduces barriers to care including stigma, cost, and geographic access'
+- 'Step 4: Participants experience reduction in depression symptoms through accessible, culturally appropriate
+  care'
+evidence:
+  quality_rating: A
+  n_studies: 19
+  primary_citation: 'Suzanne M Connolly et al. 2021. "Mental health interventions by lay counsellors:
+    a systematic review and meta-analysis.." https://doi.org/10.2471/BLT.20.269050'
+  supporting_citations:
+  - Studies included from PubMed, Cochrane Central Register of Controlled Trials, PROSPERO and EBSCO databases
+    (2000-2019)
+  - Publications from United States National Center for PTSD professional section
+  - Additional citations require full-text access to identify specific included studies
+  doi: 10.2471/BLT.20.269050
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Lay counsellor interventions significantly reduce depression symptoms in low- and middle-income
+  countries. Depression was one of the primary outcomes measured, with pooled effects showing meaningful
+  symptom improvements.
+quantitative_effects:
+  effect_size:
+    value: -0.616
+    type: standardized_mean_difference
+    ci_lower: -0.866
+    ci_upper: -0.366
+  sample_size: 5612
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies conducted across multiple low- and middle-income countries; effectiveness demonstrated
+    across diverse settings
+moderators:
+- name: healthcare_system_capacity
+  direction: strengthens
+  strength: moderate
+  description: Effects may be stronger in settings with greater shortages of professional mental health
+    providers
+structural_competency:
+  equity_implications: Depression burden is higher in low-resource settings partly due to structural inequities
+    in healthcare access. This intervention addresses the structural determinant of healthcare workforce
+    distribution, which creates systematic disparities in mental health care availability between high-income
+    and low/middle-income countries.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.527322'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

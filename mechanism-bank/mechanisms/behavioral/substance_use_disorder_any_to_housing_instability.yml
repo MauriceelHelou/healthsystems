@@ -1,0 +1,52 @@
+id: substance_use_disorder_any_to_housing_instability
+name: Substance Use Disorder (Any) → Housing Instability
+from_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+to_node:
+  node_id: housing_instability
+  node_name: Housing Instability
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Substance dependency consumes financial resources needed for housing costs'
+- 'Step 2: Substance use may lead to eviction or barriers to rental applications'
+- 'Step 3: Many housing programs require sobriety, excluding those with active substance use'
+- 'Step 4: Substance dependency creates barriers to successful transition to stable housing'
+- 'Step 5: Bidirectional cycle reinforces both homelessness and substance use'
+evidence:
+  quality_rating: A
+  n_studies: 34
+  primary_citation: 'Chris O''Leary et al. 2024. "The effectiveness of abstinence-based and harm reduction-based
+    interventions in reducing problematic substance use in adults who are experiencing homelessness in
+    high income countries: A systematic review and meta-analysis: A systematic review.." https://doi.org/10.1002/cl2.1396'
+  supporting_citations:
+  - Evidence from systematic review on substance use as barrier to housing transition
+  - Studies on housing program eligibility requirements
+  - Research on bidirectional relationship between homelessness and substance use
+  doi: 10.1002/cl2.1396
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Substance dependency creates barriers to successful transition to stable housing, creating
+  a bidirectional cycle where homelessness promotes substance use and substance use perpetuates homelessness
+quantitative_effects:
+  sample_size: 15255
+moderators:
+- name: housing_program_sobriety_requirements
+  direction: strengthens
+  strength: strong
+  description: Programs requiring abstinence for housing eligibility strengthen the barrier effect of
+    substance use on housing stability
+structural_competency:
+  equity_implications: While this mechanism includes substance use as a factor affecting housing, the
+    structural framing emphasizes that housing policies and program requirements create barriers rather
+    than simply blaming individual substance use. Housing-first approaches that do not require sobriety
+    represent a structural intervention to break this cycle. The equity implication is that populations
+    facing intersecting disadvantages (trauma history, poverty, discrimination) face compounded barriers
+    to both sobriety and housing.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.751190'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

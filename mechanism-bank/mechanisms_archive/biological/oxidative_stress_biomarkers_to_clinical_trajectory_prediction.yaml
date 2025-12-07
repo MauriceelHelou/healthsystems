@@ -1,0 +1,41 @@
+id: oxidative_stress_biomarkers_to_clinical_trajectory_prediction
+name: Oxidative Stress Biomarkers (Lipid Peroxidation) → Clinical Course Prediction
+from_node:
+  node_id: oxidative_stress_biomarkers
+  node_name: Oxidative Stress Biomarkers (Lipid Peroxidation)
+to_node:
+  node_id: clinical_trajectory_prediction
+  node_name: Clinical Course Prediction
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Lipid peroxidation biomarkers (thiobarbituric acid products, diene conjugates,
+  8-isoprostane) reflect intensity of oxidative damage'
+- 'Step 2: Antioxidant-pro-oxidant status indicators quantify redox imbalance severity'
+- 'Step 3: These biochemical markers can predict pathology trajectory in chronic alcoholism
+  patients'
+- 'Step 4: Biomarker monitoring enables assessment of treatment effectiveness and
+  guides clinical decision-making'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S Dubivska et al. 2023. "STUDY OF THE PROCESSES OF LIPID PEROXIDATION,
+    THE STATE OF THE ANTIOXIDANT SYSTEM IN PATIENTS WITH POLYTRAUMA AND ALCOHOL ANAMNESIS.."
+    *Georgian medical news*.
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.744927'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: measurement_timing
+  direction: strengthens
+  strength: moderate
+  description: Serial measurements (day 1 and day 7) provide dynamic assessment of
+    treatment response and pathology progression
+- name: comorbid_polytrauma
+  direction: strengthens
+  strength: moderate
+  description: Polytrauma patients show more pronounced biomarker elevations making
+    them more useful for prognostication

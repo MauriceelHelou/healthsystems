@@ -1,0 +1,55 @@
+id: substance_use_harm_reduction_service_access_to_drug_overdose_mortality
+name: Substance Use Harm Reduction Service Access → Drug Overdose Mortality
+from_node:
+  node_id: substance_use_harm_reduction_service_access
+  node_name: Substance Use Harm Reduction Service Access
+to_node:
+  node_id: drug_overdose_mortality
+  node_name: Drug Overdose Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Harm reduction services including drug checking capacity identify dangerous adulterants in
+  drug supply'
+- 'Step 2: Drug checking information enables people who use drugs to make informed decisions about dosing
+  and use'
+- 'Step 3: Naloxone distribution through harm reduction services increases overdose reversal capability'
+- 'Step 4: Regular contact with harm reduction services facilitates rapid response to contaminated supply
+  emergencies'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Traci C Green et al. 2025. "Study Protocol on Rapid Measurement of Novel Harm Reduction
+    Housing on HIV Risk, Treatment Uptake, Drug Use, and Supply.." https://doi.org/10.1177/29767342251341706
+  supporting_citations:
+  - Prior Rapid Assessment of Consumer Knowledge (RACK) findings referenced in protocol
+  - Ongoing drug checking capacity referenced in protocol
+  - Additional citations require full-text access
+  doi: 10.1177/29767342251341706
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Integration of harm reduction services including drug checking within housing environments
+  may reduce overdose mortality by providing information about drug supply and facilitating access to
+  naloxone and emergency response.
+quantitative_effects:
+  sample_size: 106
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Drug supply composition varies by region; study leverages existing drug checking infrastructure
+    in Boston area
+moderators:
+- name: drug_supply_contamination
+  direction: strengthens
+  strength: strong
+  description: Study explicitly examines drug supply as outcome, recognizing that fentanyl contamination
+    increases importance of harm reduction
+structural_competency:
+  equity_implications: This mechanism addresses overdose as a consequence of unregulated drug supply and
+    lack of safe consumption infrastructure rather than individual drug use choices. Drug checking represents
+    a structural public health response to poisoning crisis.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.841074'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

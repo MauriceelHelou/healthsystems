@@ -1,0 +1,49 @@
+id: NEW:naive_cd4_t_cell_fraction_to_all_cause_mortality_rate
+name: Naïve CD4+ T-cell Fraction → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:naive_cd4_t_cell_fraction
+  node_name: Naïve CD4+ T-cell Fraction
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Higher naïve CD4+ T-cell fractions indicate preserved thymic output and
+  immune system regenerative capacity, reflecting a younger immunological age'
+- 'Step 2: Naïve CD4+ T-cells provide a reservoir of uncommitted immune cells capable
+  of responding to novel antigens and pathogens'
+- 'Step 3: Adequate naïve T-cell pools enable effective immune surveillance against
+  infections, malignancies, and other threats that contribute to mortality'
+- 'Step 4: Maintained naïve CD4+ T-cell populations may indicate reduced chronic inflammation
+  and immunosenescence, both associated with age-related diseases and mortality'
+- 'Step 5: The inverse association with all-cause mortality persists independently
+  of epidemiological risk factors and baseline co-morbidity, suggesting a direct biological
+  protective effect'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: Qi Luo et al. 2023. A meta-analysis of immune-cell fractions at
+    high resolution reveals novel associations with common phenotypes and health outcomes.
+    Genome Medicine.
+  supporting_citations: []
+description: Higher fractions of naïve CD4+ T-cells in blood are associated with reduced
+  risk of all-cause mortality. This meta-analysis of 22 cohorts (23,053 samples for
+  phenotype associations, 4,386 for health outcomes) found that naïve CD4+ T-cell
+  fractions independently predicted reduced mortality risk even after controlling
+  for major epidemiological risk factors and baseline co-morbidity. A machine learning
+  predictor using immune-cell fractions achieved a C-index of 0.69 for all-cause mortality,
+  increasing to 0.83 when combined with epidemiological factors.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: age
+  direction: weakens
+  strength: moderate
+  description: Naïve CD4+ T-cell fractions naturally decline with age, though the
+    protective association with mortality remained independent of age adjustment
+- name: baseline_comorbidity
+  direction: weakens
+  strength: weak
+  description: Association remained significant after adjustment for baseline co-morbidity,
+    though comorbidities may partially mediate the relationship

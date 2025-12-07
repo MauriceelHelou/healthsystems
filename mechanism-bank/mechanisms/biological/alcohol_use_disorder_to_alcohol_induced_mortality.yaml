@@ -1,0 +1,49 @@
+id: alcohol_use_disorder_to_alcohol_induced_mortality
+name: Alcohol Use Disorder → Alcohol Use Disorder Mortality
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol Use Disorder Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol use disorder leads to chronic, heavy alcohol consumption patterns
+  that exceed safe thresholds'
+- 'Step 2: Prolonged excessive alcohol intake causes cumulative organ damage including
+  hepatotoxicity (liver cirrhosis, alcoholic hepatitis), cardiotoxicity, and neurotoxicity'
+- 'Step 3: AUD impairs behavioral regulation and increases risk of acute alcohol poisoning,
+  withdrawal complications, and accidents'
+- 'Step 4: Progressive multi-organ dysfunction and acute alcohol-related events directly
+  contribute to mortality from 100% alcohol-attributable causes'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: 'Tessa Carr et al. 2024. The risk relationships between alcohol
+    consumption, alcohol use disorder and alcohol use disorder mortality: A systematic
+    review and meta-analysis. Addiction.'
+  supporting_citations: []
+description: This systematic review and meta-analysis establishes an exponential positive
+  relationship between alcohol use disorder and alcohol-induced mortality. The mortality
+  rate in AUD patients was 3.13 per 1000 person-years. Higher levels of alcohol consumption
+  associated with AUD dramatically increase mortality risk in a dose-response manner,
+  with four standard drinks daily conferring approximately 4-fold increased risk of
+  dying from AUD compared to non-drinkers.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.13
+    type: mortality_rate_per_1000_person_years
+    ci_lower: 1.07
+    ci_upper: 9.13
+  p_value: null
+  sample_size: null
+moderators:
+- name: alcohol_consumption_level
+  direction: strengthens
+  strength: strong
+  description: Risk relationship is exponential - at 4 standard drinks per day, mortality
+    risk is 4-fold higher (RR=3.94) compared to non-drinkers; even at 20g/day (~1
+    large beer), AUD mortality risk is approximately double

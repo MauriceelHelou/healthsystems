@@ -1,0 +1,59 @@
+id: NEW:brief_intervention_alcohol_healthcare_to_NEW:alcohol_consumption_frequency
+name: Brief Interventions for Alcohol Use in Healthcare Settings → Frequency of Alcohol Consumption
+from_node:
+  node_id: NEW:brief_intervention_alcohol_healthcare
+  node_name: Brief Interventions for Alcohol Use in Healthcare Settings
+to_node:
+  node_id: NEW:alcohol_consumption_frequency
+  node_name: Frequency of Alcohol Consumption
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Brief interventions delivered during routine healthcare encounters reach individuals who may
+  not seek specialized treatment'
+- 'Step 2: Structured feedback and motivational techniques increase awareness of drinking patterns'
+- 'Step 3: Goal-setting and action planning support behavior change'
+- 'Step 4: Patients reduce frequency of alcohol consumption occasions'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'Maria L Schweer-Collins et al. 2023. "Investigating for Whom Brief Substance Use
+    Interventions Are Most Effective: An Individual Participant Data Meta-analysis.." https://doi.org/10.1007/s11121-023-01525-1'
+  supporting_citations:
+  - Parent aggregate data meta-analysis (k = 116 trials) referenced in methods
+  - 'OSF pre-registration: osf.io/m48g6'
+  - Additional citations require full-text access
+  doi: 10.1007/s11121-023-01525-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief interventions in healthcare settings reduced frequency of alcohol consumption, with
+  effects particularly pronounced among females and those with lower educational attainment.
+quantitative_effects:
+  effect_size:
+    value: 0.1
+    type: standardized_mean_difference
+    ci_lower: 0.03
+    ci_upper: 0.17
+  sample_size: 12074
+moderators:
+- name: sex_female
+  direction: strengthens
+  strength: strong
+  description: Effect was statistically significant among females
+- name: education_below_high_school
+  direction: strengthens
+  strength: strong
+  description: Individuals with less than high school education showed larger reductions in alcohol consumption
+    frequency at 3-month follow-up (d = 0.16)
+structural_competency:
+  equity_implications: The finding that individuals with less than high school education show larger effects
+    suggests brief interventions may help address health inequities. Lower educational attainment is a
+    marker of structural disadvantage often associated with reduced access to specialized treatment services.
+    Healthcare-based brief interventions may serve as an equity-promoting intervention by reaching populations
+    less likely to access specialized alcohol treatment programs.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.999272'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

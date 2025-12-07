@@ -1,0 +1,57 @@
+id: homelessness_unstable_housing_to_cardiovascular_outpatient_visits
+name: Homelessness and Unstable Housing → Cardiovascular Outpatient Care Visits
+from_node:
+  node_id: homelessness_unstable_housing
+  node_name: Homelessness and Unstable Housing
+to_node:
+  node_id: cardiovascular_outpatient_visits
+  node_name: Cardiovascular Outpatient Care Visits
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Homelessness and unstable housing creates barriers to maintaining regular healthcare appointments
+  and follow-up care'
+- 'Step 2: Lack of stable address and communication methods impedes healthcare system navigation and appointment
+  scheduling'
+- 'Step 3: Transportation barriers and competing survival needs reduce ability to access routine cardiovascular
+  care'
+- 'Step 4: Reduced outpatient cardiovascular disease management visits result in suboptimal chronic disease
+  control'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Lara J Sokoloff et al. 2024. "Association of Homelessness and Unstable Housing With
+    Cardiovascular Care Utilization Among Veterans.." *Circulation. Cardiovascular quality and outcomes*.
+    https://doi.org/10.1161/CIRCOUTCOMES.124.010993
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1161/CIRCOUTCOMES.124.010993
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '2.0'
+description: Veterans experiencing homelessness and unstable housing had 4.3% fewer outpatient visits
+  for cardiovascular disease management compared to housed veterans, indicating structural barriers to
+  routine care access.
+quantitative_effects:
+  effect_size:
+    value: 4.3
+    type: percentage_change
+    ci_lower: 2.5
+    ci_upper: 6.1
+  sample_size: 1357973
+moderators:
+- name: veteran_status
+  direction: strengthens
+  strength: moderate
+  description: Veterans are disproportionately affected by homelessness, creating amplified barriers to
+    care access
+structural_competency:
+  equity_implications: This mechanism reflects how housing instability - often rooted in inadequate affordable
+    housing policies, insufficient veteran support systems, and economic inequality - creates systematic
+    barriers to healthcare access. The effect demonstrates how structural determinants produce health
+    inequities through healthcare access pathways rather than individual choices.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.925740'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

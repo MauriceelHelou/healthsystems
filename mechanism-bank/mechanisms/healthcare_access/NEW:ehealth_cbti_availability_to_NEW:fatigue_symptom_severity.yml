@@ -1,0 +1,52 @@
+id: NEW:ehealth_cbti_availability_to_NEW:fatigue_symptom_severity
+name: eHealth Cognitive Behavioral Therapy for Insomnia Availability → Fatigue Symptom Severity
+from_node:
+  node_id: NEW:ehealth_cbti_availability
+  node_name: eHealth Cognitive Behavioral Therapy for Insomnia Availability
+to_node:
+  node_id: NEW:fatigue_symptom_severity
+  node_name: Fatigue Symptom Severity
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: eHealth CBTI expands access to insomnia treatment through digital platforms'
+- 'Step 2: Treatment addresses sleep quality and duration deficits that contribute to daytime fatigue'
+- 'Step 3: Both eCBTI and ipCBTI demonstrate statistically significant improvements in fatigue as a secondary
+  outcome'
+- 'Step 4: Improved sleep quality reduces chronic fatigue burden'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'S. Knutzen et al. 2024. "Efficacy of eHealth Versus In-Person Cognitive Behavioral
+    Therapy for Insomnia: Systematic Review and Meta-Analysis of Equivalence." https://doi.org/10.2196/58217'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 15 RCTs
+  - Within-group analyses showed significant improvements in fatigue for both delivery formats
+  - Individual study citations available in full systematic review
+  doi: 10.2196/58217
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Both eHealth and in-person CBTI resulted in statistically significant improvements in fatigue
+  as a secondary outcome. This supports the role of accessible insomnia treatment in addressing the broader
+  health impacts of sleep disorders.
+quantitative_effects:
+  p_value: 0.05
+  sample_size: 1083
+moderators:
+- name: treatment_duration
+  direction: strengthens
+  strength: moderate
+  description: Longer treatment duration may enhance fatigue improvements
+structural_competency:
+  equity_implications: Fatigue disproportionately affects workers in physically demanding occupations
+    and those with limited access to healthcare. Expanding eHealth access to effective insomnia treatment
+    could reduce health disparities related to occupational and socioeconomic factors.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.862361'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

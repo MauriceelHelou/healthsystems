@@ -1,0 +1,56 @@
+id: care_coordination_access_barriers_to_pediatric_readmission_ed_visits
+name: Difficulty Accessing Care Coordination → Pediatric Hospital Readmission and Emergency Department
+  Visits
+from_node:
+  node_id: care_coordination_access_barriers
+  node_name: Difficulty Accessing Care Coordination
+to_node:
+  node_id: pediatric_readmission_ed_visits
+  node_name: Pediatric Hospital Readmission and Emergency Department Visits
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Structural barriers prevent families from accessing adequate care coordination services'
+- 'Step 2: Limited access to care coordination results in poor communication between healthcare providers'
+- 'Step 3: Inadequate coordination leads to gaps in post-discharge follow-up and medication management'
+- 'Step 4: Care gaps increase risk of complications requiring emergency department visits and readmissions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Louise E. Vaz et al. 2020. "The Role of Caregiver-Reported Risks in Predicting Adverse
+    Pediatric Outcomes.." *Journal of Pediatric Psychology*. https://doi.org/10.1093/jpepsy/jsaa067
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1093/jpepsy/jsaa067
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '2.0'
+description: Families experiencing difficulty accessing care coordination have significantly increased
+  odds of their children having emergency department visits or hospital readmissions within 90 days
+quantitative_effects:
+  effect_size:
+    value: 2.5
+    type: odds_ratio
+    ci_lower: 1.4
+    ci_upper: 4.7
+  sample_size: 249
+moderators:
+- name: socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Lower socioeconomic status families may face greater barriers to accessing care coordination
+    services
+- name: insurance_status
+  direction: strengthens
+  strength: moderate
+  description: Insurance type and coverage may affect access to care coordination resources
+structural_competency:
+  equity_implications: This mechanism reveals structural inequities in healthcare access where care coordination
+    services are not universally accessible or adequately resourced. Access barriers disproportionately
+    affect families with fewer resources, creating a system where those who most need coordination services
+    are least able to access them
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.783225'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

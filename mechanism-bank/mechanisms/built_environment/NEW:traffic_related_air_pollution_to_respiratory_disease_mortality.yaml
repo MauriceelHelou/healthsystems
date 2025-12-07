@@ -1,0 +1,54 @@
+id: NEW:traffic_related_air_pollution_to_respiratory_disease_mortality
+name: Traffic-Related Air Pollution → Respiratory Tract Diseases
+from_node:
+  node_id: NEW:traffic_related_air_pollution
+  node_name: Traffic-Related Air Pollution
+to_node:
+  node_id: respiratory_disease_mortality
+  node_name: Respiratory Tract Diseases
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Traffic sources (vehicles, roadways) emit particulate matter including
+  PM2.5 containing combustion byproducts, metals, and organic compounds'
+- 'Step 2: PM2.5 particles are inhaled deep into the respiratory tract due to their
+  small size (≤2.5 μm), penetrating bronchioles and alveoli'
+- 'Step 3: Particles trigger inflammatory responses in airway epithelium, causing
+  oxidative stress and immune activation'
+- 'Step 4: Chronic inflammation leads to airway hyperresponsiveness, mucus hypersecretion,
+  and epithelial damage'
+- 'Step 5: These processes manifest as increased risk of cough, wheezing, lower respiratory
+  illness, and other respiratory tract diseases'
+evidence:
+  quality_rating: A
+  n_studies: 35
+  primary_citation: 'Qian Liu et al. 2017. Effect of exposure to ambient PM2.5 pollution
+    on the risk of respiratory tract diseases: a meta-analysis of cohort studies.
+    Journal of Biomedical Research.'
+  supporting_citations: []
+description: Traffic-related air pollution, particularly PM2.5, significantly increases
+  the risk of respiratory tract diseases. This meta-analysis of 35 cohort studies
+  found that traffic-related pollution poses greater respiratory health risks than
+  non-traffic-related air pollution. Children are particularly vulnerable, showing
+  significant increases in wheezing, cough, and lower respiratory illness with PM2.5
+  exposure.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Children show stronger associations with respiratory outcomes including
+    wheezing (8.2% increase), cough (7.5% increase), and lower respiratory illness
+    (15.3% increase)
+- name: pollution_source
+  direction: strengthens
+  strength: moderate
+  description: Risk of respiratory tract diseases was greater for exposure to traffic-related
+    than non-traffic-related air pollution
+- name: PM2.5_concentration
+  direction: strengthens
+  strength: moderate
+  description: 'Higher concentrations (≥25 μg/m3) associated with greater risk (RR
+    1.126, 95%CI: 1.067-1.190) compared to lower concentrations (<25 μg/m3, RR 1.091,
+    95%CI: 1.049-1.135) in children'

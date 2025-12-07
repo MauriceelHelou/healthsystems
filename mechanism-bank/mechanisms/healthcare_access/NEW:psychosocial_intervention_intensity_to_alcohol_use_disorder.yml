@@ -1,0 +1,73 @@
+id: NEW:psychosocial_intervention_intensity_to_alcohol_use_disorder
+name: Psychosocial Intervention Intensity (Multiple Sessions) → Alcohol Use Disorder
+from_node:
+  node_id: NEW:psychosocial_intervention_intensity
+  node_name: Psychosocial Intervention Intensity (Multiple Sessions)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Access to multiple-session combined psychosocial interventions (MI-CBT) provides sustained
+  therapeutic engagement'
+- 'Step 2: Motivational interviewing addresses ambivalence and enhances intrinsic motivation for behavior
+  change'
+- 'Step 3: Cognitive behavioral therapy components address maladaptive thought patterns and coping skills'
+- 'Step 4: Multiple sessions allow for skill reinforcement, relapse prevention planning, and therapeutic
+  relationship development'
+- 'Step 5: Reduced harmful alcohol consumption as measured by AUDIT score improvement'
+evidence:
+  quality_rating: A
+  n_studies: 19
+  primary_citation: 'Chia Jie Tan et al. 2023. "Comparative effectiveness of psychosocial interventions
+    in adults with harmful use of alcohol: a systematic review and network meta-analysis.." https://doi.org/10.1111/add.16187'
+  supporting_citations:
+  - Additional citations require full-text access - this systematic review included 19 RCTs with n=7149
+    participants
+  - Studies utilized the TIP (theme, intensity, provider/platform) framework classification
+  - Evidence evaluated using CINeMA (Confidence in Network Meta-Analysis) approach
+  doi: 10.1111/add.16187
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Combined motivational interviewing and cognitive behavioral therapy delivered in multiple
+  face-to-face sessions (MI-CBT/Mult/F2F) demonstrated the greatest effectiveness in reducing harmful
+  alcohol consumption compared to usual care, with an AUDIT score mean difference of -4.98 (95% CI: -7.04
+  to -2.91). This intervention ranked highest in SUCRA analysis (91.3) and remained the top-ranked intervention
+  in sensitivity analyses.'
+quantitative_effects:
+  effect_size:
+    value: -4.98
+    type: standardized_mean_difference
+    ci_lower: -7.04
+    ci_upper: -2.91
+  sample_size: 7149
+moderators:
+- name: intervention_intensity
+  direction: strengthens
+  strength: strong
+  description: Multiple session delivery associated with greater effectiveness compared to single-session
+    brief interventions
+- name: delivery_modality
+  direction: strengthens
+  strength: moderate
+  description: Face-to-face delivery was component of highest-ranking intervention (MI-CBT/Mult/F2F)
+- name: intervention_combination
+  direction: strengthens
+  strength: strong
+  description: Combined MI plus CBT approach ranked highest (SUCRA=91.3) compared to single modality interventions
+structural_competency:
+  equity_implications: This mechanism highlights the importance of healthcare system capacity to deliver
+    intensive, multi-session psychosocial interventions. Access to such services is structurally determined
+    by healthcare funding, insurance coverage, treatment facility availability, and workforce capacity.
+    Populations with limited access to behavioral health services due to geographic, economic, or systemic
+    barriers may be unable to receive the most effective treatment approaches, perpetuating alcohol-related
+    health inequities. The evidence supports investment in healthcare infrastructure that enables delivery
+    of intensive combined psychosocial interventions rather than relying solely on brief single-session
+    approaches.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.003943'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

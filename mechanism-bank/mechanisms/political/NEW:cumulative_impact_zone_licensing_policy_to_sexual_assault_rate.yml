@@ -1,0 +1,55 @@
+id: NEW:cumulative_impact_zone_licensing_policy_to_sexual_assault_rate
+name: Cumulative Impact Zone Licensing Policy → Sexual Assault Rate
+from_node:
+  node_id: NEW:cumulative_impact_zone_licensing_policy
+  node_name: Cumulative Impact Zone Licensing Policy
+to_node:
+  node_id: sexual_assault_rate
+  node_name: Sexual Assault Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Cumulative impact zones limit new alcohol outlet licenses in high-density areas'
+- 'Step 2: Reduced alcohol availability decreases opportunities for excessive alcohol consumption'
+- 'Step 3: Lower population-level intoxication reduces alcohol-facilitated sexual violence'
+- 'Step 4: Alcohol-attributable sexual offense rates decline in policy-intensive areas'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: F. Vocht et al. 2016. "Testing the impact of local alcohol licencing policies on reported
+    crime rates in England." https://doi.org/10.1136/jech-2016-207753
+  supporting_citations:
+  - Additional citations require full-text access - abstract references excessive alcohol use contributing
+    to sexual violence but does not cite specific prior studies
+  doi: 10.1136/jech-2016-207753
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol licensing policies restricting spatial availability were associated with stronger
+  declines in alcohol-attributable sexual offenses. Areas with intense policies saw declines of 0.10 per
+  1000 population compared to 0.01 per 1000 in passive policy areas from 2009-2013.
+quantitative_effects:
+  sample_size: 284
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects varied across 284 English LTLAs based on policy intensity classification
+moderators:
+- name: policy_intensity
+  direction: strengthens
+  strength: strong
+  description: High-intensity policy areas showed sexual crime decline of 0.10 per 1000 compared to 0.01
+    per 1000 in passive areas
+- name: time_period
+  direction: weakens
+  strength: strong
+  description: Effect observed 2009-2013; recorded rates increased again post-2013
+structural_competency:
+  equity_implications: This mechanism addresses sexual violence through environmental modification rather
+    than victim-focused interventions. By reducing alcohol availability, the policy targets a key facilitating
+    factor in sexual violence without placing responsibility on potential victims. This structural approach
+    recognizes the role of alcohol environments in enabling sexual violence.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.213816'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

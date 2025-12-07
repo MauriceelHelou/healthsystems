@@ -1,0 +1,68 @@
+id: NEW:aging_biological_process_to_NEW:fast_twitch_muscle_fiber_atrophy
+name: Biological Aging Process → Fast-Twitch Muscle Fiber Atrophy
+from_node:
+  node_id: NEW:aging_biological_process
+  node_name: Biological Aging Process
+to_node:
+  node_id: NEW:fast_twitch_muscle_fiber_atrophy
+  node_name: Fast-Twitch Muscle Fiber Atrophy
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Biological aging leads to preferential atrophy of fast-contracting (MyHC II and IIA) muscle
+  fibers'
+- 'Step 2: Fast-twitch fiber cross-sectional area decreases while slow-twitch (MyHC I) fiber size remains
+  stable'
+- 'Step 3: Relative protein expression shifts toward higher MyHC I and lower MyHC II/IIA isoforms'
+- 'Step 4: This fiber-type specific atrophy contributes to sarcopenia (age-related muscle loss)'
+evidence:
+  quality_rating: A
+  n_studies: 27
+  primary_citation: 'Christopher Lee et al. 2024. "Effects of age on human skeletal muscle: A systematic
+    review and meta-analysis of myosin heavy chain isoform protein expression, fiber size and distribution.."
+    https://doi.org/10.37766/inplasy2024.6.0109'
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review/meta-analysis of 27 studies
+  - Studies examining MyHC comparisons between young (18-49 years) and older (≥60 years) adults
+  - Studies using vastus lateralis muscle biopsies as primary sampling site
+  doi: 10.37766/inplasy2024.6.0109
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: Unexpected error: list index out of range'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Aging leads to selective atrophy of fast-contracting muscle fibers (MyHC II and IIA) while
+  slow-contracting fibers (MyHC I) maintain their size. This results in a shift in protein expression
+  toward slower isoforms, contributing to age-related loss in whole muscle force, velocity, and power
+  (sarcopenia).
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Studies examining females showed atrophy of MyHC II and IIA fibers with age but no change
+    in MyHC protein expression, suggesting sex-specific mechanisms
+- name: physical_activity
+  direction: weakens
+  strength: moderate
+  description: Physical activity level was identified as an important factor affecting aging muscle outcomes
+    in additional analyses
+- name: measurement_technique
+  direction: strengthens
+  strength: weak
+  description: Different measurement techniques provided important insights into aging effects
+- name: muscle_biopsied
+  direction: strengthens
+  strength: weak
+  description: Most studies used vastus lateralis; sampling additional muscles may reveal different patterns
+structural_competency:
+  equity_implications: This is primarily a biological mechanism. However, structural factors such as access
+    to exercise facilities, physical activity opportunities in the built environment, and healthcare access
+    for pharmacological interventions could modify the trajectory of sarcopenia. The finding that physical
+    activity affects outcomes suggests that structural determinants of physical activity (park access,
+    walkability, gym accessibility) are relevant upstream factors.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.854124'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

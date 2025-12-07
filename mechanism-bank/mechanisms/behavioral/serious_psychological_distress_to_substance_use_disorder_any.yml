@@ -1,0 +1,51 @@
+id: serious_psychological_distress_to_substance_use_disorder_any
+name: Serious Psychological Distress → Substance Use Disorder (Any)
+from_node:
+  node_id: serious_psychological_distress
+  node_name: Serious Psychological Distress
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Pandemic conditions create elevated psychological distress in the population'
+- 'Step 2: Mobility restrictions limit access to mental health treatment and social support'
+- 'Step 3: Psychological distress increases vulnerability to substance use as coping mechanism'
+- 'Step 4: Prolonged distress and substance use may develop into diagnosable substance use disorders'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Soo-Hoon Lee et al. 2025. "Representative national survey on drug use during the COVID-19
+    stay-at-home order in the USA.." https://doi.org/10.1136/bmjopen-2024-086141
+  supporting_citations:
+  - Additional citations require full-text access - abstract references psychometrically validated scales
+    for mental states
+  - Additional citations require full-text access - abstract references NIDA-Modified ASSIST questionnaire
+  - Additional citations require full-text access - abstract methodology describes predictor measures
+    including mental states
+  doi: 10.1136/bmjopen-2024-086141
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Mental health conditions were identified as important covariates in the relationship between
+  mobility restrictions and drug use, suggesting a mediating pathway where psychological distress during
+  the pandemic contributed to increased substance use behaviors.
+quantitative_effects:
+  sample_size: 3340
+moderators:
+- name: mobility_restriction
+  direction: strengthens
+  strength: moderate
+  description: Mobility restriction interacts with mental health conditions to increase drug use risk
+structural_competency:
+  equity_implications: While mental health is often framed as individual-level, this study appropriately
+    contextualizes psychological distress within structural conditions (pandemic, policy responses, societal
+    disruption). The structural determinants include access to mental health care, social support systems
+    disrupted by policy, and economic stressors - all of which are unequally distributed across populations
+    by race, class, and geography.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.671784'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

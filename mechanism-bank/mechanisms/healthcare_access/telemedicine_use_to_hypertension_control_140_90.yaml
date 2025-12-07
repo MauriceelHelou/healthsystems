@@ -1,0 +1,52 @@
+id: telemedicine_use_to_hypertension_control_140_90
+name: Telemedicine Use → Hypertension Control
+from_node:
+  node_id: telemedicine_use
+  node_name: Telemedicine Use
+to_node:
+  node_id: hypertension_control_140_90
+  node_name: Hypertension Control
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Telemedicine enables remote communication and interaction between healthcare
+  providers and patients with hypertension'
+- 'Step 2: Increased accessibility facilitates more frequent monitoring of blood pressure
+  and medication adherence'
+- 'Step 3: Enhanced patient engagement and self-efficacy support sustained disease
+  management behaviors'
+- 'Step 4: Continuous remote support and individualized care lead to improved blood
+  pressure control outcomes'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Wenhang Zhang et al. 2020. Effect of Telemedicine on Quality
+    of Care in Patients with Coexisting Hypertension and Diabetes: A Systematic Review
+    and Meta-Analysis. Telemedicine journal and e-health.'
+  supporting_citations: []
+description: Telemedicine significantly improves blood pressure control in patients
+  with hypertension. Meta-analysis of clinical trials found telemedicine reduced systolic
+  blood pressure by 10.4 mmHg and diastolic blood pressure by 4.8 mmHg. The mechanism
+  operates through enhanced patient-provider communication, improved blood pressure
+  monitoring, increased medication adherence, and better patient engagement and self-efficacy.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 10.4
+    type: mean_difference_mmHg_systolic
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: intervention_duration
+  direction: strengthens
+  strength: moderate
+  description: Intervention durations ranged from 3 to 6 months; longer-term studies
+    needed to confirm sustainability
+- name: comorbid_diabetes
+  direction: strengthens
+  strength: moderate
+  description: Study focused on patients with coexisting hypertension and diabetes,
+    who face greater disease management challenges

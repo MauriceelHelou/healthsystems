@@ -1,0 +1,41 @@
+# Node Definition: Heavy Alcohol Use
+# Scale 5 - Individual Behaviors & Psychosocial
+
+id: heavy_alcohol_use
+name: Heavy Alcohol Use
+scale: 5
+category: behavioral
+type: Rate
+
+unit: "Percentage of population engaging in heavy episodic drinking (≥5 drinks per occasion, ≥1 time per week)"
+
+description: |
+  Pattern of alcohol consumption characterized by frequent heavy drinking episodes.
+  Associated with increased risk of alcohol use disorder (AUD), liver disease,
+  and numerous adverse health and social outcomes.
+
+measurement_method: |
+  - Self-reported drinking patterns (NSDUH, BRFSS)
+  - Timeline followback interviews
+  - Biomarkers: GGT, CDT, ethyl glucuronide (EtG)
+
+typical_range: "15-25% of US adults (varies by demographics)"
+
+data_sources:
+  - name: "National Survey on Drug Use and Health (NSDUH)"
+    availability: "Annual"
+    granularity: "State-level, select metro areas"
+  - name: "Behavioral Risk Factor Surveillance System (BRFSS)"
+    availability: "Annual"
+    granularity: "State-level, county-level (select)"
+  - name: "National Health and Nutrition Examination Survey (NHANES)"
+    availability: "2-year cycles"
+    granularity: "National estimates only"
+
+baseline_us: "26.4% of US adults aged 18+ (NSDUH 2019)"
+
+limitations: |
+  - Self-report bias (underreporting due to social desirability)
+  - Definition varies across surveys (drink size, frequency thresholds)
+  - Seasonal variation not always captured
+  - Limited geographic granularity for small areas

@@ -3,14 +3,36 @@ Database models for causal mechanisms (MVP - Topology & Direction).
 
 MVP Scope: Focuses on network topology and directionality.
 Phase 2: Will add quantitative effect sizes and meta-analysis data.
+
+Hierarchy Support:
+- Nodes can have parent-child relationships (DAG structure)
+- Domains are root nodes (depth=0) in the hierarchy
+- Mechanisms reference nodes that must exist in the node bank
 """
 
-from sqlalchemy import Column, String, Integer, DateTime, JSON, Text, Boolean, ForeignKey, Float, CheckConstraint
+from sqlalchemy import Column, String, Integer, DateTime, JSON, Text, Boolean, ForeignKey, Float, CheckConstraint, Table, UniqueConstraint, Index
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 from datetime import datetime
+from typing import List, Optional
 
 from models.database import Base
+
+
+# Junction table for node hierarchy (DAG support - nodes can have multiple parents)
+node_hierarchy = Table(
+    'node_hierarchy',
+    Base.metadata,
+    Column('id', Integer, primary_key=True, autoincrement=True),
+    Column('parent_node_id', String, ForeignKey('nodes.id', ondelete='CASCADE'), nullable=False),
+    Column('child_node_id', String, ForeignKey('nodes.id', ondelete='CASCADE'), nullable=False),
+    Column('relationship_type', String, default='contains'),  # contains, specializes, contextualizes
+    Column('order_index', Integer, default=0),  # For ordering siblings
+    Column('created_at', DateTime, server_default=func.now()),
+    UniqueConstraint('parent_node_id', 'child_node_id', name='unique_parent_child'),
+    Index('ix_node_hierarchy_parent', 'parent_node_id'),
+    Index('ix_node_hierarchy_child', 'child_node_id'),
+)
 
 
 class Node(Base):
@@ -21,6 +43,11 @@ class Node(Base):
     - Real stocks: eviction_rate, healthcare_continuity, housing_quality
     - Proxy indices: health_access_index, economic_security_index
     - Crisis endpoints: mortality_rate, ed_utilization
+
+    Hierarchy:
+    - Nodes can have parent-child relationships (DAG structure)
+    - depth=0 nodes are "domains" (root-level organizational nodes)
+    - A node's domains are computed from its root ancestors
     """
 
     __tablename__ = "nodes"
@@ -37,11 +64,28 @@ class Node(Base):
     # Data source mapping
     data_sources = Column(JSON)  # List of census variables, CDC metrics, etc.
 
-    # Category
-    category = Column(String, index=True)  # built_environment, economic, political, etc.
-
     # Scale (7-level taxonomy: 1=policy, 2=built_env, 3=institutional, 4=individual, 5=behavioral, 6=intermediate, 7=crisis)
     scale = Column(Integer, nullable=False, index=True)
+
+    # Category (deprecated - use domains computed from hierarchy ancestry)
+    # Retained for backward compatibility with existing data and APIs
+    category = Column(String, nullable=True, index=True, default='default')
+
+    # === HIERARCHY FIELDS (NEW) ===
+    # Depth in hierarchy: 0 = root/domain node, 1+ = nested
+    depth = Column(Integer, default=0, index=True)
+
+    # Primary path for efficient ancestry queries: "root_id/parent_id/this_id"
+    primary_path = Column(String, index=True)
+
+    # All ancestor IDs (from ALL parent paths in DAG) - denormalized for query efficiency
+    all_ancestors = Column(JSON, default=list)  # ["grandparent_id", "parent1_id", "parent2_id"]
+
+    # Is this a grouping/container node (abstract) vs leaf/measurable node?
+    is_grouping_node = Column(Boolean, default=False, index=True)
+
+    # Display ordering within parent
+    display_order = Column(Integer, default=0)
 
     # Metadata
     description = Column(Text)
@@ -49,16 +93,67 @@ class Node(Base):
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
 
     # Table constraints
+    # Note: Individual column indexes are created via index=True on each column
+    # Only composite indexes are defined here
     __table_args__ = (
         CheckConstraint('scale >= 1 AND scale <= 7', name='scale_range'),
+        CheckConstraint('depth >= 0', name='depth_non_negative'),
+        Index('ix_nodes_scale_depth', 'scale', 'depth'),
     )
 
     # Relationships
     mechanisms_from = relationship("Mechanism", foreign_keys="Mechanism.from_node_id", back_populates="from_node")
     mechanisms_to = relationship("Mechanism", foreign_keys="Mechanism.to_node_id", back_populates="to_node")
 
+    # Hierarchy relationships (via junction table)
+    parents = relationship(
+        "Node",
+        secondary=node_hierarchy,
+        primaryjoin="Node.id == node_hierarchy.c.child_node_id",
+        secondaryjoin="Node.id == node_hierarchy.c.parent_node_id",
+        backref="children"
+    )
+
+    @property
+    def domains(self) -> List[str]:
+        """
+        Return domain IDs (root ancestors at depth=0).
+
+        Since this is a DAG, a node can belong to multiple domains
+        through different parent paths.
+        """
+        if self.depth == 0:
+            return [self.id]  # Root node is its own domain
+        if not self.all_ancestors:
+            return []
+        # Filter ancestors to only include root nodes (depth=0)
+        # Note: In practice, root nodes are identified by their position in all_ancestors
+        # The first element(s) of each path are the root(s)
+        # For efficiency, we store root IDs at the start of all_ancestors
+        return [a for a in (self.all_ancestors or []) if '/' not in a]
+
+    @property
+    def is_root(self) -> bool:
+        """Check if this is a root/domain node (no parents)."""
+        return self.depth == 0
+
+    @property
+    def is_leaf(self) -> bool:
+        """Check if this is a leaf node (no children)."""
+        return not self.children if hasattr(self, 'children') else True
+
+    @property
+    def parent_ids(self) -> List[str]:
+        """Get all parent node IDs."""
+        return [p.id for p in self.parents] if self.parents else []
+
+    @property
+    def child_ids(self) -> List[str]:
+        """Get all child node IDs."""
+        return [c.id for c in self.children] if hasattr(self, 'children') and self.children else []
+
     def __repr__(self):
-        return f"<Node {self.id}: {self.name}>"
+        return f"<Node {self.id}: {self.name} (depth={self.depth})>"
 
 
 class Mechanism(Base):
@@ -82,9 +177,15 @@ class Mechanism(Base):
     # Direction: positive (increase -> increase) or negative (increase -> decrease)
     direction = Column(String, nullable=False)  # 'positive' or 'negative'
 
-    # Category
+    # Category (deprecated - use domains computed from node ancestry)
     category = Column(String, nullable=False, index=True)
     # built_environment, social_environment, economic, political, healthcare_access, biological, behavioral
+
+    # Hierarchy level: what abstraction level this mechanism operates at
+    # - 'leaf': connects specific/detailed nodes (default)
+    # - 'parent': connects abstract/general nodes
+    # - 'cross': spans hierarchy levels (abstract -> specific or vice versa)
+    hierarchy_level = Column(String, default='leaf', index=True)
 
     # Mechanism pathway (step-by-step description)
     mechanism_pathway = Column(JSON)  # List of strings describing causal steps
@@ -151,6 +252,7 @@ class Mechanism(Base):
             },
             "direction": self.direction,
             "category": self.category,
+            "hierarchy_level": self.hierarchy_level or "leaf",
             "mechanism_pathway": self.mechanism_pathway,
             "evidence": {
                 "quality_rating": self.evidence_quality,

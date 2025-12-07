@@ -1,0 +1,48 @@
+id: hrus_screening_hhc_to_early_hd_detection
+name: High-Resolution Ultrasound Screening of Household Contacts → Early Hansen's
+  Disease Detection
+from_node:
+  node_id: hrus_screening_hhc
+  node_name: High-Resolution Ultrasound Screening of Household Contacts
+to_node:
+  node_id: early_hd_detection
+  node_name: Early Hansen's Disease Detection
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: HRUS provides objective, validated technique with good reproducibility
+  to evaluate peripheral nerves with detailed accuracy'
+- 'Step 2: HRUS detects nerve thickening and asymmetry in household contacts that
+  would be missed by subjective palpation examination'
+- 'Step 3: Assessment of 14 nerve points reveals asymmetric multiple mononeuropathy
+  patterns (≥20% of nerves affected) characteristic of HD neuropathy'
+- 'Step 4: Earlier detection of silent neuropathy enables treatment initiation before
+  clinical symptoms develop and irreversible damage occurs'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: G. Voltan et al. 2023. "Silent peripheral neuropathy determined
+    by high-resolution ultrasound among contacts of patients with Hansen's disease."
+    *Frontiers in Medicine*. https://doi.org/10.3389/fmed.2022.1059448
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.278304'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: number_nerve_points_assessed
+  direction: strengthens
+  strength: moderate
+  description: Assessing 14 nerve points instead of 10 increases detection sensitivity,
+    making HHCs appear more similar to HD patients in nerve thickening patterns
+- name: healthcare_system_capacity
+  direction: strengthens
+  strength: strong
+  description: Healthcare systems with capacity for systematic contact screening and
+    follow-up maximize benefit of HRUS early detection
+- name: geographic_remoteness
+  direction: weakens
+  strength: strong
+  description: Remote and rural areas have limited access to specialized diagnostic
+    equipment and trained technicians

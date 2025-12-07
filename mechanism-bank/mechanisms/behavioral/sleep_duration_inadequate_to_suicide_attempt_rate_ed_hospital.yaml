@@ -1,0 +1,56 @@
+id: sleep_duration_inadequate_to_suicide_attempt_rate_ed_hospital
+name: Sleep Disturbances → Suicide Attempts
+from_node:
+  node_id: sleep_duration_inadequate
+  node_name: Sleep Disturbances
+to_node:
+  node_id: suicide_attempt_rate_ed_hospital
+  node_name: Suicide Attempts
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Sleep disturbances (including inadequate sleep duration, insomnia, poor
+  sleep quality) disrupt neurobiological processes essential for emotional regulation
+  and cognitive functioning'
+- 'Step 2: Chronic sleep deprivation impairs prefrontal cortex functioning, reducing
+  impulse control and increasing emotional reactivity to stressors'
+- 'Step 3: Sleep disturbances amplify negative affect, hopelessness, and cognitive
+  distortions while reducing problem-solving capacity'
+- 'Step 4: Accumulating psychological distress and impaired coping mechanisms increase
+  vulnerability to suicidal ideation'
+- 'Step 5: Reduced inhibitory control combined with heightened emotional dysregulation
+  increases likelihood of progression from suicidal ideation to suicide attempt'
+evidence:
+  quality_rating: A
+  n_studies: 19
+  primary_citation: 'Valentina Baldini et al. 2024. Association between sleep disturbances
+    and suicidal behavior in adolescents: a systematic review and meta-analysis. Frontiers
+    in Psychiatry.'
+  supporting_citations: []
+description: This meta-analysis of 19 studies with over 1.1 million adolescents demonstrates
+  that sleep disturbances significantly increase the risk of suicide attempts (OR=3.10)
+  in adolescents without pre-existing psychiatric diagnoses. The threefold increased
+  risk highlights sleep disturbances as an independent and modifiable risk factor
+  for suicidal behavior in young populations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.1
+    type: odds_ratio
+    ci_lower: 2.43
+    ci_upper: 3.95
+  p_value: null
+  sample_size: 1196271
+moderators:
+- name: psychiatric comorbidity
+  direction: strengthens
+  strength: moderate
+  description: Study specifically examined adolescents without diagnosed psychiatric
+    disorders to isolate sleep-suicide relationship; presence of psychiatric conditions
+    likely strengthens association
+- name: type of sleep disturbance
+  direction: strengthens
+  strength: moderate
+  description: Various types of sleep disturbances examined; the pooled effect represents
+    multiple sleep problems including duration, quality, and insomnia

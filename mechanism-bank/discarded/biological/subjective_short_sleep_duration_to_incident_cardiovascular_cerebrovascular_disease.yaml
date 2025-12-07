@@ -1,0 +1,43 @@
+id: subjective_short_sleep_duration_to_incident_cardiovascular_cerebrovascular_disease
+name: Insomnia with Subjective Short Sleep Duration (<7 hours self-reported) → Incident
+  Cardiovascular and/or Cerebrovascular Disease
+from_node:
+  node_id: subjective_short_sleep_duration
+  node_name: Insomnia with Subjective Short Sleep Duration (<7 hours self-reported)
+to_node:
+  node_id: incident_cardiovascular_cerebrovascular_disease
+  node_name: Incident Cardiovascular and/or Cerebrovascular Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Self-reported short sleep duration reflects subjective perception but may
+  not capture objective biological sleep disruption'
+- 'Step 2: Mismatch between subjective and objective sleep measures indicates sleep
+  misperception or recall bias'
+- 'Step 3: Absence of objective short sleep duration means cardiovascular systems
+  maintain adequate recovery time'
+- 'Step 4: No significant increase in incident cardiovascular/cerebrovascular disease
+  risk observed'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Slobodanka Pejovic et al. 2024. "Insomnia with objective but
+    not subjective short sleep duration is associated with incident cardiovascular
+    and/or cerebrovascular disease.." *Journal of clinical sleep medicine : JCSM :
+    official publication of the American Academy of Sleep Medicine*. https://doi.org/10.5664/jcsm.11046'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.032285'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: measurement_type_objective_vs_subjective
+  direction: weakens
+  strength: strong
+  description: Subjective self-reported sleep duration shows no association with cardiovascular
+    disease risk, while objective polysomnography measurement shows strong association,
+    indicating subjective measures fail to capture the biological phenotype at risk
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/subjective_short_sleep_duration_to_incident_cardiovascular_cerebrovascular_disease.yaml
+_category: biological

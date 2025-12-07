@@ -1,0 +1,84 @@
+id: minimum_wage_level_to_all_cause_mortality
+name: Minimum Wage Level -> All-Cause Mortality Rate
+from_node:
+  node_id: minimum_wage_level
+  node_name: Minimum Wage Level
+  node_type: policy
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+  node_type: crisis_endpoint
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Higher minimum wages increase income for low-wage workers, reducing poverty and economic deprivation'
+- 'Step 2: Increased income improves access to healthcare, nutrition, housing quality, and other health-promoting resources'
+- 'Step 3: Reduced chronic financial stress decreases allostatic load and stress-related disease risk'
+- 'Step 4: Better material conditions reduce deaths from conditions associated with low socioeconomic status (diabetes, cardiovascular disease, stroke)'
+- 'Step 5: Cumulative improvements in health determinants reduce overall mortality rates at the population level'
+evidence:
+  quality_rating: B
+  n_studies: 6
+  primary_citation: 'Lenhart, Otto. 2017. "The impact of minimum wages on population health: evidence from 24 OECD countries." European Journal of Health Economics 18(8): 1031-1039.'
+  supporting_citations:
+  - 'Neumark, David. 2024. "The effects of minimum wages on (almost) everything? A review of recent evidence on health and related behaviors." LABOUR 38(2): 131-168.'
+  - 'Kaufman, John A., et al. 2020. "Effects of Increased Minimum Wages by Unemployment Rate on Suicide in the USA." Journal of Epidemiology and Community Health 74(3): 219-224.'
+  doi: 10.1007/s10198-016-0847-5
+  journal: European Journal of Health Economics
+  year: 2017
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 0.44
+    type: beta_coefficient
+    ci_lower: null
+    ci_upper: null
+    ci_level: 95
+  interpretation: 'A 10 percentage point increase in the Kaitz index (minimum wage relative to median wage) was associated with a 0.44 year increase in life expectancy and significant reductions in mortality from diabetes, circulatory disease, and stroke'
+  sample_size: 24
+  heterogeneity_notes: 'Cross-country analysis of 24 OECD countries over 31 years; effects concentrated among mortality causes associated with low socioeconomic status'
+last_updated: '2025-11-30'
+version: '1.0'
+description: Higher minimum wages are associated with reduced all-cause mortality and increased life expectancy. Analysis of 24 OECD countries found that a 10 percentage point increase in the minimum wage ratio was associated with significant reductions in overall death rates and a 0.44 year increase in life expectancy. Effects were particularly strong for mortality from conditions more prevalent among low-SES individuals (diabetes, cardiovascular disease, stroke). Additional evidence suggests minimum wage increases reduce suicide rates, particularly during periods of high unemployment.
+moderators:
+- name: unemployment_rate
+  direction: strengthens
+  strength: moderate
+  description: Effects on suicide mortality are stronger during periods of high unemployment
+- name: social_safety_net
+  direction: weakens
+  strength: moderate
+  description: Countries with robust social safety nets may show smaller marginal effects
+- name: healthcare_access
+  direction: strengthens
+  strength: moderate
+  description: Effects larger when income enables access to healthcare
+- name: kaitz_index_baseline
+  direction: strengthens
+  strength: moderate
+  description: Countries with lower baseline minimum wage ratio may see larger effects from increases
+structural_competency:
+  root_cause_level: policy_structural
+  avoids_victim_blaming: true
+  equity_implications: Mortality disparities by income reflect structural economic conditions. Minimum wage policy is a macro-level intervention that addresses economic determinants of health. Effects on mortality from diabetes and cardiovascular disease highlight how economic policy shapes chronic disease outcomes for low-wage workers.
+assumptions:
+- Assumes minimum wage affects material conditions of low-wage workers
+- Assumes income operates through multiple pathways (healthcare, nutrition, housing, stress)
+- Assumes effects are not offset by employment reductions
+limitations:
+- Cross-country ecological design limits causal inference
+- Country-level heterogeneity in labor markets and health systems
+- Minimum wage may interact with other social policies
+- Effects may take years to manifest in mortality
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects vary by baseline minimum wage, healthcare system, and social safety net
+  relevant_geographies:
+  - US may show larger effects due to weak safety net and employer-sponsored insurance
+  - Nordic countries with strong safety nets may show smaller effects
+  - Effects likely larger in countries with high inequality
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: moderate
+  prompt_version: 1.0-mvp

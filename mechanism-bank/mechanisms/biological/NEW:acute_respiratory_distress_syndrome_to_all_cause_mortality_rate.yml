@@ -1,0 +1,69 @@
+id: NEW:acute_respiratory_distress_syndrome_to_all_cause_mortality_rate
+name: Acute Respiratory Distress Syndrome (ARDS) → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:acute_respiratory_distress_syndrome
+  node_name: Acute Respiratory Distress Syndrome (ARDS)
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: ARDS develops as a complication in critically ill patients due to underlying conditions such
+  as sepsis or trauma'
+- 'Step 2: ARDS causes severe hypoxemic respiratory failure through diffuse alveolar damage and pulmonary
+  edema'
+- 'Step 3: Impaired gas exchange leads to systemic hypoxia and multi-organ dysfunction'
+- 'Step 4: Increased inflammatory response and ventilator-induced lung injury compound physiological stress'
+- 'Step 5: These cascading effects directly increase mortality risk independent of underlying conditions'
+evidence:
+  quality_rating: A
+  n_studies: 44
+  primary_citation: 'L. Torres et al. 2021. "Attributable mortality of acute respiratory distress syndrome:
+    a systematic review, meta-analysis and survival analysis using targeted minimum loss-based estimation."
+    https://doi.org/10.1136/thoraxjnl-2020-215950'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 44 studies across 47 cohorts
+  - Studies included observational cohorts comparing critically ill patients with and without ARDS matched
+    for underlying risk factors
+  - Three ICU cohort studies used for survival analysis with targeted minimum loss-based estimation
+  doi: 10.1136/thoraxjnl-2020-215950
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review and meta-analysis establishes a direct causal link between ARDS and
+  mortality in critically ill patients. Using both traditional meta-analysis of 44 observational studies
+  and novel causal inference methods (targeted minimum loss-based estimation), the study demonstrates
+  that ARDS independently increases mortality beyond what is attributable to underlying conditions like
+  sepsis or trauma.
+quantitative_effects:
+  effect_size:
+    value: 2.48
+    type: relative_risk
+    ci_lower: 1.86
+    ci_upper: 3.3
+  p_value: 0.001
+  sample_size: 56081
+moderators:
+- name: underlying_risk_factor_type
+  direction: strengthens
+  strength: moderate
+  description: The association between ARDS and mortality was numerically stronger in trauma patients
+    compared to sepsis patients
+- name: ards_severity
+  direction: strengthens
+  strength: strong
+  description: Severe ARDS increased mortality rate by 23%, moderate ARDS by 16%, while mild ARDS showed
+    no significant increase
+structural_competency:
+  equity_implications: While ARDS itself is a clinical syndrome, structural factors influence who develops
+    critical illness and ARDS. Access to critical care, ICU capacity, healthcare system resources, and
+    social determinants influence both risk of developing ARDS-predisposing conditions (sepsis, trauma)
+    and survival outcomes. Health systems with inadequate ICU infrastructure or delayed care access may
+    see higher ARDS-related mortality. The finding justifies investment in ARDS prevention research, which
+    has equity implications for resource allocation in healthcare systems.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.324123'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

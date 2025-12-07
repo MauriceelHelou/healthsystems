@@ -1,0 +1,39 @@
+id: off_premise_alcohol_outlet_density_to_pedestrian_injury_rate
+name: Off-Premise Alcohol Outlet Density → Pedestrian Injury Rate
+from_node:
+  node_id: off_premise_alcohol_outlet_density
+  node_name: Off-Premise Alcohol Outlet Density
+to_node:
+  node_id: pedestrian_injury_rate
+  node_name: Pedestrian Injury Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Off-premise alcohol outlets (liquor stores, convenience stores selling
+  alcohol) concentrate in neighborhoods, often due to zoning and licensing policies
+  that permit higher density in lower-income areas'
+- 'Step 2: These outlets increase local alcohol availability and consumption in the
+  immediate neighborhood environment'
+- 'Step 3: Increased alcohol consumption leads to more intoxicated pedestrians and
+  potentially impaired drivers in the area'
+- 'Step 4: Intoxication impairs motor coordination, judgment, and reaction time, increasing
+  collision risk and injury severity when pedestrians interact with vehicular traffic'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Elizabeth D Nesoff et al. 2018. "Alcohol Outlets, Neighborhood
+    Retail Environments, and Pedestrian Injury Risk.." *Alcoholism, clinical and experimental
+    research*. https://doi.org/10.1111/acer.13844
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.034999'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: retail_environment_density
+  direction: strengthens
+  strength: moderate
+  description: The effect persisted even when controlling for convenience and corner
+    stores, suggesting alcohol outlets contribute unique risk beyond general retail
+    density

@@ -1,0 +1,51 @@
+id: NEW:sbirt_intervention_receipt_to_binge_drinking
+name: SBIRT Intervention Receipt in Emergency Department → Binge Drinking
+from_node:
+  node_id: NEW:sbirt_intervention_receipt
+  node_name: SBIRT Intervention Receipt in Emergency Department
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: ED patients are universally screened for risky alcohol use using validated
+  instruments by trained bilingual/bicultural Health Educators'
+- 'Step 2: Patients screening positive receive brief motivational interventions matched
+  to their risk level during a ''teachable moment'' when they may be more receptive
+  to behavior change messaging'
+- 'Step 3: Brief intervention techniques enhance motivation to change and provide
+  strategies to reduce alcohol consumption'
+- 'Step 4: Patients modify drinking behaviors, resulting in reduced prevalence and
+  frequency of binge drinking at 6-month follow-up'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Woodruff et al. 2013. "Evaluation of California's Alcohol and
+    Drug Screening and Brief Intervention Project for Emergency Department Patients."
+    Western Journal of Emergency Medicine.
+  supporting_citations: []
+description: SBIRT interventions delivered in emergency departments reduce binge drinking
+  through opportunistic screening and brief motivational interventions. The ED setting
+  provides a 'teachable moment' where patients may be more open to feedback about
+  risky drinking behaviors. Trained Health Educators deliver interventions matched
+  to patient risk level, resulting in modest but statistically significant reductions
+  in both prevalence and frequency of binge drinking at 6-month follow-up.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Men showed more positive change in binge drinking outcomes compared
+    to women
+- name: baseline_risk_status
+  direction: strengthens
+  strength: moderate
+  description: Those at relatively higher risk status showed more positive change
+    compared to lower risk individuals
+- name: single_substance_misuse
+  direction: strengthens
+  strength: moderate
+  description: Those with only one substance of misuse (versus both alcohol and illicit
+    drug misuse) showed more positive change

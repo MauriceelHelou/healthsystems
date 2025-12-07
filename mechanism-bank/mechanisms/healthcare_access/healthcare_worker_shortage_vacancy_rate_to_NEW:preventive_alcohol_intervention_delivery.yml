@@ -1,0 +1,58 @@
+id: healthcare_worker_shortage_vacancy_rate_to_NEW:preventive_alcohol_intervention_delivery
+name: Healthcare Worker Shortage/Vacancy Rate → Preventive Alcohol Intervention Delivery Rate
+from_node:
+  node_id: healthcare_worker_shortage_vacancy_rate
+  node_name: Healthcare Worker Shortage/Vacancy Rate
+to_node:
+  node_id: NEW:preventive_alcohol_intervention_delivery
+  node_name: Preventive Alcohol Intervention Delivery Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Global workforce shortages increase workload for existing emergency care staff'
+- 'Step 2: High workload limits time available for non-urgent preventive activities'
+- 'Step 3: Staff prioritize acute care over health promotion activities like SBIRT'
+- 'Step 4: Reduced capacity for alcohol screening and brief intervention in emergency settings'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'H. Blake et al. 2023. "Attitudes and current practice in alcohol screening, brief
+    intervention, and referral for treatment among staff working in urgent and emergency settings: An
+    open, cross-sectional international survey." https://doi.org/10.1371/journal.pone.0291573'
+  supporting_citations:
+  - Study notes concerns about workload impacts on already-burdened staff
+  - Global workforce shortages identified as context for implementation challenges
+  - 87.8% of respondents were shift workers facing workload pressures
+  doi: 10.1371/journal.pone.0291573
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Healthcare workforce shortages create high workload conditions that reduce capacity for preventive
+  alcohol interventions in emergency settings, even when providers believe such interventions are appropriate
+  and needed.
+quantitative_effects:
+  sample_size: 362
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Workforce shortage severity varies by region and healthcare system
+moderators:
+- name: dedicated_health_promotion_teams
+  direction: weakens
+  strength: moderate
+  description: Dedicated onsite health promotion teams could offset workload barriers
+- name: shift_work_status
+  direction: strengthens
+  strength: weak
+  description: Shift workers (87.8% of sample) face particular scheduling constraints for preventive care
+    delivery
+structural_competency:
+  equity_implications: This mechanism identifies healthcare workforce policy as a structural determinant
+    of preventive care access. The paper explicitly notes that implementation challenges exist 'in the
+    context of global workforce shortages.' UEC workers advocate for 'increased staff capacity and/or
+    dedicated health promotion teams onsite' as structural solutions rather than expecting individual
+    providers to do more with less.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.064258'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

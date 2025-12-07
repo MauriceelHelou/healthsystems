@@ -1,0 +1,42 @@
+id: alcohol_abuse_dependence_to_acute_ischemic_stroke
+name: Alcohol Abuse or Dependence → Acute Ischemic Stroke Risk
+from_node:
+  node_id: alcohol_abuse_dependence
+  node_name: Alcohol Abuse or Dependence
+to_node:
+  node_id: acute_ischemic_stroke
+  node_name: Acute Ischemic Stroke Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption increases blood pressure through activation
+  of sympathetic nervous system and disruption of vascular regulation'
+- 'Step 2: Alcohol promotes thrombosis through effects on platelet function and coagulation
+  cascade'
+- 'Step 3: Alcohol-related cardiomyopathy and atrial fibrillation increase risk of
+  cardioembolic stroke'
+- 'Step 4: Cumulative vascular damage and prothrombotic state increase acute ischemic
+  stroke incidence'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Vinicius Sousa Pietra Pedroso et al. 2018. "Early psychiatric
+    morbidity in a Brazilian sample of acute ischemic stroke patients." *Clinics*.
+    https://doi.org/10.6061/clinics/2018/e055
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.528056'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_consumption_level
+  direction: strengthens
+  strength: strong
+  description: Heavy chronic alcohol use has stronger association with stroke risk
+    than moderate consumption
+- name: concurrent_hypertension
+  direction: strengthens
+  strength: strong
+  description: Alcohol-induced hypertension synergistically increases stroke risk
+    when combined with other cardiovascular risk factors

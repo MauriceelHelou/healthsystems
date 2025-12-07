@@ -1,0 +1,66 @@
+id: homelessness_rate_to_hepatitis_c_prevalence
+name: Homelessness → Hepatitis C Prevalence
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness
+to_node:
+  node_id: hepatitis_c_prevalence
+  node_name: Hepatitis C Prevalence
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Homelessness creates conditions of housing instability, limiting access
+  to safe hygiene facilities and private spaces for health practices'
+- 'Step 2: People experiencing homelessness have elevated rates of injection drug
+  use (21% prevalence in homeless-only populations) as a coping mechanism and due
+  to co-occurring substance use disorders'
+- 'Step 3: Injection drug use in unstable housing conditions leads to increased needle
+  sharing and use of non-sterile injection equipment'
+- 'Step 4: High-risk injection practices combined with limited healthcare access result
+  in elevated HCV transmission and seroprevalence (20% pooled prevalence in homeless-only
+  populations)'
+- 'Step 5: Barriers to healthcare access, treatment adherence, and continuity of care
+  among homeless populations allow HCV infection to persist and spread within this
+  community'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'A Hashim et al. 2021. Community-Based Assessment and Treatment
+    of Hepatitis C Virus-Related Liver Disease, Injecting Drug and Alcohol Use Amongst
+    People Who Are Homeless: A Systematic Review and Meta-Analysis. The International
+    journal on drug policy.'
+  supporting_citations: []
+description: This systematic review and meta-analysis of 39 studies demonstrates that
+  people who are homeless have substantially elevated HCV seroprevalence (20% pooled
+  estimate in homeless-only populations, range 2.5%-58% across all studies). The pathway
+  operates primarily through elevated injection drug use rates (21% in homeless populations),
+  which facilitates HCV transmission through needle sharing. Additional contributing
+  factors include high rates of alcohol use (59%), limited access to screening and
+  treatment services, and barriers to healthcare engagement. Despite these challenges,
+  when community-based treatment is provided, SVR rates of 92% are achievable.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 20.0
+    type: prevalence_percentage
+    ci_lower: 12.0
+    ci_upper: 30.0
+  p_value: null
+  sample_size: 13918
+moderators:
+- name: Injection drug use
+  direction: strengthens
+  strength: strong
+  description: IDU prevalence ranged 7%-73% across studies; 21% in homeless-only populations,
+    serving as primary transmission mechanism for HCV
+- name: Alcohol use
+  direction: strengthens
+  strength: moderate
+  description: Alcohol use prevalence was 59% in homeless-only populations, contributing
+    to liver disease progression and potentially risk behaviors
+- name: Access to community-based interventions
+  direction: weakens
+  strength: moderate
+  description: RCTs showed community-based interventions significantly increased linkage
+    to care and HCV treatment/cure rates

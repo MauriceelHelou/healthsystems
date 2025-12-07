@@ -1,0 +1,64 @@
+id: NEW:alcohol_excise_taxation_rate_to_NEW:alcohol_consumption_population_level
+name: Alcohol Excise Taxation Rate → Population-Level Alcohol Consumption
+from_node:
+  node_id: NEW:alcohol_excise_taxation_rate
+  node_name: Alcohol Excise Taxation Rate
+to_node:
+  node_id: NEW:alcohol_consumption_population_level
+  node_name: Population-Level Alcohol Consumption
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Government increases excise duties on alcoholic beverages'
+- 'Step 2: Tax increase is passed through to consumer prices (full pass-through assumed)'
+- 'Step 3: Higher prices reduce demand according to beverage-specific price elasticities'
+- 'Step 4: Population-level alcohol consumption decreases, with heavier drinkers showing less elasticity
+  than moderate drinkers'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'P. Rovira et al. 2020. "Fewer Cancer Cases in 4 Countries of the WHO European Region
+    in 2018 through Increased Alcohol Excise Taxation: A Modelling Study." https://doi.org/10.1159/000511899'
+  supporting_citations:
+  - Meta-analyses providing beverage-specific price elasticities of demand (cited in methods)
+  - GLOBOCAN 2018 cancer incidence data (referenced for baseline cancer rates)
+  - Additional citations require full-text access
+  doi: 10.1159/000511899
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Increasing alcohol excise taxation raises consumer prices, which reduces population-level
+  alcohol demand through price elasticity mechanisms. The modeling study demonstrates this structural
+  intervention's potential to reduce alcohol consumption as an upstream determinant of cancer incidence.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects varied substantially across the 4 countries studied (Germany, Italy, Kazakhstan,
+    Sweden) based on baseline taxation levels and consumption patterns. Countries with lower baseline
+    excise taxes (Germany, Italy) showed greater potential for cancer reduction.
+moderators:
+- name: baseline_taxation_level
+  direction: weakens
+  strength: strong
+  description: Countries with already high excise taxes (like Sweden) have less room for impact from further
+    increases
+- name: drinking_pattern_heavy_vs_moderate
+  direction: weakens
+  strength: moderate
+  description: Heavy drinkers show less price elasticity than moderate drinkers, meaning taxation is less
+    effective at reducing consumption among highest-risk individuals
+- name: beverage_type
+  direction: strengthens
+  strength: moderate
+  description: Beverage-specific price elasticities differ, affecting overall impact depending on beverage
+    preferences in each country
+structural_competency:
+  equity_implications: This mechanism exemplifies structural intervention by targeting pricing policy
+    rather than individual behavior change. It acknowledges that the environment shapes consumption patterns
+    and that fiscal policy is a population-level lever for health improvement. The differential elasticity
+    by drinking level highlights equity considerations - while taxation reduces overall consumption, it
+    may be less effective for those with alcohol use disorder who have more inelastic demand.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.037271'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

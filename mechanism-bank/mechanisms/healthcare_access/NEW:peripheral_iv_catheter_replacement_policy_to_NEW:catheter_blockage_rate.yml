@@ -1,0 +1,47 @@
+id: NEW:peripheral_iv_catheter_replacement_policy_to_NEW:catheter_blockage_rate
+name: Peripheral IV Catheter Replacement Policy (Routine vs Clinically-Indicated) → Catheter Blockage
+  Rate
+from_node:
+  node_id: NEW:peripheral_iv_catheter_replacement_policy
+  node_name: Peripheral IV Catheter Replacement Policy (Routine vs Clinically-Indicated)
+to_node:
+  node_id: NEW:catheter_blockage_rate
+  node_name: Catheter Blockage Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Routine replacement policy ensures catheter changes before significant occlusion develops'
+- 'Step 2: Fibrin sheath formation and blood clot accumulation occur over time'
+- 'Step 3: Shorter dwell times reduce opportunity for occlusive complications'
+- 'Step 4: Lower rates of catheter failure due to blockage'
+evidence:
+  quality_rating: A
+  n_studies: 7
+  primary_citation: Joan Webster et al. 2019. "Clinically-indicated replacement versus routine replacement
+    of peripheral venous catheters.." https://doi.org/10.1002/14651858.CD007798.pub5
+  supporting_citations:
+  - Meta-analysis of seven trials (7323 participants)
+  - Additional citations require full-text access
+  doi: 10.1002/14651858.CD007798.pub5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Catheter failure due to blockage was probably lower in routine-replacement group compared
+  to clinically-indicated group (RR 1.14, 95% CI 1.01-1.29). Blockage rates: routine-replacement 519/3733
+  (13.9%) vs clinically-indicated 560/3590 (15.6%)'
+quantitative_effects:
+  effect_size:
+    value: 1.14
+    type: relative_risk
+    ci_lower: 1.01
+    ci_upper: 1.29
+  sample_size: 7323
+structural_competency:
+  equity_implications: This mechanism highlights the complexity of healthcare policy decisions. While
+    routine replacement marginally reduces blockage, the clinical significance must be weighed against
+    costs and patient experience.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.914360'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

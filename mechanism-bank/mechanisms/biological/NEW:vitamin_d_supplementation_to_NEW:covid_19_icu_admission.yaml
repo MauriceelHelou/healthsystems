@@ -1,0 +1,49 @@
+id: NEW:vitamin_d_supplementation_to_NEW:covid_19_icu_admission
+name: Vitamin D Supplementation → COVID-19 ICU Admission
+from_node:
+  node_id: NEW:vitamin_d_supplementation
+  node_name: Vitamin D Supplementation
+to_node:
+  node_id: NEW:covid_19_icu_admission
+  node_name: COVID-19 ICU Admission
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Vitamin D supplementation increases serum 25-hydroxyvitamin D levels in
+  COVID-19 patients'
+- 'Step 2: Adequate vitamin D levels enhance innate immune function through cathelicidin
+  and defensin production, improving antimicrobial defense against SARS-CoV-2'
+- 'Step 3: Vitamin D modulates adaptive immune responses and reduces pro-inflammatory
+  cytokine production, potentially attenuating the cytokine storm associated with
+  severe COVID-19'
+- 'Step 4: Reduced inflammation and improved immune regulation decrease disease severity
+  and progression to critical illness'
+- 'Step 5: Lower probability of respiratory deterioration requiring intensive care
+  unit admission'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: 'C. Argano et al. 2023. "RETRACTED: Protective Effect of Vitamin
+    D Supplementation on COVID-19-Related Intensive Care Hospitalization and Mortality:
+    Definitive Evidence from Meta-Analysis and Trial Sequential Analysis." Pharmaceuticals.'
+  supporting_citations: []
+description: Meta-analysis of 5 RCTs demonstrates that vitamin D supplementation significantly
+  reduces the risk of ICU admission in COVID-19 patients (OR 0.28, 95% CI 0.20-0.39).
+  Trial sequential analysis confirmed this association is conclusive with definitive
+  sample size reached. The protective mechanism involves vitamin D's immunomodulatory
+  effects, including enhanced innate immunity and reduced inflammatory responses.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.28
+    type: odds_ratio
+    ci_lower: 0.2
+    ci_upper: 0.39
+  p_value: null
+  sample_size: null
+moderators:
+- name: Baseline vitamin D status
+  direction: strengthens
+  strength: moderate
+  description: Patients with severe vitamin D deficiency may benefit more from supplementation

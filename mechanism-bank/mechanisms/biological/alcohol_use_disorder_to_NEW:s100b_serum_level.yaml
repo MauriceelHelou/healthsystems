@@ -1,0 +1,47 @@
+id: alcohol_use_disorder_to_NEW:s100b_serum_level
+name: Alcohol Use Disorder → S100B Serum Level (Brain Damage Biomarker)
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:s100b_serum_level
+  node_name: S100B Serum Level (Brain Damage Biomarker)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption in Alcohol Use Disorder causes direct neurotoxic
+  damage to brain tissue, particularly affecting astrocytes and neurons'
+- 'Step 2: Alcohol-induced oxidative stress, neuroinflammation, and blood-brain barrier
+  disruption lead to astrocyte activation and damage'
+- 'Step 3: Damaged and activated astrocytes release S100B protein, which normally
+  resides intracellularly, into the extracellular space'
+- 'Step 4: S100B crosses the compromised blood-brain barrier and enters systemic circulation,
+  resulting in elevated serum S100B levels'
+- 'Step 5: Elevated serum S100B serves as a biomarker of ongoing brain damage, with
+  particularly high levels during alcohol withdrawal syndrome and delirium tremens'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Magda Malewska-Kasprzak et al. 2024. Alterations in Neurotrophins
+    in Alcohol-Addicted Patients during Alcohol Withdrawal. Brain Science.
+  supporting_citations: []
+description: Alcohol Use Disorder is associated with elevated serum S100B levels,
+  a biomarker of brain damage. Chronic alcohol exposure causes neurotoxic damage to
+  astrocytes, which release S100B protein into circulation. Elevated S100B levels
+  in AUD patients indicate ongoing neurodegeneration, with levels particularly elevated
+  during alcohol withdrawal syndrome and in cases progressing to delirium tremens.
+  S100B may also have a protective role for serotonergic neurons against alcohol-induced
+  damage.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Alcohol withdrawal syndrome
+  direction: strengthens
+  strength: strong
+  description: S100B levels are particularly elevated during alcohol withdrawal, suggesting
+    acute brain stress during this period
+- name: Delirium tremens
+  direction: strengthens
+  strength: strong
+  description: Development of delirium tremens is associated with even higher S100B
+    levels, indicating more severe brain damage

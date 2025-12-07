@@ -1,0 +1,77 @@
+id: NEW:alcohol_epidemiology_study_design_quality_to_NEW:perceived_alcohol_health_benefits
+name: Alcohol Epidemiology Study Design Quality → Perceived Alcohol Health Benefits (Mortality Protection)
+from_node:
+  node_id: NEW:alcohol_epidemiology_study_design_quality
+  node_name: Alcohol Epidemiology Study Design Quality
+to_node:
+  node_id: NEW:perceived_alcohol_health_benefits
+  node_name: Perceived Alcohol Health Benefits (Mortality Protection)
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Higher quality studies exclude former drinkers and occasional drinkers from abstainer reference
+  groups, eliminating ''sick quitter'' bias'
+- 'Step 2: Studies with younger cohorts (≤55 years) followed beyond age 55 reduce selection bias from
+  health-based abstention'
+- 'Step 3: Elimination of lifetime selection biases removes spurious protective associations between low-volume
+  drinking and mortality'
+- 'Step 4: Higher quality studies find no significant mortality benefit from low-volume alcohol consumption
+  (RR=0.98, 0.87-1.11)'
+- 'Step 5: This contrasts with lower quality studies showing apparent protective effects (RR=0.84, 0.79-0.89)'
+evidence:
+  quality_rating: A
+  n_studies: 107
+  primary_citation: Tim R Stockwell et al. 2024. "Why do only some cohort studies find health benefits
+    from low volume alcohol use? A systematic review and meta-analysis of study characteristics that may
+    bias mortality risk estimates.." https://doi.org/10.15288/jsad.23-00283
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review of 107 longitudinal studies
+  - Studies included cover 4,838,825 participants with 425,564 recorded deaths
+  - 724 estimates of association between alcohol consumption and all-cause mortality were analyzed
+  doi: 10.15288/jsad.23-00283
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This meta-analysis demonstrates that the apparent health benefits of low-volume alcohol consumption
+  found in many epidemiological studies are largely artifacts of methodological biases. When studies properly
+  account for lifetime selection biases (excluding former and occasional drinkers from abstainer groups,
+  using younger cohorts), the protective association disappears. This has profound implications for public
+  health messaging and drinking guidelines.
+quantitative_effects:
+  effect_size:
+    value: 0.98
+    type: relative_risk
+    ci_lower: 0.87
+    ci_upper: 1.11
+  sample_size: 4838825
+moderators:
+- name: former_drinker_exclusion
+  direction: strengthens
+  strength: strong
+  description: Separating former and occasional drinkers from abstainers eliminates sick quitter bias
+    and reduces apparent protective effect
+- name: cohort_age
+  direction: strengthens
+  strength: strong
+  description: Studies with mean cohort age ≤55 years followed beyond 55 reduce selection bias from health-based
+    abstention
+- name: smoking_control
+  direction: weakens
+  strength: moderate
+  description: Studies controlling for smoking showed reduced mortality risks for low volume drinkers,
+    suggesting confounding
+- name: socioeconomic_status_control
+  direction: weakens
+  strength: moderate
+  description: Studies controlling for SES showed reduced mortality risks, indicating SES confounding
+structural_competency:
+  equity_implications: This mechanism reveals how research methodology itself becomes a structural determinant
+    of health messaging. Flawed epidemiological evidence has been used to justify drinking guidelines
+    that may cause population-level harm. The alcohol industry may benefit from continued dissemination
+    of studies showing protective effects. Correcting this evidence base is essential for evidence-based
+    public health policy.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.235214'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

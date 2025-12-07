@@ -1,0 +1,45 @@
+id: sobriety_requirement_policy_to_liver_transplant_access
+name: 6-Month Sobriety Requirement Policy → Access to Liver Transplantation
+from_node:
+  node_id: sobriety_requirement_policy
+  node_name: 6-Month Sobriety Requirement Policy
+to_node:
+  node_id: liver_transplant_access
+  node_name: Access to Liver Transplantation
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Formal or informal sobriety requirement policies restrict transplant eligibility
+  for patients with alcoholic hepatitis who have less than 6 months of sobriety'
+- 'Step 2: Patients with acute alcoholic hepatitis may die while waiting to meet sobriety
+  criteria, as their condition is often rapidly progressive'
+- 'Step 3: Controversy within transplant community regarding acceptance criteria creates
+  inconsistent access across transplant centers'
+- 'Step 4: Reduced access to transplantation for patients who could benefit from life-saving
+  intervention despite shorter sobriety periods'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: M. Sedki et al. 2020. "Ethical and allocation issues in liver
+    transplant candidates with alcohol related liver disease.." *Translational Gastroenterology
+    and Hepatology*. https://doi.org/10.21037/TGH-2019-LTNA-14
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.606616'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: transplant_center_selection_criteria
+  direction: weakens
+  strength: moderate
+  description: Careful patient selection criteria at individual centers can identify
+    suitable candidates despite shorter sobriety periods
+- name: alcoholic_hepatitis_severity
+  direction: strengthens
+  strength: strong
+  description: Patients with acute alcoholic hepatitis face more severe access barriers
+    due to time-sensitive nature of their condition
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/sobriety_requirement_policy_to_liver_transplant_access.yaml
+_category: healthcare_access

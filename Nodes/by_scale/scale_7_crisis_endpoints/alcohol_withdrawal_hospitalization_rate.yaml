@@ -1,0 +1,33 @@
+id: alcohol_withdrawal_hospitalization_rate
+name: Alcohol Withdrawal Hospitalization Rate
+scale: 7
+domain: Healthcare Utilization, Substance Use Crisis
+category: crisis_endpoint
+stock:
+  value: 18.5
+  unit: Hospitalizations per 100,000 population
+  year: 2022
+  source: HCUP, state hospital discharge data
+geographic_variation:
+  score: 3
+  level: state
+  notes: Varies with heavy drinking prevalence and detox bed availability
+data_quality:
+  availability: high
+  frequency: annual
+  bias_notes: ICD-10 F10.23x/F10.24x specifically; may be undercoded when secondary to other conditions
+  primary_sources:
+  - name: AHRQ Healthcare Cost and Utilization Project (HCUP)
+    granularity: state
+  - name: State Inpatient Databases
+    granularity: state
+  - name: National Inpatient Sample (NIS)
+    granularity: national
+description: |-
+  Rate of hospital admissions for alcohol withdrawal syndrome including uncomplicated
+  withdrawal (F10.23x) and withdrawal with perceptual disturbances or delirium (F10.24x).
+  This is a standalone crisis endpoint with a specific clinical definition (ICD-10 coded).
+  Severe alcohol withdrawal (delirium tremens) is a medical emergency with 5-15% mortality
+  if untreated. This node captures acute care utilization for this specific condition;
+  upstream factors leading to withdrawal are captured in mechanisms.
+type: Rate

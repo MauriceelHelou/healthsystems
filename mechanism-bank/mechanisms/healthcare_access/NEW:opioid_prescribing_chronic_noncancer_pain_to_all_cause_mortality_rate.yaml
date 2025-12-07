@@ -1,0 +1,53 @@
+id: NEW:opioid_prescribing_chronic_noncancer_pain_to_all_cause_mortality_rate
+name: Opioid Prescribing for Chronic Noncancer Pain → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:opioid_prescribing_chronic_noncancer_pain
+  node_name: Opioid Prescribing for Chronic Noncancer Pain
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with chronic noncancer pain are prescribed opioid medications
+  for pain management'
+- 'Step 2: Long-term opioid use leads to physiological effects including respiratory
+  depression, sedation, and potential development of opioid use disorder'
+- 'Step 3: These physiological effects increase risk of fatal overdose (pooled rate
+  1.1 per 1000 person-years) and other adverse health outcomes'
+- 'Step 4: Combined overdose mortality and other opioid-related complications contribute
+  to elevated all-cause mortality (pooled rate 28.8 per 1000 person-years)'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: 'Sarah Larney et al. 2020. All-Cause and Overdose Mortality Risk
+    Among People Prescribed Opioids: A Systematic Review and Meta-analysis. Pain medicine
+    (Malden, Mass.).'
+  supporting_citations: []
+description: A systematic review and meta-analysis of 13 cohorts with over 6 million
+  participants found that people prescribed opioids (primarily for chronic noncancer
+  pain) had a pooled all-cause crude mortality rate of 28.8 per 1000 person-years
+  and overdose crude mortality rate of 1.1 per 1000 person-years. The substantial
+  heterogeneity reflects variations in prescribing practices, patient populations,
+  and outcome ascertainment across studies.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 28.8
+    type: crude_mortality_rate_per_1000_person_years
+    ci_lower: 17.9
+    ci_upper: 46.4
+  p_value: null
+  sample_size: 6029810
+moderators:
+- name: opioid_exposure_level
+  direction: strengthens
+  strength: moderate
+  description: Higher opioid exposure likely associated with greater mortality risk,
+    though poorly ascertained in included studies
+- name: indication_for_prescribing
+  direction: strengthens
+  strength: moderate
+  description: Specific indications for opioid prescribing may modify mortality risk,
+    but data were inconsistently reported

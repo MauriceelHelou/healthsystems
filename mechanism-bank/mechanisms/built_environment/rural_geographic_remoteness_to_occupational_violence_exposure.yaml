@@ -1,0 +1,50 @@
+id: rural_geographic_remoteness_to_occupational_noise_exposure
+name: Rural/Remote Geographic Location → Occupational Noise Exposure
+from_node:
+  node_id: rural_geographic_remoteness
+  node_name: Rural/Remote Geographic Location
+to_node:
+  node_id: occupational_noise_exposure
+  node_name: Occupational Noise Exposure
+  _original_id: occupational_violence_exposure
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Rural/remote locations have poor network coverage limiting communication
+  with emergency services'
+- 'Step 2: Greater distance to backup support delays response times during violent
+  incidents'
+- 'Step 3: Increased weapon accessibility in rural areas elevates risk of armed violence'
+- 'Step 4: Healthcare workers face prolonged exposure to violent situations without
+  immediate support'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Sharon L Grant et al. 2022. "Occupational violence and aggression
+    in urgent and critical care in rural health service settings: A systematic review
+    of mixed studies.." *Health & social care in the community*. https://doi.org/10.1111/hsc.14039'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.494502'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: poor_network_coverage
+  direction: strengthens
+  strength: strong
+  description: Limited cellular/communication infrastructure in remote areas prevents
+    timely calls for assistance during violent incidents
+- name: distance_to_backup
+  direction: strengthens
+  strength: strong
+  description: Geographic distance from police or additional healthcare staff increases
+    vulnerability during violent events
+- name: weapon_accessibility
+  direction: strengthens
+  strength: moderate
+  description: Rural areas typically have greater firearm ownership and weapon accessibility,
+    elevating violence severity risk
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/rural_geographic_remoteness_to_occupational_violence_exposure.yaml
+_category: built_environment

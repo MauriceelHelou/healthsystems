@@ -1,0 +1,37 @@
+id: extended_criteria_donor_liver_availability_to_high_acuity_patient_survival
+name: Extended Criteria Donor (ECD) Liver Availability → High Acuity Patient Survival
+  Post-Transplant
+from_node:
+  node_id: extended_criteria_donor_liver_availability
+  node_name: Extended Criteria Donor (ECD) Liver Availability
+to_node:
+  node_id: high_acuity_patient_survival
+  node_name: High Acuity Patient Survival Post-Transplant
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Extension of donor pool criteria (age >60, HCV+, split livers, CIT >12h,
+  DCD, macrosteatosis >30%) increases available organs for transplantation'
+- 'Step 2: Increased organ availability reduces wait time mortality for high acuity
+  (MELD ≥35) patients who face highest pre-transplant death risk'
+- 'Step 3: Despite higher post-transplant transaminases and early allograft dysfunction
+  rates, ECD grafts provide functional hepatic replacement'
+- 'Step 4: ECD recipients achieve comparable 1-, 3-, and 5-year survival rates to
+  standard liver recipients, expanding life-saving treatment access'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jacob Guorgui et al. 2021. "The Utility of Extended Criteria Donor
+    Livers in High Acuity Liver Transplant Recipients." *The American surgeon*. https://doi.org/10.1177/00031348211024658
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.615519'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: disease_severity_meld_score
+  direction: strengthens
+  strength: strong
+  description: Study specifically examines high acuity patients (MELD ≥35) who benefit
+    most from expanded donor pool due to highest waitlist mortality risk

@@ -1,0 +1,59 @@
+id: NEW:pci_utilization_rate_to_cardiovascular_disease_mortality
+name: Percutaneous Coronary Intervention Utilization Rate → Cardiovascular Disease
+  Mortality
+from_node:
+  node_id: NEW:pci_utilization_rate
+  node_name: Percutaneous Coronary Intervention Utilization Rate
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Higher PCI utilization rates increase access to timely revascularization
+  procedures for patients experiencing acute coronary syndromes and myocardial infarction'
+- 'Step 2: Timely PCI restores blood flow to ischemic myocardium, reducing infarct
+  size and preserving cardiac function'
+- 'Step 3: Improved myocardial salvage and reduced complications (heart failure, arrhythmias)
+  lead to better short-term survival outcomes'
+- 'Step 4: Lower rates of major adverse cardiovascular events following successful
+  PCI translate to reduced cardiovascular disease mortality at the population level'
+evidence:
+  quality_rating: B
+  n_studies: 10
+  primary_citation: 'Olawale O Olanisa et al. 2023. Racial Disparities and Outcomes
+    of Percutaneous Coronary Interventions in Patients Above 65 Years in America:
+    A Systematic Review. Cureus.'
+  supporting_citations: []
+description: Higher percutaneous coronary intervention utilization rates are associated
+  with reduced cardiovascular disease mortality through improved access to timely
+  revascularization. This systematic review of 10 studies found that populations with
+  lower PCI utilization rates, particularly African American and Hispanic elderly
+  patients, experienced worse clinical outcomes including higher mortality rates and
+  increased major adverse cardiovascular events. The relationship is mediated by door-to-balloon
+  time and access to care, with Medicaid expansion demonstrating ability to reduce
+  disparities.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: race_ethnicity
+  direction: strengthens
+  strength: strong
+  description: African American and Hispanic patients experience lower rates of PCI
+    utilization compared to White patients, resulting in higher mortality rates and
+    increased risk of major adverse cardiovascular events
+- name: door_to_balloon_time
+  direction: strengthens
+  strength: moderate
+  description: Longer door-to-balloon times, particularly affecting racial minorities,
+    diminish the survival benefits of PCI
+- name: medicaid_expansion
+  direction: strengthens
+  strength: moderate
+  description: Medicaid expansion reduces disparities in access to PCI and improves
+    outcomes for acute myocardial infarction patients
+- name: age
+  direction: weakens
+  strength: moderate
+  description: Patients above 65 years may have more complex presentations and comorbidities
+    affecting PCI outcomes

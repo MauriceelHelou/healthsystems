@@ -1,0 +1,43 @@
+id: high_risk_alcohol_perioperative_to_poor_postoperative_recovery
+name: High-Risk Alcohol Consumption in Perioperative Period → Significant Risks for
+  Postoperative Recovery
+from_node:
+  node_id: high_risk_alcohol_perioperative
+  node_name: High-Risk Alcohol Consumption in Perioperative Period
+to_node:
+  node_id: poor_postoperative_recovery
+  node_name: Significant Risks for Postoperative Recovery
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: High-risk alcohol consumption in weeks before surgery impairs immune function
+  and wound healing capacity'
+- 'Step 2: Alcohol affects coagulation, cardiovascular stability, and metabolic processes
+  during surgical stress'
+- 'Step 3: Perioperative alcohol use increases risk of complications including infections,
+  bleeding, and delayed healing'
+- 'Step 4: Continued postoperative alcohol consumption compounds recovery risks and
+  prolongs rehabilitation period'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Xintong Ju et al. 2024. "Study protocol for a sequential multiple
+    assignment randomized trial to decrease alcohol use before and after surgery.."
+    *Contemporary clinical trials*. https://doi.org/10.1016/j.cct.2024.107732
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.795043'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: surgery_type
+  direction: strengthens
+  strength: moderate
+  description: Non-cancer elective surgery may have different alcohol-related risk
+    profiles than emergency or cancer surgery
+- name: timing_of_alcohol_use
+  direction: strengthens
+  strength: strong
+  description: Alcohol use immediately before and after surgery poses greater short-term
+    risks than earlier consumption

@@ -1,0 +1,48 @@
+id: NEW:light_to_moderate_alcohol_consumption_to_all_cause_mortality_rate
+name: Light-to-Moderate Alcohol Consumption → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:light_to_moderate_alcohol_consumption
+  node_name: Light-to-Moderate Alcohol Consumption
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Light-to-moderate alcohol consumption in NAFLD patient population'
+- 'Step 2: Potential cardiovascular protective effects or other systemic benefits at low doses'
+- 'Step 3: Interaction with metabolic syndrome components common in NAFLD'
+- 'Step 4: Effects on overall mortality risk beyond liver-specific outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'Louise Magherman et al. 2023. "Meta‐analysis: The impact of light‐to‐moderate alcohol
+    consumption on progressive non‐alcoholic fatty liver disease." https://doi.org/10.1111/apt.17388'
+  supporting_citations:
+  - Additional citations require full-text access - studies on alcohol and all-cause mortality
+  - Research examining cardiovascular outcomes with light drinking
+  - NAFLD cohort studies with mortality endpoints
+  doi: 10.1111/apt.17388
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This meta-analysis addresses the unclear impact of light-to-moderate alcohol on overall mortality
+  in patients with NAFLD, a population at increased risk of both liver and cardiovascular death.
+moderators:
+- name: cardiovascular_disease_status
+  direction: strengthens
+  strength: moderate
+  description: NAFLD patients often have elevated cardiovascular risk where any alcohol effects may be
+    more pronounced
+structural_competency:
+  equity_implications: The J-shaped curve hypothesis for alcohol and mortality remains contested and may
+    reflect confounding by socioeconomic factors. Former drinkers (often grouped with abstainers) may
+    have quit due to illness, biasing comparisons. Policy implications must consider that promoting any
+    alcohol consumption could increase population-level harm, particularly in communities already burdened
+    by alcohol-related morbidity. Structural factors including alcohol industry marketing, pricing policies,
+    and outlet density shape consumption patterns independent of individual choice.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.488709'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

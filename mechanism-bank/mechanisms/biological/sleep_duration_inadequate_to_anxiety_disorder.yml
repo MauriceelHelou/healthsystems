@@ -1,0 +1,57 @@
+id: sleep_duration_inadequate_to_anxiety_disorder
+name: Inadequate Sleep Duration (<7 hours nightly) → Anxiety Disorder
+from_node:
+  node_id: sleep_duration_inadequate
+  node_name: Inadequate Sleep Duration (<7 hours nightly)
+to_node:
+  node_id: anxiety_disorder
+  node_name: Anxiety Disorder
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Experimental sleep reduction through deprivation, restriction, or fragmentation disrupts sleep
+  architecture'
+- 'Step 2: Sleep loss alters neurobiological processes involved in emotional regulation and threat detection'
+- 'Step 3: Hyperactivation of anxiety-related neural circuits and stress response systems'
+- 'Step 4: Increased anxiety symptoms emerge, contributing to risk for psychiatric disorders'
+evidence:
+  quality_rating: A
+  n_studies: 154
+  primary_citation: 'Cara A. Palmer et al. 2024. "0183 Sleep Loss and Emotion: A Systematic Review and
+    Meta-Analysis of over Fifty Years of Experimental Research." https://doi.org/10.1093/sleep/zsae067.0183'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes 154 studies
+  - 1338 effect sizes extracted from studies spanning 50+ years
+  - Participants ranged from age 7-79 years, 50.14% female
+  doi: 10.1093/sleep/zsae067.0183
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Sleep loss increases anxiety symptoms with standardized mean differences of 0.57-0.63. This
+  demonstrates that inadequate sleep serves as a catalyst for anxiety, with experimental evidence supporting
+  a causal pathway from sleep disruption to increased psychiatric risk.
+quantitative_effects:
+  effect_size:
+    value: 0.57
+    type: standardized_mean_difference
+  sample_size: 5717
+moderators:
+- name: study_characteristics
+  direction: varies
+  strength: moderate
+  description: Some effects moderated by study characteristics, though specifics varied by type of sleep
+    loss
+- name: hours_of_wakefulness
+  direction: u_shaped
+  strength: moderate
+  description: Non-linear effects emerged based on hours of wakefulness induced
+structural_competency:
+  equity_implications: Structural factors that impair sleep access (precarious employment requiring shift
+    work, noisy or unsafe housing, lack of paid sick leave preventing recovery from illness, economic
+    stress) create conditions for both sleep loss and anxiety, disproportionately affecting marginalized
+    populations who face multiple structural barriers.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.112441'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

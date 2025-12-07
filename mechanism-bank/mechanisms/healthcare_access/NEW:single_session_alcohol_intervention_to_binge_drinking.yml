@@ -1,0 +1,60 @@
+id: NEW:single_session_alcohol_intervention_to_binge_drinking
+name: Single Session Brief Alcohol Intervention → Binge Drinking
+from_node:
+  node_id: NEW:single_session_alcohol_intervention
+  node_name: Single Session Brief Alcohol Intervention
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare settings offer opportunistic single-session alcohol screening and intervention'
+- 'Step 2: Brief focused intervention reduces barriers to participation (time, repeated visits)'
+- 'Step 3: Concentrated motivational content maximizes immediate behavioral impact'
+- 'Step 4: Lower structural barriers to completion improve intervention reach'
+- 'Step 5: Immediate awareness and motivation translate to reduced harmful drinking'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Abhishek Ghosh et al. 2021. "Efficacy of Brief Intervention for harmful and hazardous
+    alcohol use: a systematic review and meta-analysis of studies from Low Middle-Income countries.."
+    https://doi.org/10.1111/add.15613'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Randomized controlled trials from LMIC comparing intervention modalities
+  - Individual study citations require full-text access
+  doi: 10.1111/add.15613
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Single-session brief interventions demonstrate superior efficacy compared to multiple-session
+  interventions for reducing harmful alcohol use, suggesting that concentrated, accessible interventions
+  may be more effective in LMIC healthcare contexts.
+quantitative_effects:
+  effect_size:
+    value: -0.55
+    type: standardized_mean_difference
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Evidence from LMIC settings where healthcare access barriers may make single-session
+    approaches particularly advantageous
+moderators:
+- name: number_of_sessions
+  direction: weakens
+  strength: strong
+  description: Multiple sessions (g=-0.03, P=0.85) showed dramatically reduced effectiveness compared
+    to single session (g=-0.55, P<0.001)
+structural_competency:
+  equity_implications: The paradoxical finding that single sessions outperform multiple sessions likely
+    reflects structural barriers to healthcare access in LMIC. Transportation costs, work demands, and
+    healthcare system capacity constraints make repeated visits difficult. This finding suggests that
+    intervention design must account for structural realities of healthcare access rather than assuming
+    ideal conditions. Policies should prioritize efficient, accessible intervention delivery over intensive
+    approaches that may be structurally inaccessible to populations most at risk.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.995521'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

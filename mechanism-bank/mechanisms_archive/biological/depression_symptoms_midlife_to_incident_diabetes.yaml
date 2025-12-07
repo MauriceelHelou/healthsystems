@@ -1,0 +1,47 @@
+id: depression_symptoms_midlife_to_incident_diabetes
+name: Depression Symptoms in Midlife → Incident Diabetes
+from_node:
+  node_id: depression_symptoms_midlife
+  node_name: Depression Symptoms in Midlife
+to_node:
+  node_id: incident_diabetes
+  node_name: Incident Diabetes
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Depression symptoms in midlife activate chronic stress response systems
+  including hypothalamic-pituitary-adrenal (HPA) axis dysregulation'
+- 'Step 2: Prolonged HPA axis activation leads to elevated cortisol levels and insulin
+  resistance over decades'
+- 'Step 3: Chronic inflammation (measured by C-reactive protein) and metabolic dysregulation
+  accumulate over the 27-year follow-up period'
+- 'Step 4: These biological cascades culminate in clinical diabetes diagnosis in late
+  adulthood'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Hillary L Ditmars et al. 2022. "Associations between depression
+    and cardiometabolic health: A 27-year longitudinal study.." *Psychological medicine*.
+    https://doi.org/10.1017/S003329172000505X'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.907823'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: somatic_depression_symptoms
+  direction: strengthens
+  strength: strong
+  description: When somatic depression symptoms were excluded, the association became
+    non-significant, suggesting somatic symptoms drive the relationship
+- name: body_mass_index
+  direction: weakens
+  strength: moderate
+  description: BMI was controlled for and association remained significant, suggesting
+    independent pathway beyond weight-related mechanisms
+- name: polygenic_risk_diabetes
+  direction: weakens
+  strength: moderate
+  description: Polygenic risk for diabetes was controlled for, suggesting depression
+    effect operates independently of genetic predisposition

@@ -1,0 +1,60 @@
+id: NEW:liquor_privatization_policy_to_NEW:total_ethanol_purchases
+name: Liquor Privatization Policy → Total Ethanol Purchases
+from_node:
+  node_id: NEW:liquor_privatization_policy
+  node_name: Liquor Privatization Policy
+to_node:
+  node_id: NEW:total_ethanol_purchases
+  node_name: Total Ethanol Purchases
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Initiative 1183 removes state monopoly on liquor retail and distribution'
+- 'Step 2: Private retailers expand liquor availability through increased outlet density'
+- 'Step 3: Increased access to higher-proof alcohol (liquor vs beer/wine) shifts purchasing patterns'
+- 'Step 4: Total ethanol (pure alcohol) consumption increases across the household alcohol portfolio'
+- 'Step 5: Monthly total ethanol purchases increase by approximately 26%'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Sarah Beth L Barnett et al. 2020. "Washington''s privatization of liquor: effects
+    on household alcohol purchases from Initiative 1183.." https://doi.org/10.1111/add.14875'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references Nielsen Consumer Panel Dataset
+    methodology
+  - Additional citations require full-text access - abstract references control state comparison methodology
+  - Additional citations require full-text access - abstract references differences-in-differences study
+    design
+  doi: 10.1111/add.14875
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Liquor privatization was associated with a 2.01-ounce increase in monthly total ethanol purchases
+  per household (approximately 26% increase), indicating that policy changes in alcohol retail structure
+  affect not just liquor-specific purchasing but overall alcohol consumption measured as pure ethanol
+quantitative_effects:
+  effect_size:
+    value: 2.01
+    type: beta_coefficient
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects measured in metropolitan and surrounding areas of Washington State; may differ
+    in rural areas with different baseline access patterns
+moderators:
+- name: baseline_purchasing_category
+  direction: u_shaped
+  strength: strong
+  description: Low and moderate purchasers showed increased ethanol purchases while high purchasers showed
+    decreased ethanol purchases in longitudinal subgroup analysis
+structural_competency:
+  equity_implications: This mechanism demonstrates how state alcohol control policy functions as a structural
+    determinant of population alcohol exposure. The conversion to total ethanol captures the public health
+    significance beyond just liquor volume. The differential effects by baseline consumption level raise
+    equity concerns - policies that increase consumption among light/moderate drinkers while only reducing
+    among heavy drinkers may have complex population health implications
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.188236'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

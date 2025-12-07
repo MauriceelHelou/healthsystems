@@ -1,0 +1,60 @@
+id: NEW:chronic_periodontitis_to_diabetes_control_hba1c_8
+name: Chronic Periodontitis → Diabetes Control (HbA1c)
+from_node:
+  node_id: NEW:chronic_periodontitis
+  node_name: Chronic Periodontitis
+to_node:
+  node_id: diabetes_control_hba1c_8
+  node_name: Diabetes Control (HbA1c)
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic periodontitis creates persistent bacterial infection and inflammation
+  in oral tissues, releasing inflammatory mediators (cytokines, prostaglandins) into
+  systemic circulation'
+- 'Step 2: Systemic inflammation from periodontal disease increases insulin resistance
+  through inflammatory pathways involving TNF-α, IL-6, and C-reactive protein'
+- 'Step 3: Increased insulin resistance impairs glucose uptake by cells and reduces
+  the effectiveness of endogenous and exogenous insulin'
+- 'Step 4: Poor insulin sensitivity leads to elevated blood glucose levels and higher
+  HbA1c percentages, indicating worsened glycemic control'
+- 'Step 5: Evidence from periodontal treatment studies demonstrates that reducing
+  periodontal inflammation improves HbA1c levels, confirming the causal pathway'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'R. Cao et al. 2019. Effect of non-surgical periodontal therapy
+    on glycemic control of type 2 diabetes mellitus: a systematic review and Bayesian
+    network meta-analysis. BMC Oral Health.'
+  supporting_citations: []
+description: Chronic periodontitis negatively impacts diabetes control (HbA1c) through
+  systemic inflammation and increased insulin resistance. A Bayesian network meta-analysis
+  of 14 RCTs demonstrated that periodontal treatment (scaling and root planing) significantly
+  improved HbA1c levels compared to no treatment, with mean reductions of 0.4-1.1%
+  depending on treatment type. This bidirectional relationship shows that oral inflammation
+  contributes to glycemic dysregulation in diabetic patients.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.399
+    type: mean_difference
+    ci_lower: -0.79
+    ci_upper: -0.088
+  p_value: null
+  sample_size: null
+moderators:
+- name: Adjuvant therapy type
+  direction: strengthens
+  strength: moderate
+  description: Addition of photodynamic therapy plus doxycycline to scaling and root
+    planing showed the best efficacy in lowering HbA1c (MD 1.082, 95% CrI 0.13 to
+    2.077)
+- name: Smoking status
+  direction: weakens
+  strength: moderate
+  description: Results apply primarily to non-smoking patients with chronic periodontitis
+- name: Diabetes severity
+  direction: weakens
+  strength: moderate
+  description: Evidence is strongest for patients without severe T2DM complications

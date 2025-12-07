@@ -2,8 +2,8 @@
 ## Encoding Causal Pathways with Functional Forms, Parameters, and Moderators
 
 **Document ID**: 05_MECHANISM_BANK_STRUCTURE.md  
-**Version**: 2.0  
-**Last Updated**: November 15, 2025  
+**Version**: 2.1
+**Last Updated**: December 6, 2025  
 **Tier**: 2 - Core Technical Architecture
 
 ---
@@ -16,7 +16,8 @@
 4. [Parameter Structure](#parameter-structure)
 5. [Moderator Framework](#moderator-framework)
 6. [Example Mechanisms](#example-mechanisms)
-7. [Version Control and Lineage](#version-control-and-lineage)
+7. [Referential Integrity and Hierarchy](#referential-integrity-and-hierarchy)
+8. [Version Control and Lineage](#version-control-and-lineage)
 
 ---
 
@@ -142,6 +143,54 @@ Community_Trust → Organizing_Capacity
 Neighborhood_Safety → Social_Cohesion
 Provider_Network_Density → Referral_Completion
 ```
+
+### Bidirectional Search Requirements (Discovery Pipeline)
+
+**All mechanism discovery MUST search for evidence in BOTH directions for each node pair.**
+
+This is a pipeline requirement—not just an encoding convention. The discovery process must:
+
+1. **Search A→B**: Query literature for evidence that node A causes changes in node B
+2. **Search B→A**: Query literature for evidence that node B causes changes in node A
+3. **Create mechanisms in direction(s) with sufficient evidence**
+
+**Direction Selection Rules**:
+| Evidence Scenario | Action |
+|-------------------|--------|
+| Strong A→B, weak B→A | Create forward mechanism A→B only |
+| Weak A→B, strong B→A | Create backward mechanism B→A only |
+| Strong both directions | Create TWO separate mechanisms (one forward, one backward) |
+| Weak both directions | Do not create mechanism |
+
+**Evidence Strength Criteria**:
+- **Strong**: ≥3 supporting citations, meta-analysis or multiple primary studies
+- **Weak**: <3 citations or single observational study
+
+**Why Bidirectional Search Matters**:
+- Many relationships are bidirectional (e.g., unemployment ↔ alcohol use)
+- Literature often studies one direction while feedback loop exists
+- Structural interventions may have unexpected reverse effects
+- Feedback loops are critical for system dynamics modeling
+
+**File Naming for Backward Mechanisms**:
+```
+# Forward mechanism
+{from_node}_to_{to_node}.yaml
+
+# Backward mechanism (same nodes, reversed)
+{to_node}_to_{from_node}.yaml
+```
+
+**Required YAML Field**:
+```yaml
+direction: "backward"  # Explicitly mark backward mechanisms
+```
+
+**Supporting Citations Requirement**:
+All mechanisms must have **minimum 3 supporting citations**:
+- For meta-analyses: Extract citations of key included studies
+- For systematic reviews: Extract citations of representative primary studies
+- For primary studies: Extract citations of corroborating prior studies
 
 ---
 
@@ -463,33 +512,37 @@ moderators:
 
 ## Example Mechanisms
 
-### Example 1: Eviction → Healthcare Discontinuity (Forward)
+> **Note**: All examples use canonical node IDs from `mechanism-bank/mechanisms/canonical_nodes.json`. See `Nodes/COMPLETE_NODE_INVENTORY.md` for complete node specifications.
+
+### Example 1: Eviction Filing Rate → Emergency Department Visit Rate (Forward)
 
 ```yaml
-mechanism_id: "eviction_healthcare_discontinuity"
+mechanism_id: "eviction_filing_rate_to_emergency_department_visit_rate"
 mechanism_class: "housing_to_health"
 direction: "forward"
 
 from_node:
-  node_id: "eviction_rate"
-  stock_unit: "Annual eviction filings per 1000 renter households"
+  node_id: "eviction_filing_rate"  # Canonical node from inventory
+  node_name: "Eviction Filing Rate"
+  stock_unit: "Filings per 100 renter households annually"
 
 to_node:
-  node_id: "healthcare_continuity"
-  stock_unit: "Index (0-1)"
+  node_id: "emergency_department_visit_rate"  # Canonical node from inventory
+  node_name: "Emergency Department Visit Rate"
+  stock_unit: "Visits per 1,000 population annually"
 
 functional_form: "multiplicative_dampening"
 equation: |
-  ΔContinuity = -alpha × Eviction_Rate × (Continuity / Max_Continuity)
-  
-  # Negative effect: higher evictions reduce continuity
-  # Multiplicative: effect proportional to current continuity level
-  # (those with good continuity have more to lose)
+  ΔED_Visits = alpha × Eviction_Filing_Rate × (1 - ED_Visit_Rate / Max_ED_Rate)
+
+  # Positive effect: higher eviction filings increase ED visits
+  # Multiplicative: effect dampens as ED utilization approaches maximum
+  # Captures displacement-induced healthcare disruption
 
 base_parameters:
   alpha:
     value: 0.028
-    interpretation: "Per-unit eviction rate reduces continuity proportionally"
+    interpretation: "Per-unit eviction rate increases ED utilization proportionally"
     confidence_interval: [0.018, 0.038]
     metric: "Standardized effect"
     source_studies:
@@ -499,22 +552,22 @@ base_parameters:
       - doi: "10.2222/2023-housing-instability-jones"
         effect: "β=0.24"
       # [10 more studies]
-    
+
     meta_analysis:
       method: "Bayesian random-effects"
       heterogeneity_i2: 62%
       publication_bias: "Egger test p=0.18 (minimal bias)"
 
-  Max_Continuity:
-    value: 1.0
-    description: "Perfect continuity (normalized scale)"
+  Max_ED_Rate:
+    value: 500
+    description: "Maximum plausible ED visits per 1,000 population"
 
 moderators:
   policy:
-    - factor: "just_cause_eviction_protection"
-      strong_protection: -0.08  # Reduces negative effect by 0.08
+    - factor: "just_cause_eviction_protection"  # Canonical node
+      strong_protection: -0.08  # Reduces effect by 0.08
       weak_protection: 0.00
-      condition: "Policy strength > 7/10 considered strong"
+      condition: "just_cause_eviction_protection = 1 (policy in effect)"
       evidence: "doi:10.3333/2024-eviction-policy"
       mechanism_explanation: "Just-cause protection reduces eviction instability, blunts health disruption"
 
@@ -523,11 +576,11 @@ moderators:
       adjustment: +0.09  # Effect 1.32× stronger for Black populations
       evidence: "doi:10.4444/2024-racial-disparities"
       mechanism_explanation: "Eviction effects compound with discrimination, limited wealth reserves"
-      
+
   geographic:
-    - factor: "medicaid_generosity"
-      generous: -0.05  # Reduces negative effect
-      restrictive: +0.03  # Amplifies negative effect
+    - factor: "medicaid_coverage_generosity_index"  # Canonical node
+      generous: -0.05  # Reduces effect when index > 70
+      restrictive: +0.03  # Amplifies effect when index < 40
       evidence: "doi:10.5555/2023-medicaid-eviction"
 
 temporal_dynamics:
@@ -559,26 +612,28 @@ last_updated: "2025-10-12"
 update_notes: "Added temporal dynamics specification, refined moderators based on 2025 literature"
 ```
 
-### Example 2: CHW Capacity → Healthcare Continuity (Forward, Sigmoid)
+### Example 2: Primary Care Physician Density → Preventable Hospitalization (Forward, Sigmoid)
 
 ```yaml
-mechanism_id: "chw_healthcare_continuity"
-mechanism_class: "healthcare_infrastructure_to_access"
+mechanism_id: "primary_care_physician_density_to_preventable_hospitalization_individual"
+mechanism_class: "healthcare_infrastructure_to_outcomes"
 direction: "forward"
 
 from_node:
-  node_id: "chw_capacity"
-  stock_unit: "FTE count"
+  node_id: "primary_care_physician_density"  # Canonical node
+  node_name: "Primary Care Physician Density"
+  stock_unit: "Physicians per 100,000 population"
 
 to_node:
-  node_id: "healthcare_continuity"
-  stock_unit: "Index (0-1)"
+  node_id: "preventable_hospitalization_individual"  # Canonical node
+  node_name: "Preventable Hospitalization (Individual)"
+  stock_unit: "ACSC admissions per 1,000 population"
 
 functional_form: "sigmoid"
 equation: |
-  ΔContinuity = alpha × (L / (1 + exp(-k × (CHW_Capacity - x0))))
+  ΔPreventable_Hosp = -alpha × (L / (1 + exp(-k × (PCP_Density - x0))))
 
-rationale: "Sigmoid captures: slow initial buildup (trust building), rapid mid-range growth (critical mass), saturation at high capacity (diminishing returns)"
+rationale: "Sigmoid captures: slow initial effect (minimal access), rapid mid-range reduction (critical mass of providers), saturation at high density (diminishing returns)"
 
 base_parameters:
   alpha:
@@ -586,78 +641,148 @@ base_parameters:
     confidence_interval: [0.22, 0.50]
     source_studies: [12 RCTs and cohort studies]
     meta_analysis: "Bayesian random-effects, I²=48%"
-    
+
   L:
-    value: 0.85
-    description: "Saturation level: 85% continuity is realistic maximum (some disruption inevitable)"
-    
+    value: 0.70
+    description: "Maximum reduction: 70% of preventable hospitalizations can be averted"
+
   k:
-    value: 0.12
+    value: 0.08
     description: "Steepness: moderate transition rate"
-    
+
   x0:
-    value: 150
-    description: "Midpoint: 150 CHWs per geography is inflection point"
-    source: "Calibrated from program evaluations"
+    value: 80
+    description: "Midpoint: 80 PCPs per 100k is inflection point"
+    source: "Calibrated from HRSA shortage area thresholds"
 
 moderators:
   policy:
-    - factor: "medicaid_work_requirements_absent"
-      adjustment: +0.08
-      
+    - factor: "medicaid_expansion_status"  # Canonical node
+      expanded: +0.08
+      not_expanded: -0.05
+
   implementation:
-    - factor: "healthcare_integration"
+    - factor: "care_coordination_quality"
       low: -0.10
       medium: 0.00
       high: +0.12
-      
+
   demographic:
     - factor: "population_black"
-      adjustment: +0.09
+      adjustment: +0.09  # Effect stronger for historically underserved populations
 
 # [Additional sections similar to Example 1]
 ```
 
-### Example 3: Healthcare Continuity → ED Utilization (Forward, Inverse)
+### Example 3: Housing Quality Index → Asthma Hospitalization Rate (Forward, Threshold)
 
 ```yaml
-mechanism_id: "continuity_ed_utilization"
-mechanism_class: "access_to_outcomes"
+mechanism_id: "housing_quality_index_to_asthma_hospitalization_rate"
+mechanism_class: "built_environment_to_health"
 direction: "forward"
 
 from_node:
-  node_id: "healthcare_continuity"
+  node_id: "housing_quality_index_revised_consolidated"  # Canonical node
+  node_name: "Housing Quality Index"
   stock_unit: "Index (0-1)"
 
 to_node:
-  node_id: "ed_utilization_risk"
-  stock_unit: "Index (0-1), probability of ED visit"
+  node_id: "asthma_hospitalization_rate"  # Canonical node
+  node_name: "Asthma Hospitalization Rate"
+  stock_unit: "Hospitalizations per 100,000 population"
 
-functional_form: "inverse_linear"
+functional_form: "threshold"
 equation: |
-  ED_Risk = Base_Risk × (1 - alpha × Continuity)
-  
-  # Negative relationship: higher continuity reduces ED risk
-  # Linear for simplicity (supported by literature)
+  ΔAsthma_Hosp = -alpha × max(0, Housing_Quality - threshold)
+
+  # Negative relationship: higher housing quality reduces asthma hospitalizations
+  # Threshold: quality must exceed minimum for protective effect
 
 base_parameters:
   alpha:
-    value: 0.20
-    interpretation: "Each 0.10 increase in continuity reduces ED risk by 2 percentage points"
-    confidence_interval: [0.15, 0.25]
-    
-  Base_Risk:
-    value: "Geography-specific baseline ED visit rate"
-    source: "Hospital administrative data"
+    value: 0.25
+    interpretation: "Each 0.10 increase in housing quality above threshold reduces asthma hospitalizations by 2.5%"
+    confidence_interval: [0.18, 0.32]
+
+  threshold:
+    value: 0.40
+    description: "Minimum housing quality for protective effect"
+    source: "Based on EPA/HUD healthy homes standards"
 
 moderators:
-  implementation:
-    - factor: "care_coordination_quality"
-      high: +0.05  # Amplifies continuity benefit
-      low: -0.03
+  policy:
+    - factor: "housing_code_enforcement_stringency"
+      high: +0.08  # Amplifies housing quality benefit
+      low: -0.05
+
+  demographic:
+    - factor: "children_under_18"
+      present: +0.12  # Stronger effect in households with children
+      absent: 0.00
 
 # [Additional sections]
 ```
+
+---
+
+## Referential Integrity and Hierarchy
+
+### Node Bank Referential Integrity
+
+**CRITICAL**: Mechanisms MUST reference nodes that exist in the Node Bank.
+
+```python
+# Validation rule (enforced at YAML load and API write)
+def validate_mechanism_nodes(mechanism, node_bank):
+    """Ensure mechanism nodes exist in node bank."""
+    if mechanism.from_node_id not in node_bank:
+        raise ValidationError(f"from_node '{mechanism.from_node_id}' not in Node Bank")
+    if mechanism.to_node_id not in node_bank:
+        raise ValidationError(f"to_node '{mechanism.to_node_id}' not in Node Bank")
+```
+
+**Why**: This constraint ensures:
+- All mechanism endpoints are defined, validated nodes
+- No orphan mechanisms referencing ad-hoc node names
+- Consistent node metadata (scale, category, domains) across mechanisms
+- Ability to query all mechanisms affecting a node
+
+### Hierarchy Level Field
+
+Mechanisms include a `hierarchy_level` field indicating the abstraction level:
+
+| Level | Description | When to Use |
+|-------|-------------|-------------|
+| **leaf** | Connects specific/detailed nodes (default) | Most mechanisms |
+| **parent** | Connects abstract/general nodes | Aggregated relationships |
+| **cross** | Spans hierarchy levels | Abstract → specific pathways |
+
+```yaml
+# Example: Parent-level mechanism
+mechanism_id: "substance_use_to_liver_disease"
+hierarchy_level: "parent"  # Connects general concepts
+from_node:
+  node_id: "substance_use_disorder"  # Abstract parent node
+to_node:
+  node_id: "liver_disease"  # Abstract parent node
+
+# Example: Leaf-level mechanism
+mechanism_id: "binge_drinking_to_alcohol_poisoning"
+hierarchy_level: "leaf"  # Connects specific nodes
+from_node:
+  node_id: "binge_drinking"  # Specific child node
+to_node:
+  node_id: "alcohol_poisoning"  # Specific child node
+```
+
+### No Automatic Aggregation
+
+**Key principle**: Child mechanisms don't automatically "roll up" to parent levels.
+
+If you want a mechanism visible at the parent level, you must explicitly define it. This ensures:
+- Clear evidence attribution at each level
+- Different effect sizes can be specified for abstract vs specific relationships
+- No false precision from aggregation
 
 ---
 
@@ -760,20 +885,56 @@ archived_location: "mechanisms/deprecated/eviction_healthcare_discontinuity_v1.y
 
 ---
 
+---
+
+## Canonical Node Reference
+
+All mechanism definitions MUST reference canonical nodes from the node inventory. This ensures consistency and enables automated validation.
+
+### Node Sources
+
+| Source | Location | Use Case |
+|--------|----------|----------|
+| **Canonical Nodes JSON** | `mechanism-bank/mechanisms/canonical_nodes.json` | Quick lookup of 840 node IDs |
+| **Complete Inventory** | `Nodes/COMPLETE_NODE_INVENTORY.md` | Full specifications with scales, domains, units |
+| **Backend Utilities** | `backend/utils/canonical_nodes.py` | Programmatic node lookup |
+
+### Mechanism ID Convention
+
+Mechanism IDs should follow the pattern: `{from_node_id}_to_{to_node_id}`
+
+Examples from this document:
+- `eviction_filing_rate_to_emergency_department_visit_rate`
+- `primary_care_physician_density_to_preventable_hospitalization_individual`
+- `housing_quality_index_to_asthma_hospitalization_rate`
+
+### Validation
+
+Before saving a mechanism to the bank, verify:
+1. `from_node.node_id` exists in `canonical_nodes.json`
+2. `to_node.node_id` exists in `canonical_nodes.json`
+3. Moderator node references (if any) exist in `canonical_nodes.json`
+
+---
+
 ## Document Metadata
 
 **Version History**:
 - v1.0 (2024-06): Initial mechanism bank structure
 - v2.0 (2025-11): Added bidirectional encoding, expanded moderator framework, version control specs
+- v2.1 (2025-12): Updated all examples to use canonical node IDs
+- v2.2 (2025-12): Added bidirectional search requirements for discovery pipeline, 3+ supporting citations requirement
 
 **Related Documents**:
 - [04_STOCK_FLOW_PARADIGM.md] - Node/stock specifications
 - [08_EFFECT_SIZE_TRANSLATION.md] - Converting literature effects to parameters
 - [09_LLM_TOPOLOGY_DISCOVERY.md] - How mechanisms discovered
 - [10_LLM_EFFECT_QUANTIFICATION.md] - How effect sizes extracted
+- [Canonical Nodes] `mechanism-bank/mechanisms/canonical_nodes.json`
+- [Node Specifications] `Nodes/COMPLETE_NODE_INVENTORY.md`
 
-**Last Reviewed**: November 15, 2025  
-**Next Review**: February 15, 2026
+**Last Reviewed**: December 2, 2025
+**Next Review**: March 2, 2026
 
 ---
 

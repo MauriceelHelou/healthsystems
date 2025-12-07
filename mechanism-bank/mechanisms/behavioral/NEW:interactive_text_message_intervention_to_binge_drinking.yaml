@@ -1,0 +1,57 @@
+id: NEW:interactive_text_message_intervention_to_binge_drinking
+name: Interactive Text Message Intervention (SMS Assessments + Feedback) → Binge Drinking
+from_node:
+  node_id: NEW:interactive_text_message_intervention
+  node_name: Interactive Text Message Intervention (SMS Assessments + Feedback)
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Weekly Thursday text messages query upcoming weekend drinking plans and
+  prompt participants to commit to a drinking limit goal, activating prospective planning
+  and goal-setting cognitive processes'
+- 'Step 2: Sunday follow-up texts assess actual weekend drinking quantity, creating
+  a self-monitoring feedback loop that increases awareness of drinking behavior'
+- 'Step 3: Tailored feedback based on responses provides personalized information
+  about discrepancies between goals and behavior, reinforcing motivation to reduce
+  consumption'
+- 'Step 4: Regular engagement over 12 weeks establishes new behavioral patterns and
+  drinking norms, leading to sustained reductions in binge drinking frequency and
+  intensity'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'B. Suffoletto et al. 2015. "An Interactive Text Message Intervention
+    to Reduce Binge Drinking in Young Adults: A Randomized Controlled Trial with 9-Month
+    Outcomes." PLoS ONE.'
+  supporting_citations: []
+description: A 12-week interactive text message intervention combining weekly drinking
+  plan queries, goal commitment prompts, and tailored feedback significantly reduced
+  binge drinking in young adults. At 9 months, participants in the intervention group
+  showed 31% fewer binge drinking days (IRR 0.69), 48% lower odds of binge drinking
+  prevalence (OR 0.52), fewer drinks per drinking day, and 58% lower odds of alcohol-related
+  injury compared to controls. Self-monitoring alone (without feedback) was not effective.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.52
+    type: odds_ratio
+    ci_lower: 0.26
+    ci_upper: 0.98
+  p_value: null
+  sample_size: 765
+moderators:
+- name: Feedback component
+  direction: strengthens
+  strength: strong
+  description: SMS Assessments alone (self-monitoring only) did not reduce drinking
+    relative to controls; the addition of tailored feedback was essential for intervention
+    effectiveness
+- name: Age group
+  direction: strengthens
+  strength: moderate
+  description: Intervention specifically targeted young adults (18-25 years) who have
+    highest prevalence and intensity of binge drinking

@@ -1,0 +1,62 @@
+id: homelessness_rate_to_all_cause_mortality_rate
+name: Homelessness → All-Cause Mortality
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Homelessness exposes individuals to extreme social exclusion, poverty,
+  and marginalization that creates barriers to healthcare access and health-promoting
+  resources'
+- 'Step 2: Homeless individuals experience elevated rates of multiple morbidities
+  including infectious diseases, mental health conditions, and injuries due to environmental
+  exposures, violence, and lack of shelter'
+- 'Step 3: Overlapping risk factors including substance use disorders, incarceration
+  history, and engagement in survival sex work compound health vulnerabilities'
+- 'Step 4: Accumulated health burden from multimorbidity, delayed healthcare, and
+  ongoing environmental stressors leads to substantially elevated all-cause mortality
+  rates compared to general population'
+evidence:
+  quality_rating: A
+  n_studies: 92
+  primary_citation: 'Robert W Aldridge et al. 2018. Morbidity and mortality in homeless
+    individuals, prisoners, sex workers, and individuals with substance use disorders
+    in high-income countries: a systematic review and meta-analysis. Lancet (London,
+    England).'
+  supporting_citations: []
+description: Homelessness is associated with a standardized mortality ratio of 11.86,
+  indicating nearly 12-fold increased mortality compared to the general population.
+  This systematic review of 92 datapoints found that 99% showed significantly elevated
+  all-cause mortality among homeless populations in high-income countries. The elevated
+  mortality reflects extreme health inequities driven by social exclusion, multimorbidity,
+  and barriers to healthcare.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 11.86
+    type: standardized_mortality_ratio
+    ci_lower: 10.42
+    ci_upper: 13.3
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: The relative effect of social exclusion on mortality is greater in
+    female individuals than male individuals
+- name: substance_use_disorder
+  direction: strengthens
+  strength: strong
+  description: Overlapping substance use disorders compound mortality risk among homeless
+    populations
+- name: incarceration_history
+  direction: strengthens
+  strength: moderate
+  description: History of imprisonment adds to cumulative health risks and mortality
+    in homeless populations

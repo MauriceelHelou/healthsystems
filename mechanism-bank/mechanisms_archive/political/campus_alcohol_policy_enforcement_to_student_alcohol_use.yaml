@@ -1,0 +1,53 @@
+id: campus_alcohol_policy_enforcement_to_student_alcohol_use
+name: Campus Alcohol Policy Enforcement (Mandated Intervention) → Student Alcohol
+  Use
+from_node:
+  node_id: campus_alcohol_policy_enforcement
+  node_name: Campus Alcohol Policy Enforcement (Mandated Intervention)
+to_node:
+  node_id: student_alcohol_use
+  node_name: Student Alcohol Use
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Campus alcohol violations trigger mandatory participation in brief motivational
+  interventions (BMIs)'
+- 'Step 2: BMI provides personalized feedback, explores student motivations, and discusses
+  drinking behaviors in structured setting'
+- 'Step 3: Intervention reduces alcohol consumption across multiple metrics (drinks
+  per week, typical BAC, binge frequency) at 1-month follow-up'
+- 'Step 4: Policy enforcement creates accountability mechanism that channels students
+  into evidence-based harm reduction programming'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Kate B Carey et al. 2018. "Predictors of short-term change after
+    a brief alcohol intervention for mandated college drinkers.." *Addictive behaviors*.
+    https://doi.org/10.1016/j.addbeh.2017.09.019
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.250735'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: male_sex
+  direction: weakens
+  strength: moderate
+  description: Male students showed smaller decreases in alcohol use after BMI compared
+    to female students
+- name: fun_seeking_disposition
+  direction: weakens
+  strength: moderate
+  description: Students with higher fun-seeking personality traits showed smaller
+    reductions in alcohol use
+- name: perceived_costs_of_change
+  direction: weakens
+  strength: moderate
+  description: Students who perceived greater costs of reducing drinking showed smaller
+    decreases in both alcohol use and problems
+- name: perceived_benefits_of_change
+  direction: strengthens
+  strength: moderate
+  description: Students who perceived more benefits of reducing drinking showed greater
+    decreases in both alcohol use and problems

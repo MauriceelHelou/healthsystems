@@ -1,0 +1,64 @@
+id: pretrial_diversion_programs_to_sud_treatment_entry_rate
+name: Pretrial Diversion Programs → Substance Use Disorder Treatment Entry Rate
+from_node:
+  node_id: pretrial_diversion_programs
+  node_name: Pretrial Diversion Programs
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: Substance Use Disorder Treatment Entry Rate
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Expansion of diversionary programs provides alternatives to incarceration for individuals with
+  substance use disorders'
+- 'Step 2: Diversion routes individuals away from traditional criminal justice processing toward treatment
+  services'
+- 'Step 3: Increased referral pathways from probation/parole and diversionary programs to specialty SUD
+  treatment facilities'
+- 'Step 4: Greater access to evidence-based treatment for substance use disorders'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Carrie E Fry et al. 2024. "Changes in legal referrals to specialty substance use disorder
+    treatment from 2015-2019.." https://doi.org/10.1186/s40352-024-00297-2
+  supporting_citations:
+  - Additional citations require full-text access - abstract references policy changes affecting referral
+    patterns
+  - Additional citations require full-text access - abstract references prior work on legal system referrals
+  - Additional citations require full-text access - abstract references substance use policy landscape
+    changes
+  doi: 10.1186/s40352-024-00297-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The proportion of referrals to specialty SUD treatment from probation/parole and diversionary
+  programs increased significantly from 2015-2019 (p<0.001), even as overall legal system referrals declined.
+  This suggests policy shifts toward diversion are creating new pathways to treatment.
+quantitative_effects:
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study uses U.S. national data suggesting potential state-level variation in policy
+    implementation and referral patterns
+moderators:
+- name: substance_type
+  direction: weakens
+  strength: moderate
+  description: Legal referrals for alcohol and cannabis use declined over time, while referral patterns
+    may differ by substance type
+- name: time_period
+  direction: strengthens
+  strength: moderate
+  description: Referrals from probation/parole and diversionary programs grew from 2015-2019, indicating
+    temporal strengthening of this pathway
+structural_competency:
+  equity_implications: This mechanism reflects structural changes in criminal justice policy that shift
+    from punitive approaches toward treatment-based interventions. The decline in overall legal referrals
+    may reflect broader decriminalization efforts, while growth in diversion programs represents a more
+    health-centered approach to substance use. This structural shift has equity implications as criminal
+    justice involvement disproportionately affects marginalized communities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.758055'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

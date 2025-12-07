@@ -1,0 +1,54 @@
+id: NEW:hematological_vs_solid_tumor_type_to_NEW:covid_19_icu_admission_pediatric
+name: Cancer Type (Hematological vs Solid Tumor) → COVID-19 ICU Admission Risk in
+  Pediatric Cancer Patients
+from_node:
+  node_id: NEW:hematological_vs_solid_tumor_type
+  node_name: Cancer Type (Hematological vs Solid Tumor)
+to_node:
+  node_id: NEW:covid_19_icu_admission_pediatric
+  node_name: COVID-19 ICU Admission Risk in Pediatric Cancer Patients
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hematological malignancies (leukemias, lymphomas) directly affect immune
+  cell populations in the bone marrow and lymphoid tissues, potentially causing more
+  profound immunosuppression than solid tumors'
+- 'Step 2: Treatment regimens for hematological cancers typically involve intensive
+  chemotherapy that causes severe myelosuppression, reducing neutrophils, lymphocytes,
+  and other immune cells critical for viral defense'
+- 'Step 3: This immunocompromised state was hypothesized to increase susceptibility
+  to severe COVID-19 infection requiring ICU admission compared to solid tumor patients'
+- 'Step 4: However, meta-analysis evidence shows no statistically significant difference
+  in ICU admission risk between hematological and solid tumor patients (OR = 1.42),
+  suggesting pediatric cancer patients may have protective factors regardless of cancer
+  type'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'E. Dorantes-Acosta et al. 2021. Survival and Complications in
+    Pediatric Patients With Cancer and COVID-19: A Meta-Analysis. Frontiers in Oncology.'
+  supporting_citations: []
+description: Meta-analysis of 15 studies examining 191 pediatric cancer patients with
+  COVID-19 found no statistically significant difference in ICU admission risk between
+  patients with hematological malignancies versus solid tumors (OR = 1.42, 95% CI
+  0.35-5.81). While a positive direction was hypothesized due to greater immunosuppression
+  in hematological cancers, the wide confidence interval crossing 1.0 indicates the
+  effect is not statistically significant. Overall survival in the cohort was 99.4%,
+  suggesting pediatric cancer patients may have protective factors against severe
+  COVID-19.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.42
+    type: odds_ratio
+    ci_lower: 0.35
+    ci_upper: 5.81
+  p_value: null
+  sample_size: 191
+moderators:
+- name: Treatment intensity
+  direction: strengthens
+  strength: weak
+  description: More intensive chemotherapy regimens may increase immunosuppression
+    and ICU risk, though not statistically significant in this analysis

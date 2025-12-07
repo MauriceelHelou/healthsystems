@@ -1,0 +1,54 @@
+id: NEW:delayed_hospital_presentation_pandemic_to_acute_myocardial_infarction_rate
+name: Delayed Hospital Presentation During Pandemic → Acute Myocardial Infarction
+  Rate
+from_node:
+  node_id: NEW:delayed_hospital_presentation_pandemic
+  node_name: Delayed Hospital Presentation During Pandemic
+to_node:
+  node_id: acute_myocardial_infarction_rate
+  node_name: Acute Myocardial Infarction Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: During COVID-19 pandemic, patients with acute coronary symptoms hesitated
+  to present at hospitals due to fear of infection, lockdown measures, and healthcare
+  system messaging to avoid emergency departments'
+- 'Step 2: This hesitation resulted in prolonged symptom-to-first-medical-contact
+  time, delaying critical early intervention for myocardial infarction'
+- 'Step 3: Delayed presentation led to longer door-to-balloon times for those who
+  eventually sought care, reducing effectiveness of reperfusion therapy'
+- 'Step 4: The combination of delayed care and missed treatment windows resulted in
+  worse outcomes including higher mortality rates (10-76% with COVID-19 vs 4.6-7%
+  without) and increased severity of myocardial damage'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Marius Rus et al. 2024. Acute Myocardial Infarction during the
+    COVID-19 Pandemic: Long-Term Outcomes and Prognosis—A Systematic Review. Life.'
+  supporting_citations: []
+description: During the COVID-19 pandemic, patients experiencing acute myocardial
+  infarction symptoms delayed seeking hospital care due to fear of contracting COVID-19
+  in healthcare settings. This behavioral response, documented as 'patients' hesitation
+  in presenting at the hospital,' resulted in prolonged symptom-to-first-medical-contact
+  times and longer door-to-balloon times. These delays compromised the effectiveness
+  of time-sensitive interventions like primary percutaneous coronary intervention,
+  leading to worse short and long-term outcomes including increased cardiovascular
+  mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: COVID-19 infection status
+  direction: strengthens
+  strength: strong
+  description: Patients with concurrent COVID-19 infection had substantially higher
+    mortality (10-76%) compared to AMI patients without COVID-19 (4.6-7%)
+- name: Type of MI (STEMI vs NSTEMI)
+  direction: strengthens
+  strength: moderate
+  description: STEMI patients are more time-sensitive, making delays particularly
+    harmful for this subgroup
+- name: Pandemic phase
+  direction: strengthens
+  strength: moderate
+  description: Fear and hesitation were likely highest during acute pandemic waves
+    with high infection rates

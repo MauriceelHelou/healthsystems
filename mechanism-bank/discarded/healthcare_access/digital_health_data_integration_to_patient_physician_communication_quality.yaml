@@ -1,0 +1,48 @@
+id: digital_health_data_integration_to_patient_physician_communication_quality
+name: Digital Health Data Integration in Clinical Practice → Patient-Physician Communication
+  Quality
+from_node:
+  node_id: digital_health_data_integration
+  node_name: Digital Health Data Integration in Clinical Practice
+to_node:
+  node_id: patient_physician_communication_quality
+  node_name: Patient-Physician Communication Quality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Sleep tracking technology generates objective patient health data through
+  SleepLife platform'
+- 'Step 2: Healthcare system lacks infrastructure or workflow integration for physicians
+  to review patient-generated data (only 1 physician accessed portal)'
+- 'Step 3: Patients expect improved communication based on shared objective data but
+  physicians remain unable or unwilling to engage with the technology'
+- 'Step 4: Mismatch between patient expectations and physician engagement leads to
+  decreased patient satisfaction with communication and overall sleep health management'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Sana Durrani et al. 2022. "A Feasibility Study: Testing Whether
+    a Sleep Application Providing Objective Sleep Data to Physicians Improves Patient-Physician
+    Communication Regarding Sleep Experiences, Habits, and Behaviors.." *Advances
+    in therapy*. https://doi.org/10.1007/s12325-021-02013-0'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.059712'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: physician_portal_utilization
+  direction: weakens
+  strength: strong
+  description: Extremely low physician engagement with digital platform (1 out of
+    49 physicians) represents major barrier to intended mechanism of improved communication
+    through shared data
+- name: physician_survey_completion
+  direction: weakens
+  strength: moderate
+  description: Only 55% physician survey completion rate suggests limited physician
+    investment in the intervention compared to 83% patient completion
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/digital_health_data_integration_to_patient_physician_communication_quality.yaml
+_category: healthcare_access

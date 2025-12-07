@@ -1,0 +1,66 @@
+id: NEW:postpartum_timing_day_1_to_maternal_mortality_ratio
+name: First Day Postpartum Period → Maternal Mortality Ratio
+from_node:
+  node_id: NEW:postpartum_timing_day_1
+  node_name: First Day Postpartum Period
+to_node:
+  node_id: maternal_mortality_ratio
+  node_name: Maternal Mortality Ratio
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: The first 24 hours postpartum represents the highest-risk period due to
+  immediate physiological stressors from childbirth including massive hemodynamic
+  shifts, uterine atony risk, and potential birth trauma'
+- 'Step 2: Postpartum hemorrhage (PPH) occurs predominantly on day 1 (79.1% of PPH
+  deaths), driven by uterine atony, retained placental tissue, genital tract trauma,
+  and coagulation disorders'
+- 'Step 3: Embolism-related deaths peak on day 1 (58.2%), as thromboembolic events
+  are triggered by hypercoagulable state of pregnancy combined with venous stasis
+  and potential vascular injury during delivery'
+- 'Step 4: Eclampsia and hypertensive disorders contribute substantially to day 1
+  mortality (44.3%), with acute complications including cerebral hemorrhage, HELLP
+  syndrome, and multi-organ failure'
+- 'Step 5: The concentration of nearly half (48.9%) of all postpartum maternal deaths
+  on day 1 reflects the acute biological vulnerability during the immediate post-delivery
+  period when physiological adaptations are most critical'
+evidence:
+  quality_rating: A
+  n_studies: 32
+  primary_citation: 'J. Dol et al. 2022. Timing of maternal mortality and severe morbidity
+    during the postpartum period: a systematic review. JBI Evidence Synthesis.'
+  supporting_citations: []
+description: The first day postpartum represents the period of highest maternal mortality
+  risk, accounting for 48.9% of all postpartum maternal deaths. This concentration
+  reflects acute biological vulnerabilities including postpartum hemorrhage (79.1%
+  of PPH deaths occur day 1), thromboembolism (58.2% day 1), and hypertensive disorders/eclampsia
+  (44.3% day 1). The immediate post-delivery period involves massive physiological
+  adaptations including hemodynamic shifts, uterine involution, and coagulation changes
+  that create peak vulnerability for life-threatening complications.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 48.9
+    type: proportion
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: cause_of_death
+  direction: strengthens
+  strength: strong
+  description: Postpartum hemorrhage (79.1% on day 1) and embolism (58.2% on day 1)
+    show strongest concentration of deaths on first day compared to infection (only
+    38.7% in first week)
+- name: country_income_level
+  direction: strengthens
+  strength: moderate
+  description: Country income classification affects timing patterns, likely reflecting
+    differences in access to emergency obstetric care
+- name: time_period
+  direction: weakens
+  strength: weak
+  description: Data collection before or after 2010 was examined as a subgroup factor,
+    suggesting temporal changes in care quality

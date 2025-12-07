@@ -1,0 +1,61 @@
+id: stimulant_use_disorder_to_NEW:xr_ntx_initiation_rate
+name: Stimulant Use Disorder → Extended-Release Naltrexone Initiation Rate
+from_node:
+  node_id: stimulant_use_disorder
+  node_name: Stimulant Use Disorder
+to_node:
+  node_id: NEW:xr_ntx_initiation_rate
+  node_name: Extended-Release Naltrexone Initiation Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: XR-NTX requires complete opioid detoxification before initiation, creating a structural barrier'
+- 'Step 2: Active stimulant use may complicate or destabilize the detoxification process'
+- 'Step 3: Withdrawal management is more difficult to complete with ongoing stimulant use'
+- 'Step 4: Substantially reduced likelihood of successfully initiating XR-NTX treatment'
+evidence:
+  quality_rating: B
+  n_studies: 2
+  primary_citation: R. Cook et al. 2023. "Estimating the impact of stimulant use on initiation of buprenorphine
+    and extended-release naltrexone in two clinical trials and real-world populations." https://doi.org/10.1186/s13722-023-00364-3
+  supporting_citations:
+  - CTN-0051 X:BOT clinical trial (referenced in methods)
+  - CTN-0067 CHOICES clinical trial (referenced in methods)
+  - Rural Opioids Initiative (ROI) - population data source
+  doi: 10.1186/s13722-023-00364-3
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among rural people who inject drugs, stimulant use reduced the likelihood of initiating extended-release
+  naltrexone by 76%. XR-NTX requires complete detoxification before administration, creating a structural
+  barrier that is particularly difficult to overcome for individuals with concurrent stimulant use.
+quantitative_effects:
+  effect_size:
+    value: 0.24
+    type: hazard_ratio
+    ci_lower: 0.08
+    ci_upper: 0.69
+  p_value: 0.008
+  sample_size: 1933
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The 76% reduction in XR-NTX initiation associated with stimulant use was specifically
+    identified in the rural population injecting drugs
+moderators:
+- name: rural_residence_injection_drug_use
+  direction: strengthens
+  strength: strong
+  description: Rural people who inject drugs showed a 76% reduction in XR-NTX initiation associated with
+    stimulant use, the largest effect observed across all populations
+structural_competency:
+  equity_implications: This finding reveals how medication requirements (detoxification before XR-NTX)
+    interact with polysubstance use patterns to create treatment barriers. Rural populations already face
+    limited access to MOUD providers and detoxification services. The combination of geographic isolation,
+    polysubstance use, and medication-specific requirements creates compounded structural barriers to
+    evidence-based treatment. Equity implications include the need for expanded low-barrier treatment
+    options and integrated services addressing both stimulant and opioid use disorders.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.225932'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

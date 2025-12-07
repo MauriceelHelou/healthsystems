@@ -1,0 +1,64 @@
+id: NEW:criminal_justice_system_selection_effect_to_alcohol_use_disorder
+name: Criminal Justice System Selection Effect → Alcohol Use Disorder
+from_node:
+  node_id: NEW:criminal_justice_system_selection_effect
+  node_name: Criminal Justice System Selection Effect
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Criminal justice policies and enforcement practices target behaviors associated with substance
+  use (public intoxication, property crime, drug possession)'
+- 'Step 2: Communities with limited economic resources and social services have higher rates of both substance
+  use disorders and criminal justice contact'
+- 'Step 3: Absence of pretrial diversion and treatment alternatives results in incarceration rather than
+  treatment for individuals with AUD'
+- 'Step 4: Prison reception populations show highly elevated AUD prevalence (24%) compared to general
+  population due to this selection process'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'Seena Fazel et al. 2017. "Substance use disorders in prisoners: an updated systematic
+    review and meta-regression analysis in recently incarcerated men and women.." https://doi.org/10.1111/add.13877'
+  supporting_citations:
+  - Meta-regression analysis conducted to identify sources of between-study heterogeneity
+  - Studies required clinical interviews or validated diagnostic instruments
+  - 12-month prevalence measured within 3 months of prison reception
+  doi: 10.1111/add.13877
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The 24% pooled prevalence of AUD in newly incarcerated prisoners reflects a structural selection
+  effect whereby criminal justice involvement concentrates individuals with substance use disorders. This
+  is not simply individual pathology but a systems-level phenomenon where policy choices about enforcement
+  and treatment determine who enters prison.
+quantitative_effects:
+  effect_size:
+    value: 24.0
+    type: percentage_change
+    ci_lower: 21.0
+    ci_upper: 27.0
+  sample_size: 18388
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Very high heterogeneity noted between studies, with meta-regression conducted to identify
+    sources of variation across countries and contexts
+moderators:
+- name: diagnostic_criteria
+  direction: strengthens
+  strength: moderate
+  description: Study restricted to DSM or ICD diagnoses via clinical interview or validated instruments,
+    ensuring clinical-level severity rather than self-report
+structural_competency:
+  equity_implications: This mechanism explicitly frames high AUD prevalence as a structural phenomenon
+    rather than individual failure. The concentration of AUD in prison populations reflects policy decisions
+    about what behaviors to criminalize, where to deploy enforcement resources, and whether to invest
+    in treatment alternatives. The finding that approximately 1 in 4 new prisoners has AUD indicts a system
+    that criminalizes rather than treats addiction.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.538496'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

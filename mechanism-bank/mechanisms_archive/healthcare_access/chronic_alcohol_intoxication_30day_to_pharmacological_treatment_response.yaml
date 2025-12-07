@@ -1,0 +1,39 @@
+id: chronic_alcohol_intoxication_30day_to_pharmacological_treatment_response
+name: Chronic Alcohol Intoxication (30 days) → Pharmacological Treatment Response
+  to Combined Therapy
+from_node:
+  node_id: chronic_alcohol_intoxication_30day
+  node_name: Chronic Alcohol Intoxication (30 days)
+to_node:
+  node_id: pharmacological_treatment_response
+  node_name: Pharmacological Treatment Response to Combined Therapy
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: 30 days of chronic alcohol intoxication creates moderate metabolic and
+  immune dysfunction when combined with acute pancreatitis'
+- 'Step 2: Heptral/Glutoxim/Mexidol combination normalizes 57.8% and corrects 42.4%
+  of altered parameters'
+- 'Step 3: Phosphogliv/Hypoxen/Hepon combination normalizes only 12.1% and corrects
+  60.6% of parameters'
+- 'Step 4: Shorter duration alcohol exposure allows better therapeutic response to
+  optimal drug combinations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: O. Bushmina et al. 2018. "Pharmacological correction of metabolic
+    disorders in experimental acute pancreatitis on the background of chronic alcohol
+    intoxication." *Research Results in Pharmacology*. https://doi.org/10.3897/RRPHARMACOLOGY.4.31594
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.163646'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: treatment_combination_type
+  direction: strengthens
+  strength: strong
+  description: Heptral/Glutoxim/Mexidol combination is substantially more effective
+    than Phosphogliv/Hypoxen/Hepon in normalizing parameters (57.8% vs 12.1% normalization
+    rate)

@@ -1,0 +1,64 @@
+id: NEW:e_sbirt_program_availability_to_binge_drinking
+name: Electronic Screening, Brief Intervention, and Referral to Treatment (e-SBIRT) Program Availability
+  → Binge Drinking
+from_node:
+  node_id: NEW:e_sbirt_program_availability
+  node_name: Electronic Screening, Brief Intervention, and Referral to Treatment (e-SBIRT) Program Availability
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: e-SBIRT programs provide automated screening for alcohol use disorders in various healthcare
+  and community settings'
+- 'Step 2: Electronic delivery enables broader reach and reduces barriers to accessing screening compared
+  to provider-delivered interventions'
+- 'Step 3: Identified at-risk individuals receive brief digital interventions with personalized feedback
+  about drinking patterns'
+- 'Step 4: Motivational content and harm reduction information delivered through technology platforms
+  reduces drinking frequency in short term'
+- 'Step 5: Reduced drinking frequency leads to decreased binge drinking episodes'
+evidence:
+  quality_rating: B
+  n_studies: 10
+  primary_citation: 'Matthew Jones et al. 2024. "Electronic-Screening, Brief Intervention and Referral
+    to Treatment (e-SBIRT) for Addictive Disorders: Systematic Review and Meta-Analysis." https://doi.org/10.1177/29767342241248926'
+  supporting_citations:
+  - Additional citations require full-text access - abstract reports 10 articles included in analysis
+    but does not name specific studies
+  - Studies evaluated e-SBIRT for substance use disorders including alcohol use in various settings
+  - Meta-analysis found effectiveness for reducing drinking frequency in short term only
+  doi: 10.1177/29767342241248926
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Electronic screening, brief intervention, and referral to treatment (e-SBIRT) programs show
+  effectiveness at reducing drinking frequency in the short term compared to control conditions. However,
+  this benefit appears limited to short-term outcomes, with no advantage found for abstinence or other
+  longer-term treatment outcomes. The heterogeneity of e-SBIRT program designs makes it difficult to identify
+  which specific components drive effectiveness.
+moderators:
+- name: time_since_intervention
+  direction: weakens
+  strength: strong
+  description: Effectiveness limited to short-term outcomes; e-SBIRT was not found advantageous over control
+    conditions for longer-term abstinence or other treatment outcomes
+- name: intervention_design_variability
+  direction: weakens
+  strength: moderate
+  description: e-SBIRT designs are variable across studies, complicating identification of most effective
+    components
+structural_competency:
+  equity_implications: e-SBIRT represents a structural intervention that expands access to substance use
+    screening and brief intervention by removing provider time constraints and geographic barriers. This
+    approach addresses healthcare system capacity limitations and could reduce disparities in access to
+    addiction services. However, the limited and short-term effectiveness raises questions about whether
+    technology-based interventions adequately address the structural determinants of substance use disorders.
+    The focus on individual behavior change through digital tools may not address underlying social, economic,
+    and environmental factors driving problematic alcohol use.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.603521'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,60 @@
+id: NEW:alpha2_adrenergic_agonist_treatment_to_smoking_current
+name: Alpha-2 Adrenergic Agonist Treatment (Clonidine) → Current Smoking Status
+from_node:
+  node_id: NEW:alpha2_adrenergic_agonist_treatment
+  node_name: Alpha-2 Adrenergic Agonist Treatment (Clonidine)
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking Status
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Clonidine, an alpha-2 adrenergic agonist, is administered as pharmacotherapy for tobacco use
+  disorder'
+- 'Step 2: Alpha-2 agonist action reduces noradrenergic activity in the locus coeruleus and central nervous
+  system'
+- 'Step 3: Reduced noradrenergic signaling attenuates withdrawal symptoms and stress-related craving'
+- 'Step 4: Decreased withdrawal severity and craving improves ability to maintain smoking abstinence'
+- 'Step 5: Increased smoking cessation rates reduce current smoking prevalence'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: 'P. Vanderkam et al. 2020. "Effectiveness of drugs acting on adrenergic receptors
+    in the treatment for tobacco or alcohol use disorders: systematic review and meta-analysis." https://doi.org/10.1111/add.15265'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 10 tobacco studies
+  - Studies identified through PUBMED, EMBASE, Cochrane Central Register of Controlled Trials
+  - Randomized controlled trials with adult patients meeting DSM-5 criteria
+  doi: 10.1111/add.15265
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Clonidine, an alpha-2 adrenergic agonist, significantly increases smoking abstinence rates
+  by 39% compared to placebo or other comparators. This effect operates through modulation of the noradrenaline
+  system, which plays a key role in nicotine withdrawal and craving.
+quantitative_effects:
+  effect_size:
+    value: 1.39
+    type: relative_risk
+    ci_lower: 1.04
+    ci_upper: 1.84
+moderators:
+- name: treatment_duration
+  direction: strengthens
+  strength: moderate
+  description: Study required minimum one month intervention with three months follow-up, suggesting duration
+    may influence effectiveness
+structural_competency:
+  equity_implications: Access to evidence-based pharmacotherapy for tobacco use disorder represents a
+    healthcare access issue. Populations with limited healthcare access, insurance coverage, or prescription
+    drug coverage may face barriers to accessing clonidine treatment. Smoking prevalence disparities across
+    socioeconomic groups could be partially addressed through improved access to pharmacotherapy options
+    beyond traditional nicotine replacement.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.353511'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

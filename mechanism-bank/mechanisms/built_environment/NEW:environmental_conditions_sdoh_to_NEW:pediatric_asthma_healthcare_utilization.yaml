@@ -1,0 +1,52 @@
+id: NEW:environmental_conditions_sdoh_to_NEW:pediatric_asthma_healthcare_utilization
+name: Environmental Conditions (SDOH) → Pediatric Asthma Healthcare Utilization (ED
+  visits/hospitalizations)
+from_node:
+  node_id: NEW:environmental_conditions_sdoh
+  node_name: Environmental Conditions (SDOH)
+to_node:
+  node_id: NEW:pediatric_asthma_healthcare_utilization
+  node_name: Pediatric Asthma Healthcare Utilization (ED visits/hospitalizations)
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Geographic areas with poor environmental conditions expose children to
+  higher levels of air pollution, allergens, and respiratory irritants'
+- 'Step 2: Chronic exposure to environmental triggers causes airway inflammation,
+  increased asthma symptom severity, and more frequent asthma exacerbations in pediatric
+  populations'
+- 'Step 3: Increased frequency and severity of asthma exacerbations leads to greater
+  need for acute medical care, resulting in higher rates of emergency department visits
+  and hospitalizations'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Jordan Tyris et al. 2023. Population-level SDOH and Pediatric
+    Asthma Health Care Utilization: A Systematic Review. Hospital Pediatrics.'
+  supporting_citations: []
+description: This systematic review of 40 US-based studies found consistent significant
+  associations between environmental conditions and pediatric asthma healthcare utilization
+  (ED visits and hospitalizations) when analyzed at the population level using geographic
+  entities. Environmental conditions were among the most frequently studied social
+  determinants of health and demonstrated reliable positive associations with acute
+  asthma care utilization across multiple study designs and geographic scales.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: poverty
+  direction: strengthens
+  strength: strong
+  description: Poverty was consistently associated with increased asthma healthcare
+    utilization and may compound effects of environmental conditions
+- name: housing_quality
+  direction: strengthens
+  strength: moderate
+  description: Poor housing quality showed consistent significant associations with
+    asthma healthcare utilization, potentially mediating or compounding environmental
+    exposure effects
+- name: healthcare_access
+  direction: strengthens
+  strength: moderate
+  description: Limited healthcare and primary care access showed consistent associations
+    with higher acute care utilization, suggesting lack of preventive care exacerbates
+    environmental exposure impacts

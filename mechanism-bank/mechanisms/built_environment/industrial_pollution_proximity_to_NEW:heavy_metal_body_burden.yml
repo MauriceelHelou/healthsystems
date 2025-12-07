@@ -1,0 +1,56 @@
+id: industrial_pollution_proximity_to_NEW:heavy_metal_body_burden
+name: Industrial Pollution Proximity → Heavy Metal Body Burden
+from_node:
+  node_id: industrial_pollution_proximity
+  node_name: Industrial Pollution Proximity
+to_node:
+  node_id: NEW:heavy_metal_body_burden
+  node_name: Heavy Metal Body Burden
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Industrial facilities release heavy metals (Pb, Cd, Hg) into air, water, and soil'
+- 'Step 2: Residential proximity to industrial sites increases environmental exposure pathways'
+- 'Step 3: Heavy metals enter the body through inhalation, contaminated water, and food grown in polluted
+  soil'
+- 'Step 4: Accumulated body burden of heavy metals increases risk of ototoxic effects'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Fang Wang et al. 2024. "Population‐based study of environmental heavy metal exposure
+    and hearing loss: A systematic review and meta‐analysis." https://doi.org/10.1002/lio2.1230'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Studies on population-based environmental heavy metal exposure
+  - Research on geographic patterns of pollution and health outcomes
+  doi: 10.1002/lio2.1230
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This mechanism links the structural factor of industrial pollution proximity to heavy metal
+  body burden, which subsequently leads to hearing impairment. The population-based meta-analysis examines
+  environmental heavy metal exposure as a determinant of hearing loss.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Heavy metal exposure varies substantially by proximity to industrial facilities, which
+    are disproportionately located near low-income communities and communities of color
+moderators:
+- name: residential_tenure
+  direction: strengthens
+  strength: moderate
+  description: Longer duration of residence near pollution sources increases cumulative exposure
+- name: socioeconomic_status
+  direction: strengthens
+  strength: strong
+  description: Lower SES communities have higher exposure due to environmental injustice in facility siting
+structural_competency:
+  equity_implications: Industrial pollution proximity is a key environmental justice issue. Zoning decisions,
+    lack of regulatory enforcement, and historical discriminatory practices have concentrated polluting
+    facilities in marginalized communities. This structural arrangement produces differential exposure
+    to ototoxic heavy metals, creating health inequities in hearing loss that trace to policy and planning
+    failures rather than individual choices.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.851733'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

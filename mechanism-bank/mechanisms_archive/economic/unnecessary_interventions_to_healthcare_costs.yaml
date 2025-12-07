@@ -1,0 +1,41 @@
+id: unnecessary_interventions_to_healthcare_costs
+name: Unnecessary and Ineffective Pharmacological and Interventional Therapy → Healthcare
+  Costs
+from_node:
+  node_id: unnecessary_interventions
+  node_name: Unnecessary and Ineffective Pharmacological and Interventional Therapy
+to_node:
+  node_id: healthcare_costs
+  node_name: Healthcare Costs
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Lack of effective authorized therapies leads to use of unproven or ineffective
+  interventions'
+- 'Step 2: Pharmacological and procedural interventions without evidence base are
+  administered'
+- 'Step 3: These unnecessary interventions incur substantial direct medical costs'
+- 'Step 4: Financial burden increases without corresponding improvement in clinical
+  outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Cyriac Abby Philips 2024. "A comprehensive review of diagnosis
+    and management of alcohol-associated hepatitis.." *SAGE open medicine*. https://doi.org/10.1177/20503121241297000
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.388372'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: evidence_based_guidelines
+  direction: weakens
+  strength: moderate
+  description: Implementation of evidence-based guidelines can reduce use of ineffective
+    therapies and associated costs
+- name: fee_for_service_payment
+  direction: strengthens
+  strength: moderate
+  description: Payment systems that reimburse for procedures regardless of effectiveness
+    may incentivize unnecessary interventions

@@ -9,8 +9,9 @@
 
 import React, { useEffect, useRef } from 'react';
 import * as d3 from 'd3';
-import { SystemsNetwork, MechanismNode, MechanismEdge, ImportantNodesHighlight, ActivePaths, GraphLayoutMode, PhysicsSettings, CrisisHighlight } from '../types/mechanism';
+import { SystemsNetwork, MechanismNode, MechanismEdge, ImportantNodesHighlight, ActivePaths, GraphLayoutMode, PhysicsSettings, CrisisHighlight, HierarchyLevel } from '../types/mechanism';
 import { useGraphStateStore } from '../stores/graphStateStore';
+import { HierarchicalMechanismNode } from '../utils/graphBuilder';
 
 interface MechanismGraphProps {
   data: SystemsNetwork;
@@ -38,6 +39,16 @@ interface MechanismGraphProps {
   // Layout mode props
   layoutMode?: GraphLayoutMode;
   physicsSettings?: PhysicsSettings;
+
+  // Hierarchy props (NEW)
+  /** Enable hierarchical mode with expand/collapse */
+  enableHierarchy?: boolean;
+  /** Set of currently expanded node IDs */
+  expandedNodeIds?: Set<string>;
+  /** Callback when node expand/collapse is toggled */
+  onNodeToggleExpand?: (nodeId: string) => void;
+  /** Filter by hierarchy levels */
+  hierarchyLevelFilter?: HierarchyLevel[];
 }
 
 // Map node scale (1-7) to visualization levels (1-7) - direct mapping
@@ -146,6 +157,18 @@ const EDGE_STYLE = {
   hitboxWidth: 8, // Transparent hitbox for easier clicking
 };
 
+// Hierarchy expand/collapse indicator styling
+const HIERARCHY_INDICATOR_STYLE = {
+  size: 14,
+  strokeWidth: 1.5,
+  fill: '#fff',
+  stroke: '#666',
+  expandedIcon: '−', // minus
+  collapsedIcon: '+', // plus
+  fontSize: 12,
+  fontWeight: 'bold',
+};
+
 // Hover effects
 const HOVER_STYLE = {
   nodeFill: '#f8f8f8',
@@ -172,6 +195,11 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
   onNodeSelect,
   layoutMode = 'hierarchical', // Default to hierarchical layout
   physicsSettings,
+  // Hierarchy props
+  enableHierarchy = false,
+  expandedNodeIds,
+  onNodeToggleExpand,
+  hierarchyLevelFilter: _hierarchyLevelFilter,
 }) => {
   const svgRef = useRef<SVGSVGElement>(null);
   const simulationRef = useRef<d3.Simulation<any, undefined> | null>(null);
@@ -181,7 +209,9 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
   // Get zoom request state from store
   const { zoomToNodeId, zoomToPaths, clearZoomRequest, clearZoomToPathsRequest } = useGraphStateStore();
 
-  // Main effect: Draw the graph (only when data changes)
+  // Main effect: Draw the graph (only when data or layout mode changes)
+  // CRITICAL: Don't include selectedNodeId or other interactive props in dependencies
+  // to prevent complete redraw on every interaction
   useEffect(() => {
     if (!svgRef.current || !data.nodes.length) return;
 
@@ -279,7 +309,7 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
 
     // Create zoom behavior
     const zoom = d3.zoom<SVGSVGElement, unknown>()
-      .scaleExtent([0.1, 4]) // Allow zoom from 10% to 400%
+      .scaleExtent([0.1, 1000]) // Allow zoom from 10% to 100,000%
       .on('zoom', (event) => {
         graph.attr('transform', event.transform.toString());
       });
@@ -442,73 +472,38 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
           if (onEdgeClick) onEdgeClick(edge);
         });
 
-      // Visible edge
+      // Visible edge with evidence quality indicated by opacity (subtle, no labels)
+      const evidenceOpacity = edge.evidenceQuality === 'A' ? 1.0 :
+                             edge.evidenceQuality === 'B' ? 0.8 :
+                             edge.evidenceQuality === 'C' ? 0.6 : 0.7;
+
       const visiblePath = linkEl
         .append('path')
         .attr('d', pathData)
         .attr('stroke', isNegative ? '#EF4444' : EDGE_STYLE.stroke)
         .attr('stroke-width', EDGE_STYLE.strokeWidth)
         .attr('fill', 'none')
+        .attr('opacity', evidenceOpacity) // Subtle evidence quality indication
         .attr('marker-end', `url(#arrow-${isNegative ? 'negative' : 'positive'})`)
         .attr('pointer-events', 'none');
 
-      // Add evidence quality badge if available
-      if (edge.evidenceQuality) {
-        // Calculate midpoint of the edge
-        const midX = (sourceX + targetX) / 2;
-        const midY = (sourceY + targetY) / 2;
-
-        // Evidence badge colors
-        const evidenceColors: Record<string, string> = {
-          'A': '#10B981', // Green
-          'B': '#EAB308', // Yellow
-          'C': '#F97316', // Orange
-        };
-
-        const badgeColor = evidenceColors[edge.evidenceQuality] || '#6B7280';
-
-        // Create evidence badge group
-        const badge = linkEl
-          .append('g')
-          .attr('class', `evidence-badge evidence-${edge.evidenceQuality}`)
-          .attr('data-evidence', edge.evidenceQuality)
-          .attr('transform', `translate(${midX}, ${midY})`);
-
-        // Badge background circle
-        badge
-          .append('circle')
-          .attr('r', 8)
-          .attr('fill', badgeColor)
-          .attr('stroke', '#fff')
-          .attr('stroke-width', 1.5);
-
-        // Badge text
-        badge
-          .append('text')
-          .attr('class', 'evidence-quality')
-          .attr('x', 0)
-          .attr('y', 0)
-          .attr('text-anchor', 'middle')
-          .attr('dominant-baseline', 'middle')
-          .attr('font-size', '9px')
-          .attr('font-weight', 'bold')
-          .attr('fill', '#fff')
-          .attr('pointer-events', 'none')
-          .text(edge.evidenceQuality);
-      }
+      // Evidence quality removed from visual labels - clean graph
+      // Quality is now subtly indicated by edge opacity only
 
       // Hover effects
       if (onEdgeClick) {
         linkEl.on('mouseenter', function () {
           visiblePath
             .attr('stroke', HOVER_STYLE.edgeStroke)
-            .attr('stroke-width', HOVER_STYLE.edgeStrokeWidth);
+            .attr('stroke-width', HOVER_STYLE.edgeStrokeWidth)
+            .attr('opacity', 1.0); // Full opacity on hover for visibility
         });
 
         linkEl.on('mouseleave', function () {
           visiblePath
             .attr('stroke', isNegative ? '#EF4444' : EDGE_STYLE.stroke)
-            .attr('stroke-width', EDGE_STYLE.strokeWidth);
+            .attr('stroke-width', EDGE_STYLE.strokeWidth)
+            .attr('opacity', evidenceOpacity); // Restore evidence-based opacity
         });
       }
     });
@@ -761,6 +756,76 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
           .text(nodeRank);
       }
 
+      // Add expand/collapse indicator for hierarchical nodes with children
+      const hierarchicalNode = node as unknown as HierarchicalMechanismNode;
+      const hasChildren = enableHierarchy &&
+        hierarchicalNode.childCount !== undefined &&
+        hierarchicalNode.childCount > 0;
+
+      if (hasChildren) {
+        const isExpanded = expandedNodeIds?.has(node.id) ?? false;
+        const indicatorX = -pos.width / 2 + 8;
+        const indicatorY = pos.height / 2 - 8;
+
+        // Expand/collapse button group
+        const expandGroup = nodeEl
+          .append('g')
+          .attr('class', 'expand-indicator')
+          .attr('transform', `translate(${indicatorX}, ${indicatorY})`)
+          .style('cursor', 'pointer');
+
+        // Background circle
+        expandGroup
+          .append('circle')
+          .attr('r', HIERARCHY_INDICATOR_STYLE.size / 2)
+          .attr('fill', HIERARCHY_INDICATOR_STYLE.fill)
+          .attr('stroke', HIERARCHY_INDICATOR_STYLE.stroke)
+          .attr('stroke-width', HIERARCHY_INDICATOR_STYLE.strokeWidth);
+
+        // +/- icon
+        expandGroup
+          .append('text')
+          .attr('text-anchor', 'middle')
+          .attr('dominant-baseline', 'middle')
+          .attr('font-size', `${HIERARCHY_INDICATOR_STYLE.fontSize}px`)
+          .attr('font-weight', HIERARCHY_INDICATOR_STYLE.fontWeight)
+          .attr('fill', '#333')
+          .attr('pointer-events', 'none')
+          .text(isExpanded ? HIERARCHY_INDICATOR_STYLE.expandedIcon : HIERARCHY_INDICATOR_STYLE.collapsedIcon);
+
+        // Child count badge next to indicator
+        expandGroup
+          .append('text')
+          .attr('x', HIERARCHY_INDICATOR_STYLE.size / 2 + 4)
+          .attr('text-anchor', 'start')
+          .attr('dominant-baseline', 'middle')
+          .attr('font-size', '9px')
+          .attr('fill', '#666')
+          .attr('pointer-events', 'none')
+          .text(`(${hierarchicalNode.childCount})`);
+
+        // Click handler for expand/collapse
+        expandGroup.on('click', (event: MouseEvent) => {
+          event.stopPropagation(); // Don't trigger node click
+          if (onNodeToggleExpand) {
+            onNodeToggleExpand(node.id);
+          }
+        });
+
+        // Hover effect
+        expandGroup
+          .on('mouseenter', function () {
+            d3.select(this).select('circle')
+              .attr('fill', '#e8e8e8')
+              .attr('stroke', '#333');
+          })
+          .on('mouseleave', function () {
+            d3.select(this).select('circle')
+              .attr('fill', HIERARCHY_INDICATOR_STYLE.fill)
+              .attr('stroke', HIERARCHY_INDICATOR_STYLE.stroke);
+          });
+      }
+
       // Text label (wrapped)
       const words = node.label.split(/[\s_]+/);
       const maxCharsPerLine = 18;
@@ -848,8 +913,10 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
       if (layoutMode === 'force-directed') {
         const drag = d3.drag<SVGGElement, MechanismNode>()
           .on('start', function(event, d) {
-            if (!event.active && simulationRef.current) {
-              simulationRef.current.alphaTarget(0.3).restart();
+            // Fix: Don't restart simulation on drag start - prevents jumping
+            // Only heat up simulation slightly if dragging actively
+            if (event.active && simulationRef.current) {
+              simulationRef.current.alphaTarget(0.1);
             }
             const nodeData = d as any;
             nodeData.fx = event.x;
@@ -871,9 +938,10 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
             if (!event.active && simulationRef.current) {
               simulationRef.current.alphaTarget(0);
             }
+            // Fix: Keep fixed position after drag to prevent drifting
             const nodeData = d as any;
-            nodeData.fx = null;
-            nodeData.fy = null;
+            nodeData.fx = event.x;
+            nodeData.fy = event.y;
           });
 
         nodeEl.call(drag);
@@ -888,12 +956,30 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
       }
 
       // Prepare node data with initial positions
+      // Position structural determinants on left, crisis endpoints on right, others in middle
       const simNodes = connectedNodes.map((node) => {
         const pos = nodePositions.get(node.id);
+        const level = getNodeLevel(node);
+        const isStructural = level === 1; // Structural determinants (scale 1)
+        const isCrisis = level === 7; // Crisis endpoints (scale 7)
+
+        let initialX: number;
+        if (isStructural) {
+          // Position structural nodes on the left (10-20% of width)
+          initialX = 0.15 * availableWidth;
+        } else if (isCrisis) {
+          // Position crisis nodes on the right (80-90% of width)
+          initialX = 0.85 * availableWidth;
+        } else {
+          // Position other nodes in the middle with some randomness
+          initialX = pos?.x || (0.3 + Math.random() * 0.4) * availableWidth;
+        }
+
         return {
           ...node,
-          x: pos?.x || Math.random() * availableWidth,
+          x: initialX,
           y: pos?.y || Math.random() * availableHeight,
+          level: level, // Store level for force calculations
         };
       });
 
@@ -911,19 +997,36 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
         id: edge.id
       }));
 
-      // Create force simulation
+      // Create force simulation with horizontal positioning constraints
       const simulation = d3.forceSimulation(simNodes as any)
         .force('charge', d3.forceManyBody().strength(charge))
-        .force('center', d3.forceCenter(availableWidth / 2, availableHeight / 2))
         .force('collision', d3.forceCollide().radius(NODE_STYLE.width / 2 + collision))
         .force('link', d3.forceLink(simEdges)
           .id((d: any) => d.id)
           .distance(linkDistance)
           .strength(0.5)
         )
-        .force('x', d3.forceX(availableWidth / 2).strength(gravity))
-        .force('y', d3.forceY(availableHeight / 2).strength(gravity))
-        .alphaDecay(0.02)
+        // Strong X-axis positioning for structural and crisis nodes
+        .force('x', d3.forceX((d: any) => {
+          if (d.level === 1) {
+            // Pin structural determinants to the left
+            return 0.15 * availableWidth;
+          } else if (d.level === 7) {
+            // Pin crisis endpoints to the right
+            return 0.85 * availableWidth;
+          } else {
+            // Allow other nodes to float in the middle
+            return availableWidth / 2;
+          }
+        }).strength((d: any) => {
+          // Strong force for structural and crisis, weak for others
+          return (d.level === 1 || d.level === 7) ? 0.8 : gravity;
+        }))
+        // Y-axis centering (weaker to allow vertical spreading)
+        .force('y', d3.forceY(availableHeight / 2).strength(gravity * 0.5))
+        .alphaDecay(0.05) // Faster settling (increased from 0.02)
+        .velocityDecay(0.6) // More friction - nodes slow down faster (default is 0.4)
+        .alphaMin(0.001) // Stop sooner once mostly stable (default is 0.001)
         .on('tick', () => {
           // Update node positions on each tick
           simNodes.forEach((node: any) => {
@@ -937,6 +1040,10 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
           // Re-render graph with updated positions
           updateGraphPositions();
         });
+
+      // Let simulation settle for a bit before user interaction
+      // Run simulation for initial layout, then slow it down
+      simulation.alpha(1).restart();
 
       simulationRef.current = simulation;
     }
@@ -1021,7 +1128,21 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
         simulationRef.current = null;
       }
     };
-  }, [data, width, height, onNodeClick, onEdgeClick, showLegend, importantNodes, activePaths, crisisHighlight, selectionMode, onNodeSelect, layoutMode, physicsSettings]);
+  }, [
+    // Only redraw when these STRUCTURAL changes occur:
+    data,              // Graph data changed
+    width,             // Canvas size changed
+    height,
+    layoutMode,        // Layout type changed (hierarchical vs force-directed)
+    physicsSettings,   // Physics parameters changed
+    showLegend,        // Legend visibility (rarely changes, OK to redraw)
+    // REMOVED from dependencies to prevent constant redraws:
+    // - onNodeClick, onEdgeClick (handlers don't need redraw)
+    // - importantNodes, activePaths, crisisHighlight (visual overlays, set once)
+    // - selectionMode, onNodeSelect (interaction state)
+    // These features render correctly on initial draw but won't update dynamically.
+    // For dynamic updates, would need separate effect or use React state instead of D3.
+  ]);
 
   // Zoom effect: Handle zoom requests from graph state store
   useEffect(() => {

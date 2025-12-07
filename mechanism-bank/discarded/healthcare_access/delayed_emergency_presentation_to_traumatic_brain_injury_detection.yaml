@@ -1,0 +1,48 @@
+id: delayed_emergency_presentation_to_traumatic_brain_injury_detection
+name: Delayed Emergency Department Presentation (>24 hours post-injury) → Traumatic
+  Brain Injury Detection via Clinical Decision Rules
+from_node:
+  node_id: delayed_emergency_presentation
+  node_name: Delayed Emergency Department Presentation (>24 hours post-injury)
+to_node:
+  node_id: traumatic_brain_injury_detection
+  node_name: Traumatic Brain Injury Detection via Clinical Decision Rules
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Delays in emergency department presentation after minor head trauma reduce
+  the immediate visibility of acute symptoms that clinical decision rules rely upon'
+- 'Step 2: PECARN and CATCH clinical decision rules were validated primarily on populations
+  presenting within 24 hours, when symptoms are most acute'
+- 'Step 3: In children presenting after 24 hours, sensitivity of both PECARN and CATCH
+  rules decreased from 96.3%/91.9% to 85.7%, potentially missing traumatic intracranial
+  injuries'
+- 'Step 4: Reduced sensitivity leads to potential underdetection of traumatic CT findings
+  requiring intervention'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: E. Sert et al. 2020. "The Use of PECARN and CATCH Rules in Children
+    With Minor Head Trauma Presenting to Emergency Department 24 Hours After Injury."
+    *Pediatric emergency care*. https://doi.org/10.1097/PEC.0000000000002011
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.575311'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: time_to_presentation
+  direction: weakens
+  strength: moderate
+  description: Presenting after 24 hours reduced sensitivity of clinical decision
+    rules from 91.9-96.3% to 85.7%, indicating moderate weakening of diagnostic accuracy
+    with delayed presentation
+- name: pecarn_indication_presence
+  direction: strengthens
+  strength: strong
+  description: Presence of CT scan indication according to PECARN statistically predicted
+    intracranial damage regardless of admission time, maintaining predictive validity
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/delayed_emergency_presentation_to_traumatic_brain_injury_detection.yaml
+_category: healthcare_access

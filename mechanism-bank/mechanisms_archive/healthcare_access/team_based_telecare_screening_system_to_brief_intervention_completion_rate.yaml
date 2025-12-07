@@ -1,0 +1,38 @@
+id: team_based_telecare_screening_system_to_brief_intervention_completion_rate
+name: Team-Based Telecare Screening and Intervention System → Brief Intervention Session
+  Completion
+from_node:
+  node_id: team_based_telecare_screening_system
+  node_name: Team-Based Telecare Screening and Intervention System
+to_node:
+  node_id: brief_intervention_completion_rate
+  node_name: Brief Intervention Session Completion
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Social worker-administered telephone counseling removes geographic and
+  temporal barriers to accessing behavioral health services'
+- 'Step 2: Team-based approach integrates screening, assessment, and intervention
+  within primary care workflow without requiring separate specialty visits'
+- 'Step 3: Systematic telephone outreach ensures patients receive intervention regardless
+  of ability to attend clinic appointments'
+- 'Step 4: 97% of patients completing AUDIT received at least one counseling session,
+  and 72% completed both recommended sessions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Michael Pignone et al. 2025. "Screening and Telephone-Based Intervention
+    for Unhealthy Alcohol Use in a Diverse Federally Qualified Health Center System
+    in Texas.." *Journal of general internal medicine*. https://doi.org/10.1007/s11606-024-09240-5
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.784004'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: social_worker_administered
+  direction: strengthens
+  strength: moderate
+  description: Use of trained social workers rather than physicians increases accessibility
+    and reduces power differentials that may inhibit disclosure in safety-net populations

@@ -1,0 +1,50 @@
+id: NEW:household_spending_reallocation_to_alcohol_induced_mortality
+name: Household Spending Reallocation from Alcohol → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:household_spending_reallocation
+  node_name: Household Spending Reallocation from Alcohol
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Consumer preferences shift away from alcohol consumption (tastes-induced change)'
+- 'Step 2: Household spending reallocates from alcohol to other goods and services'
+- 'Step 3: Reduced alcohol consumption at population level'
+- 'Step 4: Improved health outcomes due to lower alcohol exposure'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. Connolly et al. 2019. "Can a policy-induced reduction in alcohol consumption improve
+    health outcomes and stimulate the UK economy?: A potential ''double dividend''." https://doi.org/10.1111/dar.12962'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Health-augmented Input-Output modeling framework
+  - Previous studies on health benefits of reduced alcohol consumption
+  doi: 10.1111/dar.12962
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: When consumers voluntarily reduce alcohol consumption through preference changes, spending
+  reallocates to other sectors. While this produces health benefits, the study finds some trade-off with
+  employment (unlike the taxation scenario), though the trade-off is less severe than previously estimated
+moderators:
+- name: spending_destination_sector
+  direction: strengthens
+  strength: moderate
+  description: The economic impact depends on which sectors receive reallocated household spending; some
+    sectors may have higher employment multipliers than alcohol
+structural_competency:
+  equity_implications: This mechanism illustrates how consumption patterns are embedded in broader economic
+    systems. Changes in preferences, potentially driven by public health campaigns or social norm shifts,
+    have cascading effects through the economy. The finding that economic trade-offs are less severe than
+    past analyses suggest challenges arguments used to oppose alcohol reduction efforts.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.631632'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

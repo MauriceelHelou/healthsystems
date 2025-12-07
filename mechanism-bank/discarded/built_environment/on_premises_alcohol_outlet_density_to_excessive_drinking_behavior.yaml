@@ -1,0 +1,47 @@
+id: on_premises_alcohol_outlet_density_to_excessive_drinking_behavior
+name: On-Premises Alcohol Outlet Density → Excessive Drinking Behavior
+from_node:
+  node_id: on_premises_alcohol_outlet_density
+  node_name: On-Premises Alcohol Outlet Density
+to_node:
+  node_id: excessive_drinking_behavior
+  node_name: Excessive Drinking Behavior
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of alcohol outlets increases physical accessibility and
+  availability of alcohol in the neighborhood environment'
+- 'Step 2: Greater accessibility reduces barriers (time, distance, effort) to obtaining
+  alcohol for on-premises consumption'
+- 'Step 3: Reduced barriers and increased environmental cues (signage, establishments)
+  normalize and facilitate alcohol consumption patterns'
+- 'Step 4: Facilitated access and normalized consumption increase population-level
+  rates of excessive drinking in the geographic area'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Xingyou Zhang et al. 2015. "Changes in Density of On-Premises
+    Alcohol Outlets and Impact on Violent Crime, Atlanta, Georgia, 1997–2007." *Preventing
+    Chronic Disease*. https://doi.org/10.5888/pcd12.140317
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.098696'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: neighborhood_commercial_character
+  direction: strengthens
+  strength: moderate
+  description: Areas with entertainment districts or nightlife concentrations may
+    show stronger relationships between outlet density and excessive drinking compared
+    to residential areas
+- name: regulatory_enforcement
+  direction: weakens
+  strength: moderate
+  description: Strong enforcement of responsible beverage service laws and hours of
+    operation may attenuate the relationship between outlet density and excessive
+    drinking
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/on_premises_alcohol_outlet_density_to_excessive_drinking_behavior.yaml
+_category: built_environment

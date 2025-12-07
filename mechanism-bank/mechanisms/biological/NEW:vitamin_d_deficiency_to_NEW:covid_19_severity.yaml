@@ -1,0 +1,58 @@
+id: NEW:vitamin_d_deficiency_to_NEW:covid_19_severity
+name: Vitamin D Deficiency (25(OH)D) → COVID-19 Disease Severity
+from_node:
+  node_id: NEW:vitamin_d_deficiency
+  node_name: Vitamin D Deficiency (25(OH)D)
+to_node:
+  node_id: NEW:covid_19_severity
+  node_name: COVID-19 Disease Severity
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Vitamin D deficiency (low 25(OH)D levels) impairs immune system regulation,
+  affecting both innate and adaptive immune responses'
+- 'Step 2: Reduced vitamin D leads to decreased production of antimicrobial peptides
+  (cathelicidins and defensins) and impaired macrophage function, weakening initial
+  viral defense'
+- 'Step 3: Vitamin D deficiency promotes pro-inflammatory cytokine production and
+  reduces anti-inflammatory cytokine synthesis, contributing to dysregulated inflammatory
+  responses'
+- 'Step 4: Upon SARS-CoV-2 infection, the compromised immune regulation in vitamin
+  D deficient individuals leads to excessive inflammation and potential cytokine storm'
+- 'Step 5: This dysregulated immune response results in increased COVID-19 severity,
+  including higher rates of hospitalization, ICU admission, and mortality'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'A. Kazemi et al. 2021. Association of Vitamin D Status with SARS-CoV-2
+    Infection or COVID-19 Severity: A Systematic Review and Meta-analysis. Advances
+    in Nutrition.'
+  supporting_citations: []
+description: Vitamin D deficiency is significantly associated with increased COVID-19
+  severity. A systematic review and meta-analysis of 39 studies found that individuals
+  with vitamin D deficiency had 2.57 times higher odds of experiencing severe COVID-19
+  outcomes in adjusted analyses. The association was robust for composite severity
+  measures but showed heterogeneity for specific outcomes like ICU admission and mortality
+  depending on statistical methods used.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.57
+    type: odds_ratio
+    ci_lower: 1.65
+    ci_upper: 4.01
+  p_value: null
+  sample_size: null
+moderators:
+- name: Adjustment for confounders
+  direction: weakens
+  strength: strong
+  description: 'Unadjusted studies showed much larger effect sizes (OR: 10.61) compared
+    to adjusted studies (OR: 2.57), suggesting confounding factors partially explain
+    the association'
+- name: Statistical method
+  direction: strengthens
+  strength: moderate
+  description: 'Cox survival method showed stronger mortality association (HR: 7.67)
+    compared to logistic regression (OR: 1.05, non-significant)'

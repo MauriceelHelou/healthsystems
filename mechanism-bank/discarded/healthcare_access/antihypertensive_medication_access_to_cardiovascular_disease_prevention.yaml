@@ -1,0 +1,50 @@
+id: antihypertensive_medication_access_to_cardiovascular_disease_prevention
+name: Access to Antihypertensive Medications → Cardiovascular Disease Prevention
+from_node:
+  node_id: antihypertensive_medication_access
+  node_name: Access to Antihypertensive Medications
+to_node:
+  node_id: cardiovascular_disease_prevention
+  node_name: Cardiovascular Disease Prevention
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Access to and use of antihypertensive medications (thiazide diuretics,
+  ACE inhibitors, ARBs, calcium channel blockers) lowers blood pressure to target
+  levels (<130/80 mmHg)'
+- 'Step 2: Lowered blood pressure reduces mechanical stress on arterial walls and
+  decreases atherosclerotic progression'
+- 'Step 3: Reduced blood pressure decreases risk of target organ damage including
+  stroke, coronary atherosclerosis, heart failure, and chronic kidney disease'
+- 'Step 4: Prevention of target organ damage results in reduced cardiovascular disease
+  occurrence, disability, and death'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Laxmi Narayan Goit and Shaning Yang 2019. "Treatment of Hypertension:
+    A Review." *Yangtze Medicine*. https://doi.org/10.4236/YM.2019.32011'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.450764'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: comorbid_cardiovascular_conditions
+  direction: strengthens
+  strength: strong
+  description: Stricter BP targets (<130/80 mmHg) recommended for patients with CHD,
+    CHF, post-renal transplantation, diabetes mellitus, and stroke history
+- name: medication_adherence
+  direction: strengthens
+  strength: strong
+  description: Treatment effectiveness depends on consistent medication access and
+    adherence, which is influenced by cost, side effects, and healthcare continuity
+- name: treatment_resistance
+  direction: weakens
+  strength: moderate
+  description: Some patients require interventional approaches (renal denervation,
+    baroreflex activation therapy) when resistant to standard pharmacotherapy
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/antihypertensive_medication_access_to_cardiovascular_disease_prevention.yaml
+_category: healthcare_access

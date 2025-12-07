@@ -1,0 +1,51 @@
+id: telemedicine_use_to_NEW:patient_transfer_reduction
+name: Telemedicine Use → Patient Transfer Reduction
+from_node:
+  node_id: telemedicine_use
+  node_name: Telemedicine Use
+to_node:
+  node_id: NEW:patient_transfer_reduction
+  node_name: Patient Transfer Reduction
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Telehealth platforms enable remote consultation with mental health providers'
+- 'Step 2: Patients can receive assessment and treatment without physical travel to specialty centers'
+- 'Step 3: Reduced need for patient transfers to distant mental health facilities'
+- 'Step 4: Lower burden on emergency transport systems and reduced patient/family disruption'
+evidence:
+  quality_rating: A
+  n_studies: 114
+  primary_citation: 'Rania Al Dweik et al. 2024. "Opportunities and challenges in leveraging digital technology
+    for mental health system strengthening: a systematic review to inform interventions in the United
+    Arab Emirates." https://doi.org/10.1186/s12889-024-19980-y'
+  supporting_citations:
+  - Additional citations require full-text access - review highlighted reducing patient transfers as key
+    opportunity
+  - Systematic review included diverse telehealth interventions across mental health conditions
+  - PRISMA-guided review of 114 studies through August 2023
+  doi: 10.1186/s12889-024-19980-y
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Telehealth and digital mental health platforms reduce the need for patient transfers by enabling
+  remote consultations, particularly valuable in healthcare systems where mental health specialty services
+  are geographically concentrated.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Impact likely greater in regions with dispersed populations and concentrated specialty
+    mental health services like UAE
+moderators:
+- name: severity_of_condition
+  direction: weakens
+  strength: moderate
+  description: More severe mental health presentations may still require in-person evaluation and transfer
+structural_competency:
+  equity_implications: Patient transfers represent a structural burden disproportionately affecting rural
+    and underserved communities who must travel further for specialty mental health care. Telehealth reduces
+    this structural inequity but requires addressing digital access barriers to ensure equitable benefit.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.911073'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

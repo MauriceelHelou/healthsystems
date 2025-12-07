@@ -1,0 +1,65 @@
+id: NEW:coronavirus_hospitalization_icu_admission_to_NEW:reduced_exercise_capacity
+name: Severe Coronavirus Infection (SARS/MERS) Requiring Hospitalization or ICU →
+  Reduced Exercise Capacity (6-Minute Walk Distance)
+from_node:
+  node_id: NEW:coronavirus_hospitalization_icu_admission
+  node_name: Severe Coronavirus Infection (SARS/MERS) Requiring Hospitalization or
+    ICU
+to_node:
+  node_id: NEW:reduced_exercise_capacity
+  node_name: Reduced Exercise Capacity (6-Minute Walk Distance)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Severe coronavirus infection (SARS/MERS) causes acute lung injury requiring
+  hospitalization or ICU admission, with direct viral damage to alveolar epithelial
+  cells and pulmonary vasculature'
+- 'Step 2: Inflammatory response and immune-mediated damage leads to pulmonary fibrosis
+  and impaired diffusing capacity for carbon monoxide (DLCO), with 27% prevalence
+  of DLCO impairment at 6 months'
+- 'Step 3: Residual lung function abnormalities combined with deconditioning from
+  prolonged illness and hospitalization result in reduced cardiopulmonary reserve'
+- 'Step 4: Persistent pulmonary dysfunction manifests as reduced exercise capacity,
+  with mean 6-minute walk distance of 461 meters (below normal expected values for
+  healthy adults)'
+evidence:
+  quality_rating: A
+  n_studies: 28
+  primary_citation: 'H. Ahmed et al. 2020. Long-term clinical outcomes in survivors
+    of severe acute respiratory syndrome and Middle East respiratory syndrome coronavirus
+    outbreaks after hospitalisation or ICU admission: A systematic review and meta-analysis.
+    Journal of Rehabilitation Medicine'
+  supporting_citations: []
+description: 'Severe coronavirus infections requiring hospitalization or ICU admission
+  lead to persistent reduced exercise capacity as measured by 6-minute walk distance.
+  Meta-analysis of 28 studies found mean 6MWD of 461 meters (95% CI: 450-473m) in
+  SARS/MERS survivors, which is below normal expected values. This reduction is mechanistically
+  linked to persistent pulmonary dysfunction including impaired gas exchange (DLCO
+  abnormalities in 27% of survivors) and likely compounded by deconditioning during
+  acute illness.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 461.0
+    type: mean_6mwd_meters
+    ci_lower: 450.0
+    ci_upper: 473.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: Time since infection
+  direction: weakens
+  strength: moderate
+  description: Exercise capacity outcomes were assessed at up to 6 months and beyond,
+    with some recovery expected over time
+- name: Severity of initial illness
+  direction: strengthens
+  strength: moderate
+  description: ICU admission versus general hospitalization may impact degree of long-term
+    functional impairment
+- name: Pulmonary function impairment
+  direction: strengthens
+  strength: strong
+  description: Impaired DLCO (27% prevalence) directly contributes to reduced exercise
+    capacity

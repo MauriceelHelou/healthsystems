@@ -1,0 +1,62 @@
+id: NEW:brief_intervention_alcohol_healthcare_setting_to_binge_drinking
+name: Brief Alcohol Intervention in Healthcare Settings → Binge Drinking
+from_node:
+  node_id: NEW:brief_intervention_alcohol_healthcare_setting
+  node_name: Brief Alcohol Intervention in Healthcare Settings
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: General medical settings (emergency departments, primary care) provide opportunistic touchpoints
+  for identifying patients with hazardous alcohol use'
+- 'Step 2: Brief interventions (typically 1-4 sessions) deliver motivational interviewing, feedback on
+  drinking patterns, and goal-setting'
+- 'Step 3: Patients receive personalized information about health risks in a non-judgmental clinical context'
+- 'Step 4: Increased awareness and motivation leads to reduced drinking frequency, equivalent to approximately
+  1 fewer drinking day per month'
+evidence:
+  quality_rating: A
+  n_studies: 111
+  primary_citation: 'Emily E Tanner-Smith et al. 2022. "Effects of brief substance use interventions delivered
+    in general medical settings: a systematic review and meta-analysis.." https://doi.org/10.1111/add.15674'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes 116 trials identified
+  - Studies conducted since 1990 across general medical settings
+  - 111 trials with 62,263 participants provided effect size data
+  doi: 10.1111/add.15674
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2021, source is 2022'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief alcohol interventions delivered in general medical settings produce small but significant
+  reductions in drinking behavior, equivalent to approximately one fewer drinking day per month. This
+  represents a structural healthcare system approach to reducing alcohol consumption through routine clinical
+  encounters.
+quantitative_effects:
+  sample_size: 62263
+moderators:
+- name: target_substance
+  direction: strengthens
+  strength: moderate
+  description: Alcohol-targeted interventions showed clearer beneficial effects compared to drug-targeted
+    interventions
+- name: severity_level
+  direction: strengthens
+  strength: weak
+  description: Study included patients of any severity level; effects may vary by baseline drinking patterns
+structural_competency:
+  equity_implications: This mechanism highlights the role of healthcare system design in addressing alcohol
+    use. By integrating brief interventions into general medical settings, the approach removes barriers
+    to specialized substance use treatment and leverages existing healthcare infrastructure. The structural
+    framing emphasizes system-level opportunity for intervention rather than individual blame. Equity
+    implications include potential disparities in access based on insurance status, geographic availability
+    of healthcare services, and quality of provider training in brief intervention techniques.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.012192'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

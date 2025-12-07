@@ -1,0 +1,53 @@
+id: homelessness_rate_to_NEW:buprenorphine_treatment_access_barriers
+name: Homelessness Rate → Buprenorphine Treatment Access Barriers
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: NEW:buprenorphine_treatment_access_barriers
+  node_name: Buprenorphine Treatment Access Barriers
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Homelessness creates physical constraints including lack of stable address,
+  transportation limitations, and inability to reliably store medications, preventing
+  access to traditional brick-and-mortar buprenorphine clinics'
+- 'Step 2: Homeless individuals face discrimination and logistical barriers at pharmacies,
+  including requirements for photo identification that they may lack'
+- 'Step 3: Strict clinic inclusion criteria (urinary toxicology requirements, scheduled
+  appointments, insurance documentation) systematically exclude homeless populations
+  from standard buprenorphine treatment protocols'
+- 'Step 4: Lack of reliable communication methods (phone, address) prevents follow-up
+  care essential for buprenorphine treatment compliance'
+- 'Step 5: Financial barriers including lack of insurance and inability to navigate
+  insurance activation processes compound access difficulties'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Colin D Buzza et al. 2019. A Mobile Buprenorphine Treatment Program
+    for Homeless Patients With Opioid Use Disorder. Psychiatric Services.
+  supporting_citations: []
+description: Homelessness creates multiple, compounding barriers to buprenorphine
+  treatment access including physical constraints (lack of address, transportation),
+  administrative requirements (photo ID, insurance, toxicology screens), discrimination
+  at pharmacies, and inability to maintain reliable communication for follow-up. These
+  barriers result from traditional clinic-based treatment models that assume stable
+  housing and resources.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: race_ethnicity
+  direction: strengthens
+  strength: moderate
+  description: African Americans are disproportionately affected by homelessness in
+    Oakland, compounding barriers through systemic racism and historical housing segregation
+- name: pharmacy_partnerships
+  direction: weakens
+  strength: moderate
+  description: Community pharmacy partnerships with patient identification agreements
+    can reduce barriers
+- name: mobile_outreach_availability
+  direction: weakens
+  strength: strong
+  description: Mobile buprenorphine programs that meet patients at encampments can
+    overcome traditional access barriers

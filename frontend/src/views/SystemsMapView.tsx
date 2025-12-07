@@ -1,14 +1,16 @@
-import { FC, useState, useRef } from 'react'
+import { FC, useState, useRef, useMemo } from 'react'
 import { Panel } from '../layouts/Panel'
 import MechanismGraph from '../visualizations/MechanismGraph'
-import type { MechanismNode, MechanismEdge, Citation, GraphLayoutMode, PhysicsSettings } from '../types'
+import type { MechanismNode, MechanismEdge, GraphLayoutMode, PhysicsSettings } from '../types'
 import { Button } from '../components/base/Button'
 import { Icon } from '../components/base/Icon'
 import { CategoryBadge } from '../components/domain/CategoryBadge'
 import { EvidenceBadge } from '../components/domain/EvidenceBadge'
+import { EvidenceModal } from '../components/domain/EvidenceModal'
 import { Badge } from '../components/base/Badge'
-import { Legend } from '../components/visualization/Legend'
-import { useGraphData, useMechanismById } from '../hooks/useData'
+// import { Legend } from '../components/visualization/Legend'  // Commented out - legend is hidden
+import { useGraphDataWithCanonicalNodes, useMechanismById } from '../hooks/useData'
+import { filterByMinConnections } from '../utils/graphBuilder'
 
 export const SystemsMapView: FC = () => {
   const [selectedNode, setSelectedNode] = useState<MechanismNode | null>(null)
@@ -27,8 +29,14 @@ export const SystemsMapView: FC = () => {
     collision: 20,
   })
 
-  // Fetch graph data from API
-  const { data: graphData, isLoading, error } = useGraphData()
+  // Fetch graph data from API using canonical nodes
+  const { data: rawGraphData, isLoading, error } = useGraphDataWithCanonicalNodes()
+
+  // Filter out nodes with 1 or fewer connections (minConnections = 2)
+  const graphData = useMemo(() => {
+    if (!rawGraphData) return null
+    return filterByMinConnections(rawGraphData, 2)
+  }, [rawGraphData])
 
   const handleNodeClick = (node: MechanismNode) => {
     setSelectedNode(node)
@@ -242,10 +250,10 @@ export const SystemsMapView: FC = () => {
           </Button>
         </div>
 
-        {/* Legend */}
-        <div className="absolute bottom-4 left-4 z-10 max-w-xs">
+        {/* Legend - Commented out for testing */}
+        {/* <div className="absolute bottom-4 left-4 z-10 max-w-xs">
           <Legend showEvidenceQuality showScales />
-        </div>
+        </div> */}
 
         {/* Graph Visualization */}
         <div className="w-full h-full">
@@ -271,16 +279,6 @@ export const SystemsMapView: FC = () => {
           onClose={handleClosePanel}
           resizable
           collapsible
-          footer={
-            <div className="flex gap-2 justify-end">
-              <Button variant="secondary" size="sm">
-                Export Details
-              </Button>
-              <Button variant="primary" size="sm">
-                View Pathways →
-              </Button>
-            </div>
-          }
         >
           <NodeDetailPanel node={selectedNode} edges={graphData.edges} />
         </Panel>
@@ -309,23 +307,47 @@ const NodeDetailPanel: React.FC<{ node: MechanismNode; edges: MechanismEdge[] }>
   const outgoingEdges = edges.filter((e) => e.source === node.id)
   const incomingEdges = edges.filter((e) => e.target === node.id)
 
+  // Map stockType to human-readable label
+  const getStockTypeLabel = (stockType: string) => {
+    switch (stockType) {
+      case 'structural': return 'Structural Determinant';
+      case 'proxy': return 'Proxy/Intermediate';
+      case 'crisis': return 'Crisis Endpoint';
+      default: return stockType;
+    }
+  };
+
   return (
     <div className="space-y-6">
       {/* Quick Stats */}
-      <div className="flex items-center gap-3 pb-4 border-b">
+      <div className="flex items-center gap-3 pb-4 border-b flex-wrap">
         <CategoryBadge category={node.category} />
-        <Badge color="gray" size="sm">
-          {node.stockType}
-        </Badge>
+        {node.stockType && (
+          <Badge color="blue" size="sm">
+            {getStockTypeLabel(node.stockType)}
+          </Badge>
+        )}
+        {node.scale && (
+          <Badge color="gray" size="sm">
+            Scale {node.scale}
+          </Badge>
+        )}
       </div>
 
       {/* Overview */}
       <div>
         <h3 className="text-sm font-semibold text-gray-900 mb-2">Overview</h3>
         <div className="space-y-2 text-sm text-gray-700">
-          <p>
-            <span className="font-medium">Stock Type:</span> {node.stockType}
-          </p>
+          {node.stockType && (
+            <p>
+              <span className="font-medium">Stock Type:</span> {getStockTypeLabel(node.stockType)}
+            </p>
+          )}
+          {node.scale && (
+            <p>
+              <span className="font-medium">Scale:</span> {node.scale}
+            </p>
+          )}
           <p>
             <span className="font-medium">Connections:</span> {node.connections.outgoing} outgoing, {node.connections.incoming} incoming
           </p>
@@ -406,6 +428,8 @@ const MechanismDetailPanel: React.FC<{ edge: MechanismEdge; nodes: MechanismNode
   edge,
   nodes,
 }) => {
+  const [showEvidenceModal, setShowEvidenceModal] = useState(false)
+
   // Fetch detailed mechanism data from API
   const { data: mechanism, isLoading } = useMechanismById(edge.id)
   const sourceNode = nodes.find((n) => n.id === edge.source)
@@ -428,81 +452,88 @@ const MechanismDetailPanel: React.FC<{ edge: MechanismEdge; nodes: MechanismNode
   }
 
   return (
-    <div className="space-y-6">
-      {/* Quick Stats */}
-      <div className="flex items-center gap-3 pb-4 border-b">
-        <Badge color={edge.direction === 'positive' ? 'success' : 'error'} size="sm">
-          {edge.direction === 'positive' ? 'Positive (+)' : 'Negative (−)'}
-        </Badge>
-        {edge.evidenceQuality && (
-          <EvidenceBadge quality={edge.evidenceQuality} size="md" showLabel />
-        )}
-        <Badge color="gray" size="sm">
-          {edge.studyCount} studies
-        </Badge>
-      </div>
+    <>
+      <div className="space-y-6">
+        {/* Quick Stats */}
+        <div className="flex items-center gap-3 pb-4 border-b">
+          <Badge color={edge.direction === 'positive' ? 'success' : 'error'} size="sm">
+            {edge.direction === 'positive' ? 'Positive (+)' : 'Negative (−)'}
+          </Badge>
+          {edge.evidenceQuality && (
+            <EvidenceBadge quality={edge.evidenceQuality} size="md" showLabel />
+          )}
+          <Badge color="gray" size="sm">
+            {mechanism.n_studies || edge.studyCount} studies
+          </Badge>
+        </div>
 
-      {/* Nodes */}
-      <div className="text-sm">
-        <p className="text-gray-600 mb-1">From → To</p>
-        <p className="font-medium text-gray-900">
-          {sourceNode?.label} → {targetNode?.label}
-        </p>
-      </div>
-
-      {/* Description */}
-      <div>
-        <h3 className="text-sm font-semibold text-gray-900 mb-2">Mechanism</h3>
-        <p className="text-sm text-gray-700 leading-relaxed">{mechanism.description}</p>
-      </div>
-
-      {/* Evidence Summary */}
-      <div>
-        <h3 className="text-sm font-semibold text-gray-900 mb-2">Evidence Summary</h3>
-        <div className="space-y-2 text-sm text-gray-700">
-          <p>
-            <span className="font-medium">Quality Rating:</span>{' '}
-            {edge.evidenceQuality || 'Unknown'}
-          </p>
-          <p>
-            <span className="font-medium">Based on:</span> {edge.studyCount} studies
+        {/* Nodes */}
+        <div className="text-sm">
+          <p className="text-gray-600 mb-1">From → To</p>
+          <p className="font-medium text-gray-900">
+            {sourceNode?.label} → {targetNode?.label}
           </p>
         </div>
-      </div>
 
-      {/* Citations */}
-      {mechanism.citations && mechanism.citations.length > 0 && (
+        {/* Description */}
         <div>
-          <h3 className="text-sm font-semibold text-gray-900 mb-3">
-            Supporting Literature ({mechanism.citations.length})
-          </h3>
-          <div className="space-y-2">
-            {mechanism.citations.slice(0, 3).map((citation: Citation) => (
-              <div
-                key={citation.id}
-                className="p-3 border border-gray-200 rounded text-xs space-y-1"
-              >
-                <p className="font-medium text-gray-900">
-                  {citation.authors} ({citation.year})
-                </p>
-                <p className="text-gray-600">{citation.journal}</p>
-                <p className="text-gray-700 line-clamp-2">{citation.title}</p>
-                {citation.url && (
-                  <a
-                    href={citation.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-primary-700 inline-flex items-center gap-1"
-                  >
-                    View Citation
-                    <Icon name="arrow-right" size="xs" />
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
+          <h3 className="text-sm font-semibold text-gray-900 mb-2">Mechanism</h3>
+          <p className="text-sm text-gray-700 leading-relaxed">{mechanism.description}</p>
         </div>
+
+        {/* View Full Evidence Button */}
+        <div>
+          <Button
+            variant="primary"
+            size="md"
+            onClick={() => setShowEvidenceModal(true)}
+            className="w-full justify-center"
+          >
+            <Icon name="book-open" size="md" />
+            <span className="ml-2">View Full Evidence & Citations</span>
+          </Button>
+        </div>
+
+        {/* Citations Preview */}
+        {mechanism.citations && mechanism.citations.length > 0 && (
+          <div>
+            <h3 className="text-sm font-semibold text-gray-900 mb-3">
+              Primary Citation
+            </h3>
+            <div className="p-3 border-2 border-gray-200 rounded-lg text-xs space-y-2 bg-gray-50">
+              <p className="font-semibold text-gray-900">
+                {mechanism.citations[0].authors} ({mechanism.citations[0].year})
+              </p>
+              <p className="text-sm text-gray-900 font-medium leading-snug">{mechanism.citations[0].title}</p>
+              <p className="text-gray-600 italic">{mechanism.citations[0].journal}</p>
+              {mechanism.citations[0].url && (
+                <a
+                  href={mechanism.citations[0].url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-600 hover:text-primary-700 inline-flex items-center gap-1 font-medium text-sm"
+                >
+                  View Citation
+                  <Icon name="external-link" size="xs" />
+                </a>
+              )}
+            </div>
+            {mechanism.citations.length > 1 && (
+              <p className="text-xs text-gray-500 mt-2">
+                + {mechanism.citations.length - 1} supporting citations (click "View Full Evidence" above)
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* Evidence Modal */}
+      {showEvidenceModal && (
+        <EvidenceModal
+          mechanism={mechanism}
+          onClose={() => setShowEvidenceModal(false)}
+        />
       )}
-    </div>
+    </>
   )
 }

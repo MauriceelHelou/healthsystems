@@ -1,0 +1,67 @@
+id: NEW:psychological_smoking_cessation_intervention_incarcerated_to_smoking_current
+name: Psychological Smoking Cessation Interventions for Incarcerated Populations → Current Smoking Prevalence
+from_node:
+  node_id: NEW:psychological_smoking_cessation_intervention_incarcerated
+  node_name: Psychological Smoking Cessation Interventions for Incarcerated Populations
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking Prevalence
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Incarcerated individuals receive psychological interventions (cognitive-behavioral therapy,
+  motivational interviewing, or similar approaches) targeting smoking cessation'
+- 'Step 2: Interventions address psychological dependence, coping mechanisms, and motivation to quit within
+  the correctional setting'
+- 'Step 3: Participants develop skills and motivation to abstain from smoking'
+- 'Step 4: Smoking abstinence rates increase compared to control conditions'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: 'Mélanie Rome et al. 2025. "Effectiveness of psychological interventions for smoking
+    cessation among incarcerated population: A systematic review and meta-analysis.." https://doi.org/10.1016/j.drugalcdep.2025.112941'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not specify individual study citations
+  - Seven RCTs included in meta-analysis (authors not specified in abstract)
+  - 11 studies total (N=2688) met inclusion criteria
+  doi: 10.1016/j.drugalcdep.2025.112941
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Psychological interventions for smoking cessation among incarcerated populations show initial
+  promise with a significant increase in abstinence compared to controls (OR=3.41). However, high heterogeneity
+  (I²=85.4%) and the effect becoming non-significant after publication bias adjustment suggest cautious
+  interpretation. The pooled post-intervention abstinence rate was 18.8%.
+quantitative_effects:
+  effect_size:
+    value: 3.41
+    type: odds_ratio
+    ci_lower: 1.34
+    ci_upper: 8.7
+  p_value: 0.05
+  sample_size: 2688
+  heterogeneity_i_squared: 85.4
+moderators:
+- name: follow_up_duration
+  direction: weakens
+  strength: moderate
+  description: Meta-regression examined the effect of follow-up duration on abstinence rates, suggesting
+    temporal decay of intervention effects
+- name: publication_bias
+  direction: weakens
+  strength: strong
+  description: After adjustment for publication bias, the effect became non-significant (OR=1.60, 95%
+    CI [0.51, 5.07])
+structural_competency:
+  equity_implications: 'This mechanism addresses a critical health equity issue: smoking prevalence is
+    disproportionately high in correctional settings, reflecting structural inequities in health access
+    and health education for incarcerated populations. The intervention targets a captive population with
+    limited access to community-based cessation resources. The structural context of incarceration itself
+    creates unique challenges and opportunities for behavioral health interventions. However, methodological
+    weaknesses and small sample sizes in existing research reflect underinvestment in health services
+    research for incarcerated populations.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.694950'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

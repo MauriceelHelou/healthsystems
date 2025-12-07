@@ -27,10 +27,10 @@ class Settings(BaseSettings):
     api_host: str = "0.0.0.0"
     api_port: int = int(os.getenv("PORT", "8000"))
     api_reload: bool = True
-    allowed_origins: List[str] = ["http://localhost:3000", "http://localhost:8000"]
+    allowed_origins: List[str] = ["http://localhost:3000", "http://localhost:3002", "http://localhost:8000", "http://localhost:8002"]
 
     # Database
-    database_url: str = "postgresql://healthsystems_user:changeme@localhost:5432/healthsystems"
+    database_url: str = "sqlite:///./backend/healthsystems.db"
     database_test_url: Optional[str] = None
 
     # Redis
@@ -75,7 +75,7 @@ class Settings(BaseSettings):
     # Mechanism Bank Settings
     mechanism_bank_path: str = "../mechanism-bank/mechanisms"
     mvp_extraction_max_tokens: int = 4000
-    mvp_extraction_model: str = "claude-sonnet-4-20250514"
+    mvp_extraction_model: str = "claude-opus-4-5-20251101"
     min_evidence_quality: str = "C"
     min_confidence: str = "medium"
     enable_structural_competency_check: bool = True
@@ -83,6 +83,7 @@ class Settings(BaseSettings):
     class Config:
         env_file = ".env"
         case_sensitive = False
+        extra = "ignore"  # Ignore extra fields in .env
 
 
 settings = Settings()

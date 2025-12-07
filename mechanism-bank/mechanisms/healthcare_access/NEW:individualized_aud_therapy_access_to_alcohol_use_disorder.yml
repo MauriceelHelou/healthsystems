@@ -1,0 +1,54 @@
+id: NEW:individualized_aud_therapy_access_to_alcohol_use_disorder
+name: Individualized AUD Therapy Access → Alcohol Use Disorder
+from_node:
+  node_id: NEW:individualized_aud_therapy_access
+  node_name: Individualized AUD Therapy Access
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individualized therapy services are available and accessible in the healthcare system'
+- 'Step 2: Patients receive personalized treatment addressing their specific AUD patterns and comorbidities'
+- 'Step 3: Therapeutic interventions address underlying psychological factors and coping mechanisms'
+- 'Step 4: Patients develop alternative strategies for managing triggers and stressors'
+- 'Step 5: Sustained engagement with individualized therapy supports long-term recovery'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: Julie Worley 2021. "Review of Evidence-Based Strategies to Treat Alcohol Use Disorder.."
+    https://doi.org/10.3928/02793695-20211110-01
+  supporting_citations:
+  - Evidence for individualized therapy in AUD treatment referenced in review
+  - Additional citations require full-text access
+  doi: 10.3928/02793695-20211110-01
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Individualized therapy is an evidence-based nonpharmacological treatment for AUD that addresses
+  each patient's unique circumstances, triggers, and comorbidities.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Access to individualized therapy varies by insurance coverage, provider availability,
+    and geographic location
+moderators:
+- name: insurance_coverage
+  direction: strengthens
+  strength: strong
+  description: Adequate insurance coverage for behavioral health services increases access to individualized
+    therapy
+- name: patient_barriers
+  direction: weakens
+  strength: moderate
+  description: Patient barriers including cost, transportation, and time constraints reduce therapy engagement
+structural_competency:
+  equity_implications: Access to individualized therapy is mediated by structural factors including insurance
+    coverage, mental health provider density, and socioeconomic resources. Patient barriers noted in the
+    abstract (cost, transportation, time) reflect structural inequities in healthcare access rather than
+    individual motivation failures.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.256141'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

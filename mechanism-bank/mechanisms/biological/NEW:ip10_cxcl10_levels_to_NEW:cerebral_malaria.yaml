@@ -1,0 +1,47 @@
+id: NEW:ip10_cxcl10_levels_to_NEW:cerebral_malaria
+name: IP-10/CXCL10 Chemokine Levels → Cerebral Malaria
+from_node:
+  node_id: NEW:ip10_cxcl10_levels
+  node_name: IP-10/CXCL10 Chemokine Levels
+to_node:
+  node_id: NEW:cerebral_malaria
+  node_name: Cerebral Malaria
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Plasmodium infection triggers immune response, stimulating leukocytes (neutrophils,
+  eosinophils, monocytes) to produce and secrete IP-10/CXCL10 chemokine'
+- 'Step 2: IP-10/CXCL10 acts as a chemoattractant, recruiting immune cells including
+  T lymphocytes and monocytes to sites of infection, including the cerebral vasculature'
+- 'Step 3: Elevated IP-10 levels contribute to excessive inflammatory responses at
+  the blood-brain barrier, promoting endothelial activation and dysfunction'
+- 'Step 4: The resulting neuroinflammation and vascular pathology leads to cerebral
+  malaria manifestations including coma and neurological complications'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: Manas Kotepui et al. 2024. A systematic review of circulating
+    IP-10/CXCL10 in patients with Plasmodium infections in relation to disease severity.
+    Scientific reports.
+  supporting_citations: []
+description: This systematic review of 26 studies demonstrates that IP-10/CXCL10 levels
+  are elevated in patients with Plasmodium infections compared to healthy controls,
+  with several studies specifically indicating elevated IP-10 levels in cerebral malaria
+  cases. IP-10 is produced by specific leukocytes and plays key roles in immune response
+  to malaria. The chemokine appears to contribute to the pathogenesis of severe disease
+  through inflammatory mechanisms, though some heterogeneity exists in findings across
+  studies.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Disease severity classification
+  direction: strengthens
+  strength: moderate
+  description: Most studies reported that increased IP-10 levels were associated with
+    increased disease severity, though some studies found no significant difference
+    or decreased levels in severe cases
+- name: Confounding factors
+  direction: weakens
+  strength: moderate
+  description: Unaddressed confounding factors may influence the observed relationship
+    between IP-10 and cerebral malaria

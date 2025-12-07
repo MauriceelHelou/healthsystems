@@ -1,0 +1,59 @@
+id: intimate_partner_violence_to_suicidal_ideation
+name: Intimate Partner Violence → Suicidality
+from_node:
+  node_id: intimate_partner_violence
+  node_name: Intimate Partner Violence
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidality
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Women experience intimate partner violence (physical, psychological, and/or
+  sexual) which creates chronic traumatic stress and threatens physical safety and
+  psychological integrity'
+- 'Step 2: IPV exposure leads to development of mental health conditions including
+  depression and PTSD, which are established risk factors for suicidality'
+- 'Step 3: The combination of ongoing trauma, mental health deterioration, feelings
+  of hopelessness, entrapment, and loss of autonomy increases vulnerability to suicidal
+  ideation and behaviors'
+- 'Step 4: Social isolation often accompanying IPV reduces access to protective factors
+  and support systems, further elevating suicide risk'
+evidence:
+  quality_rating: A
+  n_studies: 201
+  primary_citation: 'S. White et al. 2023. Global Prevalence and Mental Health Outcomes
+    of Intimate Partner Violence Among Women: A Systematic Review and Meta-Analysis.
+    Trauma, Violence, & Abuse.'
+  supporting_citations: []
+description: Intimate partner violence significantly increases the odds of suicidality
+  among women, with meta-analytic evidence showing odds ratios ranging from 2.17 to
+  5.52 across different IPV types. This relationship operates through multiple pathways
+  including direct trauma effects and mediated through depression and PTSD. The association
+  is robust across 201 studies involving over 250,000 women globally.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.17
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: 5.52
+  p_value: null
+  sample_size: 250599
+moderators:
+- name: IPV type
+  direction: strengthens
+  strength: moderate
+  description: Different types of IPV (physical, psychological, sexual) showed varying
+    odds ratios for suicidality ranging from 2.17 to 5.52
+- name: Population type
+  direction: strengthens
+  strength: moderate
+  description: Clinical and community populations showed different patterns; perinatal
+    women and help-seeking women identified as groups most at risk
+- name: Country income level
+  direction: strengthens
+  strength: moderate
+  description: IPV prevalence rates significantly higher in low- to middle-income
+    countries compared to high-income countries

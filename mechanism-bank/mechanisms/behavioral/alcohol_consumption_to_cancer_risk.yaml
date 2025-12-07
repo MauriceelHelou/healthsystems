@@ -1,0 +1,45 @@
+id: alcohol_consumption_to_cancer_history
+name: Alcohol Consumption → Cancer History
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: cancer_history
+  node_name: Cancer History
+  _original_id: cancer_risk
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption directly damages DNA and produces carcinogenic metabolites
+  like acetaldehyde'
+- 'Step 2: Alcohol may interact synergistically with dietary factors to promote carcinogenesis
+  in multiple organ systems'
+- 'Step 3: Combined alcohol and dietary exposures increase risk of multiple cancer
+  types including esophageal, colorectal, and breast cancers'
+evidence:
+  quality_rating: A
+  n_studies: 19
+  primary_citation: 'Galya Bigman et al. 2022. "Dietary Intake and Cancer in Sub-Saharan
+    Africa: A Critical Review of Epidemiological Studies.." *Nutrition and cancer*.
+    https://doi.org/10.1080/01635581.2022.2032217'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.509194'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: dietary_intake_patterns
+  direction: strengthens
+  strength: strong
+  description: Specific dietary patterns may synergistically interact with alcohol
+    to increase cancer risk, though this interaction was not adequately measured in
+    existing studies
+- name: smoking
+  direction: strengthens
+  strength: strong
+  description: Tobacco use combined with alcohol creates multiplicative cancer risk
+    but this interaction was not consistently assessed
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/behavioral/alcohol_consumption_to_cancer_risk.yaml
+_category: behavioral

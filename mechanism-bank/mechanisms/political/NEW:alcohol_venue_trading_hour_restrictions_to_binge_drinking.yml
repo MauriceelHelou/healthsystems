@@ -1,0 +1,57 @@
+id: NEW:alcohol_venue_trading_hour_restrictions_to_binge_drinking
+name: Alcohol Venue Trading Hour Restrictions → Binge Drinking
+from_node:
+  node_id: NEW:alcohol_venue_trading_hour_restrictions
+  node_name: Alcohol Venue Trading Hour Restrictions
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Trading hours reduced from 5am to 3am in entertainment districts'
+- 'Step 2: Rapid intoxication drinks (shots) banned after midnight'
+- 'Step 3: Patrons compensate by consuming more alcohol before entering venues'
+- 'Step 4: Breath alcohol concentration (BrAC) at entry to entertainment districts increases substantially'
+- 'Step 5: Exit BrAC shows some evidence of increase despite shorter venue operating hours'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'G. Devilly et al. 2019. "A big night out getting bigger: Alcohol consumption, arrests
+    and crowd numbers, before and after legislative change." https://doi.org/10.1371/journal.pone.0218161'
+  supporting_citations:
+  - 'Study 1: Pre-legislation survey (n=807) on predicted behavioral changes'
+  - 'Study 2: Matched comparison before (n=497) and after (n=406) legislation'
+  - 'Study 3: Two-year baseline (n=652, n=155) and one-year post (n=460) comparison'
+  doi: 10.1371/journal.pone.0218161
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol trading hour restrictions were associated with increased overall intoxication levels
+  as measured by breath alcohol concentration at entry to entertainment districts. People were substantially
+  more inebriated when entering venues after the legislative change, suggesting the policy displaced rather
+  than reduced alcohol consumption.
+quantitative_effects:
+  sample_size: 3993
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Specific to Queensland, Australia nighttime entertainment districts. Two-year baseline
+    demonstrated stable preloading rates before legislation, indicating the increase was attributable
+    to policy change.
+moderators:
+- name: takeaway_alcohol_restrictions
+  direction: weakens
+  strength: weak
+  description: Policy included no new approvals for trading hours beyond 10pm for takeaway alcohol, but
+    existing outlets not affected
+structural_competency:
+  equity_implications: This finding illustrates the complexity of alcohol policy interventions. The structural
+    approach of restricting supply (trading hours) did not reduce consumption but shifted it to unregulated
+    settings. This highlights the need for comprehensive approaches that address both supply and the social
+    determinants of hazardous drinking in young adults. Policy failure occurred due to not adapting to
+    cultural patterns specific to the target population.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.247481'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

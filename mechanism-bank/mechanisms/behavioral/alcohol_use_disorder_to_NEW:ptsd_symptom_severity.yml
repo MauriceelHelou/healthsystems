@@ -1,0 +1,55 @@
+id: alcohol_use_disorder_to_NEW:ptsd_symptom_severity
+name: Alcohol Use Disorder → PTSD Symptom Severity
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:ptsd_symptom_severity
+  node_name: PTSD Symptom Severity
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol use disrupts natural recovery processes from trauma'
+- 'Step 2: Alcohol interferes with emotional processing and memory consolidation needed for trauma resolution'
+- 'Step 3: Withdrawal effects and alcohol-related consequences increase physiological arousal and stress'
+- 'Step 4: PTSD symptoms are maintained or exacerbated in subsequent weeks'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jessica C Tripp et al. 2020. "Bidirectional relationship of posttraumatic stress disorder
+    (PTSD) symptom severity and alcohol use over the course of integrated treatment.." https://doi.org/10.1037/adb0000564
+  supporting_citations:
+  - Studies supporting mutual maintenance model of addiction (cited in abstract)
+  - Literature on COPE (Concurrent Treatment of PTSD and Substance Use Disorder Using Prolonged Exposure)
+  - Literature on Seeking Safety present-focused coping skills-based treatment
+  doi: 10.1037/adb0000564
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Greater alcohol use is prospectively associated with greater future PTSD symptom severity
+  during integrated treatment. This reciprocal relationship supports the mutual maintenance model where
+  alcohol use perpetuates PTSD symptoms, creating a reinforcing cycle.
+quantitative_effects:
+  effect_size:
+    value: 0.13
+    type: beta_coefficient
+  p_value: 0.003
+  sample_size: 107
+moderators:
+- name: treatment_condition
+  direction: neutral
+  strength: weak
+  description: Treatment condition (COPE vs Seeking Safety) did not moderate the reciprocal effect of
+    alcohol use on PTSD symptoms
+structural_competency:
+  equity_implications: The bidirectional relationship demonstrates how co-occurring conditions maintain
+    each other when structural treatment barriers exist. Traditional sequential treatment models that
+    require addressing substance use before trauma treatment may inadvertently perpetuate both conditions.
+    Integrated treatment approaches that address both simultaneously represent a structural intervention
+    that can break this cycle. Access to such integrated treatment is often limited by healthcare system
+    fragmentation, insurance coverage gaps, and provider training deficits.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.805309'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

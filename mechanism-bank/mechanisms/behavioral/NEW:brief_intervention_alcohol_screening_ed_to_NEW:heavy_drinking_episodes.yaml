@@ -1,0 +1,66 @@
+id: NEW:brief_intervention_alcohol_screening_ed_to_NEW:heavy_drinking_episodes
+name: Brief Intervention with Alcohol Screening in Emergency Department → Heavy Drinking
+  Episodes
+from_node:
+  node_id: NEW:brief_intervention_alcohol_screening_ed
+  node_name: Brief Intervention with Alcohol Screening in Emergency Department
+to_node:
+  node_id: NEW:heavy_drinking_episodes
+  node_name: Heavy Drinking Episodes
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Patients presenting to emergency departments with alcohol-related injuries
+  or intoxication are screened to identify hazardous drinking patterns'
+- 'Step 2: Brief interventions (ranging from minimal feedback to more structured counseling)
+  are delivered, which may include motivational interviewing techniques, personalized
+  feedback on drinking risks, and goal-setting'
+- 'Step 3: The intervention triggers cognitive processes including increased awareness
+  of drinking harms, self-reflection on drinking behavior, and enhanced motivation
+  to change'
+- 'Step 4: Patients reduce the frequency and intensity of heavy drinking episodes
+  as a behavioral response to the intervention, with effects persisting at 3-, 6-,
+  and 12-month follow-up periods'
+evidence:
+  quality_rating: A
+  n_studies: 28
+  primary_citation: C. Schmidt et al. 2016. Meta-analysis on the effectiveness of
+    alcohol screening with brief interventions for patients in emergency care settings.
+    Addiction.
+  supporting_citations: []
+description: A meta-analysis of 28 randomized controlled trials with 14,456 patients
+  found that brief interventions with alcohol screening in emergency department settings
+  produce small but statistically significant reductions in heavy drinking episodes.
+  The effect sizes across follow-up periods (3, 6, and 12 months) were modest (highest
+  SMD = 0.19), indicating that while the intervention is effective, the magnitude
+  of benefit is limited. Importantly, more intensive interventions did not outperform
+  shorter approaches, suggesting that minimal interventions may be equally cost-effective.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.19
+    type: standardized_mean_difference
+    ci_lower: 0.08
+    ci_upper: 0.31
+  p_value: null
+  sample_size: 14456
+moderators:
+- name: Intervention mode (face-to-face vs. non-face-to-face)
+  direction: neutral
+  strength: weak
+  description: Non-face-to-face interventions appear comparably effective to face-to-face,
+    though evidence is tentative due to limited studies
+- name: Intervention length/intensity
+  direction: neutral
+  strength: weak
+  description: More intensive interventions showed no benefit over shorter approaches
+- name: Type of interventionist
+  direction: neutral
+  strength: weak
+  description: No significant moderation effect identified based on who delivers the
+    intervention
+- name: Control intervention intensity
+  direction: neutral
+  strength: weak
+  description: No significant moderation effect from intensity of control condition

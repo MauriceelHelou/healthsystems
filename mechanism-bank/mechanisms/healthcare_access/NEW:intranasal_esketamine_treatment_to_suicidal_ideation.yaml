@@ -1,0 +1,46 @@
+id: NEW:intranasal_esketamine_treatment_to_suicidal_ideation
+name: Intranasal Esketamine Treatment → Suicidal Ideation
+from_node:
+  node_id: NEW:intranasal_esketamine_treatment
+  node_name: Intranasal Esketamine Treatment
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Intranasal esketamine is administered as a potential rapid-acting treatment
+  for acute suicidal ideation in clinical settings'
+- 'Step 2: Esketamine (S-enantiomer of ketamine) acts as an NMDA receptor antagonist,
+  theoretically modulating glutamatergic neurotransmission'
+- 'Step 3: Despite mechanistic rationale, large-scale randomized controlled trials
+  demonstrate that intranasal esketamine does not significantly differ from placebo
+  in reducing suicidal ideation'
+- 'Step 4: Large placebo effects observed in studies may mask or diminish any therapeutic
+  signal from the active treatment'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'F. Jollant et al. 2023. Ketamine and esketamine in suicidal thoughts
+    and behaviors: a systematic review. Therapeutic Advances in Psychopharmacology.'
+  supporting_citations: []
+description: Systematic review of 26 randomized controlled trials (12 with suicidal
+  ideation reduction as primary objective, 14 as secondary) found that intranasal
+  esketamine did not differ from placebo in large-scale studies for reducing suicidal
+  ideation. This contrasts with intravenous racemic ketamine, which showed superiority
+  to control conditions within the first 72 hours. The lack of efficacy for intranasal
+  esketamine may relate to differences in bioavailability, the enantiomer-specific
+  effects, or the substantial placebo response observed in these trials.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: placebo_response
+  direction: weakens
+  strength: strong
+  description: Large placebo effects in suicidal ideation trials significantly impact
+    ability to detect treatment differences
+- name: route_of_administration
+  direction: weakens
+  strength: strong
+  description: Intranasal esketamine showed no difference from placebo, in contrast
+    to intravenous racemic ketamine which showed superiority to controls

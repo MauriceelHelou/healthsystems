@@ -1,0 +1,100 @@
+id: air_pollution_concentration_to_all_cause_mortality_rate
+name: Air Pollution Concentration -> All-Cause Mortality Rate
+from_node:
+  node_id: air_pollution_concentration
+  node_name: Air Pollution Concentration (PM2.5)
+  node_type: stock
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+  node_type: crisis_endpoint
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Fine particulate matter (PM2.5) is inhaled deep into lung tissue and enters systemic circulation'
+- 'Step 2: PM2.5 triggers oxidative stress and systemic inflammatory response throughout the body'
+- 'Step 3: Chronic inflammation accelerates atherosclerosis and cardiovascular disease progression'
+- 'Step 4: Air pollution impairs lung function and exacerbates respiratory conditions'
+- 'Step 5: Cumulative cardiovascular and respiratory damage increases mortality risk from multiple causes'
+evidence:
+  quality_rating: A
+  n_studies: 106
+  primary_citation: 'Chen, Jie and Gerard Hoek. 2020. "Long-Term Exposure to PM and All-Cause and Cause-Specific Mortality: A Systematic Review and Meta-Analysis." Environment International 143: 105974.'
+  supporting_citations:
+  - 'Di, Qian, et al. 2017. "Air Pollution and Mortality in the Medicare Population." New England Journal of Medicine 376(26): 2513-2522.'
+  - 'Burnett, Richard, et al. 2018. "Global Estimates of Mortality Associated with Long-Term Exposure to Outdoor Fine Particulate Matter." Proceedings of the National Academy of Sciences 115(38): 9592-9597.'
+  - 'WHO. 2024. "Long-Term Exposure to Particulate Matter and Mortality: An Update of the WHO Global Air Quality Guidelines Systematic Review and Meta-Analysis." International Journal of Public Health.'
+  doi: 10.1016/j.envint.2020.105974
+  journal: Environment International
+  year: 2020
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 1.08
+    type: relative_risk
+    ci_lower: 1.06
+    ci_upper: 1.09
+    ci_level: 95
+    per_unit_increase: 10
+    unit: ug/m3
+  additional_effects:
+    per_1ugm3_hr:
+      value: 1.035
+      ci_lower: 1.023
+      ci_upper: 1.047
+    medicare_population_per_10ugm3:
+      value: 1.073
+      ci_lower: 1.071
+      ci_upper: 1.075
+    six_cities_per_10ugm3:
+      value: 1.14
+      ci_lower: 1.07
+      ci_upper: 1.22
+  sample_size: 60925443
+  interpretation: 'Each 10 ug/m3 increase in PM2.5 is associated with 8% increased all-cause mortality (RR 1.08, 95% CI 1.06-1.09). In Medicare population (61 million), effect was 7.3% per 10 ug/m3. Effects are linear or supra-linear at low concentrations, with no safe threshold identified.'
+  source: Meta-analysis of 107 cohort studies, predominantly North America and Europe
+last_updated: '2025-11-30'
+version: '1.0'
+description: Long-term exposure to PM2.5 air pollution increases all-cause mortality through cardiovascular and respiratory pathways. Meta-analyses consistently show 6-14% increased mortality risk per 10 ug/m3, with effects evident even at levels below current regulatory standards. The WHO estimates 8.9 million deaths annually attributable to PM2.5 globally.
+moderators:
+- name: baseline_pm25_level
+  direction: strengthens
+  strength: moderate
+  description: Supra-linear concentration-response at low levels; effects remain significant below WHO guidelines
+- name: cardiovascular_disease_history
+  direction: strengthens
+  strength: strong
+  description: Individuals with pre-existing CVD show larger mortality effects from PM2.5 exposure
+- name: socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Low-SES populations experience higher exposures and greater susceptibility
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Elderly populations show larger effect sizes due to accumulated exposure and vulnerability
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: Air pollution exposure is not randomly distributed. Low-income communities and communities of color are systematically located near highways, industrial facilities, and other pollution sources due to historical redlining, exclusionary zoning, and environmental racism. Clean Air Act enforcement varies by region and political context. Addressing air pollution mortality requires structural interventions including emissions regulations, land use policy, and environmental justice enforcement rather than individual protective behaviors.
+assumptions:
+- PM2.5 used as indicator pollutant; effects may include correlated pollutants
+- Long-term exposure (annual average) is primary exposure metric
+- Mortality effects are independent of smoking and other individual risk factors after adjustment
+limitations:
+- Heterogeneity across studies in exposure assessment methods
+- Most studies from North America and Europe; global estimates extrapolated
+- Difficult to separate PM2.5 effects from co-pollutants and noise
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: PM2.5 concentrations range from <5 ug/m3 in rural areas to >15 ug/m3 in urban/industrial areas. Effects per unit exposure are similar across regions, but total burden depends on concentration levels.
+  relevant_geographies:
+  - Urban areas with high traffic density
+  - Regions near industrial facilities and power plants
+  - Wildfire-affected regions (increasing exposure)
+  - Areas with weak Clean Air Act enforcement
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

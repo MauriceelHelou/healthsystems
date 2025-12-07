@@ -1,0 +1,59 @@
+id: diversion_program_utilization_to_drug_involved_crime_rate
+name: Diversion Program Utilization → Drug-Involved Crime Rate
+from_node:
+  node_id: diversion_program_utilization
+  node_name: Diversion Program Utilization
+to_node:
+  node_id: drug_involved_crime_rate
+  node_name: Drug-Involved Crime Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Diversion programs identify drug-using offenders at various criminal justice touchpoints'
+- 'Step 2: Treatment access reduces active substance use disorder severity'
+- 'Step 3: Reduced drug use decreases need for acquisitive crime to fund drug purchases'
+- 'Step 4: Sustained recovery support through aftercare maintains reduced offending behavior'
+evidence:
+  quality_rating: B
+  n_studies: 16
+  primary_citation: 'Karen P Hayhurst et al. 2015. "The effectiveness and cost-effectiveness of diversion
+    and aftercare programmes for offenders using class A drugs: a systematic review and economic evaluation.."
+    https://doi.org/10.3310/hta19060'
+  supporting_citations:
+  - UK Drug Data Warehouse statistics (cited for economic evaluation data)
+  - UK Drug Treatment Outcomes Research Study (cited for outcome data)
+  - Additional citations require full-text access
+  doi: 10.3310/hta19060
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The review examined whether diversion programs reduce offending behavior among class A drug
+  users, as drug-related crime accounts for nearly 90% of the £15B societal costs of problematic drug
+  use in England and Wales. While offending was a main outcome, specific effect sizes for crime reduction
+  were not extractable from the meta-analysis.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Societal costs of drug-related crime exceed £15B in England and Wales, representing
+    90% of total costs. US evidence may not generalize to UK criminal justice context.
+moderators:
+- name: aftercare_availability
+  direction: strengthens
+  strength: moderate
+  description: Aftercare programs following initial diversion and treatment may enhance sustained reductions
+    in offending
+- name: program_type
+  direction: strengthens
+  strength: weak
+  description: Voluntary, court-mandated, and monitored services represent different program models with
+    potentially different effectiveness
+structural_competency:
+  equity_implications: This mechanism highlights how structural responses to drug use (treatment vs punishment)
+    can interrupt the cycle linking poverty, addiction, and crime. The massive societal cost of drug-related
+    crime (£15B) reflects systemic failures in addressing substance use as a health condition rather than
+    a criminal matter. Diversion programs represent policy-level recognition that incarceration perpetuates
+    rather than addresses the structural conditions driving drug-related offending.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.588125'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

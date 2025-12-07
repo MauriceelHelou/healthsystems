@@ -1,0 +1,53 @@
+id: NEW:peripheral_iv_catheter_replacement_policy_to_NEW:thrombophlebitis_rate
+name: Peripheral IV Catheter Replacement Policy (Clinically-Indicated vs Routine) → Thrombophlebitis Rate
+from_node:
+  node_id: NEW:peripheral_iv_catheter_replacement_policy
+  node_name: Peripheral IV Catheter Replacement Policy (Clinically-Indicated vs Routine)
+to_node:
+  node_id: NEW:thrombophlebitis_rate
+  node_name: Thrombophlebitis Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare policy determines catheter replacement timing'
+- 'Step 2: Longer catheter dwell time with clinically-indicated approach may increase vessel irritation
+  exposure'
+- 'Step 3: Endothelial damage and inflammatory response can lead to thrombophlebitis'
+- 'Step 4: No significant difference in thrombophlebitis rates observed between replacement strategies'
+evidence:
+  quality_rating: A
+  n_studies: 7
+  primary_citation: Joan Webster et al. 2019. "Clinically-indicated replacement versus routine replacement
+    of peripheral venous catheters.." https://doi.org/10.1002/14651858.CD007798.pub5
+  supporting_citations:
+  - Rickard CM et al. (2012). Lancet
+  - Two trials excluded from meta-analysis due to high heterogeneity
+  - Additional citations require full-text access
+  doi: 10.1002/14651858.CD007798.pub5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: No clear difference in thrombophlebitis rates between clinically-indicated (317/3590) and
+  routine replacement (307/3733) groups (RR 1.07, 95% CI 0.93-1.25). When analyzed by device days (32,709
+  total), results remained non-significant (RR 0.90, 95% CI 0.76-1.08)
+quantitative_effects:
+  effect_size:
+    value: 1.07
+    type: relative_risk
+    ci_lower: 0.93
+    ci_upper: 1.25
+  sample_size: 7323
+moderators:
+- name: infusion_type
+  direction: neutral
+  strength: weak
+  description: Result was unaffected by whether infusion was continuous or intermittent
+structural_competency:
+  equity_implications: This healthcare protocol-level policy affects all hospitalized patients requiring
+    IV access. The finding of no difference challenges routine replacement guidelines that create unnecessary
+    healthcare utilization and patient burden.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.911539'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,65 @@
+id: NEW:off_premise_alcohol_outlet_density_adjacent_to_intimate_partner_violence
+name: Off-Premise Alcohol Outlet Density in Adjacent Areas → Intimate Partner Violence
+from_node:
+  node_id: NEW:off_premise_alcohol_outlet_density_adjacent
+  node_name: Off-Premise Alcohol Outlet Density in Adjacent Areas
+to_node:
+  node_id: intimate_partner_violence
+  node_name: Intimate Partner Violence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Off-premise alcohol outlets in surrounding/adjacent block groups increase regional alcohol
+  availability'
+- 'Step 2: Spatial spillover effects allow residents to access alcohol from nearby areas even if local
+  density is low'
+- 'Step 3: Increased regional alcohol availability contributes to household alcohol consumption across
+  neighborhood boundaries'
+- 'Step 4: Alcohol-related domestic violence risk diffuses across spatial units'
+- 'Step 5: Male-on-female domestic violence in focal neighborhoods is influenced by alcohol outlet density
+  in surrounding areas'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Thomas H. Johnson and Aleksandra J. Snowden 2023. "Neighborhood Ecological Models
+    of Alcohol Outlet Density and Male–on–Female Domestic Violence: Accounting for Adjacent Place and
+    Neighborhood Characteristics." https://doi.org/10.1177/00220426231159016'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior research on effects of alcohol
+    availability in neighboring units
+  - Additional citations require full-text access - abstract discusses spatial regression methodology
+    accounting for adjacent place characteristics
+  - Additional citations require full-text access - abstract references ecological models of neighborhood
+    effects
+  doi: 10.1177/00220426231159016
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: A novel contribution of this study is demonstrating that off-premise alcohol outlet density
+  in surrounding/adjacent block groups significantly predicts male-on-female domestic violence in focal
+  neighborhoods. This spatial spillover effect indicates that alcohol availability operates across neighborhood
+  boundaries to influence domestic violence risk.
+quantitative_effects:
+  sample_size: 571
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Key finding of this study is the spatial spillover effect - alcohol availability in
+    surrounding block groups significantly predicts MFDV in focal block groups. This demonstrates that
+    domestic violence risk transcends immediate neighborhood boundaries.
+moderators:
+- name: MFDV_spatial_lag
+  direction: strengthens
+  strength: moderate
+  description: The study controlled for MFDV lag (spatial autocorrelation in violence), suggesting violence
+    patterns in adjacent areas also matter
+structural_competency:
+  equity_implications: 'This finding has important policy implications: interventions targeting only individual
+    neighborhoods may be insufficient if surrounding areas maintain high alcohol availability. Regional
+    approaches to alcohol outlet regulation may be necessary. This mechanism emphasizes structural/spatial
+    determinants over individual-level explanations, recognizing that environmental exposures do not respect
+    administrative boundaries.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.053660'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

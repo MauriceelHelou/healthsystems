@@ -1,0 +1,57 @@
+id: NEW:resistant_starch_type_2_intake_to_NEW:insulin_sensitivity
+name: Resistant Starch Type 2 Intake → Insulin Sensitivity
+from_node:
+  node_id: NEW:resistant_starch_type_2_intake
+  node_name: Resistant Starch Type 2 Intake
+to_node:
+  node_id: NEW:insulin_sensitivity
+  node_name: Insulin Sensitivity
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Resistant starch type 2 (RS2), characterized by high amylose concentration,
+  escapes digestion by endogenous enzymes in the small intestine'
+- 'Step 2: RS2 reaches the large intestine where it undergoes fermentation by gut
+  microbiota, producing short-chain fatty acids (SCFAs)'
+- 'Step 3: SCFAs and reduced glucose absorption lead to improved acute postprandial
+  insulin response and lower insulin demands'
+- 'Step 4: Chronic RS2 intake results in sustained improvements in fasting insulin
+  levels and fasting glucose concentrations'
+- 'Step 5: Reduced insulin secretion requirements and improved glucose homeostasis
+  indicate enhanced peripheral insulin sensitivity'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'Jennifer E. Pugh et al. 2023. A comparison of the effects of
+    resistant starch types on glycemic response in individuals with type 2 diabetes
+    or prediabetes: A systematic review and meta-analysis. Frontiers in Nutrition.'
+  supporting_citations: []
+description: 'Resistant starch type 2 improves insulin sensitivity through multiple
+  mechanisms. RS2 escapes small intestinal digestion due to its high amylose content,
+  reducing acute glucose absorption and postprandial insulin demands. In chronic intake,
+  RS2 significantly improves fasting insulin (SMD: -0.40) and fasting glucose (SMD:
+  -0.39), indicating enhanced insulin sensitivity. The meta-analysis of 36 RCTs (n=982)
+  demonstrates that RS2 also improves acute postprandial insulin response (SMD: -0.71),
+  suggesting both immediate and sustained benefits for glucose homeostasis in individuals
+  with T2D or prediabetes.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.4
+    type: standardized_mean_difference
+    ci_lower: -0.6
+    ci_upper: -0.21
+  p_value: null
+  sample_size: 982
+moderators:
+- name: diabetes_status
+  direction: strengthens
+  strength: moderate
+  description: Sub-group analyses conducted between subjects with T2D versus prediabetes
+    showed differential effects
+- name: study_duration
+  direction: strengthens
+  strength: moderate
+  description: Chronic RS2 intake showed improvements in both fasting glucose and
+    fasting insulin, while acute studies showed postprandial improvements

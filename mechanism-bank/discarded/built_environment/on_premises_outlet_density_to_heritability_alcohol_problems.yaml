@@ -1,0 +1,54 @@
+id: on_premises_outlet_density_to_heritability_alcohol_problems
+name: On-Premises Alcohol Outlet Density (>10 outlets) → Heritability of Alcohol Problems
+from_node:
+  node_id: on_premises_outlet_density
+  node_name: On-Premises Alcohol Outlet Density (>10 outlets)
+to_node:
+  node_id: heritability_alcohol_problems
+  node_name: Heritability of Alcohol Problems
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: High density of on-premises alcohol outlets (bars, restaurants) creates
+  pervasive environmental cues and normalized drinking contexts'
+- 'Step 2: Increased environmental permissiveness and alcohol availability reduces
+  barriers to alcohol access'
+- 'Step 3: Genetic factors become more influential in determining alcohol problems
+  when environmental constraints are removed'
+- 'Step 4: Heritability estimates increase from 11% in zero-outlet neighborhoods to
+  78% in high-outlet-density neighborhoods'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: W. Slutske et al. 2019. "Neighborhood density of alcohol outlets
+    moderates genetic and environmental influences on alcohol problems." *Addiction*.
+    https://doi.org/10.1111/add.14534
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.089522'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: zero_outlet_neighborhoods
+  direction: weakens
+  strength: strong
+  description: 'In neighborhoods with no on-premises outlets, heritability of alcohol
+    problems was only 11% (95% CI: 0-29%), demonstrating that restrictive built environments
+    can substantially suppress genetic expression and environmental influences become
+    more dominant.'
+- name: population_density
+  direction: u_shaped
+  strength: weak
+  description: The moderating effect of outlet density was independent of population
+    density, indicating the mechanism operates through alcohol-specific availability
+    rather than general urbanization.
+- name: neighborhood_sociodemographic_characteristics
+  direction: u_shaped
+  strength: weak
+  description: Effect persisted after controlling for neighborhood socio-demographic
+    characteristics, suggesting outlet density operates as an independent structural
+    determinant beyond general neighborhood disadvantage.
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/on_premises_outlet_density_to_heritability_alcohol_problems.yaml
+_category: built_environment

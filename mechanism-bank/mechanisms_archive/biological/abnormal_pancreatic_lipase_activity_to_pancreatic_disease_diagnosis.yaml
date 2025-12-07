@@ -1,0 +1,46 @@
+id: abnormal_pancreatic_lipase_activity_to_pancreatic_disease_diagnosis
+name: Abnormal Pancreatic Lipase Activity → Pancreatic Disease Diagnosis and Monitoring
+from_node:
+  node_id: abnormal_pancreatic_lipase_activity
+  node_name: Abnormal Pancreatic Lipase Activity
+to_node:
+  node_id: pancreatic_disease_diagnosis
+  node_name: Pancreatic Disease Diagnosis and Monitoring
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Pancreatic pathology (from gallstones, alcohol, or other causes) disrupts
+  normal pancreatic lipase enzyme production and secretion'
+- 'Step 2: Abnormal lipase activity levels serve as biomarker of pancreatic disease
+  severity and progression'
+- 'Step 3: Novel fluorescent probe LPP detects pancreatic lipase activity with high
+  specificity (detection limit 0.012 U/mL) within 10 minutes'
+- 'Step 4: Fluorescence lifetime imaging (FLIM) enables real-time monitoring of dynamic
+  changes in lipase activity'
+- 'Step 5: Early detection of abnormal lipase activity enables timely diagnosis and
+  monitoring of severe acute pancreatitis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Haowen Fan et al. 2025. "Fluorescence lifetime imaging of human
+    pancreatic lipase activity using a novel probe for early diagnosis of severe acute
+    pancreatitis.." *Spectrochimica acta. Part A, Molecular and biomolecular spectroscopy*.
+    https://doi.org/10.1016/j.saa.2024.125171
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.197432'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: probe_detection_sensitivity
+  direction: strengthens
+  strength: strong
+  description: High sensitivity of LPP probe (detection limit 0.012 U/mL) enables
+    early detection of subtle changes in pancreatic lipase activity before clinical
+    symptoms emerge
+- name: reaction_time
+  direction: strengthens
+  strength: strong
+  description: Rapid reaction completion (10 minutes) enables timely clinical decision-making
+    in acute care settings

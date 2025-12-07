@@ -1,0 +1,42 @@
+id: rural_poverty_rate_to_housing_instability_youth
+name: Rural Community Poverty Rate → Youth Housing Instability
+from_node:
+  node_id: rural_poverty_rate
+  node_name: Rural Community Poverty Rate
+to_node:
+  node_id: housing_instability_youth
+  node_name: Youth Housing Instability
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: High poverty rates in small non-urban communities limit household economic
+  resources across families'
+- 'Step 2: Economic strain reduces capacity of families to maintain stable housing
+  for all members including young adults'
+- 'Step 3: Limited economic resources at household level increase risk of youth housing
+  instability and homelessness'
+- 'Step 4: Poverty also constrains development and funding of formal service infrastructure,
+  eliminating alternatives to family support'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'S. Curry et al. 2020. "Navigating Housing Instability and Substance
+    Use: Hidden Tensions Facing Youth in Small Town America." *Journal of social service
+    research*. https://doi.org/10.1080/01488376.2019.1575322'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.309066'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: formal_service_funding
+  direction: weakens
+  strength: moderate
+  description: External funding for youth services can partially offset local poverty
+    effects on service availability
+- name: epidemic_drug_use
+  direction: strengthens
+  strength: strong
+  description: Substance use epidemics compound economic strain on families and reduce
+    housing stability

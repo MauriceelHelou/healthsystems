@@ -1,0 +1,52 @@
+id: NEW:specialty_sud_referral_model_to_NEW:aud_treatment_attendance
+name: Specialty SUD Clinic Referral Model → AUD Treatment Attendance Rate
+from_node:
+  node_id: NEW:specialty_sud_referral_model
+  node_name: Specialty SUD Clinic Referral Model
+to_node:
+  node_id: NEW:aud_treatment_attendance
+  node_name: AUD Treatment Attendance Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with AUD are identified in primary care settings'
+- 'Step 2: Referral to separate specialty SUD clinics creates access barriers including transportation,
+  time, and stigma'
+- 'Step 3: Only a minority of referred patients attend specialty treatment services'
+- 'Step 4: Care fragmentation between primary care and specialty SUD reduces treatment engagement'
+- 'Step 5: Low treatment attendance perpetuates unmet treatment need'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'H. Hagedorn et al. 2015. "Enhancing access to alcohol use disorder pharmacotherapy
+    and treatment in primary care settings: ADaPT-PC." https://doi.org/10.1186/s13012-016-0431-5'
+  supporting_citations:
+  - Prior research identifying barriers to implementation of AUD pharmacotherapy referenced
+  - Additional citations require full-text access
+  doi: 10.1186/s13012-016-0431-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The traditional model of referring patients with AUD from primary care to specialty SUD clinics
+  creates structural barriers that result in low treatment attendance. The abstract explicitly states
+  that 'only a minority of those referred attend treatment services,' indicating a care delivery model
+  that fails to meet patients where they are.
+moderators:
+- name: geographic_distance_to_specialty_care
+  direction: weakens
+  strength: moderate
+  description: Greater distance to specialty SUD clinics likely reduces attendance rates further
+- name: stigma_associated_with_specialty_sud_services
+  direction: weakens
+  strength: moderate
+  description: Stigma associated with attending designated SUD clinics may reduce willingness to attend
+structural_competency:
+  equity_implications: This mechanism identifies a healthcare system design flaw rather than patient non-compliance.
+    The referral model places burden on patients to navigate between care settings, creating structural
+    barriers that disproportionately affect those with fewer resources, transportation challenges, or
+    stigma concerns. Integrating treatment into primary care addresses this structural inequity.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.110181'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,43 @@
+id: NEW:treatment_resistant_status_to_NEW:invasive_neurosurgical_intervention_eligibility
+name: Treatment-Resistant Status in Alcohol Use Disorder → Eligibility for Invasive Neurosurgical Intervention
+from_node:
+  node_id: NEW:treatment_resistant_status
+  node_name: Treatment-Resistant Status in Alcohol Use Disorder
+to_node:
+  node_id: NEW:invasive_neurosurgical_intervention_eligibility
+  node_name: Eligibility for Invasive Neurosurgical Intervention
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients fail multiple conventional AUD treatments (medications, behavioral therapies)'
+- 'Step 2: Treatment resistance designation makes patients eligible for experimental interventions'
+- 'Step 3: Inpatient status provides controlled environment for surgical intervention and monitoring'
+- 'Step 4: DBS offered as last-resort option after exhausting standard treatment approaches'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'P. Bach et al. 2023. "Deep brain stimulation of the nucleus accumbens in treatment-resistant
+    alcohol use disorder: a double-blind randomized controlled multi-center trial." https://doi.org/10.1038/s41398-023-02337-1'
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1038/s41398-023-02337-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study enrolled inpatients with treatment-resistant AUD, indicating that DBS is positioned
+  as an intervention for those who have not responded to conventional treatments. This creates a pathway
+  where treatment failure paradoxically becomes a criterion for accessing advanced interventions.
+quantitative_effects:
+  sample_size: 12
+structural_competency:
+  equity_implications: 'The concept of ''treatment resistance'' in AUD is partly constructed by structural
+    factors: inadequate treatment duration, lack of integrated care, insurance limitations on treatment
+    episodes, and absence of wrap-around services (housing, employment support) that are necessary for
+    recovery. Many patients labeled ''treatment-resistant'' may actually be experiencing ''system-resistant''
+    recovery due to structural barriers. The availability of DBS only at specialized centers further stratifies
+    access based on geography and socioeconomic status.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.746823'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

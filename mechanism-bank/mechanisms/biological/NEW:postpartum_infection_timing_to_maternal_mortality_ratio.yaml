@@ -1,0 +1,54 @@
+id: NEW:postpartum_infection_timing_to_maternal_mortality_ratio
+name: Postpartum Infection (Days 8-42) → Maternal Mortality Ratio
+from_node:
+  node_id: NEW:postpartum_infection_timing
+  node_name: Postpartum Infection (Days 8-42)
+to_node:
+  node_id: maternal_mortality_ratio
+  node_name: Maternal Mortality Ratio
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Postpartum infections (puerperal sepsis, endometritis, wound infections)
+  develop following childbirth, with bacterial colonization and proliferation in the
+  reproductive tract or surgical sites'
+- 'Step 2: Infection progresses during days 8-42 postpartum as pathogens multiply,
+  with delayed presentation due to incubation periods and gradual symptom development'
+- 'Step 3: Untreated or inadequately treated infections lead to systemic inflammatory
+  response, sepsis, and multi-organ dysfunction'
+- 'Step 4: Severe sepsis results in maternal death, with 61.3% of infection-related
+  postpartum deaths occurring in the 8-42 day window'
+evidence:
+  quality_rating: A
+  n_studies: 32
+  primary_citation: 'J. Dol et al. 2022. Timing of maternal mortality and severe morbidity
+    during the postpartum period: a systematic review. JBI Evidence Synthesis.'
+  supporting_citations: []
+description: Systematic review of 32 studies found that 61.3% of maternal deaths due
+  to infection occur between days 8-42 postpartum, representing the predominant timing
+  for infection-related mortality. This delayed mortality pattern reflects the natural
+  history of puerperal infections, which require time to develop from initial colonization
+  to systemic sepsis. Unlike hemorrhage (79.1% on day 1) or eclampsia (predominantly
+  first week), infections manifest later, making the extended postpartum period particularly
+  critical for infection surveillance and treatment.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 61.3
+    type: proportion_percentage
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: Country income level
+  direction: strengthens
+  strength: moderate
+  description: Low-income settings may have higher infection-related mortality in
+    the 8-42 day period due to reduced access to antibiotics and postpartum care
+- name: Access to postpartum care
+  direction: weakens
+  strength: strong
+  description: Enhanced frequency and quality of postpartum assessments during the
+    first 42 days can detect and treat infections before they become fatal

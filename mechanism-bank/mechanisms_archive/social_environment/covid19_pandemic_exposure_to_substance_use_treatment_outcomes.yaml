@@ -1,0 +1,52 @@
+id: covid19_pandemic_exposure_to_substance_use_treatment_outcomes
+name: COVID-19 Pandemic Stressors (Composite) → Substance Use and Treatment Outcomes
+  Among Patients with OUD
+from_node:
+  node_id: covid19_pandemic_exposure
+  node_name: COVID-19 Pandemic Stressors (Composite)
+to_node:
+  node_id: substance_use_treatment_outcomes
+  node_name: Substance Use and Treatment Outcomes Among Patients with OUD
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: COVID-19 pandemic creates multiple simultaneous stressors across six domains:
+  personal/family infection, healthcare access barriers, economic hardship, health
+  deterioration, social isolation, and home conflicts'
+- 'Step 2: Universal exposure to pandemic stressors (all 150 participants reported
+  at least one negatively impacted domain) creates sustained environmental stress
+  during critical treatment period'
+- 'Step 3: Compounded structural barriers and stressors overwhelm individual and community
+  coping resources'
+- 'Step 4: Multiple simultaneous structural stressors increase vulnerability to substance
+  use and impede recovery among patients receiving buprenorphine treatment for OUD'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Zoe M Weinstein et al. "The Impact of COVID-19 on Substance Use
+    and Related Consequences Among Patients in Office-based Opioid Use Disorder Treatment.."
+    *Journal of addiction medicine*. https://doi.org/10.1097/ADM.0000000000001367
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.741747'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: economic_stressors
+  direction: strengthens
+  strength: moderate
+  description: Economic stressors independently associated with increased substance-related
+    consequences, suggesting economic hardship moderates overall pandemic impact on
+    outcomes
+- name: healthcare_access_barriers
+  direction: strengthens
+  strength: strong
+  description: Difficulty accessing healthcare/medication showed strongest association
+    with consequences (aRR 1.11), indicating healthcare access is a critical moderator
+    of pandemic impact
+- name: physical_mental_health_deterioration
+  direction: strengthens
+  strength: moderate
+  description: Worsening health associated with both substance use and consequences,
+    suggesting health deterioration amplifies other pandemic stressors

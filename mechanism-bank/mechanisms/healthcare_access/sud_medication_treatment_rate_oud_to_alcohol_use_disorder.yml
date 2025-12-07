@@ -1,0 +1,54 @@
+id: sud_medication_treatment_rate_oud_to_alcohol_use_disorder
+name: SUD Medication Treatment Rate → Alcohol Use Disorder
+from_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Access to pharmacological treatments like baclofen for AUD requires healthcare system capacity
+  and provider willingness to prescribe'
+- 'Step 2: Regulatory frameworks (e.g., French approval without dose limitation) enable flexible prescribing
+  approaches'
+- 'Step 3: Medication treatment suppresses cravings and supports abstinence or reduced drinking'
+- 'Step 4: Sustained medication-assisted treatment reduces AUD prevalence and severity'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'R. de Beaurepaire and Philippe Jaury 2024. "Baclofen in the treatment of alcohol
+    use disorder: tailored doses matter." https://doi.org/10.1093/alcalc/agad090'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references multiple RCTs of baclofen
+  - Additional citations require full-text access - abstract references observational studies
+  - Additional citations require full-text access - abstract references meta-analyses
+  doi: 10.1093/alcalc/agad090
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The paper examines how medication treatment for AUD using baclofen, when properly implemented
+  with tailored dosing, can effectively reduce alcohol use disorder. This represents a healthcare access
+  mechanism where availability of evidence-based pharmacological treatments determines treatment outcomes.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Regulatory approval varies by country - France has approved baclofen without dose limitation
+    for AUD, which may not be the case in other jurisdictions
+moderators:
+- name: regulatory_environment
+  direction: strengthens
+  strength: strong
+  description: French approval without dose limitation enables tailored prescribing approaches that may
+    be restricted elsewhere
+structural_competency:
+  equity_implications: Access to medication-assisted treatment for AUD is shaped by regulatory policies,
+    healthcare system capacity, provider training, and insurance coverage - all structural factors. Geographic
+    variation in approval status creates inequitable access based on where patients live. The paper's
+    focus on French regulatory context highlights how policy decisions at the national level shape individual
+    treatment possibilities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.725672'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

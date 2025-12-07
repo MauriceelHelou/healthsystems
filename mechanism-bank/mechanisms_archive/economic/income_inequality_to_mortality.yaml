@@ -1,0 +1,45 @@
+id: income_inequality_to_mortality
+name: Income Inequality → All-Cause Mortality
+from_node:
+  node_id: income_inequality
+  node_name: Income Inequality
+to_node:
+  node_id: mortality
+  node_name: All-Cause Mortality
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Income inequality creates steeper social gradients and status hierarchies
+  within populations'
+- 'Step 2: Status hierarchies generate psychosocial stress through social comparison
+  and status anxiety'
+- 'Step 3: Chronic stress exposure leads to physiological dysregulation and increased
+  disease risk'
+- 'Step 4: Unequal distribution of resources limits access to health-protective factors
+  for lower-income populations'
+- 'Step 5: Cumulative effects of stress and resource deprivation increase mortality
+  risk'
+evidence:
+  quality_rating: C
+  n_studies: null
+  primary_citation: 'M. Shimonovich et al. 2022. "Assessing the causal relationship
+    between income inequality and mortality and self-rated health: protocol for systematic
+    review and meta-analysis." *Systematic Reviews*. https://doi.org/10.1186/s13643-022-01892-w'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.942152'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: individual_income_level
+  direction: strengthens
+  strength: moderate
+  description: The relationship may be stronger for those with lower individual income,
+    as the protocol specifically requires conditioning on individual income or socioeconomic
+    position to isolate the effect of area-level inequality
+- name: social_welfare_policies
+  direction: weakens
+  strength: moderate
+  description: Strong social safety nets and redistributive policies may buffer against
+    the health impacts of income inequality

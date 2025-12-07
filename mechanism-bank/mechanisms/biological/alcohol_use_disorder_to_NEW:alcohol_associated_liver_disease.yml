@@ -1,0 +1,60 @@
+id: alcohol_use_disorder_to_NEW:alcohol_associated_liver_disease
+name: Alcohol Use Disorder → Alcohol-Associated Liver Disease
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:alcohol_associated_liver_disease
+  node_name: Alcohol-Associated Liver Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic excessive alcohol consumption in individuals with AUD leads to sustained hepatotoxic
+  exposure'
+- 'Step 2: Alcohol metabolism produces acetaldehyde and reactive oxygen species causing hepatocyte damage'
+- 'Step 3: Repeated liver injury triggers inflammatory responses and fibrotic changes'
+- 'Step 4: Progressive liver damage manifests as fatty liver, hepatitis, fibrosis, or cirrhosis'
+evidence:
+  quality_rating: A
+  n_studies: 35
+  primary_citation: 'Sachin Amonker et al. 2023. "Prevalence of alcohol-associated liver disease: a systematic
+    review and meta-analysis." https://doi.org/10.1097/HC9.0000000000000133'
+  supporting_citations:
+  - Additional citations require full-text access - this meta-analysis synthesized 35 studies reporting
+    on 513,278 persons
+  - Studies included populations from unselected general populations, primary care, and AUD treatment
+    settings
+  - Original studies used universal testing processes including imaging and biomarkers for liver disease
+    detection
+  doi: 10.1097/HC9.0000000000000133
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review and meta-analysis of 35 studies found that alcohol-associated liver
+  disease prevalence is dramatically higher among individuals with alcohol use disorder (51.0%) compared
+  to general populations (3.5%) and primary care settings (2.6%), demonstrating the strong biological
+  link between sustained alcohol consumption and liver pathology.
+quantitative_effects:
+  effect_size:
+    value: 51.0
+    type: percentage_change
+    ci_lower: 11.1
+    ci_upper: 89.3
+  sample_size: 513278
+moderators:
+- name: healthcare_setting
+  direction: strengthens
+  strength: strong
+  description: Prevalence varies dramatically by setting - 51% in AUD populations vs 3.5% in unselected
+    populations vs 2.6% in primary care
+structural_competency:
+  equity_implications: While this mechanism documents the biological pathway from AUD to liver disease,
+    structural factors including alcohol marketing, outlet density, pricing policies, and treatment access
+    shape who develops AUD and who receives early intervention. The dramatic difference in prevalence
+    between settings suggests opportunities for targeted case-finding in populations with AUD, which requires
+    adequate funding and capacity for substance use treatment systems.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.418403'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

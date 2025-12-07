@@ -1,0 +1,60 @@
+id: NEW:alcohol_attributable_cardiovascular_disease_comorbidity_to_sud_medication_treatment_rate_oud
+name: Alcohol-Attributable Cardiovascular Disease Comorbidity → AUD Pharmacotherapy Receipt Rate
+from_node:
+  node_id: NEW:alcohol_attributable_cardiovascular_disease_comorbidity
+  node_name: Alcohol-Attributable Cardiovascular Disease Comorbidity
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: AUD Pharmacotherapy Receipt Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with AUD develop alcohol-attributable cardiovascular diseases through chronic alcohol
+  exposure'
+- 'Step 2: Prescribers may perceive higher risk or complexity in treating patients with cardiovascular
+  comorbidities'
+- 'Step 3: Potential concerns about drug interactions or contraindications may deter pharmacotherapy initiation'
+- 'Step 4: Systemic barriers in specialist care lead to underutilization of effective AUD medications'
+- 'Step 5: Patients with greatest medical need receive lowest rates of evidence-based pharmacotherapy'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Månsson et al. 2024. "Pharmacotherapy for alcohol use disorder among adults with
+    medical disorders in Sweden." https://doi.org/10.1186/s13722-024-00471-9
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior research on AUD pharmacotherapy
+    utilization
+  - Additional citations require full-text access - abstract references research on comorbid conditions
+    in AUD
+  - Additional citations require full-text access - abstract references contraindication literature
+  doi: 10.1186/s13722-024-00471-9
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patients with AUD and alcohol-attributable cardiovascular disease have 59% lower odds of
+  receiving AUD pharmacotherapy compared to those without such comorbidities, representing substantial
+  underutilization of effective treatment in high-risk populations.
+quantitative_effects:
+  effect_size:
+    value: 0.41
+    type: odds_ratio
+    ci_lower: 0.39
+    ci_upper: 0.43
+  sample_size: 132728
+moderators:
+- name: contraindication_status
+  direction: weakens
+  strength: moderate
+  description: Presence of diagnoses which are contraindications to AUD pharmacotherapy partially but
+    not fully explains the low prescription rate
+structural_competency:
+  equity_implications: This mechanism reveals a structural failure in healthcare systems where patients
+    with the greatest medical complexity and need (those with alcohol-related organ damage) receive the
+    least access to evidence-based treatment. This represents a paradox in care delivery that cannot be
+    attributed to individual patient behavior but rather to systemic prescriber barriers, care fragmentation,
+    and potentially inadequate clinical guidelines for complex patients.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.144897'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,43 @@
+id: bac_legal_limit_policy_to_road_traffic_crash_risk
+name: BAC Legal Limit Policy (0.5 g/L) → Road Traffic Crash Risk
+from_node:
+  node_id: bac_legal_limit_policy
+  node_name: BAC Legal Limit Policy (0.5 g/L)
+to_node:
+  node_id: road_traffic_crash_risk
+  node_name: Road Traffic Crash Risk
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Legal BAC limit of 0.5 g/L establishes threshold at which driving is permitted
+  despite measurable impairment'
+- 'Step 2: At this threshold, drivers experience clinically significant road tracking
+  impairment (2.5 cm increase in SDLP, exceeding 2.4 cm clinical relevance criterion)'
+- 'Step 3: Increased weaving behavior at legal BAC limit reduces safety margins and
+  increases probability of lane departures, near-misses, and collisions'
+- 'Step 4: Population-level exposure to legally-permitted impaired driving creates
+  sustained elevated crash risk'
+evidence:
+  quality_rating: C
+  n_studies: 9
+  primary_citation: S. Jongen et al. 2017. "A pooled analysis of on-the-road highway
+    driving studies in actual traffic measuring standard deviation of lateral position
+    (i.e., "weaving") while driving at a blood alcohol concentration of 0.5 g/L."
+    *Psychopharmacology*. https://doi.org/10.1007/s00213-016-4519-z
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.529363'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: enforcement_capacity
+  direction: strengthens
+  strength: strong
+  description: Jurisdictions with greater capacity for BAC testing and enforcement
+    may more effectively translate legal limits into actual deterrence and compliance
+- name: social_drinking_norms
+  direction: weakens
+  strength: moderate
+  description: Communities with stronger cultural acceptance of drinking and driving
+    may have lower compliance with BAC limits despite legal thresholds

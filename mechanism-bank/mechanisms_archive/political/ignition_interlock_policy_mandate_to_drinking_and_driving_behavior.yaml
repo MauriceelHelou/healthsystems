@@ -1,0 +1,44 @@
+id: ignition_interlock_policy_mandate_to_drinking_and_driving_behavior
+name: Ignition Interlock Policy Mandate → Drinking and Driving Behavior
+from_node:
+  node_id: ignition_interlock_policy_mandate
+  node_name: Ignition Interlock Policy Mandate
+to_node:
+  node_id: drinking_and_driving_behavior
+  node_name: Drinking and Driving Behavior
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: DUI offenders are mandated to install ignition interlock devices as legal
+  requirement'
+- 'Step 2: Device physically prevents vehicle operation when alcohol is detected above
+  threshold'
+- 'Step 3: Technology serves as external reminder and barrier to reduce drinking and
+  driving attempts'
+- 'Step 4: Offenders report device reduces their drinking and driving behaviors during
+  restriction period'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Kenneth H Beck et al. 2020. "Driver experiences with the alcohol
+    ignition interlock: Comparing successful and poor performers.." *Traffic injury
+    prevention*. https://doi.org/10.1080/15389588.2020.1791323'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.498765'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_drinking_severity
+  direction: strengthens
+  strength: moderate
+  description: Poor performers with more serious drinking patterns were more likely
+    to recognize potential benefits of interlock as DUI preventive countermeasure,
+    suggesting greater perceived impact among high-risk offenders
+- name: emotional_comfort_drinking_context
+  direction: weakens
+  strength: moderate
+  description: Offenders who drink in context of emotional comfort were more likely
+    to be poor performers with multiple lockouts, suggesting reduced effectiveness
+    for emotional drinkers

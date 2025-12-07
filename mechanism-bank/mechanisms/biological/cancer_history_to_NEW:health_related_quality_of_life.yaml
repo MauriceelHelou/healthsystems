@@ -1,0 +1,61 @@
+id: cancer_history_to_NEW:health_related_quality_of_life
+name: Cancer History → Health-Related Quality of Life
+from_node:
+  node_id: cancer_history
+  node_name: Cancer History
+to_node:
+  node_id: NEW:health_related_quality_of_life
+  node_name: Health-Related Quality of Life
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Cancer diagnosis and treatment (surgery, chemotherapy, radiation) cause
+  direct physical damage to tissues, organs, and physiological systems'
+- 'Step 2: Cancer survivors experience persistent treatment-related side effects including
+  fatigue, pain, neuropathy, cognitive impairment, and functional limitations'
+- 'Step 3: These physical impairments combine with psychological distress (anxiety,
+  depression, fear of recurrence) to reduce overall health-related quality of life'
+- 'Step 4: Without intervention, cancer survivors face significant and sustained reductions
+  in physical, emotional, social, and functional well-being domains of HRQoL'
+evidence:
+  quality_rating: A
+  n_studies: 48
+  primary_citation: 'Zhiyu Xiong et al. 2024. "Optimal exercise dose-response improves
+    health-related quality of life in cancer survivors: a systematic review and Bayesian
+    network meta-analysis of RCTs." Frontiers in oncology.'
+  supporting_citations: []
+description: Cancer history negatively impacts health-related quality of life through
+  multiple biological and psychological pathways. Cancer survivors face significant
+  HRQoL challenges stemming from disease and treatment effects including physical
+  impairments, persistent symptoms, and psychological distress. This meta-analysis
+  of 48 RCTs involving 3,050 cancer survivors demonstrates that while cancer history
+  reduces HRQoL, structured exercise interventions can significantly improve outcomes,
+  with optimal benefits at specific dose thresholds.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.753
+    type: standardized_mean_difference
+    ci_lower: 0.463
+    ci_upper: 1.096
+  p_value: null
+  sample_size: 3050
+moderators:
+- name: exercise_intervention
+  direction: weakens
+  strength: strong
+  description: 'Exercise interventions significantly attenuate the negative impact
+    of cancer history on HRQoL, with mixed training at 970 METs-min/week showing optimal
+    benefit (SMD: 0.883)'
+- name: exercise_type
+  direction: weakens
+  strength: moderate
+  description: 'Different exercise modalities provide varying degrees of HRQoL improvement:
+    mixed training most effective, followed by resistance training, aerobic exercise,
+    and mind-body exercises'
+- name: exercise_dose
+  direction: weakens
+  strength: moderate
+  description: Optimal exercise dose of 850 METs-min/week provides maximum benefit,
+    with diminishing returns observed beyond 1,100 METs-min/week

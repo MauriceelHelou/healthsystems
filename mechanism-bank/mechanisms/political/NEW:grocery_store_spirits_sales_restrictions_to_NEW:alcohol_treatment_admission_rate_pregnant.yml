@@ -1,0 +1,62 @@
+id: NEW:grocery_store_spirits_sales_restrictions_to_NEW:alcohol_treatment_admission_rate_pregnant
+name: Grocery Store Spirits Sales Restrictions → Alcohol Treatment Admission Rate During Pregnancy
+from_node:
+  node_id: NEW:grocery_store_spirits_sales_restrictions
+  node_name: Grocery Store Spirits Sales Restrictions
+to_node:
+  node_id: NEW:alcohol_treatment_admission_rate_pregnant
+  node_name: Alcohol Treatment Admission Rate During Pregnancy
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: State policies prohibit or restrict spirits sales in grocery stores'
+- 'Step 2: Reduced physical availability and convenience of purchasing high-alcohol-content beverages'
+- 'Step 3: Lower population-level alcohol consumption, including among pregnant individuals'
+- 'Step 4: Reduced need for formal substance use disorder treatment during pregnancy'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Pamela J Trangenstein et al. 2025. "The Relationship Between Alcohol Availability
+    and Drink-Driving Policies and Admissions to Substance Use Disorder Treatment During Pregnancy.."
+    https://doi.org/10.15288/jsad.23-00414
+  supporting_citations:
+  - Additional citations require full-text access - abstract references TEDS-A dataset 1992-2019
+  - Additional citations require full-text access - abstract references state-level policy data
+  - Additional citations require full-text access - abstract notes pregnancy-specific alcohol policies
+    have limited effectiveness
+  doi: 10.15288/jsad.23-00414
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: States with policies prohibiting spirits sales in grocery stores had 12% lower alcohol treatment
+  admission rates among pregnant individuals compared to states allowing both heavy beer and spirits sales
+  in grocery stores. This suggests general population alcohol availability policies are relevant for pregnant
+  people's treatment utilization.
+quantitative_effects:
+  effect_size:
+    value: 0.88
+    type: relative_risk
+    ci_lower: 0.78
+    ci_upper: 0.99
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect observed at state level, comparing states that prohibit spirits sales in grocery
+    stores versus those allowing heavy beer (>3.2% ABV) and spirits
+moderators:
+- name: type_of_alcohol_restriction
+  direction: strengthens
+  strength: moderate
+  description: Prohibiting spirits (vs. allowing heavy beer and spirits) showed stronger protective effect
+    compared to less restrictive policies
+structural_competency:
+  equity_implications: This mechanism emphasizes structural policy interventions that affect alcohol availability
+    at the population level, rather than targeting individual pregnant people. It demonstrates that general
+    population policies can benefit vulnerable subpopulations without pregnancy-specific targeting, which
+    has been shown to have limited effectiveness and established risks. The focus on retail environment
+    policy avoids stigmatizing pregnant individuals while addressing upstream determinants of alcohol
+    use disorder.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.162719'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

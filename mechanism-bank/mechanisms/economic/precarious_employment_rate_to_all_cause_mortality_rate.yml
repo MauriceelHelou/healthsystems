@@ -1,0 +1,57 @@
+id: precarious_employment_rate_to_all_cause_mortality_rate
+name: Precarious Employment Rate → All-Cause Mortality Rate
+from_node:
+  node_id: precarious_employment_rate
+  node_name: Precarious Employment Rate
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Persistent precarious employment limits access to employer-sponsored health insurance and benefits'
+- 'Step 2: Reduced healthcare access delays diagnosis and treatment of chronic conditions'
+- 'Step 3: Chronic stress from job insecurity accelerates biological aging and cardiovascular risk'
+- 'Step 4: Income volatility reduces capacity for health-promoting investments (nutrition, housing, safety)'
+- 'Step 5: Cumulative health disadvantage across multiple pathways may increase mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 50
+  primary_citation: Andrew Pulford et al. 2022. "Does persistent precarious employment affect health outcomes
+    among working age adults? A systematic review and meta-analysis." https://doi.org/10.1136/jech-2022-219292
+  supporting_citations:
+  - Additional citations require full-text access - mortality was one of the GRADE-assessed outcomes
+  - Systematic search of nine databases identified relevant studies
+  - Random effects meta-analysis conducted for mortality outcome
+  doi: 10.1136/jech-2022-219292
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The association between persistent precarious employment and all-cause mortality was imprecisely
+  estimated (OR 1.10, 95% CI 0.91-1.33), with confidence interval crossing null. The authors note that
+  associations were smaller for outcomes with longer time lags, suggesting mortality effects may require
+  longer follow-up or larger samples to detect.
+quantitative_effects:
+  effect_size:
+    value: 1.1
+    type: odds_ratio
+    ci_lower: 0.91
+    ci_upper: 1.33
+  heterogeneity_i_squared: 73.0
+moderators:
+- name: time_lag_to_outcome
+  direction: weakens
+  strength: moderate
+  description: Mortality has longer time lag from exposure to outcome, which may explain weaker and more
+    imprecise estimates compared to mental health outcomes
+structural_competency:
+  equity_implications: This mechanism, while showing uncertain effects, appropriately conceptualizes mortality
+    as a downstream consequence of employment structures. The imprecision may reflect methodological challenges
+    in detecting long-latency effects rather than absence of causal impact. The framing appropriately
+    avoids individualizing blame and maintains focus on structural employment conditions as modifiable
+    determinants.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.635024'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

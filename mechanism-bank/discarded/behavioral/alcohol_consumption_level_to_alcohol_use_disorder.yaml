@@ -1,0 +1,48 @@
+id: alcohol_consumption_level_to_alcohol_use_disorder
+name: Alcohol Consumption Level (AUDIT-C) → Alcohol Use Disorder
+from_node:
+  node_id: alcohol_consumption_level
+  node_name: Alcohol Consumption Level (AUDIT-C)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Higher levels of alcohol consumption create repeated exposure to ethanol
+  and its metabolites in the brain'
+- 'Step 2: Chronic exposure leads to neuroadaptive changes in reward circuitry, stress
+  response systems, and executive function regions'
+- 'Step 3: These neurobiological changes increase tolerance, withdrawal symptoms,
+  and compulsive use patterns'
+- 'Step 4: However, genetic variants mediate this transition such that consumption
+  level alone does not fully explain AUD risk, with unique genetic factors influencing
+  disorder susceptibility'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'R. Kember et al. 2021. "Genetic underpinnings of the transition
+    from alcohol consumption to alcohol use disorder: shared and unique genetic architectures
+    in a cross-ancestry sample." *medRxiv*. https://doi.org/10.1101/2021.09.08.21263302'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.369074'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: genetic_architecture
+  direction: weakens
+  strength: strong
+  description: The study demonstrates that unique genetic variants influence AUD risk
+    independent of consumption, indicating that consumption level is a partial but
+    not complete mediator of the relationship between genetic risk and disorder development
+- name: psychiatric_comorbidity
+  direction: strengthens
+  strength: moderate
+  description: Paper notes that consumption and AUD have opposite genetic correlations
+    with psychiatric disorders, suggesting psychiatric factors moderate the consumption-to-disorder
+    transition
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/behavioral/alcohol_consumption_level_to_alcohol_use_disorder.yaml
+_category: behavioral

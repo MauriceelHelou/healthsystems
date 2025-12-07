@@ -1,0 +1,54 @@
+id: extreme_heat_days_exposure_to_homicide_rate
+name: Extreme Heat Days Exposure → Homicide Rate
+from_node:
+  node_id: extreme_heat_days_exposure
+  node_name: Extreme Heat Days Exposure
+to_node:
+  node_id: homicide_rate
+  node_name: Homicide Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Extreme heat exposure creates acute physiological stress including elevated body temperature
+  and hormonal changes'
+- 'Step 2: Heat stress impairs executive function and emotional regulation'
+- 'Step 3: Impaired cognitive control reduces ability to manage interpersonal conflicts non-violently'
+- 'Step 4: Increased outdoor congregation during heat events creates more opportunities for violent encounters'
+- 'Step 5: Escalation of conflicts results in serious violence including homicide'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Emil E. Jonescu et al. 2024. "Understanding the impact of urban heat islands on crime:
+    insights from temperature, population density, and green canopy cover." https://doi.org/10.1186/s40163-024-00214-w'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review component analyzed theoretical premises
+    on heat and aggression
+  - Additional citations require full-text access - abstract references literature on micro- and macro-climate
+    effects on criminal behavior
+  - Additional citations require full-text access - abstract references meta-synthesis on thermal discomfort
+    and behavior
+  doi: 10.1186/s40163-024-00214-w
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study analyzed homicide as part of Offences against the Person, finding correlations
+  with temperature patterns. The relationship between climate stressors and specific crime types shows
+  non-linear associations.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Analysis focused on Offences against the Person including homicide in Midland, Western
+    Australia; effects noted to be non-linear
+moderators:
+- name: climate_stressor_duration
+  direction: u_shaped
+  strength: moderate
+  description: Short-to-long-term climate stressors show non-linear associations with crime types
+structural_competency:
+  equity_implications: Climate change and urban design decisions create differential heat exposure across
+    neighborhoods. Lower-income areas often experience higher heat island effects due to less green space
+    and more impervious surfaces, structurally producing higher violence exposure for marginalized communities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.074135'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

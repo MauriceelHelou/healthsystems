@@ -1,0 +1,81 @@
+id: depression_diagnosis_to_suicidal_ideation
+name: Depression → Suicidal Ideation
+from_node:
+  node_id: depression_diagnosis
+  node_name: Depression
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Depression involves neurobiological changes including dysregulation of
+  serotonergic, dopaminergic, and noradrenergic neurotransmitter systems, as well
+  as HPA axis dysfunction'
+- 'Step 2: These neurobiological alterations lead to cognitive distortions including
+  hopelessness, worthlessness, and negative rumination that characterize depressive
+  states'
+- 'Step 3: Depression-associated cognitive patterns impair problem-solving abilities
+  and amplify perceptions of psychological pain and burdensomeness'
+- 'Step 4: The combination of neurobiological vulnerability, cognitive distortions,
+  and emotional dysregulation increases the threshold for suicidal ideation emergence'
+- 'Step 5: Suicidal ideation develops as depression severity increases, with comorbid
+  conditions (anxiety, PTSD, pain) and psychosocial stressors (living alone, financial
+  problems) further elevating risk'
+evidence:
+  quality_rating: A
+  n_studies: 102
+  primary_citation: 'A. Mai et al. 2023. Risk of Suicidal Ideation and Behavior in
+    Individuals With Parkinson Disease: A Systematic Review and Meta-Analysis. JAMA
+    Neurology.'
+  supporting_citations:
+  - 'Jie Chen et al. 2024. Risk factors associated with suicidal ideation among cancer
+    patients: a systematic review and meta-analysis. Frontiers in Psychology.'
+  - 'J. García-Iglesias et al. 2022. Suicidal ideation and suicide attempts in healthcare
+    professionals during the COVID-19 pandemic: A systematic review. Frontiers in
+    Public Health.'
+description: Depression is consistently identified as one of the strongest risk factors
+  for suicidal ideation across diverse populations including cancer patients, healthcare
+  workers during COVID-19, and Parkinson's disease patients. The relationship operates
+  through both biological mechanisms (neurotransmitter dysregulation, neuroinflammation)
+  and psychological mechanisms (hopelessness, cognitive distortions, impaired problem-solving).
+  Meta-analytic evidence demonstrates that individuals with depression have approximately
+  twice the odds of developing suicidal ideation compared to those without depression,
+  with the relationship being strengthened by comorbid psychiatric conditions, social
+  isolation, chronic pain, and psychosocial stressors.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.15
+    type: odds_ratio
+    ci_lower: 1.22
+    ci_upper: 3.78
+  p_value: 0.01
+  sample_size: 505950
+moderators:
+- name: anxiety_comorbidity
+  direction: strengthens
+  strength: strong
+  description: Comorbid anxiety disorders significantly strengthen the relationship
+    between depression and suicidal ideation across multiple populations
+- name: social_isolation
+  direction: strengthens
+  strength: moderate
+  description: Living alone and lower social functioning amplify depression's effect
+    on suicidal ideation
+- name: chronic_pain
+  direction: strengthens
+  strength: moderate
+  description: Physical pain in the context of depression increases suicidal ideation
+    risk, particularly in cancer and Parkinson's disease populations
+- name: psychiatric_history
+  direction: strengthens
+  strength: strong
+  description: Pre-existing mental disorders and previous suicide attempts substantially
+    increase vulnerability to suicidal ideation when depression is present
+- name: financial_stress
+  direction: strengthens
+  strength: moderate
+  description: Economic concerns and financial problems exacerbate the depression-suicidal
+    ideation pathway

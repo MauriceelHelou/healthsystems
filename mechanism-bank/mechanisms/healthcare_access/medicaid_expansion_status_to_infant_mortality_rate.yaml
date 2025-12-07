@@ -1,0 +1,47 @@
+id: medicaid_expansion_status_to_infant_mortality_rate
+name: ACA Medicaid Expansion → Infant Mortality Rate
+from_node:
+  node_id: medicaid_expansion_status
+  node_name: ACA Medicaid Expansion
+to_node:
+  node_id: infant_mortality_rate
+  node_name: Infant Mortality Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: ACA Medicaid expansion increases eligibility for low-income adults regardless
+  of pregnancy or parental status'
+- 'Step 2: Expansion increases preconception and postpartum Medicaid coverage with
+  corresponding declines in uninsurance and insurance churn'
+- 'Step 3: Improved insurance continuity enables better access to prenatal care, postpartum
+  visits, and ongoing maternal health services'
+- 'Step 4: Enhanced maternal healthcare access contributes to reduced rates of low
+  birthweight and preterm births, particularly among minority populations'
+- 'Step 5: Improvements in birth outcomes and maternal health lead to reductions in
+  infant mortality, especially through reduced racial and ethnic disparities'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'M. Bellerose et al. 2022. "The ACA Medicaid Expansion And Perinatal
+    Insurance, Health Care Use, And Health Outcomes: A Systematic Review." Health
+    Affairs.'
+  supporting_citations: []
+description: Systematic review of 24 studies found that ACA Medicaid expansion increased
+  preconception and postpartum Medicaid coverage while reducing uninsurance and insurance
+  churn. While overall evidence for improved infant birth outcomes was limited, some
+  studies reported reduced racial and ethnic disparities in low birthweight and preterm
+  births, which are key contributors to infant mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: race_ethnicity
+  direction: strengthens
+  strength: moderate
+  description: Studies reported reduced racial and ethnic disparities in prenatal/postpartum
+    visit attendance, maternal mortality, low birthweight, and preterm births, suggesting
+    stronger effects among minority populations
+- name: baseline_insurance_status
+  direction: strengthens
+  strength: moderate
+  description: Effects most pronounced for populations experiencing insurance churn
+    or uninsurance prior to expansion

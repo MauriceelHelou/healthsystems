@@ -1,0 +1,44 @@
+id: compromised_vascular_perfusion_to_acute_esophageal_necrosis
+name: Compromised Vascular Perfusion States → Acute Esophageal Necrosis
+from_node:
+  node_id: compromised_vascular_perfusion
+  node_name: Compromised Vascular Perfusion States
+to_node:
+  node_id: acute_esophageal_necrosis
+  node_name: Acute Esophageal Necrosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Conditions associated with compromised vascular perfusion (diabetes, chronic
+  kidney disease, advanced age, hypertension, shock states) reduce blood flow to esophageal
+  mucosa'
+- 'Step 2: Reduced perfusion creates vulnerability to ischemic injury and impairs
+  protective mucosal barriers'
+- 'Step 3: Acute ischemic event triggers mucosal necrosis in the distal esophagus,
+  manifesting as acute esophageal necrosis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Erik Roman-Pognuz et al. 2024. "Acute esophageal necrosis following
+    cardiac arrest: A rare and lethal syndrome with diagnostic challenges.." *International
+    journal of surgery case reports*. https://doi.org/10.1016/j.ijscr.2024.109751'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.416850'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: shock_state
+  direction: strengthens
+  strength: strong
+  description: Acute shock states dramatically increase risk by causing acute severe
+    hypoperfusion
+- name: multiple_risk_factors
+  direction: strengthens
+  strength: moderate
+  description: Presence of multiple conditions affecting vascular perfusion (obesity,
+    alcoholism, cirrhosis) creates additive vulnerability
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/compromised_vascular_perfusion_to_acute_esophageal_necrosis.yaml
+_category: biological

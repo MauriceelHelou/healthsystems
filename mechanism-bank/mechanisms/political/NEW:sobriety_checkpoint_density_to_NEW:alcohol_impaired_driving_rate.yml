@@ -1,0 +1,83 @@
+id: NEW:sobriety_checkpoint_density_to_NEW:alcohol_impaired_driving_rate
+name: Sobriety Checkpoint Density → Alcohol-Impaired Driving Rate
+from_node:
+  node_id: NEW:sobriety_checkpoint_density
+  node_name: Sobriety Checkpoint Density
+to_node:
+  node_id: NEW:alcohol_impaired_driving_rate
+  node_name: Alcohol-Impaired Driving Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Police deploy sobriety checkpoints at strategic roadway locations within a geographic area'
+- 'Step 2: Checkpoint presence creates both actual apprehension risk and perceived deterrence through
+  visibility'
+- 'Step 3: Drivers modify behavior to avoid detection, reducing alcohol-impaired driving in the immediate
+  area'
+- 'Step 4: Deterrent effect decays spatially beyond ~3,000 roadway kilometers and temporally beyond ~1
+  week'
+- 'Step 5: Lower rates of breath tests detecting BAC ≥0.05% indicate reduced alcohol-impaired driving'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: C. Morrison et al. 2021. "The Geography of Sobriety Checkpoints and Alcohol-Impaired
+    Driving.." https://doi.org/10.1111/add.15766
+  supporting_citations:
+  - Additional citations require full-text access - abstract references sobriety checkpoints as established
+    effective strategy
+  - Additional citations require full-text access - spatial ecological panel analysis methodology referenced
+  - Additional citations require full-text access - prior research on checkpoint effectiveness implied
+  doi: 10.1111/add.15766
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2022, source is 2021'
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'One additional sobriety checkpoint conducted per 500 roadway kilometers was associated with
+  a 2.5% reduction in BAC≥0.05% breath tests within local SA2 units (IRR=0.975, 95% CrI: 0.973-0.978)
+  and 5.5% reduction within SA3 units (IRR=0.945, 95% CrI: 0.937-0.953). This deterrent effect is spatially
+  and temporally bounded, decaying beyond local areas of ~60,000 residents/3,000 roadway km and after
+  ~1 week.'
+quantitative_effects:
+  effect_size:
+    value: 0.975
+    type: incidence_rate_ratio
+    ci_lower: 0.973
+    ci_upper: 0.978
+  sample_size: 178464
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects are geographically bounded - strongest within local SA2 units (mean pop ~8,883,
+    ~469 roadway km) and SA3 units (mean pop ~57,202, ~2,936 roadway km). Effects attenuate toward null
+    in spatially adjacent units and beyond areas containing approximately 60,000 residents and 3,000 kilometers
+    of roadway.
+moderators:
+- name: spatial_proximity
+  direction: weakens
+  strength: strong
+  description: Effects attenuate in spatially adjacent units - deterrence effect strongest in immediate
+    local area where checkpoint is deployed
+- name: temporal_lag
+  direction: weakens
+  strength: strong
+  description: 'Effects decay after approximately 1 week - SA3 adjacent lagged 1 week IRR=0.969 (95% CrI:
+    0.937, 1.003) showing attenuation toward null'
+- name: geographic_unit_size
+  direction: strengthens
+  strength: moderate
+  description: Larger geographic units (SA3 vs SA2) show stronger effects - 5.5% reduction at SA3 level
+    vs 2.5% at SA2 level per checkpoint, likely due to better capture of spillover effects
+structural_competency:
+  equity_implications: This mechanism highlights how law enforcement resource allocation and deployment
+    strategies serve as structural interventions affecting population-level health behaviors. The spatial
+    decay of effects suggests that equitable distribution of enforcement resources across geographic areas
+    is critical - areas with less checkpoint activity may have systematically higher alcohol-impaired
+    driving rates. This has equity implications for communities that may be over- or under-policed. The
+    finding also demonstrates that sustained, geographically distributed intervention is needed rather
+    than concentrated, sporadic enforcement.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.636668'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,56 @@
+id: NEW:digital_health_intervention_access_to_binge_drinking
+name: Digital Health Intervention Access → Binge Drinking
+from_node:
+  node_id: NEW:digital_health_intervention_access
+  node_name: Digital Health Intervention Access
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital interventions provide accessible, low-barrier alcohol reduction programs via smartphones,
+  websites, or apps'
+- 'Step 2: Users receive personalized feedback, self-monitoring tools, and brief interventions without
+  requiring in-person healthcare visits'
+- 'Step 3: Increased awareness of drinking patterns and normative comparisons motivates behavior change'
+- 'Step 4: Reduced frequency of heavy episodic drinking occasions'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'Ivneet Sohi et al. 2023. "Digital interventions for reducing alcohol use in general
+    populations: An updated systematic review and meta-analysis.." https://doi.org/10.1111/acer.15175'
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review of 80 studies total with
+    26 examining HED outcomes
+  - Studies from 2017 systematic review baseline referenced in abstract
+  - 35 new studies published since last systematic review (January 2017 to June 2022)
+  doi: 10.1111/acer.15175
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Digital interventions reduce heavy episodic drinking (HED) by 1.11 fewer occasions per month
+  compared to control conditions. This effect represents a population-level approach that removes traditional
+  barriers to alcohol treatment access.
+quantitative_effects:
+  effect_size:
+    value: -1.11
+    type: standardized_mean_difference
+    ci_lower: 0.32
+    ci_upper: 1.91
+moderators:
+- name: student_population
+  direction: strengthens
+  strength: moderate
+  description: Significant reductions in HED were observed among students specifically
+structural_competency:
+  equity_implications: Digital interventions address structural barriers to alcohol treatment including
+    geographic healthcare deserts, stigma associated with seeking in-person treatment, time constraints,
+    and cost barriers. By providing scalable, anonymous, and free/low-cost interventions, these tools
+    can reduce health inequities in alcohol treatment access. However, digital divide issues may limit
+    reach to populations without reliable internet or smartphone access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.257532'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

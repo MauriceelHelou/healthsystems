@@ -1,0 +1,56 @@
+id: NEW:mesenchymal_stem_cell_therapy_to_NEW:hba1c_level
+name: Mesenchymal Stem Cell Therapy → Hemoglobin A1c Level
+from_node:
+  node_id: NEW:mesenchymal_stem_cell_therapy
+  node_name: Mesenchymal Stem Cell Therapy
+to_node:
+  node_id: NEW:hba1c_level
+  node_name: Hemoglobin A1c Level
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Mesenchymal stem cells (MSCs) are administered to patients with diabetes
+  mellitus'
+- 'Step 2: MSCs exhibit immunomodulatory properties that reduce inflammation and autoimmune
+  attack on pancreatic beta cells'
+- 'Step 3: MSCs may promote regeneration or preservation of functional beta cell mass
+  through paracrine signaling'
+- 'Step 4: Improved beta cell function leads to better insulin secretion and glucose
+  regulation'
+- 'Step 5: Enhanced glycemic control over time results in decreased glycation of hemoglobin,
+  reducing HbA1c levels'
+evidence:
+  quality_rating: A
+  n_studies: 7
+  primary_citation: 'Jingjing He et al. 2021. Clinical efficacy on glycemic control
+    and safety of mesenchymal stem cells in patients with diabetes mellitus: Systematic
+    review and meta-analysis of RCT data. PLoS ONE.'
+  supporting_citations: []
+description: 'Meta-analysis of 7 randomized controlled trials (413 participants) demonstrates
+  that mesenchymal stem cell therapy significantly reduces HbA1c levels in patients
+  with diabetes mellitus. The MSC treatment group showed a mean difference of -1.32%
+  (95% CI: -2.06 to -0.57) in HbA1c reduction from baseline, and -0.87% (95% CI: -1.53
+  to -0.22) compared to control groups. The therapy appears safe with no significant
+  difference in adverse events between treatment and control groups, though hypoglycemia
+  was the most common adverse reaction (29.95%).'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.87
+    type: mean_difference
+    ci_lower: -1.53
+    ci_upper: -0.22
+  p_value: 0.01
+  sample_size: 413
+moderators:
+- name: Diabetes type
+  direction: strengthens
+  strength: moderate
+  description: The meta-analysis included both type 1 and type 2 diabetes patients,
+    with potential differential effects based on diabetes etiology
+- name: Follow-up duration
+  direction: strengthens
+  strength: moderate
+  description: Longer follow-up periods may show sustained or enhanced HbA1c reduction
+    effects

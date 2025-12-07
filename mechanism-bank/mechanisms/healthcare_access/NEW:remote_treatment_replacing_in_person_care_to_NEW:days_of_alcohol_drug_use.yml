@@ -1,0 +1,55 @@
+id: NEW:remote_treatment_replacing_in_person_care_to_NEW:days_of_alcohol_drug_use
+name: Remote Treatment Replacing In-Person Care → Days of Alcohol/Drug Use
+from_node:
+  node_id: NEW:remote_treatment_replacing_in_person_care
+  node_name: Remote Treatment Replacing In-Person Care
+to_node:
+  node_id: NEW:days_of_alcohol_drug_use
+  node_name: Days of Alcohol/Drug Use
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Remote/digital interventions partially or fully replace traditional in-person alcohol/drug
+  treatment'
+- 'Step 2: Treatment accessibility maintained despite reduced in-person contact'
+- 'Step 3: Some therapeutic elements may be less effective without face-to-face interaction'
+- 'Step 4: Evidence base for replacement model is smaller and shows greater uncertainty'
+- 'Step 5: Effects on days of substance use remain unclear due to limited evidence'
+evidence:
+  quality_rating: B
+  n_studies: 34
+  primary_citation: Irene Kwan et al. 2025. "How effective are remote and/or digital interventions as
+    part of alcohol and drug treatment and recovery support? A systematic review and meta-analysis.."
+    https://doi.org/10.1111/add.70021
+  supporting_citations:
+  - Smaller body of evidence for replacement interventions compared to supplemental
+  - Uncertainty noted specifically for days of use outcome in replacement model
+  - High risk of bias in over 70% of outcomes across included studies
+  doi: 10.1111/add.70021
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Remote interventions that replace or partially replace in-person alcohol/drug treatment show
+  less conclusive evidence for reducing days of substance use compared to supplemental models. The smaller
+  evidence base and greater uncertainty suggest caution in relying solely on remote modalities.
+quantitative_effects:
+  sample_size: 6461
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Evidence limited to OECD countries; findings described as less conclusive than supplementation
+    model
+moderators:
+- name: degree_of_replacement
+  direction: weakens
+  strength: moderate
+  description: Partial vs. full replacement of in-person care may yield different outcomes; evidence uncertain
+structural_competency:
+  equity_implications: While remote-only treatment could address access barriers for underserved populations,
+    the uncertain evidence suggests potential quality-equity tradeoffs. Populations with limited access
+    to in-person care should not receive inferior treatment simply due to structural barriers. Policy
+    should prioritize hybrid models where possible.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.957516'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

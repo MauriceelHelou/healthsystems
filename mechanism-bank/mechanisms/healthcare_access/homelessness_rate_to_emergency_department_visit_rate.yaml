@@ -1,0 +1,50 @@
+id: homelessness_rate_to_emergency_department_visit_rate
+name: Homelessness Rate → Emergency Department Visit Rate
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: emergency_department_visit_rate
+  node_name: Emergency Department Visit Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Persons experiencing homelessness (PEH) lack stable housing, which creates
+  barriers to accessing primary care and preventive health services'
+- 'Step 2: Without regular healthcare access, PEH rely on Emergency Departments as
+  their only or primary source of healthcare'
+- 'Step 3: High rates of substance use disorders, mental health conditions, and injury
+  among PEH create acute healthcare needs requiring emergency care'
+- 'Step 4: Alcohol-related diagnoses (up to one-third of visits) and substance poisoning
+  (up to one-quarter of visits) drive frequent ED presentations'
+- 'Step 5: Lack of integrated discharge pathways between health, housing, and social
+  care leads to repeat ED visits rather than community-based care'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'N. Vohra et al. 2022. Homelessness and the use of Emergency Department
+    as a source of healthcare: a systematic review. International Journal of Emergency
+    Medicine.'
+  supporting_citations: []
+description: Persons experiencing homelessness use Emergency Departments at substantially
+  higher rates than the general population (rate ratio 1.63 to 18.75), with PEH making
+  an average of 0.72 to 5.8 visits per person per year. This elevated usage stems
+  from ED serving as the only accessible source of healthcare for this population,
+  combined with high rates of acute conditions including substance use disorders,
+  alcohol-related illness, and injuries that require emergency care.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: alcohol_use
+  direction: strengthens
+  strength: strong
+  description: Up to a third of ED visits by PEH are contributed by alcohol-related
+    diagnoses
+- name: substance_use
+  direction: strengthens
+  strength: strong
+  description: Up to a quarter of ED visits are related to substance poisoning
+- name: study_setting
+  direction: strengthens
+  strength: moderate
+  description: Prevalence varies significantly by country and healthcare system context

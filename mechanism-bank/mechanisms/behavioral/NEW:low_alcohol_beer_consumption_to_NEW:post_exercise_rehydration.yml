@@ -1,0 +1,51 @@
+id: NEW:low_alcohol_beer_consumption_to_NEW:post_exercise_rehydration
+name: Low Alcohol Beer Consumption (<4%) → Post-Exercise Rehydration
+from_node:
+  node_id: NEW:low_alcohol_beer_consumption
+  node_name: Low Alcohol Beer Consumption (<4%)
+to_node:
+  node_id: NEW:post_exercise_rehydration
+  node_name: Post-Exercise Rehydration
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Low-alcohol beer (<4%) consumption after exercise provides fluid volume for rehydration'
+- 'Step 2: Lower alcohol content reduces diuretic effect compared to higher alcohol beverages'
+- 'Step 3: Reduced fluid losses allow for more effective restoration of fluid balance'
+- 'Step 4: Improved hydration status supports physiological recovery from exercise'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: Jaison L Wynne and Patrick B Wilson 2021. "Got Beer? A Systematic Review of Beer and
+    Exercise.." https://doi.org/10.1123/ijsnem.2021-0064
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 16 studies
+  - Studies examined hydration protocols with varying alcohol content beverages
+  - Research included standardized beverage volume protocols
+  doi: 10.1123/ijsnem.2021-0064
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review found that low-alcohol beer (<4%) may be more effective for post-exercise
+  rehydration compared to higher alcohol options. The mechanism involves reduced diuretic effects with
+  lower alcohol content, allowing better fluid retention.
+moderators:
+- name: alcohol_content
+  direction: weakens
+  strength: strong
+  description: Higher alcohol content (>4%) reduces rehydration effectiveness due to increased diuresis
+- name: fluid_volume
+  direction: u_shaped
+  strength: moderate
+  description: Larger fluid volumes (>700ml) may increase diuretic effects, particularly with higher alcohol
+    content
+structural_competency:
+  equity_implications: While focused on individual consumption, this has implications for sports culture
+    and social norms around post-exercise celebration. The widespread availability and marketing of beer
+    in athletic contexts creates structural conditions promoting alcohol consumption. Understanding that
+    low-alcohol options may reduce some harms informs harm reduction approaches.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.970093'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

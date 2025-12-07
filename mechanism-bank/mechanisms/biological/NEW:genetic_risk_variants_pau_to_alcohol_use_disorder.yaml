@@ -1,0 +1,48 @@
+id: NEW:genetic_risk_variants_pau_to_alcohol_use_disorder
+name: Genetic Risk Variants for Problematic Alcohol Use → Alcohol Use Disorder
+from_node:
+  node_id: NEW:genetic_risk_variants_pau
+  node_name: Genetic Risk Variants for Problematic Alcohol Use
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Genetic risk variants (110 independent loci identified) influence gene
+  expression in brain tissues through regulatory mechanisms'
+- 'Step 2: Prioritized genes affect neurobiological pathways involved in reward processing,
+  stress response, and executive function through chromatin interactions and altered
+  expression patterns'
+- 'Step 3: These neurobiological changes increase vulnerability to problematic drinking
+  patterns and reduce capacity to moderate alcohol consumption'
+- 'Step 4: Accumulated genetic risk, captured by polygenic risk scores, predicts elevated
+  susceptibility to developing alcohol use disorder across diverse ancestral populations'
+evidence:
+  quality_rating: A
+  n_studies: 85
+  primary_citation: Hang Zhou et al. 2023. Multi-ancestry study of the genetics of
+    problematic alcohol use in over 1 million individuals. Nature Medicine.
+  supporting_citations: []
+description: Large-scale multi-ancestry GWAS meta-analysis identified 110 independent
+  genetic risk variants associated with problematic alcohol use (PAU), a composite
+  phenotype combining alcohol use disorder and alcohol-related problems. Fine-mapping
+  and gene prioritization through brain tissue expression and chromatin interaction
+  analyses revealed neurobiological mechanisms underlying genetic risk. Polygenic
+  risk scores derived from these variants predict alcohol use disorder susceptibility,
+  with cross-ancestry scores outperforming single-ancestry scores, demonstrating the
+  clinical potential of genetic insights for risk stratification.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Ancestry
+  direction: strengthens
+  strength: moderate
+  description: Cross-ancestry analysis improved fine-mapping and variant identification;
+    genetic correlations were consistent across ancestries though effect sizes may
+    vary
+- name: Other substance use
+  direction: strengthens
+  strength: strong
+  description: Highest genetic correlations observed with other substance use traits,
+    suggesting shared genetic architecture amplifies risk

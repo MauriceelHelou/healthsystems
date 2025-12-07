@@ -1,0 +1,65 @@
+id: NEW:alcohol_treatment_failure_history_to_NEW:post_transplant_abstinence
+name: History of Repeated Alcohol Treatment Failures → Post-Transplant Abstinence
+  from Alcohol
+from_node:
+  node_id: NEW:alcohol_treatment_failure_history
+  node_name: History of Repeated Alcohol Treatment Failures
+to_node:
+  node_id: NEW:post_transplant_abstinence
+  node_name: Post-Transplant Abstinence from Alcohol
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals with repeated alcohol treatment failures demonstrate a pattern
+  of inability to achieve or maintain abstinence despite therapeutic interventions'
+- 'Step 2: This pattern reflects underlying factors such as severe alcohol dependence,
+  inadequate coping mechanisms, limited social support, or co-occurring psychological
+  conditions that impair recovery'
+- 'Step 3: These same underlying factors persist post-transplant, reducing the likelihood
+  of sustained abstinence despite the life-saving nature of the transplant'
+- 'Step 4: The behavioral patterns established through repeated treatment failures
+  predict continued difficulty maintaining abstinence after liver transplantation'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'McCallum S, Masterton G. Liver transplantation for alcoholic
+    liver disease: a systematic review of psychosocial selection criteria. Alcohol
+    and Alcoholism. 2006;41(4):358-363.'
+  supporting_citations: []
+description: A systematic review of 22 studies examining psychosocial selection criteria
+  for liver transplant candidates with alcoholic liver disease found that a history
+  of repeated alcohol treatment failures was associated with reduced likelihood of
+  post-transplant abstinence. This finding was consistent across more studies than
+  not among those examining this variable. The pattern of prior treatment failures
+  serves as a behavioral marker for factors that impair long-term recovery from alcohol
+  dependence.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: social_stability
+  direction: weakens
+  strength: moderate
+  description: Greater social stability associated with better abstinence outcomes,
+    may buffer effects of treatment failure history
+- name: age
+  direction: weakens
+  strength: moderate
+  description: Older age associated with improved abstinence, potentially mitigating
+    risk from treatment failure history
+- name: compliance_with_medical_care
+  direction: weakens
+  strength: moderate
+  description: Good compliance with medical care associated with better outcomes
+- name: family_alcohol_problems
+  direction: strengthens
+  strength: moderate
+  description: Having close relatives with alcohol problems compounds risk of relapse
+- name: polydrug_misuse
+  direction: strengthens
+  strength: moderate
+  description: Current polydrug misuse associated with worse abstinence outcomes
+- name: severe_mental_disorder
+  direction: strengthens
+  strength: moderate
+  description: Co-existing severe mental disorder associated with poorer abstinence
+    outcomes

@@ -1,0 +1,89 @@
+id: early_childhood_education_to_adult_health
+name: Early Childhood Education Access -> Adult Health Outcomes
+from_node:
+  node_id: early_childhood_education_access
+  node_name: Early Childhood Education Access and Quality
+  node_type: stock
+to_node:
+  node_id: adult_health_outcomes
+  node_name: Adult Health Outcomes
+  node_type: proxy_index
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: High-quality ECE provides cognitive and social-emotional skill development during critical periods'
+- 'Step 2: Improved school readiness reduces special education placement and grade retention'
+- 'Step 3: Higher educational attainment leads to better employment and income in adulthood'
+- 'Step 4: Adult socioeconomic position enables access to health-promoting resources and environments'
+- 'Step 5: Cumulative advantages across life course produce better adult health and longevity'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'McCoy, Dana C., et al. 2017. "Impacts of Early Childhood Education on Medium- and Long-Term Educational Outcomes." Educational Researcher 46(8): 474-487.'
+  supporting_citations:
+  - 'Centers for Disease Control and Prevention. 2016. "Early Childhood Education to Promote Health Equity: A Community Guide Systematic Review." Journal of Public Health Management and Practice.'
+  - 'Vermeer, Harriet J., et al. 2023. "The Impact of Process Quality in Early Childhood Education and Care on Socio-Emotional Development: A Meta-Analysis of Longitudinal Studies." International Journal of Environmental Research and Public Health 22(5): 775.'
+  doi: 10.3102/0013189X17737739
+  journal: Educational Researcher
+  year: 2017
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 0.33
+    type: standardized_mean_difference
+    ci_lower: null
+    ci_upper: null
+    ci_level: 95
+  sample_size: null
+  interpretation: "ECE participation leads to 0.33 SD reduction in special education placement (8.1 percentage points), 0.26 SD reduction in grade retention (8.3 percentage points), and significant increases in high school graduation rates"
+  additional_effects:
+  - metric: Process quality effect on socio-emotional development
+    value: 0.103
+    type: standardized_mean_difference
+    ci_lower: 0.052
+    ci_upper: 0.155
+    notes: "Meta-analysis of 16 longitudinal studies (N=17,913) found small but significant effect persisting to age 18"
+  - metric: Obesity reduction in adulthood (Food Stamps exposure study)
+    value: 16
+    type: percentage_change
+    notes: "Young children from disadvantaged families exposed to early programs were 16 percentage points less likely to be obese as adults"
+last_updated: '2025-11-30'
+version: '1.0'
+description: Early childhood education interventions produce long-term improvements in educational, economic, and health outcomes that persist into adulthood. Meta-analyses demonstrate effects on special education placement, grade retention, and high school graduation, with process quality predicting socio-emotional development through age 18. These educational gains translate into adult health advantages through socioeconomic pathways.
+moderators:
+- name: program_quality
+  direction: strengthens
+  strength: strong
+  description: Higher process quality (teacher-child interactions) produces larger effects
+- name: family_disadvantage
+  direction: strengthens
+  strength: strong
+  description: Children from low-income families show largest benefits
+- name: program_duration
+  direction: strengthens
+  strength: moderate
+  description: Full-day and multi-year programs produce larger effects
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: ECE access is unequally distributed by income, with low-income children less likely to attend high-quality programs. Public ECE investment (Head Start, Pre-K) partially addresses but does not eliminate access gaps. Quality is lower in programs serving low-income communities due to funding constraints. Universal high-quality ECE would reduce health disparities by equalizing early developmental opportunities.
+assumptions:
+- ECE includes center-based and formal preschool programs
+- Quality measured by structural (class size) and process (interactions) indicators
+- Health effects operate through educational and economic pathways
+limitations:
+- Long follow-up periods required to observe adult health outcomes
+- Program fadeout effects observed in some studies
+- Selection into ECE programs may confound estimates
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Access and quality vary by state Pre-K policies and Head Start availability
+  relevant_geographies:
+  - States with universal Pre-K (Oklahoma, Georgia) show broader access
+  - Rural areas have fewer ECE options
+  - Low-income urban areas often have lower-quality programs
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

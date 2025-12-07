@@ -1,0 +1,47 @@
+id: clinic_attendance_requirements_to_treatment_completion_rates
+name: Multiple In-Person Clinic Session Requirements → Alcohol Treatment Completion
+  Rates
+from_node:
+  node_id: clinic_attendance_requirements
+  node_name: Multiple In-Person Clinic Session Requirements
+to_node:
+  node_id: treatment_completion_rates
+  node_name: Alcohol Treatment Completion Rates
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Standard mhGAP requires 4-6 in-person sessions creating cumulative attendance
+  burden'
+- 'Step 2: Each session requires time off work, childcare arrangements, transportation,
+  and associated costs'
+- 'Step 3: Structural barriers accumulate across multiple required visits, increasing
+  dropout risk'
+- 'Step 4: Lower treatment completion rates result in reduced effectiveness of alcohol
+  use interventions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Jennifer M Belus et al. 2024. "SMSs as an alternative to provider-delivered
+    care for unhealthy alcohol use: study protocol for Leseli, an open-label randomised
+    controlled trial of mhGAP-Remote vs mhGAP-Standard in Lesotho.." *Trials*. https://doi.org/10.1186/s13063-024-08411-3'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.737171'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: employment_flexibility
+  direction: weakens
+  strength: moderate
+  description: Flexible work arrangements reduce the economic cost of missing work
+    for multiple clinic appointments
+- name: socioeconomic_status
+  direction: strengthens
+  strength: strong
+  description: Lower socioeconomic status intensifies barriers as individuals have
+    less capacity to absorb costs of transportation and time away from income-generating
+    activities
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/clinic_attendance_requirements_to_treatment_completion_rates.yaml
+_category: healthcare_access

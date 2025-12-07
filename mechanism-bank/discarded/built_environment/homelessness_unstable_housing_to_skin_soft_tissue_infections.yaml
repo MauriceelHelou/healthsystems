@@ -1,0 +1,46 @@
+id: homelessness_unstable_housing_to_skin_soft_tissue_infections
+name: Homelessness and Unstable Housing → Skin and Soft Tissue Infections (SSTI)
+from_node:
+  node_id: homelessness_unstable_housing
+  node_name: Homelessness and Unstable Housing
+to_node:
+  node_id: skin_soft_tissue_infections
+  node_name: Skin and Soft Tissue Infections (SSTI)
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Homelessness and unstable housing result in lack of consistent access to
+  private bathroom facilities and running water'
+- 'Step 2: Without reliable access to hygiene infrastructure, individuals cannot maintain
+  regular hand-washing routines before drug injection'
+- 'Step 3: Unhygienic injection practices in the absence of proper hand-washing introduce
+  pathogens at injection sites'
+- 'Step 4: Pathogen introduction leads to development of injection-related abscesses
+  and other soft tissue infections'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Liam Balhan et al. 2024. "A hand-washing community-based educational
+    intervention to reduce abscess incidence among people who inject drugs: a cluster
+    randomised controlled clinical trial protocol (the HAWA study protocol)." *BMC
+    public health*. https://doi.org/10.1186/s12889-024-20299-x'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.378938'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: harm_reduction_centre_access
+  direction: weakens
+  strength: moderate
+  description: Proximity to and utilization of harm reduction centres providing hygiene
+    facilities may partially compensate for lack of stable housing
+- name: seasonal_weather_conditions
+  direction: strengthens
+  strength: weak
+  description: Cold weather may increase difficulty accessing outdoor water sources
+    and maintaining hygiene for those experiencing homelessness
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/homelessness_unstable_housing_to_skin_soft_tissue_infections.yaml
+_category: built_environment

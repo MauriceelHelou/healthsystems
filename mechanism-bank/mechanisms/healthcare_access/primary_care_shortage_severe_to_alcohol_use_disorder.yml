@@ -1,0 +1,65 @@
+id: primary_care_shortage_severe_to_alcohol_use_disorder
+name: Primary Care Shortage (HPSA) → Alcohol Use Disorder
+from_node:
+  node_id: primary_care_shortage_severe
+  node_name: Primary Care Shortage (HPSA)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Low-resourced primary care clinics in underserved areas have limited workforce capacity for
+  implementing screening programs'
+- 'Step 2: Without systematic SBIRT implementation, unhealthy alcohol use goes undetected in routine primary
+  care visits'
+- 'Step 3: Lack of early identification means patients miss opportunities for brief intervention when
+  alcohol problems are developing'
+- 'Step 4: Untreated unhealthy alcohol use progresses to alcohol use disorder'
+- 'Step 5: Treatment gaps perpetuate cycles of AUD-related health consequences and healthcare utilization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Melinda M. Davis et al. 2024. "Improving screening, brief intervention and referral
+    to treatment for unhealthy alcohol use in diverse, low-resourced primary care clinics." https://doi.org/10.1186/s12913-024-11870-8
+  supporting_citations:
+  - Additional citations require full-text access - SBIRT implementation barriers literature
+  - Additional citations require full-text access - healthcare workforce shortage impact studies
+  - Additional citations require full-text access - alcohol treatment gap epidemiology
+  doi: 10.1186/s12913-024-11870-8
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Structural healthcare access barriers in low-resourced primary care settings contribute to
+  persistently low SBIRT and MAUD implementation rates, leaving unhealthy alcohol use undetected and untreated
+  in populations served by these clinics.
+quantitative_effects:
+  sample_size: 75
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study specifically targeted diverse, low-resourced clinics in Northwestern U.S.; 75
+    clinics recruited with varying levels of baseline SBIRT capacity
+moderators:
+- name: clinic_completion_rate
+  direction: weakens
+  strength: moderate
+  description: 27% attrition (18 of 66 clinics did not complete) suggests that most resource-constrained
+    clinics may be least able to sustain implementation efforts
+- name: external_support_availability
+  direction: weakens
+  strength: strong
+  description: Access to practice facilitation, expert consultation, and peer learning partially mitigates
+    resource constraints, as demonstrated by intervention effectiveness
+structural_competency:
+  equity_implications: 'This mechanism explicitly traces alcohol-related health inequities to structural
+    healthcare system deficits rather than individual patient characteristics. Low-resourced clinics serving
+    diverse populations face compounding structural disadvantages: workforce shortages, limited training
+    infrastructure, inadequate health IT, and competing clinical demands. These structural factors create
+    systematic gaps in alcohol screening and treatment that disproportionately affect marginalized communities.
+    The study''s focus on providing external implementation support acknowledges that clinic-level behavior
+    change requires addressing structural resource constraints.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.974606'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

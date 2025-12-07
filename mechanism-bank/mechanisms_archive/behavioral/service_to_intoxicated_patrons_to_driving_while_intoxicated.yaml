@@ -1,0 +1,43 @@
+id: service_to_intoxicated_patrons_to_driving_while_intoxicated
+name: Service to Intoxicated Patrons → Driving While Intoxicated
+from_node:
+  node_id: service_to_intoxicated_patrons
+  node_name: Service to Intoxicated Patrons
+to_node:
+  node_id: driving_while_intoxicated
+  node_name: Driving While Intoxicated
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Continued alcohol service to visibly intoxicated patrons in licensed premises
+  increases blood alcohol concentration beyond legal limits'
+- 'Step 2: Intoxicated patrons leaving licensed establishments may attempt to drive
+  vehicles'
+- 'Step 3: Impaired judgment and motor skills from alcohol intoxication lead to decision
+  to drive despite impairment'
+- 'Step 4: Increased instances of driving while intoxicated result in elevated risk
+  of crashes, injuries, and fatalities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'W Gill Woodall et al. 2024. "Professional Development to Improve
+    Responsible Beverage Service Training: Formative Research Results and Protocol
+    for a Randomized Controlled Trial.." *JMIR research protocols*. https://doi.org/10.2196/49680'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.609687'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: public_transportation_availability
+  direction: weakens
+  strength: moderate
+  description: Areas with accessible public transportation or ride-sharing services
+    provide alternatives to driving, weakening the link between intoxication and driving
+- name: rural_vs_urban_setting
+  direction: strengthens
+  strength: moderate
+  description: Rural areas with limited transportation alternatives and longer distances
+    may strengthen the association between intoxication at licensed premises and subsequent
+    driving

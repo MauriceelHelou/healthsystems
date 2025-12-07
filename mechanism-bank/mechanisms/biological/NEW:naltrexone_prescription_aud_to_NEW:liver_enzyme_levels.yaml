@@ -1,0 +1,52 @@
+id: NEW:naltrexone_prescription_aud_to_NEW:liver_enzyme_levels
+name: Naltrexone Prescription for AUD → Liver Enzyme Levels (AST/ALT)
+from_node:
+  node_id: NEW:naltrexone_prescription_aud
+  node_name: Naltrexone Prescription for AUD
+to_node:
+  node_id: NEW:liver_enzyme_levels
+  node_name: Liver Enzyme Levels (AST/ALT)
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Naltrexone prescription for AUD supports reduced alcohol consumption through
+  opioid receptor antagonism, decreasing cravings and reward from drinking'
+- 'Step 2: Reduced alcohol intake decreases ongoing hepatotoxic injury from ethanol
+  and its metabolites (acetaldehyde) to hepatocytes'
+- 'Step 3: With decreased hepatocellular damage, release of intracellular enzymes
+  AST and ALT into the bloodstream is reduced'
+- 'Step 4: Measured serum liver enzyme levels decline, reflecting improved hepatic
+  status and reduced inflammation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'D. Ayyala et al. 2022. Naltrexone for alcohol use disorder: Hepatic
+    safety in patients with and without liver disease. Hepatology Communications.'
+  supporting_citations: []
+description: Naltrexone prescription for alcohol use disorder is associated with significant
+  reductions in liver enzyme levels (AST and ALT). In a retrospective cohort of 160
+  patients including those with liver disease and cirrhosis, adjusted mean AST and
+  ALT levels were significantly lower after versus before naltrexone prescription
+  (p < 0.001). This effect was consistent across patients without liver disease, those
+  with liver disease without cirrhosis, and those with cirrhosis, supporting the hepatic
+  safety of naltrexone while suggesting indirect hepatoprotective benefits through
+  reduced alcohol consumption.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Baseline liver disease status
+  direction: strengthens
+  strength: moderate
+  description: Patients with liver disease (including cirrhosis) showed similar enzyme
+    reductions, suggesting naltrexone is safe and beneficial across liver disease
+    severity
+- name: Duration of naltrexone prescription
+  direction: strengthens
+  strength: moderate
+  description: Longer duration of naltrexone prescription (>30 days) was associated
+    with better outcomes including lower hospitalization rates
+- name: Cirrhosis compensation status
+  direction: weakens
+  strength: weak
+  description: Decompensated cirrhosis patients had higher hospitalization rates,
+    though enzyme improvements were still observed; more data needed for this subgroup

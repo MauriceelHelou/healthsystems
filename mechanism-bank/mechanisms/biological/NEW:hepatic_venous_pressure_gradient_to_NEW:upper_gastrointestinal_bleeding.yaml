@@ -1,0 +1,55 @@
+id: NEW:hepatic_venous_pressure_gradient_to_NEW:upper_gastrointestinal_bleeding
+name: Hepatic Venous Pressure Gradient → Upper Gastrointestinal Bleeding
+from_node:
+  node_id: NEW:hepatic_venous_pressure_gradient
+  node_name: Hepatic Venous Pressure Gradient
+to_node:
+  node_id: NEW:upper_gastrointestinal_bleeding
+  node_name: Upper Gastrointestinal Bleeding
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Elevated hepatic venous pressure gradient (HVPG) reflects increased portal
+  venous pressure in patients with liver cirrhosis'
+- 'Step 2: Portal hypertension leads to the development of portosystemic collaterals,
+  including gastroesophageal varices'
+- 'Step 3: Higher HVPG increases pressure within these varices, causing progressive
+  dilation and wall tension'
+- 'Step 4: When HVPG exceeds critical thresholds (typically >12 mmHg), variceal wall
+  tension exceeds structural integrity, leading to rupture'
+- 'Step 5: Variceal rupture results in upper gastrointestinal bleeding, which can
+  be life-threatening in cirrhotic patients'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: Antony P Zacharias et al. 2018. Carvedilol versus traditional,
+    non-selective beta-blockers for adults with cirrhosis and gastroesophageal varices.
+    The Cochrane database of systematic reviews.
+  supporting_citations: []
+description: Elevated hepatic venous pressure gradient is a direct hemodynamic driver
+  of upper gastrointestinal bleeding in cirrhotic patients. The HVPG reflects portal
+  pressure, which when elevated leads to the formation and progressive dilation of
+  gastroesophageal varices. This systematic review of 10 randomized trials (810 participants)
+  confirmed that interventions reducing HVPG are used specifically to prevent variceal
+  bleeding, demonstrating the established causal relationship between portal pressure
+  and bleeding risk. The review noted carvedilol was more effective at reducing HVPG,
+  though clinical bleeding outcomes showed uncertainty due to low quality evidence.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Non-selective beta-blocker use
+  direction: weakens
+  strength: moderate
+  description: Medications that reduce HVPG are recommended for prevention of variceal
+    bleeding, though clinical outcomes showed no clear difference between carvedilol
+    and traditional beta-blockers despite greater HVPG reduction with carvedilol
+- name: Cirrhosis severity
+  direction: strengthens
+  strength: strong
+  description: More advanced liver disease with greater portal hypertension increases
+    bleeding risk
+- name: Varix size
+  direction: strengthens
+  strength: moderate
+  description: Larger varices are at higher risk of rupture at any given pressure
+    gradient

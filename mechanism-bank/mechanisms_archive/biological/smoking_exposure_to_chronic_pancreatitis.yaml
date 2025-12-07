@@ -1,0 +1,41 @@
+id: smoking_exposure_to_chronic_pancreatitis
+name: Smoking Exposure → Chronic Pancreatitis
+from_node:
+  node_id: smoking_exposure
+  node_name: Smoking Exposure
+to_node:
+  node_id: chronic_pancreatitis
+  node_name: Chronic Pancreatitis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Tobacco smoke contains toxic compounds that reach the pancreas through
+  systemic circulation'
+- 'Step 2: Nicotine and other tobacco toxins promote oxidative stress and inflammatory
+  responses in pancreatic tissue'
+- 'Step 3: Smoking compounds the toxic effects of alcohol on pancreatic acinar cells'
+- 'Step 4: Cumulative damage leads to chronic inflammation, fibrosis, and morphological
+  changes characteristic of chronic pancreatitis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Mikael Parhiala et al. 2023. "Quality of life after endoscopic
+    procedures for chronic pancreatitis: A multicentre study.." *United European gastroenterology
+    journal*. https://doi.org/10.1002/ueg2.12466'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.230897'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: concurrent_alcohol_use
+  direction: strengthens
+  strength: strong
+  description: 71% smoking rate among patients where 65% also had alcohol as primary
+    etiology suggests synergistic effects
+- name: male_sex
+  direction: strengthens
+  strength: moderate
+  description: 68% male predominance may reflect gendered patterns of smoking exposure
+    and higher cumulative tobacco consumption

@@ -1,0 +1,45 @@
+id: alcoholic_cirrhosis_to_hepatorenal_syndrome
+name: Alcoholic Cirrhosis → Hepatorenal Syndrome
+from_node:
+  node_id: alcoholic_cirrhosis
+  node_name: Alcoholic Cirrhosis
+to_node:
+  node_id: hepatorenal_syndrome
+  node_name: Hepatorenal Syndrome
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Advanced liver cirrhosis causes portal hypertension and activation of vasodilatory
+  mechanisms in splanchnic circulation'
+- 'Step 2: Systemic vasodilation leads to reduced effective arterial blood volume
+  and activation of vasoconstrictor systems (renin-angiotensin-aldosterone, sympathetic
+  nervous system)'
+- 'Step 3: Intense renal vasoconstriction occurs as compensatory mechanism, reducing
+  renal blood flow and glomerular filtration rate'
+- 'Step 4: Progressive renal vasoconstriction results in functional kidney failure
+  without structural kidney disease, manifesting as hepatorenal syndrome'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Akshata Borle et al. 2024. "A Study of the Clinical Profiles of
+    Patients With Hepatorenal Syndrome.." *Cureus*. https://doi.org/10.7759/cureus.66778
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.393637'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: presence_of_ascites
+  direction: strengthens
+  strength: strong
+  description: The abstract notes that HRS occurs in individuals with ascites, indicating
+    this complication strengthens the progression from cirrhosis to HRS
+- name: portal_hypertension_severity
+  direction: strengthens
+  strength: strong
+  description: Portal hypertension is noted as a key feature accompanying HRS development,
+    with greater severity likely accelerating renal complications
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/alcoholic_cirrhosis_to_hepatorenal_syndrome.yaml
+_category: biological

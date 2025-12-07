@@ -1,0 +1,60 @@
+id: NEW:bar_pub_density_to_assault_injury_rate
+name: Bar/Pub Density → Assault Injury Rate
+from_node:
+  node_id: NEW:bar_pub_density
+  node_name: Bar/Pub Density
+to_node:
+  node_id: assault_injury_rate
+  node_name: Assault Injury Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of bars/pubs in neighborhoods increases physical availability of alcohol'
+- 'Step 2: Weekend evening hours see peak alcohol consumption at these establishments'
+- 'Step 3: Intoxication reduces inhibition and increases aggressive behavior among patrons'
+- 'Step 4: Concentration of intoxicated individuals in geographic areas increases interpersonal conflict'
+- 'Step 5: Assault incidents increase in Census block groups with greater bar/pub concentrations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'P. Gruenewald et al. 2023. "Micro-temporal analyses of crime related to alcohol outlets:
+    A comparison of outcomes over weekday, weekend, daytime and nighttime hours.." https://doi.org/10.1111/dar.13644'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior statistical associations
+    across neighbourhoods
+  - Study methodology builds on ecological analyses of outlet-crime relationships
+  - Bayesian space-time models referenced from prior methodological literature
+  doi: 10.1111/dar.13644
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Areas with greater densities of bars/pubs experience more assault incidents, particularly
+  during weekend evening hours when alcohol sales and consumption are greatest. The spatiotemporal signature
+  suggests bars/pubs are a critical source of these crimes across neighbourhoods.
+quantitative_effects:
+  sample_size: 336
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in Oakland, California with 336 Census block groups; effects observed
+    specifically during weekend evening hours indicating temporal-spatial variation
+moderators:
+- name: time_of_week
+  direction: strengthens
+  strength: strong
+  description: Weekend evening hours showed strongest associations compared to weekday or daytime periods
+- name: time_of_day
+  direction: strengthens
+  strength: strong
+  description: Nighttime hours showed stronger effects than daytime hours
+structural_competency:
+  equity_implications: This mechanism identifies alcohol outlet density as a structural environmental
+    factor that shapes crime patterns at the neighborhood level. Rather than blaming individual behavior,
+    it demonstrates how the built environment's configuration of alcohol retail creates conditions for
+    violence. Policy implications focus on zoning, licensing, and outlet-specific interventions rather
+    than individual responsibility. Equity implications exist as bar/pub density often varies by neighborhood
+    socioeconomic status.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.080950'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

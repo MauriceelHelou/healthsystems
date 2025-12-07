@@ -1,0 +1,37 @@
+id: pfos_serum_concentration_to_pr_positive_breast_cancer
+name: Serum Perfluorooctane Sulfonate (PFOS) Concentration → Progesterone Receptor
+  Positive (PR+) Breast Cancer
+from_node:
+  node_id: pfos_serum_concentration
+  node_name: Serum Perfluorooctane Sulfonate (PFOS) Concentration
+to_node:
+  node_id: pr_positive_breast_cancer
+  node_name: Progesterone Receptor Positive (PR+) Breast Cancer
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: PFOS acts as endocrine disruptor affecting progesterone signaling pathways'
+- 'Step 2: Persistent chemical exposure accumulates through environmental contamination
+  in water, soil, and food supply'
+- 'Step 3: Disrupted progesterone receptor function alters breast tissue cell proliferation
+  and differentiation'
+- 'Step 4: Chronic endocrine disruption increases susceptibility to PR+ tumor development'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'V. Chang et al. 2023. "Serum perfluorooctane sulfonate and perfluorooctanoate
+    and risk of postmenopausal breast cancer according to hormone receptor status:
+    An analysis in the Prostate, Lung, Colorectal and Ovarian Cancer Screening Trial."
+    *International Journal of Cancer*. https://doi.org/10.1002/ijc.34487'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.490432'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: exposure_quartile
+  direction: strengthens
+  strength: strong
+  description: Third quartile PFOS showed strongest association with PR+ tumors (OR=2.34,
+    95% CI 1.29-4.23), representing over 2-fold increased risk

@@ -1,0 +1,63 @@
+id: pregnancy_intention_unintended_to_NEW:alcohol_consumption_during_pregnancy
+name: Unintended Pregnancy → Alcohol Consumption During Pregnancy
+from_node:
+  node_id: pregnancy_intention_unintended
+  node_name: Unintended Pregnancy
+to_node:
+  node_id: NEW:alcohol_consumption_during_pregnancy
+  node_name: Alcohol Consumption During Pregnancy
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Limited access to family planning services and contraception leads to unplanned pregnancies'
+- 'Step 2: Women with unplanned pregnancies may not recognize pregnancy early or may delay prenatal care'
+- 'Step 3: Delayed pregnancy recognition results in continued pre-pregnancy behaviors including alcohol
+  use'
+- 'Step 4: Psychological distress from unplanned pregnancy may contribute to continued or increased alcohol
+  consumption'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Alemu Earsido Addila et al. 2020. "Alcohol consumption and its associated factors
+    among pregnant women in Sub-Saharan Africa: a systematic review and meta-analysis'' as given in the
+    submission system." https://doi.org/10.1186/s13011-020-00269-3'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 37 studies in qualitative synthesis
+  - Studies from various Sub-Saharan African countries included in the systematic review
+  - Primary studies accessed through PubMed, CINAHL, Cochrane Library, PsycINFO databases
+  doi: 10.1186/s13011-020-00269-3
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Unplanned pregnancy is strongly associated with alcohol consumption during pregnancy, with
+  women experiencing unplanned pregnancies having 133% higher odds of consuming alcohol compared to those
+  with planned pregnancies.
+quantitative_effects:
+  effect_size:
+    value: 2.33
+    type: odds_ratio
+    ci_lower: 1.17
+    ci_upper: 4.63
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Unplanned pregnancy rates vary by country based on contraceptive access and reproductive
+    health services
+moderators:
+- name: contraceptive_access
+  direction: weakens
+  strength: strong
+  description: Improved family planning services reduce unplanned pregnancies and associated alcohol exposure
+- name: early_pregnancy_detection
+  direction: weakens
+  strength: moderate
+  description: Earlier pregnancy detection allows women to modify behaviors sooner
+structural_competency:
+  equity_implications: This mechanism traces to structural failures in reproductive health infrastructure,
+    including limited access to contraception, family planning education, and early pregnancy detection
+    services in Sub-Saharan Africa. Unplanned pregnancy is not an individual failing but reflects systemic
+    gaps in reproductive healthcare access that disproportionately affect women in resource-limited settings.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.270352'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

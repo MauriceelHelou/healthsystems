@@ -1,0 +1,65 @@
+id: NEW:covid_19_pandemic_exposure_to_depression_diagnosis
+name: COVID-19 Pandemic Exposure → Depression Diagnosis
+from_node:
+  node_id: NEW:covid_19_pandemic_exposure
+  node_name: COVID-19 Pandemic Exposure
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: COVID-19 pandemic creates widespread public health emergency with high mortality and morbidity'
+- 'Step 2: Government-imposed lockdowns and movement restrictions disrupt normal social functioning'
+- 'Step 3: Economic disruption leads to job losses, income instability, and financial stress'
+- 'Step 4: Social isolation from physical distancing measures reduces social support networks'
+- 'Step 5: Chronic uncertainty and fear of infection elevates psychological distress and depressive symptoms'
+evidence:
+  quality_rating: A
+  n_studies: 27
+  primary_citation: 'Ismail Hosen et al. 2021. "Prevalence and risk factors of the symptoms of depression,
+    anxiety, and stress during the COVID-19 pandemic in Bangladesh: a systematic review and meta-analysis.."
+    https://doi.org/10.1017/gmh.2021.49'
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review/meta-analysis of 27 studies
+    from Bangladesh
+  - Studies included peer-reviewed and preprint articles from PubMed, Scopus, PsycINFO, Web of Science
+    databases
+  - Primary studies conducted during COVID-19 pandemic inception in Bangladesh (post-March 2020)
+  doi: 10.1017/gmh.2021.49
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The COVID-19 pandemic was associated with a 47% pooled prevalence of depression symptoms
+  in the Bangladeshi population, representing a substantial mental health burden during the public health
+  emergency.
+quantitative_effects:
+  effect_size:
+    value: 47.0
+    type: percentage_change
+    ci_lower: 39.0
+    ci_upper: 55.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focused specifically on Bangladesh context; prevalence rates may vary by country-specific
+    pandemic response measures and socioeconomic conditions
+moderators:
+- name: socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Lower socioeconomic groups face greater economic disruption from pandemic, increasing depression
+    risk
+- name: social_support_availability
+  direction: weakens
+  strength: moderate
+  description: Access to family and community support networks may buffer against pandemic-related depression
+structural_competency:
+  equity_implications: This mechanism traces pandemic-related depression to structural factors including
+    economic disruption, inadequate social safety nets, and public health system strain rather than individual
+    vulnerability. The high prevalence reflects systemic failures in mental health infrastructure and
+    social protection in a low-middle income country context.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.344713'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

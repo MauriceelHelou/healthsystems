@@ -1,0 +1,42 @@
+id: patient_navigation_intervention_to_detoxification_readmission_rate
+name: Patient Navigation Intervention (Post-Detoxification) → Detoxification Readmission
+  Rate (12-Month)
+from_node:
+  node_id: patient_navigation_intervention
+  node_name: Patient Navigation Intervention (Post-Detoxification)
+to_node:
+  node_id: detoxification_readmission_rate
+  node_name: Detoxification Readmission Rate (12-Month)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patient navigation facilitates successful transition to ongoing substance
+  use treatment within 30 days of detoxification discharge'
+- 'Step 2: Engagement in sustained treatment addresses underlying substance use disorder
+  rather than only acute withdrawal symptoms'
+- 'Step 3: Continuity of care prevents relapse cycles that would otherwise result
+  in return to acute intoxication requiring detoxification'
+- 'Step 4: Reduced readmission rates within 12 months indicate interruption of revolving
+  door pattern'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ursula Running Bear et al. 2023. "The use of patient navigation
+    to transition detoxification patients to substance use treatment in the Alaska
+    Interior.." *Public health in practice (Oxford, England)*. https://doi.org/10.1016/j.puhip.2023.100418
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.736364'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: treatment_engagement_success
+  direction: strengthens
+  strength: strong
+  description: The mechanism operates through successful treatment transition; effectiveness
+    depends on whether navigation successfully overcomes barriers to sustained treatment
+    engagement
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/patient_navigation_intervention_to_detoxification_readmission_rate.yaml
+_category: healthcare_access

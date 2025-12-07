@@ -1,0 +1,43 @@
+id: symptom_triggered_therapy_protocol_to_benzodiazepine_exposure
+name: Symptom-Triggered Therapy Protocol Implementation → Cumulative Benzodiazepine
+  Dose
+from_node:
+  node_id: symptom_triggered_therapy_protocol
+  node_name: Symptom-Triggered Therapy Protocol Implementation
+to_node:
+  node_id: benzodiazepine_exposure
+  node_name: Cumulative Benzodiazepine Dose
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Symptom-triggered therapy protocol uses objective CIWA-Ar scoring to determine
+  need for benzodiazepine administration'
+- 'Step 2: Medication is administered only when withdrawal symptoms reach threshold
+  severity (CIWA-Ar ≥10) rather than on fixed schedule'
+- 'Step 3: Individualized dosing prevents unnecessary medication administration in
+  patients with mild or resolving symptoms'
+- 'Step 4: Median cumulative dose reduced to 20mg oral diazepam compared to higher
+  doses typical of fixed-schedule regimens'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Muhammad Fahmi Ismail et al. 2018. "Symptom-triggered therapy
+    for assessment and management of alcohol withdrawal syndrome in the emergency
+    department short-stay clinical decision unit." *Emergency Medicine Journal*. https://doi.org/10.1136/emermed-2017-206997
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.712606'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_alcohol_use_severity
+  direction: strengthens
+  strength: moderate
+  description: Median AUDIT score of 25 indicates severe alcohol use disorder; higher
+    baseline use may increase medication requirements
+- name: withdrawal_symptom_severity
+  direction: strengthens
+  strength: strong
+  description: 36% of patients never reached CIWA-Ar threshold ≥10, requiring no diazepam;
+    those with severe withdrawal required up to 100+mg cumulative dose

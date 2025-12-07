@@ -1,0 +1,38 @@
+id: provider_transplant_misconceptions_to_delayed_transplant_referral
+name: Provider Misconceptions About Transplant Candidacy → Delayed Referral for Liver
+  Transplant Evaluation
+from_node:
+  node_id: provider_transplant_misconceptions
+  node_name: Provider Misconceptions About Transplant Candidacy
+to_node:
+  node_id: delayed_transplant_referral
+  node_name: Delayed Referral for Liver Transplant Evaluation
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Providers lack current knowledge of transplant candidacy guidelines and
+  referral criteria'
+- 'Step 2: Misconceptions lead providers to incorrectly assess patients as ineligible
+  for transplant evaluation'
+- 'Step 3: Referrals are not made despite patients meeting clinical indication criteria
+  (decompensation or MELD-Na ≥15)'
+- 'Step 4: Delay in referral continues until patients become critically ill requiring
+  emergent inpatient evaluation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Katherine M. Cooper et al. 2023. "Delayed referral for liver transplant
+    evaluation worsens outcomes in chronic liver disease patients requiring inpatient
+    transplant evaluation." *World journal of transplantation*. https://doi.org/10.5500/wjt.v13.i4.169
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.605202'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: provider_access_to_transplant_guidelines
+  direction: weakens
+  strength: strong
+  description: Providers with better access to current transplant guidelines and transplant
+    center consultation are less likely to have misconceptions about candidacy

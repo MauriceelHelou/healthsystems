@@ -1,0 +1,47 @@
+id: host_immune_cell_environment_to_parasite_drug_susceptibility_detection
+name: Host Immune Cell Environment and Function → Detection of Parasite Drug Susceptibility
+from_node:
+  node_id: host_immune_cell_environment
+  node_name: Host Immune Cell Environment and Function
+to_node:
+  node_id: parasite_drug_susceptibility_detection
+  node_name: Detection of Parasite Drug Susceptibility
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Parasite susceptibility to antimony compounds is mediated through host
+  immune cells, particularly macrophages, where parasites reside'
+- 'Step 2: Primary human macrophages and PBMCs reflect individual patient immune function
+  variability, which affects detection of inherent parasite drug resistance'
+- 'Step 3: Standardized U937 macrophage cell lines provide more consistent immune
+  cell environment, reducing host variability'
+- 'Step 4: U937 macrophages more effectively discern Sb-resistance through parasite
+  survival assays compared to primary human host cells with variable immune function'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Olga Lucía Fernández et al. 2024. "Natural resistance to meglumine
+    antimoniate is associated with treatment failure in cutaneous leishmaniasis caused
+    by Leishmania (Viannia) panamensis.." *PLoS neglected tropical diseases*. https://doi.org/10.1371/journal.pntd.0012156
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.132283'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: host_immune_variability
+  direction: weakens
+  strength: strong
+  description: Variable host immune function in primary cells from different patients
+    obscures detection of inherent parasite drug resistance, making standardized cell
+    models more effective for susceptibility testing
+- name: cell_model_type
+  direction: strengthens
+  strength: moderate
+  description: U937 macrophages showed significantly higher capacity to discern Sb-resistance
+    compared to primary human macrophages or PBMCs, enabling better prediction of
+    treatment outcomes
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/host_immune_cell_environment_to_parasite_drug_susceptibility_detection.yaml
+_category: biological

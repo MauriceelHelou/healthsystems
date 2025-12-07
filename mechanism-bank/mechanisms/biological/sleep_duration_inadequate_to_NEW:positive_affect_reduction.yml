@@ -1,0 +1,64 @@
+id: sleep_duration_inadequate_to_NEW:positive_affect_reduction
+name: Inadequate Sleep Duration (<7 hours nightly) → Reduced Positive Affect
+from_node:
+  node_id: sleep_duration_inadequate
+  node_name: Inadequate Sleep Duration (<7 hours nightly)
+to_node:
+  node_id: NEW:positive_affect_reduction
+  node_name: Reduced Positive Affect
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Sleep loss (total deprivation, partial restriction, or fragmentation) disrupts normal restorative
+  sleep processes'
+- 'Step 2: Disruption of sleep architecture affects neurobiological systems regulating emotional experience'
+- 'Step 3: Reduced positive affect emerges, with high arousal positive states most adversely affected'
+- 'Step 4: Diminished capacity for positive emotional experiences undermines psychological well-being'
+evidence:
+  quality_rating: A
+  n_studies: 154
+  primary_citation: 'Cara A. Palmer et al. 2024. "0183 Sleep Loss and Emotion: A Systematic Review and
+    Meta-Analysis of over Fifty Years of Experimental Research." https://doi.org/10.1093/sleep/zsae067.0183'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes 154 studies across 50+ years
+    of research
+  - Studies span age range 7-79 years with N=5,717 total participants
+  - Research includes experimental designs with total sleep deprivation, partial sleep restriction, and
+    sleep fragmentation protocols
+  doi: 10.1093/sleep/zsae067.0183
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Sleep loss in all forms (total deprivation, partial restriction, fragmentation) results in
+  reduced positive affect, with standardized mean differences ranging from -0.27 to -1.14. This meta-analysis
+  of 154 studies demonstrates consistent negative effects of inadequate sleep on positive emotional experiences.
+quantitative_effects:
+  effect_size:
+    value: -0.27
+    type: standardized_mean_difference
+  sample_size: 5717
+moderators:
+- name: age
+  direction: varies
+  strength: moderate
+  description: Effects moderated by age, though specific patterns varied by type of sleep loss and emotional
+    outcome
+- name: sex
+  direction: varies
+  strength: moderate
+  description: Some effects moderated by sex, with findings varying by type of sleep loss and emotional
+    outcome
+- name: arousal_level_of_positive_state
+  direction: strengthens
+  strength: moderate
+  description: High arousal positive states were most adversely affected by sleep loss
+structural_competency:
+  equity_implications: Sleep loss is often structurally determined by work schedules (shift work, multiple
+    jobs), economic pressures, housing instability, neighborhood noise, and caregiving responsibilities
+    that disproportionately affect low-income and marginalized populations. The emotional consequences
+    of sleep deprivation compound existing health inequities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.111229'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

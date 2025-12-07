@@ -1,0 +1,59 @@
+id: adverse_childhood_experiences_aces_to_juvenile_detention_rate
+name: Adverse Childhood Experiences (ACEs) → Juvenile Detention Rate
+from_node:
+  node_id: adverse_childhood_experiences_aces
+  node_name: Adverse Childhood Experiences (ACEs)
+to_node:
+  node_id: juvenile_detention_rate
+  node_name: Juvenile Detention Rate
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Cumulative ACEs during childhood create neurobiological changes affecting stress response and
+  behavioral regulation'
+- 'Step 2: Youth with high ACE scores demonstrate increased behavioral dysregulation and risk-taking behaviors'
+- 'Step 3: School discipline systems disproportionately punish trauma-related behaviors, feeding school-to-prison
+  pipeline'
+- 'Step 4: Initial justice involvement combined with unaddressed trauma increases vulnerability to repeated
+  offending'
+- 'Step 5: Youth courts without ACE screening fail to identify and appropriately treat underlying trauma,
+  perpetuating cycle'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: 'Miranda G. Yannon et al. 2024. "Cumulative Adverse Childhood Experiences (ACEs) and
+    Recidivism: A Meta-Analysis." https://doi.org/10.1177/00938548241267230'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis synthesizes existing literature on ACEs
+    and recidivism
+  - Youth samples showed statistically significant ACE-recidivism relationship unlike adult samples
+  - Full bibliography of 16 included studies available in original publication
+  doi: 10.1177/00938548241267230
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The meta-analysis specifically found that the ACE-recidivism relationship was statistically
+  significant only in youth subgroups, highlighting the particular vulnerability of justice-involved young
+  people with trauma histories. This finding has direct policy implications for juvenile justice systems
+  implementing trauma-informed approaches and ACE screening protocols.
+quantitative_effects:
+  sample_size: 101778
+moderators:
+- name: age_developmental_stage
+  direction: strengthens
+  strength: strong
+  description: Youth samples showed significant ACE-recidivism relationship while adult samples (n=1,204)
+    did not, suggesting developmental sensitivity
+structural_competency:
+  equity_implications: This mechanism highlights how youth justice systems can either perpetuate or interrupt
+    cycles of trauma and incarceration. The differential effect by age suggests that youth represent a
+    critical intervention window where structural changes to court processes (ACE screening, trauma-informed
+    diversion) could have outsized impact. The structural determinants of ACEs (poverty, community violence,
+    family instability) are themselves products of policy choices around social safety nets, housing,
+    and economic opportunity. Addressing youth recidivism requires upstream investment in ACE prevention
+    alongside downstream trauma-informed justice reform.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.600169'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

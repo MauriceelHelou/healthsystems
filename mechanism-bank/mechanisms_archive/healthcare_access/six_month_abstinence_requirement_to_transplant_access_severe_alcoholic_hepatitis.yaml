@@ -1,0 +1,44 @@
+id: six_month_abstinence_requirement_to_transplant_access_severe_alcoholic_hepatitis
+name: Six-Month Abstinence Rule for Transplant Eligibility → Transplant Access for
+  Severe Acute Alcoholic Hepatitis Patients
+from_node:
+  node_id: six_month_abstinence_requirement
+  node_name: Six-Month Abstinence Rule for Transplant Eligibility
+to_node:
+  node_id: transplant_access_severe_alcoholic_hepatitis
+  node_name: Transplant Access for Severe Acute Alcoholic Hepatitis Patients
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Transplant programs implement mandatory 6-month abstinence requirement
+  as eligibility criterion'
+- 'Step 2: Patients with severe acute alcoholic hepatitis experience rapid disease
+  progression and high short-term mortality'
+- 'Step 3: Six-month waiting period excludes patients who are non-responsive to steroid
+  therapy during first episode of severe decompensation'
+- 'Step 4: Systematic exclusion prevents access to potentially life-saving liver transplantation
+  for eligible candidates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Patrizia Burra et al. 2021. "Severe acute alcoholic hepatitis:
+    can we offer early liver transplantation?." *Minerva gastroenterology*. https://doi.org/10.23736/S2724-5985.20.02778-6'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.627293'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: response_to_steroid_therapy
+  direction: strengthens
+  strength: strong
+  description: Non-response to medical therapy strengthens the exclusionary effect
+    of the six-month rule, as these patients have no alternative treatment options
+    and face high mortality
+- name: multidisciplinary_assessment_availability
+  direction: weakens
+  strength: moderate
+  description: Centers with comprehensive multidisciplinary assessment teams (hepatologist,
+    surgeon, psychologist, psychiatrist) may be more likely to consider exceptions
+    to the six-month rule

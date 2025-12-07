@@ -2,13 +2,17 @@
 
 You are assisting with the HealthSystems Platform mechanism bank - a version-controlled database of causal mechanisms linking structural interventions to health outcomes.
 
+> **Full Documentation**: See `docs/LLM & Discovery Pipeline/MECHANISM_DISCOVERY_PIPELINE.md` for the complete pipeline.
+
 ## Context
 
-The mechanism bank stores YAML files in `mechanism-bank/mechanisms/` following a strict JSON schema defined in `mechanism-bank/schema/mechanism-schema.json`. Each mechanism represents a causal pathway with:
-- Evidence-based effect sizes
+The mechanism bank stores YAML files in `mechanism-bank/mechanisms/` following the schema defined in `mechanism-bank/schemas/mechanism_schema_mvp.json`. Each mechanism represents a causal pathway with:
+- Quantitative effect sizes (OR, RR, HR, etc.)
+- Confidence intervals and sample sizes
 - Context-specific moderators (policy, demographic, geographic, implementation)
-- Chicago-style citations
-- Quality ratings (A/B/C tiers)
+- Chicago-style citations with DOI verification
+- Quality ratings (A/B/C tiers - NO grade D)
+- Structural competency requirements
 - Version control via git
 
 ## Command Argument Parsing
@@ -16,6 +20,7 @@ The mechanism bank stores YAML files in `mechanism-bank/mechanisms/` following a
 Parse the user's command to determine the sub-command:
 
 - **`/mechanism create [intervention] -> [outcome]`** - Create new mechanism (AI-assisted wizard)
+- **`/mechanism discover <topic>`** - Discover mechanisms from literature (uses pipeline)
 - **`/mechanism validate [file]`** - Validate mechanism against schema
 - **`/mechanism search <query>`** - Search mechanism bank
 - **`/mechanism version <file>`** - Bump version and commit
@@ -183,6 +188,55 @@ notes: |
 
 ---
 
+## Sub-Command: DISCOVER
+
+**Purpose:** Discover new mechanisms from scientific literature using the automated pipeline.
+
+### Steps:
+
+1. **Parse topic** from command (e.g., `/mechanism discover food insecurity diabetes`)
+
+2. **Run the discovery pipeline**:
+   ```python
+   from backend.pipelines.end_to_end_discovery import EndToEndDiscoveryPipeline
+
+   pipeline = EndToEndDiscoveryPipeline(pubmed_email="your@email.com")
+
+   mechanisms = pipeline.discover_mechanisms_for_topic(
+       topic_query="food insecurity diabetes chronic disease",
+       max_papers=10,
+       year_range=(2015, 2024),
+       min_citations=10,
+       focus_area="economic determinants of health"
+   )
+
+   pipeline.save_mechanisms()
+   pipeline.print_summary()
+   ```
+
+3. **Present discovered mechanisms** to user for review:
+   - Show mechanism name, effect size, evidence quality
+   - Ask which mechanisms to keep/reject
+   - Validate structural competency
+
+4. **Save approved mechanisms** to `mechanism-bank/mechanisms/<category>/`
+
+5. **Validate each mechanism** against schema
+
+### Required Environment Variables:
+```bash
+export ANTHROPIC_API_KEY="your_api_key_here"
+export PUBMED_EMAIL="your_email@example.com"  # Recommended
+export SEMANTIC_SCHOLAR_API_KEY="..."  # Optional, for higher rate limits
+```
+
+### Query Tips:
+- Use keywords: `housing quality respiratory health` ✓
+- Add study types: `meta-analysis OR systematic review`
+- Avoid full sentences: `"What is the relationship..."` ✗
+
+---
+
 ## Sub-Command: VALIDATE
 
 **Purpose:** Run validation scripts on mechanism YAML files.
@@ -195,7 +249,7 @@ notes: |
 
 2. **Run validation**:
    ```bash
-   python mechanism-bank/scripts/validate_mechanisms.py [file]
+   python backend/scripts/validate_mechanism_schema.py [file]
    ```
 
 3. **Parse output**:
@@ -320,7 +374,21 @@ notes: |
 ## Notes
 
 - Always validate against schema before committing
-- Maintain Chicago-style citations
+- Maintain Chicago-style citations with DOI verification
 - Version control is critical for reproducibility
 - Focus on structural interventions, not individual behavior
 - Consider equity implications (population-specific effects)
+- Include quantitative effects (effect sizes, CIs, sample sizes) when available
+- Evidence grades are A, B, or C only - NO grade D
+
+---
+
+## Related Resources
+
+- **Full Pipeline Documentation**: `docs/LLM & Discovery Pipeline/MECHANISM_DISCOVERY_PIPELINE.md`
+- **Mechanism Discovery Agent**: `.claude/agents/mechanism-discovery.md`
+- **Mechanism Discovery Skill**: `.claude/skills/mechanism-discovery.md`
+- **Mechanism Validator Agent**: `.claude/agents/mechanism-validator.md`
+- **Schema Definition**: `mechanism-bank/schemas/mechanism_schema_mvp.json`
+- **Schema Config**: `backend/config/schema_config.py`
+- **Quantitative Effects Schema**: `mechanism-bank/schemas/quantitative_effects_schema.json`

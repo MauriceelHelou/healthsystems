@@ -1,0 +1,55 @@
+id: NEW:low_dose_alcohol_consumption_to_NEW:sarcopenia_risk
+name: Low-Dose Alcohol Consumption (6.6g/day) → Sarcopenia Risk
+from_node:
+  node_id: NEW:low_dose_alcohol_consumption
+  node_name: Low-Dose Alcohol Consumption (6.6g/day)
+to_node:
+  node_id: NEW:sarcopenia_risk
+  node_name: Sarcopenia Risk
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Very low alcohol consumption (approximately half a standard drink per day) represents the nadir
+  of the J-shaped dose-response curve'
+- 'Step 2: At this dose, potential anti-inflammatory or metabolic effects may occur without deleterious
+  effects on muscle protein synthesis'
+- 'Step 3: J-shaped relationship indicates risk increases both with abstinence and with higher consumption
+  levels'
+- 'Step 4: Lowest observed sarcopenia risk at 6.6g/day consumption level'
+evidence:
+  quality_rating: A
+  n_studies: 62
+  primary_citation: 'Yun-Ling Bu et al. 2024. "The association of alcohol consumption with the risk of
+    sarcopenia: a dose-response meta-analysis." https://doi.org/10.1080/00952990.2023.2300049'
+  supporting_citations:
+  - Additional citations require full-text access - nonlinear dose-response analysis
+  - Dose-response meta-analysis methodology applied across 62 studies
+  - Combined sample of 454,643 participants across international databases
+  doi: 10.1080/00952990.2023.2300049
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Nonlinear dose-response analysis revealed a J-shaped relationship between alcohol consumption
+  and sarcopenia risk. The lowest risk was observed at 6.6 grams of alcohol per day (approximately half
+  a standard drink), with OR=0.765. However, the authors explicitly caution that any suggestion of protective
+  effect should be treated with caution given the overall lack of relationship in the comprehensive meta-analysis.
+quantitative_effects:
+  effect_size:
+    value: 0.765
+    type: odds_ratio
+    ci_lower: 0.608
+    ci_upper: 0.957
+  p_value: 0.05
+  sample_size: 454643
+structural_competency:
+  equity_implications: The J-shaped finding, while statistically significant at the optimal dose, must
+    be interpreted within broader public health context. Structural factors determine who has access to
+    moderate vs. excessive alcohol, including socioeconomic status, alcohol outlet density in neighborhoods,
+    and alcohol pricing policies. Promoting any level of alcohol consumption could exacerbate health inequities,
+    as vulnerable populations may be more susceptible to alcohol-related harms. The cautious interpretation
+    by authors models appropriate translation of epidemiologic findings to policy.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.477848'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

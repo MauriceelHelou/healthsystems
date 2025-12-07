@@ -1,0 +1,58 @@
+id: NEW:whole_of_community_aod_intervention_to_binge_drinking
+name: Whole-of-Community Alcohol and Other Drug Intervention → Binge Drinking
+from_node:
+  node_id: NEW:whole_of_community_aod_intervention
+  node_name: Whole-of-Community Alcohol and Other Drug Intervention
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Community-wide interventions are implemented across schools, sporting clubs, police, retail
+  premises, and media'
+- 'Step 2: Environmental modifications aim to reduce access, change social norms, and increase enforcement'
+- 'Step 3: Target population is exposed to coordinated messaging and policy changes'
+- 'Step 4: Binge drinking rates are measured at population level'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'E. Stockings et al. 2018. "Whole‐of‐community interventions to reduce population‐level
+    harms arising from alcohol and other drug use: a systematic review and meta‐analysis." https://doi.org/10.1111/add.14277'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 63 publications from 24 trials
+  - Meta-analysis of 5 trials examining binge drinking outcomes
+  - Studies implemented across multiple community settings
+  doi: 10.1111/add.14277
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Whole-of-community interventions showed no statistically significant impact on binge drinking
+  rates (RR=0.97, 95% CI 0.89-1.06), indicating that while these structural interventions may reduce risky
+  drinking patterns, they do not effectively prevent episodic heavy drinking episodes at the population
+  level.
+quantitative_effects:
+  effect_size:
+    value: 0.97
+    type: relative_risk
+    ci_lower: 0.89
+    ci_upper: 1.06
+  sample_size: 249125
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Multiple community settings across different trials may explain heterogeneity in effects
+moderators:
+- name: study_quality
+  direction: weakens
+  strength: moderate
+  description: High risk of bias across studies may attenuate or obscure true effects
+structural_competency:
+  equity_implications: The null finding for binge drinking despite positive effects on risky drinking
+    (AUDIT>8) suggests that different drinking patterns may require different structural interventions.
+    Binge drinking may be more resistant to community-level interventions and may require additional policy
+    mechanisms such as pricing controls or more intensive enforcement.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.393121'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

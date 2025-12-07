@@ -1,0 +1,57 @@
+id: NEW:digital_mental_health_intervention_to_alcohol_use_disorder
+name: Digital Interventions for Depression and Alcohol Use → Problematic Alcohol Use
+from_node:
+  node_id: NEW:digital_mental_health_intervention
+  node_name: Digital Interventions for Depression and Alcohol Use
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Problematic Alcohol Use
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Digital interventions deliver evidence-based therapeutic content (e.g.,
+  cognitive behavioral therapy, motivational interviewing) targeting both depression
+  and alcohol use simultaneously'
+- 'Step 2: Users engage with self-monitoring tools, psychoeducation, and behavior
+  change techniques that increase awareness of drinking patterns and their relationship
+  to mood'
+- 'Step 3: Addressing comorbid depression reduces negative affect-driven drinking
+  motivations and improves self-regulation capacity'
+- 'Step 4: Over time (particularly by 6-month follow-up), reduced depressive symptoms
+  and enhanced coping skills lead to decreased problematic alcohol consumption'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'M. Schouten et al. 2021. Digital Interventions for People With
+    Co-Occurring Depression and Problematic Alcohol Use: A Systematic Review and Meta-Analysis.
+    Alcohol and Alcoholism.'
+  supporting_citations: []
+description: Digital interventions targeting both depression and problematic alcohol
+  use simultaneously produce small but significant reductions in alcohol consumption
+  at 6-month follow-up (Hedges' g = 0.14). The meta-analysis of 6 trials found that
+  integrated digital approaches addressing the comorbidity are effective, with effects
+  on alcohol use emerging over time while depressive symptom improvements occur earlier
+  (significant at 3-month follow-up). Evidence quality was rated moderate using GRADE
+  methodology.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.14
+    type: hedges_g
+    ci_lower: 0.07
+    ci_upper: 0.2
+  p_value: 0.005
+  sample_size: null
+moderators:
+- name: Follow-up duration
+  direction: strengthens
+  strength: moderate
+  description: Effects on alcohol use were significant at 6-month follow-up (g=0.14,
+    p=0.005) but non-significant at 3-month follow-up (g=0.14, p=0.07), suggesting
+    delayed intervention effects
+- name: Statistical estimator choice
+  direction: weakens
+  strength: weak
+  description: Sensitivity analysis indicated the 6-month alcohol use finding was
+    sensitive to statistical estimator choice

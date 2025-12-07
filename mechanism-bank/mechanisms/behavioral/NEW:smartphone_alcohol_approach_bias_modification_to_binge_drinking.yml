@@ -1,0 +1,76 @@
+id: NEW:smartphone_alcohol_approach_bias_modification_to_binge_drinking
+name: Smartphone Alcohol Approach Bias Modification (ApBM) → Binge Drinking
+from_node:
+  node_id: NEW:smartphone_alcohol_approach_bias_modification
+  node_name: Smartphone Alcohol Approach Bias Modification (ApBM)
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Smartphone-delivered ApBM training targets automatic approach tendencies toward alcohol cues'
+- 'Step 2: Repeated training retrains implicit cognitive biases that drive automatic alcohol-seeking behavior'
+- 'Step 3: Reduced approach bias decreases automatic motivation to consume alcohol'
+- 'Step 4: Individuals experience reduced urge to drink in response to alcohol-related stimuli'
+- 'Step 5: Overall weekly alcohol consumption decreases'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'G L Bolt et al. 2026. "AAT-App+: A double-blind, pilot randomised controlled trial
+    of a novel personalised smartphone intervention to reduce hazardous and harmful alcohol consumption
+    among middle-older adults." https://doi.org/10.1016/j.addbeh.2025.108560'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references previous ApBM literature
+  - Additional citations require full-text access - abstract references AUDIT screening tool validation
+  - Additional citations require full-text access - abstract references uMARS acceptability scale
+  doi: 10.1016/j.addbeh.2025.108560
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: This pilot RCT tested a smartphone-delivered alcohol approach bias modification (ApBM) intervention
+  for middle-older adults (≥55 years) with hazardous/harmful drinking. While both intervention and sham
+  groups showed significant reductions in weekly standard drinks (6.9 drinks overall reduction, p<.001),
+  there was no significant group-by-time interaction at the 4-week endpoint (β=-1.90, p=.43). However,
+  a significant treatment effect favoring ApBM was observed at 2 weeks (β=-5.28, p=.03), suggesting potential
+  acute benefit that may not persist.
+quantitative_effects:
+  effect_size:
+    value: -6.9
+    type: standardized_mean_difference
+  p_value: 0.001
+  sample_size: 188
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Study specifically targeted middle-older adults (≥55 years) who may have different intervention
+    needs and technology acceptance than younger populations
+- name: training_duration
+  direction: weakens
+  strength: moderate
+  description: Treatment effect was significant at 2 weeks (β=-5.28, p=.03) but not sustained at 4-week
+    endpoint, suggesting effect may attenuate over time
+- name: baseline_hazardous_drinking
+  direction: strengthens
+  strength: moderate
+  description: Participants had AUDIT ≥8 indicating hazardous/harmful drinking levels at baseline, which
+    may moderate intervention response
+structural_competency:
+  equity_implications: This intervention addresses alcohol consumption at the individual behavioral level
+    through cognitive retraining, representing a technology-based approach to extending treatment access.
+    The smartphone delivery mechanism has potential to address healthcare access barriers for older adults
+    who may face mobility limitations or live in areas with limited substance use treatment services.
+    However, the mechanism primarily targets individual-level cognitive processes rather than structural
+    determinants of alcohol misuse such as alcohol outlet density, marketing exposure, or social determinants.
+    The focus on middle-older adults acknowledges demographic shifts in problematic drinking patterns.
+    Equity considerations include digital access barriers that may disproportionately affect lower-income
+    older adults.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.168548'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

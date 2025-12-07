@@ -1,0 +1,42 @@
+id: alcohol_detection_temporal_increase_to_emergency_surgical_intervention
+name: Alcohol-Involved Violence Temporal Increase → Emergency Surgical Intervention
+from_node:
+  node_id: alcohol_detection_temporal_increase
+  node_name: Alcohol-Involved Violence Temporal Increase
+to_node:
+  node_id: emergency_surgical_intervention
+  node_name: Emergency Surgical Intervention
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Increasing alcohol involvement in violence (10% to 43% positive detection)
+  suggests more severe intoxication levels over time'
+- 'Step 2: Higher intoxication levels associated with more aggressive violence and
+  use of available weapons'
+- 'Step 3: Alcohol-impaired judgment leads to more severe force application and deeper
+  penetrating injuries'
+- 'Step 4: Greater injury severity requires immediate surgical intervention rather
+  than conservative management'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jutta Schürmann et al. 2024. "[Development of violence-associated
+    penetrating trauma in the Düsseldorf metropolitan region over a 5-year period
+    (GewPen study)]." *Die Anaesthesiologie*. https://doi.org/10.1007/s00101-024-01420-6
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.600408'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: emergency_physician_involvement
+  direction: strengthens
+  strength: moderate
+  description: Emergency physician involvement increased from 27% to 42% (p=0.04),
+    suggesting more severe presentations requiring advanced pre-hospital care
+- name: injury_severity_score
+  direction: strengthens
+  strength: moderate
+  description: Mean ISS of 11±14 among trauma center patients indicates moderate injury
+    severity requiring surgical assessment

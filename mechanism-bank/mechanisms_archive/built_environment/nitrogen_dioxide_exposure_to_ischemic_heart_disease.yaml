@@ -1,0 +1,43 @@
+id: nitrogen_dioxide_exposure_to_ischemic_heart_disease
+name: Long-term Nitrogen Dioxide (NO2) Exposure → Ischemic Heart Disease Incidence
+from_node:
+  node_id: nitrogen_dioxide_exposure
+  node_name: Long-term Nitrogen Dioxide (NO2) Exposure
+to_node:
+  node_id: ischemic_heart_disease
+  node_name: Ischemic Heart Disease Incidence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Chronic NO2 exposure from traffic-related air pollution creates sustained
+  oxidative stress in coronary vasculature'
+- 'Step 2: Oxidative stress and inflammatory mediators promote coronary atherosclerosis
+  and plaque formation'
+- 'Step 3: Progressive coronary artery disease reduces myocardial blood flow and oxygen
+  delivery'
+- 'Step 4: Myocardial ischemia manifests as clinical ischemic heart disease including
+  angina and myocardial infarction'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Xi Xia et al. 2024. "Associations of long-term nitrogen dioxide
+    exposure with a wide spectrum of diseases: a prospective cohort study of 0·5 million
+    Chinese adults.." *The Lancet. Public health*. https://doi.org/10.1016/S2468-2667(24)00264-0'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.469381'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: age_at_baseline
+  direction: strengthens
+  strength: moderate
+  description: Older adults in cohort (mean age 52.0 years, range 30-79) likely have
+    greater vulnerability to air pollution effects on coronary arteries due to age-related
+    vascular changes
+- name: duration_of_exposure
+  direction: strengthens
+  strength: strong
+  description: Longer duration of NO2 exposure would allow greater accumulation of
+    vascular damage and atherosclerotic plaque burden

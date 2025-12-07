@@ -1,0 +1,66 @@
+id: NEW:urban_rural_health_insurance_integration_to_NEW:chronic_disease_prevalence
+name: Urban-Rural Residents' Basic Medical Insurance Integration Policy → Chronic Disease Prevalence
+from_node:
+  node_id: NEW:urban_rural_health_insurance_integration
+  node_name: Urban-Rural Residents' Basic Medical Insurance Integration Policy
+to_node:
+  node_id: NEW:chronic_disease_prevalence
+  node_name: Chronic Disease Prevalence
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Rural populations historically had inferior insurance coverage compared to urban residents'
+- 'Step 2: Insurance integration policy equalizes benefits and reimbursement rates across rural/urban
+  populations'
+- 'Step 3: Rural residents gain improved access to diagnostic services and chronic disease management'
+- 'Step 4: Increased healthcare utilization leads to better disease control and prevention'
+- 'Step 5: Rural chronic disease prevalence drops from 67.09% to 43.66%'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Xiaojing Fan et al. 2022. "Effect of Health Insurance Policy on the Health Outcomes
+    of the Middle-Aged and Elderly: Progress Toward Universal Health Coverage." https://doi.org/10.3389/fpubh.2022.889377'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references China Health and Retirement Longitudinal
+    Study (CHARLS) data from 2011 and 2018
+  doi: 10.3389/fpubh.2022.889377
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Rural participants showed an 84% reduction in chronic disease risk after URRBMI policy implementation
+  (OR=0.16, 95% CI: 0.14-0.19). Prior to the policy, rural participants had 30% lower risk compared to
+  urban participants (OR=0.70, 95% CI: 0.60-0.82), but this relationship shifted dramatically post-implementation.'
+quantitative_effects:
+  effect_size:
+    value: 0.16
+    type: odds_ratio
+    ci_lower: 0.14
+    ci_upper: 0.19
+  sample_size: 28442
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Rural participants specifically showed 84% lower chronic disease risk (OR=0.16) after
+    policy implementation compared to pre-policy urban participants.
+moderators:
+- name: baseline_insurance_status
+  direction: strengthens
+  strength: strong
+  description: Rural populations with historically inferior coverage experienced greater relative gains
+    from policy integration
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Study focused on middle-aged and elderly populations (CHARLS participants), who have higher
+    chronic disease burden and greater need for healthcare access
+structural_competency:
+  equity_implications: This mechanism demonstrates how structural health policy reform can address historically
+    embedded geographic inequities. The urban-rural divide in China's healthcare system reflects deeper
+    structural inequalities tied to economic development policies, migration restrictions, and resource
+    allocation decisions. By targeting the insurance system structure rather than individual behaviors,
+    this policy addresses root causes of health disparities. The findings highlight how universal health
+    coverage advances health equity for marginalized rural populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.647154'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

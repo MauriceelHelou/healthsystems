@@ -1,0 +1,60 @@
+id: acute_kidney_injury_hospitalization_to_all_cause_mortality_rate
+name: Acute Kidney Injury Hospitalization → All-Cause Mortality Rate
+from_node:
+  node_id: acute_kidney_injury_hospitalization
+  node_name: Acute Kidney Injury Hospitalization
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Acute kidney injury (AKI) develops during hospitalization due to various
+  insults including sepsis, nephrotoxic medications, hypoperfusion, or direct viral
+  injury (e.g., SARS-CoV-2)'
+- 'Step 2: AKI leads to accumulation of uremic toxins, fluid overload, electrolyte
+  imbalances (hyperkalemia, metabolic acidosis), and impaired drug clearance'
+- 'Step 3: These metabolic derangements cause multi-organ dysfunction including cardiovascular
+  complications, respiratory failure, and impaired immune function'
+- 'Step 4: Severe cases require renal replacement therapy (RRT), which carries additional
+  risks including hemodynamic instability and infection'
+- 'Step 5: The combination of underlying disease severity, metabolic complications,
+  and multi-organ involvement substantially increases mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'F. Fabrizi et al. 2020. COVID-19 and Acute Kidney Injury: A Systematic
+    Review and Meta-Analysis. Pathogens.'
+  supporting_citations: []
+description: Acute kidney injury during hospitalization is strongly associated with
+  increased all-cause mortality. This meta-analysis of 39 studies (n=25,566 COVID-19
+  patients) found that AKI occurred in 15.4% of hospitalized patients overall and
+  53% of severe cases. The odds of death were 15.4 times higher in patients who developed
+  AKI compared to survivors. The mechanism involves metabolic derangements, multi-organ
+  dysfunction, and the need for renal replacement therapy in 4.3% of patients.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 15.4
+    type: odds_ratio
+    ci_lower: 11.4
+    ci_upper: 20.99
+  p_value: 0.001
+  sample_size: 25566
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Older age significantly associated with AKI occurrence in hospitalized
+    patients (p<0.007)
+- name: arterial_hypertension
+  direction: strengthens
+  strength: strong
+  description: Pre-existing arterial hypertension significantly associated with AKI
+    occurrence (p<0.001)
+- name: disease_severity
+  direction: strengthens
+  strength: strong
+  description: Severe COVID-19 patients had pooled AKI incidence of 53% compared to
+    15.4% overall

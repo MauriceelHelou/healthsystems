@@ -1,0 +1,52 @@
+id: high_care_coordination_needs_to_pediatric_readmission_ed_visits
+name: High Care Coordination Needs → Pediatric Hospital Readmission and Emergency Department Visits
+from_node:
+  node_id: high_care_coordination_needs
+  node_name: High Care Coordination Needs
+to_node:
+  node_id: pediatric_readmission_ed_visits
+  node_name: Pediatric Hospital Readmission and Emergency Department Visits
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: High care coordination needs indicate complex medical conditions requiring multiple healthcare
+  providers'
+- 'Step 2: Fragmented healthcare systems create gaps in communication and continuity of care'
+- 'Step 3: Poor care coordination leads to missed follow-up appointments and medication management issues'
+- 'Step 4: Inadequate coordination results in preventable complications and acute health episodes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Louise E. Vaz et al. 2020. "The Role of Caregiver-Reported Risks in Predicting Adverse
+    Pediatric Outcomes.." *Journal of Pediatric Psychology*. https://doi.org/10.1093/jpepsy/jsaa067
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1093/jpepsy/jsaa067
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '2.0'
+description: Children with high care coordination needs have significantly increased odds of experiencing
+  emergency department visits or hospital readmissions within 90 days
+quantitative_effects:
+  effect_size:
+    value: 3.2
+    type: odds_ratio
+    ci_lower: 1.6
+    ci_upper: 6.1
+  sample_size: 249
+moderators:
+- name: chronic_disease_status
+  direction: strengthens
+  strength: strong
+  description: Children with chronic diseases likely have higher care coordination needs and stronger
+    association with adverse outcomes
+structural_competency:
+  equity_implications: This mechanism highlights structural deficiencies in healthcare system integration
+    and coordination, particularly affecting children with complex medical needs. The burden falls disproportionately
+    on families to navigate fragmented systems rather than healthcare systems being designed for seamless
+    coordination
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.779619'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

@@ -1,0 +1,89 @@
+id: transit_access_to_preventive_care_utilization
+name: Transit Access -> Preventive Care Utilization
+from_node:
+  node_id: transit_job_accessibility
+  node_name: Transit Job Accessibility
+  node_type: stock
+to_node:
+  node_id: preventive_care_utilization_rate
+  node_name: Preventive Care Utilization Rate
+  node_type: intermediate_pathway
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Adequate public transit access enables transportation to healthcare facilities for people without personal vehicles'
+- 'Step 2: Reliable transit reduces time and cost barriers to scheduling and attending routine healthcare appointments'
+- 'Step 3: Reduced transportation barriers decrease likelihood of missed appointments and delayed care'
+- 'Step 4: Consistent access enables completion of preventive care sequences (vaccinations, screenings, follow-ups)'
+- 'Step 5: Increased preventive care utilization leads to earlier detection, disease prevention, and better health outcomes'
+evidence:
+  quality_rating: B
+  n_studies: 12
+  primary_citation: 'Solomon, Eli M., Holly Wing, John F. Steiner, and Laura M. Gottlieb. 2020. "Impact of Transportation Interventions on Health Care Outcomes: A Systematic Review." Medical Care 58(4): 384-391.'
+  supporting_citations:
+  - 'Syed, Samina T., Ben S. Gerber, and Lisa K. Sharp. 2013. "Traveling Towards Disease: Transportation Barriers to Health Care Access." Journal of Community Health 38(5): 976-993.'
+  - 'Wolfe, Mary K., Noreen C. McDonald, and G. Mark Holmes. 2020. "Transportation Barriers to Health Care in the United States: Findings From the National Health Interview Survey, 1997-2017." American Journal of Public Health 110(6): 815-822.'
+  - 'Urban Institute. 2023. "More than One in Five Adults with Limited Public Transit Access Forgo Health Care Because of Transportation Barriers."'
+  doi: 10.1097/MLR.0000000000001292
+  journal: Medical Care
+  year: 2020
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 2.4
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: null
+    ci_level: 95
+  interpretation: 'Adults with limited public transit access are 22% more likely to forgo needed healthcare due to transportation barriers. Those reporting fair/poor transit access were 2.4 times more likely to miss care. Nearly 6 million Americans delayed medical care due to transportation barriers in 2017'
+  sample_size: 150000
+  heterogeneity_notes: 'Effects are larger for preventive care than acute care; Medicaid beneficiaries are disproportionately affected'
+last_updated: '2025-11-30'
+version: '1.0'
+description: Transportation barriers are a significant obstacle to healthcare access, particularly for preventive care. Adults without vehicle access who report fair or poor public transit availability are significantly more likely to forgo needed healthcare. Transportation assistance interventions (bus passes, taxi vouchers, ride programs) have shown improvements in cancer screening rates, chronic disease management, and healthcare utilization. Public transit expansion particularly benefits Medicaid beneficiaries who disproportionately lack personal vehicles.
+moderators:
+- name: vehicle_ownership
+  direction: strengthens
+  strength: strong
+  description: Effects concentrated among those without personal vehicle access
+- name: insurance_status
+  direction: strengthens
+  strength: moderate
+  description: Medicaid beneficiaries particularly affected; NEMT coverage varies by state
+- name: rural_urban
+  direction: strengthens
+  strength: strong
+  description: Rural areas face compounded challenges of distance and transit unavailability
+- name: healthcare_facility_location
+  direction: strengthens
+  strength: moderate
+  description: Effects larger when healthcare facilities are not co-located with transit routes
+- name: disability_status
+  direction: strengthens
+  strength: strong
+  description: People with disabilities face additional transit accessibility barriers
+structural_competency:
+  root_cause_level: built_environment_structural
+  avoids_victim_blaming: true
+  equity_implications: Transportation barriers reflect structural inequalities in transit investment, healthcare facility siting, and economic conditions. Low-income populations are more likely to lack vehicles and live in areas with poor transit. Medicaid beneficiaries are disproportionately people with low incomes and people of color. Structural solutions include transit expansion, NEMT coverage, and healthcare facility siting in transit-accessible locations.
+assumptions:
+- Assumes healthcare facilities are not uniformly accessible by transit
+- Assumes public transit is viable alternative to personal vehicle
+- Assumes transit barriers affect appointment attendance
+limitations:
+- Systematic review found limited rigorous evidence on transportation intervention effectiveness
+- Self-reported transit access may not accurately reflect objective accessibility
+- Confounding by other socioeconomic factors correlated with transit access
+- Effects may be context-dependent based on healthcare system characteristics
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Transit availability varies dramatically between urban, suburban, and rural areas
+  relevant_geographies:
+  - Urban areas have better transit but may have congestion/reliability issues
+  - Suburban areas often lack transit connections to healthcare facilities
+  - Rural areas face most severe transportation barriers due to distance and no transit
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: moderate
+  prompt_version: 1.0-mvp

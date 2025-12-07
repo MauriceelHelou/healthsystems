@@ -1,0 +1,73 @@
+id: NEW:brief_alcohol_intervention_access_to_binge_drinking
+name: Brief Alcohol Intervention Access → Binge Drinking
+from_node:
+  node_id: NEW:brief_alcohol_intervention_access
+  node_name: Brief Alcohol Intervention Access
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Brief alcohol interventions (BAIs) are delivered in healthcare, educational, or community settings
+  to individuals at risk for alcohol misuse'
+- 'Step 2: BAIs provide personalized feedback, motivational interviewing, and normative information about
+  drinking patterns'
+- 'Step 3: Intervention recipients gain awareness of their drinking relative to peers and health risks'
+- 'Step 4: This awareness and motivation leads to reduced alcohol consumption in the short-to-medium term
+  (1-6 months)'
+- 'Step 5: Reduced mean number of drinks consumed decreases binge drinking episodes'
+evidence:
+  quality_rating: A
+  n_studies: 19
+  primary_citation: 'Eun‐Young Mun et al. 2022. "Brief Alcohol Interventions are Effective through 6 Months:
+    Findings from Marginalized Zero-inflated Poisson and Negative Binomial Models in a Two-step IPD Meta-analysis."
+    https://doi.org/10.1007/s11121-022-01420-1'
+  supporting_citations:
+  - Mun et al. (2015b). Project INTEGRATE - Individual participant data meta-analysis of brief alcohol
+    interventions.
+  - Long et al. (2014). Marginalized zero-inflated Poisson regression models.
+  - Additional citations require full-text access for specific included studies
+  doi: 10.1007/s11121-022-01420-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief alcohol interventions produce a statistically significant 8% reduction in mean number
+  of drinks at 1-3 months and 6 months post-intervention compared to controls, but this effect diminishes
+  by 9-12 months. The IPD meta-analysis of 19 studies (N=7,704) used marginalized zero-inflated models
+  to account for heterogeneous drinking patterns in the population.
+quantitative_effects:
+  effect_size:
+    value: 0.92
+    type: relative_risk
+    ci_lower: 0.85
+    ci_upper: 0.98
+  sample_size: 7704
+moderators:
+- name: time_since_intervention
+  direction: weakens
+  strength: strong
+  description: Effect significant at 1-3 months (RR=0.92) and 6 months (RR=0.92) but not statistically
+    significant at 9-12 months, indicating intervention effects decay over time
+- name: intervention_approach
+  direction: strengthens
+  strength: moderate
+  description: Some BAIs focus exclusively on heavy drinkers while others take universal prevention approach;
+    effectiveness may vary by targeting strategy
+- name: student_year
+  direction: strengthens
+  strength: moderate
+  description: 58.5% were first-year students, suggesting college transition period may be critical window
+    for intervention
+structural_competency:
+  equity_implications: 'This mechanism highlights the importance of structural access to preventive interventions
+    in educational and healthcare settings. The predominantly White (74.7%), college-student sample limits
+    generalizability to other populations. Equity implications include: (1) differential access to BAIs
+    based on educational attainment and healthcare access; (2) interventions delivered in college settings
+    may not reach non-college-attending young adults who may have higher risk; (3) the time-limited effect
+    suggests need for sustained structural supports rather than one-time interventions.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.078555'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

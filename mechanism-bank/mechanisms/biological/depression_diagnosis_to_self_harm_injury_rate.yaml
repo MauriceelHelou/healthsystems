@@ -1,0 +1,61 @@
+id: depression_diagnosis_to_self_harm_injury_rate
+name: Depressed Mood → Deliberate Self-Harm Rate
+from_node:
+  node_id: depression_diagnosis
+  node_name: Depressed Mood
+to_node:
+  node_id: self_harm_injury_rate
+  node_name: Deliberate Self-Harm Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Depressed mood involves neurobiological changes including dysregulation
+  of serotonergic and dopaminergic systems, affecting emotional regulation and impulse
+  control'
+- 'Step 2: Depression leads to hopelessness, emotional pain, and cognitive distortions
+  that increase suicidal ideation and self-harm urges'
+- 'Step 3: Impaired executive function and emotional dysregulation associated with
+  depression reduce capacity to cope with distress through adaptive means'
+- 'Step 4: These neurobiological and psychological factors culminate in increased
+  deliberate self-harm behavior as a maladaptive response to overwhelming emotional
+  distress'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: S Challis et al. 2013. Systematic meta-analysis of the risk factors
+    for deliberate self-harm before and after treatment for first-episode psychosis.
+    Acta psychiatrica Scandinavica.
+  supporting_citations: []
+description: This meta-analysis of 18 studies found that depressed mood is significantly
+  associated with deliberate self-harm in individuals with first-episode psychosis,
+  with a moderate effect size (SMD=0.49). Depression consistently predicted DSH both
+  before and after treatment initiation, suggesting a robust biological and psychological
+  pathway. The meta-analysis identified depression as one of the key continuous variables
+  associated with increased DSH risk, alongside younger age of onset and duration
+  of untreated psychosis.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.49
+    type: standardized_mean_difference
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: Timing relative to treatment
+  direction: strengthens
+  strength: moderate
+  description: Depressed mood was associated with DSH both before and after treatment
+    for first-episode psychosis, indicating a persistent relationship
+- name: Substance use
+  direction: strengthens
+  strength: moderate
+  description: Alcohol abuse (OR=1.68) and substance use (OR=1.46) co-occur with depression
+    to increase DSH risk
+- name: Prior history of DSH
+  direction: strengthens
+  strength: strong
+  description: Prior history of DSH (OR=3.94) substantially increases risk when combined
+    with depressed mood

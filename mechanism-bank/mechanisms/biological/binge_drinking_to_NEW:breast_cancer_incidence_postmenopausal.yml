@@ -1,0 +1,56 @@
+id: binge_drinking_to_NEW:breast_cancer_incidence_postmenopausal
+name: Binge Drinking → Postmenopausal Breast Cancer Incidence
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:breast_cancer_incidence_postmenopausal
+  node_name: Postmenopausal Breast Cancer Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol consumption increases estrogen biosynthesis and bioavailability in postmenopausal women'
+- 'Step 2: Elevated estrogen stimulates estrogen receptor-positive breast epithelial cell proliferation'
+- 'Step 3: Alcohol-derived acetaldehyde directly damages DNA in mammary tissue'
+- 'Step 4: Impaired folate metabolism from alcohol use disrupts DNA methylation and repair'
+- 'Step 5: Accumulated genetic and epigenetic damage leads to breast carcinogenesis'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: 'Ivneet Sohi et al. 2024. "Alcoholic beverage consumption and female breast cancer
+    risk: A systematic review and meta‐analysis of prospective cohort studies." https://doi.org/10.1111/acer.15493'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of prospective cohort studies
+  - Analyses stratified by hormone receptor status were included
+  - Analyses stratified by HER2 status were included
+  doi: 10.1111/acer.15493
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Each additional standard drink (10g ethanol) per day is associated with a 10% increased risk
+  of postmenopausal breast cancer, a stronger effect than observed for premenopausal breast cancer (3%
+  increase). This suggests postmenopausal women may be particularly vulnerable to alcohol's carcinogenic
+  effects.
+quantitative_effects:
+  effect_size:
+    value: 1.1
+    type: relative_risk
+    ci_lower: 1.08
+    ci_upper: 1.12
+moderators:
+- name: hormone_receptor_status
+  direction: strengthens
+  strength: moderate
+  description: Analyses by hormone receptor status and HER2 status were performed, suggesting differential
+    risk by tumor molecular subtype
+structural_competency:
+  equity_implications: Postmenopausal women face compounded structural vulnerabilities including age-related
+    healthcare access barriers and targeted alcohol marketing. Policy interventions such as warning labels
+    on alcohol products about breast cancer risk, restrictions on alcohol advertising, and minimum unit
+    pricing could reduce population-level exposure. Healthcare system screening protocols should incorporate
+    alcohol consumption assessment.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.275169'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,59 @@
+id: NEW:light_moderate_alcohol_consumption_to_NEW:peripheral_artery_disease_incidence
+name: Light to Moderate Alcohol Consumption → Peripheral Artery Disease Incidence
+from_node:
+  node_id: NEW:light_moderate_alcohol_consumption
+  node_name: Light to Moderate Alcohol Consumption
+to_node:
+  node_id: NEW:peripheral_artery_disease_incidence
+  node_name: Peripheral Artery Disease Incidence
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Light alcohol consumption (≤2 drinks/week) may increase HDL cholesterol and improve lipid profiles'
+- 'Step 2: Moderate alcohol intake associated with reduced platelet aggregation and improved fibrinolytic
+  activity'
+- 'Step 3: Anti-inflammatory effects at low doses may reduce chronic vascular inflammation'
+- 'Step 4: Preserved endothelial function and reduced atherosclerotic progression in peripheral arteries'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'S. Yuan et al. 2024. "Association between alcohol consumption and peripheral artery
+    disease: two de novo prospective cohorts and a systematic review with meta-analysis." https://doi.org/10.1093/eurjpc/zwae142'
+  supporting_citations:
+  - Swedish cohort study (n=70,116) - prospective cohort from Yuan et al. 2024
+  - UK Biobank cohort (n=405,406) - prospective cohort from Yuan et al. 2024
+  - Additional citations require full-text access for complete list of studies included in systematic
+    review
+  doi: 10.1093/eurjpc/zwae142
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Light alcohol consumption was associated with a 17% reduced risk of peripheral artery disease
+  compared to non/never drinkers (RR 0.83, 95% CI 0.77-0.89). The lowest PAD risk was observed at approximately
+  2 drinks/week in nonlinear analysis.
+quantitative_effects:
+  effect_size:
+    value: 0.83
+    type: relative_risk
+    ci_lower: 0.77
+    ci_upper: 0.89
+  sample_size: 475522
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Findings consistent across Swedish and British populations in de novo cohorts
+moderators:
+- name: drinking_pattern
+  direction: strengthens
+  strength: moderate
+  description: Optimal protective effect observed at approximately 2 drinks/week; protection diminishes
+    as consumption increases
+structural_competency:
+  equity_implications: This finding should not be interpreted as recommending alcohol initiation for non-drinkers.
+    Structural factors influencing drinking patterns include cultural norms, socioeconomic conditions,
+    and access to alternative stress-coping resources. Public health messaging must consider potential
+    harms of alcohol promotion.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.299459'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

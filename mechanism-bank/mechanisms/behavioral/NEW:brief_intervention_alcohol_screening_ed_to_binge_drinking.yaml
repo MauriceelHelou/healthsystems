@@ -1,0 +1,63 @@
+id: NEW:brief_intervention_alcohol_screening_ed_to_binge_drinking
+name: Brief Intervention with Alcohol Screening in Emergency Department → Alcohol
+  Consumption (Binge Drinking)
+from_node:
+  node_id: NEW:brief_intervention_alcohol_screening_ed
+  node_name: Brief Intervention with Alcohol Screening in Emergency Department
+to_node:
+  node_id: binge_drinking
+  node_name: Alcohol Consumption (Binge Drinking)
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Emergency department patients are screened for alcohol use, identifying
+  those with problematic drinking patterns including binge drinking'
+- 'Step 2: Brief interventions (BI) are delivered to identified patients, involving
+  motivational interviewing, feedback on drinking behaviors, and personalized advice'
+- 'Step 3: Patients receive information about health risks and are prompted to reflect
+  on their drinking patterns during a teachable moment following injury/intoxication'
+- 'Step 4: This reflection and counseling leads to increased awareness and motivation
+  to change drinking behavior'
+- 'Step 5: Patients reduce heavy drinking episodes and overall alcohol consumption
+  at follow-up assessments'
+evidence:
+  quality_rating: A
+  n_studies: 28
+  primary_citation: C. Schmidt et al. 2016. Meta-analysis on the effectiveness of
+    alcohol screening with brief interventions for patients in emergency care settings.
+    Addiction.
+  supporting_citations: []
+description: Brief interventions with alcohol screening in emergency departments produce
+  small but statistically significant reductions in alcohol consumption including
+  heavy drinking episodes. A meta-analysis of 28 RCTs with 14,456 patients found consistent
+  effects across 3, 6, and 12-month follow-up periods. The effect is modest (SMD =
+  0.19) but robust, with low heterogeneity. Notably, shorter interventions are as
+  effective as longer ones, and non-face-to-face delivery may be equally effective.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.19
+    type: standardized_mean_difference
+    ci_lower: 0.08
+    ci_upper: 0.31
+  p_value: null
+  sample_size: 14456
+moderators:
+- name: Intervention mode
+  direction: neutral
+  strength: weak
+  description: Non-face-to-face interventions appear comparably effective to face-to-face,
+    though evidence is tentative due to limited studies
+- name: Intervention length/intensity
+  direction: neutral
+  strength: weak
+  description: More intensive interventions showed no benefit over shorter approaches
+- name: Type of interventionist
+  direction: neutral
+  strength: weak
+  description: No significant moderation effect identified
+- name: Control intervention intensity
+  direction: neutral
+  strength: weak
+  description: No significant moderation effect identified

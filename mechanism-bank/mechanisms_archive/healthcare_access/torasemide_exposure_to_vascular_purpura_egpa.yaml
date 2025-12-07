@@ -1,0 +1,48 @@
+id: torasemide_exposure_to_vascular_purpura_egpa
+name: Torasemide (Loop Diuretic) Exposure → Vascular Purpura in EGPA
+from_node:
+  node_id: torasemide_exposure
+  node_name: Torasemide (Loop Diuretic) Exposure
+to_node:
+  node_id: vascular_purpura_egpa
+  node_name: Vascular Purpura in EGPA
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Torasemide, a sulfonamide-derivative loop diuretic, is prescribed for blood
+  pressure management in patients with underlying EGPA predisposition'
+- 'Step 2: Chemical similarity to sulfonamides (known EGPA triggering drugs) leads
+  to drug-induced immune activation'
+- 'Step 3: Acute onset of perivascular infiltrates consisting of eosinophils and neutrophils
+  with fibrinous necrosis of small vessels'
+- 'Step 4: Development of purpura-like skin lesions progressing from ankles upward
+  within 7 days of drug initiation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Aleksandra Frątczak et al. 2022. "Torasemide-induced Vascular
+    Purpura in the Course of Eosinophilic Granulomatosis with Polyangiitis.." *Acta
+    dermatovenerologica Croatica : ADC*.'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.294137'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: pre_existing_egpa_conditions
+  direction: strengthens
+  strength: strong
+  description: Coexistence of bronchial asthma, chronic sinusitis, nasal polyps, and
+    peripheral neuropathy symptoms suggests pre-existing EGPA increased vulnerability
+    to torasemide-induced vascular manifestations
+- name: panca_antibody_status
+  direction: strengthens
+  strength: moderate
+  description: Elevated anti-myeloperoxidase antibodies (pANCA 1:160) associated with
+    higher likelihood of glomerulonephritis, neuropathy, and vasculitis in EGPA patients
+- name: eosinophilia_severity
+  direction: strengthens
+  strength: strong
+  description: Severe eosinophilia (38.6% of leukocytes, 17.1 thousand/mm3 total)
+    indicates heightened immune activation state facilitating vascular damage

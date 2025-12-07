@@ -1,0 +1,66 @@
+id: NEW:aud_pharmacotherapy_implementation_barriers_to_sud_medication_treatment_rate_oud
+name: AUD Pharmacotherapy Implementation Barriers in Primary Care → SUD Medication Treatment Rate
+from_node:
+  node_id: NEW:aud_pharmacotherapy_implementation_barriers
+  node_name: AUD Pharmacotherapy Implementation Barriers in Primary Care
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary care providers lack knowledge about AUD pharmacotherapy options and efficacy'
+- 'Step 2: Providers hold negative beliefs about medications for AUD treatment'
+- 'Step 3: Limited training and clinical support systems reduce provider confidence in prescribing'
+- 'Step 4: Patients with AUD do not receive evidence-based pharmacotherapy despite presenting to primary
+  care'
+- 'Step 5: Treatment gap persists with only 7.8% of individuals with AUD receiving any treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'H. Hagedorn et al. 2019. "Implementing alcohol use disorder pharmacotherapy in primary
+    care settings: a qualitative analysis of provider-identified barriers and impact on implementation
+    outcomes." https://doi.org/10.1186/s13722-019-0151-7'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 2016 treatment statistics
+  - Consolidated Framework for Implementation Research (CFIR) methodology referenced
+  - Veterans Health Administration implementation intervention protocol referenced
+  doi: 10.1186/s13722-019-0151-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Healthcare system barriers including provider knowledge gaps, negative beliefs about AUD
+  pharmacotherapy, and incompatibility with existing primary care processes create structural obstacles
+  to delivering evidence-based AUD treatment, perpetuating the treatment gap where only 7.8% of individuals
+  with AUD receive treatment.
+quantitative_effects:
+  effect_size:
+    value: 7.8
+    type: percentage_change
+  sample_size: 24
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted across three large Veterans Health Administration facilities with site-specific
+    barriers identified, suggesting geographic and organizational variation in implementation challenges
+moderators:
+- name: leadership_support
+  direction: strengthens
+  strength: moderate
+  description: Site-level leadership support interacted with pre-implementation barriers to drive implementation
+    outcomes
+- name: provider_turnover
+  direction: weakens
+  strength: moderate
+  description: Provider turnover at sites likely negatively impacted implementation success regardless
+    of pre-implementation barrier identification
+structural_competency:
+  equity_implications: This mechanism highlights structural healthcare system failures rather than patient
+    non-compliance. The barriers are embedded in healthcare organization (workflow incompatibility), medical
+    education (limited provider knowledge), professional culture (negative attitudes toward AUD patients),
+    and resource allocation (limited implementation resources). These are systemic issues requiring organizational
+    and policy interventions, not individual behavior change.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.112363'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

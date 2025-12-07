@@ -1,0 +1,52 @@
+id: mental_health_court_utilization_to_NEW:trauma_symptoms_severity
+name: Mental Health Court Utilization → Trauma Symptoms Severity
+from_node:
+  node_id: mental_health_court_utilization
+  node_name: Mental Health Court Utilization
+to_node:
+  node_id: NEW:trauma_symptoms_severity
+  node_name: Trauma Symptoms Severity
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Mental health court enrollment identifies individuals with co-occurring disorders and trauma
+  histories'
+- 'Step 2: MISSION-CJ wraparound services provide trauma-informed care within criminal justice context'
+- 'Step 3: Integrated outreach and networking reduces barriers to sustained treatment engagement'
+- 'Step 4: Participants show significant reduction in trauma symptoms over 6-month period'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'D. Pinals et al. 2019. "Implementation of MISSION-Criminal Justice in a Treatment
+    Court: Preliminary Outcomes Among Individuals With Co-occurring Disorders.." https://doi.org/10.1176/appi.ps.201800570'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not provide specific prior study citations
+  - Trauma-informed care in criminal justice literature
+  - Co-occurring disorders and trauma literature
+  doi: 10.1176/appi.ps.201800570
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Mental health court participation with MISSION-CJ services significantly reduced trauma symptoms
+  among justice-involved individuals with co-occurring disorders, many of whom had extensive incarceration
+  histories that may have contributed to trauma burden.
+quantitative_effects:
+  p_value: 0.004
+  sample_size: 97
+moderators:
+- name: incarceration history
+  direction: strengthens
+  strength: moderate
+  description: Average of 5+ years incarcerated suggests trauma exposure from incarceration itself; treatment
+    may address both pre-existing and incarceration-related trauma
+structural_competency:
+  equity_implications: This mechanism highlights how criminal justice involvement itself can be traumatizing,
+    and how structural alternatives to incarceration can reduce trauma burden. The extensive prior incarceration
+    (average 5+ years) among participants suggests that the criminal justice system may contribute to
+    trauma, which is then addressed through trauma-informed alternatives. This represents a structural
+    approach to healing institutional harm.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.557985'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

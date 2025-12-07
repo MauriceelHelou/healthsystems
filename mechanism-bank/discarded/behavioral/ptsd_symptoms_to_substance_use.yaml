@@ -1,0 +1,45 @@
+id: ptsd_symptoms_to_substance_use
+name: PTSD Symptoms → Substance Use
+from_node:
+  node_id: ptsd_symptoms
+  node_name: PTSD Symptoms
+to_node:
+  node_id: substance_use
+  node_name: Substance Use
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: PTSD symptoms including hyperarousal, intrusive thoughts, and emotional
+  dysregulation create significant psychological distress'
+- 'Step 2: Limited access to trauma-informed mental health treatment leaves symptoms
+  unmanaged, particularly for low-income women'
+- 'Step 3: Substance use provides temporary relief from PTSD symptoms through self-medication'
+- 'Step 4: Daily fluctuations in PTSD-related distress correspond with patterns of
+  substance use at interval and day levels'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Danielle Chiaramonte et al. 2025. "Elucidating Heterogeneity
+    of Intimate Partner Violence Among Women: Latent Class Analysis of Daily IPV,
+    PTSD, and Substance Use Collected via Experience Sampling Methodologies.." *Journal
+    of interpersonal violence*. https://doi.org/10.1177/08862605241286026'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.153636'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: ipv_severity
+  direction: strengthens
+  strength: strong
+  description: Co-occurrence of multiple IPV types associated with heightened risk
+    for both PTSD symptoms and substance use, suggesting compounding effects
+- name: temporal_proximity
+  direction: strengthens
+  strength: moderate
+  description: Interval-level and day-level analyses revealed temporal associations
+    between PTSD distress and substance use within the same day or assessment period
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/behavioral/ptsd_symptoms_to_substance_use.yaml
+_category: behavioral

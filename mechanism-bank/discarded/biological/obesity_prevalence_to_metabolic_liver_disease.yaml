@@ -1,0 +1,44 @@
+id: obesity_prevalence_to_metabolic_liver_disease
+name: Obesity (BMI ≥25 kg/m²) → Metabolic Dysfunction-Associated Steatotic Liver Disease
+from_node:
+  node_id: obesity_prevalence
+  node_name: Obesity (BMI ≥25 kg/m²)
+to_node:
+  node_id: metabolic_liver_disease
+  node_name: Metabolic Dysfunction-Associated Steatotic Liver Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Elevated BMI (average 35.4 ± 8.3 in NAFLD database; 22.70% obese in NHANES)
+  leads to excess adipose tissue accumulation'
+- 'Step 2: Adipose tissue dysfunction promotes insulin resistance, dyslipidemia, and
+  systemic inflammation'
+- 'Step 3: Metabolic dysfunction drives hepatic lipid accumulation and steatosis,
+  meeting MASLD diagnostic criteria (95% met MASLD criteria based on BMI alone)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Zobair M Younossi et al. 2024. "Clinical profiles and mortality
+    rates are similar for metabolic dysfunction-associated steatotic liver disease
+    and non-alcoholic fatty liver disease.." *Journal of hepatology*. https://doi.org/10.1016/j.jhep.2024.01.014
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.622089'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: type_2_diabetes
+  direction: strengthens
+  strength: strong
+  description: 52% of NAFLD database patients and 7.28% of NHANES participants had
+    type 2 diabetes, compounding metabolic dysfunction
+- name: waist_circumference
+  direction: strengthens
+  strength: moderate
+  description: Average waist circumference of 112 ± 17 cm indicates central adiposity,
+    which is more strongly associated with metabolic liver disease than peripheral
+    obesity
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/obesity_prevalence_to_metabolic_liver_disease.yaml
+_category: biological

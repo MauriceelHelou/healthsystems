@@ -1,0 +1,54 @@
+id: NEW:tobacco_retail_density_to_NEW:ever_smoking
+name: Tobacco Retail Density → Ever Smoking
+from_node:
+  node_id: NEW:tobacco_retail_density
+  node_name: Tobacco Retail Density
+to_node:
+  node_id: NEW:ever_smoking
+  node_name: Ever Smoking
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: High tobacco retail density creates ubiquitous exposure to tobacco products and marketing across
+  neighborhoods'
+- 'Step 2: Repeated exposure normalizes tobacco use and reduces perceived risks of experimentation'
+- 'Step 3: Easy accessibility facilitates initial trial when curiosity or social pressure arises'
+- 'Step 4: Even brief experimentation registers as lifetime exposure (ever smoking), serving as gateway
+  to regular use'
+evidence:
+  quality_rating: A
+  n_studies: 62
+  primary_citation: Veronica A Martin-Gall et al. 2024. "Tobacco retail availability and smoking-A systematic
+    review and meta-analysis.." https://doi.org/10.1111/dar.13936
+  supporting_citations:
+  - Additional citations require full-text access
+  - Meta-analysis pooled studies with ever smoking as outcome measure
+  - Studies examined relationship between retail environment and smoking initiation
+  doi: 10.1111/dar.13936
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Tobacco retail density is positively associated with ever smoking, indicating that retail
+  environment influences smoking initiation. The high heterogeneity suggests this relationship may vary
+  by context.
+quantitative_effects:
+  effect_size:
+    value: 1.2
+    type: odds_ratio
+    ci_lower: 1.04
+    ci_upper: 1.37
+  heterogeneity_i_squared: 87.3
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: High heterogeneity (I²=87.3%) suggests geographic and contextual variation in how retail
+    density affects smoking initiation
+structural_competency:
+  equity_implications: Ever smoking captures lifetime initiation, reflecting how environmental exposure
+    during formative periods shapes long-term health trajectories. This structural determinant operates
+    through the commercial environment rather than individual susceptibility, identifying a modifiable
+    policy target.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.243489'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

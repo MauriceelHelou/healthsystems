@@ -1,0 +1,36 @@
+id: melatonin_supplementation_to_pap_adherence
+name: Melatonin Supplementation (10mg) → PAP Therapy Adherence
+from_node:
+  node_id: melatonin_supplementation
+  node_name: Melatonin Supplementation (10mg)
+to_node:
+  node_id: pap_adherence
+  node_name: PAP Therapy Adherence
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Melatonin reduces insomnia symptoms and nighttime awakenings'
+- 'Step 2: Improved sleep quality reduces discomfort and intolerance associated with
+  PAP use'
+- 'Step 3: Better sleep experience while using PAP increases motivation for continued
+  use'
+- 'Step 4: PAP device usage duration overnight increases reflecting improved adherence'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Tahereh Madani Motlaq et al. 2024. "Effect of melatonin on insomnia
+    and daytime sleepiness, in patients with obstructive sleep apnea and insomnia
+    (COMISA): A randomized double-blinded placebo-controlled trial." *Journal of Pharmaceutical
+    Health Care and Sciences*. https://doi.org/10.1186/s40780-024-00347-9'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.024517'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: insomnia_severity_reduction
+  direction: strengthens
+  strength: strong
+  description: PAP adherence improvement likely mediated through reduction in insomnia
+    symptoms that contribute to PAP intolerance

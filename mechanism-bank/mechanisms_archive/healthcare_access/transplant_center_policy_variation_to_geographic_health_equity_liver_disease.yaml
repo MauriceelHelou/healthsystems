@@ -1,0 +1,43 @@
+id: transplant_center_policy_variation_to_geographic_health_equity_liver_disease
+name: Transplant Center Policy Variation (Sobriety Requirements) → Geographic Health
+  Equity in Liver Disease Mortality
+from_node:
+  node_id: transplant_center_policy_variation
+  node_name: Transplant Center Policy Variation (Sobriety Requirements)
+to_node:
+  node_id: geographic_health_equity_liver_disease
+  node_name: Geographic Health Equity in Liver Disease Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Different transplant centers implement different sobriety requirement policies
+  (early vs 6-month delayed eligibility)'
+- 'Step 2: Patients in regions with early transplantation policies have immediate
+  access to waitlist placement'
+- 'Step 3: Patients in regions requiring 6-month sobriety face structural delay in
+  accessing transplant eligibility'
+- 'Step 4: Geographic location determines survival probability independent of clinical
+  factors (MELD and Lille scores)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Brian P Lee et al. 2019. "Model to Calculate Harms and Benefits
+    of Early vs Delayed Liver Transplantation for Patients With Alcohol-Associated
+    Hepatitis.." *Gastroenterology*. https://doi.org/10.1053/j.gastro.2019.04.012
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.636239'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: regional_transplant_policy
+  direction: strengthens
+  strength: strong
+  description: Regions with more restrictive sobriety policies create larger survival
+    disparities for patients with alcohol-associated hepatitis
+- name: distance_to_transplant_center
+  direction: strengthens
+  strength: moderate
+  description: Though not explicitly stated, patients living far from centers offering
+    early transplantation face additional geographic barriers

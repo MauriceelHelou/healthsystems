@@ -1,0 +1,47 @@
+id: alcohol_use_disorder_to_alcohol_withdrawal_syndrome
+name: Alcohol Use Disorder (AUD) → Alcohol Withdrawal Syndrome (AWS)
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder (AUD)
+to_node:
+  node_id: alcohol_withdrawal_syndrome
+  node_name: Alcohol Withdrawal Syndrome (AWS)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol use leads to neuroadaptive changes in GABA and glutamate
+  neurotransmitter systems'
+- 'Step 2: Central nervous system becomes dependent on presence of alcohol to maintain
+  homeostasis'
+- 'Step 3: When alcohol consumption is reduced or stopped, neurochemical imbalance
+  occurs'
+- 'Step 4: Withdrawal syndrome manifests with symptoms ranging from tremors to life-threatening
+  seizures and delirium tremens'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Chelsea T. Wolf et al. 2020. "Management of Alcohol Withdrawal
+    in the Emergency Department: Current Perspectives." *Open Access Emergency Medicine*.
+    https://doi.org/10.2147/OAEM.S235288'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.701890'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: time_course_alcohol_use
+  direction: strengthens
+  strength: strong
+  description: The time course of alcohol use and withdrawal impacts ED treatment
+    approaches and severity of withdrawal symptoms
+- name: medical_comorbidity
+  direction: strengthens
+  strength: strong
+  description: Medical comorbidity affects appropriateness of standard benzodiazepine
+    treatment and may necessitate alternative regimens
+- name: psychiatric_comorbidity
+  direction: strengthens
+  strength: strong
+  description: Psychiatric comorbidity influences treatment selection and may preclude
+    use of symptom-triggered benzodiazepine protocols

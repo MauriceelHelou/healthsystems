@@ -1,0 +1,59 @@
+id: NEW:brief_intervention_alcohol_healthcare_to_sud_treatment_entry_rate
+name: Brief Interventions for Alcohol Use in Healthcare Settings → Substance Use Disorder Treatment Entry
+  Rate
+from_node:
+  node_id: NEW:brief_intervention_alcohol_healthcare
+  node_name: Brief Interventions for Alcohol Use in Healthcare Settings
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: Substance Use Disorder Treatment Entry Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Brief interventions in healthcare settings identify individuals with substance use issues who
+  may not be engaged in specialized treatment'
+- 'Step 2: Intervention increases awareness of personal substance use severity and available treatment
+  options'
+- 'Step 3: Motivational techniques enhance readiness for change and treatment-seeking behavior'
+- 'Step 4: Referral pathways and linkages facilitate entry into formal substance use treatment programs'
+- 'Step 5: Increased utilization of specialized substance use treatment services'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'Maria L Schweer-Collins et al. 2023. "Investigating for Whom Brief Substance Use
+    Interventions Are Most Effective: An Individual Participant Data Meta-analysis.." https://doi.org/10.1007/s11121-023-01525-1'
+  supporting_citations:
+  - Parent aggregate data meta-analysis (k = 116 trials)
+  - 'OSF pre-registration: osf.io/m48g6'
+  - Additional citations require full-text access
+  doi: 10.1007/s11121-023-01525-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief interventions delivered in general healthcare settings led to significantly greater
+  substance use treatment utilization among female participants, representing the largest effect size
+  observed in this meta-analysis.
+quantitative_effects:
+  effect_size:
+    value: 0.25
+    type: standardized_mean_difference
+    ci_lower: 0.21
+    ci_upper: 0.3
+  sample_size: 12074
+moderators:
+- name: sex_female
+  direction: strengthens
+  strength: strong
+  description: Effect was significant among female participants
+structural_competency:
+  equity_implications: This finding has important structural implications. Treatment utilization depends
+    on multiple structural factors including treatment availability, insurance coverage, geographic access,
+    and social support. The strong effect on treatment utilization suggests that brief interventions can
+    serve as a critical bridge between general healthcare and specialized treatment systems. For populations
+    facing structural barriers to seeking treatment directly, healthcare-based brief interventions may
+    provide an essential pathway to care.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.001671'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

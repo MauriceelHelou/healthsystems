@@ -1,0 +1,55 @@
+id: substance_use_disorder_any_to_substance_use_treatment_dropout_rate
+name: Substance Use Disorder (Any) → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Pregnant women with SUD face multiple structural barriers to treatment retention including
+  stigma and criminalization'
+- 'Step 2: Treatment programs may lack pregnancy-specific accommodations and wraparound services'
+- 'Step 3: Competing demands of pregnancy/postpartum period reduce capacity for sustained treatment engagement'
+- 'Step 4: Fear of CPS involvement may paradoxically deter treatment entry or continuation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Darien Colson-Fearon et al. 2023. "The Impact of Child Protective Services Involvement
+    on Pregnant and Postpartum Women in Substance Use Disorder Treatment." https://doi.org/10.1080/10826084.2023.2212074
+  supporting_citations:
+  - Additional citations require full-text access - abstract notes pregnant women with SUD 'often fail
+    to complete treatment'
+  - Additional citations require full-text access - abstract references factors influencing treatment
+    retention
+  - Additional citations require full-text access - abstract suggests need for research on how 'potential
+    for CPS involvement may affect enrollment'
+  doi: 10.1080/10826084.2023.2212074
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study background notes that pregnant women with substance use disorder often fail to
+  complete treatment, highlighting this as a significant clinical problem. Treatment retention can be
+  influenced by multiple factors including CPS involvement, suggesting complex structural and system-level
+  determinants of treatment success.
+quantitative_effects:
+  sample_size: 127
+moderators:
+- name: CPS_involvement_status
+  direction: weakens
+  strength: moderate
+  description: Active CPS involvement appears to reduce early treatment discontinuation based on study
+    findings
+structural_competency:
+  equity_implications: This mechanism frames treatment failure not as individual deficit but as product
+    of structural conditions facing pregnant women with SUD. The authors appropriately call for research
+    on how fear of CPS involvement affects treatment enrollment, acknowledging the dual role of child
+    welfare systems as both barrier and facilitator. This reflects structural competency by recognizing
+    how criminalization and surveillance of pregnant women shapes healthcare seeking behavior.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.788935'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,62 @@
+id: substance_use_disorder_any_to_self_harm_injury_rate
+name: Substance Use → Deliberate Self-Harm Rate
+from_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use
+to_node:
+  node_id: self_harm_injury_rate
+  node_name: Deliberate Self-Harm Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Substance use impairs judgment, emotional regulation, and impulse control
+  through neurobiological effects on prefrontal cortex and limbic system functioning'
+- 'Step 2: Intoxication states lower inhibitions and reduce the threshold for acting
+  on self-destructive urges or suicidal ideation'
+- 'Step 3: Chronic substance use exacerbates psychiatric symptoms including depression
+  and psychotic symptoms, which are independent risk factors for deliberate self-harm'
+- 'Step 4: Substance use creates social, occupational, and interpersonal problems
+  that increase psychological distress and hopelessness'
+- 'Step 5: The combined effect of disinhibition, worsened mental state, and accumulated
+  life stressors increases the likelihood of deliberate self-harm episodes'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: S Challis et al. 2013. Systematic meta-analysis of the risk factors
+    for deliberate self-harm before and after treatment for first-episode psychosis.
+    Acta psychiatrica Scandinavica.
+  supporting_citations: []
+description: This meta-analysis of 18 studies on first-episode psychosis patients
+  found that substance use significantly increases the risk of deliberate self-harm
+  (OR=1.46). Importantly, substance use was identified as a risk factor for DSH both
+  before and after treatment, suggesting it represents a consistent behavioral pathway
+  to self-harm. The association operates alongside other risk factors including alcohol
+  abuse (OR=1.68), depression, and prior history of self-harm. The mechanism involves
+  substance-induced disinhibition, worsening of psychiatric symptoms, and accumulation
+  of psychosocial stressors.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.46
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: alcohol_abuse
+  direction: strengthens
+  strength: moderate
+  description: Alcohol abuse showed a slightly stronger association with DSH (OR=1.68)
+    compared to general substance use (OR=1.46)
+- name: timing_relative_to_treatment
+  direction: strengthens
+  strength: moderate
+  description: Substance use was associated with DSH both before and after treatment
+    for first-episode psychosis, indicating a persistent risk factor
+- name: depressed_mood
+  direction: strengthens
+  strength: strong
+  description: Depressed mood (SMD=0.49) co-occurs with substance use and amplifies
+    DSH risk

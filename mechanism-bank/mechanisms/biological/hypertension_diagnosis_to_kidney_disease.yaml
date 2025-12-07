@@ -1,0 +1,67 @@
+id: hypertension_diagnosis_to_kidney_disease
+name: Hypertension (Systolic BP >140 mmHg) → Chronic Kidney Disease
+from_node:
+  node_id: hypertension_diagnosis
+  node_name: Hypertension (Systolic BP >140 mmHg)
+to_node:
+  node_id: kidney_disease
+  node_name: Chronic Kidney Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Elevated systolic blood pressure (>140 mmHg) creates sustained mechanical
+  stress on glomerular capillaries and renal vasculature'
+- 'Step 2: Chronic hypertension leads to arteriolosclerosis and hyalinosis of renal
+  arterioles, reducing blood flow and oxygen delivery to nephrons'
+- 'Step 3: Glomerular hyperfiltration and subsequent glomerulosclerosis occur as compensatory
+  mechanisms fail'
+- 'Step 4: Progressive nephron loss and fibrosis result in declining glomerular filtration
+  rate (GFR) and development of chronic kidney disease'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Shiferaw W et al. 2020. Chronic Kidney Disease among Diabetes
+    Patients in Ethiopia: A Systematic Review and Meta-Analysis. International Journal
+    of Nephrology.'
+  supporting_citations: []
+description: Systolic blood pressure >140 mmHg is significantly associated with a
+  3.26-fold increased odds of chronic kidney disease among diabetic patients. Elevated
+  blood pressure damages renal microvasculature through mechanical stress, leading
+  to arteriolosclerosis, glomerular injury, and progressive nephron loss. This relationship
+  is particularly pronounced in the context of diabetes where hyperglycemia and hypertension
+  synergistically accelerate kidney damage.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.26
+    type: odds_ratio
+    ci_lower: 2.24
+    ci_upper: 4.74
+  p_value: null
+  sample_size: 4075
+moderators:
+- name: diabetes_status
+  direction: strengthens
+  strength: strong
+  description: Association studied specifically in diabetic patients where hypertension
+    and diabetes synergistically damage kidneys
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Age >60 years independently associated with CKD (OR=2.99), likely amplifying
+    hypertension effects
+- name: diabetes_duration
+  direction: strengthens
+  strength: moderate
+  description: Duration of diabetes >10 years increases CKD risk (OR=2.76), suggesting
+    cumulative vascular damage
+- name: glycemic_control
+  direction: strengthens
+  strength: moderate
+  description: Poor glycemic control (OR=2.01) compounds hypertensive kidney damage
+- name: obesity
+  direction: strengthens
+  strength: moderate
+  description: BMI >30 kg/m2 (OR=2.06) increases CKD risk, likely through metabolic
+    and hemodynamic mechanisms

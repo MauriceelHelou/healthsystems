@@ -1,0 +1,62 @@
+id: NEW:community_service_scarcity_to_substance_use_treatment_dropout_rate
+name: Community Service Scarcity → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: NEW:community_service_scarcity
+  node_name: Community Service Scarcity
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Resource-scarce communities lack comprehensive substance use disorder services'
+- 'Step 2: Gaps in service availability disrupt the continuum of care for people with substance use disorders'
+- 'Step 3: Participants'' readiness for change naturally fluctuates over time'
+- 'Step 4: When services are unavailable during periods of readiness, participants cannot access needed
+  support'
+- 'Step 5: Disrupted care continuum leads to participant disengagement from LEAD and related services'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Meret Hofer et al. 2025. "Patching holes and bridging gaps: Implementing Law Enforcement-Assisted
+    Diversion (LEAD) in resource-scarce environments.." https://doi.org/10.1016/j.josat.2025.209751'
+  supporting_citations:
+  - Additional citations require full-text access - qualitative findings from LEAD partners (n=27) and
+    participants (n=22)
+  - Additional citations require full-text access - references literature on harm reduction and continuum
+    of care models
+  - Additional citations require full-text access - references prior LEAD implementation research
+  doi: 10.1016/j.josat.2025.209751
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Resource scarcity in communities disrupts the continuum of care for substance use disorder
+  treatment, causing participants to disengage when their readiness for change cannot be matched with
+  available services
+quantitative_effects:
+  sample_size: 49
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Resource scarcity varied across the four North Carolina LEAD sites studied, with some
+    communities having complete absence of certain resources and services
+moderators:
+- name: participant_readiness_fluctuation
+  direction: strengthens
+  strength: moderate
+  description: When participants' readiness for change fluctuates and services are unavailable, disengagement
+    is more likely
+- name: staff_flexibility
+  direction: weakens
+  strength: moderate
+  description: LEAD programs and staff worked intensely and flexibly to increase access to community-based
+    resources, partially mitigating service gaps
+structural_competency:
+  equity_implications: This mechanism demonstrates how structural resource inequities create barriers
+    to sustained treatment engagement. The lack of community resources is a systemic issue reflecting
+    disinvestment in certain communities, not individual failure. Program staff must 'patch holes and
+    bridge gaps' to compensate for structural deficits
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.828319'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,43 @@
+id: family_history_cad_to_cad_risk
+name: Family History of Coronary Artery Disease → Risk of Developing Coronary Artery
+  Disease
+from_node:
+  node_id: family_history_cad
+  node_name: Family History of Coronary Artery Disease
+to_node:
+  node_id: cad_risk
+  node_name: Risk of Developing Coronary Artery Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Genetic inheritance from first-degree relatives transmits polymorphisms
+  affecting cardiovascular health'
+- 'Step 2: Inherited genetic factors influence cholesterol metabolism, blood pressure
+  regulation, and inflammatory responses'
+- 'Step 3: These biological processes accelerate coronary atherosclerosis formation
+  and progression'
+- 'Step 4: Increased atherosclerotic burden elevates risk of coronary artery disease
+  manifestation'
+evidence:
+  quality_rating: C
+  n_studies: null
+  primary_citation: 'Francesca Di Lenarda et al. 2024. "Coronary Artery Disease, Family
+    History, and Screening Perspectives: An Up-to-Date Review." *Journal of Clinical
+    Medicine*. https://doi.org/10.3390/jcm13195833'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.877320'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: age_of_cad_onset_in_relatives
+  direction: strengthens
+  strength: strong
+  description: Early age of CAD onset in relatives significantly increases relative
+    risk, suggesting stronger genetic contribution and earlier disease manifestation
+- name: degree_of_kinship
+  direction: strengthens
+  strength: moderate
+  description: First-degree relatives show stronger correlation with CAD risk compared
+    to more distant relatives, reflecting closer genetic similarity

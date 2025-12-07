@@ -1,0 +1,63 @@
+id: NEW:severe_neonatal_infection_to_neonatal_mortality
+name: Severe Neonatal Infection → Neonatal Mortality
+from_node:
+  node_id: NEW:severe_neonatal_infection
+  node_name: Severe Neonatal Infection
+to_node:
+  node_id: neonatal_mortality
+  node_name: Neonatal Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Neonates acquire severe infections (sepsis, pneumonia, meningitis) through
+  vertical transmission during birth, nosocomial exposure, or community-acquired pathogens
+  in the postnatal period'
+- 'Step 2: Immature neonatal immune systems are unable to mount adequate responses
+  to overwhelming bacterial, viral, or fungal pathogens'
+- 'Step 3: Systemic inflammatory response leads to multi-organ dysfunction, septic
+  shock, respiratory failure, and metabolic derangements'
+- 'Step 4: Without timely recognition and appropriate antimicrobial treatment, severe
+  infection progresses rapidly to death, with peak mortality occurring between days
+  2-7 of life'
+evidence:
+  quality_rating: A
+  n_studies: 51
+  primary_citation: 'J. Dol et al. 2022. Timing of neonatal mortality and severe morbidity
+    during the postnatal period: a systematic review. JBI Evidence Synthesis.'
+  supporting_citations: []
+description: Severe neonatal infection is a major biological pathway to neonatal mortality,
+  accounting for nearly half (48.1%) of all cause-specific deaths occurring between
+  days 2-7 of life. This systematic review of 51 studies encompassing over 6.7 million
+  live births and 47,551 neonatal deaths demonstrates that while birth asphyxia dominates
+  day 1 mortality, severe infection becomes the predominant cause of death in the
+  subsequent days of the first week. The neonatal immune system's immaturity renders
+  newborns highly susceptible to rapid disease progression from infection to sepsis
+  and death.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 48.1
+    type: proportion_percentage
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 6760731
+moderators:
+- name: timing_of_death
+  direction: strengthens
+  strength: strong
+  description: Severe infection accounts for the highest proportion of deaths between
+    days 2-7 (48.1% of cause-specific deaths), making it the leading cause of mortality
+    in the late early neonatal period
+- name: postnatal_care_access
+  direction: weakens
+  strength: strong
+  description: High-quality postnatal visits within the first week can enable early
+    detection and treatment of infections, reducing mortality risk
+- name: gestational_age
+  direction: strengthens
+  strength: moderate
+  description: While the review excluded studies solely on preterm infants, mixed
+    samples including preterm neonates showed higher vulnerability to infection-related
+    mortality

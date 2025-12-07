@@ -1,0 +1,236 @@
+# Node Schema Definition
+# All individual node YAML files must conform to this schema
+
+$schema: http://json-schema.org/draft-07/schema#
+type: object
+required:
+  - id
+  - name
+  - scale
+  - domain
+  - category
+  - stock
+  - geographic_variation
+  - data_quality
+  - description
+  - type
+
+properties:
+  id:
+    type: string
+    pattern: "^[a-z][a-z0-9_]*$"
+    description: "Unique snake_case identifier for the node"
+
+  name:
+    type: string
+    minLength: 3
+    maxLength: 100
+    description: "Human-readable display name"
+
+  scale:
+    type: integer
+    minimum: 1
+    maximum: 7
+    description: |
+      Structural hierarchy level (1-7 scale):
+      1 = Structural Determinants (federal/state policy level)
+      2 = Built Environment & Infrastructure (physical environment, regional structures)
+      3 = Institutional Infrastructure (organizations, service delivery)
+      4 = Individual/Household Conditions (lived experiences, exposures)
+      5 = Individual Behaviors & Psychosocial (health-seeking, adherence, coping)
+      6 = Intermediate Pathways (clinical measures, utilization patterns)
+      7 = Crisis Endpoints (acute health outcomes, mortality)
+
+  domain:
+    type: string
+    enum:
+      - Healthcare System
+      - Housing
+      - Economic Security
+      - Employment
+      - Criminal Justice
+      - Environmental
+      - Behavioral Health
+      - Education
+      - Transportation
+      - Food Systems
+      - Social Support
+      - Demographics
+      - Biological
+      - Policy
+    description: "Primary domain classification"
+
+  category:
+    type: string
+    enum:
+      - political
+      - economic
+      - social_environment
+      - built_environment
+      - healthcare_access
+      - behavioral
+      - biological
+    description: "Mechanism category for pathway classification"
+
+  # Stock & Measurement
+  stock:
+    type: object
+    required:
+      - value
+      - unit
+      - year
+      - source
+    properties:
+      value:
+        oneOf:
+          - type: number
+          - type: string
+            pattern: "^TBD$"
+        description: "Baseline numeric value or 'TBD' if unknown"
+      unit:
+        type: string
+        minLength: 1
+        description: "Specific unit of measurement with clear definition"
+      year:
+        type: integer
+        minimum: 2000
+        maximum: 2030
+        description: "Reference year for baseline value"
+      source:
+        type: string
+        description: "Primary data source for stock value"
+
+  # Geographic Variation
+  geographic_variation:
+    type: object
+    required:
+      - score
+      - level
+      - notes
+    properties:
+      score:
+        type: integer
+        minimum: 1
+        maximum: 5
+        description: |
+          Geographic variation score (North American context):
+          1 = Uniform nationally (federal standards)
+          2 = Minor state variation
+          3 = Moderate state/regional variation
+          4 = High county/local variation
+          5 = Hyperlocal variation (neighborhood-level)
+      level:
+        type: string
+        enum:
+          - federal
+          - state
+          - county
+          - local
+          - neighborhood
+        description: "Primary level of geographic variation"
+      notes:
+        type: string
+        description: "Brief explanation of variation drivers"
+
+  # Data Quality
+  data_quality:
+    type: object
+    required:
+      - availability
+      - frequency
+      - bias_notes
+      - primary_sources
+    properties:
+      availability:
+        type: string
+        enum:
+          - high
+          - moderate
+          - low
+        description: "Data availability rating"
+      frequency:
+        type: string
+        enum:
+          - real-time
+          - monthly
+          - quarterly
+          - annual
+          - biennial
+          - periodic
+          - one-time
+        description: "Data collection frequency"
+      bias_notes:
+        type: string
+        description: "Known biases, limitations, or data quality issues"
+      primary_sources:
+        type: array
+        minItems: 1
+        items:
+          type: object
+          required:
+            - name
+          properties:
+            name:
+              type: string
+              description: "Source name"
+            url:
+              type: string
+              format: uri
+              description: "URL to data source"
+            granularity:
+              type: string
+              enum:
+                - national
+                - state
+                - county
+                - tract
+                - block
+                - individual
+              description: "Geographic granularity of data"
+
+  # Description
+  description:
+    type: string
+    minLength: 50
+    description: |
+      Multi-line description including:
+      - What this node measures
+      - How it relates to health outcomes
+      - Key measurement considerations
+
+  # Type classification
+  type:
+    type: string
+    enum:
+      - Policy
+      - Rate
+      - Exposure
+      - Condition
+      - Outcome
+      - Behavior
+      - Biomarker
+      - Index
+      - Access/Availability
+      - Treatment
+      - Risk
+      - Population Measure
+      - Demographic
+      - Psychological
+    description: "Node type classification"
+
+  # Optional fields
+  aliases:
+    type: array
+    items:
+      type: string
+    description: "Alternative names or IDs for this node (for mapping)"
+
+  related_nodes:
+    type: array
+    items:
+      type: string
+    description: "IDs of related/connected nodes"
+
+  notes:
+    type: string
+    description: "Additional implementation or research notes"

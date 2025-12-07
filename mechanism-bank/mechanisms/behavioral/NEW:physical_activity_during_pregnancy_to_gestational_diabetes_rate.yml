@@ -1,0 +1,67 @@
+id: NEW:physical_activity_during_pregnancy_to_gestational_diabetes_rate
+name: Physical Activity During Pregnancy → Gestational Diabetes Rate
+from_node:
+  node_id: NEW:physical_activity_during_pregnancy
+  node_name: Physical Activity During Pregnancy
+to_node:
+  node_id: gestational_diabetes_rate
+  node_name: Gestational Diabetes Rate
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Physical activity during pregnancy increases glucose uptake by skeletal muscles through enhanced
+  insulin sensitivity'
+- 'Step 2: Regular exercise reduces adipose tissue accumulation and inflammatory markers associated with
+  insulin resistance'
+- 'Step 3: Improved glycemic control during early pregnancy prevents the metabolic dysregulation that
+  leads to gestational diabetes mellitus'
+- 'Step 4: Dose-response relationship shows progressive risk reduction with increased activity levels
+  measured in MET-hours/week'
+evidence:
+  quality_rating: A
+  n_studies: 35
+  primary_citation: 'Wanting Xie et al. 2024. "Physical activity during pregnancy and the risk of gestational
+    diabetes mellitus: a systematic review and dose–response meta-analysis." https://doi.org/10.1186/s12889-024-18131-7'
+  supporting_citations:
+  - Additional citations require full-text access - this meta-analysis included studies published before
+    April 25, 2023 from six databases
+  - Studies were assessed using Newcastle-Ottawa Scale for risk of bias
+  - World Cancer Research Fund criteria used for certainty of evidence assessment
+  doi: 10.1186/s12889-024-18131-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher levels of physical activity during pregnancy are associated with reduced risk of gestational
+  diabetes mellitus, with a 36% risk reduction comparing highest to lowest activity levels. The relationship
+  is dose-dependent and stronger during the first trimester.
+quantitative_effects:
+  effect_size:
+    value: 0.64
+    type: relative_risk
+    ci_lower: 0.53
+    ci_upper: 0.78
+moderators:
+- name: trimester_of_pregnancy
+  direction: strengthens
+  strength: strong
+  description: First trimester physical activity shows stronger protective effect (curvilinear relationship,
+    13% reduction at 10 MET-h/week) compared to second trimester (linear relationship, 1% reduction at
+    10 MET-h/week)
+- name: dose_of_physical_activity
+  direction: strengthens
+  strength: strong
+  description: Higher doses of physical activity (20-50 MET-h/week) contribute to further reductions in
+    GDM risk beyond the minimum recommended 10 MET-h/week
+structural_competency:
+  equity_implications: While this mechanism focuses on individual physical activity, structural factors
+    determine access to safe exercise environments during pregnancy, including availability of prenatal
+    exercise programs, workplace policies allowing physical activity breaks, neighborhood walkability,
+    access to parks and recreational facilities, and economic resources for gym memberships or exercise
+    equipment. Pregnant individuals in under-resourced communities may face barriers to achieving recommended
+    activity levels due to unsafe neighborhoods, lack of time due to work demands, or absence of culturally
+    appropriate prenatal fitness programs.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.335785'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

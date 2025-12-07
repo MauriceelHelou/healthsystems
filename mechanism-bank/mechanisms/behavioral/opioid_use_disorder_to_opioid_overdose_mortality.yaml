@@ -1,0 +1,59 @@
+id: opioid_use_disorder_to_opioid_overdose_mortality
+name: Opioid Use Disorder → Opioid Overdose Mortality
+from_node:
+  node_id: opioid_use_disorder
+  node_name: Opioid Use Disorder
+to_node:
+  node_id: opioid_overdose_mortality
+  node_name: Opioid Overdose Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Opioid use disorder involves compulsive opioid use despite harmful consequences,
+  leading to repeated exposure to opioids with unpredictable potency and purity'
+- 'Step 2: Chronic opioid use creates tolerance, requiring higher doses to achieve
+  effects while simultaneously narrowing the margin between effective and lethal doses'
+- 'Step 3: Periods of abstinence (incarceration, treatment dropout) reduce tolerance,
+  increasing overdose risk upon relapse at previously tolerated doses'
+- 'Step 4: Co-occurring risk factors in OUD populations (injection drug use, HIV infection,
+  polysubstance use) compound overdose vulnerability'
+- 'Step 5: Resulting overdose-specific crude mortality rate of 7.0 per 1000 person-years
+  among people with OUD'
+evidence:
+  quality_rating: A
+  n_studies: 101
+  primary_citation: 'A. Bahji et al. 2020. "Mortality Among People With Opioid Use
+    Disorder: A Systematic Review and Meta-analysis." Journal of addiction medicine.'
+  supporting_citations: []
+description: Opioid use disorder directly increases risk of opioid overdose mortality
+  through multiple behavioral and physiological pathways. Meta-analysis of 101 cohorts
+  demonstrates an overdose-specific crude mortality rate of 7.0 per 1000 person-years
+  among people with OUD. The relationship is strengthened by injection drug use, HIV
+  co-infection, and residence in low/middle-income countries where treatment access
+  may be limited.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 7.0
+    type: crude_mortality_rate_per_1000_person_years
+    ci_lower: 6.1
+    ci_upper: 8.0
+  p_value: null
+  sample_size: 229274
+moderators:
+- name: HIV status
+  direction: strengthens
+  strength: strong
+  description: Individuals with OUD and HIV have substantially higher overdose-specific
+    mortality
+- name: Injection drug use
+  direction: strengthens
+  strength: strong
+  description: People who inject drugs have higher overdose-specific mortality compared
+    to non-injection opioid users
+- name: Country income level
+  direction: strengthens
+  strength: moderate
+  description: Low and middle-income countries show higher overdose mortality rates,
+    likely reflecting reduced access to treatment and harm reduction services

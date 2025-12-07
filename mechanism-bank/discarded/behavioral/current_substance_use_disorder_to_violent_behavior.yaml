@@ -1,0 +1,45 @@
+id: current_substance_use_disorder_to_violent_behavior
+name: Current Substance Use Disorder → Violent Behavior
+from_node:
+  node_id: current_substance_use_disorder
+  node_name: Current Substance Use Disorder
+to_node:
+  node_id: violent_behavior
+  node_name: Violent Behavior
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Current substance use disorder in patients with severe mental disorders
+  increases neurobiological dysregulation affecting impulse control and emotion regulation'
+- 'Step 2: This dysregulation manifests as heightened irritability, negativism, and
+  verbal aggression'
+- 'Step 3: Verbal aggression and hostility escalate to physical violent behaviors
+  during acute substance use episodes'
+- 'Step 4: Over 1-year monitoring period, repeated substance use creates sustained
+  elevated risk for violent incidents'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'C. Cavalera et al. 2020. "Substance use disorders and violent
+    behaviour in patients with severe mental disorders: A prospective, multicentre
+    study." *Australian and New Zealand journal of psychiatry (Print)*. https://doi.org/10.1177/0004867420963732'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.111379'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: mental_disorder_severity
+  direction: strengthens
+  strength: moderate
+  description: Study focused on severe mental disorders; mechanism may be stronger
+    in patients with more severe psychiatric symptoms
+- name: residential_vs_outpatient_status
+  direction: strengthens
+  strength: weak
+  description: Study included both residential (n=134) and outpatient (n=244) patients;
+    residential setting may modify substance access and monitoring
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/behavioral/current_substance_use_disorder_to_violent_behavior.yaml
+_category: behavioral

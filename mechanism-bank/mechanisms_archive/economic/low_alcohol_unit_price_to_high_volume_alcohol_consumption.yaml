@@ -1,0 +1,41 @@
+id: low_alcohol_unit_price_to_high_volume_alcohol_consumption
+name: Low Alcohol Unit Price (Cask Wine) → High Volume Alcohol Consumption
+from_node:
+  node_id: low_alcohol_unit_price
+  node_name: Low Alcohol Unit Price (Cask Wine)
+to_node:
+  node_id: high_volume_alcohol_consumption
+  node_name: High Volume Alcohol Consumption
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Cask wine offers lowest price per standard drink ($0.54) compared to other
+  alcohol types'
+- 'Step 2: Economic accessibility enables purchase of larger quantities of alcohol
+  for same expenditure'
+- 'Step 3: Lower unit costs reduce economic barriers to high-volume consumption'
+- 'Step 4: Consumers of cask wine consume significantly greater quantity (7.8 standard
+  drinks per day) compared to bottled wine drinkers'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: 'Alexandra Torney et al. 2023. "Cask wine: Describing drinking
+    patterns associated with Australia''s cheapest alcohol.." *Drug and alcohol review*.
+    https://doi.org/10.1111/dar.13684'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.158888'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: beverage_format
+  direction: strengthens
+  strength: strong
+  description: Cask format specifically enables bulk purchase at lowest unit price,
+    with all cask purchases under $1.30 per standard drink
+- name: drinking_location
+  direction: strengthens
+  strength: moderate
+  description: Cask wine consumed almost entirely at home, enabling private high-volume
+    consumption patterns

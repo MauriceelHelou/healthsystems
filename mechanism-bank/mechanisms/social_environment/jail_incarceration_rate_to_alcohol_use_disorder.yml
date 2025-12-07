@@ -1,0 +1,50 @@
+id: jail_incarceration_rate_to_alcohol_use_disorder
+name: Jail Incarceration Rate → Alcohol Use Disorder
+from_node:
+  node_id: jail_incarceration_rate
+  node_name: Jail Incarceration Rate
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Police custody represents entry point into criminal justice system with 64-88% AUD prevalence'
+- 'Step 2: Short-term detention creates acute stress and withdrawal risks without adequate medical support'
+- 'Step 3: Limited screening and intervention capacity in custody settings misses treatment opportunities'
+- 'Step 4: Cycling through custody without treatment perpetuates alcohol use patterns'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: Dorothy Newbury-Birch et al. 2016. "A rapid systematic review of what we know about
+    alcohol use disorders and brief interventions in the criminal justice system.." https://doi.org/10.1108/IJPH-08-2015-0024
+  supporting_citations:
+  - UK prevalence studies in police custody settings 2000-2014
+  - Studies using validated AUDIT screening tool
+  - Additional citations require full-text access
+  doi: 10.1108/IJPH-08-2015-0024
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: In UK police custody settings, 64-88% of adults screened positive for alcohol use disorder
+  using validated screening tools. This represents the highest concentration of AUD at the entry point
+  to the criminal justice system.
+quantitative_effects:
+  effect_size:
+    value: 88.0
+    type: percentage_change
+    ci_lower: 64.0
+    ci_upper: 88.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Prevalence data specific to UK police custody settings
+structural_competency:
+  equity_implications: Police custody represents a critical structural intervention point where high AUD
+    prevalence could be addressed through systematic screening and brief intervention. The failure to
+    implement effective interventions at this stage represents a missed public health opportunity within
+    the criminal justice infrastructure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.541003'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

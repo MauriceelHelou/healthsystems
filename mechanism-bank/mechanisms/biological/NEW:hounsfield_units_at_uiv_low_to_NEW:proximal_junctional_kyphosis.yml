@@ -1,0 +1,55 @@
+id: NEW:hounsfield_units_at_uiv_low_to_NEW:proximal_junctional_kyphosis
+name: Low Hounsfield Units at Upper Instrumented Vertebra → Proximal Junctional Kyphosis
+from_node:
+  node_id: NEW:hounsfield_units_at_uiv_low
+  node_name: Low Hounsfield Units at Upper Instrumented Vertebra
+to_node:
+  node_id: NEW:proximal_junctional_kyphosis
+  node_name: Proximal Junctional Kyphosis
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Low Hounsfield units (HU) on CT imaging at the upper instrumented vertebra indicate poor local
+  bone density at the critical surgical junction'
+- 'Step 2: Reduced bone density at the UIV compromises the bone-implant interface and fixation strength'
+- 'Step 3: Surgical instrumentation creates a transition zone with concentrated mechanical stress at the
+  proximal junction'
+- 'Step 4: Inadequate bone quality leads to instrumentation failure, vertebral fracture, or ligamentous
+  failure at the junction'
+- 'Step 5: Progressive angular kyphotic deformity develops at the proximal junction'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: 'Jeffrey W. Chen et al. 2023. "The association between bone mineral density and proximal
+    junctional kyphosis in adult spinal deformity: a systematic review and meta-analysis.." https://doi.org/10.3171/2023.2.SPINE221101'
+  supporting_citations:
+  - Studies measuring Hounsfield units in PJK cohorts (n=101 PJK, n=156 non-PJK)
+  - Additional citations require full-text access
+  doi: 10.3171/2023.2.SPINE221101
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patients who developed proximal junctional kyphosis had significantly lower Hounsfield units
+  at the upper instrumented vertebra compared to those who did not develop PJK, with a mean difference
+  of -32.35 HU. This site-specific measure of bone density showed lower heterogeneity (I²=28.7%) than
+  the T-score analysis, suggesting it may be a more consistent predictor.
+quantitative_effects:
+  effect_size:
+    value: -32.35
+    type: standardized_mean_difference
+    ci_lower: -46.05
+    ci_upper: -18.65
+  p_value: 0.001
+  sample_size: 257
+  heterogeneity_i_squared: 28.7
+structural_competency:
+  equity_implications: Local bone density at surgical sites reflects cumulative exposure to factors affecting
+    bone health throughout the lifespan. Structural factors including nutritional access, occupational
+    physical demands, access to osteoporosis screening and treatment, and environmental exposures all
+    contribute to bone quality. Healthcare system factors such as access to preoperative bone density
+    optimization may also influence outcomes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.363002'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

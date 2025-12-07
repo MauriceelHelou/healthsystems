@@ -1,0 +1,52 @@
+id: alcohol_use_disorder_to_NEW:alcoholic_liver_cirrhosis_risk
+name: Alcohol Use Disorder → Alcoholic Liver Cirrhosis Risk
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:alcoholic_liver_cirrhosis_risk
+  node_name: Alcoholic Liver Cirrhosis Risk
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption characteristic of alcohol use disorder leads
+  to repeated hepatotoxic exposure'
+- 'Step 2: Alcohol metabolism in the liver produces acetaldehyde and reactive oxygen
+  species, causing oxidative stress and hepatocyte damage'
+- 'Step 3: Sustained liver injury triggers inflammatory responses and activation of
+  hepatic stellate cells'
+- 'Step 4: Progressive fibrosis develops as collagen deposition replaces functional
+  liver tissue'
+- 'Step 5: Continued alcohol exposure with genetic susceptibility factors (e.g., PNPLA3
+  variants) accelerates progression to cirrhosis'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: 'A-J Chamorro et al. 2014. Systematic review with meta-analysis:
+    the I148M variant of patatin-like phospholipase domain-containing 3 gene (PNPLA3)
+    is significantly associated with alcoholic liver cirrhosis. Alimentary pharmacology
+    & therapeutics.'
+  supporting_citations: []
+description: Alcohol use disorder significantly increases the risk of alcoholic liver
+  cirrhosis through chronic hepatotoxic exposure. This meta-analysis of 11 studies
+  (3,495 ALD patients including 2,087 with cirrhosis, and 5,038 controls) demonstrates
+  that chronic alcohol consumption leads to progressive liver damage. The relationship
+  is modified by genetic factors, particularly the PNPLA3 rs738409 variant, which
+  substantially increases cirrhosis susceptibility in alcohol users.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 4.3
+    type: odds_ratio
+    ci_lower: 3.25
+    ci_upper: 5.69
+  p_value: 1.0e-05
+  sample_size: 8533
+moderators:
+- name: PNPLA3 rs738409 genetic variant
+  direction: strengthens
+  strength: strong
+  description: Carriers of the G allele (GG genotype) have over 4-fold increased risk
+    of alcoholic liver cirrhosis compared to CC genotype. Heterozygotes (GC) have
+    approximately 2-fold increased risk, suggesting an additive genetic model.

@@ -1,0 +1,48 @@
+id: liver_transplantation_access_to_aclf_survival_rate
+name: Access to Urgent Liver Transplantation → ACLF Patient Survival Rate
+from_node:
+  node_id: liver_transplantation_access
+  node_name: Access to Urgent Liver Transplantation
+to_node:
+  node_id: aclf_survival_rate
+  node_name: ACLF Patient Survival Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Urgent liver transplantation provides functional hepatic capacity to replace
+  failed cirrhotic liver'
+- 'Step 2: Transplantation interrupts the cascade of organ failures associated with
+  ACLF syndrome'
+- 'Step 3: Post-transplant survival rates have improved to >83% at 1-year in multiple
+  centers'
+- 'Step 4: Increased transplant access directly reduces the >75% mortality rate seen
+  in untransplanted ACLF-3 patients'
+evidence:
+  quality_rating: B
+  n_studies: 2
+  primary_citation: Sophie-Caroline Sacleux and Faouzi Saliba 2023. "How to Optimize
+    the Results of Liver Transplantation for Acute-on-Chronic Liver Failure.." *Life
+    (Basel, Switzerland)*. https://doi.org/10.3390/life13051152
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.623528'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: optimal_transplant_timing
+  direction: strengthens
+  strength: strong
+  description: Optimal timing including infection control, hemodynamic stability,
+    low oxygen and vasopressor requirements is associated with excellent post-transplant
+    survival
+- name: patient_selection_quality
+  direction: strengthens
+  strength: strong
+  description: Careful selection excluding major comorbidities (older age, addiction
+    issues, severe malnutrition) improves post-transplant survival rates
+- name: aclf_grade_severity
+  direction: weakens
+  strength: moderate
+  description: ACLF-3 patients with ≥3 organ failures represent the most challenging
+    cases with highest baseline mortality

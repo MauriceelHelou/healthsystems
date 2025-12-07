@@ -1,0 +1,61 @@
+id: NEW:medication_dose_adjustment_telemedicine_to_NEW:glycemic_control_hba1c
+name: Medication Dose Adjustment via Telemedicine → Glycemic Control (HbA1c Levels)
+from_node:
+  node_id: NEW:medication_dose_adjustment_telemedicine
+  node_name: Medication Dose Adjustment via Telemedicine
+to_node:
+  node_id: NEW:glycemic_control_hba1c
+  node_name: Glycemic Control (HbA1c Levels)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Telemedicine platforms enable remote communication between healthcare providers
+  and patients with Type 1 diabetes mellitus, allowing for real-time data sharing
+  and consultation'
+- 'Step 2: Providers use transmitted glucose monitoring data and clinical information
+  to make timely medication dose adjustments (insulin titration) without requiring
+  in-person visits'
+- 'Step 3: More frequent and responsive medication adjustments optimize insulin dosing,
+  reducing periods of hyperglycemia and improving overall glycemic control'
+- 'Step 4: Improved glycemic control through optimized medication management results
+  in lower HbA1c levels over time'
+evidence:
+  quality_rating: A
+  n_studies: 20
+  primary_citation: 'Kun Zhang et al. 2023. Telemedicine in Improving Glycemic Control
+    Among Children and Adolescents With Type 1 Diabetes Mellitus: Systematic Review
+    and Meta-Analysis. Journal of Medical Internet Research.'
+  supporting_citations: []
+description: Telemedicine-enabled medication dose adjustment significantly reduces
+  HbA1c levels in children and adolescents with Type 1 diabetes mellitus. A meta-analysis
+  of 20 RCTs found that telemedicine interventions with medication dose adjustment
+  capabilities reduced HbA1c by 0.25 percentage points compared to usual care. This
+  effect is driven by the ability of healthcare providers to make timely insulin dose
+  modifications based on remotely transmitted glucose data, enabling more responsive
+  and personalized diabetes management.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.25
+    type: mean_difference
+    ci_lower: -0.37
+    ci_upper: -0.12
+  p_value: 0.001
+  sample_size: 1704
+moderators:
+- name: Age group
+  direction: strengthens
+  strength: moderate
+  description: Effect of telemedicine on HbA1c appeared greater in studies involving
+    children (MD -0.41) compared to adolescents
+- name: Study duration
+  direction: strengthens
+  strength: moderate
+  description: Studies lasting <6 months showed greater effect (MD -0.32) compared
+    to longer duration studies
+- name: Communication modality
+  direction: strengthens
+  strength: strong
+  description: Studies where providers used smartphone apps to communicate with patients
+    showed greater effect (MD -0.37)

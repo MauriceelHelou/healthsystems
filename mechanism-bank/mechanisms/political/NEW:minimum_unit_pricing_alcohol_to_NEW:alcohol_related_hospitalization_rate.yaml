@@ -1,0 +1,61 @@
+id: NEW:minimum_unit_pricing_alcohol_to_NEW:alcohol_related_hospitalization_rate
+name: Minimum Unit Pricing for Alcohol → Alcohol-Related Hospitalization Rate
+from_node:
+  node_id: NEW:minimum_unit_pricing_alcohol
+  node_name: Minimum Unit Pricing for Alcohol
+to_node:
+  node_id: NEW:alcohol_related_hospitalization_rate
+  node_name: Alcohol-Related Hospitalization Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Minimum unit pricing (MUP) establishes a legally required floor price per
+  unit of alcohol, increasing the cost of cheap, high-strength alcoholic beverages'
+- 'Step 2: Price increases disproportionately affect heavy drinkers who typically
+  consume low-cost, high-alcohol products, reducing their overall alcohol consumption'
+- 'Step 3: Reduced alcohol consumption leads to decreased acute alcohol-related health
+  events (e.g., intoxication, injuries) with immediate effects on hospital admissions'
+- 'Step 4: Over 2-3 years, reduced chronic alcohol consumption decreases the incidence
+  and progression of alcohol-related diseases (e.g., liver disease)'
+- 'Step 5: Both acute and chronic reductions result in fewer alcohol-related hospital
+  admissions, with acute admissions reducing by 2-9% immediately and chronic admissions
+  reducing by 4-9% after a lag period'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'T. Maharaj et al. 2023. "Impact of minimum unit pricing on alcohol-related
+    hospital outcomes: systematic review." BMJ Open. https://doi.org/10.1136/bmjopen-2022-065220'
+  supporting_citations: []
+description: Minimum unit pricing for alcohol reduces alcohol-related hospitalizations
+  by establishing a price floor that increases costs of cheap, high-strength alcohol
+  products. This systematic review of 22 studies (6 natural experiments and 16 modelling
+  studies) found a moderate-to-strong causal link using Bradford Hill Criteria. Real-world
+  studies showed immediate 2-9% reductions in acute alcohol-related admissions and
+  4-9% annual reductions in chronic admissions after a 2-3 year lag. Modelling studies
+  estimated 3-10% annual reductions in alcohol-related admissions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -5.5
+    type: percent_reduction
+    ci_lower: -2.0
+    ci_upper: -10.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: Socioeconomic deprivation
+  direction: strengthens
+  strength: strong
+  description: MUP targets the heaviest consumers from the most deprived groups who
+    are at greatest risk of alcohol harms, potentially reducing health inequalities
+- name: Type of alcohol-related condition
+  direction: strengthens
+  strength: moderate
+  description: Acute alcohol-related admissions respond immediately (2-9% reduction)
+    while chronic conditions show lagged effects (2-3 years) with 4-9% annual reductions
+- name: Time since implementation
+  direction: strengthens
+  strength: moderate
+  description: Effects on chronic conditions emerge and strengthen over 2-3 years
+    post-implementation

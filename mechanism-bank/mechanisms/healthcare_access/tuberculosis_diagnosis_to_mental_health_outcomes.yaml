@@ -1,0 +1,52 @@
+id: tuberculosis_incidence_to_mental_healthcare_access
+name: Tuberculosis Incidence → Mental Healthcare Access
+from_node:
+  node_id: tuberculosis_incidence
+  node_name: Tuberculosis Incidence
+  _original_id: tuberculosis_diagnosis
+to_node:
+  node_id: mental_healthcare_access
+  node_name: Mental Healthcare Access
+  _original_id: mental_health_outcomes
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Initial tuberculosis diagnosis creates substantial socio-psychological
+  stress for patients'
+- 'Step 2: Stigma associated with TB diagnosis leads to social isolation and discrimination'
+- 'Step 3: Concerns about infectiousness, treatment burden, and economic impacts compound
+  psychological distress'
+- 'Step 4: Cumulative stressors precipitate or worsen common mental disorders including
+  depression and anxiety'
+evidence:
+  quality_rating: A
+  n_studies: 100
+  primary_citation: 'André Janse van Rensburg et al. 2020. "Comorbidities between
+    tuberculosis and common mental disorders: a scoping review of epidemiological
+    patterns and person-centred care interventions from low-to-middle income and BRICS
+    countries." *Infectious Diseases of Poverty*. https://doi.org/10.1186/s40249-019-0619-4'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.516156'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: gender
+  direction: strengthens
+  strength: strong
+  description: Women in general had worse mental health outcomes following tuberculosis
+    diagnosis
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Older age was associated with more pronounced tuberculosis and mental
+    disorder comorbidity
+- name: mental_health_history
+  direction: strengthens
+  strength: strong
+  description: History of mental illness was associated with pronounced tuberculosis
+    and mental disorder comorbidity
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/tuberculosis_diagnosis_to_mental_health_outcomes.yaml
+_category: healthcare_access

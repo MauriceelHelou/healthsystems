@@ -1,0 +1,54 @@
+id: NEW:childhood_socioeconomic_status_to_self_rated_health_fair_poor
+name: Childhood Socioeconomic Status → Self-Rated Health Fair/Poor
+from_node:
+  node_id: NEW:childhood_socioeconomic_status
+  node_name: Childhood Socioeconomic Status
+to_node:
+  node_id: self_rated_health_fair_poor
+  node_name: Self-Rated Health Fair/Poor
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Unfavorable childhood socioeconomic conditions limit access to adequate nutrition, healthcare,
+  and safe living environments during critical developmental periods'
+- 'Step 2: Early life deprivation creates biological embedding through stress pathways and developmental
+  constraints'
+- 'Step 3: Cumulative disadvantage across the life course compounds early disadvantage through reduced
+  educational and economic opportunities'
+- 'Step 4: Limited resources in adulthood perpetuate poor health behaviors and restricted healthcare access'
+- 'Step 5: Results in poorer self-rated health outcomes in middle and older age'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Tao-Jie Zhou et al. 2022. "Childhood Socioeconomic Status and Late-Adulthood Health
+    Outcomes in China: A Life-Course Perspective." https://doi.org/10.1007/s12061-022-09489-5'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references CHARLS nationally representative
+    survey
+  - Life-course perspective literature referenced in study design
+  - Western country SES-health studies referenced as comparative context
+  doi: 10.1007/s12061-022-09489-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Unfavorable socioeconomic status in childhood is correlated with poorer self-rated health
+  outcomes later in life, operating through life-course accumulation of disadvantage
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focuses on China specifically, noting that the SES-health relationship is 'relatively
+    underexplored' in China compared to Western countries, suggesting geographic variation in these mechanisms
+moderators:
+- name: adulthood_socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Current SES mediates the relationship between childhood SES and health outcomes; interaction
+    effects found for disability-related outcomes
+structural_competency:
+  equity_implications: This mechanism traces health inequities to structural economic conditions in childhood
+    rather than individual choices. The life-course perspective emphasizes how early structural disadvantage
+    becomes embedded and compounds over time, highlighting the need for early intervention policies.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.637462'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

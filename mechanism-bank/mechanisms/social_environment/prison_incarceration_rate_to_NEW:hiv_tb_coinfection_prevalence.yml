@@ -1,0 +1,57 @@
+id: prison_incarceration_rate_to_NEW:hiv_tb_coinfection_prevalence
+name: Prison Incarceration Rate → HIV-TB Co-infection Prevalence
+from_node:
+  node_id: prison_incarceration_rate
+  node_name: Prison Incarceration Rate
+to_node:
+  node_id: NEW:hiv_tb_coinfection_prevalence
+  node_name: HIV-TB Co-infection Prevalence
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: High incarceration rates concentrate individuals with elevated HIV and TB risk factors'
+- 'Step 2: Prison overcrowding reduces per-person living space and ventilation adequacy'
+- 'Step 3: Close congregate living facilitates airborne TB transmission among immunocompromised individuals'
+- 'Step 4: Limited prison healthcare infrastructure delays diagnosis and treatment of co-infections'
+- 'Step 5: Elevated co-infection rates result from convergence of structural vulnerabilities'
+evidence:
+  quality_rating: A
+  n_studies: 46
+  primary_citation: 'Chantal L Edge et al. 2016. "Prisoners co-infected with tuberculosis and HIV: a systematic
+    review.." https://doi.org/10.7448/IAS.19.1.20960'
+  supporting_citations:
+  - Studies documenting prevalence ranging from 2.4% to 73.1% across prison settings
+  - Papers from multiple countries documenting geographic variation in co-infection burden
+  - Additional citations require full-text access for specific study identification
+  doi: 10.7448/IAS.19.1.20960
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Prison settings create structural conditions that amplify HIV-TB co-infection through concentration
+  of high-risk populations, overcrowding, and inadequate healthcare. This systematic review documents
+  wide variation in co-infection prevalence (2.4-73.1%) across prison populations globally.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Prevalence estimates varied dramatically (2.4% to 73.1%) reflecting differences in
+    background disease burden, prison conditions, and healthcare systems across countries
+moderators:
+- name: prison_healthcare_quality
+  direction: weakens
+  strength: moderate
+  description: Better prison healthcare systems may reduce co-infection burden through screening and treatment
+- name: general_population_hiv_prevalence
+  direction: strengthens
+  strength: strong
+  description: Higher community HIV prevalence increases baseline risk among those entering prison
+structural_competency:
+  equity_implications: This mechanism explicitly traces health outcomes to structural factors including
+    criminal justice policies, prison infrastructure, and healthcare system capacity. The review notes
+    that few studies compare prison rates to general population rates, obscuring the degree to which incarceration
+    itself produces excess co-infection burden. This represents a clear example of how structural factors
+    (mass incarceration, underfunded prison health systems) rather than individual behaviors drive disease
+    patterns in vulnerable populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.712962'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

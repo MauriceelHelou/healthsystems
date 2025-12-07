@@ -1,0 +1,58 @@
+id: NEW:affective_disorder_lifetime_to_all_cause_mortality_rate
+name: Lifetime Affective Disorder → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:affective_disorder_lifetime
+  node_name: Lifetime Affective Disorder
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Individuals with lifetime affective disorders in substance use treatment
+  populations may have greater treatment engagement and help-seeking behavior due
+  to their psychiatric symptomatology'
+- 'Step 2: Affective disorder diagnosis may serve as a marker for individuals who
+  are more likely to receive comprehensive mental health and medical care, including
+  regular monitoring'
+- 'Step 3: Treatment for affective disorders (antidepressants, mood stabilizers, psychotherapy)
+  may provide protective effects against impulsive behaviors and high-risk substance
+  use patterns'
+- 'Step 4: The reduced mortality risk (HR 0.58) suggests that affective disorder presence
+  may indicate a population subgroup with different risk profiles or better treatment
+  responsiveness compared to those without affective disorders'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Arne Jan Hjemsæter et al. 2019. Mortality, cause of death and
+    risk factors in patients with alcohol use disorder alone or poly-substance use
+    disorders: a 19-year prospective cohort study. BMC Psychiatry.'
+  supporting_citations: []
+description: 'In a 19-year prospective cohort study of 291 patients with substance
+  use disorders, having a lifetime affective disorder at baseline was associated with
+  a significantly lower risk of death (HR 0.58, 95% CI: 0.37-0.91). This counterintuitive
+  finding suggests that in this high-risk population, affective disorder diagnosis
+  may serve as a marker for treatment engagement, healthcare access, or represent
+  a subgroup with different behavioral risk profiles compared to those without affective
+  disorders.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.58
+    type: hazard_ratio
+    ci_lower: 0.37
+    ci_upper: 0.91
+  p_value: null
+  sample_size: 291
+moderators:
+- name: sex
+  direction: varies
+  strength: moderate
+  description: Age-mortality association differed significantly between men and women
+    (p=0.011), with older age increasing death risk more strongly among men
+- name: substance_use_pattern
+  direction: varies
+  strength: moderate
+  description: Patients with alcohol use disorder alone vs poly-substance use disorders
+    showed different cause-of-death patterns and age-mortality relationships (p=0.041)

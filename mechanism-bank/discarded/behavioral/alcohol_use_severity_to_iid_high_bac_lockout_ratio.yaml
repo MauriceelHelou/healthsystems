@@ -1,0 +1,40 @@
+id: alcohol_use_severity_to_iid_high_bac_lockout_ratio
+name: Alcohol Use Severity → High BAC Lockout Ratio on Ignition Interlock Device
+from_node:
+  node_id: alcohol_use_severity
+  node_name: Alcohol Use Severity
+to_node:
+  node_id: iid_high_bac_lockout_ratio
+  node_name: High BAC Lockout Ratio on Ignition Interlock Device
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Higher severity of alcohol use patterns results in more frequent drinking
+  episodes and higher blood alcohol concentrations'
+- 'Step 2: Individuals with severe alcohol use have greater difficulty maintaining
+  abstinence or low-level consumption before driving'
+- 'Step 3: Increased frequency and intensity of drinking leads to more attempts to
+  start vehicle with BAC above interlock threshold (.025)'
+- 'Step 4: Higher number of high BAC readings (>.08) relative to clean blows (≤.025)
+  results in elevated lockout ratios'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Michael Scherer et al. 2022. "Examining the role of trauma in
+    alcohol interlock performance: A structural pathway analysis.." *Traffic injury
+    prevention*. https://doi.org/10.1080/15389588.2022.2046270'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.486187'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: prior_dui_history
+  direction: strengthens
+  strength: moderate
+  description: Individuals with prior DUI history may have more severe alcohol use
+    patterns that increase lockout ratios
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/behavioral/alcohol_use_severity_to_iid_high_bac_lockout_ratio.yaml
+_category: behavioral

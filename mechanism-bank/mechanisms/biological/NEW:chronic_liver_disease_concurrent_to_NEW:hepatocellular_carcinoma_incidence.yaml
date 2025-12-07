@@ -1,0 +1,61 @@
+id: NEW:chronic_liver_disease_concurrent_to_NEW:hepatocellular_carcinoma_incidence
+name: Concurrent Chronic Liver Disease (HBV, HCV, Alcohol) → Hepatocellular Carcinoma
+  Incidence
+from_node:
+  node_id: NEW:chronic_liver_disease_concurrent
+  node_name: Concurrent Chronic Liver Disease (HBV, HCV, Alcohol)
+to_node:
+  node_id: NEW:hepatocellular_carcinoma_incidence
+  node_name: Hepatocellular Carcinoma Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic liver diseases (HBV, HCV, alcohol-related liver disease) cause
+  persistent hepatic inflammation and hepatocyte injury'
+- 'Step 2: When metabolic dysfunction-associated fatty liver disease (MAFLD) coexists
+  with these conditions (mixed-MAFLD), additive or synergistic liver damage occurs
+  through combined inflammatory, metabolic, and viral/toxic pathways'
+- 'Step 3: The combined insults accelerate fibrogenesis and progression to cirrhosis,
+  with mixed-MAFLD HCC showing significantly higher likelihood of cirrhosis compared
+  to single-etiology MAFLD'
+- 'Step 4: Cirrhotic liver provides the permissive environment for hepatocarcinogenesis
+  through altered cell proliferation, oxidative stress, and impaired tumor surveillance'
+- 'Step 5: The synergistic hepatotoxic effects result in high HCC incidence, with
+  MAFLD prevalence reaching 40% in HBV-related, 54% in HCV-related, and 64% in alcohol-related
+  HCC cases'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Harry Crane et al. 2024. Global prevalence of metabolic dysfunction-associated
+    fatty liver disease-related hepatocellular carcinoma: A systematic review and
+    meta-analysis. Clinical and Molecular Hepatology.'
+  supporting_citations: []
+description: Concurrent chronic liver diseases (HBV, HCV, alcohol-related liver disease)
+  substantially increase hepatocellular carcinoma incidence, particularly when combined
+  with metabolic dysfunction-associated fatty liver disease. This systematic review
+  of 22 studies (56,565 HCC patients) found that nearly half of all HCC cases had
+  MAFLD as a contributing factor, with mixed-etiology cases being more common than
+  single-etiology MAFLD-HCC. The synergistic effect of concurrent liver diseases accelerates
+  progression to cirrhosis and subsequent hepatocarcinogenesis.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 48.7
+    type: prevalence_percentage
+    ci_lower: 34.5
+    ci_upper: 63.0
+  p_value: null
+  sample_size: 56565
+moderators:
+- name: Type of concurrent liver disease
+  direction: strengthens
+  strength: strong
+  description: 'Mixed-MAFLD prevalence varies by etiology: alcohol-related (64.3%)
+    > HCV (54.1%) > HBV (40.0%), suggesting alcohol has strongest synergistic effect
+    with metabolic dysfunction'
+- name: Cirrhosis status
+  direction: strengthens
+  strength: strong
+  description: Mixed-MAFLD HCC had significantly higher likelihood of cirrhosis compared
+    to single-MAFLD HCC, indicating cirrhosis mediates the pathway to HCC

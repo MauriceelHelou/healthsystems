@@ -1,0 +1,55 @@
+id: NEW:smokeless_tobacco_snuff_use_to_NEW:stomach_cancer_risk
+name: Smokeless Tobacco (Snuff) Use → Stomach Cancer Risk
+from_node:
+  node_id: NEW:smokeless_tobacco_snuff_use
+  node_name: Smokeless Tobacco (Snuff) Use
+to_node:
+  node_id: NEW:stomach_cancer_risk
+  node_name: Stomach Cancer Risk
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Smokeless tobacco use is associated with altered oral and gastric microbiome'
+- 'Step 2: Potential antimicrobial effects of tobacco alkaloids may affect H. pylori colonization'
+- 'Step 3: Reduced gastric carcinogenic pathway activation'
+- 'Step 4: Paradoxically lower stomach cancer risk observed'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Melitah Motlhale et al. 2025. "Smokeless tobacco (snuff) and site-specific cancer
+    risks in adult Black South African women: Findings from the Johannesburg Cancer Study.." https://doi.org/10.1002/ijc.35293'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Studies on tobacco effects on gastric microbiome
+  - H. pylori and gastric cancer literature
+  doi: 10.1002/ijc.35293
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Unexpectedly, smokeless tobacco use was associated with 40% lower risk of stomach cancer.
+  This counterintuitive finding requires further research and may reflect unmeasured confounding or biological
+  mechanisms not yet understood.
+quantitative_effects:
+  effect_size:
+    value: 0.6
+    type: odds_ratio
+    ci_lower: 0.37
+    ci_upper: 0.99
+  sample_size: 15336
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Unexpected inverse association requiring further investigation; may be specific to
+    this population
+structural_competency:
+  equity_implications: This inverse association requires cautious interpretation and does not justify
+    SLT use. The finding may reflect selection bias, survival effects, or unmeasured confounders in this
+    case-control design. Structural factors that influence both SLT use and stomach cancer risk (dietary
+    patterns, H. pylori prevalence, healthcare access) should be explored.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.676685'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

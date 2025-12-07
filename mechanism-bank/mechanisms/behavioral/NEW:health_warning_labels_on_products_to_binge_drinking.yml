@@ -1,0 +1,62 @@
+id: NEW:health_warning_labels_on_products_to_binge_drinking
+name: Health Warning Labels on Food and Alcohol Products → Binge Drinking
+from_node:
+  node_id: NEW:health_warning_labels_on_products
+  node_name: Health Warning Labels on Food and Alcohol Products
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Health warning labels are mandated on alcoholic beverage products through policy'
+- 'Step 2: Labels communicate specific health risks of harmful alcohol consumption at point of purchase'
+- 'Step 3: Repeated exposure to warnings increases population awareness of alcohol-related harms'
+- 'Step 4: Reduced selection of alcohol products decreases availability for consumption'
+- 'Step 5: Population-level reduction in harmful drinking patterns including binge drinking'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Natasha Clarke et al. 2019. "Impact of Image-and-text and Text-only Health Warning
+    Labels on Selection and Consumption of Food and Alcohol Products: Systematic Review with Meta-analysis."
+    https://doi.org/10.31234/osf.io/jt52m'
+  supporting_citations:
+  - Review included 3 studies specifically examining alcohol products
+  - Evidence from tobacco control demonstrates warning labels reduce consumption
+  - Only 1 study measured actual consumption as outcome; urgent need for field studies
+  doi: 10.31234/osf.io/jt52m
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: Unexpected error: list index out of range'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Health warning labels on alcohol products have significant potential to reduce harmful alcohol
+  consumption patterns, based on evidence showing 26% reduction in product selection. While direct consumption
+  evidence is limited, the mechanism parallels established tobacco control evidence.
+quantitative_effects:
+  effect_size:
+    value: 0.74
+    type: relative_risk
+    ci_lower: 0.68
+    ci_upper: 0.8
+  sample_size: 12635
+moderators:
+- name: outcome_type
+  direction: weakens
+  strength: moderate
+  description: Evidence much stronger for selection than consumption outcomes; only 1 of 14 studies measured
+    actual consumption
+structural_competency:
+  equity_implications: This mechanism represents a structural policy approach to reducing alcohol-related
+    harm that operates through environmental modification rather than individual-level education or counseling.
+    Warning labels function as a universal intervention that reaches all consumers at point of purchase,
+    potentially reducing disparities in access to health information. However, effectiveness may vary
+    by literacy, language access, and label comprehension. Policy implementation should ensure labels
+    are culturally appropriate and accessible across diverse populations to avoid exacerbating existing
+    inequities in alcohol-related morbidity.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.382644'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

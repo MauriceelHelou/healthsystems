@@ -1,0 +1,67 @@
+id: alcohol_use_disorder_to_NEW:resting_state_functional_network_connectivity_alterations
+name: Alcohol Use Disorder → Resting State Functional Network Connectivity Alterations
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:resting_state_functional_network_connectivity_alterations
+  node_name: Resting State Functional Network Connectivity Alterations
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol exposure leads to neurotoxic effects on brain tissue and neural circuits'
+- 'Step 2: Alterations occur in functional connectivity between visual, sensorimotor, executive control,
+  reward, and salience networks'
+- 'Step 3: These connectivity changes are detectable through resting state functional magnetic resonance
+  imaging (rsFNC)'
+- 'Step 4: Machine learning classifiers can identify AUD based on these distinctive connectivity patterns
+  with AUC of 0.79'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'V. Vergara et al. 2022. "Identifying Alcohol Use Disorder With Resting State Functional
+    Magnetic Resonance Imaging Data: A Comparison Among Machine Learning Classifiers." https://doi.org/10.3389/fpsyg.2022.867067'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not provide specific referenced studies
+  - Previous studies mentioned nicotine comorbidity confounding in AUD neuroimaging research
+  - Prior machine learning studies in AUD detection referenced but not specifically cited in abstract
+  doi: 10.3389/fpsyg.2022.867067
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol use disorder produces detectable alterations in resting state functional network
+  connectivity, particularly involving visual, sensorimotor, executive control, reward, and salience networks.
+  These neurobiological changes can be identified using machine learning classifiers applied to fMRI data,
+  with neural network achieving AUC of 0.79 in distinguishing AUD subjects from controls.
+quantitative_effects:
+  effect_size:
+    value: 0.79
+    type: correlation
+  sample_size: 102
+moderators:
+- name: nicotine_comorbidity
+  direction: strengthens
+  strength: moderate
+  description: Previous studies were confounded by nicotine use; this study excluded nicotine users to
+    isolate alcohol-specific effects, suggesting nicotine may have independent or interactive effects
+    on brain connectivity
+- name: classifier_type
+  direction: strengthens
+  strength: moderate
+  description: Neural network classifier showed highest performance (AUC 0.79); logistic regression, nearest
+    neighbor, and SVM showed similar performance; Gaussian process and quadratic discriminant analysis
+    performed worst
+structural_competency:
+  equity_implications: 'While this study focuses on biological markers of AUD, the findings have implications
+    for structural approaches: (1) Detection tools could enable earlier identification and intervention;
+    (2) The exclusion of polysubstance users highlights how structural factors promoting polysubstance
+    use (poverty, lack of treatment access) complicate AUD research and treatment; (3) Brain network alterations
+    in reward and executive control systems reflect neurobiological pathways through which structural
+    stressors (economic insecurity, trauma) may interact with alcohol to produce disorder. The study design
+    avoids individual blame by framing AUD as a condition with identifiable neurobiological signatures
+    rather than moral failing.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.147324'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

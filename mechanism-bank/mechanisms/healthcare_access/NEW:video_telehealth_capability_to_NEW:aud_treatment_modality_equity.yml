@@ -1,0 +1,70 @@
+id: NEW:video_telehealth_capability_to_NEW:aud_treatment_modality_equity
+name: Video Telehealth Capability → AUD Treatment Modality Equity
+from_node:
+  node_id: NEW:video_telehealth_capability
+  node_name: Video Telehealth Capability
+to_node:
+  node_id: NEW:aud_treatment_modality_equity
+  node_name: AUD Treatment Modality Equity
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Video telehealth requires digital infrastructure (broadband, devices, digital literacy)'
+- 'Step 2: Older adults, Black patients, and those with certain comorbidities have reduced access to video
+  technology'
+- 'Step 3: Digital divide creates differential access to video versus telephone-only modalities'
+- 'Step 4: Treatment modality inequities emerge along demographic and clinical lines'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Perumalswami et al. 2024. "Telehealth and delivery of alcohol use disorder treatment
+    in the Veterans Health Administration.." https://doi.org/10.1111/acer.15305
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1111/acer.15305
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among patients who received any telehealth-delivered AUD treatment, older adults, Black patients,
+  those with cannabis or stimulant use disorders, and those with serious mental illness were less likely
+  to receive video visits compared to telephone-only, revealing digital divide disparities
+quantitative_effects:
+  sample_size: 138619
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Facility-level variation accounted for in mixed-effects models; digital infrastructure
+    varies geographically
+moderators:
+- name: age
+  direction: weakens
+  strength: moderate
+  description: Patients aged 45+ were less likely to receive video visits compared to telephone-only among
+    telehealth users
+- name: race_black
+  direction: weakens
+  strength: moderate
+  description: Black patients were less likely to receive video visits than only telephone visits compared
+    to White patients
+- name: cannabis_use_disorder
+  direction: weakens
+  strength: moderate
+  description: Patients with cannabis use disorder were less likely to receive video telehealth
+- name: stimulant_use_disorder
+  direction: weakens
+  strength: moderate
+  description: Patients with stimulant use disorder were less likely to receive video telehealth
+- name: serious_mental_illness
+  direction: weakens
+  strength: moderate
+  description: Patients diagnosed with serious mental illness were less likely to receive video visits
+structural_competency:
+  equity_implications: This mechanism demonstrates how the digital divide operates as a structural determinant
+    of healthcare access. Video telehealth, while potentially offering higher-quality interaction, is
+    not equitably accessible. The racial disparity (Black patients less likely to receive video) reflects
+    broader structural inequities in digital infrastructure and technology access. The finding that multiple
+    treatment modalities should remain available is a structural intervention to maintain equity.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.729055'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

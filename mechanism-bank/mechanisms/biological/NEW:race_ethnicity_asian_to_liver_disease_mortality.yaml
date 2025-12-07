@@ -1,0 +1,56 @@
+id: NEW:race_ethnicity_asian_to_liver_disease_mortality
+name: Asian Race/Ethnicity → Liver Disease Mortality
+from_node:
+  node_id: NEW:race_ethnicity_asian
+  node_name: Asian Race/Ethnicity
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Asian individuals demonstrate significantly lower mortality from alcohol-associated
+  liver disease (ALD) compared to White individuals in the United States'
+- 'Step 2: This protective effect may relate to genetic variations in alcohol metabolism
+  enzymes (e.g., ADH1B and ALDH2 polymorphisms) that are more prevalent in Asian populations,
+  leading to adverse reactions to alcohol and lower consumption rates'
+- 'Step 3: Lower alcohol consumption patterns and potentially different drinking behaviors
+  contribute to reduced ALD development and progression'
+- 'Step 4: The combined effect of genetic protection and behavioral factors results
+  in substantially lower liver disease mortality among Asian populations (OR: 0.1
+  compared to White individuals)'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: 'Ahmad Anouti et al. 2024. Racial and ethnic disparities in alcohol-associated
+    liver disease in the United States: A systematic review and meta-analysis. Hepatology
+    Communications.'
+  supporting_citations: []
+description: 'Asian race/ethnicity is associated with significantly lower alcohol-associated
+  liver disease mortality compared to White individuals in the United States. This
+  meta-analysis of 16 studies found a strong protective effect (OR: 0.1, 95% CI: 0.03-0.5),
+  representing a 90% reduction in ALD mortality risk. This was the only statistically
+  significant racial/ethnic difference in ALD mortality identified in the analysis,
+  suggesting unique protective factors in Asian populations related to genetic alcohol
+  metabolism variations and associated behavioral patterns.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.1
+    type: odds_ratio
+    ci_lower: 0.03
+    ci_upper: 0.5
+  p_value: null
+  sample_size: 76867544
+moderators:
+- name: alcohol_consumption_patterns
+  direction: strengthens
+  strength: strong
+  description: Lower alcohol consumption rates in Asian populations, potentially influenced
+    by genetic factors affecting alcohol metabolism, strengthen the protective association
+- name: genetic_polymorphisms
+  direction: strengthens
+  strength: moderate
+  description: ADH1B and ALDH2 genetic variants common in Asian populations may contribute
+    to the observed protective effect through reduced alcohol tolerance

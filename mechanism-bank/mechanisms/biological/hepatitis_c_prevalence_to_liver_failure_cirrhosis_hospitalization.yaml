@@ -1,0 +1,59 @@
+id: hepatitis_c_prevalence_to_liver_failure_cirrhosis_hospitalization
+name: Hepatitis C Virus Infection → Liver Disease Progression (Decompensated Cirrhosis)
+from_node:
+  node_id: hepatitis_c_prevalence
+  node_name: Hepatitis C Virus Infection
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Disease Progression (Decompensated Cirrhosis)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic Hepatitis C Virus (HCV) infection establishes persistent viral
+  replication in hepatocytes, causing ongoing hepatocellular injury and inflammation'
+- 'Step 2: Sustained hepatic inflammation triggers activation of hepatic stellate
+  cells and progressive fibrogenesis, leading to accumulation of extracellular matrix
+  proteins'
+- 'Step 3: Progressive fibrosis advances through stages (F0-F4), ultimately resulting
+  in cirrhosis with distortion of hepatic architecture and formation of regenerative
+  nodules'
+- 'Step 4: Compensated cirrhosis transitions to decompensated cirrhosis when portal
+  hypertension and synthetic dysfunction manifest as ascites, variceal bleeding, hepatic
+  encephalopathy, or jaundice'
+- 'Step 5: Co-occurring factors such as alcohol use disorders substantially accelerate
+  disease progression, with AUD increasing risk of decompensation by 3.3-fold in HCV-infected
+  individuals'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: Llamosas-Falcón L et al. 2020. Alcohol use disorders and the risk
+    of progression of liver disease in people with hepatitis C virus infection – a
+    systematic review. Substance Abuse Treatment, Prevention, and Policy.
+  supporting_citations: []
+description: Chronic Hepatitis C virus infection drives progressive liver disease
+  through sustained hepatocellular injury, inflammation, and fibrogenesis. The natural
+  history of untreated HCV infection involves progression through fibrosis stages
+  to cirrhosis, with eventual decompensation manifesting as ascites, variceal hemorrhage,
+  encephalopathy, and liver failure. This systematic review of 11 studies (n=286,641
+  HCV-infected individuals) demonstrates that co-occurring alcohol use disorders dramatically
+  accelerate this progression, with a 3.3-fold increased risk of decompensated cirrhosis.
+  Approximately 35% of decompensated cirrhosis cases in this population are attributable
+  to concurrent AUD, highlighting the synergistic hepatotoxicity of viral and alcohol-related
+  liver injury.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.3
+    type: relative_risk
+    ci_lower: 1.8
+    ci_upper: 4.8
+  p_value: null
+  sample_size: 286641
+moderators:
+- name: Alcohol Use Disorder
+  direction: strengthens
+  strength: strong
+  description: AUD diagnosis was associated with 3.3-fold increased risk for progression
+    to decompensated cirrhosis in HCV-infected individuals; 35.2% of decompensated
+    cirrhosis cases attributable to AUD

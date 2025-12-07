@@ -1,0 +1,61 @@
+id: obesity_individual_to_NEW:hepatocellular_carcinoma_hcc
+name: Obesity → Hepatocellular Carcinoma (HCC)
+from_node:
+  node_id: obesity_individual
+  node_name: Obesity
+to_node:
+  node_id: NEW:hepatocellular_carcinoma_hcc
+  node_name: Hepatocellular Carcinoma (HCC)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Obesity leads to excessive lipid accumulation in hepatocytes, promoting
+  hepatic steatosis'
+- 'Step 2: Chronic lipid overload triggers inflammatory responses, oxidative stress,
+  and metabolic dysfunction in the liver'
+- 'Step 3: These metabolic disturbances can progress to nonalcoholic steatohepatitis
+  (NASH) with cycles of cell death and regeneration'
+- 'Step 4: Obesity-related factors (insulin resistance, adipokine dysregulation, chronic
+  inflammation) can directly promote hepatocyte malignant transformation independent
+  of cirrhosis'
+- 'Step 5: Up to 38% of NASH-related HCC cases occur without significant underlying
+  fibrosis, indicating obesity can drive carcinogenesis through non-fibrotic pathways'
+- 'Step 6: These combined mechanisms lead to initiation and progression of hepatocellular
+  carcinoma'
+evidence:
+  quality_rating: B
+  n_studies: 19
+  primary_citation: 'Renumathy Dhanasekaran and Dean W Felsher 2019. A Tale of Two
+    Complications of Obesity: NASH and Hepatocellular Carcinoma. Hepatology (Baltimore,
+    Md.)'
+  supporting_citations: []
+description: Obesity promotes hepatocellular carcinoma through multiple pathways.
+  The traditional pathway involves progression from hepatic steatosis to NASH, followed
+  by cirrhosis and eventual malignant transformation. However, emerging evidence demonstrates
+  that a substantial proportion (up to 38%) of obesity-related HCC cases develop without
+  significant underlying fibrosis or cirrhosis. This suggests obesity-related metabolic
+  dysfunction, chronic inflammation, and cellular stress can directly promote hepatocyte
+  malignant transformation independent of the traditional fibrosis-cirrhosis-cancer
+  sequence.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 38.0
+    type: prevalence_percentage
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: Cirrhosis status
+  direction: strengthens
+  strength: moderate
+  description: While cirrhosis precedes HCC in >90% of cases in hepatitis C and alcohol-related
+    liver disease, up to 38% of NASH-HCC cases occur without significant fibrosis,
+    indicating obesity can drive HCC independently
+- name: NASH presence
+  direction: strengthens
+  strength: strong
+  description: NASH serves as an intermediary pathway, though obesity may also promote
+    HCC through mechanisms independent of NASH

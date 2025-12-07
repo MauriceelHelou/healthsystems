@@ -1,0 +1,57 @@
+id: NEW:medications_for_alcohol_use_disorder_cirrhosis_to_NEW:alcohol_abstinence_cirrhosis
+name: Medications for Alcohol Use Disorder in Cirrhosis Patients → Alcohol Abstinence
+  in Cirrhosis Patients
+from_node:
+  node_id: NEW:medications_for_alcohol_use_disorder_cirrhosis
+  node_name: Medications for Alcohol Use Disorder in Cirrhosis Patients
+to_node:
+  node_id: NEW:alcohol_abstinence_cirrhosis
+  node_name: Alcohol Abstinence in Cirrhosis Patients
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with alcohol-associated cirrhosis and alcohol use disorder are
+  prescribed medications for alcohol use disorder (MAUD) including baclofen, metadoxine,
+  acamprosate, or fecal microbiota transplant'
+- 'Step 2: These medications act through various pharmacological mechanisms to reduce
+  alcohol cravings, withdrawal symptoms, and reward pathways associated with alcohol
+  consumption'
+- 'Step 3: Reduced cravings and improved neurobiological support lead to decreased
+  alcohol consumption and increased rates of sustained alcohol abstinence'
+- 'Step 4: MAUD treatment increases alcohol abstinence rates by 32% compared to placebo
+  or standard treatment in cirrhosis patients'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'J. Gratacós-Ginés et al. 2023. "Medications for alcohol use disorder
+    promote abstinence in alcohol-associated cirrhosis: Results from a systematic
+    review and meta-analysis." Hepatology.'
+  supporting_citations: []
+description: 'Medications for alcohol use disorder (MAUD) significantly promote alcohol
+  abstinence in patients with alcohol-associated cirrhosis. A systematic review and
+  meta-analysis of 8 studies (794 patients) found that MAUD treatment reduces the
+  relative risk of alcohol consumption by 32% (RR=0.68, 95% CI: 0.48-0.97) compared
+  to placebo or standard treatment. The medications studied included baclofen, metadoxine,
+  acamprosate, and fecal microbiota transplant, with a good safety profile (only 3%
+  of serious adverse events possibly/probably related to study medications).'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.68
+    type: relative_risk
+    ci_lower: 0.48
+    ci_upper: 0.97
+  p_value: 0.03
+  sample_size: 794
+moderators:
+- name: medication_type
+  direction: strengthens
+  strength: moderate
+  description: Different MAUD types (baclofen, metadoxine, acamprosate, fecal microbiota
+    transplant) were included; baclofen was most commonly studied (6 of 8 studies)
+- name: liver_disease_severity
+  direction: weakens
+  strength: weak
+  description: Authors note larger studies needed especially in patients with advanced
+    liver disease, suggesting severity may moderate effects

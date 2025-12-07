@@ -1,0 +1,67 @@
+id: NEW:prior_radiation_treatment_to_NEW:salvage_surgery_complexity
+name: Prior Radiation Therapy to Head and Neck → Salvage Surgery Technical Complexity
+  and Risk
+from_node:
+  node_id: NEW:prior_radiation_treatment
+  node_name: Prior Radiation Therapy to Head and Neck
+to_node:
+  node_id: NEW:salvage_surgery_complexity
+  node_name: Salvage Surgery Technical Complexity and Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Prior radiation therapy to head and neck tissues causes cumulative damage
+  including fibrosis, vascular compromise, and altered tissue planes'
+- 'Step 2: Irradiated tissue fields develop reduced vascularity, impaired wound healing
+  capacity, and loss of normal anatomical landmarks'
+- 'Step 3: Salvage surgery in previously irradiated fields faces increased technical
+  complexity due to tissue friability, scarring, and distorted anatomy'
+- 'Step 4: Surgical complications increase including positive margin rates (19.4%),
+  higher complication rates (32.3%), and need for temporary tracheostomy and nasogastric
+  tube support'
+- 'Step 5: Outcomes are compromised compared to primary surgery, with reduced overall
+  survival (RR 0.35) and disease-free survival (RR 0.44) rates'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Sahil Goel et al. 2025. Is transoral robotic surgery useful as
+    a salvage technique in head and neck cancers: a systematic review and meta analysis.
+    Head & neck.'
+  supporting_citations: []
+description: Prior radiation therapy to head and neck significantly increases the
+  technical complexity and risk of salvage surgery. This systematic review of 15 studies
+  (515 patients) demonstrates that surgery in previously irradiated fields results
+  in substantially worse outcomes compared to primary cancer surgery, with risk ratios
+  of 0.35 for overall survival and 0.44 for disease-free survival. Positive surgical
+  margins occur in 19.4% of cases, complication rates reach 32.3%, and patients frequently
+  require temporary tracheostomy (mean decannulation 9.7 days) and nasogastric tube
+  support (mean 12.8 days). Long-term tracheostomy dependence occurs in up to 11.5%
+  of patients. These findings reflect the biological impact of radiation-induced tissue
+  damage including fibrosis, vascular compromise, and altered tissue planes that complicate
+  surgical intervention.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.35
+    type: risk_ratio
+    ci_lower: 0.18
+    ci_upper: 0.67
+  p_value: null
+  sample_size: 515
+moderators:
+- name: HPV status
+  direction: strengthens
+  strength: moderate
+  description: HPV status identified as a confounding factor that may influence outcomes
+    in salvage surgery
+- name: Prior adjuvant therapy
+  direction: strengthens
+  strength: moderate
+  description: Additional prior adjuvant therapy beyond radiation may further increase
+    surgical complexity
+- name: Surgical technique (TORS vs open)
+  direction: weakens
+  strength: moderate
+  description: Transoral robotic surgery shows decreased morbidity and mortality compared
+    to traditional open surgical techniques in salvage settings

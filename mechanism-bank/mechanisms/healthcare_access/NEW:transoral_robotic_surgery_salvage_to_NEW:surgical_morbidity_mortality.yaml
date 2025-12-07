@@ -1,0 +1,62 @@
+id: NEW:transoral_robotic_surgery_salvage_to_NEW:surgical_morbidity_mortality
+name: Transoral Robotic Surgery for Salvage Treatment → Surgical Morbidity and Mortality
+from_node:
+  node_id: NEW:transoral_robotic_surgery_salvage
+  node_name: Transoral Robotic Surgery for Salvage Treatment
+to_node:
+  node_id: NEW:surgical_morbidity_mortality
+  node_name: Surgical Morbidity and Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Transoral robotic surgery (TORS) provides a minimally invasive approach
+  for salvage treatment of recurrent, residual, or second primary head and neck cancers
+  in previously irradiated fields'
+- 'Step 2: The robotic approach avoids the extensive tissue dissection and reconstruction
+  required in traditional open surgical techniques, reducing surgical trauma'
+- 'Step 3: Reduced surgical invasiveness leads to shorter hospital stays (mean 8.5
+  days), faster tracheostomy decannulation (9.7 days), and reduced nasogastric dependence
+  (12.8 days)'
+- 'Step 4: Pooled complication rate of 32.3% with 92% of complications being low-grade
+  (Clavien Dindo grade 2 or 3), indicating manageable morbidity'
+- 'Step 5: Long-term tracheostomy dependence occurs in only 0%-11.5% of patients,
+  demonstrating favorable functional preservation compared to open techniques'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Sahil Goel et al. 2025. Is transoral robotic surgery useful as
+    a salvage technique in head and neck cancers: a systematic review and meta analysis.
+    Head & neck.'
+  supporting_citations: []
+description: Transoral robotic surgery for salvage treatment of recurrent/residual
+  head and neck cancers demonstrates decreased morbidity and mortality compared to
+  traditional open surgical techniques. This systematic review of 15 studies (515
+  patients) found TORS achieves favorable oncological outcomes (2-year OS 73.8%, DFS
+  56.1%) with manageable complications (32.3% pooled rate, mostly low-grade). The
+  minimally invasive approach reduces tracheostomy and feeding tube dependence, preserving
+  function while treating cancer in previously irradiated tissue.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.35
+    type: risk_ratio
+    ci_lower: 0.18
+    ci_upper: 0.67
+  p_value: null
+  sample_size: 515
+moderators:
+- name: HPV status
+  direction: strengthens
+  strength: moderate
+  description: HPV-positive tumors may have better outcomes; identified as a confounding
+    factor requiring future study
+- name: Prior adjuvant therapy
+  direction: weakens
+  strength: moderate
+  description: Previous radiation treatment in the surgical field may impact outcomes
+    and complications
+- name: Tumor site
+  direction: strengthens
+  strength: moderate
+  description: Oropharyngeal tumors most amenable to TORS approach

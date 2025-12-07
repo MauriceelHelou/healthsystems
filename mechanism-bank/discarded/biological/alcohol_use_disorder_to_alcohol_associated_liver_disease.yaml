@@ -1,0 +1,46 @@
+id: alcohol_use_disorder_to_alcohol_associated_liver_disease
+name: Alcohol Use Disorder (AUD) → Alcohol-Associated Liver Disease (ALD)
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder (AUD)
+to_node:
+  node_id: alcohol_associated_liver_disease
+  node_name: Alcohol-Associated Liver Disease (ALD)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption from AUD leads to hepatic metabolism of ethanol
+  and production of toxic metabolites (acetaldehyde)'
+- 'Step 2: Toxic metabolites induce hepatocyte injury, oxidative stress, and inflammatory
+  responses in liver tissue'
+- 'Step 3: Persistent inflammation and hepatocyte damage progresses to fibrosis, cirrhosis,
+  and clinical ALD'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Pojsakorn Danpanichkul et al. 2024. "Increased mortality from
+    alcohol use disorder, alcohol‐associated liver disease, and liver cancer from
+    alcohol among older adults in the United States: 2000 to 2021." *Alcohol, clinical
+    & experimental research*. https://doi.org/10.1111/acer.15516'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.368386'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: age_over_70_years
+  direction: strengthens
+  strength: strong
+  description: Older adults (>70 years) show increasing ALD prevalence trends in the
+    US (APC +0.54%) contrasting with declining global trends, suggesting age amplifies
+    the AUD-to-ALD pathway
+- name: geographic_location_us_state
+  direction: strengthens
+  strength: moderate
+  description: State-level variation with 40 states showing increased ALD prevalence
+    suggests structural factors like alcohol policies, healthcare access, and social
+    determinants vary by geography
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/alcohol_use_disorder_to_alcohol_associated_liver_disease.yaml
+_category: biological

@@ -1,0 +1,60 @@
+id: NEW:glycemic_control_hba1c_to_NEW:type_1_diabetes_clinical_outcomes
+name: Glycemic Control (HbA1c) → Type 1 Diabetes Clinical Outcomes
+from_node:
+  node_id: NEW:glycemic_control_hba1c
+  node_name: Glycemic Control (HbA1c)
+to_node:
+  node_id: NEW:type_1_diabetes_clinical_outcomes
+  node_name: Type 1 Diabetes Clinical Outcomes
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Glycosylated hemoglobin (HbA1c) reflects average blood glucose levels over
+  2-3 months, serving as a key marker of glycemic control in Type 1 Diabetes'
+- 'Step 2: Interventions targeting glycemic control (e.g., telemedicine with individualized
+  assessments, audit with feedback, and skill building) lead to measurable reductions
+  in HbA1c levels'
+- 'Step 3: Improved glycemic control (lower HbA1c) is associated with reduced risk
+  of microvascular and macrovascular complications characteristic of Type 1 Diabetes
+  clinical outcomes'
+- 'Step 4: Sustained glycemic control over longer durations (>6 months) produces larger
+  clinical benefits, particularly in patients with higher baseline HbA1c (≥9%)'
+evidence:
+  quality_rating: A
+  n_studies: 38
+  primary_citation: 'Shaun Wen Huey Lee et al. 2017. Telemedicine for the Management
+    of Glycemic Control and Clinical Outcomes of Type 1 Diabetes Mellitus: A Systematic
+    Review and Meta-Analysis of Randomized Controlled Studies. Frontiers in Pharmacology.'
+  supporting_citations: []
+description: Meta-analysis of 38 randomized controlled studies demonstrates that interventions
+  improving glycemic control (measured by HbA1c) are associated with Type 1 Diabetes
+  clinical outcomes. A mean reduction of 0.18% in HbA1c was observed, with greater
+  effects in longer interventions and patients with poorer baseline control. However,
+  no significant benefits were observed for secondary outcomes including blood pressure,
+  lipids, weight, quality of life, or adverse events.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.18
+    type: mean_difference
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: intervention_duration
+  direction: strengthens
+  strength: moderate
+  description: Studies with longer duration (>6 months) were associated with larger
+    effects on glycemic control
+- name: baseline_HbA1c
+  direction: strengthens
+  strength: moderate
+  description: Patients with higher baseline HbA1c (≥9%) showed larger improvements
+    in glycemic control
+- name: intervention_components
+  direction: strengthens
+  strength: moderate
+  description: Interventions involving individualized assessments, audit with feedback,
+    and skill building were more effective

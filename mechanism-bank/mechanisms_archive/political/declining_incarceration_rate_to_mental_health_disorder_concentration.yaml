@@ -1,0 +1,42 @@
+id: declining_incarceration_rate_to_mental_health_disorder_concentration
+name: Declining Incarceration Rate → Mental Health Disorder Concentration in Prison
+from_node:
+  node_id: declining_incarceration_rate
+  node_name: Declining Incarceration Rate
+to_node:
+  node_id: mental_health_disorder_concentration
+  node_name: Mental Health Disorder Concentration in Prison
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Criminal justice reforms reduce overall incarceration rates by diverting
+  lower-risk individuals from prison'
+- 'Step 2: Individuals without complex mental health needs are more successfully diverted
+  to alternative programs'
+- 'Step 3: Individuals with mental health disorders face greater barriers to diversion
+  due to lack of community-based mental health infrastructure'
+- 'Step 4: Prison population becomes increasingly concentrated with individuals having
+  mental health disorders despite smaller overall population'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Anne Bukten et al. 2024. "The prevalence and comorbidity of mental
+    health and substance use disorders in Scandinavian prisons 2010-2019: a multi-national
+    register study.." *BMC psychiatry*. https://doi.org/10.1186/s12888-024-05540-6'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.396214'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: community_mental_health_infrastructure
+  direction: weakens
+  strength: strong
+  description: Adequate community mental health services could prevent concentration
+    by providing diversion options for individuals with mental health disorders
+- name: criminal_justice_reform_design
+  direction: strengthens
+  strength: moderate
+  description: Reforms that prioritize diversion of low-risk individuals without addressing
+    mental health infrastructure gaps exacerbate concentration effects

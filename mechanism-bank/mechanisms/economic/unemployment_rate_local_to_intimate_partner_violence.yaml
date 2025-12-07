@@ -1,0 +1,55 @@
+id: unemployment_rate_local_to_intimate_partner_violence
+name: Employment Status (Unemployment) → Intimate Partner Violence
+from_node:
+  node_id: unemployment_rate_local
+  node_name: Employment Status (Unemployment)
+to_node:
+  node_id: intimate_partner_violence
+  node_name: Intimate Partner Violence
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Unemployment creates economic stress and financial insecurity within households,
+  increasing tension between intimate partners'
+- 'Step 2: Economic dependency resulting from unemployment limits women''s ability
+  to leave abusive relationships or negotiate within partnerships'
+- 'Step 3: Unemployed partners may experience frustration, loss of traditional provider
+  role identity, and reduced self-esteem, which can manifest as controlling or violent
+  behavior'
+- 'Step 4: Limited employment opportunities reduce access to resources and social
+  support networks that could serve as protective factors against IPV'
+evidence:
+  quality_rating: A
+  n_studies: 20
+  primary_citation: 'E. Tenkorang et al. 2020. Intimate Partner Violence (IPV) Against
+    HIV-Positive Women in Sub-Saharan Africa: A Mixed-Method Systematic Review and
+    Meta-Analysis. Trauma, Violence, & Abuse.'
+  supporting_citations: []
+description: Employment status, specifically unemployment, was identified as a significant
+  risk factor for intimate partner violence in a systematic review and meta-analysis
+  of 20 studies focusing on HIV-positive women in sub-Saharan Africa. Unemployment
+  increases economic vulnerability and dependency, reduces protective resources, and
+  creates household stress that elevates IPV risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: educational_background
+  direction: weakens
+  strength: moderate
+  description: Higher education may buffer the relationship between unemployment and
+    IPV through improved coping resources and economic alternatives
+- name: alcohol_use
+  direction: strengthens
+  strength: strong
+  description: Alcohol use exacerbates the risk of IPV in the context of unemployment
+    stress
+- name: marital_status
+  direction: strengthens
+  strength: moderate
+  description: Formal marital relationships may intensify economic dependencies that
+    link unemployment to IPV
+- name: previous_IPV_experience
+  direction: strengthens
+  strength: strong
+  description: Prior exposure to IPV increases vulnerability to continued violence
+    when unemployment-related stress is present

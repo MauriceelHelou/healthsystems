@@ -1,0 +1,52 @@
+id: traumatic_brain_injury_tbi_hospitalization_to_alcohol_use_disorder
+name: Traumatic Brain Injury (TBI) Hospitalization → Alcohol Use Disorder
+from_node:
+  node_id: traumatic_brain_injury_tbi_hospitalization
+  node_name: Traumatic Brain Injury (TBI) Hospitalization
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Traumatic brain injury causes damage to prefrontal cortex and other brain regions involved
+  in impulse control'
+- 'Step 2: Neurobiological changes alter reward processing and decision-making capacity'
+- 'Step 3: TBI-related cognitive impairment reduces ability to moderate drinking behavior'
+- 'Step 4: Neuropsychological deficits increase vulnerability to developing or worsening alcohol use disorder'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Z. Weil et al. 2018. "Alcohol Use Disorder and Traumatic Brain Injury." https://doi.org/10.35946/arcr.v39.2.07
+  supporting_citations:
+  - Review discusses neuropsychological mechanisms underlying TBI as risk factor for AUD
+  - Neurobiological mechanisms described as potential pathway from TBI to alcohol use disorder
+  - Additional citations require full-text access
+  doi: 10.35946/arcr.v39.2.07
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: TBI can serve as a risk factor for or modulate the course of alcohol use disorder through
+  neuropsychological and neurobiological mechanisms. Brain injury damages regions involved in impulse
+  control and reward processing, increasing vulnerability to problematic alcohol use.
+moderators:
+- name: tbi_severity
+  direction: strengthens
+  strength: moderate
+  description: More severe TBI likely causes greater neurological damage affecting impulse control and
+    decision-making
+- name: access_to_rehabilitation
+  direction: weakens
+  strength: moderate
+  description: Access to comprehensive rehabilitation services may mitigate neuropsychological deficits
+    and reduce AUD risk
+structural_competency:
+  equity_implications: This inverse relationship highlights how injury outcomes are shaped by access to
+    rehabilitation services, which varies by insurance status, geographic location, and socioeconomic
+    position. Communities with fewer healthcare resources face compounded disadvantage as TBI survivors
+    lack support to prevent secondary AUD development.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.831312'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

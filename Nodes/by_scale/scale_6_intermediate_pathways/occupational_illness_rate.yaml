@@ -1,0 +1,28 @@
+id: occupational_illness_rate
+name: Occupational Illness Rate
+scale: 6
+domain: Occupational Health
+category: biological
+stock:
+  value: TBD
+  unit: Illnesses per 100 FTE workers
+  year: 2024
+  source: TBD - needs population from authoritative source
+geographic_variation:
+  score: 4
+  level: county
+  notes: Rates vary by industry mix and exposure levels
+data_quality:
+  availability: medium
+  frequency: annual
+  bias_notes: Administrative data - may reflect reporting variations across jurisdictions
+  primary_sources:
+  - name: BLS Survey of Occupational Injuries and Illnesses
+    granularity: state
+  - name: OSHA
+    granularity: national
+description: |-
+  Measures occupational illness rate per 100 full-time equivalent workers. This is a standalone
+  intermediate pathway measure capturing work-related disease. Relationships to workplace
+  exposures or downstream health impacts are captured in mechanisms.
+type: Rate

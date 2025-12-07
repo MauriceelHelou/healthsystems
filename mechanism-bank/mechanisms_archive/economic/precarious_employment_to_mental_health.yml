@@ -1,0 +1,83 @@
+id: precarious_employment_to_mental_health
+name: Precarious Employment -> Mental Health Outcomes
+from_node:
+  node_id: precarious_employment
+  node_name: Precarious Employment (Gig Economy, Zero-Hours Contracts)
+  node_type: stock
+to_node:
+  node_id: mental_health_outcomes
+  node_name: Mental Health Outcomes
+  node_type: proxy_index
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Gig economy and non-standard employment create income volatility and unpredictability'
+- 'Step 2: Lack of job security generates persistent anxiety about work continuity'
+- 'Step 3: Absence of employer-provided health insurance creates barriers to mental health treatment'
+- 'Step 4: Algorithmic management and surveillance increase work pace and reduce autonomy'
+- 'Step 5: Social isolation from transient work relationships eliminates workplace social support'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: 'Ronnblad, Torkel, et al. 2019. "Precarious employment and mental health: a systematic review and meta-analysis of longitudinal studies." Scandinavian Journal of Work, Environment & Health 45(5): 429-443.'
+  supporting_citations:
+  - 'Irvine, Annie, and Nikolas Rose. 2024. "How Does Precarious Employment Affect Mental Health? A Scoping Review and Thematic Synthesis of Qualitative Evidence from Western Economies." Work, Employment and Society.'
+  - 'European Trade Union Institute. 2021. "Exposure to psychosocial risk factors in the gig economy: a systematic review."'
+  doi: 10.5271/sjweh.3797
+  journal: Scandinavian Journal of Work, Environment & Health
+  year: 2019
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: null
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: null
+    ci_level: 95
+  sample_size: null
+  interpretation: "Systematic review of 16 high-quality studies identified precarious employment as significantly associated with poor mental health through four core mechanisms: financial instability, temporal uncertainty, marginal status, and employment insecurity"
+  additional_effects:
+  - metric: Core experiences leading to negative mental health
+    value: 4
+    type: count
+    notes: "Four pathways identified: financial instability, temporal uncertainty, marginal status, employment insecurity"
+last_updated: '2025-11-30'
+version: '1.0'
+description: Precarious employment, including gig work, zero-hours contracts, and temporary positions, systematically harms mental health through multiple pathways. Qualitative research identifies four core experiences - financial instability, temporal uncertainty, marginal status, and employment insecurity - each connected with multiple interrelated mechanisms leading to anxiety, depression, and emotional exhaustion.
+moderators:
+- name: social_protection_coverage
+  direction: weakens
+  strength: strong
+  description: Universal healthcare and unemployment benefits buffer against employment precarity
+- name: worker_classification_laws
+  direction: weakens
+  strength: moderate
+  description: Policies requiring employee classification for gig workers improve benefits access
+- name: income_volatility
+  direction: strengthens
+  strength: strong
+  description: Greater unpredictability of income intensifies mental health impacts
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: Precarious employment disproportionately affects young workers, immigrants, and racial/ethnic minorities who face barriers to standard employment. The rise of the gig economy has shifted risk from employers to workers while maintaining employer control through algorithmic management. Policy solutions should address worker classification, portable benefits, and social protection coverage.
+assumptions:
+- Precarious employment includes gig work, temporary contracts, and involuntary part-time
+- Mental health outcomes include depression, anxiety, and psychological distress
+- Mechanism operates through economic and psychosocial pathways
+limitations:
+- Selection effects may confound estimates (people with mental health conditions may be more likely to enter precarious work)
+- Cross-national variation in labor market protections affects generalizability
+- Rapid changes in gig economy regulation may alter relationships
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Impact varies by national labor market regulations and social protection systems
+  relevant_geographies:
+  - Countries with strong social protection (Nordic) show weaker effects
+  - United States lacks universal healthcare, amplifying mental health impacts
+  - Urban areas have higher concentration of gig economy work
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

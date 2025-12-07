@@ -1,0 +1,53 @@
+id: NEW:alcohol_retail_price_to_alcohol_use_disorder
+name: Alcohol Retail Price → Alcohol Use Disorder
+from_node:
+  node_id: NEW:alcohol_retail_price
+  node_name: Alcohol Retail Price
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Effective tax pass-through increases alcohol retail prices'
+- 'Step 2: Higher prices create economic barriers to high-volume alcohol consumption'
+- 'Step 3: Reduced consumption intensity decreases physiological dependence development'
+- 'Step 4: Population-level reduction in heavy drinking patterns leads to lower incidence of alcohol use
+  disorder'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Jon P. Nelson and John R. Moran 2019. "Effects of Alcohol Taxation on Prices: A Systematic
+    Review and Meta-Analysis of Pass-Through Rates." https://doi.org/10.1515/bejeap-2019-0134'
+  supporting_citations:
+  - Literature on alcohol taxation as public health intervention
+  - Studies on price sensitivity among heavy drinkers
+  - Additional citations require full-text access
+  doi: 10.1515/bejeap-2019-0134
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The findings on alcohol tax pass-through rates inform understanding of how taxation policies
+  can be designed to effectively reduce alcohol-related health harms including alcohol use disorder. Complete
+  or over-shifting of taxes ensures policy intent is translated to consumer-facing prices.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effectiveness varies across countries with different baseline consumption patterns,
+    healthcare systems, and alcohol policy environments
+moderators:
+- name: market_structure
+  direction: strengthens
+  strength: moderate
+  description: Imperfectly competitive markets with overshifting produce larger price increases per unit
+    of tax, potentially amplifying consumption reduction effects
+structural_competency:
+  equity_implications: This mechanism demonstrates how fiscal policy can serve as a structural intervention
+    for alcohol-related harm reduction. Rather than focusing on individual willpower or treatment-seeking
+    behavior, it addresses the upstream economic environment that shapes drinking patterns. The structural
+    approach recognizes that alcohol use disorder develops within economic and social contexts that can
+    be modified through policy.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.232823'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

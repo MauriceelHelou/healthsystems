@@ -1,0 +1,59 @@
+id: NEW:alcohol_brief_intervention_primary_care_to_NEW:weekly_alcohol_consumption
+name: Alcohol Brief Intervention in Primary Care → Weekly Alcohol Consumption (Drinks/Week)
+from_node:
+  node_id: NEW:alcohol_brief_intervention_primary_care
+  node_name: Alcohol Brief Intervention in Primary Care
+to_node:
+  node_id: NEW:weekly_alcohol_consumption
+  node_name: Weekly Alcohol Consumption (Drinks/Week)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Integrated healthcare system implements routine alcohol screening for all adult primary care
+  patients'
+- 'Step 2: Patients screening positive for unhealthy alcohol use receive brief intervention counseling'
+- 'Step 3: Brief intervention addresses motivation for change and provides information on alcohol-health
+  connections'
+- 'Step 4: Patients with hypertension reduce overall weekly alcohol consumption by approximately 0.30
+  drinks per week'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'F. Chi et al. 2023. "Associations between alcohol brief intervention in primary care
+    and drinking and health outcomes in adults with hypertension and type 2 diabetes: a population-based
+    observational study." https://doi.org/10.1136/bmjopen-2022-064088'
+  supporting_citations:
+  - Additional citations require full-text access - observational study using electronic health records
+    data 2014-2017
+  - Prior research on SBIRT implementation in adult primary care settings
+  - Evidence base for alcohol screening and brief intervention in routine care
+  doi: 10.1136/bmjopen-2022-064088
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patients with hypertension who received alcohol brief intervention had an additional reduction
+  of 0.30 drinks per week at 12-month follow-up compared to those who did not receive the intervention.
+quantitative_effects:
+  effect_size:
+    value: -0.3
+    type: beta_coefficient
+    ci_lower: -0.59
+    ci_upper: -0.01
+  sample_size: 72979
+moderators:
+- name: chronic_condition_type
+  direction: strengthens
+  strength: strong
+  description: Effect significant for hypertension patients only; no significant association observed
+    among type 2 diabetes patients (N=19,642)
+structural_competency:
+  equity_implications: The structural embedding of alcohol screening into routine primary care creates
+    systematic opportunities for intervention that do not depend on patient self-referral. This addresses
+    health equity by reaching populations who might not otherwise seek specialized substance use services.
+    The lack of effect among diabetes patients suggests structural interventions may need condition-specific
+    tailoring.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.989504'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

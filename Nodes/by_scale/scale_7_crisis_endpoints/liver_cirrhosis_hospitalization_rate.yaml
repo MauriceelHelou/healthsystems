@@ -1,0 +1,33 @@
+id: liver_cirrhosis_hospitalization_rate
+name: Liver Cirrhosis Hospitalization Rate
+scale: 7
+domain: Healthcare Utilization, Hepatic Health
+category: crisis_endpoint
+stock:
+  value: 42.5
+  unit: Hospitalizations per 100,000 population
+  year: 2022
+  source: HCUP, CDC WONDER
+geographic_variation:
+  score: 3
+  level: state
+  notes: Varies with chronic liver disease prevalence, hepatitis rates, and healthcare access
+data_quality:
+  availability: high
+  frequency: annual
+  bias_notes: ICD coding may vary; includes all-cause cirrhosis (alcohol, viral, NAFLD)
+  primary_sources:
+  - name: AHRQ Healthcare Cost and Utilization Project (HCUP)
+    granularity: state
+  - name: CDC WONDER Hospitalization Data
+    granularity: state
+  - name: State Inpatient Databases
+    granularity: state
+description: |-
+  Rate of hospital admissions with primary or secondary diagnosis of liver cirrhosis
+  (ICD-10: K74.x, K70.3x). This is a standalone crisis endpoint measuring acute care
+  utilization for end-stage liver disease. Cirrhosis has multiple etiologies including
+  alcohol, viral hepatitis, and metabolic dysfunction; the specific causal pathways are
+  captured in mechanisms. This node represents the aggregate burden of cirrhosis
+  hospitalizations regardless of underlying cause.
+type: Rate

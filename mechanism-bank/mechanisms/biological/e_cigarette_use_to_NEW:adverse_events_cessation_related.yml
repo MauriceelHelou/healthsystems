@@ -1,0 +1,56 @@
+id: e_cigarette_use_to_NEW:adverse_events_cessation_related
+name: E-Cigarette Use → Adverse Events (Cessation-Related)
+from_node:
+  node_id: e_cigarette_use
+  node_name: E-Cigarette Use
+to_node:
+  node_id: NEW:adverse_events_cessation_related
+  node_name: Adverse Events (Cessation-Related)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Electronic cigarette use exposes airways to heated aerosol containing nicotine and carrier
+  compounds'
+- 'Step 2: Short-term irritation of oral and respiratory mucosa occurs'
+- 'Step 3: Common transient symptoms include throat/mouth irritation, headache, cough, and nausea'
+- 'Step 4: These symptoms tend to dissipate with continued use as tolerance develops'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: Nicola Lindson et al. 2025. "Electronic cigarettes for smoking cessation.." https://doi.org/10.1002/14651858.CD010216.pub10
+  supporting_citations:
+  - 8 studies with 2485 participants reporting adverse events in EC vs behavioral support comparisons
+  - 7 studies with 2241 participants in EC vs NRT comparisons for adverse events
+  - Additional citations require full-text access
+  doi: 10.1002/14651858.CD010216.pub10
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Adverse events may be more common with nicotine EC compared to behavioral support only (RR
+  1.22), though evidence is very uncertain. Common AEs include throat/mouth irritation, headache, cough,
+  and nausea, which typically resolve with continued use. AE rates are similar between nicotine EC and
+  NRT.
+quantitative_effects:
+  effect_size:
+    value: 1.22
+    type: relative_risk
+    ci_lower: 0.96
+    ci_upper: 1.55
+  sample_size: 2485
+  heterogeneity_i_squared: 66.0
+moderators:
+- name: comparison_group
+  direction: u_shaped
+  strength: moderate
+  description: AE rates similar to NRT (RR 1.00) but possibly higher than behavioral support alone (RR
+    1.22), though evidence uncertain
+structural_competency:
+  equity_implications: Safety monitoring of novel nicotine products is a regulatory function with equity
+    implications. Unregulated or illicit EC products may pose different risk profiles than regulated products
+    studied in trials. Access to regulated products vs unregulated alternatives may differ by socioeconomic
+    status and geographic location.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.879739'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

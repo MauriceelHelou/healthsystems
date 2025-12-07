@@ -1,0 +1,57 @@
+id: NEW:patient_provider_communication_to_NEW:preventable_ed_visits_postsurgery
+name: Patient-Provider Communication Quality → Preventable Emergency Department Visits
+  After Surgery
+from_node:
+  node_id: NEW:patient_provider_communication
+  node_name: Patient-Provider Communication Quality
+to_node:
+  node_id: NEW:preventable_ed_visits_postsurgery
+  node_name: Preventable Emergency Department Visits After Surgery
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Enhanced patient-provider communication channels (e.g., mobile app chat
+  functions) provide patients with direct access to their surgical care team during
+  the post-discharge recovery period'
+- 'Step 2: Patients can communicate concerns, symptoms, and questions directly to
+  providers without needing to visit emergency departments for reassurance or guidance'
+- 'Step 3: Providers can assess patient-reported symptoms remotely through daily questionnaires
+  and direct messaging, enabling timely triage and intervention'
+- 'Step 4: Many post-surgical concerns that would otherwise drive ED visits (anxiety
+  about symptoms, uncertainty about recovery progress) are resolved through remote
+  communication'
+- 'Step 5: Preventable ED visits are reduced as patients receive appropriate reassurance,
+  guidance, or directed outpatient care rather than defaulting to emergency services'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jules Eustache et al. 2021. A Mobile Phone App Improves Patient-Physician
+    Communication and Reduces Emergency Department Visits After Colorectal Surgery.
+    Diseases of the Colon & Rectum.
+  supporting_citations: []
+description: Improved patient-provider communication through mobile health technology
+  enables post-surgical patients to access their care team directly, allowing remote
+  assessment of concerns and symptoms. This reduces preventable emergency department
+  visits by addressing patient anxieties and clinical questions through alternative
+  channels, with a 66% reduction in preventable ED visits observed (IRR 0.34).
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.34
+    type: incidence_rate_ratio
+    ci_lower: null
+    ci_upper: null
+  p_value: 0.043
+  sample_size: 350
+moderators:
+- name: Patient technology adoption
+  direction: strengthens
+  strength: moderate
+  description: 88% of patients reported the app improved their ability to communicate
+    with their surgeon, suggesting high engagement strengthens the effect
+- name: Enhanced recovery pathway
+  direction: strengthens
+  strength: moderate
+  description: All patients were managed according to an enhanced recovery pathway,
+    which may optimize the context for communication interventions

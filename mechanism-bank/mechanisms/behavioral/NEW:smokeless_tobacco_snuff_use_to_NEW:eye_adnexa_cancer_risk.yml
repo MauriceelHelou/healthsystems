@@ -1,0 +1,65 @@
+id: NEW:smokeless_tobacco_snuff_use_to_NEW:eye_adnexa_cancer_risk
+name: Smokeless Tobacco (Snuff) Use → Eye and Adnexa Cancer Risk
+from_node:
+  node_id: NEW:smokeless_tobacco_snuff_use
+  node_name: Smokeless Tobacco (Snuff) Use
+to_node:
+  node_id: NEW:eye_adnexa_cancer_risk
+  node_name: Eye and Adnexa Cancer Risk
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Smokeless tobacco contains carcinogenic compounds including tobacco-specific nitrosamines'
+- 'Step 2: Systemic absorption of carcinogens from oral/nasal mucosa enters bloodstream'
+- 'Step 3: Carcinogenic exposure to ocular and periocular tissues through systemic circulation'
+- 'Step 4: Increased risk of malignant transformation in eye and adnexal structures'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Melitah Motlhale et al. 2025. "Smokeless tobacco (snuff) and site-specific cancer
+    risks in adult Black South African women: Findings from the Johannesburg Cancer Study.." https://doi.org/10.1002/ijc.35293'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references established carcinogenicity of
+    SLT
+  - Prior literature on SLT-associated cancers to nasal cavity, lip, and oropharynx
+  - IARC monographs on smokeless tobacco carcinogenicity
+  doi: 10.1002/ijc.35293
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Ever use of smokeless tobacco was associated with nearly two-fold increased risk of eye and
+  adnexa cancer, representing a novel finding not previously established in the SLT-cancer literature.
+quantitative_effects:
+  effect_size:
+    value: 1.95
+    type: odds_ratio
+    ci_lower: 1.03
+    ci_upper: 3.7
+  sample_size: 15336
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study specific to Johannesburg, South Africa; eye cancer association is a novel finding
+    requiring replication
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Models adjusted for age; older women may have longer cumulative exposure
+- name: education
+  direction: weakens
+  strength: weak
+  description: Higher education associated with lower SLT use; models adjusted for education level
+structural_competency:
+  equity_implications: This finding highlights health risks concentrated in populations with cultural
+    practices involving tobacco use. Lower educational attainment and limited access to health information
+    may perpetuate high-risk behaviors. The structural context includes limited cancer prevention resources
+    and screening availability in South Africa. Addressing this requires health system investments and
+    culturally appropriate health education.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.674167'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

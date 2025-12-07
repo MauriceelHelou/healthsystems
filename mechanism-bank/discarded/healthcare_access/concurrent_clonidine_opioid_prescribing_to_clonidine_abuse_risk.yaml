@@ -1,0 +1,44 @@
+id: concurrent_clonidine_opioid_prescribing_to_clonidine_abuse_risk
+name: Concurrent Clonidine and Opioid Prescribing → Clonidine Abuse Risk
+from_node:
+  node_id: concurrent_clonidine_opioid_prescribing
+  node_name: Concurrent Clonidine and Opioid Prescribing
+to_node:
+  node_id: clonidine_abuse_risk
+  node_name: Clonidine Abuse Risk
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare providers prescribe clonidine concurrently with opioids for
+  management of opioid use disorder or other conditions'
+- 'Step 2: Clonidine reportedly boosts and extends opioid-related euphoria and reduces
+  the amount of psychoactive drug needed'
+- 'Step 3: Dual availability of both medications creates opportunity for combined
+  abuse that produces enhanced psychoactive effects'
+- 'Step 4: Underestimation of clonidine abuse potential by prescribers leads to insufficient
+  monitoring and safeguards'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Brian G Mitchell and Jaekyu Lee 2021. "Case Report: Concurrent
+    Clonidine Abuse and Opioid Use Disorder.." *Journal of psychoactive drugs*. https://doi.org/10.1080/02791072.2021.1908644'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.754001'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: opioid_epidemic_prevalence
+  direction: strengthens
+  strength: strong
+  description: Increasing prevalence of opioid epidemic creates more situations where
+    concurrent prescribing occurs and increases population at risk
+- name: provider_awareness
+  direction: weakens
+  strength: moderate
+  description: Greater healthcare provider vigilance and awareness of clonidine abuse
+    potential can reduce risk through better monitoring and prescribing practices
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/concurrent_clonidine_opioid_prescribing_to_clonidine_abuse_risk.yaml
+_category: healthcare_access

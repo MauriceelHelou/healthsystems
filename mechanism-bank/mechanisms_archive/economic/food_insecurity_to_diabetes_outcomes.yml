@@ -1,0 +1,104 @@
+id: food_insecurity_to_diabetes_outcomes
+name: Food Insecurity → Diabetes Outcomes
+from_node:
+  node_id: food_insecurity
+  node_name: Food Insecurity
+  node_type: stock
+to_node:
+  node_id: diabetes_outcomes
+  node_name: Diabetes Health Outcomes
+  node_type: stock
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Household food insecurity forces trade-offs between food and medications, leading to cost-related
+  medication non-adherence'
+- 'Step 2: Limited food budgets result in consumption of calorie-dense but nutrient-poor foods, impairing
+  glycemic control'
+- 'Step 3: Cyclical food availability causes feast-famine eating patterns that destabilize blood glucose
+  levels'
+- 'Step 4: Chronic stress from food uncertainty elevates cortisol, directly worsening insulin resistance'
+- 'Step 5: Poor glycemic control leads to diabetes complications including cardiovascular disease, neuropathy,
+  and nephropathy'
+evidence:
+  quality_rating: A
+  n_studies: 49
+  primary_citation: 'Beltrán, Sourik, et al. 2022. ''Food insecurity, type 2 diabetes, and hyperglycaemia:
+    A systematic review and meta-analysis.'' Endocrinology, Diabetes & Metabolism 5(3): e315.'
+  supporting_citations:
+  - 'Gao, Yueying, et al. 2023. ''The Effect of Food is Medicine Interventions on Diabetes-related Health
+    Outcomes Among Low-income and Food-insecure Individuals: A Systematic Review and Meta-analysis.''
+    Canadian Journal of Diabetes 47(3): 266-275.'
+  - 'Lee, Woolton, et al. 2020. ''Systematic review and meta-analysis of patient race/ethnicity, socioeconomics,
+    and quality for adult type 2 diabetes.'' Health Services Research 55(3): 332-350.'
+  doi: 10.1002/edm2.315
+  journal: Endocrinology, Diabetes &amp; Metabolism
+  year: 2021
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/0b/9f/PMC8754242.tar.gz
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: -0.47
+    type: percentage_change
+    unit: A1C percentage points
+    ci_lower: -0.66
+    ci_upper: -0.29
+    ci_level: 95
+  interpretation: Food is Medicine interventions reduce A1C by 0.47 percentage points (clinically meaningful)
+  source: Meta-analysis of 5 RCTs (n=843)
+last_updated: '2025-11-30'
+version: '1.1'
+description: Food insecurity undermines diabetes management through multiple pathways including medication-food
+  trade-offs, poor diet quality, irregular eating patterns, and chronic stress. This mechanism disproportionately
+  affects low-income populations and contributes to diabetes complications and mortality.
+moderators:
+- name: food_assistance_programs
+  direction: weakens
+  strength: moderate
+  description: SNAP and food pantry access reduces severity of food insecurity and improves diet quality
+- name: diabetes_medication_cost
+  direction: strengthens
+  strength: strong
+  description: High out-of-pocket medication costs intensify food-medication trade-offs
+- name: food_is_medicine_programs
+  direction: weakens
+  strength: strong
+  description: Produce prescription and medically tailored meal programs reduce A1C by 0.47% on average
+- name: income_level
+  direction: strengthens
+  strength: strong
+  description: Very low income amplifies food insecurity effects through compounding resource constraints
+structural_competency:
+  root_cause_level: economic_system
+  avoids_victim_blaming: true
+  equity_implications: Food insecurity reflects structural economic inequality and food system failures.
+    Marginalized communities face higher food insecurity rates due to wage stagnation, inadequate safety
+    net programs, food apartheid in low-income neighborhoods, and systemic barriers to economic mobility.
+    Framing this as individual dietary choice ignores these structural determinants.
+assumptions:
+- Assumes continuous or recurrent food insecurity rather than temporary shortage
+- Food insecurity measured using USDA 18-item or 6-item screening tools
+- Diabetes outcomes include A1C, complications, and hospitalizations
+limitations:
+- Many studies are cross-sectional limiting causal inference
+- Food insecurity measurement varies across studies
+- Confounding by overall socioeconomic status difficult to fully address
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Food insecurity prevalence varies by region, with higher rates in rural areas and food
+    deserts. Local food assistance infrastructure and state SNAP policies create geographic variation
+    in effect magnitude.
+  relevant_geographies:
+  - Rural areas with limited food retail access show stronger effects
+  - States with restricted SNAP eligibility show higher food insecurity-diabetes burden
+  - Urban food deserts concentrate unhealthy food environments
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

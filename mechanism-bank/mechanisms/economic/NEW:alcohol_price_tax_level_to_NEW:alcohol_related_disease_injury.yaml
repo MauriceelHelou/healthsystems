@@ -1,0 +1,65 @@
+id: NEW:alcohol_price_tax_level_to_NEW:alcohol_related_disease_injury
+name: Alcohol Price/Tax Level → Alcohol-Related Disease and Injury Outcomes
+from_node:
+  node_id: NEW:alcohol_price_tax_level
+  node_name: Alcohol Price/Tax Level
+to_node:
+  node_id: NEW:alcohol_related_disease_injury
+  node_name: Alcohol-Related Disease and Injury Outcomes
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher alcohol prices/taxes increase the financial cost of purchasing alcoholic
+  beverages'
+- 'Step 2: Increased costs reduce alcohol consumption, including heavy and binge drinking
+  patterns (price elasticity of -0.28 for heavy drinking)'
+- 'Step 3: Reduced heavy and excessive drinking decreases cumulative alcohol exposure
+  and acute intoxication episodes'
+- 'Step 4: Lower alcohol exposure reduces incidence of alcohol-attributable diseases
+  (e.g., cirrhosis) and injuries (e.g., accidents, violence)'
+evidence:
+  quality_rating: A
+  n_studies: 122
+  primary_citation: Wagenaar et al. meta-analysis on taxes/prices and alcohol-related
+    disease and injury outcomes
+  supporting_citations:
+  - Z. Xuan et al. 2015. Comment on 'binge drinking and alcohol prices.' Health Economics
+    Review
+  - Wagenaar et al. meta-analysis of 112 studies on heavy drinking elasticity
+  - Elder et al. systematic review on alcohol tax and excessive drinking
+  - Cook and Moore review on price effects
+  - Xuan et al. study on comprehensive alcohol tax measures
+description: 'Higher alcohol prices and taxes are inversely associated with alcohol-related
+  disease and injury outcomes. This relationship operates through reduced alcohol
+  consumption at higher price points, with a meta-analysis of 112 studies estimating
+  a significant heavy drinking elasticity of -0.28. A separate meta-analysis specifically
+  demonstrated that increased taxes and prices were associated with reduced alcohol-related
+  disease and injury outcomes attributable to binge drinking. Experimental studies
+  in barroom settings confirm the causal direction: when prices decrease, consumption
+  increases.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.28
+    type: elasticity
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: Tax measure comprehensiveness
+  direction: strengthens
+  strength: moderate
+  description: Comprehensive tax measures including specific excise and value-based
+    taxes show stronger negative elasticity compared to beer excise tax alone
+- name: Age group
+  direction: strengthens
+  strength: moderate
+  description: Price effects apply to youth drinkers as well as heavy drinkers and
+    alcoholics
+- name: Drinking pattern
+  direction: strengthens
+  strength: moderate
+  description: Effects observed across drinking patterns including binge drinking,
+    heavy drinking, and chronic consumption leading to cirrhosis

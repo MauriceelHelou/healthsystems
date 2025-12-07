@@ -1,0 +1,57 @@
+id: NEW:glucocorticosteroid_treatment_to_liver_disease_mortality
+name: Glucocorticosteroid Treatment → Liver Disease Mortality
+from_node:
+  node_id: NEW:glucocorticosteroid_treatment
+  node_name: Glucocorticosteroid Treatment
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Glucocorticosteroids are administered to patients with alcoholic hepatitis
+  to suppress inflammatory response and reduce hepatic inflammation'
+- 'Step 2: Despite anti-inflammatory effects, glucocorticosteroids may increase susceptibility
+  to infections and other serious adverse events in patients with compromised liver
+  function'
+- 'Step 3: The immunosuppressive effects combined with already impaired hepatic metabolism
+  may lead to complications that could theoretically increase mortality risk'
+- 'Step 4: However, current evidence shows no statistically significant difference
+  in all-cause or liver-related mortality between glucocorticosteroid treatment and
+  placebo/no intervention'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: Chavdar S Pavlov et al. 2019. Glucocorticosteroids for people
+    with alcoholic hepatitis. The Cochrane database of systematic reviews.
+  supporting_citations: []
+description: This Cochrane systematic review of 16 randomized clinical trials (1861
+  participants) found no evidence that glucocorticosteroids affect all-cause mortality
+  (RR 0.90, 95% CI 0.70-1.15) or liver-related mortality (RR 0.89, 95% CI 0.69-1.14)
+  in people with alcoholic hepatitis compared to placebo or no intervention. The direction
+  is coded as positive (indicating potential for increased mortality risk) based on
+  the pathway classification, but the actual evidence shows a null effect with wide
+  confidence intervals that cannot rule out either benefits or harms. The certainty
+  of evidence was rated as very low due to high risk of bias in most trials.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.9
+    type: relative_risk
+    ci_lower: 0.7
+    ci_upper: 1.15
+  p_value: null
+  sample_size: 1861
+moderators:
+- name: Disease severity (Maddrey score)
+  direction: strengthens
+  strength: moderate
+  description: Alcoholic hepatitis severity (mild vs severe based on Maddrey score
+    ≥32) may modify treatment effects, though subgroup analyses were limited by data
+    availability
+- name: Alcohol abstinence
+  direction: weakens
+  strength: moderate
+  description: Risk of death depends on abstinence from alcohol; those who abstain
+    have better outcomes regardless of glucocorticosteroid treatment

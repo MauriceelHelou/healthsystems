@@ -1,0 +1,38 @@
+id: census_tract_poverty_rate_to_lifetime_alcohol_use_disorder
+name: Census-Level Neighborhood Poverty → Lifetime Alcohol Use Disorder
+from_node:
+  node_id: census_tract_poverty_rate
+  node_name: Census-Level Neighborhood Poverty
+to_node:
+  node_id: lifetime_alcohol_use_disorder
+  node_name: Lifetime Alcohol Use Disorder
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: High poverty neighborhoods concentrate economic deprivation and structural
+  disadvantage'
+- 'Step 2: Economic strain reduces access to protective resources (healthcare, social
+  services, employment opportunities)'
+- 'Step 3: Chronic stress from economic insecurity and limited opportunities increases
+  vulnerability to alcohol dependence'
+- 'Step 4: Higher rates of lifetime alcohol use disorder emerge among women in high-poverty
+  areas'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Vaeth et al. 2019. "Neighborhood factors, drinking behavior,
+    and alcohol use disorder in San Juan, Puerto Rico.." *American Journal of Orthopsychiatry*.
+    https://doi.org/10.1037/ort0000402
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.000757'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: gender
+  direction: strengthens
+  strength: strong
+  description: The positive association between neighborhood poverty and lifetime
+    AUD was observed only for women, not men, suggesting gender-specific vulnerability
+    to neighborhood economic disadvantage

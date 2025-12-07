@@ -1,0 +1,53 @@
+id: NEW:housing_first_intervention_to_homelessness_rate
+name: Housing First Intervention → Homelessness Rate
+from_node:
+  node_id: NEW:housing_first_intervention
+  node_name: Housing First Intervention
+to_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Housing First programs provide rapid access to permanent housing without
+  requiring sobriety or treatment compliance as preconditions'
+- 'Step 2: Participants receive stable, non-abstinence-contingent housing along with
+  supportive services tailored to their needs'
+- 'Step 3: Housing stability is achieved as participants spend significantly more
+  days housed compared to those receiving traditional services'
+- 'Step 4: Sustained housing placement reduces the number of individuals experiencing
+  homelessness at the population level'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'A. Baxter et al. 2019. Effects of Housing First approaches on
+    health and well-being of adults who are homeless or at risk of homelessness: systematic
+    review and meta-analysis of randomised controlled trials. Journal of Epidemiology
+    and Community Health.'
+  supporting_citations: []
+description: Housing First interventions significantly reduce homelessness by providing
+  immediate, unconditional access to permanent housing combined with supportive services.
+  This systematic review of 4 RCTs found intervention participants were 2.46 times
+  more likely to be housed at 18-24 months and spent substantially more days housed
+  (SMD=1.24) compared to control groups receiving traditional services.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.46
+    type: risk_ratio
+    ci_lower: 1.58
+    ci_upper: 3.84
+  p_value: null
+  sample_size: null
+moderators:
+- name: substance_use_status
+  direction: strengthens
+  strength: moderate
+  description: Housing First is specifically designed for populations with substance
+    use issues; no increase in problematic substance use was observed while housing
+    stability improved
+- name: follow_up_duration
+  direction: strengthens
+  strength: moderate
+  description: Housing stability effects were robust at 18-24 month follow-up periods

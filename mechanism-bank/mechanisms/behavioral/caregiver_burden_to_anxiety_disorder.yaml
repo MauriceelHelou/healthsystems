@@ -1,0 +1,46 @@
+id: caregiver_burden_to_anxiety_disorder
+name: Informal Caregiving Status → Anxiety Disorder
+from_node:
+  node_id: caregiver_burden
+  node_name: Informal Caregiving Status
+to_node:
+  node_id: anxiety_disorder
+  node_name: Anxiety Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Informal caregivers take on significant responsibilities for care recipients,
+  including physical care, emotional support, and care coordination'
+- 'Step 2: These caregiving demands create chronic stress through unpredictable care
+  needs, sleep disruption, reduced personal time, and financial strain'
+- 'Step 3: Chronic exposure to caregiving-related stressors activates the hypothalamic-pituitary-adrenal
+  (HPA) axis and sympathetic nervous system'
+- 'Step 4: Sustained physiological stress response, combined with social isolation
+  and reduced self-care behaviors, increases vulnerability to anxiety symptoms'
+- 'Step 5: Persistent worry about care recipient outcomes, anticipatory grief, and
+  uncertainty about the future contribute to development of anxiety disorders'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'P. Janson et al. 2022. Mortality, Morbidity and Health-Related
+    Outcomes in Informal Caregivers Compared to Non-Caregivers: A Systematic Review.
+    International Journal of Environmental Research and Public Health.'
+  supporting_citations: []
+description: Informal caregiving is associated with higher occurrence of anxiety compared
+  to non-caregivers. Cross-sectional evaluations in this systematic review found anxiety
+  prevalence ranging from 2% to 38% among informal caregivers. The relationship operates
+  through chronic stress exposure from caregiving demands, which manifests through
+  behavioral pathways including disrupted sleep, reduced self-care, social isolation,
+  and persistent worry about care recipient outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: care recipient condition severity
+  direction: strengthens
+  strength: moderate
+  description: Higher care demands associated with more severe conditions may increase
+    anxiety risk
+- name: caregiver social support
+  direction: weakens
+  strength: moderate
+  description: Access to social support networks may buffer against anxiety development

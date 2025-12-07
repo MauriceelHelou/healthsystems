@@ -1,0 +1,69 @@
+id: NEW:smokeless_tobacco_snuff_use_to_NEW:cervical_cancer_risk
+name: Smokeless Tobacco (Snuff) Use → Cervical Cancer Risk
+from_node:
+  node_id: NEW:smokeless_tobacco_snuff_use
+  node_name: Smokeless Tobacco (Snuff) Use
+to_node:
+  node_id: NEW:cervical_cancer_risk
+  node_name: Cervical Cancer Risk
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Cultural practices among older African women include use of smokeless tobacco (snuff), which
+  contains carcinogenic tobacco-specific nitrosamines (TSNAs)'
+- 'Step 2: Intravaginal snuff use exposes cervical epithelium directly to carcinogens'
+- 'Step 3: Local carcinogenic exposure promotes cellular transformation and oncogenesis in cervical tissue'
+- 'Step 4: Increased risk of cervical cancer development'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Melitah Motlhale et al. 2025. "Smokeless tobacco (snuff) and site-specific cancer
+    risks in adult Black South African women: Findings from the Johannesburg Cancer Study.." https://doi.org/10.1002/ijc.35293'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references established carcinogenicity of
+    SLT to nasal cavity, lip, and oropharynx from prior literature
+  - International Agency for Research on Cancer (IARC) classification of smokeless tobacco as carcinogenic
+  - Prior studies on SLT-associated cancers referenced in background
+  doi: 10.1002/ijc.35293
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Ever use of smokeless tobacco (snuff) was associated with increased risk of cervical cancer
+  among Black South African women, potentially mediated through intravaginal snuff use which is a cultural
+  practice in this population.
+quantitative_effects:
+  effect_size:
+    value: 1.14
+    type: odds_ratio
+    ci_lower: 1.0
+    ci_upper: 1.3
+  sample_size: 15336
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in Johannesburg, South Africa; findings specific to Black South African
+    women where SLT use is culturally common (22% prevalence among controls)
+moderators:
+- name: smoking_status
+  direction: strengthens
+  strength: moderate
+  description: The association adjusted for tobacco smoking status, suggesting independent effect of snuff
+    use
+- name: HIV_status
+  direction: strengthens
+  strength: moderate
+  description: HIV was adjusted for in models, suggesting potential interaction with cervical cancer risk
+structural_competency:
+  equity_implications: This mechanism reflects structural and cultural factors specific to Black South
+    African women. The high prevalence of snuff use (22%) represents a culturally embedded practice among
+    older African women. Addressing this requires culturally sensitive public health interventions rather
+    than individual blame. The study population's limited access to health education and cancer screening
+    services may compound exposure effects. Equity implications include the need for targeted prevention
+    programs that acknowledge cultural practices while reducing harm.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.672830'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

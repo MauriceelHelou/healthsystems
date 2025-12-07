@@ -1,0 +1,38 @@
+id: distance_to_mat_prescriber_to_mat_continuity_of_care
+name: Distance to Medication-Assisted Treatment Prescriber → Continuity of Pharmacotherapy
+  for Opioid Use Disorder
+from_node:
+  node_id: distance_to_mat_prescriber
+  node_name: Distance to Medication-Assisted Treatment Prescriber
+to_node:
+  node_id: mat_continuity_of_care
+  node_name: Continuity of Pharmacotherapy for Opioid Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Greater travel distances to MAT prescribers create logistical barriers
+  including increased time, cost, and transportation challenges for rural Medicaid
+  enrollees'
+- 'Step 2: These barriers reduce ability to maintain regular appointments for prescription
+  refills and clinical monitoring'
+- 'Step 3: Disruptions in appointment attendance lead to gaps in medication availability'
+- 'Step 4: Discontinuous pharmacotherapy reduces treatment effectiveness and increases
+  relapse risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Evan S Cole et al. 2019. "The Role of Primary Care in Improving
+    Access to Medication-Assisted Treatment for Rural Medicaid Enrollees with Opioid
+    Use Disorder.." *Journal of general internal medicine*. https://doi.org/10.1007/s11606-019-04943-6
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.501186'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: travel_distance_threshold
+  direction: weakens
+  strength: strong
+  description: Traveling mean distance greater than 45 miles significantly reduces
+    odds of maintaining continuity of pharmacotherapy

@@ -1,0 +1,58 @@
+id: NEW:alcohol_related_healthcare_contact_to_NEW:alcoholic_liver_cirrhosis_prevention_opportunity
+name: Alcohol-Related Healthcare Contact → Alcoholic Liver Cirrhosis Prevention Opportunity
+from_node:
+  node_id: NEW:alcohol_related_healthcare_contact
+  node_name: Alcohol-Related Healthcare Contact
+to_node:
+  node_id: NEW:alcoholic_liver_cirrhosis_prevention_opportunity
+  node_name: Alcoholic Liver Cirrhosis Prevention Opportunity
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individuals with alcohol use disorders or heavy drinking patterns present
+  to healthcare settings for alcohol-related conditions (intoxication, withdrawal,
+  injuries, psychiatric comorbidities)'
+- 'Step 2: These healthcare contacts occur prior to the development of alcoholic liver
+  cirrhosis, representing a temporal window for intervention'
+- 'Step 3: Healthcare contact provides opportunity for screening, brief intervention,
+  referral to treatment (SBIRT), and sustained engagement with addiction services'
+- 'Step 4: Early intervention during these contacts can reduce or cease heavy alcohol
+  consumption before irreversible liver damage occurs'
+- 'Step 5: Prevention of continued heavy drinking reduces cumulative liver exposure
+  and prevents progression to cirrhosis'
+evidence:
+  quality_rating: A
+  n_studies: 38
+  primary_citation: 'Gro Askgaard et al. 2019. Opportunities to Prevent Alcoholic
+    Liver Cirrhosis in High-Risk Populations: A Systematic Review With Meta-Analysis.
+    The American journal of gastroenterology.'
+  supporting_citations: []
+description: A systematic review with meta-analysis of 38 studies (N=120,928) found
+  that 40-61% of patients who developed alcoholic liver cirrhosis had a previous alcohol-related
+  healthcare contact before their cirrhosis diagnosis. This represents a significant
+  prevention opportunity, as these healthcare encounters could be leveraged to deliver
+  interventions aimed at reducing alcohol consumption before irreversible liver damage
+  occurs. Alcohol-problem cohorts were confirmed as high-risk populations with 7-16%
+  developing cirrhosis over 8-12 years.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.505
+    type: prevalence_proportion
+    ci_lower: 0.4
+    ci_upper: 0.61
+  p_value: null
+  sample_size: 120928
+moderators:
+- name: alcohol_consumption_level
+  direction: strengthens
+  strength: strong
+  description: 45% of alcoholic liver cirrhosis patients consumed >110g alcohol/day
+    (95%CI 34-56%), indicating extremely high consumption levels identify those at
+    greatest risk who would benefit most from intervention
+- name: alcohol_problem_cohort_membership
+  direction: strengthens
+  strength: strong
+  description: Alcohol-problem cohorts have 7-16% incidence of alcoholic liver cirrhosis
+    after 8-12 years, qualifying as high-risk populations for targeted intervention

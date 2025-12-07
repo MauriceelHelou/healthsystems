@@ -1,0 +1,57 @@
+id: NEW:sugar_sweetened_beverage_warning_label_policy_to_NEW:message_rejection_self_exemption
+name: Sugar-Sweetened Beverage Warning Label Policy → Health Message Rejection and Self-Exemption
+from_node:
+  node_id: NEW:sugar_sweetened_beverage_warning_label_policy
+  node_name: Sugar-Sweetened Beverage Warning Label Policy
+to_node:
+  node_id: NEW:message_rejection_self_exemption
+  node_name: Health Message Rejection and Self-Exemption
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Warning labels present health risk information that may threaten self-concept or current behaviors'
+- 'Step 2: Individuals who perceive themselves as physically active or otherwise healthy find opportunities
+  for self-exemption'
+- 'Step 3: Message misinterpretation or rejection reduces intended behavioral impact of labels'
+- 'Step 4: Self-exemption maintains current SSB consumption patterns despite label exposure'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'C. Miller et al. 2022. "No Child or Adult Would Ever Probably Choose to Have 16 Teaspoons
+    of Sugar": A Preliminary Study of Parents'' Responses to Sugary Drink Warning Label Options. https://doi.org/10.3390/nu14194173'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Prior research on health message resistance (require full-text)
+  - Psychological reactance literature (require full-text)
+  doi: 10.3390/nu14194173
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Warning labels can paradoxically trigger self-exemption behaviors where individuals who perceive
+  themselves as healthy or physically active reject the message's personal relevance, reducing the policy's
+  effectiveness for certain population segments.
+quantitative_effects:
+  sample_size: 82
+moderators:
+- name: physical_activity_level
+  direction: strengthens
+  strength: moderate
+  description: Physically active individuals more likely to self-exempt from sugar warnings
+- name: label_format
+  direction: weakens
+  strength: moderate
+  description: Exercise equivalent labels particularly prone to misinterpretation and self-exemption
+structural_competency:
+  equity_implications: This mechanism identifies a limitation of information-based policy interventions
+    - they may be differentially effective across populations. Those with higher perceived health status
+    may exempt themselves, potentially creating equity issues where labels work better for those already
+    concerned about health. This highlights the need for complementary structural interventions (taxation,
+    availability restrictions) that do not rely solely on individual message processing.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.385492'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

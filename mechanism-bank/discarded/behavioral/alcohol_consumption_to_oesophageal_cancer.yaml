@@ -1,0 +1,44 @@
+id: alcohol_consumption_to_oesophageal_cancer
+name: Alcohol Consumption → Oesophageal Cancer
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: oesophageal_cancer
+  node_name: Oesophageal Cancer
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Direct contact of alcohol with oesophageal mucosa causes local tissue damage
+  and inflammation'
+- 'Step 2: Acetaldehyde accumulation in oesophageal tissue causes DNA adduct formation
+  and mutagenesis'
+- 'Step 3: Alcohol-induced nutritional deficiencies (folate, vitamins) impair DNA
+  methylation and repair'
+- 'Step 4: Chronic inflammation promotes cellular proliferation and carcinogenic progression'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Molly Went et al. 2023. "Risk factors for eight common cancers
+    revealed from a phenome-wide Mendelian randomisation analysis of 378,142 cases
+    and 485,715 controls.." *Research square*. https://doi.org/10.21203/rs.3.rs-2587058/v1
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.506257'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: smoking_status
+  direction: strengthens
+  strength: strong
+  description: Combined alcohol and tobacco use has synergistic effects on oesophageal
+    cancer risk
+- name: genetic_polymorphisms
+  direction: strengthens
+  strength: moderate
+  description: Variants in alcohol dehydrogenase (ADH) and aldehyde dehydrogenase
+    (ALDH) genes modify acetaldehyde metabolism and cancer risk
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/behavioral/alcohol_consumption_to_oesophageal_cancer.yaml
+_category: behavioral

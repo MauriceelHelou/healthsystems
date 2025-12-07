@@ -1,0 +1,73 @@
+id: diet_quality_index_hei_2015_revised_primary_measure_to_NEW:head_and_neck_cancer_risk
+name: Mediterranean Diet Adherence → Head and Neck Cancer Risk
+from_node:
+  node_id: diet_quality_index_hei_2015_revised_primary_measure
+  node_name: Mediterranean Diet Adherence
+to_node:
+  node_id: NEW:head_and_neck_cancer_risk
+  node_name: Head and Neck Cancer Risk
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Adherence to Mediterranean diet increases consumption of fruits, vegetables, whole grains,
+  olive oil, and fish'
+- 'Step 2: These foods provide high levels of antioxidants, polyphenols, and anti-inflammatory compounds'
+- 'Step 3: Antioxidants neutralize reactive oxygen species and reduce oxidative stress in oral and pharyngeal
+  tissues'
+- 'Step 4: Reduced oxidative damage and chronic inflammation decreases DNA damage and cellular mutations'
+- 'Step 5: Lower cumulative carcinogenic exposure reduces head and neck cancer development risk'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: 'Nader G Zalaquett et al. 2025. "Adherence to the Mediterranean Diet and the Risk
+    of Head and Neck Cancer: A Systematic Review and Meta-Analysis of Case–Control Studies." https://doi.org/10.3390/nu17020287'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 11 case-control studies meeting
+    inclusion criteria
+  - Three studies with individual component analyses referenced in results
+  - Studies published up to January 2024 following PRISMA guidelines
+  doi: 10.3390/nu17020287
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: High adherence to the Mediterranean diet is significantly associated with a 44% reduced risk
+  of head and neck cancer. The protective effect appears to operate primarily through high fruit and vegetable
+  consumption, while other components (legumes, fish, low meat intake) showed no statistically significant
+  independent associations.
+quantitative_effects:
+  effect_size:
+    value: 0.561
+    type: odds_ratio
+    ci_lower: 0.368
+    ci_upper: 0.856
+  p_value: 0.007
+  sample_size: 15272
+  heterogeneity_i_squared: 92.0
+moderators:
+- name: fruit_and_vegetable_consumption
+  direction: strengthens
+  strength: strong
+  description: Individual component analyses showed higher fruit and vegetable consumption significantly
+    decreased HNC risk
+- name: tobacco_use
+  direction: strengthens
+  strength: strong
+  description: Tobacco use is an established risk factor for HNC; dietary intervention may be particularly
+    beneficial for smokers
+- name: alcohol_consumption
+  direction: strengthens
+  strength: strong
+  description: Alcohol consumption is an established risk factor; Mediterranean diet may offset some alcohol-related
+    carcinogenic effects
+structural_competency:
+  equity_implications: 'This mechanism has important structural implications: access to Mediterranean
+    diet components (fresh fruits, vegetables, olive oil, fish) is shaped by food environment, food deserts,
+    economic resources, and cultural food systems. Populations in food deserts or with limited economic
+    resources face structural barriers to dietary patterns that could reduce cancer risk. The mechanism
+    avoids individual blame by highlighting that dietary patterns are constrained by food availability,
+    affordability, and cultural context.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.332261'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,66 @@
+id: NEW:urinary_catheter_utilization_to_catheter_uti_cauti_rate
+name: Urinary Catheter Utilization Rate → Catheter-Associated Urinary Tract Infection
+  Rate
+from_node:
+  node_id: NEW:urinary_catheter_utilization
+  node_name: Urinary Catheter Utilization Rate
+to_node:
+  node_id: catheter_uti_cauti_rate
+  node_name: Catheter-Associated Urinary Tract Infection Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Higher urinary catheter utilization rates increase the number of patients
+  exposed to indwelling urinary catheters in hospital settings (ICUs and non-ICUs)'
+- 'Step 2: Catheter insertion provides a direct pathway for bacterial entry into the
+  normally sterile urinary tract, bypassing natural defense mechanisms'
+- 'Step 3: Duration of catheterization compounds infection risk as biofilm formation
+  on catheter surfaces facilitates bacterial colonization and ascension'
+- 'Step 4: Increased catheter-days at the population level directly translates to
+  higher CAUTI incidence rates, as CAUTI is mathematically defined as infections per
+  1,000 catheter-days'
+- 'Step 5: Multifaceted interventions targeting catheter utilization reduction (such
+  as the STRIVE initiative) demonstrate that lowering utilization rates reduces CAUTI
+  rates proportionally'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: Meddings J, et al. Quantitative Results of a National Intervention
+    to Prevent Hospital-Acquired Catheter-Associated Urinary Tract Infection. Annals
+    of Internal Medicine. 2019.
+  supporting_citations: []
+description: Urinary catheter utilization rate directly drives CAUTI incidence through
+  increased exposure time and opportunity for bacterial colonization. The CDC STRIVE
+  initiative and multiple systematic reviews confirm that reducing inappropriate catheter
+  use is the primary mechanism for CAUTI prevention. Meta-analysis of multifaceted
+  interventions targeting catheter utilization shows pooled CAUTI incidence rate ratio
+  of 0.54 (95% CI 0.45-0.66) compared to standard care, demonstrating that lower utilization
+  leads to proportionally lower CAUTI rates.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.54
+    type: incidence_rate_ratio
+    ci_lower: 0.45
+    ci_upper: 0.66
+  p_value: null
+  sample_size: null
+moderators:
+- name: hospital_setting
+  direction: varies
+  strength: moderate
+  description: ICU vs non-ICU settings show differential progress in CAUTI reduction;
+    non-ICU settings demonstrated more improvement from 2009-2014
+- name: infection_prevention_practices
+  direction: weakens
+  strength: strong
+  description: Multifaceted interventions including aseptic insertion techniques,
+    maintenance care protocols, and appropriate catheter use criteria significantly
+    moderate the utilization-infection relationship
+- name: hospital_type
+  direction: varies
+  strength: moderate
+  description: Acute care, long-term acute care, and critical access hospitals may
+    show different utilization-CAUTI relationships based on patient populations and
+    resource availability

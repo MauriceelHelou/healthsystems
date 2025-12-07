@@ -1,0 +1,58 @@
+id: NEW:history_of_delirium_tremens_to_alcohol_withdrawal_severe_rate
+name: History of Delirium Tremens → Severe Alcohol Withdrawal Syndrome Rate
+from_node:
+  node_id: NEW:history_of_delirium_tremens
+  node_name: History of Delirium Tremens
+to_node:
+  node_id: alcohol_withdrawal_severe_rate
+  node_name: Severe Alcohol Withdrawal Syndrome Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Prior episodes of delirium tremens indicate previous severe neuroadaptation
+  to chronic alcohol exposure, with significant alterations to GABA and glutamate
+  receptor systems'
+- 'Step 2: The kindling phenomenon occurs whereby each successive alcohol withdrawal
+  episode leads to progressive sensitization of neural circuits, lowering the threshold
+  for subsequent severe withdrawal'
+- 'Step 3: Neurobiological changes from prior delirium tremens episodes persist, including
+  altered autonomic nervous system regulation and increased excitatory neurotransmission
+  vulnerability'
+- 'Step 4: Upon alcohol cessation, the pre-sensitized nervous system exhibits an exaggerated
+  hyperexcitable response, manifesting as severe alcohol withdrawal syndrome including
+  seizures and recurrent delirium tremens'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'E. Wood et al. 2018. Will This Hospitalized Patient Develop Severe
+    Alcohol Withdrawal Syndrome?: The Rational Clinical Examination Systematic Review.
+    Journal of the American Medical Association (JAMA).'
+  supporting_citations: []
+description: History of delirium tremens significantly increases the likelihood of
+  developing severe alcohol withdrawal syndrome (SAWS) by nearly 3-fold. This systematic
+  review of 14 high-quality studies with over 71,000 patients found that prior delirium
+  tremens is one of the most predictive clinical indicators for SAWS, reflecting the
+  kindling phenomenon whereby previous severe withdrawal episodes sensitize neural
+  circuits to future withdrawal.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.9
+    type: likelihood_ratio
+    ci_lower: 1.7
+    ci_upper: 5.2
+  p_value: null
+  sample_size: 71295
+moderators:
+- name: baseline_systolic_blood_pressure
+  direction: strengthens
+  strength: moderate
+  description: Baseline systolic blood pressure ≥140 mm Hg was also associated with
+    increased likelihood of SAWS (LR 1.7), suggesting additive risk with history of
+    delirium tremens
+- name: number_of_prior_withdrawal_episodes
+  direction: strengthens
+  strength: moderate
+  description: Kindling effect suggests cumulative withdrawal episodes progressively
+    increase risk

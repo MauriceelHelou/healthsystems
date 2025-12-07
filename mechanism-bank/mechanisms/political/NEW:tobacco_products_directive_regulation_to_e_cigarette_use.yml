@@ -1,0 +1,70 @@
+id: NEW:tobacco_products_directive_regulation_to_e_cigarette_use
+name: EU Tobacco Products Directive Regulation → E-cigarette Use
+from_node:
+  node_id: NEW:tobacco_products_directive_regulation
+  node_name: EU Tobacco Products Directive Regulation
+to_node:
+  node_id: e_cigarette_use
+  node_name: E-cigarette Use
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Implementation of cross-border advertising bans reduces youth exposure to e-cigarette marketing'
+- 'Step 2: Health warning requirements on packaging decrease product appeal to young people'
+- 'Step 3: Product strength restrictions limit nicotine content available in regulated markets'
+- 'Step 4: Reduced accessibility and appeal leads to plateau and potential decline in youth e-cigarette
+  experimentation'
+- 'Step 5: Change in trend from growth to stabilization in ever-use prevalence among adolescents'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'Graham Moore et al. 2023. "Impacts of EU Tobacco Products Directive regulations on
+    use of e-cigarettes in adolescents in Great Britain: a natural experiment evaluation." https://doi.org/10.3310/WTMH3198'
+  supporting_citations:
+  - Health Behaviour in School-aged Children Survey and School Health Research Network surveys (2013-2019)
+  - Scottish Schools Adolescent Lifestyle and Substance Use Survey
+  - Smoking Drinking and Drug Use surveys (England)
+  doi: 10.3310/WTMH3198
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: The EU Tobacco Products Directive regulations, implemented in May 2016, appear to have halted
+  the growth in ever e-cigarette use among adolescents in Great Britain. Prior to implementation, e-cigarette
+  ever-use was growing among young people aged 13-15; after implementation, this growth did not continue.
+  The change in trend was statistically significant in long-term analysis with an odds ratio of 0.96.
+quantitative_effects:
+  effect_size:
+    value: 0.96
+    type: odds_ratio
+  sample_size: 91687
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Similar patterns observed across Wales (primary analysis), England, and Scotland, though
+    specific effect sizes may vary by nation
+moderators:
+- name: time_since_implementation
+  direction: strengthens
+  strength: moderate
+  description: Change in trend was significant in long-term analysis (to 2019) though of similar magnitude
+    at both short-term (to 2017) and long-term time points
+- name: retailer_compliance
+  direction: strengthens
+  strength: moderate
+  description: Observations indicated good compliance with regulations, though some retailers reported
+    limited information about TPD regulations
+structural_competency:
+  equity_implications: This mechanism demonstrates how regulatory policy at the structural level can shape
+    youth health behaviors. Rather than blaming individual youth for e-cigarette experimentation, the
+    intervention targets the commercial and marketing environment that makes these products appealing
+    and accessible. The policy approach recognizes that youth tobacco/nicotine use is shaped by commercial
+    determinants of health including advertising exposure and product design. Equity implications include
+    potential differential effects by socioeconomic status in terms of compliance enforcement in different
+    retail environments.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.440175'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

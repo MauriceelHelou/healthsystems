@@ -1,0 +1,44 @@
+id: high_blood_alcohol_concentration_to_assault_risk
+name: High Blood Alcohol Concentration → Assault Risk
+from_node:
+  node_id: high_blood_alcohol_concentration
+  node_name: High Blood Alcohol Concentration
+to_node:
+  node_id: assault_risk
+  node_name: Assault Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Elevated blood alcohol concentration impairs cognitive function, judgment,
+  and impulse control'
+- 'Step 2: Late-night drinking produces strongly increased mean estimated BAC levels'
+- 'Step 3: High intoxication levels in public settings increase both perpetration
+  and victimization risk'
+- 'Step 4: Assault peaks at 3-5am coincide with highest BAC levels and late-night
+  public congregation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Mäkelä and K. Warpenius 2020. "Night-time is the right time?
+    Late-night drinking and assaults in Finnish public and private settings.." *Drug
+    and Alcohol Review*. https://doi.org/10.1111/dar.13068
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.056151'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: setting_type
+  direction: strengthens
+  strength: strong
+  description: Public places concentrate intoxicated individuals together, amplifying
+    assault risk compared to home settings with similar BAC levels
+- name: time_of_night
+  direction: strengthens
+  strength: strong
+  description: Later hours show stronger association between BAC and assault risk,
+    with peaks at 3-5am
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/high_blood_alcohol_concentration_to_assault_risk.yaml
+_category: biological

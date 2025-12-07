@@ -1,0 +1,56 @@
+id: NEW:sbirt_intervention_receipt_to_NEW:marijuana_use_past_month
+name: SBIRT Intervention Receipt in Emergency Department → Marijuana Use Past Month
+from_node:
+  node_id: NEW:sbirt_intervention_receipt
+  node_name: SBIRT Intervention Receipt in Emergency Department
+to_node:
+  node_id: NEW:marijuana_use_past_month
+  node_name: Marijuana Use Past Month
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Adult patients visiting emergency departments are universally screened
+  for alcohol and drug use using standardized screening instruments by trained bilingual/bicultural
+  Health Educators'
+- 'Step 2: Patients who screen positive for marijuana use receive a brief motivational
+  intervention matched to their risk level, delivered during a ''teachable moment''
+  when they may be more receptive to feedback'
+- 'Step 3: The motivational intervention increases awareness of risks associated with
+  marijuana use and enhances motivation for behavior change'
+- 'Step 4: Patients internalize intervention messages and implement changes in marijuana
+  use behavior following discharge'
+- 'Step 5: At 6-month follow-up, patients demonstrate modest reductions in past-month
+  marijuana use prevalence and frequency'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Woodruff et al. 2013. "Evaluation of California's Alcohol and
+    Drug Screening and Brief Intervention Project for Emergency Department Patients."
+    Western Journal of Emergency Medicine.
+  supporting_citations: []
+description: SBIRT (Screening, Brief Intervention, and Referral to Treatment) services
+  delivered in emergency department settings are associated with modest reductions
+  in past-month marijuana use. The intervention leverages the 'teachable moment' of
+  an ED visit when patients may be more receptive to health behavior feedback. Trained
+  Health Educators screen patients and deliver brief motivational interventions matched
+  to risk level. Using an intention-to-treat approach with generalized linear mixed
+  models, the California SBIRT program (CASBIRT) demonstrated modest but significant
+  reductions in marijuana use outcomes at 6-month follow-up.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Men showed more positive change compared to women in substance use
+    outcomes
+- name: baseline_risk_status
+  direction: strengthens
+  strength: moderate
+  description: Those at relatively higher risk status showed more positive change
+    compared to lower risk individuals
+- name: polysubstance_use
+  direction: weakens
+  strength: moderate
+  description: Those with only one substance of misuse showed more positive change
+    than those with both alcohol and illicit drug misuse

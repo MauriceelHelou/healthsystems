@@ -1,0 +1,46 @@
+id: urban_geographic_concentration_to_injector_mortality_rates
+name: Urban Geographic Concentration (Dublin) → Injector Mortality Rates
+from_node:
+  node_id: urban_geographic_concentration
+  node_name: Urban Geographic Concentration (Dublin)
+to_node:
+  node_id: injector_mortality_rates
+  node_name: Injector Mortality Rates
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Urban areas concentrate populations experiencing homelessness, poverty,
+  and drug use due to availability of services and drug markets'
+- 'Step 2: High concentration creates strain on limited harm reduction and treatment
+  infrastructure, reducing per-capita service availability'
+- 'Step 3: Urban housing crises create unstable living conditions and homelessness
+  among people who inject drugs'
+- 'Step 4: Spatial concentration of risk factors without proportional service expansion
+  results in elevated mortality rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Therese M Lynn et al. 2018. "Trends in Injector Deaths in Ireland,
+    as Recorded by the National Drug-Related Deaths Index, 1998-2014.." *Journal of
+    studies on alcohol and drugs*.
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.392841'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: homelessness_prevalence
+  direction: strengthens
+  strength: strong
+  description: Urban housing crises likely contribute to the 19% homelessness rate
+    among decedents, creating compounding vulnerabilities
+- name: service_density
+  direction: weakens
+  strength: moderate
+  description: While urban areas may have more total services, concentration of need
+    may overwhelm capacity, and some evidence suggests rural areas have even less
+    access
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/urban_geographic_concentration_to_injector_mortality_rates.yaml
+_category: built_environment

@@ -1,0 +1,42 @@
+id: hiv_viral_suppression_to_hiv_transmission_risk
+name: HIV Viral Suppression → HIV Transmission Risk
+from_node:
+  node_id: hiv_viral_suppression
+  node_name: HIV Viral Suppression
+to_node:
+  node_id: hiv_transmission_risk
+  node_name: HIV Transmission Risk
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Post-release access to healthcare and HIV treatment increases medication
+  adherence and viral suppression rates'
+- 'Step 2: Viral suppression (HIV VL <200 copies/mL) reduces viral load in bodily
+  fluids'
+- 'Step 3: Lower viral loads significantly decrease the probability of HIV transmission
+  during sexual contact (treatment as prevention)'
+- 'Step 4: Among those engaging in unprotected sex, viral suppression provides biological
+  protection against transmission'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Breanne E. Biondi et al. 2019. "Reduced Sexual Risk Behaviors
+    Among Persons With HIV After Release From the Criminal Justice System." *Open
+    Forum Infectious Diseases*. https://doi.org/10.1093/ofid/ofz411
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.351059'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: time_since_release
+  direction: strengthens
+  strength: strong
+  description: At 6 months post-release, all 7 participants who reported unprotected
+    sex had viral suppression, compared to only 9 of 11 at 1 month post-release
+- name: treatment_engagement
+  direction: strengthens
+  strength: strong
+  description: Participation in structured treatment programs for substance use disorders
+    likely improved HIV treatment adherence and viral suppression

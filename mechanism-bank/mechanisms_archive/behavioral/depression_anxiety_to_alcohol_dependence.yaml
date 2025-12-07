@@ -1,0 +1,43 @@
+id: depression_anxiety_to_alcohol_dependence
+name: Depression and Anxiety Disorders → Alcohol Dependence
+from_node:
+  node_id: depression_anxiety
+  node_name: Depression and Anxiety Disorders
+to_node:
+  node_id: alcohol_dependence
+  node_name: Alcohol Dependence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Depression and anxiety disorders create psychological distress and impaired
+  emotional regulation'
+- 'Step 2: Limited access to integrated mental health care in dermatology settings
+  leaves psychiatric symptoms untreated'
+- 'Step 3: Alcohol use emerges as self-medication strategy for managing depression
+  and anxiety symptoms'
+- 'Step 4: Chronic self-medication patterns develop into alcohol dependence in absence
+  of appropriate psychiatric intervention'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: W. Sondermann et al. 2020. "Psychological burden of psoriatic
+    patients in a German university hospital dermatology department." *Journal of
+    dermatology (Print)*. https://doi.org/10.1111/1346-8138.15721
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.523449'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: access_to_psychiatric_care
+  direction: weakens
+  strength: strong
+  description: Availability of integrated psychiatric services and screening in dermatology
+    settings could interrupt the pathway from mental disorders to alcohol dependence
+- name: disease_severity
+  direction: strengthens
+  strength: moderate
+  description: Higher psoriasis severity (PASI ≥3) with associated quality of life
+    impairment strengthens the relationship between mental disorders and substance
+    dependence

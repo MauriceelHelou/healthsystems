@@ -1,0 +1,47 @@
+id: NEW:baclofen_prescribing_quality_to_NEW:baclofen_adverse_effects
+name: Baclofen Prescribing Quality and Monitoring → Severe Adverse Effects from Baclofen Treatment
+from_node:
+  node_id: NEW:baclofen_prescribing_quality
+  node_name: Baclofen Prescribing Quality and Monitoring
+to_node:
+  node_id: NEW:baclofen_adverse_effects
+  node_name: Severe Adverse Effects from Baclofen Treatment
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Careful monitoring of baclofen prescribing involves regular patient assessment and dose adjustment'
+- 'Step 2: Adherence to prescription rules prevents inappropriate dosing and drug interactions'
+- 'Step 3: Physician availability allows for timely intervention when adverse effects emerge'
+- 'Step 4: Proper monitoring prevents escalation of adverse effects to severe outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'R. de Beaurepaire and Philippe Jaury 2024. "Baclofen in the treatment of alcohol
+    use disorder: tailored doses matter." https://doi.org/10.1093/alcalc/agad090'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references literature on severe adverse effects
+    of baclofen
+  doi: 10.1093/alcalc/agad090
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Analysis of circumstances in which severe adverse effects occur suggests that careful monitoring
+  of baclofen prescribing might prevent a large majority of severe adverse effects. The paper indicates
+  that many severe adverse effects could be related to physicians not following appropriate prescription
+  rules and treatment monitoring protocols.
+moderators:
+- name: physician_adherence_to_prescription_rules
+  direction: strengthens
+  strength: strong
+  description: Many severe adverse effects appear related to non-respect of prescription rules by physicians
+structural_competency:
+  equity_implications: This mechanism identifies healthcare system quality and workforce capacity as structural
+    determinants of treatment safety. Inadequate physician training, high caseloads limiting monitoring
+    capacity, or healthcare access barriers that prevent regular follow-up represent structural factors
+    that could increase adverse effect risk. This frames treatment safety as a system-level issue rather
+    than individual patient or physician failure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.724671'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,65 @@
+id: NEW:stay_at_home_duration_pandemic_to_binge_drinking
+name: Stay-at-Home Duration During Pandemic → Binge Drinking
+from_node:
+  node_id: NEW:stay_at_home_duration_pandemic
+  node_name: Stay-at-Home Duration During Pandemic
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Pandemic-related shelter-in-place orders restrict movement and increase time spent at home'
+- 'Step 2: Extended home confinement reduces access to social support systems and increases social isolation'
+- 'Step 3: Isolation combined with pandemic-related stressors (job loss, health anxiety) increases psychological
+  distress'
+- 'Step 4: Increased availability of alcohol at home and reduced social accountability facilitates drinking'
+- 'Step 5: Coping with stress through alcohol consumption escalates to binge drinking patterns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Weerakoon et al. 2020. "Longer time spent at home during COVID-19 pandemic is associated
+    with binge drinking among US adults." https://doi.org/10.1080/00952990.2020.1832508
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior research on pandemic-related
+    stressors but does not cite specific studies
+  - Reference to first statewide shelter-in-place order March 19, 2020
+  - Reference to literature on job loss, poor mental health as pandemic stressors
+  doi: 10.1080/00952990.2020.1832508
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: For every 1-week increase in time spent at home during the COVID-19 pandemic, there was 1.19
+  times greater odds of binge drinking. This relationship reflects how structural pandemic control measures,
+  while necessary for public health, created unintended consequences by disrupting social environments
+  and increasing stressor exposure.
+quantitative_effects:
+  effect_size:
+    value: 1.19
+    type: odds_ratio
+    ci_lower: 1.06
+    ci_upper: 1.34
+  sample_size: 1982
+moderators:
+- name: depression_history
+  direction: strengthens
+  strength: moderate
+  description: 'Binge drinkers with previous diagnosis of depression and current depression symptoms had
+    greater odds of increased alcohol consumption (AOR: 1.77, 95% CI: 1.16-2.73)'
+- name: sex
+  direction: strengthens
+  strength: weak
+  description: Sample was 69% female and 31% male; sex may moderate the relationship but specific differential
+    effects not reported
+structural_competency:
+  equity_implications: This mechanism demonstrates how public health policy interventions (shelter-in-place
+    orders) can have unintended behavioral health consequences. The pathway is structural rather than
+    individual - isolation and confinement are imposed conditions, not personal choices. The study identifies
+    how pandemic-related stressors like job loss and mental health challenges are exacerbated by policies
+    that limit social connection. Equity implications include differential impacts on those with pre-existing
+    mental health conditions and those in unstable employment situations who face compounding stressors.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.029338'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

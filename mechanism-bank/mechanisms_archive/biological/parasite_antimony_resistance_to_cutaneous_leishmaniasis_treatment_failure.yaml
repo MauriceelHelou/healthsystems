@@ -1,0 +1,45 @@
+id: parasite_antimony_resistance_to_cutaneous_leishmaniasis_treatment_failure
+name: Natural Parasite Resistance to Meglumine Antimoniate → Cutaneous Leishmaniasis
+  Treatment Failure
+from_node:
+  node_id: parasite_antimony_resistance
+  node_name: Natural Parasite Resistance to Meglumine Antimoniate
+to_node:
+  node_id: cutaneous_leishmaniasis_treatment_failure
+  node_name: Cutaneous Leishmaniasis Treatment Failure
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Leishmania (Viannia) panamensis parasites exhibit natural resistance to
+  meglumine antimoniate (SbV), with resistance varying by zymodeme (genetic subpopulation)'
+- 'Step 2: Sb-resistant parasites demonstrate higher survival rates in macrophages
+  when exposed to SbV at therapeutic plasma concentrations (32 μg/mL)'
+- 'Step 3: Resistant zymodeme 2.3 strains produce larger lesions and higher parasite
+  burdens in host tissues compared to sensitive zymodeme 2.2 strains'
+- 'Step 4: Higher parasite survival rates during treatment result in persistent infection
+  and clinical treatment failure'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Olga Lucía Fernández et al. 2024. "Natural resistance to meglumine
+    antimoniate is associated with treatment failure in cutaneous leishmaniasis caused
+    by Leishmania (Viannia) panamensis.." *PLoS neglected tropical diseases*. https://doi.org/10.1371/journal.pntd.0012156
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.131439'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: host_risk_factors_for_treatment_failure
+  direction: strengthens
+  strength: strong
+  description: Host risk factors confound the association between parasite drug susceptibility
+    and treatment outcomes, with disparate effects observed when comparing strains
+    from patients with and without defined risk factors
+- name: parasite_zymodeme_type
+  direction: strengthens
+  strength: strong
+  description: Zymodeme 2.3 strains demonstrate significantly higher antimony resistance
+    and greater pathogenicity (larger lesions, higher parasite burdens) compared to
+    zymodeme 2.2 strains

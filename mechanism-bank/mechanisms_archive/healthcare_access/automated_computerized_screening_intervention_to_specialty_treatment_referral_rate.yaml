@@ -1,0 +1,43 @@
+id: automated_computerized_screening_intervention_to_specialty_treatment_referral_rate
+name: Automated Computerized Screening and Brief Intervention System → Specialty Treatment
+  Referral Rate
+from_node:
+  node_id: automated_computerized_screening_intervention
+  node_name: Automated Computerized Screening and Brief Intervention System
+to_node:
+  node_id: specialty_treatment_referral_rate
+  node_name: Specialty Treatment Referral Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Computerized system systematically assesses need for specialty treatment
+  based on standardized criteria'
+- 'Step 2: Automated referral process bypasses barriers of clinician time constraints
+  and competing priorities during brief primary care visits'
+- 'Step 3: System provides consistent, protocolized referral to specialty care for
+  patients meeting clinical thresholds'
+- 'Step 4: Increased referral rates connect more patients with severe alcohol use
+  to appropriate level of care'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Rubin et al. 2021. "Computerized Relational Agent to Deliver
+    Alcohol Brief Intervention and Referral to Treatment in Primary Care: a Randomized
+    Clinical Trial." *Journal of general internal medicine*. https://doi.org/10.1007/s11606-021-06945-9'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.774423'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: primary_care_time_constraints
+  direction: strengthens
+  strength: strong
+  description: Automated system is particularly valuable when primary care clinicians
+    face severe time constraints that limit ability to assess need and complete referrals
+- name: availability_specialty_services
+  direction: strengthens
+  strength: moderate
+  description: System effectiveness depends on existence of specialty treatment services
+    to which patients can be referred

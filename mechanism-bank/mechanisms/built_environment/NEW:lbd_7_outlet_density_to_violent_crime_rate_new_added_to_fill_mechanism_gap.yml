@@ -1,0 +1,55 @@
+id: NEW:lbd_7_outlet_density_to_violent_crime_rate_new_added_to_fill_mechanism_gap
+name: LBD-7 Combined License Outlet Density → Violent Crime Rate
+from_node:
+  node_id: NEW:lbd_7_outlet_density
+  node_name: LBD-7 Combined License Outlet Density
+to_node:
+  node_id: violent_crime_rate_new_added_to_fill_mechanism_gap
+  node_name: Violent Crime Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: LBD-7 outlets hold combined licenses permitting both off-premise and on-premise alcohol sales'
+- 'Step 2: These hybrid outlets combine the crime-generating features of both outlet types'
+- 'Step 3: Customers may consume on-site or purchase for off-site consumption in unregulated settings'
+- 'Step 4: The combined access increases opportunities for alcohol-facilitated violent crime similar to
+  pure off-premise outlets'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Trangenstein et al. 2018. "Outlet Type, Access to Alcohol, and Violent Crime."
+    https://doi.org/10.1111/acer.13880
+  supporting_citations:
+  - Additional citations require full-text access - abstract references Baltimore specific licensing categories
+  - Additional citations require full-text access - abstract references methodological approaches to outlet
+    density
+  - Additional citations require full-text access - abstract references social disorganization theory
+    indicators
+  doi: 10.1111/acer.13880
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: A 10% increase in access to LBD-7 outlets (combined off- and on-premise license) was associated
+  with a 4.2% increase in violent crime exposure, similar to pure off-premise outlets.
+quantitative_effects:
+  effect_size:
+    value: 0.43
+    type: beta_coefficient
+    ci_lower: 0.33
+    ci_upper: 0.52
+  p_value: 0.001
+  sample_size: 51006
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: LBD-7 is a Baltimore-specific license category; findings apply to similar combined
+    license types in other jurisdictions
+structural_competency:
+  equity_implications: The similar effect size for LBD-7 and off-premise outlets suggests that licensing
+    policies permitting off-site alcohol sales are the key structural driver. This supports policies that
+    restrict combined licenses or require additional security measures for establishments selling alcohol
+    for off-site consumption.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.070725'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

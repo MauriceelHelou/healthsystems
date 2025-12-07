@@ -1,0 +1,66 @@
+id: substance_use_harm_reduction_service_access_to_substance_use_disorder_any
+name: Substance Use Harm Reduction Service Access → Substance Use Disorder (Any)
+from_node:
+  node_id: substance_use_harm_reduction_service_access
+  node_name: Substance Use Harm Reduction Service Access
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Harm reduction interventions (e.g., managed alcohol programs, needle exchanges) provide safer
+  use alternatives and reduce chaotic substance use patterns'
+- 'Step 2: Low-barrier services meet people experiencing homelessness where they are, reducing structural
+  barriers to engagement'
+- 'Step 3: Reduced acute harms from substance use may stabilize health and housing situations'
+- 'Step 4: However, meta-analysis shows harm reduction approaches produce similar outcomes to treatment
+  as usual for this population'
+evidence:
+  quality_rating: A
+  n_studies: 34
+  primary_citation: 'Chris O''Leary et al. 2024. "The effectiveness of abstinence-based and harm reduction-based
+    interventions in reducing problematic substance use in adults who are experiencing homelessness in
+    high income countries: A systematic review and meta-analysis: A systematic review.." https://doi.org/10.1002/cl2.1396'
+  supporting_citations:
+  - Studies from the Homelessness Effectiveness Studies Evidence and Gaps Maps (EGM) 4th edition, searches
+    completed September 2021
+  - Additional studies identified through grey evidence calls and hand-searching key journals
+  - 48 individual papers covering 34 unique studies included in review
+  doi: 10.1002/cl2.1396
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Harm reduction interventions for adults experiencing homelessness do not show substantially
+  different outcomes compared to treatment as usual in reducing problematic substance use, though individual
+  intervention effectiveness varies
+quantitative_effects:
+  sample_size: 15255
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: All but one of the 34 studies were conducted in the United States and Canada, limiting
+    generalizability to other high-income country contexts
+moderators:
+- name: intervention_type
+  direction: strengthens
+  strength: moderate
+  description: Some individual interventions appear more effective than others, though overall approach
+    (harm reduction vs abstinence) shows little difference
+- name: study_quality
+  direction: weakens
+  strength: strong
+  description: Most papers were rated as low confidence, suggesting findings may change with higher quality
+    primary research
+structural_competency:
+  equity_implications: This mechanism addresses the structural reality that people experiencing homelessness
+    face unique barriers to substance use treatment. Harm reduction approaches attempt to address these
+    structural barriers by providing low-threshold services. The finding that neither harm reduction nor
+    abstinence approaches significantly outperform treatment as usual suggests deeper structural factors
+    (housing instability, trauma, poverty) may need to be addressed alongside substance use treatment.
+    The disproportionate rates of substance use in homeless populations stem from trauma, adverse childhood
+    experiences, and using substances to cope with street living conditions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.747400'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

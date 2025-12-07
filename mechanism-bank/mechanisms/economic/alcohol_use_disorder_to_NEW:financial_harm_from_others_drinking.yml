@@ -1,0 +1,64 @@
+id: alcohol_use_disorder_to_NEW:financial_harm_from_others_drinking
+name: Alcohol Use Disorder → Financial Harm from Others' Drinking
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:financial_harm_from_others_drinking
+  node_name: Financial Harm from Others' Drinking
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Individual''s alcohol use disorder leads to excessive spending on alcohol purchases'
+- 'Step 2: Household financial resources are diverted from essential expenses to alcohol consumption'
+- 'Step 3: Family members experience reduced money available for household expenses'
+- 'Step 4: Financial trouble emerges for those connected to the drinker through shared resources'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Anne-Marie Laslett et al. 2020. "Cross-sectional surveys of financial harm associated
+    with others'' drinking in 15 countries: Unequal effects on women?." https://doi.org/10.1016/j.drugalcdep.2020.107949'
+  supporting_citations:
+  - Additional citations require full-text access - study references AHTO (Alcohol's Harm To Others) surveys
+    conducted across 15 countries
+  - Cross-sectional survey methodology referenced from established AHTO research protocols
+  - Meta-analysis methodology drawing from country-level logistic regression analyses
+  doi: 10.1016/j.drugalcdep.2020.107949
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This multi-country study demonstrates that alcohol consumption by individuals creates financial
+  harm for others in their social network, particularly affecting household economics through reduced
+  money for expenses and financial trouble. The burden falls disproportionately on women and those in
+  lower-income countries.
+quantitative_effects:
+  sample_size: 38617
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Under 3.2% in most high-income countries reported financial harm, whereas 12-22% reported
+    financial harm in Thailand, Sri Lanka, and India. Low- and middle-income countries show significantly
+    higher prevalence than high-income countries.
+moderators:
+- name: country_income_level
+  direction: strengthens
+  strength: strong
+  description: Financial harm from others' drinking is significantly more prevalent in low- and middle-income
+    countries compared to high-income countries
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Financial harm from others' drinking is significantly more common among women than men
+    in nine of the 15 countries studied
+structural_competency:
+  equity_implications: This mechanism highlights how alcohol-related harms extend beyond the individual
+    drinker to affect household economic security of connected persons. The disproportionate impact on
+    women reflects gendered economic vulnerabilities within households, where women may have less control
+    over household finances yet bear the consequences of partners' drinking. The stark differences between
+    high-income and low-middle-income countries reflect structural economic conditions including weaker
+    social safety nets, lower baseline incomes, and potentially different household resource allocation
+    patterns.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.489720'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

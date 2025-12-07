@@ -1,0 +1,37 @@
+id: buprenorphine_provider_density_to_population_outside_treatment_access_buffer
+name: Buprenorphine Provider Density per 100,000 Population → Population Outside Geographic
+  Treatment Access Buffer
+from_node:
+  node_id: buprenorphine_provider_density
+  node_name: Buprenorphine Provider Density per 100,000 Population
+to_node:
+  node_id: population_outside_treatment_access_buffer
+  node_name: Population Outside Geographic Treatment Access Buffer
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: National provider density of 14.3 per 100,000 persons indicates insufficient
+  treatment capacity relative to opioid use disorder prevalence'
+- 'Step 2: Low provider density means greater average distance between any given location
+  and nearest provider'
+- 'Step 3: Populations in areas with lowest provider density face longest travel distances
+  and greatest access barriers'
+- 'Step 4: Geographic access barriers translate to reduced treatment initiation and
+  retention'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: James R Langabeer et al. 2020. "Geographic proximity to buprenorphine
+    treatment providers in the U.S.." *Drug and alcohol dependence*. https://doi.org/10.1016/j.drugalcdep.2020.108131
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.499716'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: state_opioid_use_disorder_prevalence
+  direction: strengthens
+  strength: moderate
+  description: Areas of higher treatment need have lower access, suggesting provider
+    density is inversely related to population need in some regions

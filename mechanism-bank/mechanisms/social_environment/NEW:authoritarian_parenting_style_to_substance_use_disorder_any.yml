@@ -1,0 +1,57 @@
+id: NEW:authoritarian_parenting_style_to_substance_use_disorder_any
+name: Authoritarian Parenting Style → Substance Use Disorder (Any)
+from_node:
+  node_id: NEW:authoritarian_parenting_style
+  node_name: Authoritarian Parenting Style
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Authoritarian parenting involves high control but low warmth and responsiveness'
+- 'Step 2: Harsh discipline without emotional support may damage parent-child relationship and communication'
+- 'Step 3: Youth may rebel against rigid control or seek emotional coping through peer groups'
+- 'Step 4: Reduced open communication prevents effective dialogue about substance use risks'
+- 'Step 5: Slightly increased substance use in offspring'
+evidence:
+  quality_rating: A
+  n_studies: 184
+  primary_citation: M. Pinquart and Jana Lauk 2024. "Associations of parenting styles with substance use
+    in the offspring—A systematic review and meta‐analysis." https://doi.org/10.1111/dar.13961
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 184 studies
+  - Studies assessed via electronic database search with multi-level meta-analysis
+  - Both concurrent and longitudinal associations examined
+  doi: 10.1111/dar.13961
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis found a very small positive correlation between authoritarian parenting (low
+  warmth, high control) and offspring substance use. The effect size of r=0.03 with confidence interval
+  touching zero indicates this is a minimal and marginally significant association.
+quantitative_effects:
+  effect_size:
+    value: 0.03
+    type: correlation
+    ci_lower: 0.0
+    ci_upper: 0.05
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect sizes varied by cultural context including levels of horizontal and vertical
+    collectivism or individualism
+moderators:
+- name: cultural_collectivism_individualism
+  direction: varies
+  strength: moderate
+  description: Associations may be stronger or weaker depending on cultural norms regarding parental authority
+structural_competency:
+  equity_implications: Authoritarian parenting styles may be more common in contexts where parents face
+    external threats (neighborhood violence, discrimination) and perceive strict control as protective.
+    Cultural values around respect for authority also influence this parenting approach. The minimal effect
+    size suggests this is not a major driver of substance use outcomes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.329186'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

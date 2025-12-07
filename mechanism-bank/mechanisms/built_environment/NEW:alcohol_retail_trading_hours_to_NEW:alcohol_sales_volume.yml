@@ -1,0 +1,79 @@
+id: NEW:alcohol_retail_trading_hours_to_NEW:alcohol_sales_volume
+name: Alcohol Retail Trading Hours → Alcohol Sales Volume
+from_node:
+  node_id: NEW:alcohol_retail_trading_hours
+  node_name: Alcohol Retail Trading Hours
+to_node:
+  node_id: NEW:alcohol_sales_volume
+  node_name: Alcohol Sales Volume
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Extended trading hours increase temporal availability of alcohol at retail outlets'
+- 'Step 2: Increased temporal availability provides more opportunities for purchase'
+- 'Step 3: Greater purchasing opportunities could theoretically increase total alcohol sales volume'
+- 'Step 4: In this study, a 1-hour extension on Saturdays did not produce statistically significant changes
+  in sales'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Daniel Bergsvik et al. 2025. "Effect of a small increase in off-premises trading
+    hours on alcohol sales in Norway: A stepped-wedge cluster-randomized controlled trial.." https://doi.org/10.1111/add.16683'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 'evidence of the effect of limiting
+    off-premises alcohol trading hours is still scarce' suggesting prior literature exists
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  doi: 10.1111/add.16683
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'This stepped-wedge cluster-randomized controlled trial tested whether extending off-premises
+  alcohol trading hours by 1 hour on Saturdays affected alcohol sales at Norwegian state monopoly outlets.
+  The study found no statistically significant effect on monthly alcohol sales per trade district (average
+  treatment effect: -185.5 litres, 95% CI = -1159.9, 788.9) or per outlet (-35.3 litres, 95% CI = -142.1,
+  72.0). Results were consistent across estimation methods and model specifications.'
+quantitative_effects:
+  effect_size:
+    value: -185.5
+    type: beta_coefficient
+    ci_lower: -1159.9
+    ci_upper: 788.9
+  sample_size: 229
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study examined effects across urban and rural trade districts in all parts of Norway;
+    subgroup analyses were conducted but specific geographic variation not detailed in abstract
+moderators:
+- name: cross_border_trade
+  direction: weakens
+  strength: moderate
+  description: Robustness checks considered effects of cross-border trade which may attenuate observed
+    effects in areas near national borders
+- name: urban_rural_location
+  direction: strengthens
+  strength: weak
+  description: Subgroup analyses examined effects in urban vs rural trade districts, though specific differential
+    effects not reported in abstract
+- name: magnitude_of_hour_extension
+  direction: strengthens
+  strength: moderate
+  description: The small extension (1 hour on Saturdays only) may explain null findings; larger extensions
+    might produce different effects
+structural_competency:
+  equity_implications: This study examines a structural-level alcohol policy intervention (trading hours
+    regulation) rather than individual behavior. The Norwegian alcohol monopoly system (Vinmonopolet)
+    represents a population-level structural approach to alcohol control. The null findings suggest that
+    small marginal changes to already restricted trading hours may not significantly impact purchasing
+    patterns in a context of strong baseline alcohol control policies. This has implications for understanding
+    the threshold effects of structural alcohol policies and suggests that incremental deregulation may
+    not immediately increase consumption. The study design (RCT at policy level) represents strong causal
+    evidence for structural determinants.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.159696'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,49 @@
+id: NEW:genetic_risk_variants_pau_to_substance_use_disorder_any
+name: Genetic Risk Variants for Problematic Alcohol Use → Substance Use Disorder Any
+from_node:
+  node_id: NEW:genetic_risk_variants_pau
+  node_name: Genetic Risk Variants for Problematic Alcohol Use
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder Any
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Genetic risk variants (110 independent loci identified) influence gene
+  expression and chromatin interactions in brain tissues'
+- 'Step 2: These variants affect neural pathways involved in reward processing, impulse
+  control, and stress response through prioritized genes in brain tissue'
+- 'Step 3: Altered neurobiological function increases vulnerability to problematic
+  alcohol use patterns'
+- 'Step 4: Shared genetic architecture between problematic alcohol use and other substance
+  use traits (highest genetic correlations observed) creates cross-substance vulnerability'
+- 'Step 5: Genetic predisposition manifests as increased risk for substance use disorder
+  through common biological pathways affecting addiction-related brain circuits'
+evidence:
+  quality_rating: A
+  n_studies: 85
+  primary_citation: Hang Zhou et al. 2023. Multi-ancestry study of the genetics of
+    problematic alcohol use in over 1 million individuals. Nature Medicine.
+  supporting_citations: []
+description: Genetic risk variants for problematic alcohol use (PAU) show strong genetic
+  correlations with other substance use traits, representing the highest observed
+  correlations among all traits examined. The 110 identified risk variants influence
+  gene expression in brain tissues through chromatin interactions, affecting neural
+  pathways that underlie addiction vulnerability. This shared genetic architecture
+  indicates common biological mechanisms between PAU and broader substance use disorders,
+  with cross-ancestry analyses confirming the robustness of these genetic associations
+  across diverse populations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: ancestry
+  direction: strengthens
+  strength: moderate
+  description: Cross-ancestry polygenic risk scores showed better predictive performance
+    than single-ancestry scores, suggesting ancestry-specific effects on risk prediction
+    accuracy
+- name: polygenicity
+  direction: strengthens
+  strength: strong
+  description: 110 independent risk variants contribute to the genetic architecture,
+    with fine-mapping improving identification of causal variants

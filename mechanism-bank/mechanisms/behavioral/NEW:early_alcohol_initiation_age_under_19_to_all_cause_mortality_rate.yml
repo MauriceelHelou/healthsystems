@@ -1,0 +1,53 @@
+id: NEW:early_alcohol_initiation_age_under_19_to_all_cause_mortality_rate
+name: Early Alcohol Initiation (Age Under 19) → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:early_alcohol_initiation_age_under_19
+  node_name: Early Alcohol Initiation (Age Under 19)
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Earlier age at first drink establishes longer duration of alcohol exposure across the lifespan'
+- 'Step 2: Extended duration increases cumulative alcohol-related organ damage'
+- 'Step 3: Earlier initiation is associated with development of hazardous drinking patterns'
+- 'Step 4: Hazardous drinking patterns compound physiological damage leading to elevated mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Horim A Hwang et al. 2025. "Age at first drink as a predictor of all-cause mortality
+    of middle-aged Koreans." https://doi.org/10.1093/ije/dyaf061
+  supporting_citations:
+  - Additional citations require full-text access - abstract references Korean National Health and Nutrition
+    Examination Survey data
+  - Additional citations require full-text access - abstract references cause-of-death statistics linkage
+  - Additional citations require full-text access - abstract references public health policy on age restrictions
+  doi: 10.1093/ije/dyaf061
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among current drinkers, those who initiated alcohol before age 19 had 20% higher mortality
+  risk compared to those who initiated at age 19 or older, demonstrating a dose-response relationship
+  with timing of first alcohol exposure
+quantitative_effects:
+  effect_size:
+    value: 1.2
+    type: hazard_ratio
+    ci_lower: 1.01
+    ci_upper: 1.42
+  sample_size: 36159
+structural_competency:
+  equity_implications: This finding reinforces the public health rationale for minimum legal drinking
+    age laws. The mechanism operates through structural policy (age restrictions) rather than individual
+    blame, as early initiation often reflects environmental availability and social context rather than
+    individual choice. Policy interventions targeting alcohol availability to youth are the appropriate
+    structural response.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.665777'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

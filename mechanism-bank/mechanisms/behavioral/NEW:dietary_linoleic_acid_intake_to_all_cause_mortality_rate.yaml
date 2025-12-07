@@ -1,0 +1,55 @@
+id: NEW:dietary_linoleic_acid_intake_to_all_cause_mortality_rate
+name: Dietary Linoleic Acid (Omega-6) Intake → All-Cause Mortality
+from_node:
+  node_id: NEW:dietary_linoleic_acid_intake
+  node_name: Dietary Linoleic Acid (Omega-6) Intake
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Increased dietary intake of omega-6 linoleic acid (primarily from safflower
+  oil and polyunsaturated margarines) replaces saturated fat in the diet'
+- 'Step 2: Elevated linoleic acid intake may increase oxidized LDL particles and promote
+  inflammatory processes through conversion to arachidonic acid and pro-inflammatory
+  eicosanoids'
+- 'Step 3: Chronic inflammation and oxidative stress contribute to atherosclerotic
+  plaque instability and cardiovascular events'
+- 'Step 4: Increased cardiovascular mortality and coronary heart disease mortality
+  translate to elevated all-cause mortality'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Christopher E Ramsden et al. 2013. Use of dietary linoleic acid
+    for secondary prevention of coronary heart disease and death: evaluation of recovered
+    data from the Sydney Diet Heart Study and updated meta-analysis. BMJ (Clinical
+    research ed.)'
+  supporting_citations: []
+description: Substituting dietary linoleic acid (omega-6 polyunsaturated fat) for
+  saturated fats was associated with increased all-cause mortality in a randomized
+  controlled trial of men with prior coronary events. The intervention group receiving
+  safflower oil and polyunsaturated margarine had 62% higher all-cause mortality compared
+  to controls. An updated meta-analysis of linoleic acid intervention trials showed
+  non-significant trends toward increased cardiovascular and coronary heart disease
+  mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.62
+    type: hazard_ratio
+    ci_lower: 1.0
+    ci_upper: 2.64
+  p_value: 0.05
+  sample_size: 458
+moderators:
+- name: prior_coronary_event
+  direction: strengthens
+  strength: strong
+  description: Study population consisted of men with recent coronary events, suggesting
+    secondary prevention context may amplify harmful effects
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Study limited to men aged 30-59; effects in women unknown

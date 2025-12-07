@@ -1,0 +1,42 @@
+id: healthcare_system_fragmentation_to_moud_discontinuity
+name: Healthcare System Fragmentation → MOUD Treatment Discontinuity
+from_node:
+  node_id: healthcare_system_fragmentation
+  node_name: Healthcare System Fragmentation
+to_node:
+  node_id: moud_discontinuity
+  node_name: MOUD Treatment Discontinuity
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Separate systems for prenatal care, substance use treatment, and mental
+  health create coordination barriers'
+- 'Step 2: Insurance changes, provider transitions, or geographic moves disrupt continuous
+  care'
+- 'Step 3: Regulatory requirements for different MOUD types create access gaps during
+  transitions'
+- 'Step 4: Despite 87% having only one documented MOUD type, discontinuity across
+  trimesters was still observed'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Emmy L Tran et al. "Patterns of Medication for Opioid Use Disorder
+    During Pregnancy, 7 Clinical Sites, MATernaL and Infant clinical NetworK (MAT-LINK),
+    2014-2021.." *Journal of addiction medicine*. https://doi.org/10.1097/ADM.0000000000001426
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.667515'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: integrated_care_model
+  direction: weakens
+  strength: strong
+  description: Sites with integrated prenatal and substance use treatment likely have
+    better MOUD continuity
+- name: insurance_stability
+  direction: weakens
+  strength: moderate
+  description: Continuous insurance coverage reduces MOUD discontinuity by maintaining
+    consistent provider access

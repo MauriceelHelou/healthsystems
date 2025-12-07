@@ -1,0 +1,46 @@
+id: neighborhood_deprivation_to_aud_registration
+name: Neighborhood Deprivation → Alcohol Use Disorder Registration
+from_node:
+  node_id: neighborhood_deprivation
+  node_name: Neighborhood Deprivation
+to_node:
+  node_id: aud_registration
+  node_name: Alcohol Use Disorder Registration
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Neighborhood deprivation concentrates economic disadvantage, limiting access
+  to protective resources including quality healthcare, recreational facilities, and
+  employment opportunities'
+- 'Step 2: Chronic stress from living in resource-deprived environments increases
+  psychological distress and reduces coping resources'
+- 'Step 3: Higher density of alcohol outlets and fewer protective institutions in
+  deprived areas increases environmental availability and exposure to alcohol'
+- 'Step 4: Combination of heightened stress, reduced protective factors, and increased
+  availability elevates risk of AUD development requiring medical or criminal system
+  registration'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'E C Long et al. 2019. "Different Characteristics and Heritabilities
+    of Alcohol Use Disorder Classes: A Population-Based Swedish Study.." *Alcohol
+    and alcoholism (Oxford, Oxfordshire)*. https://doi.org/10.1093/alcalc/agz069'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.883467'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: aud_class_type
+  direction: strengthens
+  strength: moderate
+  description: Different AUD classes (outpatient/prescription, low-frequency inpatient,
+    high-frequency mixed, crime) show varying associations with neighborhood deprivation,
+    suggesting heterogeneous pathways
+- name: sex
+  direction: u_shaped
+  strength: moderate
+  description: Males and females show different heritabilities across AUD classes,
+    suggesting potential sex-based differences in how neighborhood deprivation interacts
+    with genetic vulnerability

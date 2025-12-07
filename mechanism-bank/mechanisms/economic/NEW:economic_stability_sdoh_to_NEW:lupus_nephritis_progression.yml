@@ -1,0 +1,45 @@
+id: NEW:economic_stability_sdoh_to_NEW:lupus_nephritis_progression
+name: Economic Stability SDoH Domain → Lupus Nephritis Disease Progression
+from_node:
+  node_id: NEW:economic_stability_sdoh
+  node_name: Economic Stability SDoH Domain
+to_node:
+  node_id: NEW:lupus_nephritis_progression
+  node_name: Lupus Nephritis Disease Progression
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Economic instability limits ability to afford medications, specialist visits, and transportation
+  to care'
+- 'Step 2: Financial stress contributes to chronic psychological stress and inflammatory burden'
+- 'Step 3: Inadequate resources lead to suboptimal disease management and treatment adherence'
+- 'Step 4: Disease activity remains uncontrolled leading to progressive kidney damage'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'Shivani Garg et al. 2024. "Multiplicative Impact of Adverse Social Determinants of
+    Health on Outcomes in Lupus Nephritis: A Meta‐analysis and Systematic Review." https://doi.org/10.1002/acr.25359'
+  supporting_citations:
+  - Additional citations require full-text access - specific domain analyses from included studies
+  - Studies on economic factors and autoimmune disease outcomes
+  - Studies on poverty and lupus nephritis progression
+  doi: 10.1002/acr.25359
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Economic stability as an SDoH domain contributes to lupus nephritis outcomes through mechanisms
+  of affordability, access, and chronic stress
+moderators:
+- name: Insurance status
+  direction: strengthens
+  strength: moderate
+  description: Lack of adequate insurance amplifies economic barriers to care
+structural_competency:
+  equity_implications: Economic instability reflects structural inequities in wealth distribution, employment
+    opportunities, and social safety nets rather than individual financial management. Policy interventions
+    addressing medication affordability, insurance coverage, and income support could mitigate these effects.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.922730'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

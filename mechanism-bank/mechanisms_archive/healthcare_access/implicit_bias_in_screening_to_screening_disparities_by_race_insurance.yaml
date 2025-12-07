@@ -1,0 +1,38 @@
+id: implicit_bias_in_screening_to_screening_disparities_by_race_insurance
+name: Implicit Bias in Clinical Screening Practices → Screening Disparities by Race
+  and Insurance Status
+from_node:
+  node_id: implicit_bias_in_screening
+  node_name: Implicit Bias in Clinical Screening Practices
+to_node:
+  node_id: screening_disparities_by_race_insurance
+  node_name: Screening Disparities by Race and Insurance Status
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Absence of systematic screening protocols allows clinician discretion in
+  determining who receives screening'
+- 'Step 2: Implicit biases influence clinician perceptions of which patients are at
+  risk for alcohol problems'
+- 'Step 3: Black patients and uninsured patients are disproportionately excluded from
+  screening opportunities'
+- 'Step 4: Screening gaps prevent early intervention access for marginalized populations,
+  perpetuating health inequities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Michelle Jeffery et al. 2024. "Implementation of a novel daily
+    performance improvement checklist (PIC) improves alcohol screening and intervention
+    compliance in trauma.." *Trauma surgery & acute care open*. https://doi.org/10.1136/tsaco-2024-001517
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.804118'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: systematic_screening_protocol
+  direction: weakens
+  strength: strong
+  description: Implementation of standardized checklist eliminated racial and insurance-based
+    disparities in screening (p>0.05 post-PIC for all demographic comparisons)

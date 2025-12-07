@@ -1,0 +1,67 @@
+id: telemedicine_use_to_NEW:quality_of_life_diabetes
+name: Telemedicine Use → Quality of Life (Non-Youth-Specific)
+from_node:
+  node_id: telemedicine_use
+  node_name: Telemedicine Use
+to_node:
+  node_id: NEW:quality_of_life_diabetes
+  node_name: Quality of Life (Non-Youth-Specific)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Telemedicine interventions provide remote access to diabetes care providers,
+  enabling more frequent monitoring and communication between patients and healthcare
+  teams'
+- 'Step 2: Enhanced monitoring facilitates timely medication dose adjustments and
+  personalized diabetes management guidance, improving glycemic control (HbA1c reduction
+  of 0.22%)'
+- 'Step 3: Improved glycemic control reduces diabetes-related symptoms, complications,
+  and daily disease burden'
+- 'Step 4: Reduced disease burden and better diabetes management translate to improved
+  overall quality of life as measured by non-youth-specific instruments'
+evidence:
+  quality_rating: A
+  n_studies: 20
+  primary_citation: 'Kun Zhang et al. 2023. Telemedicine in Improving Glycemic Control
+    Among Children and Adolescents With Type 1 Diabetes Mellitus: Systematic Review
+    and Meta-Analysis. Journal of Medical Internet Research.'
+  supporting_citations: []
+description: Meta-analysis of 20 RCTs (n=1704) demonstrates that telemedicine interventions
+  significantly improve non-youth-specific quality of life in children and adolescents
+  with Type 1 diabetes mellitus compared to usual care. The improvement in quality
+  of life appears to be mediated through better glycemic control achieved via enhanced
+  remote monitoring, more frequent provider communication, and timely treatment adjustments.
+  Notably, while youth-specific diabetes quality of life scores showed no significant
+  improvement, general quality of life measures demonstrated statistically significant
+  benefits with no heterogeneity across studies.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.24
+    type: mean_difference
+    ci_lower: -0.45
+    ci_upper: -0.02
+  p_value: 0.04
+  sample_size: 1704
+moderators:
+- name: Age group
+  direction: strengthens
+  strength: moderate
+  description: Effects on HbA1c appeared greater in studies involving children compared
+    to adolescents (MD -0.41 vs overall -0.22)
+- name: Study duration
+  direction: strengthens
+  strength: moderate
+  description: Studies lasting less than 6 months showed greater effects (MD -0.32)
+    compared to longer studies
+- name: Communication modality
+  direction: strengthens
+  strength: strong
+  description: Studies using smartphone apps for provider-patient communication showed
+    stronger effects (MD -0.37)
+- name: Medication dose adjustment
+  direction: strengthens
+  strength: moderate
+  description: Studies incorporating medication dose adjustment showed enhanced effects
+    (MD -0.25)

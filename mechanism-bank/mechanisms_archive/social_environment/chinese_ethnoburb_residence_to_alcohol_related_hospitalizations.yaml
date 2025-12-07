@@ -1,0 +1,52 @@
+id: chinese_ethnoburb_residence_to_alcohol_related_hospitalizations
+name: Residence in Chinese Ethnoburb (Suburban Immigrant Neighborhood) → Alcohol-Related
+  Hospitalizations
+from_node:
+  node_id: chinese_ethnoburb_residence
+  node_name: Residence in Chinese Ethnoburb (Suburban Immigrant Neighborhood)
+to_node:
+  node_id: alcohol_related_hospitalizations
+  node_name: Alcohol-Related Hospitalizations
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Suburban spatial design disperses population across wider geographic areas,
+  reducing frequency of face-to-face community interactions and informal social monitoring'
+- 'Step 2: Greater socioeconomic advantage and English fluency in ethnoburbs facilitates
+  acculturation to mainstream American drinking cultures and increased exposure to
+  alcohol marketing'
+- 'Step 3: Car-dependent suburban infrastructure reduces walkability and community
+  cohesion, weakening social ties that provide protective norms'
+- 'Step 4: Socioeconomic mobility and integration may disrupt traditional cultural
+  norms and reduce participation in ethnic community institutions that reinforce alcohol
+  protective values'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Meme Wang-Schweig et al. 2022. "Ethnic density effect on alcohol-related
+    hospitalizations among Chinese enclaves and ethnoburbs in California, 2007-2011.."
+    *Drug and alcohol dependence*. https://doi.org/10.1016/j.drugalcdep.2022.109276
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.881222'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: socioeconomic_advantage
+  direction: weakens
+  strength: strong
+  description: Despite lower poverty rates in ethnoburbs (p<0.001), residents experience
+    more alcohol-related problems than enclave residents, suggesting socioeconomic
+    advantage paradoxically reduces protective effects
+- name: english_fluency
+  direction: weakens
+  strength: moderate
+  description: Greater English fluency in ethnoburbs (p=0.002) associated with loss
+    of protective ethnic density effect, possibly through increased acculturation
+- name: suburban_spatial_design
+  direction: weakens
+  strength: strong
+  description: Suburban built environment with lower density, car-dependency, and
+    dispersed settlement patterns weakens community cohesion that protects against
+    alcohol harm

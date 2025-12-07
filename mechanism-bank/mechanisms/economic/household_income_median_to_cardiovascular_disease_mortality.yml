@@ -1,0 +1,55 @@
+id: household_income_median_to_cardiovascular_disease_mortality
+name: Household Income (Low) → Cardiovascular Disease Mortality
+from_node:
+  node_id: household_income_median
+  node_name: Household Income (Low)
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Low income restricts access to material resources essential for health maintenance'
+- 'Step 2: Economic deprivation increases exposure to unhealthy living conditions and food environments'
+- 'Step 3: Financial constraints limit access to preventive healthcare and medication adherence'
+- 'Step 4: Chronic financial stress activates physiological stress responses and inflammation'
+- 'Step 5: Cumulative cardiovascular damage leads to increased CVD events and mortality'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: O. J. Baruwa et al. 2024. "Are socio-economic inequalities related to cardiovascular
+    disease risk? A systematic review and meta-analysis of prospective studies." https://doi.org/10.1186/s12872-024-04248-5
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 17 cohort studies
+  - Studies included approximately 26.5 million participants
+  - Over 900,000 CVD events analyzed across included studies
+  doi: 10.1186/s12872-024-04248-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Low income is associated with a 38% increased risk of cardiovascular disease compared to
+  high income. While significant, this effect is smaller than that of education (RR=1.56), suggesting
+  that economic resources alone do not fully explain the socioeconomic gradient in CVD risk.
+quantitative_effects:
+  effect_size:
+    value: 1.38
+    type: relative_risk
+    ci_lower: 1.12
+    ci_upper: 1.7
+  sample_size: 26500000
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Women with low SES show higher CVD risk than men, suggesting income effects may be modified
+    by gender-based economic inequities
+structural_competency:
+  equity_implications: Income inequality reflects structural economic arrangements including wage policies,
+    labor market conditions, and wealth distribution. Low income is not an individual failing but a product
+    of economic systems that create and maintain inequality. This mechanism appropriately identifies income
+    as a structural determinant that shapes health through material pathways.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.431015'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

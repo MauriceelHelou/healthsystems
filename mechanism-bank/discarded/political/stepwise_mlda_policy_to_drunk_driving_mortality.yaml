@@ -1,0 +1,45 @@
+id: stepwise_mlda_policy_to_drunk_driving_mortality
+name: Stepwise MLDA Policy Structure → Drunk Driving Mortality
+from_node:
+  node_id: stepwise_mlda_policy
+  node_name: Stepwise MLDA Policy Structure
+to_node:
+  node_id: drunk_driving_mortality
+  node_name: Drunk Driving Mortality
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Stepwise MLDA policy (16 for beer/wine, 18 for spirits) creates graduated
+  legal access to alcohol during adolescence'
+- 'Step 2: Policy assumes gradual introduction reduces harmful behaviors including
+  drunk driving'
+- 'Step 3: However, policy timing coincides with driving licensure when youth have
+  minimal driving experience'
+- 'Step 4: Drunk driving and related mortality show only minor associations with alcohol
+  access at both age thresholds, with driving inexperience as dominant risk factor'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Raffael Kamalow and T. Siedler 2019. "The Effects of Stepwise
+    Minimum Legal Drinking Age Legislation on Mortality: Evidence from Germany." *Social
+    Science Research Network*. https://doi.org/10.2139/ssrn.3415800'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.168534'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: driver_licensing_age
+  direction: strengthens
+  strength: strong
+  description: Concurrent timing of alcohol access and driving privileges amplifies
+    mortality risk regardless of stepwise structure
+- name: graduated_driver_licensing
+  direction: weakens
+  strength: moderate
+  description: Presence of graduated licensing systems may reduce novice driver mortality
+    effects independently of MLDA
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/stepwise_mlda_policy_to_drunk_driving_mortality.yaml
+_category: political

@@ -1,0 +1,49 @@
+id: NEW:pharmacological_treatment_psychiatric_to_suicide_rate
+name: Pharmacological Treatments for Psychiatric Conditions → Suicide Mortality
+from_node:
+  node_id: NEW:pharmacological_treatment_psychiatric
+  node_name: Pharmacological Treatments for Psychiatric Conditions
+to_node:
+  node_id: suicide_rate
+  node_name: Suicide Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Psychiatric patients receive pharmacological treatments (antidepressants,
+  mood stabilizers, antipsychotics) as part of clinical care'
+- 'Step 2: Medications reduce symptom severity of underlying psychiatric disorders
+  (depression, bipolar disorder, schizophrenia)'
+- 'Step 3: Reduced symptom severity decreases acute suicidal ideation and impulsivity
+  associated with untreated mental illness'
+- 'Step 4: Ongoing pharmacological treatment provides continued mood stabilization
+  and reduces risk of suicidal crisis episodes'
+- 'Step 5: Machine learning models identify pharmacological treatment status as a
+  predictive feature associated with lower suicide risk, indicating protective effect'
+evidence:
+  quality_rating: A
+  n_studies: 81
+  primary_citation: 'A. Pigoni et al. 2024. Machine learning and the prediction of
+    suicide in psychiatric populations: a systematic review. Translational Psychiatry.'
+  supporting_citations: []
+description: This systematic review of 81 machine learning studies in psychiatric
+  populations identified pharmacological treatments as one of the key features predicting
+  suicide risk. The review found that ML models achieved 70% or greater accuracy using
+  features including previous attempts, severity of disorder, and pharmacological
+  treatments. The inclusion of pharmacological treatment status as a predictive feature
+  in successful ML models suggests that treatment engagement and medication adherence
+  are associated with reduced suicide risk in psychiatric populations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: severity_of_psychiatric_disorder
+  direction: strengthens
+  strength: moderate
+  description: Severity of the underlying disorder moderates prediction accuracy and
+    treatment effectiveness; more severe cases may show stronger protective effects
+    from appropriate pharmacological management
+- name: previous_suicide_attempts
+  direction: strengthens
+  strength: strong
+  description: History of previous attempts interacts with treatment status as a key
+    predictor; pharmacological treatment may be particularly protective in those with
+    prior attempt history

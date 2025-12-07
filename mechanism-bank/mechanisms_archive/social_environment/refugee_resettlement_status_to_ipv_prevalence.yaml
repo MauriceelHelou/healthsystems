@@ -1,0 +1,43 @@
+id: refugee_resettlement_status_to_ipv_prevalence
+name: Refugee Resettlement Status → Intimate Partner Violence Prevalence
+from_node:
+  node_id: refugee_resettlement_status
+  node_name: Refugee Resettlement Status
+to_node:
+  node_id: ipv_prevalence
+  node_name: Intimate Partner Violence Prevalence
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Refugee status entails forced migration with associated trauma, loss of
+  social networks, and disruption of protective community structures'
+- 'Step 2: Post-migration context creates multiple structural challenges including
+  economic instability, language barriers, social isolation, and uncertain legal status'
+- 'Step 3: These compounded structural vulnerabilities increase risk factors for IPV
+  including economic dependency, limited access to support systems, and reduced capacity
+  for help-seeking'
+- 'Step 4: Structural barriers intersect with cultural contexts and power imbalances
+  in resettlement, elevating IPV risk to approximately one-third of refugee women'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Nigel Spence et al. 2024. "The acceptability of intimate partner
+    violence screening and response among refugee women accessing Australian resettlement
+    services.." *PloS one*. https://doi.org/10.1371/journal.pone.0315061
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.144004'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: time_since_arrival
+  direction: u_shaped
+  strength: weak
+  description: Abstract notes time since arrival was measured but found no association
+    with acceptability; relationship to IPV prevalence not specified in abstract
+- name: settlement_service_access
+  direction: weakens
+  strength: moderate
+  description: Access to settlement services provides structural support and connection
+    to resources that may buffer some post-migration vulnerabilities

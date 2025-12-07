@@ -1,0 +1,48 @@
+id: NEW:prehabilitation_behavior_change_intervention_to_NEW:functional_capacity_post_surgery
+name: Prehabilitation Behavior Change Intervention → Post-Surgery Functional Capacity
+from_node:
+  node_id: NEW:prehabilitation_behavior_change_intervention
+  node_name: Prehabilitation Behavior Change Intervention
+to_node:
+  node_id: NEW:functional_capacity_post_surgery
+  node_name: Post-Surgery Functional Capacity
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Prehabilitation improves baseline functional capacity before surgery'
+- 'Step 2: Better preoperative conditioning provides physiological reserve during surgical stress'
+- 'Step 3: Improved baseline facilitates faster post-surgical recovery'
+- 'Step 4: Functional capacity gains are sustained at 4 weeks post-surgery'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: 'M. Fong et al. 2023. "The effect of preoperative behaviour change interventions on
+    pre- and post-surgery health behaviours, health outcomes, and health inequalities in adults: A systematic
+    review and meta-analyses." https://doi.org/10.1371/journal.pone.0286757'
+  supporting_citations:
+  - Additional citations require full-text access - 9 trials with 4-week follow-up
+  - Studies measured six-minute walk test post-operatively
+  - Multiple surgical specialty trials included
+  doi: 10.1371/journal.pone.0286757
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Functional capacity improvements from prehabilitation are sustained at 4 weeks post-surgery,
+  with intervention groups walking 34.4 meters further than control groups on the six-minute walk test.
+quantitative_effects:
+  effect_size:
+    value: 34.4
+    type: standardized_mean_difference
+    ci_lower: 12.8
+    ci_upper: 56.0
+  p_value: 0.002
+  heterogeneity_i_squared: 72.0
+structural_competency:
+  equity_implications: Sustained post-surgical functional improvements may reduce downstream healthcare
+    utilization and disability. However, access to post-surgical rehabilitation and support services may
+    vary by socioeconomic status and insurance coverage, potentially affecting maintenance of gains.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.422788'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

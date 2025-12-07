@@ -1,0 +1,68 @@
+id: NEW:local_alcohol_ban_policy_to_child_maltreatment_substantiated_rate
+name: Local Alcohol Ban Policy (Comprehensive Area-Level) → Child Maltreatment Substantiated Rate
+from_node:
+  node_id: NEW:local_alcohol_ban_policy
+  node_name: Local Alcohol Ban Policy (Comprehensive Area-Level)
+to_node:
+  node_id: child_maltreatment_substantiated_rate
+  node_name: Child Maltreatment Substantiated Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Comprehensive area-level alcohol bans eliminate or severely restrict alcohol availability in
+  local government areas'
+- 'Step 2: Reduced alcohol availability decreases population-level alcohol consumption, particularly heavy
+  episodic drinking'
+- 'Step 3: Lower parental/caregiver alcohol use reduces alcohol-impaired parenting and associated neglect
+  behaviors'
+- 'Step 4: Decreased alcohol-related family dysfunction leads to reduced child maltreatment incidents'
+- 'Step 5: Fewer substantiated child abuse and neglect cases at the community level'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Laslett et al. 2022. "Community-Level Alcohol Availability and Child Maltreatment:
+    A Statewide Panel Analysis Over 13 Years.." https://doi.org/10.15288/jsad.20-00400'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references national-level Australian studies
+    on alcohol consumption and child injury mortality
+  - Studies on parental/caregiver alcohol use and child maltreatment risk cited in background
+  - Prior research on individual family-level alcohol-maltreatment associations referenced
+  doi: 10.15288/jsad.20-00400
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Comprehensive area-level alcohol bans predict a 38.5% reduction in substantiated child maltreatment
+  cases. This represents a structural intervention that modifies the community alcohol environment rather
+  than targeting individual behavior, demonstrating how policy can reduce child harm by addressing upstream
+  determinants.
+quantitative_effects:
+  effect_size:
+    value: -38.5
+    type: percentage_change
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted across 132 Western Australia local government areas over 13-year period
+    (2001-2013), with variation in policy implementation across areas
+moderators:
+- name: mandatory_reporting_policy
+  direction: strengthens
+  strength: moderate
+  description: Mandatory reporting of child maltreatment increased substantiated cases by 15.3%, affecting
+    detection rates and potentially moderating observed policy effects
+- name: socioeconomic_variables
+  direction: strengthens
+  strength: moderate
+  description: Models adjusted for demographic and socioeconomic variables, suggesting these factors may
+    modify the alcohol-maltreatment relationship
+structural_competency:
+  equity_implications: 'This mechanism exemplifies structural intervention - rather than blaming individual
+    parents for alcohol misuse, it identifies how community-level alcohol policy can protect children.
+    The policy operates at the population level, reducing environmental exposure to alcohol availability
+    that disproportionately affects vulnerable families. Equity implications: Communities with comprehensive
+    bans, often implemented in response to alcohol-related harms, may see protective effects for children
+    in at-risk families who otherwise face concentrated disadvantage.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.272857'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

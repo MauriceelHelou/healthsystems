@@ -1,0 +1,53 @@
+id: physical_activity_insufficient_to_NEW:sarcopenia_muscle_function_loss
+name: Insufficient Physical Activity → Sarcopenia and Muscle Function Loss
+from_node:
+  node_id: physical_activity_insufficient
+  node_name: Insufficient Physical Activity
+to_node:
+  node_id: NEW:sarcopenia_muscle_function_loss
+  node_name: Sarcopenia and Muscle Function Loss
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Insufficient physical activity fails to provide adequate mechanical loading stimulus to muscle'
+- 'Step 2: Without stimulus, fast-twitch muscle fibers undergo preferential atrophy with aging'
+- 'Step 3: MyHC protein expression shifts toward slower isoforms'
+- 'Step 4: Muscle force, velocity, and power decline'
+- 'Step 5: Sarcopenia prevalence increases'
+evidence:
+  quality_rating: A
+  n_studies: 27
+  primary_citation: 'Christopher Lee et al. 2024. "Effects of age on human skeletal muscle: A systematic
+    review and meta-analysis of myosin heavy chain isoform protein expression, fiber size and distribution.."
+    https://doi.org/10.37766/inplasy2024.6.0109'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Additional analyses by physical activity level provided important insights
+  - Exercise interventions suggested as approach to shift MyHC expression toward faster isoforms
+  doi: 10.37766/inplasy2024.6.0109
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: Unexpected error: list index out of range'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Physical activity level modifies the effects of aging on muscle fiber composition. Exercise
+  interventions that promote physical activity could shift MyHC expression toward faster isoforms and
+  increase fast-contracting fiber size, thereby decreasing sarcopenia prevalence.
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Effects of insufficient physical activity on muscle are amplified in older adults (≥60
+    years)
+structural_competency:
+  equity_implications: 'Physical activity levels are strongly influenced by structural factors including:
+    access to parks and recreational facilities, walkability of neighborhoods, availability of age-appropriate
+    exercise programs, economic resources for gym memberships, transportation access to exercise facilities,
+    and safe environments for outdoor activity. These structural determinants create differential access
+    to sarcopenia-preventing physical activity by socioeconomic status and geography.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.856695'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

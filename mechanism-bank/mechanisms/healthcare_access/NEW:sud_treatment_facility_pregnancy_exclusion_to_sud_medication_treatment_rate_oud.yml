@@ -1,0 +1,66 @@
+id: NEW:sud_treatment_facility_pregnancy_exclusion_to_sud_medication_treatment_rate_oud
+name: SUD Treatment Facility Pregnancy Exclusion → SUD Medication Treatment Rate - OUD
+from_node:
+  node_id: NEW:sud_treatment_facility_pregnancy_exclusion
+  node_name: SUD Treatment Facility Pregnancy Exclusion
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate - OUD
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Buprenorphine treatment clinics establish policies excluding pregnant patients from OUD treatment'
+- 'Step 2: 48% of clinics in North Carolina refuse to treat pregnant patients, limiting available treatment
+  options'
+- 'Step 3: During COVID-19 pandemic, an additional 33% of previously accepting clinics stopped accepting
+  pregnant patients'
+- 'Step 4: Reduced treatment facility availability creates access barriers for pregnant individuals with
+  OUD'
+- 'Step 5: Lower rates of medication-assisted treatment among pregnant population with opioid use disorder'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Ashley C. Lensch et al. 2021. "Pregnant Patients Using Opioids: Treatment Access
+    Barriers in the Age of COVID-19." https://doi.org/10.1097/ADM.0000000000000826'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references pre-pandemic barriers to OUD medication
+    access for pregnant patients
+  - SAMHSA treatment locator data referenced for clinic sampling
+  - Additional citations require full-text access
+  doi: 10.1097/ADM.0000000000000826
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Buprenorphine treatment clinic policies excluding pregnant patients create structural barriers
+  to OUD medication treatment. Before the pandemic, 48% of clinics refused pregnant patients; during the
+  pandemic, only 34% of clinics accepted them, representing a 33% reduction in treatment access.
+quantitative_effects:
+  effect_size:
+    value: 33.0
+    type: percentage_change
+  sample_size: 128
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted specifically in North Carolina; treatment access patterns may differ
+    in other states with different policy environments and facility densities
+moderators:
+- name: COVID-19 pandemic
+  direction: strengthens
+  strength: strong
+  description: The pandemic caused a 33% reduction in clinics accepting pregnant patients among those
+    that previously did so
+- name: Medicaid acceptance
+  direction: weakens
+  strength: moderate
+  description: Only 55% of accepting clinics take Medicaid, limiting access for low-income pregnant patients
+structural_competency:
+  equity_implications: This mechanism identifies a structural policy barrier at the healthcare facility
+    level that excludes a vulnerable population from evidence-based treatment. The exclusion is not due
+    to individual patient choices but institutional policies that discriminate against pregnant individuals.
+    This creates inequitable access to OUD treatment based on pregnancy status, with disproportionate
+    impacts on populations that may already face barriers to care.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.199469'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

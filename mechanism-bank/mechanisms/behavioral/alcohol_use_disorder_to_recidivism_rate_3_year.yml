@@ -1,0 +1,55 @@
+id: alcohol_use_disorder_to_recidivism_rate_3_year
+name: Alcohol Use Disorder → Recidivism Rate (3-Year)
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: recidivism_rate_3_year
+  node_name: Recidivism Rate (3-Year)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol use disorder impairs impulse control and decision-making through neurological effects
+  on prefrontal cortex'
+- 'Step 2: Impaired judgment increases likelihood of engaging in risk-taking and antisocial behaviors'
+- 'Step 3: Active alcohol use may lead to situations involving illegal activities (theft, assault, public
+  disorder)'
+- 'Step 4: Untreated alcohol use disorder in juvenile justice population perpetuates cycle of criminal
+  behavior and re-arrest'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Y. Lim et al. 2018. "Psychiatric Disorders and Recidivism among Korean Adolescents
+    on Probation or Parole." https://doi.org/10.30773/pi.2017.11.30.1
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior literature on juvenile recidivism
+    and mental health but does not name specific studies
+  doi: 10.30773/pi.2017.11.30.1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among Korean adolescents on probation or parole, alcohol use disorder was significantly associated
+  with repeated criminal offenses, while other psychiatric disorders were not. This suggests that alcohol
+  use disorder represents a unique and modifiable risk factor for juvenile recidivism that warrants targeted
+  intervention.
+quantitative_effects:
+  sample_size: 120
+moderators:
+- name: other_psychiatric_disorders
+  direction: weakens
+  strength: moderate
+  description: Other psychiatric disorders (bipolar, ASPD, ADHD) were not independently associated with
+    recidivism, suggesting alcohol use disorder has unique pathway to repeat offenses
+structural_competency:
+  equity_implications: This mechanism highlights the structural failure of juvenile justice systems to
+    adequately screen for and treat alcohol use disorders among young offenders. The high prevalence of
+    AUD (19.17%) among this population reflects broader structural issues including inadequate adolescent
+    substance use treatment capacity, lack of integration between juvenile justice and behavioral health
+    systems, and insufficient diversion programs. Addressing this requires systemic changes including
+    mandated screening, treatment accessibility within probation/parole systems, and policy reforms that
+    treat adolescent substance use as a health issue rather than solely a criminal one.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.715288'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,54 @@
+id: NEW:vitamin_d_deficiency_to_NEW:covid_19_mortality
+name: Vitamin D Deficiency (25(OH)D) → COVID-19 Mortality
+from_node:
+  node_id: NEW:vitamin_d_deficiency
+  node_name: Vitamin D Deficiency (25(OH)D)
+to_node:
+  node_id: NEW:covid_19_mortality
+  node_name: COVID-19 Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Vitamin D deficiency (low 25(OH)D levels) impairs immune system function,
+  reducing the body''s ability to mount effective antiviral responses'
+- 'Step 2: Inadequate vitamin D leads to dysregulated inflammatory responses, potentially
+  contributing to cytokine storm in severe COVID-19 cases'
+- 'Step 3: Compromised immune function and excessive inflammation increase disease
+  severity, leading to respiratory complications and multi-organ failure'
+- 'Step 4: Severe disease progression results in increased mortality risk among COVID-19
+  patients with vitamin D deficiency'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'A. Kazemi et al. 2021. Association of Vitamin D Status with SARS-CoV-2
+    Infection or COVID-19 Severity: A Systematic Review and Meta-analysis. Advances
+    in Nutrition.'
+  supporting_citations: []
+description: 'Systematic review and meta-analysis of 39 studies found that vitamin
+  D deficiency is significantly associated with increased COVID-19 mortality. Studies
+  using Cox survival analysis showed the strongest association (HR: 7.67; 95% CI:
+  3.92-15.03), while crude analyses also showed significant effects (OR: 2.62). However,
+  adjusted logistic regression studies showed inconsistent results, indicating some
+  heterogeneity in methodological approaches.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 7.67
+    type: hazard_ratio
+    ci_lower: 3.92
+    ci_upper: 15.03
+  p_value: null
+  sample_size: null
+moderators:
+- name: Statistical method
+  direction: strengthens
+  strength: strong
+  description: 'Cox survival method showed significant association (HR: 7.67), while
+    logistic regression showed no relation (OR: 1.05), suggesting methodological approach
+    affects observed relationship'
+- name: Adjustment for confounders
+  direction: weakens
+  strength: moderate
+  description: Crude OR (2.62) was higher than adjusted estimates in some analyses,
+    suggesting confounding partially explains the association

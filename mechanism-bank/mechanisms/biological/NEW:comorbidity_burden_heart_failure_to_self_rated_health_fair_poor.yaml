@@ -1,0 +1,54 @@
+id: NEW:comorbidity_burden_heart_failure_to_self_rated_health_fair_poor
+name: Comorbidity Burden in Heart Failure Patients → Health-Related Quality of Life
+from_node:
+  node_id: NEW:comorbidity_burden_heart_failure
+  node_name: Comorbidity Burden in Heart Failure Patients
+to_node:
+  node_id: self_rated_health_fair_poor
+  node_name: Health-Related Quality of Life
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Heart failure patients accumulate multiple comorbid conditions (e.g., diabetes,
+  COPD, CKD, depression, anemia) that create additive physiological and psychological
+  burden'
+- 'Step 2: Each comorbid condition contributes independent symptom burden including
+  fatigue, dyspnea, pain, cognitive impairment, and functional limitations that compound
+  HF symptoms'
+- 'Step 3: Multiple comorbidities reduce self-care confidence and ability to manage
+  complex medication regimens and lifestyle modifications required for HF management'
+- 'Step 4: The cumulative effect of symptom burden, treatment complexity, and reduced
+  functional capacity leads to diminished health-related quality of life and poorer
+  self-rated health'
+evidence:
+  quality_rating: A
+  n_studies: 42
+  primary_citation: 'Kyoung Suk Lee et al. 2023. Relationship between comorbidity
+    and health outcomes in patients with heart failure: a systematic review and meta-analysis.
+    BMC Cardiovascular Disorders.'
+  supporting_citations: []
+description: This systematic review and meta-analysis of 42 studies demonstrates that
+  comorbidity burden in heart failure patients is significantly associated with poorer
+  health-related quality of life. The presence of multiple comorbid conditions creates
+  cumulative physiological stress, increases symptom burden, reduces self-care capacity,
+  and leads to diminished quality of life. Key comorbidities including diabetes, COPD,
+  chronic kidney disease, depression, and anemia each contribute independently to
+  worse outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Depression
+  direction: strengthens
+  strength: strong
+  description: Depression as a comorbid condition has particularly strong effects
+    on quality of life outcomes in HF patients (HR 1.17 for prognostic outcomes)
+- name: Number of comorbidities
+  direction: strengthens
+  strength: strong
+  description: Higher comorbidity burden (measured by indices like Charlson Comorbidity
+    Index) associated with worse HRQOL outcomes
+- name: Self-care confidence
+  direction: weakens
+  strength: moderate
+  description: Comorbidity negatively affects self-care confidence, which mediates
+    the relationship with quality of life

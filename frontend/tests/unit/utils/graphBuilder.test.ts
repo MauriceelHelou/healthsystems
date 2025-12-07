@@ -6,10 +6,12 @@ import {
   buildGraphFromMechanisms,
   filterGraphByCategory,
   filterGraphByScale,
+  filterByMinConnections,
   calculateNodeMetrics,
   getGraphCategories,
   getGraphScales,
   buildAlcoholismSubgraph,
+  buildDomainSubgraph,
   calculateGraphStats,
 } from '../../../src/utils/graphBuilder';
 import type { Mechanism, SystemsNetwork, Category } from '../../../src/types/mechanism';
@@ -294,6 +296,228 @@ describe('graphBuilder', () => {
       expect(stats.edgesByCategory.social_environment).toBe(1);
       expect(stats.avgDegree).toBeGreaterThan(0);
       expect(stats.maxDegree).toBeGreaterThanOrEqual(stats.minDegree);
+    });
+  });
+
+  describe('filterByMinConnections', () => {
+    it('should return graph unchanged when minConnections is 1 or less', () => {
+      const graph: SystemsNetwork = {
+        nodes: [
+          { id: 'node1', label: 'Node 1', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 0, outgoing: 1 } },
+          { id: 'node2', label: 'Node 2', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 1, outgoing: 0 } },
+        ],
+        edges: [
+          { id: 'edge1', source: 'node1', target: 'node2', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+        ],
+      };
+
+      const filtered = filterByMinConnections(graph, 1);
+      expect(filtered.nodes).toHaveLength(2);
+      expect(filtered.edges).toHaveLength(1);
+
+      const filteredZero = filterByMinConnections(graph, 0);
+      expect(filteredZero.nodes).toHaveLength(2);
+    });
+
+    it('should filter out nodes with fewer than minConnections', () => {
+      // node1 -> node2 -> node3
+      //                -> node4
+      // node1 has 1 connection, node2 has 3, node3 has 1, node4 has 1
+      const graph: SystemsNetwork = {
+        nodes: [
+          { id: 'node1', label: 'Node 1', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 0, outgoing: 1 } },
+          { id: 'node2', label: 'Node 2', category: 'economic', stockType: 'structural', weight: 3, connections: { incoming: 1, outgoing: 2 } },
+          { id: 'node3', label: 'Node 3', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 1, outgoing: 0 } },
+          { id: 'node4', label: 'Node 4', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 1, outgoing: 0 } },
+        ],
+        edges: [
+          { id: 'edge1', source: 'node1', target: 'node2', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'edge2', source: 'node2', target: 'node3', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'edge3', source: 'node2', target: 'node4', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+        ],
+      };
+
+      const filtered = filterByMinConnections(graph, 2);
+
+      // Only node2 has 3 connections (>= 2), but when we remove others, it loses its connections
+      // After removing node1, node3, node4, node2 has 0 connections, so it gets removed too
+      // Result: empty graph due to iterative filtering
+      expect(filtered.nodes).toHaveLength(0);
+      expect(filtered.edges).toHaveLength(0);
+    });
+
+    it('should keep highly connected nodes and their edges', () => {
+      // Create a more connected graph: hub topology
+      // hub connects to: node1, node2, node3, node4
+      // So hub has 4 connections
+      // All leaf nodes have 1 connection each
+      const graph: SystemsNetwork = {
+        nodes: [
+          { id: 'hub', label: 'Hub', category: 'economic', stockType: 'structural', weight: 4, connections: { incoming: 0, outgoing: 4 } },
+          { id: 'node1', label: 'Node 1', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 1, outgoing: 0 } },
+          { id: 'node2', label: 'Node 2', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 1, outgoing: 0 } },
+          { id: 'node3', label: 'Node 3', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 1, outgoing: 0 } },
+          { id: 'node4', label: 'Node 4', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 1, outgoing: 0 } },
+        ],
+        edges: [
+          { id: 'e1', source: 'hub', target: 'node1', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'e2', source: 'hub', target: 'node2', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'e3', source: 'hub', target: 'node3', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'e4', source: 'hub', target: 'node4', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+        ],
+      };
+
+      // With minConnections=2, leaf nodes are removed
+      // Then hub has 0 connections and also removed
+      const filtered = filterByMinConnections(graph, 2);
+      expect(filtered.nodes).toHaveLength(0);
+    });
+
+    it('should preserve mutual connections between well-connected nodes', () => {
+      // Triangle: A <-> B <-> C <-> A
+      // Each node has 2 connections
+      const graph: SystemsNetwork = {
+        nodes: [
+          { id: 'A', label: 'A', category: 'economic', stockType: 'structural', weight: 2, connections: { incoming: 1, outgoing: 1 } },
+          { id: 'B', label: 'B', category: 'economic', stockType: 'structural', weight: 2, connections: { incoming: 1, outgoing: 1 } },
+          { id: 'C', label: 'C', category: 'economic', stockType: 'structural', weight: 2, connections: { incoming: 1, outgoing: 1 } },
+        ],
+        edges: [
+          { id: 'e1', source: 'A', target: 'B', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'e2', source: 'B', target: 'C', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'e3', source: 'C', target: 'A', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+        ],
+      };
+
+      const filtered = filterByMinConnections(graph, 2);
+
+      // All nodes have 2 connections, so all should be kept
+      expect(filtered.nodes).toHaveLength(3);
+      expect(filtered.edges).toHaveLength(3);
+    });
+
+    it('should update connection counts after filtering', () => {
+      // Diamond: A -> B, A -> C, B -> D, C -> D
+      // A has 2 out, B has 1 in + 1 out = 2, C has 1 in + 1 out = 2, D has 2 in
+      const graph: SystemsNetwork = {
+        nodes: [
+          { id: 'A', label: 'A', category: 'economic', stockType: 'structural', weight: 2, connections: { incoming: 0, outgoing: 2 } },
+          { id: 'B', label: 'B', category: 'economic', stockType: 'structural', weight: 2, connections: { incoming: 1, outgoing: 1 } },
+          { id: 'C', label: 'C', category: 'economic', stockType: 'structural', weight: 2, connections: { incoming: 1, outgoing: 1 } },
+          { id: 'D', label: 'D', category: 'economic', stockType: 'structural', weight: 2, connections: { incoming: 2, outgoing: 0 } },
+        ],
+        edges: [
+          { id: 'e1', source: 'A', target: 'B', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'e2', source: 'A', target: 'C', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'e3', source: 'B', target: 'D', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'e4', source: 'C', target: 'D', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+        ],
+      };
+
+      const filtered = filterByMinConnections(graph, 2);
+
+      // All nodes have >= 2 connections, so all should be kept
+      expect(filtered.nodes).toHaveLength(4);
+      expect(filtered.edges).toHaveLength(4);
+
+      // Verify connections are correct
+      const nodeA = filtered.nodes.find(n => n.id === 'A');
+      expect(nodeA?.connections.outgoing).toBe(2);
+      expect(nodeA?.connections.incoming).toBe(0);
+
+      const nodeD = filtered.nodes.find(n => n.id === 'D');
+      expect(nodeD?.connections.incoming).toBe(2);
+      expect(nodeD?.connections.outgoing).toBe(0);
+    });
+
+    it('should handle graph with no edges', () => {
+      const graph: SystemsNetwork = {
+        nodes: [
+          { id: 'node1', label: 'Node 1', category: 'economic', stockType: 'structural', weight: 0, connections: { incoming: 0, outgoing: 0 } },
+          { id: 'node2', label: 'Node 2', category: 'economic', stockType: 'structural', weight: 0, connections: { incoming: 0, outgoing: 0 } },
+        ],
+        edges: [],
+      };
+
+      const filtered = filterByMinConnections(graph, 2);
+      expect(filtered.nodes).toHaveLength(0);
+      expect(filtered.edges).toHaveLength(0);
+    });
+
+    it('should handle empty graph', () => {
+      const graph: SystemsNetwork = { nodes: [], edges: [] };
+      const filtered = filterByMinConnections(graph, 2);
+      expect(filtered.nodes).toHaveLength(0);
+      expect(filtered.edges).toHaveLength(0);
+    });
+
+    it('should iteratively remove nodes that fall below threshold', () => {
+      // Chain: A -> B -> C -> D -> E
+      // Each internal node has 2 connections, endpoints have 1
+      // With minConnections=2, A and E get removed first
+      // Then B and D have only 1 connection each, get removed
+      // Then C has 0 connections, gets removed
+      const graph: SystemsNetwork = {
+        nodes: [
+          { id: 'A', label: 'A', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 0, outgoing: 1 } },
+          { id: 'B', label: 'B', category: 'economic', stockType: 'structural', weight: 2, connections: { incoming: 1, outgoing: 1 } },
+          { id: 'C', label: 'C', category: 'economic', stockType: 'structural', weight: 2, connections: { incoming: 1, outgoing: 1 } },
+          { id: 'D', label: 'D', category: 'economic', stockType: 'structural', weight: 2, connections: { incoming: 1, outgoing: 1 } },
+          { id: 'E', label: 'E', category: 'economic', stockType: 'structural', weight: 1, connections: { incoming: 1, outgoing: 0 } },
+        ],
+        edges: [
+          { id: 'e1', source: 'A', target: 'B', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'e2', source: 'B', target: 'C', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'e3', source: 'C', target: 'D', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+          { id: 'e4', source: 'D', target: 'E', direction: 'positive', category: 'economic', evidenceQuality: 'B', strength: 2, studyCount: 1 },
+        ],
+      };
+
+      const filtered = filterByMinConnections(graph, 2);
+
+      // All nodes should be removed due to cascading effect
+      expect(filtered.nodes).toHaveLength(0);
+      expect(filtered.edges).toHaveLength(0);
+    });
+  });
+
+  describe('buildDomainSubgraph with minConnections', () => {
+    it('should apply minConnections filter after keyword filtering', () => {
+      const mechanisms = [
+        createMockMechanism('mech1', 'alcohol_use', 'liver_damage', 'behavioral'),
+        createMockMechanism('mech2', 'liver_damage', 'mortality', 'biological'),
+        createMockMechanism('mech3', 'poverty', 'depression', 'economic'),
+        createMockMechanism('mech4', 'alcohol_use', 'depression', 'behavioral'),
+      ];
+
+      // Without minConnections
+      const subgraphNoMin = buildDomainSubgraph(mechanisms, ['alcohol', 'liver'], {
+        includeDisconnected: false,
+      });
+
+      expect(subgraphNoMin.edges.length).toBeGreaterThanOrEqual(2);
+
+      // With minConnections=2
+      const subgraphWithMin = buildDomainSubgraph(mechanisms, ['alcohol', 'liver'], {
+        includeDisconnected: false,
+        minConnections: 2,
+      });
+
+      // Should have fewer or equal nodes/edges
+      expect(subgraphWithMin.nodes.length).toBeLessThanOrEqual(subgraphNoMin.nodes.length);
+    });
+
+    it('should work with minConnections=1 (no filtering)', () => {
+      const mechanisms = [
+        createMockMechanism('mech1', 'alcohol_use', 'liver_damage', 'behavioral'),
+      ];
+
+      const subgraph = buildDomainSubgraph(mechanisms, ['alcohol'], {
+        minConnections: 1,
+      });
+
+      expect(subgraph.nodes.length).toBe(2);
+      expect(subgraph.edges.length).toBe(1);
     });
   });
 });

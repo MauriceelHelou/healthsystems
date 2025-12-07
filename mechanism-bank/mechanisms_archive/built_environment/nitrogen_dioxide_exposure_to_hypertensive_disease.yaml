@@ -1,0 +1,42 @@
+id: nitrogen_dioxide_exposure_to_hypertensive_disease
+name: Long-term Nitrogen Dioxide (NO2) Exposure → Hypertensive Disease Incidence
+from_node:
+  node_id: nitrogen_dioxide_exposure
+  node_name: Long-term Nitrogen Dioxide (NO2) Exposure
+to_node:
+  node_id: hypertensive_disease
+  node_name: Hypertensive Disease Incidence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Chronic NO2 exposure triggers sustained systemic inflammation and oxidative
+  stress affecting vascular endothelium'
+- 'Step 2: Endothelial dysfunction reduces nitric oxide bioavailability and impairs
+  vasodilation'
+- 'Step 3: Increased vascular resistance and arterial stiffness develop due to chronic
+  inflammation and vascular remodeling'
+- 'Step 4: Elevated systemic vascular resistance manifests as sustained hypertension
+  and hypertensive disease'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Xi Xia et al. 2024. "Associations of long-term nitrogen dioxide
+    exposure with a wide spectrum of diseases: a prospective cohort study of 0·5 million
+    Chinese adults.." *The Lancet. Public health*. https://doi.org/10.1016/S2468-2667(24)00264-0'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.470153'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_cardiovascular_health
+  direction: strengthens
+  strength: moderate
+  description: Individuals with pre-existing cardiovascular risk factors may show
+    greater blood pressure responses to air pollution exposure
+- name: urban_vs_rural_residence
+  direction: strengthens
+  strength: strong
+  description: Urban residents with higher NO2 exposure from traffic and industry
+    would likely demonstrate stronger associations with hypertensive disease

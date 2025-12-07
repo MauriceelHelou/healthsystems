@@ -1,0 +1,68 @@
+id: NEW:personal_overdose_experience_to_NEW:naloxone_knowledge
+name: Personal Overdose Experience → Naloxone Knowledge
+from_node:
+  node_id: NEW:personal_overdose_experience
+  node_name: Personal Overdose Experience
+to_node:
+  node_id: NEW:naloxone_knowledge
+  node_name: Naloxone Knowledge
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Personal overdose experience creates direct encounter with overdose emergency'
+- 'Step 2: Medical intervention during overdose may include naloxone administration'
+- 'Step 3: Healthcare contact during overdose event provides opportunity for education'
+- 'Step 4: Personal experience increases awareness and knowledge of naloxone as treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: R. Gicquelais et al. 2019. "Justice involvement patterns, overdose experiences, and
+    naloxone knowledge among men and women in criminal justice diversion addiction treatment." https://doi.org/10.1186/s12954-019-0317-3
+  supporting_citations:
+  - Additional citations require full-text access - abstract references OEND program effectiveness literature
+  - Additional citations require full-text access - abstract references overdose experience and harm reduction
+    literature
+  - Additional citations require full-text access - abstract references gender differences in substance
+    use literature
+  doi: 10.1186/s12954-019-0317-3
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Male participants who had personally experienced an overdose were 1.5 times more likely to
+  correctly identify naloxone as an opioid overdose treatment compared to those without personal overdose
+  experience, after adjustment for age, race, education, housing status, heroin use, and injection drug
+  use.
+quantitative_effects:
+  effect_size:
+    value: 1.5
+    type: relative_risk
+    ci_lower: 1.1
+    ci_upper: 2.0
+  sample_size: 514
+moderators:
+- name: gender
+  direction: strengthens
+  strength: strong
+  description: Association between personal overdose and naloxone knowledge was significant only for men
+    (PR 1.5, 95% CI 1.1-2.0), not observed in women after adjustment
+- name: age
+  direction: weakens
+  strength: weak
+  description: Adjusted for in analysis as potential confounder
+- name: injection_drug_use
+  direction: strengthens
+  strength: weak
+  description: Adjusted for in analysis; injection drug use may increase exposure to naloxone education
+    through harm reduction services
+structural_competency:
+  equity_implications: This mechanism reveals a structural gap in harm reduction education. The finding
+    that personal overdose experience is associated with knowledge (in men) suggests that systematic OEND
+    education is not reaching this population proactively. The reliance on near-death experience as a
+    pathway to knowledge represents a failure of healthcare and criminal justice systems to provide preemptive
+    education. Gender differences may reflect differential access to harm reduction services or healthcare
+    contact patterns.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.553237'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,45 @@
+id: healthcare_system_gender_bias_to_sti_diagnosis_past_year
+name: Gender-Biased Healthcare Recognition Patterns → STI Diagnosis (Past Year)
+from_node:
+  node_id: healthcare_system_gender_bias
+  node_name: Gender-Biased Healthcare Recognition Patterns
+to_node:
+  node_id: sti_diagnosis_past_year
+  node_name: STI Diagnosis (Past Year)
+  _original_id: osa_diagnosis_delays
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Diagnostic criteria and clinical awareness of OSA historically based on
+  male presentations'
+- 'Step 2: Women present with different symptom patterns that may not match traditional
+  OSA screening'
+- 'Step 3: Healthcare providers may misattribute women''s OSA symptoms to other conditions
+  (depression, anxiety, insomnia)'
+- 'Step 4: This results in delayed or missed diagnosis of OSA in women'
+evidence:
+  quality_rating: A
+  n_studies: 145
+  primary_citation: 2024. "[Expert consensus on the diagnosis and treatment of obstructive
+    sleep apnea in women].." *Zhonghua jie he he hu xi za zhi = Zhonghua jiehe he
+    huxi zazhi = Chinese journal of tuberculosis and respiratory diseases*. https://doi.org/10.3760/cma.j.cn112147-20240206-00072
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.048713'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: provider_training
+  direction: weakens
+  strength: moderate
+  description: Education about sex-specific OSA presentations can reduce diagnostic
+    delays
+- name: clinical_guidelines
+  direction: weakens
+  strength: strong
+  description: Sex-specific diagnostic guidelines like this consensus statement can
+    improve recognition of OSA in women
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/healthcare_system_gender_bias_to_osa_diagnosis_delays.yaml
+_category: healthcare_access

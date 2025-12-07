@@ -1,0 +1,55 @@
+id: alcohol_use_disorder_to_NEW:acute_pancreatitis_severity
+name: Alcohol Use Disorder → Acute Pancreatitis Severity
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:acute_pancreatitis_severity
+  node_name: Acute Pancreatitis Severity
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption leads to metabolic changes in pancreatic acinar
+  cells, including oxidative stress and accumulation of toxic metabolites such as
+  acetaldehyde and fatty acid ethyl esters'
+- 'Step 2: These metabolic changes sensitize the pancreas to acute injury, resulting
+  in more severe inflammatory responses when acute pancreatitis is triggered'
+- 'Step 3: Alcoholic acute pancreatitis (AAP) demonstrates higher rates of pancreatic
+  necrosis compared to biliary acute pancreatitis, indicating more severe tissue damage'
+- 'Step 4: The severity profile of AAP shows elevated risk for non-mild (moderately
+  severe and severe) presentations compared to other etiologies like biliary or post-ERCP
+  pancreatitis'
+evidence:
+  quality_rating: A
+  n_studies: 127
+  primary_citation: 'E. Bálint et al. 2020. Assessment of the course of acute pancreatitis
+    in the light of aetiology: a systematic review and meta-analysis. Scientific Reports.'
+  supporting_citations: []
+description: Alcohol use disorder is associated with increased severity of acute pancreatitis.
+  This meta-analysis of 127 studies found that alcoholic acute pancreatitis (AAP)
+  has a higher risk for non-mild (moderately severe and severe) conditions compared
+  to biliary and post-ERCP pancreatitis. Specifically, pancreatic necrosis occurred
+  more frequently in AAP than BAP patients (OR=1.58, 95% CI 1.08-2.30). AAP also demonstrates
+  significantly higher recurrence rates, which may contribute to cumulative pancreatic
+  damage and increased severity over time.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.58
+    type: odds_ratio
+    ci_lower: 1.08
+    ci_upper: 2.3
+  p_value: null
+  sample_size: null
+moderators:
+- name: etiology comparison
+  direction: strengthens
+  strength: moderate
+  description: AAP shows higher severity than biliary AP (BAP) and post-ERCP AP (PAP),
+    but lower severity than hypertriglyceridemia-induced AP (HTG-AP)
+- name: recurrence history
+  direction: strengthens
+  strength: strong
+  description: AAP has significantly higher recurrence rate compared to BAP (OR=2.98,
+    95% CI 2.22-4.01), suggesting repeated episodes may compound severity

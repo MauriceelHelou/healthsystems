@@ -1,0 +1,61 @@
+id: NEW:vitamin_d_supplementation_to_all_cause_mortality_rate
+name: Vitamin D Supplementation → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:vitamin_d_supplementation
+  node_name: Vitamin D Supplementation
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Vitamin D supplementation increases serum 25-hydroxyvitamin D levels'
+- 'Step 2: Adequate vitamin D status supports immune function, bone health, and cellular regulation'
+- 'Step 3: Improved vitamin D status may reduce risk of infections, cancer progression, and metabolic
+  dysfunction'
+- 'Step 4: Cumulative reduction in multiple disease pathways leads to decreased all-cause mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 80
+  primary_citation: 'Antonio Ruiz-García et al. 2023. "Vitamin D Supplementation and Its Impact on Mortality
+    and Cardiovascular Outcomes: Systematic Review and Meta-Analysis of 80 Randomized Clinical Trials."
+    https://doi.org/10.3390/nu15081810'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes RCTs published between 1983
+    and 2022
+  - Studies included trials with follow-up periods longer than one year
+  - Analysis stratified by low-, fair-, and good-quality RCTs
+  doi: 10.3390/nu15081810
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis of 80 RCTs including 163,131 participants (82,210 receiving vitamin D, 80,921
+  placebo/no treatment) found vitamin D supplementation associated with 5% reduced odds of all-cause mortality.
+  Mean age was 66.1 years with 68.6% female participants. The protective effect was more pronounced in
+  higher quality studies.
+quantitative_effects:
+  effect_size:
+    value: 0.95
+    type: odds_ratio
+    ci_lower: 0.91
+    ci_upper: 0.99
+  p_value: 0.013
+  sample_size: 163131
+moderators:
+- name: study_quality
+  direction: strengthens
+  strength: strong
+  description: Association was especially convincing in fair- and good-quality RCTs; low-quality RCTs
+    showed no association
+structural_competency:
+  equity_implications: While vitamin D supplementation is an individual-level intervention, access to
+    supplementation and optimal vitamin D status are influenced by structural factors including food fortification
+    policies, healthcare access for deficiency screening, socioeconomic ability to purchase supplements,
+    and environmental factors affecting sun exposure (housing quality, occupational conditions, urban
+    design). Populations with limited healthcare access or living in food deserts may have higher rates
+    of vitamin D deficiency.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.883950'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,38 @@
+id: psoriasis_disease_severity_to_depression_anxiety
+name: Psoriasis Disease Severity (PASI ≥3) → Depression and Anxiety Disorders
+from_node:
+  node_id: psoriasis_disease_severity
+  node_name: Psoriasis Disease Severity (PASI ≥3)
+to_node:
+  node_id: depression_anxiety
+  node_name: Depression and Anxiety Disorders
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Increased psoriasis severity (PASI ≥3) creates visible skin lesions and
+  physical discomfort that impact daily functioning'
+- 'Step 2: Physical symptoms lead to reduced dermatology-specific quality of life
+  (DLQI) and overall psychological quality of life impairment'
+- 'Step 3: Chronic disease burden and quality of life impairment trigger or exacerbate
+  depressive and anxiety symptoms'
+- 'Step 4: Approximately 50% of psoriatic patients develop mental health problems,
+  primarily depression and anxiety'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: W. Sondermann et al. 2020. "Psychological burden of psoriatic
+    patients in a German university hospital dermatology department." *Journal of
+    dermatology (Print)*. https://doi.org/10.1111/1346-8138.15721
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.522065'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: disease_severity_threshold
+  direction: strengthens
+  strength: strong
+  description: Patients with PASI ≥3 showed statistically significant reduced DLQI
+    and impaired psychological quality of life compared to those with lower disease
+    severity

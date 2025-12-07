@@ -1,0 +1,41 @@
+id: alcohol_consumption_to_acute_injury_symptoms
+name: Alcohol Consumption → Acute Injury Symptoms
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: acute_injury_symptoms
+  node_name: Acute Injury Symptoms
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption in festive venues is common among young adults'
+- 'Step 2: Patients reporting alcohol consumption were significantly more likely to
+  experience symptoms following suspected needle pricking'
+- 'Step 3: Symptoms included amnesia, nausea, and dizziness, which may be attributable
+  to alcohol itself or interaction with potential injected substances'
+- 'Step 4: The association between alcohol and symptom reporting was statistically
+  significant (p < 0.05)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Clément Harmel et al. 2024. "Suspicion of needle pricking/spiking
+    in 2022 in Paris, France, an observational study from the Department of Forensic
+    Medicine.." *Journal of forensic and legal medicine*. https://doi.org/10.1016/j.jflm.2024.102739
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.589611'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: festive_context
+  direction: strengthens
+  strength: strong
+  description: 84.8% of cases occurred in festive contexts where alcohol consumption
+    is normative and encouraged
+- name: symptom_reporting
+  direction: strengthens
+  strength: moderate
+  description: Over one-third (37.5%) of patients reported no symptoms, suggesting
+    alcohol consumption may be a key moderator of symptom experience

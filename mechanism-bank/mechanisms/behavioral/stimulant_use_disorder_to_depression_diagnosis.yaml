@@ -1,0 +1,53 @@
+id: stimulant_use_disorder_to_depression_diagnosis
+name: Methamphetamine Use Disorder → Depression Diagnosis
+from_node:
+  node_id: stimulant_use_disorder
+  node_name: Methamphetamine Use Disorder
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Methamphetamine use disorder involves chronic stimulant exposure that depletes
+  monoaminergic neurotransmitter systems, particularly dopamine and serotonin'
+- 'Step 2: Repeated methamphetamine use causes neurotoxic damage to dopaminergic and
+  serotonergic neurons, leading to persistent neurochemical imbalances'
+- 'Step 3: The resulting anhedonia, dysphoria, and emotional dysregulation during
+  withdrawal and abstinence periods contribute to depressive symptomatology'
+- 'Step 4: Behavioral consequences of methamphetamine use disorder (social isolation,
+  relationship disruption, employment loss, legal problems) compound psychological
+  distress and increase depression risk'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: Leung J et al. 2023. Methamphetamine exposure and depression-A
+    systematic review and meta-analysis. Drug and Alcohol Review.
+  supporting_citations: []
+description: Systematic review and meta-analysis of 14 studies demonstrates that methamphetamine
+  use disorder is significantly associated with depression. The association is strongest
+  for those meeting criteria for methamphetamine use disorder (OR=2.80) compared to
+  any use. E-values analysis indicated low to moderate risk of unmeasured confounding
+  in longitudinal results, supporting a likely causal relationship.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.8
+    type: odds_ratio
+    ci_lower: 1.4
+    ci_upper: 5.9
+  p_value: null
+  sample_size: null
+moderators:
+- name: Severity of methamphetamine use
+  direction: strengthens
+  strength: strong
+  description: People with methamphetamine use disorder (OR=2.80) had substantially
+    higher odds of depression compared to any methamphetamine use (OR=1.66 cross-sectional,
+    OR=1.18 longitudinal)
+- name: Study design
+  direction: weakens
+  strength: moderate
+  description: Longitudinal estimates (OR=1.18) were attenuated compared to cross-sectional
+    estimates (OR=1.66), suggesting some confounding in cross-sectional associations

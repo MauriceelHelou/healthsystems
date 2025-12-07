@@ -1,0 +1,37 @@
+id: healthcare_system_navigation_complexity_to_healthcare_access_failure
+name: Healthcare System Navigation Complexity → Failed Healthcare Contact Establishment
+from_node:
+  node_id: healthcare_system_navigation_complexity
+  node_name: Healthcare System Navigation Complexity
+to_node:
+  node_id: healthcare_access_failure
+  node_name: Failed Healthcare Contact Establishment
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Conventional healthcare system requires navigation skills, understanding
+  of referral processes, and ability to coordinate multiple appointments'
+- 'Step 2: OST patients face difficulties navigating complex bureaucratic healthcare
+  structures'
+- 'Step 3: Navigation challenges lead to unsuccessful attempts to establish contact
+  with healthcare providers'
+- 'Step 4: Repeated failures result in resignation and further deprioritization of
+  health needs'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Katja Troberg et al. 2022. "Healthcare seeking among Swedish patients
+    in opioid substitution treatment - a mixed methods study on barriers and facilitators.."
+    *Substance abuse treatment, prevention, and policy*. https://doi.org/10.1186/s13011-022-00434-w
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.448473'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: on_site_primary_healthcare_integration
+  direction: weakens
+  strength: strong
+  description: Co-location of primary healthcare with OST eliminates navigation barriers
+    by providing direct access without need for complex referral processes

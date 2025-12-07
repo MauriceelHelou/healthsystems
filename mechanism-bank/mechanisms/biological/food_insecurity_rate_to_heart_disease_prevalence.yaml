@@ -1,0 +1,52 @@
+id: food_insecurity_rate_to_heart_disease_prevalence
+name: Food Insecurity → Cardiometabolic Conditions (Heart Disease, Hypertension, Stroke)
+from_node:
+  node_id: food_insecurity_rate
+  node_name: Food Insecurity
+to_node:
+  node_id: heart_disease_prevalence
+  node_name: Cardiometabolic Conditions (Heart Disease, Hypertension, Stroke)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Food insecurity leads to consumption of inexpensive, energy-dense, nutrient-poor
+  foods high in refined carbohydrates, sodium, and saturated fats due to financial
+  constraints'
+- 'Step 2: Poor dietary quality contributes to metabolic dysregulation including obesity
+  (especially in women), insulin resistance, and dyslipidemia'
+- 'Step 3: Chronic metabolic stress leads to development of intermediate conditions
+  including hypertension, diabetes with poor glycemic control, and systemic inflammation'
+- 'Step 4: Persistent cardiometabolic risk factors result in clinical manifestations
+  including coronary heart disease, congestive heart failure, stroke, and chronic
+  kidney disease'
+evidence:
+  quality_rating: A
+  n_studies: 50
+  primary_citation: 'Jennifer Te Vazquez et al. 2021. Food Insecurity and Cardiometabolic
+    Conditions: a Review of Recent Research. Current nutrition reports.'
+  supporting_citations: []
+description: Food insecurity demonstrates robust associations with cardiometabolic
+  conditions in adults, including hypertension, diabetes, coronary heart disease,
+  congestive heart failure, stroke, and chronic kidney disease. The biological pathway
+  involves dietary quality deterioration under financial constraint, leading to metabolic
+  dysregulation and cumulative cardiovascular damage. Evidence from 50 studies across
+  observational, longitudinal, and interventional designs consistently supports this
+  relationship.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Association between food insecurity and overweight/obesity is stronger
+    in women than men
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Associations are more robust and clinically apparent in adults compared
+    to children, as cardiometabolic conditions require time to develop
+- name: diabetes status
+  direction: strengthens
+  strength: moderate
+  description: Food insecurity associated with worse glycemic control and more diabetes
+    complications among those with existing diabetes

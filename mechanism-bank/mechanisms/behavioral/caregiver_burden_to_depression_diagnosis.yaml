@@ -1,0 +1,46 @@
+id: caregiver_burden_to_depression_diagnosis
+name: Informal Caregiving Status → Depression
+from_node:
+  node_id: caregiver_burden
+  node_name: Informal Caregiving Status
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Informal caregiving creates chronic stress through demanding physical and
+  emotional care responsibilities, often with limited respite or support'
+- 'Step 2: Caregivers experience behavioral changes including reduced time for self-care,
+  social isolation, disrupted sleep patterns, and decreased physical activity'
+- 'Step 3: The combination of chronic stress, social withdrawal, and neglected personal
+  health needs leads to psychological distress and emotional exhaustion'
+- 'Step 4: Prolonged exposure to caregiving demands without adequate coping resources
+  results in clinical depression, with prevalence ranging from 4% to 51% among informal
+  caregivers'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'P. Janson et al. 2022. Mortality, Morbidity and Health-Related
+    Outcomes in Informal Caregivers Compared to Non-Caregivers: A Systematic Review.
+    International Journal of Environmental Research and Public Health.'
+  supporting_citations: []
+description: Systematic review of 22 observational studies found that informal caregiving
+  is consistently associated with higher occurrence of depression compared to non-caregivers.
+  Longitudinal evidence from German health insurance data showed statistically significant
+  increased incidence of depression among caregivers. Cross-sectional studies confirmed
+  elevated depression prevalence (4-51%) in caregiver populations. The wide range
+  in prevalence reflects heterogeneity in caregiving contexts, care recipient conditions,
+  and available support systems.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: caregiving intensity
+  direction: strengthens
+  strength: moderate
+  description: Higher caregiving demands and longer duration associated with greater
+    depression risk
+- name: social support availability
+  direction: weakens
+  strength: moderate
+  description: Access to support systems may buffer against depression development

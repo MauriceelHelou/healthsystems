@@ -1,0 +1,41 @@
+id: obesity_individual_to_NEW:alcohol_related_steatosis
+name: Obesity → Alcohol-Related Steatosis
+from_node:
+  node_id: obesity_individual
+  node_name: Obesity
+to_node:
+  node_id: NEW:alcohol_related_steatosis
+  node_name: Alcohol-Related Steatosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Obesity creates baseline hepatic metabolic stress through increased free
+  fatty acid delivery to the liver and insulin resistance'
+- 'Step 2: Obesity lowers the threshold of alcohol consumption required to initiate
+  liver damage, making the liver more susceptible to alcohol''s toxic effects'
+- 'Step 3: Combined metabolic burden from obesity and alcohol accelerates hepatic
+  fat accumulation (steatosis) through synergistic lipotoxicity and oxidative stress'
+- 'Step 4: The interaction between obesity and alcohol consumption increases the likelihood
+  of progression from simple steatosis to more advanced liver disease'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Richard Parker 2020. The natural history of alcohol-related liver
+    disease. Current opinion in gastroenterology.
+  supporting_citations: []
+description: Obesity is identified as the most common comorbid factor that lowers
+  the threshold of alcohol consumption required to develop alcohol-related liver disease.
+  While ArLD typically occurs after a threshold of alcohol consumption, obesity modifies
+  this relationship by making individuals more susceptible to alcohol-induced hepatic
+  damage at lower consumption levels. Alcohol-related steatosis is the most common
+  stage of ArLD, and the synergistic effect of obesity and alcohol accelerates the
+  development of hepatic fat accumulation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: alcohol_consumption_level
+  direction: strengthens
+  strength: strong
+  description: The threshold of alcohol consumption required to cause ArLD is lowered
+    in the presence of obesity, meaning lower levels of alcohol can cause liver damage
+    when obesity is present

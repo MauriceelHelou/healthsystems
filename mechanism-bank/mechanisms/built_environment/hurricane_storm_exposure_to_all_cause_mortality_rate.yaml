@@ -1,0 +1,66 @@
+id: hurricane_storm_exposure_to_all_cause_mortality_rate
+name: Hurricane/Storm Exposure → All-Cause Mortality Rate
+from_node:
+  node_id: hurricane_storm_exposure
+  node_name: Hurricane/Storm Exposure
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Hurricane/storm exposure causes direct physical damage to buildings, infrastructure,
+  and the built environment through high winds, storm surge, and flooding'
+- 'Step 2: Structural damage leads to building collapses, flying debris, and physical
+  injuries causing immediate traumatic deaths'
+- 'Step 3: Infrastructure destruction disrupts healthcare access, emergency services,
+  power supply, and water/sanitation systems'
+- 'Step 4: Displacement from damaged housing creates exposure to environmental hazards,
+  inadequate shelter, and disrupted medication access'
+- 'Step 5: Post-storm conditions including contaminated water, mold exposure, and
+  compromised air quality contribute to delayed mortality from respiratory and infectious
+  diseases'
+- 'Step 6: Cumulative stress on vulnerable populations (elderly, those with chronic
+  conditions) leads to excess mortality in weeks to months following exposure'
+evidence:
+  quality_rating: A
+  n_studies: 71
+  primary_citation: 'Wenzhong Huang et al. 2023. Health Effects of Cyclones: A Systematic
+    Review and Meta-Analysis of Epidemiological Studies. Environmental Health Perspectives.'
+  supporting_citations: []
+description: 'Hurricane and storm exposure significantly increases all-cause mortality
+  through multiple built environment pathways. Meta-analysis of 71 studies found a
+  statistically significant 9% increase in all-cause mortality (RR=1.09, 95% CI: 1.04-1.13)
+  following cyclone exposure. The effect operates through direct trauma from structural
+  damage, disruption of critical infrastructure including healthcare systems and utilities,
+  and secondary health effects from damaged built environments including contaminated
+  water and compromised housing. Evidence is strongest for high-intensity cyclones
+  (Category 4-5) and shows consistent elevation in mortality risk across multiple
+  geographic settings.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.09
+    type: relative_risk
+    ci_lower: 1.04
+    ci_upper: 1.13
+  p_value: null
+  sample_size: null
+moderators:
+- name: storm_intensity
+  direction: strengthens
+  strength: strong
+  description: High-amplitude cyclones (Saffir-Simpson category 4 or 5, such as Hurricanes
+    Katrina and Sandy) show consistently elevated mortality risks; most studies focused
+    on these severe events
+- name: income_level
+  direction: strengthens
+  strength: moderate
+  description: Low and middle-income regions expected to have greater vulnerability,
+    though evidence is limited from these areas
+- name: pre_existing_health_conditions
+  direction: strengthens
+  strength: moderate
+  description: Populations with chronic diseases and those requiring regular medical
+    care experience amplified mortality risk due to healthcare disruption

@@ -1,0 +1,43 @@
+id: occult_gastrointestinal_bleeding_to_ischemic_stroke
+name: Occult Gastrointestinal Bleeding (FIT-Positive) → Ischemic Stroke
+from_node:
+  node_id: occult_gastrointestinal_bleeding
+  node_name: Occult Gastrointestinal Bleeding (FIT-Positive)
+to_node:
+  node_id: ischemic_stroke
+  node_name: Ischemic Stroke
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Occult gastrointestinal bleeding detected by fecal immunochemical test
+  indicates ongoing blood loss'
+- 'Step 2: Chronic blood loss leads to iron deficiency and anemia, altering blood
+  viscosity and oxygen-carrying capacity'
+- 'Step 3: Occult bleeding may reflect underlying vascular pathology, inflammation,
+  or coagulation abnormalities'
+- 'Step 4: These physiological changes increase thrombotic risk and vascular vulnerability,
+  elevating ischemic stroke incidence'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'J. Moon et al. 2020. "Occult Blood in Feces Is Associated With
+    an Increased Risk of Ischemic Stroke and Myocardial Infarction: A Nationwide Population
+    Study." *Journal of the American Heart Association : Cardiovascular and Cerebrovascular
+    Disease*. https://doi.org/10.1161/JAHA.120.017783'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.454622'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: anemia_status
+  direction: strengthens
+  strength: moderate
+  description: Increased risk remained consistent in stratified analysis on anemia
+    status, suggesting the mechanism operates independently of anemia severity
+- name: colorectal_cancer_status
+  direction: strengthens
+  strength: moderate
+  description: Increased risk remained consistent in stratified analysis on CRC status,
+    indicating the mechanism is independent of cancer presence

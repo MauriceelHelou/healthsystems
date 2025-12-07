@@ -1,0 +1,61 @@
+id: serious_mental_illness_smi_to_NEW:quality_of_life_physical_domain
+name: Mental Disorders/Comorbidity → Physical Quality of Life
+from_node:
+  node_id: serious_mental_illness_smi
+  node_name: Mental Disorders/Comorbidity
+to_node:
+  node_id: NEW:quality_of_life_physical_domain
+  node_name: Physical Quality of Life
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Mental disorders among patients with substance use disorders create neurobiological
+  dysregulation affecting physical health systems including sleep, appetite, energy
+  levels, and pain perception'
+- 'Step 2: Comorbid mental health conditions lead to reduced motivation for physical
+  self-care, decreased engagement in health-promoting behaviors, and poor medication
+  adherence for physical health conditions'
+- 'Step 3: The biological burden of mental disorders (chronic stress, HPA axis dysregulation,
+  inflammation) compounds with substance use effects to accelerate physical health
+  decline'
+- 'Step 4: Cumulative physical health deterioration manifests as reduced functional
+  capacity, increased somatic symptoms, and diminished physical quality of life'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Bahram Armoon et al. 2022. Quality of life and its correlated
+    factors among patients with substance use disorders: a systematic review and meta-analysis.
+    Archives of Public Health.'
+  supporting_citations: []
+description: Mental disorders among patients with substance use disorders are significantly
+  associated with reduced physical quality of life. A meta-analysis of 4 studies (n=3515)
+  found that having mental disorders was associated with lower physical QoL (β = -1.05,
+  p = 0.001). The mechanism involves both direct biological effects of mental illness
+  on physical health systems and indirect effects through reduced self-care and health
+  behaviors.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -1.05
+    type: beta_coefficient
+    ci_lower: null
+    ci_upper: null
+  p_value: 0.001
+  sample_size: 3515
+moderators:
+- name: substance_type
+  direction: strengthens
+  strength: moderate
+  description: Alcohol use specifically associated with worse physical QoL (β = -2.21,
+    p = 0.001)
+- name: severity_of_substance_use_disorder
+  direction: strengthens
+  strength: moderate
+  description: Severe substance use disorders associated with worse mental and environmental
+    QoL outcomes
+- name: social_support
+  direction: weakens
+  strength: moderate
+  description: Family and friend support improves mental QoL (OR = 1.05, 95% CI =
+    1.04-1.07)

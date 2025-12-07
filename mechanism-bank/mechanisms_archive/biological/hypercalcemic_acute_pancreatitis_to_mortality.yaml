@@ -1,0 +1,47 @@
+id: hypercalcemic_acute_pancreatitis_to_mortality
+name: Hypercalcemic Acute Pancreatitis → Mortality
+from_node:
+  node_id: hypercalcemic_acute_pancreatitis
+  node_name: Hypercalcemic Acute Pancreatitis
+to_node:
+  node_id: mortality
+  node_name: Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Severe hypercalcemia causes cardiac arrhythmias, neurological dysfunction,
+  and acute kidney injury'
+- 'Step 2: Acute pancreatitis triggers systemic inflammatory response with potential
+  for multi-organ failure'
+- 'Step 3: Underlying malignancy contributes to immunosuppression and poor physiologic
+  reserve'
+- 'Step 4: Combined metabolic crisis, pancreatic complications (necrosis, infection),
+  and cancer burden lead to death'
+evidence:
+  quality_rating: C
+  n_studies: 4
+  primary_citation: 'Fakhrddine Amri et al. 2024. "Acute pancreatitis related to hypercalcemia
+    as initial manifestation of cancer: About 4 cases.." *Radiology case reports*.
+    https://doi.org/10.1016/j.radcr.2023.11.017'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.226604'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: stage_of_malignancy
+  direction: strengthens
+  strength: strong
+  description: Advanced cancer stage at presentation likely increases mortality risk
+    due to higher tumor burden and more severe hypercalcemia
+- name: time_to_diagnosis
+  direction: strengthens
+  strength: strong
+  description: Delayed recognition of hypercalcemia as the etiology may delay appropriate
+    treatment and increase mortality
+- name: access_to_intensive_care
+  direction: weakens
+  strength: moderate
+  description: Availability of ICU-level care and rapid intervention may reduce mortality
+    in these critically ill patients

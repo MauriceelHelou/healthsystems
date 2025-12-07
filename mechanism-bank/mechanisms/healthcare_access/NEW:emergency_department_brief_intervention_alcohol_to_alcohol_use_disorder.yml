@@ -1,0 +1,61 @@
+id: NEW:emergency_department_brief_intervention_alcohol_to_alcohol_use_disorder
+name: Emergency Department Brief Intervention for Alcohol → Alcohol Use Disorder
+from_node:
+  node_id: NEW:emergency_department_brief_intervention_alcohol
+  node_name: Emergency Department Brief Intervention for Alcohol
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Emergency department screening identifies patients with hazardous drinking patterns before
+  progression to severe AUD'
+- 'Step 2: Brief intervention provides education on health consequences and personalized risk assessment'
+- 'Step 3: Motivational interviewing techniques help patients identify reasons for changing drinking behavior'
+- 'Step 4: Patients may reduce consumption intensity and frequency of heavy drinking episodes'
+- 'Step 5: Very small reductions in consumption may prevent some cases of progression to clinical AUD'
+evidence:
+  quality_rating: A
+  n_studies: 28
+  primary_citation: C. Schmidt et al. 2016. "Meta-analysis on the effectiveness of alcohol screening with
+    brief interventions for patients in emergency care settings.." https://doi.org/10.1111/add.13263
+  supporting_citations:
+  - Meta-analysis included assessment of consumption quantity, intensity, and heavy drinking episodes
+  - Follow-up assessments conducted at 3, 6, and 12 months post-intervention
+  - 28 separate randomized controlled studies included in analysis
+  doi: 10.1111/add.13263
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief interventions in emergency care settings produce very small reductions in alcohol consumption
+  measures including quantity, intensity, and number of heavy drinking episodes. These small reductions
+  may contribute to reduced risk of developing alcohol use disorder, though the clinical significance
+  of such small effect sizes is questionable for population-level prevention.
+quantitative_effects:
+  effect_size:
+    value: 0.19
+    type: standardized_mean_difference
+    ci_lower: 0.08
+    ci_upper: 0.31
+  sample_size: 14456
+  heterogeneity_i_squared: 40.0
+moderators:
+- name: follow_up_duration
+  direction: neutral
+  strength: weak
+  description: Effects were assessed at 3, 6, and 12 month follow-up with no clear pattern of decay or
+    strengthening over time reported
+structural_competency:
+  equity_implications: The finding that more intensive interventions provide no additional benefit over
+    shorter approaches suggests that individual-level healthcare interventions have limited capacity to
+    address alcohol-related harm at the population level. This points to the need for structural interventions
+    addressing availability, pricing, and marketing of alcohol rather than relying primarily on healthcare-based
+    behavior change strategies. The modest effects may reflect the reality that alcohol consumption is
+    shaped by broader social and economic determinants that brief clinical encounters cannot meaningfully
+    address.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.047875'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,47 @@
+id: NEW:gabapentinoid_treatment_to_alcohol_withdrawal_severe_rate
+name: Gabapentinoid Treatment (Gabapentin/Pregabalin) → Alcohol Withdrawal Severity
+from_node:
+  node_id: NEW:gabapentinoid_treatment
+  node_name: Gabapentinoid Treatment (Gabapentin/Pregabalin)
+to_node:
+  node_id: alcohol_withdrawal_severe_rate
+  node_name: Alcohol Withdrawal Severity
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Gabapentinoids (gabapentin and pregabalin) are administered to patients
+  undergoing alcohol withdrawal treatment'
+- 'Step 2: These medications bind to voltage-gated calcium channels (α2δ subunit),
+  modulating neuronal excitability and reducing hyperexcitability associated with
+  alcohol withdrawal'
+- 'Step 3: GABAergic transmission is enhanced while glutamatergic overactivity (which
+  occurs during withdrawal) is reduced'
+- 'Step 4: This neurochemical modulation attenuates autonomic hyperactivity, anxiety,
+  and seizure risk characteristic of severe alcohol withdrawal'
+- 'Step 5: Clinical manifestations of alcohol withdrawal syndrome are reduced in severity,
+  leading to lower withdrawal severity scores'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Ying-Chih Cheng et al. 2020. Gabapentinoids for treatment of
+    alcohol use disorder: A systematic review and meta‐analysis. Human psychopharmacology.'
+  supporting_citations: []
+description: Gabapentinoids (gabapentin and pregabalin) reduce alcohol withdrawal
+  severity through their action on voltage-gated calcium channels and modulation of
+  GABAergic/glutamatergic neurotransmission. This systematic review and meta-analysis
+  examined multiple randomized controlled trials evaluating gabapentinoid effects
+  on withdrawal symptoms in patients with alcohol use disorder, finding evidence supporting
+  their efficacy in reducing withdrawal severity, craving, and associated symptoms.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: withdrawal_severity_baseline
+  direction: strengthens
+  strength: moderate
+  description: Gabapentinoids may show greater benefit in patients with more severe
+    baseline withdrawal symptoms
+- name: dosage
+  direction: strengthens
+  strength: moderate
+  description: Appropriate dosing of gabapentin or pregabalin influences treatment
+    effectiveness

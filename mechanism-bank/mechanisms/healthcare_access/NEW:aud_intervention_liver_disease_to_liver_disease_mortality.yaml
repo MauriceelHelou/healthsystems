@@ -1,0 +1,57 @@
+id: NEW:aud_intervention_liver_disease_to_liver_disease_mortality
+name: AUD Intervention in Liver Disease Patients → Liver Disease Mortality
+from_node:
+  node_id: NEW:aud_intervention_liver_disease
+  node_name: AUD Intervention in Liver Disease Patients
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with liver disease receive alcohol use disorder (AUD) intervention
+  through integrated (colocated liver and addiction clinics) or concomitant (separate
+  hepatology and addiction clinics) care models'
+- 'Step 2: AUD intervention promotes alcohol abstinence (abstinence rate 0.41/person-year)
+  and reduces alcohol relapse, decreasing ongoing hepatotoxic alcohol exposure'
+- 'Step 3: Reduced alcohol consumption prevents further liver damage, slowing progression
+  of fibrosis, cirrhosis, and hepatic decompensation (44% lower odds of decompensation)'
+- 'Step 4: Improved liver function and reduced decompensation events (59% lower 30-day
+  readmission) leads to significantly reduced patient mortality (58% lower odds of
+  death)'
+evidence:
+  quality_rating: A
+  n_studies: 20
+  primary_citation: 'M. Elfeki et al. 2022. Simultaneous Management of Alcohol Use
+    Disorder and Liver Disease: A Systematic Review and Meta-analysis. Journal of
+    addiction medicine.'
+  supporting_citations: []
+description: Simultaneous management of alcohol use disorder in patients with liver
+  disease significantly reduces mortality through improved abstinence rates, reduced
+  alcohol relapse, decreased liver decompensation, and lower hospital readmission
+  rates. The meta-analysis of 20 studies with 38,329 patients (7,072 receiving AUD
+  intervention) demonstrates a 58% reduction in mortality odds with AUD intervention
+  compared to standard care.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.42
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 38329
+moderators:
+- name: Integration of care model
+  direction: strengthens
+  strength: moderate
+  description: Integrated clinics (colocated liver and addiction teams) show improved
+    outcomes compared to standard hepatology alone, particularly among liver transplant
+    recipients where integrated follow-up reduced mortality odds to 0.29
+- name: Liver transplant status
+  direction: strengthens
+  strength: strong
+  description: 'Liver transplant recipients receiving integrated addiction team follow-up
+    showed stronger protective effects: OR 0.48 for alcohol relapse and OR 0.29 for
+    mortality compared to hepatology alone'

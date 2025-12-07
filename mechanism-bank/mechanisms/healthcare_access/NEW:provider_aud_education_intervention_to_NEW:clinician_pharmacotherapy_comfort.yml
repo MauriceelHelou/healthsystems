@@ -1,0 +1,58 @@
+id: NEW:provider_aud_education_intervention_to_NEW:clinician_pharmacotherapy_comfort
+name: Provider-Focused AUD Educational Intervention → Clinician Comfort Prescribing AUD Pharmacotherapy
+from_node:
+  node_id: NEW:provider_aud_education_intervention
+  node_name: Provider-Focused AUD Educational Intervention
+to_node:
+  node_id: NEW:clinician_pharmacotherapy_comfort
+  node_name: Clinician Comfort Prescribing AUD Pharmacotherapy
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Educational session specifically covers prescribing pharmacotherapy for AUD'
+- 'Step 2: Clinicians learn about FDA-approved medications for AUD treatment in context of liver disease'
+- 'Step 3: Improved knowledge increases comfort with prescribing pharmacological treatments'
+- 'Step 4: However, intention to actually prescribe did not significantly change post-intervention'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Emily Johnson et al. 2022. "The development and evaluation of a provider-focused educational
+    intervention about alcohol use disorder in patients with cirrhosis.." https://doi.org/10.3138/canlivj-2022-0036
+  supporting_citations:
+  - Kern's Framework for Curriculum Development (referenced as methodological basis)
+  - Short Alcohol and Alcohol Problems Perception Questionnaire (SAAPPQ) validation studies
+  - Self Determination Theory literature (referenced for motivation assessment)
+  doi: 10.3138/canlivj-2022-0036
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2023, source is 2022'
+last_updated: '2025-12-06'
+version: '2.0'
+description: While the educational intervention improved clinician comfort with prescribing pharmacotherapy
+  for AUD, it did not significantly change intention to prescribe. This suggests additional structural
+  barriers beyond knowledge and comfort that prevent treatment provision.
+quantitative_effects:
+  sample_size: 95
+moderators:
+- name: prescribing_authority
+  direction: strengthens
+  strength: moderate
+  description: Clinicians with prescribing authority (physicians, NPs, PAs) may show different responses
+    than those without
+- name: practice_setting_constraints
+  direction: weakens
+  strength: moderate
+  description: Institutional barriers and workflow constraints may limit translation of comfort to prescribing
+    intention
+structural_competency:
+  equity_implications: This finding highlights that education alone is insufficient to change practice
+    when structural barriers remain. The gap between improved comfort and unchanged prescribing intention
+    points to system-level factors (formulary restrictions, time constraints, referral patterns, institutional
+    culture) that must be addressed alongside education. This is a key insight for health equity - structural
+    interventions at multiple levels are needed.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.122778'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

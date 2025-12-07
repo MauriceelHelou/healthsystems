@@ -1,0 +1,72 @@
+id: NEW:brief_intervention_cannabis_healthcare_to_NEW:cannabis_use_days
+name: Brief Interventions for Cannabis Use in Healthcare Settings → Days of Cannabis Use
+from_node:
+  node_id: NEW:brief_intervention_cannabis_healthcare
+  node_name: Brief Interventions for Cannabis Use in Healthcare Settings
+to_node:
+  node_id: NEW:cannabis_use_days
+  node_name: Days of Cannabis Use
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Brief interventions are delivered in healthcare settings (primary care, emergency departments)
+  during routine encounters'
+- 'Step 2: Interventions typically include motivational interviewing, feedback on use patterns, and advice
+  to reduce use'
+- 'Step 3: Intended to increase awareness of cannabis-related risks and motivation to change'
+- 'Step 4: Expected to reduce frequency of cannabis use through behavior change'
+- 'Step 5: However, evidence shows no significant reduction in cannabis use days (null effect)'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: 'Sameer Imtiaz et al. 2020. "Brief Interventions for Cannabis Use in Healthcare Settings:
+    Systematic Review and Meta-analyses of Randomized Trials.." https://doi.org/10.1097/ADM.0000000000000527'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 10 reports from 9 studies
+  - Studies primarily conducted in United States primary care and emergency department settings
+  - Participants were predominantly adults recruited from healthcare settings
+  doi: 10.1097/ADM.0000000000000527
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review and meta-analysis found that brief interventions delivered in healthcare
+  settings (primarily primary care and emergency departments) did not significantly reduce the number
+  of days of cannabis use in either the short-term (MD -0.22 days; 95% CI -2.27, 1.82) or long-term (MD
+  -0.28 days; 95% CI -2.42, 1.86). The null effect suggests that brief interventions, which have shown
+  efficacy for alcohol use, may not translate effectively to cannabis use reduction.
+quantitative_effects:
+  effect_size:
+    value: -0.22
+    type: standardized_mean_difference
+    ci_lower: -2.27
+    ci_upper: 1.82
+  heterogeneity_i_squared: 60.3
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Most studies were conducted in the United States, limiting generalizability to other
+    healthcare systems
+moderators:
+- name: follow_up_duration
+  direction: weakens
+  strength: weak
+  description: Both short-term (≤3 months) and long-term (>3 months) follow-up showed null effects, with
+    long-term MD -0.28 days (95% CI -2.42, 1.86)
+- name: healthcare_setting
+  direction: strengthens
+  strength: weak
+  description: Studies conducted in primary care and emergency departments; setting type may influence
+    intervention delivery and effectiveness
+structural_competency:
+  equity_implications: 'This finding has important implications for health equity and structural approaches
+    to substance use. The null effect suggests that healthcare system-based brief interventions alone
+    are insufficient to address cannabis use, potentially because: (1) cannabis use may be driven by structural
+    factors (economic stress, lack of opportunity, mental health burden) that brief clinical encounters
+    cannot address; (2) healthcare access disparities mean these interventions would not reach populations
+    with highest need; (3) a purely individual-focused clinical approach fails to address social and environmental
+    determinants of substance use. The finding argues for complementary structural interventions addressing
+    root causes rather than relying solely on clinical behavior change approaches.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.021278'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

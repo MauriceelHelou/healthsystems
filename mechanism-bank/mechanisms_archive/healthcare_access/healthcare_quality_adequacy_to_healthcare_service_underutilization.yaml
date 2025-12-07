@@ -1,0 +1,45 @@
+id: healthcare_quality_adequacy_to_healthcare_service_underutilization
+name: Preference for Specific Doctors and Adequate Healthcare Services → Healthcare
+  Service Underutilization
+from_node:
+  node_id: healthcare_quality_adequacy
+  node_name: Preference for Specific Doctors and Adequate Healthcare Services
+to_node:
+  node_id: healthcare_service_underutilization
+  node_name: Healthcare Service Underutilization
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients who express need for specific doctors or adequate services indicate
+  dissatisfaction with or lack of access to quality care at available facilities'
+- 'Step 2: Limited availability of preferred or adequate care options creates barriers
+  where patients must choose between inconvenient/costly access to quality care versus
+  local inadequate services'
+- 'Step 3: Mismatch between patient needs and available healthcare quality leads to
+  delayed or forgone care when preferred providers are inaccessible'
+- 'Step 4: Resulting gaps in care continuity lead to inadequate healthcare service
+  utilization for chronic CAD management'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Neeraj Vinod Mohandas et al. 2024. "Healthcare service utilisation
+    among adults with coronary artery disease in rural Aluva, South India: a community-based
+    cross-sectional study.." *BMJ open*. https://doi.org/10.1136/bmjopen-2024-084468'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.489834'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: rural_healthcare_infrastructure
+  direction: strengthens
+  strength: strong
+  description: Rural settings with limited healthcare provider density and potentially
+    lower service quality amplify the impact of preferences for specific adequate
+    care
+- name: socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Lower SES patients may have fewer options to access preferred quality
+    care due to cost and transportation barriers

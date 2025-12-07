@@ -1,0 +1,56 @@
+id: alcohol_use_disorder_to_NEW:alcohol_associated_cirrhosis
+name: Alcohol Use Disorder → Alcohol-Associated Cirrhosis
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:alcohol_associated_cirrhosis
+  node_name: Alcohol-Associated Cirrhosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Sustained heavy alcohol consumption in AUD leads to chronic hepatocyte injury'
+- 'Step 2: Repeated cycles of injury and repair trigger hepatic stellate cell activation'
+- 'Step 3: Activated stellate cells produce excessive collagen leading to progressive fibrosis'
+- 'Step 4: End-stage fibrosis results in cirrhosis with architectural distortion and portal hypertension'
+evidence:
+  quality_rating: A
+  n_studies: 35
+  primary_citation: 'Sachin Amonker et al. 2023. "Prevalence of alcohol-associated liver disease: a systematic
+    review and meta-analysis." https://doi.org/10.1097/HC9.0000000000000133'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 502 cases of alcohol-associated
+    cirrhosis
+  - Studies included universal testing protocols across multiple healthcare settings
+  - Primary care and general population studies provided baseline prevalence estimates
+  doi: 10.1097/HC9.0000000000000133
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among individuals with alcohol use disorder, 12.9% have alcohol-associated cirrhosis, compared
+  to only 0.3% in general populations and 1.7% in primary care. This represents a severe progression of
+  liver disease concentrated in the AUD population.
+quantitative_effects:
+  effect_size:
+    value: 12.9
+    type: percentage_change
+    ci_lower: 4.3
+    ci_upper: 33.2
+  sample_size: 513278
+moderators:
+- name: healthcare_setting
+  direction: strengthens
+  strength: strong
+  description: Cirrhosis prevalence is 12.9% in AUD populations vs 0.3% in general populations vs 1.7%
+    in primary care - approximately 40-fold difference between general population and AUD settings
+structural_competency:
+  equity_implications: The concentration of cirrhosis in AUD populations highlights failures in early
+    intervention and treatment access. Structural barriers to AUD treatment including stigma, lack of
+    insurance coverage, limited treatment capacity, and inadequate screening in healthcare settings allow
+    liver disease to progress to end-stage cirrhosis. Equity implications include differential access
+    to transplantation and advanced care for marginalized populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.419520'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

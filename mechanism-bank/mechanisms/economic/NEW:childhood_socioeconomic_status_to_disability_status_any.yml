@@ -1,0 +1,55 @@
+id: NEW:childhood_socioeconomic_status_to_disability_status_any
+name: Childhood Socioeconomic Status → Disability Status (Any)
+from_node:
+  node_id: NEW:childhood_socioeconomic_status
+  node_name: Childhood Socioeconomic Status
+to_node:
+  node_id: disability_status_any
+  node_name: Disability Status (Any)
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Low childhood SES limits access to healthcare, nutrition, and safe environments during developmental
+  periods'
+- 'Step 2: Early life adversity creates vulnerability to chronic conditions and injuries'
+- 'Step 3: Limited educational opportunities reduce knowledge and resources for health maintenance'
+- 'Step 4: Interaction between childhood and adulthood SES moderates disability outcomes'
+- 'Step 5: Cumulative life-course disadvantage results in higher disability rates in late adulthood'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Tao-Jie Zhou et al. 2022. "Childhood Socioeconomic Status and Late-Adulthood Health
+    Outcomes in China: A Life-Course Perspective." https://doi.org/10.1007/s12061-022-09489-5'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references CHARLS nationally representative
+    survey
+  - Life-course research on disability trajectories
+  - Studies on SES and disability in aging populations
+  doi: 10.1007/s12061-022-09489-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Childhood socioeconomic status shows significant interaction with adulthood SES specifically
+  for disability-related health outcomes, demonstrating heterogeneity in how early life conditions affect
+  different health domains
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in China with population aged 45 and older; disability-related outcomes
+    showed unique interaction patterns compared to other health outcomes
+moderators:
+- name: adulthood_socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: The association between disability-related health variables and adulthood SES is moderated
+    by childhood SES; this interaction effect was significant only for disability outcomes among all health
+    outcomes examined
+structural_competency:
+  equity_implications: The finding that disability outcomes show unique interaction patterns between childhood
+    and adult SES suggests that functional health trajectories are particularly sensitive to cumulative
+    structural disadvantage across the life course. This supports policies addressing both early-life
+    conditions and adult opportunities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.639648'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

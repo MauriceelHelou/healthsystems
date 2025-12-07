@@ -80,12 +80,16 @@ All detail panels follow this consistent structure:
 - Select node from search results
 
 ### Header
+
+> **Note**: All node examples reference canonical nodes from `mechanism-bank/mechanisms/canonical_nodes.json`.
+
 ```
 ┌─────────────────────────────────────┐
-│ [▪] Community Health Workers    [X] │
+│ [▪] Primary Care Physician Density [X] │
 └─────────────────────────────────────┘
 ```
-- Icon: Node type indicator (Structural/Proxy/Crisis)
+Node ID: `primary_care_physician_density`
+- Icon: Node type indicator (Structural/Proxy/Crisis based on scale)
 - Title: Node name (truncated with tooltip if long)
 
 ### Quick Stats Bar
@@ -105,47 +109,51 @@ All detail panels follow this consistent structure:
 ```
 Overview
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Definition
-Community health workers (CHWs) provide health education,
-advocacy, and care coordination within underserved communities.
+Node ID: primary_care_physician_density
 
-Stock Type
-Structural Stock (measured in FTE count)
+Definition
+Primary care physicians per 100,000 population serving the geographic area.
+
+Scale: 2 (Institutional Infrastructure)
 
 Measurement
-Typically measured as FTE count or per 100k population ratio.
-Data sources: HRSA, state workforce databases.
+Physicians per 100,000 population.
+Data sources: HRSA, AMA Masterfile, state medical boards.
 ```
 
 **Fields**:
+- **Node ID**: Canonical identifier from `canonical_nodes.json`
 - **Definition**: 2-3 sentence description
-- **Stock Type**: Badge with icon (Structural/Proxy/Crisis)
+- **Scale**: Badge with scale number (1-5) and level name
 - **Measurement**: How it's quantified (units, data sources) - qualitative only
 
 #### 2. Connections Section
+
+Example for `primary_care_physician_density`:
 ```
-Connections (18 total)
+Connections (12 total)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Outgoing (15)  [Show All ▼]
+Outgoing (9)  [Show All ▼]
 ┌─────────────────────────────────────┐
-│ → Healthcare Continuity Index    [A]│  ← Evidence badge
-│   Positive relationship             │
+│ → preventable_hospitalization    [A]│  ← Evidence badge
+│   Negative relationship (reduces)   │
 │   12 studies support                │
 ├─────────────────────────────────────┤
-│ → Community Trust Index          [B]│
+│ → primary_care_visit_rate        [A]│
 │   Positive relationship             │
-│   5 studies support                 │
-├─────────────────────────────────────┤
-│ → ED Visits                       [A]│
-│   Negative relationship (reduces)   │
 │   8 studies support                 │
+├─────────────────────────────────────┤
+│ → emergency_department_visit_rate[B]│
+│   Negative relationship (reduces)   │
+│   5 studies support                 │
 └─────────────────────────────────────┘
 
 Incoming (3)  [Show All ▼]
 ┌─────────────────────────────────────┐
-│ ← Policy: CHW Funding             [B]│
+│ ← medicaid_expansion_status      [A]│
 │   Positive relationship             │
+│   Medicaid expansion increases PCP supply│
 └─────────────────────────────────────┘
 ```
 

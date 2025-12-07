@@ -1,0 +1,46 @@
+id: rotating_checkpoint_enforcement_to_nighttime_traffic_accidents
+name: Rotating Police Checkpoint Enforcement → Nighttime Traffic Accidents
+from_node:
+  node_id: rotating_checkpoint_enforcement
+  node_name: Rotating Police Checkpoint Enforcement
+to_node:
+  node_id: nighttime_traffic_accidents
+  node_name: Nighttime Traffic Accidents
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Rotating sobriety checkpoints across multiple locations creates uncertainty
+  for drivers about enforcement location'
+- 'Step 2: Drivers require time to learn enforcement patterns and adjust their behavior
+  strategically'
+- 'Step 3: Before drivers can fully learn and avoid enforcement, the checkpoint location
+  changes, maintaining deterrent effect across wider geographic area'
+- 'Step 4: Sustained deterrent effect reduces drunk driving behavior across multiple
+  routes'
+- 'Step 5: Reduced drunk driving leads to fewer nighttime traffic accidents'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Banerjee et al. 2019. "The Efficient Deployment of Police
+    Resources: Theory and New Evidence from a Randomized Drunk Driving Crackdown in
+    India." https://doi.org/10.3386/w26224'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.205955'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: driver_learning_rate
+  direction: weakens
+  strength: strong
+  description: Faster driver learning about enforcement patterns reduces effectiveness
+    of rotating checkpoints by enabling quicker strategic avoidance
+- name: number_of_rotation_locations
+  direction: strengthens
+  strength: moderate
+  description: More rotation locations increase uncertainty and extend learning period
+    required for drivers to identify patterns
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/rotating_checkpoint_enforcement_to_nighttime_traffic_accidents.yaml
+_category: political

@@ -1,0 +1,55 @@
+id: sud_treatment_facility_density_to_polysubstance_overdose_rate
+name: SUD Treatment Facility Density → Polysubstance Overdose Rate
+from_node:
+  node_id: sud_treatment_facility_density
+  node_name: SUD Treatment Facility Density
+to_node:
+  node_id: polysubstance_overdose_rate
+  node_name: Polysubstance Overdose Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: OAT settings with capacity for integrated screening increase detection of polysubstance use'
+- 'Step 2: Identification enables delivery of brief interventions addressing co-occurring substance misuse'
+- 'Step 3: Reduced substance risk scores decrease dangerous drug combinations'
+- 'Step 4: Improved clinical outcomes and reduced psychosocial problems lower polysubstance overdose risk'
+- 'Step 5: Systematic SBI integration in OAT programs creates population-level protective effects'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'Abhishek Ghosh et al. "Efficacy of Brief Interventions for Comorbid Substance Misuse
+    in Patients on Opioid Agonist Treatment: A Systematic Review and Meta-analysis.." https://doi.org/10.1097/ADM.0000000000001058'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Co-occurring substance misuse associated with poor clinical and psychosocial outcomes
+  - Multiple substance use described as common but underrecognized problem
+  doi: 10.1097/ADM.0000000000001058
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The integration of screening and brief intervention capacity within SUD treatment facilities
+  serving OAT patients can reduce polysubstance-related harms through systematic identification and intervention
+  for co-occurring substance misuse.
+quantitative_effects:
+  effect_size:
+    value: 0.752
+    type: standardized_mean_difference
+    ci_lower: 0.405
+    ci_upper: 1.099
+moderators:
+- name: Completeness of screening implementation
+  direction: weakens
+  strength: moderate
+  description: Studies showed limited and incomplete screening for substance misuse in OAT settings, suggesting
+    implementation gaps reduce potential benefits
+structural_competency:
+  equity_implications: The finding that screening and intervention delivery is 'limited and incomplete'
+    in OAT settings reflects structural underinvestment in comprehensive addiction care. People with opioid
+    use disorder represent a marginalized population, and gaps in integrated services perpetuate health
+    inequities. Policy interventions requiring comprehensive screening protocols could address this structural
+    barrier.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.091783'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

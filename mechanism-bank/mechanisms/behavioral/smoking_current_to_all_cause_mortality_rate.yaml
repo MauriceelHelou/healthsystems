@@ -1,0 +1,58 @@
+id: smoking_current_to_all_cause_mortality_rate
+name: Current Smoking Status → All-Cause Mortality Rate
+from_node:
+  node_id: smoking_current
+  node_name: Current Smoking Status
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Current smoking exposes individuals to numerous toxic and carcinogenic
+  compounds through tobacco combustion, including tar, carbon monoxide, and nicotine'
+- 'Step 2: These exposures lead to multiple organ system damage including cardiovascular
+  disease, respiratory disorders, and various cancers'
+- 'Step 3: Cumulative physiological damage from smoking results in increased mortality
+  risk across all causes of death'
+- 'Step 4: In non-smoking cohorts compared to smoking cohorts, all-cause mortality
+  patterns differ substantially, demonstrating smoking''s confounding role in mortality
+  studies'
+evidence:
+  quality_rating: A
+  n_studies: 107
+  primary_citation: Tim R Stockwell et al. 2024. Why do only some cohort studies find
+    health benefits from low volume alcohol use? A systematic review and meta-analysis
+    of study characteristics that may bias mortality risk estimates. Journal of Studies
+    on Alcohol and Drugs.
+  supporting_citations: []
+description: This meta-analysis of 107 longitudinal studies with nearly 5 million
+  participants examined how smoking status affects all-cause mortality estimates.
+  The study found that in non-smoking cohorts, mortality risk estimates were notably
+  elevated (RR=1.16), highlighting smoking's substantial role in modifying mortality
+  risk. The research demonstrated that smoking is a critical confounder in mortality
+  studies and that controlling for smoking status significantly alters mortality risk
+  estimates. The evidence confirms that current smoking is associated with increased
+  all-cause mortality through multiple pathological pathways.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.16
+    type: relative_risk
+    ci_lower: 0.91
+    ci_upper: 1.41
+  p_value: null
+  sample_size: 4838825
+moderators:
+- name: socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Studies controlling for socio-economic status showed significantly
+    different mortality risk patterns, suggesting SES modifies the smoking-mortality
+    relationship
+- name: alcohol_consumption
+  direction: strengthens
+  strength: moderate
+  description: Smoking status mediates, moderates, or confounds alcohol-mortality
+    risk relationships, with non-smoking cohorts showing different mortality patterns

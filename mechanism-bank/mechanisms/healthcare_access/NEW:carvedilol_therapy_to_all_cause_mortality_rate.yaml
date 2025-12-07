@@ -1,0 +1,56 @@
+id: NEW:carvedilol_therapy_to_all_cause_mortality_rate
+name: Carvedilol Therapy → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:carvedilol_therapy
+  node_name: Carvedilol Therapy
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Carvedilol, a non-selective β-blocker with intrinsic vasodilatory activity,
+  is administered to patients with compensated cirrhosis and clinically significant
+  portal hypertension (CSPH)'
+- 'Step 2: The vasodilatory properties of carvedilol ameliorate hepatic vascular resistance,
+  which is a major mechanism of portal hypertension in early cirrhosis'
+- 'Step 3: Reduction in portal pressure prevents the transition from compensated to
+  decompensated cirrhosis, reducing risk of decompensating events'
+- 'Step 4: Prevention of decompensation maintains better overall health status and
+  reduces complications associated with advanced liver disease'
+- 'Step 5: Improved survival outcomes result from maintaining compensated status,
+  as decompensated cirrhosis is associated with markedly reduced life expectancy'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: Càndid Villanueva et al. 2022. "Carvedilol reduces the risk of
+    decompensation and mortality in patients with compensated cirrhosis in a competing-risk
+    meta-analysis." Journal of hepatology.
+  supporting_citations: []
+description: Carvedilol therapy reduces all-cause mortality in patients with compensated
+  cirrhosis and clinically significant portal hypertension. The medication's unique
+  vasodilatory properties reduce hepatic vascular resistance and portal pressure,
+  preventing decompensation of cirrhosis. Since the transition from compensated to
+  decompensated cirrhosis is associated with markedly reduced life expectancy, preventing
+  this progression through carvedilol therapy significantly improves survival outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.506
+    type: subdistribution_hazard_ratio
+    ci_lower: 0.289
+    ci_upper: 0.887
+  p_value: 0.017
+  sample_size: 352
+moderators:
+- name: Portal hypertension severity
+  direction: strengthens
+  strength: moderate
+  description: Benefits observed specifically in patients with clinically significant
+    portal hypertension (CSPH)
+- name: Cirrhosis compensation status
+  direction: strengthens
+  strength: strong
+  description: Effect demonstrated in compensated cirrhosis patients; mechanism involves
+    preventing progression to decompensated state

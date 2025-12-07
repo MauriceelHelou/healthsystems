@@ -1,0 +1,59 @@
+id: NEW:higher_fluid_volume_resuscitation_to_NEW:need_for_mechanical_ventilation
+name: Higher Volume Fluid Resuscitation Strategy → Need for Mechanical Ventilation
+from_node:
+  node_id: NEW:higher_fluid_volume_resuscitation
+  node_name: Higher Volume Fluid Resuscitation Strategy
+to_node:
+  node_id: NEW:need_for_mechanical_ventilation
+  node_name: Need for Mechanical Ventilation
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Aggressive fluid resuscitation increases intravascular volume'
+- 'Step 2: Excess fluid leads to extravasation into pulmonary interstitium and alveoli'
+- 'Step 3: Pulmonary edema and organ congestion develop'
+- 'Step 4: Respiratory function deteriorates requiring mechanical ventilatory support'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'S. Gendreau et al. 2024. "Geo-Economic Influence on the Effect of Fluid Volume for
+    Sepsis Resuscitation: A Meta-Analysis.." https://doi.org/10.1164/rccm.202309-1617OC'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 29 RCTs
+  - Studies reporting mechanical ventilation outcomes (specific citations in full text)
+  - Studies from LMIC settings (specific citations in full text)
+  doi: 10.1164/rccm.202309-1617OC
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher volume fluid resuscitation strategies in sepsis are associated with increased need
+  for mechanical ventilation, particularly in LMIC settings (OR 1.24). This represents the biological
+  pathway through which aggressive fluid resuscitation leads to harm when ventilatory support is unavailable.
+quantitative_effects:
+  effect_size:
+    value: 1.24
+    type: odds_ratio
+    ci_lower: 1.08
+    ci_upper: 1.43
+  sample_size: 11798
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Higher fluid volume was associated with increased need for mechanical ventilation in
+    LMICs (OR 1.24) but not in HICs (OR 1.02).
+moderators:
+- name: country_income_level
+  direction: strengthens
+  strength: moderate
+  description: The association between higher fluid volumes and increased mechanical ventilation need
+    is stronger in LMIC settings
+structural_competency:
+  equity_implications: This mechanism represents the intermediate step linking treatment strategy to mortality
+    through respiratory complications. The geographic variation suggests that patient populations in LMICs
+    may be more vulnerable to fluid overload complications, potentially due to later presentation, different
+    comorbidity profiles, or underlying nutritional status - all of which trace to structural determinants
+    of health access and socioeconomic conditions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.424931'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

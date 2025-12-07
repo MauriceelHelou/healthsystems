@@ -1,0 +1,54 @@
+id: NEW:parkinson_disease_to_suicidal_ideation
+name: Parkinson Disease → Suicidal Ideation
+from_node:
+  node_id: NEW:parkinson_disease
+  node_name: Parkinson Disease
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Parkinson''s disease causes progressive neurodegeneration affecting dopaminergic
+  pathways in the brain, particularly in the substantia nigra and related circuits'
+- 'Step 2: Dopaminergic dysfunction disrupts reward processing, mood regulation, and
+  executive function, contributing to high rates of depression and mood disorders
+  in PD patients'
+- 'Step 3: The combination of neurobiological changes, chronic progressive disability,
+  motor symptoms, and comorbid depression increases vulnerability to suicidal ideation'
+- 'Step 4: Approximately 22.2% of PD patients experience suicidal ideation, with mood
+  disorders being particularly prevalent among those reporting suicidality'
+evidence:
+  quality_rating: A
+  n_studies: 28
+  primary_citation: 'A. Mai et al. 2023. Risk of Suicidal Ideation and Behavior in
+    Individuals With Parkinson Disease: A Systematic Review and Meta-Analysis. JAMA
+    Neurology.'
+  supporting_citations: []
+description: This meta-analysis of 28 studies comprising over 500,000 Parkinson's
+  disease patients found that 22.2% experienced suicidal ideation and 1.25% exhibited
+  suicidal behavior. PD patients had approximately twice the risk of suicidal behavior
+  compared to controls (OR=2.15, HR=1.73). The relationship is mediated by neurobiological
+  changes affecting mood regulation, with depression being particularly prevalent
+  among PD patients reporting suicidality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.15
+    type: odds_ratio
+    ci_lower: 1.22
+    ci_upper: 3.78
+  p_value: 0.01
+  sample_size: 505950
+moderators:
+- name: depression
+  direction: strengthens
+  strength: strong
+  description: Mood disorders, especially depression, are prevalent in patients with
+    PD who report suicidality
+- name: study_design
+  direction: strengthens
+  strength: moderate
+  description: Prospective studies showed higher prevalence of suicidal behavior (1.75%)
+    than retrospective studies (0.50%)

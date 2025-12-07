@@ -1,0 +1,60 @@
+id: NEW:neonatal_probiotic_supplementation_to_NEW:neonatal_sepsis
+name: Neonatal Probiotic Supplementation → Neonatal Sepsis
+from_node:
+  node_id: NEW:neonatal_probiotic_supplementation
+  node_name: Neonatal Probiotic Supplementation
+to_node:
+  node_id: NEW:neonatal_sepsis
+  node_name: Neonatal Sepsis
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Probiotic supplementation introduces beneficial bacterial strains to the
+  neonatal gastrointestinal tract during the critical colonization period'
+- 'Step 2: Beneficial bacteria competitively exclude pathogenic organisms by occupying
+  attachment sites on intestinal epithelium and competing for nutrients'
+- 'Step 3: Probiotics enhance intestinal barrier function, reducing bacterial translocation
+  from the gut lumen into the bloodstream'
+- 'Step 4: Probiotics modulate the neonatal immune system, enhancing both innate and
+  adaptive immune responses against pathogens'
+- 'Step 5: Reduced pathogen colonization and improved immune function lead to decreased
+  incidence of systemic bacterial infection (sepsis)'
+evidence:
+  quality_rating: A
+  n_studies: 21
+  primary_citation: 'A. Imdad et al. 2021. Effects of neonatal nutrition interventions
+    on neonatal mortality and child health and development outcomes: A systematic
+    review. Campbell Systematic Reviews.'
+  supporting_citations: []
+description: Probiotic supplementation during the neonatal period reduces the risk
+  of neonatal sepsis by 22% (RR 0.78, 95% CI 0.70-0.86) based on high-quality evidence
+  from 21 randomized controlled trials with 9,105 participants. The number needed
+  to treat to prevent one case of sepsis is 14. This protective effect is observed
+  primarily in preterm and low birth weight neonates in hospital settings in low-
+  and middle-income countries.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.78
+    type: relative_risk
+    ci_lower: 0.7
+    ci_upper: 0.86
+  p_value: null
+  sample_size: 9105
+moderators:
+- name: gestational_age
+  direction: strengthens
+  strength: moderate
+  description: Most studies focused on preterm neonates (<37 weeks gestation), suggesting
+    greater benefit in this vulnerable population
+- name: birth_weight
+  direction: strengthens
+  strength: moderate
+  description: Studies primarily included low birth weight infants (<2500g), indicating
+    enhanced protective effects in this group
+- name: setting
+  direction: strengthens
+  strength: moderate
+  description: Evidence primarily from hospital/NICU settings; community setting evidence
+    lacking

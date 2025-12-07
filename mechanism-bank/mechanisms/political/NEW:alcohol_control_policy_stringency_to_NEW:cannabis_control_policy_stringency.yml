@@ -1,0 +1,59 @@
+id: NEW:alcohol_control_policy_stringency_to_NEW:cannabis_control_policy_stringency
+name: Alcohol Control Policy Stringency → Cannabis Control Policy Stringency
+from_node:
+  node_id: NEW:alcohol_control_policy_stringency
+  node_name: Alcohol Control Policy Stringency
+to_node:
+  node_id: NEW:cannabis_control_policy_stringency
+  node_name: Cannabis Control Policy Stringency
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Local governments develop regulatory frameworks for alcohol sales including hours of sale,
+  advertising restrictions, and outlet density limits'
+- 'Step 2: When cannabis is legalized, localities with established stringent alcohol policies have institutional
+  capacity and political will for substance regulation'
+- 'Step 3: Regulatory infrastructure and policy expertise transfers to cannabis control decisions'
+- 'Step 4: More stringent alcohol policy environments correlate with more stringent cannabis policy adoption'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Ellicott C Matthay et al. 2023. "Alignment in local approaches to alcohol and cannabis
+    control policy: A case study of California cities and counties.." https://doi.org/10.1016/j.drugpo.2023.104114'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references public health expert recommendations
+    but does not cite specific prior studies
+  doi: 10.1016/j.drugpo.2023.104114
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among California localities that permitted cannabis sales, more stringent local alcohol control
+  policies were associated with more stringent cannabis control policies, suggesting potential policy
+  learning and regulatory capacity transfer between substances.
+quantitative_effects:
+  effect_size:
+    value: 0.16
+    type: beta_coefficient
+    ci_lower: 0.07
+    ci_upper: 0.25
+  sample_size: 241
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Analysis limited to 12 California counties and 241 incorporated cities within them.
+    Among localities not banning cannabis sales (29%), stringency correlation was observed.
+moderators:
+- name: cannabis_sales_ban_status
+  direction: strengthens
+  strength: strong
+  description: Association only observed among localities that did not ban cannabis sales (29% of sample);
+    71% banned cannabis entirely regardless of alcohol policy
+structural_competency:
+  equity_implications: This mechanism identifies how local government regulatory capacity and political
+    will for substance control policies may transfer across substances. However, the finding that most
+    localities banned cannabis regardless of alcohol policy suggests political factors beyond public health
+    considerations drive decisions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.571270'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

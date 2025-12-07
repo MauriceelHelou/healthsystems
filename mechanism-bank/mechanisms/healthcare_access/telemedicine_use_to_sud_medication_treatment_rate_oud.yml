@@ -1,0 +1,52 @@
+id: telemedicine_use_to_sud_medication_treatment_rate_oud
+name: Telemedicine Use → SUD Medication Treatment Rate (OUD)
+from_node:
+  node_id: telemedicine_use
+  node_name: Telemedicine Use
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate (OUD)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: COVID-19 pandemic accelerated shift toward telemedicine and online counseling for substance
+  use treatment'
+- 'Step 2: Telemedicine expands geographic reach and reduces transportation barriers to treatment access'
+- 'Step 3: Virtual visits may reduce stigma barriers associated with in-person treatment facility attendance'
+- 'Step 4: Increased convenience and accessibility promotes treatment initiation and retention'
+- 'Step 5: However, this benefit is conditional on having adequate digital access and skills'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Renee Garett and S. Young 2021. "Potential Effects of Digital Inequality on Treatment
+    Seeking for Opioid Use Disorder." https://doi.org/10.1007/s11469-021-00629-5
+  supporting_citations:
+  - Additional citations require full-text access - abstract references COVID-19 pandemic context
+  - Telemedicine expansion literature implied but not specifically cited in abstract
+  - Additional citations require full-text access
+  doi: 10.1007/s11469-021-00629-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The shift toward telemedicine for substance use treatment during COVID-19 created both opportunities
+  and barriers, with benefits accruing primarily to those with adequate digital access while potentially
+  widening disparities for digitally excluded populations
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Telemedicine benefit varies by geography, with greater potential impact in rural areas
+    but also greater digital access barriers
+moderators:
+- name: digital_inclusion_index
+  direction: strengthens
+  strength: strong
+  description: The benefit of telemedicine expansion is contingent on having digital access, creating
+    a digital divide in who benefits from this treatment modality
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare system adaptations can inadvertently exacerbate
+    inequities when implemented without attention to underlying structural barriers. Policy solutions
+    require both expanding telemedicine AND addressing digital access disparities simultaneously.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.764047'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

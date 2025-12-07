@@ -1,0 +1,56 @@
+id: primary_care_shortage_severe_to_prescription_opioid_misuse
+name: Primary Care Shortage Severe (Medically Underserved Area) → Prescription Opioid Misuse
+from_node:
+  node_id: primary_care_shortage_severe
+  node_name: Primary Care Shortage Severe (Medically Underserved Area)
+to_node:
+  node_id: prescription_opioid_misuse
+  node_name: Prescription Opioid Misuse
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Medically underserved areas have limited access to primary care and behavioral health specialists'
+- 'Step 2: Reduced access to evidence-based pain management and mental health services'
+- 'Step 3: Limited availability of opioid use disorder screening and early intervention'
+- 'Step 4: Opioid prescription misuse becomes growing public health concern in underserved areas'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Jose Zapata et al. 2020. "Opioid Use Disorder ECHO: A Program Evaluation of a Project
+    That Provides Knowledge and Builds Capacity for Community Health Workers in Medically Underserved
+    Areas of South Texas." https://doi.org/10.1080/01612840.2020.1814911'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  doi: 10.1080/01612840.2020.1814911
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The paper contextualizes opioid use disorder as a growing public health concern in medically
+  underserved areas of South Texas, implying a structural relationship between healthcare access deficits
+  and the opioid epidemic in these communities.
+quantitative_effects:
+  sample_size: 26
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: South Texas identified as area where opioid use disorder is growing public health concern,
+    coinciding with medically underserved designation
+moderators:
+- name: rural_designation
+  direction: strengthens
+  strength: moderate
+  description: Rural areas face compounded access barriers beyond general underserved status
+structural_competency:
+  equity_implications: 'This mechanism highlights how geographic maldistribution of healthcare resources
+    creates structural vulnerability to opioid misuse. Rather than attributing opioid misuse to individual
+    moral failings, this framing recognizes that limited access to appropriate pain management, mental
+    health services, and early intervention creates conditions where opioid misuse can proliferate. The
+    decision to implement the ECHO program in these areas acknowledges this structural etiology. Equity
+    implications: Border communities and rural areas in South Texas face intersecting disadvantages including
+    poverty, limited insurance coverage, and language barriers that compound healthcare access problems.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.768459'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

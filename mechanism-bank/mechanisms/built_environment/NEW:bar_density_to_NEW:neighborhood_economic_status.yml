@@ -1,0 +1,52 @@
+id: NEW:bar_density_to_NEW:neighborhood_economic_status
+name: Bar Density → Neighborhood Economic Status
+from_node:
+  node_id: NEW:bar_density
+  node_name: Bar Density
+to_node:
+  node_id: NEW:neighborhood_economic_status
+  node_name: Neighborhood Economic Status
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher economic status neighborhoods have greater commercial activity and entertainment districts'
+- 'Step 2: Bars locate in areas with higher disposable income and nightlife demand'
+- 'Step 3: Zoning in affluent areas may permit more bars as part of commercial development'
+- 'Step 4: Results in higher bar density in economically advantaged neighborhoods'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Miriam Marco et al. 2017. "Neighborhood Characteristics, Alcohol Outlet Density,
+    and Alcohol-Related Calls-for-Service: A Spatiotemporal Analysis in a Wet Drinking Country." https://doi.org/10.3390/IJGI6120380'
+  supporting_citations:
+  - Gruenewald, P.J. (2007). The spatial ecology of alcohol problems.
+  - Additional citations require full-text access
+  doi: 10.3390/IJGI6120380
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Bar density is higher in neighborhoods with higher economic status, contrasting with off-premise
+  outlets which concentrate in lower economic status areas. This reveals differential patterns of alcohol
+  availability by outlet type across the socioeconomic gradient.
+quantitative_effects:
+  sample_size: 552
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: This pattern was observed in Valencia, Spain. The relationship between economic status
+    and bar density may differ in other urban contexts.
+moderators:
+- name: spatially_lagged_economic_status
+  direction: strengthens
+  strength: moderate
+  description: Bar density was also associated with higher spatially-lagged economic status, suggesting
+    regional economic context matters
+structural_competency:
+  equity_implications: The differential distribution of bars (higher status areas) versus off-premise
+    outlets (lower status areas) reflects how economic geography shapes alcohol environments. While both
+    increase alcohol availability, they may have different implications for neighborhood safety and health.
+    Zoning and economic factors create distinct alcohol landscapes across neighborhood types.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.060576'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

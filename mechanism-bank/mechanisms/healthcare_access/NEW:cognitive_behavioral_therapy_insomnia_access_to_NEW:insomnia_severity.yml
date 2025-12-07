@@ -1,0 +1,63 @@
+id: NEW:cognitive_behavioral_therapy_insomnia_access_to_NEW:insomnia_severity
+name: Cognitive Behavioral Therapy for Insomnia (CBT-I) Access → Insomnia Severity
+from_node:
+  node_id: NEW:cognitive_behavioral_therapy_insomnia_access
+  node_name: Cognitive Behavioral Therapy for Insomnia (CBT-I) Access
+to_node:
+  node_id: NEW:insomnia_severity
+  node_name: Insomnia Severity
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with alcohol use disorder frequently experience comorbid insomnia as a prevalent condition'
+- 'Step 2: Access to CBT-I provides structured cognitive and behavioral interventions targeting sleep
+  dysfunction'
+- 'Step 3: CBT-I addresses maladaptive sleep behaviors and cognitions that perpetuate insomnia'
+- 'Step 4: Improved sleep architecture and reduced insomnia severity result from treatment'
+- 'Step 5: Effects are maintained at 1-3 month and 6-month follow-up periods'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'Cagdas Türkmen et al. 2025. "Cognitive behavioral therapy for insomnia across the
+    spectrum of alcohol use disorder: A systematic review and meta-analysis.." https://doi.org/10.1016/j.smrv.2025.102049'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 8 RCTs
+  - Studies included adults across spectrum of AUD severity with comorbid insomnia
+  - Follow-up data available from 7 studies at 1-3 months and 4 studies at 6 months
+  doi: 10.1016/j.smrv.2025.102049
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: CBT-I produces large and sustained reductions in insomnia severity among patients across
+  the spectrum of alcohol use disorder, with effects maintained through 6-month follow-up. This represents
+  a non-pharmacological intervention that addresses a key comorbidity in AUD populations.
+quantitative_effects:
+  effect_size:
+    value: -5.51
+    type: standardized_mean_difference
+    ci_lower: -7.13
+    ci_upper: -3.9
+  sample_size: 426
+moderators:
+- name: AUD severity spectrum
+  direction: strengthens
+  strength: moderate
+  description: CBT-I effectiveness demonstrated across the full spectrum of alcohol use disorder, from
+    heavy drinking to severe AUD
+- name: Follow-up duration
+  direction: strengthens
+  strength: strong
+  description: Effects maintained at 1-3 month follow-up (estimate = -4.39, 95% CI -6.08 to -2.70) and
+    6-month follow-up (estimate = -4.55, 95% CI -6.77 to -2.33)
+structural_competency:
+  equity_implications: This mechanism highlights the importance of healthcare system capacity to provide
+    evidence-based behavioral treatments for sleep disorders in AUD populations. Structural barriers to
+    CBT-I access (availability of trained providers, insurance coverage, integration into AUD treatment
+    settings) create inequities in who can benefit from this effective intervention. The finding supports
+    wide implementation in AUD prevention and treatment settings, which requires structural investment
+    in treatment infrastructure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.007456'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

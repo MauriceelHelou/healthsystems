@@ -1,0 +1,49 @@
+id: caregiver_burden_to_chronic_pain
+name: Informal Caregiving Status → Chronic Pain
+from_node:
+  node_id: caregiver_burden
+  node_name: Informal Caregiving Status
+to_node:
+  node_id: chronic_pain
+  node_name: Chronic Pain
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Informal caregiving involves repetitive physical tasks such as lifting,
+  transferring, and assisting care recipients with mobility, leading to musculoskeletal
+  strain'
+- 'Step 2: Chronic stress from caregiving responsibilities triggers sustained physiological
+  stress responses, including elevated cortisol and inflammatory markers that sensitize
+  pain pathways'
+- 'Step 3: Caregivers often neglect self-care behaviors including exercise, rest,
+  and timely medical attention for their own health issues'
+- 'Step 4: The combination of physical strain, psychological stress, and reduced self-care
+  leads to increased incidence of diseases of the spine and chronic pain conditions'
+evidence:
+  quality_rating: C
+  n_studies: 22
+  primary_citation: 'P. Janson et al. 2022. Mortality, Morbidity and Health-Related
+    Outcomes in Informal Caregivers Compared to Non-Caregivers: A Systematic Review.
+    International Journal of Environmental Research and Public Health.'
+  supporting_citations: []
+description: Informal caregiving is associated with increased incidence of chronic
+  pain conditions, including diseases of the spine and general pain. Evidence from
+  a large longitudinal German health-insurance evaluation showed statistically significant
+  increased incidence of pain conditions among informal caregivers compared to non-caregivers.
+  Cross-sectional studies across multiple countries confirmed higher occurrence of
+  pain in caregiver populations. The mechanism involves both direct physical strain
+  from caregiving tasks and indirect effects through chronic stress and neglected
+  self-care.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: caregiving intensity
+  direction: strengthens
+  strength: moderate
+  description: Higher hours of caregiving and more physically demanding care tasks
+    likely increase pain outcomes
+- name: care recipient condition
+  direction: strengthens
+  strength: moderate
+  description: Caring for individuals with greater physical dependency or mobility
+    limitations increases physical strain on caregivers

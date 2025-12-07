@@ -1,0 +1,70 @@
+id: NEW:multimodal_cauti_prevention_intervention_to_NEW:urinary_catheter_utilization
+name: Multimodal CAUTI Prevention Intervention (STRIVE) → Urinary Catheter Utilization
+  Rate
+from_node:
+  node_id: NEW:multimodal_cauti_prevention_intervention
+  node_name: Multimodal CAUTI Prevention Intervention (STRIVE)
+to_node:
+  node_id: NEW:urinary_catheter_utilization
+  node_name: Urinary Catheter Utilization Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: STRIVE intervention provides hospitals with Infection Control Assessment
+  and Response (ICAR) and Practice Change Assessment (PCA) tools to self-identify
+  gaps in infection control and CAUTI-specific prevention practices'
+- 'Step 2: Web-based educational modules deliver training on foundational infection
+  control practices and HAI-specific prevention strategies, including appropriate
+  catheter use criteria'
+- 'Step 3: State-level partners provide external facilitation, technical assistance,
+  and coaching to support implementation of evidence-based catheter reduction practices'
+- 'Step 4: Culture change components address staff engagement, competency-based training,
+  audits, and feedback to sustain behavioral changes around catheter insertion decisions'
+- 'Step 5: Targeted Assessment for Prevention (TAP) strategy resources help hospitals
+  prioritize and focus interventions on units with highest catheter utilization burden'
+- 'Step 6: Combined multimodal approach leads to reduced inappropriate urinary catheter
+  insertions and earlier catheter removal, decreasing overall utilization rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Meddings et al. 2019. Quantitative Results of a National Intervention
+    to Prevent Hospital-Acquired Catheter-Associated Urinary Tract Infection. Annals
+    of Internal Medicine.
+  supporting_citations: []
+description: The CDC STRIVE initiative is a multimodal hospital-level intervention
+  externally facilitated by state-level partners that targets hospitals with elevated
+  healthcare-associated infection rates. The intervention combines self-assessment
+  tools (ICAR/PCA), web-based educational modules on infection control and CAUTI prevention,
+  technical implementation assistance, and culture change strategies to reduce unnecessary
+  urinary catheter use. A meta-analysis of similar multifaceted interventions demonstrated
+  a pooled CAUTI incidence rate ratio of 0.54 compared with standard care, indicating
+  substantial reduction in catheter-associated infections and utilization.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.54
+    type: incidence_rate_ratio
+    ci_lower: 0.45
+    ci_upper: 0.66
+  p_value: null
+  sample_size: null
+moderators:
+- name: Hospital setting (ICU vs non-ICU)
+  direction: strengthens
+  strength: moderate
+  description: Non-ICU settings showed more consistent progress in catheter utilization
+    reduction compared to ICU settings during 2009-2014, though both improved between
+    2013-2014
+- name: Hospital type
+  direction: strengthens
+  strength: weak
+  description: Intervention targeted acute care, long-term acute care, and critical
+    access hospitals; effectiveness may vary by hospital type due to different baseline
+    practices and resources
+- name: Baseline HAI burden
+  direction: strengthens
+  strength: moderate
+  description: Hospitals with higher baseline HAI burden (cumulative attributable
+    difference above first tertile) were specifically targeted, potentially showing
+    greater room for improvement

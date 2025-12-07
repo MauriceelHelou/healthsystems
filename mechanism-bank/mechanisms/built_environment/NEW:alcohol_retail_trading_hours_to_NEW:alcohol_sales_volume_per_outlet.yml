@@ -1,0 +1,62 @@
+id: NEW:alcohol_retail_trading_hours_to_NEW:alcohol_sales_volume_per_outlet
+name: Alcohol Retail Trading Hours → Alcohol Sales Volume Per Outlet
+from_node:
+  node_id: NEW:alcohol_retail_trading_hours
+  node_name: Alcohol Retail Trading Hours
+to_node:
+  node_id: NEW:alcohol_sales_volume_per_outlet
+  node_name: Alcohol Sales Volume Per Outlet
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Extended operating hours at individual retail outlets increase available shopping time'
+- 'Step 2: Additional hour allows consumers who could not shop during previous hours to make purchases'
+- 'Step 3: Per-outlet sales could increase if new purchasing occasions are created rather than shifted'
+- 'Step 4: In this study, the 1-hour extension showed no significant effect on per-outlet sales'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Daniel Bergsvik et al. 2025. "Effect of a small increase in off-premises trading
+    hours on alcohol sales in Norway: A stepped-wedge cluster-randomized controlled trial.." https://doi.org/10.1111/add.16683'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  doi: 10.1111/add.16683
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Analysis at the outlet level found no statistically significant effect of the 1-hour Saturday
+  trading extension on monthly alcohol sales (-35.3 litres pure alcohol, 95% CI = -142.1, 72.0). The study
+  used 229 eligible state monopoly outlets clustered into 62 trade districts with staggered implementation
+  across three time points.
+quantitative_effects:
+  effect_size:
+    value: -35.3
+    type: beta_coefficient
+    ci_lower: -142.1
+    ci_upper: 72.0
+  sample_size: 229
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: 229 outlets across 62 trade districts covering urban and rural areas throughout Norway
+moderators:
+- name: monopoly_retail_system
+  direction: weakens
+  strength: strong
+  description: Norway's state alcohol monopoly system limits overall alcohol availability compared to
+    private retail systems, potentially attenuating effects of marginal hour changes
+structural_competency:
+  equity_implications: The outlet-level analysis demonstrates how structural alcohol control policies
+    (state monopoly, limited hours) operate through retail infrastructure. The null finding at outlet
+    level suggests that temporal access restrictions within an already controlled environment may have
+    reached a threshold where marginal relaxation does not change purchasing behavior. This highlights
+    the importance of understanding policy contexts when evaluating structural interventions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.161449'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

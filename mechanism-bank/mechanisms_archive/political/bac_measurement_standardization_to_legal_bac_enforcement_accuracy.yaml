@@ -1,0 +1,47 @@
+id: bac_measurement_standardization_to_legal_bac_enforcement_accuracy
+name: Standardization of BAC Measurement Units Across Countries → Accuracy of Legal
+  BAC Enforcement
+from_node:
+  node_id: bac_measurement_standardization
+  node_name: Standardization of BAC Measurement Units Across Countries
+to_node:
+  node_id: legal_bac_enforcement_accuracy
+  node_name: Accuracy of Legal BAC Enforcement
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Different countries use different concentration units (m/v vs m/m) to report
+  blood alcohol concentration, with m/m units being ~5.5% lower than m/v units due
+  to blood density of 1.055 g/mL'
+- 'Step 2: These unit differences create confusion when scientific evidence is introduced
+  in legal proceedings for alcohol-related crimes'
+- 'Step 3: Lack of standardization affects calculation and comparison of blood/breath
+  ratios (BBRs) across jurisdictions'
+- 'Step 4: Inconsistent measurements may lead to errors in enforcement of BAC limits
+  and prosecution of impaired driving cases'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. W. Jones 2024. "Concentration units used to report blood‐ and
+    breath‐alcohol concentration for legal purposes differ between countries which
+    is important to consider when blood/breath ratios of alcohol are compared and
+    contrasted." *Journal of Forensic Sciences*. https://doi.org/10.1111/1556-4029.15511
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.525489'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: country_legal_system
+  direction: strengthens
+  strength: strong
+  description: Different legal systems have historically adopted different measurement
+    standards, with m/m units used in countries where blood aliquots were measured
+    by weight rather than volume
+- name: cross_border_evidence_transfer
+  direction: strengthens
+  strength: moderate
+  description: The mechanism becomes more problematic when scientific evidence from
+    one country is introduced in legal proceedings in another country with different
+    unit standards

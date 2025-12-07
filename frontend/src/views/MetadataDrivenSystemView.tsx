@@ -1,23 +1,27 @@
 /**
- * MetadataDrivenSystemView - Generalized focal node exploration component
+ * MetadataDrivenSystemView - Generalized domain-specific system exploration
  *
  * Supports:
  * - Domain filtering via keywords
- * - Focal node selection and exploration
+ * - Node detail panel with connection information
  * - Category/scale filtering
- * - Upstream/downstream/both traversal modes
  * - Hierarchical and force-directed layouts
  *
- * Replaces hardcoded AlcoholismSystemDiagram with metadata-driven approach.
+ * Uses details panel pattern like SystemsMapView (not focal node filtering).
  */
 
 import React, { useState, useMemo } from 'react';
 import MechanismGraph from '../visualizations/MechanismGraph';
 import { Badge } from '../components/base/Badge';
-import { useMechanismsForGraph } from '../hooks/useData';
-import { buildDomainSubgraph, buildFocalNodeSubgraph } from '../utils/graphBuilder';
-import type { Category, NodeScale, MechanismNode, GraphLayoutMode } from '../types/mechanism';
-import type { TraversalDirection } from '../utils/graphNeighborhood';
+import { Icon } from '../components/base/Icon';
+import { Panel } from '../layouts/Panel';
+import { Button } from '../components/base/Button';
+import { CategoryBadge } from '../components/domain/CategoryBadge';
+import { EvidenceBadge } from '../components/domain/EvidenceBadge';
+import { useMechanismsForGraph, useMechanismById, useNodes } from '../hooks/useData';
+import { buildGraphFromCanonicalNodes, filterByMinConnections } from '../utils/graphBuilder';
+import { EvidenceModal } from '../components/domain/EvidenceModal';
+import type { Category, NodeScale, MechanismNode, MechanismEdge, GraphLayoutMode } from '../types/mechanism';
 
 export interface MetadataDrivenSystemViewProps {
   /** Keywords to filter domain-specific mechanisms (e.g., ['alcohol', 'ald', 'liver']) */
@@ -34,6 +38,9 @@ export interface MetadataDrivenSystemViewProps {
 
   /** View description */
   description?: string;
+
+  /** Minimum number of connections required to display a node (default: 2) */
+  minConnections?: number;
 }
 
 export const MetadataDrivenSystemView: React.FC<MetadataDrivenSystemViewProps> = ({
@@ -41,14 +48,21 @@ export const MetadataDrivenSystemView: React.FC<MetadataDrivenSystemViewProps> =
   initialCategories,
   initialScales,
   title,
-  description
+  description,
+  minConnections = 2
 }) => {
-  // Fetch all mechanisms
-  const { data: allMechanisms, isLoading, error } = useMechanismsForGraph();
+  // Fetch all mechanisms and canonical nodes
+  const { data: allMechanisms, isLoading: mechanismsLoading, error: mechanismsError } = useMechanismsForGraph();
+  const { data: canonicalNodes, isLoading: nodesLoading, error: nodesError } = useNodes({ referenced_only: true });
 
-  // State for focal node exploration
-  const [focalNodeId, setFocalNodeId] = useState<string | null>(null);
-  const [traversalDirection, setTraversalDirection] = useState<TraversalDirection>('both');
+  // Combine loading/error states
+  const isLoading = mechanismsLoading || nodesLoading;
+  const error = mechanismsError || nodesError;
+
+  // State for node/edge selection and details panel
+  const [selectedNode, setSelectedNode] = useState<MechanismNode | null>(null);
+  const [selectedEdge, setSelectedEdge] = useState<MechanismEdge | null>(null);
+  const [showPanel, setShowPanel] = useState(false);
   const [filterCategories, setFilterCategories] = useState<Category[]>(initialCategories || []);
   const [filterScales, setFilterScales] = useState<NodeScale[]>(initialScales || []);
   const [showFilterPanel, setShowFilterPanel] = useState(false);
@@ -56,57 +70,106 @@ export const MetadataDrivenSystemView: React.FC<MetadataDrivenSystemViewProps> =
   // Layout state
   const [layoutMode, setLayoutMode] = useState<GraphLayoutMode>('hierarchical');
 
-  // Build domain-specific subgraph
-  const domainGraph = useMemo(() => {
-    if (!allMechanisms) return { nodes: [], edges: [] };
+  // Filter mechanisms by domain keywords
+  const domainMechanisms = useMemo(() => {
+    if (!allMechanisms) return [];
 
-    return buildDomainSubgraph(allMechanisms, domainKeywords, {
-      includeCategories: filterCategories.length > 0 ? filterCategories : undefined,
-      includeScales: filterScales.length > 0 ? filterScales : undefined,
+    const keywordLower = domainKeywords.map(k => k.toLowerCase());
+    return allMechanisms.filter(mech => {
+      const searchText = [
+        mech.id,
+        mech.name,
+        mech.from_node_name,
+        mech.to_node_name,
+        mech.description || ''
+      ].join(' ').toLowerCase();
+
+      return keywordLower.some(keyword => searchText.includes(keyword));
+    });
+  }, [allMechanisms, domainKeywords]);
+
+  // Build base domain graph (without user filters) using canonical nodes
+  const baseDomainGraph = useMemo(() => {
+    if (!canonicalNodes || !domainMechanisms.length) return { nodes: [], edges: [] };
+
+    let result = buildGraphFromCanonicalNodes(canonicalNodes, domainMechanisms, {
       includeDisconnected: false
     });
-  }, [allMechanisms, domainKeywords, filterCategories, filterScales]);
 
-  // Build focal node subgraph if focal node selected
-  const displayGraph = useMemo(() => {
-    if (!focalNodeId) return domainGraph;
-
-    return buildFocalNodeSubgraph(domainGraph, focalNodeId, {
-      direction: traversalDirection,
-      includeCategories: filterCategories.length > 0 ? filterCategories : undefined,
-      includeScales: filterScales.length > 0 ? filterScales : undefined,
-      maxHopsUpstream: null, // Unlimited
-      maxHopsDownstream: null // Unlimited
-    });
-  }, [domainGraph, focalNodeId, traversalDirection, filterCategories, filterScales]);
-
-  // Find focal node object
-  const focalNode = focalNodeId
-    ? displayGraph.nodes.find(n => n.id === focalNodeId)
-    : null;
-
-  // Handle node click
-  const handleNodeClick = (node: MechanismNode) => {
-    if (focalNodeId === node.id) {
-      // Deselect if clicking same node
-      setFocalNodeId(null);
-    } else {
-      setFocalNodeId(node.id);
+    // Apply minimum connections filter
+    if (minConnections > 1) {
+      result = filterByMinConnections(result, minConnections);
     }
+
+    return result;
+  }, [canonicalNodes, domainMechanisms, minConnections]);
+
+  // Build filtered domain-specific subgraph using canonical nodes
+  const displayGraph = useMemo(() => {
+    if (!canonicalNodes || !domainMechanisms.length) return { nodes: [], edges: [] };
+
+    console.log(`[${title}] Building domain subgraph with canonical nodes:`, {
+      totalMechanisms: domainMechanisms.length,
+      canonicalNodes: canonicalNodes.length,
+      keywords: domainKeywords,
+      filterCategories: filterCategories.length > 0 ? filterCategories : 'all',
+      filterScales: filterScales.length > 0 ? filterScales : 'all',
+      minConnections
+    });
+
+    let result = buildGraphFromCanonicalNodes(canonicalNodes, domainMechanisms, {
+      filterCategories: filterCategories.length > 0 ? filterCategories : undefined,
+      filterScales: filterScales.length > 0 ? filterScales : undefined,
+      includeDisconnected: false
+    });
+
+    // Apply minimum connections filter
+    if (minConnections > 1) {
+      result = filterByMinConnections(result, minConnections);
+    }
+
+    console.log(`[${title}] Domain subgraph result:`, {
+      nodes: result.nodes.length,
+      edges: result.edges.length
+    });
+
+    return result;
+  }, [canonicalNodes, domainMechanisms, domainKeywords, filterCategories, filterScales, title, minConnections]);
+
+  // Handle node click - show node details panel
+  const handleNodeClick = (node: MechanismNode) => {
+    setSelectedNode(node);
+    setSelectedEdge(null);
+    setShowPanel(true);
+  };
+
+  // Handle edge click - show mechanism details panel
+  const handleEdgeClick = (edge: MechanismEdge) => {
+    setSelectedEdge(edge);
+    setSelectedNode(null);
+    setShowPanel(true);
+  };
+
+  // Handle close panel
+  const handleClosePanel = () => {
+    setShowPanel(false);
+    setSelectedNode(null);
+    setSelectedEdge(null);
   };
 
   // Handle clear filters
   const handleClearFilters = () => {
-    setFocalNodeId(null);
     setFilterCategories(initialCategories || []);
     setFilterScales(initialScales || []);
-    setTraversalDirection('both');
   };
 
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-full">
-        <p className="text-gray-500">Loading system data...</p>
+        <div className="text-center">
+          <p className="text-gray-500 text-lg">Loading system data...</p>
+          <p className="text-gray-400 text-sm mt-2">Fetching mechanisms from API...</p>
+        </div>
       </div>
     );
   }
@@ -114,151 +177,224 @@ export const MetadataDrivenSystemView: React.FC<MetadataDrivenSystemViewProps> =
   if (error) {
     return (
       <div className="flex items-center justify-center h-full">
-        <p className="text-red-500">Error loading data: {error.message}</p>
+        <div className="text-center max-w-lg">
+          <p className="text-red-500 text-lg font-semibold mb-2">Error loading data</p>
+          <p className="text-gray-600 mb-4">{error.message}</p>
+          <div className="bg-gray-100 rounded p-4 text-left text-sm">
+            <p className="font-semibold mb-2">Troubleshooting:</p>
+            <ul className="list-disc list-inside space-y-1 text-gray-700">
+              <li>Check if backend server is running (port 8002)</li>
+              <li>Verify API_URL environment variable</li>
+              <li>Check browser console for CORS errors</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Check if no data was loaded
+  if (!allMechanisms || allMechanisms.length === 0) {
+    return (
+      <div className="flex items-center justify-center h-full">
+        <div className="text-center">
+          <p className="text-gray-500 text-lg">No mechanisms loaded from API</p>
+          <p className="text-gray-400 text-sm mt-2">Backend may be empty or unreachable</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Check if base domain filtering resulted in empty graph (no domain-relevant data at all)
+  if (baseDomainGraph.nodes.length === 0) {
+    return (
+      <div className="flex items-center justify-center h-full">
+        <div className="text-center max-w-lg">
+          <p className="text-gray-500 text-lg font-semibold mb-2">No matching nodes found</p>
+          <p className="text-gray-600 mb-4">
+            No mechanisms or nodes match the domain keywords for "{title}"
+          </p>
+          <div className="bg-gray-100 rounded p-4 text-left text-sm">
+            <p className="font-semibold mb-2">Keywords being searched:</p>
+            <div className="flex flex-wrap gap-2">
+              {domainKeywords.map(kw => (
+                <span key={kw} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">
+                  {kw}
+                </span>
+              ))}
+            </div>
+            <p className="mt-3 text-gray-600">
+              Loaded {allMechanisms?.length || 0} total mechanisms from API.
+            </p>
+          </div>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col h-full">
-      {/* Header */}
-      <div className="border-b border-gray-200 bg-white px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-semibold text-gray-900">{title}</h1>
-            {description && (
-              <p className="mt-1 text-sm text-gray-500">{description}</p>
-            )}
-          </div>
-
-          <div className="flex items-center gap-2">
-            {/* Layout toggle */}
-            <div className="flex gap-1 bg-gray-100 rounded-lg p-1">
-              <button
-                onClick={() => setLayoutMode('hierarchical')}
-                className={`px-3 py-1 text-sm rounded ${
-                  layoutMode === 'hierarchical'
-                    ? 'bg-white text-gray-900 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                Hierarchical
-              </button>
-              <button
-                onClick={() => setLayoutMode('force-directed')}
-                className={`px-3 py-1 text-sm rounded ${
-                  layoutMode === 'force-directed'
-                    ? 'bg-white text-gray-900 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                Force-Directed
-              </button>
+    <div className="flex h-full">
+      {/* Main content area */}
+      <div className="flex flex-col flex-1">
+        {/* Header */}
+        <div className="border-b border-gray-200 bg-white px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-2xl font-semibold text-gray-900">{title}</h1>
+              {description && (
+                <p className="mt-1 text-sm text-gray-500">{description}</p>
+              )}
             </div>
 
-            {/* Filter panel toggle */}
-            <button
-              onClick={() => setShowFilterPanel(!showFilterPanel)}
-              className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50"
-            >
-              {showFilterPanel ? 'Hide Filters' : 'Show Filters'}
-            </button>
+            <div className="flex items-center gap-2">
+              {/* Layout toggle */}
+              <div className="flex gap-1 bg-gray-100 rounded-lg p-1">
+                <button
+                  onClick={() => setLayoutMode('hierarchical')}
+                  className={`px-3 py-1 text-sm rounded ${
+                    layoutMode === 'hierarchical'
+                      ? 'bg-white text-gray-900 shadow-sm'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  Hierarchical
+                </button>
+                <button
+                  onClick={() => setLayoutMode('force-directed')}
+                  className={`px-3 py-1 text-sm rounded ${
+                    layoutMode === 'force-directed'
+                      ? 'bg-white text-gray-900 shadow-sm'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  Force-Directed
+                </button>
+              </div>
+
+              {/* Filter panel toggle */}
+              <button
+                onClick={() => setShowFilterPanel(!showFilterPanel)}
+                className="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50"
+              >
+                {showFilterPanel ? 'Hide Filters' : 'Show Filters'}
+              </button>
+            </div>
           </div>
         </div>
-
-        {/* Active focal node indicator */}
-        {focalNode && (
-          <div className="mt-4 flex items-center gap-2 p-3 bg-orange-50 border border-orange-200 rounded-lg">
-            <span className="text-sm font-medium text-orange-900">Focal Node:</span>
-            <Badge color="primary">{focalNode.label}</Badge>
-            {focalNode.scale && <Badge color="gray">Scale {focalNode.scale}</Badge>}
-            <Badge color="gray">{traversalDirection}</Badge>
-            <button
-              onClick={() => setFocalNodeId(null)}
-              className="ml-auto text-sm text-orange-700 hover:text-orange-900"
-            >
-              Clear
-            </button>
-          </div>
-        )}
-      </div>
 
       {/* Main content */}
       <div className="flex flex-1 overflow-hidden">
         {/* Filter panel */}
         {showFilterPanel && (
-          <FocalNodeFilterPanel
-            focalNodeId={focalNodeId}
-            traversalDirection={traversalDirection}
-            onTraversalDirectionChange={setTraversalDirection}
+          <FilterPanel
             filterCategories={filterCategories}
             onFilterCategoriesChange={setFilterCategories}
             filterScales={filterScales}
             onFilterScalesChange={setFilterScales}
             onClearFilters={handleClearFilters}
-            availableNodes={domainGraph.nodes}
-            onSelectFocalNode={setFocalNodeId}
           />
         )}
 
         {/* Graph visualization */}
-        <div className="flex-1">
-          <MechanismGraph
-            data={displayGraph}
-            selectedNodeId={focalNodeId}
-            onNodeClick={handleNodeClick}
-            layoutMode={layoutMode}
-            importantNodes={focalNodeId ? { nodeIds: [focalNodeId] } : undefined}
-          />
-        </div>
-      </div>
-
-      {/* Stats footer */}
-      <div className="border-t border-gray-200 bg-gray-50 px-6 py-3">
-        <div className="flex items-center gap-6 text-sm text-gray-600">
-          <span>{displayGraph.nodes.length} nodes</span>
-          <span>{displayGraph.edges.length} mechanisms</span>
-          {focalNodeId && (
-            <>
-              <span className="text-orange-600">•</span>
-              <span className="text-orange-600">
-                Exploring from {focalNode?.label} (Scale {focalNode?.scale})
-              </span>
-            </>
+        <div className="flex-1 relative">
+          {displayGraph.nodes.length === 0 ? (
+            <div className="absolute inset-0 flex items-center justify-center bg-gray-50">
+              <div className="text-center max-w-md p-6">
+                <svg
+                  className="w-16 h-16 mx-auto text-gray-300 mb-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+                  />
+                </svg>
+                <p className="text-gray-600 text-lg font-medium mb-2">No nodes match current filters</p>
+                <p className="text-gray-500 text-sm mb-4">
+                  {filterCategories.length === 0 && filterScales.length === 0
+                    ? "Please select at least one category or scale to view nodes."
+                    : "Try adjusting your category or scale filters to see more nodes."}
+                </p>
+                <button
+                  onClick={handleClearFilters}
+                  className="px-4 py-2 text-sm font-medium text-white bg-orange-600 rounded-lg hover:bg-orange-700"
+                >
+                  Reset to Default Filters
+                </button>
+              </div>
+            </div>
+          ) : (
+            <MechanismGraph
+              data={displayGraph}
+              selectedNodeId={selectedNode?.id || null}
+              onNodeClick={handleNodeClick}
+              onEdgeClick={handleEdgeClick}
+              layoutMode={layoutMode}
+            />
           )}
         </div>
       </div>
+
+        {/* Stats footer */}
+        <div className="border-t border-gray-200 bg-gray-50 px-6 py-3">
+          <div className="flex items-center gap-6 text-sm text-gray-600">
+            <span>{displayGraph.nodes.length} nodes</span>
+            <span>{displayGraph.edges.length} mechanisms</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Node Detail Panel */}
+      {showPanel && selectedNode && (
+        <Panel
+          title={selectedNode.label}
+          icon={<Icon name="arrow-right" size="md" className="text-primary-600" />}
+          onClose={handleClosePanel}
+          resizable
+          collapsible
+        >
+          <NodeDetailPanel node={selectedNode} edges={displayGraph.edges} />
+        </Panel>
+      )}
+
+      {/* Mechanism Detail Panel */}
+      {showPanel && selectedEdge && (
+        <Panel
+          title="Mechanism Detail"
+          icon={<Icon name="arrow-right" size="md" className="text-primary-600" />}
+          onClose={handleClosePanel}
+          resizable
+          collapsible
+        >
+          <MechanismDetailPanel edge={selectedEdge} nodes={displayGraph.nodes} />
+        </Panel>
+      )}
     </div>
   );
 };
 
 // ============================================
-// FocalNodeFilterPanel Component
+// FilterPanel Component
 // ============================================
 
-interface FocalNodeFilterPanelProps {
-  focalNodeId: string | null;
-  traversalDirection: TraversalDirection;
-  onTraversalDirectionChange: (direction: TraversalDirection) => void;
+interface FilterPanelProps {
   filterCategories: Category[];
   onFilterCategoriesChange: (categories: Category[]) => void;
   filterScales: NodeScale[];
   onFilterScalesChange: (scales: NodeScale[]) => void;
   onClearFilters: () => void;
-  availableNodes: MechanismNode[];
-  onSelectFocalNode: (nodeId: string) => void;
 }
 
-const FocalNodeFilterPanel: React.FC<FocalNodeFilterPanelProps> = ({
-  focalNodeId,
-  traversalDirection,
-  onTraversalDirectionChange,
+const FilterPanel: React.FC<FilterPanelProps> = ({
   filterCategories,
   onFilterCategoriesChange,
   filterScales,
   onFilterScalesChange,
   onClearFilters,
-  availableNodes,
 }) => {
   const allCategories: Category[] = [
     'political',
@@ -301,47 +437,6 @@ const FocalNodeFilterPanel: React.FC<FocalNodeFilterPanelProps> = ({
   return (
     <div className="w-80 border-r border-gray-200 bg-white overflow-y-auto">
       <div className="p-4 space-y-6">
-        {/* Focal Node Selection */}
-        <div>
-          <h3 className="text-sm font-semibold text-gray-900 mb-2">Focal Node</h3>
-          <p className="text-xs text-gray-500 mb-3">
-            Select a node to explore its causal neighborhood
-          </p>
-
-          {focalNodeId ? (
-            <div className="p-2 bg-orange-50 border border-orange-200 rounded text-sm">
-              {availableNodes.find(n => n.id === focalNodeId)?.label || focalNodeId}
-            </div>
-          ) : (
-            <p className="text-sm text-gray-400 italic">Click a node in the graph</p>
-          )}
-        </div>
-
-        {/* Traversal Direction */}
-        {focalNodeId && (
-          <div>
-            <h3 className="text-sm font-semibold text-gray-900 mb-2">Traversal Direction</h3>
-            <div className="flex flex-col gap-2">
-              {(['upstream', 'downstream', 'both'] as TraversalDirection[]).map(direction => (
-                <label key={direction} className="flex items-center gap-2 cursor-pointer">
-                  <input
-                    type="radio"
-                    checked={traversalDirection === direction}
-                    onChange={() => onTraversalDirectionChange(direction)}
-                    className="text-orange-600 focus:ring-orange-500"
-                  />
-                  <span className="text-sm capitalize text-gray-700">{direction}</span>
-                  <span className="text-xs text-gray-400">
-                    {direction === 'upstream' && '(causes)'}
-                    {direction === 'downstream' && '(effects)'}
-                    {direction === 'both' && '(full lineage)'}
-                  </span>
-                </label>
-              ))}
-            </div>
-          </div>
-        )}
-
         {/* Category Filters */}
         <div>
           <h3 className="text-sm font-semibold text-gray-900 mb-2">Categories</h3>
@@ -409,5 +504,256 @@ const FocalNodeFilterPanel: React.FC<FocalNodeFilterPanelProps> = ({
         </div>
       </div>
     </div>
+  );
+};
+
+// ============================================
+// NodeDetailPanel Component
+// ============================================
+
+const NodeDetailPanel: React.FC<{ node: MechanismNode; edges: MechanismEdge[] }> = ({
+  node,
+  edges,
+}) => {
+  const outgoingEdges = edges.filter((e) => {
+    const source = typeof e.source === 'string' ? e.source : (e.source as any).id;
+    return source === node.id;
+  });
+  const incomingEdges = edges.filter((e) => {
+    const target = typeof e.target === 'string' ? e.target : (e.target as any).id;
+    return target === node.id;
+  });
+
+  // Map stockType to human-readable label
+  const getStockTypeLabel = (stockType: string) => {
+    switch (stockType) {
+      case 'structural': return 'Structural Determinant';
+      case 'proxy': return 'Proxy/Intermediate';
+      case 'crisis': return 'Crisis Endpoint';
+      default: return stockType;
+    }
+  };
+
+  return (
+    <div className="space-y-6">
+      {/* Quick Stats */}
+      <div className="flex items-center gap-3 pb-4 border-b flex-wrap">
+        {node.category && <CategoryBadge category={node.category} />}
+        {node.stockType && (
+          <Badge color="blue" size="sm">
+            {getStockTypeLabel(node.stockType)}
+          </Badge>
+        )}
+        {node.scale && (
+          <Badge color="gray" size="sm">
+            Scale {node.scale}
+          </Badge>
+        )}
+      </div>
+
+      {/* Overview */}
+      <div>
+        <h3 className="text-sm font-semibold text-gray-900 mb-2">Overview</h3>
+        <div className="space-y-2 text-sm text-gray-700">
+          {node.stockType && (
+            <p>
+              <span className="font-medium">Stock Type:</span> {getStockTypeLabel(node.stockType)}
+            </p>
+          )}
+          {node.scale && (
+            <p>
+              <span className="font-medium">Scale:</span> {node.scale}
+            </p>
+          )}
+          <p>
+            <span className="font-medium">Connections:</span> {outgoingEdges.length} outgoing, {incomingEdges.length} incoming
+          </p>
+        </div>
+      </div>
+
+      {/* Connections */}
+      <div>
+        <h3 className="text-sm font-semibold text-gray-900 mb-3">Connections</h3>
+
+        <div className="space-y-3">
+          <div>
+            <p className="text-xs font-medium text-gray-600 mb-2">
+              Outgoing ({outgoingEdges.length})
+            </p>
+            <div className="space-y-2 max-h-48 overflow-y-auto">
+              {outgoingEdges.slice(0, 5).map((edge) => (
+                <div
+                  key={edge.id}
+                  className="flex items-start gap-2 p-2 rounded border border-gray-200 hover:border-primary-300 transition-colors cursor-pointer"
+                >
+                  <Icon name="arrow-right" size="sm" className="text-green-600 mt-0.5" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs font-medium text-gray-900 truncate">
+                      Mechanism
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      {edge.direction === 'positive' ? 'Positive' : 'Negative'} relationship
+                    </p>
+                  </div>
+                  {edge.evidenceQuality && (
+                    <EvidenceBadge quality={edge.evidenceQuality} size="sm" />
+                  )}
+                </div>
+              ))}
+              {outgoingEdges.length > 5 && (
+                <button className="text-xs text-primary-600 hover:text-primary-700 font-medium">
+                  Show all {outgoingEdges.length} connections →
+                </button>
+              )}
+            </div>
+          </div>
+
+          <div>
+            <p className="text-xs font-medium text-gray-600 mb-2">
+              Incoming ({incomingEdges.length})
+            </p>
+            <div className="space-y-2 max-h-48 overflow-y-auto">
+              {incomingEdges.slice(0, 5).map((edge) => (
+                <div
+                  key={edge.id}
+                  className="flex items-start gap-2 p-2 rounded border border-gray-200 hover:border-primary-300 transition-colors cursor-pointer"
+                >
+                  <Icon name="arrow-left" size="sm" className="text-blue-600 mt-0.5" />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-xs font-medium text-gray-900 truncate">
+                      Mechanism
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      {edge.direction === 'positive' ? 'Positive' : 'Negative'} relationship
+                    </p>
+                  </div>
+                  {edge.evidenceQuality && (
+                    <EvidenceBadge quality={edge.evidenceQuality} size="sm" />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// ============================================
+// MechanismDetailPanel Component
+// ============================================
+
+const MechanismDetailPanel: React.FC<{ edge: MechanismEdge; nodes: MechanismNode[] }> = ({
+  edge,
+  nodes,
+}) => {
+  const [showEvidenceModal, setShowEvidenceModal] = useState(false);
+
+  // Fetch detailed mechanism data from API
+  const { data: mechanism, isLoading } = useMechanismById(edge.id);
+  const sourceNode = nodes.find((n) => n.id === edge.source);
+  const targetNode = nodes.find((n) => n.id === edge.target);
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center py-8">
+        <Icon name="refresh" size="md" className="animate-spin text-primary-600" />
+      </div>
+    );
+  }
+
+  if (!mechanism) {
+    return (
+      <div className="text-center py-8 text-gray-600">
+        <p>Unable to load mechanism details.</p>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <div className="space-y-6">
+        {/* Quick Stats */}
+        <div className="flex items-center gap-3 pb-4 border-b">
+          <Badge color={edge.direction === 'positive' ? 'success' : 'error'} size="sm">
+            {edge.direction === 'positive' ? 'Positive (+)' : 'Negative (−)'}
+          </Badge>
+          {edge.evidenceQuality && (
+            <EvidenceBadge quality={edge.evidenceQuality} size="md" showLabel />
+          )}
+          <Badge color="gray" size="sm">
+            {mechanism.n_studies || edge.studyCount} studies
+          </Badge>
+        </div>
+
+        {/* Nodes */}
+        <div className="text-sm">
+          <p className="text-gray-600 mb-1">From → To</p>
+          <p className="font-medium text-gray-900">
+            {sourceNode?.label} → {targetNode?.label}
+          </p>
+        </div>
+
+        {/* Description */}
+        <div>
+          <h3 className="text-sm font-semibold text-gray-900 mb-2">Mechanism</h3>
+          <p className="text-sm text-gray-700 leading-relaxed">{mechanism.description}</p>
+        </div>
+
+        {/* View Full Evidence Button */}
+        <div>
+          <Button
+            variant="primary"
+            size="md"
+            onClick={() => setShowEvidenceModal(true)}
+            className="w-full justify-center"
+          >
+            <Icon name="book-open" size="md" />
+            <span className="ml-2">View Full Evidence & Citations</span>
+          </Button>
+        </div>
+
+        {/* Citations Preview */}
+        {mechanism.citations && mechanism.citations.length > 0 && (
+          <div>
+            <h3 className="text-sm font-semibold text-gray-900 mb-3">
+              Primary Citation
+            </h3>
+            <div className="p-3 border-2 border-gray-200 rounded-lg text-xs space-y-2 bg-gray-50">
+              <p className="font-semibold text-gray-900">
+                {mechanism.citations[0].authors} ({mechanism.citations[0].year})
+              </p>
+              <p className="text-sm text-gray-900 font-medium leading-snug">{mechanism.citations[0].title}</p>
+              <p className="text-gray-600 italic">{mechanism.citations[0].journal}</p>
+              {mechanism.citations[0].url && (
+                <a
+                  href={mechanism.citations[0].url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-600 hover:text-primary-700 inline-flex items-center gap-1 font-medium text-sm"
+                >
+                  View Citation
+                  <Icon name="external-link" size="xs" />
+                </a>
+              )}
+            </div>
+            {mechanism.citations.length > 1 && (
+              <p className="text-xs text-gray-500 mt-2">
+                + {mechanism.citations.length - 1} supporting citations (click "View Full Evidence" above)
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* Evidence Modal */}
+      {showEvidenceModal && (
+        <EvidenceModal
+          mechanism={mechanism}
+          onClose={() => setShowEvidenceModal(false)}
+        />
+      )}
+    </>
   );
 };

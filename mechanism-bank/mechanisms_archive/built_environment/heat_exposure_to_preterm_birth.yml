@@ -1,0 +1,157 @@
+id: heat_exposure_to_preterm_birth
+name: Heat Exposure → Preterm Birth
+from_node:
+  node_id: heat_exposure
+  node_name: Ambient Heat and Temperature Exposure
+  node_type: stock
+to_node:
+  node_id: preterm_birth
+  node_name: Preterm Birth and Adverse Birth Outcomes
+  node_type: crisis_endpoint
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Pregnant individuals exposed to elevated temperatures (ambient heat, heat
+  waves)'
+- 'Step 2: Heat stress induces physiological responses including dehydration, reduced
+  uterine blood flow, and increased oxytocin release'
+- 'Step 3: Thermoregulatory stress may trigger inflammatory responses and uterine
+  contractions'
+- 'Step 4: Heat exposure during pregnancy increases risk of preterm labor initiation'
+- 'Step 5: Elevated rates of preterm birth, stillbirth, and obstetric complications
+  during heat events'
+evidence:
+  quality_rating: A
+  n_studies: 196
+  primary_citation: 'Chersich, Matthew F., et al. 2024. "A systematic review and meta-analysis
+    of heat exposure impacts on maternal, fetal and neonatal health." Nature Medicine
+    30: 2922-2932.'
+  supporting_citations:
+  - 'Bekkar, Bruce, et al. 2020. "Association of air pollution and heat exposure with
+    preterm birth, low birth weight, and stillbirth in the US: a systematic review."
+    JAMA Network Open 3(6): e208243.'
+  - 'Ha, Sandie, et al. 2017. "Ambient temperature and early delivery: A national
+    study of heat and pregnancy outcomes in the U.S." Environmental Health Perspectives
+    125(4): 067001.'
+  - 'Sun, Shengzhi, et al. 2019. "Ambient heat and risks of emergency department visits
+    among adults in the United States." Environment International 125: 474-481.'
+  doi: 10.1038/s41591-024-03395-8
+  journal: Nature Medicine
+  year: 2024
+  fulltext:
+    available: false
+    source: nature
+    url: https://www.nature.com/articles/s41591-024-03395-8
+    is_open_access: false
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  primary_effect:
+    value: 1.04
+    type: odds_ratio
+    ci_lower: 1.03
+    ci_upper: 1.06
+    ci_level: 95
+    comparison: preterm birth per 1 degree C increase in heat exposure
+    source: Chersich et al. 2024 meta-analysis (196 studies, 66 countries)
+  heat_wave_effect:
+    value: 1.26
+    type: odds_ratio
+    ci_lower: 1.08
+    ci_upper: 1.47
+    ci_level: 95
+    comparison: preterm birth during heat waves vs. non-heat wave periods
+  stillbirth_effect:
+    value: 1.02
+    type: odds_ratio
+    ci_lower: 1.01
+    ci_upper: 1.03
+    ci_level: 95
+    comparison: stillbirth per 1 degree C temperature increase
+    source: Meta-analysis including stillbirth outcomes
+  low_birth_weight_effect:
+    value: 1.02
+    type: odds_ratio
+    ci_lower: 1.00
+    ci_upper: 1.03
+    ci_level: 95
+    comparison: low birth weight per 1 degree C increase
+  additional_outcomes:
+    obstetric_complications: increased odds during heat events
+    congenital_anomalies: some evidence of association
+    gestational_diabetes: emerging evidence of heat association
+  n_countries: 66
+  n_studies: 196
+  sample_size: null
+  interpretation: Each 1 degree C increase in heat exposure raises preterm birth odds
+    by 4% (OR 1.04); heat waves increase preterm birth risk by 26% (OR 1.26). This
+    represents a substantial population health burden given climate change projections.
+last_updated: '2025-11-30'
+version: '1.0'
+description: Heat exposure during pregnancy is significantly associated with increased
+  risk of preterm birth and other adverse birth outcomes. A meta-analysis of 196 studies
+  from 66 countries found preterm birth odds increase 4% per 1 degree C rise (OR 1.04)
+  and 26% during heat waves (OR 1.26). Stillbirth and low birth weight also show elevated
+  risk. Climate change will amplify these effects, disproportionately affecting communities
+  with limited cooling resources.
+moderators:
+- name: trimester_of_exposure
+  direction: varies
+  strength: moderate
+  description: Third trimester exposure may pose greater preterm birth risk; first
+    trimester exposure linked to other outcomes
+- name: socioeconomic_status
+  direction: strengthens
+  strength: strong
+  description: Lower-income pregnant individuals have less access to air conditioning
+    and cooling
+- name: outdoor_occupation
+  direction: strengthens
+  strength: strong
+  description: Occupational heat exposure (agriculture, construction) adds to ambient
+    exposure
+- name: air_conditioning_access
+  direction: weakens
+  strength: strong
+  description: Air conditioning access is protective against heat-related pregnancy
+    outcomes
+- name: urban_heat_island
+  direction: strengthens
+  strength: moderate
+  description: Urban residents face amplified heat exposure
+- name: baseline_climate
+  direction: varies
+  strength: moderate
+  description: Populations in already-hot climates may have some acclimatization
+    but also higher baseline exposure
+structural_competency:
+  root_cause_level: climate_systems
+  avoids_victim_blaming: true
+  equity_implications: Heat-related pregnancy risks reflect structural inequities
+    in climate vulnerability. Low-income pregnant individuals, outdoor workers, and
+    those in poorly-cooled housing face disproportionate exposure. Black and Hispanic
+    mothers face compounding risks from environmental racism (heat islands in segregated
+    neighborhoods) and occupational exposures. Climate adaptation must prioritize
+    pregnant workers and cooling access for vulnerable communities.
+assumptions:
+- Heat exposure measured as ambient temperature or heat wave occurrence
+- Preterm birth defined as delivery before 37 weeks gestation
+- Effect is acute rather than cumulative chronic exposure
+limitations:
+- Heat exposure measurement varies across studies (ambient vs. personal)
+- Potential confounding by air pollution which co-varies with temperature
+- Publication bias possible toward significant findings
+- Limited ability to identify critical windows of vulnerability
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Heat exposure and vulnerability vary by climate zone, urbanicity,
+    and socioeconomic geography.
+  relevant_geographies:
+  - Tropical and subtropical regions face highest baseline exposure
+  - Urban heat islands amplify exposure in cities
+  - Low-income neighborhoods with poor housing stock most vulnerable
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

@@ -1,0 +1,59 @@
+id: NEW:off_premise_alcohol_outlet_density_to_homicide_rate
+name: Off-Premise Alcohol Outlet Density (Liquor Stores) → Homicide Rate
+from_node:
+  node_id: NEW:off_premise_alcohol_outlet_density
+  node_name: Off-Premise Alcohol Outlet Density (Liquor Stores)
+to_node:
+  node_id: homicide_rate
+  node_name: Homicide Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of off-premise outlets (liquor stores) in neighborhoods increases take-home
+  alcohol availability'
+- 'Step 2: Off-premise outlets facilitate higher volume alcohol purchases and consumption in private settings'
+- 'Step 3: Liquor stores in residential areas create gathering points that may attract crime and disorder'
+- 'Step 4: Increased neighborhood-level alcohol consumption elevates community violence risk'
+- 'Step 5: Resulting interpersonal conflicts and violence lead to increased homicide rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Trangenstein et al. 2020. "The Violence Prevention Potential of Reducing Alcohol
+    Outlet Access in Baltimore, Maryland.." https://doi.org/10.15288/jsad.2020.81.24
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior epidemiological work establishing
+    off-premise outlet-homicide relationship
+  - Studies used to derive IRR of 1.76 for off-premise outlets
+  - Cost-effectiveness literature on alcohol zoning policies
+  doi: 10.15288/jsad.2020.81.24
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Off-premise alcohol outlets (liquor stores) show the strongest association with homicide
+  (IRR=1.76). Removing liquor stores from residential zones could prevent an estimated 22 homicides per
+  year in Baltimore, representing $27.5 million in costs and 391 DALYs.
+quantitative_effects:
+  effect_size:
+    value: 1.76
+    type: incidence_rate_ratio
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Analysis specific to Baltimore City; residential zone placement of liquor stores particularly
+    problematic
+moderators:
+- name: residential_zone_location
+  direction: strengthens
+  strength: strong
+  description: Removing liquor stores specifically from residential zones was associated with 22 fewer
+    homicides annually, indicating residential placement amplifies harm
+structural_competency:
+  equity_implications: This mechanism highlights how land use and zoning policies differentially locate
+    liquor stores in residential neighborhoods, often concentrated in lower-income communities and communities
+    of color. The policy solution - restricting liquor store placement in residential zones - is a structural
+    intervention that modifies the built environment rather than attempting to change individual drinking
+    behavior.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.484559'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

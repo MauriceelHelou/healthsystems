@@ -1,0 +1,58 @@
+id: depression_diagnosis_to_NEW:alcohol_consumption_during_pregnancy
+name: Depression Diagnosis → Alcohol Consumption During Pregnancy
+from_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+to_node:
+  node_id: NEW:alcohol_consumption_during_pregnancy
+  node_name: Alcohol Consumption During Pregnancy
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Pregnant women experience depression, often due to inadequate mental health screening and support
+  services'
+- 'Step 2: Depression leads to self-medication behaviors and coping mechanisms including alcohol use'
+- 'Step 3: Limited access to mental health treatment in Sub-Saharan Africa perpetuates untreated depression'
+- 'Step 4: Increased alcohol consumption during pregnancy as a maladaptive coping strategy'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Alemu Earsido Addila et al. 2020. "Alcohol consumption and its associated factors
+    among pregnant women in Sub-Saharan Africa: a systematic review and meta-analysis'' as given in the
+    submission system." https://doi.org/10.1186/s13011-020-00269-3'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 37 studies in qualitative synthesis
+  - Studies from various Sub-Saharan African countries included in the systematic review
+  - Primary studies accessed through PubMed, CINAHL, Cochrane Library, PsycINFO databases
+  doi: 10.1186/s13011-020-00269-3
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Depression is significantly associated with increased alcohol consumption during pregnancy,
+  with depressed pregnant women having 57% higher odds of consuming alcohol compared to non-depressed
+  pregnant women.
+quantitative_effects:
+  effect_size:
+    value: 1.572
+    type: odds_ratio
+    ci_lower: 1.34
+    ci_upper: 1.845
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted across multiple Sub-Saharan African countries with potentially varying
+    healthcare systems and cultural contexts
+moderators:
+- name: mental_health_service_availability
+  direction: weakens
+  strength: moderate
+  description: Access to mental health services may reduce the depression-alcohol pathway
+structural_competency:
+  equity_implications: This mechanism reflects structural failures in mental health infrastructure in
+    Sub-Saharan Africa, where inadequate screening, stigma, and limited treatment options leave pregnant
+    women with untreated depression vulnerable to alcohol use as a coping mechanism. The pathway is not
+    about individual moral failing but systemic healthcare gaps.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.266997'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,42 @@
+id: housing_instability_to_dementia_risk
+name: Housing Instability → Alzheimer's Disease and Related Dementias (ADRD) Risk
+from_node:
+  node_id: housing_instability
+  node_name: Housing Instability
+to_node:
+  node_id: dementia_risk
+  node_name: Alzheimer's Disease and Related Dementias (ADRD) Risk
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Housing instability creates frequent residential disruptions and uncertainty
+  about shelter'
+- 'Step 2: Residential instability interrupts continuity of medical care and medication
+  adherence'
+- 'Step 3: Chronic stress from housing uncertainty triggers sustained activation of
+  stress response systems'
+- 'Step 4: Prolonged stress exposure and medical care disruption increase risk of
+  cognitive decline and dementia'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Roncarati et al. 2023. "Risk of Dementia among Veterans Experiencing
+    Homelessness and Housing Instability." *Journal of The American Geriatrics Society*.
+    https://doi.org/10.1111/jgs.18680
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.329760'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: older_age
+  direction: strengthens
+  strength: strong
+  description: Older Veterans with housing instability face compounded risk for age-related
+    cognitive disorders
+- name: medical_comorbidity
+  direction: strengthens
+  strength: moderate
+  description: Complex co-occurring medical disorders amplify the dementia risk associated
+    with housing instability

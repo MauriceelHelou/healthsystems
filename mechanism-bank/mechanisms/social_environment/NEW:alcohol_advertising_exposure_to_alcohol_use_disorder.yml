@@ -1,0 +1,69 @@
+id: NEW:alcohol_advertising_exposure_to_alcohol_use_disorder
+name: Alcohol Advertising Exposure → Alcohol Use Disorder
+from_node:
+  node_id: NEW:alcohol_advertising_exposure
+  node_name: Alcohol Advertising Exposure
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Alcohol marketing through traditional and digital media increases exposure to alcohol-promoting
+  content'
+- 'Step 2: Digital marketing enables individualized and targeted advertising that circumvents traditional
+  placement restrictions'
+- 'Step 3: Increased exposure normalizes alcohol consumption and creates positive associations with drinking'
+- 'Step 4: Marketing exposure increases initiation of drinking, particularly among youth, and promotes
+  heavier consumption patterns'
+- 'Step 5: Sustained exposure and consumption patterns increase risk of developing alcohol use disorder'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Thomas Norman et al. 2022. "Regulating alcohol advertising for public health and
+    welfare in the age of digital marketing: challenges and options." https://doi.org/10.1080/09687637.2022.2148518'
+  supporting_citations:
+  - International research on alcohol marketing regulation cited in narrative review
+  - Case studies on digital media alcohol advertising regulation
+  - Reports on alcohol marketing policy effectiveness across jurisdictions
+  doi: 10.1080/09687637.2022.2148518
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This narrative review examines how alcohol marketing through digital media increases exposure
+  to alcohol-promoting content, with comprehensive advertising bans being most effective at reducing exposure.
+  Partial bans and placement restrictions have limited effectiveness as promotional budgets shift to less
+  regulated media channels.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects vary by international jurisdiction based on regulatory approaches applied to
+    digital media; some jurisdictions have implemented comprehensive bans while others rely on partial
+    restrictions
+moderators:
+- name: advertising_ban_comprehensiveness
+  direction: weakens
+  strength: strong
+  description: Comprehensive bans on advertising are generally the most effective option for reducing
+    exposure; partial bans result in budget shifts to less regulated media
+- name: digital_targeting_capability
+  direction: strengthens
+  strength: strong
+  description: Digital media's ability to individualize and target advertising undermines traditional
+    placement restrictions and increases exposure
+- name: regulatory_monitoring_capacity
+  direction: weakens
+  strength: moderate
+  description: Use of artificial intelligence for monitoring and transparency requirements may help reduce
+    exposure through better enforcement
+structural_competency:
+  equity_implications: This mechanism appropriately focuses on structural and policy-level factors (advertising
+    regulation, digital media governance) rather than individual consumer choices. The paper emphasizes
+    that current regulatory frameworks developed for traditional media are inadequate for digital contexts,
+    representing a structural gap that disproportionately affects populations targeted by digital marketing.
+    Equity implications include differential targeting of vulnerable populations through personalized
+    digital advertising.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.496533'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

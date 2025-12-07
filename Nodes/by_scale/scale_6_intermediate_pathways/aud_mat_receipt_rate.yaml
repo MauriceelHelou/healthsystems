@@ -1,0 +1,34 @@
+id: aud_mat_receipt_rate
+name: AUD Medication-Assisted Treatment Receipt Rate
+scale: 6
+domain: Healthcare Utilization, Pharmacotherapy
+category: healthcare_access
+stock:
+  value: 1.6
+  unit: Percent of those with AUD receiving FDA-approved medication
+  year: 2022
+  source: Medicare/Medicaid claims, IQVIA
+geographic_variation:
+  score: 4
+  level: state
+  notes: Higher in states with addiction medicine specialists; very low in rural areas
+data_quality:
+  availability: medium
+  frequency: annual
+  bias_notes: Claims-based; misses cash-pay prescriptions and VA system
+  primary_sources:
+  - name: CMS Medicare Part D Prescriber Data
+    granularity: provider
+  - name: State Medicaid claims analysis
+    granularity: state
+  - name: IQVIA National Prescription Audit
+    granularity: state
+description: |-
+  Percentage of individuals with AUD who received an FDA-approved medication for alcohol
+  use disorder: naltrexone (oral or extended-release injectable), acamprosate, or
+  disulfiram. Despite strong evidence for efficacy, MAT for AUD is dramatically
+  underutilized - less than 2% of those with AUD receive any medication. This is far
+  lower than MAT rates for opioid use disorder. Barriers include lack of prescriber
+  knowledge, patient preference for abstinence-only approaches, limited integration
+  with behavioral treatment, and insurance coverage gaps.
+type: Rate

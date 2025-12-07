@@ -1,0 +1,38 @@
+id: restaurant_license_density_to_family_violence_ambulance_attendance
+name: Restaurant Alcohol License Density → Family Violence-Related Ambulance Attendances
+from_node:
+  node_id: restaurant_license_density
+  node_name: Restaurant Alcohol License Density
+to_node:
+  node_id: family_violence_ambulance_attendance
+  node_name: Family Violence-Related Ambulance Attendances
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of restaurants with alcohol licenses increases normalized
+  alcohol consumption in community dining contexts'
+- 'Step 2: Restaurant alcohol service often accompanies meals over extended periods,
+  enabling sustained alcohol consumption in socially acceptable settings'
+- 'Step 3: Individuals consume alcohol quantities that impair cognitive function and
+  emotional regulation despite social dining context'
+- 'Step 4: Post-dining intoxication carries into domestic settings where alcohol-related
+  aggression manifests as family violence'
+- 'Step 5: Violence escalation necessitates emergency paramedic intervention for victim
+  protection and medical care'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Scott et al. 2021. "Alcohol Accessibility and Family Violence-related
+    Ambulance Attendances." *Journal of Interpersonal Violence*. https://doi.org/10.1177/0886260520986262
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.086675'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: socioeconomic_factors
+  direction: strengthens
+  strength: moderate
+  description: Socioeconomic factors included in model suggest they modify the strength
+    of association between restaurant license density and violence outcomes

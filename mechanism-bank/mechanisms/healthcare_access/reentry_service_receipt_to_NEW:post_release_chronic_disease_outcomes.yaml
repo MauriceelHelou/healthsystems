@@ -1,0 +1,52 @@
+id: reentry_service_receipt_to_NEW:post_release_chronic_disease_outcomes
+name: Reentry Service Receipt → Post-Release Chronic Disease Health Outcomes
+from_node:
+  node_id: reentry_service_receipt
+  node_name: Reentry Service Receipt
+to_node:
+  node_id: NEW:post_release_chronic_disease_outcomes
+  node_name: Post-Release Chronic Disease Health Outcomes
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individuals preparing for or recently released from prison receive reentry
+  services including enhanced primary care contact, support from community health
+  workers, and care coordination programs'
+- 'Step 2: These services facilitate continuity of chronic disease management by connecting
+  individuals to healthcare providers, ensuring medication access, and providing health
+  education during the vulnerable transition period'
+- 'Step 3: Sustained engagement with healthcare services and disease monitoring leads
+  to improved clinical outcomes for chronic non-communicable diseases including better
+  disease control, reduced complications, and improved quality of life'
+evidence:
+  quality_rating: A
+  n_studies: 65
+  primary_citation: 'Thomas Hewson et al. 2024. Interventions for the detection, monitoring,
+    and management of chronic non-communicable diseases in the prison population:
+    an international systematic review. BMC Public Health.'
+  supporting_citations: []
+description: Systematic review of 65 studies (n=18,311) found that reentry-focused
+  healthcare interventions including enhanced primary care contact, community health
+  worker support, and integrated care systems were associated with improvements in
+  various measures of clinical and cost effectiveness for chronic non-communicable
+  disease management among people recently released from prison. However, high clinical
+  heterogeneity prevented direct comparison between care models.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: intervention_type
+  direction: strengthens
+  strength: moderate
+  description: Enhanced primary care contact and community health worker support showed
+    associations with improved outcomes; telemedicine and integrated care systems
+    also demonstrated benefits
+- name: disease_complexity
+  direction: weakens
+  strength: weak
+  description: Most studies focused on singular non-communicable diseases; effectiveness
+    for multimorbidity remains unclear and may require different intervention approaches
+- name: study_quality
+  direction: weakens
+  strength: moderate
+  description: Most included studies were quasi-experimental and low to moderate quality,
+    limiting causal inference

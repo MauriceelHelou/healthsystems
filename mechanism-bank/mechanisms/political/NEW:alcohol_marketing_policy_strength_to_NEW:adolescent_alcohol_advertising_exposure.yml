@@ -1,0 +1,78 @@
+id: NEW:alcohol_marketing_policy_strength_to_NEW:adolescent_alcohol_advertising_exposure
+name: Alcohol Marketing Policy Strength → Adolescent Alcohol Advertising Exposure
+from_node:
+  node_id: NEW:alcohol_marketing_policy_strength
+  node_name: Alcohol Marketing Policy Strength
+to_node:
+  node_id: NEW:adolescent_alcohol_advertising_exposure
+  node_name: Adolescent Alcohol Advertising Exposure
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Stronger alcohol marketing policies restrict the channels, timing, and content of alcohol advertisements'
+- 'Step 2: Reduced availability of alcohol advertising across media platforms (television, radio, digital,
+  outdoor)'
+- 'Step 3: Decreased frequency of adolescent encounters with alcohol marketing messages'
+- 'Step 4: Lower cumulative exposure to alcohol advertising among school-aged youth'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jonathan K. Noel 2020. "Alcohol marketing policy and advertising exposure in low and
+    middle income Latin American countries." https://doi.org/10.1080/09687637.2020.1733931
+  supporting_citations:
+  - Global School-based Health Survey (GSHS) data from 13 Latin American countries
+  - WHO Global Information System on Alcohol and Health (GISAH)
+  - Additional citations require full-text access
+  doi: 10.1080/09687637.2020.1733931
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Stronger alcohol marketing policies at the country level are associated with reduced adolescent
+  exposure to alcohol advertising. This cross-national analysis of 47,195 adolescents aged 11-16 years
+  from 13 Latin American countries found a significant inverse relationship between marketing policy strength
+  and self-reported alcohol advertising exposure, controlling for individual and country-level factors.
+quantitative_effects:
+  effect_size:
+    value: -0.82
+    type: beta_coefficient
+    ci_lower: -0.96
+    ci_upper: -0.68
+  p_value: 0.001
+  sample_size: 47195
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted across 13 low and middle income countries in the WHO Americas region,
+    suggesting policy effects may vary by national context and enforcement capacity
+moderators:
+- name: other_alcohol_control_measures
+  direction: strengthens
+  strength: strong
+  description: Other alcohol control policies were also inversely associated with advertising exposure
+    (p<.001), suggesting synergistic policy effects
+- name: human_development_index
+  direction: strengthens
+  strength: moderate
+  description: Higher HDI was inversely associated with alcohol ad exposure, indicating developmental
+    context moderates policy effectiveness
+- name: pattern_of_drinking_score
+  direction: strengthens
+  strength: moderate
+  description: Pattern of drinking score was inversely associated with exposure, suggesting drinking culture
+    context matters
+- name: socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Individual SES was inversely associated with alcohol ad exposure (p<.001), indicating lower
+    SES youth face greater exposure
+structural_competency:
+  equity_implications: This mechanism exemplifies how policy-level interventions can protect youth from
+    commercial determinants of health. The finding that lower SES adolescents face greater alcohol advertising
+    exposure highlights an equity concern - marketing regulations may disproportionately benefit disadvantaged
+    youth who are otherwise more heavily targeted. The study supports structural interventions (marketing
+    bans/restrictions) rather than individual-level approaches to reducing youth alcohol exposure, aligning
+    with WHO sustainable development goals.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.514159'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

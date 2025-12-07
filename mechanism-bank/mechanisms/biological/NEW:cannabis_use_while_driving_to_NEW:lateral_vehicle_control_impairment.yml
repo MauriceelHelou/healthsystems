@@ -1,0 +1,47 @@
+id: NEW:cannabis_use_while_driving_to_NEW:lateral_vehicle_control_impairment
+name: Cannabis Use While Driving → Lateral Vehicle Control Impairment
+from_node:
+  node_id: NEW:cannabis_use_while_driving
+  node_name: Cannabis Use While Driving
+to_node:
+  node_id: NEW:lateral_vehicle_control_impairment
+  node_name: Lateral Vehicle Control Impairment
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: THC binds to cannabinoid CB1 receptors in cerebellum and motor cortex'
+- 'Step 2: Disruption of fine motor coordination and proprioceptive feedback'
+- 'Step 3: Increased variability in steering corrections and lane maintenance'
+- 'Step 4: Measurable increases in lateral position variability and lane excursions'
+evidence:
+  quality_rating: A
+  n_studies: 57
+  primary_citation: 'S. Simmons et al. 2022. "The effects of cannabis and alcohol on driving performance
+    and driver behaviour: a systematic review and meta-analysis.." https://doi.org/10.1111/add.15770'
+  supporting_citations:
+  - Studies measuring lateral position variability in driving simulators
+  - Closed-course and on-road experimental studies
+  - Additional citations require full-text access
+  doi: 10.1111/add.15770
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Cannabis impairs lateral vehicle control through effects on cerebellar function and motor
+  coordination, resulting in increased lane position variability (g=0.331) and lane excursions (g=0.198).
+  This represents a key intermediate mechanism linking cannabis to crash risk.
+quantitative_effects:
+  effect_size:
+    value: 0.198
+    type: standardized_mean_difference
+    ci_lower: 0.001
+    ci_upper: 0.395
+  sample_size: 1725
+structural_competency:
+  equity_implications: Measurement of driving impairment through experimental studies provides objective
+    evidence for policy development. Structural implications include need for validated roadside testing
+    methods and education campaigns targeting specific impairment patterns.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.631916'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

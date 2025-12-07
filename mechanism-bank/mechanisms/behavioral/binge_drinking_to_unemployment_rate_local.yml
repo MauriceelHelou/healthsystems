@@ -1,0 +1,56 @@
+id: binge_drinking_to_unemployment_rate_local
+name: Binge Drinking → Unemployment Rate
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: unemployment_rate_local
+  node_name: Unemployment Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Binge drinking may impair work performance and attendance'
+- 'Step 2: Alcohol-related behaviors could lead to job loss through workplace incidents or absenteeism'
+- 'Step 3: However, the effect is largely confounded by unmeasured variables such as poor health prior
+  to baseline'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Lluís Mangot-Sala et al. 2022. "Disentangling the association between alcohol consumption
+    and employment status: causation, selection or confounding?." https://doi.org/10.1093/eurpub/ckac141'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references selection hypothesis
+  - Additional citations require full-text access - abstract notes prior literature on heavy drinkers
+    job loss
+  - Additional citations require full-text access
+  doi: 10.1093/eurpub/ckac141
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The selection hypothesis (that binge drinkers are more prone to job loss) receives weak and
+  largely confounded support. When accounting for time-constant confounding and reciprocal causality,
+  the effect of binge drinking on unemployment becomes statistically non-significant, suggesting that
+  prior health conditions rather than drinking itself drives the association.
+quantitative_effects:
+  effect_size:
+    value: 0.14
+    type: beta_coefficient
+    ci_lower: -0.03
+    ci_upper: 0.31
+  sample_size: 138875
+moderators:
+- name: unobserved_confounders
+  direction: weakens
+  strength: strong
+  description: The effect of binge drinking on unemployment is mostly confounded by unobserved variables
+    such as poor health prior to baseline
+structural_competency:
+  equity_implications: This finding is crucial for avoiding individual blame - the apparent relationship
+    between alcohol use and unemployment is largely explained by confounding factors like pre-existing
+    health conditions rather than alcohol causing job loss. This challenges narratives that blame unemployed
+    individuals for their drinking and supports structural rather than behavioral interventions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.035183'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

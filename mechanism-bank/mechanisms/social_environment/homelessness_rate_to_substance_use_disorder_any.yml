@@ -1,0 +1,59 @@
+id: homelessness_rate_to_substance_use_disorder_any
+name: Homelessness Rate → Substance Use Disorder (Any)
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Adolescents experiencing homelessness face chronic stress, trauma, and lack of stable living
+  environments'
+- 'Step 2: Limited access to mental health services, family support, and protective social structures
+  increases vulnerability'
+- 'Step 3: Exposure to substance use in street environments and shelters normalizes drug and alcohol use'
+- 'Step 4: Self-medication to cope with trauma, mental health symptoms, and survival needs leads to substance
+  use initiation'
+- 'Step 5: Lack of treatment access and continued housing instability perpetuates substance use disorders'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: 'David Borkenhagen et al. 2025. "Prevalence of Mental Health and Substance Use Disorders
+    Among Adolescents Experiencing Homelessness: A Systematic Review.." https://doi.org/10.1007/s10597-025-01492-7'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 2 studies meeting criteria
+  - Earlier versions of DSM and ICD diagnostic classifications referenced
+  - Studies using validated diagnostic measures in homeless adolescent populations
+  doi: 10.1007/s10597-025-01492-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Drug abuse disorder was the most prevalent mental health/substance use disorder among homeless
+  adolescents (43%), indicating that housing instability creates conditions that dramatically increase
+  substance use disorder risk in vulnerable youth populations.
+quantitative_effects:
+  effect_size:
+    value: 43.0
+    type: percentage_change
+    ci_lower: 34.0
+    ci_upper: 53.0
+  sample_size: 226
+moderators:
+- name: pre_existing_mental_health_disorders
+  direction: strengthens
+  strength: strong
+  description: Adolescents with existing mental health disorders are at higher risk for both homelessness
+    and substance use disorders, creating bidirectional reinforcement
+structural_competency:
+  equity_implications: This mechanism reflects structural failures in housing policy, youth services,
+    and mental health infrastructure. Rather than individual behavioral choices, substance use among homeless
+    adolescents emerges from systematic lack of safe housing, treatment access, and protective environments.
+    Equity implications include disproportionate impact on youth from marginalized backgrounds who face
+    higher baseline homelessness risk.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.511993'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

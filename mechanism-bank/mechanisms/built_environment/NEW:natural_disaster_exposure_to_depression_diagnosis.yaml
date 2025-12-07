@@ -1,0 +1,70 @@
+id: NEW:natural_disaster_exposure_to_depression_diagnosis
+name: Natural Disaster Exposure (floods, cyclones, heatwaves, river erosion) → Depression
+  Diagnosis
+from_node:
+  node_id: NEW:natural_disaster_exposure
+  node_name: Natural Disaster Exposure (floods, cyclones, heatwaves, river erosion)
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Natural disasters (floods, cyclones, heatwaves, river erosion) cause direct
+  physical damage to homes, land, livestock, and infrastructure, resulting in displacement
+  and loss of livelihood'
+- 'Step 2: Disaster exposure triggers multiple psychosocial stressors including financial
+  hardship from income loss, food insecurity, family conflicts, death of family members,
+  and loss of social support networks'
+- 'Step 3: These compounding traumatic experiences and chronic stressors overwhelm
+  individual coping capacity, leading to development of depression and other mental
+  health conditions (anxiety, PTSD, stress disorders)'
+- 'Step 4: Demographic vulnerabilities (age, gender, marital status, lower education)
+  and socioeconomic factors (lower social class, vulnerable livelihoods) moderate
+  and often amplify the pathway from disaster exposure to depression'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'Md Zawadul Karim et al. 2024. Understanding mental health challenges
+    and associated risk factors of post-natural disasters in Bangladesh: a systematic
+    review. Frontiers in psychology.'
+  supporting_citations: []
+description: Systematic review of 17 studies from Bangladesh demonstrates that exposure
+  to natural disasters (floods, cyclones, heatwaves, river erosion) significantly
+  increases risk of depression, with prevalence ranging from 16.3% to 92.71% among
+  affected populations. The pathway operates through direct trauma, loss of property
+  and livelihood, displacement, food insecurity, and erosion of social support systems.
+  Multiple demographic, socioeconomic, and health-related factors moderate this relationship.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Gender
+  direction: strengthens
+  strength: moderate
+  description: Female gender identified as a demographic risk factor increasing vulnerability
+    to depression post-disaster
+- name: Socioeconomic status
+  direction: strengthens
+  strength: strong
+  description: Lower social class, income loss, and vulnerable livelihoods amplify
+    the mental health impact of disaster exposure
+- name: Education level
+  direction: strengthens
+  strength: moderate
+  description: Lower education associated with higher risk of depression following
+    natural disasters
+- name: Social support
+  direction: weakens
+  strength: moderate
+  description: Presence of social support networks serves as a protective factor against
+    depression
+- name: Physical injury during disaster
+  direction: strengthens
+  strength: strong
+  description: Physical injury or disability sustained during disaster increases risk
+    of subsequent depression
+- name: Displacement status
+  direction: strengthens
+  strength: strong
+  description: Displacement from home following disaster significantly increases depression
+    risk

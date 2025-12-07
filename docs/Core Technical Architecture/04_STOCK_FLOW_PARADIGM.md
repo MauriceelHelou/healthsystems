@@ -611,38 +611,14 @@ Example:
 
 ## 30+ Concrete Node Examples
 
+> **Note**: All examples use canonical node IDs from `mechanism-bank/mechanisms/canonical_nodes.json`. See `Nodes/COMPLETE_NODE_INVENTORY.md` for complete specifications.
+
 ### Category A: Structural Capacity Nodes (Real Stocks)
 
-**A1. Community Health Workers**
+**A1. Primary Care Physician Density** (Scale 2 - Institutional)
 ```
-node_id: chw_capacity
-stock_name: "Community Health Workers"
-stock_unit: "FTE count"
-stock_type: "real"
-measurement: "direct"
-typical_range: [0, 500]
-data_source: "Organizational HR records, state health department databases"
-boston_baseline: 50 FTE
-functional_form_typical: "sigmoid" (saturation at high capacity)
-```
-
-**A2. Affordable Housing Units**
-```
-node_id: affordable_housing_units
-stock_name: "Affordable Housing Units"
-stock_unit: "Count of units affordable to <80% AMI"
-stock_type: "real"
-measurement: "direct"
-typical_range: [0, 50000]
-data_source: "HUD databases, local housing authority records"
-boston_baseline: 3200 units
-functional_form_typical: "logarithmic" (diminishing returns)
-```
-
-**A3. Primary Care Physician Density**
-```
-node_id: pcp_density
-stock_name: "Primary Care Physicians"
+node_id: primary_care_physician_density
+stock_name: "Primary Care Physician Density"
 stock_unit: "Physicians per 100,000 population"
 stock_type: "real"
 measurement: "direct"
@@ -652,351 +628,363 @@ boston_baseline: 165 per 100k
 functional_form_typical: "sigmoid" (access improvements saturate)
 ```
 
-**A4. Public Transportation Routes**
+**A2. Emergency Department Availability** (Scale 2 - Institutional)
 ```
-node_id: transit_routes
-stock_name: "Public Transportation Route Coverage"
-stock_unit: "Number of routes"
+node_id: emergency_department_availability
+stock_name: "Emergency Department Availability"
+stock_unit: "ED capacity per 100,000 population"
 stock_type: "real"
 measurement: "direct"
-typical_range: [0, 300]
-data_source: "Transit authority records"
-boston_baseline: 85 routes
-functional_form_typical: "saturating_linear" (limited by geography)
+typical_range: [0, 50]
+data_source: "Hospital administrative records, AHA data"
+boston_baseline: 28 per 100k
+functional_form_typical: "saturating_linear" (limited by hospital capacity)
 ```
 
-**A5. Green Space**
+**A3. Public Housing Funding Per Capita** (Scale 1 - Structural)
 ```
-node_id: green_space
-stock_name: "Green Space Access"
-stock_unit: "Acres per 10,000 population"
+node_id: public_housing_funding_per_capita
+stock_name: "Public Housing Funding Per Capita"
+stock_unit: "Dollars per capita annual allocation"
 stock_type: "real"
 measurement: "direct"
-typical_range: [5, 300]
-data_source: "GIS analysis, parks department"
-boston_baseline: 125 acres per 10k
-functional_form_typical: "saturating_linear" (land-limited)
+typical_range: [0, 500]
+data_source: "HUD databases, local housing authority records"
+boston_baseline: 185 per capita
+functional_form_typical: "logarithmic" (diminishing returns)
+```
+
+**A4. Housing Choice Voucher Coverage Rate** (Scale 4 - Intermediate)
+```
+node_id: housing_choice_voucher_coverage_rate
+stock_name: "Housing Choice Voucher Coverage Rate"
+stock_unit: "Proportion of eligible households receiving vouchers"
+stock_type: "real"
+measurement: "direct"
+typical_range: [0.05, 0.40]
+data_source: "HUD, local housing authority records"
+boston_baseline: 0.22
+functional_form_typical: "saturating_linear" (limited by funding)
+```
+
+**A5. Eviction Legal Aid Availability** (Scale 2 - Institutional)
+```
+node_id: eviction_legal_aid_availability
+stock_name: "Eviction Legal Aid Availability"
+stock_unit: "Legal aid attorneys per 10,000 eviction filings"
+stock_type: "real"
+measurement: "direct"
+typical_range: [0.5, 10]
+data_source: "Legal aid organizations, court records"
+boston_baseline: 3.2 per 10k filings
+functional_form_typical: "threshold" (minimum capacity needed for effect)
 ```
 
 ### Category B: Intermediate Proxy Index Nodes
 
-**B1. Healthcare Continuity**
+**B1. Housing Quality Index** (Scale 3 - Individual/Household)
 ```
-node_id: healthcare_continuity
-stock_name: "Healthcare Continuity"
+node_id: housing_quality_index_revised_consolidated
+stock_name: "Housing Quality Index"
 stock_unit: "Index (0-1)"
 stock_type: "proxy"
 measurement: "constructed"
 components:
-  - insurance_persistence (weight: 0.40)
-  - provider_retention (weight: 0.30)
-  - appointment_completion (weight: 0.30)
+  - structural_adequacy (weight: 0.35)
+  - environmental_hazards_absence (weight: 0.30)
+  - maintenance_quality (weight: 0.20)
+  - overcrowding_absence (weight: 0.15)
 typical_range: [0.2, 0.9]
-boston_baseline: 0.45
-functional_form_typical: "sigmoid" (from CHW capacity)
+boston_baseline: 0.62
+functional_form_typical: "logarithmic" (from housing investment)
 ```
 
-**B2. Economic Precarity**
+**B2. Housing Cost Burden** (Scale 3 - Individual/Household)
 ```
-node_id: economic_precarity
-stock_name: "Economic Precarity"
-stock_unit: "Index (0-1), higher = more precarious"
-stock_type: "proxy"
-measurement: "constructed"
-components:
-  - rent_burden_rate (weight: 0.35)
-  - liquid_asset_poverty (weight: 0.30)
-  - income_volatility (weight: 0.25)
-  - debt_burden (weight: 0.10)
-typical_range: [0.15, 0.70]
-boston_baseline: 0.38
-functional_form_typical: "threshold" (evictions above certain rate)
+node_id: housing_cost_burden
+stock_name: "Housing Cost Burden"
+stock_unit: "Proportion paying >30% income on housing"
+stock_type: "real"
+measurement: "direct"
+typical_range: [0.15, 0.60]
+boston_baseline: 0.42
+functional_form_typical: "threshold" (policy effects above certain strength)
 ```
 
-**B3. Community Trust**
+**B3. Food Insecurity Rate** (Scale 3 - Individual/Household)
 ```
-node_id: community_trust
-stock_name: "Community Trust and Cohesion"
-stock_unit: "Index (0-1)"
-stock_type: "proxy"
-measurement: "constructed or calibrated"
-components:
-  - social_cohesion_survey (weight: 0.50)
-  - civic_participation_rate (weight: 0.30)
-  - mutual_aid_density (weight: 0.20)
-typical_range: [0.25, 0.85]
-boston_baseline: 0.58 (calibrated)
-functional_form_typical: "sigmoid" (builds slowly, saturates)
+node_id: food_insecurity_rate
+stock_name: "Food Insecurity Rate"
+stock_unit: "Proportion experiencing food insecurity"
+stock_type: "real"
+measurement: "survey"
+typical_range: [0.05, 0.30]
+boston_baseline: 0.12
+functional_form_typical: "multiplicative_dampening" (from assistance programs)
 ```
 
-**B4. Policy Strength (Eviction Protection)**
+**B4. Just-Cause Eviction Protection** (Scale 4 - Policy)
 ```
-node_id: eviction_policy_strength
-stock_name: "Eviction Protection Policy Strength"
-stock_unit: "Index (0-10 scale)"
-stock_type: "proxy"
-measurement: "constructed"
-components:
-  - just_cause_requirement (0-3 points)
-  - notice_period_adequacy (0-2 points)
-  - legal_representation_access (0-3 points)
-  - rent_control_coverage (0-2 points)
-typical_range: [0, 10]
-boston_baseline: 7.2
-functional_form_typical: "threshold" (must exceed minimum to be effective)
+node_id: just_cause_eviction_protection
+stock_name: "Just-Cause Eviction Protection"
+stock_unit: "Binary (0=no protection, 1=protection in effect)"
+stock_type: "policy"
+measurement: "direct"
+typical_range: [0, 1]
+boston_baseline: 1 (MA has just-cause protections)
+functional_form_typical: "threshold" (binary policy effect)
 ```
 
-**B5. Healthcare System Integration**
+**B5. Mental Healthcare Access** (Scale 3 - Individual/Household)
 ```
-node_id: healthcare_integration
-stock_name: "Healthcare System Integration"
+node_id: mental_healthcare_access
+stock_name: "Mental Healthcare Access"
 stock_unit: "Index (0-1)"
 stock_type: "proxy"
 measurement: "constructed"
 components:
-  - ehr_interoperability (weight: 0.40)
-  - care_coordination_programs (weight: 0.35)
-  - referral_completion_rate (weight: 0.25)
-typical_range: [0.2, 0.95]
-boston_baseline: 0.70
-functional_form_typical: N/A (typically a moderator, not mechanism target)
+  - mental_health_provider_density (weight: 0.40)
+  - insurance_mental_health_coverage (weight: 0.35)
+  - geographic_accessibility (weight: 0.25)
+typical_range: [0.2, 0.85]
+boston_baseline: 0.65
+functional_form_typical: "sigmoid" (from provider capacity)
 ```
 
 ### Category C: Crisis Endpoint Nodes (Outcomes)
 
-**C1. Emergency Department Visits**
+**C1. Emergency Department Visit Rate** (Scale 5 - Crisis Endpoint)
 ```
-node_id: ed_visits_annual
-stock_name: "Emergency Department Visits"
-stock_unit: "Annual visits"
+node_id: emergency_department_visit_rate
+stock_name: "Emergency Department Visit Rate"
+stock_unit: "Visits per 1,000 population annually"
 stock_type: "crisis_endpoint"
 measurement: "direct"
-typical_range: [50000, 300000] (varies by city size)
+typical_range: [100, 500]
 unit_cost: "$1,200 per visit"
 data_source: "Hospital administrative data, HCUP"
-boston_baseline: 122,400 visits/year
-functional_form_incoming: "multiplicative_dampening" (from continuity)
+boston_baseline: 180 per 1,000
+functional_form_incoming: "multiplicative_dampening" (from access improvements)
 ```
 
-**C2. Hospitalizations**
+**C2. Preventable Hospitalization** (Scale 5 - Crisis Endpoint)
 ```
-node_id: hospitalizations_annual
-stock_name: "Hospitalizations"
-stock_unit: "Annual admissions"
+node_id: preventable_hospitalization_individual
+stock_name: "Preventable Hospitalization (Individual)"
+stock_unit: "ACSC admissions per 1,000 population"
 stock_type: "crisis_endpoint"
 measurement: "direct"
-typical_range: [10000, 80000]
+typical_range: [5, 50]
 unit_cost: "$8,500 per admission"
-data_source: "Hospital discharge data"
-boston_baseline: 18,500 admissions/year
+data_source: "Hospital discharge data, AHRQ PQI"
+boston_baseline: 12 per 1,000
 functional_form_incoming: "multiplicative_dampening"
 ```
 
-**C3. Overdose Events**
+**C3. Asthma Hospitalization Rate** (Scale 5 - Crisis Endpoint)
 ```
-node_id: overdose_events_annual
-stock_name: "Non-Fatal Overdose Events"
-stock_unit: "Annual events requiring medical attention"
+node_id: asthma_hospitalization_rate
+stock_name: "Asthma Hospitalization Rate"
+stock_unit: "Hospitalizations per 100,000 population"
 stock_type: "crisis_endpoint"
 measurement: "direct"
-typical_range: [100, 5000]
-unit_cost: "$25,000 per event"
-data_source: "EMS records, syndromic surveillance"
-boston_baseline: 420 events/year
-functional_form_incoming: "threshold" (from substance access + stress)
+typical_range: [20, 200]
+unit_cost: "$6,500 per hospitalization"
+data_source: "Hospital discharge data"
+boston_baseline: 85 per 100k
+functional_form_incoming: "threshold" (from housing quality, air quality)
 ```
 
-**C4. Premature Deaths**
+**C4. All-Cause Mortality Rate** (Scale 5 - Crisis Endpoint)
 ```
-node_id: deaths_premature_annual
-stock_name: "Premature Deaths (Age <75)"
-stock_unit: "Annual deaths"
+node_id: all_cause_mortality_rate
+stock_name: "All-Cause Mortality Rate"
+stock_unit: "Deaths per 100,000 population"
 stock_type: "crisis_endpoint"
 measurement: "direct"
-typical_range: [200, 3000]
+typical_range: [500, 1200]
 unit_cost: "$500k-$10M (age-dependent VSL)"
 data_source: "Vital statistics, death certificates"
-boston_baseline: 850 deaths/year
+boston_baseline: 720 per 100k
 functional_form_incoming: "linear" (from multiple upstream sources)
 ```
 
-**C5. Homelessness Episodes**
+**C5. Eviction Judgment Rate** (Scale 5 - Crisis Endpoint)
 ```
-node_id: homelessness_episodes
-stock_name: "Homelessness Person-Years"
-stock_unit: "Person-years of homelessness annually"
+node_id: eviction_judgment_rate
+stock_name: "Eviction Judgment Rate"
+stock_unit: "Eviction judgments per 1,000 renter households"
 stock_type: "crisis_endpoint"
-measurement: "direct or estimated"
-typical_range: [100, 5000]
-unit_cost: "$50,000 per person-year"
-data_source: "Point-in-time counts, HMIS, shelter data"
-boston_baseline: 680 person-years
-functional_form_incoming: "threshold" (from housing instability + economic precarity)
+measurement: "direct"
+typical_range: [5, 100]
+unit_cost: "$15,000 per eviction (including downstream costs)"
+data_source: "Court records, Eviction Lab"
+boston_baseline: 12 per 1,000 renters
+functional_form_incoming: "threshold" (from policy protection + economic factors)
 ```
 
 ### Category D: Environmental/Spatial Nodes
 
-**D1. Air Quality**
+**D1. Eviction Filing Rate** (Scale 3 - Individual/Household)
 ```
-node_id: air_quality
-stock_name: "Air Quality Index"
-stock_unit: "EPA AQI (0-500 scale, lower=better)"
+node_id: eviction_filing_rate
+stock_name: "Eviction Filing Rate"
+stock_unit: "Filings per 100 renter households annually"
 stock_type: "real"
 measurement: "direct"
-typical_range: [20, 200]
-data_source: "EPA monitoring stations"
-boston_baseline: 48 (good quality)
-functional_form_typical: "linear" (from green space, traffic density)
+typical_range: [1, 20]
+data_source: "Court records, Eviction Lab"
+boston_baseline: 3.8 per 100 renters
+functional_form_typical: "threshold" (from policy + economic factors)
 ```
 
-**D2. Housing Quality**
+**D2. Eviction Rate** (Scale 3 - Individual/Household)
 ```
-node_id: housing_quality
-stock_name: "Housing Quality Index"
-stock_unit: "Index (0-1), based on inspection violations"
-stock_type: "proxy"
-measurement: "constructed"
-components:
-  - lead_paint_presence (weight: 0.30)
-  - structural_violations (weight: 0.30)
-  - overcrowding_rate (weight: 0.25)
-  - maintenance_quality (weight: 0.15)
-typical_range: [0.3, 0.9]
-boston_baseline: 0.62
-functional_form_typical: "logarithmic" (from investment)
+node_id: eviction_rate
+stock_name: "Eviction Rate"
+stock_unit: "Completed evictions per 100 renter households"
+stock_type: "real"
+measurement: "direct"
+typical_range: [0.5, 10]
+data_source: "Court records, Eviction Lab"
+boston_baseline: 1.2 per 100 renters
+functional_form_typical: "threshold" (from filing rate + legal aid)
 ```
 
-**D3. Neighborhood Safety**
+**D3. Incarceration Rate** (Scale 7 - System-level)
 ```
-node_id: neighborhood_safety
-stock_name: "Perceived Neighborhood Safety"
-stock_unit: "Index (0-1) from surveys"
-stock_type: "proxy"
-measurement: "survey-derived"
-components:
-  - crime_rate (weight: 0.40, inverse)
-  - lighting_adequacy (weight: 0.25)
-  - social_cohesion (weight: 0.35)
-typical_range: [0.3, 0.9]
-boston_baseline: 0.68
-functional_form_typical: "sigmoid" (from policing approach + community investment)
+node_id: incarceration_rate
+stock_name: "Incarceration Rate"
+stock_unit: "Incarcerated persons per 100,000 population"
+stock_type: "real"
+measurement: "direct"
+typical_range: [100, 1000]
+data_source: "Bureau of Justice Statistics, state DOC"
+boston_baseline: 320 per 100k
+functional_form_typical: "threshold" (from policy + enforcement)
 ```
 
 ### Category E: Behavioral/Utilization Nodes
 
-**E1. Healthcare Seeking Behavior**
+**E1. Primary Care Visit Rate** (Scale 4 - Intermediate)
 ```
-node_id: healthcare_seeking
-stock_name: "Healthcare Seeking Rate"
-stock_unit: "Annual primary care visits per person"
+node_id: primary_care_visit_rate
+stock_name: "Primary Care Visit Rate"
+stock_unit: "Annual visits per 1,000 population"
 stock_type: "real"
 measurement: "direct"
-typical_range: [0.5, 8.0]
-data_source: "Claims data, EHR"
-boston_baseline: 2.8 visits per person per year
-functional_form_typical: "sigmoid" (from continuity + trust)
+typical_range: [500, 4000]
+data_source: "Claims data, EHR, MEPS"
+boston_baseline: 2,800 per 1,000
+functional_form_typical: "sigmoid" (from provider density + insurance)
 ```
 
-**E2. Medication Adherence**
+**E2. Uninsured Rate** (Scale 3 - Individual/Household)
 ```
-node_id: medication_adherence
-stock_name: "Medication Adherence Rate"
-stock_unit: "Proportion of days covered (0-1)"
+node_id: uninsured_rate
+stock_name: "Uninsured Rate"
+stock_unit: "Proportion of population without health insurance"
 stock_type: "real"
 measurement: "direct"
-typical_range: [0.3, 0.9]
-data_source: "Pharmacy claims, prescription fill rates"
-boston_baseline: 0.61
-functional_form_typical: "threshold" (from economic precarity)
+typical_range: [0.02, 0.25]
+data_source: "Census ACS, state insurance data"
+boston_baseline: 0.03 (MA has near-universal coverage)
+functional_form_typical: "threshold" (from Medicaid expansion)
 ```
 
 ### Category F: Social Determinant Nodes
 
-**F1. Social Isolation**
+**F1. Asthma Prevalence (Adults)** (Scale 5 - Crisis Endpoint)
 ```
-node_id: social_isolation
-stock_name: "Social Isolation Rate"
-stock_unit: "Proportion reporting <1 close contact"
+node_id: asthma_prevalence_adults_revised_terminology_standardized
+stock_name: "Asthma Prevalence (Adults)"
+stock_unit: "Proportion of adults with asthma diagnosis"
 stock_type: "real"
-measurement: "survey"
-typical_range: [0.10, 0.40]
-data_source: "BRFSS, local surveys"
-boston_baseline: 0.22
-functional_form_typical: "multiplicative_dampening" (from community programs)
+measurement: "survey + claims"
+typical_range: [0.05, 0.15]
+data_source: "BRFSS, CDC"
+boston_baseline: 0.10
+functional_form_typical: "threshold" (from housing quality, air quality)
 ```
 
-**F2. Food Security**
+**F2. Diabetes Prevalence** (Scale 5 - Crisis Endpoint)
 ```
-node_id: food_security
-stock_name: "Food Security Rate"
-stock_unit: "Proportion food secure (0-1)"
+node_id: diabetes_prevalence
+stock_name: "Diabetes Prevalence"
+stock_unit: "Proportion of adults with diabetes"
 stock_type: "real"
-measurement: "survey"
-typical_range: [0.50, 0.95]
-data_source: "USDA food security module, local data"
-boston_baseline: 0.78
-functional_form_typical: "threshold" (from income + assistance programs)
+measurement: "survey + claims"
+typical_range: [0.05, 0.20]
+data_source: "BRFSS, CDC"
+boston_baseline: 0.09
+functional_form_typical: "multiplicative_dampening" (from food access + care)
 ```
 
-**F3. Educational Attainment**
+**F3. Minimum Wage Level** (Scale 1 - Structural Policy)
 ```
-node_id: educational_attainment
-stock_name: "Educational Attainment"
-stock_unit: "Proportion with HS diploma or higher"
-stock_type: "real"
+node_id: minimum_wage_level
+stock_name: "Minimum Wage Level"
+stock_unit: "Dollars per hour"
+stock_type: "policy"
 measurement: "direct"
-typical_range: [0.60, 0.95]
-data_source: "Census ACS"
-boston_baseline: 0.88
-functional_form_typical: "saturating_linear" (slow-changing)
+typical_range: [7.25, 20.00]
+data_source: "State labor departments"
+boston_baseline: 15.00 (MA minimum wage)
+functional_form_typical: "threshold" (effect above federal floor)
 ```
 
-**F4. Employment Rate**
+**F4. Rent Control Policy Strength** (Scale 1 - Structural Policy)
 ```
-node_id: employment_rate
-stock_name: "Employment Rate"
-stock_unit: "Proportion employed (0-1)"
-stock_type: "real"
-measurement: "direct"
-typical_range: [0.50, 0.95]
-data_source: "Census ACS, BLS"
-boston_baseline: 0.89
-functional_form_typical: "threshold" (from job training + economic conditions)
+node_id: rent_control_stabilization_policy_strength
+stock_name: "Rent Control / Stabilization Policy Strength"
+stock_unit: "Index (0-10)"
+stock_type: "policy"
+measurement: "constructed"
+typical_range: [0, 10]
+data_source: "State/local housing policy analysis"
+boston_baseline: 0 (MA banned rent control in 1994)
+functional_form_typical: "threshold" (minimum strength for effect)
 ```
 
 ### Category G: Policy Environment Nodes
 
-**G1. Medicaid Coverage Generosity**
+**G1. Medicaid Expansion Status** (Scale 1 - Structural Policy)
 ```
-node_id: medicaid_generosity
-stock_name: "Medicaid Coverage Generosity"
-stock_unit: "Index (0-10 scale)"
-stock_type: "proxy"
-measurement: "constructed"
-components:
-  - expansion_status (0-3 points)
-  - work_requirements_absent (0-2 points)
-  - scope_of_coverage (0-3 points)
-  - reimbursement_adequacy (0-2 points)
-typical_range: [0, 10]
-boston_baseline: 8.5 (MA has generous Medicaid)
-functional_form_typical: N/A (typically moderator)
+node_id: medicaid_expansion_status
+stock_name: "Medicaid Expansion Status"
+stock_unit: "Binary (0=not expanded, 1=expanded)"
+stock_type: "policy"
+measurement: "direct"
+typical_range: [0, 1]
+boston_baseline: 1 (MA expanded before ACA)
+functional_form_typical: "threshold" (binary policy effect)
 ```
 
-**G2. Criminal Justice Approach**
+**G2. Medicaid Coverage Generosity Index** (Scale 4 - Intermediate)
 ```
-node_id: cj_approach
-stock_name: "Criminal Justice Approach"
-stock_unit: "Index (0-10, higher=more reform-oriented)"
+node_id: medicaid_coverage_generosity_index
+stock_name: "Medicaid Coverage Generosity Index"
+stock_unit: "Index (0-100 scale)"
 stock_type: "proxy"
 measurement: "constructed"
 components:
-  - incarceration_rate (weight: -0.35, inverse)
-  - diversion_programs (weight: 0.30)
-  - community_supervision (weight: 0.20)
-  - bail_reform (weight: 0.15)
+  - income_eligibility_threshold
+  - optional_benefits_coverage
+  - reimbursement_rates
+typical_range: [0, 100]
+boston_baseline: 85 (MA has generous Medicaid)
+functional_form_typical: "sigmoid" (effect increases with generosity)
+```
+
+**G3. Cash Bail Reform Status** (Scale 3 - Policy)
+```
+node_id: cash_bail_reform_status
+stock_name: "Cash Bail Reform Status"
+stock_unit: "Index (0-10, higher=more reform)"
+stock_type: "policy"
+measurement: "constructed"
 typical_range: [0, 10]
-boston_baseline: 5.8 (mixed approach)
+boston_baseline: 6.5 (MA has bail reform provisions)
 functional_form_typical: "threshold" (reform must reach critical level)
 ```
 
@@ -1006,32 +994,34 @@ functional_form_typical: "threshold" (reform must reach critical level)
 
 ### Stock Data Structure
 
-```yaml
-# Example: Full specification for one node
+> **Note**: All node_id values must reference canonical nodes from `mechanism-bank/mechanisms/canonical_nodes.json`.
 
-node_id: chw_capacity
-node_class: structural
-stock_name: "Community Health Workers"
-description: "Full-time equivalent community health worker positions serving target population"
+```yaml
+# Example: Full specification for one canonical node
+
+node_id: primary_care_physician_density  # Must exist in canonical_nodes.json
+node_class: institutional
+stock_name: "Primary Care Physician Density"
+description: "Primary care physicians per 100,000 population in service area"
 
 # Stock specification
-stock_unit: "FTE count"
+stock_unit: "Physicians per 100,000 population"
 stock_type: "real"
 measurement_method: "direct"
 data_sources:
-  - "Organizational HR records"
-  - "State health department CHW registry"
-  - "Grant program participant lists"
+  - "State medical boards"
+  - "HRSA Area Health Resources File"
+  - "AMA Physician Masterfile"
 
 # Value ranges
 typical_range:
-  minimum: 0
-  maximum: 500
-  boston_baseline: 50
-  
+  minimum: 20
+  maximum: 200
+  boston_baseline: 165
+
 validation:
-  plausibility_check: "value between 0 and 1000"
-  consistency_check: "CHW per 10k population between 0 and 20"
+  plausibility_check: "value between 10 and 300"
+  consistency_check: "Must be consistent with population and physician counts"
 
 # Functional form for mechanisms FROM this node
 outgoing_mechanisms:
@@ -1040,13 +1030,13 @@ outgoing_mechanisms:
     - alpha: "effect size (mechanism-specific)"
     - L: "saturation level (mechanism-specific)"
     - k: "steepness (typically 0.10-0.20)"
-    - x0: "midpoint (typically 2-3× baseline)"
+    - x0: "midpoint (typically 1.5× baseline)"
 
 # Metadata
 added_date: "2024-05-15"
-last_updated: "2025-11-15"
+last_updated: "2025-12-02"
 version: "2.0"
-documentation: "See: CHW literature review, AHRQ evidence synthesis"
+documentation: "See: Nodes/COMPLETE_NODE_INVENTORY.md for full specification"
 ```
 
 ### Equilibrium Calculation Requirements
@@ -1097,19 +1087,47 @@ DEFAULT → Use linear (simplest, most interpretable)
 
 ---
 
+---
+
+## Canonical Node Reference
+
+All node examples in this document reference the canonical node inventory. This ensures consistency across the platform.
+
+### Node Sources
+
+| Source | Location | Use Case |
+|--------|----------|----------|
+| **Canonical Nodes JSON** | `mechanism-bank/mechanisms/canonical_nodes.json` | Quick lookup of 840 node IDs |
+| **Complete Inventory** | `Nodes/COMPLETE_NODE_INVENTORY.md` | Full specifications with scales, domains, units |
+
+### Scale Summary
+
+| Scale | Count | Examples in This Document |
+|-------|-------|---------------------------|
+| 1 - Structural Policy | ~120 | `medicaid_expansion_status`, `minimum_wage_level`, `rent_control_stabilization_policy_strength` |
+| 2 - Institutional | ~250 | `primary_care_physician_density`, `emergency_department_availability`, `eviction_legal_aid_availability` |
+| 3 - Individual/Household | ~280 | `eviction_filing_rate`, `housing_cost_burden`, `uninsured_rate` |
+| 4 - Intermediate | ~100 | `primary_care_visit_rate`, `just_cause_eviction_protection` |
+| 5 - Crisis Endpoints | ~100 | `emergency_department_visit_rate`, `asthma_hospitalization_rate`, `all_cause_mortality_rate` |
+
+---
+
 ## Document Metadata
 
 **Version History**:
 - v1.0 (2024-06): Initial stock-flow specifications
 - v2.0 (2025-11): Expanded to 30+ concrete examples, clarified functional forms, added implementation specs
+- v2.1 (2025-12): Updated all node examples to use canonical node IDs
 
 **Related Documents**:
 - [05_MECHANISM_BANK_STRUCTURE.md] - How mechanisms connect stocks
 - [06_EQUILIBRIUM_CALCULATION_ENGINE.md] - How to solve for stock values
 - [13_INITIAL_STATE_CALIBRATION.md] - Setting baseline stock levels
+- [Canonical Nodes] `mechanism-bank/mechanisms/canonical_nodes.json`
+- [Node Specifications] `Nodes/COMPLETE_NODE_INVENTORY.md`
 
-**Last Reviewed**: November 15, 2025  
-**Next Review**: February 15, 2026 (quarterly for technical specs)
+**Last Reviewed**: December 2, 2025
+**Next Review**: March 2, 2026 (quarterly for technical specs)
 
 ---
 

@@ -1,0 +1,52 @@
+id: alcohol_control_psa_volume_to_drunk_driving_fatal_accidents
+name: Volume of Alcohol-Control Public Service Announcements → Drunk-Driving Fatal
+  Accident Rate
+from_node:
+  node_id: alcohol_control_psa_volume
+  node_name: Volume of Alcohol-Control Public Service Announcements
+to_node:
+  node_id: drunk_driving_fatal_accidents
+  node_name: Drunk-Driving Fatal Accident Rate
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Increased volume of anti-drunk driving PSAs aired on television increases
+  population exposure to alcohol-control messaging'
+- 'Step 2: Exposure to PSAs during preceding 2-3 months increases awareness of drunk-driving
+  risks and social consequences'
+- 'Step 3: Enhanced awareness influences social norms around drunk-driving behavior
+  and reduces acceptability of driving while intoxicated'
+- 'Step 4: Population-level reduction in drunk-driving behavior leads to decreased
+  rates of fatal accidents involving alcohol-impaired drivers'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jeff Niederdeppe et al. 2017. "Alcohol-control public service
+    announcements (PSAs) and drunk-driving fatal accidents in the United States, 1996-2010.."
+    *Preventive medicine*. https://doi.org/10.1016/j.ypmed.2017.03.009
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.194357'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: timing_of_psa_exposure
+  direction: strengthens
+  strength: moderate
+  description: PSAs aired in preceding 2-3 months show strongest association with
+    reduced fatal accidents, suggesting temporal decay of messaging effects
+- name: age_group_adults_vs_underage
+  direction: strengthens
+  strength: moderate
+  description: Regression coefficients are largest for adults relative to underage
+    drunk drivers, indicating differential responsiveness to PSA messaging by age
+- name: psa_airtime_prime_vs_other
+  direction: strengthens
+  strength: moderate
+  description: PSAs airing during prime time show larger effects relative to daytime
+    or nighttime, reflecting higher audience reach and engagement during peak viewing
+    hours
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/social_environment/alcohol_control_psa_volume_to_drunk_driving_fatal_accidents.yaml
+_category: social_environment

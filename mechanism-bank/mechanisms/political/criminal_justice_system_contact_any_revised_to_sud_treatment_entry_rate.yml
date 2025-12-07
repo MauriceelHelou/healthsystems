@@ -1,0 +1,54 @@
+id: criminal_justice_system_contact_any_revised_to_sud_treatment_entry_rate
+name: Criminal Justice System Contact → Substance Use Disorder Treatment Entry Rate
+from_node:
+  node_id: criminal_justice_system_contact_any_revised
+  node_name: Criminal Justice System Contact
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: Substance Use Disorder Treatment Entry Rate
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Criminal justice system contact occurs through arrest, court involvement, or community supervision'
+- 'Step 2: Courts mandate or incentivize treatment as condition of probation, parole, or diversion'
+- 'Step 3: Legal referral pathways connect individuals to specialty SUD treatment facilities'
+- 'Step 4: Treatment admission occurs through legal system referral source'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Carrie E Fry et al. 2024. "Changes in legal referrals to specialty substance use disorder
+    treatment from 2015-2019.." https://doi.org/10.1186/s40352-024-00297-2
+  supporting_citations:
+  - Additional citations require full-text access - study examines specialty SUD treatment discharge data
+  - Additional citations require full-text access - references policy landscape changes around substance
+    use
+  - Additional citations require full-text access - references treatment referral source categorization
+  doi: 10.1186/s40352-024-00297-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Legal system referrals represent a significant pathway to SUD treatment, though the proportion
+  of overall legal referrals declined from 2015-2019 (p<0.001). The changing composition of legal referrals
+  reflects evolving policy approaches to substance use.
+quantitative_effects:
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: National U.S. data from 2015-2019; state-level variation in legal referral policies
+    and practices likely exists
+moderators:
+- name: referral_source_type
+  direction: strengthens
+  strength: moderate
+  description: Probation/parole and diversionary program referrals grew while other legal referral types
+    may have declined
+structural_competency:
+  equity_implications: While criminal justice contact can serve as a gateway to treatment, it also reflects
+    structural inequities in who is policed and prosecuted. The overall decline in legal referrals may
+    indicate policy shifts toward less punitive approaches. However, reliance on criminal justice for
+    treatment access highlights gaps in voluntary treatment accessibility.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.759294'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

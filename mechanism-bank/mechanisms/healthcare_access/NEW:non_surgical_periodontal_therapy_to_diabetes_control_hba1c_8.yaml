@@ -1,0 +1,62 @@
+id: NEW:non_surgical_periodontal_therapy_to_diabetes_control_hba1c_8
+name: Non-Surgical Periodontal Therapy (SRP with/without adjuvants) → Diabetes Control
+  (HbA1c)
+from_node:
+  node_id: NEW:non_surgical_periodontal_therapy
+  node_name: Non-Surgical Periodontal Therapy (SRP with/without adjuvants)
+to_node:
+  node_id: diabetes_control_hba1c_8
+  node_name: Diabetes Control (HbA1c)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Scaling and root planing (SRP) removes subgingival bacterial biofilm and
+  calculus, reducing chronic periodontal infection and inflammation'
+- 'Step 2: Reduction of periodontal inflammation decreases systemic inflammatory mediators
+  (e.g., TNF-α, IL-6, CRP) that contribute to insulin resistance'
+- 'Step 3: Decreased systemic inflammation improves insulin sensitivity and glucose
+  metabolism'
+- 'Step 4: Adjuvant therapies (antibiotics, photodynamic therapy, laser) enhance bacterial
+  reduction and anti-inflammatory effects, amplifying glycemic improvements'
+- 'Step 5: Improved glycemic control is reflected in reduced HbA1c levels over 3+
+  months follow-up'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'R. Cao et al. 2019. Effect of non-surgical periodontal therapy
+    on glycemic control of type 2 diabetes mellitus: a systematic review and Bayesian
+    network meta-analysis. BMC Oral Health.'
+  supporting_citations: []
+description: Non-surgical periodontal therapy (scaling and root planing with or without
+  adjuvants) improves glycemic control in patients with type 2 diabetes mellitus and
+  chronic periodontitis. A Bayesian network meta-analysis of 14 RCTs demonstrated
+  that SRP reduces HbA1c levels compared to no treatment (MD -0.399%), with adjuvant
+  therapies (particularly photodynamic therapy with doxycycline) providing additional
+  benefits. The mechanism operates through reduction of chronic oral infection and
+  systemic inflammation, which improves insulin sensitivity.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.399
+    type: mean_difference
+    ci_lower: -0.79
+    ci_upper: -0.088
+  p_value: null
+  sample_size: null
+moderators:
+- name: Adjuvant therapy type
+  direction: strengthens
+  strength: moderate
+  description: SRP + aPDT + doxycycline showed best efficacy (MD 1.082, 95% CrI 0.13-2.077);
+    SRP + laser and SRP + antibiotics also showed greater effects than SRP alone
+- name: Smoking status
+  direction: strengthens
+  strength: moderate
+  description: Results apply to non-smoking patients with chronic periodontitis; smoking
+    may attenuate treatment effects
+- name: Diabetes severity
+  direction: weakens
+  strength: moderate
+  description: Results apply to patients without severe T2DM complications; severe
+    complications may reduce treatment efficacy

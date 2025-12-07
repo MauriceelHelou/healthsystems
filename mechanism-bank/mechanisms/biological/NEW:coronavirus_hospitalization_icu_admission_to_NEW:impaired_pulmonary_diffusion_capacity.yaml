@@ -1,0 +1,57 @@
+id: NEW:coronavirus_hospitalization_icu_admission_to_NEW:impaired_pulmonary_diffusion_capacity
+name: Severe Coronavirus Infection (SARS/MERS) Requiring Hospitalization or ICU →
+  Impaired Diffusing Capacity for Carbon Monoxide (DLCO)
+from_node:
+  node_id: NEW:coronavirus_hospitalization_icu_admission
+  node_name: Severe Coronavirus Infection (SARS/MERS) Requiring Hospitalization or
+    ICU
+to_node:
+  node_id: NEW:impaired_pulmonary_diffusion_capacity
+  node_name: Impaired Diffusing Capacity for Carbon Monoxide (DLCO)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Severe SARS or MERS coronavirus infection triggers intense inflammatory
+  response in lung tissue, particularly affecting the alveolar-capillary membrane'
+- 'Step 2: Viral infection and host immune response cause diffuse alveolar damage,
+  including destruction of type I and II pneumocytes and endothelial cells'
+- 'Step 3: Acute phase damage leads to pulmonary fibrosis, interstitial thickening,
+  and permanent structural changes to the alveolar-capillary interface'
+- 'Step 4: Thickened or damaged alveolar-capillary membrane impairs gas diffusion,
+  resulting in reduced DLCO that persists beyond acute infection'
+- 'Step 5: Impaired diffusing capacity manifests as a common long-term pulmonary sequela
+  in coronavirus survivors, detectable up to 6 months post-hospitalization'
+evidence:
+  quality_rating: A
+  n_studies: 28
+  primary_citation: 'H. Ahmed et al. 2020. Long-term clinical outcomes in survivors
+    of severe acute respiratory syndrome and Middle East respiratory syndrome coronavirus
+    outbreaks after hospitalisation or ICU admission: A systematic review and meta-analysis.
+    Journal of Rehabilitation Medicine.'
+  supporting_citations: []
+description: 'Pooled meta-analysis of 28 studies examining SARS and MERS survivors
+  found that impaired diffusing capacity for carbon monoxide (DLCO) is a common long-term
+  complication, with a prevalence of 27% (95% CI: 15-45%) up to 6 months after hospitalization
+  or ICU admission. This reflects persistent damage to the alveolar-capillary membrane
+  from severe coronavirus infection.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.27
+    type: prevalence
+    ci_lower: 0.15
+    ci_upper: 0.45
+  p_value: null
+  sample_size: null
+moderators:
+- name: time_since_infection
+  direction: weakens
+  strength: moderate
+  description: Impaired DLCO prevalence measured up to 6 months post-admission; some
+    recovery may occur over time but persistent deficits are common
+- name: disease_severity
+  direction: strengthens
+  strength: moderate
+  description: Study focused on hospitalized and ICU-admitted patients, representing
+    more severe infections with likely greater pulmonary damage

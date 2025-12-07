@@ -1,0 +1,42 @@
+id: audit_c_score_to_aud_diagnosis_disparity
+name: AUDIT-C Alcohol Consumption Score → Racial/Ethnic Disparity in AUD Diagnosis
+from_node:
+  node_id: audit_c_score
+  node_name: AUDIT-C Alcohol Consumption Score
+to_node:
+  node_id: aud_diagnosis_disparity
+  node_name: Racial/Ethnic Disparity in AUD Diagnosis
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Veterans complete AUDIT-C screening which objectively measures alcohol
+  consumption levels across racial/ethnic groups'
+- 'Step 2: Despite similar AUDIT-C scores indicating equivalent alcohol consumption,
+  minoritized veterans are subject to differential clinical interpretation and follow-up
+  assessment'
+- 'Step 3: Structural biases lead clinicians to weigh other subjective factors more
+  heavily for Black and Hispanic veterans, resulting in diagnosis at lower consumption
+  thresholds'
+- 'Step 4: The persistence of diagnostic disparities even after controlling for AUDIT-C
+  scores demonstrates that standardized screening tools alone cannot eliminate bias
+  when downstream diagnostic decisions remain subject to racialized clinical judgment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: R. Vickers-Smith et al. 2023. "Racial and Ethnic Bias in the Diagnosis
+    of Alcohol Use Disorder in Veterans.." *American Journal of Psychiatry*. https://doi.org/10.1176/appi.ajp.21111097
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.361524'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: consumption_level
+  direction: u_shaped
+  strength: strong
+  description: Bias was minimal at lowest and highest consumption levels but pronounced
+    in middle ranges where clinical discretion is greatest
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/audit_c_score_to_aud_diagnosis_disparity.yaml
+_category: healthcare_access

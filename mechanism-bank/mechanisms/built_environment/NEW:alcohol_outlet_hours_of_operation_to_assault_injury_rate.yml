@@ -1,0 +1,55 @@
+id: NEW:alcohol_outlet_hours_of_operation_to_assault_injury_rate
+name: Alcohol Outlet Hours of Operation → Assault Injury Rate
+from_node:
+  node_id: NEW:alcohol_outlet_hours_of_operation
+  node_name: Alcohol Outlet Hours of Operation
+to_node:
+  node_id: assault_injury_rate
+  node_name: Assault Injury Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Extended hours of alcohol sales increase the duration of alcohol availability at on-premises
+  establishments'
+- 'Step 2: Longer availability allows for extended drinking sessions resulting in higher levels of intoxication'
+- 'Step 3: Intoxication reduces impulse control and increases aggressive responses to perceived provocations'
+- 'Step 4: Concentration of intoxicated patrons exiting bars during late hours creates flashpoints for
+  interpersonal aggression'
+- 'Step 5: Policy restricting hours reduces assault incidents by limiting the window of elevated risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Erika M Rosen et al. 2024. "Interrupted Time Series Analysis of Bar/Tavern Closing
+    Hours and Violent Crime.." https://doi.org/10.1001/jamainternmed.2024.0255
+  supporting_citations:
+  - Additional citations require full-text access
+  - Background literature on alcohol outlet-crime associations
+  - Maryland SB571 policy implementation documentation
+  doi: 10.1001/jamainternmed.2024.0255
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Assaults (including aggravated and common assault) showed similar reductions to all violent
+  crime following the policy intervention. The study specifically measured crimes during nighttime hours
+  (8 PM-4 AM) when alcohol-related violence is most likely to occur. The restriction of bar/tavern hours
+  from closing at 2 AM to closing at 10 PM removed 4 hours of peak risk time.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect measured in treatment vs. control neighborhoods in Baltimore; assaults included
+    both aggravated and common assault types
+moderators:
+- name: time_of_day
+  direction: strengthens
+  strength: strong
+  description: Outcomes measured during 8 PM to 4 AM window when alcohol-related assault risk is highest
+structural_competency:
+  equity_implications: The mechanism demonstrates that assault rates are responsive to structural environmental
+    changes in alcohol policy. This framing shifts responsibility from individual 'violent offenders'
+    to modifiable environmental conditions that create contexts for violence. Equity implications include
+    the potential for such policies to reduce assault-related injury and trauma in communities with high
+    bar/tavern concentration.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.065911'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,52 @@
+id: NEW:liver_stiffness_measurement_to_liver_failure_cirrhosis_hospitalization
+name: Liver Stiffness Measurement → Liver Failure/Cirrhosis Hospitalization
+from_node:
+  node_id: NEW:liver_stiffness_measurement
+  node_name: Liver Stiffness Measurement
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Failure/Cirrhosis Hospitalization
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Liver stiffness measurement (LSM) quantifies hepatic fibrosis through non-invasive
+  elastography techniques (transient elastography, MR elastography, ARFI, shear wave
+  elastography), detecting extracellular matrix accumulation and architectural distortion'
+- 'Step 2: Higher LSM values (particularly >20-25 kPa) reflect advanced fibrosis/cirrhosis
+  with portal hypertension, characterized by increased intrahepatic resistance and
+  sinusoidal capillarization'
+- 'Step 3: Portal hypertension leads to development of varices, ascites, and hepatic
+  encephalopathy - the hallmarks of hepatic decompensation'
+- 'Step 4: Decompensated cirrhosis manifests clinically as liver failure requiring
+  hospitalization for management of complications including variceal bleeding, refractory
+  ascites, spontaneous bacterial peritonitis, and hepatorenal syndrome'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: T. Addissouky 2024. "Liver stiffness as a dynamic predictor of
+    decompensation and mortality in alcohol-related liver disease." Discover medicine.
+  supporting_citations: []
+description: Liver stiffness measurement serves as a non-invasive biomarker that directly
+  reflects the degree of hepatic fibrosis and cirrhosis. Higher LSM values, particularly
+  above 20-25 kPa, demonstrate strong predictive power for hepatic decompensation
+  events leading to hospitalization. The measurement captures the underlying pathophysiology
+  of advanced liver disease including portal hypertension, which drives clinical decompensation
+  requiring hospitalization.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: alcohol_abstinence_status
+  direction: weakens
+  strength: moderate
+  description: Alcohol abstinence can reduce liver stiffness values and may lower
+    decompensation risk, while relapse increases risk
+- name: baseline_LSM_threshold
+  direction: strengthens
+  strength: strong
+  description: LSM values above 20-25 kPa are associated with substantially increased
+    risk of hepatic decompensation and mortality
+- name: LSM_trajectory
+  direction: strengthens
+  strength: moderate
+  description: Serial LSM measurements showing increasing stiffness over time indicate
+    progressive disease and higher decompensation risk

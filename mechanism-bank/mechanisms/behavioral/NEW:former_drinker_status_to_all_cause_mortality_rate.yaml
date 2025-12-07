@@ -1,0 +1,56 @@
+id: NEW:former_drinker_status_to_all_cause_mortality_rate
+name: Former Drinker Status → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:former_drinker_status
+  node_name: Former Drinker Status
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals who are former drinkers often stopped drinking due to health
+  problems, alcohol-related illnesses, or medical advice, creating a ''sick quitter''
+  effect'
+- 'Step 2: These pre-existing health conditions that prompted cessation of drinking
+  continue to affect health outcomes and increase mortality risk'
+- 'Step 3: When former drinkers are included in ''abstainer'' reference groups, they
+  artificially inflate mortality rates in that category, creating a spurious protective
+  effect for moderate drinkers'
+- 'Step 4: The elevated mortality risk among former drinkers (RR = 1.22) reflects
+  the accumulated health burden from previous drinking and/or the conditions that
+  led to drinking cessation'
+evidence:
+  quality_rating: A
+  n_studies: 87
+  primary_citation: Tim Stockwell et al. 2016. Do "Moderate" Drinkers Have Reduced
+    Mortality Risk? A Systematic Review and Meta-Analysis of Alcohol Consumption and
+    All-Cause Mortality. Journal of studies on alcohol and drugs.
+  supporting_citations: []
+description: Former drinkers have a 22% elevated mortality risk compared to other
+  drinking categories. This elevated risk is attributed to the 'sick quitter' phenomenon,
+  where individuals stop drinking due to existing health problems. This finding is
+  critical for understanding the apparent J-shaped relationship between alcohol and
+  mortality, as misclassifying former drinkers as abstainers biases the reference
+  group toward ill health.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.22
+    type: relative_risk
+    ci_lower: 1.14
+    ci_upper: 1.31
+  p_value: null
+  sample_size: 3998626
+moderators:
+- name: Study design quality
+  direction: strengthens
+  strength: strong
+  description: Higher quality studies with proper abstainer classification show more
+    pronounced differences between former drinkers and lifetime abstainers
+- name: Abstainer classification method
+  direction: strengthens
+  strength: strong
+  description: Studies that properly separate former drinkers from lifetime abstainers
+    reveal the true elevated risk among former drinkers

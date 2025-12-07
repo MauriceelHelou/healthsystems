@@ -1,0 +1,51 @@
+id: perceived_descriptive_drinking_norms_to_alcohol_consumption
+name: Perceived Descriptive Drinking Norms in Peer Groups → Alcohol Consumption (drinks
+  per week)
+from_node:
+  node_id: perceived_descriptive_drinking_norms
+  node_name: Perceived Descriptive Drinking Norms in Peer Groups
+to_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption (drinks per week)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: College students perceive how much their peer group (team) drinks on average'
+- 'Step 2: These perceived group norms create social reference points for acceptable
+  drinking behavior'
+- 'Step 3: Students adjust their own drinking behavior to align with perceived group
+  descriptive norms'
+- 'Step 4: Teams approach consensus on drinking norms over time, reinforcing normative
+  patterns'
+- 'Step 5: Higher perceived descriptive norms lead to increased individual alcohol
+  consumption'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Scott A. Graupensperger et al. 2020. "Dynamic characteristics
+    of groups and individuals that amplify adherence to perceived drinking norms in
+    college club sport teams: A longitudinal multilevel investigation.." *Psychology
+    of Addictive Behaviors*. https://doi.org/10.1037/adb0000654'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.786736'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: social_identification_with_team
+  direction: strengthens
+  strength: strong
+  description: At timepoints when students identified more strongly with their team
+    (relative to person-mean levels), they more readily adhered to perceived descriptive
+    team drinking norms
+- name: indegree_centrality
+  direction: weakens
+  strength: moderate
+  description: Students adhered more closely to perceived team drinking norms at timepoints
+    when they had relatively lower indegree centrality (fewer peer nominations)
+- name: network_density
+  direction: 'null'
+  strength: weak
+  description: Network density did not moderate the association between perceived
+    norms and drinking behavior

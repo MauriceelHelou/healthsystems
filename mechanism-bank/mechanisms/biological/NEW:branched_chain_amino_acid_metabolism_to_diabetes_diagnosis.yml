@@ -1,0 +1,65 @@
+id: NEW:branched_chain_amino_acid_metabolism_to_diabetes_diagnosis
+name: Branched-Chain Amino Acid Metabolism → Diabetes Diagnosis
+from_node:
+  node_id: NEW:branched_chain_amino_acid_metabolism
+  node_name: Branched-Chain Amino Acid Metabolism
+to_node:
+  node_id: diabetes_diagnosis
+  node_name: Diabetes Diagnosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Elevated circulating levels of branched-chain amino acids (leucine, isoleucine, valine) accumulate
+  in plasma'
+- 'Step 2: BCAAs and their metabolites (N-lactoylvaline, N-lactoylleucine) interfere with insulin signaling
+  pathways'
+- 'Step 3: Impaired insulin sensitivity leads to compensatory hyperinsulinemia and beta-cell stress'
+- 'Step 4: Progressive glycemic dysregulation manifests as transition from normal glucose regulation to
+  prediabetes to type 2 diabetes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sapna Sharma et al. 2024. "Role of human plasma metabolites in prediabetes and type
+    2 diabetes from the IMI-DIRECT study.." https://doi.org/10.1007/s00125-024-06282-6
+  supporting_citations:
+  - IMI-DIRECT consortium studies referenced in methodology
+  - Prior BCAA-diabetes association studies referenced in background
+  - Additional citations require full-text access
+  doi: 10.1007/s00125-024-06282-6
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Branched-chain amino acids (leucine, isoleucine, valine) and novel N-lactoyl-amino acid metabolites
+  (N-lactoylvaline, N-lactoylleucine) are significantly associated with progression across the glycemic
+  spectrum from normal glucose regulation to prediabetes to type 2 diabetes. These metabolites mediate
+  the effect of diabetes progression over 18-48 month follow-up.
+quantitative_effects:
+  sample_size: 3000
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Multi-center study with adjustment for study centre, suggesting geographic/population
+    variation in metabolite profiles
+moderators:
+- name: body_mass_index
+  direction: strengthens
+  strength: moderate
+  description: BMI was adjusted for in models, indicating it modifies the relationship between metabolites
+    and glycemic status
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Age adjusted in models as a factor influencing metabolite-diabetes associations
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Sex differences in metabolite profiles and diabetes risk were controlled for
+structural_competency:
+  equity_implications: While this mechanism focuses on biological pathways, BCAA levels are influenced
+    by dietary patterns shaped by food access, food deserts, and socioeconomic factors. Populations with
+    limited access to diverse, healthy foods may have metabolite profiles that increase diabetes risk.
+    Identified markers could enable targeted interventions in high-risk populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.678665'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

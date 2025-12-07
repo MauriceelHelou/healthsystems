@@ -1,0 +1,83 @@
+id: rural_broadband_to_telehealth_access
+name: Rural Broadband Infrastructure -> Telehealth Service Access
+from_node:
+  node_id: rural_broadband_infrastructure
+  node_name: Rural Broadband Infrastructure Investment
+  node_type: stock
+to_node:
+  node_id: telehealth_access
+  node_name: Telehealth Service Access
+  node_type: stock
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Federal and state broadband expansion programs fund rural infrastructure deployment'
+- 'Step 2: Adequate bandwidth enables synchronous video telehealth consultations'
+- 'Step 3: Rural residents can access specialty care without long-distance travel'
+- 'Step 4: Telehealth reduces transportation barriers and opportunity costs of healthcare'
+- 'Step 5: Improved access to care reduces healthcare disparities between rural and urban populations'
+evidence:
+  quality_rating: A
+  n_studies: 21
+  primary_citation: 'Butzner, Mark, and Yousef Cuffee. 2024. "Addressing health service equity through telehealth: A systematic review of reviews." PMC.'
+  supporting_citations:
+  - 'Muller, Stacey R. 2024. "The Impact of Digital Health Solutions on Bridging the Health Care Gap in Rural Areas: A Scoping Review." The Permanente Journal 28(1): 133-143.'
+  - 'National Rural Health Association. 2020. "How Broadband Can Improve Health Outcomes." Policy Brief.'
+  doi: null
+  journal: Various
+  year: 2024
+  citation_verified: false
+quantitative_effects:
+  effect_size:
+    value: 30
+    type: percentage_change
+    ci_lower: null
+    ci_upper: null
+    ci_level: null
+  sample_size: null
+  interpretation: "Approximately 30% of rural residents lack broadband access; infrastructure investment enables telehealth services that would otherwise be unavailable, particularly for specialty care"
+  additional_effects:
+  - metric: Systematic review publication trend
+    value: 50
+    type: percentage_change
+    notes: "50% of telehealth equity reviews published in last 2 years, indicating growing recognition of rural broadband importance"
+last_updated: '2025-11-30'
+version: '1.0'
+description: Rural broadband infrastructure is essential for telehealth access, which can bridge healthcare gaps in areas with limited specialty care. Systematic reviews document that telehealth improves access across multiple dimensions (availability, accessibility, affordability) when adequate infrastructure exists. Infrastructure investment must be paired with provider adoption and digital literacy support to achieve health equity goals.
+moderators:
+- name: provider_adoption
+  direction: strengthens
+  strength: strong
+  description: Telehealth effectiveness requires healthcare provider participation
+- name: reimbursement_parity
+  direction: strengthens
+  strength: strong
+  description: Insurance coverage for telehealth visits enables sustainable service delivery
+- name: digital_literacy_support
+  direction: strengthens
+  strength: moderate
+  description: Training and support help rural populations use telehealth effectively
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: Rural areas face underinvestment in telecommunications infrastructure due to lower return on investment. This digital divide compounds existing healthcare workforce shortages in rural areas. Infrastructure investment is necessary but not sufficient - policy must also address device access, affordability, and digital literacy. Tribal communities face additional regulatory barriers to broadband deployment.
+assumptions:
+- Broadband defined as speeds adequate for video telehealth (minimum 25/3 Mbps)
+- Telehealth includes video visits, remote monitoring, and store-and-forward
+- Rural defined by Census or OMB classifications
+limitations:
+- Infrastructure deployment has long lead times and high capital costs
+- Some healthcare services require in-person delivery
+- Telehealth adoption may face resistance from patients and providers
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Broadband availability varies by population density and terrain
+  relevant_geographies:
+  - Frontier counties (<7 people/sq mile) face greatest infrastructure gaps
+  - Tribal lands face regulatory and investment barriers
+  - States with rural broadband programs show faster deployment
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

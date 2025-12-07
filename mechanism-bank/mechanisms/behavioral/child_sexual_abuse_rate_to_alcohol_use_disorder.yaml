@@ -1,0 +1,54 @@
+id: child_sexual_abuse_rate_to_alcohol_use_disorder
+name: Childhood Sexual Abuse → Alcohol Use Disorder
+from_node:
+  node_id: child_sexual_abuse_rate
+  node_name: Childhood Sexual Abuse
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Childhood sexual abuse causes significant psychological trauma, including
+  feelings of shame, guilt, powerlessness, and disrupted emotional development'
+- 'Step 2: Survivors develop maladaptive coping strategies to manage trauma-related
+  distress, including emotional numbing and avoidance behaviors'
+- 'Step 3: Alcohol is used as a self-medication strategy to cope with trauma symptoms
+  such as anxiety, depression, intrusive memories, and hyperarousal'
+- 'Step 4: Repeated alcohol use to manage trauma-related distress leads to neurobiological
+  adaptations and increased tolerance'
+- 'Step 5: Chronic self-medication patterns progress to alcohol dependence and alcohol
+  use disorder'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Cory N. Spencer et al. 2023. Health effects associated with exposure
+    to intimate partner violence against women and childhood sexual abuse: a Burden
+    of Proof study. Nature Medicine.'
+  supporting_citations: []
+description: A moderate association exists between childhood sexual abuse and alcohol
+  use disorder, with a 45% increased risk among those exposed to CSA. This relationship
+  operates through trauma-related psychological distress leading to self-medication
+  with alcohol as a maladaptive coping strategy. The burden of proof analysis indicates
+  this is one of the more robust associations between CSA and health outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.45
+    type: relative_risk
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: access_to_mental_health_care
+  direction: weakens
+  strength: moderate
+  description: Access to trauma-informed care and mental health services may reduce
+    reliance on alcohol as a coping mechanism
+- name: social_support
+  direction: weakens
+  strength: moderate
+  description: Strong social support networks may provide alternative coping resources
+    and reduce vulnerability to alcohol use disorder

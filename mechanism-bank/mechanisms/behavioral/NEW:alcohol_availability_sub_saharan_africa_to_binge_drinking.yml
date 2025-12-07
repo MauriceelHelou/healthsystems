@@ -1,0 +1,60 @@
+id: NEW:alcohol_availability_sub_saharan_africa_to_binge_drinking
+name: Alcohol Availability in Sub-Saharan Africa → Binge Drinking
+from_node:
+  node_id: NEW:alcohol_availability_sub_saharan_africa
+  node_name: Alcohol Availability in Sub-Saharan Africa
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol availability and cultural norms influence drinking patterns at population level'
+- 'Step 2: Lifetime alcohol use prevalence reaches 34.9% among adults and 23.3% among adolescents'
+- 'Step 3: High-risk alcohol use patterns emerge including binge drinking behaviors'
+- 'Step 4: Past 6-month alcohol use of 32.2% among adults and 11.3% among adolescents indicates current
+  active use'
+evidence:
+  quality_rating: A
+  n_studies: 141
+  primary_citation: 'Habte Belete et al. 2024. "Alcohol use and alcohol use disorders in sub-Saharan Africa:
+    A systematic review and meta-analysis.." https://doi.org/10.1111/add.16514'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review methodology searched PubMed, EMBASE,
+    PsycINFO, AJOL, GHDx, and Google Scholar
+  - Studies included from 2018 onwards on general population alcohol use
+  - Studies examining any use, high-risk alcohol use, and alcohol use disorders
+  doi: 10.1111/add.16514
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'The meta-analysis found lifetime prevalence of alcohol use was 34.9% (CI: 17.7-54.1%) among
+  adults and 23.3% (CI: 11.3-37.1%) among adolescents in sub-Saharan Africa. Past year prevalence was
+  27.1% (CI: 5.0-56.4%) for adults and 36.2% (CI: 18.4-56.1%) for adolescents.'
+quantitative_effects:
+  effect_size:
+    value: 34.9
+    type: percentage_change
+    ci_lower: 17.7
+    ci_upper: 54.1
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Alcohol use patterns vary significantly across countries and subregions within sub-Saharan
+    Africa. Tanzania reported highest adult lifetime prevalence at 86.4%.
+moderators:
+- name: age_group
+  direction: weakens
+  strength: moderate
+  description: Adolescents (10-17) show lower lifetime prevalence (23.3%) than adults (18+) at 34.9%,
+    but still concerning high-risk use patterns
+structural_competency:
+  equity_implications: The wide confidence intervals reflect significant structural variation across the
+    region in alcohol policy, availability, and cultural contexts. Limited population-level surveillance
+    data in many countries represents a structural barrier to public health intervention. The inclusion
+    of high-risk alcohol use as an outcome reflects attention to harmful drinking patterns beyond simple
+    consumption.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.090483'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,51 @@
+id: morphine_monotherapy_to_neuroinflammatory_amplification
+name: Morphine Monotherapy → Neuroinflammatory Process Amplification
+from_node:
+  node_id: morphine_monotherapy
+  node_name: Morphine Monotherapy
+to_node:
+  node_id: neuroinflammatory_amplification
+  node_name: Neuroinflammatory Process Amplification
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Morphine administration in context of peripheral nerve injury interacts
+  with ongoing inflammatory processes'
+- 'Step 2: Rather than suppressing inflammation, morphine amplifies neuroinflammatory
+  processes put into motion by nerve injury'
+- 'Step 3: Amplified inflammation fails to restore function in nerve-injured animals
+  (CCI rats show no improvement in running behavior)'
+- 'Step 4: Effect is apparent only in sham rats where neuroinflammatory cascade is
+  not already activated by injury'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Suzanne M Green-Fulgham et al. 2022. "Suppression of active phase
+    voluntary wheel running in male rats by unilateral chronic constriction injury:
+    Enduring therapeutic effects of a brief treatment of morphine combined with TLR4
+    or P2X7 antagonists.." *Journal of neuroscience research*. https://doi.org/10.1002/jnr.24645'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.306321'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: nerve_injury_status
+  direction: strengthens
+  strength: strong
+  description: Presence of peripheral nerve injury (CCI) creates inflammatory environment
+    where morphine's amplifying effects prevent functional recovery
+- name: tlr4_antagonist_combination
+  direction: weakens
+  strength: strong
+  description: Co-administration with TLR4 antagonist blocks morphine's inflammatory
+    amplification and enables functional restoration
+- name: p2x7_antagonist_combination
+  direction: weakens
+  strength: strong
+  description: Co-administration with P2X7 antagonist blocks morphine's inflammatory
+    amplification and enables functional restoration
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/morphine_monotherapy_to_neuroinflammatory_amplification.yaml
+_category: biological

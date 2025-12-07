@@ -1,0 +1,52 @@
+id: NEW:social_support_from_family_friends_to_NEW:quality_of_life_mental_domain
+name: Social Support from Family/Friends → Mental Quality of Life
+from_node:
+  node_id: NEW:social_support_from_family_friends
+  node_name: Social Support from Family/Friends
+to_node:
+  node_id: NEW:quality_of_life_mental_domain
+  node_name: Mental Quality of Life
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Social support from family and friends provides emotional validation, practical
+  assistance, and a sense of belonging that buffers against psychological distress'
+- 'Step 2: Supportive social networks encourage recovery-oriented behaviors and provide
+  accountability, reducing isolation and hopelessness common in substance use disorder
+  populations'
+- 'Step 3: Enhanced coping resources and reduced stress perception translate to improved
+  subjective mental well-being and quality of life in the mental health domain'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Bahram Armoon et al. 2022. Quality of life and its correlated
+    factors among patients with substance use disorders: a systematic review and meta-analysis.
+    Archives of Public Health.'
+  supporting_citations: []
+description: 'A meta-analysis of 4 studies (n=1126 participants) found that patients
+  with substance use disorders who received support from family or friends (social
+  networks) had significantly better mental quality of life compared to those without
+  such support. The pooled odds ratio of 1.05 (95% CI: 1.04-1.07) indicates a modest
+  but statistically significant positive association between social support and mental
+  QoL domain scores.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.05
+    type: odds_ratio
+    ci_lower: 1.04
+    ci_upper: 1.07
+  p_value: null
+  sample_size: 1126
+moderators:
+- name: Substance use disorder severity
+  direction: weakens
+  strength: moderate
+  description: Severe SUD is independently associated with worse mental QoL, potentially
+    attenuating the protective effect of social support
+- name: Comorbid mental disorders
+  direction: weakens
+  strength: moderate
+  description: Presence of mental disorders negatively impacts mental QoL and may
+    modify the effectiveness of social support

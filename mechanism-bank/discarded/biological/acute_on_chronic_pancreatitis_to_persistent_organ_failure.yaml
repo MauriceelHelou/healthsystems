@@ -1,0 +1,44 @@
+id: acute_on_chronic_pancreatitis_to_persistent_organ_failure
+name: Acute-on-Chronic Pancreatitis → Persistent Organ Failure
+from_node:
+  node_id: acute_on_chronic_pancreatitis
+  node_name: Acute-on-Chronic Pancreatitis
+to_node:
+  node_id: persistent_organ_failure
+  node_name: Persistent Organ Failure
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Acute inflammatory exacerbation superimposed on chronic pancreatic dysfunction
+  triggers systemic inflammatory response syndrome'
+- 'Step 2: Severe inflammation leads to necrotizing pancreatitis in 49% of cases,
+  releasing inflammatory mediators systemically'
+- 'Step 3: Systemic inflammation causes multi-organ dysfunction affecting respiratory,
+  renal, and cardiovascular systems'
+- 'Step 4: In 9% of cases, organ dysfunction becomes persistent rather than transient,
+  requiring intensive care support'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'D. Sharma et al. 2021. "Acute-on-Chronic Pancreatitis: Analysis
+    of Clinical Profile and Outcome." *Cureus*. https://doi.org/10.7759/cureus.14242'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.184923'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: necrotizing_pancreatitis
+  direction: strengthens
+  strength: strong
+  description: Presence of necrotizing pancreatitis (49% of cohort) strongly predicts
+    progression to organ failure
+- name: tertiary_care_access
+  direction: weakens
+  strength: moderate
+  description: Access to tertiary care with intensive care units and interventional
+    procedures may reduce progression from transient to persistent organ failure
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/acute_on_chronic_pancreatitis_to_persistent_organ_failure.yaml
+_category: biological

@@ -1,0 +1,71 @@
+id: NEW:alcohol_excise_tax_rate_to_NEW:alcohol_retail_price
+name: Alcohol Excise Tax Rate → Alcohol Retail Price
+from_node:
+  node_id: NEW:alcohol_excise_tax_rate
+  node_name: Alcohol Excise Tax Rate
+to_node:
+  node_id: NEW:alcohol_retail_price
+  node_name: Alcohol Retail Price
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Government increases excise taxes on alcoholic beverages (beer, wine, spirits)'
+- 'Step 2: Producers and retailers incorporate tax increases into product pricing through pass-through
+  mechanisms'
+- 'Step 3: Pass-through rates vary by market structure - overshifting occurs in imperfectly competitive
+  markets where producers add markup beyond tax amount'
+- 'Step 4: Consumer-facing prices increase, with beer taxes showing evidence of overshifting (>100% pass-through)
+  and wine/spirits showing full shifting (~100% pass-through)'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Jon P. Nelson and John R. Moran 2019. "Effects of Alcohol Taxation on Prices: A Systematic
+    Review and Meta-Analysis of Pass-Through Rates." https://doi.org/10.1515/bejeap-2019-0134'
+  supporting_citations:
+  - Studies indicating substantial overshifting in beer markets (cited as widely cited studies in the
+    review)
+  - Meta-regression analyses correcting for publication bias
+  - Additional citations require full-text access for specific study identification among the 30 empirical
+    studies examined
+  doi: 10.1515/bejeap-2019-0134
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This meta-analysis of 30 empirical studies examines how alcohol excise taxes translate into
+  retail prices. The pass-through rate (the degree to which taxes are reflected in consumer prices) is
+  critical for understanding alcohol tax policy effectiveness. Weighted averages show beer taxes are overshifted
+  while wine-spirits taxes are fully shifted, though publication bias corrections suggest full shifting
+  cannot be rejected for any beverage category.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The review provides insights for data coverage by country, indicating geographic variation
+    in pass-through rates across different national contexts and regulatory environments
+moderators:
+- name: beverage_type
+  direction: strengthens
+  strength: moderate
+  description: Beer taxes show evidence of overshifting (prices increase more than tax), while wine and
+    spirits taxes show full shifting (prices increase by approximately the tax amount)
+- name: market_competition_structure
+  direction: strengthens
+  strength: strong
+  description: Imperfectly competitive markets demonstrate substantial overshifting, suggesting market
+    structure significantly influences how taxes translate to prices
+- name: publication_bias
+  direction: weakens
+  strength: moderate
+  description: Meta-regressions corrected for publication bias indicate that full-shifting cannot be rejected
+    for any beverage type, suggesting initial estimates of overshifting may be inflated
+structural_competency:
+  equity_implications: 'This mechanism is fundamentally structural - it examines how fiscal policy (taxation)
+    operates through market structures to affect consumer-facing prices. The finding that market competition
+    structure influences pass-through rates highlights how economic systems mediate policy effects. This
+    has equity implications: in less competitive markets, consumers bear costs exceeding the tax amount
+    (overshifting), which disproportionately affects lower-income populations who spend larger proportions
+    of income on consumption goods. Understanding pass-through rates is essential for designing effective
+    alcohol control policies that reduce consumption-related harms while considering economic justice.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.229321'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

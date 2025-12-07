@@ -1,0 +1,39 @@
+id: alcohol_outlet_density_to_negative_health_consequences
+name: High Alcohol Outlet Density → Negative Health Consequences
+from_node:
+  node_id: alcohol_outlet_density
+  node_name: High Alcohol Outlet Density
+to_node:
+  node_id: negative_health_consequences
+  node_name: Negative Health Consequences
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: High outlet density increases physical availability and accessibility of
+  alcohol in community settings'
+- 'Step 2: Increased availability leads to greater population-level alcohol consumption
+  and related harms'
+- 'Step 3: Concentrated outlet density creates environments with higher rates of violence,
+  injuries, and chronic disease'
+- 'Step 4: Populations living in high outlet density areas experience disproportionate
+  negative health outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Zhuxuan Jin et al. 2018. "Longitudinal impacts of two causal
+    drivers of alcohol demand on outlet concentrations within community settings:
+    Population size and income effects.." *Spatial and spatio-temporal epidemiology*.
+    https://doi.org/10.1016/j.sste.2018.07.003'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.031371'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: neighborhood_income
+  direction: strengthens
+  strength: strong
+  description: Lower-income communities face both higher outlet density and potentially
+    greater vulnerability to alcohol-related harms due to co-occurring stressors and
+    reduced resources

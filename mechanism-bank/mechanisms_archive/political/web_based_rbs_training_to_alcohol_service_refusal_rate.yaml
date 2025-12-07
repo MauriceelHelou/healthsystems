@@ -1,0 +1,45 @@
+id: web_based_rbs_training_to_alcohol_service_refusal_rate
+name: Web-Based Responsible Beverage Service (RBS) Training → Alcohol Service Refusal
+  Rate to Intoxicated Patrons
+from_node:
+  node_id: web_based_rbs_training
+  node_name: Web-Based Responsible Beverage Service (RBS) Training
+to_node:
+  node_id: alcohol_service_refusal_rate
+  node_name: Alcohol Service Refusal Rate to Intoxicated Patrons
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Web-based RBS training standardizes instruction quality and curriculum
+  implementation across all servers, eliminating instructor-to-instructor variability
+  present in live training'
+- 'Step 2: Standardized training provides consistent education on recognizing intoxication
+  signs and legal/policy requirements for refusing service'
+- 'Step 3: Trained servers apply consistent decision-making protocols when encountering
+  apparently intoxicated patrons'
+- 'Step 4: Increased refusal rates reduce alcohol service to intoxicated individuals
+  at the point of sale'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'W. Woodall et al. 2018. "Results of a Randomized Trial of Web-Based
+    Retail Onsite Responsible Beverage Service Training: WayToServe.." *Journal of
+    Studies on Alcohol and Drugs*. https://doi.org/10.15288/JSAD.2018.79.672'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.590331'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: time_since_training
+  direction: varies
+  strength: moderate
+  description: Effects strongest immediately post-training (68% vs 49%) and at 1-year
+    (68% vs 58%), with smaller non-significant difference at 6-months (69% vs 64%)
+- name: pseudo_patron_age
+  direction: strengthens
+  strength: strong
+  description: Younger pseudo-patrons were consistently refused service more often
+    than older pseudo-patrons, suggesting age-based differential application of refusal
+    protocols

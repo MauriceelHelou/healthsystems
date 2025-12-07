@@ -1,0 +1,51 @@
+id: NEW:vitamin_d_deficiency_to_NEW:sars_cov_2_infection_risk
+name: Vitamin D Deficiency (25(OH)D) → SARS-CoV-2 Infection Risk
+from_node:
+  node_id: NEW:vitamin_d_deficiency
+  node_name: Vitamin D Deficiency (25(OH)D)
+to_node:
+  node_id: NEW:sars_cov_2_infection_risk
+  node_name: SARS-CoV-2 Infection Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Vitamin D deficiency (low 25(OH)D concentrations) impairs innate immune
+  function, reducing antimicrobial peptide production (cathelicidins and defensins)
+  that normally provide first-line defense against respiratory pathogens'
+- 'Step 2: Deficient vitamin D status compromises epithelial barrier integrity in
+  respiratory mucosa, potentially facilitating viral entry and colonization'
+- 'Step 3: Reduced vitamin D availability impairs adaptive immune responses and may
+  dysregulate inflammatory pathways, decreasing the host''s ability to mount effective
+  antiviral defenses against SARS-CoV-2'
+- 'Step 4: The combination of weakened innate immunity and impaired barrier function
+  results in increased susceptibility to SARS-CoV-2 infection'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'A. Kazemi et al. 2021. Association of Vitamin D Status with SARS-CoV-2
+    Infection or COVID-19 Severity: A Systematic Review and Meta-analysis. Advances
+    in Nutrition.'
+  supporting_citations: []
+description: 'This systematic review and meta-analysis of 39 studies found that vitamin
+  D deficiency is significantly associated with increased risk of SARS-CoV-2 infection.
+  Both adjusted (OR: 1.77; 95% CI: 1.24-2.53) and unadjusted analyses (OR: 1.75; 95%
+  CI: 1.44-2.13) demonstrated consistent positive associations between vitamin D deficiency
+  and infection risk. The biological plausibility is supported by vitamin D''s known
+  immunomodulatory functions, including regulation of antimicrobial peptides and immune
+  cell function.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.77
+    type: odds_ratio
+    ci_lower: 1.24
+    ci_upper: 2.53
+  p_value: null
+  sample_size: null
+moderators:
+- name: Confounder adjustment
+  direction: weakens
+  strength: weak
+  description: Adjusted studies showed OR 1.77 vs unadjusted OR 1.75, indicating robust
+    association that persists after controlling for confounders

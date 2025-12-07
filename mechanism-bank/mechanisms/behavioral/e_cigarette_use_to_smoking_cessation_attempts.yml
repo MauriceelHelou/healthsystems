@@ -1,0 +1,62 @@
+id: e_cigarette_use_to_smoking_cessation_attempts
+name: E-Cigarette Use (Nicotine) → Smoking Cessation Success
+from_node:
+  node_id: e_cigarette_use
+  node_name: E-Cigarette Use (Nicotine)
+to_node:
+  node_id: smoking_cessation_attempts
+  node_name: Smoking Cessation Success
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Access to nicotine-containing electronic cigarettes provides alternative nicotine delivery
+  system'
+- 'Step 2: Nicotine from e-cigarettes reduces withdrawal symptoms and cravings associated with tobacco
+  cessation'
+- 'Step 3: Behavioral component of vaping substitutes for hand-to-mouth ritual of smoking'
+- 'Step 4: Sustained e-cigarette use facilitates transition away from combustible tobacco'
+- 'Step 5: Long-term abstinence from smoking achieved at higher rates compared to other cessation methods'
+evidence:
+  quality_rating: A
+  n_studies: 49
+  primary_citation: Nicola Lindson et al. 2025. "Electronic cigarettes for smoking cessation.." https://doi.org/10.1002/14651858.CD010216.pub9
+  supporting_citations:
+  - Studies included in Cochrane systematic review (90 completed studies total)
+  - 49 randomized controlled trials included in meta-analysis
+  - Additional citations require full-text access for specific study identification
+  doi: 10.1002/14651858.CD010216.pub9
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: High-certainty evidence that nicotine-containing electronic cigarettes increase smoking quit
+  rates by 59% compared to nicotine replacement therapy (NRT). This represents a structural intervention
+  that modifies the availability and accessibility of harm-reduction tools for tobacco cessation.
+quantitative_effects:
+  effect_size:
+    value: 1.59
+    type: relative_risk
+    ci_lower: 1.3
+    ci_upper: 1.93
+  sample_size: 29044
+moderators:
+- name: nicotine_content
+  direction: strengthens
+  strength: strong
+  description: Nicotine-containing e-cigarettes show higher quit rates compared to non-nicotine e-cigarettes
+- name: product_regulation
+  direction: strengthens
+  strength: moderate
+  description: Studies used regulated nicotine-containing EC; illicit products may have different effectiveness
+    and harm profiles
+structural_competency:
+  equity_implications: 'This mechanism relates to healthcare policy and regulatory frameworks that determine
+    access to smoking cessation tools. Structural factors include: regulation of e-cigarette products,
+    healthcare provider recommendations, insurance coverage for cessation aids, and public health messaging.
+    Equity implications involve differential access to regulated products based on socioeconomic status
+    and geographic location. Low-income populations may have limited access to regulated products and
+    cessation support services.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.904023'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

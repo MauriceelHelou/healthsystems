@@ -1,0 +1,57 @@
+id: NEW:prescribing_physician_access_to_sud_medication_treatment_rate_oud
+name: Access to Prescribing Physicians for Alcohol Dependence → SUD Medication Treatment Rate
+from_node:
+  node_id: NEW:prescribing_physician_access
+  node_name: Access to Prescribing Physicians for Alcohol Dependence
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Limited access to physicians who can prescribe alcohol dependence medications creates bottleneck
+  in care'
+- 'Step 2: Patients without access to prescribers cannot initiate or maintain pharmacotherapy'
+- 'Step 3: Geographic and temporal access barriers (office hours availability) determine treatment feasibility'
+- 'Step 4: Improved physician access enables higher rates of medication prescribing and treatment initiation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Roberta Agabio et al. 2021. "Use of Medications for the Treatment of Alcohol Dependence:
+    A Retrospective Study Conducted in 2011-2012.." https://doi.org/10.2174/2589977512666201228121820'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references lack of access to prescribing
+    physicians as documented barrier
+  - Prior studies showing lower utilization rates attributed to prescriber access issues
+  - Literature on barriers to AD medication use referenced in introduction
+  doi: 10.2174/2589977512666201228121820
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Access to physicians who prescribe alcohol dependence medications is a critical structural
+  determinant of treatment rates. When patients have ready access to prescribers during office hours,
+  medication utilization increases.
+quantitative_effects:
+  effect_size:
+    value: 58.8
+    type: percentage_change
+  sample_size: 345
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Italian study setting with office-hours physician access showed higher medication rates
+    than previously reported in other countries
+moderators:
+- name: prescribing_physician_style
+  direction: strengthens
+  strength: moderate
+  description: Physician prescribing practices and willingness to prescribe AD medications influences
+    overall utilization rates
+structural_competency:
+  equity_implications: This mechanism highlights healthcare system organization as a structural barrier.
+    The availability and geographic distribution of prescribers is a system-level issue requiring policy
+    solutions, not individual patient behavior change.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.259109'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

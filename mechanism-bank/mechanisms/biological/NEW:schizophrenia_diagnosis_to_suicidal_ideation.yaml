@@ -1,0 +1,69 @@
+id: NEW:schizophrenia_diagnosis_to_suicidal_ideation
+name: Schizophrenia Diagnosis → Suicidal Ideation
+from_node:
+  node_id: NEW:schizophrenia_diagnosis
+  node_name: Schizophrenia Diagnosis
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Schizophrenia involves neurobiological dysfunction including dopaminergic
+  dysregulation, prefrontal cortex abnormalities, and disrupted neural circuitry affecting
+  cognition and emotion regulation'
+- 'Step 2: These neurobiological changes contribute to positive symptoms (hallucinations,
+  delusions), negative symptoms (anhedonia, social withdrawal), and cognitive deficits
+  that impair functioning and quality of life'
+- 'Step 3: The chronic nature of the illness, combined with awareness of functional
+  decline and social consequences, contributes to psychological distress and hopelessness'
+- 'Step 4: Command hallucinations, persecutory delusions, and insight into illness
+  severity can directly precipitate suicidal thoughts as escape from suffering or
+  response to psychotic content'
+- 'Step 5: High rates of suicidal ideation manifest, with approximately 30-35% lifetime
+  prevalence and similar point prevalence among individuals with schizophrenia'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'W. Bai et al. 2021. Worldwide prevalence of suicidal ideation
+    and suicide plan among people with schizophrenia: a meta-analysis and systematic
+    review of epidemiological surveys. Translational Psychiatry.'
+  supporting_citations: []
+description: Schizophrenia diagnosis is strongly associated with suicidal ideation,
+  with approximately one-third of individuals with schizophrenia experiencing suicidal
+  thoughts during their lifetime. This meta-analysis of 26 studies covering 5,079
+  individuals found lifetime prevalence of 34.5% and point prevalence of 29.9% for
+  suicidal ideation. The relationship is driven by neurobiological aspects of the
+  illness including psychotic symptoms, cognitive impairment, and awareness of functional
+  decline. Males and inpatients show particularly elevated risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 34.5
+    type: prevalence_percentage
+    ci_lower: 28.2
+    ci_upper: 40.9
+  p_value: null
+  sample_size: 5079
+moderators:
+- name: sex_male
+  direction: strengthens
+  strength: moderate
+  description: Male proportion was significantly associated with both lifetime and
+    point prevalence of suicidal ideation, with higher rates in males
+- name: patient_setting_inpatient
+  direction: strengthens
+  strength: moderate
+  description: Source of patients (inpatient vs outpatient) was significantly associated
+    with point prevalence, with inpatients showing higher rates
+- name: age
+  direction: weakens
+  strength: weak
+  description: Mean age was significantly associated with lifetime prevalence of suicidal
+    ideation
+- name: sample_size
+  direction: weakens
+  strength: weak
+  description: Sample size was significantly associated with point prevalence of suicidal
+    ideation in meta-regression analysis

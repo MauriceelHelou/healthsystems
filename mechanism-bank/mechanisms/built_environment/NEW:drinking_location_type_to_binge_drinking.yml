@@ -1,0 +1,60 @@
+id: NEW:drinking_location_type_to_binge_drinking
+name: Drinking Location Type (Bar/Pub vs Home) → Binge Drinking
+from_node:
+  node_id: NEW:drinking_location_type
+  node_name: Drinking Location Type (Bar/Pub vs Home)
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Licensed premises (bars, pubs, clubs) create physical environments designed to promote alcohol
+  consumption'
+- 'Step 2: Social norms within these venues encourage continued drinking and larger quantities'
+- 'Step 3: Availability of alcohol is immediate and continuous in licensed settings'
+- 'Step 4: Lack of home-based constraints (cost, limited supply) enables heavier consumption per occasion'
+evidence:
+  quality_rating: A
+  n_studies: 65
+  primary_citation: 'O. Stanesby et al. 2019. "The contexts of heavy drinking: A systematic review of
+    the combinations of context-related factors associated with heavy drinking occasions." https://doi.org/10.1371/journal.pone.0218465'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 65 eligible studies
+  - Studies using ecological momentary assessment methodologies
+  - Event-level studies examining context-consumption associations
+  doi: 10.1371/journal.pone.0218465
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Physical drinking location (licensed premises vs. private settings) is an important driver
+  of whether an individual engages in heavy drinking occasions. The built environment characteristics
+  of drinking venues shape consumption patterns.
+moderators:
+- name: gender
+  direction: varies
+  strength: moderate
+  description: Direction and magnitude of location-drinking associations differ by gender, with some contexts
+    compelling more drinking for one gender while being protective for another
+- name: age
+  direction: varies
+  strength: moderate
+  description: Age modifies how physical and social contexts influence drinking behavior
+- name: personality
+  direction: varies
+  strength: moderate
+  description: Individual personality traits interact with context to influence drinking outcomes
+- name: drinking_motives
+  direction: varies
+  strength: moderate
+  description: Underlying motivations for drinking modify context-consumption relationships
+structural_competency:
+  equity_implications: This mechanism emphasizes how built environment and commercial alcohol availability
+    create contexts for heavy drinking rather than individual choice. Alcohol outlet licensing policies
+    and zoning represent upstream structural interventions. The finding that context effects vary by demographics
+    highlights how structural factors produce differential vulnerability.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.400054'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

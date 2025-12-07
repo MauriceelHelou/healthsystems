@@ -1,0 +1,57 @@
+id: NEW:mobile_health_app_use_to_NEW:patient_provider_communication
+name: Mobile Health App Use for Postdischarge Monitoring → Patient-Provider Communication
+  Quality
+from_node:
+  node_id: NEW:mobile_health_app_use
+  node_name: Mobile Health App Use for Postdischarge Monitoring
+to_node:
+  node_id: NEW:patient_provider_communication
+  node_name: Patient-Provider Communication Quality
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Mobile health app provides patients with a dedicated chat function enabling
+  direct asynchronous communication with their healthcare providers after hospital
+  discharge'
+- 'Step 2: Daily questionnaires within the app facilitate structured reporting of
+  symptoms and recovery progress, creating regular touchpoints between patients and
+  clinical team'
+- 'Step 3: The combination of educational materials and accessible communication channels
+  empowers patients to engage more effectively with their surgical team'
+- 'Step 4: Enhanced communication accessibility reduces barriers to seeking guidance,
+  with 88% of patients reporting improved ability to communicate with their surgeon'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jules Eustache et al. 2021. A Mobile Phone App Improves Patient-Physician
+    Communication and Reduces Emergency Department Visits After Colorectal Surgery.
+    Diseases of the Colon & Rectum.
+  supporting_citations: []
+description: Mobile health app use for postdischarge monitoring improves patient-provider
+  communication quality through multiple integrated features including direct chat
+  functionality, daily symptom questionnaires, and educational materials. In a prospective
+  cohort study of colorectal surgery patients, 88% reported that the app improved
+  their ability to communicate with their surgeon. This enhanced communication was
+  associated with downstream benefits including fewer preventable emergency department
+  visits (IRR 0.34, p=0.043) and shorter hospital length of stay.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 88.0
+    type: percentage_reporting_improvement
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 350
+moderators:
+- name: app_usability
+  direction: strengthens
+  strength: moderate
+  description: High patient-reported usability of the mobile app was associated with
+    perception of improved communication
+- name: enhanced_recovery_pathway
+  direction: strengthens
+  strength: moderate
+  description: Integration with standardized enhanced recovery protocols may facilitate
+    structured communication

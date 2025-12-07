@@ -1,0 +1,54 @@
+id: NEW:insecticide_treated_net_use_to_NEW:malaria_incidence
+name: Insecticide-Treated Net Use → Malaria Incidence
+from_node:
+  node_id: NEW:insecticide_treated_net_use
+  node_name: Insecticide-Treated Net Use
+to_node:
+  node_id: NEW:malaria_incidence
+  node_name: Malaria Incidence
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals sleep under insecticide-treated nets during nighttime hours
+  when Anopheles mosquitoes are most active'
+- 'Step 2: The physical barrier of the net prevents mosquito bites, reducing human-vector
+  contact'
+- 'Step 3: The insecticide coating kills or repels mosquitoes that land on the net,
+  providing additional protection'
+- 'Step 4: Reduced mosquito bites decrease transmission of Plasmodium parasites from
+  infected mosquitoes to humans'
+- 'Step 5: Lower parasite transmission results in decreased incidence of both Plasmodium
+  falciparum and Plasmodium vivax malaria infections'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'L. Messenger et al. 2023. Vector control for malaria prevention
+    during humanitarian emergencies: a systematic review and meta-analysis. Lancet
+    Global Health.'
+  supporting_citations: []
+description: Insecticide-treated nets significantly reduce malaria incidence by providing
+  both a physical barrier and chemical protection against mosquito bites. This systematic
+  review and meta-analysis of 22 studies with over 616,000 participants found high-certainty
+  evidence that ITN use reduces P. falciparum incidence by 45% and P. vivax incidence
+  by 31% in humanitarian emergency settings.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.55
+    type: relative_risk
+    ci_lower: 0.37
+    ci_upper: 0.79
+  p_value: null
+  sample_size: 616611
+moderators:
+- name: Plasmodium species
+  direction: strengthens
+  strength: moderate
+  description: Effect stronger for P. falciparum (RR 0.55) compared to P. vivax (RR
+    0.69)
+- name: Emergency phase
+  direction: strengthens
+  strength: moderate
+  description: Evidence strongest for chronic humanitarian emergencies; effectiveness
+    in acute phase emergencies requires further evaluation

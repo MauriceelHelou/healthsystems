@@ -1,0 +1,52 @@
+id: binge_drinking_to_hypertension_diagnosis
+name: Binge Drinking → Hypertension Diagnosis
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: hypertension_diagnosis
+  node_name: Hypertension Diagnosis
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Episodic heavy drinking (binge drinking) causes acute spikes in blood pressure
+  through sympathetic nervous system activation and vasoconstriction'
+- 'Step 2: Repeated binge drinking episodes lead to sustained elevations in systolic
+  blood pressure over time'
+- 'Step 3: Chronic exposure to elevated systolic blood pressure accelerates vascular
+  changes and atherosclerosis'
+- 'Step 4: Persistent elevation of blood pressure eventually meets clinical thresholds
+  for hypertension diagnosis'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'S. Bell 2018. Alcohol Consumption, Hypertension, and Cardiovascular
+    Health Across the Life Course: There Is No Such Thing as a One‐Size‐Fits‐All Approach.
+    Journal of the American Heart Association: Cardiovascular and Cerebrovascular
+    Disease.'
+  supporting_citations:
+  - Roerecke et al. (systematic review and dose-response meta-analysis referenced
+    in Bell 2018)
+  - Piano et al. (cross-sectional study referenced in Bell 2018)
+description: Binge drinking (consuming 5+ drinks for men or 4+ drinks for women in
+  a single day) is associated with elevated systolic blood pressure, particularly
+  in men. This commentary synthesizes evidence from multiple studies showing that
+  no level of alcohol intake is associated with lower hypertension risk, and that
+  episodic heavy drinking patterns contribute to elevated blood pressure. The relationship
+  appears stronger in men than women, and drinking habits established in early adulthood
+  have lasting impacts on cardiovascular health across the life course.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Binge drinking frequency was associated with elevated systolic blood
+    pressure in men but not women. Men show more pronounced effects of alcohol intake
+    on hypertension risk compared to women.
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Drinking habits adopted in early adulthood and middle age correlate
+    with premorbid cardiovascular health indicators. Cumulative exposure to elevated
+    blood pressure increases coronary heart disease risk proportionally.

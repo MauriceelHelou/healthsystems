@@ -1,0 +1,45 @@
+id: geographic_distance_to_moud_facility_to_moud_treatment_access
+name: Geographic Distance to MOUD Facility → MOUD Treatment Access
+from_node:
+  node_id: geographic_distance_to_moud_facility
+  node_name: Geographic Distance to MOUD Facility
+to_node:
+  node_id: moud_treatment_access
+  node_name: MOUD Treatment Access
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Geographic distance between residential location and nearest MOUD facility
+  creates spatial barriers to treatment initiation and retention'
+- 'Step 2: Greater distances increase transportation costs, time burden, and logistical
+  complexity of accessing treatment services'
+- 'Step 3: In areas dependent on single critical access providers, loss or closure
+  of that facility creates substantial access gaps with large distance increases to
+  alternative providers'
+- 'Step 4: Reduced geographic access decreases likelihood of treatment seeking, treatment
+  initiation, and ongoing treatment adherence'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Harold A Pollack et al. 2023. "Critical access medication for
+    opioid use disorder (MOUD) treatment facilities in the continental United States.."
+    *Drug and alcohol dependence reports*. https://doi.org/10.1016/j.dadr.2022.100130
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.491418'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: rural_vs_urban_location
+  direction: strengthens
+  strength: strong
+  description: Rural areas show greater dependency on single critical access providers,
+    making them more vulnerable to increased distances when facilities close or reduce
+    capacity
+- name: regional_location
+  direction: strengthens
+  strength: moderate
+  description: Central United States and the band from Texas to Georgia show particular
+    concentration of critical access facilities, indicating greater vulnerability
+    in these regions

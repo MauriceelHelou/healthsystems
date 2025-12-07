@@ -1,0 +1,44 @@
+id: unstable_housing_to_hcv_transmission_pwid
+name: Unstable Housing → Hepatitis C Virus Transmission Among People Who Inject Drugs
+from_node:
+  node_id: unstable_housing
+  node_name: Unstable Housing
+to_node:
+  node_id: hcv_transmission_pwid
+  node_name: Hepatitis C Virus Transmission Among People Who Inject Drugs
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Unstable housing disrupts continuity of healthcare access and harm reduction
+  service utilization'
+- 'Step 2: Lack of stable housing necessitates injection in public or shared spaces
+  with contaminated environments'
+- 'Step 3: Housing instability creates survival pressures leading to rushed injection
+  practices and equipment sharing networks'
+- 'Step 4: These structural conditions increase exposure to HCV through shared injection
+  equipment and contaminated injection environments'
+evidence:
+  quality_rating: B
+  n_studies: 1
+  primary_citation: 'Jack Stone et al. 2022. "The contribution of unstable housing
+    to HIV and hepatitis C virus transmission among people who inject drugs globally,
+    regionally, and at country level: a modelling study.." *The Lancet. Public health*.
+    https://doi.org/10.1016/S2468-2667(21)00258-9'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.341091'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: country_income_level
+  direction: strengthens
+  strength: strong
+  description: The effect is substantially stronger in high-income countries (tPAF
+    19.4%) compared to low-income and middle-income countries (tPAF 8.3%), reflecting
+    structural differences in housing markets and prevalence of housing instability
+- name: prevalence_unstable_housing
+  direction: strengthens
+  strength: strong
+  description: Country-level tPAFs were strongly associated with the prevalence of
+    unstable housing, demonstrating dose-response relationship

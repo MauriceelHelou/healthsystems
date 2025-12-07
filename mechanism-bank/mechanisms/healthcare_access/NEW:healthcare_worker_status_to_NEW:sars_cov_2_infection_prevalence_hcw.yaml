@@ -1,0 +1,59 @@
+id: NEW:healthcare_worker_status_to_NEW:sars_cov_2_infection_prevalence_hcw
+name: Healthcare Worker Occupational Status → SARS-CoV-2 Infection Prevalence in Healthcare
+  Workers
+from_node:
+  node_id: NEW:healthcare_worker_status
+  node_name: Healthcare Worker Occupational Status
+to_node:
+  node_id: NEW:sars_cov_2_infection_prevalence_hcw
+  node_name: SARS-CoV-2 Infection Prevalence in Healthcare Workers
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare workers have direct, repeated occupational exposure to patients
+  with confirmed or suspected SARS-CoV-2 infection in clinical settings'
+- 'Step 2: Close contact during patient care activities (examination, treatment, aerosol-generating
+  procedures) increases transmission risk despite PPE use'
+- 'Step 3: Healthcare workers in hospitalization/non-emergency wards face sustained
+  exposure during extended patient interactions, with nurses having highest contact
+  frequency'
+- 'Step 4: Occupational exposure results in elevated SARS-CoV-2 infection prevalence
+  (11% by RT-PCR, 7% by antibody testing) among healthcare workers compared to general
+  population'
+evidence:
+  quality_rating: A
+  n_studies: 97
+  primary_citation: 'S. Gómez-Ochoa et al. 2020. COVID-19 in Healthcare Workers: A
+    Living Systematic Review and Meta-analysis of Prevalence, Risk Factors, Clinical
+    Characteristics, and Outcomes. American Journal of Epidemiology.'
+  supporting_citations: []
+description: Healthcare worker occupational status directly increases SARS-CoV-2 infection
+  prevalence due to routine, sustained occupational exposure to infected patients
+  in clinical settings. A systematic review and meta-analysis of 97 studies including
+  230,398 healthcare workers found an estimated SARS-CoV-2 infection prevalence of
+  11% by RT-PCR testing and 7% by antibody testing. Nurses represented the most affected
+  group (48% of positive cases), and hospitalization/non-emergency ward workers had
+  the highest infection rates. Notably, 40% of RT-PCR positive healthcare workers
+  were asymptomatic at diagnosis, highlighting the risk of undetected transmission
+  within healthcare settings.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 11.0
+    type: prevalence_percentage
+    ci_lower: 7.0
+    ci_upper: 15.0
+  p_value: null
+  sample_size: 230398
+moderators:
+- name: healthcare_worker_role
+  direction: strengthens
+  strength: strong
+  description: Nurses had highest infection prevalence (48% of positive HCW), likely
+    due to greater direct patient contact time and care activities
+- name: work_setting
+  direction: strengthens
+  strength: moderate
+  description: Healthcare workers in hospitalization/non-emergency wards had highest
+    infection rates (43% of positive HCW), compared to emergency or other settings
