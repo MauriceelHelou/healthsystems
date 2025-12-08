@@ -3,6 +3,7 @@ Application configuration management.
 """
 
 from pydantic_settings import BaseSettings
+from pydantic import Field
 from typing import List, Optional
 import os
 
@@ -11,7 +12,7 @@ class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
 
     # LLM API Keys
-    anthropic_api_key: Optional[str] = None
+    anthropic_api_key: Optional[str] = Field(default=None, alias="ANTHROPIC_API_KEY")
 
     # Literature Search APIs
     semantic_scholar_api_key: Optional[str] = None
@@ -29,8 +30,11 @@ class Settings(BaseSettings):
     api_reload: bool = True
     allowed_origins: List[str] = ["http://localhost:3000", "http://localhost:3002", "http://localhost:8000", "http://localhost:8002"]
 
-    # Database
-    database_url: str = "sqlite:///./backend/healthsystems.db"
+    # Database - explicitly check DATABASE_URL env var
+    database_url: str = Field(
+        default="sqlite:///./backend/healthsystems.db",
+        alias="DATABASE_URL"
+    )
     database_test_url: Optional[str] = None
 
     # Redis
@@ -84,6 +88,7 @@ class Settings(BaseSettings):
         env_file = ".env"
         case_sensitive = False
         extra = "ignore"  # Ignore extra fields in .env
+        populate_by_name = True  # Allow both alias and field name
 
 
 settings = Settings()
