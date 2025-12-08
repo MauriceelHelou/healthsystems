@@ -12,128 +12,127 @@ const sectionVariants = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.3,
-      ease: "easeOut",
-      staggerChildren: 0.08,
+      duration: 0.4,
+      staggerChildren: 0.1,
       delayChildren: 0.1
     }
   }
 };
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 15 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.3, ease: "easeOut" }
-  }
-};
-
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.06,
-      delayChildren: 0.1
-    }
-  }
-};
-
-const cardVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.3, ease: "easeOut" }
-  }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] } }
 };
 
-const slideInRight = {
-  hidden: { opacity: 0, x: 30 },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { duration: 0.35, ease: "easeOut" }
+const valueProps = [
+  {
+    label: "Identification",
+    title: "Find What Matters",
+    description: "Not just mapping—discovery. Our platform surfaces high-leverage nodes where interventions generate outsized effects across multiple health outcomes. See which points in the system create disproportionate impact."
+  },
+  {
+    label: "Justification",
+    title: "Build the Evidence Case",
+    description: "Every pathway traces to peer-reviewed literature. Quality ratings, citations, and effect directions are fully transparent. Defend upstream investments with evidence chains that hold up to scrutiny."
+  },
+  {
+    label: "Equity",
+    title: "See Who Benefits",
+    description: "Outcomes stratified by population. Mechanisms include demographic, geographic, and policy moderators. Identify what reduces disparities—not just what improves averages."
   }
-};
+];
 
 export function AboutSection({ className }: AboutSectionProps) {
   const shouldReduceMotion = useReducedMotion();
 
-  const values = [
-    {
-      icon: "🔍",
-      title: "Transparency",
-      description: "Every projection traces back to source studies. No black boxes."
-    },
-    {
-      icon: "⚖️",
-      title: "Equity", 
-      description: "Outcomes stratified by population. See who benefits, who bears costs."
-    },
-    {
-      icon: "📚",
-      title: "Evidence",
-      description: "2000+ mechanisms derived from peer-reviewed literature."
-    }
-  ];
-
   return (
-    <section className={cn("py-24 md:py-32 bg-gray-50", className)}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className={cn("py-24 md:py-32 bg-white", className)} id="about">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={shouldReduceMotion ? "visible" : "hidden"}
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={sectionVariants}
-          className="text-center"
         >
-          {/* Mission Statement */}
-          <motion.div variants={fadeInUp} className="max-w-4xl mx-auto mb-20">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 mb-8">
-              Our Mission
-            </h2>
-            <p className="text-xl md:text-2xl font-medium text-gray-600 leading-relaxed">
-              Enable evidence-based decision-making for structural health interventions by making complex causal pathways visible, quantifiable, and actionable.
-            </p>
-          </motion.div>
+          {/* Mission Section */}
+          <div className="max-w-3xl">
+            <motion.p
+              variants={fadeInUp}
+              className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-4"
+            >
+              The Problem We Solve
+            </motion.p>
 
-          {/* Core Values */}
+            <motion.h2
+              variants={fadeInUp}
+              className="text-3xl md:text-4xl font-medium tracking-tight text-slate-900 leading-tight"
+            >
+              Public health faces a $65 million question: how do you quantify the return on upstream prevention?
+            </motion.h2>
+
+            <motion.div variants={fadeInUp} className="mt-8 space-y-6 text-lg text-slate-600 leading-relaxed">
+              <p>
+                Agencies advocate for housing interventions, walkable communities, and income support—but
+                cannot articulate what these investments actually buy in health outcomes. Budget silos
+                prevent departments from seeing when their investments yield savings elsewhere. Prior
+                attempts to build systems-level tools have failed.
+              </p>
+              <p>
+                We make the invisible visible. We map the causal pathways connecting structural
+                determinants to health crises, identify which intervention points generate disproportionate
+                impact, and provide the evidence infrastructure to justify investments that have been
+                impossible to defend.
+              </p>
+            </motion.div>
+          </div>
+
+          {/* Value Props */}
           <motion.div
-            variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20"
+            variants={fadeInUp}
+            className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-12"
           >
-            {values.map((value) => (
-              <motion.div
-                key={value.title}
-                variants={cardVariants}
-                whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
-                className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300"
-              >
-                <div className="text-4xl mb-6">{value.icon}</div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  {value.title}
-                </h3>
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                  {value.description}
+            {valueProps.map((prop) => (
+              <div key={prop.label}>
+                <p className="text-sm font-medium text-slate-400 uppercase tracking-wider">
+                  {prop.label}
                 </p>
-              </motion.div>
+                <h3 className="mt-2 text-xl font-medium text-slate-900">
+                  {prop.title}
+                </h3>
+                <p className="mt-4 text-base text-slate-600 leading-relaxed">
+                  {prop.description}
+                </p>
+              </div>
             ))}
           </motion.div>
 
           {/* What Makes Us Different */}
           <motion.div
-            variants={slideInRight}
-            className="max-w-4xl mx-auto"
+            variants={fadeInUp}
+            className="mt-24 pt-16 border-t border-slate-200"
           >
-            <div className="bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl p-8 md:p-12 text-white shadow-lg">
-              <h3 className="text-2xl md:text-3xl font-semibold mb-6">
+            <div className="max-w-3xl">
+              <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-4">
+                Why This Hasn't Been Done Before
+              </p>
+
+              <h3 className="text-2xl md:text-3xl font-medium tracking-tight text-slate-900 leading-tight">
                 What Makes Us Different
               </h3>
-              <p className="text-lg md:text-xl leading-relaxed opacity-95">
-                Unlike traditional health impact assessments that take months and produce qualitative reports, HealthSystems delivers quantified projections in seconds—all auditable to source research.
-              </p>
+
+              <div className="mt-8 space-y-6 text-lg text-slate-600 leading-relaxed">
+                <p>
+                  Traditional health impact assessments take 6-12 months and produce qualitative reports.
+                  SROI platforms force everything into a single monetized ratio, hiding equity distributions
+                  and causal complexity. Academic system dynamics models require PhD expertise and must be
+                  rebuilt from scratch for each context.
+                </p>
+                <p>
+                  We combine systems thinking with AI-powered literature synthesis at scale. Our mechanism
+                  bank is reusable across geographies. Our evidence chains are auditable. Our platform
+                  identifies intervention opportunities that siloed analysis systematically misses.
+                </p>
+              </div>
             </div>
           </motion.div>
         </motion.div>

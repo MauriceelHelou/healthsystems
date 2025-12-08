@@ -1,44 +1,24 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { cn } from '../../../utils/classNames';
 
 interface RoadmapSectionProps {
   className?: string;
 }
 
-type PhaseStatus = 'complete' | 'in-progress' | 'planned';
+type PhaseStatus = 'current' | 'upcoming' | 'future';
 
 interface Phase {
   status: PhaseStatus;
   title: string;
-  phase: string;
-  icon: React.FC<{ className?: string }>;
+  timeline: string;
   features: string[];
 }
 
-// Inline SVG icon components
-const CheckCircleIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
-
-const ClockIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-  </svg>
-);
-
-const CalendarIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-  </svg>
-);
-
 const fadeInUp = {
-  hidden: { opacity: 0, y: 15 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" } }
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 0.1, 0.25, 1] } }
 };
 
 const staggerContainer = {
@@ -47,255 +27,140 @@ const staggerContainer = {
 };
 
 const lineAnimation = {
-  hidden: { pathLength: 0, opacity: 0 },
-  visible: { pathLength: 1, opacity: 1, transition: { duration: 0.8, ease: "easeInOut" } }
+  hidden: { scaleX: 0 },
+  visible: { scaleX: 1, transition: { duration: 0.6, ease: "easeInOut", delay: 0.15 } }
 };
 
-const badgeAnimation = {
-  hidden: { scale: 0.8, opacity: 0 },
-  visible: { scale: 1, opacity: 1, transition: { type: "spring", stiffness: 200, damping: 20 } }
+const verticalLineAnimation = {
+  hidden: { scaleY: 0 },
+  visible: { scaleY: 1, transition: { duration: 0.6, ease: "easeInOut", delay: 0.15 } }
 };
 
 const phases: Phase[] = [
   {
-    status: 'complete',
-    title: 'Topology & Direction Discovery',
-    phase: 'Phase 1: MVP (Current)',
-    icon: CheckCircleIcon,
+    status: 'current',
+    title: 'Current Prototype',
+    timeline: 'Now',
     features: [
-      '2000 mechanisms identified and catalogued',
-      '400+ nodes defined with specifications',
-      'Direction of each mechanism (positive/negative)',
-      'Literature lineage for every pathway'
+      '1,000+ nodes mapped across structural domains',
+      '1,200+ literature-backed mechanisms',
+      'Direction and category for every pathway',
+      'Interactive exploration interface'
     ]
   },
   {
-    status: 'in-progress',
-    title: 'Quantification & Modeling',
-    phase: 'Phase 2: Coming Soon',
-    icon: ClockIcon,
+    status: 'upcoming',
+    title: 'Quantification',
+    timeline: 'Q1-Q2 2025',
     features: [
-      'Effect size quantification with 95% confidence intervals',
-      'Meta-analytic pooling from 300+ studies per mechanism',
-      'Bayesian uncertainty propagation',
-      'Intervention impact calculator'
+      'Effect size extraction with confidence intervals',
+      'Meta-analytic pooling where studies permit',
+      'Scenario modeling with uncertainty propagation',
+      'Equity-stratified projections'
     ]
   },
   {
-    status: 'planned',
-    title: 'Actor Network & Scale',
-    phase: 'Phase 3: Future',
-    icon: CalendarIcon,
+    status: 'future',
+    title: 'Scale',
+    timeline: '2025+',
     features: [
-      'Multi-geography deployment (50+ states/counties)',
-      'Organizational collaboration mapping',
-      'Real-time data integration',
-      'Policy change alerts'
+      'Multi-geography deployment',
+      'API access for integration',
+      'Custom mechanism bank curation',
+      'Collaborative analysis workspaces'
     ]
   }
 ];
 
 const statusConfig = {
-  complete: {
-    badge: 'Complete',
-    color: 'bg-green-100 text-green-800 border-green-200',
-    dotColor: 'bg-green-500',
-    cardBorder: 'border-green-200',
-    cardBg: 'bg-green-50/50'
+  current: {
+    badge: 'Current',
+    badgeClass: 'bg-slate-900 text-white',
+    dotClass: 'bg-slate-900',
+    borderClass: 'border-slate-300'
   },
-  'in-progress': {
-    badge: 'In Progress',
-    color: 'bg-orange-100 text-orange-800 border-orange-200',
-    dotColor: 'bg-orange-500',
-    cardBorder: 'border-orange-200',
-    cardBg: 'bg-orange-50/50'
+  upcoming: {
+    badge: 'Q1-Q2 2025',
+    badgeClass: 'bg-slate-100 text-slate-700',
+    dotClass: 'bg-slate-400',
+    borderClass: 'border-slate-200'
   },
-  planned: {
-    badge: 'Planned',
-    color: 'bg-gray-100 text-gray-600 border-gray-200',
-    dotColor: 'bg-gray-400',
-    cardBorder: 'border-gray-200',
-    cardBg: 'bg-gray-50/50'
+  future: {
+    badge: '2025+',
+    badgeClass: 'bg-slate-100 text-slate-500',
+    dotClass: 'bg-slate-300',
+    borderClass: 'border-slate-200'
   }
 };
 
 export function RoadmapSection({ className }: RoadmapSectionProps) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
-    <section className={cn("py-24 md:py-32 bg-gray-50", className)}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className={cn("py-24 md:py-32 bg-slate-50", className)}>
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
-          initial="hidden"
+          initial={shouldReduceMotion ? "visible" : "hidden"}
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          variants={fadeInUp}
-          className="text-center mb-16"
+          variants={staggerContainer}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 mb-6">
-            What We're Building
-          </h2>
-          <p className="text-xl md:text-2xl font-medium text-gray-600 max-w-3xl mx-auto">
-            A phased approach to comprehensive health systems modeling
-          </p>
-        </motion.div>
+          {/* Header */}
+          <motion.div variants={fadeInUp} className="max-w-3xl mb-16">
+            <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-4">
+              Roadmap
+            </p>
+            <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-slate-900 leading-tight">
+              What We're Building
+            </h2>
+          </motion.div>
 
-        {/* Desktop Timeline */}
-        <div className="hidden lg:block relative">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="relative"
-          >
+          {/* Desktop Timeline */}
+          <div className="hidden lg:block relative">
             {/* Timeline Line */}
-            <div className="absolute top-24 left-0 right-0 h-0.5 bg-gray-200">
+            <div className="absolute top-6 left-0 right-0 h-px bg-slate-200">
               <motion.div
-                variants={lineAnimation}
-                className="h-full bg-gradient-to-r from-green-500 via-orange-500 to-gray-400"
+                variants={shouldReduceMotion ? {} : lineAnimation}
+                className="h-full bg-slate-400 origin-left"
               />
-            </div>
-
-            {/* Timeline Dots */}
-            <div className="absolute top-24 left-0 right-0 flex justify-between items-center">
-              {phases.map((phase, index) => (
-                <motion.div
-                  key={index}
-                  variants={badgeAnimation}
-                  className={cn(
-                    "w-4 h-4 rounded-full border-4 border-white",
-                    statusConfig[phase.status].dotColor
-                  )}
-                />
-              ))}
             </div>
 
             {/* Phase Cards */}
-            <div className="grid grid-cols-3 gap-8 pt-16">
-              {phases.map((phase, index) => (
+            <div className="grid grid-cols-3 gap-8">
+              {phases.map((phase) => (
                 <motion.div
-                  key={index}
+                  key={phase.title}
                   variants={fadeInUp}
-                  className={cn(
-                    "bg-white rounded-2xl border p-8 hover:shadow-lg transition-all duration-300",
-                    statusConfig[phase.status].cardBorder,
-                    statusConfig[phase.status].cardBg
-                  )}
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <phase.icon className="w-6 h-6 text-gray-600" />
-                    <motion.span
-                      variants={badgeAnimation}
-                      className={cn(
-                        "px-3 py-1 rounded-full text-sm font-medium border",
-                        statusConfig[phase.status].color
-                      )}
-                    >
-                      {statusConfig[phase.status].badge}
-                    </motion.span>
-                  </div>
-                  
-                  <h3 className="text-sm font-medium text-gray-500 mb-2">
-                    {phase.phase}
-                  </h3>
-                  
-                  <h4 className="text-xl font-semibold text-gray-900 mb-6">
-                    {phase.title}
-                  </h4>
-                  
-                  <ul className="space-y-3">
-                    {phase.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-start gap-3">
-                        {phase.status === 'complete' ? (
-                          <CheckCircleIcon className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                        ) : (
-                          <div className="w-5 h-5 mt-0.5 flex-shrink-0 flex items-center justify-center">
-                            <div className="w-2 h-2 bg-gray-300 rounded-full" />
-                          </div>
-                        )}
-                        <span className="text-sm text-gray-600 leading-relaxed">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Mobile Timeline */}
-        <div className="lg:hidden">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={staggerContainer}
-            className="relative"
-          >
-            {/* Vertical Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gray-200">
-              <motion.div
-                variants={lineAnimation}
-                className="w-full bg-gradient-to-b from-green-500 via-orange-500 to-gray-400"
-                style={{ height: '100%' }}
-              />
-            </div>
-
-            <div className="space-y-8">
-              {phases.map((phase, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeInUp}
-                  className="relative pl-20"
                 >
                   {/* Timeline Dot */}
-                  <motion.div
-                    variants={badgeAnimation}
-                    className={cn(
-                      "absolute -left-2 top-4 w-4 h-4 rounded-full border-4 border-white",
-                      statusConfig[phase.status].dotColor
-                    )}
-                  />
+                  <div className={cn(
+                    "relative z-10 w-12 h-12 rounded-full flex items-center justify-center mb-6 border-4 border-white",
+                    statusConfig[phase.status].dotClass
+                  )} />
 
                   {/* Card */}
                   <div className={cn(
-                    "bg-white rounded-2xl border p-6",
-                    statusConfig[phase.status].cardBorder,
-                    statusConfig[phase.status].cardBg
+                    "bg-white rounded-xl border p-6",
+                    statusConfig[phase.status].borderClass
                   )}>
                     <div className="flex items-center gap-3 mb-4">
-                      <phase.icon className="w-6 h-6 text-gray-600" />
-                      <motion.span
-                        variants={badgeAnimation}
-                        className={cn(
-                          "px-3 py-1 rounded-full text-sm font-medium border",
-                          statusConfig[phase.status].color
-                        )}
-                      >
+                      <span className={cn(
+                        "px-3 py-1 rounded-full text-xs font-medium",
+                        statusConfig[phase.status].badgeClass
+                      )}>
                         {statusConfig[phase.status].badge}
-                      </motion.span>
+                      </span>
                     </div>
-                    
-                    <h3 className="text-sm font-medium text-gray-500 mb-2">
-                      {phase.phase}
-                    </h3>
-                    
-                    <h4 className="text-xl font-semibold text-gray-900 mb-6">
+
+                    <h3 className="text-xl font-medium text-slate-900 mb-4">
                       {phase.title}
-                    </h4>
-                    
+                    </h3>
+
                     <ul className="space-y-3">
                       {phase.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start gap-3">
-                          {phase.status === 'complete' ? (
-                            <CheckCircleIcon className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
-                          ) : (
-                            <div className="w-5 h-5 mt-0.5 flex-shrink-0 flex items-center justify-center">
-                              <div className="w-2 h-2 bg-gray-300 rounded-full" />
-                            </div>
-                          )}
-                          <span className="text-sm text-gray-600 leading-relaxed">
+                          <div className="w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0" />
+                          <span className="text-sm text-slate-600 leading-relaxed">
                             {feature}
                           </span>
                         </li>
@@ -305,8 +170,67 @@ export function RoadmapSection({ className }: RoadmapSectionProps) {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
-        </div>
+          </div>
+
+          {/* Mobile Timeline */}
+          <div className="lg:hidden">
+            <div className="relative">
+              {/* Vertical Timeline Line */}
+              <div className="absolute left-6 top-6 bottom-6 w-px bg-slate-200">
+                <motion.div
+                  variants={shouldReduceMotion ? {} : verticalLineAnimation}
+                  className="w-full h-full bg-slate-400 origin-top"
+                />
+              </div>
+
+              <div className="space-y-8">
+                {phases.map((phase) => (
+                  <motion.div
+                    key={phase.title}
+                    variants={fadeInUp}
+                    className="relative pl-16"
+                  >
+                    {/* Timeline Dot */}
+                    <div className={cn(
+                      "absolute left-0 top-0 w-12 h-12 rounded-full flex items-center justify-center border-4 border-white",
+                      statusConfig[phase.status].dotClass
+                    )} />
+
+                    {/* Card */}
+                    <div className={cn(
+                      "bg-white rounded-xl border p-5",
+                      statusConfig[phase.status].borderClass
+                    )}>
+                      <div className="flex items-center gap-3 mb-3">
+                        <span className={cn(
+                          "px-3 py-1 rounded-full text-xs font-medium",
+                          statusConfig[phase.status].badgeClass
+                        )}>
+                          {statusConfig[phase.status].badge}
+                        </span>
+                      </div>
+
+                      <h3 className="text-lg font-medium text-slate-900 mb-4">
+                        {phase.title}
+                      </h3>
+
+                      <ul className="space-y-2">
+                        {phase.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-start gap-3">
+                            <div className="w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0" />
+                            <span className="text-sm text-slate-600 leading-relaxed">
+                              {feature}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

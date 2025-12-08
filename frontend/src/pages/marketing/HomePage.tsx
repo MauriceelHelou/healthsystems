@@ -69,18 +69,6 @@ export function HomePage() {
     scrollToSection('about');
   }, [scrollToSection]);
 
-  const handleTryNow = useCallback(() => {
-    navigate('/systems');
-  }, [navigate]);
-
-  const handleGetStarted = useCallback(() => {
-    navigate('/systems');
-  }, [navigate]);
-
-  const handleContact = useCallback(() => {
-    window.open('mailto:hello@healthsystems.platform', '_blank');
-  }, []);
-
   const handleBackToTop = useCallback(() => {
     scrollToSection('hero');
   }, [scrollToSection]);
@@ -116,8 +104,7 @@ export function HomePage() {
 
         {/* How to Use Section */}
         <HowToUseSection
-          className="bg-gray-50"
-          onTryNow={handleTryNow}
+          className="bg-white"
         />
 
         {/* Roadmap Section */}
@@ -136,11 +123,7 @@ export function HomePage() {
         />
 
         {/* Footer CTA Section */}
-        <FooterCTASection
-          className="bg-gradient-to-br from-primary-500 to-secondary-500"
-          onGetStarted={handleGetStarted}
-          onContact={handleContact}
-        />
+        <FooterCTASection />
       </main>
 
       {/* Back to Top Button */}

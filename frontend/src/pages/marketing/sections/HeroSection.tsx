@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from 'framer-motion';
 import { cn } from '../../../utils/classNames';
+import { NetworkGraph3D } from '../components/NetworkGraph3D';
 
 interface HeroSectionProps {
   onPrimaryCTA?: () => void;
@@ -11,17 +12,12 @@ interface HeroSectionProps {
 
 const staggerContainer = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.1 } }
+  visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.15 } }
 };
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } }
-};
-
-const buttonVariants = {
-  hover: { scale: 1.02, transition: { duration: 0.2 } },
-  tap: { scale: 0.98 }
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] } }
 };
 
 export function HeroSection({ onPrimaryCTA, onSecondaryCTA, className }: HeroSectionProps) {
@@ -39,122 +35,81 @@ export function HeroSection({ onPrimaryCTA, onSecondaryCTA, className }: HeroSec
     if (onSecondaryCTA) {
       onSecondaryCTA();
     } else {
-      const aboutSection = document.querySelector('#about');
-      aboutSection?.scrollIntoView({ behavior: 'smooth' });
+      window.location.href = 'mailto:contact@healthsystems.io';
     }
   };
 
   return (
-    <section 
+    <section
       className={cn(
-        "relative min-h-screen md:min-h-screen flex items-center overflow-hidden",
-        "bg-gradient-to-br from-gray-50 via-white to-blue-50/30",
+        "relative min-h-screen flex items-center overflow-hidden",
+        "bg-slate-950",
         className
       )}
     >
-      {/* Floating background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="floating-dots">
-          {[...Array(12)].map((_, i) => (
-            <div
-              key={i}
-              className={cn(
-                "absolute rounded-full opacity-20",
-                i % 3 === 0 ? "bg-primary-500" : i % 3 === 1 ? "bg-secondary-500" : "bg-orange-400"
-              )}
-              style={{
-                width: Math.random() * 6 + 4 + 'px',
-                height: Math.random() * 6 + 4 + 'px',
-                left: Math.random() * 100 + '%',
-                top: Math.random() * 100 + '%',
-                animationDelay: Math.random() * 10 + 's',
-                animationDuration: (Math.random() * 20 + 15) + 's'
-              }}
-            />
-          ))}
-        </div>
+      {/* Full-screen 3D Network Graph Background */}
+      <div className="absolute inset-0 opacity-60">
+        <NetworkGraph3D />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[80vh] py-16">
+      {/* Gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/80 to-slate-950/40" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 w-full">
+        <div className="max-w-3xl py-20 lg:py-32">
           <motion.div
             initial={shouldReduceMotion ? "visible" : "hidden"}
             animate="visible"
             variants={staggerContainer}
-            className="max-w-2xl"
           >
-            <motion.h1 
+            <motion.h1
               variants={fadeInUp}
-              className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-900 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight text-white leading-[1.1]"
             >
-              Quantify How{' '}
-              <span className="relative inline-block">
-                <span className="gradient-text bg-gradient-to-r from-primary-500 via-secondary-500 to-orange-400 bg-clip-text text-transparent animate-gradient-x">
-                  Policy
-                </span>
-              </span>
-              {' '}Shapes Health
+              Identify Where Health Interventions Matter Most
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               variants={fadeInUp}
-              className="mt-6 text-xl md:text-2xl font-medium text-gray-600 leading-relaxed"
+              className="mt-8 text-lg md:text-xl text-slate-400 leading-relaxed max-w-2xl"
             >
-              A decision support platform that maps how structural interventions—housing policy, 
-              Medicaid design, workforce development—cascade through causal pathways to affect 
-              health outcomes.
+              A decision-support platform that maps how structural conditions cascade through
+              causal pathways to health outcomes. Pinpoint high-leverage intervention points.
+              Justify upstream investments with evidence.
             </motion.p>
 
-            <motion.div 
+            <motion.div
               variants={fadeInUp}
-              className="mt-10 flex flex-col sm:flex-row gap-4"
+              className="mt-12 flex flex-col sm:flex-row gap-4"
             >
-              <motion.button
-                variants={buttonVariants}
-                whileHover={shouldReduceMotion ? undefined : "hover"}
-                whileTap={shouldReduceMotion ? undefined : "tap"}
+              <button
                 onClick={handlePrimaryCTA}
                 className={cn(
-                  "group inline-flex items-center justify-center px-8 py-4 text-lg font-medium",
-                  "bg-primary-500 text-white rounded-2xl shadow-sm hover:shadow-lg",
-                  "transition-all duration-300 hover:bg-primary-600",
-                  "min-h-[56px] min-w-[160px]"
+                  "inline-flex items-center justify-center px-6 py-3.5 text-base font-medium",
+                  "bg-white text-slate-950 rounded-lg",
+                  "transition-all duration-200 hover:bg-slate-100",
+                  "focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-950"
                 )}
               >
-                Explore the Map
-                <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </motion.button>
+                Explore the Platform
+              </button>
 
-              <motion.button
-                variants={buttonVariants}
-                whileHover={shouldReduceMotion ? undefined : "hover"}
-                whileTap={shouldReduceMotion ? undefined : "tap"}
+              <button
                 onClick={handleSecondaryCTA}
                 className={cn(
-                  "inline-flex items-center justify-center px-8 py-4 text-lg font-medium",
-                  "bg-white text-gray-700 border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg",
-                  "transition-all duration-300 hover:border-gray-300 hover:bg-gray-50",
-                  "min-h-[56px] min-w-[160px]"
+                  "inline-flex items-center justify-center px-6 py-3.5 text-base font-medium",
+                  "bg-transparent text-white border border-slate-700 rounded-lg",
+                  "transition-all duration-200 hover:bg-slate-900 hover:border-slate-600",
+                  "focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-950"
                 )}
               >
-                Learn More
-              </motion.button>
+                Contact Us
+              </button>
             </motion.div>
           </motion.div>
-
-          {/* Right side space for future animated visual */}
-          <div className="hidden lg:block relative">
-            <div className="aspect-square max-w-lg mx-auto opacity-20">
-              <div className="w-full h-full border-2 border-dashed border-gray-300 rounded-2xl flex items-center justify-center">
-                <span className="text-gray-400 text-lg">Future Visual</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-
     </section>
   );
 }
