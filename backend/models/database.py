@@ -25,11 +25,22 @@ if is_sqlite:
     )
     # For SQLite, we use sync sessions
     SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=sync_engine)
+    AsyncSessionLocal = None  # Not used for SQLite
     engine = sync_engine  # Alembic needs this
 else:
-    # PostgreSQL uses async engine
+    # PostgreSQL - create both sync and async engines
+    # Sync engine for Alembic migrations
+    sync_engine = create_engine(
+        database_url,
+        echo=settings.debug,
+        pool_pre_ping=True,
+    )
+    SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=sync_engine)
+    engine = sync_engine  # Alembic needs sync engine
+
+    # Async engine for runtime operations
     async_database_url = database_url.replace("postgresql://", "postgresql+asyncpg://")
-    engine = create_async_engine(
+    async_engine = create_async_engine(
         async_database_url,
         echo=settings.debug,
         pool_pre_ping=True,
@@ -37,7 +48,7 @@ else:
         max_overflow=20,
     )
     AsyncSessionLocal = async_sessionmaker(
-        engine,
+        async_engine,
         class_=AsyncSession,
         expire_on_commit=False,
     )
@@ -54,7 +65,7 @@ async def init_db():
         logger.info("Database tables created (SQLite)")
     else:
         # For PostgreSQL, use async approach
-        async with engine.begin() as conn:
+        async with async_engine.begin() as conn:
             await conn.run_sync(Base.metadata.create_all)
         logger.info("Database tables created (PostgreSQL)")
 
@@ -65,7 +76,7 @@ async def close_db():
         engine.dispose()
         logger.info("Database connections closed (SQLite)")
     else:
-        await engine.dispose()
+        await async_engine.dispose()
         logger.info("Database connections closed (PostgreSQL)")
 
 
