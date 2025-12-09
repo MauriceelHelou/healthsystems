@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     """Application settings loaded from environment variables."""
 
     # LLM API Keys
-    anthropic_api_key: Optional[str] = Field(default=None, alias="ANTHROPIC_API_KEY")
+    anthropic_api_key: Optional[str] = Field(default=None, validation_alias="ANTHROPIC_API_KEY")
 
     # Literature Search APIs
     semantic_scholar_api_key: Optional[str] = None
@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     # Database - explicitly check DATABASE_URL env var
     database_url: str = Field(
         default="sqlite:///./backend/healthsystems.db",
-        alias="DATABASE_URL"
+        validation_alias="DATABASE_URL"
     )
     database_test_url: Optional[str] = None
 
