@@ -3,14 +3,14 @@ FROM node:20-alpine AS build
 
 WORKDIR /app
 
-# Copy package files (paths from repo root - Railway uses repo root as build context)
-COPY frontend/package*.json ./
+# Copy package files (when rootDirectory is 'frontend', paths are relative to frontend/)
+COPY package*.json ./
 
 # Install dependencies (--legacy-peer-deps needed for react-scripts 5.0.1 + TypeScript 5 compatibility)
 RUN npm ci --legacy-peer-deps
 
 # Copy source code
-COPY frontend/ .
+COPY . .
 
 # Build argument for API URL (can be overridden at build time)
 ARG REACT_APP_API_URL=https://backend-production-b6c2.up.railway.app
