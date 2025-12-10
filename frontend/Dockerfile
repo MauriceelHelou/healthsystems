@@ -6,8 +6,8 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm ci
+# Install dependencies (--legacy-peer-deps needed for react-scripts 5.0.1 + TypeScript 5 compatibility)
+RUN npm ci --legacy-peer-deps
 
 # Copy source code
 COPY . .
