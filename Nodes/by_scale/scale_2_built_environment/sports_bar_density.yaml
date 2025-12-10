@@ -1,0 +1,31 @@
+id: sports_bar_density
+name: Sports Bar Density
+scale: 2
+domain: Environmental
+category: built_environment
+stock:
+  value: TBD
+  unit: establishments per 10,000 population
+  year: 2024
+  source: TBD - needs population from authoritative source
+geographic_variation:
+  score: 4
+  level: county
+  notes: Physical infrastructure varies by region and locality
+data_quality:
+  availability: high
+  frequency: annual
+  bias_notes: Standard survey/administrative data limitations apply
+  primary_sources:
+  - name: EPA Environmental Data
+    granularity: county
+  - name: CDC PLACES
+    granularity: tract
+description: Concentration of sports bars and sports-themed drinking establishments. Associated with heavy episodic drinking
+  during sporting events.
+type: Rate
+hierarchy:
+  parent_ids:
+  - alcohol_outlet_density
+  depth: 1
+  is_grouping_node: false

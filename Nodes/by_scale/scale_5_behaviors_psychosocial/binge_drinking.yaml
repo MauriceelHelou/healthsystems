@@ -23,13 +23,24 @@ data_quality:
     granularity: county
   - name: National Health Interview Survey (NHIS)
     granularity: national
-description: |-
-  Percentage of adults (18+) who engaged in binge drinking in the past 30 days.
+description: 'Percentage of adults (18+) who engaged in binge drinking in the past 30 days.
+
   Binge drinking is defined as consuming 5 or more drinks (men) or 4 or more drinks
+
   (women) on a single occasion. This is a standalone behavioral measure with a
+
   standardized definition; approximately 90% of alcohol consumed by youth and 50%
+
   consumed by adults occurs through binge drinking. Relationships to health outcomes,
+
   risk factors, or downstream conditions are captured in mechanisms, not in this
+
   node definition. This node measures the behavior itself, independent of causes
-  or consequences.
+
+  or consequences.'
 type: Rate
+hierarchy:
+  parent_ids:
+  - heavy_alcohol_use
+  depth: 1
+  is_grouping_node: false

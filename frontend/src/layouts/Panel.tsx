@@ -12,6 +12,7 @@ interface PanelProps {
   resizable?: boolean
   collapsible?: boolean
   onClose: () => void
+  onBack?: () => void
   children: React.ReactNode
   footer?: React.ReactNode
 }
@@ -25,6 +26,7 @@ export const Panel: React.FC<PanelProps> = ({
   resizable = true,
   collapsible = true,
   onClose,
+  onBack,
   children,
   footer,
 }) => {
@@ -92,10 +94,21 @@ export const Panel: React.FC<PanelProps> = ({
       )}
 
       {/* Header */}
-      <div className="h-12 flex items-center justify-between px-6 border-b border-gray-200 flex-shrink-0">
-        <div className="flex items-center gap-2">
+      <div className="h-12 flex items-center justify-between px-4 border-b border-gray-200 flex-shrink-0">
+        <div className="flex items-center gap-2 min-w-0">
+          {onBack && (
+            <Button
+              variant="icon"
+              size="sm"
+              onClick={onBack}
+              ariaLabel="Go back"
+              className="flex-shrink-0"
+            >
+              <Icon name="arrow-left" size="sm" />
+            </Button>
+          )}
           {icon}
-          <h2 className="text-lg font-semibold text-gray-900">{title}</h2>
+          <h2 className="text-lg font-semibold text-gray-900 truncate">{title}</h2>
         </div>
         <div className="flex items-center gap-1">
           {collapsible && (

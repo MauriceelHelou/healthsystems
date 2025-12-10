@@ -50,7 +50,11 @@ function calculateEdges(nodes: NodeData[], maxDistance: number): [number, number
   return edges;
 }
 
-function NetworkScene() {
+interface NetworkSceneProps {
+  nodeCount: number;
+}
+
+function NetworkScene({ nodeCount }: NetworkSceneProps) {
   const groupRef = useRef<THREE.Group>(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
@@ -76,8 +80,8 @@ function NetworkScene() {
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  // Generate nodes and edges - many more nodes for visual impact
-  const nodes = useMemo(() => generateNodes(150), []);
+  // Generate nodes and edges - configurable node count
+  const nodes = useMemo(() => generateNodes(nodeCount), [nodeCount]);
   const edges = useMemo(() => calculateEdges(nodes, 2.5), [nodes]);
 
   // Create edge geometry
@@ -147,9 +151,10 @@ function NetworkScene() {
 
 interface NetworkGraph3DProps {
   className?: string;
+  nodeCount?: number;
 }
 
-export function NetworkGraph3D({ className }: NetworkGraph3DProps) {
+export function NetworkGraph3D({ className, nodeCount = 150 }: NetworkGraph3DProps) {
   return (
     <div className={`w-full h-full ${className || ''}`}>
       <Canvas
@@ -169,7 +174,7 @@ export function NetworkGraph3D({ className }: NetworkGraph3DProps) {
         {/* Accent light from behind */}
         <directionalLight position={[-3, -3, -5]} intensity={0.4} color="#38bdf8" />
 
-        <NetworkScene />
+        <NetworkScene nodeCount={nodeCount} />
       </Canvas>
     </div>
   );

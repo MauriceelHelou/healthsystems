@@ -11,8 +11,9 @@ import { ImportantNodesView } from './views/ImportantNodesView';
 import { CrisisExplorerView } from './views/CrisisExplorerView';
 import type { Category, NodeScale } from './types/mechanism';
 
-// Lazy load marketing page to avoid bundling with main app
+// Lazy load marketing pages to avoid bundling with main app
 const HomePage = lazy(() => import('./pages/marketing/HomePage'));
+const ContactPage = lazy(() => import('./pages/marketing/ContactPage'));
 
 // Create React Query client
 const queryClient = new QueryClient({
@@ -45,6 +46,16 @@ const App: FC = () => {
             element={
               <Suspense fallback={<LoadingFallback />}>
                 <HomePage />
+              </Suspense>
+            }
+          />
+
+          {/* Contact page */}
+          <Route
+            path="/contact"
+            element={
+              <Suspense fallback={<LoadingFallback />}>
+                <ContactPage />
               </Suspense>
             }
           />

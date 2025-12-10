@@ -1,0 +1,587 @@
+{
+  "name": "alcohol_node_pair_discovery_batch2",
+  "version": "1.0",
+  "description": "Batch 2: Extended alcohol-related mechanism discovery focusing on risk factors, treatment outcomes, and clinical endpoints",
+  "node_source": "nodes/by_scale/",
+  "budget": {
+    "max_usd": 25.0,
+    "max_pairs": 80
+  },
+  "node_keywords": {
+    "mental_health_parity_enforcement": ["mental health parity", "MHPAEA", "insurance parity", "behavioral health coverage", "mental health coverage law"],
+    "trauma_informed_care_policy": ["trauma-informed care", "TIC policy", "trauma-sensitive approach", "ACE-aware", "trauma-responsive"],
+    "workplace_drug_testing_policy": ["drug testing employment", "workplace testing", "employee drug screening", "pre-employment drug test"],
+    "naloxone_standing_order_policy": ["naloxone access", "standing order naloxone", "pharmacy naloxone", "overdose prevention"],
+    "social_host_liability_law": ["social host liability", "host responsibility", "party liability", "alcohol provision liability"],
+    "happy_hour_regulation": ["happy hour ban", "drink specials regulation", "price promotion restriction", "alcohol discount policy"],
+    "entertainment_district_density": ["nightlife district", "bar district", "entertainment zone", "drinking establishment cluster"],
+    "college_campus_proximity": ["campus alcohol", "college drinking", "university proximity", "student alcohol access"],
+    "homeless_shelter_density": ["homeless shelter", "emergency housing", "transitional housing access", "shelter capacity"],
+    "halfway_house_availability": ["halfway house", "residential reentry", "sober living facility", "transitional recovery housing"],
+    "casino_gambling_venue_density": ["casino density", "gambling venue", "gaming establishment", "gambling accessibility"],
+    "peer_recovery_specialist_availability": ["peer support specialist", "recovery coach", "peer mentor", "lived experience support"],
+    "medication_assisted_treatment_capacity": ["MAT capacity", "buprenorphine capacity", "MOUD access", "opioid treatment program"],
+    "crisis_stabilization_unit_beds": ["crisis stabilization", "psychiatric emergency", "crisis intervention beds", "acute psychiatric"],
+    "dual_diagnosis_treatment_capacity": ["dual diagnosis", "co-occurring disorder", "integrated treatment", "comorbid mental health SUD"],
+    "employee_assistance_program_coverage": ["EAP", "employee assistance", "workplace counseling", "occupational health program"],
+    "drug_court_capacity": ["drug court", "treatment court", "therapeutic jurisprudence", "diversion program"],
+    "school_based_prevention_program_coverage": ["school prevention", "DARE", "school alcohol education", "youth prevention program"],
+    "adverse_childhood_experiences_score": ["ACE score", "childhood adversity", "childhood trauma", "adverse childhood events"],
+    "intimate_partner_violence_exposure": ["IPV", "domestic violence", "partner abuse", "relationship violence"],
+    "job_loss_recent": ["job loss", "unemployment", "layoff", "employment termination"],
+    "social_isolation_index": ["social isolation", "loneliness", "social disconnection", "lack social support"],
+    "divorce_separation_status": ["divorce", "marital separation", "relationship dissolution", "marriage breakdown"],
+    "chronic_pain_prevalence": ["chronic pain", "persistent pain", "pain condition", "long-term pain"],
+    "sleep_disorder_prevalence": ["sleep disorder", "insomnia", "sleep disturbance", "sleep problems"],
+    "financial_stress_index": ["financial stress", "economic hardship", "money problems", "financial strain"],
+    "social_drinking_frequency": ["social drinking", "drinking occasions", "drinking frequency", "alcohol consumption pattern"],
+    "stress_coping_alcohol_use": ["drinking to cope", "stress drinking", "emotional drinking", "self-medication alcohol"],
+    "alcohol_expectancy_positive": ["alcohol expectancy", "drinking expectation", "anticipated alcohol effect", "positive alcohol beliefs"],
+    "treatment_seeking_delay": ["treatment delay", "help-seeking barrier", "delayed treatment", "treatment gap"],
+    "self_medication_behavior": ["self-medication", "substance coping", "drinking for relief", "self-treatment"],
+    "depression_screening_positive": ["depression screening", "PHQ positive", "depressive symptoms", "depression assessment"],
+    "anxiety_disorder_prevalence": ["anxiety disorder", "generalized anxiety", "anxiety symptoms", "panic disorder"],
+    "ptsd_prevalence": ["PTSD", "post-traumatic stress", "trauma disorder", "stress disorder"],
+    "gamma_gt_elevated": ["GGT elevated", "gamma glutamyl transferase", "liver enzyme biomarker", "hepatic enzyme"],
+    "mean_corpuscular_volume_elevated": ["MCV elevated", "macrocytosis", "red blood cell volume", "alcohol biomarker"],
+    "carbohydrate_deficient_transferrin": ["CDT", "carbohydrate-deficient transferrin", "alcohol biomarker", "heavy drinking marker"],
+    "alcohol_withdrawal_severity": ["alcohol withdrawal", "withdrawal severity", "AWS", "delirium tremens"],
+    "treatment_completion_rate": ["treatment completion", "program completion", "treatment retention", "finishing treatment"],
+    "thirty_day_abstinence_rate": ["30-day abstinence", "early abstinence", "initial sobriety", "short-term recovery"],
+    "craving_intensity_score": ["alcohol craving", "craving intensity", "urge to drink", "drinking desire"],
+    "alcoholic_hepatitis_hospitalization": ["alcoholic hepatitis", "alcohol-induced hepatitis", "AH hospitalization", "acute alcoholic hepatitis"],
+    "pancreatitis_hospitalization_rate": ["alcoholic pancreatitis", "pancreatic inflammation", "alcohol-induced pancreatitis"],
+    "alcohol_related_motor_vehicle_fatality": ["drunk driving death", "alcohol crash fatality", "DUI fatality", "impaired driving death"],
+    "alcohol_induced_cardiomyopathy": ["alcoholic cardiomyopathy", "alcohol heart disease", "ACM", "alcohol-induced heart failure"],
+    "alcohol_related_suicide_rate": ["alcohol suicide", "drinking suicide", "intoxicated suicide", "alcohol-related self-harm"],
+    "alcohol_related_homicide_rate": ["alcohol homicide", "intoxicated violence", "alcohol-related murder", "drinking violence"],
+    "esophageal_varices_bleeding": ["variceal bleeding", "esophageal varices", "portal hypertension bleeding", "cirrhosis hemorrhage"],
+    "alcohol_use_disorder": ["AUD", "alcohol dependence", "alcoholism", "alcohol addiction", "problem drinking"],
+    "binge_drinking": ["heavy episodic drinking", "excessive drinking", "alcohol intoxication", "heavy drinking episode"],
+    "liver_cirrhosis_hospitalization_rate": ["cirrhosis hospitalization", "alcoholic liver disease admission", "liver disease hospitalization"]
+  },
+  "node_pairs": [
+    {
+      "from_node_id": "adverse_childhood_experiences_score",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "social_environment"
+    },
+    {
+      "from_node_id": "adverse_childhood_experiences_score",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "social_environment"
+    },
+    {
+      "from_node_id": "intimate_partner_violence_exposure",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "social_environment"
+    },
+    {
+      "from_node_id": "intimate_partner_violence_exposure",
+      "to_node_id": "stress_coping_alcohol_use",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "social_environment"
+    },
+    {
+      "from_node_id": "job_loss_recent",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "economic"
+    },
+    {
+      "from_node_id": "job_loss_recent",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "economic"
+    },
+    {
+      "from_node_id": "social_isolation_index",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "social_environment"
+    },
+    {
+      "from_node_id": "social_isolation_index",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "social_environment"
+    },
+    {
+      "from_node_id": "divorce_separation_status",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "social_environment"
+    },
+    {
+      "from_node_id": "chronic_pain_prevalence",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "chronic_pain_prevalence",
+      "to_node_id": "self_medication_behavior",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "sleep_disorder_prevalence",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "financial_stress_index",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "economic"
+    },
+    {
+      "from_node_id": "financial_stress_index",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "economic"
+    },
+    {
+      "from_node_id": "depression_screening_positive",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "depression_screening_positive",
+      "to_node_id": "stress_coping_alcohol_use",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "anxiety_disorder_prevalence",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "anxiety_disorder_prevalence",
+      "to_node_id": "self_medication_behavior",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "ptsd_prevalence",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "ptsd_prevalence",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "mental_health_parity_enforcement",
+      "to_node_id": "dual_diagnosis_treatment_capacity",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "mental_health_parity_enforcement",
+      "to_node_id": "treatment_completion_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "trauma_informed_care_policy",
+      "to_node_id": "treatment_completion_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "trauma_informed_care_policy",
+      "to_node_id": "thirty_day_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "political"
+    },
+    {
+      "from_node_id": "social_host_liability_law",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "political"
+    },
+    {
+      "from_node_id": "social_host_liability_law",
+      "to_node_id": "alcohol_related_motor_vehicle_fatality",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "happy_hour_regulation",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "happy_hour_regulation",
+      "to_node_id": "alcohol_related_motor_vehicle_fatality",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "political"
+    },
+    {
+      "from_node_id": "entertainment_district_density",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "built_environment"
+    },
+    {
+      "from_node_id": "entertainment_district_density",
+      "to_node_id": "alcohol_related_homicide_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "built_environment"
+    },
+    {
+      "from_node_id": "college_campus_proximity",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "built_environment"
+    },
+    {
+      "from_node_id": "casino_gambling_venue_density",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "built_environment"
+    },
+    {
+      "from_node_id": "casino_gambling_venue_density",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "built_environment"
+    },
+    {
+      "from_node_id": "peer_recovery_specialist_availability",
+      "to_node_id": "treatment_completion_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "peer_recovery_specialist_availability",
+      "to_node_id": "thirty_day_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "medication_assisted_treatment_capacity",
+      "to_node_id": "treatment_completion_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "medication_assisted_treatment_capacity",
+      "to_node_id": "thirty_day_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "medication_assisted_treatment_capacity",
+      "to_node_id": "craving_intensity_score",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "crisis_stabilization_unit_beds",
+      "to_node_id": "alcohol_withdrawal_severity",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "crisis_stabilization_unit_beds",
+      "to_node_id": "alcohol_related_suicide_rate",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "dual_diagnosis_treatment_capacity",
+      "to_node_id": "treatment_completion_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "dual_diagnosis_treatment_capacity",
+      "to_node_id": "thirty_day_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "employee_assistance_program_coverage",
+      "to_node_id": "treatment_seeking_delay",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "employee_assistance_program_coverage",
+      "to_node_id": "treatment_completion_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "drug_court_capacity",
+      "to_node_id": "treatment_completion_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "drug_court_capacity",
+      "to_node_id": "thirty_day_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "political"
+    },
+    {
+      "from_node_id": "school_based_prevention_program_coverage",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "political"
+    },
+    {
+      "from_node_id": "halfway_house_availability",
+      "to_node_id": "thirty_day_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "halfway_house_availability",
+      "to_node_id": "treatment_completion_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "stress_coping_alcohol_use",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "alcohol_expectancy_positive",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "alcohol_expectancy_positive",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "self_medication_behavior",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "treatment_seeking_delay",
+      "to_node_id": "liver_cirrhosis_hospitalization_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "alcohol_use_disorder",
+      "to_node_id": "gamma_gt_elevated",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "alcohol_use_disorder",
+      "to_node_id": "mean_corpuscular_volume_elevated",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "alcohol_use_disorder",
+      "to_node_id": "carbohydrate_deficient_transferrin",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "alcohol_use_disorder",
+      "to_node_id": "alcoholic_hepatitis_hospitalization",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "alcohol_use_disorder",
+      "to_node_id": "pancreatitis_hospitalization_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "alcohol_use_disorder",
+      "to_node_id": "alcohol_induced_cardiomyopathy",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "alcohol_use_disorder",
+      "to_node_id": "esophageal_varices_bleeding",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "alcohol_use_disorder",
+      "to_node_id": "alcohol_related_suicide_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "binge_drinking",
+      "to_node_id": "alcohol_related_motor_vehicle_fatality",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "binge_drinking",
+      "to_node_id": "alcohol_related_homicide_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "binge_drinking",
+      "to_node_id": "pancreatitis_hospitalization_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "alcohol_withdrawal_severity",
+      "to_node_id": "treatment_completion_rate",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "craving_intensity_score",
+      "to_node_id": "thirty_day_abstinence_rate",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "treatment_completion_rate",
+      "to_node_id": "thirty_day_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "treatment_completion_rate",
+      "to_node_id": "liver_cirrhosis_hospitalization_rate",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "homeless_shelter_density",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "built_environment"
+    },
+    {
+      "from_node_id": "workplace_drug_testing_policy",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "political"
+    }
+  ],
+  "search_config": {
+    "papers_per_pair": 30,
+    "min_papers_required": 3,
+    "year_range": [2010, 2025],
+    "prioritize_meta_analyses": true,
+    "use_node_keywords": true,
+    "search_templates": [
+      "{from_keywords} AND {to_keywords} AND (systematic review OR meta-analysis)",
+      "{from_keywords} AND {to_keywords} AND (cohort OR longitudinal OR RCT)",
+      "{from_node_name} {to_node_name} causal effect"
+    ]
+  },
+  "llm_config": {
+    "model": "claude-sonnet-4-20250514",
+    "consolidate_papers": true,
+    "min_citations_per_mechanism": 3,
+    "force_mechanism_if_no_evidence": false,
+    "return_null_if_insufficient_evidence": true,
+    "only_use_existing_nodes": true
+  },
+  "output_config": {
+    "mechanism_bank_path": "mechanism-bank/mechanisms/",
+    "report_path": "backend/reports/",
+    "validation_required": true
+  }
+}

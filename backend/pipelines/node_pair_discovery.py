@@ -292,7 +292,7 @@ class NodePairDiscovery:
         # Initialize aggregator
         aggregator = LiteratureSearchAggregator(
             pubmed_email=self.pubmed_email,
-            semantic_scholar_key=self.ss_key
+            semantic_scholar_api_key=self.ss_key
         )
 
         all_papers = []

@@ -25,7 +25,7 @@ export function FooterCTASection({ className }: FooterCTASectionProps) {
   };
 
   const handleContact = () => {
-    window.location.href = 'mailto:maurice_elhelou@gsd.harvard.edu';
+    window.location.href = '/contact';
   };
 
   return (
@@ -44,23 +44,28 @@ export function FooterCTASection({ className }: FooterCTASectionProps) {
               variants={fadeInUp}
               className="text-sm font-medium text-slate-400 uppercase tracking-wider mb-4"
             >
-              Get Involved
+              Partner With Us
             </motion.p>
 
             <motion.h2
               variants={fadeInUp}
               className="text-3xl md:text-4xl font-medium tracking-tight text-white leading-tight mb-6"
             >
-              Partner With Us
+              We're Looking for Pilot Partners
             </motion.h2>
 
             <motion.p
               variants={fadeInUp}
-              className="text-lg text-slate-400 leading-relaxed mb-10"
+              className="text-lg text-slate-400 leading-relaxed mb-6"
             >
-              We're looking for pilot partners: state health departments, hospital systems,
-              and foundations interested in testing the platform with their data and use cases.
-              Early partners shape product direction.
+              We are seeking state health departments, hospital systems, and foundations interested in testing the platform with their contexts and use cases.
+            </motion.p>
+
+            <motion.p
+              variants={fadeInUp}
+              className="text-lg text-slate-300 leading-relaxed mb-10"
+            >
+              Early partners shape product direction. We are currently in co-development discussions with Public Health Ontario.
             </motion.p>
 
             <motion.div
@@ -75,7 +80,7 @@ export function FooterCTASection({ className }: FooterCTASectionProps) {
                   "focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
                 )}
               >
-                Explore the Prototype
+                Explore the Platform
               </button>
 
               <button
@@ -92,20 +97,6 @@ export function FooterCTASection({ className }: FooterCTASectionProps) {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-slate-950 py-8">
-        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-slate-500">
-              Harvard Graduate School of Design + Harvard Chan School of Public Health
-            </p>
-            <p className="text-sm text-slate-600">
-              2025
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

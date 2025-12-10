@@ -1,0 +1,53 @@
+id: job_loss_recent_to_binge_drinking
+name: Recent Job Loss -> Binge Drinking Prevalence
+from_node:
+  node_id: job_loss_recent
+  node_name: Recent Job Loss
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking Prevalence
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Job loss creates acute economic stress, financial insecurity, and loss
+  of social identity/structure'
+- 'Step 2: Economic stress triggers psychological distress, anxiety, and depression
+  symptoms that require coping mechanisms'
+- 'Step 3: Individuals turn to binge drinking as a maladaptive coping strategy to
+  manage stress and negative emotions from unemployment'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Hemmingsson, Tomas, and Ingvar Lundberg. "Excessive drinking
+    and history of unemployment and cohabitation in Danish men born in 1953." European
+    Journal of Public Health 21, no. 6 (2011): 731-735.'
+  supporting_citations:
+  - 'Kaparounaki, Christina K., et al. "The Frequency and Predictive Factors of Change
+    in Alcohol Consumption during the COVID-19 Pandemic: Results from a Multi-Country
+    Longitudinal Study." Nutrients 16, no. 16 (2024): 2591.'
+  - 'Epstein, Marina, et al. "Unemployment and substance use problems among young
+    adults: Does childhood low socioeconomic status exacerbate the effect?" Social
+    Science & Medicine 143 (2015): 204-213.'
+  - 'Kaparounaki, Christina K., et al. "Implications of COVID-19 on Alcoholism: New
+    Battle of the Health Care System." Asia Pacific Journal of Public Health 33, no.
+    4 (2021): 995-1086.'
+description: Recent job loss increases binge drinking prevalence through a stress-coping
+  mechanism. Job loss creates immediate economic stress and psychological distress,
+  leading individuals to use alcohol as a maladaptive coping strategy. The effect
+  is dose-dependent, with multiple job losses showing stronger associations with excessive
+  drinking, and appears consistent across different populations and age groups.
+structural_competency_notes: The pathway is exacerbated by structural factors including
+  inadequate social safety nets, limited access to mental health services, and socioeconomic
+  disadvantage. Individuals from lower socioeconomic backgrounds show stronger associations
+  between unemployment and substance use, suggesting that structural inequalities
+  amplify the stress-drinking pathway.
+last_updated: '2025-12-09'
+extraction_method: node_pair_discovery_v4
+quantitative_effects:
+  effect_size:
+    value: 1.72
+    type: odds_ratio
+    ci_lower: 1.39
+    ci_upper: 2.14
+  p_value: null
+  sample_size: 14547

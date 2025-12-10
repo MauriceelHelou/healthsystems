@@ -1,0 +1,53 @@
+id: chronic_pain_prevalence_to_alcohol_use_disorder
+name: Chronic Pain Prevalence -> Alcohol Use Disorder
+from_node:
+  node_id: chronic_pain_prevalence
+  node_name: Chronic Pain Prevalence
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic pain leads to self-medication behavior where individuals use alcohol
+  for its analgesic properties to alleviate pain symptoms'
+- 'Step 2: Repeated alcohol use for pain relief leads to acute tolerance and the need
+  for progressively higher alcohol consumption levels'
+- 'Step 3: Chronic neurobiological changes from prolonged alcohol use entrench both
+  pain hypersensitivity and alcohol dependence, creating a cycle where abstinence
+  attempts trigger withdrawal-induced hyperalgesia and increased relapse risk'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Zale, E. L., Maisto, S. A., & Ditre, J. W. (2024). Alcohol Use
+    Disorder and Chronic Pain: An Overlooked Epidemic. American Journal of Psychiatry,
+    181(8), 686-695.'
+  supporting_citations:
+  - Patkar, O. L., Belmer, A., Holgate, J. Y., & Bartlett, S. E. (2012). Approach
+    to the pharmacological management of chronic pain in patients with an alcohol
+    use disorder. Journal of Pain Research, 8, 865-877.
+  - 'Bragg, S. W., Mathews, A. J., Jameson, J., LeCroy, R., Murphy, R. K., & Davis,
+    K. A. (2024). Pain and unhealthy alcohol use among people living with HIV: A prospective
+    cohort study. Alcoholism: Clinical and Experimental Research, 48(9), 1622-1630.'
+  - 'Kim, J. K., Shin, M. J., Lee, S. H., & Park, Y. H. (2024). Increased Incidence
+    of Depression and Chronic Pain in Traumatic Spinal Cord Injury Patients With Pre-Injury
+    Alcohol Use Disorder: Longitudinal Analysis of Insurance Claim Database. Neurotrauma,
+    41(15-16), 1789-1797.'
+description: Chronic pain prevalence increases the risk of alcohol use disorder through
+  a self-medication pathway where individuals initially use alcohol for its analgesic
+  effects. This leads to tolerance requiring higher consumption levels, and chronic
+  neurobiological changes that create a reinforcing cycle between pain hypersensitivity
+  and alcohol dependence.
+structural_competency_notes: Access to appropriate pain management resources and integrated
+  care models addressing both conditions simultaneously may modify this pathway, as
+  inadequate pain treatment options may increase reliance on alcohol for pain relief.
+last_updated: '2025-12-09'
+extraction_method: node_pair_discovery_v4
+quantitative_effects:
+  effect_size:
+    value: 2.29
+    type: odds_ratio
+    ci_lower: 1.13
+    ci_upper: 4.64
+  p_value: 0.02
+  sample_size: 207

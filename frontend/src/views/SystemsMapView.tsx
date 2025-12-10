@@ -16,6 +16,8 @@ export const SystemsMapView: FC = () => {
   const [selectedNode, setSelectedNode] = useState<MechanismNode | null>(null)
   const [selectedEdge, setSelectedEdge] = useState<MechanismEdge | null>(null)
   const [showPanel, setShowPanel] = useState(false)
+  const [previousNode, setPreviousNode] = useState<MechanismNode | null>(null)
+  const [mechanismEntrySource, setMechanismEntrySource] = useState<'graph' | 'node-panel' | null>(null)
   const containerRef = useRef<HTMLDivElement>(null)
 
   // Layout mode state
@@ -47,13 +49,46 @@ export const SystemsMapView: FC = () => {
   const handleEdgeClick = (edge: MechanismEdge) => {
     setSelectedEdge(edge)
     setSelectedNode(null)
+    setPreviousNode(null)
+    setMechanismEntrySource('graph')
     setShowPanel(true)
+  }
+
+  // Navigate from node panel to mechanism panel
+  const handleMechanismFromNodePanel = (edge: MechanismEdge, originNode: MechanismNode) => {
+    setSelectedEdge(edge)
+    setPreviousNode(originNode)
+    setMechanismEntrySource('node-panel')
+    setSelectedNode(null)
+  }
+
+  // Back to originating node
+  const handleBackToNode = () => {
+    if (previousNode) {
+      setSelectedNode(previousNode)
+      setSelectedEdge(null)
+      setPreviousNode(null)
+      setMechanismEntrySource(null)
+    }
+  }
+
+  // Navigate to a different node from mechanism panel
+  const handleNavigateToNode = (nodeId: string) => {
+    const targetNode = graphData?.nodes.find(n => n.id === nodeId)
+    if (targetNode) {
+      setSelectedNode(targetNode)
+      setSelectedEdge(null)
+      setPreviousNode(null)
+      setMechanismEntrySource(null)
+    }
   }
 
   const handleClosePanel = () => {
     setShowPanel(false)
     setSelectedNode(null)
     setSelectedEdge(null)
+    setPreviousNode(null)
+    setMechanismEntrySource(null)
   }
 
   // Get container dimensions
@@ -264,6 +299,7 @@ export const SystemsMapView: FC = () => {
             onNodeClick={handleNodeClick}
             onEdgeClick={handleEdgeClick}
             selectedNodeId={selectedNode?.id || null}
+            selectedEdgeId={selectedEdge?.id || null}
             filteredCategories={[]}
             layoutMode={layoutMode}
             physicsSettings={layoutMode === 'force-directed' ? physicsSettings : undefined}
@@ -280,7 +316,12 @@ export const SystemsMapView: FC = () => {
           resizable
           collapsible
         >
-          <NodeDetailPanel node={selectedNode} edges={graphData.edges} />
+          <NodeDetailPanel
+            node={selectedNode}
+            edges={graphData.edges}
+            nodes={graphData.nodes}
+            onMechanismClick={(edge) => handleMechanismFromNodePanel(edge, selectedNode)}
+          />
         </Panel>
       )}
 
@@ -289,10 +330,15 @@ export const SystemsMapView: FC = () => {
           title="Mechanism Detail"
           icon={<Icon name="arrow-right" size="md" className="text-primary-600" />}
           onClose={handleClosePanel}
+          onBack={mechanismEntrySource === 'node-panel' ? handleBackToNode : undefined}
           resizable
           collapsible
         >
-          <MechanismDetailPanel edge={selectedEdge} nodes={graphData.nodes} />
+          <MechanismDetailPanel
+            edge={selectedEdge}
+            nodes={graphData.nodes}
+            onNodeClick={handleNavigateToNode}
+          />
         </Panel>
       )}
     </div>
@@ -300,12 +346,18 @@ export const SystemsMapView: FC = () => {
 }
 
 // Node Detail Panel Component
-const NodeDetailPanel: React.FC<{ node: MechanismNode; edges: MechanismEdge[] }> = ({
-  node,
-  edges,
-}) => {
+const NodeDetailPanel: React.FC<{
+  node: MechanismNode
+  edges: MechanismEdge[]
+  nodes: MechanismNode[]
+  onMechanismClick?: (edge: MechanismEdge) => void
+}> = ({ node, edges, nodes, onMechanismClick }) => {
   const outgoingEdges = edges.filter((e) => e.source === node.id)
   const incomingEdges = edges.filter((e) => e.target === node.id)
+
+  const getNodeLabel = (nodeId: string): string => {
+    return nodes.find((n) => n.id === nodeId)?.label || nodeId
+  }
 
   return (
     <div className="space-y-6">
@@ -347,12 +399,21 @@ const NodeDetailPanel: React.FC<{ node: MechanismNode; edges: MechanismEdge[] }>
               {outgoingEdges.slice(0, 5).map((edge) => (
                 <div
                   key={edge.id}
-                  className="flex items-start gap-2 p-2 rounded border border-gray-200 hover:border-primary-300 transition-colors cursor-pointer"
+                  className="flex items-start gap-2 p-2 rounded border border-gray-200 hover:border-primary-300 hover:bg-gray-50 transition-colors cursor-pointer"
+                  onClick={() => onMechanismClick?.(edge)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      onMechanismClick?.(edge)
+                    }
+                  }}
                 >
-                  <Icon name="arrow-right" size="sm" className="text-green-600 mt-0.5" />
+                  <Icon name="arrow-right" size="sm" className="text-green-600 mt-0.5 flex-shrink-0" />
                   <div className="flex-1 min-w-0">
-                    <p className="text-xs font-medium text-gray-900 truncate">
-                      → Target Node
+                    <p className="text-xs font-medium text-gray-900 truncate" title={`${node.label} → ${getNodeLabel(edge.target)}`}>
+                      {node.label} → {getNodeLabel(edge.target)}
                     </p>
                     <p className="text-xs text-gray-500">
                       {edge.direction === 'positive' ? 'Positive' : 'Negative'} relationship
@@ -379,12 +440,21 @@ const NodeDetailPanel: React.FC<{ node: MechanismNode; edges: MechanismEdge[] }>
               {incomingEdges.slice(0, 5).map((edge) => (
                 <div
                   key={edge.id}
-                  className="flex items-start gap-2 p-2 rounded border border-gray-200 hover:border-primary-300 transition-colors cursor-pointer"
+                  className="flex items-start gap-2 p-2 rounded border border-gray-200 hover:border-primary-300 hover:bg-gray-50 transition-colors cursor-pointer"
+                  onClick={() => onMechanismClick?.(edge)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      onMechanismClick?.(edge)
+                    }
+                  }}
                 >
-                  <Icon name="arrow-left" size="sm" className="text-blue-600 mt-0.5" />
+                  <Icon name="arrow-left" size="sm" className="text-blue-600 mt-0.5 flex-shrink-0" />
                   <div className="flex-1 min-w-0">
-                    <p className="text-xs font-medium text-gray-900 truncate">
-                      ← Source Node
+                    <p className="text-xs font-medium text-gray-900 truncate" title={`${getNodeLabel(edge.source)} → ${node.label}`}>
+                      {getNodeLabel(edge.source)} → {node.label}
                     </p>
                     <p className="text-xs text-gray-500">
                       {edge.direction === 'positive' ? 'Positive' : 'Negative'} relationship
@@ -404,10 +474,11 @@ const NodeDetailPanel: React.FC<{ node: MechanismNode; edges: MechanismEdge[] }>
 }
 
 // Mechanism Detail Panel Component
-const MechanismDetailPanel: React.FC<{ edge: MechanismEdge; nodes: MechanismNode[] }> = ({
-  edge,
-  nodes,
-}) => {
+const MechanismDetailPanel: React.FC<{
+  edge: MechanismEdge
+  nodes: MechanismNode[]
+  onNodeClick?: (nodeId: string) => void
+}> = ({ edge, nodes, onNodeClick }) => {
   const [showEvidenceModal, setShowEvidenceModal] = useState(false)
 
   // Fetch detailed mechanism data from API
@@ -449,10 +520,24 @@ const MechanismDetailPanel: React.FC<{ edge: MechanismEdge; nodes: MechanismNode
 
         {/* Nodes */}
         <div className="text-sm">
-          <p className="text-gray-600 mb-1">From → To</p>
-          <p className="font-medium text-gray-900">
-            {sourceNode?.label} → {targetNode?.label}
-          </p>
+          <p className="text-gray-600 mb-2">From → To</p>
+          <div className="flex items-center gap-2 flex-wrap">
+            <button
+              onClick={() => sourceNode && onNodeClick?.(sourceNode.id)}
+              className="px-3 py-1.5 bg-gray-100 hover:bg-primary-100 hover:text-primary-700 rounded-md text-sm font-medium text-gray-900 transition-colors"
+              title={`View details for ${sourceNode?.label}`}
+            >
+              {sourceNode?.label}
+            </button>
+            <Icon name="arrow-right" size="sm" className="text-gray-400" />
+            <button
+              onClick={() => targetNode && onNodeClick?.(targetNode.id)}
+              className="px-3 py-1.5 bg-gray-100 hover:bg-primary-100 hover:text-primary-700 rounded-md text-sm font-medium text-gray-900 transition-colors"
+              title={`View details for ${targetNode?.label}`}
+            >
+              {targetNode?.label}
+            </button>
+          </div>
         </div>
 
         {/* Description */}

@@ -12,8 +12,11 @@ HealthSystems Platform is a decision support tool for quantifying how structural
 ```bash
 cd backend
 pip install -r requirements.txt          # Install dependencies
+pip install -r requirements-dev.txt      # Dev dependencies (testing, linting)
 uvicorn api.main:app --reload             # Run API server (http://localhost:8000)
 pytest tests/ --cov=. --cov-report=html   # Run tests with coverage
+pytest tests/unit/test_file.py -v         # Run single test file
+pytest tests/unit/test_file.py::test_func -v  # Run single test function
 black . && isort .                        # Format code
 ```
 
@@ -23,9 +26,20 @@ cd frontend
 npm install                    # Install dependencies
 npm run dev                    # Dev server (http://localhost:3000)
 npm test                       # Run Jest tests
+npm test -- path/to/file.test.tsx  # Run single test file
+npm test -- --watch            # Watch mode
+npm run test:a11y              # Accessibility tests (axe-core)
 npm run test:e2e               # Run Playwright E2E tests
 npm run lint && npm run format # Lint and format
 npm run type-check             # TypeScript check
+```
+
+### Database Migrations (Alembic)
+```bash
+cd backend
+alembic upgrade head                          # Apply all migrations
+alembic revision --autogenerate -m "message"  # Create new migration
+alembic downgrade -1                          # Rollback one migration
 ```
 
 ### CLI Commands
@@ -41,6 +55,23 @@ python -m backend.cli.main regrade --input mechanism-bank/ --dry-run
 python backend/scripts/validate_mechanism_schema.py    # Validate all YAML files
 python mechanism-bank/validation/validate_mechanisms.py --file <specific_file>
 ```
+
+### Database Seeding
+```bash
+cd backend
+python scripts/seed_database.py                        # Seed all valid mechanisms
+python scripts/seed_database.py --min-quality B        # Only quality B or better
+python scripts/seed_database.py --topic alcohol        # Only alcohol-related
+python scripts/seed_database.py --min-quality B --topic alcohol  # Combined filters
+```
+
+**Important:** The seeder only loads:
+- **Nodes:** Only from `nodes/by_scale/` directory (999 defined nodes)
+- **Mechanisms:** Only from `mechanism-bank/mechanisms/{category}/` where:
+  - File does NOT have `NEW:` prefix (proposed mechanisms are excluded)
+  - BOTH from_node and to_node exist in `nodes/by_scale/`
+
+Valid mechanism categories: `behavioral/`, `built_environment/`, `economic/`, `healthcare_access/`, `political/`, `social_environment/`, `biological/`
 
 ## Architecture
 
@@ -129,7 +160,8 @@ Nodes are classified by structural level per `nodes/NODE_SYSTEM_DEFINITIONS.md`:
 ```bash
 # LLM & Core
 ANTHROPIC_API_KEY=sk-ant-...      # Required for LLM extraction
-DATABASE_URL=postgresql://...     # Production database
+DATABASE_URL=postgresql://...     # Production database (PostgreSQL 14+)
+REDIS_URL=redis://localhost:6379  # For caching and Celery tasks
 
 # Literature Search
 SEMANTIC_SCHOLAR_API_KEY=...      # Optional (higher rate limits)
@@ -142,7 +174,18 @@ ELSEVIER_INST_TOKEN=...           # Institutional token (contact Elsevier)
 WILEY_TDM_TOKEN=...               # Wiley Text & Data Mining
 CORE_API_KEY=...                  # CORE API (optional, higher limits)
 OPENALEX_EMAIL=your@email.edu     # For polite pool (10 req/sec)
+
+# Public Health Data APIs
+CENSUS_API_KEY=...                # U.S. Census Bureau (demographics, housing)
+CDC_API_KEY=...                   # CDC Data API (non-WONDER datasets)
+EPA_AQS_EMAIL=...                 # EPA Air Quality System
+EPA_AQS_KEY=...
+BLS_API_KEY=...                   # Bureau of Labor Statistics
+CMS_API_KEY=...                   # Centers for Medicare & Medicaid Services
+HRSA_API_KEY=...                  # Health Resources and Services Administration
 ```
+
+See `backend/.env.example` for complete configuration options.
 
 ## Custom Subagents
 
@@ -155,6 +198,28 @@ This project has specialized Claude Code agents in `.claude/agents/`:
 
 ## Test Coverage Requirements
 
-- Backend: Minimum 80% coverage
+- Backend: Minimum 80% coverage (`--cov-fail-under=80`)
 - Frontend: Jest unit tests + Playwright E2E + Axe accessibility tests
+- Frontend bundle size: 500KB max limit
 - Mechanisms: Schema validation required before commit
+
+## Documentation
+
+The `docs/` directory contains a 6-tier documentation system with 19 specialized documents:
+- Start: `docs/Foundational Principles/00_PROJECT_NAVIGATION_INDEX.md`
+- Reading paths organized by role: Leadership, Data Scientists, Backend Engineers, ML Engineers, UX Designers
+
+## Accessibility Requirements
+
+- WCAG 2.1 AA compliance required (AAA preferred)
+- Color contrast ratio >= 4.5:1 for text
+- Keyboard navigation and screen reader support required
+- Run `npm run test:a11y` for automated accessibility testing
+
+## Commit Messages
+
+Use conventional commits: `<type>(<scope>): <subject>`
+
+Types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `mechanism`
+
+Example: `mechanism(bank): add housing quality -> respiratory health pathway`

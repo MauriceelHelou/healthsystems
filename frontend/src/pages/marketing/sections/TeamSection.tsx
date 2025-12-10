@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
 import { cn } from '../../../utils/classNames';
 
@@ -14,45 +15,45 @@ interface TeamMember {
   affiliation: string;
   bio: string;
   initials: string;
+  headshot: string;
+  headshotLabel: string;
 }
 
-interface Advisor {
-  id: string;
-  name: string;
-  affiliation: string;
-}
-
+/**
+ * Team headshots should be placed in: public/images/team/
+ *
+ * Required files:
+ * - maurice-el-helou.jpg (400x400px recommended, square crop)
+ * - noah-johnson.jpg (400x400px recommended, square crop)
+ *
+ * Image specifications:
+ * - Format: JPG or PNG
+ * - Size: 400x400px minimum (square aspect ratio)
+ * - Style: Professional headshot, neutral background
+ */
 const coreTeam: TeamMember[] = [
   {
     id: '1',
-    name: 'Maurice el Helou',
-    role: 'MDE Candidate',
-    affiliation: 'Harvard Graduate School of Design',
-    bio: 'Architecture and urban systems background. Building tools that make structural determinants legible to policymakers.',
-    initials: 'ME'
+    name: 'Maurice El Helou',
+    role: 'Co-Founder',
+    affiliation: 'Harvard GSD (Urban Planning + Design Studies) | McMaster Health Sciences',
+    bio: 'Background in eco-social theory and built environment health impacts. Previously worked with Hamilton\'s public health department on data strategy.',
+    initials: 'ME',
+    headshot: '/images/team/maurice-el-helou.jpeg',
+    headshotLabel: 'Maurice El Helou headshot'
   },
   {
     id: '2',
     name: 'Noah Johnson',
-    role: 'PhD Candidate',
-    affiliation: 'Harvard Chan School of Public Health',
-    bio: 'Social epidemiology focus. Translating population health research into actionable system models.',
-    initials: 'NJ'
+    role: 'Co-Founder',
+    affiliation: 'Harvard GSD (Urban Planning) | Urban Institute (4 years)',
+    bio: 'Quantitative policy analysis experience building government decision-support tools for housing and food access.',
+    initials: 'NJ',
+    headshot: '/images/team/noah-johnson.jpg',
+    headshotLabel: 'Noah Johnson headshot'
   }
 ];
 
-const advisors: Advisor[] = [
-  {
-    id: '1',
-    name: 'Rob McIsaac',
-    affiliation: 'Invest Health'
-  },
-  {
-    id: '2',
-    name: 'David Yarkin',
-    affiliation: 'Invest Health'
-  }
-];
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -64,11 +65,61 @@ const staggerContainer = {
   visible: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.1 } }
 };
 
+function TeamMemberCard({ member }: { member: TeamMember }) {
+  const [imageError, setImageError] = useState(false);
+
+  return (
+    <motion.div
+      variants={fadeInUp}
+      className="bg-slate-50 rounded-xl p-8"
+    >
+      <div className="flex flex-col items-center text-center">
+        {/* Large Headshot with fallback to initials */}
+        <figure className="mb-6">
+          <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden bg-slate-200">
+            {!imageError ? (
+              <img
+                src={member.headshot}
+                alt={member.headshotLabel}
+                className="w-full h-full object-cover"
+                onError={() => setImageError(true)}
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center text-slate-600 font-medium text-4xl">
+                {member.initials}
+              </div>
+            )}
+          </div>
+          <figcaption className="mt-2 text-xs italic text-slate-400">
+            {member.headshotLabel}
+          </figcaption>
+        </figure>
+
+        {/* Info */}
+        <div>
+          <h3 className="text-xl font-medium text-slate-900">
+            {member.name}
+          </h3>
+          <p className="text-base text-slate-600 mt-1">
+            {member.role}
+          </p>
+          <p className="text-sm text-slate-500 mt-1">
+            {member.affiliation}
+          </p>
+          <p className="text-sm text-slate-600 leading-relaxed mt-4 max-w-sm mx-auto">
+            {member.bio}
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 export function TeamSection({ className }: TeamSectionProps) {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className={cn("py-24 md:py-32 bg-white", className)}>
+    <section id="team" className={cn("py-24 md:py-32 bg-white", className)}>
       <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12">
         <motion.div
           initial={shouldReduceMotion ? "visible" : "hidden"}
@@ -87,58 +138,11 @@ export function TeamSection({ className }: TeamSectionProps) {
           </motion.div>
 
           {/* Core Team */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {coreTeam.map((member) => (
-              <motion.div
-                key={member.id}
-                variants={fadeInUp}
-                className="bg-slate-50 rounded-xl p-6"
-              >
-                <div className="flex items-start gap-5">
-                  {/* Avatar */}
-                  <div className="flex-shrink-0 w-14 h-14 bg-slate-200 rounded-full flex items-center justify-center text-slate-600 font-medium text-lg">
-                    {member.initials}
-                  </div>
-
-                  {/* Info */}
-                  <div className="flex-1">
-                    <h3 className="text-lg font-medium text-slate-900">
-                      {member.name}
-                    </h3>
-                    <p className="text-sm text-slate-600 mt-0.5">
-                      {member.role}
-                    </p>
-                    <p className="text-sm text-slate-500">
-                      {member.affiliation}
-                    </p>
-                    <p className="text-sm text-slate-600 leading-relaxed mt-3">
-                      {member.bio}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
+              <TeamMemberCard key={member.id} member={member} />
             ))}
           </div>
-
-          {/* Advisors */}
-          <motion.div variants={fadeInUp}>
-            <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mb-6">
-              Advisors
-            </p>
-            <div className="flex flex-wrap gap-6">
-              {advisors.map((advisor) => (
-                <div key={advisor.id} className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-slate-500 font-medium text-sm">
-                    {advisor.name.split(' ').map(n => n[0]).join('')}
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-slate-900">{advisor.name}</p>
-                    <p className="text-xs text-slate-500">{advisor.affiliation}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>

@@ -5,12 +5,13 @@ import { useEffect, useState, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { cn } from '../../utils/classNames';
 import { HeroSection } from './sections/HeroSection';
-import { AboutSection } from './sections/AboutSection';
-import { FeaturesSection } from './sections/FeaturesSection';
-import { HowToUseSection } from './sections/HowToUseSection';
+import { ProblemSection } from './sections/ProblemSection';
+import { SolutionSection } from './sections/SolutionSection';
+import { CurrentCapabilitiesSection } from './sections/CurrentCapabilitiesSection';
+import { LimitationsSection } from './sections/LimitationsSection';
+import { HowItWorksSection } from './sections/HowItWorksSection';
 import { RoadmapSection } from './sections/RoadmapSection';
 import { TeamSection } from './sections/TeamSection';
-import { TestimonialsSection } from './sections/TestimonialsSection';
 import { FooterCTASection } from './sections/FooterCTASection';
 
 // Animation variants
@@ -66,8 +67,8 @@ export function HomePage() {
   }, [navigate]);
 
   const handleSecondaryCTA = useCallback(() => {
-    scrollToSection('about');
-  }, [scrollToSection]);
+    navigate('/contact');
+  }, [navigate]);
 
   const handleBackToTop = useCallback(() => {
     scrollToSection('hero');
@@ -92,37 +93,28 @@ export function HomePage() {
           onSecondaryCTA={handleSecondaryCTA}
         />
 
-        {/* About Section */}
-        <AboutSection
-          className="bg-gray-50"
-        />
+        {/* Problem Section - The Quantification Gap */}
+        <ProblemSection className="bg-white" />
 
-        {/* Features Section */}
-        <FeaturesSection
-          className="bg-white"
-        />
+        {/* What We Do - Make the Evidence Navigable */}
+        <SolutionSection className="bg-slate-50" />
 
-        {/* How to Use Section */}
-        <HowToUseSection
-          className="bg-white"
-        />
+        {/* Current Capabilities - What the Platform Does Today */}
+        <CurrentCapabilitiesSection className="bg-white" />
 
-        {/* Roadmap Section */}
-        <RoadmapSection
-          className="bg-white"
-        />
+        {/* Limitations - Honest About Our Stage */}
+        <LimitationsSection className="bg-slate-50" />
+
+        {/* How It Works - From Question to Evidence */}
+        <HowItWorksSection className="bg-white" />
+
+        {/* Roadmap - What We're Building */}
+        <RoadmapSection className="bg-slate-50" />
 
         {/* Team Section */}
-        <TeamSection
-          className="bg-gray-50"
-        />
+        <TeamSection className="bg-white" />
 
-        {/* Testimonials Section */}
-        <TestimonialsSection
-          className="bg-white"
-        />
-
-        {/* Footer CTA Section */}
+        {/* Footer CTA Section - Partner With Us */}
         <FooterCTASection />
       </main>
 

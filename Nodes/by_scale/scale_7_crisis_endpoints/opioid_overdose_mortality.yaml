@@ -19,6 +19,11 @@ data_quality:
   primary_sources:
   - name: TBD
     granularity: state
-description: |-
-  Measures opioid overdose mortality. Measured in Deaths per 100k. Part of the Behavioral Health domain.
+description: Measures opioid overdose mortality. Measured in Deaths per 100k. Part of the Behavioral Health domain.
 type: Rate
+hierarchy:
+  parent_ids:
+  - all_cause_mortality_rate
+  - drug_overdose_mortality
+  depth: 2
+  is_grouping_node: false

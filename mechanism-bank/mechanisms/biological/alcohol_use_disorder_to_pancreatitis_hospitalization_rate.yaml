@@ -1,0 +1,53 @@
+id: alcohol_use_disorder_to_pancreatitis_hospitalization_rate
+name: Alcohol Use Disorder -> Pancreatitis Hospitalization Rate
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: pancreatitis_hospitalization_rate
+  node_name: Pancreatitis Hospitalization Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol use disorder leads to chronic excessive alcohol consumption and
+  toxic effects of alcohol metabolites on pancreatic tissue'
+- 'Step 2: Direct toxic effects and metabolic dysfunction cause recurrent episodes
+  of acute alcoholic pancreatitis with high recurrence rates'
+- 'Step 3: High rates of recurrent acute alcoholic pancreatitis episodes result in
+  increased hospitalizations for pancreatitis'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Bernstein, Sarah L., et al. "Trends and Outcomes of Alcoholic
+    Acute Pancreatitis in Patients with Alcohol Use Disorder Treated with Naltrexone
+    in the United States: Before and After the COVID-19 Pandemic." Digestive Diseases
+    and Sciences (2025): 10.1007/s10620-025-09411-2.'
+  supporting_citations:
+  - 'Anonymous. "Increasing Prevalence and Racial Disparity of Alcohol-Related Gastrointestinal
+    and Liver Disease During the COVID-19 Pandemic: A Population-Based National Study."
+    Journal of Clinical Gastroenterology 57, no. 4 (2023): 10.1097/MCG.0000000000001665.'
+  - 'O''Brien, Sinead, et al. "The Impact of Social Work Intervention in Alcohol-Induced
+    Pancreatitis in Ireland: a Single-Center Experience." Alcohol and Alcoholism 50,
+    no. 5 (2015): 10.1093/alcalc/agv040.'
+  - 'Anonymous. "New Progress in the Study of Pathogenesis of Alcoholic Pancreatitis."
+    Pancreatology (2025): 10.1159/000542548.'
+description: Alcohol use disorder increases pancreatitis hospitalization rates through
+  direct toxic effects on pancreatic tissue. Studies show that 82.3% of alcoholic
+  acute pancreatitis patients have alcohol use disorder, with readmission rates of
+  28-43% within 11 months. The COVID-19 pandemic showed a 3.67-fold increased odds
+  of alcoholic pancreatitis hospitalizations, demonstrating the strong relationship
+  between alcohol use disorder and pancreatitis-related healthcare utilization.
+structural_competency_notes: Racial disparities exist in alcohol-related pancreatitis,
+  with African Americans disproportionately affected during COVID-19. Employment status
+  significantly influences relapse rates, and there is regional variation in treatment
+  access and outcomes across different geographical areas.
+last_updated: '2025-12-09'
+extraction_method: node_pair_discovery_v4
+quantitative_effects:
+  effect_size:
+    value: 3.67
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: null
+  p_value: 0.0001
+  sample_size: 74033580

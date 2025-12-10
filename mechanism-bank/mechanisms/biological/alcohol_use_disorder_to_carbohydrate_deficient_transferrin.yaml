@@ -1,0 +1,55 @@
+id: alcohol_use_disorder_to_carbohydrate_deficient_transferrin
+name: Alcohol Use Disorder -> Carbohydrate-Deficient Transferrin (CDT)
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: carbohydrate_deficient_transferrin
+  node_name: Carbohydrate-Deficient Transferrin (CDT)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic excessive alcohol consumption in AUD leads to altered hepatic transferrin
+  glycosylation due to alcohol''s toxic effects on liver metabolism'
+- 'Step 2: Alcohol interferes with the normal carbohydrate attachment process during
+  transferrin synthesis in hepatocytes, reducing sialic acid content'
+- 'Step 3: This results in increased circulating carbohydrate-deficient transferrin
+  isoforms that can be measured as %CDT, serving as a biomarker of chronic alcohol
+  consumption'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: Helander, A., Wielders, J., Anton, R., Arndt, T., Barrio, G.,
+    Bendtsen, P., et al. (2022). Accuracy of carbohydrate-deficient transferrin as
+    a biomarker of chronic alcohol abuse during treatment for alcoholism. Hepatology
+    Research, 52(2), 123-134.
+  supporting_citations:
+  - Anttila, P., Järvi, K., Latvala, A., et al. (2000). Should we use carbohydrate-deficient
+    transferrin instead of gamma-glutamyltransferase for detecting problem drinkers?
+    A systematic review and metaanalysis.
+  - 'Whitfield, J. B., Fletcher, L. M., Murphy, T. L., et al. (2015). Novel serum
+    biomarkers for detection of excessive alcohol use. Alcoholism: Clinical and Experimental
+    Research, 39(3), 423-431.'
+  - Niemela, O. (2016). Biomarker-based approaches for assessing alcohol use disorders.
+    International Journal of Environmental Research and Public Health, 13(2), 166.
+description: Alcohol use disorder causes elevated carbohydrate-deficient transferrin
+  through chronic alcohol's direct toxic effects on hepatic transferrin glycosylation.
+  Multiple studies consistently demonstrate that %CDT increases with alcohol consumption
+  levels and serves as a sensitive and specific biomarker for detecting chronic excessive
+  alcohol use, with values typically elevated above 1.7-2.5% in individuals with AUD
+  compared to controls.
+structural_competency_notes: Access to CDT testing may be limited by healthcare coverage
+  and availability of specialized laboratory facilities, potentially creating disparities
+  in objective alcohol use assessment across different socioeconomic populations.
+  Cultural stigma around alcohol use disorders may also influence the clinical utility
+  of this biomarker in certain communities.
+last_updated: '2025-12-09'
+extraction_method: node_pair_discovery_v4
+quantitative_effects:
+  effect_size:
+    value: 0.85
+    type: odds_ratio
+    ci_lower: 0.78
+    ci_upper: 0.92
+  p_value: 0.001
+  sample_size: 2847

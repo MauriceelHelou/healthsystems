@@ -26,72 +26,76 @@ jest.mock('../../stores/graphStateStore', () => ({
 
 // Mock D3 to prevent DOM manipulation errors in tests
 // D3 visualization behavior should be tested via E2E tests
-jest.mock('d3', () => {
-  // Create factory that generates fresh selection objects each time
-  const createMockSelection = (): any => {
-    const sel: any = {};
-    // All methods return the selection for chaining
-    ['selectAll', 'select', 'attr', 'append', 'call', 'datum', 'filter',
-     'on', 'text', 'style', 'classed', 'remove', 'transition', 'duration',
-     'each', 'data', 'enter', 'exit', 'merge', 'join', 'raise', 'lower'
-    ].forEach(method => {
-      sel[method] = jest.fn(() => sel);
-    });
-    sel.node = jest.fn(() => ({
-      getBoundingClientRect: () => ({ width: 800, height: 600, x: 0, y: 0, top: 0, left: 0 }),
-    }));
-    sel.nodes = jest.fn(() => []);
-    sel.empty = jest.fn(() => false);
-    sel.size = jest.fn(() => 1);
-    return sel;
-  };
-
-  const createMockSimulation = (): any => {
-    const sim: any = {};
-    ['force', 'alphaDecay', 'velocityDecay', 'alphaMin', 'alpha', 'on', 'alphaTarget', 'tick'
-    ].forEach(method => {
-      sim[method] = jest.fn(() => sim);
-    });
-    sim.stop = jest.fn();
-    sim.restart = jest.fn();
-    sim.nodes = jest.fn(() => []);
-    return sim;
-  };
-
-  return {
-    select: jest.fn(() => createMockSelection()),
-    selectAll: jest.fn(() => createMockSelection()),
-    zoom: jest.fn(() => {
-      const z: any = {};
-      ['scaleExtent', 'on', 'transform', 'translateExtent', 'extent', 'filter'].forEach(m => {
-        z[m] = jest.fn(() => z);
-      });
-      return z;
-    }),
-    zoomIdentity: {
-      translate: jest.fn(function() { return this; }),
-      scale: jest.fn(function() { return this; }),
-      k: 1,
-      x: 0,
-      y: 0
-    },
-    forceSimulation: jest.fn(() => createMockSimulation()),
-    forceManyBody: jest.fn(() => ({ strength: jest.fn().mockReturnThis() })),
-    forceCenter: jest.fn(() => ({})),
-    forceCollide: jest.fn(() => ({ radius: jest.fn().mockReturnThis() })),
-    forceLink: jest.fn(() => ({
-      id: jest.fn().mockReturnThis(),
-      distance: jest.fn().mockReturnThis(),
-      strength: jest.fn().mockReturnThis()
-    })),
-    forceX: jest.fn(() => ({ strength: jest.fn().mockReturnThis() })),
-    forceY: jest.fn(() => ({ strength: jest.fn().mockReturnThis() })),
-    drag: jest.fn(() => ({ on: jest.fn().mockReturnThis() })),
-  };
-});
+//
+// Note: jest.config.js has resetMocks: true, which clears mock implementations
+// between tests. We use jest.mock() to set up the initial mock, and then
+// restore implementations in beforeEach via a helper function.
+jest.mock('d3');
 
 // Import after mocking
 import MechanismGraph from '../MechanismGraph';
+import * as d3 from 'd3';
+
+// Helper to set up D3 mock - called in beforeEach because jest.config.js has resetMocks: true
+function setupD3Mock() {
+  // Create a chainable selection mock
+  const mockSelection: any = {};
+  ['selectAll', 'select', 'attr', 'append', 'call', 'datum', 'filter',
+   'on', 'text', 'style', 'classed', 'remove', 'transition', 'duration',
+   'each', 'data', 'enter', 'exit', 'merge', 'join', 'raise', 'lower'
+  ].forEach(method => {
+    mockSelection[method] = jest.fn(() => mockSelection);
+  });
+  mockSelection.node = jest.fn(() => ({
+    getBoundingClientRect: () => ({ width: 800, height: 600, x: 0, y: 0, top: 0, left: 0 }),
+    parentNode: null,
+  }));
+  mockSelection.nodes = jest.fn(() => []);
+  mockSelection.empty = jest.fn(() => true);
+  mockSelection.size = jest.fn(() => 0);
+
+  // Create a chainable zoom mock
+  const mockZoom: any = {};
+  ['scaleExtent', 'on', 'transform', 'translateExtent', 'extent', 'filter'].forEach(m => {
+    mockZoom[m] = jest.fn(() => mockZoom);
+  });
+
+  // Create a chainable simulation mock
+  const mockSimulation: any = {};
+  ['force', 'alphaDecay', 'velocityDecay', 'alphaMin', 'alpha', 'on', 'alphaTarget', 'tick'
+  ].forEach(method => {
+    mockSimulation[method] = jest.fn(() => mockSimulation);
+  });
+  mockSimulation.stop = jest.fn();
+  mockSimulation.restart = jest.fn();
+  mockSimulation.nodes = jest.fn(() => []);
+
+  // Set up the mock implementations
+  (d3.select as jest.Mock).mockImplementation(() => mockSelection);
+  (d3.selectAll as jest.Mock).mockImplementation(() => mockSelection);
+  (d3.zoom as jest.Mock).mockImplementation(() => mockZoom);
+  (d3.forceSimulation as jest.Mock).mockImplementation(() => mockSimulation);
+  (d3.forceManyBody as jest.Mock).mockImplementation(() => ({ strength: jest.fn().mockReturnThis() }));
+  (d3.forceCenter as jest.Mock).mockImplementation(() => ({}));
+  (d3.forceCollide as jest.Mock).mockImplementation(() => ({ radius: jest.fn().mockReturnThis() }));
+  (d3.forceLink as jest.Mock).mockImplementation(() => ({
+    id: jest.fn().mockReturnThis(),
+    distance: jest.fn().mockReturnThis(),
+    strength: jest.fn().mockReturnThis()
+  }));
+  (d3.forceX as jest.Mock).mockImplementation(() => ({ strength: jest.fn().mockReturnThis() }));
+  (d3.forceY as jest.Mock).mockImplementation(() => ({ strength: jest.fn().mockReturnThis() }));
+  (d3.drag as jest.Mock).mockImplementation(() => ({ on: jest.fn().mockReturnThis() }));
+
+  // Set up zoomIdentity
+  (d3 as any).zoomIdentity = {
+    translate: jest.fn(function() { return this; }),
+    scale: jest.fn(function() { return this; }),
+    k: 1,
+    x: 0,
+    y: 0
+  };
+}
 
 describe('MechanismGraph', () => {
   // Test data fixtures
@@ -140,7 +144,8 @@ describe('MechanismGraph', () => {
   };
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    // Set up D3 mock before each test (required because resetMocks: true in jest.config.js)
+    setupD3Mock();
   });
 
   // ==========================================
@@ -475,6 +480,91 @@ describe('MechanismGraph', () => {
 
       expect(() => {
         rerender(<MechanismGraph data={mockData} layoutMode="hierarchical" />);
+      }).not.toThrow();
+    });
+  });
+
+  // ==========================================
+  // Edge Selection/Highlighting Tests
+  // ==========================================
+  describe('Edge Selection Props', () => {
+    it('accepts selectedEdgeId prop', () => {
+      expect(() => {
+        render(<MechanismGraph data={mockData} selectedEdgeId="edge1" />);
+      }).not.toThrow();
+    });
+
+    it('accepts selectedEdgeId as null', () => {
+      expect(() => {
+        render(<MechanismGraph data={mockData} selectedEdgeId={null} />);
+      }).not.toThrow();
+    });
+
+    it('handles selectedEdgeId changes', () => {
+      const { rerender } = render(
+        <MechanismGraph data={mockData} selectedEdgeId="edge1" />
+      );
+
+      expect(() => {
+        rerender(<MechanismGraph data={mockData} selectedEdgeId="edge2" />);
+      }).not.toThrow();
+
+      expect(() => {
+        rerender(<MechanismGraph data={mockData} selectedEdgeId={null} />);
+      }).not.toThrow();
+    });
+
+    it('handles selectedEdgeId with nonexistent edge id', () => {
+      expect(() => {
+        render(<MechanismGraph data={mockData} selectedEdgeId="nonexistent-edge" />);
+      }).not.toThrow();
+    });
+
+    it('handles simultaneous node and edge selection', () => {
+      expect(() => {
+        render(
+          <MechanismGraph
+            data={mockData}
+            selectedNodeId="node1"
+            selectedEdgeId="edge1"
+          />
+        );
+      }).not.toThrow();
+    });
+
+    it('handles switching from node to edge selection', () => {
+      const { rerender } = render(
+        <MechanismGraph data={mockData} selectedNodeId="node1" selectedEdgeId={null} />
+      );
+
+      expect(() => {
+        rerender(
+          <MechanismGraph data={mockData} selectedNodeId={null} selectedEdgeId="edge1" />
+        );
+      }).not.toThrow();
+    });
+
+    it('handles switching from edge to node selection', () => {
+      const { rerender } = render(
+        <MechanismGraph data={mockData} selectedNodeId={null} selectedEdgeId="edge1" />
+      );
+
+      expect(() => {
+        rerender(
+          <MechanismGraph data={mockData} selectedNodeId="node1" selectedEdgeId={null} />
+        );
+      }).not.toThrow();
+    });
+
+    it('handles clearing both selections', () => {
+      const { rerender } = render(
+        <MechanismGraph data={mockData} selectedNodeId="node1" selectedEdgeId="edge1" />
+      );
+
+      expect(() => {
+        rerender(
+          <MechanismGraph data={mockData} selectedNodeId={null} selectedEdgeId={null} />
+        );
       }).not.toThrow();
     });
   });

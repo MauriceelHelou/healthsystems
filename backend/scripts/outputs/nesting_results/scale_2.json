@@ -1,0 +1,124 @@
+{
+  "scale": 2,
+  "scale_name": "Built Environment",
+  "total_nodes": 60,
+  "relationships_found": 11,
+  "domain_roots_identified": 48,
+  "orphan_nodes_count": 49,
+  "orphan_nodes": [
+    "occupational_chemical_exposure",
+    "banking_desert_no_physical_bank_access",
+    "walkability_index",
+    "urban_heat_island_intensity",
+    "bank_branch_density",
+    "sidewalk_completeness",
+    "recovery_community_center_access",
+    "heat_advisory_days",
+    "homeless_shelter_density",
+    "safe_water_access_point_of_use_treatment",
+    "wet_shelter_availability",
+    "halfway_house_availability",
+    "air_quality_alert_days",
+    "indoor_radon_exposure",
+    "telehealth_inability_due_to_digital_access",
+    "transit_route_density",
+    "wildfire_smoke_exposure",
+    "entertainment_district_density",
+    "college_campus_proximity",
+    "tree_canopy_coverage"
+  ],
+  "relationships": [
+    {
+      "parent_id": "occupational_chemical_exposure",
+      "parent_name": "Occupational Chemical Exposure",
+      "child_id": "pesticide_exposure_residential",
+      "child_name": "Pesticide Exposure (Residential)",
+      "confidence": "high",
+      "reasoning": "Residential pesticide exposure is a specific type of chemical exposure, fitting within the broader category of chemical exposure"
+    },
+    {
+      "parent_id": "noise_exposure",
+      "parent_name": "Noise Exposure",
+      "child_id": "occupational_noise_exposure",
+      "child_name": "Occupational Noise Exposure",
+      "confidence": "high",
+      "reasoning": "Occupational noise exposure is a specific subset of overall noise exposure, occurring in workplace settings"
+    },
+    {
+      "parent_id": "alcohol_outlet_density",
+      "parent_name": "Alcohol Outlet Density",
+      "child_id": "liquor_store_proximity",
+      "child_name": "Liquor Store Proximity",
+      "confidence": "high",
+      "reasoning": "Liquor store proximity is a specific measure of alcohol outlet accessibility, which is contained within the broader alcohol outlet density concept"
+    },
+    {
+      "parent_id": "alcohol_outlet_density",
+      "parent_name": "Alcohol Outlet Density",
+      "child_id": "bar_tavern_density",
+      "child_name": "Bar/Tavern Density",
+      "confidence": "high",
+      "reasoning": "Bar/tavern density is a specific type of alcohol outlet density, measuring on-premise drinking establishments"
+    },
+    {
+      "parent_id": "alcohol_outlet_density",
+      "parent_name": "Alcohol Outlet Density",
+      "child_id": "drive_through_liquor_store_prevalence",
+      "child_name": "Drive-Through Liquor Store Prevalence",
+      "confidence": "high",
+      "reasoning": "Drive-through liquor stores are a specific subset of alcohol outlets with particular accessibility characteristics"
+    },
+    {
+      "parent_id": "alcohol_outlet_density",
+      "parent_name": "Alcohol Outlet Density",
+      "child_id": "sports_bar_density",
+      "child_name": "Sports Bar Density",
+      "confidence": "high",
+      "reasoning": "Sports bars are a specific type of alcohol outlet/drinking establishment"
+    },
+    {
+      "parent_id": "food_desert_prevalence",
+      "parent_name": "Food Desert Prevalence",
+      "child_id": "grocery_store_desert_food_desert",
+      "child_name": "Grocery Store Desert (Food Desert)",
+      "confidence": "high",
+      "reasoning": "Grocery store desert is the definitional measure of food desert prevalence - they represent the same concept with grocery store desert being the specific operational definition"
+    },
+    {
+      "parent_id": "transit_route_density",
+      "parent_name": "Transit Route Density",
+      "child_id": "transit_stop_density",
+      "child_name": "Transit Stop Density",
+      "confidence": "high",
+      "reasoning": "Transit stops are components of transit routes - stop density is a specific measure within the broader transit route infrastructure"
+    },
+    {
+      "parent_id": "green_space_access",
+      "parent_name": "Green Space Access",
+      "child_id": "park_acreage_per_capita",
+      "child_name": "Park Acreage Per Capita",
+      "confidence": "high",
+      "reasoning": "Park acreage per capita is a specific quantitative measure of green space access availability"
+    },
+    {
+      "parent_id": "tree_canopy_coverage",
+      "parent_name": "Tree Canopy Coverage",
+      "child_id": "tree_canopy_cover_change",
+      "child_name": "Tree Canopy Cover (Change)",
+      "confidence": "high",
+      "reasoning": "Tree canopy cover change is a temporal measure of tree canopy coverage, representing change in the same underlying construct"
+    },
+    {
+      "parent_id": "wildfire_smoke_exposure",
+      "parent_name": "Wildfire Smoke Exposure",
+      "child_id": "wildfire_risk_exposure",
+      "child_name": "Wildfire Risk Exposure",
+      "confidence": "high",
+      "reasoning": "Wildfire risk exposure represents the potential for the actual wildfire smoke exposure to occur - risk is contained within the broader exposure concept"
+    }
+  ],
+  "llm_metadata": {
+    "model": "claude-sonnet-4-20250514",
+    "timestamp": "2025-12-10T00:55:05.059015+00:00"
+  }
+}

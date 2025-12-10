@@ -25,6 +25,11 @@ data_quality:
     granularity: state
   - name: NHTSA FARS (fatalities)
     granularity: state
-description: |-
-  Measures alcohol poisoning ed visit rate. Measured in Visits per 100k. Part of the Behavioral Health domain.
+description: Measures alcohol poisoning ed visit rate. Measured in Visits per 100k. Part of the Behavioral Health domain.
 type: Rate
+hierarchy:
+  parent_ids:
+  - emergency_department_visit_rate
+  - substance_use_related_ed_visit_rate
+  depth: 2
+  is_grouping_node: false

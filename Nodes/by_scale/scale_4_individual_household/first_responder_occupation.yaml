@@ -1,0 +1,31 @@
+id: first_responder_occupation
+name: First Responder Occupation
+scale: 4
+domain: Employment
+category: economic
+stock:
+  value: TBD
+  unit: percent employed as first responders
+  year: 2024
+  source: TBD - needs population from authoritative source
+geographic_variation:
+  score: 4
+  level: county
+  notes: Varies by local socioeconomic conditions
+data_quality:
+  availability: high
+  frequency: annual
+  bias_notes: Standard survey/administrative data limitations apply
+  primary_sources:
+  - name: Bureau of Labor Statistics
+    granularity: county
+  - name: Census Bureau ACS
+    granularity: tract
+description: Proportion employed as police, fire, EMS. First responders have elevated AUD risk from occupational trauma and
+  cultural factors.
+type: Rate
+hierarchy:
+  parent_ids:
+  - industrial_composition_index
+  depth: 1
+  is_grouping_node: false

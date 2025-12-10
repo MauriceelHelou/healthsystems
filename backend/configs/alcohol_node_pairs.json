@@ -5,7 +5,7 @@
   "node_source": "nodes/by_scale/",
   "budget": {
     "max_usd": 25.0,
-    "max_pairs": 50
+    "max_pairs": 80
   },
   "node_keywords": {
     "alcohol_taxation": ["alcohol tax", "excise tax", "minimum unit pricing", "alcohol price policy", "alcohol duty", "beverage tax"],
@@ -253,6 +253,321 @@
       "expected_direction": "negative",
       "priority": 2,
       "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_taxation",
+      "to_node_id": "early_onset_drinking",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_taxation",
+      "to_node_id": "heavy_alcohol_use",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_taxation",
+      "to_node_id": "alcohol_poisoning_ed_visit_rate",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_outlet_density_regulation",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_outlet_density_regulation",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_sales_hours_restriction",
+      "to_node_id": "alcohol_poisoning_ed_visit_rate",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_advertising_restriction_policy",
+      "to_node_id": "early_onset_drinking",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_advertising_restriction_policy",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "political"
+    },
+    {
+      "from_node_id": "dui_law_stringency",
+      "to_node_id": "alcohol_poisoning_ed_visit_rate",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_warning_label_policy",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "political"
+    },
+    {
+      "from_node_id": "alcohol_warning_label_policy",
+      "to_node_id": "heavy_alcohol_use",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "political"
+    },
+    {
+      "from_node_id": "medicaid_sud_treatment_coverage",
+      "to_node_id": "alcohol_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "medicaid_sud_treatment_coverage",
+      "to_node_id": "aud_mat_receipt_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "medicaid_sud_treatment_coverage",
+      "to_node_id": "liver_cirrhosis_hospitalization_rate",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "medicaid_sud_treatment_coverage",
+      "to_node_id": "alcohol_withdrawal_hospitalization_rate",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "aud_treatment_engagement_rate",
+      "to_node_id": "liver_cirrhosis_hospitalization_rate",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "aud_treatment_engagement_rate",
+      "to_node_id": "alcohol_withdrawal_hospitalization_rate",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "aud_mat_receipt_rate",
+      "to_node_id": "liver_cirrhosis_hospitalization_rate",
+      "expected_direction": "negative",
+      "priority": 1,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "alcohol_treatment_facility_density",
+      "to_node_id": "aud_mat_receipt_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "detox_bed_availability",
+      "to_node_id": "aud_treatment_engagement_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "recovery_housing_capacity",
+      "to_node_id": "aud_treatment_engagement_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "sbirt_program_capacity",
+      "to_node_id": "alcohol_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "aa_na_meeting_density",
+      "to_node_id": "aud_treatment_engagement_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "social_environment"
+    },
+    {
+      "from_node_id": "aud_pharmacotherapy_prescriber_density",
+      "to_node_id": "alcohol_abstinence_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "aud_pharmacotherapy_prescriber_density",
+      "to_node_id": "liver_cirrhosis_hospitalization_rate",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "healthcare_access"
+    },
+    {
+      "from_node_id": "alcohol_use_disorder",
+      "to_node_id": "alcohol_poisoning_ed_visit_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "binge_drinking",
+      "to_node_id": "liver_function_alt_elevated",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "binge_drinking",
+      "to_node_id": "alcohol_withdrawal_hospitalization_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "heavy_alcohol_use",
+      "to_node_id": "alcohol_poisoning_ed_visit_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "heavy_alcohol_use",
+      "to_node_id": "wernicke_korsakoff_syndrome_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "early_onset_drinking",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "early_onset_drinking",
+      "to_node_id": "heavy_alcohol_use",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "drinking_and_driving_behavior",
+      "to_node_id": "alcohol_poisoning_ed_visit_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "alcohol_risk_awareness",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "alcohol_risk_awareness",
+      "to_node_id": "early_onset_drinking",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "behavioral"
+    },
+    {
+      "from_node_id": "parental_aud_exposure_childhood",
+      "to_node_id": "early_onset_drinking",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "social_environment"
+    },
+    {
+      "from_node_id": "parental_aud_exposure_childhood",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "social_environment"
+    },
+    {
+      "from_node_id": "family_history_aud",
+      "to_node_id": "early_onset_drinking",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "family_history_aud",
+      "to_node_id": "heavy_alcohol_use",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "biological"
+    },
+    {
+      "from_node_id": "aa_na_meeting_density",
+      "to_node_id": "recovery_housing_capacity",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "social_environment"
+    },
+    {
+      "from_node_id": "alcohol_affordability_burden",
+      "to_node_id": "alcohol_use_disorder",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "economic"
+    },
+    {
+      "from_node_id": "alcohol_affordability_burden",
+      "to_node_id": "heavy_alcohol_use",
+      "expected_direction": "negative",
+      "priority": 2,
+      "category": "economic"
+    },
+    {
+      "from_node_id": "alcohol_outlet_density",
+      "to_node_id": "alcohol_poisoning_ed_visit_rate",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "built_environment"
+    },
+    {
+      "from_node_id": "alcohol_outlet_density",
+      "to_node_id": "liver_cirrhosis_hospitalization_rate",
+      "expected_direction": "positive",
+      "priority": 2,
+      "category": "built_environment"
+    },
+    {
+      "from_node_id": "alcohol_advertising_density",
+      "to_node_id": "binge_drinking",
+      "expected_direction": "positive",
+      "priority": 1,
+      "category": "built_environment"
     }
   ],
   "search_config": {

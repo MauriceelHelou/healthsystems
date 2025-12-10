@@ -615,22 +615,23 @@ class DatabaseSeeder:
 
         Creates nodes dynamically from mechanism data.
         """
-        # Check cache first
-        if node_id in self.nodes_cache:
-            return self.nodes_cache[node_id]
+        # Clean up node_id - remove NEW: prefix for storage
+        clean_node_id = node_id.replace('NEW:', '')
+
+        # Check cache first (always use clean_node_id)
+        if clean_node_id in self.nodes_cache:
+            return self.nodes_cache[clean_node_id]
 
         # Check database
-        stmt = select(Node).where(Node.id == node_id)
+        stmt = select(Node).where(Node.id == clean_node_id)
         existing_node = session.execute(stmt).scalar_one_or_none()
 
         if existing_node:
-            self.nodes_cache[node_id] = existing_node
+            self.nodes_cache[clean_node_id] = existing_node
             return existing_node
 
         # Create new node from mechanism data
-        node_name = node_data.get('node_name', node_id.replace('_', ' ').replace('NEW:', '').title())
-        # Clean up node_id - remove NEW: prefix for storage
-        clean_node_id = node_id.replace('NEW:', '')
+        node_name = node_data.get('node_name', clean_node_id.replace('_', ' ').title())
 
         new_node = Node(
             id=clean_node_id,
@@ -642,6 +643,8 @@ class DatabaseSeeder:
         )
 
         session.add(new_node)
+        # Flush to ensure the node is in the database before other queries try to find it
+        session.flush()
         self.nodes_cache[clean_node_id] = new_node
         self.valid_node_ids.add(clean_node_id)
         return new_node

@@ -1,0 +1,31 @@
+id: concurrent_cannabis_use
+name: Concurrent Cannabis Use
+scale: 5
+domain: Behavioral Health
+category: behavioral
+stock:
+  value: TBD
+  unit: percent with co-occurring cannabis use
+  year: 2024
+  source: TBD - needs population from authoritative source
+geographic_variation:
+  score: 4
+  level: county
+  notes: Behavioral patterns vary by community and culture
+data_quality:
+  availability: moderate
+  frequency: annual
+  bias_notes: Standard survey/administrative data limitations apply
+  primary_sources:
+  - name: SAMHSA NSDUH
+    granularity: state
+  - name: CDC BRFSS
+    granularity: state
+description: Concurrent alcohol and cannabis use. Increasingly common polysubstance pattern; may indicate different treatment
+  needs.
+type: Rate
+hierarchy:
+  parent_ids:
+  - illicit_drug_use_past_month
+  depth: 1
+  is_grouping_node: false

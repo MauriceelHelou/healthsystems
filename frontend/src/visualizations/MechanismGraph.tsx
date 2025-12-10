@@ -20,6 +20,7 @@ interface MechanismGraphProps {
   onNodeClick?: (node: MechanismNode) => void;
   onEdgeClick?: (edge: MechanismEdge) => void;
   selectedNodeId?: string | null;
+  selectedEdgeId?: string | null;
   filteredCategories?: string[];
   showLegend?: boolean;
 
@@ -187,6 +188,7 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
   onNodeClick,
   onEdgeClick,
   selectedNodeId,
+  selectedEdgeId,
   showLegend = false, // Disabled by default for clean look
   importantNodes,
   activePaths,
@@ -205,6 +207,7 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
   const simulationRef = useRef<d3.Simulation<any, undefined> | null>(null);
   const zoomBehaviorRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown> | null>(null);
   const nodePositionsRef = useRef<Map<string, { x: number; y: number; width: number; height: number }>>(new Map());
+  const zoomTransformRef = useRef<d3.ZoomTransform | null>(null); // Preserve zoom position across redraws
 
   // Get zoom request state from store
   const { zoomToNodeId, zoomToPaths, clearZoomRequest, clearZoomToPathsRequest } = useGraphStateStore();
@@ -229,7 +232,7 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
     // Layout parameters
     const marginLeft = 150;
     const marginRight = 50;
-    const marginTop = 60;
+    const marginTop = 80; // Increased from 60 to accommodate larger scale labels
     const marginBottom = 40;
     const numLevels = 7; // Updated for 7-scale system
     const edgeSpacing = 16; // Increased from 8 to 16 for better readability
@@ -281,7 +284,7 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
 
     const availableWidth = actualWidth - marginLeft - marginRight;
     const availableHeight = actualHeight - marginTop - marginBottom;
-    const levelSpacing = (availableWidth / (numLevels - 1)) * 0.85;
+    const levelSpacing = (availableWidth / (numLevels - 1)) * 2;
 
     // Create SVG with calculated dimensions
     const svg = d3
@@ -311,6 +314,7 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
     const zoom = d3.zoom<SVGSVGElement, unknown>()
       .scaleExtent([0.1, 1000]) // Allow zoom from 10% to 100,000%
       .on('zoom', (event) => {
+        zoomTransformRef.current = event.transform; // Save current transform to preserve across redraws
         graph.attr('transform', event.transform.toString());
       });
 
@@ -318,18 +322,25 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
     svg.call(zoom as any);
     zoomBehaviorRef.current = zoom; // Store in ref for zoom effect
 
-    // Set initial zoom with reasonable default scale for readability
-    // Use 0.8 as default, or fit to height if diagram is small enough
-    const fitScale = height / actualHeight;
-    const initialScale = fitScale > 0.6 ? Math.min(1, fitScale) : 0.8;
+    // Restore previous zoom transform or set initial position
+    // This prevents the view from resetting when clicking nodes/edges
+    if (zoomTransformRef.current) {
+      // Restore saved zoom position
+      svg.call(zoom.transform as any, zoomTransformRef.current);
+    } else {
+      // Set initial zoom with reasonable default scale for readability
+      // Use 0.8 as default, or fit to height if diagram is small enough
+      const fitScale = height / actualHeight;
+      const initialScale = fitScale > 0.6 ? Math.min(1, fitScale) : 0.8;
 
-    // Center the diagram horizontally
-    const translateX = (width - actualWidth * initialScale) / 2;
+      // Center the diagram horizontally
+      const translateX = (width - actualWidth * initialScale) / 2;
 
-    svg.call(
-      zoom.transform as any,
-      d3.zoomIdentity.translate(translateX, marginTop).scale(initialScale)
-    );
+      svg.call(
+        zoom.transform as any,
+        d3.zoomIdentity.translate(translateX, marginTop).scale(initialScale)
+      );
+    }
 
     // Calculate positions for each node
     const nodePositions = new Map<string, { x: number; y: number; width: number; height: number }>();
@@ -378,9 +389,9 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
           .append('text')
           .text(LEVEL_LABELS[i])
           .attr('x', i * levelSpacing)
-          .attr('y', -30)
+          .attr('y', -40) // Adjusted for larger font size
           .attr('text-anchor', 'middle')
-          .attr('font-size', '12px')
+          .attr('font-size', '24px') // Doubled from 12px for better readability
           .attr('font-weight', '600')
           .attr('font-family', NODE_STYLE.fontFamily)
           .attr('fill', '#666')
@@ -441,10 +452,21 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
 
       if (!sourcePos || !targetPos) return;
 
-      // Adjust edge endpoints to node boundaries
-      const sourceX = sourcePos.x + sourcePos.width / 2;
+      // Detect if this is a backwards edge (source is to the right of target)
+      const isBackwardsEdge = sourcePos.x > targetPos.x;
+
+      // Adjust edge endpoints based on flow direction
+      let sourceX: number, targetX: number;
+      if (isBackwardsEdge) {
+        // Backwards edge: exit LEFT side of source, enter RIGHT side of target
+        sourceX = sourcePos.x - sourcePos.width / 2;
+        targetX = targetPos.x + targetPos.width / 2;
+      } else {
+        // Forward edge: exit RIGHT side of source, enter LEFT side of target
+        sourceX = sourcePos.x + sourcePos.width / 2;
+        targetX = targetPos.x - targetPos.width / 2;
+      }
       const sourceY = sourcePos.y;
-      const targetX = targetPos.x - targetPos.width / 2;
       const targetY = targetPos.y;
 
       const pathData = createCurvedPath(sourceX, sourceY, targetX, targetY);
@@ -461,6 +483,7 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
         .attr('stroke-width', EDGE_STYLE.hitboxWidth)
         .attr('fill', 'none')
         .style('cursor', onEdgeClick ? 'pointer' : 'default')
+        .style('outline', 'none') // Remove browser focus outline (blue box)
         .attr('role', 'button')
         .attr('tabindex', onEdgeClick ? 0 : -1)
         .attr('aria-label', () => {
@@ -531,9 +554,17 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
           const targetPos = nodePositions.get(targetId);
           if (!sourcePos || !targetPos) return '';
 
-          const sourceX = sourcePos.x + sourcePos.width / 2;
+          // Detect backwards edge (source is to the right of target)
+          const isBackwardsEdge = sourcePos.x > targetPos.x;
+          let sourceX: number, targetX: number;
+          if (isBackwardsEdge) {
+            sourceX = sourcePos.x - sourcePos.width / 2;
+            targetX = targetPos.x + targetPos.width / 2;
+          } else {
+            sourceX = sourcePos.x + sourcePos.width / 2;
+            targetX = targetPos.x - targetPos.width / 2;
+          }
           const sourceY = sourcePos.y;
-          const targetX = targetPos.x - targetPos.width / 2;
           const targetY = targetPos.y;
 
           return createCurvedPath(sourceX, sourceY, targetX, targetY);
@@ -552,9 +583,17 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
           const targetPos = nodePositions.get(targetId);
           if (!sourcePos || !targetPos) return '';
 
-          const sourceX = sourcePos.x + sourcePos.width / 2;
+          // Detect backwards edge (source is to the right of target)
+          const isBackwardsEdge = sourcePos.x > targetPos.x;
+          let sourceX: number, targetX: number;
+          if (isBackwardsEdge) {
+            sourceX = sourcePos.x - sourcePos.width / 2;
+            targetX = targetPos.x + targetPos.width / 2;
+          } else {
+            sourceX = sourcePos.x + sourcePos.width / 2;
+            targetX = targetPos.x - targetPos.width / 2;
+          }
           const sourceY = sourcePos.y;
-          const targetX = targetPos.x - targetPos.width / 2;
           const targetY = targetPos.y;
 
           return createCurvedPath(sourceX, sourceY, targetX, targetY);
@@ -1243,6 +1282,41 @@ const MechanismGraph: React.FC<MechanismGraphProps> = ({
         return nodeData && selectedNodeId === nodeData.id ? 2 : NODE_STYLE.strokeWidth;
       });
   }, [selectedNodeId]);
+
+  // Edge selection effect: Update edge styling when selection changes (without redrawing)
+  useEffect(() => {
+    if (!svgRef.current) return;
+
+    const svg = d3.select(svgRef.current);
+
+    // Reset all edge strokes to default
+    svg.selectAll<SVGPathElement, unknown>('g.link path')
+      .filter(function() {
+        // Only update visible paths, not transparent hitboxes
+        return d3.select(this).attr('stroke') !== 'transparent';
+      })
+      .each(function() {
+        const path = d3.select(this);
+        const linkGroup = d3.select(this.parentNode as SVGGElement);
+        const edgeData = linkGroup.datum() as MechanismEdge | undefined;
+
+        if (edgeData && selectedEdgeId === edgeData.id) {
+          // Highlight selected edge with prominent styling and glow effect
+          path
+            .attr('stroke', '#2563EB') // Darker blue (blue-600) for better visibility
+            .attr('stroke-width', 5)
+            .attr('opacity', 1)
+            .style('filter', 'drop-shadow(0 0 4px rgba(37, 99, 235, 0.6))'); // Glow effect
+        } else {
+          // Reset to default based on direction
+          const isNegative = edgeData?.direction === 'negative';
+          path
+            .attr('stroke', isNegative ? '#EF4444' : EDGE_STYLE.stroke)
+            .attr('stroke-width', EDGE_STYLE.strokeWidth)
+            .style('filter', 'none'); // Remove any glow
+        }
+      });
+  }, [selectedEdgeId]);
 
   return (
     <svg
