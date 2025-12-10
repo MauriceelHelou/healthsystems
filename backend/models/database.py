@@ -82,27 +82,29 @@ async def close_db():
 
 def get_db():
     """
-    Dependency for getting database sessions.
-
-    For SQLite: Returns synchronous Session
-    For PostgreSQL: Returns AsyncSession
+    Dependency for getting database sessions (sync - for SQLite or sync PostgreSQL).
 
     Yields:
         Session: Database session
     """
-    if is_sqlite:
-        db = SessionLocal()
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+
+async def get_async_db():
+    """
+    Async dependency for getting database sessions (PostgreSQL with asyncpg).
+
+    Yields:
+        AsyncSession: Async database session
+    """
+    if AsyncSessionLocal is None:
+        raise RuntimeError("Async session not available - using SQLite?")
+    async with AsyncSessionLocal() as session:
         try:
-            yield db
+            yield session
         finally:
-            db.close()
-    else:
-        # For async PostgreSQL, this should be async
-        # But FastAPI Depends works with both sync and async
-        async def _get_async_db():
-            async with AsyncSessionLocal() as session:
-                try:
-                    yield session
-                finally:
-                    await session.close()
-        return _get_async_db()
+            await session.close()
