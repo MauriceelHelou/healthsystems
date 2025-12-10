@@ -2,22 +2,32 @@
 Database seeding script for Railway deployment.
 
 This script:
-1. Loads mechanism YAML files from the mechanism-bank
-2. Extracts and creates unique nodes from nodes/by_scale/ directory
-3. Creates mechanism records with proper relationships
-4. Handles bidirectional relationships
+1. Loads ONLY nodes defined in nodes/by_scale/ directory
+2. Loads ONLY mechanisms from mechanism-bank/mechanisms/{category}/ where:
+   - The mechanism file does NOT have a NEW: prefix
+   - BOTH from_node and to_node exist in nodes/by_scale/
+3. Supports quality filtering (min_quality parameter)
+4. Supports topic filtering (e.g., alcohol-related mechanisms)
 5. Idempotent - can be run multiple times safely
-6. Supports quality filtering (min_quality parameter)
-7. Supports topic filtering (e.g., alcohol-related mechanisms)
+
+IMPORTANT: Mechanisms referencing undefined nodes are skipped.
+The NEW: prefix indicates proposed/candidate mechanisms not yet validated.
+
+Valid mechanism categories:
+- behavioral, built_environment, economic, healthcare_access,
+  political, social_environment, biological
 
 Usage:
-    # Seed all mechanisms (quality B or better):
+    # Seed all valid mechanisms (no filters):
+    python seed_database.py
+
+    # Seed only high-quality mechanisms (A or B rating):
     python seed_database.py --min-quality B
 
     # Seed only alcohol-related mechanisms:
     python seed_database.py --topic alcohol
 
-    # Seed with both filters:
+    # Seed alcohol mechanisms with quality B or better:
     python seed_database.py --min-quality B --topic alcohol
 """
 
@@ -59,6 +69,17 @@ TOPIC_KEYWORDS = {
         'pm25', 'pollution', 'ventilation', 'mold'
     ],
 }
+
+# Valid mechanism category subdirectories
+VALID_MECHANISM_CATEGORIES = [
+    'behavioral',
+    'built_environment',
+    'economic',
+    'healthcare_access',
+    'political',
+    'social_environment',
+    'biological'
+]
 
 # Configure logging
 logging.basicConfig(
@@ -109,8 +130,10 @@ class DatabaseSeeder:
             bind=self.engine
         )
 
-        # Track unique nodes
+        # Track unique nodes (loaded from nodes/by_scale/)
         self.nodes_cache: Dict[str, Node] = {}
+        # Set of valid node IDs (only nodes from YAML files are valid)
+        self.valid_node_ids: Set[str] = set()
 
     def passes_quality_filter(self, mech_data: Dict) -> bool:
         """Check if mechanism passes quality filter."""
@@ -151,22 +174,58 @@ class DatabaseSeeder:
         text_to_search = f"{mech_id} {from_node_id} {to_node_id} {description}"
         return any(keyword in text_to_search for keyword in keywords)
 
+    def has_valid_node_references(self, mech_data: Dict) -> bool:
+        """
+        Check if mechanism references nodes that exist in nodes/by_scale/.
+
+        Returns False if:
+        - Either node has NEW: prefix (proposed/candidate node)
+        - Either node doesn't exist in valid_node_ids set
+        """
+        # Get node IDs from mechanism data structure
+        from_node = mech_data.get('from_node', {})
+        to_node = mech_data.get('to_node', {})
+
+        from_node_id = from_node.get('node_id', '')
+        to_node_id = to_node.get('node_id', '')
+
+        # If no from_node/to_node structure, try to parse from ID
+        if not from_node_id or not to_node_id:
+            mech_id = mech_data.get('id', '')
+            if '_to_' in mech_id:
+                parts = mech_id.split('_to_')
+                from_node_id = from_node_id or parts[0]
+                to_node_id = to_node_id or '_to_'.join(parts[1:])
+
+        # Skip if either contains NEW: prefix
+        if 'NEW:' in from_node_id or 'NEW:' in to_node_id:
+            return False
+
+        # Check both nodes exist in valid set
+        return from_node_id in self.valid_node_ids and to_node_id in self.valid_node_ids
+
     def init_tables(self, drop_existing: bool = False):
         """Create all database tables."""
-        from sqlalchemy import text
+        from sqlalchemy import text, inspect
         if drop_existing:
             logger.info("Dropping existing database tables...")
-            # Drop all indexes first via raw SQL for SQLite
+            # Drop all indexes first via SQLAlchemy inspector (database-agnostic)
             with self.engine.connect() as conn:
-                # Get all user indexes
-                result = conn.execute(
-                    text("SELECT name FROM sqlite_master WHERE type='index' AND name LIKE 'ix_%'")
-                )
-                for row in result:
-                    try:
-                        conn.execute(text(f"DROP INDEX IF EXISTS {row[0]}"))
-                    except Exception:
-                        pass
+                inspector = inspect(conn)
+                dialect_name = conn.dialect.name
+
+                # Get all tables and their indexes
+                for table_name in inspector.get_table_names():
+                    for index in inspector.get_indexes(table_name):
+                        index_name = index['name']
+                        if index_name and index_name.startswith('ix_'):
+                            try:
+                                if dialect_name == 'postgresql':
+                                    conn.execute(text(f'DROP INDEX IF EXISTS "{index_name}"'))
+                                else:
+                                    conn.execute(text(f"DROP INDEX IF EXISTS {index_name}"))
+                            except Exception as e:
+                                logger.debug(f"Could not drop index {index_name}: {e}")
                 conn.commit()
             Base.metadata.drop_all(bind=self.engine)
         logger.info("Creating database tables...")
@@ -174,18 +233,41 @@ class DatabaseSeeder:
         logger.info("Database tables created successfully")
 
     def load_mechanism_files(self) -> List[Path]:
-        """Load all mechanism YAML files from mechanism-bank."""
+        """
+        Load valid mechanism YAML files from mechanism-bank categories.
+
+        Only loads files from valid category subdirectories and excludes:
+        - Files with NEW: prefix (proposed/candidate mechanisms)
+        - JSON files (metadata files)
+        - Files not in valid category directories
+        """
         mechanism_bank_path = Path(__file__).parent.parent.parent / "mechanism-bank" / "mechanisms"
 
         if not mechanism_bank_path.exists():
             logger.error(f"Mechanism bank not found at {mechanism_bank_path}")
             return []
 
-        # Find all YAML files recursively
-        yaml_files = list(mechanism_bank_path.glob("**/*.yml")) + \
-                     list(mechanism_bank_path.glob("**/*.yaml"))
+        yaml_files = []
+        new_prefix_count = 0
 
-        logger.info(f"Found {len(yaml_files)} mechanism files")
+        # Only load from valid category subdirectories
+        for category in VALID_MECHANISM_CATEGORIES:
+            category_path = mechanism_bank_path / category
+            if not category_path.exists():
+                logger.debug(f"Category directory not found: {category}")
+                continue
+
+            # Find YAML files in this category (not recursive - only direct children)
+            for pattern in ["*.yaml", "*.yml"]:
+                for f in category_path.glob(pattern):
+                    # Skip files with NEW: prefix
+                    if f.name.startswith('NEW:'):
+                        new_prefix_count += 1
+                        continue
+                    yaml_files.append(f)
+
+        logger.info(f"Found {len(yaml_files)} valid mechanism files")
+        logger.info(f"Skipped {new_prefix_count} files with NEW: prefix")
         return yaml_files
 
     def load_node_files(self) -> List[Path]:
@@ -260,7 +342,12 @@ class DatabaseSeeder:
             return None
 
     def seed_nodes_from_yaml(self, session: Session) -> int:
-        """Load all nodes from YAML definition files."""
+        """
+        Load all nodes from YAML definition files.
+
+        This also populates self.valid_node_ids with all node IDs
+        that are loaded, so mechanisms can be validated against this set.
+        """
         node_files = self.load_node_files()
         nodes_loaded = 0
 
@@ -268,6 +355,8 @@ class DatabaseSeeder:
             node = self.load_node_from_yaml(session, file_path)
             if node:
                 nodes_loaded += 1
+                # Add to valid node IDs set
+                self.valid_node_ids.add(node.id)
 
             # Commit every 50 nodes
             if nodes_loaded % 50 == 0:
@@ -276,6 +365,7 @@ class DatabaseSeeder:
 
         session.commit()
         logger.info(f"Loaded {nodes_loaded} nodes from YAML definitions")
+        logger.info(f"Valid node IDs registered: {len(self.valid_node_ids)}")
         return nodes_loaded
 
     def parse_yaml_file(self, file_path: Path) -> Optional[Dict]:
@@ -300,123 +390,6 @@ class DatabaseSeeder:
         except Exception as e:
             logger.warning(f"Error parsing {file_path.name}: {e} - skipping")
             return None
-
-    def infer_scale_from_node_id(self, node_id: str) -> int:
-        """
-        Infer scale level from node ID using taxonomy:
-        1=policy, 2=built_env, 3=institutional, 4=individual,
-        5=behavioral, 6=intermediate_biological, 7=crisis
-        """
-        node_id_lower = node_id.lower()
-
-        # Policy level (1)
-        if any(term in node_id_lower for term in [
-            'policy', 'law', 'regulation', 'mandate', 'enforcement',
-            'expansion', 'outlet_density', 'diversion', 'medicaid'
-        ]):
-            return 1
-
-        # Built environment (2)
-        if any(term in node_id_lower for term in [
-            'housing', 'air_pollution', 'indoor', 'outdoor', 'built',
-            'environmental', 'neighborhood', 'superfund', 'flooding',
-            'mold', 'dampness', 'ventilation'
-        ]):
-            return 2
-
-        # Institutional (3)
-        if any(term in node_id_lower for term in [
-            'insurance', 'access', 'facility', 'treatment', 'healthcare',
-            'support', 'program', 'service', 'clinic'
-        ]):
-            return 3
-
-        # Individual characteristics (4)
-        if any(term in node_id_lower for term in [
-            'age', 'race', 'sex', 'education', 'income', 'employment',
-            'poverty', 'hardship', 'debt', 'instability'
-        ]):
-            return 4
-
-        # Behavioral (5)
-        if any(term in node_id_lower for term in [
-            'behavior', 'drinking', 'smoking', 'substance', 'alcohol_use',
-            'binge', 'consumption', 'exposure', 'stress', 'isolation',
-            'stigma', 'aces', 'depression'
-        ]):
-            return 5
-
-        # Intermediate biological (6)
-        if any(term in node_id_lower for term in [
-            'inflammation', 'liver_function', 'respiratory', 'lung',
-            'rhinitis', 'withdrawal', 'disorder', 'aud'
-        ]):
-            return 6
-
-        # Crisis endpoints (7)
-        if any(term in node_id_lower for term in [
-            'mortality', 'death', 'hospitalization', 'ed_visit',
-            'exacerbation', 'acute', 'crisis', 'failure', 'cirrhosis',
-            'poisoning', 'complications'
-        ]):
-            return 7
-
-        # Default to individual level
-        return 4
-
-    def extract_nodes_from_mechanism(self, mech_data: Dict) -> tuple[str, str]:
-        """Extract from_node_id and to_node_id from mechanism data."""
-        mech_id = mech_data.get('id', '')
-
-        # Most mechanism IDs follow pattern: from_node_to_to_node
-        # Try to split on '_to_'
-        if '_to_' in mech_id:
-            parts = mech_id.split('_to_')
-            from_node_id = parts[0]
-            to_node_id = '_to_'.join(parts[1:])  # Handle multiple '_to_'
-        else:
-            # Fallback: try to infer from name or description
-            logger.warning(f"Cannot parse nodes from mechanism ID: {mech_id}")
-            from_node_id = mech_id + "_from"
-            to_node_id = mech_id + "_to"
-
-        return from_node_id, to_node_id
-
-    def create_or_get_node(self, session: Session, node_id: str, category: str) -> Node:
-        """Create node if it doesn't exist, or return existing."""
-        # Check cache first
-        if node_id in self.nodes_cache:
-            return self.nodes_cache[node_id]
-
-        # Check database
-        stmt = select(Node).where(Node.id == node_id)
-        existing_node = session.execute(stmt).scalar_one_or_none()
-
-        if existing_node:
-            self.nodes_cache[node_id] = existing_node
-            return existing_node
-
-        # Create new node
-        # Convert node_id to human-readable name
-        name = node_id.replace('_', ' ').title()
-
-        # Infer scale
-        scale = self.infer_scale_from_node_id(node_id)
-
-        new_node = Node(
-            id=node_id,
-            name=name,
-            node_type="stock",  # Default type
-            category=category,
-            scale=scale,
-            description=f"Node extracted from mechanism: {node_id}"
-        )
-
-        session.add(new_node)
-        self.nodes_cache[node_id] = new_node
-
-        logger.debug(f"Created node: {node_id} (scale={scale}, category={category})")
-        return new_node
 
     def infer_direction(self, mech_data: Dict) -> str:
         """Infer mechanism direction (positive/negative)."""
@@ -456,8 +429,38 @@ class DatabaseSeeder:
 
         return None
 
+    def get_node_ids_from_mechanism(self, mech_data: Dict) -> tuple[str, str]:
+        """
+        Extract from_node_id and to_node_id from mechanism data.
+
+        Tries to get IDs from:
+        1. from_node.node_id and to_node.node_id (preferred structure)
+        2. Parsing the mechanism ID (fallback)
+        """
+        # Try from_node/to_node structure first
+        from_node = mech_data.get('from_node', {})
+        to_node = mech_data.get('to_node', {})
+
+        from_node_id = from_node.get('node_id', '')
+        to_node_id = to_node.get('node_id', '')
+
+        # If not found, try parsing from mechanism ID
+        if not from_node_id or not to_node_id:
+            mech_id = mech_data.get('id', '')
+            if '_to_' in mech_id:
+                parts = mech_id.split('_to_')
+                from_node_id = from_node_id or parts[0]
+                to_node_id = to_node_id or '_to_'.join(parts[1:])
+
+        return from_node_id, to_node_id
+
     def create_mechanism(self, session: Session, mech_data: Dict) -> Optional[Mechanism]:
-        """Create mechanism from YAML data."""
+        """
+        Create mechanism from YAML data.
+
+        IMPORTANT: Does NOT create nodes - only uses existing nodes from cache.
+        Mechanisms referencing non-existent nodes will return None.
+        """
         try:
             mech_id = mech_data.get('id')
             if not mech_id:
@@ -472,13 +475,20 @@ class DatabaseSeeder:
                 logger.debug(f"Mechanism {mech_id} already exists, skipping")
                 return existing_mech
 
-            # Extract nodes
-            from_node_id, to_node_id = self.extract_nodes_from_mechanism(mech_data)
+            # Get node IDs from mechanism data
+            from_node_id, to_node_id = self.get_node_ids_from_mechanism(mech_data)
             category = mech_data.get('category', 'built_environment')
 
-            # Create or get nodes
-            from_node = self.create_or_get_node(session, from_node_id, category)
-            to_node = self.create_or_get_node(session, to_node_id, category)
+            # Lookup nodes from cache (do NOT create new nodes)
+            if from_node_id not in self.nodes_cache:
+                logger.debug(f"Skipping mechanism {mech_id}: from_node '{from_node_id}' not in valid nodes")
+                return None
+            if to_node_id not in self.nodes_cache:
+                logger.debug(f"Skipping mechanism {mech_id}: to_node '{to_node_id}' not in valid nodes")
+                return None
+
+            from_node = self.nodes_cache[from_node_id]
+            to_node = self.nodes_cache[to_node_id]
 
             # Extract evidence data
             evidence = mech_data.get('evidence', {})
@@ -530,11 +540,14 @@ class DatabaseSeeder:
 
         Returns:
             Dictionary with counts of nodes and mechanisms created
+
+        IMPORTANT: Only seeds nodes from nodes/by_scale/ and mechanisms
+        where both from_node and to_node exist in that directory.
         """
         stats = {
             'nodes_from_yaml': 0,
-            'nodes_from_mechanisms': 0,
             'mechanisms_created': 0,
+            'mechanisms_filtered_invalid_nodes': 0,
             'mechanisms_filtered_quality': 0,
             'mechanisms_filtered_topic': 0,
             'files_processed': 0,
@@ -582,6 +595,12 @@ class DatabaseSeeder:
                         stats['files_failed'] += 1
                         continue
 
+                    # Check for valid node references FIRST
+                    if not self.has_valid_node_references(mech_data):
+                        stats['mechanisms_filtered_invalid_nodes'] += 1
+                        stats['files_processed'] += 1
+                        continue
+
                     # Apply quality filter
                     if not self.passes_quality_filter(mech_data):
                         stats['mechanisms_filtered_quality'] += 1
@@ -594,14 +613,11 @@ class DatabaseSeeder:
                         stats['files_processed'] += 1
                         continue
 
-                    # Create mechanism (this also creates nodes if needed)
-                    nodes_before = len(self.nodes_cache)
+                    # Create mechanism (only uses existing nodes from cache)
                     mechanism = self.create_mechanism(session, mech_data)
-                    nodes_after = len(self.nodes_cache)
 
                     if mechanism:
                         stats['mechanisms_created'] += 1
-                        stats['nodes_from_mechanisms'] += (nodes_after - nodes_before)
 
                     stats['files_processed'] += 1
 
@@ -630,8 +646,8 @@ class DatabaseSeeder:
             logger.info(f"  - Topic: {self.topic or 'None'}")
             logger.info("-" * 60)
             logger.info(f"Node definitions loaded from YAML: {stats['nodes_from_yaml']}")
-            logger.info(f"Additional nodes from mechanisms: {stats['nodes_from_mechanisms']}")
             logger.info(f"Mechanisms created: {stats['mechanisms_created']}")
+            logger.info(f"Mechanisms filtered (invalid nodes): {stats['mechanisms_filtered_invalid_nodes']}")
             logger.info(f"Mechanisms filtered (quality): {stats['mechanisms_filtered_quality']}")
             logger.info(f"Mechanisms filtered (topic): {stats['mechanisms_filtered_topic']}")
             logger.info(f"Files failed: {stats['files_failed']}")
