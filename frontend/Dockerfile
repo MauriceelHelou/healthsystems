@@ -17,8 +17,7 @@ ARG REACT_APP_API_URL=https://backend-production-b6c2.up.railway.app
 ENV REACT_APP_API_URL=$REACT_APP_API_URL
 
 # Build the app (CI=false prevents ESLint warnings from failing the build)
-ENV CI=false
-RUN npm run build
+RUN CI=false npm run build
 
 # Production stage - serve with Node.js 'serve' package
 FROM node:20-alpine
