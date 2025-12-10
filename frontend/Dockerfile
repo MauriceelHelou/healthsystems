@@ -37,4 +37,5 @@ ENV PORT=3000
 EXPOSE ${PORT}
 
 # Serve the build folder with SPA fallback (-s flag)
-CMD serve -s build -l ${PORT}
+# Use -p for port (newer serve syntax)
+CMD ["sh", "-c", "serve -s build -p $PORT"]
