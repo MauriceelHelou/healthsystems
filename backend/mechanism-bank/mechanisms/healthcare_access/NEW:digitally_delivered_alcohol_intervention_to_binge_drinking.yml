@@ -1,0 +1,62 @@
+id: NEW:digitally_delivered_alcohol_intervention_to_binge_drinking
+name: Digitally-Delivered Alcohol Intervention → Binge Drinking
+from_node:
+  node_id: NEW:digitally_delivered_alcohol_intervention
+  node_name: Digitally-Delivered Alcohol Intervention
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital interventions (apps, websites, automated programs) are deployed in accessible settings'
+- 'Step 2: Self-guided tools provide feedback on drinking patterns and normative comparisons'
+- 'Step 3: Lower barrier to access enables population-level reach'
+- 'Step 4: At 12 months, digital interventions achieve equivalent outcomes to practitioner interventions'
+- 'Step 5: Long-term alcohol consumption reduction is maintained without ongoing practitioner contact'
+evidence:
+  quality_rating: A
+  n_studies: 201
+  primary_citation: 'Fiona R Beyer et al. 2023. "Practitioner and digitally delivered interventions for
+    reducing hazardous and harmful alcohol consumption in people not seeking alcohol treatment: a systematic
+    review and network meta-analysis.." https://doi.org/10.1111/add.15999'
+  supporting_citations:
+  - Additional citations require full-text access - network meta-analysis conducted in Stata using random
+    effects frequentist models
+  - Comprehensive search for randomized controlled trials with robust screening methods
+  - Cochrane Risk of Bias tool used for appraisal
+  doi: 10.1111/add.15999
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2022, source is 2023'
+last_updated: '2025-12-06'
+version: '2.0'
+description: At 12 months, there is no evidence of difference between practitioner and digitally delivered
+  interventions for reducing alcohol consumption (-6 g/wk, 95% CI -24 to 12), suggesting digital interventions
+  may be equally effective for long-term outcomes
+quantitative_effects:
+  effect_size:
+    value: -6.0
+    type: mean_difference
+    ci_lower: -24.0
+    ci_upper: 12.0
+  sample_size: 94753
+moderators:
+- name: intervention_duration
+  direction: strengthens
+  strength: moderate
+  description: Digital interventions catch up to practitioner interventions over longer time periods,
+    achieving equivalence at 12 months
+structural_competency:
+  equity_implications: The equivalence of digital and practitioner interventions at 12 months has important
+    equity implications. Digital interventions could expand reach to populations with limited access to
+    healthcare practitioners, but require digital infrastructure and literacy. This finding supports a
+    tiered public health approach where digital interventions may be appropriate for population-level
+    prevention while practitioner interventions may be reserved for those needing more intensive support.
+    However, digital divide issues (broadband access, digital literacy) may create new inequities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.095539'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

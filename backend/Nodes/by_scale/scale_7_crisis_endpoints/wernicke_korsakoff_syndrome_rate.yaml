@@ -1,0 +1,45 @@
+id: wernicke_korsakoff_syndrome_rate
+name: Wernicke-Korsakoff Syndrome Rate
+scale: 7
+domain: Neurological, Alcohol-Related Mortality
+category: crisis_endpoint
+stock:
+  value: 1.2
+  unit: Cases per 100,000 population per year
+  year: 2022
+  source: HCUP, neurological registry data
+geographic_variation:
+  score: 2
+  level: state
+  notes: Likely underdiagnosed; rates reflect diagnostic capacity as much as true incidence
+data_quality:
+  availability: low
+  frequency: periodic
+  bias_notes: Often undiagnosed or diagnosed at autopsy; ICD coding may undercount
+  primary_sources:
+  - name: AHRQ HCUP (ICD-10 E51.2, F10.26, F10.96)
+    granularity: state
+  - name: Hospital discharge databases
+    granularity: state
+  - name: Autopsy/pathology studies
+    granularity: varies
+description: 'Rate of Wernicke-Korsakoff syndrome (WKS), a severe neurological complication of
+
+  chronic alcoholism caused by thiamine (vitamin B1) deficiency. Wernicke encephalopathy
+
+  is the acute phase (confusion, ataxia, eye movement abnormalities) while Korsakoff
+
+  syndrome is the chronic amnestic phase with permanent memory impairment. Often called
+
+  "wet brain," WKS causes irreversible brain damage in 80%+ of cases. This crisis
+
+  endpoint represents the extreme neurological consequence of long-term heavy drinking.
+
+  Early thiamine supplementation can prevent progression but is often missed in
+
+  clinical settings.'
+type: Rate
+hierarchy:
+  parent_ids: []
+  depth: 0
+  is_grouping_node: false

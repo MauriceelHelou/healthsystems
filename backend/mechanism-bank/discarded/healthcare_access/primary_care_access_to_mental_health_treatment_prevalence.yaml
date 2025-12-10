@@ -1,0 +1,47 @@
+id: primary_care_access_to_mental_health_treatment_prevalence
+name: Primary Care Access and Treatment Availability → Mental Health Treatment Prevalence
+from_node:
+  node_id: primary_care_access
+  node_name: Primary Care Access and Treatment Availability
+to_node:
+  node_id: mental_health_treatment_prevalence
+  node_name: Mental Health Treatment Prevalence
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary care serves as the first point of contact for most mental health
+  concerns in the Swedish healthcare system'
+- 'Step 2: Primary care registry captures 80% or more of cases for major depression,
+  anxiety disorders, adjustment disorder, and drug abuse'
+- 'Step 3: Primary care captures 45-55% of alcohol use disorder cases, with remaining
+  cases in specialist/hospital settings'
+- 'Step 4: Greater availability and accessibility of primary care increases the proportion
+  of individuals receiving mental health diagnoses and treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Sundquist et al. 2017. "Common adult psychiatric disorders
+    in Swedish primary care where most mental health patients are treated." *BMC Psychiatry*.
+    https://doi.org/10.1186/s12888-017-1381-4
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.514087'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: disorder_severity
+  direction: strengthens
+  strength: strong
+  description: More severe disorders (personality disorder, ADHD, alcohol use disorder)
+    have lower proportions treated exclusively in primary care (45-55%), suggesting
+    referral patterns based on complexity
+- name: disorder_type
+  direction: strengthens
+  strength: strong
+  description: Common mental disorders (depression, anxiety, adjustment disorder)
+    are predominantly treated in primary care (80%+), while substance use and chronic
+    psychiatric conditions show more specialist involvement
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/primary_care_access_to_mental_health_treatment_prevalence.yaml
+_category: healthcare_access

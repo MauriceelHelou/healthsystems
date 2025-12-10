@@ -1,0 +1,48 @@
+id: stimulant_use_disorder_to_recidivism_rate_3_year
+name: Stimulant Use Disorder → Recidivism Rate (3-Year)
+from_node:
+  node_id: stimulant_use_disorder
+  node_name: Stimulant Use Disorder
+to_node:
+  node_id: recidivism_rate_3_year
+  node_name: Recidivism Rate (3-Year)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Pre-CJS methamphetamine use indicates ongoing substance use disorder requiring treatment'
+- 'Step 2: Lack of adequate treatment during CJS contact fails to address underlying addiction'
+- 'Step 3: Post-release, untreated substance use disorder drives continued drug-seeking behavior'
+- 'Step 4: Drug-related offenses and associated criminal activity lead to rearrest and reincarceration'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Craig Cumming et al. 2020. "Methamphetamine use, health and criminal justice system
+    outcomes: A systematic review.." https://doi.org/10.1111/dar.13062'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 4 CJS outcome studies
+  - Studies examining recidivism outcomes in methamphetamine-using populations
+  - Research on crime costs associated with pre-CJS methamphetamine use
+  doi: 10.1111/dar.13062
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Pre-criminal justice system methamphetamine use is associated with increased risk of recidivism
+  after CJS contact. Four studies in this systematic review demonstrated this association, with additional
+  evidence showing higher crime costs among those with pre-CJS methamphetamine use.
+moderators:
+- name: treatment_during_cjs_contact
+  direction: weakens
+  strength: moderate
+  description: Authors recommend prioritizing treatment during CJS contact to reduce recidivism, suggesting
+    treatment access moderates this relationship
+structural_competency:
+  equity_implications: This mechanism reflects structural failures in providing adequate substance use
+    treatment within the criminal justice system. Rather than treating addiction as a health condition,
+    punitive approaches fail to address root causes. Lack of reentry services, treatment access, and social
+    support post-release perpetuates cycles of incarceration. Structural interventions including drug
+    courts, treatment alternatives, and reentry services could interrupt this pathway.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.570685'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

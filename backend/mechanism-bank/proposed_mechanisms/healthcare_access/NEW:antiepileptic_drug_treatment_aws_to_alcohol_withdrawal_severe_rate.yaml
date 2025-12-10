@@ -1,0 +1,57 @@
+id: NEW:antiepileptic_drug_treatment_aws_to_alcohol_withdrawal_severe_rate
+name: Antiepileptic Drug Treatment for Alcohol Withdrawal Syndrome → Alcohol Withdrawal
+  Syndrome Severity
+from_node:
+  node_id: NEW:antiepileptic_drug_treatment_aws
+  node_name: Antiepileptic Drug Treatment for Alcohol Withdrawal Syndrome
+to_node:
+  node_id: alcohol_withdrawal_severe_rate
+  node_name: Alcohol Withdrawal Syndrome Severity
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with moderate to severe alcohol withdrawal syndrome (AWS) receive
+  antiepileptic drugs (AEDs) as treatment'
+- 'Step 2: AEDs modulate neuronal excitability through various mechanisms including
+  GABA enhancement and sodium/calcium channel blockade'
+- 'Step 3: Despite theoretical neurobiological rationale, AEDs show no significant
+  benefit in reducing withdrawal syndrome severity measured by clinical scales'
+- 'Step 4: AEDs demonstrate no reduction in progression to delirium tremens or seizure
+  prevention compared to placebo or other treatments'
+- 'Step 5: AWS severity remains largely unchanged with AED treatment, indicating neutral
+  to ineffective impact on clinical outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'Jenny Rojo-Mira et al. 2021. Efficacy and Safety of Anticonvulsants
+    for the Inpatient Treatment of Alcohol Withdrawal Syndrome: A Systematic Review
+    and Meta-analysis. Alcohol and Alcoholism.'
+  supporting_citations: []
+description: This systematic review and meta-analysis of 26 randomized controlled
+  trials (1709 patients) found that antiepileptic drugs do not significantly improve
+  alcohol withdrawal syndrome severity or prevent complications. AEDs showed no benefit
+  in reducing withdrawal severity measured by clinical scales, no reduction in delirium
+  tremens development, and no difference in seizure incidence compared to placebo
+  or other treatments. The evidence supports a weak recommendation against routine
+  AED use in moderate to severe AWS unless indicated for comorbid conditions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.0
+    type: relative_risk
+    ci_lower: 0.76
+    ci_upper: 1.33
+  p_value: null
+  sample_size: 1709
+moderators:
+- name: Type of antiepileptic drug
+  direction: weakens
+  strength: weak
+  description: Carbamazepine and valproic acid associated with higher proportion of
+    mild adverse events, but no differential efficacy
+- name: Comparison treatment
+  direction: weakens
+  strength: weak
+  description: No difference in seizure incidence when AEDs compared to placebo (RR=0.95,
+    95% CI 0.57-1.57) or other medications

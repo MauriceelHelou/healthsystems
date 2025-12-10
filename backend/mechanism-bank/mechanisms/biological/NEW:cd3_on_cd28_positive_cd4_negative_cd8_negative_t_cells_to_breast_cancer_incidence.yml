@@ -1,0 +1,64 @@
+id: NEW:cd3_on_cd28_positive_cd4_negative_cd8_negative_t_cells_to_breast_cancer_incidence
+name: CD3 on CD28+ CD4-CD8- T Cells → Breast Cancer Incidence
+from_node:
+  node_id: NEW:cd3_on_cd28_positive_cd4_negative_cd8_negative_t_cells
+  node_name: CD3 on CD28+ CD4-CD8- T Cells
+to_node:
+  node_id: breast_cancer_incidence
+  node_name: Breast Cancer Incidence
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Higher expression of CD3 on CD28+ CD4-CD8- T cells reflects enhanced T cell receptor signaling
+  capacity'
+- 'Step 2: Enhanced immune surveillance enables recognition and elimination of nascent tumor cells'
+- 'Step 3: Cytokine secretion from activated T cells directly inhibits tumor cell proliferation'
+- 'Step 4: Triggering of apoptotic pathways in tumor cells reduces cancer cell numbers'
+- 'Step 5: Modulation of tumor microenvironment makes it unfavorable for tumor growth and spread'
+evidence:
+  quality_rating: B
+  n_studies: 2
+  primary_citation: 'Wanxian Xu et al. 2024. "The association between immune cells and breast cancer:
+    insights from Mendelian randomization and meta‐analysis." https://doi.org/10.1097/JS9.0000000000001840'
+  supporting_citations:
+  - BCAC consortium GWAS data on breast cancer
+  - FinnGen R10 database breast cancer GWAS
+  - GWAS Catalog immune cell phenotype data (731 immune phenotypes)
+  doi: 10.1097/JS9.0000000000001840
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Mendelian randomization analysis demonstrates that genetically predicted higher levels of
+  CD3 expression on CD28+ CD4-CD8- T cells are causally protective against breast cancer. This immune
+  phenotype reduces breast cancer risk through enhanced immune surveillance, direct cytokine-mediated
+  tumor suppression, induction of tumor cell apoptosis, and modulation of the tumor microenvironment.
+quantitative_effects:
+  effect_size:
+    value: 0.945
+    type: odds_ratio
+    ci_lower: 0.922
+    ci_upper: 0.97
+  p_value: 1.7e-05
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study notes breast cancer has highest incidence in North America, Europe, and Australia,
+    with lower rates in parts of Asia and Africa. The 5-year survival rate is over 90% in developed countries
+    but lower in developing ones.
+moderators:
+- name: healthcare_system_development
+  direction: strengthens
+  strength: strong
+  description: Early screening and diagnosis capacity in developed countries may interact with immune
+    protection mechanisms to improve outcomes
+structural_competency:
+  equity_implications: While this mechanism is primarily biological, the paper acknowledges that breast
+    cancer risk and outcomes are influenced by structural factors including access to early screening
+    (mammography, MRI), healthcare system development, and geographic location. The protective immune
+    mechanism may be less effective in populations with limited access to healthcare or in environments
+    with higher exposure to risk factors like obesity and alcohol consumption, which the paper identifies
+    as modifiable risk factors influenced by structural conditions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.633804'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,54 @@
+id: systolic_bp_elevation_during_hospitalization_to_major_bleeding_events_post_pci
+name: Systolic Blood Pressure Elevation During Hospitalization (≥20 mm Hg increase)
+  → Major Bleeding Events After Percutaneous Coronary Intervention
+from_node:
+  node_id: systolic_bp_elevation_during_hospitalization
+  node_name: Systolic Blood Pressure Elevation During Hospitalization (≥20 mm Hg increase)
+to_node:
+  node_id: major_bleeding_events_post_pci
+  node_name: Major Bleeding Events After Percutaneous Coronary Intervention
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Patients present with lower systolic blood pressure at hospital admission
+  but experience significant elevation (≥20 mm Hg) by discharge'
+- 'Step 2: Elevated blood pressure increases vascular stress and wall tension, potentially
+  compromising vessel integrity at catheterization access sites'
+- 'Step 3: Higher systolic pressure increases hydrostatic pressure gradient across
+  vessel walls and puncture sites'
+- 'Step 4: Increased vascular pressure combined with antiplatelet therapy required
+  post-PCI elevates bleeding risk at access sites and systemically over 3-year follow-up'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Yasuhiro Otsuka et al. 2024. "Changes in systolic blood pressure
+    during hospitalisation and bleeding events after percutaneous coronary intervention.."
+    *Open heart*. https://doi.org/10.1136/openhrt-2024-002987
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.459930'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: female_sex
+  direction: strengthens
+  strength: moderate
+  description: Female sex identified as independent factor associated with elevated
+    BP during hospitalization, potentially increasing bleeding risk through this pathway
+- name: chronic_kidney_disease
+  direction: strengthens
+  strength: moderate
+  description: Chronic kidney disease independently associated with elevated BP during
+    hospitalization, representing both impaired BP regulation and increased baseline
+    bleeding risk
+- name: peripheral_artery_disease
+  direction: strengthens
+  strength: moderate
+  description: Peripheral artery disease independently associated with elevated BP,
+    indicating broader vascular pathology that may amplify bleeding complications
+- name: chronic_coronary_syndrome
+  direction: strengthens
+  strength: moderate
+  description: Chronic coronary syndrome independently associated with BP elevation
+    during hospitalization

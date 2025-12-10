@@ -1,0 +1,62 @@
+id: NEW:nurse_delivered_brief_intervention_to_alcohol_use_disorder
+name: Nurse-Delivered Brief Intervention for Alcohol → Alcohol Use Disorder
+from_node:
+  node_id: NEW:nurse_delivered_brief_intervention
+  node_name: Nurse-Delivered Brief Intervention for Alcohol
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare systems utilize existing nursing workforce to deliver alcohol screening and brief
+  intervention'
+- 'Step 2: Nurses in primary care settings identify patients with harmful/hazardous alcohol use through
+  standardized screening'
+- 'Step 3: Brief motivational counseling is provided during routine healthcare encounters'
+- 'Step 4: Accessible and trusted nurse-patient relationships enhance intervention acceptability'
+- 'Step 5: Reduction in harmful drinking patterns prevents progression to alcohol use disorder'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Abhishek Ghosh et al. 2021. "Efficacy of Brief Intervention for harmful and hazardous
+    alcohol use: a systematic review and meta-analysis of studies from Low Middle-Income countries.."
+    https://doi.org/10.1111/add.15613'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis synthesized RCTs from LMIC
+  - Studies used standard screening instruments for outcome measurement
+  - Individual study citations require full-text access
+  doi: 10.1111/add.15613
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Nurse-delivered brief interventions demonstrate significant efficacy in reducing harmful
+  alcohol use in LMIC settings, leveraging existing primary care workforce to address alcohol-related
+  harms where specialist resources are limited.
+quantitative_effects:
+  effect_size:
+    value: -0.44
+    type: standardized_mean_difference
+  p_value: 0.02
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focused specifically on LMIC with disproportionately higher alcohol-attributable
+    disease burden; 7 of 14 studies from South Africa indicating regional concentration of evidence
+moderators:
+- name: provider_type
+  direction: strengthens
+  strength: strong
+  description: Nurse-delivered interventions showed significantly better effect (g=-0.44) compared to
+    interventions by others (g=-0.14)
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare workforce composition affects intervention
+    effectiveness. In LMIC where physician density is low, task-shifting to nurses represents a structural
+    adaptation to resource constraints. The effectiveness of nurse-delivered interventions suggests that
+    health systems can address alcohol-related harms without requiring specialist providers, addressing
+    structural inequities in healthcare access. This has implications for health workforce policy and
+    training investments.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.994351'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

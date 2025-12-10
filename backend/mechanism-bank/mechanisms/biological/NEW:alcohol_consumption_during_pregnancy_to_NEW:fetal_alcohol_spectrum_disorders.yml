@@ -1,0 +1,62 @@
+id: NEW:alcohol_consumption_during_pregnancy_to_NEW:fetal_alcohol_spectrum_disorders
+name: Alcohol Consumption During Pregnancy → Fetal Alcohol Spectrum Disorders
+from_node:
+  node_id: NEW:alcohol_consumption_during_pregnancy
+  node_name: Alcohol Consumption During Pregnancy
+to_node:
+  node_id: NEW:fetal_alcohol_spectrum_disorders
+  node_name: Fetal Alcohol Spectrum Disorders
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol crosses the placenta and reaches the developing fetus'
+- 'Step 2: Fetal exposure to alcohol disrupts organogenesis and neurodevelopment'
+- 'Step 3: Teratogenic effects cause structural and functional abnormalities'
+- 'Step 4: Outcomes include fetal alcohol spectrum disorders and other adverse birth outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Alemu Earsido Addila et al. 2020. "Alcohol consumption and its associated factors
+    among pregnant women in Sub-Saharan Africa: a systematic review and meta-analysis'' as given in the
+    submission system." https://doi.org/10.1186/s13011-020-00269-3'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 37 studies in qualitative synthesis
+  - Studies from various Sub-Saharan African countries included in the systematic review
+  - Primary studies accessed through PubMed, CINAHL, Cochrane Library, PsycINFO databases
+  doi: 10.1186/s13011-020-00269-3
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The pooled prevalence of alcohol consumption during pregnancy in Sub-Saharan Africa is 20.83%,
+  indicating that approximately one in five pregnant women consume alcohol, placing their fetuses at risk
+  for adverse developmental outcomes.
+quantitative_effects:
+  effect_size:
+    value: 20.83
+    type: percentage_change
+    ci_lower: 18.21
+    ci_upper: 23.46
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Prevalence of 20.83% alcohol consumption during pregnancy in Sub-Saharan Africa creates
+    substantial population-level risk for fetal harm
+moderators:
+- name: timing_of_exposure
+  direction: strengthens
+  strength: strong
+  description: First trimester exposure during organogenesis causes more severe structural defects
+- name: dose_and_pattern
+  direction: strengthens
+  strength: strong
+  description: Higher doses and binge drinking patterns increase severity of fetal effects
+structural_competency:
+  equity_implications: The high prevalence of prenatal alcohol exposure in Sub-Saharan Africa reflects
+    structural determinants including limited health education, inadequate prenatal care infrastructure,
+    poverty, mental health service gaps, and reproductive healthcare limitations. Addressing this public
+    health concern requires systematic interventions addressing these root causes rather than stigmatizing
+    individual pregnant women.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.272817'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

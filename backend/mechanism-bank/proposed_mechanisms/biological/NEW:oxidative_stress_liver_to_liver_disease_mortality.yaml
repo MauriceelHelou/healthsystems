@@ -1,0 +1,60 @@
+id: NEW:oxidative_stress_liver_to_liver_disease_mortality
+name: Hepatic Oxidative Stress → Liver Disease Mortality
+from_node:
+  node_id: NEW:oxidative_stress_liver
+  node_name: Hepatic Oxidative Stress
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Oxidative stress in the liver is induced by various agents including alcohol,
+  drugs, viral infections, environmental pollutants, and dietary components, leading
+  to accumulation of reactive oxygen species (ROS)'
+- 'Step 2: ROS accumulation causes lipid peroxidation, proinflammatory cytokine release,
+  and activation of hepatic stellate cells, which initiates and propagates liver injury'
+- 'Step 3: Chronic oxidative damage overwhelms antioxidant defense systems (SOD, CAT,
+  GSH, GPx, GR) and impairs Nrf2 protective responses'
+- 'Step 4: Sustained oxidative injury drives progression from initial liver damage
+  to non-alcoholic steatohepatitis (NASH), non-alcoholic fatty liver disease (NAFLD),
+  fibrosis, and cirrhosis'
+- 'Step 5: Advanced liver disease (cirrhosis) leads to liver failure, hepatocellular
+  carcinoma risk, and increased liver disease mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'M. Farzaei et al. 2018. Curcumin in Liver Diseases: A Systematic
+    Review of the Cellular Mechanisms of Oxidative Stress and Clinical Perspective.
+    Nutrients.'
+  supporting_citations: []
+description: Hepatic oxidative stress is a key causative factor in liver damage progression.
+  ROS accumulation from various sources (alcohol, drugs, viruses, pollutants, dietary
+  factors) leads to lipid peroxidation, proinflammatory cytokine activation, and hepatic
+  stellate cell activation. This overwhelms cellular antioxidant defenses (Nrf2, SOD,
+  CAT, GSH, GPx, GR) and drives progression through stages of liver injury including
+  NASH, NAFLD, fibrosis, and cirrhosis, ultimately increasing liver disease mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Alcohol consumption
+  direction: strengthens
+  strength: strong
+  description: Alcohol is identified as a key inducer of hepatic oxidative stress
+- name: Drug exposure
+  direction: strengthens
+  strength: moderate
+  description: Various drugs can induce hepatotoxicity through oxidative mechanisms
+- name: Viral infections
+  direction: strengthens
+  strength: strong
+  description: Viral hepatitis infections increase oxidative stress burden
+- name: Environmental pollutants
+  direction: strengthens
+  strength: moderate
+  description: Environmental toxins contribute to hepatic oxidative damage
+- name: Dietary antioxidants (e.g., curcumin)
+  direction: weakens
+  strength: moderate
+  description: Curcumin and similar compounds can scavenge free radicals and enhance
+    antioxidant defenses

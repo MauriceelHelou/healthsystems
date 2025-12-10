@@ -1,0 +1,46 @@
+id: medicaid_expansion_status_to_preventive_care_utilization
+name: Medicaid Expansion Status → Preventive Care Utilization
+from_node:
+  node_id: medicaid_expansion_status
+  node_name: Medicaid Expansion Status
+to_node:
+  node_id: preventive_care_utilization
+  node_name: Preventive Care Utilization
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: States adopt Medicaid expansion under the Affordable Care Act, extending
+  eligibility to adults with incomes up to 138% of the federal poverty level'
+- 'Step 2: Previously uninsured individuals gain Medicaid coverage, reducing financial
+  barriers to accessing healthcare services'
+- 'Step 3: With insurance coverage, individuals can now afford and access preventive
+  care services including cardiac screenings and treatment of comorbidities'
+- 'Step 4: Increased utilization of preventive cardiac care services, including screening
+  for and treatment of cardiac risk factors and comorbidities'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Ginger Y Jiang et al. 2023. Medicaid Expansion Under the Affordable
+    Care Act and Association With Cardiac Care: A Systematic Review. Circulation.
+    Cardiovascular quality and outcomes.'
+  supporting_citations: []
+description: A systematic review of 30 studies examining Medicaid expansion under
+  the ACA found that expansion was generally associated with increased insurance coverage
+  and improvements in cardiac-focused prevention and screening. Of the included studies,
+  41.1% assessed preventive care outcomes, with findings indicating some increase
+  in screening for and treatment of cardiac comorbidities in expansion states compared
+  to non-expansion states.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Time since expansion
+  direction: strengthens
+  strength: moderate
+  description: Studies evaluated median of 2 years post-expansion (range 0.5-6 years);
+    longer follow-up periods may show stronger effects as utilization patterns stabilize
+- name: Care setting
+  direction: strengthens
+  strength: moderate
+  description: Improvements in cardiac outcomes were more pronounced outside of acute
+    care settings, suggesting preventive care utilization has greater impact in outpatient/community
+    settings

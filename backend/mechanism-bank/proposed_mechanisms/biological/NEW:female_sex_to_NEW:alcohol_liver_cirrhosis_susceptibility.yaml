@@ -1,0 +1,60 @@
+id: NEW:female_sex_to_NEW:alcohol_liver_cirrhosis_susceptibility
+name: Female Sex → Alcohol-Related Liver Cirrhosis Susceptibility
+from_node:
+  node_id: NEW:female_sex
+  node_name: Female Sex
+to_node:
+  node_id: NEW:alcohol_liver_cirrhosis_susceptibility
+  node_name: Alcohol-Related Liver Cirrhosis Susceptibility
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Females have lower levels of gastric alcohol dehydrogenase enzyme activity,
+  resulting in reduced first-pass metabolism of alcohol in the stomach'
+- 'Step 2: Higher blood alcohol concentrations are achieved in females compared to
+  males for equivalent alcohol intake due to lower total body water content and different
+  body composition'
+- 'Step 3: Estrogen enhances gut permeability and endotoxin absorption, increasing
+  hepatic exposure to inflammatory mediators'
+- 'Step 4: Female livers demonstrate increased oxidative stress and inflammatory responses
+  to alcohol exposure'
+- 'Step 5: These biological factors result in accelerated hepatocyte damage, fibrosis
+  progression, and cirrhosis development at lower cumulative alcohol doses in females
+  compared to males'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'Laura Llamosas-Falcón et al. 2022. Sex-specific association between
+    alcohol consumption and liver cirrhosis: An updated systematic review and meta-analysis.
+    Frontiers in Gastroenterology.'
+  supporting_citations: []
+description: Females demonstrate significantly higher susceptibility to alcohol-related
+  liver cirrhosis compared to males at equivalent levels of alcohol consumption. This
+  meta-analysis of 24 studies including over 3 million participants found that at
+  40g alcohol per day, females had a relative risk of 9.35 compared to 2.82 for males,
+  representing a more than 3-fold higher relative risk. This sex difference is attributed
+  to biological factors including differences in alcohol metabolism, body composition,
+  hormonal influences on hepatic inflammation, and enhanced oxidative stress responses
+  in female livers.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 9.35
+    type: relative_risk
+    ci_lower: 7.64
+    ci_upper: 11.45
+  p_value: null
+  sample_size: 3037329
+moderators:
+- name: alcohol_consumption_level
+  direction: strengthens
+  strength: strong
+  description: The sex difference in cirrhosis risk increases with higher alcohol
+    consumption levels. At 40g/day, females have RR 9.35 vs males 2.82; at 80g/day,
+    females have RR 23.32 vs males 7.93
+- name: outcome_type
+  direction: strengthens
+  strength: moderate
+  description: Higher female risk observed for both morbidity and mortality outcomes
+    from liver cirrhosis

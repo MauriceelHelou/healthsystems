@@ -1,0 +1,55 @@
+id: NEW:alcohol_taxation_rate_to_NEW:mortality_inequality_education_based
+name: Alcohol Taxation Rate → Education-Based Mortality Inequality
+from_node:
+  node_id: NEW:alcohol_taxation_rate
+  node_name: Alcohol Taxation Rate
+to_node:
+  node_id: NEW:mortality_inequality_education_based
+  node_name: Education-Based Mortality Inequality
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Alcohol taxation increase raises the price of alcohol, reducing affordability
+  across all population segments'
+- 'Step 2: Lower educated populations, who tend to have higher rates of harmful alcohol
+  consumption and are more price-sensitive, experience greater reductions in alcohol
+  consumption'
+- 'Step 3: Reduced alcohol consumption leads to decreased alcohol-attributable mortality,
+  particularly from injuries and infectious diseases, which disproportionately affect
+  lower educated groups'
+- 'Step 4: As mortality declines more sharply among lower educated populations compared
+  to higher educated populations, the education-based mortality gap narrows'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'J. Manthey et al. 2023. "The impact of alcohol taxation increase
+    on all-cause mortality inequalities in Lithuania: an interrupted time series analysis."
+    BMC Medicine.'
+  supporting_citations: []
+description: Increased alcohol taxation reduces education-based mortality inequalities
+  by disproportionately reducing alcohol-attributable deaths among lower educated
+  populations. In Lithuania, the 2017 taxation increase was associated with a 13%
+  reduction in mortality inequalities among men, primarily through decreased deaths
+  from injuries and infectious diseases in lower educated groups.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -13.0
+    type: percentage_change
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Effect was pronounced among men (-13% reduction in mortality inequalities)
+    but not statistically significant among women, suggesting alcohol taxation has
+    differential impacts by sex
+- name: time
+  direction: weakens
+  strength: moderate
+  description: The reduction in mortality inequalities was temporary rather than sustained,
+    indicating potential adaptation or other confounding factors over time

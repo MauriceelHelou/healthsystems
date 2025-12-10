@@ -1,0 +1,50 @@
+id: extreme_heat_days_per_year_to_asthma_exacerbation_severe_rate
+name: Extreme Temperatures → Asthma Exacerbation Rate
+from_node:
+  node_id: extreme_heat_days_per_year
+  node_name: Extreme Temperatures
+to_node:
+  node_id: asthma_exacerbation_severe_rate
+  node_name: Asthma Exacerbation Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Extreme heat exposure triggers physiological stress responses including
+  increased respiratory rate and altered airway thermoregulation'
+- 'Step 2: Heat stress induces airway inflammation, increased mucus production, and
+  bronchial hyperresponsiveness in susceptible individuals'
+- 'Step 3: Extreme temperatures often co-occur with elevated ground-level ozone and
+  air pollutants, compounding respiratory irritation'
+- 'Step 4: Combined thermal and pollution stress leads to increased frequency and
+  severity of asthma exacerbations requiring medical intervention'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Ioana Agache et al. 2024. The impact of outdoor pollution and
+    extreme temperatures on asthma-related outcomes: A systematic review for the EAACI
+    guidelines on environmental science for allergic diseases and asthma. Allergy.'
+  supporting_citations: []
+description: Extreme temperatures, particularly heat, increase asthma exacerbation
+  rates through direct physiological effects on airways and indirect mechanisms involving
+  increased air pollution formation. This systematic review for EAACI guidelines evaluated
+  evidence on short-term exposure effects, finding that extreme temperatures represent
+  a significant environmental threat for asthma patients, with effects compounded
+  by climate change and concurrent air pollution exposure.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: air_pollution_levels
+  direction: strengthens
+  strength: strong
+  description: Impact of extreme temperatures on asthma is augmented when combined
+    with high air pollution exposure, particularly PM2.5, PM10, and NO2
+- name: climate_change
+  direction: strengthens
+  strength: moderate
+  description: Climate change amplifies the health threats from both extreme temperatures
+    and air pollution on asthma outcomes
+- name: asthma_severity
+  direction: strengthens
+  strength: moderate
+  description: Individuals with pre-existing severe asthma are more susceptible to
+    temperature-related exacerbations

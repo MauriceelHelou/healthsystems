@@ -1,0 +1,42 @@
+id: icu_symptom_triggered_protocol_implementation_to_icu_related_pneumonia
+name: ICU Symptom-Triggered Protocol Implementation for Alcohol Withdrawal → ICU-Related
+  Pneumonia
+from_node:
+  node_id: icu_symptom_triggered_protocol_implementation
+  node_name: ICU Symptom-Triggered Protocol Implementation for Alcohol Withdrawal
+to_node:
+  node_id: icu_related_pneumonia
+  node_name: ICU-Related Pneumonia
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Protocol-guided alcohol withdrawal management reduces need for mechanical
+  ventilation by preventing severe respiratory compromise'
+- 'Step 2: Decreased mechanical ventilation exposure reduces risk of ventilator-associated
+  complications including aspiration and nosocomial infection'
+- 'Step 3: Shorter duration of sedation and reduced intubation lowers opportunity
+  for bacterial colonization of airways'
+- 'Step 4: Combined reduction in ventilation and airway manipulation decreases incidence
+  of ICU-related pneumonia'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jason J Heavner et al. 2018. "Implementation of an ICU-Specific
+    Alcohol Withdrawal Syndrome Management Protocol Reduces the Need for Mechanical
+    Ventilation.." *Pharmacotherapy*. https://doi.org/10.1002/phar.2127
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.776841'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: mechanical_ventilation_reduction
+  direction: strengthens
+  strength: strong
+  description: The reduction in pneumonia appears mechanistically linked to the reduction
+    in mechanical ventilation, as intubation is a primary risk factor for ICU-acquired
+    pneumonia
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/icu_symptom_triggered_protocol_implementation_to_icu_related_pneumonia.yaml
+_category: healthcare_access

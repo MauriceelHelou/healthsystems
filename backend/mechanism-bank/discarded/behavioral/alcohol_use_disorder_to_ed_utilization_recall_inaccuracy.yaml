@@ -1,0 +1,40 @@
+id: alcohol_use_disorder_to_ed_utilization_recall_inaccuracy
+name: Alcohol Use Disorder → Emergency Department Utilization Recall Inaccuracy
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: ed_utilization_recall_inaccuracy
+  node_name: Emergency Department Utilization Recall Inaccuracy
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol use disorder causes neurocognitive impairments affecting memory
+  formation and recall'
+- 'Step 2: Chronic alcohol exposure damages hippocampal structures critical for episodic
+  memory consolidation'
+- 'Step 3: Impaired memory processes reduce ability to accurately recall specific
+  ED visit events over 12-month period'
+- 'Step 4: Patients with alcohol use problems demonstrate both under-reporting and
+  over-reporting of ED visits compared to objective health information exchange data'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: L. Whiteside et al. 2021. "Leveraging a health information exchange
+    to examine the accuracy of self-report emergency department utilization data among
+    hospitalized injury survivors." *Trauma Surgery & Acute Care Open*. https://doi.org/10.1136/tsaco-2020-000550
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.573201'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: major_psychiatric_illness
+  direction: strengthens
+  strength: moderate
+  description: Comorbid psychiatric illness in addition to alcohol use problems increases
+    likelihood of inaccurate ED visit recall
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/behavioral/alcohol_use_disorder_to_ed_utilization_recall_inaccuracy.yaml
+_category: behavioral

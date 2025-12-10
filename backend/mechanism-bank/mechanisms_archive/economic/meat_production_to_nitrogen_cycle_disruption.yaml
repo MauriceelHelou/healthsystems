@@ -1,0 +1,42 @@
+id: meat_production_to_nitrogen_cycle_disruption
+name: Meat Production → Global Nitrogen Cycle Disruption
+from_node:
+  node_id: meat_production
+  node_name: Meat Production
+to_node:
+  node_id: nitrogen_cycle_disruption
+  node_name: Global Nitrogen Cycle Disruption
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Livestock production requires substantial nitrogen inputs for feed crop
+  production through synthetic fertilizers'
+- 'Step 2: Manure from livestock operations contains high concentrations of reactive
+  nitrogen compounds'
+- 'Step 3: Excess nitrogen leaches into waterways causing eutrophication and contaminates
+  groundwater with nitrates'
+- 'Step 4: Water contamination creates health risks including methemoglobinemia (blue
+  baby syndrome) and potential cancer risks, while air pollution from nitrogen compounds
+  contributes to respiratory disease'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'F. Funke et al. 2022. "Toward Optimal Meat Pricing: Is It Time
+    to Tax Meat Consumption?." *Review of Environmental Economics and Policy*. https://doi.org/10.1086/721078'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.111627'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: proximity_to_livestock_operations
+  direction: strengthens
+  strength: strong
+  description: Communities located near concentrated animal feeding operations experience
+    greater exposure to nitrogen pollution in water and air
+- name: water_source_type
+  direction: strengthens
+  strength: moderate
+  description: Reliance on groundwater or surface water sources in agricultural areas
+    increases exposure to nitrate contamination

@@ -1,0 +1,77 @@
+id: NEW:emergency_department_brief_intervention_alcohol_to_binge_drinking
+name: Emergency Department Brief Intervention for Alcohol → Binge Drinking
+from_node:
+  node_id: NEW:emergency_department_brief_intervention_alcohol
+  node_name: Emergency Department Brief Intervention for Alcohol
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Emergency department visit creates a ''teachable moment'' when patients may be more receptive
+  to behavior change messaging'
+- 'Step 2: Alcohol screening identifies at-risk drinkers who may not have been previously identified in
+  healthcare settings'
+- 'Step 3: Brief intervention provides structured counseling addressing alcohol-related harms and motivational
+  strategies'
+- 'Step 4: Patients receive personalized feedback on their drinking patterns and associated health risks'
+- 'Step 5: Very small reductions in alcohol consumption quantity occur following intervention'
+evidence:
+  quality_rating: A
+  n_studies: 28
+  primary_citation: C. Schmidt et al. 2016. "Meta-analysis on the effectiveness of alcohol screening with
+    brief interventions for patients in emergency care settings.." https://doi.org/10.1111/add.13263
+  supporting_citations:
+  - Additional citations require full-text access - this meta-analysis synthesizes 28 separate RCT studies
+    published between January 2002 and September 2015
+  - Studies included injured and/or intoxicated patients in emergency department settings
+  - 33 publications representing 28 separate studies were analyzed
+  doi: 10.1111/add.13263
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Emergency department-based alcohol screening with brief interventions produces very small
+  but statistically significant reductions in alcohol consumption among injured and/or intoxicated patients.
+  The highest effect observed was SMD of 0.19, representing a small effect size. Six of nine outcome comparisons
+  across different time points and consumption measures showed significant effects favoring brief intervention.
+quantitative_effects:
+  effect_size:
+    value: 0.19
+    type: standardized_mean_difference
+    ci_lower: 0.08
+    ci_upper: 0.31
+  sample_size: 14456
+  heterogeneity_i_squared: 40.0
+moderators:
+- name: intervention_mode
+  direction: neutral
+  strength: weak
+  description: Face-to-face vs non-face-to-face interventions showed comparable effectiveness, though
+    non-face-to-face findings are tentative due to low number of studies
+- name: intervention_length
+  direction: neutral
+  strength: weak
+  description: More intensive interventions showed no benefit over shorter approaches
+- name: interventionist_type
+  direction: neutral
+  strength: weak
+  description: Type of interventionist did not significantly moderate outcomes
+- name: control_intervention_intensity
+  direction: neutral
+  strength: weak
+  description: Intensity of control intervention did not significantly moderate outcomes
+structural_competency:
+  equity_implications: This mechanism addresses healthcare system capacity to identify and intervene with
+    at-risk drinkers during opportunistic healthcare encounters. Emergency departments represent a critical
+    touchpoint for reaching populations who may lack regular primary care access. However, the very small
+    effect sizes raise questions about whether widespread ED-based screening and brief intervention implementation
+    is the most efficient use of limited healthcare resources. Structural factors influencing alcohol
+    use (economic stress, neighborhood alcohol outlet density, housing instability) are not addressed
+    by individual-level brief interventions. The findings suggest that while ED-based interventions may
+    provide marginal benefit, they do not address upstream determinants of harmful alcohol use patterns.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.046330'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

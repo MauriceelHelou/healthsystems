@@ -1,0 +1,42 @@
+id: alcohol_outlet_density_to_alcohol_relapse
+name: Density of Bars/Alcohol Outlets → Alcohol Relapse/Rising Dependence
+from_node:
+  node_id: alcohol_outlet_density
+  node_name: Density of Bars/Alcohol Outlets
+to_node:
+  node_id: alcohol_relapse
+  node_name: Alcohol Relapse/Rising Dependence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: High density of bars and alcohol outlets increases physical availability
+  and visibility of alcohol in the neighborhood environment'
+- 'Step 2: Greater outlet density exposes individuals in recovery to more alcohol-related
+  cues and triggers in daily routines'
+- 'Step 3: Increased physical proximity reduces barriers to alcohol access during
+  vulnerable moments or craving episodes'
+- 'Step 4: Cumulative exposure to alcohol-saturated environments undermines recovery
+  maintenance and increases relapse probability'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. Karriker-Jaffe et al. 2020. "Testing a Socioecological Model
+    of Relapse and Recovery from Alcohol Problems." *Substance abuse : research and
+    treatment*. https://doi.org/10.1177/1178221820933631'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.867101'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: neighborhood_poverty
+  direction: strengthens
+  strength: moderate
+  description: High outlet density in poverty neighborhoods creates compounded risk
+    through both environmental exposure and limited alternative resources
+- name: social_network_support_for_sobriety
+  direction: weakens
+  strength: moderate
+  description: Strong prosocial networks can buffer outlet density effects by providing
+    alternative activities and accountability

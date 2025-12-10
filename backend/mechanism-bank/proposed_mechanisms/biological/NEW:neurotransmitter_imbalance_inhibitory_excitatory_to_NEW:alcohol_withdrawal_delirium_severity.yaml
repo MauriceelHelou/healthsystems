@@ -1,0 +1,62 @@
+id: NEW:neurotransmitter_imbalance_inhibitory_excitatory_to_NEW:alcohol_withdrawal_delirium_severity
+name: Inhibitory/Excitatory Neurotransmitter Imbalance → Alcohol Withdrawal Delirium
+  Severity
+from_node:
+  node_id: NEW:neurotransmitter_imbalance_inhibitory_excitatory
+  node_name: Inhibitory/Excitatory Neurotransmitter Imbalance
+to_node:
+  node_id: NEW:alcohol_withdrawal_delirium_severity
+  node_name: Alcohol Withdrawal Delirium Severity
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption causes adaptive neurological changes, including
+  downregulation of inhibitory GABA receptors and upregulation of excitatory glutamate
+  (NMDA) receptors'
+- 'Step 2: Upon cessation of alcohol, the compensatory neuroadaptations result in
+  an imbalance with reduced inhibitory neurotransmission (GABA) and increased excitatory
+  neurotransmission (glutamate)'
+- 'Step 3: This neurotransmitter imbalance produces a state of CNS hyperexcitability
+  characterized by autonomic instability, agitation, and altered consciousness'
+- 'Step 4: The severity of the inhibitory/excitatory imbalance directly correlates
+  with the severity of alcohol withdrawal delirium, as measured by clinical assessment
+  scales (CIWA, RASS)'
+- 'Step 5: Standard benzodiazepine therapy targeting GABA receptors alone is often
+  inadequate to control delirium symptoms due to the magnitude of neurotransmitter
+  imbalance in severe cases'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Anne Dabrow Woods et al. 2015. The use of dexmedetomidine as
+    an adjuvant to benzodiazepine-based therapy to decrease the severity of delirium
+    in alcohol withdrawal in adult intensive care unit patients: a systematic review.
+    JBI database of systematic reviews and implementation reports.'
+  supporting_citations: []
+description: The imbalance between inhibitory (GABA) and excitatory (glutamate) neurotransmitters
+  that develops during chronic alcohol use and manifests upon alcohol cessation directly
+  drives the severity of alcohol withdrawal delirium. This systematic review of 4
+  studies demonstrates that benzodiazepine-based therapy alone is often inadequate
+  to control delirium symptoms in ICU patients due to this fundamental neurotransmitter
+  imbalance, supporting the causal relationship between neurotransmitter dysregulation
+  and delirium severity.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -5.2
+    type: weighted_mean_difference
+    ci_lower: -6.24
+    ci_upper: -4.16
+  p_value: 0.0001
+  sample_size: 55
+moderators:
+- name: ICU setting
+  direction: strengthens
+  strength: moderate
+  description: Patients in ICU settings may have more severe withdrawal requiring
+    intensive monitoring and treatment
+- name: Adjuvant alpha-2 agonist therapy
+  direction: weakens
+  strength: moderate
+  description: Dexmedetomidine as adjuvant therapy significantly reduces delirium
+    severity by addressing the neurotransmitter imbalance through alternative pathways

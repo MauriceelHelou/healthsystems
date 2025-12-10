@@ -1,0 +1,62 @@
+id: NEW:cannabis_cautioning_policy_to_illicit_drug_use_past_month
+name: Cannabis Cautioning Policy (vs Arrest) → Illicit Drug Use Past Month
+from_node:
+  node_id: NEW:cannabis_cautioning_policy
+  node_name: Cannabis Cautioning Policy (vs Arrest)
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use Past Month
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Cannabis cautioning policy connects offenders to education about cannabis risks'
+- 'Step 2: Treatment referrals provide access to substance use interventions'
+- 'Step 3: Non-punitive approach may increase engagement with health services'
+- 'Step 4: No statistically significant difference in cannabis use outcomes compared to arrest'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Marian Shanahan et al. 2017. "Alternate policing strategies: Cost-effectiveness of
+    cautioning for cannabis offences.." https://doi.org/10.1016/j.drugpo.2016.12.012'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references education and treatment components
+    of cautioning
+  - Additional citations require full-text access - abstract references prior evidence on efficacy of
+    alternatives
+  - Additional citations require full-text access - abstract references comparable outcomes across intervention
+    types
+  doi: 10.1016/j.drugpo.2016.12.012
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Cannabis cautioning produces equivalent effects on cannabis use compared to arrest/charge
+  approach, indicating that diversion to education/treatment is as effective as punitive approaches for
+  substance use outcomes.
+quantitative_effects:
+  sample_size: 544
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in Australia with nationwide online survey; applicability to other
+    jurisdictions noted
+moderators:
+- name: baseline_cannabis_consumption
+  direction: weakens
+  strength: moderate
+  description: Cannabis consumption levels were matched between groups; higher baseline use may reduce
+    intervention effectiveness
+- name: employment_status
+  direction: strengthens
+  strength: weak
+  description: Employment status was a matching variable, suggesting employed individuals may respond
+    differently
+structural_competency:
+  equity_implications: This finding challenges the assumption that criminal justice involvement is necessary
+    to deter drug use. The null difference in substance use outcomes between cautioning and arrest suggests
+    that criminalization does not provide additional public health benefit while imposing significant
+    individual and social costs. This has implications for drug policy reform and reducing structural
+    harms of prohibition.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.583259'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,39 @@
+id: mental_health_symptom_severity_to_mhp_help_seeking_avoidance
+name: Mental Health Symptom Severity (High GHQ Score) → Avoidance of Mental Health
+  Professional Help-Seeking
+from_node:
+  node_id: mental_health_symptom_severity
+  node_name: Mental Health Symptom Severity (High GHQ Score)
+to_node:
+  node_id: mhp_help_seeking_avoidance
+  node_name: Avoidance of Mental Health Professional Help-Seeking
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Higher mental health symptom severity (measured by GHQ-12) creates increased
+  psychological distress and functional impairment'
+- 'Step 2: Increased distress may lead to cognitive symptoms including hopelessness,
+  withdrawal, and decreased self-efficacy'
+- 'Step 3: These symptoms reduce capacity for help-seeking behaviors and increase
+  avoidance of formal mental health services'
+- 'Step 4: Paradoxically, those with greatest need are least likely to access mental
+  health professionals'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Genis Seera et al. 2020. "Help-seeking behaviors for mental health
+    problems in medical students: Studies in Thailand and India.." *Asian journal
+    of psychiatry*. https://doi.org/10.1016/j.ajp.2020.102453'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.456589'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: country_context
+  direction: strengthens
+  strength: moderate
+  description: Effect was stronger in India (OR=2.20 for dichotomized GHQ≥2) compared
+    to Thailand (OR=1.11 per continuous GHQ unit), suggesting cultural and healthcare
+    system factors moderate this relationship

@@ -1,0 +1,64 @@
+id: permanent_supportive_housing_units_to_homelessness_rate
+name: Permanent Supportive Housing (Housing First) → Homelessness Rate
+from_node:
+  node_id: permanent_supportive_housing_units
+  node_name: Permanent Supportive Housing (Housing First)
+to_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Permanent Supportive Housing (PSH) with Housing First approach provides
+  immediate, unconditional access to permanent housing without requiring ''housing
+  readiness'' (sobriety or psychiatric treatment compliance)'
+- 'Step 2: Housing stability is established as individuals gain secure, long-term
+  residence with accompanying supportive services (health, mental health, and social
+  services)'
+- 'Step 3: Stable housing tenure is maintained through integrated support services
+  that address underlying health and social needs without housing contingency'
+- 'Step 4: Direct reduction in homelessness as individuals transition from unhoused
+  status to permanent stable housing, with sustained housing retention over time'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'Yinan Peng et al. 2020. Permanent Supportive Housing With Housing
+    First to Reduce Homelessness and Promote Health Among Homeless Populations With
+    Disability: A Community Guide Systematic Review. Journal of Public Health Management
+    and Practice.'
+  supporting_citations: []
+description: A Community Guide systematic review of 26 studies demonstrates that Permanent
+  Supportive Housing with Housing First approach substantially reduces homelessness
+  among disabled populations. The intervention provides immediate permanent housing
+  without requiring sobriety or treatment compliance ('housing readiness'), paired
+  with voluntary supportive services. Compared to Treatment First approaches, Housing
+  First decreased homelessness by 88% and improved housing stability by 41%. The mechanism
+  operates through unconditional housing provision that removes barriers to housing
+  access while integrating health and social services to maintain stability.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 88.0
+    type: percent_reduction
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: disability_status
+  direction: strengthens
+  strength: strong
+  description: Housing First programs specifically target and demonstrate effectiveness
+    for homeless populations with disabilities including mental health conditions,
+    substance use disorders, and HIV
+- name: program_model
+  direction: strengthens
+  strength: strong
+  description: Housing First approach (unconditional housing) outperforms Treatment
+    First approach (requiring housing readiness) - 88% reduction vs comparison groups
+- name: HIV_status
+  direction: strengthens
+  strength: moderate
+  description: For clients with HIV, Housing First reduced homelessness by 37% with
+    additional health benefits including reduced viral load and mortality

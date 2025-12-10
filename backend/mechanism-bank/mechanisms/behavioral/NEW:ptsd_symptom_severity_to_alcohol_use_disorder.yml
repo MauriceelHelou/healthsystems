@@ -1,0 +1,55 @@
+id: NEW:ptsd_symptom_severity_to_alcohol_use_disorder
+name: PTSD Symptom Severity → Alcohol Use Disorder
+from_node:
+  node_id: NEW:ptsd_symptom_severity
+  node_name: PTSD Symptom Severity
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Elevated PTSD symptoms create psychological distress and hyperarousal states'
+- 'Step 2: Individuals may use alcohol as a maladaptive coping mechanism to self-medicate trauma symptoms'
+- 'Step 3: Increased alcohol consumption reinforces avoidance behaviors central to PTSD'
+- 'Step 4: Greater alcohol use develops over subsequent weeks as symptom severity remains elevated'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jessica C Tripp et al. 2020. "Bidirectional relationship of posttraumatic stress disorder
+    (PTSD) symptom severity and alcohol use over the course of integrated treatment.." https://doi.org/10.1037/adb0000564
+  supporting_citations:
+  - Studies supporting mutual maintenance model of addiction (cited in abstract)
+  - Literature on COPE (Concurrent Treatment of PTSD and Substance Use Disorder Using Prolonged Exposure)
+  - Literature on Seeking Safety present-focused coping skills-based treatment
+  doi: 10.1037/adb0000564
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Greater PTSD symptom severity is prospectively associated with greater future alcohol use
+  during integrated treatment, supporting the self-medication hypothesis within the mutual maintenance
+  model. The effect size for PTSD symptoms predicting future alcohol use was larger than the reciprocal
+  relationship.
+quantitative_effects:
+  effect_size:
+    value: 0.2
+    type: beta_coefficient
+  p_value: 0.024
+  sample_size: 107
+moderators:
+- name: treatment_condition
+  direction: neutral
+  strength: weak
+  description: Treatment condition (COPE vs Seeking Safety) did not moderate the effect of PTSD symptom
+    severity on alcohol use
+structural_competency:
+  equity_implications: This mechanism highlights how trauma exposure (often rooted in structural factors
+    like military service, community violence, or adverse childhood experiences) can drive substance use.
+    Veterans face unique structural exposures including combat trauma, military sexual trauma, and challenges
+    reintegrating into civilian life. Sequential treatment models that require abstinence before trauma
+    treatment create structural barriers to care that perpetuate this cycle.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.804088'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

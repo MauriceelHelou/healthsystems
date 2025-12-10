@@ -1,0 +1,48 @@
+id: NEW:average_alcohol_volume_consumed_to_suicide_attempt_rate_ed_hospital
+name: Average Alcohol Volume Consumed → Suicide Attempt Rate (ED/Hospital)
+from_node:
+  node_id: NEW:average_alcohol_volume_consumed
+  node_name: Average Alcohol Volume Consumed
+to_node:
+  node_id: suicide_attempt_rate_ed_hospital
+  node_name: Suicide Attempt Rate (ED/Hospital)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Higher average alcohol consumption creates chronic neurobiological changes affecting mood regulation'
+- 'Step 2: Chronic alcohol exposure disrupts serotonergic and GABAergic systems involved in emotional
+  stability'
+- 'Step 3: Regular consumption may mask or exacerbate underlying depression and anxiety disorders'
+- 'Step 4: Dose-response relationship between alcohol volume and suicidal behavior risk'
+- 'Step 5: Increased probability of suicide attempts requiring emergency or hospital care'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'S. Lange et al. 2022. "Alcohol use and the gender-specific risk of suicidal behavior:
+    a systematic review and meta-analysis protocol." https://doi.org/10.1186/s13643-022-02159-0'
+  supporting_citations:
+  - Additional citations require full-text access - this is a protocol paper
+  - Studies to be identified through systematic search of Embase, PsycINFO, PubMed, and Web of Science
+  - Protocol registered as PROSPERO CRD42022320918
+  doi: 10.1186/s13643-022-02159-0
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The protocol will examine average alcohol volume consumed as a key exposure dimension, providing
+  risk estimates for suicide attempts stratified by gender and consumption level.
+moderators:
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Women show heightened risk of suicidal behavior at various levels of alcohol consumption
+structural_competency:
+  equity_implications: Average alcohol consumption is influenced by structural determinants including
+    alcohol availability, pricing policies, advertising exposure, socioeconomic conditions, and cultural
+    norms around drinking. Gender differences in risk relationships may reflect biological differences
+    in alcohol metabolism, gendered social expectations, and differential exposure to alcohol-related
+    social harms. The focus on quantitative consumption levels enables policy-relevant risk estimates.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.333251'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

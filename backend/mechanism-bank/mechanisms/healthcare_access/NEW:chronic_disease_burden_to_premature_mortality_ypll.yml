@@ -1,0 +1,58 @@
+id: NEW:chronic_disease_burden_to_premature_mortality_ypll
+name: Chronic Disease Burden → Premature Mortality (Years of Potential Life Lost)
+from_node:
+  node_id: NEW:chronic_disease_burden
+  node_name: Chronic Disease Burden
+to_node:
+  node_id: premature_mortality_ypll
+  node_name: Premature Mortality (Years of Potential Life Lost)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Chronic conditions progress over time without adequate management'
+- 'Step 2: Health systems inadequately resourced for chronic care fail to prevent complications'
+- 'Step 3: Unmanaged chronic diseases lead to premature death'
+- 'Step 4: Chronic conditions account for 71% of Years of Life Lost globally'
+evidence:
+  quality_rating: A
+  n_studies: 1
+  primary_citation: '2025. "Characterising acute and chronic care needs: insights from the Global Burden
+    of Disease Study 2019.." https://doi.org/10.1038/s41467-025-56910-x'
+  supporting_citations:
+  - GBD 2019 Disease and Injury Incidence and Prevalence Collaborators. Lancet.
+  - GBD 2019 Mortality Collaborators. Lancet.
+  - Additional citations require full-text access
+  doi: 10.1038/s41467-025-56910-x
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Chronic conditions requiring long-term management contribute 71% of Years of Life Lost (YLL)
+  globally, indicating that premature mortality is predominantly driven by conditions that require sustained,
+  system-level interventions rather than acute care responses.
+quantitative_effects:
+  effect_size:
+    value: 71.0
+    type: percentage_change
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Burden varies by socio-demographic index across regions
+moderators:
+- name: socio_demographic_index
+  direction: strengthens
+  strength: moderate
+  description: Lower socio-demographic index regions may have higher chronic disease mortality due to
+    health system limitations
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Chronic conditions increase with age, contributing to mortality burden
+structural_competency:
+  equity_implications: The high proportion of YLL attributable to chronic conditions reflects structural
+    underinvestment in chronic disease prevention and management infrastructure. Populations in lower-resourced
+    settings face both higher chronic disease burden and fewer resources for management, creating compounding
+    inequities. Solutions require structural transformation of health systems toward chronic care capacity.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.004020'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

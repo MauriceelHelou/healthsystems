@@ -1,0 +1,85 @@
+id: minimum_wage_level_to_depression_prevalence
+name: Minimum Wage Level -> Depression Prevalence
+from_node:
+  node_id: minimum_wage_level
+  node_name: Minimum Wage Level
+  node_type: policy
+to_node:
+  node_id: depression_prevalence
+  node_name: Depression Prevalence
+  node_type: crisis_endpoint
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Minimum wage increases raise income for low-wage workers, reducing economic precarity and financial stress'
+- 'Step 2: Higher wages reduce the need for multiple jobs, excessive work hours, and economic insecurity'
+- 'Step 3: Improved financial stability reduces chronic stress, anxiety about basic needs, and sense of deprivation'
+- 'Step 4: Better material conditions enable investment in social activities, healthcare, and self-care'
+- 'Step 5: Reduced chronic economic stress leads to lower rates of depression and improved mental wellbeing'
+evidence:
+  quality_rating: B
+  n_studies: 8
+  primary_citation: 'Reeves, Aaron, Martin McKee, Johan Mackenbach, Margaret Whitehead, and David Stuckler. 2017. "Introduction of a National Minimum Wage Reduced Depressive Symptoms in Low-Wage Workers: A Quasi-Natural Experiment in the UK." Health Economics 26(5): 639-655.'
+  supporting_citations:
+  - 'Neumark, David. 2024. "The effects of minimum wages on (almost) everything? A review of recent evidence on health and related behaviors." LABOUR 38(2): 131-168.'
+  - 'Lenhart, Otto. 2017. "The impact of minimum wages on population health: evidence from 24 OECD countries." European Journal of Health Economics 18(8): 1031-1039.'
+  - 'Pabayo, Roman, et al. 2019. "State-level minimum wage and depression: A systematic review." Preventive Medicine 118: 14-24.'
+  doi: 10.1002/hec.3336
+  journal: Health Economics
+  year: 2017
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: -0.15
+    type: standardized_mean_difference
+    ci_lower: -0.28
+    ci_upper: -0.02
+    ci_level: 95
+  interpretation: 'Introduction of UK national minimum wage was associated with a significant reduction in depressive symptoms (GHQ-12 score) among low-wage workers compared to control group, sustained over follow-up period'
+  sample_size: 14000
+  heterogeneity_notes: 'Effects were concentrated among low-wage workers directly affected by the policy; no spillover effects to higher-wage workers'
+last_updated: '2025-11-30'
+version: '1.0'
+description: Minimum wage increases are associated with reduced depressive symptoms among low-wage workers. The UK quasi-natural experiment of the 1999 national minimum wage introduction found sustained reductions in depression measured by GHQ-12. A 2024 review found somewhat more studies reporting positive mental health impacts than no impact, with none finding negative impacts. Higher minimum wages have also been associated with reduced suicide rates, consistent with mental health benefits.
+moderators:
+- name: baseline_wage_level
+  direction: strengthens
+  strength: moderate
+  description: Workers with lowest baseline wages show largest mental health improvements
+- name: employment_effects
+  direction: weakens
+  strength: weak
+  description: If minimum wage increases reduce employment, displaced workers may experience worse mental health
+- name: social_support
+  direction: strengthens
+  strength: moderate
+  description: Strong social networks amplify positive effects of income increases on mental health
+- name: housing_costs
+  direction: weakens
+  strength: moderate
+  description: High housing costs may absorb wage gains, limiting mental health benefits
+structural_competency:
+  root_cause_level: policy_structural
+  avoids_victim_blaming: true
+  equity_implications: Depression among low-wage workers reflects material conditions created by wage policy, not individual vulnerability. Minimum wage policy is a structural intervention that addresses economic determinants of mental health. Disproportionately affects women, minorities, and young workers in low-wage sectors.
+assumptions:
+- Assumes wage increases improve material conditions for low-wage workers
+- Assumes financial stress is a significant contributor to depression
+- Assumes employment effects do not offset income effects
+limitations:
+- Most evidence is observational; causation difficult to establish
+- UK natural experiment may not generalize to US context
+- Employment effects of minimum wage remain debated
+- Effect sizes vary across studies and populations
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects depend on baseline wages, cost of living, and social safety net generosity
+  relevant_geographies:
+  - Effects stronger in areas with lower baseline wages
+  - High cost-of-living areas may see smaller effects as wage gains absorbed by expenses
+  - Countries with stronger social safety nets may show smaller marginal effects
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: moderate
+  prompt_version: 1.0-mvp

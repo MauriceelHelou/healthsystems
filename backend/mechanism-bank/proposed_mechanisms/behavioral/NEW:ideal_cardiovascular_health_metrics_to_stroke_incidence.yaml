@@ -1,0 +1,51 @@
+id: NEW:ideal_cardiovascular_health_metrics_to_stroke_incidence
+name: Ideal Cardiovascular Health Metrics (AHA 7-metric tool) → Stroke Incidence
+from_node:
+  node_id: NEW:ideal_cardiovascular_health_metrics
+  node_name: Ideal Cardiovascular Health Metrics (AHA 7-metric tool)
+to_node:
+  node_id: stroke_incidence
+  node_name: Stroke Incidence
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Higher adherence to AHA''s 7 ideal cardiovascular health metrics (smoking
+  status, physical activity, diet, body mass index, blood pressure, cholesterol, and
+  blood glucose) reflects healthier behavioral patterns and better metabolic control'
+- 'Step 2: These combined health behaviors reduce atherosclerotic plaque formation,
+  improve endothelial function, decrease systemic inflammation, and maintain healthy
+  blood pressure levels'
+- 'Step 3: Reduced atherosclerosis and improved vascular health decrease the likelihood
+  of both ischemic stroke (from thrombosis or embolism) and hemorrhagic stroke (from
+  hypertension-related vessel damage)'
+- 'Step 4: The cumulative protective effect of multiple ideal CVH metrics results
+  in significantly lower stroke incidence in the general population'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Radovanovic M et al. 2023. Ideal Cardiovascular Health and Risk
+    of Cardiovascular Events or Mortality: A Systematic Review and Meta-Analysis of
+    Prospective Studies. Journal of Clinical Medicine.'
+  supporting_citations: []
+description: This systematic review and meta-analysis of 22 prospective studies (n=3,240,660
+  adults, mean follow-up 12.0 years) demonstrated that achieving a higher number of
+  ideal cardiovascular health metrics as defined by the American Heart Association
+  is significantly associated with reduced stroke incidence. The protective effect
+  appears to be dose-dependent, with even modest improvements in CVH metrics providing
+  meaningful stroke risk reduction. The 7 metrics encompass both behavioral factors
+  (smoking, physical activity, diet) and health factors (BMI, blood pressure, cholesterol,
+  blood glucose), which together influence stroke risk through multiple pathways including
+  reduced atherosclerosis, improved vascular function, and better metabolic health.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: number_of_ideal_metrics
+  direction: strengthens
+  strength: strong
+  description: Higher number of ideal CVH metrics leads to progressively lower stroke
+    risk, suggesting a dose-response relationship
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Study population was 57.8% men; effect observed across both sexes but
+    potential differential effects not explicitly reported

@@ -1,0 +1,54 @@
+id: NEW:coal_price_to_NEW:natural_gas_consumption
+name: Coal Price → Natural Gas Consumption
+from_node:
+  node_id: NEW:coal_price
+  node_name: Coal Price
+to_node:
+  node_id: NEW:natural_gas_consumption
+  node_name: Natural Gas Consumption
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Coal prices change in the energy market'
+- 'Step 2: Coal serves as a substitute fuel for natural gas in many applications'
+- 'Step 3: In the short-term, higher coal prices lead to decreased natural gas consumption (cross-price
+  elasticity -0.762)'
+- 'Step 4: This counterintuitive short-term relationship may reflect market dynamics and adjustment costs'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Jian Chai et al. 2018. "The Price Elasticity of Natural Gas Demand in China: A Meta-Regression
+    Analysis." https://doi.org/10.3390/EN11123255'
+  supporting_citations:
+  - Additional citations require full-text access - meta-regression synthesizes multiple empirical studies
+  - Studies examine coal-to-natural gas cross-price elasticity across different contexts
+  - Analysis includes both short-run and long-run elasticity estimates
+  doi: 10.3390/EN11123255
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The cross-price elasticity between coal and natural gas shows a negative short-run relationship
+  (-0.762), becoming near-zero in the long-run (0.008). This suggests complex substitution dynamics between
+  these fuel sources in China's energy market.
+quantitative_effects:
+  effect_size:
+    value: -0.762
+    type: beta_coefficient
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Heterogeneity explained by geographical region and other study characteristics
+moderators:
+- name: time_horizon
+  direction: weakens
+  strength: strong
+  description: Long-run cross-price elasticity (0.008) is near zero, differing substantially from short-run
+    elasticity (-0.762)
+structural_competency:
+  equity_implications: Coal-to-gas substitution has significant air quality and health implications. Lower
+    coal consumption generally improves ambient air quality and reduces respiratory health burdens. However,
+    this paper focuses on economic relationships rather than health outcomes directly.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.049165'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

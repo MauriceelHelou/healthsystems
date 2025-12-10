@@ -1,0 +1,61 @@
+id: NEW:dexmedetomidine_adjuvant_therapy_to_NEW:alcohol_withdrawal_delirium_severity
+name: Dexmedetomidine as Adjuvant to Benzodiazepine Therapy → Alcohol Withdrawal Delirium
+  Severity
+from_node:
+  node_id: NEW:dexmedetomidine_adjuvant_therapy
+  node_name: Dexmedetomidine as Adjuvant to Benzodiazepine Therapy
+to_node:
+  node_id: NEW:alcohol_withdrawal_delirium_severity
+  node_name: Alcohol Withdrawal Delirium Severity
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption leads to neuroadaptive changes creating imbalance
+  between inhibitory (GABA) and excitatory (glutamate) neurotransmitters'
+- 'Step 2: Upon alcohol cessation in hospitalized ICU patients, standard benzodiazepine-based
+  therapy alone is often inadequate to control delirium symptoms due to this neurotransmitter
+  imbalance'
+- 'Step 3: Dexmedetomidine, an alpha-2 adrenergic agonist, is added as adjuvant therapy
+  to benzodiazepine treatment'
+- 'Step 4: Dexmedetomidine provides additional sedation and anxiolysis through a different
+  mechanism than benzodiazepines, addressing the excitatory-inhibitory imbalance more
+  comprehensively'
+- 'Step 5: Combined therapy results in decreased alcohol withdrawal delirium severity
+  as measured by validated scales (CIWA, RASS, CAM-ICU)'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Anne Dabrow Woods et al. 2015. The use of dexmedetomidine as
+    an adjuvant to benzodiazepine-based therapy to decrease the severity of delirium
+    in alcohol withdrawal in adult intensive care unit patients: a systematic review.
+    JBI database of systematic reviews and implementation reports.'
+  supporting_citations: []
+description: 'This systematic review with meta-analysis of 4 studies (3 retrospective
+  and 1 prospective case series) demonstrates that dexmedetomidine as an adjuvant
+  to benzodiazepine-based therapy significantly decreases alcohol withdrawal delirium
+  severity in adult ICU patients. The meta-analysis of 3 studies using CIWA scores
+  showed a weighted mean difference of -5.2 (95% CI: -6.24 to -4.16, p<0.0001), indicating
+  clinically meaningful reduction in delirium severity. The mechanism relates to addressing
+  the neurotransmitter imbalance that occurs during alcohol withdrawal through complementary
+  pharmacological pathways.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -5.2
+    type: weighted_mean_difference
+    ci_lower: -6.24
+    ci_upper: -4.16
+  p_value: 0.0001
+  sample_size: 55
+moderators:
+- name: ICU setting
+  direction: strengthens
+  strength: moderate
+  description: Evidence applies specifically to adult ICU patients where close monitoring
+    allows for safe dexmedetomidine administration
+- name: Baseline delirium severity
+  direction: strengthens
+  strength: moderate
+  description: Adjuvant therapy particularly beneficial when benzodiazepine-based
+    therapy alone is inadequate to control symptoms

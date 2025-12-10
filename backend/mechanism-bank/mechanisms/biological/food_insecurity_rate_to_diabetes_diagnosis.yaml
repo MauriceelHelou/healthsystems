@@ -1,0 +1,54 @@
+id: food_insecurity_rate_to_diabetes_diagnosis
+name: Food Insecurity → Diabetes Diagnosis
+from_node:
+  node_id: food_insecurity_rate
+  node_name: Food Insecurity
+to_node:
+  node_id: diabetes_diagnosis
+  node_name: Diabetes Diagnosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Food insecurity leads to reliance on inexpensive, energy-dense, nutrient-poor
+  foods that are high in refined carbohydrates and added sugars'
+- 'Step 2: This dietary pattern promotes weight gain, particularly central adiposity,
+  and increases metabolic stress through repeated glucose spikes'
+- 'Step 3: Chronic exposure to poor diet quality combined with cycles of food scarcity
+  and overconsumption when food is available leads to insulin resistance'
+- 'Step 4: Sustained insulin resistance progresses to impaired glucose tolerance and
+  eventually clinical diabetes mellitus diagnosis'
+- 'Step 5: Once diagnosed, food insecurity further impairs glycemic control through
+  inability to maintain consistent, diabetes-appropriate nutrition'
+evidence:
+  quality_rating: A
+  n_studies: 55
+  primary_citation: 'Jennifer Te Vazquez et al. 2021. Food Insecurity and Cardiometabolic
+    Conditions: a Review of Recent Research. Current nutrition reports.'
+  supporting_citations:
+  - Kristen L. Flint et al. 2020. Emerging trends and the clinical impact of food
+    insecurity in patients with diabetes. Journal of Diabetes.
+description: Food insecurity is robustly associated with diabetes diagnosis in adults
+  through biological pathways involving poor diet quality, weight gain, and metabolic
+  dysfunction. The inability to consistently obtain nutritious food forces reliance
+  on cheap, calorie-dense foods that promote obesity and insulin resistance. Once
+  diabetes develops, food insecurity continues to impair glycemic control and increases
+  risk of diabetes complications.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Association between food insecurity and overweight/obesity is especially
+    strong for women, potentially amplifying diabetes risk
+- name: socioeconomic_status
+  direction: strengthens
+  strength: strong
+  description: Food insecurity disproportionately affects socioeconomically disadvantaged
+    households, compounding health risks through multiple pathways
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Adults show stronger associations than children; cardiometabolic conditions
+    take time to develop but childhood experiences set trajectories for worse health
+    later in life

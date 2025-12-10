@@ -1,0 +1,59 @@
+id: NEW:health_warning_labels_food_alcohol_to_NEW:product_selection_behavior
+name: Health Warning Labels on Food and Alcohol Products → Product Selection Behavior
+from_node:
+  node_id: NEW:health_warning_labels_food_alcohol
+  node_name: Health Warning Labels on Food and Alcohol Products
+to_node:
+  node_id: NEW:product_selection_behavior
+  node_name: Product Selection Behavior
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Health warning labels (HWLs) are mandated on food and alcohol products through policy intervention'
+- 'Step 2: HWLs increase visibility and salience of health risks associated with product consumption at
+  point of selection'
+- 'Step 3: Cognitive processing of warning information triggers risk perception and health concerns'
+- 'Step 4: Increased perceived risk reduces likelihood of selecting the labeled product'
+- 'Step 5: Reduced selection translates to decreased purchase and consumption of harmful products'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Natasha Clarke et al. 2020. "Impact of health warning labels on selection and consumption
+    of food and alcohol products: systematic review with meta-analysis." https://doi.org/10.1080/17437199.2020.1780147'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 14 RCTs (3 for alcohol, 11 for
+    food)
+  - Studies included in meta-analysis of 12 comparisons from 9 studies
+  - PROSPERO registration CRD42018106522 contains full study list
+  doi: 10.1080/17437199.2020.1780147
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Health warning labels on food and alcohol products reduce selection of targeted products
+  by 26%. This meta-analysis of 14 RCTs found participants were significantly less likely to choose products
+  displaying HWLs compared to products without HWLs.
+quantitative_effects:
+  effect_size:
+    value: 0.74
+    type: relative_risk
+    ci_lower: 0.68
+    ci_upper: 0.8
+  sample_size: 12635
+moderators:
+- name: label_type
+  direction: strengthens
+  strength: moderate
+  description: Image-and-text (pictorial) HWLs showed larger effect (RR=0.65, 95%CI 0.54-0.80) compared
+    to text-only HWLs (RR=0.79, 95%CI 0.74-0.85), though difference not statistically significant
+structural_competency:
+  equity_implications: This mechanism represents a structural/policy-level intervention that modifies
+    the information environment at point of purchase rather than relying on individual motivation or education.
+    HWLs shift the default information landscape, reducing information asymmetry between industry and
+    consumers. This approach addresses health inequities by providing universal access to health risk
+    information regardless of education level or health literacy, though image-based warnings may be more
+    equitable for populations with lower literacy.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.370094'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

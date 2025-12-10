@@ -1,0 +1,52 @@
+id: NEW:continuity_of_care_postoperative_to_NEW:quality_of_life_cancer_patients
+name: Continuity of Care for Postoperative Patients → Quality of Life in Cancer Patients
+from_node:
+  node_id: NEW:continuity_of_care_postoperative
+  node_name: Continuity of Care for Postoperative Patients
+to_node:
+  node_id: NEW:quality_of_life_cancer_patients
+  node_name: Quality of Life in Cancer Patients
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Postoperative cancer patients receive continuity of care interventions
+  that provide comprehensive, continuous, and personalized care services extending
+  beyond hospital discharge'
+- 'Step 2: Extended care addresses psychological needs by alleviating postoperative
+  anxiety (SMD=-0.92) and depression (SMD=-1.15) through ongoing support and monitoring'
+- 'Step 3: Reduced negative emotions and improved emotional well-being contribute
+  to enhanced overall quality of life in cancer patients (SMD=1.35)'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: 'Wenfeng Fu et al. 2024. Effectiveness of continuity of care in
+    postoperative patients with cervical cancer: a systematic evaluation and meta-analysis
+    of a randomized controlled trial. Frontiers in oncology.'
+  supporting_citations: []
+description: Continuity of care for postoperative cancer patients improves quality
+  of life through a mechanism involving extended care services that provide ongoing
+  support beyond hospital discharge. This comprehensive care addresses both physical
+  recovery needs and psychological well-being, significantly reducing postoperative
+  anxiety and depression, which in turn leads to improved overall quality of life
+  outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.35
+    type: standardized_mean_difference
+    ci_lower: 1.05
+    ci_upper: 1.64
+  p_value: 0.05
+  sample_size: null
+moderators:
+- name: Psychological distress
+  direction: strengthens
+  strength: strong
+  description: Patients with higher baseline anxiety and depression may benefit more
+    from continuity of care interventions
+- name: Care model comprehensiveness
+  direction: strengthens
+  strength: moderate
+  description: More comprehensive and personalized care services are associated with
+    greater improvements in quality of life

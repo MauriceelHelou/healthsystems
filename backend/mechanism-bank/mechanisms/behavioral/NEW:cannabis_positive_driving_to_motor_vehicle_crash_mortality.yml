@@ -1,0 +1,69 @@
+id: NEW:cannabis_positive_driving_to_motor_vehicle_crash_mortality
+name: Cannabis-Positive Driving → Motor Vehicle Crash Mortality
+from_node:
+  node_id: NEW:cannabis_positive_driving
+  node_name: Cannabis-Positive Driving
+to_node:
+  node_id: motor_vehicle_crash_mortality
+  node_name: Motor Vehicle Crash Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: THC-positive drivers operate vehicles with detectable cannabis metabolites'
+- 'Step 2: Cannabis may affect psychomotor performance, reaction time, and attention'
+- 'Step 3: Impaired driving performance increases probability of culpable crash involvement'
+- 'Step 4: Crash involvement leads to potential fatal and non-fatal injuries'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: Ole Rogeberg 2019. "A meta-analysis of the crash risk of cannabis-positive drivers
+    in culpability studies-Avoiding interpretational bias.." https://doi.org/10.1016/j.aap.2018.11.011
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis pooled 13 published culpability studies
+  - Studies included in analysis not individually named in abstract
+  - Full citation details available in original publication
+  doi: 10.1016/j.aap.2018.11.011
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis of 13 culpability studies examining crash risk among cannabis-positive drivers.
+  Using a Bayesian statistical model to avoid interpretational bias inherent in traditional odds ratio
+  approaches, the study found a modest 28% increase in total crash risk (OR 1.28, 95% CI 1.16-1.40) and
+  42% increase in culpable crash risk (95% credibility interval 1.11-1.75). The attributable risk fraction
+  was below 2% in most studies, indicating cannabis impaired driving contributes minimally to overall
+  crash burden.
+quantitative_effects:
+  effect_size:
+    value: 1.28
+    type: relative_risk
+    ci_lower: 1.16
+    ci_upper: 1.4
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Attributable risk fraction varied substantially across studies, with most studies showing
+    <2% attributable risk but two studies showing higher values, suggesting geographic or methodological
+    variation
+moderators:
+- name: study_design_interpretation
+  direction: strengthens
+  strength: strong
+  description: Traditional odds ratio interpretation overestimates risk (1.46 vs 1.28 for total crash
+    risk), creating interpretational bias
+- name: culpability_vs_total_crash
+  direction: strengthens
+  strength: moderate
+  description: Culpable crash risk (1.42) is higher than total crash risk (1.28), indicating risk varies
+    by crash type
+structural_competency:
+  equity_implications: 'This mechanism has important policy implications for drug-impaired driving laws
+    and enforcement. The relatively modest effect size (compared to alcohol impairment) and low attributable
+    risk fraction suggest that punitive drug testing policies may have limited public health impact. Structural
+    approaches should consider: (1) whether per se THC limits accurately reflect impairment, (2) racial
+    disparities in drug testing and enforcement, (3) alternative transportation infrastructure that reduces
+    need for impaired driving. The study highlights methodological issues in how risk is communicated
+    to policymakers, which can lead to disproportionate policy responses.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.621015'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

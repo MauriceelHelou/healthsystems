@@ -1,0 +1,37 @@
+id: ice_guided_rfca_access_to_transseptal_puncture_success
+name: Access to Intracardiac Echocardiography-Guided RFCA → First-Attempt Transseptal
+  Puncture Success Rate
+from_node:
+  node_id: ice_guided_rfca_access
+  node_name: Access to Intracardiac Echocardiography-Guided RFCA
+to_node:
+  node_id: transseptal_puncture_success
+  node_name: First-Attempt Transseptal Puncture Success Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: ICE provides direct real-time visualization of interatrial septum anatomy
+  and catheter position'
+- 'Step 2: Enhanced visualization allows precise identification of optimal puncture
+  site on first attempt'
+- 'Step 3: Successful first-attempt puncture reduces procedural complications and
+  duration'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Yao Tong et al. 2024. "Real-world evaluation of intracardiac
+    echocardiography guided radio-frequency catheter ablation for atrial fibrillation:
+    a retrospective cohort study.." *Scientific reports*. https://doi.org/10.1038/s41598-024-83186-w'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.458658'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: patient_complexity
+  direction: strengthens
+  strength: moderate
+  description: ICE preferentially used in patients with higher clinical complexity
+    (atrial tachycardia, heart failure, higher HAS-BLED scores), suggesting benefit
+    may be greatest in anatomically or clinically challenging cases

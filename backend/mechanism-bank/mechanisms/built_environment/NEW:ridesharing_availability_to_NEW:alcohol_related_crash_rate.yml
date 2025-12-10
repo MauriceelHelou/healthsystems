@@ -1,0 +1,75 @@
+id: NEW:ridesharing_availability_to_NEW:alcohol_related_crash_rate
+name: Ridesharing Service Availability → Alcohol-Related Motor Vehicle Crash Rate
+from_node:
+  node_id: NEW:ridesharing_availability
+  node_name: Ridesharing Service Availability
+to_node:
+  node_id: NEW:alcohol_related_crash_rate
+  node_name: Alcohol-Related Motor Vehicle Crash Rate
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Ridesharing services (e.g., Uber) are introduced in urban areas, providing an alternative transportation
+  option'
+- 'Step 2: Individuals who have consumed alcohol can access on-demand transportation via smartphone application'
+- 'Step 3: Availability of alternative transportation reduces likelihood of impaired driving after alcohol
+  consumption'
+- 'Step 4: Reduction in drunk driving incidents leads to decreased alcohol-related motor vehicle crashes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Carola A. Blazquez et al. 2021. "Differential impacts of ridesharing on alcohol-related
+    crashes by socioeconomic municipalities: rate of technology adoption matters." https://doi.org/10.1186/s12889-021-12066-z'
+  supporting_citations:
+  - Studies examining ridesharing effects on alcohol-related crashes in United States, United Kingdom,
+    Brazil, and Chile (referenced in abstract)
+  - Chile's Road Safety Commission data (referenced as data source)
+  - Additional citations require full-text access
+  doi: 10.1186/s12889-021-12066-z
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The introduction of Uber ridesharing in Santiago, Chile was associated with a 29% reduction
+  in alcohol-related crashes in high socioeconomic municipalities during the first 9 months of service.
+  This protective effect was not observed in low socioeconomic municipalities, suggesting that structural
+  barriers including credit card access and technology adoption mediate the relationship between ridesharing
+  availability and crash reduction.
+quantitative_effects:
+  effect_size:
+    value: 0.71
+    type: relative_risk
+    ci_lower: 0.56
+    ci_upper: 0.89
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect limited to high socioeconomic municipalities in Santiago, Chile. No significant
+    reduction observed in low socioeconomic municipalities.
+moderators:
+- name: municipal_socioeconomic_status
+  direction: strengthens
+  strength: strong
+  description: Ridesharing reduces alcohol-related crashes only in high socioeconomic municipalities (RR=0.71),
+    with null/slight increases in low socioeconomic areas (RR=1.10)
+- name: credit_card_access
+  direction: strengthens
+  strength: strong
+  description: Access to credit cards enables use of ridesharing services, which explains differential
+    effects by socioeconomic status
+- name: technology_adoption_rate
+  direction: strengthens
+  strength: moderate
+  description: Rate of technology adoption varies by socioeconomic group, affecting ability to use smartphone-based
+    ridesharing applications
+structural_competency:
+  equity_implications: This mechanism demonstrates how technological interventions can exacerbate health
+    inequities when access barriers are not addressed. The differential effect by socioeconomic status
+    reflects structural inequities in financial services access (credit card ownership) and digital infrastructure.
+    Rather than blaming individuals for drunk driving, this research identifies systemic barriers that
+    prevent low-income populations from benefiting equally from harm reduction interventions. Policy implications
+    include need for alternative payment methods for ridesharing or subsidized access in lower-income
+    areas.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.641128'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

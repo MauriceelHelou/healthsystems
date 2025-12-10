@@ -1,0 +1,48 @@
+id: NEW:striatal_insula_connectivity_to_substance_use_treatment_dropout_rate
+name: Striatal-Insula Functional Connectivity → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: NEW:striatal_insula_connectivity
+  node_name: Striatal-Insula Functional Connectivity
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol exposure induces neuroadaptations in mesocorticolimbic terminal regions'
+- 'Step 2: Enhanced resting-state functional connectivity develops between striatum and insula'
+- 'Step 3: This enhanced connectivity amplifies interoceptive signaling related to craving states'
+- 'Step 4: Heightened craving intensity drives pathological drug-seeking behavior'
+- 'Step 5: Individuals with enhanced striatal-insula connectivity are more likely to drop out of treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: M. Kohno et al. 2017. "Executive Control and Striatal Resting-State Network Interact
+    with Risk Factors to Influence Treatment Outcomes in Alcohol-Use Disorder." https://doi.org/10.3389/fpsyt.2017.00182
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.3389/fpsyt.2017.00182
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Individuals with alcohol use disorder who fail to complete treatment show enhanced functional
+  connectivity between striatum and insula compared to treatment completers. This connectivity pattern
+  is positively associated with craving intensity in non-completers, suggesting a neural mechanism underlying
+  treatment dropout.
+moderators:
+- name: craving_intensity
+  direction: strengthens
+  strength: strong
+  description: Non-completers exhibited positive associations between craving intensity and striatum-insula
+    RSFC, indicating craving moderates the relationship between neural connectivity and treatment outcomes
+structural_competency:
+  equity_implications: This biological mechanism represents the neurological consequences of alcohol exposure
+    rather than individual choice. The brain changes that develop with AUD are not under voluntary control
+    and represent structural changes that treatment programs must accommodate. Understanding these neural
+    signatures could inform targeted interventions and reduce stigma by showing relapse vulnerability
+    has biological underpinnings.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.126771'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

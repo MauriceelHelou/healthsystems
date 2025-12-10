@@ -1,0 +1,61 @@
+id: binge_drinking_to_NEW:peripheral_artery_disease_incidence
+name: Binge Drinking → Peripheral Artery Disease Incidence
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:peripheral_artery_disease_incidence
+  node_name: Peripheral Artery Disease Incidence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Heavy alcohol consumption (≥10 drinks/week) creates chronic vascular stress through repeated
+  episodes of elevated blood pressure and heart rate'
+- 'Step 2: Alcohol metabolites and oxidative stress promote endothelial dysfunction and systemic inflammation'
+- 'Step 3: Chronic inflammation accelerates atherosclerotic plaque formation in peripheral arteries'
+- 'Step 4: Progressive arterial narrowing leads to reduced blood flow to extremities and peripheral artery
+  disease development'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'S. Yuan et al. 2024. "Association between alcohol consumption and peripheral artery
+    disease: two de novo prospective cohorts and a systematic review with meta-analysis." https://doi.org/10.1093/eurjpc/zwae142'
+  supporting_citations:
+  - Swedish cohort study (n=70,116) - prospective cohort from Yuan et al. 2024
+  - UK Biobank cohort (n=405,406) - prospective cohort from Yuan et al. 2024
+  - Additional citations require full-text access for complete list of studies included in systematic
+    review
+  doi: 10.1093/eurjpc/zwae142
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: High-to-heavy alcohol consumption (≥10 drinks/week) was associated with elevated peripheral
+  artery disease risk compared to non-drinkers, though the association was not statistically significant
+  (RR 0.94, 95% CI 0.83-1.07). The nonlinear meta-analysis revealed pronounced PAD risk at ≥10 drinks/week.
+quantitative_effects:
+  effect_size:
+    value: 0.94
+    type: relative_risk
+    ci_lower: 0.83
+    ci_upper: 1.07
+  sample_size: 475522
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study included Swedish and British cohorts, suggesting potential variation across European
+    populations
+moderators:
+- name: alcohol_consumption_level
+  direction: u_shaped
+  strength: strong
+  description: U-shaped relationship where light-moderate drinking shows protective effect while heavy
+    drinking (≥10 drinks/week) shows increased risk
+structural_competency:
+  equity_implications: While this mechanism involves individual behavior, heavy alcohol consumption is
+    often structurally determined by factors including alcohol outlet density, targeted marketing in disadvantaged
+    communities, economic stress, and lack of access to treatment services. Structural interventions addressing
+    alcohol availability and affordability may be more effective than individual-level approaches.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.298297'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

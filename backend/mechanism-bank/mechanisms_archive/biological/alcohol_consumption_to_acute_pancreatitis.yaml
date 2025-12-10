@@ -1,0 +1,41 @@
+id: alcohol_consumption_to_acute_pancreatitis
+name: Alcohol Consumption → Acute Pancreatitis
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: acute_pancreatitis
+  node_name: Acute Pancreatitis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol exposure creates toxic metabolites that damage pancreatic acinar
+  cells'
+- 'Step 2: Alcohol disrupts digestive enzyme secretion and promotes premature enzyme
+  activation within the pancreas'
+- 'Step 3: Inflammatory cascade is triggered leading to pancreatic tissue damage'
+- 'Step 4: Acute pancreatitis develops with higher rates observed in males due to
+  differential exposure patterns and biological susceptibility'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: M. Drake et al. 2021. "Sex-Related Differences of Acute and Chronic
+    Pancreatitis in Adults." *Journal of Clinical Medicine*. https://doi.org/10.3390/jcm10020300
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.170832'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: biological_sex
+  direction: strengthens
+  strength: strong
+  description: Males have higher rates of alcohol-related acute pancreatitis compared
+    to females, suggesting sex-based differences in alcohol metabolism, exposure patterns,
+    or biological vulnerability
+- name: genetic_factors
+  direction: strengthens
+  strength: moderate
+  description: Animal and human studies suggest genes may contribute to differential
+    susceptibility to alcohol-induced pancreatitis

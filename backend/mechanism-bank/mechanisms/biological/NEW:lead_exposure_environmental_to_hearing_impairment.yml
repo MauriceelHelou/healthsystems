@@ -1,0 +1,57 @@
+id: NEW:lead_exposure_environmental_to_hearing_impairment
+name: Environmental Lead (Pb) Exposure → Hearing Impairment
+from_node:
+  node_id: NEW:lead_exposure_environmental
+  node_name: Environmental Lead (Pb) Exposure
+to_node:
+  node_id: hearing_impairment
+  node_name: Hearing Impairment
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Environmental lead exposure occurs through contaminated water, air, soil, or occupational settings'
+- 'Step 2: Lead accumulates in the body and crosses into the cochlear system'
+- 'Step 3: Lead causes oxidative stress and damage to the cochlear hair cells and auditory nerve'
+- 'Step 4: Neurotoxic effects impair signal transmission along the auditory pathway'
+- 'Step 5: Progressive damage results in measurable hearing loss'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Fang Wang et al. 2024. "Population‐based study of environmental heavy metal exposure
+    and hearing loss: A systematic review and meta‐analysis." https://doi.org/10.1002/lio2.1230'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 12 studies on lead and hearing loss
+  - Studies examining blood lead levels and audiometric outcomes
+  - Population-based studies on environmental lead pollution effects
+  doi: 10.1002/lio2.1230
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Environmental lead pollution is associated with hearing loss through neurotoxic mechanisms
+  affecting the auditory system. This meta-analysis synthesizes evidence from population-based studies
+  examining lead exposure and hearing outcomes.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Environmental lead exposure varies by proximity to industrial pollution, age of housing
+    stock, and occupational settings
+moderators:
+- name: exposure_level
+  direction: strengthens
+  strength: strong
+  description: Higher blood lead levels associated with greater hearing impairment risk
+- name: age_of_exposure
+  direction: strengthens
+  strength: moderate
+  description: Childhood exposure may have more severe long-term effects on auditory development
+structural_competency:
+  equity_implications: Lead exposure is structurally determined by housing quality (lead paint), water
+    infrastructure (lead pipes), industrial zoning, and occupational safety regulations. Low-income communities
+    and communities of color disproportionately bear the burden of lead exposure due to historical redlining,
+    underinvestment in infrastructure, and proximity to industrial pollution sources. This mechanism traces
+    hearing loss to policy failures in environmental protection and housing standards rather than individual
+    behavior.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.848347'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

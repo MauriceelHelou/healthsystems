@@ -1,0 +1,55 @@
+id: NEW:hiv_tb_coinfection_prevalence_to_NEW:prisoner_treatment_outcomes
+name: HIV-TB Co-infection Prevalence → Prisoner Treatment Outcomes
+from_node:
+  node_id: NEW:hiv_tb_coinfection_prevalence
+  node_name: HIV-TB Co-infection Prevalence
+to_node:
+  node_id: NEW:prisoner_treatment_outcomes
+  node_name: Prisoner Treatment Outcomes
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: HIV-TB co-infection requires complex multi-drug treatment regimens'
+- 'Step 2: Prison healthcare systems often lack capacity for coordinated HIV and TB care'
+- 'Step 3: Drug interactions and overlapping toxicities complicate treatment adherence'
+- 'Step 4: Treatment outcomes (success vs. death) may be compromised in co-infected prisoners'
+evidence:
+  quality_rating: B
+  n_studies: 9
+  primary_citation: 'Chantal L Edge et al. 2016. "Prisoners co-infected with tuberculosis and HIV: a systematic
+    review.." https://doi.org/10.7448/IAS.19.1.20960'
+  supporting_citations:
+  - 9 papers providing treatment outcome data in co-infected prisoners
+  - Evidence described as 'conflicting' regarding HIV status influence on treatment outcomes
+  - Additional citations require full-text access for specific study identification
+  doi: 10.7448/IAS.19.1.20960
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Limited evidence exists on treatment outcomes for HIV-TB co-infected prisoners, with only
+  9 studies identified and conflicting findings regarding the influence of HIV status on TB treatment
+  success or mortality.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The review notes evidence is 'conflicting' regarding HIV status influence on prisoner
+    treatment outcomes, suggesting significant between-study heterogeneity
+moderators:
+- name: antiretroviral_therapy_access
+  direction: weakens
+  strength: strong
+  description: Access to ART in prisons likely moderates treatment outcomes for co-infected individuals
+- name: treatment_completion_infrastructure
+  direction: weakens
+  strength: moderate
+  description: Prison systems with better treatment completion infrastructure may show improved outcomes
+structural_competency:
+  equity_implications: The paucity of outcome data (only 9 studies) itself reflects structural neglect
+    of incarcerated populations in health research. The conflicting evidence suggests that structural
+    factors (prison healthcare quality, medication access, continuity of care) rather than HIV status
+    alone determine treatment outcomes. This highlights how criminal justice and healthcare systems interact
+    to shape health outcomes for multiply-marginalized populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.714177'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

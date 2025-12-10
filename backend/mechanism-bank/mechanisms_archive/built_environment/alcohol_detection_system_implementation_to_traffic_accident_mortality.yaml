@@ -1,0 +1,51 @@
+id: alcohol_detection_system_implementation_to_traffic_accident_mortality
+name: Alcohol Detection System Implementation in Vehicles → Traffic Accident Mortality
+  from Drunk Driving
+from_node:
+  node_id: alcohol_detection_system_implementation
+  node_name: Alcohol Detection System Implementation in Vehicles
+to_node:
+  node_id: traffic_accident_mortality
+  node_name: Traffic Accident Mortality from Drunk Driving
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Fuzzy logic-based alcohol detection system (FAADM) is installed in vehicles
+  with sensors that detect alcohol in driver''s breath'
+- 'Step 2: When alcohol is detected above threshold, the system prevents vehicle ignition
+  and immobilizes the vehicle engine'
+- 'Step 3: System includes rolling retests during operation to verify driver remains
+  alert and sober throughout journey'
+- 'Step 4: Prevention of intoxicated drivers from operating vehicles reduces drunk
+  driving incidents on roads'
+- 'Step 5: Reduction in drunk driving directly decreases traffic collision rates and
+  associated fatalities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: V. R. Kavitha et al. 2023. "An Improved Fuzzy Logic Based Alcohol
+    Detection System to Preserve Road Safety using Smart Sensors Association." *2023
+    3rd International Conference on Mobile Networks and Wireless Communications (ICMNWC)*.
+    https://doi.org/10.1109/ICMNWC60182.2023.10435877
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.463582'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: emergency_override_system
+  direction: weakens
+  strength: moderate
+  description: System includes emergency override capability that allows engine operation
+    in unexpected emergencies, which may reduce effectiveness if misused
+- name: rolling_retest_frequency
+  direction: strengthens
+  strength: strong
+  description: Continuous rolling retests during vehicle operation ensure sustained
+    driver alertness and prevent alcohol consumption during driving
+- name: alarm_system_activation
+  direction: strengthens
+  strength: moderate
+  description: Alarm activation when alcohol is detected provides social deterrent
+    and alerts others to attempted drunk driving

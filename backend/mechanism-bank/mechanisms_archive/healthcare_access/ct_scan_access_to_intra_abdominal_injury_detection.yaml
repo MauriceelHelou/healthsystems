@@ -1,0 +1,40 @@
+id: ct_scan_access_to_intra_abdominal_injury_detection
+name: Access to CT Scanning Technology → Detection of Intra-abdominal Injuries
+from_node:
+  node_id: ct_scan_access
+  node_name: Access to CT Scanning Technology
+to_node:
+  node_id: intra_abdominal_injury_detection
+  node_name: Detection of Intra-abdominal Injuries
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: CT scanning provides high diagnostic accuracy for identifying intra-abdominal
+  injuries in blunt trauma patients'
+- 'Step 2: Normal CT scan at admission effectively rules out clinically significant
+  intra-abdominal pathology in hemodynamically stable patients'
+- 'Step 3: High negative predictive value (99.8%) allows for safe discharge without
+  prolonged observation, preventing unnecessary hospital resource utilization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Virginia Zarama et al. 2024. "Incidence of intra-abdominal injuries
+    in hemodynamically stable blunt trauma patients with a normal computed tomography
+    scan admitted to the emergency department." *BMC Emergency Medicine*. https://doi.org/10.1186/s12873-024-01014-w
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.560617'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: hemodynamic_stability
+  direction: strengthens
+  strength: strong
+  description: In hemodynamically stable patients (99.2% with RTS=8), normal CT has
+    extremely high negative predictive value for ruling out injury
+- name: high_energy_mechanism
+  direction: strengthens
+  strength: moderate
+  description: CT scanning is particularly indicated in high-energy trauma mechanisms
+    where clinical examination alone may be insufficient

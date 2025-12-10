@@ -1,0 +1,46 @@
+id: alcohol_use_disorder_to_NEW:substance_medical_service_use
+name: Alcohol Use Disorder (Lifetime) → Substance and Medical Service Use
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder (Lifetime)
+to_node:
+  node_id: NEW:substance_medical_service_use
+  node_name: Substance and Medical Service Use
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals with lifetime alcohol use disorder develop multiple comorbidities
+  including physical health complications and co-occurring substance use issues over
+  time'
+- 'Step 2: These accumulated health burdens and complex needs drive increased contact
+  with healthcare and substance treatment systems'
+- 'Step 3: Lifetime AUD diagnosis may serve as an entry point or identifier that connects
+  individuals to both substance treatment services and medical care, resulting in
+  higher documented service utilization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Olubunmi O Asana et al. 2018. Associations of Alcohol Use Disorder,
+    Alcohol Use, Housing, and Service Use in A Homeless Sample of 255 Individuals
+    Followed over 2 Years. Substance Abuse.
+  supporting_citations: []
+description: Lifetime alcohol use disorder is positively associated with increased
+  utilization of both substance treatment and medical services among homeless individuals.
+  This relationship reflects the accumulated health burden and complex comorbidities
+  that develop over the course of chronic alcohol problems, driving greater service
+  needs and engagement with treatment systems.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: housing_status
+  direction: weakens
+  strength: moderate
+  description: Stable housing was negatively associated with psychiatric and substance
+    service use, suggesting that obtaining housing may reduce perceived need for services
+    or improve access barriers
+- name: current_alcohol_use
+  direction: strengthens
+  strength: moderate
+  description: Current alcohol use, when finally associated with substance services
+    in year 2, appeared to provide a gateway to psychiatric and subsequently medical
+    services

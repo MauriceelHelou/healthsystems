@@ -1,0 +1,46 @@
+id: afp_response_positive_to_recurrence_free_survival
+name: Positive α-Fetoprotein Response (Decreasing AFP) → Recurrence-Free Survival
+  After Liver Transplant
+from_node:
+  node_id: afp_response_positive
+  node_name: Positive α-Fetoprotein Response (Decreasing AFP)
+to_node:
+  node_id: recurrence_free_survival
+  node_name: Recurrence-Free Survival After Liver Transplant
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Dynamic AFP response (difference between maximum and final pre-transplant
+  AFP level) reflects biological responsiveness of tumor to treatment'
+- 'Step 2: Favorable AFP-R indicates tumor with less aggressive biological characteristics
+  and better treatment response'
+- 'Step 3: NYCA score incorporating AFP-R stratifies patients into risk categories
+  with distinct recurrence rates'
+- 'Step 4: Low-risk category shows 9.5% 5-year cumulative incidence of recurrence,
+  acceptable-risk 20.5%, and high-risk 40.5%'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: K. Halazun et al. 2021. "Dynamic α-Fetoprotein Response and Outcomes
+    After Liver Transplant for Hepatocellular Carcinoma.." *JAMA Surgery*. https://doi.org/10.1001/jamasurg.2021.0954
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.613120'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: milan_criteria_status
+  direction: strengthens
+  strength: moderate
+  description: Among patients not meeting Milan Criteria, AFP-R becomes particularly
+    important for risk stratification, with 83.1% achieving favorable outcomes when
+    biology is considered
+- name: tumor_morphology
+  direction: strengthens
+  strength: moderate
+  description: NYCA score combining AFP-R with tumor morphology provides better discrimination
+    (C-statistic 0.66) than morphology-only criteria (Milan C-statistic 0.59)
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/afp_response_positive_to_recurrence_free_survival.yaml
+_category: biological

@@ -1,0 +1,52 @@
+id: alcohol_use_disorder_to_NEW:liver_stiffness_measurement
+name: Alcohol Use Disorder → Liver Stiffness Measurement
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:liver_stiffness_measurement
+  node_name: Liver Stiffness Measurement
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption in alcohol use disorder leads to direct hepatotoxic
+  effects on liver cells through acetaldehyde and reactive oxygen species generation'
+- 'Step 2: Persistent hepatocyte injury triggers inflammatory responses and activation
+  of hepatic stellate cells'
+- 'Step 3: Activated stellate cells produce excessive extracellular matrix proteins,
+  particularly collagen, leading to progressive liver fibrosis'
+- 'Step 4: Accumulation of fibrous tissue and architectural changes in liver parenchyma
+  increase tissue stiffness'
+- 'Step 5: Liver stiffness measurement (LSM) via elastography techniques detects increased
+  tissue stiffness, with values above 20-25 kPa indicating advanced fibrosis/cirrhosis
+  and increased risk of decompensation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: T. Addissouky 2024. "Liver stiffness as a dynamic predictor of
+    decompensation and mortality in alcohol-related liver disease." Discover medicine.
+  supporting_citations: []
+description: Alcohol use disorder causes progressive liver damage through direct hepatotoxic
+  effects, inflammation, and stellate cell activation, leading to fibrosis and increased
+  liver stiffness. Liver stiffness measurement (LSM) using elastography techniques
+  provides a non-invasive, dynamic biomarker of this pathophysiological process, with
+  values above 20-25 kPa indicating advanced disease and increased risk of hepatic
+  decompensation and mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: alcohol_abstinence
+  direction: weakens
+  strength: strong
+  description: Serial LSM measurements show decreased liver stiffness with alcohol
+    abstinence, indicating reversibility of some fibrotic changes
+- name: alcohol_relapse
+  direction: strengthens
+  strength: strong
+  description: Alcohol relapse leads to increased liver stiffness on serial measurements,
+    demonstrating dynamic progression of disease
+- name: baseline_liver_stiffness
+  direction: strengthens
+  strength: moderate
+  description: Higher baseline LSM values (>20-25 kPa) associated with greater risk
+    of decompensation and mortality

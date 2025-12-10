@@ -1,0 +1,54 @@
+id: NEW:chronic_liver_disease_to_NEW:covid_19_mortality
+name: Chronic Liver Disease → COVID-19 Mortality
+from_node:
+  node_id: NEW:chronic_liver_disease
+  node_name: Chronic Liver Disease
+to_node:
+  node_id: NEW:covid_19_mortality
+  node_name: COVID-19 Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic liver disease impairs hepatic function, reducing the liver''s ability
+  to synthesize proteins essential for immune response and coagulation'
+- 'Step 2: Compromised liver function leads to dysregulated immune responses, including
+  impaired cytokine regulation and reduced ability to clear pathogens'
+- 'Step 3: Pre-existing liver inflammation and fibrosis create a hyperinflammatory
+  state that amplifies COVID-19-induced systemic inflammation (cytokine storm)'
+- 'Step 4: Impaired hepatic clearance of inflammatory mediators and metabolic dysfunction
+  contribute to multi-organ failure in severe COVID-19'
+- 'Step 5: Combined hepatic dysfunction and COVID-19 infection result in significantly
+  increased risk of severe disease progression and death'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Ramya Nagarajan et al. 2022. COVID-19 Severity and Mortality
+    Among Chronic Liver Disease Patients: A Systematic Review and Meta-Analysis. Preventing
+    Chronic Disease.'
+  supporting_citations: []
+description: Chronic liver disease significantly increases the risk of COVID-19 mortality,
+  with patients having 2.35 times higher odds of death compared to those without CLD.
+  This meta-analysis of 40 studies involving over 900,000 participants demonstrates
+  that pre-existing hepatic dysfunction compromises immune responses and exacerbates
+  the inflammatory cascade triggered by SARS-CoV-2 infection.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.35
+    type: odds_ratio
+    ci_lower: 1.85
+    ci_upper: 3.0
+  p_value: null
+  sample_size: 908032
+moderators:
+- name: CLD severity
+  direction: strengthens
+  strength: moderate
+  description: More advanced liver disease (cirrhosis, decompensated liver disease)
+    likely associated with greater COVID-19 mortality risk
+- name: CLD etiology
+  direction: strengthens
+  strength: weak
+  description: Different underlying causes of CLD (viral, alcoholic, metabolic) may
+    differentially affect COVID-19 outcomes

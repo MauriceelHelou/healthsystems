@@ -1,0 +1,53 @@
+id: NEW:young_pwid_population_proportion_to_NEW:blood_borne_virus_intervention_coverage_gap
+name: Young PWID Population Proportion → Blood-Borne Virus Intervention Coverage Gap
+from_node:
+  node_id: NEW:young_pwid_population_proportion
+  node_name: Young PWID Population Proportion
+to_node:
+  node_id: NEW:blood_borne_virus_intervention_coverage_gap
+  node_name: Blood-Borne Virus Intervention Coverage Gap
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Regions with higher proportions of young PWID (aged ≤25) reflect emerging or expanding drug
+  epidemics'
+- 'Step 2: Healthcare and harm reduction infrastructure may lag behind rapidly evolving epidemics'
+- 'Step 3: Young PWID populations face inadequate coverage of interventions for HIV/HCV prevention'
+- 'Step 4: Structural gaps in intervention coverage increase blood-borne virus transmission risk'
+evidence:
+  quality_rating: A
+  n_studies: 741
+  primary_citation: 'Lindsey A Hines et al. 2020. "Associations between national development indicators
+    and the age profile of people who inject drugs: results from a global systematic review and meta-analysis.."
+    https://doi.org/10.1016/S2214-109X(19)30462-0'
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review of 741 studies across
+    93 countries
+  - World Bank national development indicators were used as data source
+  - DerSimonian-Laird methodology applied for meta-analysis
+  doi: 10.1016/S2214-109X(19)30462-0
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Regions with the highest prevalence of young PWID (aged ≤25 years) also had the lowest coverage
+  of interventions to prevent spread of blood-borne viruses, creating structural vulnerability.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Eastern Europe had highest proportion of young PWID (43.4%) and low intervention coverage;
+    Middle East/North Africa had lowest young PWID (6.9%)
+moderators:
+- name: regional_context
+  direction: strengthens
+  strength: strong
+  description: Eastern Europe shows strongest association between young PWID populations and intervention
+    gaps
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare system capacity and policy investment
+    in harm reduction fail to keep pace with emerging epidemics, creating structural inequities in health
+    protection. Young PWID are not individually responsible for intervention gaps; these reflect policy
+    and resource allocation failures.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.358164'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

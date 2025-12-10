@@ -1,0 +1,102 @@
+id: housing_cost_burden_to_depression_prevalence
+name: Housing Cost Burden -> Depression Prevalence
+from_node:
+  node_id: housing_cost_burden
+  node_name: Housing Cost Burden
+  node_type: stock
+to_node:
+  node_id: depression_prevalence
+  node_name: Depression Prevalence
+  node_type: proxy_index
+direction: positive
+category: economic
+mechanism_pathway:
+  - "Step 1: Housing costs exceeding 30% of household income create financial strain"
+  - "Step 2: Housing cost burden forces tradeoffs with other essential needs (food, healthcare, medications)"
+  - "Step 3: Chronic financial stress from housing costs activates sustained stress response"
+  - "Step 4: Uncertainty about housing stability (fear of eviction, inability to pay rent) creates anticipatory anxiety"
+  - "Step 5: Cost burden may force housing instability, moves to poorer quality housing, or overcrowding"
+  - "Step 6: Cumulative material hardship and psychological stress dysregulate HPA axis and increase inflammation"
+  - "Step 7: Sustained housing-related stress manifests as depressive symptoms and major depression"
+evidence:
+  quality_rating: B
+  n_studies: 12
+  primary_citation: "Baker, Emma, et al. 2023. 'Trajectories of Housing Affordability and Mental Health Problems: A Population-Based Cohort Study.' Social Science & Medicine 319: 115725."
+  supporting_citations:
+    - "Burgard, Sarah A., et al. 2012. 'Housing Instability and Health: Findings from the Michigan Recession and Recovery Study.' Social Science & Medicine 75(12): 2215-2224."
+    - "Pollack, Craig Evan, et al. 2010. 'Housing Affordability and Health Among Homeowners and Renters.' American Journal of Preventive Medicine 39(6): 515-521."
+    - "Bentley, Rebecca, et al. 2016. 'Housing Affordability and Mental Health: A Population-Based Study.' PLOS ONE 11(3): e0151426."
+    - "Alley, Dawn E., et al. 2011. 'Mortgage Delinquency and Changes in Access to Health Resources and Depressive Symptoms in a Nationally Representative Cohort of Americans Older Than 50 Years.' American Journal of Public Health 101(12): 2293-2298."
+  doi: "10.1016/j.socscimed.2023.115725"
+  journal: Social Science & Medicine
+  year: 2023
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 8.60
+    type: odds_ratio
+    ci_lower: 3.38
+    ci_upper: 21.85
+    ci_level: 95
+    context: "Mortgage delinquency and elevated depressive symptoms"
+  secondary_effects:
+    - description: "Severe housing cost burden and new ADL limitation (older renters)"
+      value: 1.94
+      type: odds_ratio
+      se: 0.38
+      source: "NHATS study"
+    - description: "Persistent housing cost burden and new ADL limitation"
+      value: 2.01
+      type: odds_ratio
+      se: 0.42
+      source: "NHATS study"
+    - description: "Housing affordability problems trajectory associated with worse mental health"
+      beta: "significant positive association"
+      source: "Understanding Society UK, 9 waves"
+  sample_size: 30025
+  interpretation: "Housing cost burden significantly increases depression risk through multiple pathways. Mortgage delinquency increases depression odds 8.6-fold. Severe housing cost burden (>50% income) among older renters doubles odds of functional decline. Longitudinal UK study of 30,000 households shows persistent housing affordability problems predict worse mental health over 9 years. Effects particularly strong for renters and younger adults."
+last_updated: "2025-12-01"
+version: "1.0"
+description: "Housing cost burden is associated with increased depression through chronic financial stress, uncertainty, and tradeoffs with other health-promoting expenditures. Studies show mortgage delinquency increases depression odds 8.6-fold, while persistent housing cost burden predicts worse mental health over time. Renters and low-income populations are most affected. The relationship is bidirectional, with depression also contributing to housing instability."
+moderators:
+  - name: tenure_type
+    direction: strengthens
+    strength: strong
+    description: "Renters show stronger mental health effects than homeowners"
+  - name: age
+    direction: varies
+    strength: moderate
+    description: "Younger adults and older adults show strongest associations"
+  - name: severity
+    direction: strengthens
+    strength: strong
+    description: "Severe cost burden (>50% income) shows stronger effects than moderate burden (30-50%)"
+  - name: duration
+    direction: strengthens
+    strength: strong
+    description: "Persistent vs. transient cost burden shows stronger mental health effects"
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: "Housing cost burden reflects structural factors: wage stagnation relative to housing costs, inadequate housing supply, zoning restrictions limiting affordable housing, insufficient housing subsidies, and discriminatory lending/renting practices. Nearly half of US renters are cost-burdened. Low-income households, racial minorities, and single-parent families face highest rates. Policy solutions require housing supply interventions, rent assistance expansion, zoning reform, and wage policies rather than individual financial counseling."
+assumptions:
+  - "Housing cost burden defined as spending 30%+ of income on housing costs"
+  - "Severe burden defined as 50%+ of income"
+  - "Depression measured via validated screening instruments"
+limitations:
+  - "Heterogeneity in measurement across studies prevents meta-analysis"
+  - "Bidirectional relationship (depression may cause housing problems)"
+  - "Residual confounding by income, employment, and other economic factors"
+  - "Cross-sectional studies cannot establish causation"
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: "Housing cost burden varies dramatically by metropolitan area. Coastal cities (SF, NYC, LA, Boston) show highest burden rates. Effects may be stronger in high-cost markets where burden extends to middle-income households. Rural areas show different patterns with lower costs but also lower incomes."
+  relevant_geographies:
+    - "High-cost coastal metros (SF, NYC, LA, Boston)"
+    - "Effects observed in US, UK, Netherlands, Australia"
+    - "Gentrifying neighborhoods show increasing burden"
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: "2025-12-01T00:00:00"
+  extraction_confidence: moderate
+  prompt_version: "1.0-discovery"

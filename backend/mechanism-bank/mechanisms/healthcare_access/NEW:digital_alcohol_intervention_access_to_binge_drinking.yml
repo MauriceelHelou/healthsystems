@@ -1,0 +1,72 @@
+id: NEW:digital_alcohol_intervention_access_to_binge_drinking
+name: Digital Alcohol Intervention Access → Binge Drinking
+from_node:
+  node_id: NEW:digital_alcohol_intervention_access
+  node_name: Digital Alcohol Intervention Access
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital interventions provide accessible, personalized feedback on alcohol consumption patterns
+  via computer, mobile device, or smartphone'
+- 'Step 2: Behavior change techniques (problem solving, behavior substitution, goal setting) are delivered
+  through digital platforms without requiring face-to-face clinical encounters'
+- 'Step 3: Increased accessibility removes structural barriers to brief alcohol interventions (time, location,
+  stigma, healthcare access)'
+- 'Step 4: Users receive credible source information and can engage with interventions at their convenience'
+- 'Step 5: Reduced frequency of binge drinking episodes through sustained engagement with intervention
+  content'
+evidence:
+  quality_rating: A
+  n_studies: 57
+  primary_citation: Eileen Fs Kaner et al. 2017. "Personalised digital interventions for reducing hazardous
+    and harmful alcohol consumption in community-dwelling populations.." https://doi.org/10.1002/14651858.CD011479.pub2
+  supporting_citations:
+  - Studies based on Motivational Interviewing Theory (7/20 studies referenced in review)
+  - Studies based on Transtheoretical Model (6/20 studies referenced in review)
+  - Studies based on Social Norms Theory (6/20 studies referenced in review)
+  doi: 10.1002/14651858.CD011479.pub2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Digital interventions reduce binge drinking episodes by approximately one session per month
+  compared to no intervention controls, through delivery of accessible behavior change techniques that
+  overcome traditional barriers to alcohol brief interventions
+quantitative_effects:
+  effect_size:
+    value: -1.0
+    type: standardized_mean_difference
+  sample_size: 3587
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Secondary objectives examined whether outcomes differ between trials where digital
+    intervention targets participants in health, social care, education or other community-based settings
+    versus remotely via internet or mobile platforms
+moderators:
+- name: behavior_substitution_technique
+  direction: strengthens
+  strength: strong
+  description: Behavior substitution BCT associated with -95.12 g/week reduction in adjusted model (95%
+    CI -162.90 to -27.34)
+- name: problem_solving_technique
+  direction: strengthens
+  strength: moderate
+  description: Problem solving BCT associated with -45.92 g/week reduction in adjusted model (95% CI -90.97
+    to -0.87)
+- name: credible_source
+  direction: strengthens
+  strength: moderate
+  description: Credible source BCT associated with -32.09 g/week reduction in adjusted model (95% CI -60.64
+    to -3.55)
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to healthcare access by providing
+    interventions that do not require clinical appointments, transportation, or overcoming stigma of seeking
+    help. Digital delivery democratizes access to evidence-based alcohol interventions for community-dwelling
+    populations who may lack access to primary care or specialist services.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.039998'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,58 @@
+id: NEW:metabolic_dysfunction_associated_fatty_liver_disease_mafld_to_NEW:hepatocellular_carcinoma_incidence
+name: Metabolic Dysfunction-Associated Fatty Liver Disease (MAFLD) → Hepatocellular
+  Carcinoma Incidence
+from_node:
+  node_id: NEW:metabolic_dysfunction_associated_fatty_liver_disease_mafld
+  node_name: Metabolic Dysfunction-Associated Fatty Liver Disease (MAFLD)
+to_node:
+  node_id: NEW:hepatocellular_carcinoma_incidence
+  node_name: Hepatocellular Carcinoma Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: MAFLD develops through metabolic dysfunction characterized by hepatic steatosis
+  combined with markers of metabolic dysfunction (obesity, type 2 diabetes, or metabolic
+  dysregulation)'
+- 'Step 2: Chronic hepatic inflammation and oxidative stress from lipid accumulation
+  leads to progressive liver damage, promoting hepatocyte injury and regeneration
+  cycles'
+- 'Step 3: Sustained metabolic stress and inflammation drive fibrosis progression,
+  which can advance to cirrhosis in many cases'
+- 'Step 4: The pro-oncogenic microenvironment created by chronic inflammation, insulin
+  resistance, and lipotoxicity promotes hepatocellular transformation and carcinogenesis'
+- 'Step 5: MAFLD contributes to HCC both as a sole etiology (single-MAFLD) and as
+  a co-factor potentiating other liver diseases (mixed-MAFLD), with nearly half of
+  all HCC cases having MAFLD involvement'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Harry Crane et al. 2024. Global prevalence of metabolic dysfunction-associated
+    fatty liver disease-related hepatocellular carcinoma: A systematic review and
+    meta-analysis. Clinical and Molecular Hepatology.'
+  supporting_citations: []
+description: MAFLD is a major contributor to hepatocellular carcinoma, with nearly
+  half (48.7%) of all HCC cases having MAFLD involvement. MAFLD can act as the sole
+  cause of HCC (12.4% of cases) or more commonly as a contributory co-factor in mixed-etiology
+  HCC. The metabolic dysfunction underlying MAFLD creates a pro-carcinogenic hepatic
+  environment through chronic inflammation, lipotoxicity, and often cirrhosis development.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 48.7
+    type: prevalence_percentage
+    ci_lower: 34.5
+    ci_upper: 63.0
+  p_value: null
+  sample_size: 56565
+moderators:
+- name: concurrent_liver_disease
+  direction: strengthens
+  strength: strong
+  description: 'MAFLD prevalence is higher in mixed-etiology HCC: 40.0% with hepatitis
+    B, 54.1% with hepatitis C, and 64.3% with alcohol-related liver disease'
+- name: cirrhosis_status
+  direction: strengthens
+  strength: moderate
+  description: Mixed-MAFLD HCC had significantly higher likelihood of cirrhosis compared
+    to single-MAFLD HCC

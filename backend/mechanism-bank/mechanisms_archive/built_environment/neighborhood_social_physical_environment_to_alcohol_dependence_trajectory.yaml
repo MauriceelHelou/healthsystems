@@ -1,0 +1,42 @@
+id: neighborhood_social_physical_environment_to_alcohol_dependence_trajectory
+name: Neighborhood Social and Physical Environment Quality → Alcohol Dependence Trajectory
+from_node:
+  node_id: neighborhood_social_physical_environment
+  node_name: Neighborhood Social and Physical Environment Quality
+to_node:
+  node_id: alcohol_dependence_trajectory
+  node_name: Alcohol Dependence Trajectory
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Neighborhood social and physical environments are shaped by historical
+  investment patterns, zoning policies, and resource allocation'
+- 'Step 2: Poor quality environments combine multiple risk factors: high outlet density,
+  concentrated poverty, limited services, and social disorganization'
+- 'Step 3: Cumulative environmental exposures create chronic stress while limiting
+  access to recovery-supportive resources'
+- 'Step 4: These structural conditions shape alcohol dependence trajectories across
+  the life course, determining who achieves stable recovery versus chronic high dependence'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. Karriker-Jaffe et al. 2020. "Testing a Socioecological Model
+    of Relapse and Recovery from Alcohol Problems." *Substance abuse : research and
+    treatment*. https://doi.org/10.1177/1178221820933631'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.869310'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: psychiatric_severity
+  direction: strengthens
+  strength: moderate
+  description: Individuals with higher psychiatric severity may be more vulnerable
+    to poor environmental conditions due to limited coping resources
+- name: treatment_access
+  direction: weakens
+  strength: moderate
+  description: Access to ongoing treatment can partially buffer negative environmental
+    effects through provision of professional support and pharmacotherapy

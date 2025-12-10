@@ -1,0 +1,54 @@
+id: NEW:tobacco_retail_density_to_smoking_cessation_attempts
+name: Tobacco Retail Density → Smoking Cessation Attempts
+from_node:
+  node_id: NEW:tobacco_retail_density
+  node_name: Tobacco Retail Density
+to_node:
+  node_id: smoking_cessation_attempts
+  node_name: Smoking Cessation Attempts
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: High tobacco retail density creates persistent environmental cues that trigger cravings during
+  quit attempts'
+- 'Step 2: Easy accessibility makes relapse more likely when experiencing withdrawal symptoms'
+- 'Step 3: Point-of-sale marketing undermines motivation to quit by promoting tobacco products'
+- 'Step 4: Lack of tobacco-free environments reduces social support for cessation'
+evidence:
+  quality_rating: A
+  n_studies: 62
+  primary_citation: Veronica A Martin-Gall et al. 2024. "Tobacco retail availability and smoking-A systematic
+    review and meta-analysis.." https://doi.org/10.1111/dar.13936
+  supporting_citations:
+  - Additional citations require full-text access
+  - Review examined cessation as outcome in relation to retail density
+  - Studies assessed how retail environment affects quit success
+  doi: 10.1111/dar.13936
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Tobacco retail density is positively associated with smoking and negatively associated with
+  cessation success. The review found positive associations between outlet density and cessation failure,
+  though specific pooled estimates were not reported.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Restrictive retail laws based on proximity may not reduce smoking except in specific
+    subgroups like men who smoke heavily
+moderators:
+- name: smoking_intensity
+  direction: strengthens
+  strength: moderate
+  description: Men who smoke heavily may be more affected by proximity-based retail restrictions
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Evidence suggests men may show differential response to proximity-based retail policies
+structural_competency:
+  equity_implications: Cessation success is not merely a matter of individual willpower but is shaped
+    by the retail environment. Reducing retailer density removes structural barriers to quitting and represents
+    a population-level intervention that can reduce health inequities in smoking-related disease.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.246744'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

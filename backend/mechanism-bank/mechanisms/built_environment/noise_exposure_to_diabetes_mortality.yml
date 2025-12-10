@@ -1,0 +1,69 @@
+id: noise_exposure_to_diabetes_mortality
+name: Noise Exposure (Transportation) → Diabetes Mellitus Mortality
+from_node:
+  node_id: noise_exposure
+  node_name: Noise Exposure (Transportation)
+to_node:
+  node_id: diabetes_mortality
+  node_name: Diabetes Mellitus Mortality
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Long-term residential exposure to road traffic noise (≥46 dB Lden) triggers chronic physiological
+  stress responses'
+- 'Step 2: Chronic noise-induced stress activates hypothalamic-pituitary-adrenal axis and sympathetic
+  nervous system'
+- 'Step 3: Sustained stress hormone elevation promotes insulin resistance, metabolic dysfunction, and
+  systemic inflammation'
+- 'Step 4: These metabolic disturbances contribute to diabetes development and progression'
+- 'Step 5: Diabetes complications lead to increased mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'D. Vienneau et al. 2024. "Long-term exposure to transportation noise and diabetes
+    mellitus mortality: a national cohort study and updated meta-analysis." https://doi.org/10.1186/s12940-024-01084-0'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 14 studies for road traffic
+    noise and combined incidence/mortality outcomes
+  - Swiss National Cohort study (2001-2015) with 4.14 million adults
+  - WHO Environmental Noise Guidelines referenced for threshold comparisons
+  doi: 10.1186/s12940-024-01084-0
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Long-term residential exposure to road traffic noise is independently associated with increased
+  diabetes mellitus mortality, with a 6% increase in hazard per 10 dB increase in day-evening-night noise
+  level (Lden). The threshold effect appears around 46 dB, which is well below the WHO guideline level
+  of 53 dB.
+quantitative_effects:
+  effect_size:
+    value: 1.06
+    type: hazard_ratio
+    ci_lower: 1.05
+    ci_upper: 1.07
+  sample_size: 4140000
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Hazard ratios were higher for males compared to females
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Hazard ratios were higher in younger compared to older adults
+- name: air_pollution_no2
+  direction: weakens
+  strength: weak
+  description: Association persisted after adjustment for NO2, suggesting independent noise effect
+structural_competency:
+  equity_implications: This mechanism highlights how transportation infrastructure decisions and urban
+    planning create unequal noise exposure burdens. Lower-income and minority communities are often disproportionately
+    located near highways and major roads, creating environmental injustice in noise exposure. The finding
+    that effects occur below WHO guideline levels suggests current standards may inadequately protect
+    health. Policy interventions should address noise mitigation in residential areas and consider health
+    equity in transportation planning.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.413375'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

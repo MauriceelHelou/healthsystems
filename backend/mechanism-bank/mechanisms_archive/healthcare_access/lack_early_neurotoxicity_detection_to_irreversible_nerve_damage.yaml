@@ -1,0 +1,45 @@
+id: lack_early_neurotoxicity_detection_to_irreversible_nerve_damage
+name: Lack of Early Neurotoxicity Detection and Monitoring → Irreversible Peripheral
+  Nerve Damage
+from_node:
+  node_id: lack_early_neurotoxicity_detection
+  node_name: Lack of Early Neurotoxicity Detection and Monitoring
+to_node:
+  node_id: irreversible_nerve_damage
+  node_name: Irreversible Peripheral Nerve Damage
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare systems without routine electroneurophysiological testing protocols
+  fail to detect subclinical neuropathy in 33.4% of affected patients'
+- 'Step 2: Undetected subclinical nerve damage progresses with continued oxaliplatin
+  exposure through additional treatment cycles'
+- 'Step 3: Cumulative neurotoxic effects transition from reversible acute changes
+  to chronic irreversible peripheral nerve damage'
+- 'Step 4: Delayed recognition prevents timely treatment adjustment, resulting in
+  preventable permanent sensory and motor dysfunction'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'M. Banach et al. 2018. "Oxaliplatin treatment and peripheral
+    nerve damage in cancer patients: A Polish cohort study." *Journal of Cancer Research
+    and Therapeutics*. https://doi.org/10.4103/jcrt.JCRT_971_16'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.272325'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: healthcare_system_monitoring_capacity
+  direction: weakens
+  strength: strong
+  description: Healthcare systems with capacity for routine electroneurophysiological
+    testing before and during treatment can identify subclinical cases and adjust
+    treatment before irreversible damage occurs
+- name: clinical_assessment_alone
+  direction: strengthens
+  strength: moderate
+  description: Reliance solely on standard neurological examination and symptom reporting
+    misses one-third of neuropathy cases that are detectable only through electrophysiological
+    testing

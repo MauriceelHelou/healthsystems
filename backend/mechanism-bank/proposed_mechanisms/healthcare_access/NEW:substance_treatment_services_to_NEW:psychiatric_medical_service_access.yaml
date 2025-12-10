@@ -1,0 +1,46 @@
+id: NEW:substance_treatment_services_to_NEW:psychiatric_medical_service_access
+name: Substance Treatment Services → Psychiatric and Medical Service Access
+from_node:
+  node_id: NEW:substance_treatment_services
+  node_name: Substance Treatment Services
+to_node:
+  node_id: NEW:psychiatric_medical_service_access
+  node_name: Psychiatric and Medical Service Access
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Homeless individuals with alcohol use engage with substance treatment services
+  as initial point of healthcare contact'
+- 'Step 2: Substance treatment services serve as a ''gateway'' connecting individuals
+  to integrated care networks and referral systems'
+- 'Step 3: Through substance treatment engagement, individuals gain access to psychiatric
+  services via coordinated care pathways'
+- 'Step 4: Psychiatric services subsequently provide a secondary gateway to medical
+  services, creating a cascading service connection effect'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Olubunmi O Asana et al. 2018. Associations of Alcohol Use Disorder,
+    Alcohol Use, Housing, and Service Use in A Homeless Sample of 255 Individuals
+    Followed over 2 Years. Substance Abuse.
+  supporting_citations: []
+description: Engagement with substance treatment services creates a gateway effect
+  that facilitates access to psychiatric and subsequently medical services among homeless
+  individuals. The study found that in the second year of follow-up, substance services
+  provided a pathway to psychiatric services, which in turn provided access to medical
+  services, demonstrating a cascading service connection mechanism.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: housing_status
+  direction: weakens
+  strength: moderate
+  description: Stable housing was negatively associated with psychiatric and substance
+    service use, suggesting that obtaining housing may reduce engagement with the
+    service cascade pathway
+- name: timing_of_alcohol_use
+  direction: strengthens
+  strength: moderate
+  description: The gateway effect from substance services to psychiatric services
+    was observed specifically in year 2 when alcohol use became associated with receiving
+    substance services, suggesting temporal dynamics in the pathway

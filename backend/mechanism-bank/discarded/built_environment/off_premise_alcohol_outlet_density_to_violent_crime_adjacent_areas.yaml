@@ -1,0 +1,40 @@
+id: off_premise_alcohol_outlet_density_to_violent_crime_adjacent_areas
+name: Off-Premise Alcohol Outlet Density → Violent Crime in Adjacent Areas
+from_node:
+  node_id: off_premise_alcohol_outlet_density
+  node_name: Off-Premise Alcohol Outlet Density
+to_node:
+  node_id: violent_crime_adjacent_areas
+  node_name: Violent Crime in Adjacent Areas
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Off-premise alcohol outlets (liquor stores, convenience stores) concentrate
+  in specific geographic areas, creating spatial clustering of alcohol availability'
+- 'Step 2: These outlets increase alcohol consumption and congregation patterns that
+  extend beyond the immediate block group into adjacent neighborhoods'
+- 'Step 3: Greater alcohol availability and consumption in surrounding areas increases
+  intoxication-related conflict and violence spillover'
+- 'Step 4: Violence manifests in adjacent block groups rather than solely in the block
+  group containing the outlet, creating geographic redistribution of harm'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Dennis M Gorman et al. 2018. "Violent crime redistribution in
+    a city following a substantial increase in the number of off-sale alcohol outlets:
+    A Bayesian analysis.." *Drug and alcohol review*. https://doi.org/10.1111/dar.12636'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.103504'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: spatial_proximity
+  direction: strengthens
+  strength: strong
+  description: The effect was specific to adjacent block groups, indicating that proximity
+    to off-premise outlets is a critical moderating factor in violence outcomes
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/off_premise_alcohol_outlet_density_to_violent_crime_adjacent_areas.yaml
+_category: built_environment

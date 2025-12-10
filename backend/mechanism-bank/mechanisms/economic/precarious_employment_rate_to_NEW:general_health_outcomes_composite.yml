@@ -1,0 +1,56 @@
+id: precarious_employment_rate_to_NEW:general_health_outcomes_composite
+name: Precarious Employment Rate → General Health Outcomes Composite
+from_node:
+  node_id: precarious_employment_rate
+  node_name: Precarious Employment Rate
+to_node:
+  node_id: NEW:general_health_outcomes_composite
+  node_name: General Health Outcomes Composite
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Persistent precarious employment reflects structural shift toward less secure employment forms'
+- 'Step 2: Job insecurity creates chronic stress activation and elevated cortisol'
+- 'Step 3: Lack of paid sick leave and healthcare benefits reduces preventive care and treatment access'
+- 'Step 4: Income instability limits investments in nutrition, housing quality, and health-promoting behaviors'
+- 'Step 5: Multiple pathway effects converge to produce poorer overall health status'
+evidence:
+  quality_rating: A
+  n_studies: 50
+  primary_citation: Andrew Pulford et al. 2022. "Does persistent precarious employment affect health outcomes
+    among working age adults? A systematic review and meta-analysis." https://doi.org/10.1136/jech-2022-219292
+  supporting_citations:
+  - Additional citations require full-text access - abstract reports evidence across mental health, general
+    health, physical health, and health behaviors domains
+  - 50 studies met inclusion criteria from systematic search
+  - GRADE approach used for certainty assessment across outcomes
+  doi: 10.1136/jech-2022-219292
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The systematic review found persistent precarious employment was associated with poorer health
+  across multiple domains including mental health, general health, physical health, and health behaviors.
+  The overall conclusion is that precarious employment harms health, though causality remains uncertain
+  due to methodological limitations in available studies.
+moderators:
+- name: outcome_time_lag
+  direction: weakens
+  strength: moderate
+  description: Authors explicitly note associations were strongest for outcomes with short time lags
+- name: study_quality
+  direction: weakens
+  strength: moderate
+  description: Risk of bias was generally high (n=18 studies) and GRADE certainty was very low across
+    all outcomes, suggesting true effects may differ from observed
+structural_competency:
+  equity_implications: This review explicitly frames precarious employment as a structural determinant
+    reflecting 'a shift towards less secure forms of employment' - appropriately locating the problem
+    in labor market transformations rather than individual worker characteristics. The authors' recommendation
+    to explore 'precautionary labour regulations and employment policies' demonstrates structural competency
+    by identifying policy levers rather than individual behavior change as the appropriate intervention
+    level.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.636293'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

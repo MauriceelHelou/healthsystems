@@ -1,0 +1,50 @@
+id: NEW:gabapentin_treatment_aws_to_alcohol_withdrawal_severe_rate
+name: Gabapentin Treatment for Acute Alcohol Withdrawal Syndrome → Alcohol Withdrawal
+  Severe Rate
+from_node:
+  node_id: NEW:gabapentin_treatment_aws
+  node_name: Gabapentin Treatment for Acute Alcohol Withdrawal Syndrome
+to_node:
+  node_id: alcohol_withdrawal_severe_rate
+  node_name: Alcohol Withdrawal Severe Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Gabapentin is administered to hospitalized patients experiencing acute
+  alcohol withdrawal syndrome (AWS), often as adjunctive therapy alongside benzodiazepines'
+- 'Step 2: Gabapentin''s mechanism of action modulates GABA activity and calcium channels,
+  potentially reducing neuronal hyperexcitability characteristic of alcohol withdrawal'
+- 'Step 3: In patients with severe AWS, gabapentin treatment is associated with reduced
+  benzodiazepine requirements, suggesting improved symptom control'
+- 'Step 4: Faster symptom resolution rate in gabapentin-treated patients may prevent
+  progression to severe withdrawal complications such as seizures and delirium tremens'
+- 'Step 5: Reduced hospital length of stay in severe AWS subgroup indicates more efficient
+  symptom management and reduced severity of withdrawal episodes'
+evidence:
+  quality_rating: B
+  n_studies: 8
+  primary_citation: 'Anna G Mattle et al. 2022. Gabapentin to treat acute alcohol
+    withdrawal in hospitalized patients: A systematic review and meta-analysis. Drug
+    and alcohol dependence.'
+  supporting_citations: []
+description: Gabapentin treatment for acute alcohol withdrawal syndrome shows potential
+  for reducing severe withdrawal outcomes, particularly in patients with severe AWS.
+  The meta-analysis of 8 retrospective studies (n=2030) found significant improvements
+  in symptom resolution rate favoring gabapentin. Subgroup analyses revealed that
+  severe AWS patients receiving gabapentin had reduced hospital length of stay and
+  lower benzodiazepine requirements, suggesting gabapentin may help prevent progression
+  to severe withdrawal complications.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Baseline AWS severity
+  direction: strengthens
+  strength: moderate
+  description: Subgroup analysis of severe AWS patients showed significant improvements
+    in LOS (p=0.04) and reduced benzodiazepine use (p=0.02), though based on limited
+    studies
+- name: Concurrent benzodiazepine use
+  direction: weakens
+  strength: moderate
+  description: Patients receiving gabapentin alone without benzodiazepines showed
+    significantly decreased LOS compared to benzodiazepine-only group (p<0.001)

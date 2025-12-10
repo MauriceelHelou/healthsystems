@@ -1,0 +1,46 @@
+id: psychiatric_disorders_to_dementia_risk
+name: Psychiatric Disorders → Alzheimer's Disease and Related Dementias (ADRD) Risk
+from_node:
+  node_id: psychiatric_disorders
+  node_name: Psychiatric Disorders
+to_node:
+  node_id: dementia_risk
+  node_name: Alzheimer's Disease and Related Dementias (ADRD) Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Psychiatric disorders are highly prevalent among Veterans experiencing
+  homelessness'
+- 'Step 2: Chronic psychiatric conditions create neurobiological changes affecting
+  brain structure and function'
+- 'Step 3: Co-occurring psychiatric and medical conditions compound overall health
+  burden and stress'
+- 'Step 4: Cumulative neurological effects and systemic inflammation increase dementia
+  risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Roncarati et al. 2023. "Risk of Dementia among Veterans Experiencing
+    Homelessness and Housing Instability." *Journal of The American Geriatrics Society*.
+    https://doi.org/10.1111/jgs.18680
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.331214'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: homelessness_status
+  direction: strengthens
+  strength: strong
+  description: Psychiatric disorders combined with homelessness create compounded
+    dementia vulnerability
+- name: older_age
+  direction: strengthens
+  strength: strong
+  description: Aging Veterans with psychiatric disorders show elevated dementia risk
+- name: substance_use_disorders
+  direction: strengthens
+  strength: moderate
+  description: Co-occurring substance use and psychiatric disorders amplify cognitive
+    decline risk

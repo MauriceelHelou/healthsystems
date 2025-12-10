@@ -1,0 +1,53 @@
+id: NEW:vitamin_d_supplementation_to_cardiovascular_disease_mortality
+name: Vitamin D Supplementation → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:vitamin_d_supplementation
+  node_name: Vitamin D Supplementation
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Vitamin D supplementation targets vitamin D receptor pathways'
+- 'Step 2: Vitamin D may influence cardiovascular function through effects on vascular endothelium and
+  cardiac muscle'
+- 'Step 3: Despite biological plausibility, supplementation did not demonstrate statistically significant
+  cardiovascular mortality reduction'
+evidence:
+  quality_rating: A
+  n_studies: 80
+  primary_citation: 'Antonio Ruiz-García et al. 2023. "Vitamin D Supplementation and Its Impact on Mortality
+    and Cardiovascular Outcomes: Systematic Review and Meta-Analysis of 80 Randomized Clinical Trials."
+    https://doi.org/10.3390/nu15081810'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes RCTs published between 1983
+    and 2022
+  - Studies included trials with follow-up periods longer than one year
+  - Analysis examined myocardial infarction, stroke, heart failure as secondary outcomes
+  doi: 10.3390/nu15081810
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis found vitamin D supplementation was not statistically associated with lower
+  risk of cardiovascular mortality or cardiovascular morbidity outcomes including myocardial infarction,
+  stroke, heart failure, and major adverse cardiovascular events. This null finding persisted across study
+  quality strata.
+quantitative_effects:
+  sample_size: 163131
+moderators:
+- name: study_quality
+  direction: strengthens
+  strength: moderate
+  description: Low-quality RCTs showed no association with any cardiovascular morbi-mortality outcomes
+structural_competency:
+  equity_implications: The lack of cardiovascular benefit from supplementation suggests that cardiovascular
+    disease mortality is more strongly determined by upstream structural factors (food environment, built
+    environment promoting physical activity, healthcare access for hypertension/diabetes management, occupational
+    stress) rather than isolated nutrient supplementation. Addressing cardiovascular health inequities
+    requires structural interventions beyond individual supplementation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.885090'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

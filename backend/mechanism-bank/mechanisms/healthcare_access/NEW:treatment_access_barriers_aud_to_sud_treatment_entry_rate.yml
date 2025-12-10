@@ -1,0 +1,62 @@
+id: NEW:treatment_access_barriers_aud_to_sud_treatment_entry_rate
+name: Treatment Access Barriers for AUD → SUD Treatment Entry Rate
+from_node:
+  node_id: NEW:treatment_access_barriers_aud
+  node_name: Treatment Access Barriers for AUD
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Geographic, transportation, scheduling, and stigma barriers prevent treatment seeking'
+- 'Step 2: Only a small fraction of individuals needing AUD treatment seek care'
+- 'Step 3: Lack of treatment access perpetuates untreated AUD in the population'
+- 'Step 4: Structural barriers disproportionately affect rural, low-income, and marginalized populations'
+- 'Step 5: Telemedicine interventions can circumvent these barriers and improve treatment entry'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Glasner et al. 2022. "Feasibility, Acceptability, and Preliminary Outcomes of an
+    Integrated Telemedicine Intervention Combining Naltrexone and Cognitive Behavioral Therapy for Alcohol
+    Use Disorder." https://doi.org/10.1089/tmr.2022.0029
+  supporting_citations:
+  - Additional citations require full-text access - treatment gap literature referenced in background
+  - Additional citations require full-text access - barriers to AUD care literature mentioned
+  - Additional citations require full-text access - treatment seeking behavior studies cited
+  doi: 10.1089/tmr.2022.0029
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study explicitly acknowledges that 'a small fraction of individuals in need of treatment
+  for alcohol use disorders seek care, owing largely to barriers to accessing treatment.' The telemedicine
+  intervention was designed specifically to address these structural access barriers.
+quantitative_effects:
+  sample_size: 26
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Treatment access barriers vary significantly by geography, with rural areas facing
+    greater shortages of SUD treatment providers and services
+moderators:
+- name: digital_literacy
+  direction: strengthens
+  strength: moderate
+  description: Telemedicine solutions require digital access and literacy, potentially creating new barriers
+    while removing others
+- name: broadband_access
+  direction: strengthens
+  strength: strong
+  description: Broadband availability is prerequisite for telemedicine interventions; rural broadband
+    deserts may limit reach
+structural_competency:
+  equity_implications: This mechanism directly addresses the structural causes of the AUD treatment gap.
+    Rather than attributing lack of treatment to individual motivation or denial, the study recognizes
+    that systemic barriers—geographic distance, lack of providers, transportation challenges, scheduling
+    conflicts, and stigma—prevent care access. This framing appropriately locates the problem in healthcare
+    system structures rather than individual characteristics, representing a structurally competent approach
+    to understanding treatment disparities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.223386'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

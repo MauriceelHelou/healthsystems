@@ -1,0 +1,52 @@
+id: NEW:post_release_status_to_suicidal_ideation
+name: Post-Release from Incarceration Status → Suicidal Ideation
+from_node:
+  node_id: NEW:post_release_status
+  node_name: Post-Release from Incarceration Status
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Release from incarceration creates an acute transition period characterized
+  by disruption of social supports, housing instability, and loss of structured environment'
+- 'Step 2: Post-release individuals face significant challenges including stigma,
+  barriers to employment, severed family relationships, and difficulty accessing mental
+  health services'
+- 'Step 3: These cumulative stressors, combined with pre-existing mental health vulnerabilities
+  common in incarcerated populations, significantly elevate risk for suicidal ideation'
+- 'Step 4: The immediate post-release period represents a particularly high-risk window,
+  as evidenced by suicide rates exceeding those during incarceration itself'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'E. Janca et al. 2022. Sex differences in suicide, suicidal ideation,
+    and self-harm after release from incarceration: a systematic review and meta-analysis.
+    Social Psychiatry and Psychiatric Epidemiology.'
+  supporting_citations: []
+description: People released from incarceration are at substantially elevated risk
+  for suicide and suicidal ideation compared to the general population, with standardized
+  mortality ratios over 7 times higher. This systematic review and meta-analysis of
+  29 studies found suicide rates are higher after release than during incarceration,
+  indicating the post-release transition represents a critical high-risk period. The
+  elevation in risk is particularly pronounced for women, who show approximately three
+  times the relative risk increase compared to men, though no studies specifically
+  reporting suicidal ideation stratified results by sex.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 7.4
+    type: standardized_mortality_ratio
+    ci_lower: 5.4
+    ci_upper: 9.4
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Women released from incarceration have approximately three times higher
+    elevation in suicide risk compared to general population (SMR 14.9) than men (SMR
+    4.6), though absolute crude mortality rates are similar between sexes

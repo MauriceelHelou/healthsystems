@@ -1,0 +1,43 @@
+id: dui_conviction_intervention_policy_to_polysubstance_use
+name: DUI Conviction Intervention Policy Without Treatment → Polysubstance Use Pattern
+from_node:
+  node_id: dui_conviction_intervention_policy
+  node_name: DUI Conviction Intervention Policy Without Treatment
+to_node:
+  node_id: polysubstance_use
+  node_name: Polysubstance Use Pattern
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: DUI conviction triggers technology-based intervention (IID) without mandated
+  comprehensive substance use treatment'
+- 'Step 2: Absence of treatment component means underlying substance use disorders
+  and behavioral patterns remain unaddressed'
+- 'Step 3: Drivers adapt to technological constraint through substance substitution
+  rather than reducing overall substance use'
+- 'Step 4: Upon removal of constraint, drivers combine resumed alcohol use with established
+  cannabis use patterns, creating polysubstance use'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Michael Scherer et al. 2022. "Cannabis Adaptation During and
+    After Alcohol Ignition Interlock Device Installation: A Longitudinal Study.."
+    *Journal of studies on alcohol and drugs*. https://doi.org/10.15288/jsad.2022.83.486'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.484770'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: treatment_intervention_availability
+  direction: weakens
+  strength: strong
+  description: Supplemental treatment interventions during IID period could prevent
+    transfer of risk to other substances and reduce polysubstance use after device
+    removal
+- name: monitoring_after_iid_removal
+  direction: weakens
+  strength: moderate
+  description: Continued monitoring and support services after device removal may
+    reduce escalation of polysubstance use

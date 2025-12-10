@@ -1,0 +1,43 @@
+id: peth_based_risk_stratification_to_withdrawal_medication_initiation
+name: PEth-Based Risk Stratification for Withdrawal → Appropriate Withdrawal Medication
+  Initiation
+from_node:
+  node_id: peth_based_risk_stratification
+  node_name: PEth-Based Risk Stratification for Withdrawal
+to_node:
+  node_id: withdrawal_medication_initiation
+  node_name: Appropriate Withdrawal Medication Initiation
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: PEth biomarker testing on admission provides objective measure of alcohol
+  exposure and withdrawal risk'
+- 'Step 2: Higher PEth levels identify patients who will likely reach AWS score of
+  6 or more (medication threshold)'
+- 'Step 3: Early risk stratification enables proactive medication planning rather
+  than reactive treatment'
+- 'Step 4: Appropriate early medication initiation prevents progression to severe
+  withdrawal complications including seizures and delirium tremens'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Lan Novak et al. 2023. "Alcohol Biomarker Phosphatidylethanol
+    as a Predictor of the Severity of Alcohol Withdrawal Syndrome.." *Alcohol and
+    Alcoholism*. https://doi.org/10.1093/alcalc/agac071
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.700457'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: healthcare_setting_resources
+  direction: strengthens
+  strength: strong
+  description: Settings with laboratory capacity for PEth testing and trained medical
+    staff for AWS assessment can implement this risk stratification approach
+- name: insurance_coverage
+  direction: strengthens
+  strength: moderate
+  description: Coverage for biomarker testing determines which patients can benefit
+    from PEth-based risk stratification

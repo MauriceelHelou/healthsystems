@@ -1,0 +1,54 @@
+id: NEW:carvedilol_use_to_all_cause_mortality_rate
+name: Carvedilol Use → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:carvedilol_use
+  node_name: Carvedilol Use
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Carvedilol, a non-selective beta-blocker with intrinsic alpha-blocking
+  activity, is administered to patients with cirrhosis and gastroesophageal varices'
+- 'Step 2: Carvedilol reduces hepatic venous pressure gradient more effectively than
+  traditional non-selective beta-blockers (propranolol, nadolol)'
+- 'Step 3: Reduced portal hypertension decreases risk of variceal bleeding, a major
+  cause of mortality in cirrhotic patients'
+- 'Step 4: Prevention of upper gastrointestinal bleeding events may contribute to
+  reduced all-cause mortality, though evidence remains uncertain'
+evidence:
+  quality_rating: B
+  n_studies: 10
+  primary_citation: Antony P Zacharias et al. 2018. Carvedilol versus traditional,
+    non-selective beta-blockers for adults with cirrhosis and gastroesophageal varices.
+    The Cochrane database of systematic reviews.
+  supporting_citations: []
+description: This Cochrane systematic review of 10 randomized clinical trials (810
+  participants) found no statistically significant difference in mortality between
+  carvedilol and traditional non-selective beta-blockers (propranolol or nadolol)
+  in adults with cirrhosis and gastroesophageal varices. While carvedilol showed a
+  non-significant trend toward reduced mortality (RR 0.86, 95% CI 0.48-1.53), with
+  16/254 deaths in carvedilol group vs 19/253 in control group, the evidence was rated
+  as low or very low quality due to high risk of bias across all included trials.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.86
+    type: relative_risk
+    ci_lower: 0.48
+    ci_upper: 1.53
+  p_value: null
+  sample_size: 507
+moderators:
+- name: prevention_type
+  direction: strengthens
+  strength: weak
+  description: Studies evaluated both primary and secondary prevention of variceal
+    bleeding with potentially different effects
+- name: study_duration
+  direction: strengthens
+  strength: moderate
+  description: Longer duration studies (6-30 months) may show more pronounced mortality
+    effects compared to short-term hemodynamic studies (1-12 weeks)

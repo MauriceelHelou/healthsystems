@@ -1,0 +1,58 @@
+id: NEW:cannabis_use_while_driving_to_motor_vehicle_crash_injury_rate
+name: Cannabis Use While Driving → Motor Vehicle Crash Injury Rate
+from_node:
+  node_id: NEW:cannabis_use_while_driving
+  node_name: Cannabis Use While Driving
+to_node:
+  node_id: motor_vehicle_crash_injury_rate
+  node_name: Motor Vehicle Crash Injury Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Cannabis consumption results in THC crossing blood-brain barrier and binding to cannabinoid
+  receptors'
+- 'Step 2: Impaired lateral vehicle control manifests as increased lane position variability (g=0.331)
+  and lane excursions (g=0.198)'
+- 'Step 3: Compensatory reduction in driving speed (g=-0.176) partially mitigates but does not eliminate
+  crash risk'
+- 'Step 4: Impaired hazard response and vehicle control increases probability of motor vehicle crashes
+  and injuries'
+evidence:
+  quality_rating: A
+  n_studies: 57
+  primary_citation: 'S. Simmons et al. 2022. "The effects of cannabis and alcohol on driving performance
+    and driver behaviour: a systematic review and meta-analysis.." https://doi.org/10.1111/add.15770'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 57 studies with 1725 participants
+  - Studies included driving simulator, closed-course, and on-road experimental designs
+  - Epidemiological meta-analyses referenced for cannabis-crash risk associations
+  doi: 10.1111/add.15770
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Cannabis impairs driving performance by reducing lateral vehicle control (increased lane
+  position variability and lane excursions), though drivers may partially compensate by reducing speed.
+  This impairment pattern increases motor vehicle crash risk.
+quantitative_effects:
+  effect_size:
+    value: 0.331
+    type: standardized_mean_difference
+    ci_lower: 0.212
+    ci_upper: 0.451
+  sample_size: 1725
+moderators:
+- name: dose_response
+  direction: strengthens
+  strength: moderate
+  description: Effects of cannabis on driving performance likely increase with higher THC doses
+structural_competency:
+  equity_implications: This mechanism relates to drug policy and cannabis legalization contexts. Structural
+    factors include availability of cannabis, lack of roadside testing infrastructure, inadequate public
+    education, and limited alternative transportation options. Equity implications include differential
+    enforcement of drugged driving laws across racial/ethnic groups and socioeconomic barriers to alternatives
+    to driving.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.628692'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

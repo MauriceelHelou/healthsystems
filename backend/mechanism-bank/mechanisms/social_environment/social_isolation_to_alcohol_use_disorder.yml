@@ -1,0 +1,58 @@
+id: social_isolation_to_alcohol_use_disorder
+name: Social Isolation → Alcohol Use Disorder
+from_node:
+  node_id: social_isolation
+  node_name: Social Isolation
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Social isolation reduces opportunities for positive social interactions and emotional support'
+- 'Step 2: Isolated individuals experience lower subjective well-being and increased negative affect (sad,
+  stressed, anxious language)'
+- 'Step 3: Solitary drinking emerges as a coping mechanism in the absence of social buffering'
+- 'Step 4: Drinking alone is strongly associated with problematic alcohol consumption patterns'
+- 'Step 5: Repeated solitary drinking reinforces negative affect cycles and increases AUD risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: August Håkan Nilsson et al. 2024. "Language-based EMA assessments help understand
+    problematic alcohol consumption." https://doi.org/10.1371/journal.pone.0298300
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior work on alcohol and subjective
+    well-being
+  - Additional citations require full-text access - abstract references social aspects of alcohol consumption
+    literature
+  - Additional citations require full-text access - abstract references EMA methodology studies
+  doi: 10.1371/journal.pone.0298300
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Drinking alone is strongly negatively correlated with subjective well-being (r = -0.29 between-person),
+  whereas total drinking shows a much weaker relationship (r = -0.10). Individuals who drink alone describe
+  their feelings using sad, stressed, and anxious language, indicating that solitary drinking contexts
+  are markers of problematic consumption patterns linked to lower psychological well-being.
+quantitative_effects:
+  effect_size:
+    value: -0.29
+    type: correlation
+  sample_size: 908
+moderators:
+- name: social_context_of_drinking
+  direction: weakens
+  strength: strong
+  description: Drinking with friends/others substantially weakens the negative relationship between alcohol
+    consumption and well-being compared to drinking alone
+structural_competency:
+  equity_implications: This mechanism identifies social context as a structural determinant of problematic
+    alcohol use. The finding shifts focus from individual drinking behavior to the social environment
+    in which drinking occurs. Occupational factors (restaurant work) may create structural conditions
+    promoting solitary drinking. Interventions should address social isolation rather than blaming individual
+    drinking choices.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.238797'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

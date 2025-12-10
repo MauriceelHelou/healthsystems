@@ -1,0 +1,65 @@
+id: sud_medication_treatment_rate_oud_to_suicide_rate
+name: Opioid Agonist Treatment (OAT) Receipt → Suicide Mortality
+from_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: Opioid Agonist Treatment (OAT) Receipt
+to_node:
+  node_id: suicide_rate
+  node_name: Suicide Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: OAT (methadone or buprenorphine) stabilizes opioid-dependent individuals
+  by reducing cravings and withdrawal symptoms through controlled agonist activity
+  at opioid receptors'
+- 'Step 2: Treatment stabilization enables regular healthcare engagement, providing
+  opportunities for mental health screening, intervention, and ongoing support'
+- 'Step 3: Reduced chaotic drug-seeking behavior and associated psychosocial stressors
+  (financial strain, legal problems, relationship difficulties) decreases depression
+  and hopelessness'
+- 'Step 4: Neurobiological stabilization from consistent opioid agonist dosing may
+  reduce emotional dysregulation and impulsivity associated with untreated opioid
+  dependence'
+- 'Step 5: Lower suicide mortality during OAT periods compared to periods not receiving
+  treatment'
+evidence:
+  quality_rating: A
+  n_studies: 51
+  primary_citation: 'Thomas Santo et al. 2021. Association of Opioid Agonist Treatment
+    With All-Cause Mortality and Specific Causes of Death Among People With Opioid
+    Dependence: A Systematic Review and Meta-analysis. JAMA psychiatry.'
+  supporting_citations: []
+description: This systematic review and meta-analysis of 15 RCTs and 36 cohort studies
+  found that opioid agonist treatment is associated with a 52% reduction in suicide
+  mortality (RR 0.48, 95% CI 0.37-0.61) among people with opioid dependence. The protective
+  effect operates through stabilization of opioid-dependent individuals, enabling
+  healthcare engagement and reducing psychosocial stressors that contribute to suicidal
+  behavior. The association was consistent across patient sex, age, geographic location,
+  HIV status, hepatitis C status, and injection drug use status.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.48
+    type: rate_ratio
+    ci_lower: 0.37
+    ci_upper: 0.61
+  p_value: null
+  sample_size: 753486
+moderators:
+- name: treatment_type
+  direction: strengthens
+  strength: moderate
+  description: Both methadone (RR 0.47) and buprenorphine (RR 0.34) showed protective
+    effects against all-cause mortality; buprenorphine may have slightly stronger
+    protective effect
+- name: treatment_timing
+  direction: weakens
+  strength: strong
+  description: Mortality risk is elevated in the first 4 weeks of methadone treatment
+    and dramatically elevated (6-fold) in the 4 weeks after OAT cessation
+- name: incarceration_status
+  direction: strengthens
+  strength: strong
+  description: OAT showed particularly strong protective effects during incarceration
+    (RR 0.06) and after release from incarceration (RR 0.09)

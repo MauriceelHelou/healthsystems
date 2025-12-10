@@ -1,0 +1,67 @@
+id: criminal_justice_involvement_intensity_revised_consolidated_to_sud_medication_treatment_rate_oud
+name: Criminal Justice Involvement Intensity → SUD Medication Treatment Rate for OUD
+from_node:
+  node_id: criminal_justice_involvement_intensity_revised_consolidated
+  node_name: Criminal Justice Involvement Intensity
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate for OUD
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Criminal justice system referral to OUD treatment operates under different institutional constraints
+  than other referral sources'
+- 'Step 2: Criminal justice settings often have policies or practices that restrict or discourage medication
+  for opioid use disorder (MOUD)'
+- 'Step 3: Individuals referred through criminal justice system face structural barriers to accessing
+  evidence-based pharmacotherapy (buprenorphine, methadone, naltrexone)'
+- 'Step 4: Lower rates of MOUD utilization result in poorer treatment outcomes for this population'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. T. Donahoe et al. 2024. "Disparities in Medication Use for Criminal Justice System–Referred
+    Opioid Use Disorder Treatment." https://doi.org/10.1001/jamahealthforum.2024.2807
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior work on poor outcomes in
+    criminal justice-involved population with OUD
+  - Additional citations require full-text access - abstract references treatment disparities literature
+  - Additional citations require full-text access - abstract references MOUD effectiveness research
+  doi: 10.1001/jamahealthforum.2024.2807
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Criminal justice system referral to opioid use disorder treatment is associated with significantly
+  lower rates of medication for opioid use disorder (MOUD) compared to referrals from other sources. This
+  cross-sectional analysis of over 3 million treatment admissions (2014-2021) found persistent disparities
+  in MOUD use, indicating structural barriers within the criminal justice system that impede access to
+  evidence-based treatment.
+quantitative_effects:
+  sample_size: 3000000
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The study notes that the disparity exists in most states and is closing slowly, indicating
+    significant geographic variation in the magnitude of the treatment gap
+moderators:
+- name: time_period
+  direction: weakens
+  strength: weak
+  description: MOUD use among criminal justice-referred individuals has increased over time (2014-2021),
+    though disparity persists
+- name: state_policy_environment
+  direction: strengthens
+  strength: moderate
+  description: State-level variation suggests that policy environments differentially affect MOUD access
+    for criminal justice populations
+structural_competency:
+  equity_implications: This mechanism clearly demonstrates how institutional arrangements (criminal justice
+    referral pathways) create structural barriers to evidence-based healthcare. The disparity is not attributable
+    to individual patient characteristics but rather to systemic differences in how treatment is delivered
+    based on referral source. The persistence of this gap despite known effectiveness of MOUD represents
+    a structural failure that disproportionately harms individuals with criminal justice involvement -
+    a population already marginalized by the carceral system. Targeted policy interventions are needed
+    to address institutional barriers rather than individual behavior change.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.549507'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

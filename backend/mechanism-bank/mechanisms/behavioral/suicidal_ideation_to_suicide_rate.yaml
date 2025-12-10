@@ -1,0 +1,58 @@
+id: suicidal_ideation_to_suicide_rate
+name: Suicidal Ideation → Suicide Rate
+from_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+to_node:
+  node_id: suicide_rate
+  node_name: Suicide Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Suicidal ideation emerges as persistent thoughts about self-harm or ending
+  one''s life, often in the context of mental health conditions, psychosocial stressors,
+  or crisis situations'
+- 'Step 2: Suicidal ideation, when untreated or unaddressed, may progress in intensity
+  and specificity, potentially involving planning and intent formation'
+- 'Step 3: The presence of suicidal ideation increases the probability of suicide
+  attempts and completed suicide, with a moderate but significant association (OR
+  = 3.11)'
+evidence:
+  quality_rating: A
+  n_studies: 51
+  primary_citation: M. Large et al. 2020. Is suicidal behaviour a stronger predictor
+    of later suicide than suicidal ideation? A systematic review and meta-analysis.
+    Australian and New Zealand journal of psychiatry (Print)
+  supporting_citations: []
+description: Suicidal ideation is moderately but significantly associated with later
+  completed suicide, with individuals experiencing suicidal ideation having approximately
+  three times the odds of dying by suicide compared to those without such ideation.
+  This meta-analysis of 51 studies demonstrates that suicidal ideation should not
+  be deprioritized relative to suicidal behavior when assessing suicide risk, as both
+  represent important clinical warning signs.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.11
+    type: odds_ratio
+    ci_lower: 2.51
+    ci_upper: 3.86
+  p_value: null
+  sample_size: null
+moderators:
+- name: Clinical setting
+  direction: strengthens
+  strength: moderate
+  description: Subgroup analyses examined psychiatric vs non-psychiatric settings;
+    no significant differences in association strength were found
+- name: Diagnostic mix
+  direction: strengthens
+  strength: weak
+  description: Population diagnostic characteristics were examined but did not significantly
+    moderate the association
+- name: Definition of suicidal ideation
+  direction: strengthens
+  strength: weak
+  description: Various definitions of suicidal ideation were used across studies;
+    subgroup analysis showed no significant differences

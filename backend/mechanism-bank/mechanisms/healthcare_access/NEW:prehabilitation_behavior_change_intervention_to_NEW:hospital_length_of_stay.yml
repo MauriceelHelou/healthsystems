@@ -1,0 +1,58 @@
+id: NEW:prehabilitation_behavior_change_intervention_to_NEW:hospital_length_of_stay
+name: Prehabilitation Behavior Change Intervention → Hospital Length of Stay
+from_node:
+  node_id: NEW:prehabilitation_behavior_change_intervention
+  node_name: Prehabilitation Behavior Change Intervention
+to_node:
+  node_id: NEW:hospital_length_of_stay
+  node_name: Hospital Length of Stay
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare systems implement preoperative behavior change interventions targeting smoking,
+  alcohol, physical activity, or diet'
+- 'Step 2: Patients modify health risk behaviors prior to surgery, improving physiological readiness'
+- 'Step 3: Improved preoperative health status reduces surgical complications and recovery time'
+- 'Step 4: Reduced complications translate to shorter hospital stays'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: 'M. Fong et al. 2023. "The effect of preoperative behaviour change interventions on
+    pre- and post-surgery health behaviours, health outcomes, and health inequalities in adults: A systematic
+    review and meta-analyses." https://doi.org/10.1371/journal.pone.0286757'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 67 RCTs
+  - Studies included lung cancer surgery trials showing -3.5 day reduction
+  - Multiple surgical specialty trials included in meta-analysis
+  doi: 10.1371/journal.pone.0286757
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Behavioral prehabilitation interventions delivered before surgery reduce hospital length
+  of stay by an average of 1.5 days compared to usual care, with stronger effects observed in lung cancer
+  patients.
+quantitative_effects:
+  effect_size:
+    value: -1.5
+    type: standardized_mean_difference
+    ci_lower: -2.6
+    ci_upper: -0.4
+  p_value: 0.01
+  heterogeneity_i_squared: 83.0
+moderators:
+- name: cancer_type
+  direction: strengthens
+  strength: strong
+  description: Lung cancer patients showed greater reduction in length of stay (-3.5 days) compared to
+    overall effect (-1.5 days)
+structural_competency:
+  equity_implications: This mechanism operates at the healthcare system level, representing how institutional
+    practices around surgical care can improve outcomes. Access to prehabilitation programs may be inequitably
+    distributed, potentially favoring patients with resources, flexible schedules, and healthcare literacy.
+    No trials examined effects by equality measures, representing a significant gap in understanding health
+    equity implications.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.420724'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,51 @@
+id: NEW:blood_ammonia_concentration_to_NEW:hepatic_encephalopathy
+name: Blood Ammonia Concentration → Hepatic Encephalopathy
+from_node:
+  node_id: NEW:blood_ammonia_concentration
+  node_name: Blood Ammonia Concentration
+to_node:
+  node_id: NEW:hepatic_encephalopathy
+  node_name: Hepatic Encephalopathy
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: In cirrhosis, impaired liver function reduces capacity to convert ammonia
+  to urea via the urea cycle, leading to elevated blood ammonia concentrations'
+- 'Step 2: Elevated blood ammonia crosses the blood-brain barrier and enters astrocytes
+  in the central nervous system'
+- 'Step 3: Within astrocytes, ammonia is metabolized to glutamine, causing osmotic
+  stress and astrocyte swelling'
+- 'Step 4: Astrocyte dysfunction leads to altered neurotransmission, cerebral edema,
+  and neuroinflammation'
+- 'Step 5: These neurotoxic effects manifest clinically as hepatic encephalopathy,
+  ranging from subtle cognitive impairment (minimal HE) to overt neuropsychiatric
+  symptoms'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: Harry D Zacharias et al. 2019. Pharmacotherapies that specifically
+    target ammonia for the prevention and treatment of hepatic encephalopathy in adults
+    with cirrhosis. The Cochrane database of systematic reviews.
+  supporting_citations: []
+description: Ammonia plays a key role in the pathogenesis of hepatic encephalopathy
+  in cirrhosis. Elevated blood ammonia concentrations result from impaired hepatic
+  ammonia clearance and contribute to the neurotoxic effects underlying both minimal
+  and overt hepatic encephalopathy. This Cochrane systematic review of 11 RCTs (943
+  participants) evaluated ammonia-targeting pharmacotherapies and confirmed that these
+  drugs reduce blood ammonia concentrations compared to placebo, supporting the causal
+  link between elevated ammonia and hepatic encephalopathy, though clinical outcome
+  effects remain uncertain.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Cirrhosis severity
+  direction: strengthens
+  strength: strong
+  description: More severe liver dysfunction leads to greater impairment in ammonia
+    metabolism and higher blood ammonia levels
+- name: Ammonia-lowering pharmacotherapy
+  direction: weakens
+  strength: moderate
+  description: Drugs targeting ammonia (sodium benzoate, glycerol phenylbutyrate,
+    ornithine phenylacetate, AST-120, polyethylene glycol) can reduce blood ammonia
+    concentrations compared to placebo

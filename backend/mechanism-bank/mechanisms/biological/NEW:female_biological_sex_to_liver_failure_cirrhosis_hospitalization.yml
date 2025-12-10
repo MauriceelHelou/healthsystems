@@ -1,0 +1,57 @@
+id: NEW:female_biological_sex_to_liver_failure_cirrhosis_hospitalization
+name: Female Biological Sex → Liver Failure/Cirrhosis Hospitalization
+from_node:
+  node_id: NEW:female_biological_sex
+  node_name: Female Biological Sex
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Failure/Cirrhosis Hospitalization
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Female-specific hormonal factors influence alcohol metabolism and liver response'
+- 'Step 2: Estrogen may potentiate alcohol-induced oxidative stress and inflammation'
+- 'Step 3: Lower gastric alcohol dehydrogenase activity in females leads to higher systemic alcohol exposure'
+- 'Step 4: Enhanced fibrogenic response to equivalent hepatotoxic insult'
+- 'Step 5: More rapid cirrhosis development and increased hospitalization risk'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'Laura Llamosas-Falcón et al. 2022. "Sex-specific association between alcohol consumption
+    and liver cirrhosis: An updated systematic review and meta-analysis." https://doi.org/10.3389/fgstr.2022.1005729'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes 24 longitudinal and case-control
+    studies
+  - Studies included examined ICD-8/ICD-9 code 571 and ICD-10 codes K70, K73, K74
+  - Pooled analysis from PubMed/Medline and Embase databases
+  doi: 10.3389/fgstr.2022.1005729
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: At high alcohol consumption levels (80g/day), females demonstrate dramatically elevated cirrhosis
+  risk with RR of 23.32, nearly three times higher than the male RR of 7.93. The non-linear dose-response
+  relationship shows that sex-based vulnerability persists across consumption levels.
+quantitative_effects:
+  effect_size:
+    value: 23.32
+    type: relative_risk
+    ci_lower: 18.24
+    ci_upper: 29.82
+  sample_size: 2112476
+moderators:
+- name: alcohol_dose
+  direction: strengthens
+  strength: strong
+  description: At 80g/day, females show RR of 23.32 compared to male RR of 7.93, demonstrating persistent
+    sex-specific vulnerability
+structural_competency:
+  equity_implications: The 23-fold increased risk for females at 80g/day consumption underscores urgent
+    need for sex-specific public health interventions. Structural approaches should include sex-differentiated
+    safe drinking guidelines, targeted screening in primary care, and gender-responsive alcohol treatment
+    programs. Policy interventions on alcohol availability and pricing may have differential protective
+    effects by sex.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.305271'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

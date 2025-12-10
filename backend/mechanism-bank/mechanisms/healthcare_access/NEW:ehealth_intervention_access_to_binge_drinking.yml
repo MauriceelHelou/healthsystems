@@ -1,0 +1,63 @@
+id: NEW:ehealth_intervention_access_to_binge_drinking
+name: eHealth Intervention Access → Binge Drinking
+from_node:
+  node_id: NEW:ehealth_intervention_access
+  node_name: eHealth Intervention Access
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Disadvantaged adolescents face structural barriers (stigma, cost, geographic distance) to accessing
+  alcohol prevention services'
+- 'Step 2: eHealth platforms provide confidential, accessible alcohol prevention content that bypasses
+  traditional service barriers'
+- 'Step 3: Digital interventions deliver evidence-based alcohol education and harm reduction messaging'
+- 'Step 4: Intervention completers demonstrate reduced binge drinking behavior at 1-month follow-up'
+evidence:
+  quality_rating: C
+  n_studies: 3
+  primary_citation: Lyra Egan et al. 2023. "A Systematic Review of eHealth Interventions Among Adolescents
+    of Low Socioeconomic and Geographically Remote Backgrounds in Preventing Poor Diet, Alcohol Use, Tobacco
+    Smoking and Vaping." https://doi.org/10.1007/s40894-023-00210-2
+  supporting_citations:
+  - Three alcohol-focused eHealth interventions included in systematic review
+  - One combined alcohol and tobacco intervention also included
+  - Additional citations require full-text access for specific study details
+  doi: 10.1007/s40894-023-00210-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: eHealth interventions targeting alcohol use among disadvantaged adolescents showed significant
+  reductions in binge drinking at 1-month follow-up among intervention completers, demonstrating that
+  digital platforms can effectively deliver alcohol prevention to populations facing barriers to traditional
+  services
+quantitative_effects:
+  sample_size: 7170
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects observed in populations including geographically remote adolescents who typically
+    have limited access to alcohol prevention services
+moderators:
+- name: intervention_completion
+  direction: strengthens
+  strength: strong
+  description: Effects on binge drinking were observed specifically among intervention completers, suggesting
+    engagement is a key moderator
+- name: follow_up_duration
+  direction: weakens
+  strength: moderate
+  description: Effects demonstrated at 1-month follow-up; longer-term sustainability unclear
+structural_competency:
+  equity_implications: 'This mechanism recognizes that binge drinking among disadvantaged youth is partially
+    explained by structural barriers to prevention services, not merely individual choice. The review
+    identifies stigma, access, and affordability as key structural barriers that create health inequity.
+    eHealth represents a structural intervention that can bypass these barriers. Equity implications:
+    digital interventions may help reduce alcohol-related health disparities by democratizing access to
+    prevention.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.718461'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

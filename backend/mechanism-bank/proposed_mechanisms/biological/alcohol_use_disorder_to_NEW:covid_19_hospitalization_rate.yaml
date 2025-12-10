@@ -1,0 +1,59 @@
+id: alcohol_use_disorder_to_NEW:covid_19_hospitalization_rate
+name: Alcohol Use Disorder → COVID-19 Hospitalization Rate
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:covid_19_hospitalization_rate
+  node_name: COVID-19 Hospitalization Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol use disorder compromises immune system function, reducing
+  the body''s ability to mount effective responses to viral infections'
+- 'Step 2: Alcohol-induced damage to respiratory epithelium and impaired mucociliary
+  clearance increases susceptibility to respiratory pathogens including SARS-CoV-2'
+- 'Step 3: AUD increases risk of developing acute respiratory distress syndrome (ARDS)
+  and exacerbates pneumonia severity during COVID-19 infection'
+- 'Step 4: Comorbidities commonly associated with AUD (liver disease, cardiovascular
+  conditions) compound COVID-19 severity'
+- 'Step 5: More severe COVID-19 disease progression leads to increased need for hospitalization
+  among AUD patients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. Bailey et al. 2022. COVID‐19 patients with documented alcohol
+    use disorder or alcohol‐related complications are more likely to be hospitalized
+    and have higher all‐cause mortality. Alcoholism: Clinical and Experimental Research.'
+  supporting_citations: []
+description: Individuals with alcohol use disorder have 51% higher odds of requiring
+  hospitalization when infected with COVID-19 compared to those without AUD, even
+  after adjusting for age, sex, race/ethnicity, smoking, BMI, and comorbidities. This
+  relationship is attributed to known mechanisms by which AUD increases severity of
+  respiratory infections, including impaired immune function, increased susceptibility
+  to acute respiratory distress syndrome, and enhanced pneumonia severity.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.51
+    type: odds_ratio
+    ci_lower: 1.46
+    ci_upper: 1.56
+  p_value: 0.001
+  sample_size: 1335028
+moderators:
+- name: comorbidities
+  direction: strengthens
+  strength: moderate
+  description: Effect persists after adjustment for comorbidities, suggesting independent
+    AUD effect, though comorbidities contribute to baseline risk
+- name: smoking status
+  direction: strengthens
+  strength: moderate
+  description: Adjusted for in analysis; smoking often co-occurs with AUD and may
+    amplify respiratory vulnerability
+- name: body mass index
+  direction: strengthens
+  strength: weak
+  description: Adjusted for in analysis as potential confounding factor

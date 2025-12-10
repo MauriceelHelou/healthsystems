@@ -1,0 +1,75 @@
+id: adverse_childhood_experiences_aces_to_recidivism_rate_3_year
+name: Adverse Childhood Experiences (ACEs) → Recidivism Rate (3-Year)
+from_node:
+  node_id: adverse_childhood_experiences_aces
+  node_name: Adverse Childhood Experiences (ACEs)
+to_node:
+  node_id: recidivism_rate_3_year
+  node_name: Recidivism Rate (3-Year)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Cumulative exposure to adverse childhood experiences (abuse, neglect, household dysfunction)
+  creates toxic stress during critical developmental periods'
+- 'Step 2: Chronic stress dysregulates neurobiological systems including the hypothalamic-pituitary-adrenal
+  axis and prefrontal cortex development'
+- 'Step 3: Impaired executive function, emotional regulation, and impulse control increase risk-taking
+  and antisocial behaviors'
+- 'Step 4: Structural disadvantages associated with ACE exposure (poverty, unstable housing, limited education)
+  reduce access to prosocial opportunities'
+- 'Step 5: These combined neurobiological and structural factors increase likelihood of reoffending among
+  justice-involved individuals'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: 'Miranda G. Yannon et al. 2024. "Cumulative Adverse Childhood Experiences (ACEs) and
+    Recidivism: A Meta-Analysis." https://doi.org/10.1177/00938548241267230'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes 12 published studies and 4
+    dissertations
+  - Studies encompass 101,778 unique participants across youth and adult samples
+  - Full citation list of included studies available in original publication
+  doi: 10.1177/00938548241267230
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This meta-analysis of 16 studies (101,778 participants) found a small but significant overall
+  effect where cumulative adverse childhood experiences increased the odds of reoffending among court-involved
+  individuals. The effect was particularly pronounced in youth populations, with adult samples showing
+  non-significant relationships. The findings support screening for ACEs in court settings, especially
+  youth courts, to identify those at highest risk for recidivism and in need of trauma-informed intervention.
+quantitative_effects:
+  sample_size: 101778
+moderators:
+- name: age_group
+  direction: strengthens
+  strength: strong
+  description: The relationship between ACEs and recidivism was only statistically significant for youth
+    samples, not adult samples (n=1,204 adults)
+- name: publication_status
+  direction: strengthens
+  strength: moderate
+  description: ACEs only predicted recidivism in published studies compared to dissertations, suggesting
+    possible publication bias
+- name: gender
+  direction: weakens
+  strength: weak
+  description: Gender was tested as a moderator but was not significant (sample was 21.1% girls/women)
+- name: recidivism_time_frame
+  direction: weakens
+  strength: weak
+  description: Recidivism time frame was tested as a moderator but was not significant
+structural_competency:
+  equity_implications: 'This mechanism appropriately traces criminal justice outcomes to early life structural
+    exposures rather than individual moral failings. ACEs themselves are structurally determined - children
+    in poverty, unstable housing, and marginalized communities experience higher ACE exposure. The recommendation
+    for court-based ACE screening represents a structural intervention that could redirect youth from
+    punitive to therapeutic pathways. Equity implications are significant: communities of color and low-income
+    communities experience both higher ACE prevalence and higher rates of justice involvement, creating
+    compounding structural disadvantage. The finding that effects are stronger in youth suggests developmental
+    windows where intervention could disrupt the ACE-to-incarceration pipeline.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.598530'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,43 @@
+id: NEW:chemotherapy_pineoblastoma_to_NEW:pineoblastoma_survival
+name: Chemotherapy for Pineoblastoma → Adult Pineoblastoma Survival
+from_node:
+  node_id: NEW:chemotherapy_pineoblastoma
+  node_name: Chemotherapy for Pineoblastoma
+to_node:
+  node_id: NEW:pineoblastoma_survival
+  node_name: Adult Pineoblastoma Survival
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Adult patients diagnosed with pineoblastoma receive chemotherapy as part
+  of multimodal treatment approach'
+- 'Step 2: Chemotherapeutic agents target rapidly dividing pineoblastoma tumor cells,
+  inducing cell death and reducing tumor burden'
+- 'Step 3: Chemotherapy works synergistically with other treatment modalities (surgery,
+  radiotherapy) to achieve better disease control'
+- 'Step 4: Reduced tumor burden and improved disease control leads to improved overall
+  survival outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 32
+  primary_citation: Xiufeng Chu et al. 2024. A systematic review of adult pineoblastoma.
+    Frontiers in oncology.
+  supporting_citations: []
+description: Systematic review of 108 adult pineoblastoma cases from 32 articles demonstrated
+  that chemotherapy treatment modality was beneficial for survival (P=0.020). The
+  5-year survival rate was 49.5% and 10-year survival rate was 33.9%. Kaplan-Meier
+  survival analysis confirmed chemotherapy's positive association with improved outcomes
+  in this rare CNS malignancy.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Radiotherapy
+  direction: strengthens
+  strength: strong
+  description: Radiotherapy was an independent factor in beneficial prognosis (P<0.001)
+    and may enhance chemotherapy effectiveness as part of multimodal treatment
+- name: Extent of surgical resection
+  direction: strengthens
+  strength: moderate
+  description: Gross total resection was more beneficial than subtotal resection and
+    tends to improve survival within five years (P=0.079)

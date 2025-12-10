@@ -1,0 +1,58 @@
+id: NEW:urban_residence_to_NEW:maternal_health_service_uptake
+name: Urban Place of Residence → Maternal Health Care Service Utilization
+from_node:
+  node_id: NEW:urban_residence
+  node_name: Urban Place of Residence
+to_node:
+  node_id: NEW:maternal_health_service_uptake
+  node_name: Maternal Health Care Service Utilization
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Urban areas have greater concentration and density of health facilities,
+  including hospitals, clinics, and skilled healthcare providers'
+- 'Step 2: Urban residents experience shorter travel distances and better transportation
+  infrastructure to access maternal health services'
+- 'Step 3: Urban environments typically have better information access and health
+  education promoting awareness of maternal health services'
+- 'Step 4: Urban areas often have higher rates of formal employment providing health
+  insurance or ability to pay for services'
+- 'Step 5: These cumulative urban advantages result in significantly higher utilization
+  of antenatal care, skilled delivery care, and postnatal care services'
+evidence:
+  quality_rating: A
+  n_studies: 51
+  primary_citation: 'Addisu Alemayehu Gube et al. 2024. Inequity in uptake of maternal
+    health care services in developing countries: a systematic review and meta-analysis.
+    Frontiers in Public Health.'
+  supporting_citations: []
+description: Urban residence is strongly associated with increased maternal health
+  care service utilization in developing countries. This systematic review and meta-analysis
+  of 51 studies found that mothers living in urban areas were nearly three times more
+  likely to receive antenatal care compared to rural mothers. Similar urban-rural
+  inequalities were observed for skilled delivery care and postnatal care utilization,
+  indicating a consistent pattern of urban advantage across the maternal health care
+  continuum.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.95
+    type: odds_ratio
+    ci_lower: 2.23
+    ci_upper: 3.89
+  p_value: null
+  sample_size: 340390
+moderators:
+- name: education_level
+  direction: strengthens
+  strength: strong
+  description: Higher education amplifies maternal health service utilization; secondary
+    education shows 6x higher odds, higher education shows 14x higher odds compared
+    to no education
+- name: wealth_index
+  direction: strengthens
+  strength: strong
+  description: Higher wealth quintiles show progressively higher maternal health service
+    utilization; second wealth quintile shows OR 1.62 compared to lowest, with greater
+    effects at higher quintiles

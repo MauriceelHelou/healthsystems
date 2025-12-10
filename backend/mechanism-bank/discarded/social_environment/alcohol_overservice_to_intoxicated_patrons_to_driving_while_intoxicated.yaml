@@ -1,0 +1,39 @@
+id: alcohol_overservice_to_intoxicated_patrons_to_driving_while_intoxicated
+name: Alcohol Overservice to Obviously Intoxicated Patrons → Driving While Intoxicated
+from_node:
+  node_id: alcohol_overservice_to_intoxicated_patrons
+  node_name: Alcohol Overservice to Obviously Intoxicated Patrons
+to_node:
+  node_id: driving_while_intoxicated
+  node_name: Driving While Intoxicated
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Licensed on-premises establishments fail to refuse service to obviously
+  intoxicated patrons (79% overservice rate observed)'
+- 'Step 2: Patrons continue consuming alcohol beyond legal intoxication thresholds
+  at commercial establishments'
+- 'Step 3: Intoxicated patrons leave establishments and operate motor vehicles'
+- 'Step 4: Elevated blood alcohol concentration impairs driving ability and increases
+  crash risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Robert Saltz et al. 2024. "Serving Alcohol to an "Obviously Intoxicated"
+    Patron.." *Journal of studies on alcohol and drugs*. https://doi.org/10.15288/jsad.23-00253
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.614103'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: patron_gender
+  direction: weakens
+  strength: strong
+  description: Female pseudo-patrons were significantly more likely to be refused
+    service (OR=3.71, 95% CI [1.67, 8.24]), indicating lower overservice rates for
+    female patrons
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/social_environment/alcohol_overservice_to_intoxicated_patrons_to_driving_while_intoxicated.yaml
+_category: social_environment

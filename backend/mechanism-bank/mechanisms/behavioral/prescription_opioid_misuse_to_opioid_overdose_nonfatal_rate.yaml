@@ -1,0 +1,47 @@
+id: prescription_opioid_misuse_to_opioid_overdose_nonfatal_rate
+name: Non-Medical Prescription Opioid Use → Non-Fatal Overdose
+from_node:
+  node_id: prescription_opioid_misuse
+  node_name: Non-Medical Prescription Opioid Use
+to_node:
+  node_id: opioid_overdose_nonfatal_rate
+  node_name: Non-Fatal Overdose
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Non-medical prescription opioid use (NMPOU) involves taking opioids without
+  a prescription, in higher doses than prescribed, or for non-medical purposes (e.g.,
+  euphoria)'
+- 'Step 2: NMPOU leads to opioid tolerance, requiring escalating doses to achieve
+  desired effects, increasing risk of respiratory depression'
+- 'Step 3: Without medical supervision, users lack knowledge of safe dosing thresholds,
+  potency variations, and drug interaction risks'
+- 'Step 4: Users may combine prescription opioids with other CNS depressants (alcohol,
+  benzodiazepines) further increasing overdose risk'
+- 'Step 5: Acute opioid toxicity results in respiratory depression, hypoxia, and other
+  life-threatening complications constituting non-fatal overdose'
+evidence:
+  quality_rating: A
+  n_studies: 182
+  primary_citation: 'Dan Werb et al. 2022. Health harms of non-medical prescription
+    opioid use: A systematic review. Drug and alcohol review.'
+  supporting_citations: []
+description: A large systematic review of 182 studies found strong evidence for associations
+  between non-medical prescription opioid use and both fatal and non-fatal overdose.
+  The review identified this as one of the most well-established health harms of NMPOU,
+  within the domain of mental and behavioral disorders. The mechanism involves escalating
+  use patterns, tolerance development, unsafe dosing practices, and potential polysubstance
+  use leading to acute opioid toxicity and overdose events.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: polysubstance use
+  direction: strengthens
+  strength: strong
+  description: Co-use of other substances, particularly CNS depressants, significantly
+    increases overdose risk
+- name: opioid use disorder status
+  direction: strengthens
+  strength: strong
+  description: Progression to opioid use disorder is associated with increased overdose
+    frequency

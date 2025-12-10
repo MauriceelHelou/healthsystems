@@ -1,0 +1,63 @@
+id: obesity_individual_to_NEW:non_alcoholic_fatty_liver_disease
+name: Obesity → Non-Alcoholic Fatty Liver Disease (NAFLD)
+from_node:
+  node_id: obesity_individual
+  node_name: Obesity
+to_node:
+  node_id: NEW:non_alcoholic_fatty_liver_disease
+  node_name: Non-Alcoholic Fatty Liver Disease (NAFLD)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Obesity results from chronic caloric excess and physical inactivity, leading
+  to positive energy balance and increased adipose tissue accumulation'
+- 'Step 2: Excess adiposity promotes metabolic dysfunction including insulin resistance,
+  altered lipid metabolism, and chronic low-grade inflammation'
+- 'Step 3: These metabolic disturbances lead to increased hepatic free fatty acid
+  influx and de novo lipogenesis in the liver'
+- 'Step 4: Excessive lipid accumulation in hepatocytes (hepatic steatosis) develops,
+  defining NAFLD'
+- 'Step 5: The relationship between obesity and NAFLD is further exacerbated by associated
+  conditions including metabolic syndrome and type 2 diabetes'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: 'Alex E. Henney et al. 2023. Ultra-Processed Food Intake Is Associated
+    with Non-Alcoholic Fatty Liver Disease in Adults: A Systematic Review and Meta-Analysis.
+    Nutrients.'
+  supporting_citations: []
+description: Obesity is a primary risk factor for NAFLD through multiple interconnected
+  biological mechanisms. The meta-analysis confirms that overweight/obesity, along
+  with metabolic syndrome and type 2 diabetes, represents a major pathway to NAFLD
+  development. Chronic caloric excess and physical inactivity drive adiposity, which
+  in turn promotes hepatic fat accumulation through insulin resistance, altered lipid
+  metabolism, and inflammatory processes. The evidence demonstrates a dose-response
+  relationship where higher levels of obesogenic dietary patterns (ultra-processed
+  foods) significantly increase NAFLD risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.42
+    type: relative_risk
+    ci_lower: 1.16
+    ci_upper: 1.75
+  p_value: 0.01
+  sample_size: 60961
+moderators:
+- name: Ultra-processed food consumption level
+  direction: strengthens
+  strength: strong
+  description: 'Dose-response relationship observed: moderate UPF intake shows RR
+    1.03 (1.00-1.07), while high UPF intake shows RR 1.42 (1.16-1.75), indicating
+    greater NAFLD risk with higher consumption levels'
+- name: Type 2 diabetes comorbidity
+  direction: strengthens
+  strength: moderate
+  description: NAFLD is strongly associated with T2D, which shares common pathophysiological
+    mechanisms with obesity including insulin resistance
+- name: Metabolic syndrome
+  direction: strengthens
+  strength: moderate
+  description: Metabolic syndrome components amplify the obesity-NAFLD relationship
+    through compounding metabolic dysfunction

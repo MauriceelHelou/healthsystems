@@ -1,0 +1,42 @@
+id: thiamine_deficiency_to_neurocognitive_impairment
+name: Thiamine Deficiency → Neurocognitive Impairment
+from_node:
+  node_id: thiamine_deficiency
+  node_name: Thiamine Deficiency
+to_node:
+  node_id: neurocognitive_impairment
+  node_name: Neurocognitive Impairment
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Thiamine deficiency disrupts glucose metabolism and energy production in
+  neurons, particularly in the thalamus, mammillary bodies, and cerebellum'
+- 'Step 2: Neuronal dysfunction leads to Wernicke-Korsakoff Syndrome characterized
+  by delirium, memory impairment, cerebellar dysfunction, and oculomotor abnormalities'
+- 'Step 3: Accumulation of neurological damage manifests as measurable deficits in
+  cognitive assessment scores and coordination'
+- 'Step 4: Without treatment, progressive thiamine deficiency causes permanent structural
+  brain damage and persistent neurocognitive deficits'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Shihong Lin et al. 2020. "Prevalence and Improvement of Caine-Positive
+    Wernicke-Korsakoff Syndrome in Psychiatric Inpatient Admissions.." *Psychosomatics*.
+    https://doi.org/10.1016/j.psym.2019.08.002
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.348728'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: nutritional_deficiency_status
+  direction: strengthens
+  strength: strong
+  description: Nutritional deficiency is one of the Caine criteria and increases likelihood
+    of thiamine deficiency severity
+- name: psychiatric_inpatient_status
+  direction: strengthens
+  strength: moderate
+  description: Psychiatric inpatients have 12% prevalence of Caine-positive WKS, suggesting
+    underlying vulnerabilities in this population

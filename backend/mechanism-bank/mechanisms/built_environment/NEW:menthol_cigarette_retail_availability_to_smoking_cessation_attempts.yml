@@ -1,0 +1,58 @@
+id: NEW:menthol_cigarette_retail_availability_to_smoking_cessation_attempts
+name: Menthol Cigarette Retail Availability → Smoking Cessation Attempts
+from_node:
+  node_id: NEW:menthol_cigarette_retail_availability
+  node_name: Menthol Cigarette Retail Availability
+to_node:
+  node_id: smoking_cessation_attempts
+  node_name: Smoking Cessation Attempts
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Menthol cigarettes are disproportionately marketed and advertised in Black community retail
+  environments'
+- 'Step 2: Continued availability and price promotions maintain accessibility despite policy restrictions'
+- 'Step 3: Easy access and promotional pricing reduce motivation and success of quit attempts'
+- 'Step 4: Lower likelihood of successful quitting among Black people who smoke perpetuates disparities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Kellie Ann Mei et al. 2024. "Commercial Tobacco Retailers Need to Be Included in Research
+    on Policies Restricting the Sale of Menthol Cigarettes.." https://doi.org/10.1093/ntr/ntad252
+  supporting_citations:
+  - Additional citations require full-text access - abstract references lower quit success among Black
+    smokers
+  - Additional citations require full-text access - abstract references targeted marketing in Black communities
+  - Additional citations require full-text access - abstract references menthol cigarette-related disparities
+  doi: 10.1093/ntr/ntad252
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Continued retail availability and price promotions for menthol cigarettes in Black communities
+  reduces smoking cessation success, perpetuating tobacco-related health disparities
+quantitative_effects:
+  sample_size: 22
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Marketing and retail density patterns vary by community racial/ethnic composition;
+    study focused on communities with high Black resident percentage
+moderators:
+- name: retailer_price_promotions
+  direction: weakens
+  strength: moderate
+  description: 54.5% of retailers offering price promotions undermines quit attempts by reducing cost
+    barrier
+- name: community_racial_composition
+  direction: strengthens
+  strength: strong
+  description: Effect is concentrated in Black communities due to targeted marketing practices
+structural_competency:
+  equity_implications: 'This mechanism traces tobacco use disparities to structural factors: industry
+    targeting of Black communities through retail environment marketing rather than individual choices.
+    The pathway demonstrates how commercial determinants of health create racial health inequities through
+    spatial and economic mechanisms.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.558705'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

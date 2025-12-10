@@ -1,0 +1,46 @@
+id: emergency_department_cdu_access_to_inpatient_admission_avoidance
+name: Emergency Department Clinical Decision Unit Access → Avoidance of General Hospital
+  Admission
+from_node:
+  node_id: emergency_department_cdu_access
+  node_name: Emergency Department Clinical Decision Unit Access
+to_node:
+  node_id: inpatient_admission_avoidance
+  node_name: Avoidance of General Hospital Admission
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Clinical decision units in emergency departments provide short-stay observation
+  and treatment capacity for conditions traditionally requiring inpatient admission'
+- 'Step 2: Availability of CDU beds with nursing staff trained in symptom-triggered
+  therapy enables management of alcohol withdrawal in ED setting'
+- 'Step 3: Structured STT protocol allows safe discharge after median 22 hours when
+  withdrawal symptoms stabilized'
+- 'Step 4: Only 3% of patients required escalation to general hospital admission,
+  avoiding inpatient placement for 97% of alcohol withdrawal cases'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Muhammad Fahmi Ismail et al. 2018. "Symptom-triggered therapy
+    for assessment and management of alcohol withdrawal syndrome in the emergency
+    department short-stay clinical decision unit." *Emergency Medicine Journal*. https://doi.org/10.1136/emermed-2017-206997
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.713398'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: cdu_bed_availability
+  direction: strengthens
+  strength: strong
+  description: Physical infrastructure of dedicated CDU beds enables this care pathway;
+    hospitals without CDUs cannot implement this model
+- name: nursing_staffing_capacity
+  direction: strengthens
+  strength: strong
+  description: Trained nursing staff capable of repeated CIWA-Ar assessments and medication
+    administration essential for protocol implementation
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/emergency_department_cdu_access_to_inpatient_admission_avoidance.yaml
+_category: healthcare_access

@@ -1,0 +1,62 @@
+id: NEW:cbt_mi_intervention_to_alcohol_use_disorder
+name: Cognitive-Behavioural Therapy and Motivational Interviewing Combined Intervention
+  → Alcohol Use Disorder
+from_node:
+  node_id: NEW:cbt_mi_intervention
+  node_name: Cognitive-Behavioural Therapy and Motivational Interviewing Combined
+    Intervention
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Motivational interviewing enhances intrinsic motivation to change drinking
+  behavior by resolving ambivalence and strengthening commitment to reduce alcohol
+  consumption'
+- 'Step 2: Cognitive-behavioural therapy identifies and modifies maladaptive thought
+  patterns and beliefs that maintain problematic drinking behaviors'
+- 'Step 3: CBT teaches coping skills and alternative behavioral strategies to manage
+  triggers, cravings, and high-risk situations without alcohol use'
+- 'Step 4: The combined approach addresses comorbid depression symptoms, which often
+  co-occur with and maintain alcohol use disorder, creating synergistic treatment
+  effects'
+- 'Step 5: Sustained engagement with therapeutic techniques leads to measurable reductions
+  in alcohol consumption compared to usual care'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'H. Riper et al. 2014. Treatment of comorbid alcohol use disorders
+    and depression with cognitive-behavioural therapy and motivational interviewing:
+    a meta-analysis. Addiction.'
+  supporting_citations: []
+description: 'Combined cognitive-behavioural therapy and motivational interviewing
+  produces a small but clinically significant reduction in alcohol consumption among
+  individuals with comorbid alcohol use disorder and depression. The meta-analysis
+  of 12 studies with 1721 patients found a Hedges'' g of 0.17 (95% CI: 0.07-0.28)
+  for decreased alcohol consumption compared to usual care. The intervention works
+  through enhancing motivation to change via MI techniques while simultaneously providing
+  CBT-based skills to modify drinking-related cognitions and behaviors.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.17
+    type: hedges_g
+    ci_lower: 0.07
+    ci_upper: 0.28
+  p_value: 0.001
+  sample_size: 1721
+moderators:
+- name: delivery_format
+  direction: strengthens
+  strength: moderate
+  description: Digital interventions showed higher effect sizes for depression outcomes
+    compared to face-to-face interventions (g=0.73 vs g=0.23, p=0.030), suggesting
+    delivery format may influence treatment effectiveness
+- name: comorbid_depression
+  direction: strengthens
+  strength: moderate
+  description: The combined intervention specifically targets comorbid alcohol use
+    disorder and depression, with effects observed for both clinical and subclinical
+    presentations

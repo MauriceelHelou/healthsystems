@@ -1,0 +1,47 @@
+id: heavy_drinking_to_alcohol_use_disorder
+name: Heavy Drinking (High AUDIT-C Scores) → Alcohol Use Disorder Diagnosis
+from_node:
+  node_id: heavy_drinking
+  node_name: Heavy Drinking (High AUDIT-C Scores)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder Diagnosis
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Heavy drinking patterns (measured by AUDIT-C) create neurobiological adaptations
+  through repeated alcohol exposure'
+- 'Step 2: Continued heavy consumption leads to tolerance, withdrawal symptoms, and
+  altered reward processing'
+- 'Step 3: However, study shows heavy drinking is necessary but not sufficient for
+  AUD development'
+- 'Step 4: Additional factors including genetic susceptibility, environmental stressors,
+  and access to treatment determine transition from heavy drinking to clinical disorder'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: H. Kranzler et al. 2019. "Genome-wide association study of alcohol
+    consumption and use disorder in 274,424 individuals from multiple populations."
+    *Nature Communications*. https://doi.org/10.1038/s41467-019-09480-8
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.366051'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: genetic_risk_aud
+  direction: strengthens
+  strength: strong
+  description: Genetic susceptibility to AUD moderates the transition from heavy drinking
+    to clinical disorder
+- name: structural_stressors
+  direction: strengthens
+  strength: moderate
+  description: Environmental and structural factors determine which heavy drinkers
+    develop clinical disorder
+- name: treatment_access
+  direction: weakens
+  strength: moderate
+  description: Access to treatment and supportive services can prevent progression
+    from heavy drinking to AUD

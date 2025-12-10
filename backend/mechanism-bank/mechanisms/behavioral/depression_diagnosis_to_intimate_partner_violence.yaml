@@ -1,0 +1,58 @@
+id: depression_diagnosis_to_intimate_partner_violence
+name: Depression Diagnosis → Intimate Partner Violence Victimisation
+from_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+to_node:
+  node_id: intimate_partner_violence
+  node_name: Intimate Partner Violence Victimisation
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Depression reduces self-efficacy, social functioning, and ability to recognize
+  or escape unsafe relationship dynamics'
+- 'Step 2: Depressive symptoms may lead to social isolation, reduced help-seeking,
+  and economic dependency that increases vulnerability to victimization'
+- 'Step 3: Depression impairs judgment and coping mechanisms, potentially leading
+  individuals to remain in or enter abusive relationships'
+- 'Step 4: A bidirectional cycle emerges where depression increases IPV victimization
+  risk, and IPV victimization subsequently worsens depressive symptoms'
+evidence:
+  quality_rating: A
+  n_studies: 43
+  primary_citation: 'Loraine J Bacchus et al. 2018. Recent intimate partner violence
+    against women and health: a systematic review and meta-analysis of cohort studies.
+    BMJ open.'
+  supporting_citations:
+  - 'Katherine R K Saunders et al. 2023. Past-year intimate partner violence perpetration
+    among people with and without depression: an individual participant data (IPD)
+    meta-mediation analysis. Social psychiatry and psychiatric epidemiology.'
+description: Depression is associated with increased risk of intimate partner violence
+  victimization through a bidirectional relationship. Evidence from cohort studies
+  demonstrates that depression predicts subsequent IPV victimization with an odds
+  ratio of 1.76. Meta-mediation analyses reveal that IPV victimization mediates a
+  substantial portion (45-60%) of depression's effects on subsequent relationship
+  violence, suggesting an intertwined cycle where depression both increases vulnerability
+  to victimization and is exacerbated by it.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.76
+    type: odds_ratio
+    ci_lower: 1.26
+    ci_upper: 2.44
+  p_value: null
+  sample_size: 12679
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: The relationship between depression and IPV shows sex-specific patterns,
+    with IPV victimization mediating 45-60% of the depression-IPV perpetration relationship
+    among women
+- name: severity of IPV
+  direction: strengthens
+  strength: moderate
+  description: Severe IPV victimization shows stronger mediation effects (60%) compared
+    to general IPV victimization (45%)

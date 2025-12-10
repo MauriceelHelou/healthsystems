@@ -1,0 +1,58 @@
+id: alcohol_use_disorder_to_NEW:systemic_inflammation
+name: Alcohol Use Disorder → Systemic Inflammation
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:systemic_inflammation
+  node_name: Systemic Inflammation
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic heavy alcohol consumption causes direct damage to the gut epithelium,
+  increasing intestinal permeability (leaky gut) and allowing bacterial endotoxins
+  (lipopolysaccharides) to enter systemic circulation'
+- 'Step 2: Alcohol metabolism in the liver generates reactive oxygen species and acetaldehyde,
+  triggering hepatic immune responses and Kupffer cell activation, leading to production
+  of pro-inflammatory cytokines (TNF-α, IL-1β, IL-6)'
+- 'Step 3: Circulatory cytokines and neuroimmune mediators from peripheral inflammation
+  cross the blood-brain barrier or signal through afferent pathways, activating central
+  nervous system immune responses'
+- 'Step 4: Chronic alcohol exposure attenuates microglial compensatory mechanisms
+  and promotes sustained neuroinflammation, contributing to systemic and central inflammatory
+  states'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: V. Coppens et al. 2019. The Interplay of Inflammatory Processes
+    and Cognition in Alcohol Use Disorders—A Systematic Review. Frontiers in Psychiatry.
+  supporting_citations:
+  - S. Neupane 2016. Neuroimmune Interface in the Comorbidity between Alcohol Use
+    Disorder and Major Depression. Frontiers in Immunology.
+description: Alcohol use disorder provokes systemic inflammation through multiple
+  converging pathways. Chronic heavy drinking triggers peripheral immune responses
+  through liver damage and gut barrier disruption, releasing pro-inflammatory cytokines
+  into circulation. These circulatory mediators signal to the brain through afferent
+  immune-to-brain pathways. Additionally, alcohol directly impacts central nervous
+  system immune function, initially prompting compensatory microglial responses that
+  become attenuated with chronic exposure, leading to sustained neuroinflammation
+  and systemic inflammatory dysregulation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: chronicity_of_alcohol_use
+  direction: strengthens
+  strength: strong
+  description: Chronic alcohol intake more strongly associated with sustained inflammatory
+    responses compared to acute exposure, with microglial responses shifting from
+    compensatory/neuroprotective to attenuated over time
+- name: liver_cirrhosis_status
+  direction: strengthens
+  strength: strong
+  description: Presence of liver cirrhosis represents severely immunogenic sequelae
+    that substantially amplifies systemic inflammation
+- name: comorbid_depression
+  direction: strengthens
+  strength: moderate
+  description: Shared neuroimmune correlates between AUD and major depression may
+    amplify inflammatory cascades through overlapping pathways

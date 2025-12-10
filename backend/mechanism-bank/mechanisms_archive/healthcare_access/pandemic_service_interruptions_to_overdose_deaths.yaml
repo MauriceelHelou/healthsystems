@@ -1,0 +1,42 @@
+id: pandemic_service_interruptions_to_overdose_deaths
+name: COVID-19 Pandemic Service Interruptions → Overdose Deaths
+from_node:
+  node_id: pandemic_service_interruptions
+  node_name: COVID-19 Pandemic Service Interruptions
+to_node:
+  node_id: overdose_deaths
+  node_name: Overdose Deaths
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: COVID-19 pandemic creates barriers to addiction and social service availability
+  and access'
+- 'Step 2: Service delivery interruptions reduce access to medications for opioid
+  use disorder, counseling, and harm reduction services'
+- 'Step 3: Reduced treatment access increases risk of relapse and continued drug use
+  without medical supervision'
+- 'Step 4: Loss of treatment continuity and support services increases overdose risk
+  among people who use drugs'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: C Hendricks Brown et al. 2024. "Overdose deaths before and during
+    the COVID-19 pandemic in a US county.." *Frontiers in public health*. https://doi.org/10.3389/fpubh.2024.1366161
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.745201'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: local_service_availability
+  direction: weakens
+  strength: strong
+  description: Areas with more robust local addiction and social services likely experienced
+    smaller increases in overdose deaths during pandemic disruptions
+- name: interdiction_disruptions
+  direction: strengthens
+  strength: moderate
+  description: Concurrent interdiction interruptions contributed to overdose death
+    increases, suggesting compounding effects when drug supply and treatment access
+    are both disrupted

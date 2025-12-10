@@ -1,0 +1,49 @@
+id: NEW:dcis_surgical_treatment_access_to_NEW:breast_cancer_specific_survival
+name: Access to Surgical Treatment for DCIS → Breast Cancer-Specific Survival
+from_node:
+  node_id: NEW:dcis_surgical_treatment_access
+  node_name: Access to Surgical Treatment for DCIS
+to_node:
+  node_id: NEW:breast_cancer_specific_survival
+  node_name: Breast Cancer-Specific Survival
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Surgical treatment removes pre-invasive ductal carcinoma tissue before malignant transformation'
+- 'Step 2: Prevention of invasive progression eliminates the primary cause of breast cancer mortality
+  in this population'
+- 'Step 3: Lower rates of invasive ipsilateral breast tumor events translate to reduced breast cancer-specific
+  deaths'
+- 'Step 4: 10-year breast cancer-specific survival rates are significantly higher in surgery group (99.6%)
+  compared to non-surgery (96.0%)'
+evidence:
+  quality_rating: A
+  n_studies: 33
+  primary_citation: 'Qian Chen et al. 2024. "Outcomes from low-risk ductal carcinoma in situ: a systematic
+    review and meta-analysis." https://doi.org/10.1007/s10549-024-07473-w'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of BCSS outcomes
+  - Studies reporting long-term survival outcomes after DCIS treatment
+  - Ongoing trials on active surveillance mentioned as pending confirmation
+  doi: 10.1007/s10549-024-07473-w
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The meta-analysis found that 10-year breast cancer-specific survival (BCSS) was significantly
+  higher in patients who received surgery (99.6%) compared to those who did not (96.0%, P=0.010). This
+  demonstrates that access to surgical treatment for low-risk DCIS has meaningful survival benefits.
+quantitative_effects:
+  p_value: 0.01
+  sample_size: 47696
+structural_competency:
+  equity_implications: This survival benefit mechanism highlights the importance of equitable access to
+    surgical oncology services. Healthcare system factors including specialist availability, hospital
+    infrastructure, insurance coverage for cancer treatment, and geographic proximity to cancer centers
+    determine who receives survival-improving interventions. The 3.6 percentage point absolute difference
+    in 10-year survival represents a clinically meaningful disparity that could be magnified by structural
+    barriers to care access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.888446'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

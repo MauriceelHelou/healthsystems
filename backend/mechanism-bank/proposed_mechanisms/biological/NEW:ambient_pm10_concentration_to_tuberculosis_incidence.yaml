@@ -1,0 +1,57 @@
+id: NEW:ambient_pm10_concentration_to_tuberculosis_incidence
+name: Ambient Air Pollution PM10 → Pulmonary Tuberculosis Incidence
+from_node:
+  node_id: NEW:ambient_pm10_concentration
+  node_name: Ambient Air Pollution PM10
+to_node:
+  node_id: tuberculosis_incidence
+  node_name: Pulmonary Tuberculosis Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhalation of PM10 particulate matter deposits in the respiratory tract,
+  with particles penetrating into the lower airways and alveoli'
+- 'Step 2: PM10 exposure triggers oxidative stress and inflammatory responses in pulmonary
+  tissues, compromising local immune defenses'
+- 'Step 3: Chronic PM10 exposure impairs alveolar macrophage function and reduces
+  their ability to effectively phagocytose and kill Mycobacterium tuberculosis'
+- 'Step 4: Weakened pulmonary immune surveillance increases susceptibility to new
+  TB infections and may promote reactivation of latent TB infections'
+- 'Step 5: Increased vulnerability to TB infection manifests as higher population-level
+  incidence of pulmonary tuberculosis in areas with elevated PM10 concentrations'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: C. A. Dimala and Benjamin Momo Kadia 2022. A systematic review
+    and meta-analysis on the association between ambient air pollution and pulmonary
+    tuberculosis. Scientific Reports.
+  supporting_citations: []
+description: 'This meta-analysis of 8 studies demonstrates a statistically significant
+  positive association between ambient PM10 air pollution and pulmonary tuberculosis
+  incidence. For every 10 μg/m3 increase in PM10 concentration, there is a 6% increase
+  in TB incidence risk (aRR=1.06, 95% CI: 1.01-1.12). The biological mechanism involves
+  PM10-induced impairment of pulmonary immune defenses, particularly alveolar macrophage
+  dysfunction, which increases susceptibility to Mycobacterium tuberculosis infection.
+  This meta-analysis included 437,255 tuberculosis cases from predominantly Asian
+  populations.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.06
+    type: relative_risk
+    ci_lower: 1.01
+    ci_upper: 1.12
+  p_value: 0.022
+  sample_size: 437255
+moderators:
+- name: baseline_tuberculosis_burden
+  direction: strengthens
+  strength: moderate
+  description: Areas with higher TB prevalence may show stronger associations due
+    to greater pool of latent infections susceptible to reactivation
+- name: pollution_concentration_level
+  direction: strengthens
+  strength: moderate
+  description: Effect is dose-dependent with 6% increased risk per 10 μg/m3 increment
+    in PM10 concentration

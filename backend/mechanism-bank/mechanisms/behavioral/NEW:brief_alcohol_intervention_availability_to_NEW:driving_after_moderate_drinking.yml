@@ -1,0 +1,56 @@
+id: NEW:brief_alcohol_intervention_availability_to_NEW:driving_after_moderate_drinking
+name: Brief Alcohol Intervention Availability → Driving After Moderate Drinking (2+/3+ drinks)
+from_node:
+  node_id: NEW:brief_alcohol_intervention_availability
+  node_name: Brief Alcohol Intervention Availability
+to_node:
+  node_id: NEW:driving_after_moderate_drinking
+  node_name: Driving After Moderate Drinking (2+/3+ drinks)
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: College students receive brief alcohol interventions targeting drinking behaviors'
+- 'Step 2: Interventions provide personalized feedback on drinking patterns and risk behaviors'
+- 'Step 3: Students may reduce overall drinking frequency but maintain moderate drinking occasions'
+- 'Step 4: Driving decisions after moderate drinking may be less directly addressed by current intervention
+  content'
+- 'Step 5: Non-significant reduction in driving after 2+/3+ drinks suggests intervention content/timing
+  may not adequately target this behavior'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: Eun‐Young Mun et al. 2021. "Do Brief Alcohol Interventions Reduce Driving After Drinking
+    Among College Students? A Two-step Meta-analysis of Individual Participant Data." https://doi.org/10.1093/alcalc/agaa146
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 15 RCTs with individual participant
+    data
+  - Studies included examined MI+PF, GMI, and PF interventions
+  - Combined sample from randomized controlled trials in college settings
+  doi: 10.1093/alcalc/agaa146
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief alcohol interventions showed a non-significant 9% reduction in odds of driving after
+  moderate drinking (2+/3+ drinks). This suggests that current intervention content may need enhancement
+  to specifically address driving behaviors at lower consumption thresholds, not just heavy drinking occasions.
+quantitative_effects:
+  effect_size:
+    value: 0.91
+    type: odds_ratio
+  sample_size: 6801
+moderators:
+- name: intervention_content_relevance
+  direction: weakens
+  strength: moderate
+  description: Current intervention content and timing may not be optimally designed to address driving
+    after moderate (vs. heavy) drinking
+structural_competency:
+  equity_implications: The lack of significant effect at lower drinking thresholds highlights a structural
+    gap in intervention design. Harm reduction approaches may need to more explicitly address driving
+    decisions across all drinking levels. This has implications for traffic safety policy and the comprehensiveness
+    of college-based prevention programming.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.614317'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

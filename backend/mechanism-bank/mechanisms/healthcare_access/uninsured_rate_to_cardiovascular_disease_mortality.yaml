@@ -1,0 +1,49 @@
+id: uninsured_rate_to_cardiovascular_disease_mortality
+name: Uninsured Rate → Cardiovascular Disease Mortality
+from_node:
+  node_id: uninsured_rate
+  node_name: Uninsured Rate
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Higher uninsured rates mean fewer individuals have health insurance coverage
+  for cardiac treatments and preventive services'
+- 'Step 2: Without insurance coverage, individuals face financial barriers to accessing
+  screening for cardiovascular risk factors (hypertension, diabetes, hyperlipidemia)
+  and preventive cardiac care'
+- 'Step 3: Reduced access to preventive care leads to delayed diagnosis and inadequate
+  management of cardiac comorbidities that contribute to cardiovascular disease progression'
+- 'Step 4: Undertreatment of modifiable cardiac risk factors and reduced utilization
+  of evidence-based cardiac treatments increases cardiovascular morbidity'
+- 'Step 5: Cumulative lack of preventive interventions and disease management results
+  in higher cardiovascular disease mortality, particularly outside of acute care settings'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Ginger Y Jiang et al. 2023. Medicaid Expansion Under the Affordable
+    Care Act and Association With Cardiac Care: A Systematic Review. Circulation.
+    Cardiovascular quality and outcomes.'
+  supporting_citations: []
+description: This systematic review of 30 studies demonstrates that lack of insurance
+  coverage (higher uninsured rates) is associated with worse cardiovascular outcomes
+  through reduced access to preventive cardiac care, screening, and treatment. Medicaid
+  expansion, which reduced uninsured rates, was associated with increased insurance
+  coverage for cardiac treatments, improvements in cardiac-focused prevention and
+  screening, and reduction in overall cardiac morbidity/mortality outside of acute
+  care settings.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Care setting
+  direction: strengthens
+  strength: moderate
+  description: Association between insurance expansion and reduced cardiac morbidity/mortality
+    was stronger outside of acute care settings
+- name: Time since expansion
+  direction: strengthens
+  strength: weak
+  description: Median follow-up was only 2 years post-expansion (range 0.5-6 years),
+    suggesting effects may strengthen with longer follow-up

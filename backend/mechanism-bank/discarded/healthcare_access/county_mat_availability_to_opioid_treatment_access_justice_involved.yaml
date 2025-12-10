@@ -1,0 +1,46 @@
+id: county_mat_availability_to_opioid_treatment_access_justice_involved
+name: County-Level MAT Availability → Opioid Treatment Access for Justice-Involved
+  Individuals
+from_node:
+  node_id: county_mat_availability
+  node_name: County-Level MAT Availability
+to_node:
+  node_id: opioid_treatment_access_justice_involved
+  node_name: Opioid Treatment Access for Justice-Involved Individuals
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Geographic distribution of MAT providers determines whether justice-involved
+  individuals can access pharmacotherapy'
+- 'Step 2: Counties with MAT deserts create structural barriers requiring extensive
+  travel or relocation for treatment'
+- 'Step 3: Problem-solving courts in MAT-available counties can facilitate referrals
+  and monitor treatment adherence'
+- 'Step 4: Local treatment infrastructure enables continuity of care from incarceration
+  through community supervision'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Fanni Faragó et al. 2022. "Medication-Assisted Treatment in Problem-solving
+    Courts: A National Survey of State and Local Court Coordinators." *Journal of
+    Drug Issues*. https://doi.org/10.1177/00220426221109948'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.645614'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: transportation_access
+  direction: strengthens
+  strength: moderate
+  description: Even when MAT providers exist in region, lack of transportation infrastructure
+    limits actual access for justice-involved individuals
+- name: rural_urban_status
+  direction: weakens
+  strength: strong
+  description: Rural counties face compounded MAT access barriers due to provider
+    shortages and geographic isolation
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/county_mat_availability_to_opioid_treatment_access_justice_involved.yaml
+_category: healthcare_access

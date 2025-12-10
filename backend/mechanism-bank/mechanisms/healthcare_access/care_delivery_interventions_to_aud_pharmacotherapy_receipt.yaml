@@ -1,0 +1,39 @@
+id: cesarean_delivery_rate_to_aud_pharmacotherapy_receipt
+name: Cesarean Delivery Rate → Receipt of AUD Pharmacotherapy
+from_node:
+  node_id: cesarean_delivery_rate
+  node_name: Cesarean Delivery Rate
+  _original_id: care_delivery_interventions
+to_node:
+  node_id: aud_pharmacotherapy_receipt
+  node_name: Receipt of AUD Pharmacotherapy
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Care delivery interventions modify treatment structures through patient-level
+  recruitment and randomization to candidate treatment options'
+- 'Step 2: Interventions address barriers to medication access through systematic
+  changes in care delivery processes'
+- 'Step 3: Modified care structures increase opportunities for patients to receive
+  evidence-based pharmacotherapy for AUD'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Emily C Williams et al. 2019. "Strategies to increase implementation
+    of pharmacotherapy for alcohol use disorders: a structured review of care delivery
+    and implementation interventions.." *Addiction science & clinical practice*. https://doi.org/10.1186/s13722-019-0134-8'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.686100'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: intervention_type
+  direction: strengthens
+  strength: moderate
+  description: Three of four care delivery RCTs resulted in increased AUD medication
+    receipt, suggesting intervention design matters
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/care_delivery_interventions_to_aud_pharmacotherapy_receipt.yaml
+_category: healthcare_access

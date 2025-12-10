@@ -1,0 +1,51 @@
+id: NEW:methamphetamine_use_to_depression_diagnosis
+name: Methamphetamine Use → Depression Diagnosis
+from_node:
+  node_id: NEW:methamphetamine_use
+  node_name: Methamphetamine Use
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Methamphetamine use causes acute dopamine release followed by dopaminergic
+  neurotoxicity and depletion of monoamine neurotransmitters'
+- 'Step 2: Chronic methamphetamine exposure leads to neuroadaptive changes in reward
+  circuitry and stress response systems'
+- 'Step 3: Neurotransmitter dysregulation and neurobiological changes manifest as
+  depressive symptoms and increased risk of depression diagnosis'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: J. Leung et al. 2023. Methamphetamine exposure and depression-A
+    systematic review and meta-analysis. Drug and Alcohol Review.
+  supporting_citations: []
+description: Systematic review and meta-analysis of 14 studies demonstrates that methamphetamine
+  use is significantly associated with increased odds of depression. The longitudinal
+  estimate (OR=1.18) provides stronger causal evidence than cross-sectional estimates.
+  Those with methamphetamine use disorder show substantially elevated risk (OR=2.80).
+  E-value analyses suggest low to moderate risk of unmeasured confounding in longitudinal
+  results.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.18
+    type: odds_ratio
+    ci_lower: 1.08
+    ci_upper: 1.28
+  p_value: null
+  sample_size: null
+moderators:
+- name: Methamphetamine use disorder severity
+  direction: strengthens
+  strength: strong
+  description: People with methamphetamine use disorder had significantly higher odds
+    of depression (OR=2.80) compared to any methamphetamine use (OR=1.18-1.66)
+- name: Study design (cross-sectional vs longitudinal)
+  direction: strengthens
+  strength: moderate
+  description: Cross-sectional studies showed stronger associations (OR=1.66) than
+    longitudinal studies (OR=1.18), suggesting possible reverse causation or acute
+    effects

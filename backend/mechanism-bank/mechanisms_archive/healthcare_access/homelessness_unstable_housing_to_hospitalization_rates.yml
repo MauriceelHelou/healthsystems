@@ -1,0 +1,47 @@
+id: homelessness_unstable_housing_to_hospitalization_rates
+name: Homelessness and Unstable Housing → Hospitalization Rates
+from_node:
+  node_id: homelessness_unstable_housing
+  node_name: Homelessness and Unstable Housing
+to_node:
+  node_id: hospitalization_rates
+  node_name: Hospitalization Rates
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Housing instability disrupts routine cardiovascular disease management and medication adherence'
+- 'Step 2: Exposure to environmental stressors and poor living conditions exacerbates cardiovascular conditions'
+- 'Step 3: Barriers to outpatient care result in progression of cardiovascular disease to more severe
+  stages'
+- 'Step 4: Acute cardiovascular complications require hospitalization due to lack of preventive care'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Lara J Sokoloff et al. 2024. "Association of Homelessness and Unstable Housing With
+    Cardiovascular Care Utilization Among Veterans.." *Circulation. Cardiovascular quality and outcomes*.
+    https://doi.org/10.1161/CIRCOUTCOMES.124.010993
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1161/CIRCOUTCOMES.124.010993
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '2.0'
+description: Veterans experiencing homelessness and unstable housing had higher rates of all-cause and
+  cardiovascular hospitalizations, indicating progression to acute care needs.
+quantitative_effects:
+  sample_size: 1357973
+moderators:
+- name: access_to_social_services
+  direction: weakens
+  strength: moderate
+  description: Veterans with better access to VA homeless services may have reduced hospitalization risk
+structural_competency:
+  equity_implications: This mechanism illustrates how housing instability creates a cascade from reduced
+    preventive care to increased acute care utilization. The pattern reflects structural inequities where
+    inadequate housing policies and healthcare access barriers compound to produce worse health outcomes
+    and higher healthcare costs for vulnerable populations.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.937991'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

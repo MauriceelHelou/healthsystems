@@ -1,0 +1,37 @@
+id: oncologist_density_men_to_colorectal_cancer_mortality_men
+name: Oncologist Density (Men) → Colorectal Cancer Mortality (Men)
+from_node:
+  node_id: oncologist_density_men
+  node_name: Oncologist Density (Men)
+to_node:
+  node_id: colorectal_cancer_mortality_men
+  node_name: Colorectal Cancer Mortality (Men)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Higher oncologist density indicates greater healthcare resource concentration
+  in geographic areas'
+- 'Step 2: Areas with more oncologists may attract patients with more advanced disease
+  seeking specialized care'
+- 'Step 3: Higher concentration of advanced cases in specialized centers increases
+  observed mortality rates in those regions'
+- 'Step 4: This represents a supply-induced demand or referral pattern rather than
+  causal harm from oncologist availability'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Jonas Eduardo Monteiro Dos Santos et al. 2024. "Overweight is
+    the main behavioral risk factor associated with colorectal cancer mortality in
+    the Brazilian population: an ecological analysis.." *Scientific reports*. https://doi.org/10.1038/s41598-024-79921-y'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.957165'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: disease_severity
+  direction: strengthens
+  strength: moderate
+  description: Association likely driven by referral patterns where advanced cases
+    concentrate in areas with more oncologists

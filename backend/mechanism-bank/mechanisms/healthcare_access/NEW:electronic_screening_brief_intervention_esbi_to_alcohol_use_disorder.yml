@@ -1,0 +1,59 @@
+id: NEW:electronic_screening_brief_intervention_esbi_to_alcohol_use_disorder
+name: Electronic Screening and Brief Intervention (e-SBI) → Alcohol Use Disorder
+from_node:
+  node_id: NEW:electronic_screening_brief_intervention_esbi
+  node_name: Electronic Screening and Brief Intervention (e-SBI)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: e-SBI provides accessible, scalable alcohol screening in trauma care settings'
+- 'Step 2: Electronic delivery reduces barriers to intervention (staffing, time constraints, stigma)'
+- 'Step 3: Brief intervention delivers personalized feedback on alcohol consumption patterns'
+- 'Step 4: Patients receive motivation and strategies for reducing problematic drinking'
+- 'Step 5: Reduction in problematic alcohol consumption up to 6 months post-implementation'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Matthew Woliansky et al. 2025. "Review article: Electronic screening and brief intervention
+    for alcohol-related trauma: A systematic review and meta-analysis.." https://doi.org/10.1111/1742-6723.14506'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 4 RCTs from 1995-2023 but does
+    not name specific studies
+  - Studies followed Cochrane Collaboration guidelines
+  - Grey literature from Google Scholar included
+  doi: 10.1111/1742-6723.14506
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Electronic screening and brief intervention (e-SBI) in trauma care settings significantly
+  reduces problematic alcohol consumption in the short term (up to 6 months) among alcohol-related trauma
+  patients, though uncertainties exist regarding effects on specific risk behaviors like binge drinking
+  and alcohol-related consequences.
+quantitative_effects:
+  sample_size: 2641
+moderators:
+- name: measurement_heterogeneity
+  direction: weakens
+  strength: moderate
+  description: Heterogeneity in outcome measurements across studies contributed to uncertainty in findings
+- name: follow_up_duration
+  direction: weakens
+  strength: moderate
+  description: Effects demonstrated up to 6 months; long-term impact remains uncertain
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to alcohol intervention by making
+    screening accessible through technology in healthcare settings. The e-SBI approach removes dependence
+    on individual healthcare provider availability and training, potentially reducing disparities in access
+    to alcohol intervention services. The scalability of electronic interventions could address healthcare
+    workforce limitations that disproportionately affect underserved populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.081288'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

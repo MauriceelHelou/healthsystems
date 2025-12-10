@@ -1,0 +1,49 @@
+id: NEW:cardiac_ace2_suppression_to_heart_disease_prevalence
+name: Cardiac ACE2 Suppression → Heart Disease/Cardiac Dysfunction
+from_node:
+  node_id: NEW:cardiac_ace2_suppression
+  node_name: Cardiac ACE2 Suppression
+to_node:
+  node_id: heart_disease_prevalence
+  node_name: Heart Disease/Cardiac Dysfunction
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: ACE2 suppression in cardiac tissue reduces the conversion of Angiotensin
+  II to Angiotensin 1-7, disrupting the protective counter-regulatory arm of the renin-angiotensin
+  system'
+- 'Step 2: Reduced ACE2 activity leads to accumulation of Angiotensin II in cardiac
+  tissue, promoting vasoconstriction, inflammation, and oxidative stress'
+- 'Step 3: Loss of ACE2-mediated cardioprotection induces myocardial cell apoptosis
+  and impairs cardiac remodeling processes'
+- 'Step 4: Progressive cardiomyocyte death and dysfunction manifests as measurable
+  cardiac dysfunction including reduced ejection fraction and impaired contractility'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Hongyun Wang et al. 2022. Extracellular vesicles enclosed‐miR‐421
+    suppresses air pollution (PM2.5)‐induced cardiac dysfunction via ACE2 signalling.
+    Journal of Extracellular Vesicles.
+  supporting_citations: []
+description: Suppression of cardiac ACE2 leads to heart disease and cardiac dysfunction
+  through disruption of the protective renin-angiotensin system counter-regulatory
+  pathway. ACE2 normally converts harmful Angiotensin II to cardioprotective Angiotensin
+  1-7. When ACE2 is suppressed (e.g., by miR-421 targeting), this protective mechanism
+  is lost, leading to myocardial cell apoptosis and cardiac dysfunction. This was
+  demonstrated in experimental models where ACE2 was identified as the downstream
+  target mediating cardiac injury, and ACE2 activator treatment could reverse the
+  dysfunction.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: ACE2 activator treatment (DIZE)
+  direction: weakens
+  strength: strong
+  description: Diminazene aceturate (DIZE), an ACE2 activator, attenuated PM2.5-induced
+    cardiac dysfunction in vivo, demonstrating that restoring ACE2 activity can reverse
+    the cardiac damage pathway
+- name: miR-421 levels
+  direction: strengthens
+  strength: strong
+  description: Higher miR-421 levels (which suppress ACE2) exacerbate cardiac dysfunction;
+    inhibition of miR-421 significantly reversed cardiac dysfunction

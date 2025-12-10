@@ -1,0 +1,59 @@
+id: NEW:vitamin_d_supplementation_to_NEW:non_cardiovascular_mortality
+name: Vitamin D Supplementation → Non-Cardiovascular Mortality
+from_node:
+  node_id: NEW:vitamin_d_supplementation
+  node_name: Vitamin D Supplementation
+to_node:
+  node_id: NEW:non_cardiovascular_mortality
+  node_name: Non-Cardiovascular Mortality
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Vitamin D supplementation increases circulating vitamin D metabolites'
+- 'Step 2: Vitamin D exerts immunomodulatory effects that may reduce infection-related mortality'
+- 'Step 3: Vitamin D may influence cancer cell proliferation and apoptosis pathways'
+- 'Step 4: Combined effects on multiple non-cardiovascular disease pathways approach but do not reach
+  statistical significance for mortality reduction'
+evidence:
+  quality_rating: A
+  n_studies: 80
+  primary_citation: 'Antonio Ruiz-García et al. 2023. "Vitamin D Supplementation and Its Impact on Mortality
+    and Cardiovascular Outcomes: Systematic Review and Meta-Analysis of 80 Randomized Clinical Trials."
+    https://doi.org/10.3390/nu15081810'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes RCTs published between 1983
+    and 2022
+  - Studies included trials with follow-up periods longer than one year
+  - Non-cardiovascular mortality was a secondary outcome
+  doi: 10.3390/nu15081810
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis found vitamin D supplementation was close to statistical significance for reduced
+  non-cardiovascular mortality (OR 0.94, 95% CI 0.87-1.00, p=0.055). This borderline finding suggests
+  potential benefits for mortality from causes such as infections, cancer, or other non-cardiovascular
+  conditions.
+quantitative_effects:
+  effect_size:
+    value: 0.94
+    type: odds_ratio
+    ci_lower: 0.87
+    ci_upper: 1.0
+  p_value: 0.055
+  sample_size: 163131
+moderators:
+- name: study_quality
+  direction: strengthens
+  strength: moderate
+  description: Results approached significance and may be more robust in higher quality studies
+structural_competency:
+  equity_implications: Non-cardiovascular mortality encompasses deaths from infections, cancers, and other
+    conditions that are heavily influenced by social determinants including housing conditions, occupational
+    exposures, access to preventive care, and environmental quality. Vitamin D deficiency itself is socially
+    patterned, with higher prevalence in populations with limited sun exposure due to indoor work, institutionalization,
+    or living in areas with high pollution.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.886130'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

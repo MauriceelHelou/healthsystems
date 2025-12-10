@@ -1,0 +1,54 @@
+id: NEW:healthcare_communication_accessibility_to_dental_care_access
+name: Healthcare Communication Accessibility Barriers → Dental Care Access
+from_node:
+  node_id: NEW:healthcare_communication_accessibility
+  node_name: Healthcare Communication Accessibility Barriers
+to_node:
+  node_id: dental_care_access
+  node_name: Dental Care Access
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Dental practices lack accommodations for patients with hearing, speech, or cognitive communication
+  needs'
+- 'Step 2: Information about appointments, procedures, and aftercare is not provided in accessible formats'
+- 'Step 3: Patients cannot effectively communicate symptoms, consent to treatment, or understand instructions'
+- 'Step 4: Quality of care diminishes and patients may avoid seeking dental services'
+- 'Step 5: Oral health outcomes worsen due to communication-related barriers to effective treatment'
+evidence:
+  quality_rating: B
+  n_studies: 16
+  primary_citation: 'S. V. da Rosa et al. 2020. "Barriers in Access to Dental Services Hindering the Treatment
+    of People with Disabilities: A Systematic Review." https://doi.org/10.1155/2020/9074618'
+  supporting_citations:
+  - Additional citations require full-text access - review included studies from Latin American and Caribbean
+    Health Sciences Literature (LILACS) and Brazilian Library of Dentistry (BBO)
+  - Barriers categorized from dentist perspective, parent/guardian perspective, and person with disability
+    perspective
+  - All relevant studies translated and reviewed regardless of original language
+  doi: 10.1155/2020/9074618
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Communication difficulties were identified as a significant barrier to dental service access
+  for people with disabilities. This includes lack of sign language interpretation, accessible written
+  materials, and provider skills in alternative communication methods.
+moderators:
+- name: interpreter_service_availability
+  direction: weakens
+  strength: moderate
+  description: Availability of sign language interpreters and communication aids reduces this barrier
+- name: cognitive_disability_severity
+  direction: strengthens
+  strength: moderate
+  description: More complex communication needs may face greater barriers without specialized accommodations
+structural_competency:
+  equity_implications: Communication barriers reflect structural failures in healthcare system design
+    rather than patient deficits. Responsibility lies with healthcare systems to provide interpreter services,
+    train staff in augmentative communication, and develop accessible patient materials. This has equity
+    implications as communication barriers compound existing marginalization.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.694328'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

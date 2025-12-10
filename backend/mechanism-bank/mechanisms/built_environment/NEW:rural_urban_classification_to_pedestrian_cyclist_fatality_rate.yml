@@ -1,0 +1,54 @@
+id: NEW:rural_urban_classification_to_pedestrian_cyclist_fatality_rate
+name: Rural-Urban Classification → Pedestrian and Cyclist Safety Fatality Rate
+from_node:
+  node_id: NEW:rural_urban_classification
+  node_name: Rural-Urban Classification
+to_node:
+  node_id: pedestrian_cyclist_fatality_rate
+  node_name: Pedestrian and Cyclist Safety Fatality Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Rural areas have reduced access to emergency medical services and longer response times'
+- 'Step 2: Rural roads may have higher speed limits and less pedestrian infrastructure'
+- 'Step 3: Distance to trauma centers is greater in rural areas, delaying critical care'
+- 'Step 4: Higher rates of on-scene death occur in rural areas among alcohol-involved pedestrian crashes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Lasota et al. 2019. "The effect of ethyl alcohol on the severity of injuries in
+    fatal pedestrian victims of traffic crashes." https://doi.org/10.1371/journal.pone.0221749
+  supporting_citations:
+  - Additional citations require full-text access - abstract references rural area findings
+  - Additional citations require full-text access - study methodology from Warsaw Medical University
+  - Additional citations require full-text access - statistical analysis methods
+  doi: 10.1371/journal.pone.0221749
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study found that pedestrian victims, especially those under the influence of alcohol,
+  die more frequently on the scene in rural areas. This points to structural factors related to built
+  environment, emergency response infrastructure, and trauma care access.
+quantitative_effects:
+  sample_size: 158
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study specifically identifies rural areas as having higher percentages of on-scene
+    pedestrian deaths
+moderators:
+- name: alcohol_intoxication
+  direction: strengthens
+  strength: strong
+  description: Alcohol involvement combined with rural location increases on-scene fatality risk
+structural_competency:
+  equity_implications: This mechanism highlights how geographic and infrastructural inequities contribute
+    to disparate mortality outcomes. Rural communities face systematic disadvantages in pedestrian safety
+    infrastructure, emergency response times, and trauma care access. These structural factors compound
+    the risks associated with alcohol-impaired pedestrians. Policy interventions should address rural-urban
+    disparities in transportation safety infrastructure and emergency medical services rather than focusing
+    solely on individual behavior.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.651074'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

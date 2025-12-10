@@ -1,0 +1,59 @@
+id: NEW:alcohol_attributable_gastrointestinal_disease_comorbidity_to_sud_medication_treatment_rate_oud
+name: Alcohol-Attributable Gastrointestinal Disease Comorbidity → AUD Pharmacotherapy Receipt Rate
+from_node:
+  node_id: NEW:alcohol_attributable_gastrointestinal_disease_comorbidity
+  node_name: Alcohol-Attributable Gastrointestinal Disease Comorbidity
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: AUD Pharmacotherapy Receipt Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption causes gastrointestinal pathology including liver disease, pancreatitis,
+  and gastritis'
+- 'Step 2: Hepatic impairment may affect drug metabolism and create legitimate clinical concerns'
+- 'Step 3: Prescriber caution about hepatotoxicity of some AUD medications may extend to inappropriate
+  avoidance'
+- 'Step 4: Lack of clear clinical guidelines for AUD pharmacotherapy in patients with GI comorbidities
+  creates treatment hesitancy'
+- 'Step 5: Patients with alcohol-related GI disease are systematically undertreated despite potential
+  benefit from medications'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Månsson et al. 2024. "Pharmacotherapy for alcohol use disorder among adults with
+    medical disorders in Sweden." https://doi.org/10.1186/s13722-024-00471-9
+  supporting_citations:
+  - Additional citations require full-text access - abstract references AUD pharmacotherapy literature
+  - Additional citations require full-text access - abstract references gastrointestinal comorbidity studies
+  - Additional citations require full-text access - abstract references contraindication guidelines
+  doi: 10.1186/s13722-024-00471-9
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patients with AUD and gastrointestinal comorbidities have 43% lower odds of filling prescriptions
+  for AUD pharmacotherapy, representing significant underutilization even accounting for contraindications.
+quantitative_effects:
+  effect_size:
+    value: 0.57
+    type: odds_ratio
+    ci_lower: 0.54
+    ci_upper: 0.6
+  sample_size: 132728
+moderators:
+- name: contraindication_status
+  direction: weakens
+  strength: moderate
+  description: True contraindications (e.g., severe liver disease for certain medications) only partially
+    explain reduced prescribing
+structural_competency:
+  equity_implications: This pattern reflects structural barriers in healthcare delivery where clinical
+    uncertainty and risk aversion lead to therapeutic nihilism. Patients who have already experienced
+    organ damage from alcohol - and thus have the most to gain from abstinence support - are least likely
+    to receive pharmacological tools to achieve it. This creates a self-perpetuating cycle of harm that
+    is rooted in healthcare system failures rather than patient characteristics.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.147436'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

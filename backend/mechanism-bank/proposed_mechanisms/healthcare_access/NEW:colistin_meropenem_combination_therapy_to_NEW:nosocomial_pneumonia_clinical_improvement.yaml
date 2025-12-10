@@ -1,0 +1,58 @@
+id: NEW:colistin_meropenem_combination_therapy_to_NEW:nosocomial_pneumonia_clinical_improvement
+name: Colistin Plus Meropenem Combination Therapy → Nosocomial Pneumonia Clinical
+  Improvement
+from_node:
+  node_id: NEW:colistin_meropenem_combination_therapy
+  node_name: Colistin Plus Meropenem Combination Therapy
+to_node:
+  node_id: NEW:nosocomial_pneumonia_clinical_improvement
+  node_name: Nosocomial Pneumonia Clinical Improvement
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Colistin disrupts the outer membrane of multidrug-resistant gram-negative
+  bacteria by binding to lipopolysaccharides, increasing bacterial cell permeability'
+- 'Step 2: Meropenem, a carbapenem antibiotic, inhibits bacterial cell wall synthesis
+  by binding to penicillin-binding proteins, providing broad-spectrum bactericidal
+  activity'
+- 'Step 3: The combination therapy produces synergistic antimicrobial effects against
+  resistant pathogens causing nosocomial pneumonia, with colistin facilitating meropenem
+  entry into bacterial cells'
+- 'Step 4: Enhanced bacterial eradication leads to reduced inflammatory response,
+  decreased organ dysfunction (lower SOFA scores), and improved clinical outcomes
+  in hospitalized patients'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: Hazhir Moradi et al. 2024. Systematic review and meta-analysis
+    of colistin plus meropenem therapy for the treatment of nosocomial pneumonia.
+    Iranian journal of microbiology.
+  supporting_citations: []
+description: Colistin plus meropenem combination therapy significantly improves clinical
+  outcomes in patients with nosocomial pneumonia caused by multidrug-resistant gram-negative
+  bacteria. The meta-analysis of 5 studies with 991 patients demonstrated that this
+  combination therapy is superior to other colistin-based treatments, with an odds
+  ratio of 1.37 for clinical improvement. The therapy also significantly reduced Sequential
+  Organ Failure Assessment scores, indicating improved organ function.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.37
+    type: odds_ratio
+    ci_lower: 1.04
+    ci_upper: 1.81
+  p_value: 0.027
+  sample_size: 991
+moderators:
+- name: Baseline organ dysfunction (SOFA score)
+  direction: strengthens
+  strength: moderate
+  description: Patients with higher baseline organ dysfunction may benefit more from
+    combination therapy, as evidenced by significant SOFA score reduction (OR = -0.28,
+    p = 0.001)
+- name: Comorbidity burden (Charlson Comorbidity Index)
+  direction: strengthens
+  strength: weak
+  description: Combination therapy showed increased CCI scores (OR = 0.16, p = 0.021),
+    suggesting potential differential effects based on comorbidity burden

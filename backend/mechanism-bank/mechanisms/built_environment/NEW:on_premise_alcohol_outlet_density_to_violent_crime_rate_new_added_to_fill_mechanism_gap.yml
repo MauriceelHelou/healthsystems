@@ -1,0 +1,62 @@
+id: NEW:on_premise_alcohol_outlet_density_to_violent_crime_rate_new_added_to_fill_mechanism_gap
+name: On-Premise Alcohol Outlet Density → Violent Crime Rate
+from_node:
+  node_id: NEW:on_premise_alcohol_outlet_density
+  node_name: On-Premise Alcohol Outlet Density
+to_node:
+  node_id: violent_crime_rate_new_added_to_fill_mechanism_gap
+  node_name: Violent Crime Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: On-premise outlets (bars, restaurants) allow alcohol consumption on-site under supervision'
+- 'Step 2: Staff oversight and responsible beverage service practices provide some regulation of consumption'
+- 'Step 3: Despite supervision, outlets still serve as convergence points for potential offenders and
+  victims'
+- 'Step 4: Violent crime increases but at a lower rate compared to off-premise outlets due to partial
+  regulatory effects'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Trangenstein et al. 2018. "Outlet Type, Access to Alcohol, and Violent Crime."
+    https://doi.org/10.1111/acer.13880
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior studies showing conflicting
+    findings on outlet type
+  - Additional citations require full-text access - abstract references routine activity theory framework
+  - Additional citations require full-text access - abstract references spatial access methods literature
+  doi: 10.1111/acer.13880
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: A 10% increase in access to on-premise outlets was associated with a 3.0% increase in violent
+  crime exposure. This effect was smaller than off-premise outlets, suggesting that on-site supervision
+  may partially mitigate the crime-outlet relationship.
+quantitative_effects:
+  effect_size:
+    value: 0.31
+    type: beta_coefficient
+    ci_lower: 0.2
+    ci_upper: 0.41
+  p_value: 0.001
+  sample_size: 51006
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Baltimore, MD study; association may differ in areas with different on-premise outlet
+    regulations
+moderators:
+- name: supervision_and_oversight
+  direction: weakens
+  strength: moderate
+  description: On-premise outlets have inherent supervision mechanisms that partially attenuate the crime-outlet
+    relationship compared to off-premise
+structural_competency:
+  equity_implications: The differential effect between on- and off-premise outlets demonstrates that regulatory
+    structures matter. On-premise establishments with required staffing and oversight show weaker crime
+    associations, suggesting policy interventions requiring supervision and responsible service could
+    reduce harm. This points to regulatory failure rather than individual behavior as the root cause.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.069597'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

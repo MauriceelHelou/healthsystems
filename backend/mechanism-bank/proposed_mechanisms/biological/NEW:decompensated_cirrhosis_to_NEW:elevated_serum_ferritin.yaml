@@ -1,0 +1,65 @@
+id: NEW:decompensated_cirrhosis_to_NEW:elevated_serum_ferritin
+name: Decompensated Cirrhosis → Elevated Serum Ferritin
+from_node:
+  node_id: NEW:decompensated_cirrhosis
+  node_name: Decompensated Cirrhosis
+to_node:
+  node_id: NEW:elevated_serum_ferritin
+  node_name: Elevated Serum Ferritin
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Decompensated cirrhosis leads to progressive hepatocyte dysfunction and
+  necrosis, causing release of intracellular ferritin stores into circulation'
+- 'Step 2: Impaired liver function reduces hepcidin production, dysregulating iron
+  homeostasis and increasing iron absorption and ferritin synthesis'
+- 'Step 3: Systemic inflammation associated with decompensated cirrhosis (including
+  bacterial translocation and immune activation) stimulates ferritin as an acute phase
+  reactant'
+- 'Step 4: Reduced hepatic clearance capacity in cirrhosis contributes to elevated
+  circulating ferritin levels'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'Dan Liu et al. 2023. Effect of elevated serum ferritin on the
+    risk of death in patients with decompensated cirrhosis: a meta-analysis. European
+    journal of gastroenterology & hepatology.'
+  supporting_citations: []
+description: Decompensated cirrhosis is associated with a 40.6% prevalence of elevated
+  serum ferritin. This elevation occurs through multiple mechanisms including hepatocyte
+  damage releasing stored ferritin, dysregulated iron metabolism due to impaired hepcidin
+  production, systemic inflammation triggering ferritin as an acute phase protein,
+  and reduced hepatic clearance. The association is stronger in males, those with
+  alcoholic etiology, more severe liver disease (Child-Pugh C), and those with hepatic
+  encephalopathy.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 40.6
+    type: prevalence_percentage
+    ci_lower: 32.1
+    ci_upper: 49.2
+  p_value: null
+  sample_size: 1829
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Elevated serum ferritin prevalence was higher in males with decompensated
+    cirrhosis
+- name: etiology
+  direction: strengthens
+  strength: moderate
+  description: Patients with alcohol-associated liver disease showed higher prevalence
+    of elevated serum ferritin
+- name: disease_severity
+  direction: strengthens
+  strength: strong
+  description: Patients with Child-Pugh grade C had higher prevalence of elevated
+    serum ferritin compared to less severe grades
+- name: hepatic_encephalopathy
+  direction: strengthens
+  strength: moderate
+  description: Presence of hepatic encephalopathy was associated with higher prevalence
+    of elevated serum ferritin

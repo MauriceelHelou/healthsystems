@@ -1,0 +1,70 @@
+id: NEW:wine_consumption_to_cardiovascular_disease_mortality
+name: Wine Consumption → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:wine_consumption
+  node_name: Wine Consumption
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Moderate wine consumption introduces polyphenolic compounds (resveratrol, flavonoids) into
+  systemic circulation'
+- 'Step 2: These compounds exert antioxidant and anti-inflammatory effects on vascular endothelium'
+- 'Step 3: Reduced oxidative stress and inflammation decrease atherosclerotic plaque formation and progression'
+- 'Step 4: Improved vascular function and reduced thrombotic risk lower cardiovascular mortality'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Maribel Lucerón-Lucas-Torres et al. 2023. "Association between Wine Consumption with
+    Cardiovascular Disease and Cardiovascular Mortality: A Systematic Review and Meta-Analysis." https://doi.org/10.3390/nu15122785'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 25 longitudinal studies included
+  - Studies searched from multiple databases through March 2023
+  - PROSPERO registration CRD42021293568 indicates systematic protocol
+  doi: 10.3390/nu15122785
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Meta-analysis of 22 longitudinal studies found wine consumption inversely associated with
+  cardiovascular mortality (RR=0.73, 95% CI: 0.59-0.90). This protective association was not modified
+  by age, proportion of women, or follow-up time. Authors caution that increased wine intake may be harmful
+  for individuals vulnerable to alcohol due to age, medication interactions, or pre-existing pathologies.'
+quantitative_effects:
+  effect_size:
+    value: 0.73
+    type: relative_risk
+    ci_lower: 0.59
+    ci_upper: 0.9
+moderators:
+- name: age
+  direction: strengthens
+  strength: weak
+  description: Mean age of participants did not significantly influence the association, suggesting consistent
+    effects across age groups
+- name: sex_proportion_female
+  direction: strengthens
+  strength: weak
+  description: Percentage of female subjects in samples did not influence the association
+- name: follow_up_time
+  direction: strengthens
+  strength: weak
+  description: Follow-up time did not influence the inverse association
+- name: smoking_current
+  direction: weakens
+  strength: moderate
+  description: Percentage of current smokers was analyzed as a potential modifier of the association
+structural_competency:
+  equity_implications: 'While this finding focuses on individual consumption patterns, structural factors
+    shape access to and patterns of alcohol consumption including: socioeconomic status affecting wine
+    affordability, cultural norms around alcohol consumption, marketing and availability of alcoholic
+    beverages, and healthcare system capacity to identify individuals vulnerable to alcohol harms. The
+    protective effect should not be used to recommend alcohol initiation, as vulnerable populations may
+    experience harm. Health equity requires understanding that benefits and harms of alcohol are not equally
+    distributed across populations.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.308497'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

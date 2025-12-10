@@ -1,0 +1,73 @@
+id: NEW:internet_alcohol_intervention_access_to_binge_drinking
+name: Internet-Based Alcohol Intervention Access → Binge Drinking
+from_node:
+  node_id: NEW:internet_alcohol_intervention_access
+  node_name: Internet-Based Alcohol Intervention Access
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Internet-based interventions provide accessible, low-barrier treatment options for problem
+  drinking that overcome geographic and time constraints'
+- 'Step 2: Interventions deliver evidence-based therapeutic content including personalized normative feedback
+  and integrated therapeutic principles'
+- 'Step 3: Participants engage with intervention content leading to increased awareness of drinking patterns
+  and motivation to change'
+- 'Step 4: Behavioral modification techniques reduce weekly alcohol consumption by average of 5.02 standard
+  units'
+- 'Step 5: Reduced consumption leads to decreased binge drinking patterns and associated health risks'
+evidence:
+  quality_rating: A
+  n_studies: 19
+  primary_citation: 'H. Riper et al. 2018. "Effectiveness and treatment moderators of internet interventions
+    for adult problem drinking: An individual patient data meta-analysis of 19 randomised controlled trials."
+    https://doi.org/10.1371/journal.pmed.1002714'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes 19 RCTs with 14,198 participants
+  - Studies included community and healthcare setting interventions
+  - Multiple intervention types analyzed including PNF-based and integrated therapeutic approaches
+  doi: 10.1371/journal.pmed.1002714
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Internet-based alcohol interventions effectively reduce weekly alcohol consumption among
+  adult problem drinkers by providing accessible, scalable treatment that overcomes traditional barriers
+  to face-to-face care. The meta-analysis of 19 RCTs demonstrates a mean weekly reduction of 5.02 standard
+  units compared to controls.
+quantitative_effects:
+  effect_size:
+    value: -5.02
+    type: standardized_mean_difference
+    ci_lower: -7.57
+    ci_upper: -2.48
+  p_value: 0.001
+  sample_size: 14198
+moderators:
+- name: human_support
+  direction: strengthens
+  strength: strong
+  description: Human-supported interventions showed superior outcomes with additional 6.78 SU reduction
+    compared to fully automated interventions
+- name: age_over_55
+  direction: strengthens
+  strength: moderate
+  description: Persons above age 55 showed higher treatment response (OR=1.66, 95% CI 1.21-2.27)
+- name: intervention_type
+  direction: strengthens
+  strength: moderate
+  description: Integrated therapeutic principles interventions were superior to personalized normative
+    feedback alone (OR=0.52 for PNF vs integrated)
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to alcohol treatment access. Traditional
+    face-to-face interventions have limited implementation in routine care and community settings, creating
+    treatment gaps particularly for those with geographic, time, or stigma-related barriers. Internet
+    interventions provide a structural solution by increasing accessibility regardless of location or
+    schedule constraints. Human-supported versions show stronger effects, suggesting hybrid models may
+    optimize outcomes while maintaining accessibility.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.947764'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

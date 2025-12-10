@@ -1,0 +1,48 @@
+id: wealth_inequality_gini_coefficient_to_all_cause_mortality_rate
+name: Wealth Inequality (Gini Coefficient) → All-Cause Mortality Rate
+from_node:
+  node_id: wealth_inequality_gini_coefficient
+  node_name: Wealth Inequality (Gini Coefficient)
+  _original_id: income_inequality_gini
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+  _original_id: all_cause_mortality
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Income inequality creates differential access to life-sustaining resources
+  including healthcare, nutrition, safe housing, and environmental quality'
+- 'Step 2: Unequal societies may underinvest in public goods and social safety nets
+  that protect health across the lifespan'
+- 'Step 3: Chronic stress from social stratification and relative deprivation accelerates
+  biological aging and disease processes through neuroendocrine and immune pathways'
+- 'Step 4: Combined material deprivation, reduced access to preventive and curative
+  healthcare, and chronic stress exposure increase mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'M. Shimonovich et al. 2024. "Causal Assessment of Income Inequality
+    on Self‐Rated Health and All‐Cause Mortality: A Systematic Review and Meta‐Analysis."
+    *Milbank Quarterly*. https://doi.org/10.1111/1468-0009.12689'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.934597'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: individual_socioeconomic_position
+  direction: strengthens
+  strength: moderate
+  description: All included studies adjusted for individual-level socioeconomic position
+    to isolate contextual effects of income inequality from individual income effects
+    on mortality
+- name: study_design_cohort
+  direction: strengthens
+  strength: strong
+  description: Mortality studies used cohort designs establishing temporal precedence
+    of income inequality exposure before death, though confounding remains a concern
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/economic/income_inequality_gini_to_all_cause_mortality.yaml
+_category: economic

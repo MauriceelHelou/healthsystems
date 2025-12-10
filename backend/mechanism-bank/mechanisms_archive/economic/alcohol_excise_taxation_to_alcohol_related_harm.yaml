@@ -1,0 +1,40 @@
+id: alcohol_excise_taxation_to_alcohol_related_harm
+name: Alcohol Excise Taxation → Alcohol-Related Harm
+from_node:
+  node_id: alcohol_excise_taxation
+  node_name: Alcohol Excise Taxation
+to_node:
+  node_id: alcohol_related_harm
+  node_name: Alcohol-Related Harm
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Increased alcohol excise taxation raises prices and reduces affordability'
+- 'Step 2: Reduced affordability leads to decreased population-level alcohol consumption'
+- 'Step 3: Decreased alcohol consumption reduces population exposure to alcohol''s
+  toxic effects'
+- 'Step 4: Reduced exposure translates to decreased alcohol-related morbidity and
+  mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Jakob Manthey et al. 2024. "The Impact of Raising Alcohol Taxes
+    on Government Tax Revenue: Insights from Five European Countries.." *Applied health
+    economics and health policy*. https://doi.org/10.1007/s40258-024-00873-5'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.142057'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_consumption_level
+  direction: strengthens
+  strength: moderate
+  description: Countries with higher baseline alcohol consumption may see greater
+    absolute reductions in harm from tax-induced consumption decreases
+- name: beverage_type_taxation
+  direction: strengthens
+  strength: moderate
+  description: Spirits accounted for 57-72% of tax revenue, suggesting differential
+    harm reduction potential by beverage-specific taxation

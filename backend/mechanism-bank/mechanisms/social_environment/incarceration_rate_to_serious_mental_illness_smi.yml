@@ -1,0 +1,63 @@
+id: incarceration_rate_to_serious_mental_illness_smi
+name: Incarceration Rate → Serious Mental Illness (SMI)
+from_node:
+  node_id: incarceration_rate
+  node_name: Incarceration Rate
+to_node:
+  node_id: serious_mental_illness_smi
+  node_name: Serious Mental Illness (SMI)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Inadequate mental health infrastructure in low-income and middle-income countries (LMICs) leads
+  to insufficient community-based treatment options'
+- 'Step 2: Untreated mental illness increases vulnerability to behaviors that lead to criminal justice
+  involvement'
+- 'Step 3: Prison environments expose individuals to stress, trauma, and conditions that exacerbate or
+  precipitate mental illness'
+- 'Step 4: Lack of adequate psychiatric care within prison systems perpetuates high rates of psychosis
+  and depression among incarcerated populations'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: 'Gergő Baranyi et al. 2019. "Severe mental illness and substance use disorders in
+    prisoners in low-income and middle-income countries: a systematic review and meta-analysis of prevalence
+    studies.." https://doi.org/10.1016/S2214-109X(18)30539-4'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review includes 23 publications from 13
+    LMICs
+  - Global Burden of Diseases 2016 database used for general population comparison estimates
+  - PROSPERO registration CRD42015020905 indicates protocol-based systematic methodology
+  doi: 10.1016/S2214-109X(18)30539-4
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Non-affective psychosis prevalence among prisoners in LMICs is 16 times higher than in general
+  populations (6.2% prevalence rate), reflecting the concentration of individuals with serious mental
+  illness within carceral systems due to inadequate community mental health infrastructure.
+quantitative_effects:
+  effect_size:
+    value: 16.0
+    type: relative_risk
+  sample_size: 14527
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Geographic variations noted across LMIC regions; prevalence at prison intake differs
+    from general prison population
+moderators:
+- name: prison_intake_timing
+  direction: strengthens
+  strength: moderate
+  description: Increased prevalence noted at prison intake, suggesting pre-existing conditions concentrated
+    in newly incarcerated populations
+structural_competency:
+  equity_implications: This mechanism reflects the criminalization of mental illness in resource-poor
+    settings. The structural root cause is inadequate investment in community mental health services,
+    leading to the prison system becoming a de facto psychiatric institution. The 16-fold prevalence ratio
+    indicates massive unmet mental health needs that are being addressed through incarceration rather
+    than treatment.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.461653'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

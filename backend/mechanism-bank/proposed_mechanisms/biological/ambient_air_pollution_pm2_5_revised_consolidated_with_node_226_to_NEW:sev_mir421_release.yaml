@@ -1,0 +1,46 @@
+id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226_to_NEW:sev_mir421_release
+name: Ambient Air Pollution (PM2.5) → Small Extracellular Vesicle miR-421 Release
+from_node:
+  node_id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226
+  node_name: Ambient Air Pollution (PM2.5)
+to_node:
+  node_id: NEW:sev_mir421_release
+  node_name: Small Extracellular Vesicle miR-421 Release
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: PM2.5 particles are inhaled and deposited in the respiratory tract, causing
+  pulmonary injury to bronchial epithelial cells'
+- 'Step 2: Damaged lung cells (bronchial epithelial cells) respond to PM2.5 exposure
+  by increasing production and release of small extracellular vesicles (sEV)'
+- 'Step 3: PM2.5 exposure specifically increases CD63/CD81/CD9 positive sEV particles,
+  as demonstrated by single particle interferometric reflectance imaging sensing analysis'
+- 'Step 4: These respiratory system-derived sEV are enriched with miR-421 cargo'
+- 'Step 5: sEV-enclosed miR-421 is released into systemic circulation, enabling cross-talk
+  between pulmonary and cardiovascular systems'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Hongyun Wang et al. 2022. Extracellular vesicles enclosed‐miR‐421
+    suppresses air pollution (PM2.5)‐induced cardiac dysfunction via ACE2 signalling.
+    Journal of Extracellular Vesicles.
+  supporting_citations: []
+description: PM2.5 exposure causes pulmonary injury that triggers bronchial epithelial
+  cells to release small extracellular vesicles (sEV) containing miR-421 into circulation.
+  This represents a key mechanism by which air pollution-induced lung injury can cause
+  systemic effects, particularly cardiovascular dysfunction. The sEV particles positive
+  for CD63/CD81/CD9 surface markers are increased following PM2.5 exposure, carrying
+  miR-421 cargo that mediates organ cross-talk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Duration of PM2.5 exposure
+  direction: strengthens
+  strength: moderate
+  description: Subacute PM2.5 exposure showed time-dependent effects on sEV release,
+    with cardiac dysfunction secondary to lung injury developing over time
+- name: GW4869 (sEV release inhibitor)
+  direction: weakens
+  strength: strong
+  description: Pharmacological inhibition of sEV release with GW4869 attenuated PM2.5-induced
+    downstream effects

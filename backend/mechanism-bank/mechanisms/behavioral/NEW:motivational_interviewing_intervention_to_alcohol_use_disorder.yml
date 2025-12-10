@@ -1,0 +1,65 @@
+id: NEW:motivational_interviewing_intervention_to_alcohol_use_disorder
+name: Motivational Interviewing Intervention → Alcohol Use Disorder
+from_node:
+  node_id: NEW:motivational_interviewing_intervention
+  node_name: Motivational Interviewing Intervention
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: MI intervention delivered in 1-9 sessions addresses alcohol use through client-centered exploration
+  of ambivalence'
+- 'Step 2: Therapeutic approach strengthens personal motivation for reducing alcohol consumption'
+- 'Step 3: Resolved ambivalence leads to commitment to change alcohol use patterns'
+- 'Step 4: Reduced alcohol consumption compared to no intervention or assessment-only conditions'
+evidence:
+  quality_rating: A
+  n_studies: 93
+  primary_citation: Rosemarie Schwenker et al. 2023. "Motivational interviewing for substance use reduction.."
+    https://doi.org/10.1002/14651858.CD008063.pub3
+  supporting_citations:
+  - Smedslund et al. (2011). Cochrane Database of Systematic Reviews - Original version
+  - Studies included individuals using drugs, alcohol, or both
+  - Additional citations require full-text access
+  doi: 10.1002/14651858.CD008063.pub3
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Motivational interviewing demonstrates effectiveness for alcohol use reduction as part of
+  broader substance use outcomes. The review included individuals using alcohol alone or in combination
+  with drugs. Effects are most pronounced when compared to no intervention, with more modest differences
+  compared to assessment and feedback conditions.
+quantitative_effects:
+  effect_size:
+    value: 0.48
+    type: standardized_mean_difference
+    ci_lower: 0.07
+    ci_upper: 0.89
+  sample_size: 22776
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Heterogeneity noted across study settings, participant characteristics, and substances
+    used, suggesting effects may vary by context
+moderators:
+- name: session_intensity
+  direction: u_shaped
+  strength: weak
+  description: Session numbers ranged from 1-9, with durations from 10-148 minutes; optimal dosing unclear
+    from heterogeneous evidence
+- name: comparison_to_assessment_feedback
+  direction: weakens
+  strength: moderate
+  description: MI probably reduces substance use only slightly compared to assessment and feedback over
+    medium- and long-term periods
+structural_competency:
+  equity_implications: Access to MI for alcohol use is mediated by structural factors including healthcare
+    coverage, treatment facility availability, and provider training infrastructure. University and clinical
+    settings may have greater capacity to deliver MI compared to under-resourced community settings. Veterans'
+    health centers represent a structural healthcare system that can systematically provide such interventions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.700093'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

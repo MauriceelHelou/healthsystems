@@ -1,0 +1,60 @@
+id: alcohol_use_disorder_to_NEW:bartonella_quintana_seroprevalence
+name: Alcohol Use Disorder → Bartonella quintana Seroprevalence
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:bartonella_quintana_seroprevalence
+  node_name: Bartonella quintana Seroprevalence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol use disorder frequently co-occurs with housing instability and homelessness due to
+  structural barriers to housing access'
+- 'Step 2: Chronic alcohol use impairs immune system function and wound healing capacity'
+- 'Step 3: Alcohol use disorder may reduce attention to personal hygiene and self-care behaviors'
+- 'Step 4: Impaired judgment and social marginalization increase exposure to environments with higher
+  vector density'
+- 'Step 5: Combined immunosuppression and increased exposure elevate risk of B. quintana infection and
+  seroconversion'
+evidence:
+  quality_rating: A
+  n_studies: 45
+  primary_citation: Ba-Hoang-Anh Mai 2022. "Seroprevalence of ." https://doi.org/10.4103/jgid.jgid_220_21
+  supporting_citations:
+  - Studies from 21 countries across 4 continents included in systematic review (1996-2020)
+  - Alcoholism identified as one of three key susceptibility factors in homeless populations
+  - Additional citations require full-text access for specific study details
+  doi: 10.4103/jgid.jgid_220_21
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcoholism was identified as one of three key susceptibility factors for Bartonella quintana
+  infection among homeless populations in this systematic review. The relationship between alcohol use
+  disorder and infectious disease susceptibility reflects both biological (immunosuppression) and structural
+  (housing instability, reduced healthcare access) pathways.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Geographic variation noted across 21 countries and 4 continents in the systematic review
+moderators:
+- name: housing_status
+  direction: strengthens
+  strength: strong
+  description: The interaction between alcoholism and homelessness compounds infection risk
+- name: homeless_period_duration
+  direction: strengthens
+  strength: moderate
+  description: Longer duration of unstable housing among those with alcohol use disorder increases cumulative
+    exposure
+structural_competency:
+  equity_implications: 'While alcoholism is identified as a risk factor, this should be understood through
+    a structural lens: alcohol use disorder often develops in contexts of trauma, economic hardship, and
+    social marginalization. Those with alcohol use disorder face systematic barriers to housing, healthcare,
+    and hygiene facilities. Effective interventions must address both addiction treatment access AND structural
+    supports including housing-first programs and harm reduction services, rather than blaming individuals
+    for their substance use.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.517852'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

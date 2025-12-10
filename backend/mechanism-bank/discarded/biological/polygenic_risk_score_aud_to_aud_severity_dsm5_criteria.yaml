@@ -1,0 +1,42 @@
+id: polygenic_risk_score_aud_to_aud_severity_dsm5_criteria
+name: Polygenic Risk Score for Alcohol Use Disorder → AUD Severity (DSM-5 Diagnostic
+  Criteria Count)
+from_node:
+  node_id: polygenic_risk_score_aud
+  node_name: Polygenic Risk Score for Alcohol Use Disorder
+to_node:
+  node_id: aud_severity_dsm5_criteria
+  node_name: AUD Severity (DSM-5 Diagnostic Criteria Count)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Higher polygenic risk scores reflect cumulative genetic variants associated
+  with alcohol-related traits and neurobiological vulnerability'
+- 'Step 2: Genetic predisposition influences both likelihood of developing AUD and
+  progression to more severe presentations'
+- 'Step 3: PRS shows dose-response relationship with number of DSM-5 diagnostic criteria
+  met, indicating genetic influence on disorder severity'
+- 'Step 4: Association persists after controlling for family history, suggesting distinct
+  genetic architecture for AUD severity'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'D. Lai et al. 2022. "Evaluating risk for alcohol use disorder:
+    Polygenic risk scores and family history.." *Alcoholism: Clinical and Experimental
+    Research*. https://doi.org/10.1111/acer.14772'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.856971'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: family_history_status
+  direction: strengthens
+  strength: moderate
+  description: PRS significantly associated with AUD severity in full sample, FH+
+    subsample, and FH? subsample (p≤6.7E-11), with independent effects after accounting
+    for family history
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/polygenic_risk_score_aud_to_aud_severity_dsm5_criteria.yaml
+_category: biological

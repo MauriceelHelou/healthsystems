@@ -1,0 +1,37 @@
+id: benzodiazepine_sparing_protocol_implementation_to_hospital_length_of_stay
+name: Benzodiazepine-Sparing Protocol Implementation → Hospital Length of Stay
+from_node:
+  node_id: benzodiazepine_sparing_protocol_implementation
+  node_name: Benzodiazepine-Sparing Protocol Implementation
+to_node:
+  node_id: hospital_length_of_stay
+  node_name: Hospital Length of Stay
+direction: 'null'
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Protocol implementation changes medication approach to alcohol withdrawal
+  but maintains overall safety and efficacy'
+- 'Step 2: Reduced withdrawal severity and lower benzodiazepine exposure do not translate
+  to significantly shorter hospital stays in this trauma population'
+- 'Step 3: Length of stay driven by multiple factors including injury severity, complications,
+  and discharge planning rather than withdrawal management alone'
+- 'Step 4: Protocol demonstrates safety equivalence without increasing hospital resource
+  utilization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Mary Alyce McCullough et al. 2023. "Eliminating the benzos: A
+    benzodiazepine-sparing approach to preventing and treating alcohol withdrawal
+    syndrome." *Journal of Trauma and Acute Care Surgery*. https://doi.org/10.1097/TA.0000000000004188'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.724029'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: injury_severity
+  direction: weakens
+  strength: moderate
+  description: Trauma-related injuries are primary drivers of length of stay, potentially
+    overshadowing effects of withdrawal management approach

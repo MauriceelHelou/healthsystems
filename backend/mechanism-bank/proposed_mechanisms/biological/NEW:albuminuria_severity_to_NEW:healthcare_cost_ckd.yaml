@@ -1,0 +1,50 @@
+id: NEW:albuminuria_severity_to_NEW:healthcare_cost_ckd
+name: Albuminuria Severity → Healthcare Costs for CKD Patients
+from_node:
+  node_id: NEW:albuminuria_severity
+  node_name: Albuminuria Severity
+to_node:
+  node_id: NEW:healthcare_cost_ckd
+  node_name: Healthcare Costs for CKD Patients
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Albuminuria indicates glomerular damage and increased permeability of the
+  kidney filtration barrier, reflecting underlying kidney pathology'
+- 'Step 2: Higher albuminuria severity is associated with accelerated CKD progression,
+  increased cardiovascular complications, and higher rates of acute kidney injury
+  events'
+- 'Step 3: These complications necessitate more frequent healthcare utilization including
+  hospitalizations, emergency department visits, specialist consultations, and pharmaceutical
+  interventions'
+- 'Step 4: Patients with severe albuminuria require more intensive monitoring, disease
+  management, and treatment of comorbid conditions, driving up direct medical costs'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: B. Manns et al. 2019. The Cost of Care for People With Chronic
+    Kidney Disease. Canadian Journal of Kidney Health and Disease.
+  supporting_citations: []
+description: In a population-based cohort study of 219,641 adults with CKD in Alberta,
+  Canada, healthcare costs demonstrated a graded positive association with albuminuria
+  severity. Patients with more severe albuminuria had higher 1-year cumulative healthcare
+  costs, which included drugs, physician visits, emergency department visits, outpatient
+  procedures, dialysis, and hospitalizations. The mean unadjusted cumulative 1-year
+  cost was Can$14,634 per patient overall, with costs increasing substantially for
+  those with more severe albuminuria independent of eGFR category. This relationship
+  reflects the biological pathway whereby albuminuria indicates greater kidney damage
+  and predicts accelerated disease progression and complications requiring more intensive
+  and costly healthcare interventions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: eGFR level
+  direction: strengthens
+  strength: strong
+  description: Lower eGFR combined with more severe albuminuria results in substantially
+    higher healthcare costs
+- name: Comorbidity burden
+  direction: strengthens
+  strength: strong
+  description: Higher comorbidity is associated with increased healthcare costs in
+    CKD patients

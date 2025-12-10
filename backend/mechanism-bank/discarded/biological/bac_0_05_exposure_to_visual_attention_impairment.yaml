@@ -1,0 +1,43 @@
+id: bac_0_05_exposure_to_visual_attention_impairment
+name: Exposure to Drivers at 0.05% BAC → Forward Roadway Visual Attention
+from_node:
+  node_id: bac_0_05_exposure
+  node_name: Exposure to Drivers at 0.05% BAC
+to_node:
+  node_id: visual_attention_impairment
+  node_name: Forward Roadway Visual Attention
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol affects neural processing and executive function at 0.05% BAC'
+- 'Step 2: Cognitive resources for divided attention and visual scanning are reduced'
+- 'Step 3: At 0.10% BAC, percentage of time focused on forward roadway decreases compared
+  to placebo'
+- 'Step 4: Reduced forward roadway attention impairs hazard detection and response
+  time in urban driving'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: T. Brown et al. 2018. "Effects of alcohol at 0.05% blood alcohol
+    concentration (BAC) on low speed urban driving." *Traffic Injury Prevention*.
+    https://doi.org/10.1080/15389588.2018.1532220
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.519296'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: bac_level_threshold
+  direction: strengthens
+  strength: strong
+  description: Forward roadway attention impairment became significant at 0.10% BAC
+    but not at 0.05% BAC, suggesting a threshold effect for visual attention deficits
+- name: task_complexity
+  direction: strengthens
+  strength: moderate
+  description: Urban driving environments require more divided attention and visual
+    scanning, potentially amplifying attention impairment effects
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/bac_0_05_exposure_to_visual_attention_impairment.yaml
+_category: biological

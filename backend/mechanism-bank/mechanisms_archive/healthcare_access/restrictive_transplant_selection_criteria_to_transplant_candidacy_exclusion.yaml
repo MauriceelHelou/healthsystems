@@ -1,0 +1,38 @@
+id: restrictive_transplant_selection_criteria_to_transplant_candidacy_exclusion
+name: Restrictive Transplant Selection Criteria (Milan Criteria) → Exclusion from
+  Liver Transplant Candidacy
+from_node:
+  node_id: restrictive_transplant_selection_criteria
+  node_name: Restrictive Transplant Selection Criteria (Milan Criteria)
+to_node:
+  node_id: transplant_candidacy_exclusion
+  node_name: Exclusion from Liver Transplant Candidacy
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Strict selection criteria (Milan) limit the tumor size and number thresholds
+  for liver transplant eligibility'
+- 'Step 2: Patients with hepatocellular carcinoma exceeding these narrow boundaries
+  are deemed ineligible for Model for End-stage Liver Disease exception points'
+- 'Step 3: Ineligible patients cannot access deceased donor liver transplantation
+  despite potentially similar survival outcomes'
+- 'Step 4: Expanded criteria (UCSF, U7, Metroticket 2.0) allow 3.5-7.7% more patients
+  to qualify for transplantation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'C. Wehrle et al. 2024. "Expanding Selection Criteria in Deceased
+    Donor Liver Transplantation for Hepatocellular Carcinoma: Long-term Follow-up
+    of a National Registry and 2 Transplant Centers." *Transplantation*. https://doi.org/10.1097/TP.0000000000005097'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.595027'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: selection_criteria_type
+  direction: strengthens
+  strength: moderate
+  description: UCSF criteria expanded candidacy by 7.7% (n=1898), Metroticket 2.0
+    by 4.2% (n=1037), and U7 by 3.5% (n=828) compared to Milan criteria

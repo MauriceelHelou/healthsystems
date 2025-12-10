@@ -1,0 +1,45 @@
+id: automated_vehicle_warning_system_to_multi_vehicle_crash_risk
+name: Automated Vehicle Deceleration and Warning System → Multi-Vehicle Crash Risk
+  and Bystander Injury
+from_node:
+  node_id: automated_vehicle_warning_system
+  node_name: Automated Vehicle Deceleration and Warning System
+to_node:
+  node_id: multi_vehicle_crash_risk
+  node_name: Multi-Vehicle Crash Risk and Bystander Injury
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: System activates audible buzzer warning when drunk driving is detected'
+- 'Step 2: Simultaneous automatic vehicle deceleration reduces speed of impaired driver''s
+  vehicle'
+- 'Step 3: Warning signals alert surrounding drivers to maintain safe distance from
+  potentially impaired vehicle'
+- 'Step 4: Reduced vehicle speed and increased awareness by surrounding traffic decreases
+  collision probability and injury severity for bystanders'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Dr. T. Senthil Kumar et al. 2023. "Drunk Driving Detection and
+    Automatic Car Ignition Locking System." *2023 International Conference on Self
+    Sustainable Artificial Intelligence Systems (ICSSAS)*. https://doi.org/10.1109/ICSSAS57918.2023.10331754
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.444166'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: traffic_density
+  direction: strengthens
+  strength: moderate
+  description: Warning system more effective in higher traffic density environments
+    where other drivers can respond to alerts and maintain distance
+- name: vehicle_to_vehicle_communication
+  direction: strengthens
+  strength: strong
+  description: Integration with broader vehicle-to-vehicle communication systems would
+    amplify warning effectiveness across traffic network
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/automated_vehicle_warning_system_to_multi_vehicle_crash_risk.yaml
+_category: built_environment

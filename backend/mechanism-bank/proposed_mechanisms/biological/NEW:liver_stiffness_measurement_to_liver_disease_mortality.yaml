@@ -1,0 +1,53 @@
+id: NEW:liver_stiffness_measurement_to_liver_disease_mortality
+name: Liver Stiffness Measurement → Liver Disease Mortality
+from_node:
+  node_id: NEW:liver_stiffness_measurement
+  node_name: Liver Stiffness Measurement
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Liver stiffness measurement (LSM) using techniques such as transient elastography,
+  magnetic resonance elastography, or shear wave elastography quantifies the degree
+  of liver fibrosis and cirrhosis'
+- 'Step 2: Elevated LSM values (particularly >20-25 kPa) reflect advanced fibrosis
+  with increased extracellular matrix deposition, collagen cross-linking, and architectural
+  distortion of liver parenchyma'
+- 'Step 3: Higher liver stiffness correlates with portal hypertension development
+  due to increased intrahepatic vascular resistance'
+- 'Step 4: Portal hypertension leads to hepatic decompensation events including variceal
+  bleeding, ascites, hepatic encephalopathy, and hepatorenal syndrome'
+- 'Step 5: Decompensation events and progressive liver dysfunction increase mortality
+  risk in patients with chronic liver disease'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Addissouky T. 2024. Liver stiffness as a dynamic predictor of
+    decompensation and mortality in alcohol-related liver disease. Discover medicine.
+  supporting_citations: []
+description: Liver stiffness measurement serves as a dynamic, non-invasive biomarker
+  that reflects the degree of hepatic fibrosis and cirrhosis. Higher LSM values, particularly
+  above 20-25 kPa, demonstrate strong predictive power for hepatic decompensation
+  and mortality in patients with alcohol-related liver disease. The mechanism operates
+  through LSM's quantification of structural liver damage, which correlates with portal
+  hypertension development and subsequent decompensation events that drive mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: alcohol_abstinence
+  direction: weakens
+  strength: moderate
+  description: Serial LSM measurements show improvement with alcohol abstinence, potentially
+    reducing mortality risk
+- name: LSM_threshold
+  direction: strengthens
+  strength: strong
+  description: Values above 20-25 kPa are associated with markedly increased risk
+    of decompensation and mortality
+- name: biomarker_integration
+  direction: strengthens
+  strength: moderate
+  description: Integration of LSM with other biomarkers and prognostic models enhances
+    risk stratification accuracy

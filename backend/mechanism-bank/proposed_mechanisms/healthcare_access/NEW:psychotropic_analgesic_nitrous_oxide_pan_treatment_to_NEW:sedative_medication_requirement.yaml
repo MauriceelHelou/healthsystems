@@ -1,0 +1,50 @@
+id: NEW:psychotropic_analgesic_nitrous_oxide_pan_treatment_to_NEW:sedative_medication_requirement
+name: Psychotropic Analgesic Nitrous Oxide (PAN) Treatment → Sedative Medication Requirement
+from_node:
+  node_id: NEW:psychotropic_analgesic_nitrous_oxide_pan_treatment
+  node_name: Psychotropic Analgesic Nitrous Oxide (PAN) Treatment
+to_node:
+  node_id: NEW:sedative_medication_requirement
+  node_name: Sedative Medication Requirement
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: PAN treatment is administered to patients experiencing alcohol withdrawal
+  states as an alternative to benzodiazepine regimens'
+- 'Step 2: PAN exerts rapid psychotropic and analgesic effects that directly address
+  withdrawal symptoms including anxiety and agitation'
+- 'Step 3: The therapeutic effects of PAN reduce the severity of withdrawal symptoms
+  more rapidly than traditional sedative approaches'
+- 'Step 4: Reduced symptom severity decreases the clinical need for sedative medications
+  to manage withdrawal'
+- 'Step 5: Both the amount and duration of sedative medication requirements are decreased
+  compared to standard treatment protocols'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: M A Gillman et al. 2007. Psychotropic analgesic nitrous oxide
+    for alcoholic withdrawal states. The Cochrane database of systematic reviews.
+  supporting_citations: []
+description: Psychotropic analgesic nitrous oxide (PAN) treatment reduces sedative
+  medication requirements in patients with alcohol withdrawal states. A Cochrane systematic
+  review of 5 RCTs with 212 participants found that PAN treatment was associated with
+  improvements in withdrawal symptoms and significant reductions in both the amount
+  and duration of sedative medication needed. The rapid therapeutic effect of PAN
+  therapy coupled with minimal sedative requirements may enable patients to enter
+  psychological treatment phases more quickly, potentially accelerating recovery.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.35
+    type: relative_risk
+    ci_lower: 1.01
+    ci_upper: 1.79
+  p_value: null
+  sample_size: 212
+moderators:
+- name: withdrawal_severity
+  direction: weakens
+  strength: moderate
+  description: Evidence supports effectiveness for mild to moderate withdrawal states;
+    severe withdrawal may still require standard sedative protocols

@@ -1,0 +1,59 @@
+id: NEW:chronic_disease_burden_to_NEW:years_lived_with_disability_yld
+name: Chronic Disease Burden → Years Lived with Disability (YLD)
+from_node:
+  node_id: NEW:chronic_disease_burden
+  node_name: Chronic Disease Burden
+to_node:
+  node_id: NEW:years_lived_with_disability_yld
+  node_name: Years Lived with Disability (YLD)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Chronic conditions persist over extended periods, often decades'
+- 'Step 2: Long-term conditions generate sequelae (complications and secondary conditions)'
+- 'Step 3: Sequelae from chronic conditions account for 93% of YLDs, indicating cumulative disability
+  burden'
+- 'Step 4: Overall chronic conditions represent 86% of all YLDs globally'
+evidence:
+  quality_rating: A
+  n_studies: 1
+  primary_citation: '2025. "Characterising acute and chronic care needs: insights from the Global Burden
+    of Disease Study 2019.." https://doi.org/10.1038/s41467-025-56910-x'
+  supporting_citations:
+  - GBD 2019 Disease and Injury Incidence and Prevalence Collaborators. Lancet.
+  - GBD 2019 Mortality Collaborators. Lancet.
+  - Additional citations require full-text access
+  doi: 10.1038/s41467-025-56910-x
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Chronic conditions are responsible for 86% of Years Lived with Disability globally, with
+  sequelae from chronic conditions accounting for 93% of YLDs from sequelae, demonstrating the overwhelming
+  contribution of chronic disease to population disability burden.
+quantitative_effects:
+  effect_size:
+    value: 86.0
+    type: percentage_change
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Burden analyzed by socio-demographic index indicating geographic and developmental
+    variation
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Chronic care needs and associated disability increase with age
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Data analyzed by sex suggesting differential patterns
+structural_competency:
+  equity_implications: The dominance of chronic conditions in disability burden reflects structural failures
+    in prevention, early intervention, and disease management systems. Populations without access to comprehensive
+    chronic disease management bear disproportionate disability burdens. This is not about individual
+    compliance but about health system design and resource allocation priorities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.002921'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,58 @@
+id: NEW:alcohol_sales_restriction_policy_to_child_maltreatment_substantiated_rate
+name: Alcohol Sales Restriction Policy (Hours/Volume) → Child Maltreatment Substantiated Rate
+from_node:
+  node_id: NEW:alcohol_sales_restriction_policy
+  node_name: Alcohol Sales Restriction Policy (Hours/Volume)
+to_node:
+  node_id: child_maltreatment_substantiated_rate
+  node_name: Child Maltreatment Substantiated Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Policies restricting alcohol sales hours or volumes limit temporal and quantity access to alcohol'
+- 'Step 2: Restrictions reduce overall alcohol consumption and particularly heavy drinking occasions'
+- 'Step 3: Reduced alcohol-related impairment among parents/caregivers decreases episodes of neglect and
+  abuse'
+- 'Step 4: Community-level reduction in alcohol-related family violence and child endangerment'
+- 'Step 5: Fewer child maltreatment cases substantiated by child protective services'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Laslett et al. 2022. "Community-Level Alcohol Availability and Child Maltreatment:
+    A Statewide Panel Analysis Over 13 Years.." https://doi.org/10.15288/jsad.20-00400'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references national-level Australian studies
+  - Background literature on parental alcohol use and maltreatment risk
+  - Prior ecological studies on alcohol availability and harm
+  doi: 10.15288/jsad.20-00400
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Policies restricting alcohol sales predict a 9.6% reduction in substantiated child maltreatment.
+  While smaller than comprehensive bans, this demonstrates that partial restrictions on alcohol availability
+  still provide meaningful child protection at the population level.
+quantitative_effects:
+  effect_size:
+    value: -9.6
+    type: percentage_change
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect observed across Western Australian local government areas with varying levels
+    of sales restrictions
+moderators:
+- name: on_trade_outlet_density
+  direction: weakens
+  strength: weak
+  description: Models adjusted for on-trade outlet density, suggesting the mix of outlet types may modify
+    policy effectiveness
+structural_competency:
+  equity_implications: This finding supports harm reduction through environmental modification rather
+    than individual-level intervention. By limiting when and how much alcohol can be sold, communities
+    can reduce child maltreatment without requiring individual behavior change programs. This is particularly
+    important for equity as it provides universal protection regardless of individual resources for treatment
+    or services.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.274474'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

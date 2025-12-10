@@ -1,0 +1,45 @@
+id: web_based_rbs_training_to_alcohol_service_refusal_rate
+name: Web-Based Responsible Beverage Service Training → Alcohol Service Refusal Rate
+  to Intoxicated Patrons
+from_node:
+  node_id: web_based_rbs_training
+  node_name: Web-Based Responsible Beverage Service Training
+to_node:
+  node_id: alcohol_service_refusal_rate
+  node_name: Alcohol Service Refusal Rate to Intoxicated Patrons
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Web-based training standardizes RBS curriculum delivery, eliminating variation
+  in instruction quality across different instructors and classes'
+- 'Step 2: Standardized online training ensures consistent implementation of evidence-based
+  protocols for recognizing and responding to patron intoxication'
+- 'Step 3: Servers receive uniform messaging about legal responsibilities and techniques
+  for refusing service to intoxicated patrons'
+- 'Step 4: Trained servers apply standardized protocols when encountering apparently
+  intoxicated patrons, resulting in higher refusal rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'W Gill Woodall et al. 2018. "Results of a Randomized Trial of
+    Web-Based Retail Onsite Responsible Beverage Service Training: WayToServe.." *Journal
+    of studies on alcohol and drugs*. https://doi.org/10.15288/jsad.2018.79.672'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.617094'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: time_since_training
+  direction: u_shaped
+  strength: moderate
+  description: Refusal rates showed significant differences at immediate post-training
+    (68% vs 49%) and 1-year follow-up (68% vs 58%), but not at 6-month follow-up (69%
+    vs 64%), suggesting temporal variation in training effectiveness
+- name: pseudo_patron_age
+  direction: strengthens
+  strength: strong
+  description: Younger pseudo-patrons were consistently refused service more often
+    than older pseudo-patrons, indicating age-based differential application of refusal
+    protocols

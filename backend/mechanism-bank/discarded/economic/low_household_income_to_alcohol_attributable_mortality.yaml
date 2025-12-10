@@ -1,0 +1,55 @@
+id: low_household_income_to_alcohol_attributable_mortality
+name: Low Household Income → Alcohol-Attributable Mortality
+from_node:
+  node_id: low_household_income
+  node_name: Low Household Income
+to_node:
+  node_id: alcohol_attributable_mortality
+  node_name: Alcohol-Attributable Mortality
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Low household income creates material deprivation and financial stress
+  that affect living conditions, nutrition, and access to healthcare'
+- 'Step 2: Economic constraints limit ability to access preventive health services,
+  addiction treatment, and quality medical care for alcohol-related conditions'
+- 'Step 3: Low-income neighborhoods may have higher alcohol outlet density and fewer
+  health-promoting resources, increasing exposure to alcohol harm'
+- 'Step 4: Cumulative economic disadvantage and stress contribute to higher mortality
+  from alcohol-attributable causes including chronic diseases and acute injuries'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Alessandra T Andreacchi et al. 2025. "Socioeconomic inequities
+    in alcohol-attributable mortality by sex/gender and age in Canada: a 13-year population-representative
+    cohort study.." *American journal of epidemiology*. https://doi.org/10.1093/aje/kwae385'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.959260'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sex_gender_men
+  direction: strengthens
+  strength: strong
+  description: Absolute SEP inequities were greater among men with rate difference
+    of 30.81 per 100,000 person-years comparing lowest to highest income quintile
+- name: sex_gender_women
+  direction: strengthens
+  strength: moderate
+  description: Women showed rate difference of 9.86 per 100,000 person-years comparing
+    lowest to highest income quintile, approximately 3 times lower than men
+- name: age_middle_older_adulthood
+  direction: strengthens
+  strength: strong
+  description: Absolute inequities most pronounced above age 30 for women and age
+    50 for men, reflecting cumulative disadvantage
+- name: age_young_adulthood
+  direction: weakens
+  strength: moderate
+  description: Smaller rate differences in ages 12-29, though relative inequities
+    (hazard ratios) were greater at younger ages
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/economic/low_household_income_to_alcohol_attributable_mortality.yaml
+_category: economic

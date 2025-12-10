@@ -1,0 +1,66 @@
+id: NEW:ambient_air_pollution_no2_to_NEW:heart_failure_incidence_hospitalization_mortality
+name: Ambient Air Pollution (NO2) → Heart Failure Incidence, Hospitalization, and
+  Mortality
+from_node:
+  node_id: NEW:ambient_air_pollution_no2
+  node_name: Ambient Air Pollution (NO2)
+to_node:
+  node_id: NEW:heart_failure_incidence_hospitalization_mortality
+  node_name: Heart Failure Incidence, Hospitalization, and Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhalation of NO2 leads to direct pulmonary oxidative stress and inflammation,
+  with reactive nitrogen species causing damage to respiratory epithelium and triggering
+  systemic inflammatory responses'
+- 'Step 2: Systemic inflammation and oxidative stress promote endothelial dysfunction,
+  reducing nitric oxide bioavailability and impairing vascular function'
+- 'Step 3: Chronic endothelial dysfunction contributes to increased arterial stiffness,
+  elevated blood pressure, and accelerated atherosclerosis, placing additional hemodynamic
+  stress on the heart'
+- 'Step 4: NO2 exposure activates autonomic nervous system imbalances, increasing
+  sympathetic activity which elevates heart rate and myocardial oxygen demand'
+- 'Step 5: Combined effects of systemic inflammation, endothelial dysfunction, hemodynamic
+  stress, and autonomic dysregulation lead to myocardial remodeling, reduced cardiac
+  function, and ultimately increased risk of heart failure incidence, hospitalization,
+  and mortality'
+evidence:
+  quality_rating: A
+  n_studies: 100
+  primary_citation: 'Yanhui Jia et al. 2023. Effect of Air Pollution on Heart Failure:
+    Systematic Review and Meta-Analysis. Environmental Health Perspectives.'
+  supporting_citations: []
+description: 'This meta-analysis of 100 studies across 20 countries demonstrates that
+  NO2 exposure is significantly associated with increased heart failure risk. Long-term
+  NO2 exposure showed a 20.4% increased risk of heart failure per 10-ppb increment
+  (RR=1.204, 95% CI: 1.069-1.356). The biological mechanism involves NO2-induced oxidative
+  stress, systemic inflammation, endothelial dysfunction, and autonomic nervous system
+  disruption, which collectively impair cardiac function and increase heart failure
+  risk through hospitalization, incidence, and mortality outcomes.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.204
+    type: relative_risk
+    ci_lower: 1.069
+    ci_upper: 1.356
+  p_value: null
+  sample_size: null
+moderators:
+- name: Country income level
+  direction: strengthens
+  strength: moderate
+  description: Associations between air pollution and heart failure were stronger
+    in low- and middle-income countries compared to high-income countries
+- name: Exposure duration
+  direction: strengthens
+  strength: strong
+  description: Long-term exposure showed stronger associations (RR=1.204 per 10-ppb
+    NO2) compared to short-term exposure effects
+- name: Lag period
+  direction: strengthens
+  strength: moderate
+  description: For short-term exposure, positive associations were stronger when exposure
+    was considered over previous 2 days (lag 0-1) rather than on day of exposure only
+    (lag 0)

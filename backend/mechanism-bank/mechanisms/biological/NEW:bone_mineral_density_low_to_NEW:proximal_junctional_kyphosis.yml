@@ -1,0 +1,69 @@
+id: NEW:bone_mineral_density_low_to_NEW:proximal_junctional_kyphosis
+name: Low Bone Mineral Density → Proximal Junctional Kyphosis
+from_node:
+  node_id: NEW:bone_mineral_density_low
+  node_name: Low Bone Mineral Density
+to_node:
+  node_id: NEW:proximal_junctional_kyphosis
+  node_name: Proximal Junctional Kyphosis
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Low preoperative bone mineral density (BMD) as measured by T-score indicates compromised bone
+  quality in surgical candidates'
+- 'Step 2: Reduced BMD leads to weakened vertebral bone structure at the upper instrumented vertebra (UIV)
+  and adjacent segments'
+- 'Step 3: Following adult spinal deformity (ASD) surgery, mechanical stress concentrates at the proximal
+  junction between fused and unfused spine segments'
+- 'Step 4: Weakened bone is unable to adequately support the instrumentation and resist the biomechanical
+  forces at the junction'
+- 'Step 5: Progressive kyphotic deformity develops at the proximal junction, resulting in proximal junctional
+  kyphosis (PJK)'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: 'Jeffrey W. Chen et al. 2023. "The association between bone mineral density and proximal
+    junctional kyphosis in adult spinal deformity: a systematic review and meta-analysis.." https://doi.org/10.3171/2023.2.SPINE221101'
+  supporting_citations:
+  - Studies providing T-scores from 8 included studies in meta-analysis
+  - Studies providing Hounsfield Unit measurements from included studies
+  - Additional citations require full-text access
+  doi: 10.3171/2023.2.SPINE221101
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This meta-analysis of 18 studies with 2185 patients demonstrates that low preoperative bone
+  mineral density, as measured by T-score, is significantly associated with the development of proximal
+  junctional kyphosis following adult spinal deformity surgery. Patients who developed PJK had T-scores
+  that were on average 0.69 units lower than those who did not develop PJK.
+quantitative_effects:
+  effect_size:
+    value: -0.69
+    type: standardized_mean_difference
+    ci_lower: -0.88
+    ci_upper: -0.5
+  p_value: 0.001
+  sample_size: 2185
+  heterogeneity_i_squared: 63.9
+moderators:
+- name: osteoporosis_diagnosis
+  direction: strengthens
+  strength: strong
+  description: Diagnosis of osteoporosis was associated with higher postoperative PJK risk
+- name: hounsfield_units_at_uiv
+  direction: strengthens
+  strength: strong
+  description: Lower Hounsfield units at the upper instrumented vertebra (UIV) were significant risk factors
+    for PJK
+structural_competency:
+  equity_implications: While this mechanism is primarily biological/clinical in nature, structural determinants
+    of osteoporosis include nutrition access, physical activity opportunities, healthcare access for early
+    diagnosis and treatment, and occupational factors. Populations with limited access to calcium/vitamin
+    D rich foods, safe environments for weight-bearing exercise, or preventive healthcare may be at higher
+    risk for low BMD and subsequent surgical complications. This represents a downstream consequence of
+    upstream structural inequities in healthcare access and nutrition.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.361655'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,41 @@
+id: mental_health_comorbidity_to_acute_injury_admission
+name: Mental Health and Substance Use Comorbidity → Acute Injury Requiring Trauma
+  Center Admission
+from_node:
+  node_id: mental_health_comorbidity
+  node_name: Mental Health and Substance Use Comorbidity
+to_node:
+  node_id: acute_injury_admission
+  node_name: Acute Injury Requiring Trauma Center Admission
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Post-traumatic stress disorder, depression, and suicidal ideation reduce
+  risk perception and increase risk-taking behaviors'
+- 'Step 2: Alcohol comorbidity impairs judgment and motor coordination during high-risk
+  activities'
+- 'Step 3: Combined mental health and substance use problems increase vulnerability
+  to environmental hazards and interpersonal violence'
+- 'Step 4: These factors culminate in severe injuries requiring Level I trauma center
+  admission'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: L. Whiteside et al. 2021. "Leveraging a health information exchange
+    to examine the accuracy of self-report emergency department utilization data among
+    hospitalized injury survivors." *Trauma Surgery & Acute Care Open*. https://doi.org/10.1136/tsaco-2020-000550
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.573891'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: suicidal_ideation
+  direction: strengthens
+  strength: strong
+  description: Presence of suicidal ideation likely increases injury severity and
+    intentionality
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/social_environment/mental_health_comorbidity_to_acute_injury_admission.yaml
+_category: social_environment

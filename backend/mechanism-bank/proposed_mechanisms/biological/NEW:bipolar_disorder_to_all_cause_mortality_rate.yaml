@@ -1,0 +1,61 @@
+id: NEW:bipolar_disorder_to_all_cause_mortality_rate
+name: Bipolar Disorder → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:bipolar_disorder
+  node_name: Bipolar Disorder
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Bipolar disorder creates chronic physiological stress through mood episode
+  cycling, disrupted sleep patterns, and hypothalamic-pituitary-adrenal (HPA) axis
+  dysregulation'
+- 'Step 2: The disorder increases risk of suicide (RR=11.69) and other unnatural causes
+  of death (RR=7.29) through impulsivity during episodes, hopelessness, and impaired
+  judgment'
+- 'Step 3: Individuals with BD have elevated rates of cardiovascular disease (RR=1.76),
+  respiratory disease (RR=3.18), and infectious disease mortality (RR=4.38) due to
+  metabolic effects of medications, lifestyle factors, and reduced healthcare access'
+- 'Step 4: Somatic comorbidities compound the mortality risk through inflammation,
+  metabolic syndrome, and reduced adherence to medical treatment for physical conditions'
+- 'Step 5: Combined effects of psychiatric symptoms, medication side effects, lifestyle
+  factors, and healthcare disparities result in approximately 2-fold increased all-cause
+  mortality'
+evidence:
+  quality_rating: A
+  n_studies: 57
+  primary_citation: 'T. Biazus et al. 2023. All-cause and cause-specific mortality
+    among people with bipolar disorder: a large-scale systematic review and meta-analysis.
+    Molecular Psychiatry.'
+  supporting_citations: []
+description: 'Bipolar disorder is associated with a 2-fold increased risk of all-cause
+  mortality compared to the general population. This excess mortality operates through
+  multiple pathways: dramatically elevated suicide risk (RR=11.69), increased unnatural
+  death from other causes (RR=7.29), and substantially elevated natural cause mortality
+  (RR=1.90) particularly from infectious, respiratory, and cardiovascular diseases.
+  The meta-analysis of 57 studies with 678,353 individuals with BD represents the
+  largest synthesis of evidence on this topic.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.02
+    type: relative_risk
+    ci_lower: 1.89
+    ci_upper: 2.16
+  p_value: null
+  sample_size: 678353
+moderators:
+- name: cause_of_death_type
+  direction: strengthens
+  strength: strong
+  description: Suicide (RR=11.69) and unnatural causes (RR=7.29) show much stronger
+    associations than natural causes (RR=1.90)
+- name: specific_disease_category
+  direction: strengthens
+  strength: moderate
+  description: Infectious disease mortality (RR=4.38) and respiratory disease mortality
+    (RR=3.18) show stronger associations than cardiovascular (RR=1.76) or cerebrovascular
+    (RR=1.57) mortality

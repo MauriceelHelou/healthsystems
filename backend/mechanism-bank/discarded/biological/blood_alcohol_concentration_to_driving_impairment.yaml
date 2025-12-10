@@ -1,0 +1,44 @@
+id: blood_alcohol_concentration_to_driving_impairment
+name: Blood Alcohol Concentration (BAC) → Driving Performance Impairment
+from_node:
+  node_id: blood_alcohol_concentration
+  node_name: Blood Alcohol Concentration (BAC)
+to_node:
+  node_id: driving_impairment
+  node_name: Driving Performance Impairment
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol at 0.05% BAC enters the bloodstream and affects central nervous
+  system functioning'
+- 'Step 2: Neural impairment reduces psychomotor control and cognitive processing
+  speed'
+- 'Step 3: Degraded neural function manifests as increased variability in lane keeping
+  and speed control'
+- 'Step 4: Impaired driving performance increases crash risk in urban driving environments'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: T. Brown et al. 2018. "Effects of alcohol at 0.05% blood alcohol
+    concentration (BAC) on low speed urban driving." *Traffic Injury Prevention*.
+    https://doi.org/10.1080/15389588.2018.1532220
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.517196'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: bac_level
+  direction: strengthens
+  strength: strong
+  description: Performance degradation increases with BAC level, with effects beginning
+    at 0.05% BAC and worsening at 0.10% BAC
+- name: driving_environment
+  direction: strengthens
+  strength: moderate
+  description: Urban low-speed driving context where lateral and longitudinal control
+    are critical safety factors
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/blood_alcohol_concentration_to_driving_impairment.yaml
+_category: biological

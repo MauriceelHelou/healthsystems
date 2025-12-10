@@ -1,0 +1,43 @@
+id: licensed_premises_late_closing_times_to_assault_incidence
+name: Late Closing Times of Licensed Premises → Assault Incidence
+from_node:
+  node_id: licensed_premises_late_closing_times
+  node_name: Late Closing Times of Licensed Premises
+to_node:
+  node_id: assault_incidence
+  node_name: Assault Incidence
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Extended operating hours of licensed premises allow continued alcohol service
+  into late night hours'
+- 'Step 2: Concentration of drinking activity in licensed premises extends later into
+  the night compared to home settings'
+- 'Step 3: Late-night drinking occasions result in significantly elevated blood alcohol
+  concentrations'
+- 'Step 4: High intoxication levels combined with public place congregation increases
+  assault risk, with peaks occurring 3-5am coinciding with closing times'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Mäkelä and K. Warpenius 2020. "Night-time is the right time?
+    Late-night drinking and assaults in Finnish public and private settings.." *Drug
+    and Alcohol Review*. https://doi.org/10.1111/dar.13068
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.054225'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: setting_type
+  direction: strengthens
+  strength: strong
+  description: Licensed premises show higher proportion of late-night drinking compared
+    to home surroundings, intensifying the temporal concentration of intoxication
+    in public spaces
+- name: day_of_week
+  direction: strengthens
+  strength: strong
+  description: Fridays and Saturdays show greatest peaks in drinking activity, concentrating
+    late-night intoxication and assault risk on weekend nights

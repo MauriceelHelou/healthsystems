@@ -1,0 +1,55 @@
+id: NEW:pau_genetic_risk_variants_to_alcohol_use_disorder
+name: Problematic Alcohol Use Genetic Risk Variants → Alcohol Use Disorder
+from_node:
+  node_id: NEW:pau_genetic_risk_variants
+  node_name: Problematic Alcohol Use Genetic Risk Variants
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Individuals inherit risk variants at 29 independent genetic loci associated
+  with problematic alcohol use, including genes involved in neurotransmission, alcohol
+  metabolism, and brain function'
+- 'Step 2: These genetic variants alter gene expression and protein function in brain
+  regions, with genetic heritability enriched in brain tissue and conserved/regulatory
+  genomic regions'
+- 'Step 3: Altered neurobiological function affects reward processing, impulse control,
+  and alcohol metabolism, increasing vulnerability to problematic drinking patterns'
+- 'Step 4: Genetic predisposition interacts with substance use behaviors, psychiatric
+  conditions, and risk-taking tendencies (supported by Mendelian randomization evidence)
+  to promote development of alcohol use disorder'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: Hang Zhou et al. 2020. Genome-wide meta-analysis of problematic
+    alcohol use in 435,563 individuals yields insights into biology and relationships
+    with other traits. Nature Neuroscience.
+  supporting_citations: []
+description: Large-scale genome-wide meta-analysis identified 29 independent risk
+  variants for problematic alcohol use, with genetic heritability enriched in brain
+  tissue and regulatory genomic regions. The study combined data from Million Veteran
+  Program, Psychiatric Genomics Consortium, and UK Biobank, finding 19 novel loci.
+  Genetic correlations with 138 phenotypes and phenome-wide polygenic risk score analysis
+  confirmed relationships between PAU genetic risk and substance use/psychiatric disorders.
+  Mendelian randomization provided evidence for causal pathways involving substance
+  use, psychiatric status, risk-taking, and cognitive performance.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Psychiatric comorbidity
+  direction: strengthens
+  strength: moderate
+  description: PAU genetically correlated with psychiatric traits; Mendelian randomization
+    suggests causal effects of psychiatric status on PAU liability
+- name: Risk-taking behavior
+  direction: strengthens
+  strength: moderate
+  description: Mendelian randomization evidence suggests causal effects of risk-taking
+    behavior on PAU liability
+- name: Cognitive performance
+  direction: weakens
+  strength: moderate
+  description: Mendelian randomization suggests causal effects of cognitive performance
+    on PAU liability

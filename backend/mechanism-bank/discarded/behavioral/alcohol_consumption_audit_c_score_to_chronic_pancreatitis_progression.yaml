@@ -1,0 +1,40 @@
+id: alcohol_consumption_audit_c_score_to_chronic_pancreatitis_progression
+name: Alcohol Consumption (AUDIT-C ≥6 male, ≥4 female) → Progression to Chronic Pancreatitis
+from_node:
+  node_id: alcohol_consumption_audit_c_score
+  node_name: Alcohol Consumption (AUDIT-C ≥6 male, ≥4 female)
+to_node:
+  node_id: chronic_pancreatitis_progression
+  node_name: Progression to Chronic Pancreatitis
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Continued alcohol consumption after acute pancreatitis episode causes repeated
+  pancreatic injury and inflammation'
+- 'Step 2: Alcohol metabolites (acetaldehyde, fatty acid ethyl esters) directly damage
+  pancreatic acinar cells and induce oxidative stress'
+- 'Step 3: Recurrent injury triggers pancreatic stellate cell activation and fibrogenesis'
+- 'Step 4: Progressive fibrosis and atrophy lead to irreversible structural changes
+  characteristic of chronic pancreatitis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Akira Yamamiya et al. 2022. "The Risk Factors for Progression
+    to Chronic Pancreatitis in Patients with Past-History of Acute Pancreatitis: A
+    Retrospective Analysis Based on Mechanistic Definition." *Journal of Clinical
+    Medicine*. https://doi.org/10.3390/jcm11082209'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.168393'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Different AUDIT-C thresholds for males (≥6) versus females (≥4) suggest
+    sex-based differences in alcohol metabolism and pancreatic vulnerability
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/behavioral/alcohol_consumption_audit_c_score_to_chronic_pancreatitis_progression.yaml
+_category: behavioral

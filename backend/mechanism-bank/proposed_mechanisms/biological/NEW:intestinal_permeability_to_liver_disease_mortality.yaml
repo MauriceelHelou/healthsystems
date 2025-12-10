@@ -1,0 +1,53 @@
+id: NEW:intestinal_permeability_to_liver_disease_mortality
+name: Intestinal Permeability → Liver Disease Mortality
+from_node:
+  node_id: NEW:intestinal_permeability
+  node_name: Intestinal Permeability
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Increased intestinal permeability (leaky gut) allows translocation of bacterial
+  products, endotoxins (lipopolysaccharides), and microbial metabolites from the gut
+  lumen into the portal circulation'
+- 'Step 2: These translocated bacterial products reach the liver via portal blood
+  flow, triggering hepatic immune responses and activating Kupffer cells and hepatic
+  stellate cells'
+- 'Step 3: Chronic exposure to gut-derived endotoxins induces persistent hepatic inflammation,
+  characterized by elevated cytokine production and inflammatory cascades'
+- 'Step 4: Sustained hepatic inflammation promotes progressive liver damage including
+  alcoholic hepatitis, fibrosis, cirrhosis, and potentially hepatocellular carcinoma'
+- 'Step 5: Progressive liver disease from these pathological processes increases risk
+  of liver-related mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: L. Sparfel et al. 2023. Akkermansia muciniphila and Alcohol-Related
+    Liver Diseases. A Systematic Review. Molecular Nutrition & Food Research.
+  supporting_citations: []
+description: Increased intestinal permeability allows bacterial endotoxins and metabolites
+  to translocate from the gut to the liver via portal circulation. This triggers chronic
+  hepatic inflammation and immune activation, promoting progression through alcohol-related
+  liver diseases including hepatitis, cirrhosis, and hepatocellular carcinoma, ultimately
+  increasing liver disease mortality risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Alcohol consumption
+  direction: strengthens
+  strength: strong
+  description: Ethanol over-intake exacerbates intestinal permeability impairment
+    and accelerates the gut-liver axis pathology, increasing liver disease risk
+- name: Gut microbiota composition
+  direction: weakens
+  strength: moderate
+  description: Higher abundance of beneficial bacteria like Akkermansia muciniphila
+    may protect intestinal barrier integrity and reduce harmful translocation to the
+    liver
+- name: Metabolic comorbidities
+  direction: strengthens
+  strength: moderate
+  description: Obesity, diabetes, and metabolic syndromes are associated with lower
+    protective gut bacteria and increased intestinal permeability

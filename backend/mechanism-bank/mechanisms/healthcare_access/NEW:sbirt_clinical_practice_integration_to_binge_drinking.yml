@@ -1,0 +1,58 @@
+id: NEW:sbirt_clinical_practice_integration_to_binge_drinking
+name: SBIRT Clinical Practice Integration → Binge Drinking
+from_node:
+  node_id: NEW:sbirt_clinical_practice_integration
+  node_name: SBIRT Clinical Practice Integration
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Systematic screening identifies patients with excessive alcohol consumption during emergency
+  encounters'
+- 'Step 2: Brief interventions provide personalized feedback and motivational support for behavior change'
+- 'Step 3: Referrals connect patients with specialized treatment for more severe alcohol use disorders'
+- 'Step 4: Early identification and intervention prevents escalation of harmful drinking patterns'
+- 'Step 5: Population-level implementation contributes to reduced alcohol-related health burden'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'H. Blake et al. 2023. "Alcohol Prevention in Urgent and Emergency Care (APUEC): Development
+    and Evaluation of Workforce Digital Training on Screening, Brief Intervention, and Referral for Treatment."
+    https://doi.org/10.3390/ijerph20227028'
+  supporting_citations:
+  - Abstract notes SBIRT is an established approach for identifying and intervening with patients with
+    excessive alcohol consumption
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  doi: 10.3390/ijerph20227028
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Integration of SBIRT into routine emergency care creates systematic opportunities to identify
+  excessive alcohol consumption and provide early intervention, potentially reducing population-level
+  harmful drinking. The abstract notes this mechanism is theoretically expected but patient outcomes not
+  yet tested.
+moderators:
+- name: treatment_referral_availability
+  direction: strengthens
+  strength: strong
+  description: Effectiveness depends on availability of specialized treatment services for referral
+- name: patient_readiness
+  direction: strengthens
+  strength: moderate
+  description: Brief interventions more effective when patients are receptive to change
+structural_competency:
+  equity_implications: This mechanism represents a structural intervention targeting healthcare system
+    capacity rather than individual behavior change alone. By building workforce capacity for SBIRT, the
+    intervention creates conditions for systematic identification and support for people with excessive
+    alcohol consumption. The approach avoids individual blame by recognizing that effective intervention
+    requires trained healthcare infrastructure. Equity implications include potential benefits for populations
+    who rely on emergency departments for care access, though structural barriers to treatment referral
+    completion (insurance, transportation, availability) may limit effectiveness for marginalized populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.074128'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,58 @@
+id: NEW:supervised_dispensing_practices_to_prescription_opioid_misuse
+name: Supervised Dispensing Practices in Prisons → Prescription Opioid Misuse
+from_node:
+  node_id: NEW:supervised_dispensing_practices
+  node_name: Supervised Dispensing Practices in Prisons
+to_node:
+  node_id: prescription_opioid_misuse
+  node_name: Prescription Opioid Misuse
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Prisons implement supervised dispensing protocols for opioid medications'
+- 'Step 2: Direct observation aims to ensure medication is swallowed rather than retained'
+- 'Step 3: Despite supervision, diversion still occurs through techniques like cheek retention of tablets'
+- 'Step 4: Widespread supervised dispensing reduces but does not eliminate abuse risk'
+evidence:
+  quality_rating: B
+  n_studies: 10
+  primary_citation: 'Zanib Bi-Mohammed et al. 2017. "Prescription opioid abuse in prison settings: A systematic
+    review of prevalence, practice and treatment responses." https://doi.org/10.1016/j.drugalcdep.2016.11.032'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review methodology described
+  - Databases searched included Medline, Embase, CINAHL, PsycINFO, Google Scholar, ASSIA and Science Direct
+  - 42 full-text articles retrieved with 10 meeting inclusion criteria
+  doi: 10.1016/j.drugalcdep.2016.11.032
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Supervised dispensing is a standard practice to prevent medication diversion, but the review
+  found that abuse risk remains significant despite these protocols, indicating structural limitations
+  of this intervention alone.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Implementation and effectiveness of supervised dispensing varies across different prison
+    systems and countries
+moderators:
+- name: staff_training
+  direction: strengthens
+  strength: moderate
+  description: Better trained staff may more effectively monitor medication consumption
+- name: medication_formulation
+  direction: strengthens
+  strength: strong
+  description: Abuse-deterrent formulations (buprenorphine/naloxone) enhance effectiveness of supervision
+structural_competency:
+  equity_implications: This mechanism demonstrates that procedural controls within carceral healthcare
+    systems have limitations. The persistence of diversion despite supervision points to the need for
+    multi-level interventions including medication formulation changes and addressing underlying addiction
+    treatment needs in carceral settings. The structural environment of prisons creates unique challenges
+    that cannot be solved through surveillance alone.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.709626'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

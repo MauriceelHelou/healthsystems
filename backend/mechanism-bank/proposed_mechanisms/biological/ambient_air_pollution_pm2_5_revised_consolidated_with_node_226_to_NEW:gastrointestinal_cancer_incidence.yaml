@@ -1,0 +1,56 @@
+id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226_to_NEW:gastrointestinal_cancer_incidence
+name: Ambient Air Pollution PM2.5 → Gastrointestinal Cancer Incidence
+from_node:
+  node_id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226
+  node_name: Ambient Air Pollution PM2.5
+to_node:
+  node_id: NEW:gastrointestinal_cancer_incidence
+  node_name: Gastrointestinal Cancer Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: PM2.5 particles are inhaled and enter systemic circulation, with some particles
+  also being swallowed and directly entering the gastrointestinal tract'
+- 'Step 2: PM2.5 and its chemical components induce oxidative stress and chronic inflammation
+  in GI tissues through direct contact and systemic inflammatory responses'
+- 'Step 3: Sustained inflammation and oxidative damage lead to DNA damage, mutations,
+  and epigenetic alterations in gastrointestinal epithelial cells'
+- 'Step 4: Accumulated genetic and epigenetic changes promote cellular proliferation,
+  inhibit apoptosis, and facilitate carcinogenesis in the liver, colorectum, and other
+  GI organs'
+evidence:
+  quality_rating: A
+  n_studies: 20
+  primary_citation: 'N. Pritchett et al. 2022. Exposure to Outdoor Particulate Matter
+    Air Pollution and Risk of Gastrointestinal Cancers in Adults: A Systematic Review
+    and Meta-Analysis of Epidemiologic Evidence. Environmental Health Perspectives.'
+  supporting_citations: []
+description: Systematic review and meta-analysis of 20 epidemiologic studies from
+  14 countries demonstrates that PM2.5 exposure is associated with increased risk
+  of gastrointestinal cancer incidence. The meta-analysis of 13 studies found an overall
+  12% increased risk (RR=1.12), with stronger associations for liver cancer (31% increase)
+  and colorectal cancer (35% increase). All studies identified positive associations,
+  though not all reached statistical significance. The evidence was rated as 'moderate'
+  quality with 'limited' strength, primarily due to inconsistent statistical significance
+  and small number of studies per cancer site.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.12
+    type: relative_risk
+    ci_lower: 1.01
+    ci_upper: 1.24
+  p_value: null
+  sample_size: null
+moderators:
+- name: Cancer site
+  direction: strengthens
+  strength: moderate
+  description: Liver and colorectal cancers show stronger associations with PM2.5
+    exposure compared to other GI cancer sites
+- name: PM chemical composition
+  direction: strengthens
+  strength: moderate
+  description: Specific chemical components of PM may differentially affect cancer
+    risk; identified as important area for future research

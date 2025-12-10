@@ -1,0 +1,36 @@
+id: obesity_to_pancreatic_cancer_risk
+name: Obesity → Pancreatic Cancer Risk
+from_node:
+  node_id: obesity
+  node_name: Obesity
+to_node:
+  node_id: pancreatic_cancer_risk
+  node_name: Pancreatic Cancer Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Obesity creates a state of chronic low-grade systemic inflammation with
+  elevated pro-inflammatory cytokines (TNF-alpha, IL-6)'
+- 'Step 2: Adipose tissue dysfunction leads to insulin resistance and hyperinsulinemia,
+  which promotes cell proliferation'
+- 'Step 3: Elevated insulin and insulin-like growth factors (IGF-1) activate signaling
+  pathways that stimulate pancreatic cell growth and inhibit apoptosis'
+- 'Step 4: Chronic inflammation, oxidative stress, and growth factor dysregulation
+  create favorable conditions for malignant transformation in pancreatic tissue'
+evidence:
+  quality_rating: C
+  n_studies: null
+  primary_citation: 'Carl Bryce and Merima Bucaj 2024. "Pancreatic Cancer: Rapid Evidence
+    Review.." *American family physician*.'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.212777'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: smoking_status
+  direction: strengthens
+  strength: moderate
+  description: Multiple modifiable risk factors may have additive or synergistic effects
+    on pancreatic cancer risk

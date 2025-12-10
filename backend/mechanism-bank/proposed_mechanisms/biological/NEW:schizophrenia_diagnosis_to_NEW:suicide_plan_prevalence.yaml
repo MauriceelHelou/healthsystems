@@ -1,0 +1,66 @@
+id: NEW:schizophrenia_diagnosis_to_NEW:suicide_plan_prevalence
+name: Schizophrenia Diagnosis → Suicide Plan Prevalence
+from_node:
+  node_id: NEW:schizophrenia_diagnosis
+  node_name: Schizophrenia Diagnosis
+to_node:
+  node_id: NEW:suicide_plan_prevalence
+  node_name: Suicide Plan Prevalence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Schizophrenia involves neurobiological abnormalities affecting dopaminergic,
+  glutamatergic, and serotonergic systems that impair emotional regulation, reality
+  testing, and cognitive function'
+- 'Step 2: These neurobiological disturbances contribute to persistent psychotic symptoms,
+  depression, hopelessness, and command hallucinations that may direct self-harm'
+- 'Step 3: Cognitive impairments and executive dysfunction associated with schizophrenia
+  may reduce problem-solving capacity and increase vulnerability to suicidal thinking
+  progressing to concrete planning'
+- 'Step 4: The chronic nature of schizophrenia and awareness of illness impact leads
+  to demoralization and increased likelihood of formulating suicide plans, with lifetime
+  prevalence reaching 44.3% and point prevalence ranging 6.4-13%'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'W. Bai et al. 2021. Worldwide prevalence of suicidal ideation
+    and suicide plan among people with schizophrenia: a meta-analysis and systematic
+    review of epidemiological surveys. Translational Psychiatry.'
+  supporting_citations: []
+description: Individuals with schizophrenia have substantially elevated prevalence
+  of suicide plans compared to the general population, with lifetime prevalence of
+  44.3% and point prevalence ranging from 6.4% to 13%. This meta-analysis of 26 studies
+  covering 5079 people with schizophrenia demonstrates that the neurobiological and
+  psychological burden of schizophrenia creates significant vulnerability to suicidal
+  planning, particularly among males and inpatients.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 44.3
+    type: prevalence_percentage
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 5079
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Male proportion was significantly associated with both lifetime and
+    point prevalence of suicidal ideation, with males showing higher risk
+- name: patient_setting
+  direction: strengthens
+  strength: moderate
+  description: Source of patients (inpatient vs outpatient) was significantly associated
+    with prevalence, with inpatients showing higher rates
+- name: sample_size
+  direction: weakens
+  strength: weak
+  description: Sample size was significantly associated with point prevalence of suicidal
+    ideation in meta-regression
+- name: age
+  direction: weakens
+  strength: weak
+  description: Mean age was significantly associated with lifetime prevalence of suicidal
+    ideation

@@ -1,0 +1,58 @@
+id: NEW:lean_nafld_to_liver_disease_mortality
+name: Nonalcoholic Fatty Liver Disease in Lean Individuals → Liver Disease Mortality
+from_node:
+  node_id: NEW:lean_nafld
+  node_name: Nonalcoholic Fatty Liver Disease in Lean Individuals
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Lean individuals develop NAFLD through metabolic dysfunction (insulin resistance,
+  dyslipidemia) despite normal body weight, with genetic variants (PNPLA3, TM6SF2)
+  potentially contributing to susceptibility'
+- 'Step 2: Hepatic steatosis progresses to nonalcoholic steatohepatitis (NASH) in
+  up to 1 in 4 individuals with NAFLD, involving hepatocyte injury, inflammation,
+  and oxidative stress'
+- 'Step 3: Persistent hepatic inflammation and injury drive progressive fibrosis through
+  activation of hepatic stellate cells and extracellular matrix deposition'
+- 'Step 4: Advanced fibrosis progresses to cirrhosis with portal hypertension, synthetic
+  dysfunction, and risk of hepatic decompensation'
+- 'Step 5: Cirrhotic liver disease leads to complications including variceal bleeding,
+  ascites, hepatic encephalopathy, and hepatocellular carcinoma, ultimately increasing
+  liver-related mortality'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'M. Long et al. 2022. AGA Clinical Practice Update: Diagnosis
+    and Management of Nonalcoholic Fatty Liver Disease in Lean Individuals: Expert
+    Review. Gastroenterology.'
+  supporting_citations: []
+description: Lean NAFLD (affecting 7-20% of all NAFLD cases) is associated with increased
+  liver-related mortality through progression to NASH, cirrhosis, hepatic decompensation,
+  and hepatocellular carcinoma. Multiple studies demonstrate that lean individuals
+  with NAFLD have increased liver mortality relative to those without NAFLD, highlighting
+  that normal body weight does not confer protection against severe liver outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: fibrosis_stage
+  direction: strengthens
+  strength: strong
+  description: Advanced fibrosis (F3-F4) substantially increases liver-related mortality
+    risk compared to early-stage disease
+- name: presence_of_NASH
+  direction: strengthens
+  strength: strong
+  description: Progression from simple steatosis to NASH significantly increases risk
+    of fibrosis progression and liver-related mortality
+- name: type_2_diabetes_mellitus
+  direction: strengthens
+  strength: moderate
+  description: Comorbid T2DM accelerates disease progression and increases mortality
+    risk
+- name: genetic_variants
+  direction: strengthens
+  strength: moderate
+  description: PNPLA3 and TM6SF2 variants may increase susceptibility to disease progression

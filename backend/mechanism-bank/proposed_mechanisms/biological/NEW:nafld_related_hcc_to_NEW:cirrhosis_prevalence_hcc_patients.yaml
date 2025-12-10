@@ -1,0 +1,53 @@
+id: NEW:nafld_related_hcc_to_NEW:cirrhosis_prevalence_hcc_patients
+name: NAFLD-Related Hepatocellular Carcinoma → Cirrhosis Prevalence in HCC Patients
+from_node:
+  node_id: NEW:nafld_related_hcc
+  node_name: NAFLD-Related Hepatocellular Carcinoma
+to_node:
+  node_id: NEW:cirrhosis_prevalence_hcc_patients
+  node_name: Cirrhosis Prevalence in HCC Patients
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: NAFLD-related HCC can develop through non-cirrhotic pathways, where hepatocarcinogenesis
+  occurs via direct lipotoxicity, oxidative stress, and chronic inflammation in steatotic
+  liver tissue without requiring progression to cirrhosis'
+- 'Step 2: Metabolic dysfunction in NAFLD (insulin resistance, lipid accumulation,
+  adipokine dysregulation) creates a pro-oncogenic environment that promotes hepatocyte
+  transformation independent of the fibrosis-cirrhosis-cancer sequence typical of
+  viral hepatitis or alcohol-related liver disease'
+- 'Step 3: As a result, patients with NAFLD-related HCC have significantly lower prevalence
+  of underlying cirrhosis (50.4%) compared to patients with HCC from other etiologies
+  (64.0%), demonstrating NAFLD''s unique carcinogenic pathway'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'Jiaoling Su et al. 2023. "Prognosis after hepatic resection of
+    patients with hepatocellular carcinoma related to non-alcoholic fatty liver disease:
+    meta-analysis." BJS Open.'
+  supporting_citations: []
+description: Meta-analysis of 17 studies (11,477 patients) demonstrates that NAFLD-related
+  HCC is associated with significantly lower cirrhosis prevalence (50.4% vs 64.0%,
+  P<0.001) compared to HCC of other etiologies. This reflects NAFLD's unique pathophysiology
+  where hepatocellular carcinoma can develop through metabolic and lipotoxic pathways
+  without requiring progression through cirrhosis, unlike viral or alcohol-related
+  liver disease.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: geographic_region
+  direction: strengthens
+  strength: moderate
+  description: Asian populations showed more pronounced survival benefits for NAFLD-related
+    HCC patients, possibly related to lower cirrhosis rates and different metabolic
+    profiles
+- name: body_mass_index
+  direction: strengthens
+  strength: moderate
+  description: NAFLD-related HCC patients had higher BMI, reflecting the metabolic
+    syndrome etiology that enables non-cirrhotic hepatocarcinogenesis
+- name: age
+  direction: strengthens
+  strength: weak
+  description: NAFLD-related HCC patients were older, suggesting longer exposure to
+    metabolic risk factors may compensate for lack of cirrhosis in cancer development

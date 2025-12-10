@@ -1,0 +1,82 @@
+id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226_to_all_cause_mortality_rate
+name: Long-term PM2.5 Exposure → All-Cause Mortality
+from_node:
+  node_id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226
+  node_name: Long-term PM2.5 Exposure
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Fine particulate matter (PM2.5) is inhaled deeply into the lungs due to
+  its small aerodynamic diameter (<2.5 μm), allowing particles to penetrate the alveoli
+  and enter systemic circulation'
+- 'Step 2: PM2.5 triggers local pulmonary inflammation and oxidative stress, releasing
+  pro-inflammatory cytokines and reactive oxygen species into the bloodstream'
+- 'Step 3: Systemic inflammation promotes endothelial dysfunction, accelerated atherosclerosis,
+  and vascular damage, increasing cardiovascular disease risk'
+- 'Step 4: Chronic exposure leads to cumulative damage to cardiovascular and respiratory
+  systems, including ischemic heart disease, cerebrovascular disease, and chronic
+  obstructive pulmonary disease'
+- 'Step 5: These pathophysiological changes result in increased risk of death from
+  cardiovascular causes (primary pathway) and respiratory causes, contributing to
+  elevated all-cause mortality'
+evidence:
+  quality_rating: A
+  n_studies: 868
+  primary_citation: 'Pablo Orellano et al. 2024. Long-Term Exposure to Particulate
+    Matter and Mortality: An Update of the WHO Global Air Quality Guidelines Systematic
+    Review and Meta-Analysis. International Journal of Public Health.'
+  supporting_citations:
+  - 'R. Atkinson et al. 2014. Epidemiological time series studies of PM2.5 and daily
+    mortality and hospital admissions: a systematic review and meta-analysis. Thorax.'
+  - 'G. Hoek et al. 2013. Long-term air pollution exposure and cardio-respiratory
+    mortality: a review. Environmental Health.'
+  - Cong Liu et al. 2019. Ambient Particulate Air Pollution and Daily Mortality in
+    652 Cities. New England Journal of Medicine.
+description: Long-term exposure to PM2.5 is consistently and significantly associated
+  with increased all-cause mortality across extensive global evidence. Meta-analyses
+  of over 100 cohort studies demonstrate approximately 6% excess mortality risk per
+  10 μg/m3 increase in PM2.5 exposure. The biological mechanism involves deep lung
+  penetration of fine particles, triggering systemic inflammation and oxidative stress
+  that promotes cardiovascular disease (particularly ischemic heart disease) and respiratory
+  disease. Short-term exposure studies across 652 cities globally confirm 0.68% increase
+  in daily mortality per 10 μg/m3 PM2.5 increment. The association is robust after
+  adjustment for gaseous pollutants and shows a consistent concentration-response
+  relationship with no evidence of a safe threshold.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.06
+    type: relative_risk
+    ci_lower: 1.04
+    ci_upper: 1.08
+  p_value: null
+  sample_size: null
+moderators:
+- name: baseline_pollution_level
+  direction: weakens
+  strength: moderate
+  description: Steeper concentration-response slopes observed at lower PM concentrations;
+    associations stronger in locations with lower annual mean PM levels
+- name: annual_mean_temperature
+  direction: strengthens
+  strength: moderate
+  description: Associations stronger in locations with higher annual mean temperatures
+- name: socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Larger effect estimates found in subjects with lower education, though
+    evidence has weakened in more recent studies
+- name: obesity
+  direction: strengthens
+  strength: moderate
+  description: Obese subjects show larger effect estimates for mortality related to
+    fine PM exposure
+- name: particle_composition
+  direction: strengthens
+  strength: moderate
+  description: Elemental carbon (combustion marker) shows strong associations with
+    mortality; particle composition contributes to heterogeneity in effect estimates

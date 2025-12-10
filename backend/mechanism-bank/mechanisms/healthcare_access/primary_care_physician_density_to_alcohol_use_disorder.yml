@@ -1,0 +1,60 @@
+id: primary_care_physician_density_to_alcohol_use_disorder
+name: Primary Care Physician Density → Alcohol Use Disorder Treatment Access
+from_node:
+  node_id: primary_care_physician_density
+  node_name: Primary Care Physician Density
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder Treatment Access
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Increased primary care capacity creates more opportunities for AUD identification'
+- 'Step 2: Patient dashboards identifying individuals with AUD enable case identification'
+- 'Step 3: Integration of AUD pharmacotherapy into primary care increases treatment access points'
+- 'Step 4: Patients can receive AUD treatment without requiring specialty referral'
+- 'Step 5: Treatment penetration for AUD increases when primary care serves as delivery setting'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'H. Hagedorn et al. 2019. "Implementing alcohol use disorder pharmacotherapy in primary
+    care settings: a qualitative analysis of provider-identified barriers and impact on implementation
+    outcomes." https://doi.org/10.1186/s13722-019-0151-7'
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1186/s13722-019-0151-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Primary care settings represent an untapped resource for AUD treatment delivery, with the
+  potential to dramatically expand treatment access given that only 7.8% of individuals with AUD currently
+  receive any treatment. Implementing AUD pharmacotherapy in primary care could increase treatment access
+  by meeting patients in settings they already use for healthcare.
+quantitative_effects:
+  sample_size: 24
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Implementation occurred across three VHA facilities; the relationship between primary
+    care capacity and AUD treatment likely varies by healthcare system characteristics
+moderators:
+- name: implementation_support
+  direction: strengthens
+  strength: moderate
+  description: Clinical champions and external facilitation strengthen the ability of primary care to
+    deliver AUD treatment
+- name: resource_availability
+  direction: strengthens
+  strength: moderate
+  description: Limited available resources was identified as a site-specific barrier, suggesting adequate
+    resourcing moderates primary care capacity to address AUD
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare system organization determines treatment
+    access. The current specialty-based model for AUD treatment creates structural barriers that primary
+    care integration could overcome. However, successful integration requires addressing the systemic
+    barriers identified in this study (workflow, knowledge, attitudes, resources), not simply mandating
+    that primary care providers add AUD to their responsibilities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.115984'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

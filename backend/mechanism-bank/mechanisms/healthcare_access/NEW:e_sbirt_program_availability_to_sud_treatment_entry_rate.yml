@@ -1,0 +1,59 @@
+id: NEW:e_sbirt_program_availability_to_sud_treatment_entry_rate
+name: Electronic Screening, Brief Intervention, and Referral to Treatment (e-SBIRT) Program Availability
+  → Substance Use Disorder Treatment Entry Rate
+from_node:
+  node_id: NEW:e_sbirt_program_availability
+  node_name: Electronic Screening, Brief Intervention, and Referral to Treatment (e-SBIRT) Program Availability
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: Substance Use Disorder Treatment Entry Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: e-SBIRT programs deploy electronic screening tools to identify individuals with substance use
+  disorders in multiple settings'
+- 'Step 2: Automated referral to treatment component connects identified individuals to appropriate treatment
+  resources'
+- 'Step 3: Digital delivery may reduce stigma and increase willingness to accept referrals compared to
+  face-to-face interventions'
+- 'Step 4: Linkage to treatment services potentially increases treatment uptake among those with addictive
+  disorders'
+evidence:
+  quality_rating: C
+  n_studies: 10
+  primary_citation: 'Matthew Jones et al. 2024. "Electronic-Screening, Brief Intervention and Referral
+    to Treatment (e-SBIRT) for Addictive Disorders: Systematic Review and Meta-Analysis." https://doi.org/10.1177/29767342241248926'
+  supporting_citations:
+  - Additional citations require full-text access - abstract describes systematic review methodology
+  - Studies searched across MEDLINE, PubMed, Web of Science, Scopus, Embase, and PsycInfo databases
+  - Abstract notes addictive disorders are significant global public health burden with low treatment
+    uptake
+  doi: 10.1177/29767342241248926
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: e-SBIRT programs are designed to improve treatment uptake for addictive disorders by providing
+  automated screening and referral pathways. While the theoretical mechanism suggests e-SBIRT could increase
+  treatment entry rates by reducing barriers and expanding reach, the systematic review found no clear
+  evidence that e-SBIRT is advantageous over control conditions for treatment outcomes. The evidence base
+  is characterized as poor quality.
+moderators:
+- name: evidence_quality
+  direction: weakens
+  strength: strong
+  description: Overall quality of outcome evidence is low; high-quality experimental treatment evaluation
+    research is needed
+structural_competency:
+  equity_implications: The low treatment uptake for addictive disorders reflects structural barriers in
+    the healthcare system including insufficient treatment capacity, geographic access limitations, insurance
+    coverage gaps, and stigma. e-SBIRT attempts to address some of these structural barriers through technology-based
+    delivery, potentially reaching populations underserved by traditional healthcare. However, the lack
+    of demonstrated effectiveness may indicate that addressing individual-level screening without addressing
+    broader structural barriers to treatment access is insufficient. Equity implications include potential
+    for technology-based interventions to either reduce or exacerbate disparities depending on digital
+    access and literacy across populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.604831'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

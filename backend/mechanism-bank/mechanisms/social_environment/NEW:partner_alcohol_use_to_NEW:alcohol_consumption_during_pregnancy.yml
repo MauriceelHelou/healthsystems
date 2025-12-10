@@ -1,0 +1,57 @@
+id: NEW:partner_alcohol_use_to_NEW:alcohol_consumption_during_pregnancy
+name: Partner Alcohol Use → Alcohol Consumption During Pregnancy
+from_node:
+  node_id: NEW:partner_alcohol_use
+  node_name: Partner Alcohol Use
+to_node:
+  node_id: NEW:alcohol_consumption_during_pregnancy
+  node_name: Alcohol Consumption During Pregnancy
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Partners who consume alcohol create household environments where alcohol is normalized and
+  accessible'
+- 'Step 2: Social modeling effects influence pregnant women''s drinking behaviors'
+- 'Step 3: Partner alcohol use may reflect household-level socioeconomic factors and cultural norms'
+- 'Step 4: Pregnant women in these households have increased exposure and likelihood of alcohol consumption'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Alemu Earsido Addila et al. 2020. "Alcohol consumption and its associated factors
+    among pregnant women in Sub-Saharan Africa: a systematic review and meta-analysis'' as given in the
+    submission system." https://doi.org/10.1186/s13011-020-00269-3'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 37 studies in qualitative synthesis
+  - Studies from various Sub-Saharan African countries included in the systematic review
+  - Primary studies accessed through PubMed, CINAHL, Cochrane Library, PsycINFO databases
+  doi: 10.1186/s13011-020-00269-3
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Partner alcohol use is significantly associated with alcohol consumption during pregnancy,
+  with pregnant women whose partners drink having 32% higher odds of consuming alcohol themselves.
+quantitative_effects:
+  effect_size:
+    value: 1.32
+    type: odds_ratio
+    ci_lower: 1.11
+    ci_upper: 1.57
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Partner influence may vary by cultural context across different Sub-Saharan African
+    countries
+moderators:
+- name: gender_norms
+  direction: strengthens
+  strength: moderate
+  description: Patriarchal household structures may increase partner influence on pregnant women's behaviors
+structural_competency:
+  equity_implications: This mechanism highlights how household-level social environments shaped by gender
+    dynamics, cultural norms around alcohol, and partner behaviors create structural contexts that influence
+    pregnant women's alcohol use. Interventions must address household and community-level factors rather
+    than focusing solely on individual pregnant women.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.268098'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

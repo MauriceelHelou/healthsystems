@@ -1,0 +1,50 @@
+id: indoor_dampness_to_asthma_outcomes
+name: Indoor Home Dampness → Adverse Asthma Outcomes
+from_node:
+  node_id: indoor_dampness
+  node_name: Indoor Home Dampness
+to_node:
+  node_id: asthma_outcomes
+  node_name: Adverse Asthma Outcomes
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Dampness in indoor home environments creates conditions for mold growth and dust mite proliferation'
+- 'Step 2: Damp conditions release airborne allergens and irritants into the indoor air'
+- 'Step 3: Exposure to these allergens triggers inflammatory responses in the respiratory system'
+- 'Step 4: Chronic exposure leads to increased asthma symptoms and worse asthma control'
+evidence:
+  quality_rating: C
+  n_studies: 35
+  primary_citation: 'Dhanusha Punyadasa et al. 2024. "Self-reported questionnaires to assess indoor home
+    environmental exposures in asthma patients: a scoping review.." *BMC public health*. https://doi.org/10.1186/s12889-024-20418-8'
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1186/s12889-024-20418-8
+  citation_verified: true
+  journal: BMC Public Health
+  year: 2024
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/96/34/12889_2024_Article_20418.PMC11494864.pdf
+    is_open_access: true
+    fetched_date: '2025-11-30'
+last_updated: '2025-11-30'
+version: '2.0'
+description: Indoor dampness was the exposure most consistently associated with adverse asthma outcomes
+  across 79% of reviewed studies, representing the strongest environmental risk factor identified.
+moderators:
+- name: childhood_age
+  direction: strengthens
+  strength: moderate
+  description: 66% of studies were conducted in children, suggesting stronger effects in pediatric populations
+structural_competency:
+  equity_implications: Dampness reflects structural housing quality issues often concentrated in low-income
+    housing where residents lack resources for repairs or ability to relocate. This creates differential
+    exposure based on socioeconomic position.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T18:40:50.677197'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

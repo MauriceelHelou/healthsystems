@@ -1,0 +1,58 @@
+id: NEW:hiv_related_stigma_to_suicidal_ideation
+name: HIV-Related Stigma → Suicidal Ideation
+from_node:
+  node_id: NEW:hiv_related_stigma
+  node_name: HIV-Related Stigma
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: PLWH experience pervasive stigma at individual, community, and structural levels'
+- 'Step 2: Stigma creates profound shame, hopelessness, and emotional distress'
+- 'Step 3: Social isolation and discrimination undermine sense of belonging and self-worth'
+- 'Step 4: Cumulative psychological burden from stigma combined with HIV diagnosis trauma'
+- 'Step 5: Suicidal ideation emerges as response to sustained stigma-related psychological distress'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Bahram Armoon et al. 2022. "HIV related stigma associated with social support, alcohol
+    use disorders, depression, anxiety, and suicidal ideation among people living with HIV: a systematic
+    review and meta-analysis." https://doi.org/10.1186/s13033-022-00527-w'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 22 studies with 9548 participants
+  - Studies published between January 1992 and August 2020 from PubMed, Scopus, Web of Sciences, PsycInfo,
+    SciELO and Cochrane library
+  - Studies measuring stigma among PLWH examining mental health outcomes
+  doi: 10.1186/s13033-022-00527-w
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: PLWH who reported suicidal ideation were 1.83 times more likely to report HIV-related stigma.
+  This reflects how structural stigma and discrimination create conditions of hopelessness and psychological
+  distress that contribute to suicidal thoughts.
+quantitative_effects:
+  effect_size:
+    value: 1.83
+    type: odds_ratio
+  sample_size: 9548
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Cultural and structural variation in stigma experiences across study populations from
+    multiple countries
+moderators:
+- name: social_support
+  direction: weakens
+  strength: moderate
+  description: Social support serves as protective factor against both stigma and suicidal ideation
+structural_competency:
+  equity_implications: Suicidal ideation is framed as a consequence of structural stigma and discrimination
+    rather than individual mental health vulnerability. The paper emphasizes that addressing stigma at
+    multiple levels - including healthcare provider discrimination and structural inequalities - is necessary
+    to reduce suicide risk among PLWH.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.991174'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

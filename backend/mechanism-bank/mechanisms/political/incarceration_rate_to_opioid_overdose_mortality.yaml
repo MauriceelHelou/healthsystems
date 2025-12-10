@@ -1,0 +1,68 @@
+id: incarceration_rate_to_opioid_overdose_mortality
+name: Incarceration Rate → Opioid Overdose Mortality
+from_node:
+  node_id: incarceration_rate
+  node_name: Incarceration Rate
+to_node:
+  node_id: opioid_overdose_mortality
+  node_name: Opioid Overdose Mortality
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: High incarceration rates concentrate individuals with opioid use disorder
+  (OUD) within the criminal justice system, where treatment access is often limited
+  or absent'
+- 'Step 2: During incarceration, opioid tolerance decreases significantly due to forced
+  abstinence without medication-assisted treatment (MAT)'
+- 'Step 3: Upon release, individuals face disrupted social determinants of health
+  including housing instability, unemployment, and fractured social support networks'
+- 'Step 4: The combination of reduced tolerance, limited post-release care continuity,
+  and competing SDOH priorities creates extremely high overdose vulnerability'
+- 'Step 5: Post-release mortality rate is approximately 13 times higher than general
+  population, with opioids contributing to nearly half of all overdose deaths in this
+  period'
+evidence:
+  quality_rating: B
+  n_studies: 13
+  primary_citation: 'Olivia K. Sugarman et al. 2020. "Interventions for incarcerated
+    adults with opioid use disorder in the United States: A systematic review with
+    a focus on social determinants of health." PLoS ONE.'
+  supporting_citations: []
+description: Incarceration increases opioid overdose mortality through multiple interconnected
+  pathways. The incarcerated population experiences forced abstinence that reduces
+  opioid tolerance without adequate medication-assisted treatment. Upon release, individuals
+  face dramatically elevated mortality risk (13 times higher than general population),
+  with opioids contributing to approximately 1 in 8 post-release fatalities overall
+  and nearly half of all overdose deaths. This risk is compounded by disrupted social
+  determinants of health including housing, employment, and healthcare access. The
+  systematic review found that while medication treatment throughout incarceration
+  improves outcomes, most correctional systems lack comprehensive OUD treatment and
+  SDOH-integrated interventions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 13.0
+    type: relative_risk
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: medication_assisted_treatment_availability
+  direction: weakens
+  strength: strong
+  description: Interventions that initiated medication treatment early and throughout
+    incarceration had significant positive effects on reducing opioid use and overdose
+    outcomes post-release
+- name: social_determinants_of_health_support
+  direction: weakens
+  strength: moderate
+  description: SDOH needs identified as competing priorities among justice-involved
+    individuals; addressing housing, employment, and social support may reduce overdose
+    risk
+- name: timing_of_release
+  direction: strengthens
+  strength: strong
+  description: The immediate post-release period carries highest overdose mortality
+    risk due to reduced tolerance and transition challenges

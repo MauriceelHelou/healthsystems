@@ -1,0 +1,49 @@
+id: NEW:plasmodium_infection_to_NEW:ip10_cxcl10_levels
+name: Plasmodium Infection (Malaria) → IP-10/CXCL10 Chemokine Levels
+from_node:
+  node_id: NEW:plasmodium_infection
+  node_name: Plasmodium Infection (Malaria)
+to_node:
+  node_id: NEW:ip10_cxcl10_levels
+  node_name: IP-10/CXCL10 Chemokine Levels
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Plasmodium parasites infect red blood cells and trigger innate immune recognition
+  through pathogen-associated molecular patterns (PAMPs) and damage-associated molecular
+  patterns (DAMPs)'
+- 'Step 2: Activated immune cells, particularly monocytes, macrophages, and dendritic
+  cells, produce interferon-gamma (IFN-γ) in response to parasitemia'
+- 'Step 3: IFN-γ stimulates specific leukocytes including neutrophils, eosinophils,
+  and monocytes to produce and secrete IP-10/CXCL10'
+- 'Step 4: Elevated circulating IP-10/CXCL10 levels serve as a chemokine attracting
+  CXCR3-positive immune cells to sites of infection and inflammation'
+- 'Step 5: IP-10/CXCL10 levels correlate with disease severity, with particularly
+  elevated levels observed in cerebral malaria cases'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: Manas Kotepui et al. 2024. A systematic review of circulating
+    IP-10/CXCL10 in patients with Plasmodium infections in relation to disease severity.
+    Scientific reports.
+  supporting_citations: []
+description: Plasmodium infection triggers a robust immune response that leads to
+  elevated circulating IP-10/CXCL10 levels. This chemokine is produced by activated
+  leukocytes (neutrophils, eosinophils, monocytes) in response to interferon-gamma
+  signaling during malaria infection. A systematic review of 26 studies consistently
+  demonstrated elevated IP-10 levels in malaria patients compared to healthy controls,
+  with levels generally correlating with disease severity.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: disease_severity
+  direction: strengthens
+  strength: moderate
+  description: Most studies reported that increased IP-10 levels were associated with
+    increased disease severity, though some studies found no significant difference
+    or decreased levels in severe compared to uncomplicated malaria
+- name: cerebral_malaria
+  direction: strengthens
+  strength: moderate
+  description: Several studies indicated that IP-10 levels were particularly elevated
+    in cerebral malaria cases

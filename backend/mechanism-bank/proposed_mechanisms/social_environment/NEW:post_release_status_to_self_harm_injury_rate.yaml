@@ -1,0 +1,52 @@
+id: NEW:post_release_status_to_self_harm_injury_rate
+name: Post-Release from Incarceration Status → Self-Harm Injury Rate
+from_node:
+  node_id: NEW:post_release_status
+  node_name: Post-Release from Incarceration Status
+to_node:
+  node_id: self_harm_injury_rate
+  node_name: Self-Harm Injury Rate
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Release from incarceration creates acute transitional stress including
+  loss of structured environment, social support disruption, and reentry challenges'
+- 'Step 2: Post-release individuals face compounding vulnerabilities including housing
+  instability, unemployment, stigma, disrupted healthcare access, and substance use
+  relapse risks'
+- 'Step 3: Pre-existing mental health conditions prevalent in incarcerated populations
+  interact with post-release stressors, increasing psychological distress'
+- 'Step 4: The combination of accumulated trauma, social marginalization, and inadequate
+  community mental health support leads to elevated rates of self-harm and suicidal
+  behavior compared to general population'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'E. Janca et al. 2022. Sex differences in suicide, suicidal ideation,
+    and self-harm after release from incarceration: a systematic review and meta-analysis.
+    Social Psychiatry and Psychiatric Epidemiology.'
+  supporting_citations: []
+description: People released from incarceration have substantially elevated risk of
+  suicide and self-harm compared to the general population, with a pooled standardized
+  mortality ratio of 7.4. The suicide crude mortality rate is 114.5 per 100,000 person
+  years for released individuals. Notably, the rate of suicide is higher after release
+  than during incarceration, indicating the post-release period represents a particularly
+  vulnerable time. Women experience a disproportionately elevated risk relative to
+  their general population counterparts.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 7.4
+    type: standardized_mortality_ratio
+    ci_lower: 5.4
+    ci_upper: 9.4
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Women show three times higher elevation in suicide risk compared to
+    general population (SMR 14.9) than men (SMR 4.6), though absolute rates are similar
+    between sexes

@@ -1,0 +1,42 @@
+id: pregnancy_progression_to_moud_coverage
+name: Gestational Age Progression → MOUD Treatment Coverage
+from_node:
+  node_id: pregnancy_progression
+  node_name: Gestational Age Progression
+to_node:
+  node_id: moud_coverage
+  node_name: MOUD Treatment Coverage
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: As pregnancy advances, physical changes become more apparent, increasing
+  likelihood of healthcare system engagement'
+- 'Step 2: Progressive pregnancy symptoms and pregnancy confirmation motivate prenatal
+  care seeking'
+- 'Step 3: Later trimesters associated with increased healthcare touchpoints and opportunities
+  for OUD identification and MOUD referral'
+- 'Step 4: MOUD coverage increased from 37% in first trimester to 61% in second and
+  91% in third trimester'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Emmy L Tran et al. "Patterns of Medication for Opioid Use Disorder
+    During Pregnancy, 7 Clinical Sites, MATernaL and Infant clinical NetworK (MAT-LINK),
+    2014-2021.." *Journal of addiction medicine*. https://doi.org/10.1097/ADM.0000000000001426
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.666176'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: prenatal_care_timing
+  direction: strengthens
+  strength: strong
+  description: Earlier prenatal care entry would strengthen earlier MOUD access, but
+    structural barriers delay both
+- name: insurance_activation
+  direction: strengthens
+  strength: moderate
+  description: Pregnancy-related Medicaid eligibility typically activates during pregnancy,
+    facilitating later care access

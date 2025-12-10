@@ -1,0 +1,46 @@
+id: intellectual_developmental_disability_status_to_metastatic_cancer_stage_at_diagnosis
+name: Intellectual or Developmental Disability Status → Metastatic (Stage IV) Cancer
+  at Diagnosis
+from_node:
+  node_id: intellectual_developmental_disability_status
+  node_name: Intellectual or Developmental Disability Status
+to_node:
+  node_id: metastatic_cancer_stage_at_diagnosis
+  node_name: Metastatic (Stage IV) Cancer at Diagnosis
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: People with IDD experience lower cancer screening rates due to systemic
+  barriers in healthcare access and accommodation'
+- 'Step 2: Reduced screening leads to missed opportunities for early cancer detection
+  during asymptomatic stages'
+- 'Step 3: Cancers progress undetected to advanced metastatic stages before clinical
+  presentation'
+- 'Step 4: Diagnostic delays result in higher proportion of Stage IV cancer at initial
+  diagnosis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Mahar et al. 2023. "Stage IV breast, colorectal, and lung
+    cancer at diagnosis in adults living with intellectual or developmental disabilities:
+    A population‐based cross‐sectional study." *Cancer*. https://doi.org/10.1002/cncr.35068'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.487357'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: cancer_type
+  direction: strengthens
+  strength: moderate
+  description: The mechanism may vary by cancer type (breast, colorectal, lung) as
+    screening programs and detection protocols differ across cancer types
+- name: screening_program_availability
+  direction: weakens
+  strength: moderate
+  description: Availability and accessibility of cancer screening programs for people
+    with IDD could moderate the diagnostic delay pathway
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/intellectual_developmental_disability_status_to_metastatic_cancer_stage_at_diagnosis.yaml
+_category: healthcare_access

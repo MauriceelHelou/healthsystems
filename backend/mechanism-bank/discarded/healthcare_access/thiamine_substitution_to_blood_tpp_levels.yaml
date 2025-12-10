@@ -1,0 +1,39 @@
+id: thiamine_substitution_to_blood_tpp_levels
+name: Thiamine Substitution (Oral or IV) → Blood Thiamine Pyrophosphate (TPP) Levels
+from_node:
+  node_id: thiamine_substitution
+  node_name: Thiamine Substitution (Oral or IV)
+to_node:
+  node_id: blood_tpp_levels
+  node_name: Blood Thiamine Pyrophosphate (TPP) Levels
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Thiamine supplementation (oral 3×100mg/day for 7 days, then 1×100mg/day,
+  with or without IV 3×100mg/day for 5 days) is administered during alcohol withdrawal
+  treatment'
+- 'Step 2: Thiamine is absorbed and converted to active form (thiamine pyrophosphate)
+  in blood'
+- 'Step 3: TPP accumulates in peripheral blood over 1-2 weeks of treatment'
+- 'Step 4: Blood TPP levels increase substantially from baseline'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Stephan Listabarth et al. 2023. "Can thiamine substitution restore
+    cognitive function in alcohol use disorder?." *Alcohol and alcoholism (Oxford,
+    Oxfordshire)*. https://doi.org/10.1093/alcalc/agad017
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.341305'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: route_of_administration
+  direction: weakens
+  strength: weak
+  description: No relevant difference found between intravenous and oral routes (average
+    difference 2.3 nmol/l, p=0.912), suggesting route does not moderate effect
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/thiamine_substitution_to_blood_tpp_levels.yaml
+_category: healthcare_access

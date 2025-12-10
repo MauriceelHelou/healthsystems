@@ -1,0 +1,56 @@
+id: NEW:alcohol_abstinence_reduction_to_alcohol_use_disorder
+name: Alcohol Abstinence or Substantial Reduction in Drinking → Alcohol Use Disorder
+from_node:
+  node_id: NEW:alcohol_abstinence_reduction
+  node_name: Alcohol Abstinence or Substantial Reduction in Drinking
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Achieving abstinence or substantial reduction in alcohol consumption represents
+  the primary behavioral outcome goal in AUD treatment'
+- 'Step 2: Sustained abstinence or reduced drinking interrupts the cycle of alcohol
+  dependence and physiological addiction'
+- 'Step 3: Breaking the drinking pattern allows for neurobiological recovery and reduces
+  craving intensity over time'
+- 'Step 4: Continued abstinence or controlled drinking leads to remission of alcohol
+  use disorder diagnostic criteria'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'Dakota J. Sicignano et al. 2023. The impact of psychedelics on
+    patients with alcohol use disorder: a systematic review with meta-analysis. Current
+    Medical Research and Opinion.'
+  supporting_citations: []
+description: 'This meta-analysis examined the relationship between achieving alcohol
+  abstinence or substantial reduction in drinking and alcohol use disorder outcomes
+  in the context of psychedelic-assisted treatment. Across 6 controlled trials, psychedelic
+  therapy enhanced the odds of patients achieving abstinence or substantial reduction
+  in drinking by 89% (OR 1.89, 95% CI: 1.42-2.50). The pathway represents the direct
+  behavioral intervention target - achieving and maintaining reduced alcohol consumption
+  - as the means by which AUD is addressed. However, methodological limitations including
+  high risk of bias in most studies and the historical nature of LSD research temper
+  the strength of conclusions.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.89
+    type: odds_ratio
+    ci_lower: 1.42
+    ci_upper: 2.5
+  p_value: null
+  sample_size: null
+moderators:
+- name: treatment_type
+  direction: strengthens
+  strength: moderate
+  description: Psychedelic-assisted therapy (LSD, psilocybin) enhanced odds of achieving
+    abstinence or substantial reduction by 89% compared to control
+- name: study_quality
+  direction: weakens
+  strength: moderate
+  description: Four of 6 trials had high risk of bias and methodological issues, reducing
+    confidence in effect estimates

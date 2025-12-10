@@ -1,0 +1,58 @@
+id: NEW:cross_agency_data_sharing_capacity_to_sud_treatment_entry_rate
+name: Cross-Agency Data Sharing Capacity → SUD Treatment Entry Rate
+from_node:
+  node_id: NEW:cross_agency_data_sharing_capacity
+  node_name: Cross-Agency Data Sharing Capacity
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Criminal-legal system agencies (jails, probation, parole) identify individuals with substance
+  use disorders'
+- 'Step 2: Without data sharing infrastructure, individual-level health information cannot be communicated
+  to community treatment providers'
+- 'Step 3: Treatment providers lack necessary information to engage individuals upon release or during
+  supervision'
+- 'Step 4: Gaps in information transfer result in delayed or missed treatment entry for substance use
+  disorders'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Maji Hailemariam et al. 2025. "Use of data-driven decision-making among agencies
+    serving individuals with criminal-legal system involvement: a qualitative study.." https://doi.org/10.1186/s12913-025-13385-2'
+  supporting_citations:
+  - Additional citations require full-text access - qualitative interviews with mental health, substance
+    use, jail, and probation leaders
+  doi: 10.1186/s12913-025-13385-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Inadequate data sharing capacity between criminal-legal and substance use treatment agencies
+  impedes treatment entry for justice-involved individuals with substance use disorders
+quantitative_effects:
+  sample_size: 68
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Data capacity varies across 52 U.S. counties studied, reflecting geographic variation
+    in infrastructure investment
+moderators:
+- name: data_dashboard_availability
+  direction: strengthens
+  strength: moderate
+  description: Agencies identified data dashboards as best practice for improving data use and coordination
+- name: standardized_data_management_systems
+  direction: strengthens
+  strength: strong
+  description: Standardized systems enable more effective data sharing across agency types
+structural_competency:
+  equity_implications: This mechanism highlights how structural deficiencies in data infrastructure create
+    barriers to care for a marginalized population. Justice-involved individuals with substance use disorders
+    face systemic barriers to treatment that are not of their making. Addressing this requires policy
+    changes and targeted investment in data systems, not individual behavior change.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.818813'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

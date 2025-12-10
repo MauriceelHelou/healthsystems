@@ -1,0 +1,58 @@
+id: NEW:aud_intervention_liver_disease_to_liver_failure_cirrhosis_hospitalization
+name: AUD Intervention in Liver Disease Patients → Liver Decompensation/Hospitalization
+from_node:
+  node_id: NEW:aud_intervention_liver_disease
+  node_name: AUD Intervention in Liver Disease Patients
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Decompensation/Hospitalization
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with liver disease receive alcohol use disorder (AUD) intervention
+  through integrated (colocated liver and addiction clinics) or concomitant (separate
+  hepatology and addiction clinics) care models'
+- 'Step 2: AUD intervention promotes alcohol abstinence (abstinence rate 0.41 per
+  person-year) and reduces alcohol relapse through structured treatment and monitoring'
+- 'Step 3: Reduced alcohol consumption decreases ongoing hepatotoxic injury to already
+  compromised liver tissue'
+- 'Step 4: Decreased hepatic insult allows for stabilization or improvement of liver
+  function, reducing progression to decompensation'
+- 'Step 5: Lower rates of liver decompensation result in reduced hospitalizations,
+  with odds of decompensation decreased by 44% and 30-day readmission reduced by 59%'
+evidence:
+  quality_rating: A
+  n_studies: 20
+  primary_citation: 'M. Elfeki et al. 2022. Simultaneous Management of Alcohol Use
+    Disorder and Liver Disease: A Systematic Review and Meta-analysis. Journal of
+    addiction medicine.'
+  supporting_citations: []
+description: Systematic review and meta-analysis of 20 studies (38,329 patients, 7,072
+  receiving AUD intervention) demonstrates that simultaneous management of alcohol
+  use disorder in patients with liver disease significantly reduces liver decompensation
+  by 44%, 30-day hospital readmission by 59%, and mortality by 58% compared to standard
+  of care. The mechanism operates through achieving abstinence and reducing alcohol
+  relapse, thereby preventing ongoing hepatotoxic injury and allowing liver stabilization.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.56
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 38329
+moderators:
+- name: Care model integration
+  direction: strengthens
+  strength: moderate
+  description: Integrated clinics (colocated liver and addiction care) showed similar
+    abstinence/relapse rates as concomitant care for liver disease patients, but for
+    liver transplant recipients, integrated follow-up with addiction team showed substantially
+    better outcomes (OR 0.48 for relapse, OR 0.29 for mortality)
+- name: Liver transplant status
+  direction: strengthens
+  strength: strong
+  description: Liver transplant recipients showed even greater benefits from integrated
+    addiction care compared to hepatology alone follow-up

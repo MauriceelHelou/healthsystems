@@ -1,0 +1,54 @@
+id: NEW:smokeless_tobacco_snuff_use_to_NEW:hodgkin_lymphoma_risk
+name: Smokeless Tobacco (Snuff) Use → Hodgkin Lymphoma Risk
+from_node:
+  node_id: NEW:smokeless_tobacco_snuff_use
+  node_name: Smokeless Tobacco (Snuff) Use
+to_node:
+  node_id: NEW:hodgkin_lymphoma_risk
+  node_name: Hodgkin Lymphoma Risk
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Smokeless tobacco use may influence immune function'
+- 'Step 2: Potential immunomodulatory effects of tobacco alkaloids'
+- 'Step 3: Altered lymphocyte function or tumor surveillance mechanisms'
+- 'Step 4: Paradoxically reduced Hodgkin lymphoma risk observed'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Melitah Motlhale et al. 2025. "Smokeless tobacco (snuff) and site-specific cancer
+    risks in adult Black South African women: Findings from the Johannesburg Cancer Study.." https://doi.org/10.1002/ijc.35293'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Literature on tobacco and immune function
+  - Hodgkin lymphoma risk factor studies
+  doi: 10.1002/ijc.35293
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-12-06'
+version: '2.0'
+description: SLT users showed 52% lower risk of Hodgkin lymphoma compared to non-users. This surprising
+  finding was characterized as unexpected by the authors and requires replication and mechanistic investigation.
+quantitative_effects:
+  effect_size:
+    value: 0.48
+    type: odds_ratio
+    ci_lower: 0.23
+    ci_upper: 0.97
+  sample_size: 15336
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Unexpected inverse association; may be population-specific or reflect methodological
+    issues
+structural_competency:
+  equity_implications: This unexpected protective association should not be interpreted as a benefit of
+    SLT use given the established carcinogenicity for other sites. The finding may reflect confounding
+    by socioeconomic factors, detection bias, or population-specific factors in South Africa. Caution
+    is warranted in interpretation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.677691'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

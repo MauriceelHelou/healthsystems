@@ -1,0 +1,52 @@
+id: assertive_community_treatment_act_enrollment_to_homelessness_rate
+name: Assertive Community Treatment (ACT) → Days Homeless
+from_node:
+  node_id: assertive_community_treatment_act_enrollment
+  node_name: Assertive Community Treatment (ACT)
+to_node:
+  node_id: homelessness_rate
+  node_name: Days Homeless
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: ACT provides intensive, coordinated mental health services through multidisciplinary
+  teams that actively engage individuals experiencing homelessness with severe mental
+  illness'
+- 'Step 2: ACT teams deliver services directly in community settings, reducing barriers
+  to care and maintaining consistent contact with clients who might otherwise disengage
+  from traditional services'
+- 'Step 3: Comprehensive support addresses multiple needs simultaneously (psychiatric
+  care, medication management, housing assistance, substance use support), stabilizing
+  mental health symptoms'
+- 'Step 4: Improved mental health stability and continuous case management support
+  enables individuals to obtain and maintain housing placements'
+- 'Step 5: Reduced days homeless as individuals achieve greater housing stability
+  through sustained engagement with ACT services'
+evidence:
+  quality_rating: A
+  n_studies: 86
+  primary_citation: Aliza Moledina et al. 2021. A comprehensive review of prioritised
+    interventions to improve the health and wellbeing of persons with lived experience
+    of homelessness. Campbell Systematic Reviews.
+  supporting_citations: []
+description: Assertive Community Treatment (ACT) reduces days homeless among individuals
+  experiencing homelessness with severe mental illness. This systematic review found
+  that mental health interventions including ACT appeared to reduce the number of
+  days homeless. ACT employs intensive, mobile, multidisciplinary teams that provide
+  comprehensive psychiatric and social services directly in community settings, maintaining
+  engagement with hard-to-reach populations. The intervention also demonstrated cost-effectiveness,
+  with included studies consistently showing that ACT saved payers money while improving
+  health outcomes compared to usual care.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: comorbid mental illness severity
+  direction: strengthens
+  strength: moderate
+  description: ACT designed specifically for individuals with severe mental illness;
+    effects most pronounced in populations with significant psychiatric comorbidity
+- name: substance use disorder comorbidity
+  direction: varies
+  strength: moderate
+  description: ACT showed varied effects on substance use outcomes over time, which
+    may moderate housing stability effects

@@ -1,0 +1,58 @@
+id: NEW:evidence_base_quality_for_chronic_disease_treatment_to_NEW:treatment_effectiveness_uncertainty
+name: Evidence Base Quality for Chronic Disease Treatment → Treatment Effectiveness Uncertainty
+from_node:
+  node_id: NEW:evidence_base_quality_for_chronic_disease_treatment
+  node_name: Evidence Base Quality for Chronic Disease Treatment
+to_node:
+  node_id: NEW:treatment_effectiveness_uncertainty
+  node_name: Treatment Effectiveness Uncertainty
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Clinical trials use surrogate markers as primary endpoints to accelerate drug approval'
+- 'Step 2: Only 54% of surrogate-clinical outcome pairs (59 of 109) reported correlation coefficients'
+- 'Step 3: Among those reporting correlations, 83% (49 of 59) showed less than high-strength association
+  with clinical outcomes'
+- 'Step 4: Healthcare providers and patients make treatment decisions with insufficient evidence of real-world
+  effectiveness'
+evidence:
+  quality_rating: A
+  n_studies: 54
+  primary_citation: Joshua D Wallach et al. 2024. "Associations Between Surrogate Markers and Clinical
+    Outcomes for Nononcologic Chronic Disease Treatments.." https://doi.org/10.1001/jama.2024.4175
+  supporting_citations:
+  - Meta-analyses included median 18.5 trials (IQR 12.0-43.0) per surrogate marker
+  - Pooled analyses included median 90,056 patients (IQR 20,109-170,014)
+  - Additional citations require full-text access for specific meta-analysis sources
+  doi: 10.1001/jama.2024.4175
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review demonstrates that the evidence base supporting surrogate markers in
+  chronic disease drug approval is weaker than commonly assumed. The median number of meta-analyzed trials
+  per surrogate marker was only 2.5, and the majority of surrogate-clinical outcome pairs either lacked
+  correlation data entirely or showed correlations below the high-strength threshold. This structural
+  gap in evidence affects treatment decisions across 32 chronic diseases.
+quantitative_effects:
+  effect_size:
+    value: 52.0
+    type: percentage_change
+  sample_size: 90056
+moderators:
+- name: statistical_method_used
+  direction: varies
+  strength: moderate
+  description: Among meta-analyses reporting only slopes/effect estimates/meta-regression (no r or R²),
+    52% showed statistically significant results, but this does not indicate correlation strength
+structural_competency:
+  equity_implications: This mechanism highlights structural deficiencies in the pharmaceutical evidence
+    generation system. The emphasis on surrogate markers allows faster, cheaper drug development but creates
+    systemic uncertainty about treatment benefits. Populations with chronic diseases who depend on these
+    medications face structural exposure to potentially ineffective treatments. Health equity is affected
+    as patients with fewer resources may have less ability to seek alternative treatments or navigate
+    complex medical evidence.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.028122'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

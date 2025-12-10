@@ -1,0 +1,47 @@
+id: public_health_interventions_to_alcohol_related_disease_burden
+name: Targeted Public Health Interventions for Alcohol → Alcohol-Related Disease Burden
+from_node:
+  node_id: public_health_interventions
+  node_name: Targeted Public Health Interventions for Alcohol
+to_node:
+  node_id: alcohol_related_disease_burden
+  node_name: Alcohol-Related Disease Burden
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Public health interventions (e.g., taxation, availability restrictions,
+  marketing bans) reduce population-level alcohol consumption'
+- 'Step 2: Reduced consumption decreases incidence and prevalence of alcohol-attributable
+  diseases including cirrhosis, cancers, cardiovascular disease, and injuries'
+- 'Step 3: Mathematical models estimate the cost-effectiveness of these interventions
+  by projecting changes in disease burden metrics (deaths, DALYs, QALYs)'
+- 'Step 4: Cost-effective interventions can be prioritized for implementation to maximize
+  population health gains'
+evidence:
+  quality_rating: B
+  n_studies: 63
+  primary_citation: 'Ariel Esteban Bardach et al. 2019. "Alcohol consumption''s attributable
+    disease burden and cost-effectiveness of targeted public health interventions:
+    a systematic review of mathematical models." *BMC Public Health*. https://doi.org/10.1186/s12889-019-7771-4'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.121232'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_alcohol_consumption
+  direction: strengthens
+  strength: strong
+  description: Interventions are more cost-effective in populations with higher baseline
+    consumption due to greater potential for disease burden reduction
+- name: existing_policy_environment
+  direction: weakens
+  strength: moderate
+  description: In jurisdictions with already strong alcohol control policies, incremental
+    interventions may have lower cost-effectiveness
+- name: local_data_availability
+  direction: strengthens
+  strength: moderate
+  description: Countries with better local data can develop more accurate models that
+    better inform policy decisions and implementation

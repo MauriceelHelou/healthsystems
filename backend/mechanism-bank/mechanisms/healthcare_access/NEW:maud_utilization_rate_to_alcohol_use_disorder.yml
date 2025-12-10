@@ -1,0 +1,56 @@
+id: NEW:maud_utilization_rate_to_alcohol_use_disorder
+name: Medications for Alcohol Use Disorder Utilization Rate → Alcohol Use Disorder
+from_node:
+  node_id: NEW:maud_utilization_rate
+  node_name: Medications for Alcohol Use Disorder Utilization Rate
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: FDA-approved medications (naltrexone, disulfiram, acamprosate) are effective treatments for
+  AUD'
+- 'Step 2: When patients access and adhere to MAUD, medication mechanisms reduce craving and/or create
+  aversion to alcohol'
+- 'Step 3: Reduced craving and drinking behavior leads to improved AUD outcomes'
+- 'Step 4: However, current MAUD utilization rates remain particularly low compared to psychotherapy'
+- 'Step 5: Low utilization represents a missed opportunity for reducing AUD burden at the population level'
+evidence:
+  quality_rating: B
+  n_studies: 14
+  primary_citation: 'Devin C Tomlinson et al. 2025. "Patient perspectives on medications for alcohol use
+    disorder: A systematic scoping review.." https://doi.org/10.1111/acer.70022'
+  supporting_citations:
+  - Additional citations require full-text access - review documents low MAUD utilization as public health
+    concern
+  - Studies on general MAUD perspectives (n=7 studies)
+  - 'Studies examining specific medications: naltrexone (n=5), disulfiram (n=2), acamprosate (n=1)'
+  doi: 10.1111/acer.70022
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Medications for alcohol use disorder are effective but dramatically underutilized. Increasing
+  MAUD utilization through addressing patient-perceived barriers could significantly reduce AUD prevalence
+  and related harms at the population level.
+moderators:
+- name: psychotherapy_integration
+  direction: strengthens
+  strength: moderate
+  description: Combining MAUD with psychotherapy may improve overall AUD treatment outcomes
+- name: treatment_retention
+  direction: strengthens
+  strength: strong
+  description: Longer retention on MAUD improves outcomes; early discontinuation limits effectiveness
+structural_competency:
+  equity_implications: Low MAUD utilization reflects structural barriers including healthcare system failures
+    to educate patients and providers, stigma embedded in policies and practices, insurance coverage limitations,
+    and inadequate integration of MAUD into routine clinical care. These barriers are not uniformly distributed
+    - marginalized populations likely face additional obstacles to accessing effective AUD treatment.
+    Addressing low utilization requires system-level interventions rather than individual-level behavior
+    change approaches.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.250800'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

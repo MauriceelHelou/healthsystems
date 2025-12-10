@@ -1,0 +1,52 @@
+id: NEW:race_ethnicity_minority_status_to_NEW:pediatric_trauma_care_quality
+name: Race/Ethnicity Minority Status → Pediatric Trauma Care Quality
+from_node:
+  node_id: NEW:race_ethnicity_minority_status
+  node_name: Race/Ethnicity Minority Status
+to_node:
+  node_id: NEW:pediatric_trauma_care_quality
+  node_name: Pediatric Trauma Care Quality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Structural racism creates differential hospital quality and resource allocation across communities'
+- 'Step 2: Minority children may be more likely to receive care at lower-resourced trauma facilities'
+- 'Step 3: Implicit bias and discrimination may affect clinical decision-making and treatment intensity'
+- 'Step 4: Disparities in quality of trauma care received lead to differential outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 0
+  primary_citation: 'Janyce Eunice Gnanvi et al. 2024. "Social determinants of health and disparities
+    in pediatric trauma care: protocol for a systematic review and meta-analysis." https://doi.org/10.1186/s13643-024-02510-7'
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review protocol
+  - PROGRESS-Plus framework explicitly includes race/ethnicity/culture/language as SDH factor
+  - Cochrane methodology cited for systematic review approach
+  doi: 10.1186/s13643-024-02510-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Race and ethnicity are associated with disparities in the quality of pediatric trauma care
+  received, reflecting structural inequities in healthcare delivery systems.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Racial/ethnic disparities in healthcare are known to vary by region and local healthcare
+    market characteristics
+moderators:
+- name: hospital_quality_metrics
+  direction: weakens
+  strength: moderate
+  description: High-quality trauma centers may reduce racial disparities through standardized protocols
+- name: language_access_services
+  direction: weakens
+  strength: moderate
+  description: Availability of interpreters and culturally concordant care may mitigate disparities
+structural_competency:
+  equity_implications: This mechanism explicitly traces disparities to structural racism in healthcare
+    systems rather than individual patient factors. The focus on quality of care received emphasizes system-level
+    factors creating differential treatment.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.928584'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

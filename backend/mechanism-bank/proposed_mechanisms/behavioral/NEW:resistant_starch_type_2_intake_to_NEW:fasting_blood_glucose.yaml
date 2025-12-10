@@ -1,0 +1,53 @@
+id: NEW:resistant_starch_type_2_intake_to_NEW:fasting_blood_glucose
+name: Resistant Starch Type 2 Intake → Fasting Blood Glucose
+from_node:
+  node_id: NEW:resistant_starch_type_2_intake
+  node_name: Resistant Starch Type 2 Intake
+to_node:
+  node_id: NEW:fasting_blood_glucose
+  node_name: Fasting Blood Glucose
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Resistant starch type 2 (high amylose content) resists digestion by endogenous
+  enzymes in the small intestine due to its molecular structure'
+- 'Step 2: Undigested RS2 reaches the large intestine where it undergoes fermentation
+  by gut microbiota, producing short-chain fatty acids (SCFAs)'
+- 'Step 3: SCFAs improve insulin sensitivity and glucose uptake in peripheral tissues
+  through multiple signaling pathways'
+- 'Step 4: Improved insulin sensitivity and glucose metabolism leads to reduced fasting
+  blood glucose levels over chronic consumption periods'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'Pugh JE et al. 2023. A comparison of the effects of resistant
+    starch types on glycemic response in individuals with type 2 diabetes or prediabetes:
+    A systematic review and meta-analysis. Frontiers in Nutrition.'
+  supporting_citations: []
+description: Chronic intake of resistant starch type 2 significantly reduces fasting
+  blood glucose levels in individuals with type 2 diabetes or prediabetes. This meta-analysis
+  of 36 RCTs found a moderate effect size (SMD = -0.39) for the relationship between
+  RS2 intake and improved fasting glucose. RS2, characterized by high amylose content
+  that resists small intestinal digestion, reaches the colon where fermentation produces
+  metabolites that improve glucose homeostasis and insulin sensitivity.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.39
+    type: standardized_mean_difference
+    ci_lower: -0.66
+    ci_upper: -0.13
+  p_value: null
+  sample_size: 982
+moderators:
+- name: diabetes_status
+  direction: strengthens
+  strength: moderate
+  description: Sub-group analyses were conducted between subjects with T2D versus
+    prediabetes, suggesting differential effects based on glycemic status
+- name: resistant_starch_type
+  direction: strengthens
+  strength: strong
+  description: RS2 specifically showed significant improvements in fasting glucose,
+    while other RS types showed different patterns of glycemic effects

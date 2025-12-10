@@ -1,0 +1,69 @@
+id: NEW:alcohol_outlet_density_snack_bars_to_NEW:adolescent_current_alcohol_consumption
+name: Alcohol Outlet Density - Snack Bars → Adolescent Current Alcohol Consumption
+from_node:
+  node_id: NEW:alcohol_outlet_density_snack_bars
+  node_name: Alcohol Outlet Density - Snack Bars
+to_node:
+  node_id: NEW:adolescent_current_alcohol_consumption
+  node_name: Adolescent Current Alcohol Consumption
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of snack bars selling alcohol within 200 meters of adolescent residences increases
+  physical accessibility to alcohol'
+- 'Step 2: Proximity reduces barriers to acquisition including travel time and effort needed to obtain
+  alcohol'
+- 'Step 3: Increased availability normalizes alcohol presence in the immediate neighborhood environment'
+- 'Step 4: Adolescents have greater opportunity for direct purchase or indirect access through social
+  networks frequenting these establishments'
+- 'Step 5: Increased exposure and access leads to higher rates of current alcohol consumption'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: B. R. Carvalho et al. 2020. "Is alcohol outlet density in the residential area associated
+    with alcohol consumption among adolescents?." https://doi.org/10.1590/1980-549720200089
+  supporting_citations:
+  - Additional citations require full-text access - study references prior literature on alcohol outlet
+    density and consumption patterns
+  - Additional citations require full-text access - study references WHO recommendations on alcohol availability
+  - Additional citations require full-text access - study references Brazilian national survey data
+  doi: 10.1590/1980-549720200089
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Each additional snack bar within 200 meters of an adolescent's residence is associated with
+  a 13% increase in the prevalence of current alcohol consumption. This reflects how the built environment's
+  commercial alcohol landscape shapes adolescent drinking behaviors through increased accessibility.
+quantitative_effects:
+  effect_size:
+    value: 1.13
+    type: relative_risk
+    ci_lower: 1.03
+    ci_upper: 1.24
+  sample_size: 601
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in Belo Horizonte, Brazil; findings may vary by urban context and alcohol
+    regulation environment
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Significant interaction between outlet density and sex was found, suggesting differential
+    effects by gender
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Significant interaction between outlet density and age was found, suggesting differential
+    vulnerability across adolescent age groups
+structural_competency:
+  equity_implications: This mechanism highlights how urban planning decisions regarding commercial zoning
+    and alcohol licensing create differential exposure to alcohol retail environments. Lower-income neighborhoods
+    may have higher concentrations of such outlets, creating structural inequities in adolescent alcohol
+    exposure. The focus is appropriately on environmental determinants rather than individual adolescent
+    choices.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.471368'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

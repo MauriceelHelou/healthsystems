@@ -1,0 +1,48 @@
+id: aud_detection_systems_to_aud_diagnosis_treatment_referral
+name: Systematic Alcohol Use Detection in Clinical Settings → AUD Diagnosis and Treatment
+  Referral
+from_node:
+  node_id: aud_detection_systems
+  node_name: Systematic Alcohol Use Detection in Clinical Settings
+to_node:
+  node_id: aud_diagnosis_treatment_referral
+  node_name: AUD Diagnosis and Treatment Referral
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Implementation of systematic detection methods (clinical interview, standardized
+  surveys, biomarkers) identifies patients with alcohol use who would otherwise remain
+  undetected'
+- 'Step 2: Detection enables formal diagnosis of AUD through interview-based processes
+  with addiction professionals or severity assessment via surveys'
+- 'Step 3: Diagnosis triggers referral pathways to formal AUD treatment, especially
+  for more severe cases'
+- 'Step 4: Treatment referral connects patients to therapeutic modalities including
+  psychotherapy, group therapy, mutual aid, and medications'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jessica L. Mellinger et al. 2023. "Management of alcohol use disorder
+    in patients with chronic liver disease." *Hepatology Communications*. https://doi.org/10.1097/HC9.0000000000000145
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.375447'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: healthcare_system_screening_protocols
+  direction: strengthens
+  strength: strong
+  description: Systematic implementation of screening protocols as standard practice
+    increases detection rates compared to opportunistic screening
+- name: provider_training
+  direction: strengthens
+  strength: moderate
+  description: Training of nonaddiction clinicians to use surveys and identify hazardous
+    drinking expands detection capacity beyond specialized addiction professionals
+- name: biomarker_availability
+  direction: strengthens
+  strength: moderate
+  description: Access to alcohol biomarkers supplements interview-based detection
+    and can identify patients who underreport use

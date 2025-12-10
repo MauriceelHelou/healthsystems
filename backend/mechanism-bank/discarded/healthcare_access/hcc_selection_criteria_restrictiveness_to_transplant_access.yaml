@@ -1,0 +1,47 @@
+id: hcc_selection_criteria_restrictiveness_to_transplant_access
+name: Restrictiveness of HCC Selection Criteria for Liver Transplant → Access to Liver
+  Transplantation
+from_node:
+  node_id: hcc_selection_criteria_restrictiveness
+  node_name: Restrictiveness of HCC Selection Criteria for Liver Transplant
+to_node:
+  node_id: transplant_access
+  node_name: Access to Liver Transplantation
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Traditional selection criteria (e.g., Milan Criteria) use only tumor morphology
+  without incorporating biological characteristics of tumors'
+- 'Step 2: Patients with tumors outside morphological criteria are automatically excluded
+  from transplant candidacy regardless of favorable tumor biology'
+- 'Step 3: 24.4% of patients in this cohort did not meet Milan Criteria and would
+  be denied transplant access'
+- 'Step 4: Among those excluded, 83.1% (453/545) could be recategorized as low- or
+  acceptable-risk with >75% 5-year recurrence-free survival when biological markers
+  are considered'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: K. Halazun et al. 2021. "Dynamic α-Fetoprotein Response and Outcomes
+    After Liver Transplant for Hepatocellular Carcinoma.." *JAMA Surgery*. https://doi.org/10.1001/jamasurg.2021.0954
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.612239'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: incorporation_of_afp_response
+  direction: weakens
+  strength: strong
+  description: Using AFP-R as a biological marker allows safe expansion of criteria,
+    reducing exclusion of potentially curable patients by 83.1% among those outside
+    Milan Criteria
+- name: transplant_center_policies
+  direction: strengthens
+  strength: moderate
+  description: Center-specific application of selection criteria may create additional
+    barriers or opportunities for transplant access
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/hcc_selection_criteria_restrictiveness_to_transplant_access.yaml
+_category: healthcare_access

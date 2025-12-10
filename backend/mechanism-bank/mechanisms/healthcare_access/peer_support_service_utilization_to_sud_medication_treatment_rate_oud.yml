@@ -1,0 +1,55 @@
+id: peer_support_service_utilization_to_sud_medication_treatment_rate_oud
+name: Peer Support Service Utilization → SUD Medication Treatment Rate OUD
+from_node:
+  node_id: peer_support_service_utilization
+  node_name: Peer Support Service Utilization
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate OUD
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Peer recovery support specialists connect with OUD patients in emergency department'
+- 'Step 2: PRSS provide recovery coaching and treatment navigation services'
+- 'Step 3: PRSS facilitate linkage to medication-assisted treatment (MAT) programs'
+- 'Step 4: Increased referrals and follow-through theoretically increases OUD medication treatment rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Dennis P. Watson et al. 2024. "Results From the POINT Pragmatic Randomized Trial:
+    An Emergency Department-Based Peer Support Specialist Intervention to Increase Opioid Use Disorder
+    Treatment Linkage and Reduce Recurrent Overdose." https://doi.org/10.1177/29767342231221054'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references treatment linkage as key secondary
+    outcome
+  - Additional citations require full-text access - abstract references medication duration in days as
+    outcome
+  - Additional citations require full-text access - abstract notes PRSS interventions have expanded in
+    US EDs
+  doi: 10.1177/29767342231221054
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The POINT intervention aimed to increase OUD medication treatment linkage through ED-based
+  peer support. OUD medication treatment linkage and duration were key secondary outcomes. No significant
+  differences were found between intervention and control groups on treatment linkage or medication duration
+  at any time point assessed.
+quantitative_effects:
+  sample_size: 243
+moderators:
+- name: treatment_motivation
+  direction: strengthens
+  strength: moderate
+  description: Ad hoc analyses showed treatment motivation and readiness vary by presentation type, with
+    overdose patients showing lower readiness scores
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to treatment access by placing peer
+    support services at a critical touchpoint (ED). The null findings suggest that peer support alone
+    may be insufficient to overcome structural barriers to MAT access including treatment availability,
+    insurance, stigma, and system navigation challenges. The study appropriately examines system-level
+    intervention strategies rather than attributing treatment non-engagement to individual failure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.791383'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

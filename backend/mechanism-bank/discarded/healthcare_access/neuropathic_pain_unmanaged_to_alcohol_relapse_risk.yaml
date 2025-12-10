@@ -1,0 +1,44 @@
+id: neuropathic_pain_unmanaged_to_alcohol_relapse_risk
+name: Unmanaged Neuropathic Pain → Risk of Relapse to Alcohol Use
+from_node:
+  node_id: neuropathic_pain_unmanaged
+  node_name: Unmanaged Neuropathic Pain
+to_node:
+  node_id: alcohol_relapse_risk
+  node_name: Risk of Relapse to Alcohol Use
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Neuropathic pain following detoxification creates ongoing physical discomfort
+  and distress'
+- 'Step 2: Without adequate pain management support, individuals may seek relief through
+  self-medication'
+- 'Step 3: Alcohol provides temporary pain relief and neurological numbing effects'
+- 'Step 4: Use of alcohol for pain management leads to relapse into high-risk alcohol
+  use patterns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Iain Wilson and Trevor Thompson 2021. "Association between medically
+    assisted detoxification and neuropathic pain.." *Nursing standard (Royal College
+    of Nursing (Great Britain) : 1987)*. https://doi.org/10.7748/ns.2021.e11604'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.751804'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: pain_management_service_access
+  direction: weakens
+  strength: strong
+  description: Timely access to pain clinics and appropriate pain management support
+    can interrupt the pathway from pain to relapse
+- name: nursing_assessment_quality
+  direction: weakens
+  strength: moderate
+  description: Enhanced nursing preparation in assessing and monitoring neuropathic
+    pain can facilitate earlier intervention and reduce relapse risk
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/neuropathic_pain_unmanaged_to_alcohol_relapse_risk.yaml
+_category: healthcare_access

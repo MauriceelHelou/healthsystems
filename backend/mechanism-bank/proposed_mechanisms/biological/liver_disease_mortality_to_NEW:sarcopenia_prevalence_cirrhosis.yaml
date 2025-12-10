@@ -1,0 +1,58 @@
+id: liver_disease_mortality_to_NEW:sarcopenia_prevalence_cirrhosis
+name: Liver Disease (Cirrhosis) Severity → Sarcopenia Prevalence in Cirrhosis Patients
+from_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease (Cirrhosis) Severity
+to_node:
+  node_id: NEW:sarcopenia_prevalence_cirrhosis
+  node_name: Sarcopenia Prevalence in Cirrhosis Patients
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Progressive liver dysfunction in cirrhosis impairs hepatic protein synthesis
+  and leads to metabolic derangements including hyperammonemia and altered amino acid
+  metabolism'
+- 'Step 2: Impaired nutrient absorption, reduced glycogen storage capacity, and chronic
+  inflammation create a catabolic state favoring muscle protein breakdown'
+- 'Step 3: As cirrhosis severity increases (measured by Child-Pugh classification),
+  sarcopenia prevalence rises from approximately 37.5% overall to up to 50% in Child-Pugh
+  class C patients'
+- 'Step 4: The resultant muscle wasting (sarcopenia) becomes an independent predictor
+  of mortality, with approximately 2-fold increased risk of death in cirrhotic patients
+  with sarcopenia'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Xinxing Tantai et al. 2022. Effect of sarcopenia on survival
+    in patients with cirrhosis: A meta-analysis. Journal of hepatology.'
+  supporting_citations: []
+description: This meta-analysis demonstrates a strong dose-response relationship between
+  cirrhosis severity and sarcopenia prevalence. The pooled prevalence of sarcopenia
+  in cirrhotic patients is 37.5% overall, but increases substantially with disease
+  severity, reaching approximately 50% in patients with Child-Pugh class C cirrhosis
+  or alcohol-associated liver disease. This relationship reflects the progressive
+  metabolic deterioration in advanced liver disease that promotes muscle wasting through
+  impaired protein synthesis, altered amino acid metabolism, and chronic catabolic
+  states.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Sex
+  direction: strengthens
+  strength: moderate
+  description: Sarcopenia prevalence is higher in male patients with cirrhosis
+- name: Liver disease etiology
+  direction: strengthens
+  strength: strong
+  description: Alcohol-associated liver disease shows higher sarcopenia prevalence
+    (up to 50%)
+- name: Child-Pugh classification
+  direction: strengthens
+  strength: strong
+  description: Child-Pugh grade C cirrhosis associated with highest sarcopenia prevalence
+    (up to 50%)
+- name: Measurement method
+  direction: strengthens
+  strength: moderate
+  description: L3-SMI (third lumbar-skeletal muscle index) measurement yields higher
+    prevalence estimates

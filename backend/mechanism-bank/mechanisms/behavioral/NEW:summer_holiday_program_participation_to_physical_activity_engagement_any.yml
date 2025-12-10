@@ -1,0 +1,65 @@
+id: NEW:summer_holiday_program_participation_to_physical_activity_engagement_any
+name: Summer Holiday Program Participation → Physical Activity Engagement (Any)
+from_node:
+  node_id: NEW:summer_holiday_program_participation
+  node_name: Summer Holiday Program Participation
+to_node:
+  node_id: physical_activity_engagement_any
+  node_name: Physical Activity Engagement (Any)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Summer holiday programs incorporate structured physical activity components into daily programming'
+- 'Step 2: Children receive supervised opportunities for moderate-to-vigorous physical activity that may
+  not be available at home'
+- 'Step 3: Program environments provide equipment, space, and peer interaction that facilitate physical
+  activity'
+- 'Step 4: Regular participation maintains physical activity levels during a period when they typically
+  decline'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: 'Emily Eglitis et al. 2024. "Health effects of children''s summer holiday programs:
+    a systematic review and meta-analysis." https://doi.org/10.1186/s12966-024-01658-8'
+  supporting_citations:
+  - Additional citations require full-text access - abstract reports 10 studies (2 RCTs, 8 non-randomized
+    controlled trials) but does not name specific included studies
+  - Studies included children aged 5-18 years with programs of at least 5 days duration
+  - Search conducted across MEDLINE, JBI, PsychINFO, Embase, ERIC and Scopus databases
+  doi: 10.1186/s12966-024-01658-8
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Summer holiday programs demonstrate a significant small effect on improving moderate-to-vigorous
+  physical activity in school-aged children (g=0.35). Programs counteract the typical decline in physical
+  activity that occurs during summer vacation by providing structured opportunities for movement.
+quantitative_effects:
+  effect_size:
+    value: 0.35
+    type: standardized_mean_difference
+    ci_lower: 0.02
+    ci_upper: 0.67
+  sample_size: 1446
+moderators:
+- name: child_sociodemographic_characteristics
+  direction: strengthens
+  strength: weak
+  description: No significant differential effects by child sociodemographic characteristics were detected
+- name: program_characteristics
+  direction: strengthens
+  strength: weak
+  description: No significant differential effects by program characteristics were detected
+structural_competency:
+  equity_implications: This mechanism highlights how structural interventions (community programs) can
+    address the physical activity gap during summer months. Without such programs, children from lower-income
+    families may have reduced access to safe spaces, equipment, and supervision for physical activity,
+    potentially widening health disparities. The lack of differential effects by sociodemographic characteristics
+    suggests these programs may have equitable benefits when access is provided.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.866071'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

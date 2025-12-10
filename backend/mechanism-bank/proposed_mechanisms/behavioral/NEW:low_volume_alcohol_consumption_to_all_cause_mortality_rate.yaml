@@ -1,0 +1,79 @@
+id: NEW:low_volume_alcohol_consumption_to_all_cause_mortality_rate
+name: Low Volume Alcohol Consumption → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:low_volume_alcohol_consumption
+  node_name: Low Volume Alcohol Consumption
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Low volume alcohol consumption (defined as >1.3g to <25g ethanol/day, or
+  roughly 1 drink/week to 2 drinks/day) was historically associated with reduced mortality
+  in epidemiological studies'
+- 'Step 2: However, this apparent protective effect is largely attributable to methodological
+  biases, particularly ''abstainer bias'' where former drinkers and occasional drinkers
+  with pre-existing health conditions are misclassified as abstainers in the reference
+  group'
+- 'Step 3: When higher-quality studies control for these biases (younger cohorts ≤55
+  years, excluding former/occasional drinkers from abstainer groups, following up
+  beyond age 55), the apparent mortality benefit disappears'
+- 'Step 4: In non-smoking cohorts specifically, low volume alcohol consumption shows
+  elevated mortality risk (RR=1.16), indicating alcohol itself may increase mortality
+  when confounding by smoking is removed'
+- 'Step 5: Direct biological effects of alcohol (even at low doses) including oxidative
+  stress, inflammatory responses, and organ toxicity contribute to increased mortality
+  risk without the masking effect of methodological biases'
+evidence:
+  quality_rating: A
+  n_studies: 194
+  primary_citation: Tim R Stockwell et al. 2024. Why do only some cohort studies find
+    health benefits from low volume alcohol use? A systematic review and meta-analysis
+    of study characteristics that may bias mortality risk estimates. Journal of Studies
+    on Alcohol and Drugs.
+  supporting_citations:
+  - Tim Stockwell et al. 2016. Do 'Moderate' Drinkers Have Reduced Mortality Risk?
+    A Systematic Review and Meta-Analysis of Alcohol Consumption and All-Cause Mortality.
+    Journal of studies on alcohol and drugs.
+description: Two comprehensive meta-analyses (totaling 194 cohort studies, ~4.8 million
+  participants, ~425,000 deaths) demonstrate that the historically observed J-shaped
+  relationship between alcohol and mortality is an artifact of methodological biases.
+  When studies properly exclude former and occasional drinkers from abstainer reference
+  groups and control for confounders like smoking and socioeconomic status, low volume
+  alcohol consumption shows no mortality benefit (RR=0.97-0.98) compared to lifetime
+  abstention. In non-smoking cohorts, low volume drinking is associated with elevated
+  mortality risk (RR=1.16). This evidence supports a positive (harmful) direction
+  of effect for low volume alcohol consumption on all-cause mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.16
+    type: relative_risk
+    ci_lower: 0.91
+    ci_upper: 1.41
+  p_value: null
+  sample_size: 4838825
+moderators:
+- name: smoking_status
+  direction: strengthens
+  strength: strong
+  description: In non-smoking cohorts, low volume drinking shows elevated mortality
+    risk (RR=1.16); smoking may confound or moderate the alcohol-mortality relationship
+- name: cohort_age
+  direction: weakens
+  strength: moderate
+  description: Studies with younger cohorts (≤55 years) with follow-up beyond age
+    55 show null or positive association, while older cohorts show spurious protective
+    effects
+- name: abstainer_classification
+  direction: strengthens
+  strength: strong
+  description: Studies that properly exclude former and occasional drinkers from abstainer
+    reference groups eliminate apparent protective effects of low volume drinking
+- name: socioeconomic_status
+  direction: weakens
+  strength: moderate
+  description: Controlling for SES significantly reduces apparent mortality risk reduction
+    for low volume drinkers

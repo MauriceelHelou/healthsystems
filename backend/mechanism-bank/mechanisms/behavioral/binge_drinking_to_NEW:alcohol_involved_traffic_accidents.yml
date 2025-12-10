@@ -1,0 +1,53 @@
+id: binge_drinking_to_NEW:alcohol_involved_traffic_accidents
+name: Binge Drinking Past Month → Alcohol-Involved Traffic Accidents and Deaths
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking Past Month
+to_node:
+  node_id: NEW:alcohol_involved_traffic_accidents
+  node_name: Alcohol-Involved Traffic Accidents and Deaths
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: College students who engage in heavy drinking have increased risk of driving after drinking'
+- 'Step 2: Driving after drinking impairs cognitive function, reaction time, and motor coordination'
+- 'Step 3: Impaired driving increases probability of traffic accidents'
+- 'Step 4: Persistence of driving after drinking patterns over time extends risk into adulthood'
+- 'Step 5: Elevated rates of alcohol-involved traffic accidents and deaths among this population'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: Eun‐Young Mun et al. 2021. "Do Brief Alcohol Interventions Reduce Driving After Drinking
+    Among College Students? A Two-step Meta-analysis of Individual Participant Data." https://doi.org/10.1093/alcalc/agaa146
+  supporting_citations:
+  - Additional citations require full-text access - background literature on college drinking and traffic
+    safety
+  - Studies documenting persistence of driving after drinking from college into adulthood
+  - Research on alcohol-involved traffic accident epidemiology
+  doi: 10.1093/alcalc/agaa146
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The paper establishes the background mechanism that college students who drink are at increased
+  risk of driving after drinking and subsequent alcohol-involved traffic accidents and deaths. The persistence
+  of driving after drinking behaviors over time creates need for effective early interventions to prevent
+  future drunk driving in adulthood.
+quantitative_effects:
+  sample_size: 6801
+moderators:
+- name: age_college_student_status
+  direction: strengthens
+  strength: moderate
+  description: College students represent a high-risk population for both heavy drinking and driving after
+    drinking; 58% of sample were first-year students
+structural_competency:
+  equity_implications: 'This mechanism reflects structural factors including: campus alcohol environments,
+    transportation infrastructure (or lack thereof) in college towns, social norms around drinking and
+    driving in college culture, and developmental timing of intervention. Addressing this requires systemic
+    approaches including campus policy, alternative transportation, and evidence-based prevention programming
+    rather than solely individual-level blame.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.615427'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

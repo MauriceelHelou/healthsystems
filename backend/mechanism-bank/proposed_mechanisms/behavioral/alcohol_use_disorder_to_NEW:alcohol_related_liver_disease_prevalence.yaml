@@ -1,0 +1,79 @@
+id: alcohol_use_disorder_to_NEW:alcohol_related_liver_disease_prevalence
+name: Alcohol Use Disorder → Alcohol-Related Liver Disease Prevalence
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:alcohol_related_liver_disease_prevalence
+  node_name: Alcohol-Related Liver Disease Prevalence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol Use Disorder leads to chronic, excessive alcohol consumption with
+  average daily intake of 146.6 g/d among affected individuals'
+- 'Step 2: Prolonged alcohol exposure (>20 years in 54.8% of cases) causes direct
+  hepatotoxicity through acetaldehyde production and oxidative stress'
+- 'Step 3: Repeated hepatic injury progresses through stages from steatosis to alcoholic
+  hepatitis to cirrhosis (32.9% of ARLD spectrum)'
+- 'Step 4: Liver damage manifests as alcohol-related liver disease with complications
+  including ascites (25.1% prevalence) and increased mortality (23.9% overall, 21.6%
+  liver-related)'
+evidence:
+  quality_rating: A
+  n_studies: 725
+  primary_citation: 'Xuanxuan Niu et al. 2023. Global prevalence, incidence, and outcomes
+    of alcohol related liver diseases: a systematic review and meta-analysis. BMC
+    Public Health.'
+  supporting_citations:
+  - 'Hongqin Xu et al. 2022. Epidemic characteristics of alcohol‐related liver disease
+    in Asia from 2000 to 2020: A systematic review and meta‐analysis. Liver international
+    (Print).'
+description: Alcohol Use Disorder directly causes alcohol-related liver disease through
+  chronic hepatotoxic exposure. Global prevalence of ARLD is 4.8%, with alcoholic
+  liver cirrhosis comprising 32.9% of the disease spectrum. The pathway involves sustained
+  heavy alcohol consumption (average 146.6 g/d) over extended periods (>20 years in
+  majority), leading to progressive liver damage through direct toxic effects, oxidative
+  stress, and inflammatory cascades. Disease severity and mortality (23.9%) are influenced
+  by sex, drinking duration, daily consumption, and comorbidities including smoking
+  and viral hepatitis coinfection.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 4.8
+    type: prevalence_percent
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Males have significantly higher ARLD prevalence (2.9%) compared to
+    females (0.5%)
+- name: duration_of_drinking
+  direction: strengthens
+  strength: strong
+  description: Drinking duration >20 years present in 54.8% of ARLD cases, indicating
+    cumulative exposure effect
+- name: daily_alcohol_intake
+  direction: strengthens
+  strength: strong
+  description: Average daily intake of 146.6 g/d in ARLD population indicates dose-response
+    relationship
+- name: smoking_status
+  direction: strengthens
+  strength: moderate
+  description: 59.5% of ARLD patients were current or former smokers, suggesting synergistic
+    hepatotoxicity
+- name: hepatitis_virus_coinfection
+  direction: strengthens
+  strength: moderate
+  description: 18.7% of ARLD patients had hepatitis virus coinfection, accelerating
+    liver damage
+- name: ethnicity
+  direction: strengthens
+  strength: moderate
+  description: Caucasians showed highest proportion (68.9%) among ethnic groups with
+    ARLD

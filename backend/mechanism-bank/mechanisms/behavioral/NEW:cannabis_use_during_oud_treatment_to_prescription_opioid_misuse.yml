@@ -1,0 +1,69 @@
+id: NEW:cannabis_use_during_oud_treatment_to_prescription_opioid_misuse
+name: Cannabis Use During OUD Treatment → Non-Medical Opioid Use
+from_node:
+  node_id: NEW:cannabis_use_during_oud_treatment
+  node_name: Cannabis Use During OUD Treatment
+to_node:
+  node_id: prescription_opioid_misuse
+  node_name: Non-Medical Opioid Use
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals receiving pharmacotherapies (methadone, buprenorphine, naltrexone) for opioid use
+  disorder may concurrently use cannabis'
+- 'Step 2: Cannabis use could theoretically interact with opioid treatment through shared neurobiological
+  pathways involving endocannabinoid and opioid receptor systems'
+- 'Step 3: Meta-analysis of longitudinal studies finds no statistically significant association between
+  cannabis use and return to non-medical opioid use during treatment'
+- 'Step 4: Pooled analysis suggests cannabis use neither increases nor decreases risk of non-medical opioid
+  use among those in MOUD treatment'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: 'Gabriel P A Costa et al. 2024. "The impact of cannabis on non-medical opioid use
+    among individuals receiving pharmacotherapies for opioid use disorder: a systematic review and meta-analysis
+    of longitudinal studies." https://doi.org/10.1080/00952990.2023.2287406'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 10 longitudinal studies
+  - Studies utilized methadone (76.3%), buprenorphine (21.3%), and naltrexone (2.4%) treatment modalities
+  - Average follow-up across studies was 9.7 months (SD = 3.77)
+  doi: 10.1080/00952990.2023.2287406
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'This systematic review and meta-analysis of 10 longitudinal studies (N=8,367) found no significant
+  association between cannabis use and non-medical opioid use among patients receiving medications for
+  opioid use disorder. The pooled odds ratio was 1.00 (95% CI: 0.97-1.04, p=0.98), indicating cannabis
+  use neither increased nor decreased the risk of returning to non-medical opioid use during MOUD treatment.'
+quantitative_effects:
+  effect_size:
+    value: 1.0
+    type: odds_ratio
+    ci_lower: 0.97
+    ci_upper: 1.04
+  p_value: 0.98
+  sample_size: 8367
+moderators:
+- name: OUD treatment modality
+  direction: strengthens
+  strength: moderate
+  description: Sensitivity analysis conducted to understand potential differences between methadone, buprenorphine,
+    and naltrexone treatment modalities
+- name: Follow-up duration
+  direction: strengthens
+  strength: weak
+  description: Follow-up time ranged from 4 to 15 months (mean 9.7 months), which may affect detection
+    of associations
+structural_competency:
+  equity_implications: This finding has important policy implications for substance use treatment programs.
+    Many MOUD programs require cannabis abstinence as a condition of treatment enrollment or continuation.
+    The null finding challenges this structural barrier to treatment access, suggesting that cannabis
+    abstinence requirements may unnecessarily restrict access to life-saving opioid treatment without
+    evidence of benefit. This has equity implications as cannabis policies and enforcement disproportionately
+    affect marginalized communities, creating additional barriers to OUD treatment for already underserved
+    populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.445958'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

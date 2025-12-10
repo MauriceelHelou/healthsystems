@@ -1,0 +1,53 @@
+id: criminal_justice_involvement_intensity_revised_consolidated_to_serious_mental_illness_smi
+name: Criminal Justice Involvement Intensity → Serious Mental Illness (SMI)
+from_node:
+  node_id: criminal_justice_involvement_intensity_revised_consolidated
+  node_name: Criminal Justice Involvement Intensity
+to_node:
+  node_id: serious_mental_illness_smi
+  node_name: Serious Mental Illness (SMI)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Individuals with serious mental illness are overrepresented in criminal-legal system settings'
+- 'Step 2: Jails, probation, and parole agencies have rudimentary data use capacity for mental health
+  service coordination'
+- 'Step 3: Limited data sharing between criminal justice and community mental health agencies disrupts
+  care continuity'
+- 'Step 4: Fragmented mental health care exacerbates symptoms and increases recidivism risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Maji Hailemariam et al. 2025. "Use of data-driven decision-making among agencies
+    serving individuals with criminal-legal system involvement: a qualitative study.." https://doi.org/10.1186/s12913-025-13385-2'
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1186/s12913-025-13385-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Criminal justice involvement is associated with serious mental illness, with inadequate cross-agency
+  data infrastructure limiting effective mental health service delivery
+quantitative_effects:
+  sample_size: 68
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: County-level variation in mental health service coordination capacity across 52 U.S.
+    counties
+moderators:
+- name: community_mental_health_agency_involvement
+  direction: weakens
+  strength: moderate
+  description: Active involvement of community mental health agencies in cross-system coordination can
+    improve outcomes
+structural_competency:
+  equity_implications: This mechanism reflects the criminalization of mental illness as a structural phenomenon.
+    The overrepresentation of individuals with SMI in jails results from inadequate community mental health
+    infrastructure, not individual choices. The data infrastructure gaps identified represent actionable
+    structural targets for intervention. Equity implications include disproportionate impact on communities
+    of color and low-income populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.822222'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

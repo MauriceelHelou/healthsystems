@@ -1,0 +1,60 @@
+id: NEW:healthcare_worker_shortage_global_to_primary_care_shortage_severe
+name: Global Healthcare Worker Shortage → Primary Care Shortage (Severe)
+from_node:
+  node_id: NEW:healthcare_worker_shortage_global
+  node_name: Global Healthcare Worker Shortage
+to_node:
+  node_id: primary_care_shortage_severe
+  node_name: Primary Care Shortage (Severe)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Global shortage of over 7 million skilled healthcare workers (midwives, nurses, physicians)
+  creates gaps in healthcare coverage'
+- 'Step 2: Shortage projected to grow to over 12 million by 2035 with population growth'
+- 'Step 3: Rapid urbanization concentrates populations in areas with inadequate healthcare infrastructure'
+- 'Step 4: Inequities in healthcare access are exacerbated in urban areas of developing nations'
+- 'Step 5: Populations experience reduced access to hypertension screening, diagnosis, and treatment'
+evidence:
+  quality_rating: C
+  n_studies: 0
+  primary_citation: 'Pål Skar et al. 2015. "Changes in blood pressure among users of lay health worker
+    or volunteer operated community-based blood pressure programs over time: a systematic review protocol.."
+    https://doi.org/10.11124/jbisrir-2015-1927'
+  supporting_citations:
+  - Global Health Workforce Alliance and WHO model of skilled health care worker density and requirements.
+  - World Health Organization 2008 data on global hypertension prevalence.
+  - United Nations population report on urbanization projections 2011-2050.
+  doi: 10.11124/jbisrir-2015-1927
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The global shortage of skilled healthcare workers contributes to severe primary care shortages,
+  particularly in rapidly urbanizing areas of developing nations, limiting access to hypertension screening
+  and management.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Healthcare worker shortages are most pronounced in developing nations and less developed
+    regions. Population growth in urban areas projected to be 2.6 billion between 2011-2050, concentrated
+    in cities of less developed regions.
+moderators:
+- name: population_growth_rate
+  direction: strengthens
+  strength: strong
+  description: World population projected to increase by 2.3 billion in next 40 years, exacerbating healthcare
+    worker shortages
+- name: rural_to_urban_migration
+  direction: strengthens
+  strength: moderate
+  description: Shift of rural populations to urban centers increases strain on urban healthcare systems
+structural_competency:
+  equity_implications: This mechanism highlights how global workforce distribution inequities create differential
+    access to basic healthcare services. The shortage is a structural issue reflecting healthcare workforce
+    training capacity, economic factors influencing career choices, and migration patterns of healthcare
+    professionals. The resulting access inequities disproportionately affect populations in developing
+    nations and urban areas experiencing rapid growth.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.494937'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

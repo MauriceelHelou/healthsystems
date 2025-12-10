@@ -1,0 +1,60 @@
+id: NEW:primary_care_alcohol_screening_to_alcohol_induced_mortality
+name: Primary Care Alcohol Screening Programs → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:primary_care_alcohol_screening
+  node_name: Primary Care Alcohol Screening Programs
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary care settings implement systematic screening for harmful/hazardous alcohol use'
+- 'Step 2: Early identification of at-risk individuals before development of severe alcohol-related disease'
+- 'Step 3: Brief interventions provided to identified individuals reduce harmful consumption'
+- 'Step 4: Reduced alcohol consumption decreases alcohol-attributable disease burden'
+- 'Step 5: Prevention of alcohol-related morbidity reduces alcohol-induced mortality'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Abhishek Ghosh et al. 2021. "Efficacy of Brief Intervention for harmful and hazardous
+    alcohol use: a systematic review and meta-analysis of studies from Low Middle-Income countries.."
+    https://doi.org/10.1111/add.15613'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Studies measured outcomes using standardized screening instruments
+  - Individual RCT citations require full-text access
+  doi: 10.1111/add.15613
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Primary care-based screening and brief intervention programs in LMIC can address the disproportionate
+  alcohol-attributable disease burden through early identification and intervention with at-risk individuals.
+quantitative_effects:
+  effect_size:
+    value: -0.34
+    type: standardized_mean_difference
+  p_value: 0.04
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: LMIC have disproportionately higher alcohol-attributable disease burden combined with
+    minimal focus on primary prevention, creating both greater need and greater potential impact
+moderators:
+- name: healthcare_system_context
+  direction: strengthens
+  strength: moderate
+  description: LMIC settings with minimal primary prevention infrastructure may see greater relative benefit
+    from implementing screening programs
+structural_competency:
+  equity_implications: This mechanism addresses global health equity by focusing on structural determinants
+    of alcohol-related health disparities between high-income and low/middle-income countries. The 'disproportionately
+    higher alcohol-attributable disease burden' in LMIC reflects structural factors including lack of
+    healthcare infrastructure, weak alcohol policies, and limited prevention resources. Implementing screening
+    in primary care represents a structural intervention that can leverage existing healthcare touchpoints
+    to address population-level alcohol harms. The focus on LMIC specifically highlights how global economic
+    inequities produce differential health burdens.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.996671'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

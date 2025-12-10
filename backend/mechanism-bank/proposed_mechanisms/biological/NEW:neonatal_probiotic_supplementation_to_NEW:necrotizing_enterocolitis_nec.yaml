@@ -1,0 +1,59 @@
+id: NEW:neonatal_probiotic_supplementation_to_NEW:necrotizing_enterocolitis_nec
+name: Neonatal Probiotic Supplementation → Necrotizing Enterocolitis (NEC)
+from_node:
+  node_id: NEW:neonatal_probiotic_supplementation
+  node_name: Neonatal Probiotic Supplementation
+to_node:
+  node_id: NEW:necrotizing_enterocolitis_nec
+  node_name: Necrotizing Enterocolitis (NEC)
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Probiotic supplementation introduces beneficial bacterial strains to the
+  neonatal gut, establishing or enhancing colonization with protective microorganisms'
+- 'Step 2: Probiotics competitively exclude pathogenic bacteria, reduce intestinal
+  permeability, and strengthen the gut mucosal barrier function'
+- 'Step 3: Enhanced gut barrier integrity and balanced microbiome reduce bacterial
+  translocation and inflammatory responses in the immature intestinal tissue'
+- 'Step 4: Reduced intestinal inflammation and improved mucosal defense mechanisms
+  decrease the risk of ischemic necrosis of the bowel characteristic of NEC'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'A. Imdad et al. 2021. Effects of neonatal nutrition interventions
+    on neonatal mortality and child health and development outcomes: A systematic
+    review. Campbell Systematic Reviews.'
+  supporting_citations: []
+description: Systematic review and meta-analysis of 29 randomized controlled trials
+  (n=5,574 participants) demonstrates that neonatal probiotic supplementation reduces
+  the incidence of necrotizing enterocolitis by 54% (RR 0.46, 95% CI 0.35-0.59) compared
+  to controls. This represents a number needed to treat of 17 to prevent one case
+  of NEC. The evidence quality is rated high by GRADE criteria with low statistical
+  heterogeneity (I²=24%) and symmetrical funnel plot. The protective effect is most
+  pronounced in preterm and low birth weight infants in hospital settings.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.46
+    type: relative_risk
+    ci_lower: 0.35
+    ci_upper: 0.59
+  p_value: null
+  sample_size: 5574
+moderators:
+- name: gestational_age
+  direction: strengthens
+  strength: strong
+  description: Most studies focused on preterm infants (born <37 weeks gestation),
+    who are at highest risk for NEC and show greatest benefit from probiotic supplementation
+- name: birth_weight
+  direction: strengthens
+  strength: strong
+  description: Studies included low birth weight infants (<2500g), who demonstrate
+    significant protective effects from probiotic supplementation against NEC
+- name: probiotic_strain
+  direction: strengthens
+  strength: moderate
+  description: Clinical heterogeneity in probiotic strains used across studies; no
+    single strain recommended for wider use based on current evidence

@@ -1,0 +1,65 @@
+id: NEW:nafld_prevalence_to_all_cause_mortality_rate
+name: Non-alcoholic fatty liver disease prevalence → All-cause mortality rate
+from_node:
+  node_id: NEW:nafld_prevalence
+  node_name: Non-alcoholic fatty liver disease prevalence
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-cause mortality rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: NAFLD involves hepatic steatosis and progressive liver inflammation, leading
+  to non-alcoholic steatohepatitis (NASH) in a subset of patients'
+- 'Step 2: Progressive liver damage leads to fibrosis, cirrhosis, and increased risk
+  of hepatocellular carcinoma (1.8 cases per 1000 person-years)'
+- 'Step 3: NAFLD is associated with systemic metabolic dysfunction including insulin
+  resistance, dyslipidemia, and chronic inflammation'
+- 'Step 4: These metabolic derangements increase cardiovascular disease risk, which
+  is a leading cause of death in NAFLD patients'
+- 'Step 5: Combined hepatic and cardiovascular complications result in elevated overall
+  mortality rate (5.3 deaths per 1000 person-years)'
+evidence:
+  quality_rating: A
+  n_studies: 237
+  primary_citation: 'Jie Li et al. 2019. Prevalence, incidence, and outcome of non-alcoholic
+    fatty liver disease in Asia, 1999-2019: a systematic review and meta-analysis.
+    The lancet. Gastroenterology & hepatology.'
+  supporting_citations: []
+description: Non-alcoholic fatty liver disease (NAFLD) is associated with increased
+  all-cause mortality through multiple pathways including progressive liver disease
+  leading to cirrhosis and hepatocellular carcinoma, as well as systemic metabolic
+  dysfunction contributing to cardiovascular mortality. This meta-analysis of 237
+  studies across Asia found an overall mortality rate of 5.3 deaths per 1000 person-years
+  among NAFLD patients, with hepatocellular carcinoma incidence of 1.8 cases per 1000
+  person-years.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 5.3
+    type: incidence_rate
+    ci_lower: 1.5
+    ci_upper: 11.4
+  p_value: null
+  sample_size: 13044518
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Older individuals identified as high-risk group for NAFLD complications
+    and mortality
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Men identified as higher risk group for NAFLD-related outcomes
+- name: obesity
+  direction: strengthens
+  strength: strong
+  description: Obese individuals identified as high-risk group for NAFLD complications
+    and mortality
+- name: time_period
+  direction: strengthens
+  strength: moderate
+  description: NAFLD prevalence has increased significantly over time, suggesting
+    growing disease burden

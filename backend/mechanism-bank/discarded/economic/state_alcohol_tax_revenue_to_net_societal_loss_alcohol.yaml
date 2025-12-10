@@ -1,0 +1,48 @@
+id: state_alcohol_tax_revenue_to_net_societal_loss_alcohol
+name: State Alcohol Excise Tax Revenue → Net Societal Loss from Alcohol Use
+from_node:
+  node_id: state_alcohol_tax_revenue
+  node_name: State Alcohol Excise Tax Revenue
+to_node:
+  node_id: net_societal_loss_alcohol
+  node_name: Net Societal Loss from Alcohol Use
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: State governments collect excise taxes from alcohol sales as revenue source,
+  creating fiscal dependence on alcohol industry'
+- 'Step 2: Revenue generation priorities potentially conflict with public health objectives
+  to reduce alcohol consumption through higher taxation'
+- 'Step 3: Lower taxation maintains alcohol affordability and market access, generating
+  tax revenue but enabling higher consumption'
+- 'Step 4: Health costs from alcohol-attributable disease burden (valued at 6.2 trillion
+  INR) substantially exceed tax revenue collected (1.8 trillion INR)'
+- 'Step 5: Net societal loss of 4.4 trillion INR represents the economic shortfall
+  where health externalities are not captured through fiscal policy'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Siddhesh Zadey 2024. "Assessing the societal value of health lost
+    to alcohol use in India compared to excise taxes on alcohol sales.." *Drug and
+    alcohol review*. https://doi.org/10.1111/dar.13932
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.131016'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: state_fiscal_dependence_on_alcohol_revenue
+  direction: weakens
+  strength: strong
+  description: States with higher fiscal dependence on alcohol excise revenue may
+    be less likely to implement adequate tax increases to disincentivize consumption,
+    perpetuating net losses
+- name: population_size
+  direction: strengthens
+  strength: moderate
+  description: Larger population states like Maharashtra show larger absolute net
+    losses even when per capita effects are controlled
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/economic/state_alcohol_tax_revenue_to_net_societal_loss_alcohol.yaml
+_category: economic

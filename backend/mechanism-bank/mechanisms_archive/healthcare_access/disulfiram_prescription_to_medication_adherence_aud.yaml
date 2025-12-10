@@ -1,0 +1,42 @@
+id: disulfiram_prescription_to_medication_adherence_aud
+name: Disulfiram Prescription for Alcohol Use Disorder → Medication Adherence for
+  Alcohol Use Disorder
+from_node:
+  node_id: disulfiram_prescription
+  node_name: Disulfiram Prescription for Alcohol Use Disorder
+to_node:
+  node_id: medication_adherence_aud
+  node_name: Medication Adherence for Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Disulfiram requires daily oral administration and produces aversive reactions
+  with alcohol consumption'
+- 'Step 2: The medication''s mechanism creates psychological and physical barriers
+  to consistent use in community settings without supervision'
+- 'Step 3: Healthcare delivery systems in VA settings provide limited structured supervision
+  or monitoring for daily oral medications'
+- 'Step 4: Lowest adherence rates result (41.3% mean, only 11.9% achieving 80% adherence)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: James R Walker et al. 2019. "Adherence Across FDA-Approved Medications
+    for Alcohol Use Disorder in a Veterans Administration Population.." *Journal of
+    studies on alcohol and drugs*. https://doi.org/10.15288/jsad.2019.80.572
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.683919'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: comparison_to_oral_naltrexone
+  direction: weakens
+  strength: moderate
+  description: Disulfiram adherence significantly lower than oral naltrexone (41.3%
+    vs 49.8%, p=0.002)
+- name: comparison_to_injectable_naltrexone
+  direction: weakens
+  strength: moderate
+  description: Disulfiram adherence significantly lower than extended-release injectable
+    naltrexone (41.3% vs 54.6%, p=0.004)

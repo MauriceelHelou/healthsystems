@@ -1,0 +1,33 @@
+id: prenatal_alcohol_exposure_prevalence
+name: Prenatal Alcohol Exposure Prevalence
+scale: 6
+domain: Maternal Health, Prenatal Risk
+category: biological
+stock:
+  value: 10.2
+  unit: Percent of pregnancies with any alcohol exposure
+  year: 2022
+  source: NSDUH, PRAMS
+geographic_variation:
+  score: 3
+  level: state
+  notes: Higher in states with elevated adult drinking; varies with screening practices
+data_quality:
+  availability: medium
+  frequency: annual
+  bias_notes: Self-report significantly underestimates due to stigma; biomarker testing limited
+  primary_sources:
+  - name: SAMHSA NSDUH (pregnant women alcohol use)
+    granularity: state
+  - name: CDC Pregnancy Risk Assessment Monitoring System (PRAMS)
+    granularity: state
+  - name: Behavioral Risk Factor Surveillance System (BRFSS)
+    granularity: state
+description: |-
+  Prevalence of alcohol exposure during pregnancy, measured as percentage of pregnancies
+  with any reported maternal alcohol consumption. This is a standalone intermediate
+  pathway measure capturing a biological exposure state. Despite public health messaging,
+  approximately 10% of pregnant women report any alcohol use and 3-5% report binge drinking.
+  Relationships to downstream outcomes (e.g., FASD) are captured in mechanisms.
+  No known safe amount of alcohol exposure during pregnancy exists.
+type: Rate

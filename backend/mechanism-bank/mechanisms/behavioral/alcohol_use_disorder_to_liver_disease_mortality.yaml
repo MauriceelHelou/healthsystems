@@ -1,0 +1,84 @@
+id: alcohol_use_disorder_to_liver_disease_mortality
+name: Alcohol Use Disorder → Liver Disease Mortality
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Chronic heavy alcohol consumption in AUD leads to direct hepatotoxicity
+  through acetaldehyde and reactive oxygen species generation'
+- 'Step 2: Sustained alcohol exposure causes progressive liver damage including steatosis,
+  steatohepatitis, fibrosis, and ultimately cirrhosis'
+- 'Step 3: AUD accelerates liver disease progression, particularly in combination
+  with other hepatic insults (e.g., HCV infection increases decompensation risk 3.3-fold)'
+- 'Step 4: Decompensated cirrhosis leads to life-threatening complications including
+  variceal bleeding, hepatic encephalopathy, and hepatorenal syndrome'
+- 'Step 5: Gastrointestinal/liver-related deaths represent the second most common
+  cause of mortality in AUD populations (5.63/1000 person-years)'
+evidence:
+  quality_rating: A
+  n_studies: 107
+  primary_citation: 'Abdul-Kareem Abdul-Rahman et al. 2018. All-Cause and Cause-Specific
+    Mortality Rates of Patients Treated for Alcohol Use Disorders: A Meta-Analysis.
+    Substance Abuse.'
+  supporting_citations:
+  - Laura Llamosas-Falcón et al. 2020. Alcohol use disorders and the risk of progression
+    of liver disease in people with hepatitis C virus infection – a systematic review.
+    Substance Abuse Treatment, Prevention, and Policy.
+  - 'Fangfang Duan et al. 2023. Systematic review and meta-analysis: Efficacy and
+    safety of baclofen in patients with alcohol use disorder co-morbid liver diseases.
+    Journal of psychiatric research.'
+  - 'Gro Askgaard et al. 2019. Opportunities to Prevent Alcoholic Liver Cirrhosis
+    in High-Risk Populations: A Systematic Review With Meta-Analysis. The American
+    journal of gastroenterology.'
+  - A. Rabiee et al. 2023. Medications for alcohol use disorder improve survival in
+    patients with hazardous drinking and alcohol-associated cirrhosis. Hepatology
+    Communications.
+  - Chavdar S Pavlov et al. 2017. Glucocorticosteroids for people with alcoholic hepatitis.
+    The Cochrane database of systematic reviews.
+description: Alcohol Use Disorder leads to liver disease mortality through direct
+  hepatotoxic effects of chronic alcohol consumption causing progressive liver damage.
+  The pathway proceeds from steatosis through steatohepatitis and fibrosis to cirrhosis
+  and its life-threatening complications. Gastrointestinal/liver-related deaths occur
+  at a rate of 5.63/1000 person-years in AUD populations, making it the second most
+  common cause of death after cardiovascular disease. The association is particularly
+  strong in those with HCV co-infection (3.3-fold increased risk of decompensation).
+  In alcohol-problem cohorts, 7-16% develop alcoholic liver cirrhosis within 8-12
+  years. Approximately 40% of alcoholic liver cirrhosis patients had prior alcohol-related
+  healthcare contacts, representing prevention opportunities. Treatment with medications
+  for AUD can reduce mortality by 20% in cirrhosis patients.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 5.63
+    type: incidence_rate
+    ci_lower: 4.1
+    ci_upper: 7.74
+  p_value: null
+  sample_size: 286641
+moderators:
+- name: HCV co-infection
+  direction: strengthens
+  strength: strong
+  description: 'AUD with HCV co-infection increases risk of decompensated cirrhosis
+    3.3-fold (95% CI: 1.8-4.8); 35-40% of decompensated cases attributable to AUD'
+- name: Alcohol consumption level
+  direction: strengthens
+  strength: strong
+  description: 45% of alcoholic liver cirrhosis patients consumed >110g alcohol/day;
+    dose-response relationship with liver damage
+- name: Medication for AUD treatment
+  direction: weakens
+  strength: moderate
+  description: 'MAUD (naltrexone/acamprosate) associated with 20% reduced mortality
+    (HR 0.80, 95% CI: 0.67-0.97) in cirrhosis patients'
+- name: Disease severity
+  direction: strengthens
+  strength: strong
+  description: Severe alcoholic hepatitis (Maddrey score ≥32) associated with higher
+    mortality; 7-16% develop cirrhosis within 8-12 years in alcohol-problem cohorts

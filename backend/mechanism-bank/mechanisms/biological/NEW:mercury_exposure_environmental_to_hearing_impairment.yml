@@ -1,0 +1,56 @@
+id: NEW:mercury_exposure_environmental_to_hearing_impairment
+name: Environmental Mercury (Hg) Exposure → Hearing Impairment
+from_node:
+  node_id: NEW:mercury_exposure_environmental
+  node_name: Environmental Mercury (Hg) Exposure
+to_node:
+  node_id: hearing_impairment
+  node_name: Hearing Impairment
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Mercury enters the environment through industrial emissions, coal combustion, and waste disposal'
+- 'Step 2: Methylmercury bioaccumulates in fish and seafood, entering the human food chain'
+- 'Step 3: Mercury crosses biological barriers and accumulates in neural tissues including auditory pathways'
+- 'Step 4: Neurotoxic effects damage the cochlea, auditory nerve, and central auditory processing centers'
+- 'Step 5: Auditory function is impaired leading to hearing loss'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Fang Wang et al. 2024. "Population‐based study of environmental heavy metal exposure
+    and hearing loss: A systematic review and meta‐analysis." https://doi.org/10.1002/lio2.1230'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes mercury exposure studies
+  - Studies on fish consumption patterns and mercury biomarkers
+  - Research on occupational mercury exposure and audiometric outcomes
+  doi: 10.1002/lio2.1230
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Environmental mercury pollution is associated with hearing loss through neurotoxic mechanisms
+  affecting the auditory system. The meta-analysis synthesizes evidence on mercury exposure and hearing
+  outcomes in population-based studies.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Mercury exposure varies by proximity to industrial emissions, reliance on fish as dietary
+    staple, and occupational settings (dental, mining)
+moderators:
+- name: fish_consumption_patterns
+  direction: strengthens
+  strength: moderate
+  description: Populations relying heavily on fish consumption may have higher methylmercury exposure
+- name: form_of_mercury
+  direction: strengthens
+  strength: strong
+  description: Organic mercury (methylmercury) is more neurotoxic than inorganic forms
+structural_competency:
+  equity_implications: Mercury exposure reflects structural inequities in environmental regulation, industrial
+    policy, and food system contamination. Indigenous and coastal communities with traditional fish-based
+    diets bear disproportionate methylmercury burden. Industrial emissions from coal plants and waste
+    facilities are often concentrated near marginalized communities. This mechanism links hearing loss
+    to failures in environmental protection and equitable industrial siting.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.850592'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

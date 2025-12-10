@@ -1,0 +1,42 @@
+id: alcohol_intoxication_to_functional_disability_dash_score
+name: Alcohol Intoxication → Functional Disability (DASH Score)
+from_node:
+  node_id: alcohol_intoxication
+  node_name: Alcohol Intoxication
+to_node:
+  node_id: functional_disability_dash_score
+  node_name: Functional Disability (DASH Score)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol intoxication increases likelihood of severe laceration injuries
+  involving neurovascular structures and tendons (74% of intoxicated patients)'
+- 'Step 2: Laceration injuries require complex surgical repair and prolonged rehabilitation
+  compared to simple fractures'
+- 'Step 3: Damage to nerves and tendons results in incomplete functional recovery
+  despite treatment'
+- 'Step 4: Patients with laceration-type injuries demonstrate higher disability scores
+  on DASH questionnaire at follow-up'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Y Ağirdil and Y Şahbat 2024. "Analysis of Punch Injuries: Clinical
+    Characteristics, Management and Outcomes.." *Acta chirurgiae orthopaedicae et
+    traumatologiae Cechoslovaca*. https://doi.org/10.55095/ACHOT2024/029'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.588151'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: injury_type_laceration
+  direction: strengthens
+  strength: strong
+  description: Laceration injuries show significantly higher disability scores compared
+    to simple fractures or dermabrasions
+- name: surgical_intervention_access
+  direction: weakens
+  strength: moderate
+  description: Access to timely surgical repair may reduce long-term disability, though
+    disparities in surgical access create inequitable outcomes

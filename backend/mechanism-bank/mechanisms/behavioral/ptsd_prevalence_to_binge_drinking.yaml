@@ -1,0 +1,63 @@
+id: ptsd_prevalence_to_binge_drinking
+name: PTSD Prevalence -> Binge Drinking Prevalence
+from_node:
+  node_id: ptsd_prevalence
+  node_name: PTSD Prevalence
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking Prevalence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: PTSD symptoms create psychological distress, hyperarousal, and negative
+  emotional states that individuals seek to alleviate'
+- 'Step 2: Individuals with PTSD engage in self-medication behaviors, specifically
+  drinking to cope with PTSD symptoms rather than general negative affect'
+- 'Step 3: This coping-motivated alcohol use leads to increased frequency and intensity
+  of binge drinking episodes as individuals consume larger quantities to achieve symptom
+  relief'
+evidence:
+  quality_rating: B
+  n_studies: 7
+  primary_citation: 'Vujanovic, Anka A., et al. "Co-Occurring Posttraumatic Stress
+    Disorder Symptoms and Alcohol Use Behaviors: The Mediating Role of Drinking to
+    Cope with PTSD Symptoms." Journal of Dual Diagnosis 19, no. 4 (2023): 185-200.'
+  supporting_citations:
+  - 'Brackbill, Robert M., et al. "Longitudinal trajectories of binge and heavy drinking
+    pattern among World Trade Center Health Registry enrollees, 2006-2021: A dual
+    trajectory modeling approach." Drug and Alcohol Dependence 266 (2025): 112912.'
+  - 'Welch, Andréa E., et al. "Intensity of Binge Drinking a Decade After the September
+    11th Terror Attacks Among Exposed Individuals." American Journal of Preventive
+    Medicine 52, no. 6 (2017): 788-795.'
+  - 'Hawn, Sage E., et al. "Pre-trauma insomnia and posttraumatic alcohol and cannabis
+    use in the AURORA observational cohort study of trauma survivors." Journal of
+    Psychiatric Research 184 (2025): 106027.'
+  - 'Stewart, Samantha H., et al. "Military service and alcohol use: a systematic
+    narrative review." Occupational Medicine 72, no. 4 (2022): 243-251.'
+  - 'Lehavot, Keren, et al. "The impact of elevated posttraumatic stress on the efficacy
+    of brief alcohol interventions for heavy drinking college students." Addictive
+    Behaviors 38, no. 4 (2013): 1719-1725.'
+  - 'Brennan, Melanie B., et al. "Functional Relationships of Binge Drinking and Alcohol-Related
+    Problems With Posttraumatic Stress Symptoms in a Pilot Sample of Veterans." Journal
+    of Dual Diagnosis (2025): 1-15.'
+description: PTSD prevalence causally increases binge drinking prevalence through
+  a self-medication mechanism. Individuals with PTSD symptoms experience psychological
+  distress and seek relief through alcohol consumption, specifically drinking to cope
+  with trauma-related symptoms. This coping-motivated drinking pattern leads to increased
+  binge drinking behaviors, with stronger effects observed in certain populations
+  such as military personnel and trauma-exposed individuals.
+structural_competency_notes: The PTSD-binge drinking relationship is influenced by
+  structural factors including military culture that normalizes heavy drinking, limited
+  access to mental health services leading to self-medication, socioeconomic stressors
+  that exacerbate both PTSD and drinking behaviors, and cultural acceptance of alcohol
+  use as a coping mechanism in certain communities.
+last_updated: '2025-12-09'
+extraction_method: node_pair_discovery_v4
+quantitative_effects:
+  effect_size:
+    value: 1.63
+    type: odds_ratio
+    ci_lower: 1.43
+    ci_upper: 1.86
+  p_value: 0.005
+  sample_size: 46924

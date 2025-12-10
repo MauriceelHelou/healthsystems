@@ -1,0 +1,44 @@
+id: alcohol_outlet_hours_restriction_to_assault_rate
+name: Alcohol Outlet Hours Restriction → Assault Rate
+from_node:
+  node_id: alcohol_outlet_hours_restriction
+  node_name: Alcohol Outlet Hours Restriction
+to_node:
+  node_id: assault_rate
+  node_name: Assault Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Legislative reduction in bar/tavern operating hours (6am-2am to 9am-10pm)
+  eliminates 7 hours of daily alcohol sales'
+- 'Step 2: Restricted access to alcohol during late-night hours reduces opportunities
+  for alcohol consumption during peak assault times'
+- 'Step 3: Lower prevalence of acute alcohol intoxication during nighttime hours decreases
+  aggression and impaired judgment in public spaces'
+- 'Step 4: Reduced incidence of both aggravated and common assault near alcohol outlets
+  during high-risk hours (8pm-4am)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Erika M Rosen et al. 2024. "Interrupted Time Series Analysis of
+    Bar/Tavern Closing Hours and Violent Crime.." *JAMA Internal Medicine*. https://doi.org/10.1001/jamainternmed.2024.0255
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.060901'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: assault_severity
+  direction: strengthens
+  strength: moderate
+  description: Effects observed for both aggravated assault and common assault, suggesting
+    the mechanism operates across violence severity spectrum
+- name: spatial_concentration
+  direction: strengthens
+  strength: strong
+  description: Effects concentrated within 800-ft buffer of outlets during 8pm-4am,
+    indicating violence reduction is spatially and temporally linked to alcohol availability
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/alcohol_outlet_hours_restriction_to_assault_rate.yaml
+_category: political

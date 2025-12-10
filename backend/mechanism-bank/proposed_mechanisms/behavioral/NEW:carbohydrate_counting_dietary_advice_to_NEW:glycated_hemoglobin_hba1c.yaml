@@ -1,0 +1,55 @@
+id: NEW:carbohydrate_counting_dietary_advice_to_NEW:glycated_hemoglobin_hba1c
+name: Carbohydrate Counting Dietary Advice → Glycated Hemoglobin (HbA1c)
+from_node:
+  node_id: NEW:carbohydrate_counting_dietary_advice
+  node_name: Carbohydrate Counting Dietary Advice
+to_node:
+  node_id: NEW:glycated_hemoglobin_hba1c
+  node_name: Glycated Hemoglobin (HbA1c)
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Patients with type 1 diabetes mellitus receive education on carbohydrate
+  counting techniques to estimate carbohydrate content in meals'
+- 'Step 2: Carbohydrate counting enables more precise calculation of meal-related
+  insulin doses matched to actual carbohydrate intake'
+- 'Step 3: Improved insulin-to-carbohydrate matching leads to better postprandial
+  glucose control while allowing dietary flexibility'
+- 'Step 4: Sustained improvements in daily glucose management result in reduced glycated
+  hemoglobin (HbA1c) levels over time'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: 'C. Builes-Montaño et al. 2022. Efficacy and safety of carbohydrate
+    counting versus other forms of dietary advice in patients with type 1 diabetes
+    mellitus: A systematic review and meta-analysis of randomized clinical trials.
+    Journal of human nutrition and dietetics (Print).'
+  supporting_citations: []
+description: Carbohydrate counting is an efficacious dietary technique that reduces
+  HbA1c in adults and children with type 1 diabetes compared to standard diabetes
+  education. The meta-analysis of 11 RCTs (n=899) found a meaningful reduction in
+  HbA1c (SMD -0.52%, 95%CI -0.82 to -0.23) when excluding highly heterogeneous studies.
+  The intervention allows patients to calculate insulin doses based on carbohydrate
+  intake, enabling better glycemic control without increasing hypoglycemia risk, body
+  weight, or adverse effects on blood lipids.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.52
+    type: standardized_mean_difference
+    ci_lower: -0.82
+    ci_upper: -0.23
+  p_value: null
+  sample_size: 899
+moderators:
+- name: Comparator type
+  direction: strengthens
+  strength: moderate
+  description: Effect is significant when compared to usual diabetes education, but
+    not when compared to all dietary advice forms combined
+- name: Study duration
+  direction: strengthens
+  strength: weak
+  description: Effect does not appear to diminish with prolonged time (mean follow-up
+    52 ± 35.5 weeks)

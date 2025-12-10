@@ -1,0 +1,66 @@
+id: NEW:military_service_status_to_depression_diagnosis
+name: Military Service (Active or Veteran) → Depression Diagnosis
+from_node:
+  node_id: NEW:military_service_status
+  node_name: Military Service (Active or Veteran)
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Military service exposes individuals to unique occupational stressors including
+  combat exposure, deployment-related separation from family, and witnessing traumatic
+  events'
+- 'Step 2: These experiences create cumulative psychological burden through repeated
+  stress activation, moral injury, and adaptation challenges'
+- 'Step 3: Both active duty personnel and veterans face barriers to mental health
+  care including stigma, limited access, and military culture emphasizing resilience'
+- 'Step 4: Chronic stress exposure and inadequate support lead to neurobiological
+  changes and maladaptive coping patterns'
+- 'Step 5: These factors culminate in elevated rates of clinical depression, with
+  prevalence of 23% in active military and 20% in veterans'
+evidence:
+  quality_rating: A
+  n_studies: 73
+  primary_citation: 'Yousef Moradi et al. 2021. The global prevalence of depression,
+    suicide ideation, and attempts in the military forces: a systematic review and
+    Meta-analysis of cross sectional studies. BMC Psychiatry.'
+  supporting_citations: []
+description: Military service, whether active duty or veteran status, is associated
+  with elevated depression prevalence compared to general population estimates. This
+  systematic review and meta-analysis of cross-sectional studies found depression
+  prevalence of 23% among active military forces and 20% among veterans. The relationship
+  is mediated by unique occupational exposures including combat, deployment stress,
+  and trauma, combined with cultural and structural barriers to mental health care
+  within military systems.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.23
+    type: prevalence
+    ci_lower: 0.2
+    ci_upper: 0.26
+  p_value: null
+  sample_size: null
+moderators:
+- name: Military status (active vs veteran)
+  direction: strengthens
+  strength: weak
+  description: Active military personnel showed slightly higher depression prevalence
+    (23%) compared to veterans (20%)
+- name: Substance use (drugs)
+  direction: strengthens
+  strength: strong
+  description: Drug-using military personnel showed substantially elevated suicidal
+    ideation (18%) and attempts (30%), suggesting substance use as a significant moderator
+- name: Alcohol consumption
+  direction: strengthens
+  strength: moderate
+  description: Alcohol-consuming military showed elevated suicidal ideation (9%) and
+    attempts (8%)
+- name: HIV/AIDS status
+  direction: strengthens
+  strength: moderate
+  description: Military personnel with HIV/AIDS showed 5% prevalence of suicide attempts

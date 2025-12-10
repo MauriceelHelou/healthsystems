@@ -1,0 +1,64 @@
+id: NEW:sarcopenia_screening_tool_availability_to_NEW:sarcopenia_early_detection
+name: Sarcopenia Screening Tool Availability (Ishii Test) → Early Detection of Sarcopenia
+from_node:
+  node_id: NEW:sarcopenia_screening_tool_availability
+  node_name: Sarcopenia Screening Tool Availability (Ishii Test)
+to_node:
+  node_id: NEW:sarcopenia_early_detection
+  node_name: Early Detection of Sarcopenia
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: The Ishii Test provides a non-invasive, simple screening method using age, grip strength, and
+  calf circumference'
+- 'Step 2: Healthcare settings can implement this low-cost screening tool without expensive equipment
+  like DXA or BIA'
+- 'Step 3: Increased availability of screening enables systematic assessment of older adults in clinical
+  settings'
+- 'Step 4: Early identification allows for timely intervention before progression to severe functional
+  decline'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: 'Sabrina Gabrielle Gomes Fernandes Macêdo et al. 2024. "Use of the Ishii Test for
+    screening sarcopenia in older adults: a systematic review with meta-analysis of diagnostic test accuracy
+    (DTA) studies." https://doi.org/10.1186/s12877-024-05155-2'
+  supporting_citations:
+  - Studies included in meta-analysis (11 studies total) - specific citations require full-text access
+  - European Working Group on Sarcopenia in Older People (EWGSOP2) guidelines
+  - Additional citations require full-text access
+  doi: 10.1186/s12877-024-05155-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review and meta-analysis of 11 diagnostic test accuracy studies demonstrates
+  that the Ishii Test has good sensitivity and specificity for screening sarcopenia in older adults (age
+  60+). The test, recommended by EWGSOP2, shows AUC values above the discrimination threshold (0.500)
+  across all included studies, with summary ROC curves indicating good diagnostic performance for both
+  men and women.
+quantitative_effects:
+  p_value: 0.001
+  heterogeneity_i_squared: 83.66
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: 'Test performance varies by gender with different I² values: 83.66% for men (95%CI: 69.38-91.28)
+    and 60.04% for women (95%CI: 13.06-81.63)'
+- name: cut_off_values
+  direction: strengthens
+  strength: moderate
+  description: Four studies used original values while five studies developed new cut-off points, suggesting
+    population-specific calibration may improve accuracy
+structural_competency:
+  equity_implications: The availability of simple, low-cost screening tools like the Ishii Test can help
+    address healthcare access disparities in sarcopenia detection. Expensive diagnostic equipment (DXA,
+    BIA) creates structural barriers to screening in resource-limited settings. This tool could enable
+    screening in primary care and community settings, potentially reducing inequities in early detection
+    among older adults with limited healthcare access. The tool's reliance on simple measurements (grip
+    strength, calf circumference) makes it implementable in diverse healthcare contexts.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.098013'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

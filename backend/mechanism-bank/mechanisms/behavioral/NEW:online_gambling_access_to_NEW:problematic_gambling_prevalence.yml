@@ -1,0 +1,68 @@
+id: NEW:online_gambling_access_to_NEW:problematic_gambling_prevalence
+name: Online Gambling Access → Problematic Gambling Prevalence
+from_node:
+  node_id: NEW:online_gambling_access
+  node_name: Online Gambling Access
+to_node:
+  node_id: NEW:problematic_gambling_prevalence
+  node_name: Problematic Gambling Prevalence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Growth of online gambling industry increases accessibility and availability of gambling platforms'
+- 'Step 2: Online formats (particularly casino/slots) provide 24/7 access without geographic barriers'
+- 'Step 3: Increased accessibility leads to higher engagement with high-risk gambling formats'
+- 'Step 4: Online casino/slots gambling shows highest rates of problematic gambling (15.8%)'
+- 'Step 5: Problematic gambling develops through continuous access and reduced social barriers to gambling'
+evidence:
+  quality_rating: A
+  n_studies: 380
+  primary_citation: 'Lucy T Tran et al. 2024. "The prevalence of gambling and problematic gambling: a
+    systematic review and meta-analysis." https://doi.org/10.1016/S2468-2667(24)00126-9'
+  supporting_citations:
+  - Additional citations require full-text access - this systematic review included 380 representative
+    unique samples across 68 countries
+  - Studies were identified through MEDLINE, Embase, and PsycInfo databases
+  - Grey literature sources also contributed to the 366 samples included in meta-analysis
+  doi: 10.1016/S2468-2667(24)00126-9
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: The systematic review found that among adults who gamble, those using online casino or slots
+  formats have the highest rates of problematic gambling at 15.8% (95% CI 10.7-21.6). The growth of the
+  online gambling industry represents a structural factor that increases population-level exposure to
+  gambling and subsequently problematic gambling behaviors.
+quantitative_effects:
+  effect_size:
+    value: 15.8
+    type: percentage_change
+    ci_lower: 10.7
+    ci_upper: 21.6
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study included data from 68 countries and territories, with most samples from high-income
+    countries. Regional and global estimates were generated using population-weighted methods.
+moderators:
+- name: gambling_format
+  direction: strengthens
+  strength: strong
+  description: Online casino/slots gambling associated with highest problematic gambling rates (15.8%)
+    compared to other formats
+- name: sex_gender
+  direction: strengthens
+  strength: moderate
+  description: Men show higher gambling participation rates (49.1%) than women (37.4%)
+structural_competency:
+  equity_implications: This mechanism identifies the regulatory environment and growth of the online gambling
+    industry as structural determinants of problematic gambling, rather than blaming individual choices.
+    The paper explicitly calls for governments to give greater attention to strict regulation and monitoring
+    of gambling globally. The lack of regulatory barriers to online gambling creates differential exposure
+    across populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.166283'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

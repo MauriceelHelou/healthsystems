@@ -1,0 +1,69 @@
+id: NEW:male_gender_to_alcohol_use_disorder
+name: Male Gender → Alcohol Use Disorder
+from_node:
+  node_id: NEW:male_gender
+  node_name: Male Gender
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Gender-specific cultural norms in East Asian societies encourage male drinking in social and
+  business contexts'
+- 'Step 2: Workplace expectations and networking practices often involve alcohol consumption for men'
+- 'Step 3: Marketing of alcohol products disproportionately targets male consumers'
+- 'Step 4: Social acceptance of heavy drinking among men reduces help-seeking and early intervention'
+- 'Step 5: Biological differences in alcohol metabolism and genetic polymorphisms (e.g., ALDH2) interact
+  with social exposure patterns'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Getaneh Mulualem Belay et al. 2023. "Magnitude and determinants of alcohol use disorder
+    among adult population in East Asian countries: A systematic review and meta-analysis." https://doi.org/10.3389/fpubh.2023.1144012'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 14 primary studies
+  - Studies included populations from Korea, China, Japan, Taiwan, and Mongolia
+  - Gender-stratified analyses conducted across multiple included studies
+  doi: 10.3389/fpubh.2023.1144012
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Male gender is strongly associated with alcohol use disorder in East Asian populations, with
+  men having nearly 6 times higher odds of AUD compared to women. This reflects deeply embedded structural
+  and cultural factors including gendered social norms, workplace drinking expectations, and differential
+  marketing exposure.
+quantitative_effects:
+  effect_size:
+    value: 5.9
+    type: odds_ratio
+    ci_lower: 3.3
+    ci_upper: 8.51
+  sample_size: 93161
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Gender disparities observed across all East Asian countries studied, though magnitude
+    may vary by country-specific cultural norms
+moderators:
+- name: cultural_context
+  direction: strengthens
+  strength: strong
+  description: East Asian cultural contexts with strong gendered drinking norms amplify the male-AUD association
+- name: occupational_factors
+  direction: strengthens
+  strength: moderate
+  description: Business drinking culture particularly prevalent in Korea may explain highest AUD rates
+    among men
+structural_competency:
+  equity_implications: 'This mechanism is fundamentally structural rather than individual. The nearly
+    6-fold gender disparity reflects: (1) workplace policies and cultures that normalize business drinking
+    for men, (2) alcohol industry marketing targeting male consumers, (3) gender role expectations that
+    stigmatize female but not male drinking, and (4) differential access to treatment due to gendered
+    stigma. Interventions should target workplace policies, marketing regulations, and cultural norm change
+    rather than individual behavior modification. The high prevalence in Korea (16.73% lifetime) particularly
+    reflects structural factors like ''hoesik'' (company dinner) culture.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.293010'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

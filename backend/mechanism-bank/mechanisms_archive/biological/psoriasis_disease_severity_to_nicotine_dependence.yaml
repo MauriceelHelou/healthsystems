@@ -1,0 +1,42 @@
+id: psoriasis_disease_severity_to_nicotine_dependence
+name: Psoriasis Disease Severity (PASI ≥3) → Nicotine Dependence
+from_node:
+  node_id: psoriasis_disease_severity
+  node_name: Psoriasis Disease Severity (PASI ≥3)
+to_node:
+  node_id: nicotine_dependence
+  node_name: Nicotine Dependence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Increased psoriasis severity creates chronic stress, psychological distress,
+  and reduced quality of life'
+- 'Step 2: Psychological burden and co-occurring mental health problems (depression,
+  anxiety) increase vulnerability to substance use'
+- 'Step 3: Nicotine use serves as stress-coping mechanism and self-medication for
+  psychological symptoms'
+- 'Step 4: Chronic nicotine use patterns develop into dependence in context of ongoing
+  disease-related stress'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: W. Sondermann et al. 2020. "Psychological burden of psoriatic
+    patients in a German university hospital dermatology department." *Journal of
+    dermatology (Print)*. https://doi.org/10.1111/1346-8138.15721
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.524172'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: mental_health_comorbidity
+  direction: strengthens
+  strength: strong
+  description: Co-occurring depression and anxiety (present in ~50% of patients) strengthens
+    pathway to nicotine dependence
+- name: integrated_substance_use_screening
+  direction: weakens
+  strength: moderate
+  description: Systematic screening for nicotine dependence as recommended could enable
+    early intervention and weaken progression to dependence

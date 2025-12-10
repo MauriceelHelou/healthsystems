@@ -1,0 +1,58 @@
+id: NEW:cognitive_behavioral_therapy_for_comorbid_aud_depression_to_depression_diagnosis
+name: Cognitive Behavioral Therapy for Comorbid AUD-Depression → Depressive Symptoms
+from_node:
+  node_id: NEW:cognitive_behavioral_therapy_for_comorbid_aud_depression
+  node_name: Cognitive Behavioral Therapy for Comorbid AUD-Depression
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depressive Symptoms
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: CBT targets maladaptive thought patterns and cognitive distortions common
+  in comorbid AUD-depression, helping patients identify and challenge negative automatic
+  thoughts'
+- 'Step 2: Behavioral activation components increase engagement in rewarding activities
+  and reduce avoidance behaviors that perpetuate both depression and alcohol use'
+- 'Step 3: Skill-building in coping strategies provides alternative mechanisms for
+  emotional regulation beyond alcohol use, reducing depressive rumination'
+- 'Step 4: Integrated treatment addresses the bidirectional relationship between alcohol
+  use and depression, breaking the cycle where each condition exacerbates the other'
+- 'Step 5: Reduction in depressive symptoms as measured by standardized assessments
+  with large effect size (SMD = -0.84)'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'S. Grant et al. 2021. "Clinical interventions for adults with
+    comorbid alcohol use and depressive disorders: A systematic review and network
+    meta-analysis." PLoS Medicine.'
+  supporting_citations: []
+description: Cognitive behavioral therapy demonstrates a large beneficial effect on
+  reducing depressive symptoms in adults with comorbid alcohol use disorder and depression.
+  A network meta-analysis of 36 RCTs with 2,729 participants found CBT adjunctive
+  to treatment as usual produced significantly greater reductions in depressive symptoms
+  compared to no additional treatment (SMD = -0.84), with moderate confidence in this
+  estimate. CBT also showed modest benefits for reducing alcohol use (SMD = -0.25).
+  The integrated approach addresses both conditions simultaneously through cognitive
+  restructuring and behavioral strategies.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.84
+    type: standardized_mean_difference
+    ci_lower: -1.05
+    ci_upper: -0.63
+  p_value: 0.001
+  sample_size: 2729
+moderators:
+- name: Treatment duration/follow-up
+  direction: weakens
+  strength: moderate
+  description: Evidence limited to post-intervention effects; long-term efficacy uncertain
+    due to sparse evidence on intervention effects over time
+- name: Comparator type
+  direction: weakens
+  strength: moderate
+  description: Effects demonstrated against no additional treatment/TAU rather than
+    active comparators, limiting conclusions about comparative effectiveness

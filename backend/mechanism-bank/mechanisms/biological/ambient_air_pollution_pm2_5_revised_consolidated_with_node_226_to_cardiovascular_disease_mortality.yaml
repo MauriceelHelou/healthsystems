@@ -1,0 +1,93 @@
+id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226_to_cardiovascular_disease_mortality
+name: Long-term PM2.5 Exposure → Cardiovascular Disease Mortality
+from_node:
+  node_id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226
+  node_name: Long-term PM2.5 Exposure
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Fine particulate matter (PM2.5) is inhaled and penetrates deep into the
+  alveolar regions of the lungs due to its small aerodynamic diameter (<2.5 μm)'
+- 'Step 2: PM2.5 particles trigger local pulmonary inflammation and oxidative stress,
+  releasing pro-inflammatory cytokines and reactive oxygen species into systemic circulation'
+- 'Step 3: Systemic inflammation promotes endothelial dysfunction, accelerating atherosclerotic
+  plaque formation and destabilization in coronary and cerebral arteries'
+- 'Step 4: Chronic exposure leads to autonomic nervous system imbalance, increased
+  blood pressure, and altered cardiac electrophysiology'
+- 'Step 5: These cumulative cardiovascular insults increase risk of ischemic heart
+  disease events, stroke, and cardiovascular mortality'
+evidence:
+  quality_rating: A
+  n_studies: 948
+  primary_citation: 'Pablo Orellano et al. 2024. Long-Term Exposure to Particulate
+    Matter and Mortality: An Update of the WHO Global Air Quality Guidelines Systematic
+    Review and Meta-Analysis. International Journal of Public Health.'
+  supporting_citations:
+  - 'W. R. Wan Mahiyuddin et al. 2023. Cardiovascular and Respiratory Health Effects
+    of Fine Particulate Matters (PM2.5): A Review on Time Series Studies. Atmosphere.'
+  - 'R. Atkinson et al. 2014. Epidemiological time series studies of PM2.5 and daily
+    mortality and hospital admissions: a systematic review and meta-analysis. Thorax.'
+  - 'G. Hoek et al. 2013. Long-term air pollution exposure and cardio-respiratory
+    mortality: a review. Environmental Health.'
+  - Cong Liu et al. 2019. Ambient Particulate Air Pollution and Daily Mortality in
+    652 Cities. New England Journal of Medicine.
+  - 'Lei Zhao et al. 2017. Association between air pollution and cardiovascular mortality
+    in China: a systematic review and meta-analysis. OncoTarget.'
+description: Long-term exposure to PM2.5 is consistently and significantly associated
+  with increased cardiovascular disease mortality across multiple large-scale meta-analyses
+  and multinational studies. The pooled evidence from over 900 studies demonstrates
+  an 11% excess risk of cardiovascular mortality per 10 μg/m³ increase in PM2.5, with
+  particularly strong associations for ischemic heart disease. The biological pathway
+  involves systemic inflammation, oxidative stress, endothelial dysfunction, and accelerated
+  atherosclerosis. Short-term exposure studies confirm acute effects (0.55-0.68% increase
+  per 10 μg/m³), while long-term cohort studies reveal cumulative cardiovascular damage.
+  The evidence certainty is rated high by WHO systematic reviews, supporting current
+  air quality guidelines.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 11.0
+    type: percent_excess_risk_per_10ug_m3
+    ci_lower: 5.0
+    ci_upper: 16.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Adults aged ≥65 years show greater cardiovascular mortality risk from
+    PM2.5 exposure compared to younger individuals
+- name: sex
+  direction: strengthens
+  strength: weak
+  description: Female sex associated with greater cardiovascular mortality risk, though
+    evidence across studies shows little consistent difference between men and women
+- name: socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Lower education associated with larger effect estimates for PM2.5-related
+    mortality, though recent evidence has weakened this finding
+- name: obesity
+  direction: strengthens
+  strength: moderate
+  description: Obese subjects show larger effect estimates for fine PM-related mortality
+- name: temperature
+  direction: strengthens
+  strength: moderate
+  description: Lower temperatures associated with greater cardiovascular mortality
+    risks from air pollution exposure
+- name: baseline_pm_concentration
+  direction: weakens
+  strength: moderate
+  description: Associations stronger in locations with lower annual mean PM concentrations;
+    concentration-response curves show steeper slopes at lower PM levels
+- name: exposure_duration
+  direction: strengthens
+  strength: moderate
+  description: Long-term studies (≥7 years) show higher cardiovascular mortality risks
+    compared to short-term studies

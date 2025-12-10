@@ -1,0 +1,66 @@
+id: substance_use_disorder_any_to_NEW:palliative_care_access_barriers
+name: Substance Use Disorder (Any) → Palliative Care Access Barriers
+from_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+to_node:
+  node_id: NEW:palliative_care_access_barriers
+  node_name: Palliative Care Access Barriers
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individuals with substance use disorders face stigma from healthcare providers that creates
+  unwelcoming care environments'
+- 'Step 2: Complex co-morbidities including mental health problems complicate standard palliative care
+  approaches'
+- 'Step 3: Homelessness and housing instability among this population creates logistical barriers to receiving
+  consistent end-of-life care'
+- 'Step 4: Healthcare staff lack specific training in managing both addiction and palliative needs simultaneously'
+- 'Step 5: Exclusionary policies in palliative care settings may deny services to actively using individuals'
+evidence:
+  quality_rating: B
+  n_studies: 13
+  primary_citation: 'Olivia Cook et al. 2022. "Palliative care needs and models of care for people who
+    use drugs and/or alcohol: A mixed methods systematic review.." https://doi.org/10.1177/02692163211061994'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 9 qualitative and 4 quantitative
+    studies
+  - Studies used range of data collection methods across various settings
+  - Full bibliography available in original publication
+  doi: 10.1177/02692163211061994
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: People who use drugs and/or alcohol face multi-faceted challenges accessing palliative and
+  end-of-life care, including access barriers, care quality issues, and healthcare staff skills gaps.
+  These barriers stem from both individual complexity (co-morbidities, mental health, homelessness) and
+  systemic issues (policies, staff attitudes, lack of specialized training).
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies conducted across various settings suggesting potential geographic and institutional
+    variation in care access
+moderators:
+- name: homelessness_status
+  direction: strengthens
+  strength: strong
+  description: Homelessness compounds barriers to accessing palliative care for people who use substances
+- name: mental_health_comorbidity
+  direction: strengthens
+  strength: moderate
+  description: Co-occurring mental health problems increase complexity and barriers to care
+- name: staff_training
+  direction: weakens
+  strength: moderate
+  description: Training exchanges between drug/alcohol services and palliative care can reduce access
+    barriers
+structural_competency:
+  equity_implications: This mechanism highlights structural barriers in healthcare systems rather than
+    individual choices. The review identifies that creating inclusive policies, sensitizing staff to distinctive
+    needs, and facilitating training exchanges between addiction and palliative services are system-level
+    interventions. The burden falls on healthcare systems to adapt rather than on vulnerable individuals
+    to change.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.520090'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

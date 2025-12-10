@@ -1,0 +1,40 @@
+id: physician_nurse_understaffing_to_hcv_treatment_access
+name: Physician and Nurse Understaffing at Treatment Centers → HCV Treatment Access
+  for People Who Inject Drugs
+from_node:
+  node_id: physician_nurse_understaffing
+  node_name: Physician and Nurse Understaffing at Treatment Centers
+to_node:
+  node_id: hcv_treatment_access
+  node_name: HCV Treatment Access for People Who Inject Drugs
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Insufficient staffing levels at SerD (outpatient addiction centers) reduce
+  capacity to provide comprehensive services'
+- 'Step 2: Limited staff availability restricts the number of patients who can receive
+  HCV screening, referral, and treatment services'
+- 'Step 3: Practitioners are unable to follow protocol recommendations due to time
+  and resource constraints'
+- 'Step 4: Less than 50% of PWID patients receive appropriate HCV care despite availability
+  of effective medications and universal health care'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'S. Molinaro et al. 2019. "Barriers to effective management of
+    hepatitis C virus in people who inject drugs: Evidence from outpatient clinics.."
+    *Drug and Alcohol Review*. https://doi.org/10.1111/dar.12978'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.698233'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: protocol_adherence
+  direction: strengthens
+  strength: strong
+  description: Practitioners who follow protocol recommendations are able to deliver
+    all four services (screening, referral, treatment, harm reduction) to >50% of
+    patients, suggesting that adherence to protocols can partially mitigate understaffing
+    barriers

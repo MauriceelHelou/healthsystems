@@ -1,0 +1,54 @@
+id: alcohol_pricing_policy_to_population_alcohol_consumption
+name: Alcohol Pricing Policy and Affordability → Population-Level Alcohol Consumption
+from_node:
+  node_id: alcohol_pricing_policy
+  node_name: Alcohol Pricing Policy and Affordability
+to_node:
+  node_id: population_alcohol_consumption
+  node_name: Population-Level Alcohol Consumption
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Excise tax levels determine final alcohol prices in retail markets, affecting
+  economic accessibility'
+- 'Step 2: Lower excise taxation (insufficient relative to health costs) maintains
+  alcohol affordability across socioeconomic strata'
+- 'Step 3: Higher affordability reduces economic barriers to alcohol purchase and
+  consumption at population level'
+- 'Step 4: Increased population-level consumption generates alcohol-attributable disease
+  burden across multiple cause categories measured through GBD methodology'
+- 'Step 5: Disease burden manifests as disability-adjusted life-years with substantial
+  societal value loss (6.2 trillion INR)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Siddhesh Zadey 2024. "Assessing the societal value of health lost
+    to alcohol use in India compared to excise taxes on alcohol sales.." *Drug and
+    alcohol review*. https://doi.org/10.1111/dar.13932
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.131787'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: socioeconomic_status
+  direction: strengthens
+  strength: strong
+  description: Lower-income populations are more responsive to price changes but also
+    experience greater relative burden from alcohol-related health costs when prices
+    remain low
+- name: informal_alcohol_markets
+  direction: weakens
+  strength: moderate
+  description: Presence of untaxed informal alcohol markets may reduce effectiveness
+    of excise tax policy in controlling consumption and disease burden
+- name: cultural_drinking_norms
+  direction: strengthens
+  strength: moderate
+  description: State-level variation in cultural drinking patterns interacts with
+    pricing policy to determine population consumption levels, as evidenced by wide
+    geographic variation in per capita losses
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/alcohol_pricing_policy_to_population_alcohol_consumption.yaml
+_category: political

@@ -1,0 +1,57 @@
+id: NEW:alcohol_consumption_average_to_hypertension_diagnosis
+name: Average Alcohol Consumption → Hypertension Diagnosis
+from_node:
+  node_id: NEW:alcohol_consumption_average
+  node_name: Average Alcohol Consumption
+to_node:
+  node_id: hypertension_diagnosis
+  node_name: Hypertension Diagnosis
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Regular alcohol consumption leads to direct effects on cardiovascular physiology,
+  including activation of the sympathetic nervous system and increased heart rate'
+- 'Step 2: Chronic alcohol intake promotes vascular dysfunction through oxidative
+  stress, inflammation, and endothelial damage'
+- 'Step 3: These cumulative effects result in sustained elevation of systolic blood
+  pressure over time'
+- 'Step 4: Prolonged exposure to elevated blood pressure leads to clinical diagnosis
+  of hypertension, with risk proportional to average time exposed to higher blood
+  pressure levels'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: Roerecke et al. 2018 (cited in Bell 2018)
+  supporting_citations:
+  - 'S. Bell 2018. Alcohol Consumption, Hypertension, and Cardiovascular Health Across
+    the Life Course: There Is No Such Thing as a One‐Size‐Fits‐All Approach. Journal
+    of the American Heart Association.'
+  - Piano et al. 2018 (cited in Bell 2018)
+description: A systematic review and dose-response meta-analysis found that no level
+  of alcohol intake was associated with a lower risk of developing hypertension in
+  either sex. Evidence indicates alcohol consumption, even at levels typically considered
+  'moderate', is causally associated with elevated blood pressure. The relationship
+  shows a cumulative effect where systolic blood pressure exposure is proportional
+  to average time exposed to elevated levels, accelerating age-related changes in
+  blood pressure.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Effects of alcohol on hypertension appear more pronounced in men than
+    in women. Both the meta-analysis by Roerecke et al. and cross-sectional study
+    by Piano et al. found less pronounced effects in women.
+- name: drinking_pattern
+  direction: strengthens
+  strength: moderate
+  description: Episodic heavy drinking (binge drinking) was associated with elevated
+    systolic blood pressure in men, suggesting pattern of consumption matters beyond
+    average volume
+- name: age_at_exposure
+  direction: strengthens
+  strength: moderate
+  description: Drinking habits adopted in early adulthood and middle age correlate
+    with premorbid cardiovascular indicators; earlier exposure leads to cumulative
+    effects on blood pressure

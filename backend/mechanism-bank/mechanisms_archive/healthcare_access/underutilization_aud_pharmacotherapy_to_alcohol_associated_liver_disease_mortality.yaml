@@ -1,0 +1,39 @@
+id: underutilization_aud_pharmacotherapy_to_alcohol_associated_liver_disease_mortality
+name: Underutilization of Alcohol Use Disorder Pharmacotherapy → Alcohol-Associated
+  Liver Disease Mortality
+from_node:
+  node_id: underutilization_aud_pharmacotherapy
+  node_name: Underutilization of Alcohol Use Disorder Pharmacotherapy
+to_node:
+  node_id: alcohol_associated_liver_disease_mortality
+  node_name: Alcohol-Associated Liver Disease Mortality
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Efficacious pharmacological treatments for alcohol use disorder exist but
+  are seldomly prescribed to patients who need them'
+- 'Step 2: Lack of prescription and access to evidence-based treatments results in
+  continued unhealthy alcohol use in patients with existing liver disease'
+- 'Step 3: Continued alcohol consumption in patients with alcohol-associated liver
+  disease accelerates disease progression and hepatic decompensation'
+- 'Step 4: Untreated alcohol use disorder leads to increased rates of liver transplantation
+  need and liver-related deaths'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Lamia Y Haque et al. 2024. "Treatment of alcohol use disorder
+    in patients with alcohol-associated liver disease: Innovative approaches and a
+    call to action." *Addiction Science & Clinical Practice*. https://doi.org/10.1186/s13722-024-00448-8'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.371542'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: presence_liver_cirrhosis
+  direction: strengthens
+  strength: strong
+  description: The presence of liver cirrhosis complicates pharmacological treatment
+    choices, potentially further reducing prescription rates and exacerbating the
+    treatment gap

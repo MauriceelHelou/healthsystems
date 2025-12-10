@@ -1,0 +1,48 @@
+id: criminal_justice_incarceration_to_sexual_risk_behaviors
+name: Criminal Justice System Incarceration → Sexual Risk Behaviors
+from_node:
+  node_id: criminal_justice_incarceration
+  node_name: Criminal Justice System Incarceration
+to_node:
+  node_id: sexual_risk_behaviors
+  node_name: Sexual Risk Behaviors
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Incarceration physically restricts access to sexual partners and opportunities
+  for sexual activity through confinement'
+- 'Step 2: Post-release period involves reintegration challenges and supervised release
+  conditions that may limit social interactions'
+- 'Step 3: Reduced sexual activity and fewer sexual partners lead to decreased overall
+  sexual risk behaviors'
+- 'Step 4: Among those engaging in sexual activity post-release, participation in
+  healthcare systems increases viral suppression rates, further reducing transmission
+  risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Breanne E. Biondi et al. 2019. "Reduced Sexual Risk Behaviors
+    Among Persons With HIV After Release From the Criminal Justice System." *Open
+    Forum Infectious Diseases*. https://doi.org/10.1093/ofid/ofz411
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.349563'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: time_since_release
+  direction: strengthens
+  strength: moderate
+  description: Sexual activity remained lower at both 1 month (41%) and 6 months (46%)
+    post-release compared to pre-incarceration (60%), with slight increase over time
+- name: viral_suppression
+  direction: strengthens
+  strength: strong
+  description: Among those with sexual risk behaviors at 6 months, all had viral suppression,
+    eliminating HIV transmission risk despite continued sexual activity
+- name: substance_use_disorder_treatment
+  direction: strengthens
+  strength: moderate
+  description: Participants were enrolled in trials for alcohol or opioid use disorder
+    treatment, which may have contributed to reduced risk behaviors

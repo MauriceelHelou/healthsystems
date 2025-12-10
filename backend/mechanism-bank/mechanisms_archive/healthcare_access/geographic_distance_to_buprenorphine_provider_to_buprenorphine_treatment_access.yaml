@@ -1,0 +1,42 @@
+id: geographic_distance_to_buprenorphine_provider_to_buprenorphine_treatment_access
+name: Geographic Distance to Buprenorphine Treatment Provider → Access to Buprenorphine
+  Treatment
+from_node:
+  node_id: geographic_distance_to_buprenorphine_provider
+  node_name: Geographic Distance to Buprenorphine Treatment Provider
+to_node:
+  node_id: buprenorphine_treatment_access
+  node_name: Access to Buprenorphine Treatment
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Greater geographic distance creates physical barriers to reaching buprenorphine
+  treatment facilities'
+- 'Step 2: Increased travel burden (time, cost, transportation requirements) reduces
+  feasibility of initiating and maintaining treatment'
+- 'Step 3: Reduced access to medications for opioid use disorder (MOUD) leads to untreated
+  opioid use disorder'
+- 'Step 4: Untreated opioid use disorder increases risk of overdose and mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: James R Langabeer et al. 2020. "Geographic proximity to buprenorphine
+    treatment providers in the U.S.." *Drug and alcohol dependence*. https://doi.org/10.1016/j.drugalcdep.2020.108131
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.498411'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: state_rurality
+  direction: strengthens
+  strength: moderate
+  description: Positive correlation between state's percentage rurality and percentage
+    outside distance buffers (r = .491, p < .000), indicating rural areas have substantially
+    worse geographic access
+- name: baseline_treatment_need
+  direction: strengthens
+  strength: moderate
+  description: Access is lower in areas of higher need, creating inverse care law
+    where populations most requiring treatment have worst geographic access

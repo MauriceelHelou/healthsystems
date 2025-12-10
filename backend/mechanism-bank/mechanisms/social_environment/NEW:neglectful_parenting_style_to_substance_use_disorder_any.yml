@@ -1,0 +1,61 @@
+id: NEW:neglectful_parenting_style_to_substance_use_disorder_any
+name: Neglectful Parenting Style → Substance Use Disorder (Any)
+from_node:
+  node_id: NEW:neglectful_parenting_style
+  node_name: Neglectful Parenting Style
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Neglectful parenting involves low warmth and low control/monitoring in the family environment'
+- 'Step 2: Children experience reduced supervision and fewer limits on behavior'
+- 'Step 3: Lack of emotional support increases vulnerability to peer influence and negative coping mechanisms'
+- 'Step 4: Reduced parental monitoring allows greater opportunity for substance experimentation'
+- 'Step 5: Increased initiation and escalation of psychoactive substance use in offspring'
+evidence:
+  quality_rating: A
+  n_studies: 184
+  primary_citation: M. Pinquart and Jana Lauk 2024. "Associations of parenting styles with substance use
+    in the offspring—A systematic review and meta‐analysis." https://doi.org/10.1111/dar.13961
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 184 studies
+  - Studies assessed via electronic database search with multi-level meta-analysis
+  - Both concurrent and longitudinal associations examined
+  doi: 10.1111/dar.13961
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis found that neglectful parenting (low warmth, low control) showed the strongest
+  positive association with offspring substance use among the non-authoritative parenting styles. The
+  correlation of 0.10 indicates a small but consistent risk-increasing effect.
+quantitative_effects:
+  effect_size:
+    value: 0.1
+    type: correlation
+    ci_lower: 0.08
+    ci_upper: 0.13
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect sizes varied by cultural context including levels of horizontal and vertical
+    collectivism or individualism
+moderators:
+- name: cultural_collectivism_individualism
+  direction: varies
+  strength: moderate
+  description: Associations varied by levels of horizontal and vertical collectivism or individualism
+- name: substance_type
+  direction: varies
+  strength: moderate
+  description: Associations varied by the specific type of substance assessed
+structural_competency:
+  equity_implications: Neglectful parenting often results from structural conditions including poverty,
+    parental mental health challenges, work demands requiring multiple jobs, lack of childcare support,
+    and community-level adversity. Rather than blaming parents, interventions should address economic
+    security, workplace policies, and social services that enable engaged parenting.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.327029'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

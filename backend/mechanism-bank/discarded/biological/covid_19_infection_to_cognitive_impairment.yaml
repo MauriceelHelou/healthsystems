@@ -1,0 +1,42 @@
+id: covid_19_infection_to_cognitive_impairment
+name: COVID-19 Infection → Cognitive Impairment and Neurological Disability
+from_node:
+  node_id: covid_19_infection
+  node_name: COVID-19 Infection
+to_node:
+  node_id: cognitive_impairment
+  node_name: Cognitive Impairment and Neurological Disability
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: COVID-19 infection causes persistent dysgeusia in vulnerable populations'
+- 'Step 2: Taste disturbance leads to reduced nutritional intake and thiamine deficiency'
+- 'Step 3: Thiamine deficiency produces Wernicke encephalopathy with neuronal damage'
+- 'Step 4: Progression to Wernicke-Korsakoff syndrome results in persistent cognitive
+  impairment and neurological disability requiring rehabilitation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Hannah Skok et al. 2022. "Wernicke Korsakoff syndrome in a teenage
+    female as a complication of COVID‐19." *Journal of the American College of Emergency
+    Physicians Open*. https://doi.org/10.1002/emp2.12735
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.330140'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: socioeconomic_status
+  direction: strengthens
+  strength: strong
+  description: Lower SES associated with higher COVID-19 exposure risk, reduced access
+    to nutritious food during recovery, and delayed medical care for complications
+- name: integrated_post_covid_care
+  direction: weakens
+  strength: moderate
+  description: Healthcare systems with post-COVID monitoring and nutritional screening
+    could interrupt pathway before neurological damage occurs
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/covid_19_infection_to_cognitive_impairment.yaml
+_category: biological

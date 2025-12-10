@@ -1,0 +1,83 @@
+id: substance_use_disorder_any_to_suicide_attempt_rate_ed_hospital
+name: Substance Use Disorder → Suicide Attempt Rate
+from_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder
+to_node:
+  node_id: suicide_attempt_rate_ed_hospital
+  node_name: Suicide Attempt Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Substance use disorder causes neurobiological changes including impaired
+  prefrontal cortex function, affecting impulse control, decision-making, and emotional
+  regulation'
+- 'Step 2: Chronic substance use leads to social consequences including relationship
+  deterioration, interpersonal conflict, job loss, and social isolation, creating
+  psychosocial stressors'
+- 'Step 3: Acute intoxication further impairs judgment and lowers inhibitions, increasing
+  the likelihood of acting on suicidal thoughts (ideation-to-enaction facilitation)'
+- 'Step 4: Comorbid psychiatric conditions (depression, personality disorders) frequently
+  co-occur with substance use disorder, compounding suicide risk through shared vulnerability
+  pathways'
+- 'Step 5: Substance use disorder reduces help-seeking behavior and treatment engagement,
+  while withdrawal states may precipitate acute suicidal crises, leading to increased
+  emergency department presentations for suicide attempts'
+evidence:
+  quality_rating: A
+  n_studies: 177
+  primary_citation: 'E. Breet et al. 2018. Substance use and suicidal ideation and
+    behaviour in low- and middle-income countries: a systematic review. BMC Public
+    Health.'
+  supporting_citations:
+  - 'Heather McClelland et al. 2023. Suicide Risk in Personality Disorders: A Systematic
+    Review. Current Psychiatry Reports.'
+  - 'Yousef Moradi et al. 2021. The global prevalence of depression, suicide ideation,
+    and attempts in the military forces: a systematic review and Meta-analysis of
+    cross sectional studies. BMC Psychiatry.'
+  - 'S. Espinet et al. 2019. Predisposing and protective factors influencing suicide
+    ideation, attempt, and death in patients accessing substance use treatment: a
+    systematic review and meta-analysis protocol. Systematic Reviews.'
+description: Substance use disorder demonstrates a consistent positive association
+  with suicide attempts across all substance types (alcohol, tobacco, cannabis, illicit
+  drugs, prescription drug misuse) and all dimensions of use (intoxication, regular
+  use, pathological use). The lifetime risk of suicide in patients with substance
+  use disorder is 5-10 times higher than the general population. Mechanisms include
+  neurobiological impairment of impulse control, psychosocial deterioration, facilitation
+  of ideation-to-enaction transitions during intoxication, and frequent comorbidity
+  with other psychiatric disorders. The relationship holds across diverse populations
+  including military personnel, individuals with personality disorders, and populations
+  in low- and middle-income countries.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 5.0
+    type: relative_risk
+    ci_lower: null
+    ci_upper: 10.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: substance_type
+  direction: strengthens
+  strength: moderate
+  description: Drug use shows stronger association with suicide attempts than alcohol;
+    in military populations, drug users showed 30% suicide attempt prevalence vs 8%
+    for alcohol users
+- name: comorbid_personality_disorder
+  direction: strengthens
+  strength: strong
+  description: Drug and alcohol use commonly associated with suicide-related outcomes
+    in personality disorder populations, suggesting additive or multiplicative risk
+- name: childhood_trauma_history
+  direction: strengthens
+  strength: moderate
+  description: Historical interpersonal factors including childhood trauma interact
+    with substance use to increase suicide attempt risk
+- name: treatment_engagement
+  direction: weakens
+  strength: moderate
+  description: Up to 19% continue suicidal behavior after treatment access, but treatment
+    represents a modifiable intervention point; interpersonal support interventions
+    may reduce attempts

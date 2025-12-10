@@ -1,0 +1,83 @@
+id: digital_divide_to_telehealth_disparities
+name: Digital Divide -> Telehealth Access Disparities
+from_node:
+  node_id: digital_divide
+  node_name: Digital Divide (Broadband and Device Access)
+  node_type: stock
+to_node:
+  node_id: telehealth_disparities
+  node_name: Telehealth Access Disparities
+  node_type: proxy_index
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Historical underinvestment in telecommunications infrastructure creates broadband deserts in rural and low-income areas'
+- 'Step 2: Limited broadband prevents video-based telehealth, restricting care to audio-only or in-person visits'
+- 'Step 3: Lack of devices (smartphones, tablets, computers) compounds infrastructure gaps'
+- 'Step 4: During health crises like COVID-19, populations without digital access cannot shift to virtual care'
+- 'Step 5: Care gaps widen as digitally-connected populations maintain access while disconnected populations face barriers'
+evidence:
+  quality_rating: A
+  n_studies: 21
+  primary_citation: 'Ternes, Sara, et al. 2024. "The role of increasing synchronous telehealth use during the COVID-19 pandemic on disparities in access to healthcare: A systematic review." Journal of Telemedicine and Telecare.'
+  supporting_citations:
+  - 'Rhizomatic Digital Ecosystem Framework. 2025. "Redefining and solving the digital divide and exclusion to improve healthcare." PMC.'
+  - 'Pinero de Plaza. 2025. "Addressing health service equity through telehealth: A systematic review of reviews." PMC.'
+  doi: 10.1177/1357633X241245459
+  journal: Journal of Telemedicine and Telecare
+  year: 2024
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 57.1
+    type: percentage_change
+    ci_lower: null
+    ci_upper: null
+    ci_level: null
+  sample_size: null
+  interpretation: "57.1% of those without broadband access lived in rural areas; telehealth disparities skew toward younger, English-speaking, and female patients who have better digital access"
+  additional_effects:
+  - metric: Rural broadband gap
+    value: 30
+    type: percentage_change
+    notes: "Approximately 30% of rural residents lack access to broadband services"
+last_updated: '2025-11-30'
+version: '1.0'
+description: The digital divide creates systematic barriers to telehealth access that disproportionately affect rural, elderly, non-English-speaking, and low-income populations. A 2024 systematic review found that despite rapid telehealth adoption during COVID-19, the technology did not reduce existing disparities in access to care. The five-dimension framework (access, availability, adequacy, acceptability, affordability) helps identify where digital exclusion creates health inequities.
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Older adults face greater digital literacy barriers and lower device ownership
+- name: language
+  direction: strengthens
+  strength: moderate
+  description: Non-English speakers face additional barriers with patient-facing instructions and interpreter access
+- name: audio_only_availability
+  direction: weakens
+  strength: moderate
+  description: Audio-only telehealth options partially mitigate video-based access barriers
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: Digital divide compounds existing health disparities through structural underinvestment. Rural areas lack infrastructure due to lower return on investment for telecommunications companies. Low-income households face affordability barriers for both connectivity and devices. Policy must address infrastructure, affordability, and digital literacy simultaneously.
+assumptions:
+- Digital divide includes both infrastructure access and device ownership
+- Telehealth disparities measured by utilization rates and care quality
+- Assumes telehealth would improve access if barriers removed
+limitations:
+- Digital literacy barriers persist even with infrastructure access
+- Some populations prefer in-person care regardless of digital access
+- Rapid technology changes may create new forms of digital exclusion
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Rural and tribal areas face infrastructure gaps; low-income urban areas face affordability gaps
+  relevant_geographies:
+  - Rural Appalachia and Great Plains have lowest broadband access rates
+  - Tribal reservations face both regulatory and investment barriers
+  - Low-income urban areas may have infrastructure but face cost barriers
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

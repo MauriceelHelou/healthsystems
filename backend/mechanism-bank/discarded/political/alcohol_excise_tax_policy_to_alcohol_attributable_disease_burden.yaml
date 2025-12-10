@@ -1,0 +1,56 @@
+id: alcohol_excise_tax_policy_to_alcohol_attributable_disease_burden
+name: Alcohol Excise Tax Policy → Alcohol-Attributable Disease Burden (DALYs)
+from_node:
+  node_id: alcohol_excise_tax_policy
+  node_name: Alcohol Excise Tax Policy
+to_node:
+  node_id: alcohol_attributable_disease_burden
+  node_name: Alcohol-Attributable Disease Burden (DALYs)
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Current excise tax levels on alcohol sales in India (1.8 trillion INR nationally)
+  are insufficient relative to health costs, creating low price disincentives for
+  alcohol consumption'
+- 'Step 2: Low taxation maintains alcohol affordability and availability, facilitating
+  higher population-level alcohol consumption patterns'
+- 'Step 3: Higher alcohol consumption increases exposure to alcohol as a risk factor
+  across multiple disease pathways (as measured through GBD 2019 Study methodology)'
+- 'Step 4: Increased alcohol exposure generates substantial disease burden measured
+  in disability-adjusted life-years (6.2 trillion INR societal value of health lost)'
+- 'Step 5: Net societal loss of 4.4 trillion INR represents the excess health burden
+  not offset by revenue, indicating inadequate tax policy to disincentivize consumption'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Siddhesh Zadey 2024. "Assessing the societal value of health lost
+    to alcohol use in India compared to excise taxes on alcohol sales.." *Drug and
+    alcohol review*. https://doi.org/10.1111/dar.13932
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.130055'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: state_level_tax_policy
+  direction: strengthens
+  strength: strong
+  description: State-level variation in excise tax policy and enforcement affects
+    alcohol pricing and availability, creating differential health burdens across
+    Indian states
+- name: gdp_per_capita
+  direction: strengthens
+  strength: moderate
+  description: Regional GDP per capita (2019-2020) affects the calculated societal
+    value of health lost, with value of life-year approach incorporating economic
+    capacity into health burden estimates
+- name: baseline_alcohol_consumption_patterns
+  direction: strengthens
+  strength: strong
+  description: Pre-existing state-level alcohol consumption patterns interact with
+    tax policy to determine overall disease burden, as evidenced by wide variation
+    in per capita losses
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/alcohol_excise_tax_policy_to_alcohol_attributable_disease_burden.yaml
+_category: political

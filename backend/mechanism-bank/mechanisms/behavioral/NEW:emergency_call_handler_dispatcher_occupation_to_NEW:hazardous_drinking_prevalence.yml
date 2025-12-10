@@ -1,0 +1,72 @@
+id: NEW:emergency_call_handler_dispatcher_occupation_to_NEW:hazardous_drinking_prevalence
+name: Emergency Call-Handler and Dispatcher Occupation → Hazardous Drinking Prevalence
+from_node:
+  node_id: NEW:emergency_call_handler_dispatcher_occupation
+  node_name: Emergency Call-Handler and Dispatcher Occupation
+to_node:
+  node_id: NEW:hazardous_drinking_prevalence
+  node_name: Hazardous Drinking Prevalence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: CHDs experience high levels of occupational stress, trauma exposure, and emotional exhaustion'
+- 'Step 2: Inadequate access to formal psychological support creates unmet mental health needs'
+- 'Step 3: Shift work and irregular schedules disrupt normal social support networks and healthy coping
+  mechanisms'
+- 'Step 4: Alcohol is used as a coping mechanism for occupational stress and to self-medicate untreated
+  mental health symptoms'
+- 'Step 5: Pattern of hazardous drinking develops as maladaptive response to structural work conditions'
+evidence:
+  quality_rating: A
+  n_studies: 37
+  primary_citation: C Osório et al. 2025. "Systematic review and meta-analysis on the mental health of
+    emergency and urgent call-handlers and dispatchers.." https://doi.org/10.1093/occmed/kqae104
+  supporting_citations:
+  - Additional citations require full-text access - abstract references studies from Annals of Emergency
+    Dispatch and Response
+  - Studies from 10 electronic databases and grey literature included
+  - 13 articles provided quantitative information for meta-analyses
+  doi: 10.1093/occmed/kqae104
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Pooled prevalence of hazardous drinking among emergency call-handlers and dispatchers is
+  17.8%, equal to PTSD prevalence. This reflects occupational stress-related alcohol use as a coping mechanism
+  for the psychological demands of the job.
+quantitative_effects:
+  effect_size:
+    value: 17.8
+    type: percentage_change
+    ci_lower: 6.9
+    ci_upper: 32.2
+  sample_size: 7759
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Wide confidence interval (6.9-32.2%) indicates substantial heterogeneity across the
+    nine countries, possibly reflecting cultural differences in alcohol use and availability of alternative
+    coping resources
+moderators:
+- name: mental_health_support_access
+  direction: weakens
+  strength: moderate
+  description: Access to employee assistance programs and psychological support may reduce reliance on
+    alcohol as coping mechanism
+- name: shift_work_intensity
+  direction: strengthens
+  strength: moderate
+  description: More intensive shift patterns may increase hazardous drinking as coping strategy
+structural_competency:
+  equity_implications: Hazardous drinking among CHDs should be understood as a structural outcome of inadequate
+    occupational mental health support rather than individual moral failing. The work environment creates
+    conditions conducive to maladaptive coping. Interventions should include mandatory employee assistance
+    programs, peer support programs, and normalization of mental health help-seeking within first responder
+    culture. Alcohol use disparities in this population reflect gaps in organizational support rather
+    than individual choice.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.014492'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

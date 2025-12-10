@@ -1,0 +1,38 @@
+id: medication_formulation_type_to_medication_adherence_aud
+name: Medication Formulation Type (Injectable vs Oral) → Medication Adherence for
+  Alcohol Use Disorder
+from_node:
+  node_id: medication_formulation_type
+  node_name: Medication Formulation Type (Injectable vs Oral)
+to_node:
+  node_id: medication_adherence_aud
+  node_name: Medication Adherence for Alcohol Use Disorder
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Injectable formulations (extended-release naltrexone) require less frequent
+  dosing (monthly) compared to daily oral medications'
+- 'Step 2: Reduced dosing frequency decreases barriers to consistent medication availability
+  and use'
+- 'Step 3: Healthcare system structures medication access around formulation type,
+  with injectable requiring scheduled clinical visits that facilitate adherence monitoring'
+- 'Step 4: Higher adherence rates for injectable formulations (54.6%) compared to
+  oral formulations (41.3-49.8%) support treatment engagement'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: James R Walker et al. 2019. "Adherence Across FDA-Approved Medications
+    for Alcohol Use Disorder in a Veterans Administration Population.." *Journal of
+    studies on alcohol and drugs*. https://doi.org/10.15288/jsad.2019.80.572
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.683241'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: medication_type
+  direction: strengthens
+  strength: moderate
+  description: Injectable naltrexone showed strongest adherence (54.6%) compared to
+    disulfiram (41.3%), with significant difference (p=0.004)

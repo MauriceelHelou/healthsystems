@@ -1,0 +1,56 @@
+id: sleep_duration_inadequate_to_NEW:psychiatric_disorder_risk
+name: Inadequate Sleep Duration (<7 hours nightly) → Increased Risk for Psychiatric Disorders
+from_node:
+  node_id: sleep_duration_inadequate
+  node_name: Inadequate Sleep Duration (<7 hours nightly)
+to_node:
+  node_id: NEW:psychiatric_disorder_risk
+  node_name: Increased Risk for Psychiatric Disorders
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Extended wakefulness, shortened sleep duration, and nighttime awakening disrupt emotional processing'
+- 'Step 2: Multiple emotional domains affected: reduced positive affect, increased anxiety, blunted reactivity'
+- 'Step 3: Cumulative emotional dysfunction undermines resilience and coping capacity'
+- 'Step 4: Persistent sleep-related emotional dysfunction increases risk for development of psychiatric
+  disorders'
+evidence:
+  quality_rating: A
+  n_studies: 154
+  primary_citation: 'Cara A. Palmer et al. 2024. "0183 Sleep Loss and Emotion: A Systematic Review and
+    Meta-Analysis of over Fifty Years of Experimental Research." https://doi.org/10.1093/sleep/zsae067.0183'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Synthesis of 50+ years of experimental research
+  - Findings across multiple emotional outcomes support psychiatric risk pathway
+  doi: 10.1093/sleep/zsae067.0183
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This comprehensive meta-analysis demonstrates that sleep loss through multiple mechanisms
+  (extended wakefulness, shortened duration, nighttime awakening) undermines emotional functioning and
+  increases risk for psychiatric disorders. The effects span multiple emotional domains including positive
+  affect, anxiety, and emotional reactivity.
+quantitative_effects:
+  sample_size: 5717
+moderators:
+- name: type_of_sleep_loss
+  direction: varies
+  strength: moderate
+  description: Total sleep deprivation, partial sleep restriction, and sleep fragmentation all increased
+    psychiatric risk through different emotional pathways
+- name: age
+  direction: varies
+  strength: moderate
+  description: Age moderated some effects, with participants ranging from 7-79 years
+structural_competency:
+  equity_implications: Psychiatric risk from sleep loss represents a mechanism through which structural
+    inequities (precarious employment, housing instability, lack of paid leave, caregiving burdens) translate
+    into mental health disparities. Those facing multiple structural barriers experience compounding risk
+    through both direct stressors and sleep-mediated emotional dysfunction. Addressing upstream structural
+    factors is essential for reducing population-level psychiatric burden.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.115592'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,48 @@
+id: emergency_department_pediatric_readiness_to_pediatric_injury_mortality
+name: Emergency Department Pediatric Readiness Level → Pediatric Injury Mortality
+from_node:
+  node_id: emergency_department_pediatric_readiness
+  node_name: Emergency Department Pediatric Readiness Level
+to_node:
+  node_id: pediatric_injury_mortality
+  node_name: Pediatric Injury Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Emergency departments with higher pediatric readiness have specialized
+  equipment, trained staff, and protocols for managing injured children'
+- 'Step 2: These resources enable rapid assessment, appropriate resuscitation, and
+  timely definitive care for pediatric trauma patients'
+- 'Step 3: Enhanced care quality and reduced treatment delays result in improved survival
+  outcomes for injured children'
+- 'Step 4: Long-term survival is independently associated with higher emergency department
+  pediatric readiness levels'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'S. Ross et al. 2023. "Prehospital and emergency department pediatric
+    readiness for injured children: A statement from the American College of Surgeons
+    Committee on Trauma Emergency Medical Services Committee." *Journal of Trauma
+    and Acute Care Surgery*. https://doi.org/10.1097/TA.0000000000003997'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.561348'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: rural_vs_urban_location
+  direction: strengthens
+  strength: strong
+  description: The mechanism is particularly important in rural and underserved areas
+    where pediatric readiness deficits may be more pronounced, creating greater disparities
+    in pediatric injury outcomes
+- name: trauma_center_designation_level
+  direction: strengthens
+  strength: moderate
+  description: Pediatric readiness requirements apply across all levels of trauma
+    center designation, with varying capacity to implement comprehensive pediatric
+    protocols
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/emergency_department_pediatric_readiness_to_pediatric_injury_mortality.yaml
+_category: healthcare_access

@@ -1,0 +1,54 @@
+id: NEW:nolo_alcohol_advertising_exposure_to_alcohol_use_disorder
+name: No/Low Alcohol Beverage Advertising Exposure → Alcohol Use Disorder
+from_node:
+  node_id: NEW:nolo_alcohol_advertising_exposure
+  node_name: No/Low Alcohol Beverage Advertising Exposure
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: NoLo advertising increases exposure to alcohol brand imagery for vulnerable populations'
+- 'Step 2: Those in recovery or who drink harmfully encounter triggering brand cues in protected spaces'
+- 'Step 3: Brand cues may activate craving and relapse risk'
+- 'Step 4: Regulatory loopholes prevent escape from alcohol marketing even in ostensibly protected areas'
+- 'Step 5: Increased risk of harmful drinking or relapse among vulnerable populations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Emeka W Dumbili et al. 2025. "Prioritising research on marketing and consumption of
+    No and Low (NoLo) alcoholic beverages in Ireland.." https://doi.org/10.1016/j.drugpo.2025.104794
+  supporting_citations:
+  - Additional citations require full-text access
+  - Paper recommends research on 'perceptions and consumption of NoLo among different populations, including
+    those who drink harmfully or are in recovery'
+  - Reference to industry role serving 'alcohol industry's interests, not public health interests'
+  doi: 10.1016/j.drugpo.2025.104794
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: NoLo advertising that uses parent brand imagery may trigger cravings and increase relapse
+  risk among people in recovery from alcohol use disorder or those who currently drink harmfully, as brand
+  cues appear in spaces where they expected protection from alcohol marketing.
+moderators:
+- name: recovery_status
+  direction: strengthens
+  strength: strong
+  description: Those in recovery from alcohol use disorder may be particularly vulnerable to brand cue
+    exposure
+- name: harmful_drinking_history
+  direction: strengthens
+  strength: strong
+  description: Those with history of harmful drinking may experience stronger responses to alcohol brand
+    imagery
+structural_competency:
+  equity_implications: This mechanism identifies how regulatory loopholes create differential harm - people
+    in recovery cannot avoid alcohol brand triggers even in legally protected spaces. The structural failure
+    is inadequate policy implementation that prioritizes industry interests over protecting vulnerable
+    populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.546711'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

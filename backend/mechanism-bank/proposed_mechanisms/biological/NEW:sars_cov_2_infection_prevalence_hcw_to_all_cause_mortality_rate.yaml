@@ -1,0 +1,62 @@
+id: NEW:sars_cov_2_infection_prevalence_hcw_to_all_cause_mortality_rate
+name: SARS-CoV-2 Infection Prevalence in Healthcare Workers → All-Cause Mortality
+  Rate
+from_node:
+  node_id: NEW:sars_cov_2_infection_prevalence_hcw
+  node_name: SARS-CoV-2 Infection Prevalence in Healthcare Workers
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Healthcare workers (HCW) are exposed to SARS-CoV-2 through direct patient
+  care and occupational contact, leading to infection prevalence of approximately
+  11% by RT-PCR and 7% by antibody testing'
+- 'Step 2: Infected HCW develop COVID-19 disease, with 40% being asymptomatic at diagnosis
+  but others progressing to symptomatic illness characterized by anosmia, fever, and
+  myalgia'
+- 'Step 3: Among COVID-19 positive HCW, approximately 5% develop severe clinical complications
+  including respiratory failure, acute respiratory distress syndrome, and multi-organ
+  dysfunction'
+- 'Step 4: A subset of severely ill HCW (approximately 0.5%) die from COVID-19 complications,
+  contributing directly to all-cause mortality'
+evidence:
+  quality_rating: A
+  n_studies: 97
+  primary_citation: 'S. Gómez-Ochoa et al. 2020. COVID-19 in Healthcare Workers: A
+    Living Systematic Review and Meta-analysis of Prevalence, Risk Factors, Clinical
+    Characteristics, and Outcomes. American Journal of Epidemiology.'
+  supporting_citations: []
+description: SARS-CoV-2 infection in healthcare workers contributes to all-cause mortality
+  through occupational exposure leading to COVID-19 infection, disease progression
+  to severe complications in approximately 5% of cases, and death in approximately
+  0.5% of infected HCW. This meta-analysis of 97 studies with over 230,000 HCW demonstrates
+  a clear biological pathway from infection to mortality, with nurses and ward-based
+  staff being disproportionately affected.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.5
+    type: mortality_rate_percent
+    ci_lower: 0.02
+    ci_upper: 1.3
+  p_value: null
+  sample_size: 230398
+moderators:
+- name: healthcare_worker_role
+  direction: strengthens
+  strength: moderate
+  description: Nurses were most frequently affected (48% of infected HCW), suggesting
+    occupational role influences exposure and subsequent mortality risk
+- name: work_location
+  direction: strengthens
+  strength: moderate
+  description: HCW working in hospitalization/non-emergency wards had highest infection
+    rates (43%), potentially due to prolonged patient contact
+- name: disease_severity
+  direction: strengthens
+  strength: strong
+  description: 5% of infected HCW developed severe complications, which is the primary
+    pathway to mortality

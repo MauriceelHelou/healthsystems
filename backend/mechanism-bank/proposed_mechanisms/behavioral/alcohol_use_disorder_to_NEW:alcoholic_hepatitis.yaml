@@ -1,0 +1,56 @@
+id: alcohol_use_disorder_to_NEW:alcoholic_hepatitis
+name: Alcohol Use Disorder → Alcoholic Hepatitis
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:alcoholic_hepatitis
+  node_name: Alcoholic Hepatitis
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Chronic heavy alcohol consumption characteristic of Alcohol Use Disorder
+  leads to sustained hepatic exposure to ethanol and its metabolites'
+- 'Step 2: Ethanol metabolism in the liver produces acetaldehyde and generates reactive
+  oxygen species, causing direct hepatocyte injury and oxidative stress'
+- 'Step 3: Repeated hepatic injury triggers inflammatory responses including steatosis
+  (fatty liver), necroinflammation, and progressive fibrosis'
+- 'Step 4: Continued alcohol exposure in individuals with Alcohol Use Disorder prevents
+  liver recovery and promotes development of alcoholic hepatitis, typically manifesting
+  between ages 40-50'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: Chavdar S Pavlov et al. 2019. Glucocorticosteroids for people
+    with alcoholic hepatitis. The Cochrane database of systematic reviews.
+  supporting_citations: []
+description: Alcohol Use Disorder, characterized by chronic heavy alcohol consumption,
+  is a direct causal factor for alcoholic hepatitis. This form of alcoholic liver
+  disease is defined by steatosis, necroinflammation, fibrosis, and hepatic complications.
+  The condition typically develops after years of heavy drinking, manifesting between
+  ages 40-50. While abstinence can lead to resolution, continued alcohol use perpetuates
+  liver damage. The severity of alcoholic hepatitis, measured by Maddrey's discriminant
+  function score, determines prognosis and risk of mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: abstinence from alcohol
+  direction: weakens
+  strength: strong
+  description: Alcoholic hepatitis can be resolved if people abstain from drinking;
+    continued drinking worsens prognosis
+- name: severity of liver damage (Maddrey's score)
+  direction: strengthens
+  strength: strong
+  description: Risk of death depends on severity; Maddrey's score ≥32 indicates severe
+    alcoholic hepatitis with worse outcomes
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Alcoholic hepatitis typically presents in people between 40 and 50
+    years of age, suggesting cumulative exposure effects
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: 65% of participants were men, indicating higher prevalence in males,
+    though women may develop alcoholic hepatitis at lower consumption levels

@@ -1,0 +1,44 @@
+id: elearning_mat_intervention_to_buprenorphine_referrals
+name: eLearning MAT Educational Intervention for Judges → Buprenorphine Referral Rate
+from_node:
+  node_id: elearning_mat_intervention
+  node_name: eLearning MAT Educational Intervention for Judges
+to_node:
+  node_id: buprenorphine_referrals
+  node_name: Buprenorphine Referral Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: eLearning modules provide judges with evidence-based information about
+  MAT effectiveness and safety'
+- 'Step 2: Educational intervention addresses knowledge gaps and reduces stigma toward
+  agonist medications'
+- 'Step 3: Judges with improved knowledge increase buprenorphine referrals for individuals
+  with OUD under court supervision'
+- 'Step 4: Increased referrals expand access to buprenorphine pharmacotherapy, improving
+  treatment engagement and recovery outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Harlan Matusow et al. 2021. "Online Medication Assisted Treatment
+    Education for Court Professionals: Need, Opportunities and Challenges." *Substance
+    Use & Misuse*. https://doi.org/10.1080/10826084.2021.1936045'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.653692'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: participant_retention
+  direction: strengthens
+  strength: strong
+  description: Only 11 of 25 judges who completed pretest and viewed modules completed
+    3-month follow-up, indicating that sustained participation is critical for intervention
+    effectiveness
+- name: baseline_referral_rate
+  direction: strengthens
+  strength: moderate
+  description: Low baseline buprenorphine referral rate (2.6%) provided substantial
+    opportunity for improvement; courts with higher baseline rates may show smaller
+    absolute increases

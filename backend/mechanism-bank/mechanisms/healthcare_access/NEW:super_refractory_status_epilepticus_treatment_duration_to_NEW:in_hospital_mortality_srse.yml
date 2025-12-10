@@ -1,0 +1,70 @@
+id: NEW:super_refractory_status_epilepticus_treatment_duration_to_NEW:in_hospital_mortality_srse
+name: Super-Refractory Status Epilepticus Treatment Duration → In-Hospital Mortality from Super-Refractory
+  Status Epilepticus
+from_node:
+  node_id: NEW:super_refractory_status_epilepticus_treatment_duration
+  node_name: Super-Refractory Status Epilepticus Treatment Duration
+to_node:
+  node_id: NEW:in_hospital_mortality_srse
+  node_name: In-Hospital Mortality from Super-Refractory Status Epilepticus
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Extended treatment duration (>28 days) for super-refractory status epilepticus provides sustained
+  seizure suppression'
+- 'Step 2: Prolonged intensive care allows for continued physiological stabilization despite ongoing neurological
+  crisis'
+- 'Step 3: Very long-term treatment enables greater opportunity for underlying etiology resolution or
+  adaptation'
+- 'Step 4: Mortality stabilizes after extended treatment period, with increased rates of seizure cessation'
+evidence:
+  quality_rating: A
+  n_studies: 95
+  primary_citation: 'Camilla Dyremose Cornwall et al. 2023. "Outcomes and Treatment Approaches for Super-Refractory
+    Status Epilepticus: A Systematic Review and Meta-Analysis." https://doi.org/10.1001/jamaneurol.2023.2407'
+  supporting_citations:
+  - Additional citations require full-text access - this systematic review included 95 articles and 30
+    conference abstracts
+  - Individual patient data meta-analysis included 266 patients from multiple studies
+  - Studies reporting adult patients with nonanoxic SRSE from database inception through May 5, 2022
+  doi: 10.1001/jamaneurol.2023.2407
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Very long-term treatment (>28 days) for super-refractory status epilepticus was associated
+  with lower mortality and high odds of seizure cessation, but with increased risk of moderate to severe
+  disability. In-hospital mortality was 24.1% overall. This represents a distinct treatment pattern where
+  younger patients without typical negative prognostic factors receive extended care.
+quantitative_effects:
+  effect_size:
+    value: 24.1
+    type: percentage_change
+  sample_size: 1200
+moderators:
+- name: patient_age
+  direction: weakens
+  strength: weak
+  description: Mean age of patients was 40.8 years; younger patients may be more likely to receive aggressive
+    long-term treatment. Notably, established prognostic factors like age were NOT associated with in-hospital
+    mortality in this population
+- name: etiology_type
+  direction: weakens
+  strength: weak
+  description: Unknown or nonmalignant etiologies were associated with receiving longer-term treatment;
+    established prognostic factors including etiology were NOT associated with in-hospital mortality
+structural_competency:
+  equity_implications: This mechanism highlights healthcare system capacity and treatment decision-making
+    patterns. Access to prolonged ICU care and specialized neurological services represents a structural
+    healthcare factor. The finding that traditional prognostic factors (age, etiology) did not predict
+    mortality in this population suggests the disease course may be more dependent on healthcare system
+    factors and treatment intensity than individual patient characteristics. Equity implications relate
+    to differential access to specialized neurological care and ICU resources across geographic regions
+    and healthcare systems.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.122692'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

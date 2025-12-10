@@ -1,0 +1,43 @@
+id: pediatric_ed_screening_tool_use_to_aht_detection_sensitivity
+name: Pediatric Emergency Department Screening Tool Use (PediBIRN-4) → Abusive Head
+  Trauma Detection Sensitivity
+from_node:
+  node_id: pediatric_ed_screening_tool_use
+  node_name: Pediatric Emergency Department Screening Tool Use (PediBIRN-4)
+to_node:
+  node_id: aht_detection_sensitivity
+  node_name: Abusive Head Trauma Detection Sensitivity
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Implementation of validated clinical decision rule (PediBIRN-4) in pediatric
+  emergency department settings provides systematic screening framework'
+- 'Step 2: Four-variable screening criteria applied to children under 3 years with
+  bruising and acute head trauma enables structured assessment'
+- 'Step 3: High sensitivity screening (96%) allows for detection of vast majority
+  of abusive head trauma cases that present to emergency departments'
+- 'Step 4: Early identification in ED setting enables timely intervention, child protection,
+  and prevention of further harm'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: K. Hymel et al. 2022. "External Validation of the PediBIRN Screening
+    Tool for Abusive Head Trauma in Pediatric Emergency Department Settings." *Pediatric
+    emergency care*. https://doi.org/10.1097/PEC.0000000000002670
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.580396'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: clinical_setting
+  direction: strengthens
+  strength: moderate
+  description: Sensitivity maintained across pediatric intensive care unit, inpatient,
+    and emergency department settings, though specificity varies by setting
+- name: patient_age
+  direction: strengthens
+  strength: moderate
+  description: Screening tool specifically validated for children under 3 years of
+    age, where abusive head trauma risk is highest

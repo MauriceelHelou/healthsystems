@@ -1,0 +1,64 @@
+id: alcohol_use_disorder_to_NEW:pedestrian_traffic_injury_severity
+name: Alcohol Use Disorder → Pedestrian Traffic Injury Severity
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:pedestrian_traffic_injury_severity
+  node_name: Pedestrian Traffic Injury Severity
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Ethyl alcohol consumption impairs cognitive function and situational awareness in pedestrians'
+- 'Step 2: Intoxicated pedestrians exhibit reduced ability to avoid or respond to oncoming vehicles'
+- 'Step 3: Impaired protective reflexes lead to inability to brace for impact or minimize trauma'
+- 'Step 4: Alcohol-induced physiological changes may affect tissue vulnerability and bleeding risk'
+- 'Step 5: Higher blood alcohol concentrations correlate with more severe injuries as measured by injury
+  severity scales (LTI, ICISS)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Lasota et al. 2020. "Effects of ethyl alcohol on injuries severity according to
+    injury severity scales in pedestrian fatal injury in traffic crashes." https://doi.org/10.1080/17457300.2019.1665551
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not provide specific prior study citations
+  - Warsaw Medical University Department of Forensic Medicine data (2009-2013)
+  - Studies referenced regarding Life Threat Indicator (LTI), ICISS, ISS, and NISS scales
+  doi: 10.1080/17457300.2019.1665551
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2019, source is 2020'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher blood alcohol concentration is associated with more severe injuries in fatal pedestrian
+  traffic crashes, with the effect particularly pronounced in women. The study found that as alcohol concentration
+  increases, injury severity measures (LTI, ICISS-10, ICISS-15) show lower values indicating more severe
+  injuries. Gender and age significantly influence injury severity assessment.
+quantitative_effects:
+  sample_size: 200
+moderators:
+- name: gender
+  direction: strengthens
+  strength: strong
+  description: As alcohol concentration increases in women, injury severity indices (LTI, ICISS-10, ICISS-15)
+    indicate more severe injuries; injuries are significantly heavier in women than in men across ISS
+    and NISS scales
+- name: age
+  direction: weakens
+  strength: moderate
+  description: Older victims die from milder injuries according to all scales used, suggesting age-related
+    vulnerability rather than alcohol interaction with severity
+structural_competency:
+  equity_implications: 'While this study focuses on individual-level alcohol consumption, the structural
+    determinants include: availability of alcohol through outlet density policies, inadequate pedestrian
+    infrastructure that fails to protect intoxicated individuals, lack of safe transportation alternatives
+    (public transit, ride-sharing) that reduce need for walking while intoxicated, and gender-based differences
+    that may reflect differential access to protective resources. The finding that women experience more
+    severe injuries points to potential structural inequities in road safety design and emergency response
+    systems.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.645286'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

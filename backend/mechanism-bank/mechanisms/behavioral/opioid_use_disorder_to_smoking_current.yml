@@ -1,0 +1,51 @@
+id: opioid_use_disorder_to_smoking_current
+name: Opioid Use Disorder → Current Smoking Status
+from_node:
+  node_id: opioid_use_disorder
+  node_name: Opioid Use Disorder
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking Status
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Patients receiving opioid agonist therapy have extremely high tobacco smoking prevalence (85%)'
+- 'Step 2: Concurrent substance use disorders create neurobiological vulnerabilities that reinforce tobacco
+  dependence'
+- 'Step 3: Treatment settings historically prioritize opioid treatment over tobacco cessation'
+- 'Step 4: Current smoking cessation interventions show poor effectiveness (<10% quit rate) in this population'
+- 'Step 5: Continued high smoking rates lead to disproportionate smoking-related pulmonary disease burden'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Karl Trygve Druckrey-Fiskaaen et al. 2025. "Multimethod feasibility evaluation of
+    smoking cessation intervention for patients receiving opioid agonist therapy.." https://doi.org/10.1186/s40814-025-01717-2
+  supporting_citations:
+  - Additional citations require full-text access - 85% smoking prevalence cited from prior literature
+  - Additional citations require full-text access - <10% quit rate with current interventions cited from
+    prior literature
+  - Additional citations require full-text access - significant impact of smoking-related pulmonary diseases
+    on disability and mortality cited
+  doi: 10.1186/s40814-025-01717-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among patients receiving opioid agonist therapy, 85% are active tobacco smokers, representing
+  a dramatically elevated prevalence compared to general population, contributing to significant pulmonary
+  disease burden
+quantitative_effects:
+  effect_size:
+    value: 85.0
+    type: percentage_change
+structural_competency:
+  equity_implications: The co-occurrence of opioid use disorder and tobacco use reflects intersecting
+    structural vulnerabilities including poverty, trauma, and inadequate integrated healthcare. Historical
+    separation of substance use treatment from tobacco cessation services represents a structural failure
+    that perpetuates health inequities. The population receiving OAT faces multiple marginalization including
+    stigma and healthcare system fragmentation that compounds difficulty accessing effective smoking cessation
+    support.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.193815'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,61 @@
+id: NEW:dcis_surgical_treatment_access_to_NEW:invasive_breast_cancer_progression
+name: Access to Surgical Treatment for DCIS → Invasive Breast Cancer Progression
+from_node:
+  node_id: NEW:dcis_surgical_treatment_access
+  node_name: Access to Surgical Treatment for DCIS
+to_node:
+  node_id: NEW:invasive_breast_cancer_progression
+  node_name: Invasive Breast Cancer Progression
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Access to surgical intervention for low-risk ductal carcinoma in situ (DCIS) enables complete
+  removal of pre-invasive lesions'
+- 'Step 2: Surgical excision eliminates or reduces residual abnormal ductal cells that could undergo malignant
+  transformation'
+- 'Step 3: Reduced cellular burden of pre-malignant tissue decreases probability of invasive ipsilateral
+  breast tumor events (iIBTE)'
+- 'Step 4: Lower invasive progression rates translate to improved breast cancer-specific survival'
+evidence:
+  quality_rating: A
+  n_studies: 33
+  primary_citation: 'Qian Chen et al. 2024. "Outcomes from low-risk ductal carcinoma in situ: a systematic
+    review and meta-analysis." https://doi.org/10.1007/s10549-024-07473-w'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis pooled 33 studies involving 47,696 women
+  - Studies comparing surgery vs. non-surgery approaches for low-risk DCIS
+  - Studies examining breast-conserving surgery with/without radiotherapy
+  doi: 10.1007/s10549-024-07473-w
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This meta-analysis of 33 studies (n=47,696) found that surgical treatment for low-risk DCIS
+  significantly reduces invasive ipsilateral breast tumor events. At 5 years, iIBTE rates were 3.5% with
+  surgery vs 9.0% without surgery (P=0.003). At 10 years, rates were 6.4% vs 22.7% (P=0.008). This represents
+  a healthcare access mechanism where availability of appropriate surgical intervention prevents disease
+  progression.
+quantitative_effects:
+  p_value: 0.003
+  sample_size: 47696
+moderators:
+- name: Adjuvant radiotherapy
+  direction: strengthens
+  strength: moderate
+  description: Additional radiotherapy after breast-conserving surgery significantly reduced IBTE risk
+- name: Follow-up duration
+  direction: strengthens
+  strength: moderate
+  description: Difference between surgery and non-surgery groups more pronounced at 10 years (6.4% vs
+    22.7%) compared to 5 years (3.5% vs 9.0%)
+structural_competency:
+  equity_implications: This mechanism relates to healthcare system capacity and access to surgical oncology
+    services. Structural barriers including insurance coverage, geographic access to specialized cancer
+    centers, and healthcare system capacity may create disparities in who receives timely surgical treatment
+    for DCIS. The finding that surgery significantly improves outcomes has equity implications regarding
+    overtreatment debates, as decisions about active surveillance must consider whether patients have
+    equal access to monitoring and subsequent intervention if needed.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.887241'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

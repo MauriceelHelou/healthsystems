@@ -1,0 +1,56 @@
+id: NEW:aud_pharmacotherapy_utilization_to_alcohol_use_disorder
+name: AUD Pharmacotherapy Utilization → Alcohol Use Disorder
+from_node:
+  node_id: NEW:aud_pharmacotherapy_utilization
+  node_name: AUD Pharmacotherapy Utilization
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: FDA-approved pharmacotherapies (disulfiram, acamprosate, naltrexone) are available but under-utilized
+  for AUD treatment'
+- 'Step 2: Under-utilization limits patient access to effective medication-assisted treatment'
+- 'Step 3: Lack of treatment options perpetuates AUD symptomatology and prevents recovery'
+- 'Step 4: Improved pharmacotherapy utilization would reduce AUD prevalence and associated harms'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Malia A Belnap et al. 2024. "Endpoints for Pharmacotherapy Trials for Alcohol Use
+    Disorder." https://doi.org/10.1007/s40290-024-00526-x
+  supporting_citations:
+  - US Food and Drug Administration approved medications for AUD (disulfiram, acamprosate, naltrexone)
+    - referenced in abstract
+  - World Health Organization (WHO) risk drinking level framework - referenced in abstract
+  - National Institute on Alcohol Abuse and Alcoholism (NIAAA) definition of recovery - referenced in
+    abstract
+  doi: 10.1007/s40290-024-00526-x
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This paper reviews endpoints for AUD pharmacotherapy trials, noting that currently approved
+  medications are under-utilized. The shift from abstinence-only to harm-reduction endpoints and incorporation
+  of biological markers and patient-oriented outcomes may improve pharmacotherapy development and utilization.
+moderators:
+- name: endpoint_type
+  direction: strengthens
+  strength: moderate
+  description: Harm-reduction endpoints (WHO risk drinking level reductions) versus abstinence-based endpoints
+    may improve treatment engagement and trial success
+- name: outcome_measurement_method
+  direction: strengthens
+  strength: moderate
+  description: Biological markers of alcohol use may provide more objective endpoints compared to patient
+    self-report
+structural_competency:
+  equity_implications: 'The paper highlights a structural barrier in AUD treatment: the under-utilization
+    of approved pharmacotherapies. This represents a healthcare system failure rather than individual
+    patient failure. The emphasis on harm-reduction versus abstinence-only approaches represents a structural
+    shift in treatment philosophy that may reduce barriers to care. Equity implications include the need
+    for patient-centered outcomes and provider-patient relationship quality in treatment.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.149892'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

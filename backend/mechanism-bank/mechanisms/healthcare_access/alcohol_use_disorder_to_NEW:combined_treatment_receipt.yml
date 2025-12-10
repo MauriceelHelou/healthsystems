@@ -1,0 +1,53 @@
+id: alcohol_use_disorder_to_NEW:combined_treatment_receipt
+name: Alcohol Use Disorder → Combined Pharmacological and Non-Pharmacological Treatment Receipt
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:combined_treatment_receipt
+  node_name: Combined Pharmacological and Non-Pharmacological Treatment Receipt
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with alcohol dependence who continue drinking have ongoing treatment needs'
+- 'Step 2: Evidence supports combining pharmacological and non-pharmacological approaches for active drinkers'
+- 'Step 3: Healthcare system fails to provide integrated combined treatment to most actively drinking
+  patients'
+- 'Step 4: Less than 30% of still-drinking patients receive combined treatment, indicating major treatment
+  gap'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Roberta Agabio et al. 2021. "Use of Medications for the Treatment of Alcohol Dependence:
+    A Retrospective Study Conducted in 2011-2012.." https://doi.org/10.2174/2589977512666201228121820'
+  supporting_citations:
+  - Additional citations require full-text access
+  - References to clinical guidelines supporting combined treatment approaches
+  - Prior studies documenting underutilization of combined therapies
+  doi: 10.2174/2589977512666201228121820
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among patients with alcohol dependence who are still drinking, fewer than 30% receive the
+  recommended combination of pharmacological and non-pharmacological treatments, representing a significant
+  healthcare system failure.
+quantitative_effects:
+  effect_size:
+    value: 30.0
+    type: percentage_change
+  sample_size: 345
+moderators:
+- name: treatment_integration
+  direction: strengthens
+  strength: moderate
+  description: Systems that integrate pharmacological and non-pharmacological services may achieve higher
+    combined treatment rates
+structural_competency:
+  equity_implications: This gap reflects healthcare system organization and treatment delivery structures
+    rather than patient non-compliance. Improving integration of treatment modalities is a systems-level
+    intervention.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.261242'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

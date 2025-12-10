@@ -1,0 +1,69 @@
+id: prison_incarceration_rate_to_smoking_current
+name: Prison Incarceration Rate → Current Smoking Status
+from_node:
+  node_id: prison_incarceration_rate
+  node_name: Prison Incarceration Rate
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking Status
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Smoke-free prison policies enforce temporary smoking abstinence during incarceration'
+- 'Step 2: Upon release, formerly incarcerated individuals return to environments with high smoking prevalence
+  and tobacco availability'
+- 'Step 3: Lack of pre-release and post-release smoking cessation support leads to high relapse rates'
+- 'Step 4: Social networks and stress associated with reentry facilitate return to smoking behavior'
+evidence:
+  quality_rating: B
+  n_studies: 15
+  primary_citation: Cheneal Puljević and Catherine J Segan 2019. "Systematic Review of Factors Influencing
+    Smoking Following Release From Smoke-Free Prisons.." https://doi.org/10.1093/ntr/nty088
+  supporting_citations:
+  - Additional citations require full-text access - abstract indicates 15 studies were included in the
+    systematic review
+  - Studies were identified from health, social science, and criminal justice databases
+  - Evidence base described as mostly US-based and methodologically weak
+  doi: 10.1093/ntr/nty088
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2018, source is 2019'
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review examines factors influencing smoking behaviors among people released
+  from smoke-free prisons. High smoking relapse rates occur following release, despite enforced abstinence
+  during incarceration. Interventions delivered both pre- and post-release that strengthen quit intentions,
+  integrate with substance use treatment, and facilitate social support may help maintain abstinence.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Evidence base is almost exclusively US-based, limiting generalizability to other contexts
+    where smoke-free prison policies are proliferating internationally
+moderators:
+- name: intention_to_quit
+  direction: weakens
+  strength: moderate
+  description: Stronger pre-release intention to remain abstinent from smoking is associated with reduced
+    postrelease smoking relapse
+- name: substance_use_treatment_integration
+  direction: weakens
+  strength: moderate
+  description: Integration of smoking cessation with other substance use treatment may help maintain postrelease
+    abstinence
+- name: social_support_for_quitting
+  direction: weakens
+  strength: moderate
+  description: Facilitated social support for quitting may help maintain postrelease smoking abstinence
+structural_competency:
+  equity_implications: This mechanism highlights how correctional system policies (smoke-free prisons)
+    create temporary abstinence that is not sustained due to lack of structural support during reentry.
+    The focus is appropriately on system-level interventions rather than individual blame. The formerly
+    incarcerated population faces compounded vulnerabilities including limited healthcare access, economic
+    instability, and disrupted social networks that increase smoking relapse risk. The findings emphasize
+    the need for coordinated pre- and post-release support systems rather than expecting individual behavior
+    change without structural support.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.704516'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

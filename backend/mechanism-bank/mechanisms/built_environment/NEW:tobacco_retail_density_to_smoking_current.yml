@@ -1,0 +1,67 @@
+id: NEW:tobacco_retail_density_to_smoking_current
+name: Tobacco Retail Density → Current Smoking
+from_node:
+  node_id: NEW:tobacco_retail_density
+  node_name: Tobacco Retail Density
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of tobacco retailers increases physical accessibility and convenience of purchasing
+  cigarettes'
+- 'Step 2: Increased visibility of tobacco products through storefront advertising and point-of-sale displays
+  normalizes smoking behavior'
+- 'Step 3: Proximity reduces barriers to impulsive purchasing and undermines quit attempts by providing
+  easy access during cravings'
+- 'Step 4: Concentration of retailers in communities creates an obesogenic-like environment for tobacco
+  that promotes initiation and sustained use'
+evidence:
+  quality_rating: A
+  n_studies: 62
+  primary_citation: Veronica A Martin-Gall et al. 2024. "Tobacco retail availability and smoking-A systematic
+    review and meta-analysis.." https://doi.org/10.1111/dar.13936
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 62 studies across multiple
+    databases
+  - Studies included examined tobacco outlet density and smoking in pregnancy, youth, adults and cessation
+  - Ecological and individual-level studies from searches up to January 2023
+  doi: 10.1111/dar.13936
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher tobacco retail density is consistently associated with increased cigarette smoking
+  among adults. This systematic review and meta-analysis of 62 studies found positive associations between
+  outlet density and smoking behaviors across multiple populations.
+quantitative_effects:
+  effect_size:
+    value: 1.11
+    type: odds_ratio
+    ci_lower: 1.01
+    ci_upper: 1.22
+  heterogeneity_i_squared: 74.8
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects observed across multiple geographic contexts; spatial variation in tobacco
+    retail environments creates differential exposure by neighborhood
+moderators:
+- name: age_group
+  direction: strengthens
+  strength: moderate
+  description: Youth show stronger associations (OR 1.23) compared to adults (OR 1.11)
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Men who smoke heavily may be more affected by proximity and mixed measures
+structural_competency:
+  equity_implications: This mechanism identifies retail environment as a structural determinant of smoking
+    rather than framing tobacco use as purely individual choice. The built environment shapes accessibility
+    and normalizes consumption. Tobacco retailers are often concentrated in lower-income and minority
+    neighborhoods, creating structural health inequities. Policy interventions limiting retail density
+    address root causes rather than targeting individual behavior.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.241218'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

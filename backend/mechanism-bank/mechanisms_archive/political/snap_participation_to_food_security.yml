@@ -1,0 +1,87 @@
+id: snap_participation_to_food_security
+name: SNAP Program Participation -> Food Security and Health
+from_node:
+  node_id: snap_participation
+  node_name: SNAP Program Participation
+  node_type: stock
+to_node:
+  node_id: food_security_health
+  node_name: Food Security and Health Outcomes
+  node_type: proxy_index
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: SNAP eligibility and enrollment processes connect low-income households to food benefits'
+- 'Step 2: Monthly benefits increase household food purchasing power and reduce food insecurity'
+- 'Step 3: Reduced food insecurity decreases need to sacrifice healthcare spending for food'
+- 'Step 4: Adequate nutrition supports chronic disease management and medication adherence'
+- 'Step 5: Improved nutritional status leads to better self-reported health and reduced healthcare utilization'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'Gundersen, Craig, and James P. Ziliak. 2015. "Food Insecurity and Health Outcomes." Health Affairs 34(11): 1830-1839.'
+  supporting_citations:
+  - 'Almond, Douglas, Hilary W. Hoynes, and Diane Whitmore Schanzenbach. 2011. "Inside the War on Poverty: The Impact of Food Stamps on Birth Outcomes." Review of Economics and Statistics 93(2): 387-403.'
+  - 'Center on Budget and Policy Priorities. 2024. "SNAP Is Linked With Improved Health Outcomes and Lower Health Care Costs."'
+  doi: 10.1377/hlthaff.2015.0645
+  journal: Health Affairs
+  year: 2015
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 30
+    type: percentage_change
+    ci_lower: null
+    ci_upper: null
+    ci_level: null
+  sample_size: null
+  interpretation: "SNAP participation reduces food insecurity by up to 30%, with some studies finding even larger effects for specific populations; early childhood SNAP exposure reduces adult obesity by 16 percentage points"
+  additional_effects:
+  - metric: Healthcare cost reduction
+    value: 1400
+    type: cost_savings
+    notes: "SNAP participation can reduce health care spending by up to $1,400 per year among low-income adults"
+  - metric: Adult obesity reduction (childhood exposure)
+    value: 16
+    type: percentage_change
+    notes: "Children from disadvantaged families exposed to Food Stamps were 16 percentage points less likely to be obese as adults"
+last_updated: '2025-11-30'
+version: '1.0'
+description: SNAP is the nation's largest anti-hunger program, providing food benefits to approximately 42 million people. Research demonstrates SNAP significantly reduces food insecurity and improves health outcomes including better self-reported health, lower risk of heart disease and obesity among adults who had childhood access, and greater medication adherence among older participants. Early childhood exposure produces particularly strong long-term health effects.
+moderators:
+- name: benefit_adequacy
+  direction: strengthens
+  strength: strong
+  description: Higher benefit levels (as in 2021 Thrifty Food Plan update) produce larger effects
+- name: enrollment_barriers
+  direction: weakens
+  strength: moderate
+  description: Administrative burdens and stigma reduce participation among eligible households
+- name: food_environment
+  direction: strengthens
+  strength: moderate
+  description: SNAP works better when healthy food retail is accessible
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: SNAP serves as critical safety net infrastructure addressing structural causes of food insecurity (unemployment, low wages, high housing costs). Benefit adequacy, not individual food choices, is the primary policy lever. Administrative barriers and work requirements can exclude vulnerable populations. Policy should focus on benefit levels, enrollment simplification, and integration with healthcare.
+assumptions:
+- SNAP participation includes regular monthly benefits
+- Food security measured by USDA Food Security Survey Module
+- Health outcomes include self-reported health, chronic disease, and healthcare utilization
+limitations:
+- Randomized trials ethically infeasible; causal estimates rely on quasi-experimental designs
+- Some research shows SNAP participants have lower dietary quality than eligible non-participants (selection effects)
+- Benefit levels may be insufficient for healthy diet in high-cost areas
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Impact varies by state SNAP policies, food prices, and food retail access
+  relevant_geographies:
+  - States with simplified enrollment show higher participation
+  - High cost-of-living areas may have insufficient benefit levels
+  - Rural areas with food deserts face compounded access barriers
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

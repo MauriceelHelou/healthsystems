@@ -1,0 +1,51 @@
+id: NEW:chronic_liver_disease_to_NEW:covid_19_severity
+name: Chronic Liver Disease → COVID-19 Severe Disease
+from_node:
+  node_id: NEW:chronic_liver_disease
+  node_name: Chronic Liver Disease
+to_node:
+  node_id: NEW:covid_19_severity
+  node_name: COVID-19 Severe Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic liver disease impairs hepatic function, reducing the liver''s ability
+  to synthesize proteins essential for immune response and coagulation'
+- 'Step 2: Compromised liver function leads to dysregulated systemic inflammation
+  and reduced clearance of inflammatory mediators during SARS-CoV-2 infection'
+- 'Step 3: Pre-existing hepatic inflammation and fibrosis create a pro-inflammatory
+  state that amplifies COVID-19-induced cytokine storm'
+- 'Step 4: Impaired hepatic metabolism affects drug processing and reduces effectiveness
+  of COVID-19 treatments'
+- 'Step 5: Combined hepatic and systemic dysfunction leads to multi-organ failure
+  and increased severity of COVID-19 outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Ramya Nagarajan et al. 2022. COVID-19 Severity and Mortality
+    Among Chronic Liver Disease Patients: A Systematic Review and Meta-Analysis. Preventing
+    Chronic Disease.'
+  supporting_citations: []
+description: Chronic liver disease significantly increases the risk of severe COVID-19
+  outcomes. This meta-analysis of 40 studies with over 900,000 participants found
+  that patients with pre-existing CLD had 2.44 times higher odds of developing severe
+  COVID-19 compared to those without CLD. The mortality risk was similarly elevated
+  (OR = 2.35). The mechanism involves impaired hepatic function compromising immune
+  response, amplifying inflammatory cascades, and contributing to multi-organ dysfunction
+  during SARS-CoV-2 infection.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.44
+    type: odds_ratio
+    ci_lower: 1.89
+    ci_upper: 3.16
+  p_value: null
+  sample_size: 908032
+moderators:
+- name: Severity of liver disease
+  direction: strengthens
+  strength: moderate
+  description: More advanced liver disease likely associated with greater COVID-19
+    severity risk

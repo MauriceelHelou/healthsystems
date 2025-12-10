@@ -1,0 +1,43 @@
+id: high_energy_trauma_exposure_to_blunt_abdominal_trauma
+name: High-Energy Trauma Exposure (Motor Vehicle Accidents, Falls) → Blunt Abdominal
+  Trauma
+from_node:
+  node_id: high_energy_trauma_exposure
+  node_name: High-Energy Trauma Exposure (Motor Vehicle Accidents, Falls)
+to_node:
+  node_id: blunt_abdominal_trauma
+  node_name: Blunt Abdominal Trauma
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: High-energy mechanisms including motor vehicle accidents (64.2%) and falls
+  from height (26%) create biomechanical forces on the body'
+- 'Step 2: These forces transmit energy to the abdominal cavity and internal organs'
+- 'Step 3: Energy transfer can cause organ contusion, laceration, or rupture resulting
+  in intra-abdominal injury'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Virginia Zarama et al. 2024. "Incidence of intra-abdominal injuries
+    in hemodynamically stable blunt trauma patients with a normal computed tomography
+    scan admitted to the emergency department." *BMC Emergency Medicine*. https://doi.org/10.1186/s12873-024-01014-w
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.559879'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: ct_scan_availability
+  direction: weakens
+  strength: strong
+  description: Access to CT scanning as gold standard imaging reduces missed intra-abdominal
+    injuries, with only 0.2% of patients with normal CT developing injury during observation
+- name: hemodynamic_stability
+  direction: weakens
+  strength: strong
+  description: Hemodynamically stable patients (99.2% with Revised Trauma Score of
+    8) had extremely low incidence of subsequent intra-abdominal injury
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/high_energy_trauma_exposure_to_blunt_abdominal_trauma.yaml
+_category: built_environment

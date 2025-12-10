@@ -1,0 +1,71 @@
+id: NEW:drink_driving_enforcement_intensity_to_motor_vehicle_crash_mortality
+name: Drink-Driving Enforcement Intensity → Motor Vehicle Crash Mortality
+from_node:
+  node_id: NEW:drink_driving_enforcement_intensity
+  node_name: Drink-Driving Enforcement Intensity
+to_node:
+  node_id: motor_vehicle_crash_mortality
+  node_name: Motor Vehicle Crash Mortality
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Increased drink-driving enforcement operations (sobriety checkpoints, random breath testing)
+  raise the perceived risk of detection'
+- 'Step 2: Higher visibility of enforcement activities creates general deterrence effect in the driving
+  population'
+- 'Step 3: Sustained enforcement reduces the prevalence of drink-driving behavior'
+- 'Step 4: Reduced drink-driving leads to fewer alcohol-related motor vehicle crashes'
+- 'Step 5: Decreased crash frequency results in lower crash-related fatalities'
+evidence:
+  quality_rating: A
+  n_studies: 21
+  primary_citation: 'Sharon E O''Hara et al. 2022. "Determining a dosage threshold of drink-driving enforcement
+    operations: A systematic review.." https://doi.org/10.1111/dar.13519'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 21 studies meeting inclusion
+    criteria
+  - Studies assessed using Cochrane Collaboration EPOC tool
+  - Studies assessed using JBI checklist for risk of bias
+  doi: 10.1111/dar.13519
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review examined the relationship between drink-driving enforcement dosage
+  (intensity/frequency of enforcement operations) and drink-driving outcomes including motor vehicle crashes
+  and fatalities. While most of the 21 included studies found that sustained enforcement was associated
+  with reductions in drink driving or related harms, the review found insufficient evidence to determine
+  an optimal enforcement dosage threshold. Only two studies tested an optimal dosage level.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies differed in measures of enforcement dosage and outcomes across different jurisdictions,
+    making cross-study synthesis difficult. Community settings presented challenges for rigorous study
+    designs.
+moderators:
+- name: enforcement_visibility
+  direction: strengthens
+  strength: moderate
+  description: High visibility of enforcement operations enhances deterrence effect; the review specifically
+    examined 'visibility' as related to enforcement dosage effects
+- name: enforcement_sustainability
+  direction: strengthens
+  strength: moderate
+  description: Sustained enforcement was associated with reductions in drink driving or related harms
+    in most included studies
+- name: resource_constraints
+  direction: weakens
+  strength: moderate
+  description: Agency resource constraints and competing enforcement demands limit the intensity and sustainability
+    of drink-driving enforcement
+structural_competency:
+  equity_implications: This mechanism appropriately focuses on policy enforcement as a structural intervention
+    rather than individual behavior change. The review highlights structural barriers including resource
+    constraints faced by law enforcement agencies, which disproportionately affect communities with fewer
+    resources. The framing appropriately positions enforcement capacity as a policy choice that affects
+    population-level outcomes. However, enforcement-based approaches may have differential impacts across
+    communities, potentially affecting marginalized populations through increased police contact while
+    not addressing underlying social determinants of alcohol misuse.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.618239'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

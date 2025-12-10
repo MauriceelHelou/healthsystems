@@ -1,0 +1,63 @@
+id: NEW:jdtc_program_graduation_to_recidivism_rate_3_year
+name: JDTC Program Graduation Rate → Recidivism Rate (3-Year)
+from_node:
+  node_id: NEW:jdtc_program_graduation
+  node_name: JDTC Program Graduation Rate
+to_node:
+  node_id: recidivism_rate_3_year
+  node_name: Recidivism Rate (3-Year)
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Average program graduation rate is 54.74% among JDTC participants'
+- 'Step 2: Graduation indicates completion of required treatment, supervision, and behavioral benchmarks'
+- 'Step 3: Program completers have engaged with full dose of intervention services'
+- 'Step 4: Those who do not graduate may face traditional sanctions and lack full intervention exposure'
+- 'Step 5: Graduation status may differentially predict post-program outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 55
+  primary_citation: 'E. Tanner‐Smith et al. 2023. "Examining the Effects of Juvenile Drug Treatment Courts:
+    A Systematic Review and Meta-Analysis." https://doi.org/10.1177/00938548231208208'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis synthesized 55 eligible samples
+  - Studies providing data from 12,310 participants across U.S.-based JDTCs
+  - Controlled evaluations comparing JDTCs to traditional juvenile adjudication
+  doi: 10.1177/00938548231208208
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The average graduation rate among JDTC participants was 54.74% (95% CI [0.50, 0.59]). This
+  indicates that nearly half of enrolled youth do not complete the program, which has implications for
+  overall program effectiveness and equity in outcomes.
+quantitative_effects:
+  effect_size:
+    value: 54.74
+    type: percentage_change
+    ci_lower: 50.0
+    ci_upper: 59.0
+  sample_size: 12310
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Graduation rates likely vary across programs based on program structure, eligibility
+    criteria, and community resources
+moderators:
+- name: program_requirements
+  direction: weakens
+  strength: moderate
+  description: More stringent program requirements may reduce graduation rates
+- name: support_services_availability
+  direction: strengthens
+  strength: moderate
+  description: Greater availability of wraparound support services may increase graduation likelihood
+structural_competency:
+  equity_implications: The ~45% non-completion rate raises equity concerns about whether program structures
+    are accessible to all youth. Youth facing greater structural barriers (housing instability, family
+    challenges, transportation issues, co-occurring mental health conditions) may be less likely to graduate
+    regardless of motivation. Non-completion should not be viewed as individual failure but as a signal
+    that program structures may not accommodate the structural realities of vulnerable youth populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.594211'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

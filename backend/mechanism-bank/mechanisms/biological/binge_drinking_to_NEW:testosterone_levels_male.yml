@@ -1,0 +1,56 @@
+id: binge_drinking_to_NEW:testosterone_levels_male
+name: Binge Drinking → Testosterone Levels in Males
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:testosterone_levels_male
+  node_name: Testosterone Levels in Males
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Moderate alcohol consumption may have different acute effects on the HPT axis than chronic
+  heavy use'
+- 'Step 2: Moderate intake appears to be associated with slightly higher testosterone levels'
+- 'Step 3: The biological mechanism may involve acute stimulatory effects on the HPT axis at lower doses'
+- 'Step 4: This contrasts with the suppressive effects seen at higher chronic consumption levels'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'M. Moosazadeh et al. 2024. "Association of the Effect of Alcohol Consumption on Luteinizing
+    Hormone (LH), Follicle-Stimulating Hormone (FSH), and Testosterone Hormones in Men: A Systematic Review
+    and Meta-Analysis." https://doi.org/10.4103/ijpvm.ijpvm_81_24'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 17 observational studies
+  - Subgroup analysis by alcohol intake levels included in systematic review
+  - Studies searched across PubMed, Scopus, Science Direct, and Google Scholar (2020-2022)
+  doi: 10.4103/ijpvm.ijpvm_81_24
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Subgroup analysis revealed that moderate alcohol intake was associated with significantly
+  higher testosterone levels compared to non-exposed individuals (SMD 0.22, 95% CI: 0.12-0.32). Low intake
+  also showed higher testosterone (SMD 0.19, 95% CI: 0.04-0.35). This suggests a complex dose-response
+  relationship.'
+quantitative_effects:
+  effect_size:
+    value: 0.22
+    type: standardized_mean_difference
+    ci_lower: 0.12
+    ci_upper: 0.32
+moderators:
+- name: alcohol_intake_level
+  direction: u_shaped
+  strength: moderate
+  description: Both moderate (SMD 0.22) and low (SMD 0.19) alcohol intake showed significantly higher
+    testosterone compared to non-exposed, suggesting a non-linear relationship
+structural_competency:
+  equity_implications: This finding highlights the complexity of alcohol's effects on hormonal health.
+    Structural factors such as alcohol pricing policies, taxation, and marketing regulations influence
+    population-level consumption patterns. Understanding dose-response relationships is critical for evidence-based
+    policy that addresses the spectrum from moderate use to alcohol use disorder.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.310369'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

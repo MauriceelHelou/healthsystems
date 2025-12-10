@@ -1,0 +1,48 @@
+id: poverty_level_to_housing_instability
+name: Living at or Below Poverty Level → Housing Instability
+from_node:
+  node_id: poverty_level
+  node_name: Living at or Below Poverty Level
+to_node:
+  node_id: housing_instability
+  node_name: Housing Instability
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Poverty limits financial resources available for housing costs and deposits'
+- 'Step 2: Low income reduces access to stable rental markets and homeownership opportunities'
+- 'Step 3: Economic constraints force reliance on temporary, substandard, or overcrowded housing'
+- 'Step 4: Financial vulnerability increases risk of eviction and frequent housing changes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'R. Marcus et al. 2021. "Characteristics of Adults With Diagnosed HIV Who Experienced
+    Housing Instability: Findings From the Centers for Disease Control and Prevention Medical Monitoring
+    Project, United States, 2018." *Journal of the Association of Nurses in AIDS Care*. https://doi.org/10.1097/JNC.0000000000000314'
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1097/JNC.0000000314
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: DOI not found in Crossref database'
+last_updated: '2025-11-30'
+version: '2.0'
+description: People who are unstably housed are more likely to live at or below the poverty level, indicating
+  economic factors as key drivers of housing instability
+quantitative_effects:
+  sample_size: 4050
+moderators:
+- name: incarceration_history
+  direction: strengthens
+  strength: moderate
+  description: Previous incarceration compounds economic disadvantage and housing access barriers
+structural_competency:
+  equity_implications: Identifies economic inequality as a root structural cause of housing instability.
+    Focuses on systemic poverty rather than individual financial management, highlighting need for economic
+    policy interventions.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.865544'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

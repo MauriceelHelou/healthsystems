@@ -1,0 +1,58 @@
+id: depression_diagnosis_to_NEW:ipv_perpetration
+name: Depression Diagnosis → Intimate Partner Violence Perpetration
+from_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+to_node:
+  node_id: NEW:ipv_perpetration
+  node_name: Intimate Partner Violence Perpetration
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Depression is associated with emotional dysregulation, irritability, and
+  reduced impulse control, which may increase vulnerability to engaging in aggressive
+  behaviors'
+- 'Step 2: Depression often co-occurs with experiencing IPV victimization, particularly
+  among women, creating a bidirectional violence dynamic where victimization mediates
+  the relationship between depression and perpetration'
+- 'Step 3: The combination of depressive symptoms and ongoing relationship conflict
+  leads to increased risk of physical intimate partner violence perpetration, with
+  effects observed in both sexes but stronger in women'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Katherine R K Saunders et al. 2023. "Past-year intimate partner
+    violence perpetration among people with and without depression: an individual
+    participant data (IPD) meta-mediation analysis." Social psychiatry and psychiatric
+    epidemiology.'
+  supporting_citations: []
+description: Depression is associated with increased risk of intimate partner violence
+  perpetration in both men and women. This IPD meta-mediation analysis of four general
+  population surveys found that depression was associated with a 7.4% proportion increase
+  in past-year physical IPV perpetration among women and 4.8% among men. Importantly,
+  alcohol misuse did not mediate this relationship. However, among women, past-year
+  IPV victimization was a significant mediator, accounting for 45% of the total effect,
+  suggesting bidirectional violence dynamics play a key role in the depression-perpetration
+  pathway.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 7.4
+    type: proportion_increase
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 12679
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: The association is stronger in women (7.4% proportion increase) compared
+    to men (4.8% proportion increase)
+- name: IPV victimization
+  direction: strengthens
+  strength: strong
+  description: Among women, past-year IPV victimization mediated 45% of the total
+    effect of depression on IPV perpetration; for severe IPV, victimization mediated
+    60% of the effect

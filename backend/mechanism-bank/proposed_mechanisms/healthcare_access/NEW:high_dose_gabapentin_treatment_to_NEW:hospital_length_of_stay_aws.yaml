@@ -1,0 +1,46 @@
+id: NEW:high_dose_gabapentin_treatment_to_NEW:hospital_length_of_stay_aws
+name: High-Dose Gabapentin Treatment → Hospital Length of Stay for Alcohol Withdrawal
+from_node:
+  node_id: NEW:high_dose_gabapentin_treatment
+  node_name: High-Dose Gabapentin Treatment
+to_node:
+  node_id: NEW:hospital_length_of_stay_aws
+  node_name: Hospital Length of Stay for Alcohol Withdrawal
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: High-dose gabapentin (≥1800mg/day) is administered as adjunctive therapy
+  to patients hospitalized with severe alcohol withdrawal syndrome (AWS)'
+- 'Step 2: Gabapentin modulates GABAergic neurotransmission and reduces glutamatergic
+  hyperexcitability, addressing the neurobiological imbalance underlying AWS symptoms'
+- 'Step 3: Improved symptom control reduces the severity and duration of withdrawal
+  symptoms including anxiety, tremor, and autonomic instability'
+- 'Step 4: Reduced symptom burden decreases the need for high-dose benzodiazepine
+  therapy, which can cause sedation and prolonged recovery'
+- 'Step 5: Faster stabilization of AWS symptoms and reduced sedation from lower benzodiazepine
+  requirements enables earlier medical clearance and hospital discharge'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Alexander R. Levine et al. 2019. High‐Dose Gabapentin for the
+    Treatment of Severe Alcohol Withdrawal Syndrome: A Retrospective Cohort Analysis.
+    Pharmacotherapy.'
+  supporting_citations: []
+description: High-dose gabapentin treatment for severe alcohol withdrawal syndrome
+  reduces hospital length of stay through improved symptom control and reduced benzodiazepine
+  requirements. By addressing the GABAergic and glutamatergic dysregulation underlying
+  AWS, gabapentin facilitates faster symptom resolution and clinical stabilization,
+  enabling earlier safe discharge.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: AWS severity
+  direction: strengthens
+  strength: moderate
+  description: Study focused on severe AWS where high-dose gabapentin may have greater
+    impact on reducing LOS compared to mild cases
+- name: Gabapentin dosing
+  direction: strengthens
+  strength: moderate
+  description: Higher doses (≥1800mg/day) appear necessary for efficacy in AWS treatment;
+    lower doses may not achieve same LOS reduction

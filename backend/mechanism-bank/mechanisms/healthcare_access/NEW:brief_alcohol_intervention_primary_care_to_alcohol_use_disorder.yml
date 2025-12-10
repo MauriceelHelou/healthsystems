@@ -1,0 +1,69 @@
+id: NEW:brief_alcohol_intervention_primary_care_to_alcohol_use_disorder
+name: Brief Alcohol Intervention in Primary Care → Alcohol Use Disorder
+from_node:
+  node_id: NEW:brief_alcohol_intervention_primary_care
+  node_name: Brief Alcohol Intervention in Primary Care
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare system screening identifies hazardous and harmful drinkers not actively seeking
+  alcohol treatment'
+- 'Step 2: Brief intervention (<60 minutes total, ≤5 sessions) provides structured feedback and counseling'
+- 'Step 3: Information about potential harms and benefits of reducing intake increases health literacy'
+- 'Step 4: Personalized reduction plans address individual patterns and motivations'
+- 'Step 5: Reduced consumption trajectory decreases progression from hazardous drinking to alcohol use
+  disorder'
+evidence:
+  quality_rating: A
+  n_studies: 34
+  primary_citation: Eileen Fs Kaner et al. 2018. "Effectiveness of brief alcohol interventions in primary
+    care populations.." https://doi.org/10.1002/14651858.CD004148.pub4
+  supporting_citations:
+  - Studies from Alcohol and Alcohol Problems Science Database (through 2003)
+  - Randomized controlled trials from trials registries
+  - Additional citations require full-text access for specific study identification
+  doi: 10.1002/14651858.CD004148.pub4
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief alcohol interventions in primary care target individuals at the hazardous/harmful drinking
+  stage before they develop alcohol use disorder. By providing accessible, low-barrier interventions within
+  routine healthcare encounters, these programs can prevent progression to more severe alcohol-related
+  conditions.
+quantitative_effects:
+  effect_size:
+    value: -20.0
+    type: standardized_mean_difference
+    ci_lower: -28.0
+    ci_upper: -12.0
+  sample_size: 15197
+  heterogeneity_i_squared: 73.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Mean baseline alcohol consumption was 244 g/week (30.5 standard UK units), indicating
+    study populations were drinking at hazardous levels across different geographic contexts
+moderators:
+- name: baseline_consumption_level
+  direction: strengthens
+  strength: moderate
+  description: Studies included participants with mean baseline consumption of 244 g/week, representing
+    hazardous drinkers who may benefit most from early intervention
+- name: age_group
+  direction: strengthens
+  strength: weak
+  description: Studies targeting adolescents/young adults (9%) and older adults (6%) suggest age-specific
+    approaches may be needed, though evidence was limited
+structural_competency:
+  equity_implications: This mechanism illustrates secondary prevention through healthcare infrastructure.
+    The structural availability of primary care and emergency care as intervention points is critical.
+    Communities with primary care shortages or healthcare deserts may have reduced access to these preventive
+    interventions, creating structural inequities in alcohol-related health outcomes. The intervention
+    addresses drinking patterns at a population level rather than blaming individual behavior.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.034778'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,38 @@
+id: census_tract_undereducation_rate_to_past_year_alcohol_use_disorder_men
+name: Census-Level Neighborhood Undereducation → Past-Year Alcohol Use Disorder (Men)
+from_node:
+  node_id: census_tract_undereducation_rate
+  node_name: Census-Level Neighborhood Undereducation
+to_node:
+  node_id: past_year_alcohol_use_disorder_men
+  node_name: Past-Year Alcohol Use Disorder (Men)
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: High undereducation neighborhoods may have stronger traditional family
+  structures and social networks that discourage heavy drinking among men'
+- 'Step 2: Lower educational attainment areas may have limited access to venues and
+  social settings where problematic drinking occurs'
+- 'Step 3: Cultural norms in lower-education neighborhoods may enforce protective
+  behavioral expectations for men'
+- 'Step 4: Reduced risk of past-year alcohol use disorder among men in high undereducation
+  areas'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Vaeth et al. 2019. "Neighborhood factors, drinking behavior,
+    and alcohol use disorder in San Juan, Puerto Rico.." *American Journal of Orthopsychiatry*.
+    https://doi.org/10.1037/ort0000402
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.001403'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: gender
+  direction: strengthens
+  strength: strong
+  description: 'The protective association between neighborhood undereducation and
+    alcohol use disorder differed by gender: men showed reduced past-year AUD while
+    women showed reduced lifetime AUD in high undereducation areas'

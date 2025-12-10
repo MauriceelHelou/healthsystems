@@ -1,0 +1,49 @@
+id: housing_instability_to_hiv_clinical_outcomes
+name: Housing Instability → HIV Clinical Outcomes
+from_node:
+  node_id: housing_instability
+  node_name: Housing Instability
+to_node:
+  node_id: hiv_clinical_outcomes
+  node_name: HIV Clinical Outcomes
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Housing instability creates barriers to consistent healthcare access and medication storage'
+- 'Step 2: Unstable housing environments increase stress and reduce ability to maintain treatment routines'
+- 'Step 3: Frequent moves and temporary accommodations disrupt continuity of care with healthcare providers'
+- 'Step 4: Poor clinical outcomes result from inconsistent treatment adherence and care disruptions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'R. Marcus et al. 2021. "Characteristics of Adults With Diagnosed HIV Who Experienced
+    Housing Instability: Findings From the Centers for Disease Control and Prevention Medical Monitoring
+    Project, United States, 2018." *Journal of the Association of Nurses in AIDS Care*. https://doi.org/10.1097/JNC.0000000000000314'
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1097/JNC.0000000314
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: DOI not found in Crossref database'
+last_updated: '2025-11-30'
+version: '2.0'
+description: Housing instability among people living with HIV is associated with poorer clinical outcomes,
+  with effects observed even among those who are not homeless
+quantitative_effects:
+  sample_size: 4050
+moderators:
+- name: homelessness_status
+  direction: strengthens
+  strength: moderate
+  description: Effects are independent of homelessness status, indicating housing instability has impacts
+    beyond just homelessness
+structural_competency:
+  equity_implications: This mechanism traces housing instability to health outcomes through structural
+    barriers in healthcare systems and built environment factors that affect care continuity. Addresses
+    systemic issues rather than individual behaviors.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.844012'
+  extraction_confidence: medium
+  prompt_version: 2.0-citation-verified

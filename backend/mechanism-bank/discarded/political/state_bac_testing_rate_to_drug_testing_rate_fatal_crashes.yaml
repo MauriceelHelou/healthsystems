@@ -1,0 +1,47 @@
+id: state_bac_testing_rate_to_drug_testing_rate_fatal_crashes
+name: State Blood Alcohol Content Testing Rate → Drug Testing Rate in Fatal Crashes
+from_node:
+  node_id: state_bac_testing_rate
+  node_name: State Blood Alcohol Content Testing Rate
+to_node:
+  node_id: drug_testing_rate_fatal_crashes
+  node_name: Drug Testing Rate in Fatal Crashes
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: States with higher BAC testing rates have established infrastructure and
+  protocols for systematic substance testing in fatal crashes'
+- 'Step 2: Testing infrastructure includes laboratory capacity, trained personnel,
+  and standardized procedures that can be extended to drug testing'
+- 'Step 3: States with robust BAC testing policies often implement parallel drug testing
+  protocols, leveraging existing testing infrastructure'
+- 'Step 4: Higher testing rates improve detection and documentation of substance-impaired
+  driving across both alcohol and drugs'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Megan E Slater et al. 2016. "Differences in state drug testing
+    and reporting by driver type in U.S. fatal traffic crashes.." *Accident; analysis
+    and prevention*. https://doi.org/10.1016/j.aap.2016.03.015
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.559990'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: driver_vital_status
+  direction: strengthens
+  strength: strong
+  description: Testing rates were highest among drivers who died at the scene (median=70.8%)
+    compared to surviving drivers not transported to hospital (median=14.0%), indicating
+    that testing protocols are more consistently applied to deceased drivers
+- name: driver_fault_status
+  direction: strengthens
+  strength: strong
+  description: Testing rates were higher among at-fault drivers who died (median=64.4%)
+    compared to surviving drivers not at fault (median=10.0%), suggesting testing
+    protocols prioritize suspected impaired drivers
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/state_bac_testing_rate_to_drug_testing_rate_fatal_crashes.yaml
+_category: political

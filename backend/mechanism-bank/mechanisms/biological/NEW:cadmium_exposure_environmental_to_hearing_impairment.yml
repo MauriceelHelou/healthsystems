@@ -1,0 +1,58 @@
+id: NEW:cadmium_exposure_environmental_to_hearing_impairment
+name: Environmental Cadmium (Cd) Exposure → Hearing Impairment
+from_node:
+  node_id: NEW:cadmium_exposure_environmental
+  node_name: Environmental Cadmium (Cd) Exposure
+to_node:
+  node_id: hearing_impairment
+  node_name: Hearing Impairment
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Cadmium enters the environment through industrial processes, mining, and contaminated food
+  sources'
+- 'Step 2: Human exposure occurs via inhalation, ingestion of contaminated food/water, or occupational
+  contact'
+- 'Step 3: Cadmium accumulates in tissues and generates oxidative stress in the cochlea'
+- 'Step 4: Ototoxic effects damage sensory hair cells and cochlear structures'
+- 'Step 5: Hearing function deteriorates resulting in measurable hearing loss'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Fang Wang et al. 2024. "Population‐based study of environmental heavy metal exposure
+    and hearing loss: A systematic review and meta‐analysis." https://doi.org/10.1002/lio2.1230'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes studies on cadmium and hearing
+  - Studies measuring urinary cadmium biomarkers and audiometric function
+  - Occupational health studies on cadmium-exposed workers
+  doi: 10.1002/lio2.1230
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Environmental cadmium pollution is associated with hearing loss through ototoxic mechanisms.
+  The meta-analysis examines population-based evidence on cadmium exposure at various levels and hearing
+  outcomes.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Cadmium exposure varies by proximity to industrial facilities, agricultural practices,
+    and smoking prevalence in populations
+moderators:
+- name: smoking_status
+  direction: strengthens
+  strength: moderate
+  description: Tobacco smoke is a major source of cadmium exposure, compounding environmental sources
+- name: occupational_exposure
+  direction: strengthens
+  strength: strong
+  description: Workers in battery manufacturing, mining, and metal processing have elevated exposure
+structural_competency:
+  equity_implications: Cadmium exposure is structurally determined by industrial regulation, occupational
+    safety standards, agricultural practices, and environmental justice in siting of polluting facilities.
+    Communities near industrial zones, often low-income and minority populations, face disproportionate
+    exposure. Tobacco use, itself socially patterned by economic stress and targeted marketing, adds additional
+    cadmium burden to disadvantaged populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.849473'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

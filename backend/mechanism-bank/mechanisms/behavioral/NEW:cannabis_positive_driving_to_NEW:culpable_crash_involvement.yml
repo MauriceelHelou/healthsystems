@@ -1,0 +1,60 @@
+id: NEW:cannabis_positive_driving_to_NEW:culpable_crash_involvement
+name: Cannabis-Positive Driving → Culpable Crash Involvement
+from_node:
+  node_id: NEW:cannabis_positive_driving
+  node_name: Cannabis-Positive Driving
+to_node:
+  node_id: NEW:culpable_crash_involvement
+  node_name: Culpable Crash Involvement
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Driver operates vehicle while THC-positive (detected through toxicological testing)'
+- 'Step 2: Cannabis may impair divided attention, lane tracking, and decision-making'
+- 'Step 3: Impairment increases likelihood of being at-fault in crash scenarios'
+- 'Step 4: Culpability determination assigns responsibility for crash causation'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: Ole Rogeberg 2019. "A meta-analysis of the crash risk of cannabis-positive drivers
+    in culpability studies-Avoiding interpretational bias.." https://doi.org/10.1016/j.aap.2018.11.011
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis pooled 13 published culpability studies
+  - Traditional pooled OR estimate comparison available in original publication
+  - Bootstrap validation study details in full text
+  doi: 10.1016/j.aap.2018.11.011
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The pooled increased risk of a culpable crash for THC-positive drivers was estimated at 1.42
+  (95% credibility interval 1.11-1.75), similar to traditional OR pooling (1.46, 95% CI 1.24-1.72). The
+  study developed a Bayesian statistical model specifically for culpability study count data with hierarchical
+  effects to account for heterogeneity across studies. This approach outperformed traditional culpability
+  OR in bootstrap analyses.
+quantitative_effects:
+  effect_size:
+    value: 1.42
+    type: odds_ratio
+    ci_lower: 1.11
+    ci_upper: 1.75
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Heterogeneous risk parameter values across studies necessitated hierarchical effect
+    specification in meta-analytic model
+moderators:
+- name: statistical_methodology
+  direction: weakens
+  strength: moderate
+  description: Bayesian hierarchical model produces similar culpable crash OR (1.42) to traditional methods
+    (1.46), but reduces parameter uncertainty
+structural_competency:
+  equity_implications: The distinction between culpable and total crash risk has policy implications.
+    Culpability studies overrepresent at-fault crashes, and misinterpreting culpability ORs as total crash
+    risk leads to 'interpretational bias' that exaggerates both risk increases and parameter uncertainty.
+    This methodological insight is critical for evidence-based policy development around cannabis-impaired
+    driving laws, which disproportionately affect certain populations through enforcement patterns.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.622374'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

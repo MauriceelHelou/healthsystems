@@ -1,0 +1,68 @@
+id: NEW:surrogate_marker_based_drug_approval_to_NEW:clinical_outcome_uncertainty
+name: Surrogate Marker Based Drug Approval → Clinical Outcome Uncertainty
+from_node:
+  node_id: NEW:surrogate_marker_based_drug_approval
+  node_name: Surrogate Marker Based Drug Approval
+to_node:
+  node_id: NEW:clinical_outcome_uncertainty
+  node_name: Clinical Outcome Uncertainty
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: FDA approves drugs for nononcologic chronic diseases based on surrogate markers (e.g., blood
+  pressure, HbA1c, cholesterol) as primary endpoints'
+- 'Step 2: Systematic review finds only 41% of surrogate markers (15 of 37) have any published meta-analysis
+  examining association with clinical outcomes'
+- 'Step 3: Among those with meta-analyses, only 17% (10 of 59) showed high-strength correlation (r≥0.85
+  or R²≥0.72) with clinical outcomes'
+- 'Step 4: Patients receive treatments with uncertain benefit for meaningful clinical outcomes (mortality,
+  morbidity, quality of life)'
+evidence:
+  quality_rating: A
+  n_studies: 54
+  primary_citation: Joshua D Wallach et al. 2024. "Associations Between Surrogate Markers and Clinical
+    Outcomes for Nononcologic Chronic Disease Treatments.." https://doi.org/10.1001/jama.2024.4175
+  supporting_citations:
+  - FDA Adult Surrogate Endpoint Table (referenced as primary data source)
+  - Additional citations require full-text access - abstract references 54 meta-analyses across 14 chronic
+    diseases
+  - Additional citations require full-text access - individual meta-analyses covering median 18.5 trials
+    and 90,056 patients
+  doi: 10.1001/jama.2024.4175
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review reveals that most surrogate markers used for FDA drug approval in
+  nononcologic chronic diseases lack high-strength evidence of association with clinical outcomes. Of
+  37 surrogate markers examined, only 15 (41%) had any meta-analysis evidence, and among those with correlation
+  data, only 17% showed high-strength associations. This creates structural uncertainty in healthcare
+  where treatments may modify surrogate markers without delivering meaningful clinical benefits to patients.
+quantitative_effects:
+  effect_size:
+    value: 17.0
+    type: percentage_change
+  sample_size: 90056
+moderators:
+- name: disease_type
+  direction: varies
+  strength: moderate
+  description: Only 14 of 32 unique chronic diseases had any meta-analysis evidence; correlation strength
+    varies by disease-marker pair
+- name: availability_of_meta_analysis_evidence
+  direction: strengthens
+  strength: strong
+  description: 59% of surrogate markers (22 of 37) lacked any eligible meta-analysis examining association
+    with clinical outcomes
+structural_competency:
+  equity_implications: This mechanism exposes a structural problem in pharmaceutical regulation and healthcare
+    delivery. The reliance on surrogate markers in drug approval creates a system where patients with
+    chronic diseases may receive treatments that fail to improve actual health outcomes. This has equity
+    implications as vulnerable populations with less access to information or alternative treatments may
+    be disproportionately affected by treatments that modify biomarkers without clinical benefit. The
+    structural issue lies in regulatory frameworks that allow market access based on incomplete evidence
+    of clinical efficacy.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.026771'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

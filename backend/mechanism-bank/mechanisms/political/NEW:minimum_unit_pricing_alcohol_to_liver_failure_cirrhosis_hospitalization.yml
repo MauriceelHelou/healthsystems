@@ -1,0 +1,58 @@
+id: NEW:minimum_unit_pricing_alcohol_to_liver_failure_cirrhosis_hospitalization
+name: Minimum Unit Pricing for Alcohol → Liver Failure/Cirrhosis Hospitalization
+from_node:
+  node_id: NEW:minimum_unit_pricing_alcohol
+  node_name: Minimum Unit Pricing for Alcohol
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Failure/Cirrhosis Hospitalization
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: MUP increases cost of cheap, high-alcohol content beverages'
+- 'Step 2: Heavy drinkers reduce consumption due to price sensitivity for these products'
+- 'Step 3: Sustained reduction in heavy alcohol consumption decreases ongoing liver damage'
+- 'Step 4: Over 2-3 years, reduced cumulative liver injury decreases chronic liver disease progression'
+- 'Step 5: Fewer hospitalizations for alcohol-related liver disease including cirrhosis'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'T. Maharaj et al. 2023. "Impact of minimum unit pricing on alcohol-related hospital
+    outcomes: systematic review." https://doi.org/10.1136/bmjopen-2022-065220'
+  supporting_citations:
+  - Natural experiment studies from Canada on chronic alcohol-related outcomes
+  - Scottish MUP evaluation studies examining liver disease outcomes
+  - Modelling studies projecting chronic disease burden reductions
+  doi: 10.1136/bmjopen-2022-065220
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: MUP reduces chronic alcohol-related hospitalizations including liver disease through sustained
+  reduction in heavy alcohol consumption. Unlike acute admissions which respond immediately, chronic conditions
+  like liver disease show a 2-3 year lag with 4-9% annual reductions observed after this period.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect observed across multiple country settings with consistent lag time of 2-3 years
+    for chronic condition impacts
+moderators:
+- name: time_since_implementation
+  direction: strengthens
+  strength: strong
+  description: Chronic alcohol-related admissions show lagged response of 2-3 years, reflecting time required
+    for biological changes in liver pathology
+- name: baseline_heavy_drinking_prevalence
+  direction: strengthens
+  strength: moderate
+  description: Populations with higher prevalence of heavy drinking show greater potential for reduction
+    in chronic liver disease
+structural_competency:
+  equity_implications: This mechanism demonstrates how structural alcohol policy interventions can prevent
+    the accumulation of biological damage over time. The lagged effect reflects the pathophysiology of
+    liver disease while the intervention addresses upstream commercial determinants. This approach avoids
+    blaming individuals for addiction while acknowledging that sustained environmental changes can prevent
+    progressive organ damage.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.313683'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

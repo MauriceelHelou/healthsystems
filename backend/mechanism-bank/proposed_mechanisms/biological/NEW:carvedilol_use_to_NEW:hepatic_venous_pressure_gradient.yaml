@@ -1,0 +1,50 @@
+id: NEW:carvedilol_use_to_NEW:hepatic_venous_pressure_gradient
+name: Carvedilol Use → Hepatic Venous Pressure Gradient
+from_node:
+  node_id: NEW:carvedilol_use
+  node_name: Carvedilol Use
+to_node:
+  node_id: NEW:hepatic_venous_pressure_gradient
+  node_name: Hepatic Venous Pressure Gradient
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Carvedilol is administered as a non-selective beta-blocker with additional
+  intrinsic alpha-1 adrenergic blocking activity'
+- 'Step 2: Beta-adrenergic blockade reduces cardiac output and causes splanchnic vasoconstriction,
+  decreasing portal blood inflow'
+- 'Step 3: Alpha-1 adrenergic blockade causes vasodilation of intrahepatic vasculature,
+  reducing intrahepatic vascular resistance'
+- 'Step 4: The combined beta and alpha-blocking effects synergistically reduce portal
+  venous pressure more effectively than traditional non-selective beta-blockers'
+- 'Step 5: Hepatic venous pressure gradient (HVPG) decreases as a result of reduced
+  portal blood flow and decreased intrahepatic resistance'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: Antony P Zacharias et al. 2018. Carvedilol versus traditional,
+    non-selective beta-blockers for adults with cirrhosis and gastroesophageal varices.
+    The Cochrane database of systematic reviews.
+  supporting_citations: []
+description: Carvedilol, a non-selective beta-blocker with intrinsic alpha-1 blocking
+  activity, reduces hepatic venous pressure gradient more effectively than traditional
+  non-selective beta-blockers (propranolol, nadolol) in patients with cirrhosis and
+  gastroesophageal varices. This enhanced effect is attributed to the dual mechanism
+  of reducing portal inflow via beta-blockade and decreasing intrahepatic resistance
+  via alpha-1 blockade. The Cochrane systematic review of 10 randomized clinical trials
+  involving 810 participants confirmed that carvedilol was more effective at reducing
+  HVPG, though the clinical implications for bleeding and mortality outcomes remained
+  uncertain due to low quality evidence.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Cirrhosis severity
+  direction: weakens
+  strength: moderate
+  description: Patients with more advanced cirrhosis may have variable response to
+    hemodynamic effects
+- name: Type of variceal prevention
+  direction: strengthens
+  strength: weak
+  description: Studies included both primary and secondary prevention populations
+    with consistent HVPG reduction findings

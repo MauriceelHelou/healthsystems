@@ -1,0 +1,64 @@
+id: NEW:covid_19_complications_to_NEW:covid_19_disease_severity
+name: COVID-19 Complications (ARDS, respiratory failure, liver injury) → COVID-19
+  Disease Severity and Mortality
+from_node:
+  node_id: NEW:covid_19_complications
+  node_name: COVID-19 Complications (ARDS, respiratory failure, liver injury)
+to_node:
+  node_id: NEW:covid_19_disease_severity
+  node_name: COVID-19 Disease Severity and Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: COVID-19 infection triggers inflammatory responses and direct viral damage
+  to multiple organ systems, leading to complications including ARDS, respiratory
+  failure, and liver injury'
+- 'Step 2: ARDS and respiratory failure impair gas exchange and oxygen delivery, causing
+  systemic hypoxia and multi-organ dysfunction'
+- 'Step 3: Liver injury reflects systemic inflammation and potential direct viral
+  hepatotoxicity, contributing to metabolic dysregulation and reduced drug metabolism
+  capacity'
+- 'Step 4: These complications create a cascade of physiological deterioration requiring
+  intensive care, mechanical ventilation, and advanced supportive measures'
+- 'Step 5: The accumulation of organ damage and systemic dysfunction significantly
+  increases the risk of ICU admission, disease progression, and mortality'
+evidence:
+  quality_rating: A
+  n_studies: 187
+  primary_citation: 'Zhe Chen et al. 2022. Comorbidities and complications of COVID-19
+    associated with disease severity, progression, and mortality in China with centralized
+    isolation and hospitalization: A systematic review and meta-analysis. Frontiers
+    in Public Health.'
+  supporting_citations: []
+description: COVID-19 complications including ARDS, respiratory failure, and liver
+  injury are strongly and positively associated with increased disease severity and
+  mortality. In this meta-analysis of 187 studies with 77,013 patients, respiratory
+  failure demonstrated the strongest association with severe/critical disease (OR
+  105.12), while ARDS was present in 94.17% of critical cases. Liver injury prevalence
+  increased from 10% in mild cases to 43.48% in severe cases, indicating a dose-response
+  relationship between complications and disease severity.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 105.12
+    type: odds_ratio
+    ci_lower: 49.48
+    ci_upper: 223.33
+  p_value: null
+  sample_size: 77013
+moderators:
+- name: complication_type
+  direction: strengthens
+  strength: strong
+  description: Respiratory failure showed the strongest association with severe/critical
+    disease (OR 105.12), followed by shock and ARDS
+- name: disease_severity_level
+  direction: strengthens
+  strength: strong
+  description: Prevalence of complications increased progressively from mild to critical
+    cases; ARDS prevalence was 94.17% in critical cases
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Gender ratio was examined as a source of heterogeneity in the meta-analysis

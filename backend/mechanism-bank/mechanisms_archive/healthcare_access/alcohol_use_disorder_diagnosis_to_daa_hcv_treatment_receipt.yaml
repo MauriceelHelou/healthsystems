@@ -1,0 +1,50 @@
+id: alcohol_use_disorder_diagnosis_to_daa_hcv_treatment_receipt
+name: Alcohol Use Disorder Diagnosis → Direct-Acting Antiviral HCV Treatment Receipt
+from_node:
+  node_id: alcohol_use_disorder_diagnosis
+  node_name: Alcohol Use Disorder Diagnosis
+to_node:
+  node_id: daa_hcv_treatment_receipt
+  node_name: Direct-Acting Antiviral HCV Treatment Receipt
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with alcohol use disorder diagnosis face stigma and discrimination
+  in healthcare settings'
+- 'Step 2: Healthcare providers may withhold or delay HCV treatment referrals based
+  on misconceptions about alcohol use and treatment eligibility'
+- 'Step 3: Structural barriers in healthcare systems (e.g., insurance requirements,
+  provider gatekeeping) disproportionately affect patients with substance use disorder
+  diagnoses'
+- 'Step 4: Patients with alcohol use disorder encounter reduced access to DAA treatment
+  despite clinical guidelines recommending treatment regardless of alcohol use'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Lamia Y. Haque et al. 2022. "Association Between Alcohol Use Disorder
+    and Receipt of Direct-Acting Antiviral Hepatitis C Virus Treatment." *JAMA Network
+    Open*. https://doi.org/10.1001/jamanetworkopen.2022.46604
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.366830'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: abstinence_status
+  direction: weakens
+  strength: weak
+  description: Even patients with alcohol use disorder who are abstinent experience
+    barriers to treatment, suggesting that current alcohol use is not the primary
+    mechanism but rather the diagnosis itself creates barriers
+- name: demographic_characteristics
+  direction: weakens
+  strength: moderate
+  description: Association persists after adjusting for demographic characteristics,
+    indicating structural barriers beyond individual-level factors
+- name: comorbidities
+  direction: weakens
+  strength: moderate
+  description: Association persists after adjusting for comorbidities, suggesting
+    barriers are specific to substance use disorder stigma rather than general medical
+    complexity

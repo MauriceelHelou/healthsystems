@@ -1,0 +1,52 @@
+id: NEW:maternal_high_hemoglobin_to_stillbirth_rate
+name: Maternal High Hemoglobin Concentration (≥130 g/L) → Stillbirth Rate
+from_node:
+  node_id: NEW:maternal_high_hemoglobin
+  node_name: Maternal High Hemoglobin Concentration (≥130 g/L)
+to_node:
+  node_id: stillbirth_rate
+  node_name: Stillbirth Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Elevated maternal hemoglobin concentrations (≥130 g/L) indicate increased
+  blood viscosity and reduced plasma volume expansion during pregnancy'
+- 'Step 2: Increased blood viscosity impairs uteroplacental blood flow and oxygen
+  delivery to the fetus'
+- 'Step 3: Reduced placental perfusion leads to placental insufficiency and compromised
+  fetal oxygenation'
+- 'Step 4: Chronic fetal hypoxia and nutrient deprivation increase risk of intrauterine
+  fetal demise (stillbirth)'
+evidence:
+  quality_rating: A
+  n_studies: 148
+  primary_citation: 'M. Young et al. 2023. Maternal low and high hemoglobin concentrations
+    and associations with adverse maternal and infant health outcomes: an updated
+    global systematic review and meta-analysis. BMC Pregnancy and Childbirth.'
+  supporting_citations: []
+description: High maternal hemoglobin concentration (≥130 g/L) during pregnancy is
+  significantly associated with increased risk of stillbirth (OR 1.32, 95% CI 1.09-1.60).
+  This association likely reflects underlying pathophysiology related to inadequate
+  plasma volume expansion, increased blood viscosity, and compromised uteroplacental
+  circulation leading to fetal compromise.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.32
+    type: odds_ratio
+    ci_lower: 1.09
+    ci_upper: 1.6
+  p_value: null
+  sample_size: null
+moderators:
+- name: timing_of_hemoglobin_assessment
+  direction: strengthens
+  strength: moderate
+  description: The role of timing of high Hb assessment was inconsistent across studies,
+    though earlier pregnancy assessment may show different associations
+- name: hemoglobin_cutoff_threshold
+  direction: strengthens
+  strength: weak
+  description: Data were too limited to identify clear patterns for varying high Hb
+    cutoffs, though higher thresholds may show stronger associations

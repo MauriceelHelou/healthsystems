@@ -1,0 +1,42 @@
+id: motivational_interviewing_alone_to_substance_use_treatment_transition
+name: Motivational Interviewing Alone (Without Navigation Support) → Successful Transition
+  to Substance Use Treatment
+from_node:
+  node_id: motivational_interviewing_alone
+  node_name: Motivational Interviewing Alone (Without Navigation Support)
+to_node:
+  node_id: substance_use_treatment_transition
+  node_name: Successful Transition to Substance Use Treatment
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Motivational interviewing session enhances individual readiness and motivation
+  for behavior change following detoxification'
+- 'Step 2: Increased motivation may improve intention to engage in substance use treatment'
+- 'Step 3: However, without navigation support, structural barriers (transportation,
+  insurance, appointment access) remain unaddressed'
+- 'Step 4: Motivational interviewing alone may be less resource-intensive but not
+  optimally effective without practical barrier removal'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ursula Running Bear et al. 2023. "The use of patient navigation
+    to transition detoxification patients to substance use treatment in the Alaska
+    Interior.." *Public health in practice (Oxford, England)*. https://doi.org/10.1016/j.puhip.2023.100418
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.737046'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: structural_barrier_severity
+  direction: weakens
+  strength: strong
+  description: When structural barriers are severe (transportation, insurance, geographic
+    isolation), motivation alone is insufficient for treatment transition
+- name: resource_availability
+  direction: strengthens
+  strength: moderate
+  description: MI effectiveness increases when treatment resources are readily accessible
+    and structural barriers are minimal

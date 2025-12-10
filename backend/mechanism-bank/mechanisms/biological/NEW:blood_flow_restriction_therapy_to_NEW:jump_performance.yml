@@ -1,0 +1,53 @@
+id: NEW:blood_flow_restriction_therapy_to_NEW:jump_performance
+name: Blood Flow Restriction Therapy with Exercise → Jump Performance
+from_node:
+  node_id: NEW:blood_flow_restriction_therapy
+  node_name: Blood Flow Restriction Therapy with Exercise
+to_node:
+  node_id: NEW:jump_performance
+  node_name: Jump Performance
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Blood flow restriction during exercise creates ischemic conditions in lower extremity muscles'
+- 'Step 2: Ischemia theoretically promotes greater motor unit recruitment and muscle activation'
+- 'Step 3: Enhanced neuromuscular adaptations proposed to improve explosive power for jumping'
+- 'Step 4: Meta-analysis demonstrates no significant benefit over exercise alone for jump performance'
+evidence:
+  quality_rating: A
+  n_studies: 21
+  primary_citation: 'D. Khurana et al. 2023. "Blood flow restriction therapy with exercise are no better
+    than exercise alone in improving athletic performance, muscle strength, and hypertrophy: a systematic
+    review and meta-analysis." https://doi.org/10.1080/08990220.2023.2181328'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 27 studies identified, 21 analyzed
+  - Studies included randomized controlled trials from inception to April 2021
+  - Full citation details for individual RCTs require access to complete manuscript
+  doi: 10.1080/08990220.2023.2181328
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Blood flow restriction therapy with exercise provides no additional benefit for jump performance
+  compared to exercise alone, with wide confidence intervals indicating substantial heterogeneity across
+  studies.
+quantitative_effects:
+  effect_size:
+    value: -0.02
+    type: standardized_mean_difference
+    ci_lower: -1.06
+    ci_upper: 1.02
+moderators:
+- name: time_frame
+  direction: neutral
+  strength: weak
+  description: Neither immediate nor long-term (SMD -0.40, 95% CI -1.46, 0.67) effects showed significant
+    differences
+structural_competency:
+  equity_implications: The null finding is relevant for healthcare access and sports medicine resource
+    allocation, suggesting that standard exercise protocols may be equally effective without requiring
+    specialized equipment that may not be universally accessible.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.093837'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,57 @@
+id: NEW:household_air_pollution_pm2_5_to_low_birthweight_rate
+name: Household Air Pollution PM2.5 → Low Birthweight Rate
+from_node:
+  node_id: NEW:household_air_pollution_pm2_5
+  node_name: Household Air Pollution PM2.5
+to_node:
+  node_id: low_birthweight_rate
+  node_name: Low Birthweight Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Pregnant women are exposed to household PM2.5 pollution primarily from
+  solid fuel combustion (wood, coal, dung, crop residues) used for cooking and heating'
+- 'Step 2: Inhaled PM2.5 particles cross the alveolar-capillary barrier and enter
+  maternal circulation, triggering systemic inflammation and oxidative stress'
+- 'Step 3: PM2.5-induced inflammation and oxidative stress impair placental function,
+  reducing nutrient and oxygen transfer to the developing fetus'
+- 'Step 4: Compromised placental function leads to restricted fetal growth and reduced
+  gestational weight gain'
+- 'Step 5: The combination of direct toxicity and reduced nutrient/oxygen delivery
+  results in low birth weight (<2500g)'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'R. Ghosh et al. 2021. Ambient and household PM2.5 pollution and
+    adverse perinatal outcomes: A meta-regression and analysis of attributable global
+    burden for 204 countries and territories. PLoS Medicine.'
+  supporting_citations: []
+description: Meta-regression analysis of 40 studies found that PM2.5 exposure increases
+  low birth weight risk by 11% per 10 μg/m³ increment. Globally, 15.6% of all LBW
+  infants (approximately 2.76 million) were attributable to total PM2.5 in 2019. Household
+  air pollution from solid fuel combustion dominates this burden in low-income countries.
+  The mechanism involves maternal inhalation of fine particles leading to systemic
+  inflammation, oxidative stress, and impaired placental function, ultimately restricting
+  fetal growth. An estimated 22 grams reduction in birth weight occurs per 10 μg/m³
+  PM2.5 increment.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.11
+    type: relative_risk
+    ci_lower: 1.07
+    ci_upper: 1.16
+  p_value: null
+  sample_size: null
+moderators:
+- name: country_income_level
+  direction: strengthens
+  strength: strong
+  description: HAP contribution to LBW is substantially higher in low-income countries
+    where solid fuel use for cooking is prevalent
+- name: exposure_level
+  direction: strengthens
+  strength: moderate
+  description: Nonlinear exposure-response relationship indicates greater risk at
+    higher exposure levels common in household settings

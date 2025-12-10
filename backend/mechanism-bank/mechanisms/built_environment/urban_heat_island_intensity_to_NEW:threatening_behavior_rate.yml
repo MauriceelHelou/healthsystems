@@ -1,0 +1,50 @@
+id: urban_heat_island_intensity_to_NEW:threatening_behavior_rate
+name: Urban Heat Island Intensity → Threatening Behavior Rate
+from_node:
+  node_id: urban_heat_island_intensity
+  node_name: Urban Heat Island Intensity
+to_node:
+  node_id: NEW:threatening_behavior_rate
+  node_name: Threatening Behavior Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Urban heat islands expose residents to elevated temperatures and thermal discomfort'
+- 'Step 2: Heat stress activates physiological arousal and reduces frustration tolerance'
+- 'Step 3: Lower thresholds for aggression increase verbal and physical threatening behaviors'
+- 'Step 4: Poorly designed urban spaces lacking thermal refuge intensify exposure'
+- 'Step 5: Threatening behavior increases as manifestation of heat-induced aggression'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Emil E. Jonescu et al. 2024. "Understanding the impact of urban heat islands on crime:
+    insights from temperature, population density, and green canopy cover." https://doi.org/10.1186/s40163-024-00214-w'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review on thermal discomfort and behavior
+  - Additional citations require full-text access - meta-synthesis on heat and aggression
+  - Additional citations require full-text access - theoretical literature on micro-climate and criminal
+    behavior
+  doi: 10.1186/s40163-024-00214-w
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study specifically analyzed threatening behavior alongside homicide, assault, and robbery,
+  finding correlations with temperature and urban heat island effects.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Analysis specifically examined threatening behavior as category within Offences against
+    the Person
+moderators:
+- name: urban_design_quality
+  direction: weakens
+  strength: moderate
+  description: Well-designed spaces that provide thermal comfort may reduce threatening behavior
+structural_competency:
+  equity_implications: Threatening behavior as a crime category reflects how environmental stressors manifest
+    in interpersonal interactions. Urban design that fails to provide thermal refuge creates conditions
+    for aggression, placing responsibility on planning decisions rather than individual moral failings.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.076227'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

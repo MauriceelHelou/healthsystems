@@ -1,0 +1,48 @@
+id: NEW:psychosocial_intervention_for_aud_to_substance_use_treatment_dropout_rate
+name: Psychosocial Intervention for Alcohol Use Disorder → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: NEW:psychosocial_intervention_for_aud
+  node_name: Psychosocial Intervention for Alcohol Use Disorder
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individuals with AUD are enrolled in psychosocial intervention programs'
+- 'Step 2: Treatment discontinuation rates are measured as indicator of treatment acceptability and feasibility'
+- 'Step 3: No significant difference in treatment discontinuation between intervention and control groups'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: 'Abhishek Ghosh et al. 2024. "Effectiveness of psychosocial interventions for alcohol
+    use disorder: a systematic review and meta-analysis update." https://doi.org/10.1080/00952990.2024.2350056'
+  supporting_citations:
+  - Additional citations require full-text access - studies from meta-analysis examining treatment discontinuation
+  - Studies included in WHO Mental Health Gap Action Programme guideline update
+  doi: 10.1080/00952990.2024.2350056
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Psychosocial interventions for AUD do not significantly affect treatment discontinuation
+  rates compared to treatment-as-usual (RR = 1.09, 95% CI: 0.66 to 1.80), suggesting comparable acceptability
+  and tolerability'
+quantitative_effects:
+  effect_size:
+    value: 1.09
+    type: relative_risk
+    ci_lower: 0.66
+    ci_upper: 1.8
+  sample_size: 2575
+structural_competency:
+  equity_implications: Similar treatment retention across intervention and control groups suggests that
+    psychosocial interventions are not more burdensome than standard care. However, structural factors
+    affecting treatment access and retention (transportation, work schedules, childcare, stigma) are not
+    captured in these clinical trials. Addressing these structural barriers is essential for translating
+    trial efficacy into real-world effectiveness, particularly for marginalized populations who face compounded
+    access barriers.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.251458'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,43 @@
+id: transplant_access_eligibility_to_overall_survival
+name: Eligibility for Liver Transplantation → Overall Survival in HCC Patients
+from_node:
+  node_id: transplant_access_eligibility
+  node_name: Eligibility for Liver Transplantation
+to_node:
+  node_id: overall_survival
+  node_name: Overall Survival in HCC Patients
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Liver transplantation offers potential cure for hepatocellular carcinoma
+  by removing tumor and underlying diseased liver'
+- 'Step 2: Access to transplantation determined by selection criteria that stratify
+  risk of post-transplant recurrence'
+- 'Step 3: Patients meeting eligibility criteria receive transplantation with risk-stratified
+  outcomes (low-risk: 9.5% recurrence, acceptable-risk: 20.5%, high-risk: 40.5%)'
+- 'Step 4: Overall survival is secondary outcome improved by transplant access when
+  appropriate risk stratification occurs'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: K. Halazun et al. 2021. "Dynamic α-Fetoprotein Response and Outcomes
+    After Liver Transplant for Hepatocellular Carcinoma.." *JAMA Surgery*. https://doi.org/10.1001/jamasurg.2021.0954
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.614768'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: tumor_biological_characteristics
+  direction: strengthens
+  strength: strong
+  description: Patients with favorable AFP-R achieve >75% 5-year recurrence-free survival
+    even when exceeding traditional morphological criteria, demonstrating biology
+    moderates survival benefit
+- name: recurrence_risk_category
+  direction: strengthens
+  strength: strong
+  description: Low- and acceptable-risk categories show substantially better outcomes,
+    with 5-year recurrence rates of 9.5% and 20.5% respectively compared to 40.5%
+    in high-risk

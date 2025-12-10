@@ -1,0 +1,69 @@
+id: NEW:cpap_treatment_adherence_to_cardiovascular_disease_mortality
+name: CPAP Treatment Adherence (≥4 hours/day) → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:cpap_treatment_adherence
+  node_name: CPAP Treatment Adherence (≥4 hours/day)
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Good adherence to CPAP therapy (≥4 hours/day) maintains upper airway patency during sleep'
+- 'Step 2: Consistent airway patency prevents intermittent hypoxia and sleep fragmentation characteristic
+  of untreated obstructive sleep apnea'
+- 'Step 3: Prevention of intermittent hypoxia reduces oxidative stress, systemic inflammation, and sympathetic
+  nervous system activation'
+- 'Step 4: Reduced physiological stress decreases endothelial dysfunction and blood pressure variability'
+- 'Step 5: These improvements lower the risk of recurrent major adverse cardiac and cerebrovascular events
+  (MACCEs)'
+evidence:
+  quality_rating: A
+  n_studies: 3
+  primary_citation: 'M. Sánchez-de-la-Torre et al. 2023. "Adherence to CPAP Treatment and the Risk of
+    Recurrent Cardiovascular Events: A Meta-Analysis.." https://doi.org/10.1001/jama.2023.17465'
+  supporting_citations:
+  - SAVE Trial (NCT00738179). Sleep Apnea Cardiovascular Endpoints Study.
+  - ISAACC Trial (NCT01335087). Impact of Sleep Apnea Syndrome in the Evolution of Acute Coronary Syndrome.
+  - RICCADSA Trial (NCT00519597). Randomized Intervention with CPAP in Coronary Artery Disease and Sleep
+    Apnea.
+  doi: 10.1001/jama.2023.17465
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among patients with obstructive sleep apnea and established cardiovascular disease, good
+  adherence to CPAP therapy (≥4 hours/day) was associated with a 31% reduction in risk of recurrent major
+  adverse cardiac and cerebrovascular events. This benefit was not observed in intention-to-treat analysis,
+  highlighting that treatment adherence is a key factor in achieving cardiovascular benefits from CPAP.
+quantitative_effects:
+  effect_size:
+    value: 0.69
+    type: hazard_ratio
+    ci_lower: 0.52
+    ci_upper: 0.92
+  sample_size: 4186
+moderators:
+- name: Treatment adherence threshold
+  direction: strengthens
+  strength: strong
+  description: The protective effect of CPAP on cardiovascular events was only observed with good adherence
+    (≥4 hours/day); intention-to-treat analysis showed no effect (HR 1.01)
+- name: Baseline cardiovascular disease
+  direction: strengthens
+  strength: moderate
+  description: Study population consisted of patients with established cardiovascular disease and OSA,
+    representing secondary prevention context
+structural_competency:
+  equity_implications: 'This mechanism highlights structural barriers to healthcare effectiveness. Mean
+    CPAP adherence was only 3.1 hours/day across the population, below the 4-hour threshold for benefit.
+    Structural factors affecting CPAP adherence include: access to sleep medicine specialists, cost of
+    CPAP equipment and supplies, patient education and support resources, healthcare system follow-up
+    protocols, and insurance coverage policies. The null effect in intention-to-treat analysis suggests
+    that simply prescribing CPAP without addressing adherence barriers does not improve outcomes. Health
+    equity implications include: CPAP access and adherence support may be less available in under-resourced
+    communities, creating disparities in secondary cardiovascular prevention among OSA patients.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.875095'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

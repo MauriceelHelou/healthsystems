@@ -1,0 +1,45 @@
+id: travel_time_to_mental_health_facility_to_inpatient_mental_health_service_utilization
+name: Travel Time to Mental Health Facility (Public Transportation) → Inpatient Mental
+  Health Service Utilization
+from_node:
+  node_id: travel_time_to_mental_health_facility
+  node_name: Travel Time to Mental Health Facility (Public Transportation)
+to_node:
+  node_id: inpatient_mental_health_service_utilization
+  node_name: Inpatient Mental Health Service Utilization
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: For most mental disorders, inpatient service utilization is not affected
+  by geographic distance due to the acute and mandatory nature of inpatient admissions'
+- 'Step 2: For organic mental disorders specifically, distance creates barriers to
+  inpatient service access'
+- 'Step 3: The severity and acute nature of conditions requiring hospitalization may
+  override distance barriers for most psychiatric conditions'
+- 'Step 4: Centralized inpatient facilities can serve populations without significant
+  geographic access inequities except for specific diagnostic categories'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'N. Stulz et al. 2018. "The gravitational force of mental health
+    services: distance decay effects in a rural Swiss service area." *BMC Health Services
+    Research*. https://doi.org/10.1186/s12913-018-2888-1'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.483525'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: mental_disorder_type
+  direction: strengthens
+  strength: strong
+  description: Distance decay effect is present specifically for organic mental disorders
+    in inpatient settings, but not for other psychiatric conditions, suggesting diagnostic
+    category moderates the geographic barrier effect
+- name: service_acuity_level
+  direction: weakens
+  strength: strong
+  description: The acute and often involuntary nature of inpatient psychiatric admissions
+    appears to override distance barriers for most conditions, making inpatient services
+    less sensitive to geographic location

@@ -1,0 +1,50 @@
+id: low_income_neighborhood_to_alcohol_outlet_data_quality
+name: Low Income Neighborhood (Below Poverty Level) → Alcohol Outlet Data Quality
+  and Accuracy
+from_node:
+  node_id: low_income_neighborhood
+  node_name: Low Income Neighborhood (Below Poverty Level)
+to_node:
+  node_id: alcohol_outlet_data_quality
+  node_name: Alcohol Outlet Data Quality and Accuracy
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Low-income areas experience systematic underfunding of administrative infrastructure
+  and regulatory oversight capacity'
+- 'Step 2: Reduced municipal resources lead to inadequate maintenance and updating
+  of business licensing databases'
+- 'Step 3: Lower regulatory enforcement allows unlicensed or improperly documented
+  alcohol outlets to operate'
+- 'Step 4: Multiple data systems fail to capture or reconcile outlet information,
+  creating greater discrepancies between local, state, and national databases'
+- 'Step 5: Poor data quality undermines targeted interventions and policy enforcement
+  in communities that may face highest alcohol-related harms'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Adam J. Milam et al. 2020. "Discrepancies in Local, State, and
+    National Alcohol Outlet Listings: Implications for Research and Interventions."
+    *Substance Use & Misuse*. https://doi.org/10.1080/10826084.2020.1817080'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.876647'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: urbanicity
+  direction: weakens
+  strength: strong
+  description: Urban areas show fewer data discrepancies (IR=0.378, p<0.01), suggesting
+    better administrative infrastructure partially protects against data quality problems
+    even in low-income urban neighborhoods
+- name: state_data_infrastructure
+  direction: weakens
+  strength: strong
+  description: Oregon showed minimal variation between data sources (1.09-1.22), suggesting
+    state-level investment in data systems can reduce socioeconomic disparities in
+    data quality
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/economic/low_income_neighborhood_to_alcohol_outlet_data_quality.yaml
+_category: economic

@@ -1,0 +1,66 @@
+id: criminal_justice_involvement_intensity_revised_consolidated_to_hiv_incidence
+name: Criminal Justice Involvement Intensity → HIV Incidence
+from_node:
+  node_id: criminal_justice_involvement_intensity_revised_consolidated
+  node_name: Criminal Justice Involvement Intensity
+to_node:
+  node_id: hiv_incidence
+  node_name: HIV Incidence
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Release from incarceration represents a high-risk transition period with disrupted healthcare
+  continuity'
+- 'Step 2: Carceral institutions prioritize behavioral health and acute medical needs over HIV prevention
+  services like PrEP'
+- 'Step 3: Disconnection between carceral institutions and community providers limits linkage to HIV prevention
+  care post-release'
+- 'Step 4: People releasing from incarceration have difficulty accessing PrEP and HIV prevention during
+  this vulnerable period'
+- 'Step 5: Increased HIV acquisition risk during the reentry period'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Emily Callen et al. 2025. "HIV Prevention for People Releasing from Incarceration:
+    A Qualitative Pre-implementation Study.." https://doi.org/10.1007/s11606-025-09895-8'
+  supporting_citations:
+  - Additional citations require full-text access - this is a qualitative implementation study
+  - Prior efforts to expand PrEP access for people releasing from jail or prison mentioned in abstract
+  - Consolidated Framework for Implementation Research referenced as theoretical framework
+  doi: 10.1007/s11606-025-09895-8
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Release from prison or jail is identified as a high-risk time for HIV acquisition. Carceral
+  institutions have PrEP available but do not offer it widely, instead focusing on behavioral health or
+  acute medical needs. The disconnection between carceral institutions and community providers creates
+  barriers to HIV prevention care linkage.
+quantitative_effects:
+  sample_size: 35
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in Washington State; implementation landscape may differ across jurisdictions
+    with varying carceral and community health infrastructure
+moderators:
+- name: substance_use_disorder_treatment_integration
+  direction: weakens
+  strength: moderate
+  description: Integration of HIV prevention into existing substance use disorder treatment programs may
+    reduce barriers by leveraging existing care infrastructure
+- name: carceral_community_coordination
+  direction: weakens
+  strength: moderate
+  description: Closer relationships between carceral institutions and community organizations may improve
+    care coordination and linkage to HIV prevention services
+structural_competency:
+  equity_implications: 'This mechanism traces HIV risk to structural failures in the carceral-to-community
+    healthcare transition rather than individual behavior. The paper identifies five structural themes:
+    primacy of basic needs deprioritizing HIV prevention, lack of funding for prevention programming,
+    cultural/philosophical differences in institutions, disconnection between carceral and community providers,
+    and tensions between confidentiality and care coordination. These are systemic barriers that disproportionately
+    affect incarcerated populations who are already marginalized.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.797405'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

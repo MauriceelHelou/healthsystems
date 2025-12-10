@@ -1,0 +1,53 @@
+id: NEW:acute_care_burden_to_NEW:disability_adjusted_life_years_dalys
+name: Acute Care Burden → Disability-Adjusted Life Years (DALYs)
+from_node:
+  node_id: NEW:acute_care_burden
+  node_name: Acute Care Burden
+to_node:
+  node_id: NEW:disability_adjusted_life_years_dalys
+  node_name: Disability-Adjusted Life Years (DALYs)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Acute conditions (infections, injuries, acute complications) require immediate healthcare intervention'
+- 'Step 2: Acute conditions contribute to both mortality and short-term disability'
+- 'Step 3: Acute care needs account for 27% of global DALYs'
+evidence:
+  quality_rating: A
+  n_studies: 1
+  primary_citation: '2025. "Characterising acute and chronic care needs: insights from the Global Burden
+    of Disease Study 2019.." https://doi.org/10.1038/s41467-025-56910-x'
+  supporting_citations:
+  - GBD 2019 Disease and Injury Incidence and Prevalence Collaborators. Lancet.
+  - GBD 2019 Mortality Collaborators. Lancet.
+  - Additional citations require full-text access
+  doi: 10.1038/s41467-025-56910-x
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Acute conditions requiring short-term care interventions account for approximately 27% of
+  global DALYs, representing the ongoing but minority contribution of acute care needs to global disease
+  burden.
+quantitative_effects:
+  effect_size:
+    value: 27.0
+    type: percentage_change
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Acute care burden likely varies by region and socio-demographic index
+moderators:
+- name: socio_demographic_index
+  direction: strengthens
+  strength: moderate
+  description: Lower SDI regions may have higher acute care burden from infectious diseases and injuries
+structural_competency:
+  equity_implications: While acute care burden is smaller than chronic, it remains significant and is
+    inequitably distributed. Lower-income regions face higher burdens from infectious diseases and injuries,
+    reflecting structural factors including sanitation infrastructure, occupational safety regulations,
+    and access to emergency care. The acute-chronic distinction has important implications for health
+    system resource allocation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.006399'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

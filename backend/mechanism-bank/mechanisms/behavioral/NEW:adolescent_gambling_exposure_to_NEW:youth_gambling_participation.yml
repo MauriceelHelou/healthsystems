@@ -1,0 +1,59 @@
+id: NEW:adolescent_gambling_exposure_to_NEW:youth_gambling_participation
+name: Adolescent Gambling Exposure → Youth Gambling Participation
+from_node:
+  node_id: NEW:adolescent_gambling_exposure
+  node_name: Adolescent Gambling Exposure
+to_node:
+  node_id: NEW:youth_gambling_participation
+  node_name: Youth Gambling Participation
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Gambling products and marketing reach adolescent populations'
+- 'Step 2: Despite age restrictions, adolescents gain access to gambling'
+- 'Step 3: 17.9% of adolescents report past-year gambling participation'
+- 'Step 4: Early gambling initiation may establish patterns for adult gambling behavior'
+evidence:
+  quality_rating: A
+  n_studies: 380
+  primary_citation: 'Lucy T Tran et al. 2024. "The prevalence of gambling and problematic gambling: a
+    systematic review and meta-analysis." https://doi.org/10.1016/S2468-2667(24)00126-9'
+  supporting_citations:
+  - Meta-analysis included both adult and adolescent samples from representative surveys
+  - Few data reported on risk and problematic gambling among adolescent samples specifically
+  - Study noted mean age of 29.72 years across samples with adolescent data available
+  doi: 10.1016/S2468-2667(24)00126-9
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: The review found 17.9% (95% CI 14.8-21.2) of adolescents had gambled in the past 12 months,
+  with limited data on risk and problematic gambling in this age group. This identifies youth gambling
+  as an emerging public health concern requiring attention.
+quantitative_effects:
+  effect_size:
+    value: 17.9
+    type: percentage_change
+    ci_lower: 14.8
+    ci_upper: 21.2
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Adolescent gambling prevalence varies across countries, but limited data availability
+    noted in review
+moderators:
+- name: data_availability
+  direction: weakens
+  strength: moderate
+  description: Few data reported on risk and problematic gambling among adolescents, suggesting potential
+    underestimation of youth gambling harms
+structural_competency:
+  equity_implications: Adolescent gambling participation reflects failures in age verification systems,
+    gambling advertising regulations, and youth protection policies. The structural environment allows
+    gambling exposure among minors despite nominal restrictions, highlighting regulatory gaps.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.171229'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

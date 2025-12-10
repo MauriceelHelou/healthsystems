@@ -1,0 +1,48 @@
+id: alcohol_consumption_to_penetrating_trauma_violence
+name: Alcohol Consumption → Violence-Associated Penetrating Trauma
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: penetrating_trauma_violence
+  node_name: Violence-Associated Penetrating Trauma
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption impairs cognitive function and reduces impulse control'
+- 'Step 2: Impaired judgment increases likelihood of engagement in violent confrontations'
+- 'Step 3: Reduced inhibition escalates conflicts to physical violence involving weapons'
+- 'Step 4: Penetrating injuries occur from knife attacks and broken glass bottles
+  during alcohol-involved violence'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jutta Schürmann et al. 2024. "[Development of violence-associated
+    penetrating trauma in the Düsseldorf metropolitan region over a 5-year period
+    (GewPen study)]." *Die Anaesthesiologie*. https://doi.org/10.1007/s00101-024-01420-6
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.598056'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: temporal_pattern_weekend_nights
+  direction: strengthens
+  strength: strong
+  description: High frequency of rescue missions in nights from Saturday to Sunday
+    between 20:00-04:00, corresponding to peak alcohol consumption periods in nightlife
+    districts
+- name: nightlife_district_location
+  direction: strengthens
+  strength: strong
+  description: Particularly higher frequency in Old Town and City Center districts,
+    areas with concentrated nightlife and alcohol venues
+- name: glass_bottle_availability
+  direction: strengthens
+  strength: moderate
+  description: Broken glass bottles (18%) and broken glasses (6%) used as weapons,
+    suggesting alcohol consumption contexts create weapon availability
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/behavioral/alcohol_consumption_to_penetrating_trauma_violence.yaml
+_category: behavioral

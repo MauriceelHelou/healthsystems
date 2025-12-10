@@ -1,0 +1,52 @@
+id: NEW:primary_care_aud_integration_to_alcohol_use_disorder
+name: Primary Care AUD Treatment Integration → Alcohol Use Disorder
+from_node:
+  node_id: NEW:primary_care_aud_integration
+  node_name: Primary Care AUD Treatment Integration
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Majority of individuals meeting AUD diagnostic criteria do not receive formal treatment'
+- 'Step 2: Primary care represents an accessible point of contact for individuals with AUD'
+- 'Step 3: Integration of AUD pharmacotherapy into primary care increases treatment access'
+- 'Step 4: Enhanced access enables earlier identification and treatment of AUD'
+- 'Step 5: Effective pharmacotherapy reduces AUD severity and complications'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'H. Hagedorn et al. 2022. "Alcohol Use Disorder Pharmacotherapy and Treatment in Primary
+    Care (Adapt-Pc) Trial: Impact on Identified Barriers to Implementation." https://doi.org/10.1080/08897077.2022.2060444'
+  supporting_citations:
+  - Literature on AUD treatment gap cited in background
+  - Primary care integration research
+  - Additional citations require full-text access
+  doi: 10.1080/08897077.2022.2060444
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study is premised on the well-documented gap between AUD prevalence and treatment receipt.
+  Developing AUD treatment options within primary care settings is identified as imperative to increase
+  treatment access. The limited impact of the implementation intervention underscores the challenge of
+  closing this treatment gap even with targeted implementation strategies.
+quantitative_effects:
+  sample_size: 20
+moderators:
+- name: implementation_intervention_success
+  direction: strengthens
+  strength: weak
+  description: Even successful educational implementation had limited impact due to persistent structural
+    barriers
+structural_competency:
+  equity_implications: This mechanism addresses the structural treatment gap in AUD care. The finding
+    that only a minority of individuals with AUD receive treatment reflects healthcare system failures
+    rather than patient resistance to care. The study's focus on primary care integration acknowledges
+    that specialty treatment models create access barriers, particularly for veterans in this VHA context.
+    Structural solutions require redesigning care delivery systems, not just educating providers.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.107600'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

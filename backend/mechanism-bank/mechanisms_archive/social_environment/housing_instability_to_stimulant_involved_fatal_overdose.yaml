@@ -1,0 +1,53 @@
+id: housing_instability_to_stimulant_involved_fatal_overdose
+name: Housing Instability → Stimulant-Involved Fatal Overdose
+from_node:
+  node_id: housing_instability
+  node_name: Housing Instability
+to_node:
+  node_id: stimulant_involved_fatal_overdose
+  node_name: Stimulant-Involved Fatal Overdose
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Housing instability creates chronic stress, environmental chaos, and reduced
+  access to stable healthcare relationships'
+- 'Step 2: Lack of stable housing reduces ability to maintain harm reduction supplies,
+  safe consumption spaces, and medication storage'
+- 'Step 3: Housing instability increases exposure to drug market violence and contaminated
+  drug supply through reliance on survival networks'
+- 'Step 4: Unstable housing reduces likelihood of emergency response when overdose
+  occurs due to consumption in isolated or unsafe locations'
+- 'Step 5: Healthcare systems systematically underdetect housing instability, preventing
+  targeted interventions and increasing overdose mortality risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Daniel R Harris et al. 2024. "Housing instability increases for
+    stimulant-involved overdose deaths after linking surveillance data to electronic
+    health records in Kentucky.." *Drug and alcohol dependence*. https://doi.org/10.1016/j.drugalcdep.2024.112455
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.334890'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: data_linkage_methodology
+  direction: strengthens
+  strength: strong
+  description: Linking surveillance data to EHR increased detected housing instability
+    from 10.5% to 41.5%, revealing a nearly 4-fold undercount in standard surveillance
+    systems. This suggests the true association is much stronger than traditional
+    surveillance suggests.
+- name: safety_net_healthcare_utilization
+  direction: strengthens
+  strength: moderate
+  description: Individuals with stimulant-involved overdoses who accessed safety-net
+    hospitals had higher detected rates of housing instability, indicating that healthcare
+    system contact patterns moderate detection and potentially intervention opportunities
+- name: surveillance_data_source
+  direction: weakens
+  strength: strong
+  description: Reliance on SUDORS definitions alone dramatically undercounted housing
+    instability (10.5% vs 41.5%), weakening observed associations in standard public
+    health surveillance and preventing appropriate resource allocation

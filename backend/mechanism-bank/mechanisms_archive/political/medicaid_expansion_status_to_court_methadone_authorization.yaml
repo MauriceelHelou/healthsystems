@@ -1,0 +1,42 @@
+id: medicaid_expansion_status_to_court_methadone_authorization
+name: State Medicaid Expansion Status → Court Authorization of Methadone
+from_node:
+  node_id: medicaid_expansion_status
+  node_name: State Medicaid Expansion Status
+to_node:
+  node_id: court_methadone_authorization
+  node_name: Court Authorization of Methadone
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Medicaid expansion provides reimbursement for methadone maintenance treatment
+  at licensed opioid treatment programs'
+- 'Step 2: Expanded funding supports operation and accessibility of methadone clinics
+  serving justice-involved populations'
+- 'Step 3: Financial coverage enables court participants to afford daily methadone
+  treatment without out-of-pocket costs'
+- 'Step 4: Courts authorize methadone when sustainable funding mechanisms exist to
+  support long-term treatment adherence'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Fanni Faragó et al. 2022. "Medication-Assisted Treatment in Problem-solving
+    Courts: A National Survey of State and Local Court Coordinators." *Journal of
+    Drug Issues*. https://doi.org/10.1177/00220426221109948'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.644199'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: stigma_toward_methadone
+  direction: weakens
+  strength: strong
+  description: Historical stigma and abstinence-only philosophies in criminal justice
+    may limit methadone authorization even when funding is available
+- name: methadone_clinic_proximity
+  direction: strengthens
+  strength: strong
+  description: Daily dosing requirements for methadone make geographic proximity to
+    licensed clinics critical for feasibility

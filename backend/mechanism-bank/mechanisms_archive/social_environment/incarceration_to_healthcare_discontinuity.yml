@@ -1,0 +1,145 @@
+id: incarceration_to_healthcare_discontinuity
+name: Incarceration → Healthcare Discontinuity
+from_node:
+  node_id: incarceration_exposure
+  node_name: Criminal Legal System Exposure
+  node_type: stock
+to_node:
+  node_id: healthcare_discontinuity
+  node_name: Healthcare Access Discontinuity
+  node_type: stock
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Incarceration removes individuals from community-based healthcare relationships
+  and insurance coverage'
+- 'Step 2: Prison healthcare is often inadequate and not integrated with community
+  systems'
+- 'Step 3: Upon release, immediate gaps occur as Medicaid enrollment takes weeks
+  and employment-based insurance requires job acquisition'
+- 'Step 4: Criminal record creates employment discrimination, limiting access to
+  employer-sponsored insurance'
+- 'Step 5: Housing instability post-release further disrupts care continuity and
+  medication access'
+evidence:
+  quality_rating: B
+  n_studies: 17
+  primary_citation: 'Frank, Joseph W., et al. 2014. "Increased hospital and emergency
+    department utilization by individuals with recent criminal justice involvement:
+    results of a national survey." Journal of General Internal Medicine 29(9): 1226-1233.'
+  supporting_citations:
+  - 'Hawks, Laura C., et al. 2023. "Relationship between criminal legal system exposure
+    and health care utilization in US adults with diabetes." Journal of the National
+    Medical Association 115(2): 194-202.'
+  - 'Binswanger, Ingrid A., et al. 2007. "Release from prison--a high risk of death
+    for former inmates." New England Journal of Medicine 356(2): 157-165.'
+  - 'Hewson, Thomas, et al. 2024. "Interventions for the detection, monitoring, and
+    management of chronic non-communicable diseases in the prison population: an
+    international systematic review." BMC Public Health 24(1): 292.'
+  doi: 10.1007/s11606-014-2877-y
+  journal: Journal of General Internal Medicine
+  year: 2014
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4139534/
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  ed_utilization:
+    value: 1.30
+    type: incidence_rate_ratio
+    ci_lower: 1.17
+    ci_upper: 1.46
+    ci_level: 95
+    comparison: ED visits for diabetes patients with vs. without incarceration history
+    source: Hawks et al. 2023
+  inpatient_utilization:
+    value: 1.23
+    type: incidence_rate_ratio
+    ci_lower: 1.01
+    ci_upper: 1.50
+    ci_level: 95
+    comparison: inpatient stays for diabetes patients with vs. without incarceration
+      history
+  post_release_mortality:
+    value: 3.5
+    type: relative_risk
+    ci_lower: 2.8
+    ci_upper: 4.3
+    ci_level: 95
+    comparison: all-cause mortality weeks 1-2 post-release vs. general population
+    source: Binswanger et al. 2007
+  insurance_gap:
+    description: Medicaid enrollment typically delayed weeks to months post-release;
+      many states terminate rather than suspend during incarceration
+  sample_size: 12686
+  interpretation: Incarceration creates healthcare discontinuity manifesting as 30%
+    higher ED use and 23% higher hospitalization for chronic disease, plus 3.5-fold
+    elevated mortality risk in first two weeks post-release
+last_updated: '2025-11-30'
+version: '1.0'
+description: Incarceration creates healthcare discontinuity through multiple structural
+  mechanisms including insurance termination, disruption of provider relationships,
+  inadequate prison healthcare, and post-release barriers to care. This manifests
+  as elevated ED utilization (IRR 1.30), hospitalization (IRR 1.23), and dramatically
+  elevated mortality risk in the weeks following release (RR 3.5 in first two weeks).
+  Systemic solutions require Medicaid continuity, discharge planning, and reentry
+  healthcare linkage.
+moderators:
+- name: medicaid_policy
+  direction: varies
+  strength: strong
+  description: States that suspend (vs. terminate) Medicaid during incarceration
+    enable faster reactivation
+- name: discharge_planning
+  direction: weakens
+  strength: strong
+  description: Comprehensive discharge planning with healthcare linkage improves
+    post-release continuity
+- name: sentence_length
+  direction: strengthens
+  strength: moderate
+  description: Longer sentences create greater disruption to healthcare relationships
+- name: chronic_disease_burden
+  direction: strengthens
+  strength: strong
+  description: Those with chronic diseases face greater consequences from healthcare
+    discontinuity
+- name: substance_use_disorder
+  direction: strengthens
+  strength: strong
+  description: SUD complicates healthcare continuity and increases post-release mortality
+    risk
+structural_competency:
+  root_cause_level: institutional
+  avoids_victim_blaming: true
+  equity_implications: Healthcare discontinuity from incarceration disproportionately
+    affects Black and low-income communities due to mass incarceration patterns rooted
+    in systemic racism. The healthcare system and criminal legal system are not coordinated,
+    creating preventable gaps in care. Solutions require Medicaid continuity policies,
+    institutional discharge planning, and healthcare system coordination with reentry
+    services.
+assumptions:
+- Healthcare discontinuity includes insurance gaps, provider disruption, and medication
+  access
+- Incarceration includes jail and prison stays of varying duration
+- Post-release period is highest risk for healthcare-related adverse outcomes
+limitations:
+- Selection effects (factors leading to incarceration also affect health)
+- Data on incarceration history often self-reported and underestimated
+- Prison healthcare quality varies substantially across facilities
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Healthcare discontinuity varies by state Medicaid policy, prison
+    healthcare quality, and availability of reentry services.
+  relevant_geographies:
+  - States with Medicaid expansion provide better post-release coverage
+  - States with suspension (vs. termination) policies enable faster coverage
+  - Counties with strong reentry programs show better continuity
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

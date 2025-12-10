@@ -1,0 +1,50 @@
+id: NEW:ip10_cxcl10_levels_to_NEW:malaria_disease_severity
+name: IP-10/CXCL10 Chemokine Levels → Malaria Disease Severity
+from_node:
+  node_id: NEW:ip10_cxcl10_levels
+  node_name: IP-10/CXCL10 Chemokine Levels
+to_node:
+  node_id: NEW:malaria_disease_severity
+  node_name: Malaria Disease Severity
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Plasmodium infection triggers immune response, activating leukocytes including
+  neutrophils, eosinophils, and monocytes'
+- 'Step 2: Activated leukocytes produce and secrete IP-10/CXCL10 chemokine in response
+  to interferon-γ signaling'
+- 'Step 3: Elevated IP-10/CXCL10 recruits CXCR3+ T cells and other immune cells to
+  sites of infection and inflammation'
+- 'Step 4: Excessive IP-10/CXCL10-mediated immune cell recruitment contributes to
+  immunopathology and tissue damage'
+- 'Step 5: Dysregulated inflammatory response leads to increased disease severity,
+  including progression to cerebral malaria and other severe manifestations'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: Manas Kotepui et al. 2024. A systematic review of circulating
+    IP-10/CXCL10 in patients with Plasmodium infections in relation to disease severity.
+    Scientific reports.
+  supporting_citations: []
+description: IP-10/CXCL10, an interferon-γ-induced chemokine produced by activated
+  leukocytes during Plasmodium infection, is elevated in malaria patients compared
+  to healthy controls. Most evidence indicates that increased IP-10 levels are associated
+  with greater disease severity, potentially through excessive immune cell recruitment
+  and inflammatory immunopathology. The chemokine may serve as both a biomarker for
+  disease severity and a mechanistic contributor to severe malaria pathogenesis, particularly
+  in cerebral malaria.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Cerebral malaria status
+  direction: strengthens
+  strength: moderate
+  description: Several studies indicated that IP-10 levels were particularly elevated
+    in cerebral malaria cases, suggesting this severe manifestation may show stronger
+    associations
+- name: Study methodology
+  direction: weakens
+  strength: weak
+  description: A few studies found no significant difference or decreased IP-10 levels
+    in severe vs uncomplicated malaria, indicating methodological heterogeneity affects
+    findings

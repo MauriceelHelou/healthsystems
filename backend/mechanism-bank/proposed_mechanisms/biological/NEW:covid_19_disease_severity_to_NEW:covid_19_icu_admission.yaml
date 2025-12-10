@@ -1,0 +1,65 @@
+id: NEW:covid_19_disease_severity_to_NEW:covid_19_icu_admission
+name: COVID-19 Disease Severity and Mortality → COVID-19 ICU Admission and Death
+from_node:
+  node_id: NEW:covid_19_disease_severity
+  node_name: COVID-19 Disease Severity and Mortality
+to_node:
+  node_id: NEW:covid_19_icu_admission
+  node_name: COVID-19 ICU Admission and Death
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: COVID-19 disease severity progresses through clinical stages (mild, moderate,
+  severe, critical), with accumulating organ system involvement'
+- 'Step 2: Severe cases develop life-threatening complications including acute respiratory
+  distress syndrome (ARDS; 94.17% in critical cases), respiratory failure (90.69%
+  in critical cases), and multi-organ dysfunction'
+- 'Step 3: Respiratory failure dramatically increases risk of ICU admission (OR 105.12),
+  as patients require intensive respiratory support and monitoring'
+- 'Step 4: Critical complications including shock and ARDS represent the highest estimated
+  risk for ICU admission and subsequent mortality'
+- 'Step 5: The presence of comorbidities (especially renal insufficiency with OR 17.43
+  for severe/critical progression) compounds disease severity and accelerates deterioration
+  requiring ICU-level care'
+evidence:
+  quality_rating: A
+  n_studies: 187
+  primary_citation: 'Zhe Chen et al. 2022. Comorbidities and complications of COVID-19
+    associated with disease severity, progression, and mortality in China with centralized
+    isolation and hospitalization: A systematic review and meta-analysis. Frontiers
+    in Public Health.'
+  supporting_citations: []
+description: COVID-19 disease severity is strongly and positively associated with
+  ICU admission and death through a biological cascade of progressive respiratory
+  and multi-organ dysfunction. As disease progresses from mild to critical stages,
+  patients develop increasingly severe complications, with respiratory failure (OR
+  105.12) and ARDS being the strongest predictors of ICU admission. The meta-analysis
+  of 187 studies with 77,013 patients demonstrates that comorbidities and complications
+  are positively associated with increased risk of ICU admission, disease exacerbation,
+  and death during hospitalization.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 105.12
+    type: odds_ratio
+    ci_lower: 49.48
+    ci_upper: 223.33
+  p_value: null
+  sample_size: 77013
+moderators:
+- name: Presence of comorbidities
+  direction: strengthens
+  strength: strong
+  description: Renal insufficiency (OR 17.43), autoimmune disease, nervous system
+    disease, and stroke significantly increase risk of ICU admission
+- name: Development of ARDS
+  direction: strengthens
+  strength: strong
+  description: ARDS represents highest risk for ICU admission and mortality with 94.17%
+    prevalence in critical cases
+- name: Gender
+  direction: strengthens
+  strength: moderate
+  description: Subgroup analysis by gender ratio conducted to address heterogeneity,
+    suggesting gender modifies the severity-ICU relationship

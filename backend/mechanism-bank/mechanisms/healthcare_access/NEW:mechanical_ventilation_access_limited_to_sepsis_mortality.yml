@@ -1,0 +1,63 @@
+id: NEW:mechanical_ventilation_access_limited_to_sepsis_mortality
+name: Limited Access to Mechanical Ventilation → Sepsis Mortality
+from_node:
+  node_id: NEW:mechanical_ventilation_access_limited
+  node_name: Limited Access to Mechanical Ventilation
+to_node:
+  node_id: sepsis_mortality
+  node_name: Sepsis Mortality
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare systems with limited mechanical ventilation capacity cannot provide respiratory
+  support when needed'
+- 'Step 2: Higher volume fluid resuscitation increases risk of pulmonary edema and respiratory failure'
+- 'Step 3: Patients developing respiratory failure from fluid overload cannot receive life-saving ventilatory
+  support'
+- 'Step 4: Inability to manage respiratory complications leads to increased mortality'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'S. Gendreau et al. 2024. "Geo-Economic Influence on the Effect of Fluid Volume for
+    Sepsis Resuscitation: A Meta-Analysis.." https://doi.org/10.1164/rccm.202309-1617OC'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 29 RCTs
+  - Studies with self-reported limited mechanical ventilation access (specific citations in full text)
+  - Studies with adequate mechanical ventilation access (specific citations in full text)
+  doi: 10.1164/rccm.202309-1617OC
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Limited access to mechanical ventilation modifies the effect of fluid resuscitation strategies
+  in sepsis. In settings where mechanical ventilation is restricted, higher fluid volumes significantly
+  increase mortality (OR 1.45), while this effect is attenuated in settings with adequate ventilator access
+  (OR 1.09).
+quantitative_effects:
+  effect_size:
+    value: 1.45
+    type: odds_ratio
+    ci_lower: 1.09
+    ci_upper: 1.93
+  p_value: 0.02
+  sample_size: 11798
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect of higher fluid volume on mortality was significantly increased in settings
+    with self-reported limited access to mechanical ventilation (OR 1.45) compared to settings with adequate
+    access (OR 1.09), p=0.02 for subgroup differences.
+moderators:
+- name: fluid_volume_strategy
+  direction: strengthens
+  strength: strong
+  description: Higher fluid volume strategies amplify the harmful effect of limited ventilation access
+structural_competency:
+  equity_implications: This finding demonstrates how healthcare infrastructure deficits create treatment-related
+    harms. The structural issue is not individual patient or provider behavior, but system-level resource
+    allocation that determines whether complications of treatment can be managed. This has profound implications
+    for global health equity and the transferability of clinical guidelines across different resource
+    settings.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.423766'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

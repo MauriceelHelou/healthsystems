@@ -1,0 +1,57 @@
+id: NEW:long_working_hours_to_binge_drinking
+name: Long Working Hours → New Onset Risky Alcohol Use (Prospective)
+from_node:
+  node_id: NEW:long_working_hours
+  node_name: Long Working Hours
+to_node:
+  node_id: binge_drinking
+  node_name: New Onset Risky Alcohol Use (Prospective)
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Long working hours at baseline create sustained occupational stress exposure'
+- 'Step 2: Chronic stress and time pressure limit adoption of healthy coping strategies'
+- 'Step 3: Over time, workers develop new alcohol use patterns that exceed recommended levels'
+- 'Step 4: Prospective follow-up confirms temporal sequence from exposure to outcome'
+evidence:
+  quality_rating: A
+  n_studies: 20
+  primary_citation: 'M. Virtanen et al. 2015. "Long working hours and alcohol use: systematic review and
+    meta-analysis of published studies and unpublished individual participant data." https://doi.org/10.1136/bmj.g7772'
+  supporting_citations:
+  - Prospective analysis of 20 studies with 100,602 participants from 9 countries
+  - Studies included both published and unpublished individual participant data
+  - Maximum adjusted odds ratios with control for potential confounders
+  doi: 10.1136/bmj.g7772
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Prospective analysis establishes temporal relationship between long working hours and subsequent
+  development of risky alcohol use. The 12% increased odds of new onset risky alcohol use provides stronger
+  causal evidence than cross-sectional data alone, confirming that long working hours precede and predict
+  alcohol misuse.
+quantitative_effects:
+  effect_size:
+    value: 1.12
+    type: odds_ratio
+    ci_lower: 1.04
+    ci_upper: 1.2
+  sample_size: 100602
+moderators:
+- name: baseline_risky_alcohol_prevalence
+  direction: neutral
+  strength: weak
+  description: No difference based on prevalence of risky alcohol use in the cohort
+- name: sample_attrition
+  direction: neutral
+  strength: weak
+  description: No difference by sample attrition rate, suggesting robust findings
+structural_competency:
+  equity_implications: The prospective design strengthens causal inference that work conditions drive
+    health behaviors rather than selection effects. This supports structural interventions targeting workplace
+    policies and labor regulations rather than individual-level health education approaches.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.103717'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,57 @@
+id: alcohol_use_disorder_to_NEW:tuberculosis_treatment_adherence
+name: Alcohol Use Disorder → Tuberculosis Treatment Adherence
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:tuberculosis_treatment_adherence
+  node_name: Tuberculosis Treatment Adherence
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol use disorder impairs cognitive function and decision-making capacity'
+- 'Step 2: AUD creates competing priorities that interfere with complex medication regimens'
+- 'Step 3: Alcohol-related social instability (housing, employment) disrupts healthcare access and appointment
+  adherence'
+- 'Step 4: Potential pharmacological interactions between alcohol and TB medications reduce treatment
+  effectiveness'
+- 'Step 5: Poor compliance leads to treatment failure and worse TB outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 28
+  primary_citation: 'Mogesie Necho et al. 2021. "Prevalence and associated factors for alcohol use disorder
+    among tuberculosis patients: a systematic review and meta-analysis study.." https://doi.org/10.1186/s13011-020-00335-w'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 28 primary studies
+  - Studies examining poor compliance to anti-tuberculosis treatment
+  - Studies on poor tuberculosis treatment outcomes associated with AUD
+  doi: 10.1186/s13011-020-00335-w
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The review establishes that alcohol use disorders in tuberculosis patients are complicated
+  by poor compliance to anti-tuberculosis treatment and poor tuberculosis treatment outcomes. This bidirectional
+  relationship creates a cycle where TB burden increases AUD risk and AUD worsens TB outcomes.
+quantitative_effects:
+  sample_size: 30854
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The relationship between AUD and TB treatment outcomes likely varies by healthcare
+    system capacity for integrated care across different regions
+moderators:
+- name: healthcare_system_integration
+  direction: weakens
+  strength: moderate
+  description: Integrated TB-AUD screening and management programs may mitigate negative effects on treatment
+    adherence
+structural_competency:
+  equity_implications: This mechanism reflects healthcare system failures to integrate mental health/substance
+    use screening into infectious disease care. The structural determinants include fragmented healthcare
+    systems that treat TB and AUD separately, lack of trained personnel for dual diagnosis management,
+    and insufficient resources for comprehensive patient support. The recommendation for early screening
+    and management points to structural interventions rather than individual behavior modification.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.945227'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

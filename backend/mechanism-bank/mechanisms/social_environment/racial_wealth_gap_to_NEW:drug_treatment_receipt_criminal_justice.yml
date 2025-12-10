@@ -1,0 +1,57 @@
+id: racial_wealth_gap_to_NEW:drug_treatment_receipt_criminal_justice
+name: Racial Structural Inequity (African American Status) → Drug Treatment Receipt in Criminal Justice
+  Population
+from_node:
+  node_id: racial_wealth_gap
+  node_name: Racial Structural Inequity (African American Status)
+to_node:
+  node_id: NEW:drug_treatment_receipt_criminal_justice
+  node_name: Drug Treatment Receipt in Criminal Justice Population
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Structural racism creates differential treatment within criminal justice system'
+- 'Step 2: African Americans on probation/parole face systemic barriers to drug treatment access'
+- 'Step 3: These barriers result in 50% lower likelihood of receiving drug treatment compared to White
+  individuals'
+- 'Step 4: Racial disparity persists regardless of criminal justice involvement (also observed in non-supervised
+  population)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Audrey Hang Hai et al. 2025. "Adults on probation and parole who receive substance
+    use treatment: An analysis of correlates in a national sample, 2015-2021.." https://doi.org/10.1016/j.jpsychires.2025.03.035'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references need to address racial disparities
+    in treatment
+  - Additional citations require full-text access - abstract references NSDUH methodology
+  - Additional citations require full-text access - abstract references behavioral health research on
+    criminal justice populations
+  doi: 10.1016/j.jpsychires.2025.03.035
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Being African American is associated with approximately half the likelihood (OR ~0.5) of
+  receiving drug treatment compared to being White, both among those on probation/parole and those not
+  under supervision. This represents a persistent structural inequity in treatment access.
+quantitative_effects:
+  effect_size:
+    value: 0.5
+    type: odds_ratio
+moderators:
+- name: criminal_justice_status
+  direction: strengthens
+  strength: moderate
+  description: Racial disparity present both for those on probation/parole and those not, but criminal
+    justice involvement compounds existing inequities
+structural_competency:
+  equity_implications: This finding demonstrates how structural racism operates within both healthcare
+    and criminal justice systems to produce treatment disparities. The disparity is not explained by criminal
+    justice involvement alone, suggesting deeper systemic barriers. The mechanism avoids individual blame
+    by identifying race as a structural category that shapes institutional treatment, not as an individual
+    characteristic causing differential behavior.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.754788'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

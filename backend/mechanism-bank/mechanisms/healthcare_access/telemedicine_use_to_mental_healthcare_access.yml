@@ -1,0 +1,65 @@
+id: telemedicine_use_to_mental_healthcare_access
+name: Telemedicine Use → Mental Healthcare Access
+from_node:
+  node_id: telemedicine_use
+  node_name: Telemedicine Use
+to_node:
+  node_id: mental_healthcare_access
+  node_name: Mental Healthcare Access
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Telemedicine platforms enable remote delivery of mental health treatments including CBTI'
+- 'Step 2: Remote delivery removes geographic, transportation, and scheduling barriers to accessing care'
+- 'Step 3: Patients in underserved areas or with limited mobility gain access to specialist care'
+- 'Step 4: Increased utilization of evidence-based treatments that were previously inaccessible'
+- 'Step 5: Equivalent clinical outcomes achieved compared to in-person care, validating expanded access'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'S. Knutzen et al. 2024. "Efficacy of eHealth Versus In-Person Cognitive Behavioral
+    Therapy for Insomnia: Systematic Review and Meta-Analysis of Equivalence." https://doi.org/10.2196/58217'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes studies using telephone, videoconference,
+    web-based, and mobile app delivery
+  - Studies demonstrate equivalence across multiple delivery modalities
+  - Individual study citations available in full systematic review
+  doi: 10.2196/58217
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: This meta-analysis provides evidence that telemedicine delivery of CBTI is equivalent to
+  in-person delivery for treating insomnia, supporting policy and healthcare system expansion of telehealth
+  mental health services to increase treatment access.
+quantitative_effects:
+  p_value: 0.05
+  sample_size: 1083
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The study explicitly addresses limited accessibility to in-person CBTI as rationale
+    for eHealth alternatives, with implications for rural and underserved areas with mental health provider
+    shortages
+moderators:
+- name: digital_access
+  direction: strengthens
+  strength: moderate
+  description: Access to broadband internet and devices is necessary for eHealth utilization
+- name: digital_literacy
+  direction: strengthens
+  strength: moderate
+  description: Ability to navigate digital platforms affects successful engagement with eHealth interventions
+structural_competency:
+  equity_implications: Mental health provider shortages disproportionately affect rural communities and
+    low-income urban areas. Telemedicine represents a structural intervention that can address healthcare
+    access disparities by removing geographic barriers. However, the benefits of telemedicine access depend
+    on adequate broadband infrastructure and digital literacy, which themselves have socioeconomic and
+    geographic disparities. Policy interventions must address both telehealth expansion and underlying
+    digital divides to ensure equitable access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.863360'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

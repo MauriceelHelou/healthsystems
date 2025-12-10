@@ -1,0 +1,57 @@
+id: NEW:inpatient_psychiatric_status_to_suicidal_ideation
+name: Inpatient Psychiatric Status → Suicidal Ideation
+from_node:
+  node_id: NEW:inpatient_psychiatric_status
+  node_name: Inpatient Psychiatric Status
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Inpatient psychiatric admission typically occurs for individuals with severe
+  psychiatric symptoms, indicating acute illness severity and crisis states'
+- 'Step 2: Inpatient settings concentrate individuals at highest risk who are experiencing
+  acute psychological distress, hopelessness, and decompensation'
+- 'Step 3: The severity of illness warranting hospitalization is associated with greater
+  symptom burden including suicidal ideation'
+- 'Step 4: Meta-analysis demonstrates that inpatient status is significantly associated
+  with higher point prevalence of suicidal ideation compared to outpatient populations'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'W. Bai et al. 2021. Worldwide prevalence of suicidal ideation
+    and suicide plan among people with schizophrenia: a meta-analysis and systematic
+    review of epidemiological surveys. Translational Psychiatry.'
+  supporting_citations: []
+description: Inpatient psychiatric status is positively associated with suicidal ideation
+  prevalence. This meta-analysis of 26 studies found that source of patients (inpatient
+  vs. outpatient) was significantly associated with point prevalence of suicidal ideation
+  among people with schizophrenia. The lifetime prevalence of suicidal ideation was
+  34.5% and point prevalence was 29.9%, with inpatients showing elevated rates. The
+  association reflects that psychiatric hospitalization captures individuals during
+  periods of acute crisis and severe symptomatology, when suicidal ideation is most
+  likely to be present.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Male proportion was significantly associated with both lifetime and
+    point prevalence of suicidal ideation, with males showing higher rates
+- name: sample_size
+  direction: weakens
+  strength: moderate
+  description: Sample size was significantly associated with point prevalence of suicidal
+    ideation in meta-regression analyses
+- name: survey_time
+  direction: strengthens
+  strength: weak
+  description: Survey time was significantly associated with lifetime prevalence of
+    suicidal ideation
+- name: age
+  direction: weakens
+  strength: weak
+  description: Mean age was significantly associated with lifetime prevalence of suicidal
+    ideation

@@ -1,0 +1,63 @@
+id: precarious_employment_rate_to_serious_psychological_distress
+name: Precarious Employment Rate → Serious Psychological Distress
+from_node:
+  node_id: precarious_employment_rate
+  node_name: Precarious Employment Rate
+to_node:
+  node_id: serious_psychological_distress
+  node_name: Serious Psychological Distress
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Persistent precarious employment creates ongoing uncertainty about employment continuity and
+  income'
+- 'Step 2: Chronic uncertainty triggers sustained psychological stress and anxiety responses'
+- 'Step 3: Irregular schedules and income volatility disrupt sleep, social relationships, and daily routines'
+- 'Step 4: Limited control over work conditions reduces sense of agency and increases hopelessness'
+- 'Step 5: Cumulative psychological burden manifests as clinically significant mental health symptoms'
+evidence:
+  quality_rating: A
+  n_studies: 50
+  primary_citation: Andrew Pulford et al. 2022. "Does persistent precarious employment affect health outcomes
+    among working age adults? A systematic review and meta-analysis." https://doi.org/10.1136/jech-2022-219292
+  supporting_citations:
+  - Additional citations require full-text access - mental health was the most reported outcome domain
+    in the 50 included studies
+  - Meta-analysis included 29 studies with quantitative pooling
+  - GRADE approach used to assess certainty of evidence
+  doi: 10.1136/jech-2022-219292
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Persistent precarious employment is associated with 44% increased odds of mental health symptoms
+  compared to stable employment. Mental health was the most commonly reported outcome domain in this systematic
+  review, suggesting this is a primary pathway through which employment precarity affects health.
+quantitative_effects:
+  effect_size:
+    value: 1.44
+    type: odds_ratio
+    ci_lower: 1.23
+    ci_upper: 1.7
+  heterogeneity_i_squared: 65.0
+moderators:
+- name: duration_of_precarity
+  direction: strengthens
+  strength: moderate
+  description: Persistent precarity (12+ months) was the specific exposure studied, indicating temporal
+    persistence matters
+- name: time_lag_to_outcome
+  direction: strengthens
+  strength: moderate
+  description: Mental health outcomes show stronger associations likely due to shorter time lags between
+    exposure and outcome
+structural_competency:
+  equity_implications: Mental health symptoms are framed as downstream consequences of structural labor
+    market conditions rather than individual vulnerability. The mechanism pathway emphasizes how employment
+    structures create conditions that undermine psychological wellbeing through lack of control, unpredictability,
+    and disrupted social functioning. This appropriately locates the problem in employment arrangements
+    that can be addressed through policy intervention.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.633834'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

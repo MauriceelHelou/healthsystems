@@ -1,0 +1,63 @@
+id: illicit_drug_use_past_month_to_inpatient_admission_rate
+name: Illicit Drug Use → Hospital Admission Rate
+from_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use
+to_node:
+  node_id: inpatient_admission_rate
+  node_name: Hospital Admission Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Illicit drug use (heroin, methamphetamine, crack cocaine, etc.) leads to
+  acute and chronic health complications including overdose, infections, cardiovascular
+  events, and respiratory problems'
+- 'Step 2: Drug injection practices increase risk of bloodborne infections (HIV, hepatitis),
+  injection site infections, and endocarditis requiring hospitalization'
+- 'Step 3: Co-occurring factors among people who use drugs (unstable housing, mental
+  health problems) compound health vulnerability and care-seeking patterns'
+- 'Step 4: Accumulated health problems and acute crises result in hospital admissions
+  at rates approximately 7.1 times higher than the general population'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'D. Lewer et al. 2019. Frequency of health‐care utilization by
+    adults who use illicit drugs: a systematic review and meta‐analysis. Addiction.'
+  supporting_citations: []
+description: People who use illicit drugs are admitted to hospital approximately 7.1
+  times more often than the general population, with a pooled rate of 41 per 100 person-years.
+  This elevated hospitalization rate is driven by direct drug-related complications
+  (overdose, intoxication), indirect health consequences (infections, cardiovascular
+  and respiratory problems), and compounding social vulnerabilities. The association
+  is strongest among those using heroin, methamphetamine, or crack cocaine, and those
+  with drug dependence diagnoses.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 7.1
+    type: rate_ratio
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: unstable_housing
+  direction: strengthens
+  strength: moderate
+  description: Unstable housing consistently predicted higher health-care utilization
+    among people who use drugs
+- name: drug_injection
+  direction: strengthens
+  strength: moderate
+  description: Drug injection was consistently associated with increased hospital
+    admissions
+- name: mental_health_problems
+  direction: strengthens
+  strength: moderate
+  description: Mental health problems consistently predicted higher health-care utilization
+- name: opioid_substitution_therapy
+  direction: weakens
+  strength: moderate
+  description: Opioid substitution therapy was consistently associated with reduced
+    hospital admission rates

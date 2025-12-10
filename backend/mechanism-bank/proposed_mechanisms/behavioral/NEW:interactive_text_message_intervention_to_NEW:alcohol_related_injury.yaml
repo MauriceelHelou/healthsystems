@@ -1,0 +1,54 @@
+id: NEW:interactive_text_message_intervention_to_NEW:alcohol_related_injury
+name: Interactive Text Message Intervention (SMS Assessments + Feedback) → Alcohol-Related
+  Injury Prevalence
+from_node:
+  node_id: NEW:interactive_text_message_intervention
+  node_name: Interactive Text Message Intervention (SMS Assessments + Feedback)
+to_node:
+  node_id: NEW:alcohol_related_injury
+  node_name: Alcohol-Related Injury Prevalence
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Young adults receive weekly Thursday text messages querying weekend drinking
+  plans and prompting commitment to drinking limit goals'
+- 'Step 2: Sunday text messages query actual weekend drinking quantity, providing
+  opportunity for self-reflection and accountability'
+- 'Step 3: Participants receive tailored feedback based on their responses, reinforcing
+  goal-setting and behavioral change'
+- 'Step 4: The intervention reduces binge drinking frequency (IRR 0.69) and drinks
+  per drinking day, lowering overall alcohol consumption'
+- 'Step 5: Reduced alcohol consumption leads to fewer episodes of intoxication and
+  impaired judgment'
+- 'Step 6: Lower rates of intoxication result in decreased prevalence of alcohol-related
+  injuries (OR 0.42)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'B. Suffoletto et al. 2015. An Interactive Text Message Intervention
+    to Reduce Binge Drinking in Young Adults: A Randomized Controlled Trial with 9-Month
+    Outcomes. PLoS ONE.'
+  supporting_citations: []
+description: A 12-week interactive text message intervention combining weekly drinking
+  assessments with tailored feedback significantly reduces alcohol-related injury
+  prevalence in young adults. The intervention prompts goal-setting for weekend drinking
+  limits and provides personalized feedback based on reported consumption, leading
+  to sustained reductions in binge drinking behavior and consequently fewer alcohol-related
+  injuries up to 6 months post-intervention.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.42
+    type: odds_ratio
+    ci_lower: 0.21
+    ci_upper: 0.88
+  p_value: null
+  sample_size: 765
+moderators:
+- name: Intervention component (feedback vs. assessment only)
+  direction: strengthens
+  strength: strong
+  description: SMS Assessment + Feedback group showed significant reductions in alcohol-related
+    injury, while SMS Assessment only group did not differ from controls, indicating
+    that tailored feedback is the active intervention component

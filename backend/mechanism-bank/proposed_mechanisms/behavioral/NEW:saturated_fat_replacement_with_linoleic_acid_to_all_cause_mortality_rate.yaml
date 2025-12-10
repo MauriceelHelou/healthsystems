@@ -1,0 +1,58 @@
+id: NEW:saturated_fat_replacement_with_linoleic_acid_to_all_cause_mortality_rate
+name: Saturated Fat Replacement with Linoleic Acid → All-Cause Mortality
+from_node:
+  node_id: NEW:saturated_fat_replacement_with_linoleic_acid
+  node_name: Saturated Fat Replacement with Linoleic Acid
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Dietary intervention replaces saturated fat with vegetable oils rich in
+  linoleic acid (corn oil, polyunsaturated margarine)'
+- 'Step 2: Serum cholesterol levels significantly decrease (mean reduction ~13.8%
+  vs 1.0% in controls)'
+- 'Step 3: Despite cholesterol reduction, no mortality benefit is observed; instead
+  a 22% higher risk of death is found per 30 mg/dL reduction in serum cholesterol'
+- 'Step 4: No evidence of benefit for coronary atherosclerosis or myocardial infarcts
+  at autopsy, suggesting cholesterol lowering via this mechanism does not translate
+  to cardiovascular benefit'
+- 'Step 5: Potential mechanisms for harm may include oxidative susceptibility of linoleic
+  acid, inflammatory pathways, or other unmeasured effects of high polyunsaturated
+  fat intake'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'Christopher E Ramsden et al. 2016. Re-evaluation of the traditional
+    diet-heart hypothesis: analysis of recovered data from Minnesota Coronary Experiment
+    (1968-73). BMJ (Clinical research ed.)'
+  supporting_citations: []
+description: Replacement of saturated fat with linoleic acid-rich vegetable oils effectively
+  lowers serum cholesterol but does not reduce and may potentially increase all-cause
+  mortality risk. The Minnesota Coronary Experiment and systematic review of 5 RCTs
+  (total n=10,808) found no evidence of mortality benefit despite significant cholesterol
+  reduction. Per-unit cholesterol reduction was paradoxically associated with increased
+  mortality risk (HR 1.22 per 30 mg/dL reduction). This challenges the traditional
+  diet-heart hypothesis and suggests that not all cholesterol-lowering dietary interventions
+  translate to reduced mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.07
+    type: hazard_ratio
+    ci_lower: 0.9
+    ci_upper: 1.27
+  p_value: null
+  sample_size: 10808
+moderators:
+- name: magnitude_of_cholesterol_reduction
+  direction: strengthens
+  strength: moderate
+  description: Greater reductions in serum cholesterol were associated with higher
+    mortality risk (HR 1.22 per 30 mg/dL reduction)
+- name: age
+  direction: strengthens
+  strength: weak
+  description: No mortality benefit observed in any prespecified age subgroup

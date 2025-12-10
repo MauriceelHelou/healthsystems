@@ -1,0 +1,43 @@
+id: surgical_intervention_access_to_mortality_early_hcc
+name: Access to Surgical Intervention → All-Cause Mortality in Early-Stage Hepatocellular
+  Carcinoma
+from_node:
+  node_id: surgical_intervention_access
+  node_name: Access to Surgical Intervention
+to_node:
+  node_id: mortality_early_hcc
+  node_name: All-Cause Mortality in Early-Stage Hepatocellular Carcinoma
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Surgical eligibility creates a structural divide in treatment options available
+  to patients with early-stage hepatocellular carcinoma'
+- 'Step 2: Surgery provides potential for complete tumor removal with curative intent
+  in eligible patients'
+- 'Step 3: Differential access to surgical versus non-surgical interventions creates
+  disparate survival trajectories based on clinical eligibility criteria'
+- 'Step 4: Healthcare system infrastructure determines which patients are deemed surgically
+  eligible, potentially creating structural barriers to optimal treatment'
+evidence:
+  quality_rating: C
+  n_studies: 4
+  primary_citation: 'Avik Majumdar et al. 2017. "Management of people with early-
+    or very early-stage hepatocellular carcinoma: an attempted network meta-analysis.."
+    *The Cochrane database of systematic reviews*. https://doi.org/10.1002/14651858.CD011650.pub2'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.639673'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: cirrhosis_status
+  direction: weakens
+  strength: strong
+  description: Majority of participants had cirrhotic livers which may limit surgical
+    eligibility and outcomes
+- name: portal_hypertension_status
+  direction: weakens
+  strength: moderate
+  description: Portal hypertension status not reported but likely affects surgical
+    candidacy and post-operative complications

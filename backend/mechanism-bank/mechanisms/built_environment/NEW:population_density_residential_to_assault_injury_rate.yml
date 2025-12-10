@@ -1,0 +1,57 @@
+id: NEW:population_density_residential_to_assault_injury_rate
+name: Population Density (Residential) → Assault Injury Rate
+from_node:
+  node_id: NEW:population_density_residential
+  node_name: Population Density (Residential)
+to_node:
+  node_id: assault_injury_rate
+  node_name: Assault Injury Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher population density increases frequency of interpersonal contact and potential conflict
+  situations'
+- 'Step 2: Dense urban environments may amplify heat island effects, compounding thermal stress'
+- 'Step 3: Competition for limited resources and space increases tension'
+- 'Step 4: Crowded conditions reduce privacy and increase friction between residents'
+- 'Step 5: Elevated stress and conflict opportunity manifest as increased assault rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Emil E. Jonescu et al. 2024. "Understanding the impact of urban heat islands on crime:
+    insights from temperature, population density, and green canopy cover." https://doi.org/10.1186/s40163-024-00214-w'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references population demographics in analysis
+  - Additional citations require full-text access - abstract references urban density effects in systematic
+    review
+  - Additional citations require full-text access - abstract references future densification as policy
+    concern
+  doi: 10.1186/s40163-024-00214-w
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Population density shows positive correlation with crime in the analysis. The study examined
+  assault as part of Offences against the Person, with density interacting with temperature and canopy
+  cover.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study notes future densification as relevant planning concern; relationship may vary
+    by urban design quality
+moderators:
+- name: temperature
+  direction: strengthens
+  strength: moderate
+  description: Positive correlation noted between temperature and population density effects on crime
+- name: green_canopy_cover
+  direction: weakens
+  strength: moderate
+  description: Green canopy may buffer negative effects of density on crime
+structural_competency:
+  equity_implications: Urban densification policies must be accompanied by adequate green infrastructure
+    to avoid exacerbating crime. Low-income communities often face densification without corresponding
+    investment in heat mitigation and green space, creating structural vulnerability to violence.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.075166'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

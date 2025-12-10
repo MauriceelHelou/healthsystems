@@ -1,0 +1,68 @@
+id: NEW:dui_enforcement_monitoring_to_NEW:dui_arrest_rate
+name: DUI Enforcement and Monitoring → DUI Arrest Rate
+from_node:
+  node_id: NEW:dui_enforcement_monitoring
+  node_name: DUI Enforcement and Monitoring
+to_node:
+  node_id: NEW:dui_arrest_rate
+  node_name: DUI Arrest Rate
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Law enforcement agencies participate in the FBI Uniform Crime Reporting Program to track DUI
+  arrests'
+- 'Step 2: DUI laws and enforcement policies determine the level of surveillance and enforcement activities'
+- 'Step 3: Arrests reflect both the prevalence of alcohol-impaired driving and enforcement intensity'
+- 'Step 4: Trend monitoring enables assessment of prevention measure effectiveness'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'J. Oluwoye and L.F. Nicolas-Kassama 2021. "Mann-Kendall test for Monotonic Trend
+    Analysis of Driving Under Intoxicated (DUI) Arrests in the United States: 1995-2013." https://doi.org/10.51542/ijscia.v2i5.36'
+  supporting_citations:
+  - Federal Bureau of Investigation, Uniform Crime Reporting Program (UCR), 1995.
+  - Additional citations require full-text access
+  doi: 10.51542/ijscia.v2i5.36
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This study examined trends in DUI arrests in the United States from 1995-2013 using FBI Uniform
+  Crime Reporting data. DUI arrests accounted for 10% of total arrests (14,107,840 individuals). Results
+  showed a 9% decrease in DUI arrests over this period with an average yearly rate change of 1%, though
+  this trend was not statistically significant (Z=-1.77, p=0.076). The study emphasizes the importance
+  of monitoring alcohol-impaired driving trends to evaluate prevention effectiveness.
+quantitative_effects:
+  effect_size:
+    value: -9.0
+    type: percentage_change
+  p_value: 0.076
+  sample_size: 14107840
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Data collected from over 16,000 (1995) to 18,415 (2013) law enforcement agencies across
+    city, university/college, county, state, tribal, and federal jurisdictions, suggesting geographic
+    variation in reporting and enforcement
+moderators:
+- name: law_enforcement_participation
+  direction: strengthens
+  strength: moderate
+  description: Voluntary reporting by law enforcement agencies affects data completeness; increased participation
+    from 16,000 to 18,415 agencies over the study period
+- name: temporal_variation
+  direction: u_shaped
+  strength: moderate
+  description: Highest increase in arrests observed in 1999 (8% increase), highest decrease in 2011 (14%
+    decrease), indicating temporal fluctuations in enforcement or behavior
+structural_competency:
+  equity_implications: This mechanism appropriately focuses on structural factors (law enforcement policies,
+    surveillance systems, prevention measures) rather than individual blame. The study acknowledges that
+    existing data sources should be utilized efficiently for policy planning. The structural approach
+    recognizes that DUI is a public health issue requiring systematic monitoring and policy intervention
+    rather than solely individual-level interventions. However, the study does not address equity implications
+    or differential enforcement patterns by race, class, or geography, which is a limitation from a structural
+    competency perspective.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.605396'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

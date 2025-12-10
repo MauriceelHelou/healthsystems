@@ -1,0 +1,36 @@
+id: male_sex_to_covid19_severity
+name: Male Sex → COVID-19 Severity and Mortality
+from_node:
+  node_id: male_sex
+  node_name: Male Sex
+to_node:
+  node_id: covid19_severity
+  node_name: COVID-19 Severity and Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Male sex is associated with higher androgen levels which may regulate TMPRSS2
+  expression'
+- 'Step 2: TMPRSS2 facilitates SARS-CoV-2 viral entry into cells'
+- 'Step 3: Enhanced viral entry increases viral load and disease severity'
+- 'Step 4: Higher disease severity leads to increased morbidity and mortality'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: 'H. Moravvej et al. 2021. "Androgenetic alopecia and COVID‐19:
+    A review of the hypothetical role of androgens." *Dermatologic Therapy*. https://doi.org/10.1111/dth.15004'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.072666'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: androgenetic_alopecia
+  direction: strengthens
+  strength: moderate
+  description: AGA represents hyperandrogenic state which may further increase COVID-19
+    severity risk
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/male_sex_to_covid19_severity.yaml
+_category: biological

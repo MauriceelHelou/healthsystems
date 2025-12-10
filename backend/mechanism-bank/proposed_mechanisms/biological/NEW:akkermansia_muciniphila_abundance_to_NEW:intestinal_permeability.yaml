@@ -1,0 +1,48 @@
+id: NEW:akkermansia_muciniphila_abundance_to_NEW:intestinal_permeability
+name: Akkermansia muciniphila Gut Abundance → Intestinal Permeability
+from_node:
+  node_id: NEW:akkermansia_muciniphila_abundance
+  node_name: Akkermansia muciniphila Gut Abundance
+to_node:
+  node_id: NEW:intestinal_permeability
+  node_name: Intestinal Permeability
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Akkermansia muciniphila degrades mucin in the intestinal mucosa, which
+  paradoxically stimulates mucus production and turnover'
+- 'Step 2: This mucin degradation activity promotes a healthy mucus layer that serves
+  as a physical barrier protecting the intestinal epithelium'
+- 'Step 3: A. muciniphila produces metabolites and outer membrane proteins (like Amuc_1100)
+  that strengthen tight junctions between intestinal epithelial cells'
+- 'Step 4: Enhanced tight junction integrity and mucus barrier function result in
+  reduced intestinal permeability (decreased ''leaky gut'')'
+- 'Step 5: Reduced intestinal permeability prevents translocation of bacterial products
+  and toxins into systemic circulation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: L. Sparfel et al. 2023. Akkermansia muciniphila and Alcohol-Related
+    Liver Diseases. A Systematic Review. Molecular Nutrition & Food Research
+  supporting_citations: []
+description: Akkermansia muciniphila, a Gram-negative commensal bacterium, modulates
+  intestinal permeability through its mucin-degrading activity in the intestinal mucosa.
+  Higher abundance of A. muciniphila is associated with improved intestinal barrier
+  function and reduced permeability. Conversely, conditions that reduce A. muciniphila
+  (such as chronic alcohol intake, obesity, or metabolic syndromes) are associated
+  with impaired intestinal permeability. Supplementation with A. muciniphila has been
+  shown to improve intestinal barrier integrity.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: ethanol_intake
+  direction: weakens
+  strength: strong
+  description: Over-intake of ethanol induces a decrease of A. muciniphila abundance,
+    which is associated with impaired intestinal permeability
+- name: metabolic_conditions
+  direction: weakens
+  strength: moderate
+  description: Obesity, diabetes, and metabolic syndromes are associated with lower
+    A. muciniphila levels, potentially reducing the protective effect on intestinal
+    barrier

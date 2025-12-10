@@ -1,0 +1,48 @@
+id: NEW:qualified_interpreter_shortage_to_medical_interpreter_unavailability_rate
+name: Qualified Interpreter Shortage → Medical Interpreter Unavailability Rate
+from_node:
+  node_id: NEW:qualified_interpreter_shortage
+  node_name: Qualified Interpreter Shortage
+to_node:
+  node_id: medical_interpreter_unavailability_rate
+  node_name: Medical Interpreter Unavailability Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Limited investment in training and employing qualified medical interpreters restricts supply'
+- 'Step 2: Demand for interpretation services exceeds available interpreter capacity'
+- 'Step 3: Immediate interpretation needs cannot be met during medical encounters'
+- 'Step 4: Healthcare encounters proceed without adequate interpretation support'
+evidence:
+  quality_rating: A
+  n_studies: 21
+  primary_citation: 'Sif Sofie Vange et al. 2023. "Interpreter services for immigrants in European healthcare
+    systems: a systematic review of access barriers and facilitators." https://doi.org/10.1177/14034948231179279'
+  supporting_citations:
+  - Studies published between 1996 and 2021 included in systematic review
+  - 21 original quantitative, qualitative and mixed methods studies assessed
+  - Additional citations require full-text access
+  doi: 10.1177/14034948231179279
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: A limited number of qualified interpreters creates systemic unavailability of interpretation
+  services, particularly for less common languages, creating healthcare access disparities.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Interpreter availability varies by language requested and geographic location within
+    European countries
+moderators:
+- name: Language commonality
+  direction: weakens
+  strength: strong
+  description: More common languages have greater interpreter availability
+structural_competency:
+  equity_implications: Interpreter workforce shortages reflect policy decisions about healthcare system
+    investment priorities. The burden falls disproportionately on immigrant communities speaking less
+    common languages, creating tiered access to quality healthcare based on language group size.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.707682'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

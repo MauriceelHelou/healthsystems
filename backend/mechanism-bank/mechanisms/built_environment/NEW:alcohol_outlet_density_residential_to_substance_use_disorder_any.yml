@@ -1,0 +1,55 @@
+id: NEW:alcohol_outlet_density_residential_to_substance_use_disorder_any
+name: Alcohol Outlet Density in Residential Areas → Substance Use Disorder
+from_node:
+  node_id: NEW:alcohol_outlet_density_residential
+  node_name: Alcohol Outlet Density in Residential Areas
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: High concentration of alcohol outlets in residential neighborhoods increases alcohol accessibility'
+- 'Step 2: Increased physical availability normalizes alcohol consumption in community'
+- 'Step 3: Greater accessibility facilitates problematic alcohol use patterns'
+- 'Step 4: Community members identified need for substance use supports indicating recognition of this
+  pathway'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Matson et al. 2021. "A systems framework depicting how complex neighborhood dynamics
+    and contextual factors could impact the effectiveness of an alcohol outlet zoning policy.." https://doi.org/10.1002/ajcp.12566
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1002/ajcp.12566
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The causal loop diagrams developed by stakeholders implicitly recognize the relationship
+  between alcohol outlet presence and substance use challenges, as community members emphasized the need
+  for additional substance use supports when discussing policy outcomes.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Outlet density effects vary by neighborhood characteristics and existing substance
+    use treatment infrastructure
+moderators:
+- name: substance_use_treatment_availability
+  direction: weakens
+  strength: moderate
+  description: Community members identified need for additional substance use supports, suggesting treatment
+    availability moderates harm
+- name: mental_health_services
+  direction: weakens
+  strength: moderate
+  description: Co-occurring mental health needs identified as important contextual factor
+structural_competency:
+  equity_implications: This mechanism traces substance use challenges to environmental availability rather
+    than individual moral failing. The stakeholder-identified need for substance use supports reflects
+    understanding that removing outlets alone does not address underlying treatment needs in structurally
+    disadvantaged communities. Equity implications include recognition that alcohol outlets are disproportionately
+    concentrated in low-income communities and communities of color.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.464706'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

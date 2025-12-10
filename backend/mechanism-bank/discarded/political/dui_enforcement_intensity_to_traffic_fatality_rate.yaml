@@ -1,0 +1,50 @@
+id: dui_enforcement_intensity_to_traffic_fatality_rate
+name: DUI Enforcement and Policy Intensity → Alcohol-Related Traffic Fatality Rate
+from_node:
+  node_id: dui_enforcement_intensity
+  node_name: DUI Enforcement and Policy Intensity
+to_node:
+  node_id: traffic_fatality_rate
+  node_name: Alcohol-Related Traffic Fatality Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Intensified DUI enforcement policies and social control mechanisms implemented
+  over 30-year period (1985-2015)'
+- 'Step 2: Increased detection, arrest, and prosecution of impaired drivers creates
+  deterrent effect and removes intoxicated drivers from roads'
+- 'Step 3: After stagnation in first decade of 2000s, renewed decline in DUI rates
+  across all sex-by-age groups according to self-reports and traffic fatality data'
+- 'Step 4: Reduced prevalence of alcohol-impaired driving translates to decreased
+  alcohol-related traffic fatalities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Jennifer Schwartz and Lindsey Beltz 2018. "Trends in female and
+    male drunken driving prevalence over thirty years: Triangulating diverse sources
+    of evidence (1985-2015)." *Addictive behaviors*. https://doi.org/10.1016/j.addbeh.2018.03.024'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.230001'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: time_period
+  direction: weakens
+  strength: moderate
+  description: Effectiveness stagnated during first decade of 2000s but resumed decline
+    afterward, suggesting temporal variation in enforcement impact
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Recent declines are steeper for males than females, suggesting differential
+    effectiveness by gender
+- name: age_group
+  direction: u_shaped
+  strength: weak
+  description: Declines observed across all four age groups (18-20, 21-34, 35-49,
+    and 50-64) though magnitude of effect may vary
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/dui_enforcement_intensity_to_traffic_fatality_rate.yaml
+_category: political

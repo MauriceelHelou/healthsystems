@@ -1,0 +1,69 @@
+id: criminal_justice_system_contact_any_revised_to_substance_use_disorder_any
+name: Criminal Justice System Contact → Substance Use Disorder (Any)
+from_node:
+  node_id: criminal_justice_system_contact_any_revised
+  node_name: Criminal Justice System Contact
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Justice-involved young adults experience high rates of substance use disorders due to intersecting
+  risk factors including trauma, socioeconomic disadvantage, and limited access to resources'
+- 'Step 2: Community supervision (probation/parole) maintains ongoing access to substances while imposing
+  structural barriers to treatment'
+- 'Step 3: Justice system involvement creates stigma, documentation requirements, and scheduling conflicts
+  that reduce treatment engagement'
+- 'Step 4: Low treatment engagement perpetuates substance use disorders and associated health consequences'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Anna Harrison et al. 2022. "Using Social Media to Engage Justice-Involved Young Adults
+    in Digital Health Interventions for Substance Use: Pilot Feasibility Survey Study." https://doi.org/10.2196/37609'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not provide specific prior study citations
+  - Background literature on justice-involved populations and substance use referenced but not specifically
+    cited in abstract
+  - Digital health intervention literature referenced but not specifically cited in abstract
+  doi: 10.2196/37609
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Justice system involvement among young adults is associated with high rates of hazardous
+  drug use (57.4%) while simultaneously creating barriers to treatment engagement. The study found 78.6%
+  of justice-involved young adults with substance use issues were not currently participating in treatment.
+quantitative_effects:
+  effect_size:
+    value: 57.4
+    type: percentage_change
+  sample_size: 131
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: National sample recruited indicating geographic variation exists; participants were
+    from across the US with varying justice system structures
+moderators:
+- name: age_group
+  direction: strengthens
+  strength: moderate
+  description: Justice-involved young adults (18-24) have worse treatment outcomes compared to adolescents
+    and older adults, suggesting developmental period moderates the relationship
+- name: supervision_type
+  direction: strengthens
+  strength: moderate
+  description: 54.9% on probation/parole in past year - community supervision maintains substance access
+    while creating treatment barriers
+structural_competency:
+  equity_implications: This mechanism highlights how criminal justice system contact creates structural
+    barriers to healthcare access rather than individual deficits. The focus on community supervision
+    (not incarceration) reveals how punitive approaches maintain substance access while restricting treatment
+    access. The racial diversity of participants (including 20.6% Asian, 17.6% Black, 19.8% Latinx individuals)
+    suggests differential exposure to justice involvement across racial groups.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.776224'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

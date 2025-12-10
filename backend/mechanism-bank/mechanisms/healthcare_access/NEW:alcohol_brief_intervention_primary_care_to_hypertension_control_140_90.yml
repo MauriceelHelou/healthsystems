@@ -1,0 +1,58 @@
+id: NEW:alcohol_brief_intervention_primary_care_to_hypertension_control_140_90
+name: Alcohol Brief Intervention in Primary Care → Hypertension Control (Diastolic Blood Pressure)
+from_node:
+  node_id: NEW:alcohol_brief_intervention_primary_care
+  node_name: Alcohol Brief Intervention in Primary Care
+to_node:
+  node_id: hypertension_control_140_90
+  node_name: Hypertension Control (Diastolic Blood Pressure)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: System-wide alcohol screening identifies hypertensive patients with unhealthy alcohol use patterns'
+- 'Step 2: Brief intervention delivered in primary care setting addresses alcohol consumption'
+- 'Step 3: Reduced alcohol consumption decreases physiological mechanisms contributing to elevated blood
+  pressure (vasoconstrictive effects, sympathetic activation)'
+- 'Step 4: Patients achieve clinically meaningful reduction in diastolic blood pressure (≥3 mm Hg) at
+  18-month follow-up'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'F. Chi et al. 2023. "Associations between alcohol brief intervention in primary care
+    and drinking and health outcomes in adults with hypertension and type 2 diabetes: a population-based
+    observational study." https://doi.org/10.1136/bmjopen-2022-064088'
+  supporting_citations:
+  - Additional citations require full-text access - study examines 18-month health outcomes
+  - Research on alcohol-blood pressure physiological relationships
+  - Evidence for brief intervention effects on cardiovascular outcomes
+  doi: 10.1136/bmjopen-2022-064088
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patients with hypertension who received alcohol brief intervention had higher odds (OR 1.05,
+  95% CI 1.00-1.09) of achieving clinically meaningful reduction in diastolic blood pressure (≥3 mm Hg)
+  at 18-month follow-up.
+quantitative_effects:
+  effect_size:
+    value: 1.05
+    type: odds_ratio
+    ci_lower: 1.0
+    ci_upper: 1.09
+  sample_size: 72979
+moderators:
+- name: baseline_drinking_severity
+  direction: strengthens
+  strength: moderate
+  description: Study included only patients who screened positive for unhealthy alcohol use, suggesting
+    intervention effects may be concentrated among those with elevated baseline consumption
+structural_competency:
+  equity_implications: This mechanism demonstrates how healthcare system infrastructure (routine screening,
+    integrated SBIRT) can produce downstream improvements in chronic disease management. The structural
+    approach of embedding alcohol intervention in primary care addresses the often-siloed nature of substance
+    use and chronic disease treatment, promoting integrated care that addresses social and behavioral
+    determinants within routine medical encounters.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.990633'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

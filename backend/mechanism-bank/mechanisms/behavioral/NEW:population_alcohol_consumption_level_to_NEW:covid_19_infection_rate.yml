@@ -1,0 +1,68 @@
+id: NEW:population_alcohol_consumption_level_to_NEW:covid_19_infection_rate
+name: Population-Level Alcohol Consumption (Per Capita) → COVID-19 Infection Rate
+from_node:
+  node_id: NEW:population_alcohol_consumption_level
+  node_name: Population-Level Alcohol Consumption (Per Capita)
+to_node:
+  node_id: NEW:covid_19_infection_rate
+  node_name: COVID-19 Infection Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Increased alcohol sales at retail outlets lead to higher population-level per capita alcohol
+  consumption'
+- 'Step 2: Alcohol consumption occurs in social settings or leads to impaired judgment about COVID-19
+  precautions'
+- 'Step 3: Reduced adherence to physical distancing, mask-wearing, and other public health measures'
+- 'Step 4: Increased person-to-person contact and viral transmission opportunities'
+- 'Step 5: Higher COVID-19 infection rates observed 2-3 weeks after consumption increase (incubation +
+  reporting lag)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'T. Stockwell et al. 2022. "Alcohol sales in Canadian liquor outlets as a predictor
+    of subsequent COVID‐19 infection rates: a time‐series analysis." https://doi.org/10.1111/add.16011'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not cite specific prior studies
+  - Public Health Agency of Canada (PHAC) COVID-19 surveillance data referenced
+  - Provincial government alcohol distributor sales data (Ontario, British Columbia, Nova Scotia)
+  doi: 10.1111/add.16011
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Population-level per capita alcohol consumption predicted COVID-19 infection rates 2 weeks
+  later, with a 6.34% increase in infections per one drink/week increase in consumption. This relationship
+  reflects how alcohol retail availability and consumption patterns during pandemic restrictions influenced
+  viral transmission dynamics.
+quantitative_effects:
+  effect_size:
+    value: 6.34
+    type: percentage_change
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted across three Canadian provinces (Ontario, British Columbia, Nova Scotia)
+    with combined analysis
+moderators:
+- name: sales_channel_type
+  direction: strengthens
+  strength: strong
+  description: On-premise outlets (bars/restaurants) showed much larger effect sizes (+77.27% per standard
+    drink/person/week at 2 weeks) compared to government liquor stores (+6.49%) or private liquor stores
+    (+7.13%), likely due to social consumption settings
+- name: public_health_measure_stringency
+  direction: strengthens
+  strength: moderate
+  description: Consumption was positively associated with stringency of public health measures, suggesting
+    compensatory drinking behavior during lockdowns
+structural_competency:
+  equity_implications: This mechanism highlights how alcohol policy decisions (expanding home delivery
+    options and trading hours for liquor stores during COVID-19) created conditions for increased consumption.
+    The structural framing avoids individual blame by focusing on population-level consumption patterns
+    shaped by government alcohol distribution policies. The finding that on-premise outlets showed stronger
+    effects than retail stores suggests social environment factors mediate transmission risk.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.116837'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

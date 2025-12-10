@@ -1,0 +1,62 @@
+id: NEW:cannabis_dispensary_proximity_to_illicit_drug_use_past_month
+name: Cannabis Dispensary Proximity (Accessibility) → Illicit Drug Use Past Month
+from_node:
+  node_id: NEW:cannabis_dispensary_proximity
+  node_name: Cannabis Dispensary Proximity (Accessibility)
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use Past Month
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Greater proximity to cannabis dispensaries (shorter distances to nearest outlet) increases
+  spatial accessibility'
+- 'Step 2: Enhanced accessibility reduces time and transportation costs for obtaining cannabis'
+- 'Step 3: Lower barriers facilitate more frequent purchasing opportunities and impulse purchases'
+- 'Step 4: Geographic accessibility enables transition from occasional to daily/near-daily cannabis use
+  patterns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Pamela J Trangenstein et al. 2025. "Measuring the Association Between Cannabis Dispensary
+    Density and Adult Consumption in a Statewide Setting: Does Urbanicity Matter?." https://doi.org/10.26828/cannabis/2025/000235'
+  supporting_citations:
+  - Additional citations require full-text access - study references Privatization of Spirits in Washington
+    Surveys
+  - Additional citations require full-text access - Washington State non-medical cannabis legalization
+    policy context
+  - Additional citations require full-text access - prior studies on outlet proximity and substance use
+  doi: 10.26828/cannabis/2025/000235
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Proximity to cannabis dispensaries (a measure of accessibility) was associated with daily/near-daily
+  cannabis use in Washington State's early non-medical cannabis market. This suggests that spatial accessibility
+  enables higher frequency consumption patterns distinct from the availability-regular use pathway.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Proximity measures detected greater density in urban areas compared to suburban/rural
+    areas. The association between proximity and daily/near-daily use suggests accessibility may be particularly
+    important for high-frequency consumption patterns.
+moderators:
+- name: urbanicity
+  direction: strengthens
+  strength: moderate
+  description: Urban areas have closer proximity to dispensaries, potentially strengthening the accessibility-use
+    relationship in these contexts
+- name: frequency_of_use
+  direction: strengthens
+  strength: moderate
+  description: Proximity was specifically associated with daily/near-daily use rather than monthly/bimonthly
+    use, suggesting accessibility is more relevant for frequent users
+structural_competency:
+  equity_implications: The proximity mechanism highlights how built environment characteristics shape
+    health behaviors through structural accessibility rather than individual predisposition. Policy implications
+    include minimum distance requirements between dispensaries as structural interventions. The differential
+    impact across urban-rural contexts suggests potential equity considerations in how zoning and licensing
+    decisions distribute exposure across communities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.233478'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

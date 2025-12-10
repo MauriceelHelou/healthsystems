@@ -1,0 +1,83 @@
+id: food_desert_to_diet_related_disease
+name: Food Desert Residence -> Diet-Related Chronic Disease
+from_node:
+  node_id: food_desert_residence
+  node_name: Food Desert Residence (Limited Supermarket Access)
+  node_type: stock
+to_node:
+  node_id: diet_related_disease
+  node_name: Diet-Related Chronic Disease
+  node_type: proxy_index
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Neighborhood disinvestment and market forces result in supermarket closures and limited healthy food retail'
+- 'Step 2: Residents rely on convenience stores, fast food, and small grocery stores with limited fresh produce'
+- 'Step 3: Higher prices and lower quality of healthy foods in available outlets reduce healthy food consumption'
+- 'Step 4: Dietary patterns shift toward processed, calorie-dense, nutrient-poor foods'
+- 'Step 5: Long-term dietary patterns increase risk of obesity, diabetes, cardiovascular disease'
+evidence:
+  quality_rating: B
+  n_studies: 49
+  primary_citation: 'Beaulac, Julie, Elizabeth Kristjansson, and Steven Cummins. 2009. "A Systematic Review of Food Deserts, 1966-2007." Preventing Chronic Disease 6(3): A105.'
+  supporting_citations:
+  - 'Walker, Renee E., Christopher R. Keane, and Jessica G. Burke. 2010. "Disparities and access to healthy food in the United States: A review of food deserts literature." Health & Place 16(5): 876-884.'
+  - 'Allcott, Hunt, et al. 2019. "Food Deserts and the Causes of Nutritional Inequality." Quarterly Journal of Economics 134(4): 1793-1844.'
+  doi: 10.5888/pcd6.3.a105
+  journal: Preventing Chronic Disease
+  year: 2009
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 6.2
+    type: percentage_change
+    ci_lower: null
+    ci_upper: null
+    ci_level: null
+  sample_size: null
+  interpretation: "6.2% of US population resides in census tracts classified as food deserts; systematic review of 49 studies found evidence for structural inequalities in food retail environments contributing to diet-related health disparities"
+  additional_effects:
+  - metric: Deprivation amplification
+    value: null
+    type: null
+    notes: "US evidence shows 'deprivation amplification' where food retail problems further disadvantage low-income and minority populations"
+last_updated: '2025-11-30'
+version: '1.0'
+description: Food deserts - areas with limited access to affordable healthy food - contribute to diet-related health disparities through structural barriers to healthy eating. Systematic reviews document that low-income and minority neighborhoods have fewer supermarkets, more fast food outlets, and higher prices for healthy foods. However, research also shows that food access alone is insufficient; relative prices and demand factors also shape dietary behaviors.
+moderators:
+- name: transportation_access
+  direction: strengthens
+  strength: moderate
+  description: Lack of vehicle ownership amplifies food desert effects
+- name: relative_food_prices
+  direction: strengthens
+  strength: strong
+  description: Price differentials between healthy and unhealthy foods compound access effects
+- name: supermarket_intervention
+  direction: weakens
+  strength: weak
+  description: New supermarket openings alone show limited dietary improvement effects
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: Food deserts result from market decisions about where to locate stores, reflecting historical redlining and ongoing neighborhood disinvestment. Low-income and minority neighborhoods are systematically underserved. Policy solutions should address both access (new stores, farmers markets) and affordability (SNAP incentives, subsidies) rather than blaming individual food choices.
+assumptions:
+- Food desert defined by USDA criteria (low access, low income)
+- Diet-related disease includes obesity, diabetes, cardiovascular disease
+- Mechanism operates through retail food environment
+limitations:
+- Supermarket placement alone may not change dietary behavior
+- Demand-side factors (preferences, food culture) also shape diet
+- Food desert definitions vary across studies
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Food desert prevalence varies by urban/rural status and neighborhood demographics
+  relevant_geographies:
+  - Urban food deserts in low-income minority neighborhoods
+  - Rural food deserts with long distances to any grocery store
+  - Tribal areas with limited food retail infrastructure
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: medium
+  prompt_version: 1.0-mvp

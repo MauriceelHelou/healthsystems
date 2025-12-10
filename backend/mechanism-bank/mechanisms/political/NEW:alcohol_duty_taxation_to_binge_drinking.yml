@@ -1,0 +1,55 @@
+id: NEW:alcohol_duty_taxation_to_binge_drinking
+name: Alcohol Duty/Taxation Level → Binge Drinking
+from_node:
+  node_id: NEW:alcohol_duty_taxation
+  node_name: Alcohol Duty/Taxation Level
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Government increases alcohol duties/excise taxes'
+- 'Step 2: Retail prices of alcoholic beverages increase'
+- 'Step 3: Price elasticity of demand leads to reduced alcohol purchases'
+- 'Step 4: Population-level reduction in excessive alcohol consumption including binge drinking'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. Connolly et al. 2019. "Can a policy-induced reduction in alcohol consumption improve
+    health outcomes and stimulate the UK economy?: A potential ''double dividend''." https://doi.org/10.1111/dar.12962'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 'previous UK alcohol impact studies'
+    without specific citations
+  - Input-Output modeling framework studies referenced but not specifically cited in abstract
+  - Health-augmented economic modeling literature referenced but not specifically cited
+  doi: 10.1111/dar.12962
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Increased alcohol taxation reduces alcohol consumption through price mechanisms while generating
+  government revenue that can be reinvested in the economy, producing both health benefits and economic
+  stimulation simultaneously
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focused specifically on UK economy and health system context; findings may vary
+    by country due to different tax structures, healthcare systems, and drinking cultures
+moderators:
+- name: government_revenue_reallocation
+  direction: strengthens
+  strength: strong
+  description: The use of increased tax revenues to stimulate government expenditure strengthens the positive
+    economic effects, creating a 'double dividend' rather than economic trade-off
+structural_competency:
+  equity_implications: This mechanism operates at the population level through fiscal policy rather than
+    targeting individual behavior change. It addresses the structural availability and affordability of
+    alcohol as a root cause of excessive consumption. The policy approach recognizes that individual choices
+    are shaped by price signals and market conditions created by government policy.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.628107'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

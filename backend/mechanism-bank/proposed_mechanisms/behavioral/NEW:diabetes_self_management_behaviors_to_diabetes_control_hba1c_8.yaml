@@ -1,0 +1,53 @@
+id: NEW:diabetes_self_management_behaviors_to_diabetes_control_hba1c_8
+name: Diabetes Self-Management Behaviors → Glycemic Control (HbA1c)
+from_node:
+  node_id: NEW:diabetes_self_management_behaviors
+  node_name: Diabetes Self-Management Behaviors
+to_node:
+  node_id: diabetes_control_hba1c_8
+  node_name: Glycemic Control (HbA1c)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Diabetes self-management behaviors encompass multiple practices including
+  medication adherence, blood glucose monitoring, dietary management, physical activity,
+  and foot care'
+- 'Step 2: Consistent engagement in self-management behaviors leads to better regulation
+  of blood glucose levels through direct physiological effects (diet, exercise, medication)
+  and early detection of glycemic excursions (monitoring)'
+- 'Step 3: Sustained self-management practices over time result in improved glycemic
+  control as measured by lower HbA1c levels, reflecting average blood glucose over
+  2-3 months'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Butayeva J et al. 2023. The impact of health literacy interventions
+    on glycemic control and self‐management outcomes among type 2 diabetes mellitus:
+    A systematic review. Journal of Diabetes.'
+  supporting_citations: []
+description: Diabetes self-management behaviors positively influence glycemic control
+  (HbA1c) through consistent engagement in medication adherence, blood glucose monitoring,
+  dietary management, and physical activity. A systematic review of 15 RCTs demonstrated
+  that improved self-management behaviors lead to reduced HbA1c levels. The relationship
+  is moderated by diabetes duration, intervention setting, and delivery method, with
+  longer disease duration and hospital-based settings showing stronger effects.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: diabetes_duration
+  direction: strengthens
+  strength: moderate
+  description: Self-management interventions yielded better improvement among people
+    with longer diabetes duration (more than 7 years)
+- name: intervention_setting
+  direction: strengthens
+  strength: moderate
+  description: Hospital settings achieved better glycemic control compared to outpatient
+    settings, with large HbA1c reductions possible after 3-month intervention in hospital
+    settings
+- name: intervention_delivery_method
+  direction: strengthens
+  strength: moderate
+  description: Individual and telephone-based interventions improved glycemic control
+    and self-management skills respectively; nurse-led interventions were particularly
+    effective for glycemic control

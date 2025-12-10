@@ -1,0 +1,59 @@
+id: sud_treatment_facility_density_to_sud_treatment_entry_rate
+name: SUD Treatment Facility Density → SUD Treatment Entry Rate
+from_node:
+  node_id: sud_treatment_facility_density
+  node_name: SUD Treatment Facility Density
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Limited availability of AUD/PAU treatment facilities creates geographic barriers to accessing
+  care'
+- 'Step 2: Fragmented service delivery systems require patients to navigate multiple disconnected providers'
+- 'Step 3: Reduced physical accessibility decreases likelihood of treatment initiation and continuation'
+- 'Step 4: Lower treatment entry rates result in untreated alcohol use disorder and problematic alcohol
+  use'
+evidence:
+  quality_rating: C
+  n_studies: 0
+  primary_citation: 'D. Wolfe et al. 2022. "Service-level barriers to and facilitators of access to services
+    for the treatment of alcohol use disorder and problematic alcohol use: protocol for a scoping review."
+    https://doi.org/10.1136/bmjopen-2022-064578'
+  supporting_citations:
+  - Joanna Briggs Institute methodological guidance for scoping reviews (cited in methods)
+  - Additional citations require full-text access
+  doi: 10.1136/bmjopen-2022-064578
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This scoping review protocol aims to identify service-level characteristics affecting access
+  to AUD/PAU treatment. Prior to COVID-19, these services were fragmented and challenging to access. The
+  pandemic exacerbated these barriers, often disrupting treatment while alcohol use rose.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The protocol specifically aims to map barriers and facilitators stratified by service
+    type and key measures of inequity across service users, suggesting geographic and demographic variation
+    in access
+moderators:
+- name: COVID-19 pandemic
+  direction: weakens
+  strength: strong
+  description: The pandemic magnified system weaknesses and resulted in disruptions of treatment services
+- name: virtual_care_availability
+  direction: strengthens
+  strength: moderate
+  description: Virtual care was implemented to offset drops in in-person care, though accessibility was
+    not universal
+structural_competency:
+  equity_implications: This mechanism focuses on system-level and structural barriers to treatment access
+    rather than individual-level factors. The review explicitly examines inequities in service access
+    across different populations, recognizing that structural characteristics of treatment services create
+    differential access. The protocol's focus on provider and patient perspectives aims to identify modifiable
+    service-level factors.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.709862'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

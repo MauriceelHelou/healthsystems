@@ -1,0 +1,57 @@
+id: alcohol_use_disorder_to_unemployment_rate_local
+name: Alcohol Use Disorder → Unemployment Rate
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: unemployment_rate_local
+  node_name: Unemployment Rate
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Alcohol use disorder leads to functional impairment affecting work capacity and reliability'
+- 'Step 2: Stigma and discrimination in hiring practices create barriers to employment for individuals
+  with AUD history'
+- 'Step 3: Existing employment support in addiction treatment programs is ineffective at addressing vocational
+  needs'
+- 'Step 4: Prolonged unemployment (6+ months) becomes entrenched, creating additional barriers to labor
+  market re-entry'
+- 'Step 5: High prevalence of unemployment among AUD populations perpetuates economic disadvantage'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: John Marsden et al. 2020. "Protocol for a multi-centre, definitive randomised controlled
+    trial of the effectiveness of Individual Placement and Support for employment support among people
+    with alcohol and drug dependence." https://doi.org/10.1186/s13063-020-4099-4
+  supporting_citations:
+  - Background literature on high unemployment prevalence in populations with alcohol and drug dependence
+    (referenced but specific citations require full-text access)
+  - Evidence that employment support in addiction-treatment programmes is ineffective (referenced but
+    specific citations require full-text access)
+  - Additional citations require full-text access
+  doi: 10.1186/s13063-020-4099-4
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: The abstract establishes that unemployment is highly prevalent among populations with alcohol
+  and drug dependence, and that current employment support offered in addiction treatment programs is
+  ineffective, creating a structural barrier to economic participation.
+moderators:
+- name: treatment_engagement
+  direction: weakens
+  strength: moderate
+  description: Enrollment in ongoing community treatment may mitigate unemployment through structured
+    support
+structural_competency:
+  equity_implications: This mechanism highlights how the failure of healthcare and social systems to provide
+    effective employment support perpetuates unemployment among people with substance use disorders. The
+    problem is not individual motivation but systemic inadequacy of vocational services. This structural
+    gap creates and maintains economic inequality affecting a vulnerable population.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.906248'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

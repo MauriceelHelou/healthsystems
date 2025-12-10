@@ -1,0 +1,40 @@
+id: housing_instability_to_unmet_healthcare_needs
+name: Housing Instability → Unmet Healthcare Needs for Mental Health and Substance
+  Use
+from_node:
+  node_id: housing_instability
+  node_name: Housing Instability
+to_node:
+  node_id: unmet_healthcare_needs
+  node_name: Unmet Healthcare Needs for Mental Health and Substance Use
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Housing instability disrupts continuity of care by creating frequent changes
+  in location and loss of connection to healthcare providers'
+- 'Step 2: Lack of stable housing reduces ability to store medications, attend appointments,
+  and maintain treatment regimens for mental health and substance use issues'
+- 'Step 3: Housing instability increases exposure to structural barriers including
+  lack of transportation, inability to receive mail/appointment reminders, and competing
+  survival needs that take priority over healthcare'
+- 'Step 4: Accumulated barriers result in inability to access needed mental health
+  and substance use services, creating unmet healthcare needs'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Elaine Hyshka et al. 2017. "Perceived unmet need and barriers
+    to care amongst street-involved people who use illicit drugs.." *Drug and alcohol
+    review*. https://doi.org/10.1111/dar.12427
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.344331'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: drug_dependence_severity
+  direction: strengthens
+  strength: moderate
+  description: Participants meeting criteria for drug dependence had additional elevated
+    odds of unmet needs (aOR=1.22), suggesting drug dependence compounds the effect
+    of housing instability on unmet healthcare needs

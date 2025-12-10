@@ -1,0 +1,58 @@
+id: NEW:primary_healthcare_tb_control_capacity_to_NEW:tb_case_management_rate
+name: Primary Healthcare TB Control Capacity → TB Case Management Rate
+from_node:
+  node_id: NEW:primary_healthcare_tb_control_capacity
+  node_name: Primary Healthcare TB Control Capacity
+to_node:
+  node_id: NEW:tb_case_management_rate
+  node_name: TB Case Management Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary healthcare (PHC) sectors serve as first point of contact for TB control in communities
+  under integrated TB control model'
+- 'Step 2: PHC sectors with adequate capacity can effectively trace patients and provide case management
+  services'
+- 'Step 3: Regional economic development affects PHC infrastructure and staffing levels'
+- 'Step 4: Higher capacity PHC sectors achieve better TB case management rates and patient follow-up'
+evidence:
+  quality_rating: A
+  n_studies: 43
+  primary_citation: 'Xi Chen et al. 2024. "Challenge of ending TB in China: tuberculosis control in primary
+    healthcare sectors under integrated TB control model–a systematic review and meta-analysis." https://doi.org/10.1186/s12889-023-16292-5'
+  supporting_citations:
+  - Studies from 16 provinces/municipalities in China included in systematic review
+  - 9 studies reporting factors related to TB control service in PHC sectors
+  - Additional citations require full-text access for specific study identification
+  doi: 10.1186/s12889-023-16292-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Primary healthcare sector capacity for TB control, including patient tracing and case management,
+  is strongly influenced by regional development, with East China outperforming West China in TB control
+  service delivery.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: East China delivers TB control service better overall than West China, with both pooled
+    arrival rate of tracing and pooled TCM rate higher in East China than West China
+moderators:
+- name: regional_economic_development
+  direction: strengthens
+  strength: strong
+  description: East China (more economically developed) has significantly better TB control services compared
+    to West China
+- name: patient_context_characteristics
+  direction: weakens
+  strength: moderate
+  description: 6 studies identified patient characteristics as associated factors affecting TB control
+    service delivery
+structural_competency:
+  equity_implications: This mechanism highlights structural inequities between regions in China, where
+    economic development disparities translate into healthcare infrastructure gaps. The focus on PHC sector
+    capacity rather than individual patient behaviors appropriately frames TB control as a systems-level
+    challenge requiring structural investment rather than individual blame.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.870607'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

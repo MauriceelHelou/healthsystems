@@ -1,0 +1,46 @@
+id: chronic_pancreatitis_to_osteopenia
+name: Chronic Pancreatitis → Osteopenia
+from_node:
+  node_id: chronic_pancreatitis
+  node_name: Chronic Pancreatitis
+to_node:
+  node_id: osteopenia
+  node_name: Osteopenia
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic inflammation and fibrosis of pancreatic tissue reduces digestive
+  enzyme production'
+- 'Step 2: Enzyme deficiency causes maldigestion and malabsorption of macronutrients
+  and micronutrients'
+- 'Step 3: Chronic malnutrition and vitamin deficiencies lead to negative calcium
+  balance'
+- 'Step 4: Progressive bone mineral loss results in osteopenia as precursor to osteoporosis'
+evidence:
+  quality_rating: B
+  n_studies: 17
+  primary_citation: 'Daryl Ramai et al. 2023. "Prevalence of Osteopathy in Chronic
+    Pancreatitis: A Systematic Review and Meta-Analysis.." *Clinical and translational
+    gastroenterology*. https://doi.org/10.14309/ctg.0000000000000623'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.236314'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: low_body_mass_index
+  direction: strengthens
+  strength: strong
+  description: Low BMI reflects severity of malnutrition and predicts greater bone
+    mineral loss
+- name: female_sex
+  direction: strengthens
+  strength: moderate
+  description: Female sex associated with higher risk of osteopenia due to baseline
+    bone density differences
+- name: older_age
+  direction: strengthens
+  strength: moderate
+  description: Age-related bone loss compounds malabsorption-induced bone mineral
+    density reduction

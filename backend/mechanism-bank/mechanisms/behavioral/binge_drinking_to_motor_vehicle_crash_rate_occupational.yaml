@@ -1,0 +1,56 @@
+id: binge_drinking_to_motor_vehicle_crash_rate_occupational
+name: Binge Drinking → Motor Vehicle Crash Rate Occupational
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: motor_vehicle_crash_rate_occupational
+  node_name: Motor Vehicle Crash Rate Occupational
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Binge drinking patterns develop among occupational drivers (19% prevalence
+  among truck drivers), often as a coping mechanism for job-related stress, irregular
+  schedules, and time away from home'
+- 'Step 2: Acute alcohol intoxication or residual effects from recent binge episodes
+  impair psychomotor function, reaction time, judgment, and vigilance during vehicle
+  operation'
+- 'Step 3: Impaired driving performance increases risk of traffic accidents during
+  occupational duties, contributing to elevated motor vehicle crash rates in commercial
+  driving populations'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: 'Bragazzi et al. 2018. Patterns of Harmful Alcohol Consumption
+    among Truck Drivers: Implications for Occupational Health and Work Safety from
+    a Systematic Review and Meta-Analysis. International Journal of Environmental
+    Research and Public Health.'
+  supporting_citations: []
+description: Binge drinking among occupational drivers, particularly truck drivers,
+  is a significant risk factor for traffic accidents during work. A systematic review
+  and meta-analysis found 19% prevalence of binge drinking among truck drivers, with
+  alcohol use during driving activities identified as an important risk factor for
+  motor vehicle crashes. The pathway operates through acute impairment of driving
+  performance and judgment, with additional risk from patterns of everyday drinking
+  (9.4%) and alcohol misuse disorders (22.7%).
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.19
+    type: prevalence
+    ci_lower: 0.131
+    ci_upper: 0.269
+  p_value: null
+  sample_size: null
+moderators:
+- name: alcohol_use_severity
+  direction: strengthens
+  strength: strong
+  description: Higher severity patterns (everyday drinking at 9.4%, AUDIT/CAGE positive
+    at 22.7%) associated with greater occupational risk
+- name: occupational_category
+  direction: strengthens
+  strength: moderate
+  description: Truck drivers identified as high-risk occupational category due to
+    job-specific stressors and work conditions

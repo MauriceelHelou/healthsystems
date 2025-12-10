@@ -1,0 +1,55 @@
+id: alcohol_use_disorder_to_NEW:malnutrition_ald
+name: Alcohol Use Disorder → Malnutrition in Alcoholic Liver Disease
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:malnutrition_ald
+  node_name: Malnutrition in Alcoholic Liver Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption leads to inadequate dietary intake due to alcohol
+  replacing nutrient-dense foods and appetite suppression'
+- 'Step 2: Ethanol damages the gastrointestinal mucosa and impairs nutrient absorption
+  and digestion, particularly affecting vitamins and trace elements'
+- 'Step 3: Alcohol disrupts normal lipid metabolism and increases skeletal and visceral
+  protein catabolism, leading to muscle wasting'
+- 'Step 4: Progressive liver damage from alcohol impairs the liver''s metabolic and
+  synthetic functions, exacerbating nutritional deficiencies'
+- 'Step 5: As ALD progresses to cirrhosis, protein-energy malnutrition and sarcopenia
+  develop, worsening patient prognosis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Tomoko Tadokoro et al. 2023. Nutritional Support for Alcoholic
+    Liver Disease. Nutrients.
+  supporting_citations: []
+description: Alcohol use disorder leads to malnutrition in alcoholic liver disease
+  through a complex, multifactorial etiology. The mechanisms include inadequate dietary
+  intake due to alcohol substituting for nutritious foods, impaired gastrointestinal
+  absorption and digestion caused by mucosal damage, increased protein catabolism
+  in skeletal and visceral tissues, and abnormal interactions between ethanol and
+  lipid metabolism. These factors combine to cause deficiencies in macronutrients,
+  vitamins, and trace elements. As liver disease progresses, malnutrition worsens
+  and is associated with poorer prognosis, complications such as ascites and hepatic
+  encephalopathy, and development of sarcopenia.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Disease stage
+  direction: strengthens
+  strength: strong
+  description: Malnutrition severity increases as ALD progresses from early stages
+    to cirrhosis, with protein-energy malnutrition and sarcopenia becoming common
+    complications
+- name: Metabolic syndrome comorbidity
+  direction: u_shaped
+  strength: moderate
+  description: Patients with ALD and metabolic syndrome may present with overnutrition
+    rather than undernutrition, requiring individualized nutritional assessment
+- name: Vitamin and trace element deficiency
+  direction: strengthens
+  strength: moderate
+  description: Deficiencies in vitamins and trace elements increase likelihood of
+    anemia and altered cognitive status, compounding malnutrition effects

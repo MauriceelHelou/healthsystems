@@ -1,0 +1,54 @@
+id: criminal_justice_system_contact_any_revised_to_NEW:complex_service_needs_population
+name: Criminal Justice System Contact (Probation/Parole) → Complex Service Needs Population Concentration
+from_node:
+  node_id: criminal_justice_system_contact_any_revised
+  node_name: Criminal Justice System Contact (Probation/Parole)
+to_node:
+  node_id: NEW:complex_service_needs_population
+  node_name: Complex Service Needs Population Concentration
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Criminal justice supervision concentrates individuals with multiple social disadvantages'
+- 'Step 2: Population is disproportionately male, low-income, and people of color'
+- 'Step 3: These structural disadvantages create complex, intersecting service needs'
+- 'Step 4: Multiple disadvantages compound to produce poor health outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Audrey Hang Hai et al. 2025. "Adults on probation and parole who receive substance
+    use treatment: An analysis of correlates in a national sample, 2015-2021.." https://doi.org/10.1016/j.jpsychires.2025.03.035'
+  supporting_citations:
+  - Additional citations require full-text access - abstract describes population characteristics
+  - Additional citations require full-text access - abstract references poor health outcomes
+  - Additional citations require full-text access - abstract references complex service needs
+  doi: 10.1016/j.jpsychires.2025.03.035
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Probation and parole populations concentrate individuals with intersecting structural disadvantages
+  including male gender, low income, and racial minority status, creating populations with complex service
+  needs and poor health outcomes.
+moderators:
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Population tends to be male
+- name: income
+  direction: strengthens
+  strength: strong
+  description: Population is disproportionately low-income
+- name: race_ethnicity
+  direction: strengthens
+  strength: strong
+  description: Population is disproportionately people of color
+structural_competency:
+  equity_implications: This mechanism identifies how criminal justice involvement serves as a structural
+    sorting mechanism that concentrates social disadvantage. Rather than viewing these characteristics
+    as individual risk factors, this framing recognizes them as products of structural inequities (racism,
+    poverty, gender-based policing) that funnel certain populations into criminal justice supervision.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.756943'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

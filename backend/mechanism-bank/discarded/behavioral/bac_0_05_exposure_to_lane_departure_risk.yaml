@@ -1,0 +1,43 @@
+id: bac_0_05_exposure_to_lane_departure_risk
+name: Exposure to Drivers at 0.05% BAC → Lane Departure Events
+from_node:
+  node_id: bac_0_05_exposure
+  node_name: Exposure to Drivers at 0.05% BAC
+to_node:
+  node_id: lane_departure_risk
+  node_name: Lane Departure Events
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol at 0.05% BAC impairs psychomotor control and visual attention'
+- 'Step 2: Impaired drivers show increased variability in lateral lane position control'
+- 'Step 3: While lane departure frequency at 0.05% did not significantly differ from
+  placebo in this study, variability in lane keeping increased'
+- 'Step 4: Increased lane keeping variability creates conditions for lane departure
+  events, particularly in complex urban environments'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: T. Brown et al. 2018. "Effects of alcohol at 0.05% blood alcohol
+    concentration (BAC) on low speed urban driving." *Traffic Injury Prevention*.
+    https://doi.org/10.1080/15389588.2018.1532220
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.518608'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: road_complexity
+  direction: strengthens
+  strength: moderate
+  description: Urban environments with more complex road geometry and traffic patterns
+    may amplify impairment effects
+- name: bac_progression
+  direction: strengthens
+  strength: strong
+  description: At 0.10% BAC, lane departure frequency significantly increased compared
+    to both placebo and 0.05% BAC
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/behavioral/bac_0_05_exposure_to_lane_departure_risk.yaml
+_category: behavioral

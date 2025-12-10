@@ -1,0 +1,54 @@
+id: poverty_rate_to_NEW:alcohol_brief_intervention_receipt
+name: Poverty Rate → Alcohol Brief Intervention Receipt
+from_node:
+  node_id: poverty_rate
+  node_name: Poverty Rate
+to_node:
+  node_id: NEW:alcohol_brief_intervention_receipt
+  node_name: Alcohol Brief Intervention Receipt
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Low-income communities face resource constraints affecting healthcare infrastructure'
+- 'Step 2: Primary care practices in low-income areas may have fewer resources for preventive services'
+- 'Step 3: Without targeted interventions like REACH, alcohol brief interventions remain underdelivered'
+- 'Step 4: Structural intervention programs can address this gap by providing additional resources and
+  training'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'E. Sturgiss et al. 2023. "Multifaceted intervention to increase the delivery of alcohol
+    brief interventions in primary care: a mixed-methods process analysis." https://doi.org/10.3399/BJGP.2022.0613'
+  supporting_citations:
+  - Additional citations require full-text access - study design targeted low-income communities
+  - Additional citations require full-text access - abstract references healthcare delivery challenges
+  - Additional citations require full-text access - abstract references implementation barriers
+  doi: 10.3399/BJGP.2022.0613
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study explicitly focused on general practice clinics serving low-income communities,
+  recognizing that these populations face barriers to receiving evidence-based alcohol interventions.
+  The REACH intervention was designed to address these structural barriers by providing additional implementation
+  support.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study specifically targeted general practice clinics serving low-income communities
+    in Melbourne, Australia
+moderators:
+- name: targeted_intervention_programs
+  direction: strengthens
+  strength: moderate
+  description: Implementation of REACH program can mitigate the negative relationship between poverty
+    and healthcare access
+structural_competency:
+  equity_implications: This mechanism explicitly addresses health equity by targeting intervention resources
+    to low-income communities. Rather than attributing alcohol-related health disparities to individual
+    choices, the study recognizes that structural factors including resource availability in healthcare
+    settings create differential access to preventive interventions. The focus on implementation factors
+    acknowledges that healthcare system capacity, not patient behavior, is the primary barrier.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.963239'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

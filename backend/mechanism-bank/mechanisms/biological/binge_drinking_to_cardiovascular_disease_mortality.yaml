@@ -1,0 +1,57 @@
+id: binge_drinking_to_cardiovascular_disease_mortality
+name: Volume of Alcohol Use → Cardiovascular Disease Mortality
+from_node:
+  node_id: binge_drinking
+  node_name: Volume of Alcohol Use
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Heavy drinking occasions (binge drinking) lead to acute physiological stress
+  on the cardiovascular system, including blood pressure spikes and cardiac arrhythmias'
+- 'Step 2: Repeated binge drinking episodes cause cumulative damage through oxidative
+  stress, inflammation, and lipid metabolism disruption'
+- 'Step 3: These biological insults promote atherosclerosis, cardiomyopathy, and increased
+  thrombotic risk'
+- 'Step 4: Progressive cardiovascular damage increases vulnerability to acute cardiac
+  events including myocardial infarction and stroke'
+- 'Step 5: Elevated risk of fatal cardiovascular events, particularly in those with
+  underlying cardiovascular disease'
+evidence:
+  quality_rating: A
+  n_studies: 255
+  primary_citation: Jürgen Rehm et al. 2017. The relationship between different dimensions
+    of alcohol use and the burden of disease-an update. Addiction (Abingdon, England)
+  supporting_citations: []
+description: This systematic review of 255 reviews and meta-analyses establishes that
+  alcohol use, particularly patterns involving heavy drinking occasions (binge drinking),
+  is causally linked to cardiovascular disease mortality. While most partially attributable
+  disease categories show monotonic dose-response relationships (more alcohol = higher
+  risk), ischaemic heart disease shows a more complex curvilinear relationship where
+  potential cardioprotective effects of light-moderate drinking are eliminated by
+  irregular heavy drinking occasions. Biological pathways suggest that heavy drinking
+  occasions impose acute cardiovascular stress through mechanisms including hypertension,
+  arrhythmias, and prothrombotic states, with cumulative damage leading to increased
+  mortality risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: pattern_of_drinking
+  direction: strengthens
+  strength: strong
+  description: Heavy drinking occasions significantly modify the relationship, with
+    irregular heavy drinking eliminating potential cardioprotective effects seen with
+    light-moderate regular consumption
+- name: baseline_cardiovascular_risk
+  direction: strengthens
+  strength: moderate
+  description: Individuals with pre-existing cardiovascular conditions or risk factors
+    may experience amplified harmful effects from binge drinking
+- name: volume_of_consumption
+  direction: u_shaped
+  strength: moderate
+  description: For ischaemic diseases specifically, light-moderate drinking without
+    heavy drinking occasions may show curvilinear protective effects, but this is
+    negated by binge drinking patterns

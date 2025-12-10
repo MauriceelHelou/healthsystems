@@ -1,0 +1,62 @@
+id: NEW:nonalcoholic_fatty_liver_disease_nafld_to_cardiovascular_disease_mortality
+name: Nonalcoholic Fatty Liver Disease (NAFLD) → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:nonalcoholic_fatty_liver_disease_nafld
+  node_name: Nonalcoholic Fatty Liver Disease (NAFLD)
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: NAFLD leads to hepatic insulin resistance and systemic metabolic dysfunction,
+  promoting atherogenic dyslipidemia and chronic low-grade inflammation'
+- 'Step 2: Liver-derived inflammatory mediators (cytokines, hepatokines) and procoagulant
+  factors enter systemic circulation, promoting endothelial dysfunction and accelerated
+  atherosclerosis'
+- 'Step 3: High prevalence of comorbid metabolic syndrome (41.73%), cardiovascular
+  disease (16.83%), hypertension, dyslipidemia, and diabetes in NAFLD patients compounds
+  cardiovascular risk'
+- 'Step 4: Progressive cardiovascular damage leads to increased incidence of cardiovascular
+  events (24.77 per 1,000 person-years) and ultimately CVD-related mortality (4.53
+  per 1,000 person-years)'
+evidence:
+  quality_rating: A
+  n_studies: 79
+  primary_citation: 'M. Le et al. 2024. Global incidence of adverse clinical events
+    in non-alcoholic fatty liver disease: A systematic review and meta-analysis. Clinical
+    and Molecular Hepatology.'
+  supporting_citations: []
+description: NAFLD is associated with increased cardiovascular disease mortality through
+  multiple interconnected biological pathways. The meta-analysis of 79 studies (1,377,466
+  persons) found CVD-related mortality incidence of 4.53 per 1,000 person-years in
+  NAFLD patients. The mechanism involves hepatic metabolic dysfunction driving systemic
+  inflammation, atherogenic lipid profiles, and insulin resistance. High baseline
+  prevalence of metabolic comorbidities in NAFLD populations (metabolic syndrome 41.73%,
+  CVD 16.83%) indicates shared pathophysiology and cumulative cardiovascular risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 4.53
+    type: incidence_rate_per_1000_person_years
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 1377466
+moderators:
+- name: geographic_region
+  direction: strengthens
+  strength: moderate
+  description: North America and Europe show higher CVD mortality rates compared to
+    other regions
+- name: time_period
+  direction: weakens
+  strength: moderate
+  description: Time-period analyses showed decreasing rates of cardiovascular mortality
+    over recent periods (P<0.05), possibly due to improved CVD management
+- name: NASH_status
+  direction: strengthens
+  strength: weak
+  description: Biopsy-proven NASH associated with higher incidence of liver-related
+    complications; relationship to CVD mortality not significantly different

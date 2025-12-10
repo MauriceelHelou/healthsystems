@@ -1,0 +1,67 @@
+id: NEW:natural_gas_price_to_NEW:natural_gas_consumption
+name: Natural Gas Price → Natural Gas Consumption
+from_node:
+  node_id: NEW:natural_gas_price
+  node_name: Natural Gas Price
+to_node:
+  node_id: NEW:natural_gas_consumption
+  node_name: Natural Gas Consumption
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Natural gas prices increase in the market'
+- 'Step 2: Higher prices increase household and industrial energy costs'
+- 'Step 3: Consumers reduce natural gas consumption in the short-term due to price sensitivity (elasticity
+  -1.521)'
+- 'Step 4: Reduced natural gas use may lead to substitution with alternative fuels or energy conservation'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Jian Chai et al. 2018. "The Price Elasticity of Natural Gas Demand in China: A Meta-Regression
+    Analysis." https://doi.org/10.3390/EN11123255'
+  supporting_citations:
+  - Additional citations require full-text access - meta-regression synthesizes multiple empirical studies
+    on price elasticity
+  - Studies included examine various data types, sample periods, and geographical regions in China
+  - Primary studies analyzed using Fixed-effects model and OLS regression approaches
+  doi: 10.3390/EN11123255
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This meta-regression analysis finds that natural gas consumption in China responds negatively
+  to own-price changes in the short-term, with a mean elasticity of -1.521, indicating elastic demand.
+  In the long-run, the elasticity becomes positive (0.410), suggesting complex adjustment dynamics over
+  time.
+quantitative_effects:
+  effect_size:
+    value: -1.521
+    type: beta_coefficient
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The paper explicitly notes that heterogeneity in estimates can be explained by geographical
+    region, type of data, sample period, models of analysis, and type of consumer.
+moderators:
+- name: time_horizon
+  direction: weakens
+  strength: strong
+  description: Long-run own-price elasticity (0.410) differs substantially from short-run elasticity (-1.521),
+    indicating consumers adapt over time
+- name: geographical_region
+  direction: strengthens
+  strength: moderate
+  description: Geographic region explains heterogeneity in elasticity estimates across studies
+- name: consumer_type
+  direction: strengthens
+  strength: moderate
+  description: Type of consumer (residential, industrial, commercial) affects price elasticity response
+structural_competency:
+  equity_implications: While this paper focuses on energy economics rather than direct health outcomes,
+    energy pricing and consumption patterns have indirect health implications through air quality, heating/cooling
+    adequacy, and energy poverty. The structural factors identified (data type, sample period, analytical
+    models, geography, consumer type) represent important contextual determinants. However, this paper
+    does not directly examine health equity implications.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.047945'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

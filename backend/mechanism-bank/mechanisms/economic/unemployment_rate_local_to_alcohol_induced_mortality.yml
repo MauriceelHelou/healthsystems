@@ -1,0 +1,51 @@
+id: unemployment_rate_local_to_alcohol_induced_mortality
+name: Unemployment Rate → Alcohol-Induced Mortality (Women)
+from_node:
+  node_id: unemployment_rate_local
+  node_name: Unemployment Rate
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality (Women)
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Unemployment leads to loss of income, health insurance access, and daily structure'
+- 'Step 2: Loss of employment-based social networks and occupational role contributes to social isolation'
+- 'Step 3: Economic and psychosocial stressors increase risk of problematic alcohol consumption'
+- 'Step 4: Women may face unique barriers to accessing substance use treatment while unemployed'
+- 'Step 5: Untreated alcohol use disorder progresses to fatal alcohol-attributable conditions'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: Celine Saul et al. 2022. "Employment Status and Alcohol-Attributable Mortality Risk-A
+    Systematic Review and Meta-Analysis.." https://doi.org/10.3390/ijerph19127354
+  supporting_citations:
+  - Previous review with two studies on unemployment-alcohol mortality (specific citation requires full-text
+    access)
+  - Studies with 3,147 alcohol-attributable deaths among women (specific citations require full-text access)
+  - Additional citations require full-text access
+  doi: 10.3390/ijerph19127354
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Sex-stratified analysis specifically for women found that unemployed women have 3.64 times
+  higher risk of alcohol-attributable mortality compared to employed women. This analysis included approximately
+  14.4 million women with 3,147 alcohol-attributable deaths.
+quantitative_effects:
+  effect_size:
+    value: 3.64
+    type: relative_risk
+    ci_lower: 2.04
+    ci_upper: 6.66
+  sample_size: 14400000
+structural_competency:
+  equity_implications: The sex-stratified analysis acknowledges that unemployment may operate differently
+    across gender due to structural factors including differential labor market participation, caregiving
+    responsibilities, access to treatment, and social support systems. Women's lower but still substantially
+    elevated risk may reflect both protective factors (stronger social networks) and additional barriers
+    (stigma around women's alcohol use, childcare responsibilities limiting treatment access).
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.343682'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,48 @@
+id: alcohol_consumption_to_violent_crime_rate
+name: Alcohol Consumption → Violent Crime Rate
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: violent_crime_rate
+  node_name: Violent Crime Rate
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: High rates of alcohol consumption in neighborhood increase alcohol intoxication
+  prevalence'
+- 'Step 2: Alcohol intoxication impairs judgment, increases aggression, and reduces
+  impulse control'
+- 'Step 3: Alcohol outlets serve as congregation points where intoxicated individuals
+  interact'
+- 'Step 4: Increased likelihood of interpersonal conflicts escalating to violence
+  in and around high-consumption areas'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Matson et al. 2021. "A systems framework depicting how complex
+    neighborhood dynamics and contextual factors could impact the effectiveness of
+    an alcohol outlet zoning policy.." *American Journal of Community Psychology*.
+    https://doi.org/10.1002/ajcp.12566
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.055077'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: community_police_relations
+  direction: weakens
+  strength: moderate
+  description: Positive community-police relations may reduce escalation of alcohol-related
+    conflicts to violent crime through effective intervention
+- name: social_cohesion
+  direction: weakens
+  strength: moderate
+  description: Higher levels of community social cohesion may buffer the relationship
+    between consumption and violence through informal social control
+- name: economic_disinvestment
+  direction: strengthens
+  strength: strong
+  description: Neighborhoods experiencing economic disinvestment show stronger relationship
+    between alcohol consumption and violent crime due to compounding stressors

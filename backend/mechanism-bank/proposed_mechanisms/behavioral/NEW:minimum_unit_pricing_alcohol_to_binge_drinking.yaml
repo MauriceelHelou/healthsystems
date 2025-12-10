@@ -1,0 +1,65 @@
+id: NEW:minimum_unit_pricing_alcohol_to_binge_drinking
+name: Minimum Unit Pricing for Alcohol → Heavy Alcohol Consumption
+from_node:
+  node_id: NEW:minimum_unit_pricing_alcohol
+  node_name: Minimum Unit Pricing for Alcohol
+to_node:
+  node_id: binge_drinking
+  node_name: Heavy Alcohol Consumption
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Minimum unit pricing (MUP) establishes a legally required floor price per
+  unit of alcohol, directly increasing the cost of cheap, high-strength alcoholic
+  beverages'
+- 'Step 2: Price increases disproportionately affect the cheapest alcohol products
+  typically purchased by heavy drinkers, as these products previously sold below the
+  minimum price threshold'
+- 'Step 3: Heavy consumers, who tend to purchase larger quantities of cheap alcohol,
+  face the greatest relative price increase and economic barrier to maintaining consumption
+  levels'
+- 'Step 4: The price elasticity of demand leads heavy drinkers to reduce consumption
+  volume, as the financial cost of maintaining high consumption becomes prohibitive'
+- 'Step 5: Reduced heavy alcohol consumption manifests as decreased alcohol-related
+  hospital admissions, with acute effects appearing immediately and chronic effects
+  following 2-3 years later'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'T. Maharaj et al. 2023. Impact of minimum unit pricing on alcohol-related
+    hospital outcomes: systematic review. BMJ Open.'
+  supporting_citations: []
+description: Minimum unit pricing reduces heavy alcohol consumption by establishing
+  a floor price that disproportionately increases costs for cheap, high-strength alcohol
+  preferred by heavy drinkers. This systematic review of 22 studies (6 natural experiments
+  and 16 modelling studies) found that MUP reduces alcohol-related hospital admissions
+  by 2-10% annually, with the policy specifically targeting the heaviest consumers.
+  The Bradford Hill Criteria analysis inferred a 'moderate-to-strong' causal link
+  between MUP and reduced alcohol-related harm.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 6.5
+    type: percentage_reduction
+    ci_lower: 2.0
+    ci_upper: 10.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: socioeconomic deprivation
+  direction: strengthens
+  strength: strong
+  description: MUP targets the heaviest consumers from the most deprived groups who
+    tend to be at greatest risk of alcohol harms, resulting in larger effects among
+    disadvantaged populations
+- name: baseline consumption level
+  direction: strengthens
+  strength: strong
+  description: Heaviest drinkers experience the greatest impact as they consume more
+    cheap, high-strength products affected by the price floor
+- name: time since implementation
+  direction: strengthens
+  strength: moderate
+  description: Acute alcohol-related outcomes respond immediately while chronic conditions
+    show effects after 2-3 year lag

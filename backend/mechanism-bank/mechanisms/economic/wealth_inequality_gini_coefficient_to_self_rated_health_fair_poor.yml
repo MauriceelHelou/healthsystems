@@ -1,0 +1,74 @@
+id: wealth_inequality_gini_coefficient_to_self_rated_health_fair_poor
+name: Wealth Inequality (Gini Coefficient) → Self-Rated Health Fair/Poor
+from_node:
+  node_id: wealth_inequality_gini_coefficient
+  node_name: Wealth Inequality (Gini Coefficient)
+to_node:
+  node_id: self_rated_health_fair_poor
+  node_name: Self-Rated Health Fair/Poor
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher income inequality at population level creates relative deprivation and psychosocial
+  stress'
+- 'Step 2: Unequal income distribution leads to underinvestment in public goods and social infrastructure'
+- 'Step 3: Reduced social cohesion and trust in communities with high inequality'
+- 'Step 4: Chronic stress exposure and reduced access to health-promoting resources'
+- 'Step 5: Increased perception of poor health status among population'
+evidence:
+  quality_rating: A
+  n_studies: 38
+  primary_citation: 'M. Shimonovich et al. 2024. "Causal Assessment of Income Inequality on Self‐Rated
+    Health and All‐Cause Mortality: A Systematic Review and Meta‐Analysis." https://doi.org/10.1111/1468-0009.12689'
+  supporting_citations:
+  - Studies included in meta-analysis using multilevel data and adjusting for individual-level socioeconomic
+    position (38 cross-sectional studies)
+  - Additional citations require full-text access to identify specific primary studies included in the
+    systematic review
+  - Bradford Hill viewpoint analysis studies examining temporality and plausibility
+  doi: 10.1111/1468-0009.12689
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'This systematic review and meta-analysis found a small but statistically significant association
+  between income inequality (measured by Gini coefficient) and poor self-rated health. Per 0.05-unit increase
+  in the Gini coefficient, the odds ratio for poor self-rated health was 1.06 (95% CI: 1.03-1.08). The
+  evidence was rated as very low certainty due to serious risk of bias in 63.2% of studies. The review
+  found evidence supporting temporality and plausibility Bradford Hill viewpoints, but could not establish
+  causality due to methodological limitations.'
+quantitative_effects:
+  effect_size:
+    value: 1.06
+    type: odds_ratio
+    ci_lower: 1.03
+    ci_upper: 1.08
+  sample_size: 2916576
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The review notes that very few studies examined income inequality at the national level
+    versus subnational levels, suggesting geographic variation in measurement and effects. The evidence
+    base was noted as methodologically limited with different findings across study contexts.
+moderators:
+- name: individual_income
+  direction: weakens
+  strength: moderate
+  description: Studies adjusted for individual-level socioeconomic position to isolate contextual effects
+    of inequality from individual income effects
+- name: study_design_quality
+  direction: weakens
+  strength: strong
+  description: 63.2% of SRH studies were at serious risk of bias, suggesting effect estimates may be inflated
+    in lower-quality studies
+structural_competency:
+  equity_implications: 'This mechanism appropriately traces health outcomes to structural economic conditions
+    (income distribution) rather than individual behaviors. The review explicitly uses multilevel analysis
+    to separate contextual effects from individual-level factors. However, the finding of only small associations
+    and high risk of bias suggests the pathway from inequality to health may be mediated by multiple intervening
+    structural factors not fully captured. The equity implications are significant: income inequality
+    disproportionately affects lower-income populations who experience both relative deprivation and reduced
+    access to resources in high-inequality contexts.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.472487'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

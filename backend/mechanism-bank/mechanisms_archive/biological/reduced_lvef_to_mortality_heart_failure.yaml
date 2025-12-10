@@ -1,0 +1,41 @@
+id: reduced_lvef_to_mortality_heart_failure
+name: Reduced Left Ventricular Ejection Fraction (<30%) → Mortality in Heart Failure
+  Patients
+from_node:
+  node_id: reduced_lvef
+  node_name: Reduced Left Ventricular Ejection Fraction (<30%)
+to_node:
+  node_id: mortality_heart_failure
+  node_name: Mortality in Heart Failure Patients
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Severely reduced left ventricular ejection fraction (<30%) indicates compromised
+  cardiac pump function and reduced cardiac output'
+- 'Step 2: Diminished cardiac output leads to inadequate tissue perfusion and oxygen
+  delivery to vital organs'
+- 'Step 3: Chronic hypoperfusion results in multi-organ dysfunction and hemodynamic
+  instability'
+- 'Step 4: Progressive cardiac decompensation and organ failure increase risk of death'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Darryl P Leong et al. 2025. "The risk of death according to left
+    ventricular ejection fraction and right ventricular dilatation in 17 321 adults
+    with heart failure from 40 high-, middle- and low-income countries - A Global
+    Congestive Heart Failure (G-CHF) study.." *European journal of heart failure*.
+    https://doi.org/10.1002/ejhf.3550
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.464548'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: heart_failure_etiology
+  direction: strengthens
+  strength: strong
+  description: The relationship between LVEF and death differed significantly by HF
+    etiology (interaction p=0.0010). In ischemic HF and idiopathic dilated cardiomyopathy,
+    there was a continuous inverse association between LVEF and mortality, but in
+    hypertensive, valvular and other HF types, no association was found.

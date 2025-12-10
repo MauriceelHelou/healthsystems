@@ -1,0 +1,50 @@
+id: smoking_current_to_NEW:natural_killer_cell_fraction
+name: Current Smoking Status → Natural Killer Cell Fraction
+from_node:
+  node_id: smoking_current
+  node_name: Current Smoking Status
+to_node:
+  node_id: NEW:natural_killer_cell_fraction
+  node_name: Natural Killer Cell Fraction
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Current smoking introduces toxic compounds including nicotine, carbon monoxide,
+  and reactive oxidative species into the bloodstream'
+- 'Step 2: These compounds create systemic oxidative stress and inflammatory responses
+  that affect immune cell populations'
+- 'Step 3: Chronic smoking-induced inflammation and immunosuppressive effects lead
+  to decreased natural killer cell counts and/or impaired NK cell maturation'
+- 'Step 4: Reduced NK cell fractions compromise innate immune surveillance capacity
+  against infections and malignancies'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: Qi Luo et al. 2023. A meta-analysis of immune-cell fractions at
+    high resolution reveals novel associations with common phenotypes and health outcomes.
+    Genome Medicine.
+  supporting_citations: []
+description: This large-scale meta-analysis of 22 cohorts comprising 23,053 blood
+  samples used high-resolution DNA methylation profiling to estimate immune cell fractions.
+  The study found that current smoking is associated with decreased natural killer
+  cell fractions in blood. This finding was validated with single-cell RNA sequencing
+  data. The reduction in NK cells among smokers may contribute to impaired immune
+  surveillance and increased susceptibility to infections and malignancies.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: obesity
+  direction: strengthens
+  strength: moderate
+  description: Obesity was independently associated with decreased NK cell counts,
+    potentially compounding smoking effects
+- name: exercise
+  direction: weakens
+  strength: moderate
+  description: Exercise was associated with increased NK cell counts, potentially
+    counteracting smoking effects
+- name: stress_levels
+  direction: strengthens
+  strength: moderate
+  description: Higher stress levels were also associated with decreased NK cell counts,
+    potentially amplifying smoking effects

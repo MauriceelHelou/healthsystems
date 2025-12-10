@@ -1,0 +1,43 @@
+id: single_sensor_detection_systems_to_false_vehicle_lockouts
+name: Single-Sensor Drunk Driving Detection Systems → False Vehicle Lockouts and Erroneous
+  Judgments
+from_node:
+  node_id: single_sensor_detection_systems
+  node_name: Single-Sensor Drunk Driving Detection Systems
+to_node:
+  node_id: false_vehicle_lockouts
+  node_name: False Vehicle Lockouts and Erroneous Judgments
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Single-sensor detection systems have limited data inputs and lower accuracy
+  in distinguishing driver alcohol exposure from ambient conditions'
+- 'Step 2: Low detection accuracy leads to both false positives (locking vehicles
+  when drivers are sober) and false negatives (failing to detect intoxicated drivers)'
+- 'Step 3: Erroneous judgments reduce system reliability and user trust in drunk driving
+  detection technology'
+- 'Step 4: Inconsistent performance creates barriers to widespread adoption of automated
+  drunk driving prevention systems'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Juan Liu et al. 2022. "An Intelligent Online Drunk Driving Detection
+    System Based on Multi-Sensor Fusion Technology.." *Sensors (Basel, Switzerland)*.
+    https://doi.org/10.3390/s22218460
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.482582'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sensor_array_design
+  direction: weakens
+  strength: strong
+  description: Multi-sensor arrays based on gas diffusion models reduce erroneous
+    judgments by improving data consistency and detection accuracy
+- name: data_fusion_algorithms
+  direction: weakens
+  strength: strong
+  description: Support matrix and adaptive weighted fusion algorithms improve single
+    sensor data consistency and reduce false positives

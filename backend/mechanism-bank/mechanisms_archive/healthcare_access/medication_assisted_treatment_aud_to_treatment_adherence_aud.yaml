@@ -1,0 +1,43 @@
+id: medication_assisted_treatment_aud_to_treatment_adherence_aud
+name: Medication-Assisted Treatment System for Alcohol Use Disorder → Treatment Adherence
+  for Alcohol Use Disorder
+from_node:
+  node_id: medication_assisted_treatment_aud
+  node_name: Medication-Assisted Treatment System for Alcohol Use Disorder
+to_node:
+  node_id: treatment_adherence_aud
+  node_name: Treatment Adherence for Alcohol Use Disorder
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: FDA-approved medications (disulfiram, acamprosate, naltrexone, extended-release
+  naltrexone) are available through VA healthcare system'
+- 'Step 2: Healthcare infrastructure determines medication access, monitoring frequency,
+  and support services'
+- 'Step 3: System-level barriers including pharmacy access, appointment scheduling,
+  and clinical follow-up affect medication availability'
+- 'Step 4: Overall low adherence across all medications (41-55%) reflects structural
+  gaps in treatment delivery rather than medication efficacy'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: James R Walker et al. 2019. "Adherence Across FDA-Approved Medications
+    for Alcohol Use Disorder in a Veterans Administration Population.." *Journal of
+    studies on alcohol and drugs*. https://doi.org/10.15288/jsad.2019.80.572
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.684629'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: medication_formulation
+  direction: strengthens
+  strength: moderate
+  description: Injectable formulations show higher adherence (54.6%) compared to oral
+    medications (41.3-49.8%)
+- name: achievement_of_80_percent_adherence
+  direction: weakens
+  strength: strong
+  description: Only 11.9-24.4% of treatment courses achieved 80% adherence threshold
+    across all medications

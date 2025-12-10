@@ -1,0 +1,55 @@
+id: NEW:dietary_linoleic_acid_intake_to_cardiovascular_disease_mortality
+name: Dietary Linoleic Acid (Omega-6) Intake → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:dietary_linoleic_acid_intake
+  node_name: Dietary Linoleic Acid (Omega-6) Intake
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Increased dietary intake of omega-6 linoleic acid (from sources like safflower
+  oil and polyunsaturated margarine) replaces saturated fats in the diet'
+- 'Step 2: High linoleic acid intake may promote oxidative modification of LDL cholesterol
+  and increase oxidized lipid metabolites'
+- 'Step 3: Omega-6 fatty acids may promote pro-inflammatory eicosanoid production
+  (prostaglandins, leukotrienes) that contribute to atherosclerotic plaque instability'
+- 'Step 4: These metabolic changes may accelerate cardiovascular disease progression
+  and increase risk of fatal coronary events'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'Christopher E Ramsden et al. 2013. "Use of dietary linoleic acid
+    for secondary prevention of coronary heart disease and death: evaluation of recovered
+    data from the Sydney Diet Heart Study and updated meta-analysis." BMJ (Clinical
+    research ed.)'
+  supporting_citations: []
+description: Substituting dietary saturated fats with omega-6 linoleic acid increased
+  cardiovascular disease mortality in the Sydney Diet Heart Study RCT. The intervention
+  group showed significantly higher cardiovascular mortality (17.2% vs 11.0%, HR 1.70).
+  An updated meta-analysis of linoleic acid intervention trials showed a non-significant
+  trend toward increased cardiovascular death risk (HR 1.27, 95% CI 0.98-1.65, P=0.07).
+  These findings challenge the conventional advice to replace saturated fats with
+  polyunsaturated fats for cardiovascular benefit.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.7
+    type: hazard_ratio
+    ci_lower: 1.03
+    ci_upper: 2.8
+  p_value: 0.04
+  sample_size: 458
+moderators:
+- name: pre-existing coronary heart disease
+  direction: strengthens
+  strength: strong
+  description: The Sydney Diet Heart Study focused on secondary prevention in men
+    with recent coronary events, suggesting the harmful effect may be more pronounced
+    in those with existing CVD
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Study included only men aged 30-59, so effects in women remain uncertain

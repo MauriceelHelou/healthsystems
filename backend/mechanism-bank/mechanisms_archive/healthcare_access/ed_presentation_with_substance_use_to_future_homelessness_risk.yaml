@@ -1,0 +1,38 @@
+id: ed_presentation_with_substance_use_to_future_homelessness_risk
+name: Emergency Department Presentation with Substance Use → Future Homelessness Risk
+from_node:
+  node_id: ed_presentation_with_substance_use
+  node_name: Emergency Department Presentation with Substance Use
+to_node:
+  node_id: future_homelessness_risk
+  node_name: Future Homelessness Risk
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: ED presentation indicates lack of access to primary care and preventive
+  services, reflecting structural barriers in healthcare access and insurance coverage'
+- 'Step 2: ED visits for substance use reflect broader social determinants including
+  poverty, unemployment, and housing instability'
+- 'Step 3: Lack of integration between ED care and housing/social services fails to
+  address underlying structural vulnerabilities'
+- 'Step 4: Without coordinated intervention addressing housing and social needs, ED
+  patients remain at high risk for homelessness'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Ruth Yoo et al. 2022. "Association of Substance Use Characteristics
+    and Future Homelessness among Emergency Department Patients with Drug Use Or Unhealthy
+    Alcohol Use: Results from A Linked Data Longitudinal Cohort Analysis." *Substance
+    Abuse*. https://doi.org/10.1080/08897077.2022.2060445'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.334161'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: substance_use_severity
+  direction: strengthens
+  strength: strong
+  description: Risk increases substantially with severity, with 40.9% shelter entry
+    among those with most severe drug use problems compared to 9.4% overall

@@ -1,0 +1,47 @@
+id: NEW:oliceridine_biased_opioid_agonism_to_NEW:opioid_related_side_effects
+name: Oliceridine Biased Opioid Agonism → Opioid-Related Side Effects
+from_node:
+  node_id: NEW:oliceridine_biased_opioid_agonism
+  node_name: Oliceridine Biased Opioid Agonism
+to_node:
+  node_id: NEW:opioid_related_side_effects
+  node_name: Opioid-Related Side Effects
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Oliceridine''s biased agonism reduces beta-arrestin recruitment compared to conventional opioids'
+- 'Step 2: Reduced beta-arrestin signaling is hypothesized to decrease adverse effects such as respiratory
+  depression, nausea, and constipation'
+- 'Step 3: Lower side effect burden may improve postoperative recovery and reduce complications'
+evidence:
+  quality_rating: C
+  n_studies: 0
+  primary_citation: Anne Wolf et al. 2024. "Efficacy, safety, and side effects of oliceridine in acute
+    postoperative pain, a protocol for a systematic review and meta-analysis." https://doi.org/10.1371/journal.pone.0299320
+  supporting_citations:
+  - Additional citations require full-text access - this is a protocol paper
+  - Planned analysis will compare side effect profiles between oliceridine and morphine
+  - Dose-dependent side effects to be evaluated via meta-regression
+  doi: 10.1371/journal.pone.0299320
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The protocol plans to evaluate whether oliceridine's mechanism as a biased opioid agonist
+  results in fewer side effects compared to conventional opioids like morphine. Dichotomous outcomes will
+  be presented as risk ratios.
+moderators:
+- name: dose
+  direction: u_shaped
+  strength: moderate
+  description: Side effects likely dose-dependent; meta-regression planned to characterize this relationship
+structural_competency:
+  equity_implications: Reduction in opioid side effects has structural implications for healthcare systems
+    managing postoperative care. Populations with limited access to intensive monitoring (rural hospitals,
+    under-resourced facilities) could particularly benefit from medications with improved safety profiles.
+    However, cost and formulary access may create disparities in who receives newer, potentially safer
+    medications.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.110259'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

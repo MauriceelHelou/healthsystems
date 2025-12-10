@@ -1,0 +1,102 @@
+id: food_insecurity_to_psychological_distress
+name: Food Insecurity → Psychological Distress
+from_node:
+  node_id: food_insecurity
+  node_name: Food Insecurity
+  node_type: stock
+to_node:
+  node_id: psychological_distress
+  node_name: Psychological Distress
+  node_type: stock
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Chronic uncertainty about food availability creates persistent worry and anxiety about meeting
+  basic needs'
+- 'Step 2: Shame and stigma associated with food assistance seeking compounds psychological burden'
+- 'Step 3: Nutritional deficiencies from poor diet quality affect neurotransmitter synthesis and brain
+  function'
+- 'Step 4: Food-related stress accumulates with other poverty-related stressors, overwhelming coping capacity'
+- 'Step 5: Sustained psychological distress manifests as clinical anxiety, depression, and sleep disorders'
+evidence:
+  quality_rating: A
+  n_studies: 44
+  primary_citation: 'Jandaghian-Bidgoli, Mohammadamin, et al. 2024. ''Focusing attention on the important
+    association between food insecurity and psychological distress: a systematic review and meta-analysis.''
+    BMC Nutrition 10(1): 78.'
+  supporting_citations:
+  - 'Bell, Zoë, et al. 2024. ''Associations between food insecurity in high-income countries and pregnancy
+    outcomes: A systematic review and meta-analysis.'' PLoS Medicine 21(8): e1004450.'
+  doi: 10.1186/s40795-024-00922-1
+  journal: BMC Nutrition
+  year: 2024
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_pdf/c6/34/40795_2024_Article_922.PMC11378639.pdf
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 3.29
+    type: odds_ratio
+    ci_lower: 2.46
+    ci_upper: 4.4
+    ci_level: 95
+  sample_size: 1953636
+  heterogeneity_i_squared: null
+  interpretation: Food insecurity increases odds of psychological distress by 229% (OR 3.29)
+last_updated: '2025-11-30'
+version: '1.1'
+description: Food insecurity is strongly associated with psychological distress, increasing the odds of
+  distress by 229% (OR 3.29). This relationship operates through chronic stress, nutritional impacts on
+  brain health, and the compounding effects of poverty-related adversity. Secondary outcomes include sleep
+  problems, anxiety, depression, and lower life satisfaction.
+moderators:
+- name: social_support
+  direction: weakens
+  strength: moderate
+  description: Strong social networks and community support buffer against psychological impacts of food
+    insecurity
+- name: food_assistance_stigma
+  direction: strengthens
+  strength: moderate
+  description: High stigma around food assistance seeking intensifies shame and psychological burden
+- name: household_composition
+  direction: strengthens
+  strength: strong
+  description: Parents experiencing food insecurity with children present show heightened distress due
+    to caregiver guilt
+- name: mental_health_services_access
+  direction: weakens
+  strength: moderate
+  description: Access to mental health treatment mitigates psychological distress outcomes
+structural_competency:
+  root_cause_level: economic_system
+  avoids_victim_blaming: true
+  equity_implications: Food insecurity is a structural exposure reflecting economic inequality, not individual
+    failing. The psychological distress it causes is a predictable response to material deprivation and
+    systemic exclusion from food security. Policy solutions must address root causes including living
+    wages, robust food assistance, and affordable housing rather than individual resilience.
+assumptions:
+- Assumes chronic or recurrent food insecurity exposure
+- Psychological distress measured through validated scales (K6, PHQ, etc.)
+- Excludes acute, temporary food shortage situations
+limitations:
+- Cross-sectional studies predominate, limiting causal inference
+- Bidirectional relationship possible (distress may also cause food insecurity)
+- Most studies from high-income countries, particularly US
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Food insecurity prevalence and associated distress vary by region, with higher rates
+    in areas with limited food assistance infrastructure and high poverty concentration.
+  relevant_geographies:
+  - Low-income households show 2-3x higher food insecurity rates
+  - Rural areas face transportation barriers to food access
+  - Food deserts concentrate food access challenges
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

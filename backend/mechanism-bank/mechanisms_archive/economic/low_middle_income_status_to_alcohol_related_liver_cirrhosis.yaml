@@ -1,0 +1,43 @@
+id: low_middle_income_status_to_alcohol_related_liver_cirrhosis
+name: Lower and Middle Income Status → Alcohol-Related Liver Cirrhosis with HE
+from_node:
+  node_id: low_middle_income_status
+  node_name: Lower and Middle Income Status
+to_node:
+  node_id: alcohol_related_liver_cirrhosis
+  node_name: Alcohol-Related Liver Cirrhosis with HE
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Lower and middle-income populations have disproportionate representation
+  in patient cohort (mean age 46.66±10.21 and 47.14±6.36 years)'
+- 'Step 2: Economic constraints limit access to early screening, alcohol use disorder
+  treatment, and preventive hepatology care'
+- 'Step 3: Lack of resources for regular medical monitoring allows undetected progression
+  from fatty liver to cirrhosis over 14+ years of alcohol consumption'
+- 'Step 4: By the time patients present to medical care, liver cirrhosis has already
+  progressed to severe complications including hepatic encephalopathy with cognitive
+  impairment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Prabhudas Nelaturi et al. 2024. "Alcoholism and Socioeconomic
+    Status among Patients with Hepatic Encephalopathy in Association with Increased
+    Mortality.." *Addiction & health*. https://doi.org/10.34172/ahj.2024.1467
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.423857'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: healthcare_access_barriers
+  direction: strengthens
+  strength: strong
+  description: Economic barriers to healthcare prevent early intervention and allow
+    progression to severe cirrhosis with HE complications
+- name: duration_before_diagnosis
+  direction: strengthens
+  strength: strong
+  description: Patients consumed alcohol for more than 14 years, suggesting delayed
+    diagnosis and intervention strengthens the pathway to severe disease

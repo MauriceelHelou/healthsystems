@@ -1,0 +1,46 @@
+id: license_d_alcohol_outlet_density_to_aggravated_assault_rate
+name: License D Alcohol Outlet Density (Off Premises Establishments/Liquor Stores)
+  → Aggravated Assault Rate
+from_node:
+  node_id: license_d_alcohol_outlet_density
+  node_name: License D Alcohol Outlet Density (Off Premises Establishments/Liquor
+    Stores)
+to_node:
+  node_id: aggravated_assault_rate
+  node_name: Aggravated Assault Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of off premises alcohol outlets (liquor stores) increases
+  alcohol availability for consumption in public and private spaces'
+- 'Step 2: Liquor stores may become hotspots for loitering and social congregation
+  in neighborhoods with limited alternative gathering spaces'
+- 'Step 3: Concentrated alcohol purchasing and consumption in areas around liquor
+  stores increases intoxication rates in public spaces'
+- 'Step 4: Public intoxication and congregation around outlets increases opportunities
+  for interpersonal conflicts that escalate to aggravated assault'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Lardier et al. 2021. "A Spatial Analysis of Alcohol Outlet
+    Density Type, Abandoned Properties, and Police Calls on Aggravated Assault Rates
+    in a Northeastern U.S. City." *Substance Use & Misuse*. https://doi.org/10.1080/10826084.2021.1942053
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.094540'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: social_isolation
+  direction: strengthens
+  strength: moderate
+  description: Abstract mentions that socially isolated communities are particularly
+    affected, suggesting the relationship may be stronger where alternative social
+    spaces and community cohesion are limited
+- name: neighborhood_poverty
+  direction: strengthens
+  strength: moderate
+  description: Poor communities are noted as being critically important to consider,
+    suggesting economic disadvantage may amplify the relationship between liquor store
+    density and violence

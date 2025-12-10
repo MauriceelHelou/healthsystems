@@ -1,0 +1,136 @@
+id: ambient_temperature_to_kidney_disease
+name: Ambient Temperature → Kidney Disease Morbidity and Mortality
+from_node:
+  node_id: ambient_temperature
+  node_name: Ambient Temperature and Heat Exposure
+  node_type: stock
+to_node:
+  node_id: kidney_disease
+  node_name: Kidney Disease Morbidity and Mortality
+  node_type: crisis_endpoint
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Elevated ambient temperatures cause physiological heat stress and increased
+  sweating'
+- 'Step 2: Dehydration and reduced renal perfusion stress kidney function'
+- 'Step 3: Chronic or repeated heat exposure may cause subclinical kidney injury
+  (particularly in outdoor workers)'
+- 'Step 4: Pre-existing chronic kidney disease is exacerbated by heat-related dehydration
+  and medication effects'
+- 'Step 5: Increased acute kidney injury hospitalizations and chronic kidney disease
+  progression during heat events'
+evidence:
+  quality_rating: A
+  n_studies: 47
+  primary_citation: 'Borg, Malcolm, et al. 2017. "The association between temperature
+    and kidney disease in a meta-analysis of epidemiological data." Environmental
+    Research 156: 293-301.'
+  supporting_citations:
+  - 'Johnson, Richard J., et al. 2019. "Chronic kidney disease of unknown cause in
+    agricultural communities." New England Journal of Medicine 380(19): 1843-1852.'
+  - 'Glaser, Jakob, et al. 2016. "Climate change and the emergent epidemic of CKD
+    from heat stress in rural communities: the case for heat stress nephropathy."
+    Clinical Journal of the American Society of Nephrology 11(8): 1472-1483.'
+  - 'Bowe, Benjamin, et al. 2019. "Kidney outcomes in migrants from a high-risk to
+    a lower-risk region for chronic kidney disease of unknown etiology." Annals of
+    Internal Medicine 171(11): 775-781.'
+  doi: 10.1016/j.envres.2017.03.030
+  journal: Environmental Research
+  year: 2017
+  fulltext:
+    available: false
+    source: sciencedirect
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  morbidity_effect:
+    value: 1.01
+    type: relative_risk
+    ci_lower: 1.00
+    ci_upper: 1.02
+    ci_level: 95
+    comparison: kidney-related morbidity per 1 degree C temperature increase
+    source: Borg et al. 2017 meta-analysis (47 studies)
+  mortality_effect:
+    value: 1.03
+    type: relative_risk
+    ci_lower: 1.01
+    ci_upper: 1.04
+    ci_level: 95
+    comparison: kidney-related mortality per 1 degree C temperature increase
+  occupational_ckd:
+    description: Chronic kidney disease of unknown cause (CKDu) epidemic among agricultural
+      workers in Central America, South Asia linked to heat stress
+    prevalence: 15-20% in some agricultural communities
+    source: Johnson et al. 2019
+  sample_size: null
+  n_studies: 47
+  interpretation: Each 1 degree C temperature rise increases kidney morbidity by 1%
+    and kidney mortality by 3%. Occupational heat exposure in agriculture creates
+    epidemic-level CKD in some regions.
+last_updated: '2025-11-30'
+version: '1.0'
+description: Ambient temperature and heat exposure are associated with increased
+  kidney disease morbidity and mortality. A meta-analysis found 1% increase in kidney
+  morbidity and 3% increase in kidney mortality per 1 degree C temperature rise.
+  Chronic occupational heat exposure in agriculture and construction has created epidemic
+  chronic kidney disease of unknown cause (CKDu) in Central America and South Asia,
+  affecting up to 20% of workers in some communities. Climate change will amplify
+  these effects globally.
+moderators:
+- name: occupational_heat_exposure
+  direction: strengthens
+  strength: strong
+  description: Agricultural, construction, and outdoor workers face compounded heat
+    exposure and CKD risk
+- name: hydration_access
+  direction: weakens
+  strength: strong
+  description: Workplace hydration programs and shade access can reduce heat-related
+    kidney stress
+- name: pre_existing_ckd
+  direction: strengthens
+  strength: strong
+  description: Those with chronic kidney disease are more vulnerable to heat-related
+    exacerbation
+- name: medication_use
+  direction: strengthens
+  strength: moderate
+  description: NSAIDs, diuretics, and some antihypertensives increase heat-related
+    kidney vulnerability
+- name: poverty
+  direction: strengthens
+  strength: strong
+  description: Poverty limits access to cooling, hydration, and healthcare for kidney
+    disease
+structural_competency:
+  root_cause_level: climate_occupation
+  avoids_victim_blaming: true
+  equity_implications: Heat-related kidney disease reflects occupational and climate
+    justice inequities. Agricultural workers and outdoor laborers, often low-income
+    and immigrant populations, face the greatest exposure. Climate change amplifies
+    these occupational hazards. Solutions require workplace heat protections, occupational
+    safety enforcement, and climate adaptation in agricultural communities rather
+    than expecting individual workers to avoid heat exposure.
+assumptions:
+- Heat exposure includes both ambient temperature and occupational heat
+- Kidney disease includes acute kidney injury and chronic kidney disease
+- CKDu in agricultural communities is heat-related (debated but substantial evidence)
+limitations:
+- CKDu etiology still debated (agrochemicals, heat, other factors)
+- Individual-level exposure measurement limited in most studies
+- Confounding by hydration behavior and other factors
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Heat-related kidney disease varies by climate, agricultural practices,
+    and occupational safety standards.
+  relevant_geographies:
+  - Central American Pacific coast (sugarcane agriculture)
+  - South Asian agricultural regions
+  - US agricultural communities (California, Florida)
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

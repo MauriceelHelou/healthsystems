@@ -1,0 +1,44 @@
+id: expedited_addiction_treatment_access_to_emergency_department_utilization
+name: Expedited Access to Addiction Treatment Services → Emergency Department Visits
+from_node:
+  node_id: expedited_addiction_treatment_access
+  node_name: Expedited Access to Addiction Treatment Services
+to_node:
+  node_id: emergency_department_utilization
+  node_name: Emergency Department Visits
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Rapid connection to addiction medicine clinic provides patients with designated
+  point of care for substance use disorder management, reducing reliance on emergency
+  department for crisis-driven care'
+- 'Step 2: Early treatment engagement facilitates medication-assisted treatment initiation
+  and stabilization, reducing acute complications of untreated substance use disorders
+  (overdose, withdrawal, infections)'
+- 'Step 3: Established care relationship provides alternative to emergency department
+  for urgent needs, with clinic serving as medical home for addiction-related concerns'
+- 'Step 4: Continuity of care through addiction medicine clinic prevents escalation
+  of health crises that would otherwise result in emergency presentations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Srivastava et al. 2021. "Facilitating rapid access to addiction
+    treatment: a randomized controlled trial." *Addiction Science & Clinical Practice*.
+    https://doi.org/10.1186/s13722-021-00240-y'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.724624'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_emergency_department_utilization
+  direction: strengthens
+  strength: moderate
+  description: Population had high baseline ED utilization (mean 13.02 visits per
+    year in control group), suggesting unmet need for structured addiction treatment
+- name: availability_of_alternative_urgent_care
+  direction: weakens
+  strength: moderate
+  description: Effect size may be attenuated in settings where other low-barrier urgent
+    care options exist for substance use disorder complications

@@ -1,0 +1,56 @@
+id: NEW:alcohol_advertising_marketing_restrictions_to_NEW:adult_alcohol_per_capita_consumption
+name: Alcohol Advertising and Marketing Restrictions → Adult Alcohol Per Capita Consumption
+from_node:
+  node_id: NEW:alcohol_advertising_marketing_restrictions
+  node_name: Alcohol Advertising and Marketing Restrictions
+to_node:
+  node_id: NEW:adult_alcohol_per_capita_consumption
+  node_name: Adult Alcohol Per Capita Consumption
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Policy restricts alcohol advertising and marketing exposure'
+- 'Step 2: Reduced normalization of alcohol consumption in media environment'
+- 'Step 3: Gradual shift in cultural attitudes and social norms around drinking over mid- to long-term'
+- 'Step 4: Population-level consumption may decrease through changed social norms (theorized, not confirmed)'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: Jürgen Rehm et al. 2022. "Do alcohol control policies have the predicted effects on
+    consumption? An analysis of the Baltic countries and Poland 2000-2020.." https://doi.org/10.1016/j.drugalcdep.2022.109682
+  supporting_citations:
+  - World Health Organization. Best buys and other recommended interventions for the prevention and control
+    of noncommunicable diseases.
+  - Additional citations require full-text access for specific prior studies on advertising restrictions
+  - Additional citations require full-text access for Baltic/Polish alcohol policy literature
+  doi: 10.1016/j.drugalcdep.2022.109682
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Restrictions on advertising and/or marketing showed no significant immediate association
+  with alcohol per capita consumption (average effect 0.04 litres per year, 95% CI: -0.65 to 0.73). This
+  WHO ''best buy'' policy may require longer time horizons to demonstrate effects on consumption through
+  social norm changes.'
+quantitative_effects:
+  effect_size:
+    value: 0.04
+    type: beta_coefficient
+    ci_lower: -0.65
+    ci_upper: 0.73
+moderators:
+- name: time_lag
+  direction: strengthens
+  strength: moderate
+  description: The authors postulated that advertising restrictions would have mid- to long-term effects
+    rather than immediate effects; the study may not have captured the full delayed impact
+structural_competency:
+  equity_implications: While this mechanism did not show immediate effects, the structural approach of
+    modifying the information environment represents an upstream intervention targeting commercial determinants
+    of health. The lack of immediate effect does not negate the policy's potential long-term value in
+    denormalizing alcohol consumption across populations, particularly for youth who may be most susceptible
+    to marketing exposure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.584548'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

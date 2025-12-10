@@ -1,0 +1,50 @@
+id: court_intervention_dropout_to_ipv_recidivism_rate
+name: Court-Mandated Intervention Program Dropout → Intimate Partner Violence Recidivism
+  Rate
+from_node:
+  node_id: court_intervention_dropout
+  node_name: Court-Mandated Intervention Program Dropout
+to_node:
+  node_id: ipv_recidivism_rate
+  node_name: Intimate Partner Violence Recidivism Rate
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Dropout from court-mandated intervention programs leaves perpetrators without
+  completed treatment for violence-related cognitive and behavioral patterns'
+- 'Step 2: Untreated deficits in emotional information processing and behavioral regulation
+  persist'
+- 'Step 3: Absence of intervention effects on empathy, emotional decoding, and cognitive
+  flexibility maintain violence risk factors'
+- 'Step 4: Higher official recidivism rates observed during first year after intervention
+  period, particularly among dropouts with high alcohol consumption'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Á. Romero-Martínez et al. 2019. "Dropout from Court-Mandated
+    Intervention Programs for Intimate Partner Violence Offenders: The Relevance of
+    Alcohol Misuse and Cognitive Impairments." *International Journal of Environmental
+    Research and Public Health*. https://doi.org/10.3390/ijerph16232402'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.433692'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_consumption_level
+  direction: strengthens
+  strength: strong
+  description: Dropouts with high alcohol consumption showed the highest official
+    recidivism rates, while treatment completers with low alcohol consumption showed
+    the lowest recidivism rates
+- name: cognitive_impairments
+  direction: strengthens
+  strength: strong
+  description: Dropouts demonstrated more cognitive errors and perseverative errors,
+    which were associated with higher recidivism risk
+- name: initial_risk_assessment
+  direction: strengthens
+  strength: strong
+  description: Dropouts with high alcohol consumption presented the highest initial
+    risk levels, which predicted subsequent higher recidivism

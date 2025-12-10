@@ -1,0 +1,46 @@
+id: community_reentry_from_jail_to_opioid_relapse_risk
+name: Community Re-entry from Jail → Opioid Relapse Risk
+from_node:
+  node_id: community_reentry_from_jail
+  node_name: Community Re-entry from Jail
+to_node:
+  node_id: opioid_relapse_risk
+  node_name: Opioid Relapse Risk
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Transition from jail to community exposes women to environmental triggers
+  and social contexts associated with previous substance use'
+- 'Step 2: Women face unique gender-specific risk factors during re-entry including
+  trauma, economic instability, housing insecurity, and caregiving responsibilities'
+- 'Step 3: Loss of treatment continuity during transition period leaves women without
+  medications or support during high-risk re-entry phase'
+- 'Step 4: Combination of environmental stressors, structural barriers, and treatment
+  discontinuity increases vulnerability to opioid relapse'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Michele Staton et al. 2024. "Examining use of telehealth in jails:
+    linking women to community OUD services.." *BMC women''s health*. https://doi.org/10.1186/s12905-024-03394-4'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.377804'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: gender_specific_risk_factors
+  direction: strengthens
+  strength: strong
+  description: Women face unique vulnerabilities during re-entry that increase relapse
+    risk beyond general population factors
+- name: treatment_continuity
+  direction: weakens
+  strength: strong
+  description: Successful linkage to community MOUD services before release reduces
+    relapse risk during re-entry transition
+- name: community_support_resources
+  direction: weakens
+  strength: moderate
+  description: Access to peer navigation, housing, and social services reduces structural
+    barriers that contribute to relapse risk

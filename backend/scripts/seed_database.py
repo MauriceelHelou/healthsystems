@@ -221,10 +221,22 @@ class DatabaseSeeder:
         - Files with NEW: prefix (these are valid mechanisms)
         - All .yaml and .yml files
         """
-        mechanism_bank_path = Path(__file__).parent.parent.parent / "mechanism-bank" / "mechanisms"
+        # Try multiple possible locations for mechanism-bank
+        possible_paths = [
+            Path(__file__).parent.parent / "mechanism-bank" / "mechanisms",  # backend/mechanism-bank/mechanisms (Docker)
+            Path(__file__).parent.parent.parent / "mechanism-bank" / "mechanisms",  # ../mechanism-bank/mechanisms (local dev)
+            Path("/app/mechanism-bank/mechanisms"),  # Absolute path in Docker container
+        ]
 
-        if not mechanism_bank_path.exists():
-            logger.error(f"Mechanism bank not found at {mechanism_bank_path}")
+        mechanism_bank_path = None
+        for path in possible_paths:
+            if path.exists():
+                mechanism_bank_path = path
+                logger.info(f"Found mechanism bank at: {mechanism_bank_path}")
+                break
+
+        if mechanism_bank_path is None:
+            logger.error(f"Mechanism bank not found. Tried: {[str(p) for p in possible_paths]}")
             return []
 
         yaml_files = []
@@ -245,11 +257,23 @@ class DatabaseSeeder:
         return yaml_files
 
     def load_node_files(self) -> List[Path]:
-        """Load all node YAML files from nodes/by_scale/ directory."""
-        nodes_path = Path(__file__).parent.parent.parent / "nodes" / "by_scale"
+        """Load all node YAML files from Nodes/by_scale/ directory."""
+        # Try multiple possible locations for nodes
+        possible_paths = [
+            Path(__file__).parent.parent / "Nodes" / "by_scale",  # backend/Nodes/by_scale (Docker)
+            Path(__file__).parent.parent.parent / "Nodes" / "by_scale",  # ../Nodes/by_scale (local dev)
+            Path("/app/Nodes/by_scale"),  # Absolute path in Docker container
+        ]
 
-        if not nodes_path.exists():
-            logger.warning(f"Nodes directory not found at {nodes_path}")
+        nodes_path = None
+        for path in possible_paths:
+            if path.exists():
+                nodes_path = path
+                logger.info(f"Found nodes at: {nodes_path}")
+                break
+
+        if nodes_path is None:
+            logger.warning(f"Nodes directory not found. Tried: {[str(p) for p in possible_paths]}")
             return []
 
         # Find all YAML files recursively
@@ -715,6 +739,7 @@ class DatabaseSeeder:
         creates nodes dynamically as needed.
         """
         stats = {
+            'nodes_from_yaml': 0,
             'nodes_created': 0,
             'mechanisms_created': 0,
             'mechanisms_filtered_invalid_nodes': 0,
@@ -740,9 +765,15 @@ class DatabaseSeeder:
             if self.topic:
                 logger.info(f"Topic filter: {self.topic}")
 
-            # Load mechanism files from mechanism-bank
+            # Step 1: Load nodes from YAML files in Nodes/by_scale/
             logger.info("=" * 60)
-            logger.info("Loading mechanisms from mechanism-bank/mechanisms/")
+            logger.info("STEP 1: Loading nodes from Nodes/by_scale/")
+            logger.info("=" * 60)
+            stats['nodes_from_yaml'] = self.seed_nodes_from_yaml(session)
+
+            # Step 2: Load mechanism files from mechanism-bank
+            logger.info("=" * 60)
+            logger.info("STEP 2: Loading mechanisms from mechanism-bank/mechanisms/")
             logger.info("=" * 60)
             yaml_files = self.load_mechanism_files()
 

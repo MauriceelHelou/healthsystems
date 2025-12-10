@@ -1,0 +1,50 @@
+id: alcohol_outlet_access_to_violent_crime_exposure
+name: Access to Alcohol Outlets (Overall) → Violent Crime Exposure
+from_node:
+  node_id: alcohol_outlet_access
+  node_name: Access to Alcohol Outlets (Overall)
+to_node:
+  node_id: violent_crime_exposure
+  node_name: Violent Crime Exposure
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Greater spatial access to alcohol outlets increases alcohol availability
+  in neighborhoods'
+- 'Step 2: Increased alcohol availability creates convergence of potential offenders
+  and victims in spaces with alcohol consumption'
+- 'Step 3: Alcohol outlets become routine activity spaces where guardianship may be
+  insufficient'
+- 'Step 4: Congregation around outlets and alcohol-related behavioral changes increase
+  opportunities for violent encounters'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Pamela J Trangenstein et al. 2018. "Outlet Type, Access to Alcohol,
+    and Violent Crime.." *Alcoholism, clinical and experimental research*. https://doi.org/10.1111/acer.13880
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.032058'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: owner_occupied_housing_rate
+  direction: weakens
+  strength: moderate
+  description: Markers of social disorganization including owner-occupied housing
+    rates were controlled as confounders, suggesting neighborhood stability moderates
+    the relationship
+- name: median_household_income
+  direction: weakens
+  strength: moderate
+  description: Economic disadvantage measured by median household income was controlled,
+    suggesting socioeconomic context moderates outlet-crime associations
+- name: drug_arrests
+  direction: strengthens
+  strength: moderate
+  description: Drug arrest rates (marker of social disorganization) controlled as
+    confounder, suggesting areas with higher crime activity amplify outlet effects
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/alcohol_outlet_access_to_violent_crime_exposure.yaml
+_category: built_environment

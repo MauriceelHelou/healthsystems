@@ -1,0 +1,37 @@
+id: low_screening_coverage_threshold_to_population_alcohol_consumption
+name: Screening Coverage Below 10% Threshold → Population-Level Alcohol Consumption
+from_node:
+  node_id: low_screening_coverage_threshold
+  node_name: Screening Coverage Below 10% Threshold
+to_node:
+  node_id: population_alcohol_consumption
+  node_name: Population-Level Alcohol Consumption
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Screening coverage below 10% reaches insufficient proportion of at-risk
+  drinkers to achieve population-level impact'
+- 'Step 2: Low coverage fails to create critical mass of intervention recipients needed
+  for measurable aggregate effects'
+- 'Step 3: Sporadic screening results in missed opportunities for early intervention
+  across majority of risky drinking population'
+- 'Step 4: Absence of measurable population-level change maintains status quo of high
+  alcohol consumption patterns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Manthey et al. 2021. "Can alcohol consumption in Germany be
+    reduced by alcohol screening, brief intervention and referral to treatment in
+    primary health care? Results of a simulation study." *medRxiv*. https://doi.org/10.1101/2021.05.18.21257405
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.757084'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: ten_percent_threshold
+  direction: weakens
+  strength: strong
+  description: Screening coverage must exceed 10% to produce any measurable population-level
+    effect on alcohol consumption

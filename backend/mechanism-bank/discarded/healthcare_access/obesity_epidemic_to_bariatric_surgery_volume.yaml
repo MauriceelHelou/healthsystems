@@ -1,0 +1,44 @@
+id: obesity_epidemic_to_bariatric_surgery_volume
+name: Obesity Epidemic → Volume of Bariatric Surgery Procedures
+from_node:
+  node_id: obesity_epidemic
+  node_name: Obesity Epidemic
+to_node:
+  node_id: bariatric_surgery_volume
+  node_name: Volume of Bariatric Surgery Procedures
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Rising obesity rates driven by structural factors (food systems, built
+  environment) increase population with severe obesity'
+- 'Step 2: Healthcare system responds with increased availability and performance
+  of bariatric surgery including RYGB'
+- 'Step 3: More patients undergo RYGB creating larger population at risk for post-surgical
+  complications'
+- 'Step 4: Expanded bariatric surgery population includes those who may develop alcohol
+  use disorder and alcohol-associated liver disease post-operatively'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Chimaobi Anugwom et al. 2023. "Lower survival and higher rates
+    of cirrhosis in patients with ROUX-EN-Y gastric bypass hospitalised with alcohol-associated
+    hepatitis." *BMJ Open Gastroenterology*. https://doi.org/10.1136/bmjgast-2022-001083
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.355384'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: insurance_coverage
+  direction: strengthens
+  strength: strong
+  description: Access to bariatric surgery depends heavily on insurance coverage for
+    the procedure
+- name: geographic_availability
+  direction: strengthens
+  strength: moderate
+  description: Bariatric surgery centers are concentrated in certain geographic areas
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/obesity_epidemic_to_bariatric_surgery_volume.yaml
+_category: healthcare_access

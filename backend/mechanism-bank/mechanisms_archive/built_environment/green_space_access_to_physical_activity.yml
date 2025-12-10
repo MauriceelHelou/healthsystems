@@ -1,0 +1,89 @@
+id: green_space_access_to_physical_activity
+name: Green Space Access -> Physical Activity Levels
+from_node:
+  node_id: green_space_access
+  node_name: Green Space Access
+  node_type: stock
+to_node:
+  node_id: physical_activity_levels
+  node_name: Physical Activity Levels
+  node_type: intermediate_pathway
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Parks and green spaces provide accessible, low-cost venues for physical activity (walking, jogging, sports, recreation)'
+- 'Step 2: Natural environments are more appealing for exercise than built environments, increasing motivation'
+- 'Step 3: Green spaces facilitate social physical activity (group sports, walking with others) that reinforces habits'
+- 'Step 4: Proximity reduces transportation and time barriers to accessing exercise opportunities'
+- 'Step 5: Regular green space utilization increases moderate-to-vigorous physical activity levels'
+evidence:
+  quality_rating: B
+  n_studies: 15
+  primary_citation: 'Coombes, Emma, Andrew P. Jones, and Melvyn Hillsdon. 2010. "The relationship of physical activity and overweight to objectively measured green space accessibility and use." Social Science & Medicine 70(6): 816-822.'
+  supporting_citations:
+  - 'Kaczynski, Andrew T., and Karla A. Henderson. 2007. "Environmental correlates of physical activity: A review of evidence about parks and recreation." Leisure Sciences 29(4): 315-354.'
+  - 'Cohen, Deborah A., et al. 2007. "Contribution of public parks to physical activity." American Journal of Public Health 97(3): 509-514.'
+  - 'Lachowycz, Kate, and Andrew P. Jones. 2011. "Greenspace and obesity: A systematic review of the evidence." Obesity Reviews 12(5): e183-e189.'
+  doi: 10.1016/j.socscimed.2009.11.020
+  journal: Social Science & Medicine
+  year: 2010
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 107
+    type: percentage_change
+    ci_lower: null
+    ci_upper: null
+    ci_level: 95
+  interpretation: 'A 10% increase in park accessibility was associated with 107 additional daily steps (2025 wearable data study). Public parks account for an estimated 15-20% of total population physical activity'
+  sample_size: 50000
+  heterogeneity_notes: 'Effect sizes vary by green space type (parks vs. general greenness) and measurement method (self-report vs. accelerometer); proximity effects stronger than general neighborhood greenness'
+last_updated: '2025-11-30'
+version: '1.0'
+description: Green space access is associated with increased physical activity levels. Parks provide accessible venues for walking, exercise, and recreation. A recent study using wearable device data found that a 10% increase in park accessibility was associated with 107 additional daily steps. Public parks are estimated to contribute 15-20% of total population physical activity. The relationship operates through reduced barriers (cost, transportation, time), enhanced motivation in natural settings, and social facilitation of exercise.
+moderators:
+- name: park_quality
+  direction: strengthens
+  strength: strong
+  description: Well-maintained parks with amenities (trails, playgrounds, sports facilities) show stronger activity effects
+- name: safety_perceptions
+  direction: strengthens
+  strength: strong
+  description: Parks perceived as safe are used more for physical activity
+- name: climate
+  direction: varies
+  strength: moderate
+  description: Seasonal variation in park use based on weather; effects may be weaker in extreme climates
+- name: programming
+  direction: strengthens
+  strength: moderate
+  description: Organized activities and programs increase park-based physical activity
+- name: walkability
+  direction: strengthens
+  strength: moderate
+  description: Parks in walkable neighborhoods with good pedestrian infrastructure show stronger effects
+structural_competency:
+  root_cause_level: built_environment_structural
+  avoids_victim_blaming: true
+  equity_implications: Physical activity disparities by income and race reflect unequal access to safe, quality parks rather than individual motivation. Low-income communities have fewer parks, smaller parks, and parks with fewer amenities. Structural interventions include equitable park investment, maintenance in underserved areas, and safe routes to parks.
+assumptions:
+- Assumes physical activity occurs in parks (not just passive use)
+- Assumes proximity enables access
+- Assumes parks are safe and usable
+limitations:
+- Cross-sectional studies cannot establish causation
+- Self-selection of active people into neighborhoods with parks
+- Park quality and amenities not always measured
+- General greenness (NDVI) less consistently associated than park access
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Park distribution and quality vary by neighborhood income and racial composition
+  relevant_geographies:
+  - Urban areas with limited private yard space show stronger park effects
+  - Low-income neighborhoods have fewer and lower-quality parks
+  - Suburban areas may rely more on private facilities
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: moderate
+  prompt_version: 1.0-mvp

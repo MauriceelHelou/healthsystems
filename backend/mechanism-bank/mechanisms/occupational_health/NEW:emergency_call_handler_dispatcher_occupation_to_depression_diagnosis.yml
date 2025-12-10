@@ -1,0 +1,61 @@
+id: NEW:emergency_call_handler_dispatcher_occupation_to_depression_diagnosis
+name: Emergency Call-Handler and Dispatcher Occupation → Depression Diagnosis
+from_node:
+  node_id: NEW:emergency_call_handler_dispatcher_occupation
+  node_name: Emergency Call-Handler and Dispatcher Occupation
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: positive
+category: occupational_health
+mechanism_pathway:
+- 'Step 1: CHDs experience chronic workplace stress from high call volumes and emotional labor demands'
+- 'Step 2: Repeated exposure to distressing content without control over outcomes creates learned helplessness'
+- 'Step 3: Shift work and irregular schedules disrupt circadian rhythms and social connections'
+- 'Step 4: Cumulative emotional exhaustion and inadequate organizational support lead to clinical depression'
+evidence:
+  quality_rating: A
+  n_studies: 37
+  primary_citation: C Osório et al. 2025. "Systematic review and meta-analysis on the mental health of
+    emergency and urgent call-handlers and dispatchers.." https://doi.org/10.1093/occmed/kqae104
+  supporting_citations:
+  - Additional citations require full-text access - abstract references studies from Annals of Emergency
+    Dispatch and Response
+  - Studies from 10 electronic databases and grey literature included
+  - 13 articles provided quantitative information for meta-analyses
+  doi: 10.1093/occmed/kqae104
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Pooled prevalence of depression among emergency call-handlers and dispatchers is 28.2%, the
+  highest among mental health conditions studied. This reflects the significant emotional burden of the
+  occupation.
+quantitative_effects:
+  effect_size:
+    value: 28.2
+    type: percentage_change
+    ci_lower: 20.7
+    ci_upper: 36.2
+  sample_size: 7759
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Data from nine countries suggests international variation likely reflecting differences
+    in labor protections and mental health support
+moderators:
+- name: organizational_support
+  direction: weakens
+  strength: moderate
+  description: Adequate psychological support programs may reduce depression risk among CHDs
+structural_competency:
+  equity_implications: Depression prevalence of over one-quarter of workers indicates systemic occupational
+    health failure rather than individual susceptibility. Structural interventions needed include mandatory
+    psychological support, adequate staffing to prevent overwork, and recognition of CHDs as first responders
+    for purposes of mental health benefits.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.012207'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

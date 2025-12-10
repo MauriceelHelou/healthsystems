@@ -1,0 +1,45 @@
+id: sobriety_checkpoint_frequency_to_alcohol_involved_motor_vehicle_crashes
+name: Sobriety Checkpoint Frequency → Alcohol-Involved Motor Vehicle Crashes
+from_node:
+  node_id: sobriety_checkpoint_frequency
+  node_name: Sobriety Checkpoint Frequency
+to_node:
+  node_id: alcohol_involved_motor_vehicle_crashes
+  node_name: Alcohol-Involved Motor Vehicle Crashes
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Law enforcement conducts roadside sobriety checkpoints where officers stop
+  passing vehicles to check for driver impairment'
+- 'Step 2: Increased checkpoint frequency creates general deterrent effects across
+  the entire population of drivers through heightened perceived risk of detection'
+- 'Step 3: Drivers reduce alcohol-impaired driving behavior due to increased expectation
+  of enforcement'
+- 'Step 4: Reduction in alcohol-impaired driving leads to fewer alcohol-involved motor
+  vehicle crashes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Christopher N Morrison et al. 2019. "Sobriety Checkpoints and
+    Alcohol-Involved Motor Vehicle Crashes at Different Temporal Scales.." *American
+    journal of preventive medicine*. https://doi.org/10.1016/j.amepre.2019.01.015
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.582919'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: temporal_configuration
+  direction: strengthens
+  strength: strong
+  description: Individual checkpoints affect crashes for approximately 1 week. The
+    temporal spacing and configuration of checkpoints within an overall program is
+    critical - checkpoints conducted over previous 4-7 days show associations with
+    reduced crashes.
+- name: checkpoint_recency
+  direction: strengthens
+  strength: strong
+  description: Deterrent effect strongest when checkpoints occurred within previous
+    4-7 days and 1 week; effect dissipates after approximately 1 week, suggesting
+    need for sustained frequency.

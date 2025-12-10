@@ -1,0 +1,67 @@
+id: NEW:alcohol_price_tax_level_to_binge_drinking
+name: Alcohol Price/Tax Level → Binge Drinking
+from_node:
+  node_id: NEW:alcohol_price_tax_level
+  node_name: Alcohol Price/Tax Level
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher alcohol taxes and prices increase the monetary cost of purchasing
+  alcohol beverages'
+- 'Step 2: Increased costs reduce the quantity of alcohol that consumers can afford
+  or are willing to purchase within their budget constraints'
+- 'Step 3: Price sensitivity affects heavy drinking occasions, as binge drinking episodes
+  require consumption of multiple drinks'
+- 'Step 4: Both experimental evidence (Happy Hour studies) and population-level data
+  demonstrate reduced alcohol consumption when prices increase'
+- 'Step 5: Reduced overall consumption translates to fewer binge drinking episodes
+  across populations including youth, heavy drinkers, and chronic consumers'
+evidence:
+  quality_rating: A
+  n_studies: 122
+  primary_citation: Wagenaar, A.C. et al. Meta-analysis of 112 studies on price/tax
+    effects on alcohol consumption
+  supporting_citations:
+  - Z. Xuan et al. 2015. Comment on 'binge drinking and alcohol prices'. Health Economics
+    Review
+  - Elder et al. Systematic review on alcohol tax and excessive drinking
+  - Cook and Moore review on price effects on consumption
+  - Xuan et al. study on comprehensive alcohol tax measures and binge drinking
+  - Wagenaar et al. meta-analysis on taxes/prices and alcohol-related disease/injury
+description: Higher alcohol prices and taxes are inversely associated with binge drinking.
+  A meta-analysis of 112 studies found a significant elasticity of -0.28 for heavy
+  drinking, indicating that a 10% increase in price is associated with approximately
+  2.8% reduction in heavy drinking. This relationship is supported by experimental
+  evidence from barroom settings demonstrating that price changes directly affect
+  consumption, as well as multiple systematic reviews confirming the inverse relationship
+  between alcohol taxes and excessive drinking. The effect extends to alcohol-related
+  disease and injury outcomes attributable to binge drinking.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.28
+    type: elasticity
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: Age group
+  direction: strengthens
+  strength: moderate
+  description: Youth populations show responsiveness to price changes; effects demonstrated
+    across age groups
+- name: Tax measure comprehensiveness
+  direction: strengthens
+  strength: moderate
+  description: Comprehensive measures including specific excise tax and value-based
+    taxes show more negative elasticity compared to conventional beer excise tax measures
+- name: Drinking pattern
+  direction: strengthens
+  strength: moderate
+  description: Heavy drinkers and those at risk of alcohol-related disease respond
+    to price changes

@@ -1,0 +1,82 @@
+id: diabetes_diagnosis_to_kidney_disease
+name: Diabetes Diagnosis → Chronic Kidney Disease
+from_node:
+  node_id: diabetes_diagnosis
+  node_name: Diabetes Diagnosis
+to_node:
+  node_id: kidney_disease
+  node_name: Chronic Kidney Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic hyperglycemia from diabetes causes glycation of proteins and accumulation
+  of advanced glycation end products (AGEs) in kidney tissue'
+- 'Step 2: Elevated blood glucose leads to glomerular hyperfiltration and increased
+  intraglomerular pressure, damaging the filtration apparatus'
+- 'Step 3: Poor glycemic control and prolonged diabetes duration cause progressive
+  microvascular damage to renal blood vessels'
+- 'Step 4: Concurrent hypertension (systolic BP >140 mmHg) accelerates nephron damage
+  through additional hemodynamic stress'
+- 'Step 5: Cumulative damage leads to albuminuria, declining glomerular filtration
+  rate, and progression through CKD stages'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'W. Shiferaw et al. 2020. "Chronic Kidney Disease among Diabetes
+    Patients in Ethiopia: A Systematic Review and Meta-Analysis." International Journal
+    of Nephrology.'
+  supporting_citations: []
+description: Diabetes diagnosis significantly increases the risk of chronic kidney
+  disease through multiple pathophysiological mechanisms including chronic hyperglycemia-induced
+  microvascular damage, glomerular hyperfiltration, and progressive nephron loss.
+  Meta-analysis of 12 studies in Ethiopia found 35.5% prevalence of CKD stages 1-5
+  among diabetic patients, with risk substantially increased by longer diabetes duration,
+  poor glycemic control, concurrent hypertension, and older age.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 35.52
+    type: prevalence_percent
+    ci_lower: 25.9
+    ci_upper: 45.45
+  p_value: null
+  sample_size: 4075
+moderators:
+- name: diabetes_duration
+  direction: strengthens
+  strength: strong
+  description: 'Duration of diabetes >10 years significantly increases CKD risk (OR=2.76,
+    95% CI: 1.38-5.51)'
+- name: glycemic_control
+  direction: strengthens
+  strength: moderate
+  description: 'Poor glycemic control increases CKD risk (OR=2.01, 95% CI: 1.34-3.02);
+    fasting blood glucose >150 mg/dl (OR=2.58, 95% CI: 1.79-3.72)'
+- name: systolic_blood_pressure
+  direction: strengthens
+  strength: strong
+  description: 'Systolic BP >140 mmHg strongly increases CKD risk (OR=3.26, 95% CI:
+    2.24-4.74)'
+- name: diabetes_type
+  direction: strengthens
+  strength: moderate
+  description: 'Type 2 diabetes associated with higher CKD risk compared to Type 1
+    (OR=2.54, 95% CI: 1.73-3.73)'
+- name: age
+  direction: strengthens
+  strength: strong
+  description: 'Age >60 years significantly increases CKD risk (OR=2.99, 95% CI: 1.56-5.73)'
+- name: obesity
+  direction: strengthens
+  strength: moderate
+  description: 'BMI >30 kg/m² increases CKD risk (OR=2.06, 95% CI: 1.41-3.00)'
+- name: sex
+  direction: strengthens
+  strength: weak
+  description: 'Female sex associated with higher CKD risk (OR=1.68, 95% CI: 1.04-2.69)'
+- name: diabetic_retinopathy
+  direction: strengthens
+  strength: strong
+  description: 'Presence of diabetic retinopathy indicates systemic microvascular
+    damage and strongly predicts CKD (OR=4.54, 95% CI: 1.08-25)'

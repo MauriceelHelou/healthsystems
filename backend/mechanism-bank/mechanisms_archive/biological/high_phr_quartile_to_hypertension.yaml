@@ -1,0 +1,46 @@
+id: high_phr_quartile_to_hypertension
+name: Highest PHR Quartile → Hypertension
+from_node:
+  node_id: high_phr_quartile
+  node_name: Highest PHR Quartile
+to_node:
+  node_id: hypertension
+  node_name: Hypertension
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Highest PHR quartile represents most severe combination of elevated platelet
+  counts and low HDL-C'
+- 'Step 2: Severe metabolic and inflammatory dysregulation creates maximal endothelial
+  dysfunction and oxidative stress'
+- 'Step 3: Sustained vascular inflammation and reduced vascular compliance establish
+  chronic hypertensive state'
+- 'Step 4: Hypertension risk more than doubles compared to lowest PHR quartile'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Jia Chen et al. 2024. "Association between platelet to high-density
+    lipoprotein cholesterol ratio (PHR) and hypertension: evidence from NHANES 2005-2018.."
+    *Lipids in health and disease*. https://doi.org/10.1186/s12944-024-02342-3'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.476818'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: diabetes_status
+  direction: strengthens
+  strength: strong
+  description: Diabetes was adjusted as a covariate, suggesting it may amplify the
+    PHR-hypertension relationship through compounding metabolic dysfunction
+- name: cardiovascular_disease_history
+  direction: strengthens
+  strength: strong
+  description: History of coronary heart disease, angina, heart attack, and stroke
+    were adjusted, indicating these conditions may modify the PHR effect
+- name: central_adiposity
+  direction: strengthens
+  strength: moderate
+  description: Waist circumference was adjusted as a covariate, suggesting visceral
+    adiposity may enhance inflammatory and metabolic pathways

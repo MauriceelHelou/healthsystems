@@ -1,0 +1,60 @@
+id: NEW:off_premise_alcohol_outlet_density_to_poverty_rate
+name: Off-Premise Alcohol Outlet Density → Poverty Rate
+from_node:
+  node_id: NEW:off_premise_alcohol_outlet_density
+  node_name: Off-Premise Alcohol Outlet Density
+to_node:
+  node_id: poverty_rate
+  node_name: Poverty Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Lower economic status neighborhoods have fewer resources to resist alcohol outlet proliferation'
+- 'Step 2: Weaker political representation and zoning enforcement in disadvantaged areas permits more
+  outlets'
+- 'Step 3: Off-premise outlets (liquor stores, convenience stores) cluster in areas with lower economic
+  status'
+- 'Step 4: This creates disproportionate alcohol availability in already vulnerable communities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Miriam Marco et al. 2017. "Neighborhood Characteristics, Alcohol Outlet Density,
+    and Alcohol-Related Calls-for-Service: A Spatiotemporal Analysis in a Wet Drinking Country." https://doi.org/10.3390/IJGI6120380'
+  supporting_citations:
+  - 'Romley, J.A. et al. (2007). Alcohol and environmental justice: the density of liquor stores and bars
+    in urban neighborhoods.'
+  - LaVeist, T.A. & Wallace, J.M. (2000). Health risk and inequitable distribution of liquor stores in
+    African American neighborhood.
+  - Additional citations require full-text access
+  doi: 10.3390/IJGI6120380
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Off-premise alcohol outlets (liquor stores, convenience stores selling alcohol) are disproportionately
+  concentrated in neighborhoods with lower economic status, creating inequitable exposure to alcohol availability.
+quantitative_effects:
+  sample_size: 552
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: This pattern of off-premise outlet concentration in lower economic status areas was
+    observed in Valencia, Spain, consistent with findings from U.S. studies.
+moderators:
+- name: immigrant_concentration
+  direction: strengthens
+  strength: moderate
+  description: Off-premise density was higher in areas with higher immigrant concentration, suggesting
+    compounded vulnerability
+- name: residential_instability
+  direction: weakens
+  strength: moderate
+  description: Off-premise density was lower in areas with higher residential instability
+structural_competency:
+  equity_implications: This mechanism reflects environmental injustice in alcohol outlet distribution.
+    Disadvantaged neighborhoods bear disproportionate burden of off-premise alcohol availability due to
+    weaker political power, less restrictive zoning, and economic incentives for outlet operators. This
+    structural pattern perpetuates health inequities as low-income communities face greater alcohol exposure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.058454'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

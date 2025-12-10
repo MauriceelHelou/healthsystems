@@ -1,0 +1,42 @@
+id: income_inequality_gini_to_poor_self_rated_health
+name: Income Inequality (Gini Coefficient) → Poor Self-Rated Health
+from_node:
+  node_id: income_inequality_gini
+  node_name: Income Inequality (Gini Coefficient)
+to_node:
+  node_id: poor_self_rated_health
+  node_name: Poor Self-Rated Health
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Income inequality creates unequal distribution of resources across populations,
+  concentrating wealth and opportunity in smaller segments'
+- 'Step 2: Unequal resource distribution reduces access to health-promoting resources
+  (healthcare, healthy food, safe housing) for those in lower income brackets'
+- 'Step 3: Chronic stress from social comparison and relative deprivation in unequal
+  societies impacts physiological and psychological well-being'
+- 'Step 4: Combined material deprivation and psychosocial stress pathways contribute
+  to poorer perceived health status'
+evidence:
+  quality_rating: B
+  n_studies: 38
+  primary_citation: 'M. Shimonovich et al. 2024. "Causal Assessment of Income Inequality
+    on Self‐Rated Health and All‐Cause Mortality: A Systematic Review and Meta‐Analysis."
+    *Milbank Quarterly*. https://doi.org/10.1111/1468-0009.12689'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.933823'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: individual_socioeconomic_position
+  direction: strengthens
+  strength: moderate
+  description: Studies adjusted for individual-level socioeconomic position to separate
+    contextual effects of inequality from compositional effects of individual income
+- name: geographic_scale
+  direction: weakens
+  strength: moderate
+  description: Studies examined income inequality at subnational levels rather than
+    national level, potentially attenuating observed associations

@@ -1,0 +1,56 @@
+id: NEW:practitioner_delivered_alcohol_intervention_to_binge_drinking
+name: Practitioner-Delivered Alcohol Intervention → Binge Drinking
+from_node:
+  node_id: NEW:practitioner_delivered_alcohol_intervention
+  node_name: Practitioner-Delivered Alcohol Intervention
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Practitioner interventions delivered at 6-month follow-up period'
+- 'Step 2: Sustained therapeutic relationship supports continued behavior change'
+- 'Step 3: Accountability and follow-up mechanisms maintain reduced consumption'
+- 'Step 4: Reduced weekly alcohol consumption compared to digital-only interventions'
+evidence:
+  quality_rating: A
+  n_studies: 201
+  primary_citation: 'Fiona R Beyer et al. 2023. "Practitioner and digitally delivered interventions for
+    reducing hazardous and harmful alcohol consumption in people not seeking alcohol treatment: a systematic
+    review and network meta-analysis.." https://doi.org/10.1111/add.15999'
+  supporting_citations:
+  - Additional citations require full-text access - this is a network meta-analysis of 201 RCTs
+  - 104 trials reported number of single high intensity drinking episodes
+  - CINeMA tool used to assess confidence in effect sizes
+  doi: 10.1111/add.15999
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2022, source is 2023'
+last_updated: '2025-12-06'
+version: '2.0'
+description: At 6 months, practitioner-delivered interventions maintain superiority over digital interventions,
+  reducing weekly alcohol consumption by 14 grams/week among non-treatment-seeking hazardous drinkers
+quantitative_effects:
+  effect_size:
+    value: -14.0
+    type: mean_difference
+    ci_lower: -25.0
+    ci_upper: -3.0
+  sample_size: 94753
+moderators:
+- name: time_since_intervention
+  direction: weakens
+  strength: moderate
+  description: Effect attenuates from 1 month to 6 months, with smaller but still significant reduction
+structural_competency:
+  equity_implications: The diminishing but persistent effect at 6 months suggests that sustained access
+    to practitioner support is important for maintaining behavior change. Healthcare systems that provide
+    continuity of care may achieve better outcomes. Structural barriers to follow-up care (transportation,
+    cost, availability) may contribute to effect attenuation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.094369'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

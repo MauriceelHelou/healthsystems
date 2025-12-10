@@ -1,0 +1,56 @@
+id: NEW:liver_disease_severity_to_NEW:alcohol_related_hospitalization
+name: Liver Disease Severity (Cirrhosis/Decompensation) → Alcohol-Related Hospitalization
+from_node:
+  node_id: NEW:liver_disease_severity
+  node_name: Liver Disease Severity (Cirrhosis/Decompensation)
+to_node:
+  node_id: NEW:alcohol_related_hospitalization
+  node_name: Alcohol-Related Hospitalization
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Progressive liver disease (from no disease to cirrhosis to decompensation)
+  reduces hepatic functional reserve and metabolic capacity'
+- 'Step 2: Impaired liver function leads to decreased ability to metabolize alcohol
+  and manage its toxic byproducts, increasing vulnerability to alcohol-related complications'
+- 'Step 3: Advanced liver disease is associated with complications such as portal
+  hypertension, variceal bleeding, ascites, and hepatic encephalopathy that can be
+  precipitated or worsened by continued alcohol exposure'
+- 'Step 4: These complications, combined with reduced physiological resilience, result
+  in significantly higher rates of alcohol-related hospitalizations as liver disease
+  severity increases'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'D. Ayyala et al. 2022. Naltrexone for alcohol use disorder: Hepatic
+    safety in patients with and without liver disease. Hepatology Communications.'
+  supporting_citations: []
+description: 'Progressive liver disease severity, from no liver disease through cirrhosis
+  to decompensated cirrhosis, is strongly associated with increased alcohol-related
+  hospitalization rates. In a retrospective cohort of patients with alcohol use disorder,
+  2-year hospitalization rates increased in a dose-response pattern: 8.2% for those
+  without liver disease, 27.7% for liver disease without cirrhosis, 40.5% for cirrhosis,
+  and 41.7% for decompensated cirrhosis. Cirrhosis was an independent predictor of
+  subsequent hospitalization with a hazard ratio of 5.16.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 5.16
+    type: hazard_ratio
+    ci_lower: 1.69
+    ci_upper: 15.75
+  p_value: null
+  sample_size: 160
+moderators:
+- name: Naltrexone treatment duration
+  direction: weakens
+  strength: moderate
+  description: Longer duration of naltrexone prescription (>30 days) was associated
+    with reduced hospitalization risk (HR 2.50 for ≤30 days vs longer treatment)
+- name: Decompensation status
+  direction: strengthens
+  strength: strong
+  description: Decompensated cirrhosis showed highest 2-year hospitalization rate
+    (41.7%) compared to compensated cirrhosis (40.5%), LD without cirrhosis (27.7%),
+    and no LD (8.2%)

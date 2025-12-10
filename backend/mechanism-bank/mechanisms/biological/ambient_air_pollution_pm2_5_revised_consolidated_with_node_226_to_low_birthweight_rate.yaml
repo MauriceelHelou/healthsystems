@@ -1,0 +1,56 @@
+id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226_to_low_birthweight_rate
+name: Ambient PM2.5 Pollution → Low Birthweight Rate
+from_node:
+  node_id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226
+  node_name: Ambient PM2.5 Pollution
+to_node:
+  node_id: low_birthweight_rate
+  node_name: Low Birthweight Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Pregnant women inhale ambient PM2.5 particles, which penetrate deep into
+  the respiratory system and enter systemic circulation'
+- 'Step 2: PM2.5 induces systemic oxidative stress and inflammation, affecting placental
+  function and fetal development'
+- 'Step 3: Inflammatory responses and oxidative damage impair placental nutrient and
+  oxygen transfer to the fetus'
+- 'Step 4: Reduced placental efficiency leads to fetal growth restriction and lower
+  birth weight'
+- 'Step 5: PM2.5 exposure may also reduce gestational age, which independently contributes
+  to lower birth weight'
+evidence:
+  quality_rating: A
+  n_studies: 44
+  primary_citation: 'R. Ghosh et al. 2021. Ambient and household PM2.5 pollution and
+    adverse perinatal outcomes: A meta-regression and analysis of attributable global
+    burden for 204 countries and territories. PLoS Medicine.'
+  supporting_citations: []
+description: Ambient PM2.5 pollution exposure during pregnancy is associated with
+  an 11% increased risk of low birth weight per 10 μg/m3 increment, and a mean reduction
+  of 22 grams in birth weight. This meta-regression of 44 birth weight studies across
+  204 countries demonstrates a robust association, with approximately 2.76 million
+  LBW infants globally attributable to total PM2.5 exposure in 2019. The biological
+  pathway involves systemic inflammation, oxidative stress, and impaired placental
+  function leading to fetal growth restriction.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.11
+    type: relative_risk
+    ci_lower: 1.07
+    ci_upper: 1.16
+  p_value: null
+  sample_size: null
+moderators:
+- name: country_income_level
+  direction: strengthens
+  strength: strong
+  description: Low and middle-income countries bear a disproportionate burden due
+    to higher ambient PM2.5 levels and combined exposure with household air pollution
+- name: exposure_level
+  direction: strengthens
+  strength: moderate
+  description: Nonlinear dose-response relationship exists; higher ambient PM2.5 concentrations
+    associated with greater risk

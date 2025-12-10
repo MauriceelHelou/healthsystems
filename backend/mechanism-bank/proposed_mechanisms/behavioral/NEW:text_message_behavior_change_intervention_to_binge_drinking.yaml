@@ -1,0 +1,54 @@
+id: NEW:text_message_behavior_change_intervention_to_binge_drinking
+name: Text Message Behavior Change Intervention → Binge Drinking
+from_node:
+  node_id: NEW:text_message_behavior_change_intervention
+  node_name: Text Message Behavior Change Intervention
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Young adults with hazardous drinking receive automated text messages on
+  their typical drinking days (2 days per week)'
+- 'Step 2: Text messages deliver behavior change techniques including pre-drinking
+  cognition feedback, alcohol consumption feedback, and/or adaptive goal support'
+- 'Step 3: These techniques promote self-monitoring, increase awareness of drinking
+  patterns, and support drinking limit goals'
+- 'Step 4: Enhanced self-awareness and goal-directed behavior lead to reduced alcohol
+  consumption on drinking occasions'
+- 'Step 5: Cumulative effect results in fewer binge drinking days per month'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'B. Suffoletto et al. 2022. Effects of text message interventions
+    with different behavior change techniques on alcohol consumption among young adults:
+    A 5-arm randomized controlled trial. Addiction.'
+  supporting_citations: []
+description: Automated text message interventions incorporating behavior change techniques
+  (feedback on drinking plans, alcohol consumption feedback, and drinking limit goal
+  support) produce small yet durable reductions in binge drinking days among non-treatment
+  seeking young adults with hazardous drinking. The combination intervention showed
+  the strongest effects, with mean binge drinking days decreasing from 3.0 to 2.3
+  at 3-month follow-up compared to an increase in the control condition.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.52
+    type: beta_coefficient
+    ci_lower: -0.77
+    ci_upper: -0.26
+  p_value: null
+  sample_size: 1141
+moderators:
+- name: intervention_type
+  direction: strengthens
+  strength: moderate
+  description: Combined interventions (COMBO) showed largest effect (-0.52), followed
+    by USE (-0.38) and GOAL (-0.34), compared to simple self-monitoring (TRACK)
+- name: time_since_intervention
+  direction: strengthens
+  strength: moderate
+  description: Effects were durable at 6-month follow-up, with all active conditions
+    showing significantly lower binge drinking days compared to control

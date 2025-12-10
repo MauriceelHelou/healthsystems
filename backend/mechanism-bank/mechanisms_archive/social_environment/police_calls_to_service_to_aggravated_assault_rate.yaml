@@ -1,0 +1,38 @@
+id: police_calls_to_service_to_aggravated_assault_rate
+name: Police Calls to Service → Aggravated Assault Rate
+from_node:
+  node_id: police_calls_to_service
+  node_name: Police Calls to Service
+to_node:
+  node_id: aggravated_assault_rate
+  node_name: Aggravated Assault Rate
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Higher police calls to service indicate elevated levels of neighborhood
+  disorder, conflict, and underlying social instability'
+- 'Step 2: Police presence and activity may reflect or exacerbate community tensions
+  and adversarial relationships between residents and authorities'
+- 'Step 3: Neighborhoods with frequent police calls experience heightened surveillance
+  and enforcement that can increase stress and conflict without addressing root causes'
+- 'Step 4: The combination of underlying disorder, police presence without violence
+  abatement, and community stress contributes to elevated aggravated assault rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Lardier et al. 2021. "A Spatial Analysis of Alcohol Outlet
+    Density Type, Abandoned Properties, and Police Calls on Aggravated Assault Rates
+    in a Northeastern U.S. City." *Substance Use & Misuse*. https://doi.org/10.1080/10826084.2021.1942053
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.096298'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: community_disadvantage
+  direction: strengthens
+  strength: strong
+  description: Abstract explicitly notes that disadvantaged urban communities are
+    burdened by greater police presence with limited or no abatement in crime or violence,
+    suggesting the relationship is particularly strong in marginalized areas

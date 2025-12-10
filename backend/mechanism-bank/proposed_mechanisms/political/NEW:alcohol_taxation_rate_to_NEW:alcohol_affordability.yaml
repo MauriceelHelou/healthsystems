@@ -1,0 +1,44 @@
+id: NEW:alcohol_taxation_rate_to_NEW:alcohol_affordability
+name: Alcohol Taxation Rate → Alcohol Affordability
+from_node:
+  node_id: NEW:alcohol_taxation_rate
+  node_name: Alcohol Taxation Rate
+to_node:
+  node_id: NEW:alcohol_affordability
+  node_name: Alcohol Affordability
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Government implements alcohol taxation increase (excise tax policy)'
+- 'Step 2: Higher taxes are passed through to retail prices of alcoholic beverages'
+- 'Step 3: Increased prices relative to income reduce the affordability of alcohol
+  for consumers'
+- 'Step 4: Reduced affordability leads to decreased alcohol consumption, particularly
+  among price-sensitive populations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'J. Manthey et al. 2023. "The impact of alcohol taxation increase
+    on all-cause mortality inequalities in Lithuania: an interrupted time series analysis."
+    BMC Medicine.'
+  supporting_citations: []
+description: Alcohol taxation increases directly reduce alcohol affordability by raising
+  retail prices. This economic mechanism operates through standard price elasticity
+  of demand, where higher prices relative to consumer income make alcohol less affordable.
+  The 2017 Lithuanian taxation increase demonstrated this pathway, with subsequent
+  reductions in alcohol-related mortality, particularly among lower socioeconomic
+  groups who are more price-sensitive.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: socioeconomic status
+  direction: strengthens
+  strength: strong
+  description: Lower-educated and lower-income populations are more price-sensitive;
+    taxation increases have greater impact on affordability and subsequent consumption
+    in these groups
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Effects on downstream mortality inequalities were more pronounced among
+    men (13% reduction) compared to women, suggesting differential affordability impacts

@@ -1,0 +1,74 @@
+id: NEW:hydroxychloroquine_treatment_covid19_to_all_cause_mortality_rate
+name: Hydroxychloroquine Treatment for COVID-19 → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:hydroxychloroquine_treatment_covid19
+  node_name: Hydroxychloroquine Treatment for COVID-19
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Hydroxychloroquine administered to hospitalized COVID-19 patients at therapeutic or elevated
+  doses'
+- 'Step 2: Drug may cause cardiac toxicity including QT prolongation and arrhythmias'
+- 'Step 3: Potential interference with beneficial immune responses or no therapeutic antiviral effect'
+- 'Step 4: Increased risk of adverse events without corresponding clinical benefit'
+- 'Step 5: Net increase in all-cause mortality compared to standard care or placebo'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: C. Axfors et al. 2021. "Mortality outcomes with hydroxychloroquine and chloroquine
+    in COVID-19 from an international collaborative meta-analysis of randomized trials." https://doi.org/10.1038/s41467-021-22446-z
+  supporting_citations:
+  - RECOVERY Collaborative Group. Effect of hydroxychloroquine in hospitalized patients with Covid-19.
+    N Engl J Med.
+  - WHO SOLIDARITY Trial Consortium. Repurposed antiviral drugs for Covid-19. N Engl J Med.
+  - Additional citations require full-text access for identification of specific included RCTs
+  doi: 10.1038/s41467-021-22446-z
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis of 26 randomized controlled trials (10,012 patients) found hydroxychloroquine
+  treatment for COVID-19 was associated with 11% increased odds of all-cause mortality (OR 1.11, 95% CI
+  1.02-1.20). Results showed no heterogeneity (I²=0%) across trials, with findings dominated by large
+  pragmatic trials RECOVERY and WHO SOLIDARITY.
+quantitative_effects:
+  effect_size:
+    value: 1.11
+    type: odds_ratio
+    ci_lower: 1.02
+    ci_upper: 1.2
+  sample_size: 10012
+  heterogeneity_i_squared: 0.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Results dominated by RECOVERY (UK) and WHO SOLIDARITY (international) trials. Generalizability
+    unclear for outpatients, children, pregnant women, and people with comorbidities.
+moderators:
+- name: patient_setting
+  direction: strengthens
+  strength: moderate
+  description: Most evidence from hospitalized patients; effects in outpatient settings unclear
+- name: drug_dosing
+  direction: strengthens
+  strength: moderate
+  description: RECOVERY and SOLIDARITY employed relatively high doses which may have contributed to harm
+- name: diagnostic_confirmation
+  direction: weakens
+  strength: weak
+  description: Prespecified subgroup analysis found no effect modification by diagnostic confirmation
+    status
+structural_competency:
+  equity_implications: This finding has structural implications for healthcare resource allocation and
+    policy. The rapid adoption of hydroxychloroquine for COVID-19 treatment without adequate evidence
+    reflects structural pressures during pandemic emergencies to act before evidence accrues. Substantial
+    research investment was allocated to these trials, representing opportunity costs. The finding that
+    treatment caused harm underscores the importance of evidence-based medicine in crisis situations and
+    the potential for unproven treatments to worsen health outcomes at population level, particularly
+    affecting those with limited healthcare options who may be offered experimental treatments.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.878895'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

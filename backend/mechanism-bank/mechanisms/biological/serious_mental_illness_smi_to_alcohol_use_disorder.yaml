@@ -1,0 +1,51 @@
+id: serious_mental_illness_smi_to_alcohol_use_disorder
+name: Serious Mental Illness → Alcohol Use Disorder
+from_node:
+  node_id: serious_mental_illness_smi
+  node_name: Serious Mental Illness
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Serious mental illness (SMI) and problematic alcohol use share overlapping
+  genetic architecture, with significant genetic correlations identified between psychiatric
+  traits and alcohol use disorder'
+- 'Step 2: Shared genetic variants affect common neurobiological pathways, including
+  dopaminergic reward circuits and stress response systems that are dysregulated in
+  both SMI and alcohol use disorder'
+- 'Step 3: Genetic heritability is enriched in brain regions and regulatory genomic
+  regions, suggesting shared neural substrates underlying both conditions'
+- 'Step 4: Mendelian randomization analyses indicate causal effects of psychiatric
+  status on liability to problematic alcohol use, supporting a biological pathway
+  from SMI to AUD'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: Hang Zhou et al. 2020. Genome-wide meta-analysis of problematic
+    alcohol use in 435,563 individuals yields insights into biology and relationships
+    with other traits. Nature Neuroscience.
+  supporting_citations: []
+description: This genome-wide meta-analysis combining data from the Million Veteran
+  Program, Psychiatric Genomics Consortium, and UK Biobank identified significant
+  genetic correlations between problematic alcohol use and psychiatric traits. The
+  study found 29 independent risk variants for problematic alcohol use, with genetic
+  heritability enriched in brain tissue and regulatory genomic regions. Mendelian
+  randomization analyses provided evidence for causal effects of psychiatric status
+  on liability to problematic alcohol use, supporting a biological mechanism whereby
+  shared genetic factors and overlapping neurobiological pathways predispose individuals
+  with serious mental illness to develop alcohol use disorder.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: substance_use_comorbidity
+  direction: strengthens
+  strength: strong
+  description: Genetic correlations with other substance use traits suggest shared
+    biological vulnerability that may amplify the SMI-AUD relationship
+- name: risk_taking_behavior
+  direction: strengthens
+  strength: moderate
+  description: Mendelian randomization identified risk-taking behavior as a causal
+    factor in PAU liability, which may be elevated in SMI

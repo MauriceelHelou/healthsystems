@@ -1,0 +1,68 @@
+id: intimate_partner_violence_to_NEW:ptsd_prevalence
+name: Intimate Partner Violence → Posttraumatic Stress Disorder (PTSD)
+from_node:
+  node_id: intimate_partner_violence
+  node_name: Intimate Partner Violence
+to_node:
+  node_id: NEW:ptsd_prevalence
+  node_name: Posttraumatic Stress Disorder (PTSD)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Women experience intimate partner violence (physical, psychological, or
+  sexual) which constitutes direct exposure to traumatic events involving threat to
+  physical safety and bodily autonomy'
+- 'Step 2: IPV exposure triggers trauma responses including hyperarousal, intrusive
+  memories, emotional dysregulation, and avoidance behaviors characteristic of PTSD
+  symptomatology'
+- 'Step 3: Repeated or chronic IPV exposure reinforces trauma pathways, with ongoing
+  threat perception, learned helplessness, and disrupted sense of safety contributing
+  to persistent PTSD development'
+- 'Step 4: The relational nature of IPV complicates recovery as the source of trauma
+  is often within the home environment, creating complex trauma responses and elevated
+  PTSD risk'
+evidence:
+  quality_rating: A
+  n_studies: 201
+  primary_citation: 'S. White et al. 2023. "Global Prevalence and Mental Health Outcomes
+    of Intimate Partner Violence Among Women: A Systematic Review and Meta-Analysis."
+    Trauma, Violence, & Abuse.'
+  supporting_citations: []
+description: Intimate partner violence significantly increases the odds of posttraumatic
+  stress disorder among women. A comprehensive meta-analysis of 201 studies with over
+  250,000 women found that IPV exposure was associated with OR = 2.15-2.66 for PTSD
+  outcomes. This relationship was consistent across different types of IPV (physical,
+  psychological, sexual) and across clinical and community populations, though prevalence
+  rates varied by country income level.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.15
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: 2.66
+  p_value: null
+  sample_size: 250599
+moderators:
+- name: IPV type
+  direction: strengthens
+  strength: moderate
+  description: Different IPV subtypes (physical, psychological, sexual) showed varying
+    effect sizes for PTSD outcomes (OR range 2.15-2.66)
+- name: Population type
+  direction: strengthens
+  strength: moderate
+  description: Clinical and community populations showed different prevalence patterns,
+    with community populations reporting highest past-year prevalence for physical,
+    psychological, and sexual violence
+- name: Country income level
+  direction: strengthens
+  strength: moderate
+  description: IPV prevalence and associations varied significantly by country income
+    level
+- name: Pregnancy status
+  direction: strengthens
+  strength: moderate
+  description: Perinatal women were most likely to have experienced lifetime physical
+    IPV, representing a high-risk group

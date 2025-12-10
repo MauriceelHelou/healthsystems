@@ -1,0 +1,42 @@
+id: neutrophil_pad4_expression_to_ald_mortality_risk
+name: Neutrophil PAD4 Expression → ALD Mortality Risk
+from_node:
+  node_id: neutrophil_pad4_expression
+  node_name: Neutrophil PAD4 Expression
+to_node:
+  node_id: ald_mortality_risk
+  node_name: ALD Mortality Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Elevated PAD4 expression indicates increased neutrophil extracellular trap
+  (NET) formation and severe inflammatory dysregulation'
+- 'Step 2: High PAD4 levels correlate with greater liver dysfunction severity and
+  development of ALD complications'
+- 'Step 3: Systemic inflammation marked by PAD4 contributes to multi-organ dysfunction
+  and infection susceptibility'
+- 'Step 4: Combined inflammatory burden and liver failure increase mortality risk
+  in ALD patients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Anna Rycyk-Bojarzynska et al. 2024. "Neutrophil PAD4 Expression
+    and Its Pivotal Role in Assessment of Alcohol-Related Liver Disease.." *International
+    journal of molecular sciences*. https://doi.org/10.3390/ijms25147597
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.126801'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: ald_complications
+  direction: strengthens
+  strength: strong
+  description: PAD4 levels correlate with development of ALD complications, indicating
+    complication presence amplifies mortality risk
+- name: 90_day_followup_period
+  direction: strengthens
+  strength: moderate
+  description: PAD4 showed good predictive accuracy over 90-day follow-up, suggesting
+    short-term prognostic value

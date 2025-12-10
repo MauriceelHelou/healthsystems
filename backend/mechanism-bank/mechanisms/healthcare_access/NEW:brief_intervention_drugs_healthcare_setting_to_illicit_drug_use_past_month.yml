@@ -1,0 +1,53 @@
+id: NEW:brief_intervention_drugs_healthcare_setting_to_illicit_drug_use_past_month
+name: Brief Drug Use Intervention in Healthcare Settings → Illicit Drug Use Past Month
+from_node:
+  node_id: NEW:brief_intervention_drugs_healthcare_setting
+  node_name: Brief Drug Use Intervention in Healthcare Settings
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use Past Month
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare settings screen for drug use among patients presenting for other medical concerns'
+- 'Step 2: Brief interventions provide education, risk assessment, and motivational counseling for drug
+  use'
+- 'Step 3: Small improvements observed in multiple drug/mixed substance use outcomes'
+- 'Step 4: Limited evidence suggests modest reductions in overall drug use patterns'
+evidence:
+  quality_rating: A
+  n_studies: 111
+  primary_citation: 'Emily E Tanner-Smith et al. 2022. "Effects of brief substance use interventions delivered
+    in general medical settings: a systematic review and meta-analysis.." https://doi.org/10.1111/add.15674'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes 116 trials identified
+  - Studies conducted since 1990 across general medical settings
+  - 64,439 total participants across all identified trials
+  doi: 10.1111/add.15674
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2021, source is 2022'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Drug-targeted brief interventions in healthcare settings yielded significant but small improvements
+  in multiple drug/mixed substance use. However, evidence for effects specifically on drug use outcomes
+  remains limited, suggesting the need for more tailored approaches.
+quantitative_effects:
+  sample_size: 64439
+moderators:
+- name: substance_type
+  direction: weakens
+  strength: moderate
+  description: Drug-targeted interventions showed limited evidence compared to alcohol-targeted interventions
+structural_competency:
+  equity_implications: The limited effectiveness of drug-targeted brief interventions compared to alcohol
+    interventions may reflect structural differences in how these substances are addressed in healthcare
+    systems, including stigma, criminalization of drug use, and lack of integrated treatment pathways.
+    This finding points to the need for systemic changes in how healthcare systems approach drug use,
+    including decriminalization efforts and integration of harm reduction services.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.013464'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

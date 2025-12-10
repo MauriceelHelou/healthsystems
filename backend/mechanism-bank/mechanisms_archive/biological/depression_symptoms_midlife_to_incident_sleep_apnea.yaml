@@ -1,0 +1,42 @@
+id: depression_symptoms_midlife_to_incident_sleep_apnea
+name: Depression Symptoms in Midlife → Incident Sleep Apnea
+from_node:
+  node_id: depression_symptoms_midlife
+  node_name: Depression Symptoms in Midlife
+to_node:
+  node_id: incident_sleep_apnea
+  node_name: Incident Sleep Apnea
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Depression symptoms, particularly non-somatic symptoms, alter sleep architecture
+  and respiratory control'
+- 'Step 2: Chronic sleep disturbances affect upper airway muscle tone and neural control
+  of breathing'
+- 'Step 3: Over decades, progressive changes in sleep physiology and possible weight
+  gain contribute to airway collapse'
+- 'Step 4: Clinical sleep apnea develops requiring medical diagnosis and treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Hillary L Ditmars et al. 2022. "Associations between depression
+    and cardiometabolic health: A 27-year longitudinal study.." *Psychological medicine*.
+    https://doi.org/10.1017/S003329172000505X'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.910067'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: non_somatic_depression_symptoms
+  direction: strengthens
+  strength: strong
+  description: When somatic symptoms were excluded, sleep apnea was the only condition
+    that remained significantly associated (OR 1.32, 95% CI 1.09-1.60), indicating
+    non-somatic depression symptoms specifically predict sleep apnea
+- name: body_mass_index
+  direction: weakens
+  strength: moderate
+  description: BMI was controlled for and association remained, suggesting depression
+    effect on sleep apnea operates beyond weight-mediated pathways

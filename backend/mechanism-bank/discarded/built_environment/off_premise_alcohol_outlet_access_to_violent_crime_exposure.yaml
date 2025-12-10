@@ -1,0 +1,44 @@
+id: off_premise_alcohol_outlet_access_to_violent_crime_exposure
+name: Access to Off-Premise Alcohol Outlets → Violent Crime Exposure
+from_node:
+  node_id: off_premise_alcohol_outlet_access
+  node_name: Access to Off-Premise Alcohol Outlets
+to_node:
+  node_id: violent_crime_exposure
+  node_name: Violent Crime Exposure
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Off-premise outlets (liquor stores, convenience stores) allow alcohol purchase
+  for consumption elsewhere without on-site supervision'
+- 'Step 2: Lack of effective measures to maintain order in and around off-premise
+  outlets creates ungoverned spaces'
+- 'Step 3: These outlets attract congregation and loitering without built-in social
+  control mechanisms present in on-premise establishments'
+- 'Step 4: Portable alcohol consumption disperses intoxicated individuals into public
+  spaces with minimal guardianship, multiplying opportunities for violent encounters'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Pamela J Trangenstein et al. 2018. "Outlet Type, Access to Alcohol,
+    and Violent Crime.." *Alcoholism, clinical and experimental research*. https://doi.org/10.1111/acer.13880
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.032863'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: population_density
+  direction: strengthens
+  strength: moderate
+  description: Population density controlled as confounder; higher density areas may
+    amplify effects through increased interactions in public spaces
+- name: guardianship_capacity
+  direction: weakens
+  strength: strong
+  description: The paper explicitly notes that lack of effective order-maintenance
+    measures around off-premise outlets explains their stronger association with violence
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/off_premise_alcohol_outlet_access_to_violent_crime_exposure.yaml
+_category: built_environment

@@ -1,0 +1,57 @@
+id: NEW:oral_nicotine_pouch_use_to_smoking_cessation_attempts
+name: Oral Nicotine Pouch Use → Smoking Cessation Attempts
+from_node:
+  node_id: NEW:oral_nicotine_pouch_use
+  node_name: Oral Nicotine Pouch Use
+to_node:
+  node_id: smoking_cessation_attempts
+  node_name: Smoking Cessation Attempts
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Oral nicotine pouches provide alternative nicotine delivery without combustion'
+- 'Step 2: Users substitute cigarettes with nicotine pouches to maintain nicotine levels'
+- 'Step 3: Reduced exposure to combustion products may facilitate transition away from smoking'
+- 'Step 4: Nicotine delivery sustains attempts to abstain from cigarettes'
+evidence:
+  quality_rating: C
+  n_studies: 4
+  primary_citation: Jamie Hartmann-Boyce et al. 2025. "Oral nicotine pouches for cessation or reduction
+    of use of other tobacco or nicotine products.." https://doi.org/10.1002/14651858.CD016220.pub2
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 4 small studies (n<150 each)
+  - Studies conducted in USA (3) and New Zealand (1)
+  - One industry-funded study included
+  doi: 10.1002/14651858.CD016220.pub2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Oral nicotine pouches may slightly increase smoking abstinence compared to no intervention
+  at 8-week follow-up, but evidence is very uncertain due to risk of bias and imprecision
+quantitative_effects:
+  effect_size:
+    value: 1.58
+    type: relative_risk
+    ci_lower: 0.07
+    ci_upper: 35.32
+  sample_size: 27
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies conducted in USA (3 studies) and New Zealand (1 study) - geographic variation
+    in regulatory environments and product availability
+moderators:
+- name: nicotine_dose
+  direction: strengthens
+  strength: weak
+  description: Higher-dose ONP showed higher quit rates compared to lower-dose (RR 5.00, 95% CI 0.26-96.13),
+    though evidence is imprecise
+structural_competency:
+  equity_implications: This mechanism relates to harm reduction policy and regulatory frameworks for nicotine
+    products. Access to alternative nicotine delivery systems represents a structural intervention that
+    could reduce combustible tobacco harms. However, industry involvement in research and marketing raises
+    equity concerns about who benefits from these products.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.885705'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

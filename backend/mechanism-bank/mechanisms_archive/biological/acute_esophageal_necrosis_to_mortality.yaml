@@ -1,0 +1,39 @@
+id: acute_esophageal_necrosis_to_mortality
+name: Acute Esophageal Necrosis → Mortality
+from_node:
+  node_id: acute_esophageal_necrosis
+  node_name: Acute Esophageal Necrosis
+to_node:
+  node_id: mortality
+  node_name: Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Acute esophageal necrosis causes severe mucosal damage with risk of complications'
+- 'Step 2: Complications include perforation, stricture formation, and progression
+  of necrosis'
+- 'Step 3: High mortality results from combined effects of AEN complications, underlying
+  comorbidities (cirrhosis), and post-cardiac arrest syndrome'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Erik Roman-Pognuz et al. 2024. "Acute esophageal necrosis following
+    cardiac arrest: A rare and lethal syndrome with diagnostic challenges.." *International
+    journal of surgery case reports*. https://doi.org/10.1016/j.ijscr.2024.109751'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.417599'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: liver_cirrhosis
+  direction: strengthens
+  strength: strong
+  description: Pre-existing liver cirrhosis with failure significantly increases mortality
+    risk in AEN patients
+- name: post_cardiac_arrest_syndrome
+  direction: strengthens
+  strength: strong
+  description: Post-cardiac arrest syndrome combined with AEN creates synergistic
+    increase in mortality

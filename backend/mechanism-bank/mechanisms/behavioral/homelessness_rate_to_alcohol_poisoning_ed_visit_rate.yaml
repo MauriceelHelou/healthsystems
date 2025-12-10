@@ -1,0 +1,59 @@
+id: homelessness_rate_to_alcohol_poisoning_ed_visit_rate
+name: Homelessness Rate → Alcohol Poisoning ED Visit Rate
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: alcohol_poisoning_ed_visit_rate
+  node_name: Alcohol Poisoning ED Visit Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Persons experiencing homelessness face chronic environmental stressors
+  including lack of stable housing, social isolation, and economic insecurity that
+  contribute to elevated rates of alcohol use as a coping mechanism'
+- 'Step 2: Limited access to primary healthcare and preventive services means alcohol
+  use disorders among homeless populations often go untreated, leading to escalation
+  of consumption and higher risk of acute intoxication'
+- 'Step 3: Homeless individuals lack safe, private spaces for shelter, leading to
+  outdoor drinking and exposure to elements that compound alcohol''s physiological
+  effects'
+- 'Step 4: When acute alcohol poisoning occurs, homeless individuals are more likely
+  to be brought to Emergency Departments by outreach workers, police, or bystanders
+  rather than receiving care at home'
+- 'Step 5: Up to one-third of ED visits by persons experiencing homelessness are attributed
+  to alcohol-related diagnoses, with rate ratios of ED use 1.63 to 18.75 times higher
+  than housed populations'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'Vohra N et al. 2022. Homelessness and the use of Emergency Department
+    as a source of healthcare: a systematic review. International Journal of Emergency
+    Medicine.'
+  supporting_citations: []
+description: 'Systematic review of 36 studies demonstrates that persons experiencing
+  homelessness utilize Emergency Departments at significantly higher rates than housed
+  populations, with alcohol-related diagnoses accounting for up to one-third of all
+  ED visits. The pathway operates through multiple behavioral and structural mechanisms:
+  chronic stress and limited coping resources increase alcohol use, lack of primary
+  care access prevents early intervention, and absence of safe private spaces leads
+  to public intoxication requiring emergency response. Rate ratios of ED use among
+  homeless populations range from 1.63 to 18.75 times that of non-homeless individuals.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: healthcare_access
+  direction: strengthens
+  strength: strong
+  description: Lack of access to primary care increases reliance on ED for acute alcohol-related
+    presentations
+- name: substance_use_comorbidity
+  direction: strengthens
+  strength: moderate
+  description: Up to a quarter of visits involved substance poisoning in addition
+    to alcohol, suggesting polysubstance use compounds risk
+- name: country_context
+  direction: strengthens
+  strength: moderate
+  description: Variations by country reflect differences in social safety nets, healthcare
+    systems, and housing policies

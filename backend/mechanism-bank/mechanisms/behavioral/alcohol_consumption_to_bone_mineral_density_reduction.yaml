@@ -1,0 +1,50 @@
+id: alcohol_consumption_to_worker_center_density
+name: Alcohol Consumption → Worker Center Density
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: worker_center_density
+  node_name: Worker Center Density
+  _original_id: bone_mineral_density_reduction
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption contributes to development and progression of chronic
+  pancreatitis through direct toxic effects on pancreatic tissue'
+- 'Step 2: Chronic pancreatitis leads to pancreatic exocrine insufficiency and malabsorption
+  of fat-soluble vitamins (D and K)'
+- 'Step 3: Vitamin D and K deficiencies impair calcium absorption and bone metabolism'
+- 'Step 4: Chronic malnutrition and vitamin deficiencies result in decreased bone
+  mineral density and osteopathy'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'Daryl Ramai et al. 2023. "Prevalence of Osteopathy in Chronic
+    Pancreatitis: A Systematic Review and Meta-Analysis.." *Clinical and translational
+    gastroenterology*. https://doi.org/10.14309/ctg.0000000000000623'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.234668'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: low_body_mass_index
+  direction: strengthens
+  strength: moderate
+  description: Low BMI associated with decreased bone mineral density, likely reflecting
+    severity of malnutrition and malabsorption
+- name: older_age
+  direction: strengthens
+  strength: moderate
+  description: Older age increases vulnerability to bone loss in context of chronic
+    pancreatitis
+- name: female_sex
+  direction: strengthens
+  strength: moderate
+  description: Female sex associated with greater bone loss, possibly due to baseline
+    sex differences in bone density and hormonal factors
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/behavioral/alcohol_consumption_to_bone_mineral_density_reduction.yaml
+_category: behavioral

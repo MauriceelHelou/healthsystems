@@ -1,0 +1,43 @@
+id: steroid_therapy_response_to_mortality_severe_alcoholic_hepatitis
+name: Response to Steroid Therapy → Mortality in Severe Acute Alcoholic Hepatitis
+from_node:
+  node_id: steroid_therapy_response
+  node_name: Response to Steroid Therapy
+to_node:
+  node_id: mortality_severe_alcoholic_hepatitis
+  node_name: Mortality in Severe Acute Alcoholic Hepatitis
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Steroid therapy is administered as first-line medical treatment for severe
+  acute alcoholic hepatitis'
+- 'Step 2: Non-response to steroids indicates more severe disease with uncontrolled
+  hepatic inflammation and progression'
+- 'Step 3: Patients without steroid response lack alternative effective medical treatments'
+- 'Step 4: Progressive liver failure in steroid non-responders leads to significantly
+  higher mortality without transplantation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Patrizia Burra et al. 2021. "Severe acute alcoholic hepatitis:
+    can we offer early liver transplantation?." *Minerva gastroenterology*. https://doi.org/10.23736/S2724-5985.20.02778-6'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.629693'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: disease_severity_at_presentation
+  direction: strengthens
+  strength: strong
+  description: Greater disease severity at presentation strengthens the mortality
+    risk in steroid non-responders
+- name: access_to_early_transplantation
+  direction: weakens
+  strength: strong
+  description: Availability of early liver transplantation as rescue therapy significantly
+    weakens the mortality risk for steroid non-responders
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/steroid_therapy_response_to_mortality_severe_alcoholic_hepatitis.yaml
+_category: biological

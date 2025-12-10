@@ -1,0 +1,42 @@
+id: hypercalcemic_acute_pancreatitis_to_end_stage_renal_disease
+name: Hypercalcemic Acute Pancreatitis → End-Stage Renal Disease
+from_node:
+  node_id: hypercalcemic_acute_pancreatitis
+  node_name: Hypercalcemic Acute Pancreatitis
+to_node:
+  node_id: end_stage_renal_disease
+  node_name: End-Stage Renal Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Severe hypercalcemia causes direct nephrotoxicity through calcium deposition
+  in renal tubules (nephrocalcinosis)'
+- 'Step 2: Acute pancreatitis triggers systemic inflammatory response syndrome (SIRS)
+  with hemodynamic instability and renal hypoperfusion'
+- 'Step 3: Combined insults of hypercalcemia and acute kidney injury from pancreatitis
+  lead to progressive renal damage'
+- 'Step 4: Untreated or delayed treatment results in irreversible nephron loss and
+  progression to end-stage renal failure'
+evidence:
+  quality_rating: C
+  n_studies: 4
+  primary_citation: 'Fakhrddine Amri et al. 2024. "Acute pancreatitis related to hypercalcemia
+    as initial manifestation of cancer: About 4 cases.." *Radiology case reports*.
+    https://doi.org/10.1016/j.radcr.2023.11.017'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.225881'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: duration_of_hypercalcemia
+  direction: strengthens
+  strength: strong
+  description: Prolonged hypercalcemia before diagnosis increases cumulative renal
+    damage and risk of irreversible kidney injury
+- name: baseline_renal_function
+  direction: strengthens
+  strength: moderate
+  description: Pre-existing chronic kidney disease increases vulnerability to progression
+    to end-stage renal disease

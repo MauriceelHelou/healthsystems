@@ -1,0 +1,52 @@
+id: NEW:cognitive_performance_polygenic_score_to_alcohol_use_disorder
+name: Cognitive Performance Polygenic Score → Alcohol Use Disorder
+from_node:
+  node_id: NEW:cognitive_performance_polygenic_score
+  node_name: Cognitive Performance Polygenic Score
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Genetic variants aggregate into polygenic scores reflecting inherited cognitive performance
+  potential'
+- 'Step 2: Higher cognitive performance PGS associated with neurobiological substrates supporting executive
+  function and impulse control'
+- 'Step 3: These genetic factors may influence reward processing and decision-making circuits relevant
+  to addiction vulnerability'
+- 'Step 4: Higher PGS for cognitive performance confers protection against AUD diagnosis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Andrea Johansson Capusan et al. 2025. "Measures of General Intelligence and Risk for
+    Alcohol Use Disorder.." https://doi.org/10.1001/jamapsychiatry.2025.2689
+  supporting_citations:
+  - GWAS summary statistics from cognitive performance study (n=257,481) referenced
+  - GWAS summary statistics from AUD study (n=753,248 total; 113,325 cases) referenced
+  - Yale-Penn cohort (n=5,424) used for PGS analysis
+  doi: 10.1001/jamapsychiatry.2025.2689
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher polygenic scores for cognitive performance are associated with 17% reduced odds of
+  alcohol use disorder diagnosis in the Yale-Penn cohort of European-ancestry individuals. This genetic
+  evidence supports a biological pathway linking cognitive capacity to AUD risk.
+quantitative_effects:
+  effect_size:
+    value: 0.83
+    type: odds_ratio
+    ci_lower: 0.78
+    ci_upper: 0.89
+  sample_size: 5424
+structural_competency:
+  equity_implications: While this mechanism involves genetic factors, it is important to recognize that
+    gene expression is influenced by environmental context. Structural factors that create differential
+    environments (poverty, education access, toxic exposures) can modify how genetic predispositions manifest.
+    This finding should not be used to essentialize AUD risk but rather to understand how structural environments
+    interact with biology.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.995781'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

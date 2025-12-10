@@ -1,0 +1,49 @@
+id: NEW:deprescribing_interventions_to_all_cause_mortality_rate
+name: Deprescribing Interventions → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:deprescribing_interventions
+  node_name: Deprescribing Interventions
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Deprescribing interventions systematically review and discontinue potentially
+  inappropriate medications (PIMs) in older adults'
+- 'Step 2: Reduction in polypharmacy decreases adverse drug events, drug-drug interactions,
+  and medication-related falls'
+- 'Step 3: Improved medication appropriateness leads to better overall health status
+  and reduced hospitalizations'
+- 'Step 4: Decreased medication burden and adverse events contributes to improved
+  survival, particularly in frail older populations'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Hui Wen Quek et al. 2024. The effect of deprescribing interventions
+    on mortality and health outcomes in older people: An updated systematic review
+    and meta‐analysis. British Journal of Clinical Pharmacology.'
+  supporting_citations: []
+description: This systematic review and meta-analysis synthesizes evidence that deprescribing
+  interventions—structured approaches to discontinuing potentially inappropriate medications—may
+  improve survival in older adults. The effect is particularly pronounced in frail
+  older populations. The mechanism operates through reducing polypharmacy-related
+  harms including adverse drug events, drug interactions, falls, and hospitalizations,
+  leading to improved health outcomes and reduced mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: frailty_status
+  direction: strengthens
+  strength: strong
+  description: Deprescribing interventions show particularly strong mortality benefits
+    in frail older people
+- name: polypharmacy_level
+  direction: strengthens
+  strength: moderate
+  description: Greater baseline polypharmacy may increase potential benefit from deprescribing
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Older adults may benefit more from deprescribing due to higher prevalence
+    of inappropriate prescribing

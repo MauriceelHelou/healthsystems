@@ -1,0 +1,37 @@
+id: early_transplant_referral_to_mortality_chronic_liver_disease
+name: Early Referral Within 3 Months of Indication → Mortality in Chronic Liver Disease
+from_node:
+  node_id: early_transplant_referral
+  node_name: Early Referral Within 3 Months of Indication
+to_node:
+  node_id: mortality_chronic_liver_disease
+  node_name: Mortality in Chronic Liver Disease
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Providers recognize clinical indication for transplant evaluation (decompensation
+  or MELD-Na ≥15) and make timely referral within 3 months'
+- 'Step 2: Early evaluation allows assessment before significant disease progression
+  and medical complications'
+- 'Step 3: Patients can be listed for transplant at earlier disease stages with better
+  candidacy profiles'
+- 'Step 4: Earlier listing increases likelihood of receiving transplant before disease
+  progression to death'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Katherine M. Cooper et al. 2023. "Delayed referral for liver transplant
+    evaluation worsens outcomes in chronic liver disease patients requiring inpatient
+    transplant evaluation." *World journal of transplantation*. https://doi.org/10.5500/wjt.v13.i4.169
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.605927'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: guideline_adherence
+  direction: strengthens
+  strength: strong
+  description: Systematic implementation of practice guidelines ensuring referral
+    within 3 months of indication strengthens protective effect

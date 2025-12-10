@@ -1,0 +1,58 @@
+id: NEW:renal_replacement_therapy_status_to_NEW:quality_of_life_health_related
+name: Renal Replacement Therapy Status → Health-Related Quality of Life
+from_node:
+  node_id: NEW:renal_replacement_therapy_status
+  node_name: Renal Replacement Therapy Status
+to_node:
+  node_id: NEW:quality_of_life_health_related
+  node_name: Health-Related Quality of Life
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Young adults with established kidney failure require ongoing renal replacement therapy (dialysis
+  or transplantation)'
+- 'Step 2: RRT imposes significant treatment burden including time constraints, dietary restrictions,
+  and medical appointments'
+- 'Step 3: Physical symptoms and treatment side effects contribute to reduced physical functioning'
+- 'Step 4: Chronic disease management during developmental transition to adulthood disrupts normal life
+  trajectory'
+- 'Step 5: Combined physical and psychosocial burden results in substantially lower quality of life compared
+  to healthy peers'
+evidence:
+  quality_rating: A
+  n_studies: 60
+  primary_citation: Alexander J Hamilton et al. 2017. "Sociodemographic, Psychologic Health, and Lifestyle
+    Outcomes in Young Adults on Renal Replacement Therapy.." https://doi.org/10.2215/CJN.04760517
+  supporting_citations:
+  - Studies of transplant recipients from childhood (multiple studies referenced in meta-analysis)
+  - Cross-sectional studies comparing RRT patients to general population
+  - Additional citations require full-text access for specific included study details
+  doi: 10.2215/CJN.04760517
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Young adults on renal replacement therapy have significantly lower quality of life compared
+  to healthy peers, with dialysis patients experiencing larger decrements than transplant recipients.
+quantitative_effects:
+  effect_size:
+    value: -1.01
+    type: standardized_mean_difference
+    ci_lower: -1.32
+    ci_upper: -0.7
+  sample_size: 15575
+moderators:
+- name: treatment_modality
+  direction: strengthens
+  strength: strong
+  description: Dialysis patients had worse quality of life (SMD -1.01) compared to transplant patients
+    (SMD -0.42)
+structural_competency:
+  equity_implications: This mechanism highlights how chronic disease burden during young adulthood creates
+    structural barriers to achieving developmental milestones. Healthcare system design that fails to
+    address the unique needs of young adults with chronic kidney disease perpetuates health inequities.
+    Access to transplantation versus dialysis may vary by socioeconomic status and geography.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.365059'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

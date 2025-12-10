@@ -1,0 +1,43 @@
+id: liver_transplant_access_to_overall_survival_extensive_crc_mets
+name: Access to Liver Transplantation → Overall Survival in Extensive Colorectal Cancer
+  Liver Metastases
+from_node:
+  node_id: liver_transplant_access
+  node_name: Access to Liver Transplantation
+to_node:
+  node_id: overall_survival_extensive_crc_mets
+  node_name: Overall Survival in Extensive Colorectal Cancer Liver Metastases
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Liver transplantation provides complete replacement of diseased liver tissue
+  in patients with extensive, nonresectable colorectal cancer liver metastases'
+- 'Step 2: Transplantation removes all tumor burden including micrometastases that
+  would remain after resection approaches'
+- 'Step 3: Complete tumor clearance prevents early recurrence and disease progression'
+- 'Step 4: Extended disease-free survival translates to improved overall survival
+  outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Dueland et al. 2021. "Survival Outcomes After Portal Vein Embolization
+    and Liver Resection Compared With Liver Transplant for Patients With Extensive
+    Colorectal Cancer Liver Metastases.." *JAMA Surgery*. https://doi.org/10.1001/jamasurg.2021.0267
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.609654'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: tumor_load
+  direction: strengthens
+  strength: strong
+  description: The survival benefit of transplant over PVE/resection was most pronounced
+    in patients with high tumor load (9+ metastatic tumors or largest lesion ≥5.5cm),
+    with 5-year OS of 33.4% vs 6.7%
+- name: primary_tumor_location
+  direction: strengthens
+  strength: strong
+  description: Among patients with high tumor load and left-sided primary tumors,
+    5-year OS was 45.3% for transplant vs 12.5% for PVE/resection

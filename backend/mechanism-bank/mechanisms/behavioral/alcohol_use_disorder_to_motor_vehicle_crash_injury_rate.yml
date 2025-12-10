@@ -1,0 +1,58 @@
+id: alcohol_use_disorder_to_motor_vehicle_crash_injury_rate
+name: Alcohol Use Disorder → Motor Vehicle Crash Injury Rate
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: motor_vehicle_crash_injury_rate
+  node_name: Motor Vehicle Crash Injury Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption elevates blood alcohol concentration (BAC)'
+- 'Step 2: BAC impairs neurological function affecting judgment, reaction time, and coordination'
+- 'Step 3: Impaired driving increases probability and severity of crashes'
+- 'Step 4: Crash involvement results in injuries ranging from minor to severe'
+evidence:
+  quality_rating: A
+  n_studies: 60
+  primary_citation: A. Høye and Ingeborg Storesund Hesjevoll 2023. "Alcohol and driving—How bad is the
+    combination? A meta-analysis." https://doi.org/10.1080/15389588.2023.2204984
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis synthesized 60 studies with 393 effect
+    estimates
+  - Studies examining crash culpability included in analysis
+  - Studies from multiple geographic regions analyzed
+  doi: 10.1080/15389588.2023.2204984
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The meta-analysis confirms that elevated BAC increases motor vehicle crash injury risk following
+  an exponential dose-response pattern. The 393 effect estimates from 60 studies demonstrate that this
+  relationship holds across multiple study designs and geographic regions, with heterogeneity explained
+  by BAC level, outcome severity, data source, and geography.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects vary by geographic region with stronger associations observed in Nordic countries
+    compared to other regions
+moderators:
+- name: BAC level
+  direction: strengthens
+  strength: strong
+  description: Exponential relationship between BAC and injury risk - higher BAC produces disproportionately
+    greater injury risk
+- name: Injury severity
+  direction: strengthens
+  strength: strong
+  description: The association is stronger for more severe injury outcomes
+structural_competency:
+  equity_implications: Structural determinants influence both alcohol consumption patterns and crash injury
+    risk. Low-income communities may have higher alcohol outlet density, fewer safe transportation alternatives,
+    and less access to rideshare services. Policy interventions at the structural level (sobriety checkpoints,
+    BAC limit laws, ignition interlock requirements) can reduce population-level risk. The geographic
+    variation observed suggests policy environments and infrastructure differences moderate this relationship.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.626426'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

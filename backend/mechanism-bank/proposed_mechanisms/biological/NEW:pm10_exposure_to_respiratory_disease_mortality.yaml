@@ -1,0 +1,48 @@
+id: NEW:pm10_exposure_to_respiratory_disease_mortality
+name: Long-term PM10 Exposure → Respiratory Disease Mortality
+from_node:
+  node_id: NEW:pm10_exposure
+  node_name: Long-term PM10 Exposure
+to_node:
+  node_id: respiratory_disease_mortality
+  node_name: Respiratory Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Long-term inhalation of PM10 particles deposits coarse and fine particulate
+  matter in the respiratory tract, with larger particles (2.5-10μm) primarily affecting
+  upper airways and bronchi'
+- 'Step 2: Chronic exposure triggers sustained inflammatory responses in lung tissue,
+  including oxidative stress, release of pro-inflammatory cytokines, and recruitment
+  of inflammatory cells'
+- 'Step 3: Persistent inflammation leads to progressive airway remodeling, fibrosis,
+  impaired mucociliary clearance, and compromised lung function over time'
+- 'Step 4: Cumulative damage exacerbates chronic respiratory conditions (COPD, asthma,
+  interstitial lung disease), increases susceptibility to respiratory infections,
+  and ultimately increases risk of respiratory mortality'
+evidence:
+  quality_rating: A
+  n_studies: 106
+  primary_citation: 'Pablo Orellano et al. 2024. Long-Term Exposure to Particulate
+    Matter and Mortality: An Update of the WHO Global Air Quality Guidelines Systematic
+    Review and Meta-Analysis. International Journal of Public Health.'
+  supporting_citations: []
+description: Long-term exposure to PM10 is positively and significantly associated
+  with increased respiratory disease mortality. This WHO-commissioned systematic review
+  and meta-analysis of 106 studies provides high certainty evidence that chronic PM10
+  inhalation leads to cumulative respiratory damage through sustained inflammation,
+  oxidative stress, and progressive deterioration of lung function, ultimately increasing
+  mortality risk from respiratory causes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: PM10 concentration level
+  direction: strengthens
+  strength: moderate
+  description: Higher long-term PM10 exposure concentrations associated with greater
+    respiratory mortality risk
+- name: Pre-existing respiratory conditions
+  direction: strengthens
+  strength: moderate
+  description: Individuals with chronic respiratory diseases likely experience enhanced
+    susceptibility to PM10-related mortality

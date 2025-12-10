@@ -1,0 +1,47 @@
+id: NEW:ammonia_targeting_pharmacotherapy_to_NEW:blood_ammonia_concentration
+name: Ammonia-Targeting Pharmacotherapy → Blood Ammonia Concentration
+from_node:
+  node_id: NEW:ammonia_targeting_pharmacotherapy
+  node_name: Ammonia-Targeting Pharmacotherapy
+to_node:
+  node_id: NEW:blood_ammonia_concentration
+  node_name: Blood Ammonia Concentration
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Ammonia-targeting pharmacotherapies (sodium benzoate, glycerol phenylbutyrate,
+  ornithine phenylacetate, AST-120, polyethylene glycol) are administered to patients
+  with cirrhosis'
+- 'Step 2: These drugs act through various mechanisms to reduce ammonia: sodium benzoate
+  conjugates with glycine to form hippurate (excreted renally), glycerol phenylbutyrate
+  and ornithine phenylacetate enhance nitrogen excretion via alternative pathways,
+  AST-120 adsorbs ammonia in the gut, and polyethylene glycol promotes ammonia elimination
+  through catharsis'
+- 'Step 3: Through these mechanisms, blood ammonia concentrations are reduced compared
+  to placebo, though the magnitude of reduction and clinical significance remain uncertain'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: Harry D Zacharias et al. 2019. Pharmacotherapies that specifically
+    target ammonia for the prevention and treatment of hepatic encephalopathy in adults
+    with cirrhosis. The Cochrane database of systematic reviews.
+  supporting_citations: []
+description: Ammonia-targeting pharmacotherapies have the potential to reduce blood
+  ammonia concentrations compared to placebo in adults with cirrhosis. These drugs
+  work through various mechanisms including conjugation, enhanced nitrogen excretion,
+  gut adsorption, and catharsis. However, the evidence is of very low certainty due
+  to high risk of bias in most trials, and the overall clinical benefit remains uncertain.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Type of pharmacotherapy
+  direction: strengthens
+  strength: moderate
+  description: Different drugs (sodium benzoate, glycerol phenylbutyrate, ornithine
+    phenylacetate, AST-120, polyethylene glycol) may have varying efficacy in reducing
+    blood ammonia
+- name: Disease severity
+  direction: strengthens
+  strength: weak
+  description: Trials included both prevention (at-risk patients) and treatment (minimal
+    or overt hepatic encephalopathy) populations

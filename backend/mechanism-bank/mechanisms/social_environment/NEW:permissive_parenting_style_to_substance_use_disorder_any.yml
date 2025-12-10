@@ -1,0 +1,57 @@
+id: NEW:permissive_parenting_style_to_substance_use_disorder_any
+name: Permissive Parenting Style → Substance Use Disorder (Any)
+from_node:
+  node_id: NEW:permissive_parenting_style
+  node_name: Permissive Parenting Style
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Permissive parenting provides warmth but lacks consistent behavioral control and limit-setting'
+- 'Step 2: Children receive fewer clear boundaries regarding acceptable behaviors including substance
+  use'
+- 'Step 3: Limited parental monitoring reduces oversight of peer activities and substance exposure'
+- 'Step 4: Youth may interpret permissiveness as implicit approval of experimentation'
+- 'Step 5: Modestly increased substance use in offspring'
+evidence:
+  quality_rating: A
+  n_studies: 184
+  primary_citation: M. Pinquart and Jana Lauk 2024. "Associations of parenting styles with substance use
+    in the offspring—A systematic review and meta‐analysis." https://doi.org/10.1111/dar.13961
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 184 studies
+  - Studies assessed via electronic database search with multi-level meta-analysis
+  - Both concurrent and longitudinal associations examined
+  doi: 10.1111/dar.13961
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis found a very small but statistically significant positive correlation between
+  permissive parenting (high warmth, low control) and offspring substance use. The effect size of r=0.04
+  indicates this association is quite weak.
+quantitative_effects:
+  effect_size:
+    value: 0.04
+    type: correlation
+    ci_lower: 0.01
+    ci_upper: 0.07
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect sizes varied by cultural context including levels of horizontal and vertical
+    collectivism or individualism
+moderators:
+- name: cultural_collectivism_individualism
+  direction: varies
+  strength: moderate
+  description: Associations varied by levels of horizontal and vertical collectivism or individualism
+structural_competency:
+  equity_implications: Permissive parenting styles may be influenced by cultural norms, generational patterns,
+    and lack of access to parenting resources and education. The very small effect size suggests this
+    is a minor contributor compared to other structural and environmental factors.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.328164'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

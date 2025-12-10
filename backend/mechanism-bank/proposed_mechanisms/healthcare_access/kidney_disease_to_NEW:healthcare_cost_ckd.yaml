@@ -1,0 +1,62 @@
+id: kidney_disease_to_NEW:healthcare_cost_ckd
+name: Chronic Kidney Disease → Healthcare Costs for CKD Patients
+from_node:
+  node_id: kidney_disease
+  node_name: Chronic Kidney Disease
+to_node:
+  node_id: NEW:healthcare_cost_ckd
+  node_name: Healthcare Costs for CKD Patients
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: CKD progression leads to declining kidney function (measured by eGFR) and
+  increasing albuminuria severity'
+- 'Step 2: Disease progression requires more frequent physician visits, laboratory
+  monitoring, and specialist consultations'
+- 'Step 3: Complications develop requiring hospitalizations, emergency department
+  visits, and outpatient procedures'
+- 'Step 4: Advanced CKD (eGFR<15) requires dialysis initiation, dramatically increasing
+  kidney care costs to 32.3% of total costs'
+- 'Step 5: Cardiovascular complications common in CKD patients add additional healthcare
+  utilization and costs'
+- 'Step 6: Cumulative healthcare costs show graded association with CKD severity,
+  with mean costs exceeding twice national average'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: B. Manns et al. 2019. The Cost of Care for People With Chronic
+    Kidney Disease. Canadian Journal of Kidney Health and Disease.
+  supporting_citations: []
+description: Chronic kidney disease imposes substantial healthcare costs through a
+  graded relationship with disease severity. In a population-based cohort of 219,641
+  adults with CKD in Alberta, Canada, mean 1-year healthcare costs were Can$14,634
+  per patient (more than twice the average per-person healthcare cost in Canada).
+  Costs increased dramatically with declining kidney function, with kidney care costs
+  rising from 1.6% of total costs overall to 32.3% for patients with eGFR<15. Healthcare
+  utilization spans drugs, physician visits, emergency department visits, outpatient
+  procedures including dialysis, and hospitalizations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 14634.0
+    type: mean_annual_cost_CAD
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 219641
+moderators:
+- name: eGFR level
+  direction: strengthens
+  strength: strong
+  description: Lower eGFR associated with substantially higher costs; patients with
+    eGFR<15 had kidney care costs of Can$14,169 vs Can$230 overall
+- name: Albuminuria severity
+  direction: strengthens
+  strength: moderate
+  description: More severe albuminuria associated with higher healthcare costs
+- name: Comorbidity burden
+  direction: strengthens
+  strength: strong
+  description: Higher comorbidity associated with increased healthcare costs in CKD
+    patients

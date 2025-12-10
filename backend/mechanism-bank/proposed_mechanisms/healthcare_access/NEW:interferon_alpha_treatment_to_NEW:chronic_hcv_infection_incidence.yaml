@@ -1,0 +1,52 @@
+id: NEW:interferon_alpha_treatment_to_NEW:chronic_hcv_infection_incidence
+name: Interferon-Alpha Treatment → Chronic HCV Infection Incidence
+from_node:
+  node_id: NEW:interferon_alpha_treatment
+  node_name: Interferon-Alpha Treatment
+to_node:
+  node_id: NEW:chronic_hcv_infection_incidence
+  node_name: Chronic HCV Infection Incidence
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Interferon-alpha is administered to patients with acute hepatitis C virus
+  (HCV) infection during the first six months following infection'
+- 'Step 2: Interferon-alpha activates antiviral immune responses, including stimulation
+  of natural killer cells and induction of interferon-stimulated genes that inhibit
+  viral replication'
+- 'Step 3: Enhanced immune response leads to viral clearance, preventing the transition
+  from acute to chronic HCV infection'
+- 'Step 4: Successful viral clearance is measured as sustained virological response
+  (SVR), indicating absence of persistent HCV RNA in blood'
+- 'Step 5: Patients achieving SVR avoid progression to chronic HCV infection, reducing
+  incidence of chronic disease and associated long-term complications'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'Maria Kalafateli et al. 2017. "Pharmacological interventions
+    for acute hepatitis C infection: an attempted network meta-analysis." The Cochrane
+    database of systematic reviews.'
+  supporting_citations: []
+description: Very low quality evidence from a Cochrane systematic review suggests
+  that interferon-alpha may decrease the incidence of chronic HCV infection as measured
+  by sustained virological response in patients with acute HCV infection. The review
+  identified 3 trials (99 participants) comparing interferon-alpha versus no intervention.
+  However, clinical outcomes such as health-related quality of life, reduction in
+  cirrhosis, decompensated liver disease, and liver transplantation have not been
+  reported. The applicability of these findings to current clinical practice is uncertain
+  given the dominance of pegylated interferons and direct-acting antivirals in modern
+  treatment protocols.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: timing_of_treatment
+  direction: strengthens
+  strength: moderate
+  description: Treatment during acute phase (first six months) before chronic infection
+    establishes may enhance effectiveness
+- name: interferon_formulation
+  direction: weakens
+  strength: weak
+  description: The review found no evidence that pegylated interferons or ribavirin
+    combinations were effective, while standard interferon-alpha showed potential
+    benefit

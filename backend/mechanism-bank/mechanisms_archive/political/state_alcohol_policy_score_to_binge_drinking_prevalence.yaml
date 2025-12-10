@@ -1,0 +1,45 @@
+id: state_alcohol_policy_score_to_binge_drinking_prevalence
+name: State Alcohol Policy Score (Evidence-Based Policies) → Binge Drinking Prevalence
+from_node:
+  node_id: state_alcohol_policy_score
+  node_name: State Alcohol Policy Score (Evidence-Based Policies)
+to_node:
+  node_id: binge_drinking_prevalence
+  node_name: Binge Drinking Prevalence
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: State legislatures enact evidence-based alcohol control policies (e.g.,
+  taxation, outlet density restrictions, blood alcohol concentration limits)'
+- 'Step 2: These policies create structural barriers that reduce physical and economic
+  availability of alcohol at the population level'
+- 'Step 3: Reduced alcohol availability constrains opportunities for excessive consumption
+  across all demographic groups'
+- 'Step 4: Population-level decreases in binge drinking occur as environmental constraints
+  supersede individual-level factors'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Silver et al. 2019. "Evaluating the relationship between binge
+    drinking rates and a replicable measure of U.S. state alcohol policy environments."
+    *PLoS ONE*. https://doi.org/10.1371/journal.pone.0218718
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.047392'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Gender gaps in binge drinking behaviors narrowed in states with higher
+    state alcohol policy scores, indicating stronger protective effects for women
+- name: age
+  direction: strengthens
+  strength: weak
+  description: Effects were consistent across most age subgroups
+- name: race
+  direction: strengthens
+  strength: weak
+  description: Effects were consistent across most race subgroups

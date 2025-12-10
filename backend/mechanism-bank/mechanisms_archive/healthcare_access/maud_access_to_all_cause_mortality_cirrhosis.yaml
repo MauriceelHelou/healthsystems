@@ -1,0 +1,54 @@
+id: maud_access_to_all_cause_mortality_cirrhosis
+name: Access to Medications for Alcohol Use Disorder (MAUD) → All-Cause Mortality
+  in Alcohol-Associated Cirrhosis
+from_node:
+  node_id: maud_access
+  node_name: Access to Medications for Alcohol Use Disorder (MAUD)
+to_node:
+  node_id: all_cause_mortality_cirrhosis
+  node_name: All-Cause Mortality in Alcohol-Associated Cirrhosis
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: MAUD (naltrexone or acamprosate) prescribed to patients with alcohol-associated
+  cirrhosis and high-risk alcohol use disorder'
+- 'Step 2: Medications achieve and maintain abstinence or reduced alcohol consumption
+  in patients with AUD'
+- 'Step 3: Reduced alcohol consumption prevents progression of liver disease and cirrhosis
+  decompensation'
+- 'Step 4: Prevention of cirrhosis progression and decompensation reduces mortality
+  risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Rabiee et al. 2023. "Medications for alcohol use disorder improve
+    survival in patients with hazardous drinking and alcohol-associated cirrhosis."
+    *Hepatology Communications*. https://doi.org/10.1097/HC9.0000000000000093
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.335060'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: duration_maud_exposure
+  direction: strengthens
+  strength: moderate
+  description: Duration of MAUD exposure >3 months in 39% of exposed patients suggests
+    longer exposure may provide greater benefit
+- name: cirrhosis_decompensation_history
+  direction: weakens
+  strength: strong
+  description: History of cirrhosis decompensation was the strongest negative predictor
+    of MAUD prescription, indicating structural barriers to accessing treatment for
+    sicker patients
+- name: inpatient_aud_diagnosis
+  direction: strengthens
+  strength: strong
+  description: Inpatient diagnosis code for AUD was the strongest positive predictor
+    of MAUD prescription, suggesting hospitalization increases treatment access
+- name: concurrent_depression_diagnosis
+  direction: strengthens
+  strength: moderate
+  description: Concurrent diagnosis of depression was a positive predictor of MAUD
+    prescription, possibly reflecting greater engagement with mental health services

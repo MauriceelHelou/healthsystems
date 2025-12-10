@@ -1,0 +1,50 @@
+id: alcohol_use_disorder_to_NEW:male_infertility_semen_quality
+name: Alcohol Use Disorder → Male Infertility - Semen Quality Impairment
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:male_infertility_semen_quality
+  node_name: Male Infertility - Semen Quality Impairment
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol and its metabolite acetaldehyde are directly toxic to testicular tissue'
+- 'Step 2: Ethanol induces oxidative stress and lipid peroxidation in reproductive organs'
+- 'Step 3: Alcohol disrupts Sertoli cell function essential for sperm maturation'
+- 'Step 4: Both quality (morphology) and quantity (concentration, volume) of semen are impaired'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Ryan Ramon et al. 2024. "Effect of tobacco smoking and alcohol consumption on semen
+    quality and hormone reproductive levels in infertile males: A systematic review and meta analysis."
+    https://doi.org/10.3897/pharmacia.71.e113854'
+  supporting_citations:
+  - Additional citations require full-text access - analysis included 210 alcoholics and 407 non-alcoholics
+  - Meta-analysis compared semen parameters between alcohol users and non-users
+  - Individual study citations not provided in abstract
+  doi: 10.3897/pharmacia.71.e113854
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol consumption affects both the quality and quantity of semen in infertile males, with
+  detrimental impacts on conventional semen characteristics.
+quantitative_effects:
+  sample_size: 617
+moderators:
+- name: tobacco_smoking
+  direction: strengthens
+  strength: moderate
+  description: Combined alcohol consumption and tobacco smoking may amplify negative effects on semen
+    parameters
+structural_competency:
+  equity_implications: Alcohol consumption patterns are shaped by structural determinants including alcohol
+    outlet density in low-income neighborhoods, alcohol industry marketing targeting vulnerable populations,
+    lack of accessible treatment services, and economic stress driving self-medication. The alcohol policy
+    environment (taxation, availability regulations) creates differential exposure by socioeconomic status,
+    contributing to reproductive health disparities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.315559'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,58 @@
+id: NEW:bidirectional_homelessness_mental_health_to_homelessness_rate
+name: Bidirectional Homelessness-Mental Health Relationship → Homelessness Rate
+from_node:
+  node_id: NEW:bidirectional_homelessness_mental_health
+  node_name: Bidirectional Homelessness-Mental Health Relationship
+to_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Pre-existing mental health and substance use disorders increase risk of family conflict and
+  housing instability'
+- 'Step 2: Adolescents with mental health disorders may experience school failure and reduced employment
+  prospects'
+- 'Step 3: Mental health symptoms may lead to running away or being expelled from family home'
+- 'Step 4: Substance use disorders deplete financial resources and damage supportive relationships'
+- 'Step 5: Limited mental health treatment access allows conditions to worsen, precipitating homelessness'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: 'David Borkenhagen et al. 2025. "Prevalence of Mental Health and Substance Use Disorders
+    Among Adolescents Experiencing Homelessness: A Systematic Review.." https://doi.org/10.1007/s10597-025-01492-7'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 2 studies meeting criteria
+  - Earlier versions of DSM and ICD diagnostic classifications referenced
+  - Studies using validated diagnostic measures in homeless adolescent populations
+  doi: 10.1007/s10597-025-01492-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The paper explicitly notes that adolescents with existing mental health and substance use
+  disorders are at higher risk for homelessness, indicating a bidirectional relationship where mental
+  health conditions both precede and are exacerbated by housing instability.
+quantitative_effects:
+  sample_size: 226
+moderators:
+- name: treatment_access
+  direction: weakens
+  strength: moderate
+  description: Access to mental health treatment may reduce risk of homelessness among adolescents with
+    existing disorders
+- name: family_support_systems
+  direction: weakens
+  strength: moderate
+  description: Strong family support may buffer against homelessness even when mental health disorders
+    are present
+structural_competency:
+  equity_implications: This bidirectional mechanism highlights how inadequate mental health infrastructure
+    and youth services create pathways to homelessness. Rather than individual pathology, this reflects
+    systemic failures to provide accessible mental health treatment, family support services, and housing
+    stability programs for vulnerable youth. Prevention requires upstream investment in youth mental health
+    services and family stabilization programs.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.515375'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

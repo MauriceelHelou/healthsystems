@@ -1,0 +1,46 @@
+id: chronic_pancreatitis_to_osteopathy_overall
+name: Chronic Pancreatitis → Osteopathy (Combined Osteoporosis and Osteopenia)
+from_node:
+  node_id: chronic_pancreatitis
+  node_name: Chronic Pancreatitis
+to_node:
+  node_id: osteopathy_overall
+  node_name: Osteopathy (Combined Osteoporosis and Osteopenia)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic pancreatitis causes progressive pancreatic exocrine insufficiency'
+- 'Step 2: Reduced pancreatic enzyme secretion leads to maldigestion and malabsorption
+  of nutrients'
+- 'Step 3: Deficiencies in calcium, vitamin D, vitamin K, and overall protein-calorie
+  malnutrition develop'
+- 'Step 4: Cumulative nutritional deficits result in reduced bone mineral density
+  manifesting as osteopathy'
+evidence:
+  quality_rating: B
+  n_studies: 17
+  primary_citation: 'Daryl Ramai et al. 2023. "Prevalence of Osteopathy in Chronic
+    Pancreatitis: A Systematic Review and Meta-Analysis.." *Clinical and translational
+    gastroenterology*. https://doi.org/10.14309/ctg.0000000000000623'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.237056'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_consumption
+  direction: strengthens
+  strength: strong
+  description: Alcohol consumption both causes pancreatitis and has direct toxic effects
+    on bone
+- name: smoking
+  direction: strengthens
+  strength: moderate
+  description: Smoking accelerates pancreatitis progression and independently reduces
+    bone density
+- name: decreased_fecal_elastase
+  direction: strengthens
+  strength: strong
+  description: Marker of severe pancreatic insufficiency predicting greater malabsorption
+    and bone loss

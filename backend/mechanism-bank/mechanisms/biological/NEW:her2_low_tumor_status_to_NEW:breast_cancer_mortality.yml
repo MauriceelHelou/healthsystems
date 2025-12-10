@@ -1,0 +1,57 @@
+id: NEW:her2_low_tumor_status_to_NEW:breast_cancer_mortality
+name: HER2-Low Tumor Status → Breast Cancer Mortality
+from_node:
+  node_id: NEW:her2_low_tumor_status
+  node_name: HER2-Low Tumor Status
+to_node:
+  node_id: NEW:breast_cancer_mortality
+  node_name: Breast Cancer Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: HER2-low expression identifies a subset of HR+ metastatic breast cancer with distinct biological
+  behavior'
+- 'Step 2: Reduced efficacy of CDK 4/6 inhibitors in HER2-low tumors leads to earlier disease progression'
+- 'Step 3: Disease progression is associated with increased tumor burden and metastatic spread'
+- 'Step 4: Advanced disease burden contributes to higher mortality risk in HER2-low patients'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'D. Guven and TK Sahin 2024. "The association between HER2-low status and survival
+    in patients with metastatic breast cancer treated with Cyclin-dependent kinases 4 and 6 inhibitors:
+    a systematic review and meta-analysis." https://doi.org/10.1007/s10549-023-07226-1'
+  supporting_citations:
+  - Additional citations require full-text access - pooled analysis included 5 studies for OS
+  - Studies searched from Pubmed, Web of Science, and Scopus databases through August 2023
+  - Studies reported survival outcomes according to HER2 expression status
+  doi: 10.1007/s10549-023-07226-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: HER2-low tumor status is associated with a 22% higher risk of death compared to HER2-zero
+  tumors in patients with HR+ metastatic breast cancer treated with CDK 4/6 inhibitors, although this
+  analysis was limited by short follow-up duration.
+quantitative_effects:
+  effect_size:
+    value: 1.22
+    type: hazard_ratio
+    ci_lower: 1.04
+    ci_upper: 1.44
+  p_value: 0.01
+moderators:
+- name: Follow-up duration
+  direction: strengthens
+  strength: moderate
+  description: Short median follow-up may underestimate the true mortality difference; longer follow-up
+    could reveal larger effect
+structural_competency:
+  equity_implications: The identification of HER2-low as a prognostic biomarker has implications for healthcare
+    system organization and equity. Ensuring universal access to appropriate HER2 testing methodology
+    and novel targeted therapies for HER2-low disease is essential. Structural barriers to specialized
+    oncology care, biomarker testing, and newer therapeutics may disproportionately affect marginalized
+    populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.891579'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

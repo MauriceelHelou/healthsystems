@@ -1,0 +1,45 @@
+id: temporal_alcohol_availability_restriction_to_acute_alcohol_intoxication_events
+name: Temporal Restriction of Alcohol Availability → Acute Alcohol Intoxication Events
+  Requiring Medical Care
+from_node:
+  node_id: temporal_alcohol_availability_restriction
+  node_name: Temporal Restriction of Alcohol Availability
+to_node:
+  node_id: acute_alcohol_intoxication_events
+  node_name: Acute Alcohol Intoxication Events Requiring Medical Care
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Time-based restrictions on alcohol sales create temporal windows during
+  which additional alcohol cannot be legally purchased from convenient retail sources'
+- 'Step 2: These restrictions particularly affect drinking episodes that begin earlier
+  in the evening and might otherwise continue into late-night hours with additional
+  alcohol purchases'
+- 'Step 3: Limited ability to continue or escalate consumption during late-night hours
+  prevents progression to dangerous levels of blood alcohol concentration'
+- 'Step 4: Fewer instances of severe acute intoxication reduce the volume of emergency
+  medical interventions and hospital admissions for alcohol poisoning'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jan Marcus and T. Siedler 2015. "Reducing Binge Drinking? The
+    Effect of a Ban on Late-Night Off-Premise Alcohol Sales on Alcohol-Related Hospital
+    Stays in Germany." *Social Science Research Network*. https://doi.org/10.2139/ssrn.2553193
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.051118'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: enforcement_capacity
+  direction: strengthens
+  strength: moderate
+  description: Effectiveness depends on retail compliance with time-based restrictions,
+    which may vary by enforcement resources and regulatory oversight capacity.
+- name: cross_border_access
+  direction: weakens
+  strength: weak
+  description: In border regions or areas with easy access to jurisdictions without
+    time restrictions, consumers may travel to purchase alcohol, potentially weakening
+    the policy effect.

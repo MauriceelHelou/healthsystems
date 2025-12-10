@@ -1,0 +1,34 @@
+id: alcohol_exposure_to_diabetes_type_ii
+name: Alcohol (Ethanol) Exposure → Type II Diabetes
+from_node:
+  node_id: alcohol_exposure
+  node_name: Alcohol (Ethanol) Exposure
+to_node:
+  node_id: diabetes_type_ii
+  node_name: Type II Diabetes
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol exposure damages pancreatic tissue causing acute pancreatitis'
+- 'Step 2: Pancreatic inflammation increases pro-inflammatory mediators (MIF, IL-6,
+  resistin)'
+- 'Step 3: Inflammatory mediators impair insulin signaling and secretion'
+- 'Step 4: Metabolic and inflammatory dysfunction promotes type II diabetes onset'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ryan J Kim et al. 2024. "Network meta-analysis on the mechanisms
+    underlying alcohol augmentation of acute pancreatitis and diabetes type II.."
+    *Alcohol, clinical & experimental research*. https://doi.org/10.1111/acer.15428
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.200611'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: inflammatory_mediator_activity
+  direction: strengthens
+  strength: strong
+  description: The activity of key inflammatory and metabolic mediators like resistin,
+    IL-6, and insulin plays a critical role in alcohol-induced diabetes type II progression

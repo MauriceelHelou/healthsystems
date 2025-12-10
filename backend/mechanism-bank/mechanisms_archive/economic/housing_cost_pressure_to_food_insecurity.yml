@@ -1,0 +1,51 @@
+id: housing_cost_pressure_to_food_insecurity
+name: Housing Cost Pressure → Food Insecurity
+from_node:
+  node_id: housing_cost_pressure
+  node_name: Housing Cost Pressure
+to_node:
+  node_id: food_insecurity
+  node_name: Food Insecurity
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: High housing costs consume disproportionate share of household income'
+- 'Step 2: Reduced available income for other necessities including food'
+- 'Step 3: Households forced to compromise on food quality and quantity'
+- 'Step 4: Development of food insecurity as housing costs take priority'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Tuong-Vi Phan et al. 2025. "Associations Between Food Security, Housing and Health
+    in South Australia.." *Health promotion journal of Australia : official journal of Australian Association
+    of Health Promotion Professionals*. https://doi.org/10.1002/hpja.950'
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1002/hpja.950
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-11-30'
+version: '2.0'
+description: Housing cost pressures create economic trade-offs that force households to reduce food expenditure,
+  leading to food insecurity
+quantitative_effects:
+  sample_size: 3002
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in South Australia specifically
+moderators:
+- name: rental_status
+  direction: strengthens
+  strength: moderate
+  description: Renters face additional vulnerability to housing cost pressures compared to homeowners
+structural_competency:
+  equity_implications: This mechanism demonstrates how housing market dynamics and lack of affordable
+    housing policy create downstream health impacts through food insecurity. Addresses structural rather
+    than individual factors.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.881982'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

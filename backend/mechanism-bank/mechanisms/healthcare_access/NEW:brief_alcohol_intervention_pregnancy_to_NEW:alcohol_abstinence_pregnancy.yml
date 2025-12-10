@@ -1,0 +1,66 @@
+id: NEW:brief_alcohol_intervention_pregnancy_to_NEW:alcohol_abstinence_pregnancy
+name: Brief Alcohol Intervention for Pregnant Women → Alcohol Abstinence During Pregnancy
+from_node:
+  node_id: NEW:brief_alcohol_intervention_pregnancy
+  node_name: Brief Alcohol Intervention for Pregnant Women
+to_node:
+  node_id: NEW:alcohol_abstinence_pregnancy
+  node_name: Alcohol Abstinence During Pregnancy
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare systems provide brief alcohol interventions (BIs) during prenatal care visits'
+- 'Step 2: BIs deliver screening, feedback, and counseling about alcohol risks during pregnancy'
+- 'Step 3: Increased awareness and motivation leads to behavior change'
+- 'Step 4: Pregnant women increase likelihood of alcohol abstinence by 56%'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'Svetlana Popova et al. 2023. "Effectiveness of brief alcohol interventions for pregnant
+    women: a systematic literature review and meta-analysis.." https://doi.org/10.1186/s12884-023-05344-8'
+  supporting_citations:
+  - Centre for Evidence-based Medicine Oxford critical appraisal tool for RCTs (1)
+  - GRADE (Grading of Recommendations Assessment, Development and Evaluation) (2)
+  - Additional citations require full-text access - abstract references studies from 1987-2021
+  doi: 10.1186/s12884-023-05344-8
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief alcohol interventions delivered to pregnant women are moderately effective at increasing
+  abstinence from alcohol during pregnancy, with a 56% increase in odds of abstinence compared to no/minimal
+  intervention.
+quantitative_effects:
+  effect_size:
+    value: 1.56
+    type: odds_ratio
+    ci_lower: 1.15
+    ci_upper: 2.13
+  sample_size: 2620
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: All 26 studies were from high-income countries; authors note need for studies from
+    low- and middle-income countries
+moderators:
+- name: maternal_age
+  direction: unknown
+  strength: moderate
+  description: Authors note need for more studies with younger mothers, suggesting age may moderate effectiveness
+- name: ethnicity
+  direction: unknown
+  strength: moderate
+  description: Authors note need for studies with broader range of ethnic groups, suggesting potential
+    differential effectiveness
+- name: country_income_level
+  direction: unknown
+  strength: moderate
+  description: Evidence limited to high-income countries; effectiveness in LMIC settings unknown
+structural_competency:
+  equity_implications: This mechanism reflects healthcare system capacity to integrate alcohol screening
+    and intervention into prenatal care. The lack of evidence from LMICs highlights global health inequities
+    in research and potentially in healthcare access. The finding that BIs work suggests structural solutions
+    (routine screening in prenatal care) rather than individual blame for alcohol use during pregnancy.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.007461'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,54 @@
+id: binge_drinking_to_NEW:covid_19_hospitalization
+name: Binge Drinking → COVID-19 Hospitalization
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:covid_19_hospitalization
+  node_name: COVID-19 Hospitalization
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Excessive alcohol consumption causes acute and chronic immune dysregulation'
+- 'Step 2: Alcohol disrupts gut barrier integrity allowing bacterial translocation and systemic inflammation'
+- 'Step 3: Pre-existing inflammation primes for exaggerated cytokine response to SARS-CoV-2 infection'
+- 'Step 4: Hyperinflammatory state leads to acute respiratory distress requiring hospitalization'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Baozhu Wei et al. 2023. "Impact of alcohol consumption on coronavirus disease 2019
+    severity: A systematic review and meta‐analysis." https://doi.org/10.1002/jmv.28547'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis covering 1,697,683 COVID-19 individuals
+  - Studies specifically examining excessive drinking patterns
+  - Studies from multiple international cohorts
+  doi: 10.1002/jmv.28547
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The meta-analysis specifically identified excessive drinkers as being at high risk for COVID-19
+  hospitalization. This pattern-specific finding suggests dose-response relationship where heavy episodic
+  drinking creates particularly high vulnerability to severe COVID-19 outcomes.
+quantitative_effects:
+  sample_size: 1697683
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies spanned multiple geographic regions with consistent findings that excessive
+    drinkers faced high hospitalization risk
+moderators:
+- name: drinking_intensity
+  direction: strengthens
+  strength: strong
+  description: Excessive drinkers specifically identified as high risk for COVID-19 hospitalization, beyond
+    general drinking history
+structural_competency:
+  equity_implications: Excessive drinking patterns are shaped by structural factors including alcohol
+    pricing policies, outlet density, marketing exposure, and availability of alternative coping resources.
+    During the pandemic, lockdown policies may have differentially affected drinking patterns across socioeconomic
+    groups. Addressing pandemic-related alcohol harms requires structural interventions including price
+    controls, marketing restrictions, and expanded access to substance use treatment services.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.320617'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

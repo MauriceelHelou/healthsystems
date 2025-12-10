@@ -1,0 +1,66 @@
+id: NEW:early_liver_transplant_policy_to_NEW:post_transplant_alcohol_relapse
+name: Early Liver Transplantation Policy (Less Than 6 Months Abstinence) → Post-Transplant Alcohol Relapse
+from_node:
+  node_id: NEW:early_liver_transplant_policy
+  node_name: Early Liver Transplantation Policy (Less Than 6 Months Abstinence)
+to_node:
+  node_id: NEW:post_transplant_alcohol_relapse
+  node_name: Post-Transplant Alcohol Relapse
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Traditional liver transplant policies require 6 months of documented alcohol abstinence before
+  transplant eligibility'
+- 'Step 2: Early liver transplant policies allow transplantation with less than 6 months abstinence for
+  strictly selected patients with alcoholic liver disease'
+- 'Step 3: Concern exists that shorter pre-transplant sobriety periods may increase post-transplant alcohol
+  relapse risk'
+- 'Step 4: Meta-analysis of comparative studies evaluates whether early transplant actually increases
+  relapse rates'
+- 'Step 5: Evidence shows no statistically significant difference in alcohol relapse between early and
+  standard transplant protocols'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'Yousaf Zafar et al. 2024. "Alcohol Relapse After Early Liver Transplantation in Patients
+    With Alcoholic Liver Disease: A Meta-Analysis." https://doi.org/10.14740/gr1674'
+  supporting_citations:
+  - Dallas Consensus Conference on early liver transplantation for alcoholic liver disease
+  - Studies demonstrating survival benefit of early liver transplant in selected ALD patients
+  - Additional citations require full-text access for specific included study references
+  doi: 10.14740/gr1674
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'This meta-analysis examines whether early liver transplantation (less than 6 months of alcohol
+  abstinence) is associated with increased alcohol relapse compared to standard transplant protocols requiring
+  6 months abstinence. The pooled analysis of 3 studies with 367 patients found no statistically significant
+  difference in relapse rates (OR: 1.24, 95% CI: 0.75-2.06, p=0.40), suggesting the traditional 6-month
+  rule may be an unnecessary barrier to life-saving transplantation.'
+quantitative_effects:
+  effect_size:
+    value: 1.24
+    type: odds_ratio
+    ci_lower: 0.75
+    ci_upper: 2.06
+  p_value: 0.4
+  sample_size: 367
+moderators:
+- name: Patient selection criteria
+  direction: weakens
+  strength: strong
+  description: Strict patient selection criteria for early transplant may reduce relapse risk by identifying
+    patients with better prognosis and social support
+structural_competency:
+  equity_implications: This finding has important structural and equity implications. The 6-month abstinence
+    rule has historically functioned as a gatekeeping mechanism that may disproportionately exclude patients
+    with fewer resources to maintain sobriety while awaiting transplant. Evidence that shorter abstinence
+    periods do not increase relapse challenges policies that may inadvertently create inequitable access
+    to organ transplantation for patients with alcohol use disorder. The structural barrier of mandatory
+    waiting periods can result in preventable mortality among patients with acute alcoholic hepatitis
+    who cannot survive 6 months without transplantation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.621334'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

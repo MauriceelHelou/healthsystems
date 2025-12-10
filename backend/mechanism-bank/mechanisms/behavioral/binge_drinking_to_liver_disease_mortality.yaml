@@ -1,0 +1,65 @@
+id: binge_drinking_to_liver_disease_mortality
+name: Binge Drinking → Alcoholic Liver Disease Mortality
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Alcoholic Liver Disease Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Binge drinking episodes expose the liver to acute high concentrations of
+  alcohol, overwhelming hepatic metabolic capacity and generating toxic acetaldehyde
+  and reactive oxygen species'
+- 'Step 2: Repeated binge drinking causes cumulative hepatocyte damage, triggering
+  inflammatory responses, hepatic steatosis (fatty liver), and progressive fibrosis'
+- 'Step 3: Continued binge drinking pattern accelerates progression from fibrosis
+  to cirrhosis, with impaired liver regeneration and increased susceptibility to liver
+  failure'
+- 'Step 4: Advanced alcoholic liver disease leads to complications including portal
+  hypertension, hepatic encephalopathy, and ultimately increased mortality from liver
+  failure or hepatocellular carcinoma'
+evidence:
+  quality_rating: A
+  n_studies: 261
+  primary_citation: Jürgen Rehm et al. 2017. The relationship between different dimensions
+    of alcohol use and the burden of disease-an update. Addiction (Abingdon, England)
+  supporting_citations:
+  - 'R. Grucza et al. 2018. Trends in Adult Alcohol Use and Binge Drinking in the
+    Early 21st‐Century United States: A Meta‐Analysis of 6 National Survey Series.
+    Alcoholism: Clinical and Experimental Research'
+description: Binge drinking directly increases risk of alcoholic liver disease mortality
+  through repeated acute toxic insults to hepatocytes. The pattern of heavy episodic
+  drinking is particularly damaging to the liver, as it overwhelms detoxification
+  capacity and promotes inflammatory and fibrotic processes. Meta-analyses confirm
+  that liver disease shows a monotonic relationship with alcohol volume, with additional
+  risk from binge patterns. Recent U.S. trends show concurrent increases in binge
+  drinking prevalence and alcoholic liver disease mortality, particularly among middle-aged
+  and older adults.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Middle-aged (50-64) and older adults (65+) show the largest increases
+    in binge drinking prevalence, which may be driving increasing alcohol-related
+    morbidity and mortality including liver disease
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Trends in binge drinking differ by sex, with differential impacts on
+    liver disease risk; women may be more susceptible to alcohol-related liver damage
+    at lower consumption levels
+- name: drinking pattern
+  direction: strengthens
+  strength: strong
+  description: Heavy drinking occasions (binge pattern) specifically increase liver
+    disease risk beyond total volume consumed; pattern of drinking is independently
+    important for liver outcomes
+- name: alcohol quality
+  direction: strengthens
+  strength: moderate
+  description: For liver cirrhosis specifically, quality of alcohol consumed is an
+    additional risk factor beyond volume and pattern

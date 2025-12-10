@@ -1,0 +1,55 @@
+id: NEW:convalescent_plasma_treatment_to_NEW:length_of_hospital_stay
+name: Convalescent Plasma Treatment for COVID-19 → Length of Hospital Stay
+from_node:
+  node_id: NEW:convalescent_plasma_treatment
+  node_name: Convalescent Plasma Treatment for COVID-19
+to_node:
+  node_id: NEW:length_of_hospital_stay
+  node_name: Length of Hospital Stay
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Convalescent plasma infusion introduces donor antibodies'
+- 'Step 2: Theoretical acceleration of viral clearance and immune response'
+- 'Step 3: Faster recovery could reduce hospitalization duration'
+- 'Step 4: Meta-analysis found non-significant effect on length of stay'
+- 'Step 5: Extremely wide confidence intervals indicate high uncertainty'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'P. Janiaud et al. 2021. "Association of Convalescent Plasma Treatment With Clinical
+    Outcomes in Patients With COVID-19: A Systematic Review and Meta-analysis.." https://doi.org/10.1001/jama.2021.2747'
+  supporting_citations:
+  - Peer-reviewed RCTs from systematic search
+  - PubMed database studies through January 2021
+  - Cochrane COVID-19 trial registry
+  - Additional citations require full-text access
+  doi: 10.1001/jama.2021.2747
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The summary hazard ratio for length of hospital stay was 1.17 (95% CI 0.07-20.34), indicating
+  no significant difference between convalescent plasma and control groups. The extremely wide confidence
+  interval reflects substantial imprecision and low certainty of evidence.
+quantitative_effects:
+  effect_size:
+    value: 1.17
+    type: hazard_ratio
+    ci_lower: 0.07
+    ci_upper: 20.34
+  sample_size: 1060
+moderators:
+- name: data_availability
+  direction: weakens
+  strength: strong
+  description: Limited data available on length of hospital stay outcome, contributing to extreme imprecision
+structural_competency:
+  equity_implications: Hospital length of stay has important structural implications for healthcare system
+    capacity and resource allocation. Extended hospitalizations during pandemic surges exacerbated bed
+    shortages and affected care quality for all patients, with disproportionate impacts on under-resourced
+    healthcare systems serving marginalized communities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.871050'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,53 @@
+id: substance_use_disorder_any_to_alcohol_use_disorder
+name: Substance Use Disorder (Any) → Alcohol Use Disorder
+from_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals with any substance use disorder share genetic variants that
+  increase vulnerability to addictive behaviors, including those affecting dopaminergic
+  reward pathways and impulse control circuits'
+- 'Step 2: Shared genetic architecture creates cross-substance liability - genetic
+  risk factors for substance use disorders are largely non-specific and predispose
+  to multiple substance dependencies'
+- 'Step 3: Behavioral patterns established through one substance use disorder (e.g.,
+  using substances to cope, tolerance to intoxication, social environments) facilitate
+  transition to or co-occurrence of alcohol use disorder'
+- 'Step 4: Mendelian randomization evidence supports causal effects of substance use
+  on liability to problematic alcohol use, indicating that substance use behaviors
+  causally increase alcohol use disorder risk'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: Hang Zhou et al. 2020. Genome-wide meta-analysis of problematic
+    alcohol use in 435,563 individuals yields insights into biology and relationships
+    with other traits. Nature Neuroscience.
+  supporting_citations: []
+description: This genome-wide meta-analysis combining data from the Million Veteran
+  Program, Psychiatric Genomics Consortium, and UK Biobank demonstrates strong genetic
+  correlations between problematic alcohol use and other substance use traits. The
+  study identified that PAU was genetically correlated with 138 phenotypes including
+  substance use and psychiatric traits. Mendelian randomization analyses provided
+  evidence for causal effects of substance use on liability to problematic alcohol
+  use, supporting a behavioral pathway from general substance use disorder to alcohol
+  use disorder. The shared genetic architecture and causal relationships suggest that
+  substance use disorders increase risk for alcohol use disorder through both genetic
+  predisposition and behavioral mechanisms.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: psychiatric_comorbidity
+  direction: strengthens
+  strength: moderate
+  description: Genetic correlations between PAU and psychiatric traits suggest comorbid
+    psychiatric conditions strengthen the substance use to alcohol use disorder pathway
+- name: risk_taking_behavior
+  direction: strengthens
+  strength: moderate
+  description: Mendelian randomization indicated causal effects of risk-taking behavior
+    on problematic alcohol use liability

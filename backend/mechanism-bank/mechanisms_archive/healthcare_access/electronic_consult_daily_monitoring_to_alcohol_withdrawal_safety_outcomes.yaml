@@ -1,0 +1,42 @@
+id: electronic_consult_daily_monitoring_to_alcohol_withdrawal_safety_outcomes
+name: Electronic Consult with Daily Phone Monitoring → Alcohol Withdrawal Safety Outcomes
+from_node:
+  node_id: electronic_consult_daily_monitoring
+  node_name: Electronic Consult with Daily Phone Monitoring
+to_node:
+  node_id: alcohol_withdrawal_safety_outcomes
+  node_name: Alcohol Withdrawal Safety Outcomes
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: E-consult system prompts physician to conduct daily phone calls with patients
+  undergoing outpatient alcohol detoxification'
+- 'Step 2: Daily assessment monitors alcohol withdrawal symptoms, medication compliance,
+  and ability to abstain from alcohol in real-time'
+- 'Step 3: Early identification of complications or non-adherence allows for timely
+  clinical intervention before adverse events occur'
+- 'Step 4: Continuous clinical oversight provides safety net for outpatient detoxification
+  that would traditionally require inpatient monitoring'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: James A Hall et al. 2020. "The alcohol detoxification protocol
+    and creation of the e-consult at Central Texas Veterans health care system.."
+    *Proceedings (Baylor University. Medical Center)*. https://doi.org/10.1080/08998280.2020.1727707
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.757064'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: phone_accessibility
+  direction: strengthens
+  strength: strong
+  description: Patients with reliable phone access and ability to answer daily calls
+    benefit more from this monitoring system
+- name: physician_consistency
+  direction: strengthens
+  strength: moderate
+  description: Consistent daily follow-through by physicians strengthens the safety
+    monitoring effect

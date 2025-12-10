@@ -1,0 +1,58 @@
+id: NEW:racial_minority_status_to_NEW:concussion_recovery_time
+name: Racial Minority Status → Concussion Recovery Time
+from_node:
+  node_id: NEW:racial_minority_status
+  node_name: Racial Minority Status
+to_node:
+  node_id: NEW:concussion_recovery_time
+  node_name: Concussion Recovery Time
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Structural racism creates differential access to healthcare resources and quality care'
+- 'Step 2: Racial minorities may face implicit bias in clinical assessment and treatment recommendations'
+- 'Step 3: Social and community context factors associated with race affect recovery environment and support
+  systems'
+- 'Step 4: Intersecting disadvantages in economic stability and education access compound healthcare barriers'
+- 'Step 5: These cumulative structural factors extend the time needed for clinical recovery from concussion'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: 'Tamerah N Hunt et al. 2024. "The Effect of Social Determinants of Health on Clinical
+    Recovery Following Concussion: A Systematic Review.." https://doi.org/10.1123/jsr.2023-0068'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 5 high-quality studies
+    per Downs and Black Quality Index
+  - Studies evaluated using 2011 Oxford Center for Evidence-Based Medicine Guide
+  - Studies retrieved from CINAHL, MEDLINE, PsycInfo, and SPORTDiscus databases
+  doi: 10.1123/jsr.2023-0068
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2025, source is 2024'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Race appears to have an association with the speed of concussion recovery, with racial minorities
+  potentially experiencing longer recovery times. This relationship is likely mediated through structural
+  factors including differential healthcare access, implicit bias in clinical care, and intersecting social
+  determinants.
+moderators:
+- name: insurance_status
+  direction: strengthens
+  strength: moderate
+  description: Insurance status intersects with race to compound effects on recovery speed
+- name: economic_stability
+  direction: strengthens
+  strength: moderate
+  description: Economic stability may mediate or moderate the relationship between race and recovery
+structural_competency:
+  equity_implications: This mechanism fundamentally traces to structural racism rather than biological
+    differences. The association between race and recovery reflects accumulated disadvantages in healthcare
+    access, quality of care received, and social support systems. The review appropriately frames this
+    as a social determinant rather than an individual characteristic, recognizing that race serves as
+    a proxy for exposure to structural inequities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.917415'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

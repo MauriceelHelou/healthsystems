@@ -1,0 +1,44 @@
+id: sap_block_availability_to_opioid_consumption
+name: Availability of Serratus Anterior Plane Block in Emergency Department → Total
+  Opioid Consumption in Trauma Patients
+from_node:
+  node_id: sap_block_availability
+  node_name: Availability of Serratus Anterior Plane Block in Emergency Department
+to_node:
+  node_id: opioid_consumption
+  node_name: Total Opioid Consumption in Trauma Patients
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: SAP block provides regional anesthesia alternative to systemic opioid analgesia
+  for rib fracture pain'
+- 'Step 2: Effective nerve blockade reduces baseline pain intensity requiring less
+  supplemental opioid medication'
+- 'Step 3: Patients receiving SAP block require median 0 morphine milligram equivalents
+  (MME) compared to 20 MME in standard therapy group'
+- 'Step 4: Reduced opioid consumption decreases risk of opioid-related adverse effects
+  and dependency'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'S. Serra et al. 2024. "Efficacy and safety of the serratus anterior
+    plane block (SAP block) for pain management in patients with multiple rib fractures
+    in the emergency department: a retrospective study." *European Journal of Trauma
+    and Emergency Surgery*. https://doi.org/10.1007/s00068-024-02597-6'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.567761'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: pain_severity
+  direction: strengthens
+  strength: strong
+  description: Higher baseline pain severity increases the opioid-sparing effect of
+    SAP block compared to standard therapy
+- name: block_efficacy
+  direction: strengthens
+  strength: strong
+  description: Successful SAP block administration with adequate anesthetic spread
+    maximizes opioid reduction

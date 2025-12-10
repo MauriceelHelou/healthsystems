@@ -1,0 +1,60 @@
+id: NEW:cannabis_dispensary_density_count_to_illicit_drug_use_past_month
+name: Cannabis Dispensary Density (Count-Based) → Illicit Drug Use Past Month
+from_node:
+  node_id: NEW:cannabis_dispensary_density_count
+  node_name: Cannabis Dispensary Density (Count-Based)
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use Past Month
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher counts of cannabis dispensaries within geographic buffers (3-5 miles) increase physical
+  availability of cannabis products'
+- 'Step 2: Greater availability reduces search costs and time required to obtain cannabis'
+- 'Step 3: Reduced barriers to access facilitate initiation and maintenance of monthly/bimonthly cannabis
+  use patterns'
+- 'Step 4: Increased monthly/bimonthly cannabis consumption at the population level'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Pamela J Trangenstein et al. 2025. "Measuring the Association Between Cannabis Dispensary
+    Density and Adult Consumption in a Statewide Setting: Does Urbanicity Matter?." https://doi.org/10.26828/cannabis/2025/000235'
+  supporting_citations:
+  - Additional citations require full-text access - study references Privatization of Spirits in Washington
+    Surveys
+  - Additional citations require full-text access - Washington State non-medical cannabis legalization
+    policy context
+  - Additional citations require full-text access - prior studies on alcohol/tobacco outlet density associations
+  doi: 10.26828/cannabis/2025/000235
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Cannabis dispensary availability, measured by counts within 3-5 mile geographic buffers,
+  was associated with monthly/bimonthly cannabis use in the full Washington State sample during early
+  non-medical legalization. This suggests that product availability through retail density influences
+  regular consumption patterns.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Associations varied by urbanicity - the effect of count-based density measures on monthly/bimonthly
+    use was observed in the full sample but differential patterns emerged between urban and suburban/rural
+    areas. Crude counts and counts per population were higher in suburban/rural areas while counts per
+    land area, counts in buffers, proximity, and clustering detected greater densities in urban areas.
+moderators:
+- name: urbanicity
+  direction: strengthens
+  strength: moderate
+  description: Urban areas showed higher density by area-based measures while suburban/rural areas showed
+    higher crude counts and per-population measures, suggesting different mechanisms may operate across
+    urban-rural contexts
+structural_competency:
+  equity_implications: This mechanism appropriately focuses on structural-level retail environment factors
+    rather than individual choice or moral failing. The policy implication - that dispensary density thresholds
+    and minimum distances between dispensaries may reduce regular use - represents a structural intervention
+    approach. However, the study does not examine differential impacts by race, income, or other equity
+    dimensions which would strengthen structural competency analysis.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.232076'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

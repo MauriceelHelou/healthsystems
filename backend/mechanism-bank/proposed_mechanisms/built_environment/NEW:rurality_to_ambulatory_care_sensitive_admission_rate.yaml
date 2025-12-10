@@ -1,0 +1,46 @@
+id: NEW:rurality_to_ambulatory_care_sensitive_admission_rate
+name: Rurality → Avoidable Hospitalizations
+from_node:
+  node_id: NEW:rurality
+  node_name: Rurality
+to_node:
+  node_id: ambulatory_care_sensitive_admission_rate
+  node_name: Avoidable Hospitalizations
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Rural communities have lower density of primary care physicians and medical
+  specialists, reducing access to timely ambulatory care'
+- 'Step 2: Geographic barriers including distance to healthcare facilities and limited
+  transportation options delay or prevent outpatient medical visits'
+- 'Step 3: Delayed or inadequate ambulatory care management of chronic conditions
+  (diabetes, heart failure, COPD, asthma) leads to disease exacerbation'
+- 'Step 4: When conditions deteriorate beyond outpatient management capacity, hospitalization
+  becomes necessary for conditions that could have been prevented with appropriate
+  primary care'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'C. Berlin et al. 2014. Avoidable hospitalizations in Switzerland:
+    a small area analysis on regional variation, density of physicians, hospital supply
+    and rurality. BMC Health Services Research.'
+  supporting_citations: []
+description: Rurality is significantly associated with increased rates of avoidable
+  hospitalizations. This multilevel Poisson regression analysis of Swiss hospital
+  service areas (2008-2010) demonstrated that as the proportion of residences in rural
+  communities increased, rates of all avoidable hospitalizations significantly increased.
+  The relationship persists after controlling for physician density, hospital bed
+  density, and reimbursement system type.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Primary care physician density
+  direction: weakens
+  strength: moderate
+  description: Higher primary care physician density significantly reduces avoidable
+    hospitalization rates, potentially mitigating the rurality effect
+- name: Medical specialist density
+  direction: strengthens
+  strength: moderate
+  description: Higher specialist density paradoxically associated with increased avoidable
+    hospitalizations, possibly reflecting supply-induced demand or referral patterns

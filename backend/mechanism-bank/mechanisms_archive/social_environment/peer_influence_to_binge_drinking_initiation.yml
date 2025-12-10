@@ -1,0 +1,99 @@
+id: peer_influence_to_binge_drinking_initiation
+name: Peer Influence → Binge Drinking Initiation (Adolescents/Young Adults)
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking (Peer Environment)
+  node_type: stock
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking (Individual)
+  node_type: stock
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Peer drinking behavior creates normative expectations about alcohol use among adolescents and
+  young adults'
+- 'Step 2: Social pressure and desire for peer acceptance motivate participation in drinking activities'
+- 'Step 3: Observational learning from peers models binge drinking as acceptable or desirable social behavior'
+- 'Step 4: Drinking contexts (parties, social gatherings) provide opportunities and encouragement for
+  high-volume consumption'
+- 'Step 5: Repeated participation in peer drinking leads to habituation, tolerance, and established binge
+  drinking pattern'
+evidence:
+  quality_rating: A
+  n_studies: 28
+  primary_citation: 'K. Bucholz et al.. 2017. "Comparison of Parent, Peer, Psychiatric, and Cannabis Use
+    Influences Across Stages of Offspring Alcohol Involvement: Evidence from the COGA Prospective Study"
+    Alcoholism: Clinical and Experimental Research. https://doi.org/10.1111/acer.13293 (Cited: 69)'
+  supporting_citations:
+  - 'Ali, Mir M., and Debra S. Dwyer. 2010. "Social network effects in alcohol consumption among adolescents."
+    Addictive Behaviors 35(4): 337-342.'
+  - 'Bot, Suzanne M., Regina J. J. M. van den Eijnden, Jacqueline E. W. Meijer, et al. 2005. "Early adolescent
+    alcohol use: The role of parental regulation, alcohol availability and descriptive and injunctive
+    norms." Journal of Studies on Alcohol 66(3): 366-374.'
+  doi: 10.1093/alcalc/agt147
+  fulltext:
+    available: true
+    source: harvard_proxy
+    url: https://ezp-prod1.hul.harvard.edu/login?url=https://doi.org/10.1093/alcalc/agt147
+    is_open_access: false
+    fetched_date: '2025-11-30'
+  citation_verified: false
+last_updated: '2025-11-30'
+version: '1.0'
+description: Peer influence drives binge drinking initiation among adolescents and young adults through
+  social norms, modeling, peer pressure, and drinking contexts that normalize and reinforce high-volume
+  alcohol consumption.
+moderators:
+- name: parental_monitoring
+  direction: weakens
+  strength: moderate
+  description: Strong parental monitoring and communication about alcohol reduce peer influence effects
+- name: school_connectedness
+  direction: weakens
+  strength: moderate
+  description: Strong bonds to school and academic engagement buffer peer drinking influences
+- name: substance_free_activities
+  direction: weakens
+  strength: moderate
+  description: Access to organized sports, arts, and youth programs provides alternative peer contexts
+- name: college_environment
+  direction: strengthens
+  strength: strong
+  description: College settings with heavy drinking culture (Greek life, sports culture) amplify peer
+    influences
+structural_competency:
+  root_cause_level: institutional
+  avoids_victim_blaming: true
+  equity_implications: 'Peer influence on youth drinking operates within structural contexts that shape
+    opportunities and norms. Alcohol industry marketing deliberately targets youth and normalizes binge
+    drinking through social media and event sponsorship. Colleges permit drinking cultures that generate
+    billions in alumni donations while externalizing health costs. Communities with few youth development
+    resources leave young people with limited substance-free social options. Weak enforcement of underage
+    drinking laws in white affluent communities contrasts with criminalization in communities of color.
+    High youth binge drinking reflects policy choices about alcohol marketing regulation, campus alcohol
+    policies, investment in youth programming, and enforcement equity. Reducing peer-driven initiation
+    requires structural interventions: marketing restrictions, campus policy reform, universal youth development
+    access, and enforcement focused on industry supply rather than youth criminalization.'
+assumptions:
+- Peer influence strongest during adolescence and young adulthood (ages 13-25)
+- Mechanism operates through both active peer pressure and passive modeling
+- Social network composition affects individual drinking behavior
+limitations:
+- Individual susceptibility to peer influence varies by personality and family factors
+- Selection effects exist (youth choose peers with similar drinking attitudes)
+- Peer influence can also reduce drinking when peer norms are protective
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Peer drinking norms vary by community culture, youth programming availability, and
+    enforcement context
+  relevant_geographies:
+  - College towns show concentrated youth binge drinking during academic year
+  - Communities with robust youth programming (sports, arts, employment) show lower initiation
+  - Rural areas with limited structured activities may show higher peer-driven drinking
+  - Affluent communities with weak underage drinking enforcement normalize youth binge drinking
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

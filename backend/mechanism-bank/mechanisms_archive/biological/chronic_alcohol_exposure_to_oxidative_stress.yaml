@@ -1,0 +1,43 @@
+id: chronic_alcohol_exposure_to_oxidative_stress
+name: Chronic Alcohol Exposure → Oxidative Stress
+from_node:
+  node_id: chronic_alcohol_exposure
+  node_name: Chronic Alcohol Exposure
+to_node:
+  node_id: oxidative_stress
+  node_name: Oxidative Stress
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol exposure and subsequent withdrawal lead to generation of
+  reactive oxygen species (ROS)'
+- 'Step 2: Elevated ROS production manifests as increased active products of thiobarbituric
+  acid, diene conjugates, and 8-isoprostane'
+- 'Step 3: Antioxidant system (superoxide dismutase, catalase, glutathione peroxidase)
+  becomes depleted and insufficient'
+- 'Step 4: Imbalance between oxidants and antioxidants results in oxidative stress
+  with damage to lipids, proteins, and nucleic acids'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S Dubivska et al. 2023. "STUDY OF THE PROCESSES OF LIPID PEROXIDATION,
+    THE STATE OF THE ANTIOXIDANT SYSTEM IN PATIENTS WITH POLYTRAUMA AND ALCOHOL ANAMNESIS.."
+    *Georgian medical news*.
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.741973'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: polytrauma_presence
+  direction: strengthens
+  strength: strong
+  description: Combined polytrauma with alcohol withdrawal syndrome results in more
+    pronounced oxidative stress compared to either condition alone, as polytrauma
+    independently generates oxidative stress that compounds alcohol-related effects
+- name: time_since_admission
+  direction: weakens
+  strength: moderate
+  description: Measurements on day 7 showed ongoing oxidative stress despite therapy,
+    suggesting persistent pathology but potential moderation with appropriate treatment

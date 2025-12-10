@@ -1,0 +1,57 @@
+id: NEW:acamprosate_treatment_to_alcohol_use_disorder
+name: Acamprosate Treatment → Alcohol Use Disorder
+from_node:
+  node_id: NEW:acamprosate_treatment
+  node_name: Acamprosate Treatment
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Acamprosate is prescribed as pharmacotherapy for patients with alcohol
+  use disorder, typically in conjunction with psychosocial interventions'
+- 'Step 2: Acamprosate modulates glutamatergic neurotransmission and restores the
+  balance between excitatory and inhibitory neurotransmitter systems disrupted by
+  chronic alcohol use'
+- 'Step 3: This neurobiological stabilization reduces alcohol craving and the negative
+  affective states associated with protracted abstinence'
+- 'Step 4: Patients receiving acamprosate treatment demonstrate significantly higher
+  rates of maintaining abstinence (NNT=11 to prevent one person from returning to
+  any drinking)'
+- 'Step 5: Sustained abstinence and reduced drinking leads to improved alcohol use
+  disorder outcomes and reduced severity of the condition'
+evidence:
+  quality_rating: A
+  n_studies: 118
+  primary_citation: 'Melissa McPheeters et al. 2023. "Pharmacotherapy for Alcohol
+    Use Disorder: A Systematic Review and Meta-Analysis." Journal of the American
+    Medical Association (JAMA).'
+  supporting_citations: []
+description: Acamprosate treatment significantly reduces the likelihood of returning
+  to any drinking in patients with alcohol use disorder. A comprehensive meta-analysis
+  of 118 clinical trials with 20,976 participants found that acamprosate has a number
+  needed to treat of 11 to prevent one person from returning to any drinking, supporting
+  its use as a first-line pharmacotherapy for alcohol use disorder when combined with
+  psychosocial interventions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 11.0
+    type: number_needed_to_treat
+    ci_lower: 1.0
+    ci_upper: 32.0
+  p_value: null
+  sample_size: 20976
+moderators:
+- name: psychosocial_intervention_co-treatment
+  direction: strengthens
+  strength: moderate
+  description: Acamprosate is recommended for use in conjunction with psychosocial
+    interventions, which may enhance treatment efficacy
+- name: gastrointestinal_adverse_effects
+  direction: weakens
+  strength: weak
+  description: Diarrhea risk ratio of 1.58 (95% CI, 1.27-1.97) compared to placebo
+    may affect adherence and treatment continuation

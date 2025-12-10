@@ -1,0 +1,69 @@
+id: NEW:digital_alcohol_intervention_access_to_NEW:weekly_alcohol_consumption
+name: Digital Alcohol Intervention Access → Weekly Alcohol Consumption
+from_node:
+  node_id: NEW:digital_alcohol_intervention_access
+  node_name: Digital Alcohol Intervention Access
+to_node:
+  node_id: NEW:weekly_alcohol_consumption
+  node_name: Weekly Alcohol Consumption
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital interventions deliver personalized feedback and behavior change techniques via accessible
+  technology platforms'
+- 'Step 2: Interventions employ median of 9 behavior change techniques including goal setting, problem
+  solving, and information about antecedents'
+- 'Step 3: Users can access interventions without scheduling appointments or facing healthcare system
+  barriers'
+- 'Step 4: Sustained engagement with digital content supports ongoing behavior modification'
+- 'Step 5: Reduction in overall weekly alcohol consumption through cumulative effect of multiple behavior
+  change techniques'
+evidence:
+  quality_rating: A
+  n_studies: 41
+  primary_citation: Eileen Fs Kaner et al. 2017. "Personalised digital interventions for reducing hazardous
+    and harmful alcohol consumption in community-dwelling populations.." https://doi.org/10.1002/14651858.CD011479.pub2
+  supporting_citations:
+  - 42 comparisons from 41 studies included in primary meta-analysis
+  - Studies utilizing Motivational Interviewing Theory framework
+  - Studies utilizing Transtheoretical Model framework
+  doi: 10.1002/14651858.CD011479.pub2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Digital alcohol interventions reduce weekly alcohol consumption by approximately 23 grams
+  (about 3 UK standard drinks) compared to no or minimal intervention controls. This represents a clinically
+  meaningful reduction achieved through accessible, technology-based delivery of behavior change techniques.
+quantitative_effects:
+  effect_size:
+    value: -23.0
+    type: standardized_mean_difference
+    ci_lower: -30.0
+    ci_upper: -15.0
+  sample_size: 19241
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Substantial heterogeneity noted across studies; mode of delivery (health/social care/education
+    settings vs. remote internet/mobile platforms) examined as potential source of variation
+moderators:
+- name: number_of_bcts_used
+  direction: strengthens
+  strength: moderate
+  description: Median of 9 BCTs used in experimental arms (range 1-22); specific BCTs differentially associated
+    with effectiveness
+- name: mode_of_delivery
+  direction: strengthens
+  strength: moderate
+  description: Impact of mode of delivery (functionality features, setting type) examined as potential
+    moderator of outcomes
+structural_competency:
+  equity_implications: This mechanism demonstrates how technology can address structural healthcare access
+    inequities by providing evidence-based interventions that bypass traditional barriers including geography,
+    time constraints, stigma, and lack of trained providers. The finding that digital interventions are
+    similarly effective to face-to-face interventions suggests potential for scaling alcohol harm reduction
+    to underserved populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.041467'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,53 @@
+id: NEW:prescription_drug_monitoring_program_mandatory_to_opioid_overdose_nonfatal_rate
+name: Mandatory Prescription Drug Monitoring Program → Opioid Overdose Nonfatal Rate (ED visits per 100k)
+from_node:
+  node_id: NEW:prescription_drug_monitoring_program_mandatory
+  node_name: Mandatory Prescription Drug Monitoring Program
+to_node:
+  node_id: opioid_overdose_nonfatal_rate
+  node_name: Opioid Overdose Nonfatal Rate (ED visits per 100k)
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Mandatory prescription drug monitoring requires prescribers to check patient medication history
+  before prescribing opioids'
+- 'Step 2: Real-time monitoring reduces prescriber ability to issue prescriptions to patients already
+  receiving opioids from multiple sources'
+- 'Step 3: Reduced opioid supply limits availability of prescription opioids for misuse or diversion'
+- 'Step 4: Decreased opioid exposure reduces risk of opioid-related adverse events requiring emergency
+  care'
+- 'Step 5: Opioid-related ED presentation rates decline among people prescribed opioids'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Suzanne Nielsen et al. 2025. "Prescription opioid supply-restricting policies and
+    hospital use by people prescribed opioid medications, Victoria, 2018-22: a controlled interrupted
+    time series analysis.." https://doi.org/10.5694/mja2.52713'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references European post-authorisation study
+    register (EUROPAS), EUPAS104005
+  doi: 10.5694/mja2.52713
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Implementation of mandatory prescription drug monitoring in April 2020 was associated with
+  a decline in opioid-related ED presentations among people prescribed opioids, reversing a pre-intervention
+  increasing trend. The rate decline was not significantly different from the control group trend.
+quantitative_effects:
+  sample_size: 179091
+moderators:
+- name: pre_intervention_trend
+  direction: strengthens
+  strength: moderate
+  description: The opioid-related ED presentation rate had been increasing prior to intervention, suggesting
+    greater potential for reduction
+structural_competency:
+  equity_implications: This mechanism addresses opioid harm through regulatory policy intervention at
+    the healthcare system level rather than individual behavior modification. It recognizes that prescription
+    opioid availability is a structural driver of opioid-related harm and targets the prescribing environment.
+    The policy avoids blame on individuals by regulating the supply side of prescription opioids.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.659126'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,50 @@
+id: NEW:ultra_processed_food_consumption_to_obesity_individual
+name: Ultra-Processed Food Consumption → Obesity
+from_node:
+  node_id: NEW:ultra_processed_food_consumption
+  node_name: Ultra-Processed Food Consumption
+to_node:
+  node_id: obesity_individual
+  node_name: Obesity
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Ultra-processed foods (UPFs) are engineered for hyperpalatability, leading
+  to increased caloric intake beyond satiety signals'
+- 'Step 2: UPFs are typically energy-dense but nutrient-poor, promoting chronic caloric
+  excess without adequate micronutrient intake'
+- 'Step 3: Chronic overconsumption of calories from UPFs leads to positive energy
+  balance and fat accumulation'
+- 'Step 4: Sustained positive energy balance results in weight gain and development
+  of overweight/obesity'
+- 'Step 5: Obesity contributes to metabolic dysfunction including insulin resistance,
+  metabolic syndrome, and related conditions such as NAFLD and type 2 diabetes'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: 'Alex E. Henney et al. 2023. Ultra-Processed Food Intake Is Associated
+    with Non-Alcoholic Fatty Liver Disease in Adults: A Systematic Review and Meta-Analysis.
+    Nutrients.'
+  supporting_citations: []
+description: Ultra-processed food consumption is associated with obesity through mechanisms
+  involving chronic caloric excess and physical inactivity. This meta-analysis of
+  9 studies (60,961 individuals) confirms that UPF intake increases risk of metabolic
+  conditions associated with obesity, with a clear dose-response relationship. High
+  UPF consumption significantly increases risk compared to low consumption, supporting
+  previous meta-analyses confirming associations between UPF intake and obesity.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.42
+    type: relative_risk
+    ci_lower: 1.16
+    ci_upper: 1.75
+  p_value: 0.01
+  sample_size: 60961
+moderators:
+- name: UPF consumption level
+  direction: strengthens
+  strength: strong
+  description: 'Dose-response relationship observed: moderate UPF intake (RR 1.03)
+    shows smaller effect than high UPF intake (RR 1.42) compared to low intake'

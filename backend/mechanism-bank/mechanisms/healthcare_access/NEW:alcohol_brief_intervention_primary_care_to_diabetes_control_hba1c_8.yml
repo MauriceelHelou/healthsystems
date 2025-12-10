@@ -1,0 +1,55 @@
+id: NEW:alcohol_brief_intervention_primary_care_to_diabetes_control_hba1c_8
+name: Alcohol Brief Intervention in Primary Care → Diabetes Control (HbA1c <8%)
+from_node:
+  node_id: NEW:alcohol_brief_intervention_primary_care
+  node_name: Alcohol Brief Intervention in Primary Care
+to_node:
+  node_id: diabetes_control_hba1c_8
+  node_name: Diabetes Control (HbA1c <8%)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare system implements routine alcohol screening for patients with type 2 diabetes'
+- 'Step 2: Brief intervention is delivered to patients screening positive for unhealthy alcohol use'
+- 'Step 3: Hypothesized pathway: reduced alcohol consumption improves glycemic control through reduced
+  caloric intake, improved medication adherence, and reduced interference with glucose metabolism'
+- 'Step 4: No significant association observed - mechanism pathway not supported in this population'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'F. Chi et al. 2023. "Associations between alcohol brief intervention in primary care
+    and drinking and health outcomes in adults with hypertension and type 2 diabetes: a population-based
+    observational study." https://doi.org/10.1136/bmjopen-2022-064088'
+  supporting_citations:
+  - Additional citations require full-text access - study examined glycohemoglobin (HbA1c) outcomes
+  - Prior research on alcohol-diabetes relationships
+  - Evidence base for brief intervention in diabetic populations
+  doi: 10.1136/bmjopen-2022-064088
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among patients with type 2 diabetes who screened positive for unhealthy alcohol use, no significant
+  associations were found between alcohol brief intervention and changes in drinking outcomes or HbA1c
+  levels at follow-up. This null finding highlights important heterogeneity in intervention effectiveness
+  across chronic disease populations.
+quantitative_effects:
+  sample_size: 19642
+moderators:
+- name: chronic_condition_type
+  direction: weakens
+  strength: strong
+  description: Unlike hypertension patients, type 2 diabetes patients showed no significant associations
+    between brief intervention and drinking or health outcomes
+structural_competency:
+  equity_implications: The null finding among diabetes patients is structurally important - it indicates
+    that uniform system-wide implementation of brief intervention may not achieve equitable outcomes across
+    all patient populations. This points to the need for structural approaches that are tailored to specific
+    population needs rather than one-size-fits-all interventions. Understanding why the intervention worked
+    for hypertension but not diabetes patients requires attention to potential structural differences
+    in care pathways, patient characteristics, or the biological/behavioral mechanisms linking alcohol
+    to each condition.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.991779'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

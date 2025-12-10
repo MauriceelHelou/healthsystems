@@ -1,0 +1,61 @@
+id: incarceration_rate_to_binge_drinking
+name: Incarceration Rate → Binge Drinking
+from_node:
+  node_id: incarceration_rate
+  node_name: Incarceration Rate
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: State-level incarceration disparities reflect structural racism embedded in criminal justice
+  systems that disproportionately target Black communities'
+- 'Step 2: High incarceration rates disrupt community social networks, family structures, and economic
+  stability in Black neighborhoods'
+- 'Step 3: Community-level trauma, chronic stress, and reduced social cohesion from mass incarceration
+  create conditions that promote maladaptive coping'
+- 'Step 4: Limited access to mental health resources and elevated psychosocial stress increase vulnerability
+  to substance use as a coping mechanism'
+- 'Step 5: Increased frequency of binge drinking emerges as a response to structural stressors associated
+  with incarceration disparities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: N. Woodard et al. 2023. "The association between state-level structural racism and
+    alcohol and tobacco use behaviors among a national probability sample of Black Americans.." https://doi.org/10.1158/1055-9965.EPI-23-0873
+  supporting_citations:
+  - Additional citations require full-text access - abstract references theoretical framework linking
+    structural racism to health behaviors
+  - Study builds on existing composite index of state-level structural racism with five dimensions
+  - Additional citations require full-text access
+  doi: 10.1158/1055-9965.EPI-23-0873
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: State-level structural racism expressed through incarceration disparities is positively associated
+  with binge drinking frequency among Black Americans. This reflects how racist criminal justice policies
+  create community-level trauma and chronic stress that increase vulnerability to harmful alcohol use
+  patterns.
+quantitative_effects:
+  sample_size: 1946
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: State-level variation is central to this study; associations between structural racism
+    and health behaviors vary by state-level policy and structural racism indices
+moderators:
+- name: individual_level_covariates
+  direction: strengthens
+  strength: moderate
+  description: Models controlled for individual-level covariates suggesting potential moderating effects
+    of sociodemographic factors
+structural_competency:
+  equity_implications: This mechanism appropriately traces alcohol use to structural root causes (racist
+    incarceration policies) rather than blaming individuals. It recognizes that substance use behaviors
+    emerge from structural conditions including community disruption, chronic stress, and limited resources
+    caused by mass incarceration targeting Black communities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.131570'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

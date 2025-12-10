@@ -1,0 +1,42 @@
+id: alcohol_consumption_to_colorectal_cancer
+name: Alcohol Consumption → Colorectal Cancer
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: colorectal_cancer
+  node_name: Colorectal Cancer
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol and acetaldehyde directly contact colonic mucosa, causing DNA damage
+  and oxidative stress'
+- 'Step 2: Alcohol alters gut microbiome composition, increasing production of carcinogenic
+  metabolites'
+- 'Step 3: Chronic alcohol consumption increases colonic inflammation and disrupts
+  intestinal barrier function'
+- 'Step 4: Alcohol interferes with folate absorption and metabolism, impairing DNA
+  synthesis and repair in rapidly dividing colonic cells'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Molly Went et al. 2023. "Risk factors for eight common cancers
+    revealed from a phenome-wide Mendelian randomisation analysis of 378,142 cases
+    and 485,715 controls.." *Research square*. https://doi.org/10.21203/rs.3.rs-2587058/v1
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.507612'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: dietary_intake
+  direction: weakens
+  strength: moderate
+  description: Adequate folate and fiber intake may partially mitigate alcohol-related
+    colorectal cancer risk through improved DNA methylation and reduced inflammation
+- name: physical_activity
+  direction: weakens
+  strength: moderate
+  description: Physical activity reduces colorectal cancer risk and may partially
+    offset alcohol effects through improved metabolic health and reduced inflammation

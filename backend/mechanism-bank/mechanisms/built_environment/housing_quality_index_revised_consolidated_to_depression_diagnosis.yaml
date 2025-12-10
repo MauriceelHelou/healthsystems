@@ -1,0 +1,51 @@
+id: housing_quality_index_revised_consolidated_to_depression_diagnosis
+name: Housing Conditions → Depression and Anxiety
+from_node:
+  node_id: housing_quality_index_revised_consolidated
+  node_name: Housing Conditions
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression and Anxiety
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Poor housing conditions (inadequate space, noise, poor maintenance, safety
+  concerns) create chronic environmental stressors for residents'
+- 'Step 2: These stressors disrupt sleep quality, increase feelings of insecurity,
+  and reduce sense of control over one''s living environment'
+- 'Step 3: Chronic exposure to substandard housing conditions activates prolonged
+  stress responses and reduces adaptive coping capacity'
+- 'Step 4: Sustained stress and reduced wellbeing manifest as increased symptoms of
+  depression, anxiety, and psychological distress'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'I. Franzoi et al. 2022. Housing conditions and psychological
+    distress among higher education students: a systematic literature review. Journal
+    of Further and Higher Education.'
+  supporting_citations: []
+description: This systematic review demonstrates that housing conditions play an important
+  role in psychological distress, including depression, anxiety, and other mental
+  health conditions among higher education students. Better housing quality is associated
+  with reduced risk of depression and anxiety through multiple pathways including
+  improved sleep, reduced environmental stressors, and enhanced overall wellbeing.
+  The relationship is bidirectional in some cases but the primary direction shows
+  poor housing conditions contributing to mental health problems.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: housing_type
+  direction: strengthens
+  strength: moderate
+  description: Type of student accommodation (on-campus vs off-campus, shared vs private)
+    moderates the relationship between housing conditions and mental health outcomes
+- name: social_support
+  direction: weakens
+  strength: moderate
+  description: Adequate social support within housing environments may buffer the
+    negative effects of suboptimal physical housing conditions
+- name: adaptation_period
+  direction: strengthens
+  strength: moderate
+  description: Homesickness and adaptation challenges during transition periods intensify
+    the relationship between housing conditions and psychological distress

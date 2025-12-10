@@ -1,0 +1,58 @@
+id: NEW:prison_based_aod_behavioral_treatment_to_recidivism_rate_3_year
+name: Prison-Based Alcohol and Other Drug Behavioral Treatment → Recidivism Rate (3-Year)
+from_node:
+  node_id: NEW:prison_based_aod_behavioral_treatment
+  node_name: Prison-Based Alcohol and Other Drug Behavioral Treatment
+to_node:
+  node_id: recidivism_rate_3_year
+  node_name: Recidivism Rate (3-Year)
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Incarcerated men with histories of alcohol and other drug (AoD) use receive structured behavioral
+  treatment programs within prison settings'
+- 'Step 2: Treatment programs address the substance use behaviors that are often linked to the crimes
+  for which individuals are imprisoned'
+- 'Step 3: Behavioral interventions modify substance use patterns and associated criminal behaviors'
+- 'Step 4: Upon release, reduced substance use decreases likelihood of reoffending and subsequent reincarceration'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: M. Doyle et al. 2019. "A systematic review of evaluations of prison‐based alcohol
+    and other drug use behavioural treatment for men." https://doi.org/10.1111/1753-6405.12884
+  supporting_citations:
+  - Additional citations require full-text access - systematic review methodology implies multiple primary
+    studies were analyzed
+  - Studies evaluating therapeutic communities in prison settings
+  - Studies evaluating cognitive-behavioral therapy programs for incarcerated populations
+  doi: 10.1111/1753-6405.12884
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review examines prison-based behavioral treatment programs for alcohol and
+  other drug use among incarcerated men, assessing their effectiveness in reducing substance use and related
+  outcomes including recidivism. The review is notable as the first in over a decade to comprehensively
+  evaluate methodological quality of such evaluations.
+moderators:
+- name: treatment_program_type
+  direction: strengthens
+  strength: moderate
+  description: Different behavioral treatment modalities may have varying effectiveness for reducing recidivism
+- name: methodological_quality
+  direction: strengthens
+  strength: moderate
+  description: The review explicitly examines methodological quality of evaluations, suggesting quality
+    varies across studies
+structural_competency:
+  equity_implications: This mechanism acknowledges the structural context of incarceration and substance
+    use linkage. The high prevalence of AoD use histories among incarcerated men reflects broader structural
+    determinants including socioeconomic disadvantage, limited treatment access in communities, and criminalization
+    of substance use. Prison-based treatment represents an institutional response to substance use disorders,
+    though it occurs within a punitive rather than public health framework. Equity implications include
+    the disproportionate incarceration of marginalized populations and the structural barriers to treatment
+    access that precede incarceration.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.677498'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

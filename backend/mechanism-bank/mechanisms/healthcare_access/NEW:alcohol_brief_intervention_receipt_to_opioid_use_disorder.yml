@@ -1,0 +1,58 @@
+id: NEW:alcohol_brief_intervention_receipt_to_opioid_use_disorder
+name: Alcohol-Related Brief Intervention Receipt → Opioid Use Disorder
+from_node:
+  node_id: NEW:alcohol_brief_intervention_receipt
+  node_name: Alcohol-Related Brief Intervention Receipt
+to_node:
+  node_id: opioid_use_disorder
+  node_name: Opioid Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary care-based alcohol screening identifies at-risk patients through standardized AUDIT-C'
+- 'Step 2: Brief intervention addresses unhealthy alcohol use patterns and co-occurring substance use
+  risks'
+- 'Step 3: Intervention may increase patient awareness of polysubstance risks and motivate behavior change'
+- 'Step 4: Reduced progression from any opioid exposure to problematic opioid use patterns'
+- 'Step 5: Lower incidence of new opioid use disorder diagnoses'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Dan V. Blalock et al. 2024. "Associations Between a Primary Care-Delivered Alcohol-Related
+    Brief Intervention and Subsequent Opioid-Related Outcomes.." https://doi.org/10.1176/appi.ajp.20230683
+  supporting_citations:
+  - Additional citations require full-text access - abstract references co-occurrence of unhealthy alcohol
+    use and opioid misuse
+  - Additional citations require full-text access - abstract references overdose and death literature
+  - Additional citations require full-text access - abstract references medications for OUD (MOUD) literature
+  doi: 10.1176/appi.ajp.20230683
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Veterans with positive AUDIT-C screens who did NOT receive an alcohol-related brief intervention
+  had 19% higher odds of receiving a new opioid use disorder diagnosis within one year compared to those
+  who received the intervention. This represents the intervention's protective effect against OUD development.
+quantitative_effects:
+  effect_size:
+    value: 1.19
+    type: odds_ratio
+    ci_lower: 1.02
+    ci_upper: 1.4
+  sample_size: 63804
+moderators:
+- name: Medications for OUD (MOUD)
+  direction: strengthens
+  strength: weak
+  description: Removal of MOUD from analysis did not impact associations, suggesting the effect is independent
+    of medication-assisted treatment
+structural_competency:
+  equity_implications: This finding emphasizes how healthcare system protocols for addressing one substance
+    (alcohol) can have cascading protective effects for another (opioids). The co-occurrence of unhealthy
+    alcohol and opioid use reflects shared structural vulnerabilities including pain management inadequacy,
+    mental health access gaps, and socioeconomic stressors. Integrated screening and intervention approaches
+    address multiple risk pathways simultaneously.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.984578'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

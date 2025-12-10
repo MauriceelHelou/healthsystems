@@ -1,0 +1,52 @@
+id: NEW:ssri_treatment_for_comorbid_aud_depression_to_alcohol_use_disorder
+name: SSRI Treatment for Comorbid AUD-Depression → Alcohol Use
+from_node:
+  node_id: NEW:ssri_treatment_for_comorbid_aud_depression
+  node_name: SSRI Treatment for Comorbid AUD-Depression
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: SSRIs are prescribed to patients with comorbid alcohol use disorder and
+  depressive disorders as adjunctive treatment to usual care'
+- 'Step 2: SSRIs modulate serotonergic neurotransmission, which may address shared
+  neurobiological pathways underlying both depression and alcohol craving/consumption'
+- 'Step 3: Improved functional status and potential reduction in depressive symptoms
+  may decrease self-medication with alcohol'
+- 'Step 4: Treatment results in slight reduction in alcohol use, though effect is
+  modest and confidence in the evidence is low'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'S. Grant et al. 2021. Clinical interventions for adults with
+    comorbid alcohol use and depressive disorders: A systematic review and network
+    meta-analysis. PLoS Medicine.'
+  supporting_citations: []
+description: A systematic review and network meta-analysis of 36 RCTs found that SSRIs
+  may result in a slight reduction of alcohol use in adults with comorbid alcohol
+  use disorder and depressive disorders compared to placebo (SMD = -0.30). SSRIs also
+  demonstrated greater benefit for functional status. However, confidence in the alcohol
+  use reduction effect is low, and SSRIs were associated with increased risk of adverse
+  events.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.3
+    type: standardized_mean_difference
+    ci_lower: -0.59
+    ci_upper: -0.02
+  p_value: 0.039
+  sample_size: 2729
+moderators:
+- name: Treatment duration
+  direction: weakens
+  strength: moderate
+  description: Evidence limited to post-intervention outcomes; long-term effects uncertain
+- name: Adverse events
+  direction: weakens
+  strength: moderate
+  description: Patients receiving SSRIs had increased risk of adverse events (OR=2.20,
+    95% CI 0.94-5.16), which may affect treatment adherence and outcomes

@@ -1,0 +1,65 @@
+id: acute_kidney_injury_hospitalization_to_NEW:renal_replacement_therapy_rate
+name: Acute Kidney Injury Hospitalization → Renal Replacement Therapy Rate
+from_node:
+  node_id: acute_kidney_injury_hospitalization
+  node_name: Acute Kidney Injury Hospitalization
+to_node:
+  node_id: NEW:renal_replacement_therapy_rate
+  node_name: Renal Replacement Therapy Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Acute kidney injury (AKI) occurs during hospitalization, causing rapid
+  decline in kidney function with reduced glomerular filtration rate and accumulation
+  of metabolic waste products'
+- 'Step 2: Severe AKI leads to life-threatening complications including hyperkalemia,
+  metabolic acidosis, fluid overload, and uremic toxicity that cannot be managed with
+  conservative measures alone'
+- 'Step 3: When kidney function deteriorates beyond a critical threshold (typically
+  Stage 3 AKI or failure to respond to medical management), renal replacement therapy
+  (RRT) becomes necessary to artificially filter blood and maintain homeostasis'
+- 'Step 4: Among critically ill hospitalized patients with AKI, approximately 20%
+  require initiation of RRT (hemodialysis, continuous renal replacement therapy, or
+  peritoneal dialysis)'
+evidence:
+  quality_rating: A
+  n_studies: 85
+  primary_citation: 'A. Cau et al. 2021. Acute Kidney Injury and Renal Replacement
+    Therapy in COVID-19 Versus Other Respiratory Viruses: A Systematic Review and
+    Meta-Analysis. Canadian Journal of Kidney Health and Disease.'
+  supporting_citations: []
+description: Acute kidney injury during hospitalization directly leads to renal replacement
+  therapy when kidney function deteriorates to the point where the body cannot maintain
+  fluid, electrolyte, and acid-base homeostasis. Among critically ill hospitalized
+  patients, approximately 51% develop AKI, and of these, about 20% require RRT. The
+  progression from AKI to RRT is driven by the severity of kidney dysfunction and
+  is modulated by factors such as hemodynamic instability and shock requiring vasopressor
+  support.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.2
+    type: pooled_proportion
+    ci_lower: 0.16
+    ci_upper: 0.24
+  p_value: null
+  sample_size: 23655
+moderators:
+- name: shock_or_vasopressor_use
+  direction: strengthens
+  strength: strong
+  description: Patients with shock or requiring vasopressors had significantly higher
+    rates of RRT; after adjusting for these factors, differences between virus groups
+    were no longer significant
+- name: viral_etiology
+  direction: weakens
+  strength: moderate
+  description: Non-ACE2-associated viruses showed higher RRT rates (49%) compared
+    to COVID-19 (20%) and other ACE2-associated viruses (18%), possibly due to higher
+    shock/vasopressor use
+- name: icu_admission
+  direction: strengthens
+  strength: strong
+  description: Critical illness requiring ICU admission is associated with higher
+    AKI severity and consequently higher RRT requirements

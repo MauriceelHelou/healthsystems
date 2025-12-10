@@ -1,0 +1,47 @@
+id: NEW:cannabis_use_while_driving_to_NEW:compensatory_speed_reduction
+name: Cannabis Use While Driving → Compensatory Speed Reduction
+from_node:
+  node_id: NEW:cannabis_use_while_driving
+  node_name: Cannabis Use While Driving
+to_node:
+  node_id: NEW:compensatory_speed_reduction
+  node_name: Compensatory Speed Reduction
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Cannabis users may have some awareness of impairment'
+- 'Step 2: Compensatory behavior manifests as reduced driving speed (g=-0.176)'
+- 'Step 3: Speed reduction partially offsets but does not eliminate crash risk from lateral control deficits'
+- 'Step 4: Net effect remains increased crash probability despite compensation'
+evidence:
+  quality_rating: A
+  n_studies: 57
+  primary_citation: 'S. Simmons et al. 2022. "The effects of cannabis and alcohol on driving performance
+    and driver behaviour: a systematic review and meta-analysis.." https://doi.org/10.1111/add.15770'
+  supporting_citations:
+  - Driving simulator studies measuring speed selection
+  - Closed-course experimental paradigms
+  - Additional citations require full-text access
+  doi: 10.1111/add.15770
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Cannabis-impaired drivers tend to reduce their driving speed (g=-0.176), representing a compensatory
+  behavior that partially but incompletely mitigates crash risk. This contrasts with alcohol where speed
+  increases may occur.
+quantitative_effects:
+  effect_size:
+    value: -0.176
+    type: standardized_mean_difference
+    ci_lower: -0.298
+    ci_upper: -0.053
+  sample_size: 1725
+structural_competency:
+  equity_implications: Understanding compensatory behaviors has implications for road design and speed
+    limit policies. However, reliance on driver compensation should not be used to minimize the need for
+    structural interventions such as improved public transit and ride-sharing accessibility.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.632849'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,47 @@
+id: alcohol_use_disorder_to_depression_incidence
+name: Alcohol Use Disorder (AUD) → Depression Incidence
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder (AUD)
+to_node:
+  node_id: depression_incidence
+  node_name: Depression Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol use disorder creates neurobiological changes including alterations
+  in neurotransmitter systems (serotonin, dopamine, GABA) that regulate mood'
+- 'Step 2: Chronic alcohol exposure induces inflammatory responses and oxidative stress
+  affecting brain structure and function'
+- 'Step 3: Type 2 diabetes diagnosis adds additional stress and disease burden for
+  individuals with existing AUD'
+- 'Step 4: Combined physiological burden of AUD and T2DM, along with pre-existing
+  mental health vulnerabilities, increases susceptibility to depressive episodes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sarah Cook et al. 2024. "Is alcohol use disorder associated with
+    higher rates of depression and anxiety among people with new onset type 2 diabetes?
+    A cohort study using linked primary care data in England.." *BMC primary care*.
+    https://doi.org/10.1186/s12875-024-02628-6
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.540949'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: history_mental_health_condition
+  direction: weakens
+  strength: moderate
+  description: After adjustment for history of mental health condition, the IRR reduced
+    from 2.00 to 1.45, indicating that pre-existing mental health conditions partially
+    explain the association
+- name: socioeconomic_deprivation
+  direction: strengthens
+  strength: moderate
+  description: Index of Multiple Deprivation was included as confounder, suggesting
+    deprivation may modify the relationship between AUD and depression
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/alcohol_use_disorder_to_depression_incidence.yaml
+_category: biological

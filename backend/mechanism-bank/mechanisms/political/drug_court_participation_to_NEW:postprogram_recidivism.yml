@@ -1,0 +1,60 @@
+id: drug_court_participation_to_NEW:postprogram_recidivism
+name: Drug Court Participation → Postprogram Recidivism
+from_node:
+  node_id: drug_court_participation
+  node_name: Drug Court Participation
+to_node:
+  node_id: NEW:postprogram_recidivism
+  node_name: Postprogram Recidivism
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Youth complete juvenile drug treatment court program (average graduation rate 54.74%)'
+- 'Step 2: Program completion ends structured supervision, treatment services, and judicial oversight'
+- 'Step 3: Without sustained community support and continued treatment, treatment gains may not be maintained'
+- 'Step 4: Implementation failures in connecting youth to post-program services limit long-term effectiveness'
+- 'Step 5: Postprogram recidivism rates show minimal to no difference from traditional adjudication'
+evidence:
+  quality_rating: A
+  n_studies: 55
+  primary_citation: 'E. Tanner‐Smith et al. 2023. "Examining the Effects of Juvenile Drug Treatment Courts:
+    A Systematic Review and Meta-Analysis." https://doi.org/10.1177/00938548231208208'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis synthesized 55 eligible samples
+  - Studies providing data from 12,310 participants across U.S.-based JDTCs
+  - Controlled evaluations comparing JDTCs to traditional juvenile adjudication
+  doi: 10.1177/00938548231208208
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Due partly to implementation failures, JDTCs may have minimal to no effects on postprogram
+  recidivism. While during-supervision effects are modest, the lack of sustained impact after program
+  completion highlights structural gaps in transitioning youth to community-based supports.
+quantitative_effects:
+  sample_size: 12310
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Variability in effects across programs suggests geographic and implementation differences
+    influence outcomes
+moderators:
+- name: implementation_quality
+  direction: strengthens
+  strength: moderate
+  description: Implementation failures contribute to minimal postprogram effects; better implementation
+    may improve outcomes
+- name: treatment_needs_matching
+  direction: strengthens
+  strength: moderate
+  description: Better tailoring of program enrollment and services to youth treatment needs associated
+    with effectiveness
+structural_competency:
+  equity_implications: The lack of sustained effects reveals structural limitations in the juvenile justice
+    system's ability to address root causes of youth substance use and offending. Implementation failures
+    reflect systemic issues including underfunding, inadequate training, and fragmented service systems
+    rather than individual youth failure. This finding points to the need for structural solutions that
+    extend beyond court supervision periods.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.591837'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,53 @@
+id: low_socioeconomic_status_to_thirty_day_mortality
+name: Low Socioeconomic Status (Low Education and Income) → 30-Day Mortality After
+  Medical Helpline Call
+from_node:
+  node_id: low_socioeconomic_status
+  node_name: Low Socioeconomic Status (Low Education and Income)
+to_node:
+  node_id: thirty_day_mortality
+  node_name: 30-Day Mortality After Medical Helpline Call
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Low SES individuals experience accumulated health disadvantages including
+  higher baseline disease burden and delayed care-seeking'
+- 'Step 2: Telephone triage systems less frequently direct low SES callers to face-to-face
+  medical contact despite medical need'
+- 'Step 3: Reduced access to timely face-to-face evaluation delays diagnosis and treatment
+  of serious conditions'
+- 'Step 4: Delayed or missed interventions for acute conditions lead to disease progression
+  and increased mortality risk'
+- 'Step 5: Low SES callers experience higher 30-day mortality following telephone
+  triage contact'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: H. Gamst-Jensen et al. 2021. "Socioeconomic inequality in telephone
+    triage on triage response, hospitalization and 30-day mortality.." *European Journal
+    of Public Health*. https://doi.org/10.1093/eurpub/ckaa242
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.949047'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_health_status
+  direction: strengthens
+  strength: strong
+  description: Pre-existing health conditions and comorbidities more common in low
+    SES populations increase vulnerability to adverse outcomes from care delays
+- name: triage_protocol_equity_training
+  direction: weakens
+  strength: moderate
+  description: Standardized protocols with explicit equity considerations may reduce
+    SES-based mortality disparities
+- name: social_support_networks
+  direction: weakens
+  strength: moderate
+  description: Strong social networks may help low SES individuals navigate healthcare
+    system barriers and seek alternative care pathways
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/low_socioeconomic_status_to_thirty_day_mortality.yaml
+_category: healthcare_access

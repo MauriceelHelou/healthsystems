@@ -1,0 +1,56 @@
+id: NEW:covid_19_critical_illness_to_acute_kidney_injury_hospitalization
+name: COVID-19 Critical Illness (ICU Admission) → Acute Kidney Injury Hospitalization
+from_node:
+  node_id: NEW:covid_19_critical_illness
+  node_name: COVID-19 Critical Illness (ICU Admission)
+to_node:
+  node_id: acute_kidney_injury_hospitalization
+  node_name: Acute Kidney Injury Hospitalization
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: SARS-CoV-2 binds to angiotensin converting enzyme 2 (ACE2) receptors, which
+  are highly expressed in kidney proximal tubular cells, enabling viral entry and
+  direct renal injury'
+- 'Step 2: Critical illness in COVID-19 ICU patients triggers systemic inflammatory
+  responses, cytokine storms, and hemodynamic instability leading to renal hypoperfusion'
+- 'Step 3: Shock and vasopressor use in critically ill patients further compromises
+  renal blood flow and tubular function'
+- 'Step 4: Combined direct viral injury, systemic inflammation, and hemodynamic compromise
+  result in acute kidney injury requiring hospitalization and potentially renal replacement
+  therapy'
+evidence:
+  quality_rating: A
+  n_studies: 74
+  primary_citation: 'A. Cau et al. 2021. Acute Kidney Injury and Renal Replacement
+    Therapy in COVID-19 Versus Other Respiratory Viruses: A Systematic Review and
+    Meta-Analysis. Canadian Journal of Kidney Health and Disease.'
+  supporting_citations: []
+description: Critically ill COVID-19 patients admitted to the ICU have a 51% pooled
+  rate of developing acute kidney injury. The mechanism involves direct viral injury
+  through ACE2 receptor binding in kidney tissue, systemic inflammatory responses,
+  and hemodynamic instability including shock requiring vasopressors. Approximately
+  20% of critically ill COVID-19 patients require renal replacement therapy.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.51
+    type: pooled_proportion
+    ci_lower: 0.44
+    ci_upper: 0.57
+  p_value: null
+  sample_size: 23655
+moderators:
+- name: shock_or_vasopressor_use
+  direction: strengthens
+  strength: strong
+  description: After adjusting for shock or vasopressor use, AKI rates between virus
+    groups were not significantly different, suggesting shock/vasopressor use is a
+    key mediator of the AKI risk
+- name: ACE2_receptor_binding
+  direction: weakens
+  strength: moderate
+  description: COVID-19 and other ACE2-associated viruses showed lower RRT rates (20%)
+    compared to non-ACE2-associated viruses (49%), possibly due to lower frequencies
+    of shock in ACE2-associated infections

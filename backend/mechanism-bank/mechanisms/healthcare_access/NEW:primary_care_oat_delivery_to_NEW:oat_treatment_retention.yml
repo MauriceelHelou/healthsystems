@@ -1,0 +1,64 @@
+id: NEW:primary_care_oat_delivery_to_NEW:oat_treatment_retention
+name: Primary Care OAT Delivery Setting → OAT Treatment Retention
+from_node:
+  node_id: NEW:primary_care_oat_delivery
+  node_name: Primary Care OAT Delivery Setting
+to_node:
+  node_id: NEW:oat_treatment_retention
+  node_name: OAT Treatment Retention
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary care settings may offer more convenient appointment scheduling and location accessibility'
+- 'Step 2: Reduced stigma in primary care may improve patient willingness to continue treatment'
+- 'Step 3: Comprehensive primary care may address multiple health needs simultaneously, improving engagement'
+- 'Step 4: However, evidence for treatment retention difference is very uncertain'
+evidence:
+  quality_rating: A
+  n_studies: 7
+  primary_citation: Danielle Perry et al. 2025. "Opioid agonist therapy for opioid use disorder in primary
+    versus specialty care.." https://doi.org/10.1002/14651858.CD013672.pub2
+  supporting_citations:
+  - Studies from France (1 study) included in meta-analysis
+  - Studies from Ukraine (1 study) included in meta-analysis
+  - Studies from US (5 studies) included in meta-analysis
+  - Additional citations require full-text access for specific study details
+  doi: 10.1002/14651858.CD013672.pub2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The evidence is very uncertain whether there is a difference in treatment retention between
+  primary care and specialty care settings for OAT delivery, with a risk ratio of 1.15 (95% CI 0.98-1.34)
+  based on 7 studies with 1952 participants. Evidence downgraded for inconsistency due to high heterogeneity.
+quantitative_effects:
+  effect_size:
+    value: 1.15
+    type: relative_risk
+    ci_lower: 0.98
+    ci_upper: 1.34
+  sample_size: 1952
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: High heterogeneity noted across studies from France, Ukraine, and US, leading to downgrading
+    of evidence certainty
+moderators:
+- name: Healthcare system structure
+  direction: strengthens
+  strength: moderate
+  description: Effects may vary based on integration of primary and specialty care systems within different
+    countries
+- name: Patient stability on OAT
+  direction: strengthens
+  strength: strong
+  description: Studies included lower-risk patients who were already stable on OAT, limiting generalizability
+structural_competency:
+  equity_implications: Treatment retention in OUD is influenced by structural factors including healthcare
+    system design, geographic accessibility, and stigma. The uncertain findings highlight the need for
+    healthcare system redesign that addresses barriers faced by diverse populations. Current specialty
+    care concentration may systematically exclude populations with transportation barriers, work schedule
+    conflicts, or concerns about visibility.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.508359'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

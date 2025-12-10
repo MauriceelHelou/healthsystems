@@ -1,0 +1,65 @@
+id: NEW:sglt2_inhibitor_treatment_access_to_kidney_disease
+name: SGLT2 Inhibitor Treatment Access → Chronic Kidney Disease
+from_node:
+  node_id: NEW:sglt2_inhibitor_treatment_access
+  node_name: SGLT2 Inhibitor Treatment Access
+to_node:
+  node_id: kidney_disease
+  node_name: Chronic Kidney Disease
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare systems adopt SGLT2 inhibitors (Empagliflozin, Canagliflozin, Dapagliflozin) as
+  standard treatment for CKD'
+- 'Step 2: SGLT2 inhibitors reduce glucose reabsorption in proximal tubules, lowering intraglomerular
+  pressure'
+- 'Step 3: Reduced glomerular hyperfiltration slows progression of kidney damage'
+- 'Step 4: Anti-inflammatory and cardioprotective effects provide additional renal protection'
+- 'Step 5: Disease progression to end-stage renal disease is delayed or prevented'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: 'Anh Thi Ngoc Toan et al. 2024. "Cost-effectiveness of sodium-glucose cotransporter
+    2 inhibitors in the treatment of chronic kidney disease: a systematic review." https://doi.org/10.1080/14737167.2024.2420654'
+  supporting_citations:
+  - Studies evaluating Empagliflozin (n=3) - specific citations require full-text access
+  - Studies evaluating Canagliflozin (n=3) - specific citations require full-text access
+  - Studies evaluating Dapagliflozin (n=8) - specific citations require full-text access
+  doi: 10.1080/14737167.2024.2420654
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: SGLT2 inhibitors added to standard of care provide cost-effective treatment for CKD patients
+  regardless of T2D status, with cost-saving benefits in CKD patients with T2D in high-income countries.
+  This represents a healthcare system intervention that can reduce disease progression and economic burden.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Cost-effectiveness findings varied by country income level; SGLT2 inhibitors were cost-saving
+    in high-income countries under health system perspective
+moderators:
+- name: type_2_diabetes_status
+  direction: strengthens
+  strength: strong
+  description: In CKD patients with T2D, SGLT2 inhibitors were cost-saving rather than just cost-effective
+- name: country_income_level
+  direction: strengthens
+  strength: moderate
+  description: Cost-saving benefits were observed primarily in high-income countries under health system
+    perspective
+- name: specific_sglt2_agent
+  direction: varies
+  strength: moderate
+  description: Dapagliflozin was not cost-effective compared to Canagliflozin, suggesting differential
+    value between agents
+structural_competency:
+  equity_implications: This mechanism highlights healthcare system-level determinants of CKD outcomes.
+    Access to SGLT2 inhibitors depends on healthcare coverage, formulary inclusion, and affordability
+    policies. The finding that cost-effectiveness varies by country income level suggests structural economic
+    factors influence treatment access. Equity implications include that patients in lower-income settings
+    may not have access to these beneficial treatments, and within-country disparities in insurance coverage
+    could create differential access to these medications.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.925626'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

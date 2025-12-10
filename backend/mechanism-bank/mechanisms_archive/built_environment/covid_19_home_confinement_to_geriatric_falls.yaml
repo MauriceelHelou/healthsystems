@@ -1,0 +1,41 @@
+id: covid_19_home_confinement_to_geriatric_falls
+name: COVID-19 Home Confinement → Geriatric Falls
+from_node:
+  node_id: covid_19_home_confinement
+  node_name: COVID-19 Home Confinement
+to_node:
+  node_id: geriatric_falls
+  node_name: Geriatric Falls
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: COVID-19 pandemic policies confine older adults to home environments for
+  extended periods'
+- 'Step 2: Increased time at home exposes older adults to home hazards (stairs, slippery
+  surfaces, poor lighting, clutter) for longer durations'
+- 'Step 3: Reduced outdoor activity and social engagement may decrease physical conditioning
+  and balance'
+- 'Step 4: Extended home confinement increases fall risk and incidence of fall-related
+  injuries requiring emergency care'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Hasan Sultanoğlu et al. 2022. "Trends in Geriatric Trauma Emergency
+    Department Admissions During COVID-19." *Journal of Trauma Nursing*. https://doi.org/10.1097/JTN.0000000000000652
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.578166'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: housing_quality_safety
+  direction: weakens
+  strength: strong
+  description: Better housing conditions with fewer safety hazards would reduce the
+    increased fall risk associated with extended home confinement
+- name: socioeconomic_status
+  direction: weakens
+  strength: moderate
+  description: Higher socioeconomic status associated with safer, better-maintained
+    housing would reduce fall risk during home confinement

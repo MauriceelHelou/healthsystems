@@ -1,0 +1,54 @@
+id: NEW:oral_nicotine_pouch_use_to_smoking_current
+name: Oral Nicotine Pouch Use → Current Smoking Status
+from_node:
+  node_id: NEW:oral_nicotine_pouch_use
+  node_name: Oral Nicotine Pouch Use
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking Status
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Oral nicotine pouches deliver nicotine without tobacco combustion'
+- 'Step 2: Users may substitute cigarettes with pouches'
+- 'Step 3: Reduced cigarette consumption during substitution period'
+- 'Step 4: Potential complete transition away from combustible tobacco'
+evidence:
+  quality_rating: C
+  n_studies: 4
+  primary_citation: Jamie Hartmann-Boyce et al. 2025. "Oral nicotine pouches for cessation or reduction
+    of use of other tobacco or nicotine products.." https://doi.org/10.1002/14651858.CD016220.pub2
+  supporting_citations:
+  - Additional citations require full-text access - 4 RCTs included in review
+  - Total participants n=284 across all studies
+  - Studies compared ONP to various controls including e-cigarettes, snus, and NRT
+  doi: 10.1002/14651858.CD016220.pub2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Low-certainty evidence suggests people randomized to ONP may be slightly less likely to quit
+  smoking than those randomized to e-cigarettes, indicating ONP may be less effective as a cessation tool
+  compared to vaping products
+quantitative_effects:
+  effect_size:
+    value: 0.25
+    type: relative_risk
+    ci_lower: 0.03
+    ci_upper: 2.02
+  sample_size: 36
+moderators:
+- name: alternative_nicotine_product_type
+  direction: weakens
+  strength: moderate
+  description: E-cigarettes may be more effective than ONP for smoking cessation (ONP showed lower abstinence
+    rates compared to e-cigarettes)
+structural_competency:
+  equity_implications: Differential effectiveness of harm reduction products has policy implications for
+    tobacco control strategies. If e-cigarettes are more effective, regulatory frameworks that restrict
+    e-cigarettes while permitting ONP may not optimize population health outcomes. Market availability
+    and regulatory stringency represent structural determinants of cessation success.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.886885'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

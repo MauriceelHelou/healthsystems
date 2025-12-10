@@ -1,0 +1,52 @@
+id: NEW:smartphone_tablet_exposure_children_to_sleep_duration_inadequate
+name: Smartphone and Tablet Exposure in Children → Inadequate Sleep Duration (Shortened)
+from_node:
+  node_id: NEW:smartphone_tablet_exposure_children
+  node_name: Smartphone and Tablet Exposure in Children
+to_node:
+  node_id: sleep_duration_inadequate
+  node_name: Inadequate Sleep Duration (Shortened)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Children are exposed to smartphones and tablets in home and school environments'
+- 'Step 2: Device use displaces sleep time and delays bedtime routines'
+- 'Step 3: Arousing content increases cognitive and physiological activation before sleep'
+- 'Step 4: Children using devices have significantly higher odds of shortened sleep duration'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'E. Bacil et al. 2024. "Exposure to Smartphones and Tablets, Physical Activity and
+    Sleep in Children From 5 to 10 Years Old: A Systematic Review and Meta-Analysis." https://doi.org/10.1177/08901171241242556'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 17 studies included
+  - Studies identified from 2396 potentially relevant papers meeting inclusion criteria
+  - Observational studies from indexed journals in Portuguese, English, and Spanish
+  doi: 10.1177/08901171241242556
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Children using smartphones and tablets were 1.79 times more likely to have shorter sleep
+  duration compared to those with lower usage (OR = 1.79; 95%CI = 1.72-1.86). This represents a robust
+  association with narrow confidence intervals indicating high precision.
+quantitative_effects:
+  effect_size:
+    value: 1.79
+    type: odds_ratio
+    ci_lower: 1.72
+    ci_upper: 1.86
+moderators:
+- name: duration_of_exposure
+  direction: strengthens
+  strength: strong
+  description: Higher exposure duration associated with greater odds of shortened sleep
+structural_competency:
+  equity_implications: The structural context includes technology industry practices targeting children,
+    inadequate policy frameworks limiting children's digital exposure, and socioeconomic factors influencing
+    parental capacity to provide alternative enrichment activities. Lower-income families may have fewer
+    resources for supervised activities, potentially increasing reliance on screen-based entertainment.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.105924'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

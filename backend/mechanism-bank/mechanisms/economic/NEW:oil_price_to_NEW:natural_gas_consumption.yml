@@ -1,0 +1,61 @@
+id: NEW:oil_price_to_NEW:natural_gas_consumption
+name: Oil Price → Natural Gas Consumption
+from_node:
+  node_id: NEW:oil_price
+  node_name: Oil Price
+to_node:
+  node_id: NEW:natural_gas_consumption
+  node_name: Natural Gas Consumption
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Oil prices increase in global and domestic markets'
+- 'Step 2: Higher oil costs increase expenses for transportation, heating, and industrial processes using
+  petroleum'
+- 'Step 3: Natural gas becomes relatively more cost-effective as a substitute fuel'
+- 'Step 4: Consumers and industries shift toward natural gas (cross-price elasticity 2.267 short-run,
+  1.275 long-run)'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Jian Chai et al. 2018. "The Price Elasticity of Natural Gas Demand in China: A Meta-Regression
+    Analysis." https://doi.org/10.3390/EN11123255'
+  supporting_citations:
+  - Additional citations require full-text access - meta-regression synthesizes empirical estimates
+  - Studies examine oil-to-natural gas substitution dynamics
+  - Analysis employs Fixed-effects and OLS estimation methods
+  doi: 10.3390/EN11123255
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Oil and natural gas demonstrate strong positive cross-price elasticity, with the highest
+  short-run value (2.267) among all cross-price relationships examined. This indicates oil and natural
+  gas are significant substitutes in China's energy market.
+quantitative_effects:
+  effect_size:
+    value: 2.267
+    type: beta_coefficient
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Geographic region and consumer type contribute to variation in elasticity estimates
+    across studies
+moderators:
+- name: time_horizon
+  direction: weakens
+  strength: moderate
+  description: Long-run elasticity (1.275) notably lower than short-run (2.267), suggesting adjustment
+    over time
+- name: sample_period
+  direction: strengthens
+  strength: moderate
+  description: Sample period explains heterogeneity, reflecting changing market conditions over time
+structural_competency:
+  equity_implications: Oil-to-gas fuel switching has environmental health implications through changes
+    in emissions profiles. Natural gas generally produces fewer particulate emissions than petroleum products,
+    potentially improving air quality. However, this paper does not directly examine health equity dimensions
+    of energy transitions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.051209'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

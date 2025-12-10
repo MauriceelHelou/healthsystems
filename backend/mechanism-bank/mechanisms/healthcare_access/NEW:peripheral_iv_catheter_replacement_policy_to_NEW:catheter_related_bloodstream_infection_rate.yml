@@ -1,0 +1,58 @@
+id: NEW:peripheral_iv_catheter_replacement_policy_to_NEW:catheter_related_bloodstream_infection_rate
+name: Peripheral IV Catheter Replacement Policy (Clinically-Indicated vs Routine) → Catheter-Related Bloodstream
+  Infection Rate
+from_node:
+  node_id: NEW:peripheral_iv_catheter_replacement_policy
+  node_name: Peripheral IV Catheter Replacement Policy (Clinically-Indicated vs Routine)
+to_node:
+  node_id: NEW:catheter_related_bloodstream_infection_rate
+  node_name: Catheter-Related Bloodstream Infection Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare policy determines whether peripheral venous catheters are replaced on a fixed schedule
+  (every 72-96 hours) or only when clinically indicated'
+- 'Step 2: Clinically-indicated replacement allows catheters to remain in place longer when functioning
+  without signs of complications'
+- 'Step 3: Potential for bacterial colonization and biofilm formation exists regardless of replacement
+  schedule'
+- 'Step 4: No significant difference in bloodstream infection rates detected between policies due to low
+  baseline incidence'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: Joan Webster et al. 2019. "Clinically-indicated replacement versus routine replacement
+    of peripheral venous catheters.." https://doi.org/10.1002/14651858.CD007798.pub5
+  supporting_citations:
+  - Rickard CM et al. (2012). Lancet - largest included RCT with 3283 participants
+  - Van Donk P et al. - one of nine included RCTs in meta-analysis
+  - Additional citations require full-text access for complete study identification
+  doi: 10.1002/14651858.CD007798.pub5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Clinically-indicated catheter replacement compared to routine 72-96 hour replacement shows
+  no clear difference in catheter-related bloodstream infections (RR 0.61, 95% CI 0.08-4.68), with very
+  low event rates (1/3590 vs 2/3733)
+quantitative_effects:
+  effect_size:
+    value: 0.61
+    type: relative_risk
+    ci_lower: 0.08
+    ci_upper: 4.68
+  sample_size: 7323
+moderators:
+- name: infusion_type
+  direction: neutral
+  strength: weak
+  description: Results unaffected by whether infusion was continuous or intermittent
+structural_competency:
+  equity_implications: This mechanism relates to healthcare system policy decisions affecting patient
+    care protocols. Current CDC guidelines recommend routine replacement, but evidence suggests this may
+    be unnecessary, imposing systemic costs and patient discomfort without demonstrated benefit. Policy
+    change could reduce healthcare resource utilization.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.910403'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,65 @@
+id: NEW:aud_medication_treatment_availability_to_alcohol_use_disorder
+name: AUD Medication Treatment Availability (Disulfiram, Naltrexone, Acamprosate) → Alcohol Use Disorder
+from_node:
+  node_id: NEW:aud_medication_treatment_availability
+  node_name: AUD Medication Treatment Availability (Disulfiram, Naltrexone, Acamprosate)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: FDA-approved medications (disulfiram, naltrexone, acamprosate) are available but underutilized
+  in healthcare systems'
+- 'Step 2: Provider barriers including stigma, lack of knowledge, and lack of professional support limit
+  prescribing'
+- 'Step 3: Shortage of willing providers creates treatment access gaps'
+- 'Step 4: When medications are prescribed, they reduce alcohol craving, block rewarding effects, or create
+  aversive reactions'
+- 'Step 5: Reduced medication access perpetuates AUD prevalence and severity'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: Julie Worley 2021. "Review of Evidence-Based Strategies to Treat Alcohol Use Disorder.."
+    https://doi.org/10.3928/02793695-20211110-01
+  supporting_citations:
+  - Additional citations require full-text access - abstract references FDA-approved medications for AUD
+    treatment
+  - Evidence base for disulfiram, naltrexone, and acamprosate efficacy referenced
+  - Literature on provider barriers to AUD treatment referenced
+  doi: 10.3928/02793695-20211110-01
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: FDA-approved medications for AUD (disulfiram, naltrexone, acamprosate) are effective but
+  severely underutilized due to systemic healthcare barriers including provider stigma, knowledge gaps,
+  lack of professional support, and shortage of willing providers. This represents a structural failure
+  in healthcare delivery that perpetuates AUD burden.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Provider availability and willingness to prescribe AUD medications likely varies by
+    region, healthcare system, and practice setting
+moderators:
+- name: provider_stigma
+  direction: weakens
+  strength: strong
+  description: Provider stigma toward patients with AUD reduces likelihood of offering evidence-based
+    pharmacological treatments
+- name: provider_knowledge
+  direction: strengthens
+  strength: moderate
+  description: Greater provider knowledge of AUD medications increases prescribing rates
+- name: professional_support_systems
+  direction: strengthens
+  strength: moderate
+  description: Presence of professional support and training increases provider willingness to treat AUD
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare system failures - not individual patient
+    factors - drive AUD treatment gaps. Provider stigma reflects broader societal stigma institutionalized
+    in medical practice. Shortage of willing providers is a workforce and training system issue. The focus
+    on underutilization shifts blame from patients to structural barriers in healthcare delivery.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.252974'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

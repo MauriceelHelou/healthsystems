@@ -1,0 +1,54 @@
+id: NEW:aud_pharmacotherapy_access_to_alcohol_use_disorder
+name: AUD Pharmacotherapy Access → Alcohol Use Disorder
+from_node:
+  node_id: NEW:aud_pharmacotherapy_access
+  node_name: AUD Pharmacotherapy Access
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Limited approved pharmacotherapies (only 3 widely-approved medications) restricts treatment
+  options for heterogeneous AUD population'
+- 'Step 2: Under-treatment of AUD persists due to lack of diverse medication options matching patient-specific
+  needs'
+- 'Step 3: Stigma and lack of pharmacological variety reduce treatment-seeking behavior'
+- 'Step 4: Untreated or inadequately treated AUD leads to continued alcohol-related health harms'
+evidence:
+  quality_rating: B
+  n_studies: 22
+  primary_citation: E. Burnette et al. 2022. "Novel Agents for the Pharmacological Treatment of Alcohol
+    Use Disorder." https://doi.org/10.1007/s40265-021-01670-3
+  supporting_citations:
+  - Studies on disulfiram, acamprosate, and naltrexone efficacy (referenced in review)
+  - Studies on topiramate and gabapentin as repurposed agents (referenced in review)
+  - Studies on novel agents including ibudilast, prazosin, and cannabidiol (referenced in review)
+  doi: 10.1007/s40265-021-01670-3
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Limited approved pharmacotherapies for AUD contribute to under-treatment. The review identifies
+  22 medications (approved, repurposed, and novel) that could expand treatment options for the heterogeneous
+  AUD population, potentially improving outcomes through precision medicine approaches.
+moderators:
+- name: AUD heterogeneity
+  direction: strengthens
+  strength: strong
+  description: Given AUD is a heterogeneous disorder, availability of diverse pharmacotherapies increases
+    likelihood of finding effective individual treatment
+- name: Treatment stigma
+  direction: weakens
+  strength: moderate
+  description: Stigma associated with AUD treatment reduces treatment-seeking even when pharmacotherapies
+    are available
+structural_competency:
+  equity_implications: This mechanism highlights structural healthcare barriers rather than individual
+    blame. The limited availability of approved treatments is a systemic failure, not patient non-compliance.
+    Expanding approved medications and reducing treatment stigma are structural interventions that could
+    improve AUD outcomes across populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.238162'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,76 @@
+id: NEW:external_facilitation_intervention_implementation_to_sud_medication_treatment_rate_oud
+name: External Facilitation Intervention Implementation → MOUD Prescribing Rate
+from_node:
+  node_id: NEW:external_facilitation_intervention_implementation
+  node_name: External Facilitation Intervention Implementation
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: MOUD Prescribing Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: External facilitation teams provide evidence-based implementation support to healthcare sites'
+- 'Step 2: Pre-implementation activities prepare sites for MOUD program adoption through planning and
+  stakeholder engagement'
+- 'Step 3: Implementation activities address system-level barriers to MOUD prescribing including provider
+  training and workflow integration'
+- 'Step 4: Labor investment in planning and implementation activities translates to increased organizational
+  capacity for MOUD delivery'
+- 'Step 5: Increased access to medication treatment reduces opioid-related overdoses and deaths'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Carla Garcia et al. 2023. "Costs of implementing a multi-site facilitation intervention
+    to increase access to medication treatment for opioid use disorder." https://doi.org/10.1186/s43058-023-00482-8
+  supporting_citations:
+  - Additional citations require full-text access - abstract references evidence-based pharmaceutical
+    interventions (buprenorphine, methadone, naltrexone)
+  - Additional citations require full-text access - abstract references external facilitation as evidence-based
+    implementation intervention
+  - Additional citations require full-text access - abstract references Bureau of Labor Statistics and
+    VHA Financial Management System data sources
+  doi: 10.1186/s43058-023-00482-8
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: External facilitation is an evidence-based implementation intervention that increases access
+  to medication for opioid use disorder (MOUD). The average total cost of implementation per site was
+  $18,847 (SD 6717), ranging from $11,320 to $31,592, translating to approximately $48 per patient with
+  OUD. Implementation costs were driven mostly by labor involved in planning and implementation activities.
+quantitative_effects:
+  effect_size:
+    value: 18847.0
+    type: cost_per_site
+    ci_lower: 11320.0
+    ci_upper: 31592.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Costs varied by site based on number of encounters, participant composition, and salary
+    levels. VHA sites had higher costs than BLS estimates due to higher wages.
+moderators:
+- name: participant_salary_levels
+  direction: strengthens
+  strength: moderate
+  description: Sites with participants with higher salaries in attendance had higher implementation costs
+- name: number_of_encounters
+  direction: strengthens
+  strength: moderate
+  description: Sites with more encounters had higher total implementation costs
+- name: stakeholder_composition
+  direction: strengthens
+  strength: moderate
+  description: Participant composition played an important role in total implementation costs; decision
+    makers need to identify optimal number of stakeholders
+structural_competency:
+  equity_implications: This mechanism addresses system-level barriers to MOUD access rather than individual-level
+    factors. The focus on external facilitation as an implementation strategy recognizes that healthcare
+    system capacity and organizational readiness are structural determinants of treatment access. The
+    cost analysis provides decision makers with information to overcome resource barriers to implementing
+    evidence-based OUD treatment, addressing the structural gap between available treatments and actual
+    patient access. The finding that costs are affordable depending on payer budget constraints highlights
+    how healthcare financing structures influence treatment availability.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.205496'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

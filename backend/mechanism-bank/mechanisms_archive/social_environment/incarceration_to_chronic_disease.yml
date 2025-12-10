@@ -1,0 +1,123 @@
+id: incarceration_to_chronic_disease
+name: Incarceration History → Chronic Disease Outcomes
+from_node:
+  node_id: incarceration_exposure
+  node_name: Criminal Legal System Exposure
+  node_type: stock
+to_node:
+  node_id: chronic_disease_outcomes
+  node_name: Chronic Disease Outcomes
+  node_type: stock
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Incarceration disrupts employment, housing, and social connections, creating chronic stress'
+- 'Step 2: Prison healthcare is often inadequate, leading to delayed diagnosis and poor disease management'
+- 'Step 3: Post-release barriers (employment discrimination, housing restrictions) perpetuate economic
+  instability'
+- 'Step 4: Healthcare access barriers post-release due to insurance gaps and provider discrimination'
+- 'Step 5: Accumulated disadvantage manifests as accelerated chronic disease progression and complications'
+evidence:
+  quality_rating: B
+  n_studies: 6
+  primary_citation: 'Hawks, Laura C., et al. 2023. ''Relationship between criminal legal system exposure
+    and health care utilization in US adults with diabetes.'' Journal of the National Medical Association
+    115(2): 194-202.'
+  supporting_citations:
+  - 'Olukotun, Oluwatoyin, et al. 2022. ''The association between history of incarceration and heart disease:
+    Adults from the 1979 National Longitudinal Survey of Youth.'' Health & Place 76: 102808. doi:10.1016/j.healthplace.2022.102808'
+  - 'Hewson, Thomas, et al. 2024. ''Interventions for the detection, monitoring, and management of chronic
+    non-communicable diseases in the prison population: an international systematic review.'' BMC Public
+    Health.'
+  - Polanco, Boris, et al. 2024. 'Chronic health conditions and their impact on the labor market.' SSM
+    Population Health.
+  doi: 10.1016/j.jnma.2023.01.015
+  heart_disease_source_doi: 10.1016/j.healthplace.2022.102808
+  journal: Journal of the National Medical Association
+  year: 2023
+  fulltext:
+    available: true
+    source: unpaywall
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10121761/pdf/nihms-1870552.pdf
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  primary_effect:
+    value: 2.14
+    type: odds_ratio
+    ci_lower: 1.25
+    ci_upper: 3.67
+    ci_level: 95
+    comparison: incarceration history vs. no incarceration, adjusted for SES and clinical factors
+  unadjusted_effect:
+    value: 2.29
+    type: odds_ratio
+    ci_lower: 1.4
+    ci_upper: 3.75
+    ci_level: 95
+  healthcare_utilization:
+    ed_visits:
+      value: 1.3
+      type: incidence_rate_ratio
+      ci_lower: 1.17
+      ci_upper: 1.46
+    inpatient:
+      value: 1.23
+      type: incidence_rate_ratio
+      ci_lower: 1.01
+      ci_upper: 1.5
+  interpretation: Incarceration history associated with 2.14x higher odds of heart disease after full
+    adjustment
+  source: NLSY 1979 dataset (n=12,686)
+last_updated: '2025-11-30'
+version: '1.1'
+description: Criminal legal system exposure is associated with worse chronic disease outcomes including
+  diabetes, cardiovascular disease, and respiratory conditions. Among those with diabetes, incarceration
+  history is associated with higher ED and inpatient utilization, reflecting both disease severity and
+  barriers to primary care access.
+moderators:
+- name: medicaid_expansion
+  direction: weakens
+  strength: moderate
+  description: States with Medicaid expansion provide better post-release healthcare access
+- name: reentry_programs
+  direction: weakens
+  strength: moderate
+  description: Comprehensive reentry programs with healthcare linkage improve outcomes
+- name: sentence_length
+  direction: strengthens
+  strength: moderate
+  description: Longer incarceration associated with greater health deterioration
+- name: substance_use_disorder
+  direction: strengthens
+  strength: strong
+  description: Comorbid SUD compounds chronic disease management challenges
+structural_competency:
+  root_cause_level: institutional
+  avoids_victim_blaming: true
+  equity_implications: Mass incarceration disproportionately affects Black and low-income communities
+    due to systemic racism in policing, prosecution, and sentencing. The health consequences of incarceration
+    are concentrated in already marginalized populations, compounding existing health inequities. Criminal
+    legal reform and decarceration are necessary to address root causes.
+assumptions:
+- Criminal legal system exposure includes any arrest, conviction, or incarceration
+- Chronic disease outcomes include diabetes, cardiovascular disease, respiratory disease
+- Mechanism operates through both direct (healthcare disruption) and indirect (socioeconomic) pathways
+limitations:
+- Selection effects difficult to address (factors leading to incarceration may also affect health)
+- Data on incarceration history often limited in health datasets
+- Most research from US context with unique criminal legal system
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Incarceration rates, prison healthcare quality, and post-release support vary dramatically
+    by state and county.
+  relevant_geographies:
+  - States with high incarceration rates show population-level health impacts
+  - Counties with better reentry services show improved post-release outcomes
+  - States with Medicaid expansion provide better continuity of care
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

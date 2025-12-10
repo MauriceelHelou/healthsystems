@@ -1,0 +1,50 @@
+id: sulfonamide_derivative_medications_to_egpa_disease_activation
+name: Sulfonamide-Derivative Medications → EGPA Disease Activation and Vasculitis
+from_node:
+  node_id: sulfonamide_derivative_medications
+  node_name: Sulfonamide-Derivative Medications
+to_node:
+  node_id: egpa_disease_activation
+  node_name: EGPA Disease Activation and Vasculitis
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Sulfonamide-derivative drugs (including torasemide) share chemical structural
+  features with known EGPA-triggering sulfonamides'
+- 'Step 2: Drug exposure in susceptible individuals activates eosinophilic and neutrophilic
+  immune responses'
+- 'Step 3: Immune activation leads to perivascular infiltration, neutrophil nuclear
+  fragmentation, and fibrinous necrosis of small vessels'
+- 'Step 4: Systemic vasculitis manifests across multiple organ systems (skin, lungs,
+  peripheral nerves) in patients with underlying EGPA predisposition'
+evidence:
+  quality_rating: C
+  n_studies: 4
+  primary_citation: 'Aleksandra Frątczak et al. 2022. "Torasemide-induced Vascular
+    Purpura in the Course of Eosinophilic Granulomatosis with Polyangiitis.." *Acta
+    dermatovenerologica Croatica : ADC*.'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.296048'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: underlying_asthma_atopy
+  direction: strengthens
+  strength: strong
+  description: Bronchial asthma is a core feature of EGPA and indicates Th2-skewed
+    immune system predisposed to eosinophilic responses. All EGPA patients by definition
+    have asthma history
+- name: leukotriene_receptor_antagonist_use
+  direction: strengthens
+  strength: strong
+  description: Strongest drug association with EGPA occurrence is leukotriene receptor
+    antagonists (montelukast, zafirlukast, pranlukast), though paradoxically used
+    to treat asthma which is an EGPA feature
+- name: dose_timing_exposure
+  direction: strengthens
+  strength: moderate
+  description: Prior leukocytoclastic vasculitis cases from torasemide developed within
+    24 hours of administration; this case showed 7-10 day progression, suggesting
+    dose-response or cumulative exposure effects

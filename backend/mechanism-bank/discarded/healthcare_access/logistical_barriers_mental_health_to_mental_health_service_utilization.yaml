@@ -1,0 +1,48 @@
+id: logistical_barriers_mental_health_to_mental_health_service_utilization
+name: External Logistical Barriers to Mental Health Treatment → Mental Health Service
+  Utilization
+from_node:
+  node_id: logistical_barriers_mental_health
+  node_name: External Logistical Barriers to Mental Health Treatment
+to_node:
+  node_id: mental_health_service_utilization
+  node_name: Mental Health Service Utilization
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Structural features of healthcare delivery create access barriers including
+  transportation challenges, limited appointment availability, waitlists, and scheduling
+  inflexibility'
+- 'Step 2: Geographic distance from services, inadequate public transportation, and
+  time constraints from work/family obligations impede ability to attend appointments'
+- 'Step 3: Financial barriers including copayments, lost wages, and childcare costs
+  increase opportunity costs of treatment engagement'
+- 'Step 4: However, study findings indicate logistical barriers were NOT primary correlates—problem
+  recognition and treatment beliefs had stronger associations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Emily M Johnson and Kyle Possemato 2019. "Problem recognition
+    and treatment beliefs relate to mental health utilization among veteran primary
+    care patients.." *Psychological services*. https://doi.org/10.1037/ser0000341
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.409177'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: primary_care_enrollment
+  direction: weakens
+  strength: strong
+  description: Sample was drawn from veterans already enrolled in primary care, suggesting
+    existing connection to healthcare system may reduce impact of logistical barriers
+    compared to unenrolled populations
+- name: va_healthcare_access
+  direction: weakens
+  strength: moderate
+  description: VA-enrolled veterans may face fewer financial barriers than uninsured
+    or underinsured civilian populations
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/logistical_barriers_mental_health_to_mental_health_service_utilization.yaml
+_category: healthcare_access

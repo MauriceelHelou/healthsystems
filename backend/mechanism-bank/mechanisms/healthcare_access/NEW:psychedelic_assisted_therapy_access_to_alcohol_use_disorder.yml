@@ -1,0 +1,65 @@
+id: NEW:psychedelic_assisted_therapy_access_to_alcohol_use_disorder
+name: Psychedelic-Assisted Therapy Access → Alcohol Use Disorder
+from_node:
+  node_id: NEW:psychedelic_assisted_therapy_access
+  node_name: Psychedelic-Assisted Therapy Access
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Access to psychedelic-assisted therapy (LSD or psilocybin) in clinical settings provides structured
+  therapeutic intervention'
+- 'Step 2: Psychedelics may induce neuroplasticity and alter default mode network activity, facilitating
+  psychological insight'
+- 'Step 3: Therapeutic sessions help patients process underlying trauma and psychological factors contributing
+  to alcohol dependence'
+- 'Step 4: Patients achieve abstinence or substantial reduction in alcohol consumption through enhanced
+  treatment response'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Dakota J. Sicignano et al. 2023. "The impact of psychedelics on patients with alcohol
+    use disorder: a systematic review with meta-analysis." https://doi.org/10.1080/03007995.2023.2296968'
+  supporting_citations:
+  - LSD studies published between 1966-1970 (historical trials cited in meta-analysis)
+  - Psilocybin trial from 2022 (higher methodological quality contemporary study)
+  - Additional citations require full-text access for specific author/journal details
+  doi: 10.1080/03007995.2023.2296968
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis of randomized controlled trials found that any psychedelic therapy (LSD or
+  psilocybin) enhanced odds of achieving abstinence or substantial reduction in alcohol consumption by
+  2.16 times compared to placebo in double-blind trials. When inclusion criteria were relaxed, the odds
+  ratio was 1.89 across 6 trials.
+quantitative_effects:
+  effect_size:
+    value: 2.16
+    type: odds_ratio
+    ci_lower: 1.26
+    ci_upper: 3.69
+moderators:
+- name: study_design_rigor
+  direction: strengthens
+  strength: moderate
+  description: Double-blind, placebo-controlled trials showed stronger effects (OR 2.16) compared to trials
+    without such controls
+- name: time_period
+  direction: weakens
+  strength: moderate
+  description: Historical studies (1966-1970) may have weaker applicability to contemporary practice compared
+    to the 2022 psilocybin trial
+structural_competency:
+  equity_implications: This mechanism highlights how regulatory restrictions on psychedelic research and
+    treatment access create structural barriers to potentially effective AUD treatments. The historical
+    gap in research (1970s to 2022) reflects policy decisions that limited investigation of these therapies.
+    Expanding access to evidence-based psychedelic-assisted therapy requires policy reform at federal
+    and state levels. Equity implications include differential access based on clinical trial availability,
+    healthcare system engagement, and potential future insurance coverage disparities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.294319'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

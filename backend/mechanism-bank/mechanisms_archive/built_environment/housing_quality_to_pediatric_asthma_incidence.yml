@@ -1,0 +1,60 @@
+id: housing_quality_to_pediatric_asthma_incidence
+name: Housing Quality (Structural Conditions) -> Pediatric Asthma Incidence
+from_node:
+  node_id: housing_quality
+  node_name: Housing Quality (Structural Conditions)
+to_node:
+  node_id: pediatric_asthma_incidence
+  node_name: Pediatric Asthma Incidence
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Poor housing quality creates structural defects (inadequate ventilation, water intrusion, pest
+  entry points)'
+- 'Step 2: Structural defects enable environmental exposures (dampness, mold growth, allergen accumulation)'
+- 'Step 3: Indoor air quality deteriorates with increased particulates and biological contaminants'
+- 'Step 4: Repeated exposure to poor indoor air quality triggers respiratory inflammation and sensitization'
+- 'Step 5: Chronic respiratory inflammation leads to asthma development in susceptible children'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'T. Simoneau, J. Gaffin. 2023. "Socioeconomic determinants of asthma health" Current
+    Opinion in Pediatrics. https://doi.org/10.1097/MOP.0000000000001235 (Cited: 9)'
+  doi: 10.1097/mop.0000000000001235
+  journal: Current Opinion in Pediatrics
+  year: 2023
+  fulltext:
+    available: true
+    source: unpaywall
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10160003/pdf/nihms-1874440.pdf
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '1.0'
+description: Poor housing quality creates environmental conditions that directly compromise indoor air
+  quality, leading to respiratory sensitization and asthma development in children through repeated exposure
+  to biological and physical contaminants.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects were most pronounced in older buildings (built pre-1978) and in humid climates
+moderators:
+- name: building_age
+  direction: strengthens
+  strength: strong
+  description: Older buildings (pre-1978) have deteriorated infrastructure and outdated building standards
+    that worsen housing quality impacts
+- name: climate_humidity
+  direction: strengthens
+  strength: moderate
+  description: Humid climates exacerbate moisture-related housing problems like mold growth and dampness
+structural_competency:
+  equity_implications: This mechanism demonstrates how housing policy failures (weak building codes, inadequate
+    maintenance standards, insufficient affordable housing investment) directly produce pediatric health
+    inequities. Low-income families are structurally constrained to poor-quality housing due to market
+    failures and policy neglect, not personal choices.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-17T10:24:30.168144'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

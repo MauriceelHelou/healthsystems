@@ -1,0 +1,52 @@
+id: alcohol_use_disorder_to_all_cause_mortality_rate
+name: Alcohol Use Disorder → All-Cause Mortality Rate
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption leads to alcohol-related liver disease'
+- 'Step 2: ALD patients experience both hepatic and extra-hepatic disease burden'
+- 'Step 3: Cumulative organ damage from malignancies, cardiovascular disease, and infections'
+- 'Step 4: Compounding effects of liver dysfunction with extra-hepatic conditions'
+- 'Step 5: Elevated all-cause mortality from multiple disease pathways'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'M. Theodoreson et al. 2023. "Extra‐hepatic morbidity and mortality in alcohol‐related
+    liver disease: Systematic review and meta‐analysis." https://doi.org/10.1111/liv.15526'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of mortality outcomes in ALD
+  - Studies comparing all-cause mortality in ALD vs general population
+  - Primary research on competing causes of death in alcohol-related liver disease
+  doi: 10.1111/liv.15526
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol-related liver disease significantly increases all-cause mortality through both hepatic
+  complications and the additional burden of extra-hepatic conditions including cancers, cardiovascular
+  disease, and other organ damage caused by chronic alcohol exposure.
+moderators:
+- name: liver_disease_severity
+  direction: strengthens
+  strength: strong
+  description: More severe liver disease (cirrhosis vs. steatosis) associated with higher mortality
+- name: abstinence_from_alcohol
+  direction: weakens
+  strength: moderate
+  description: Alcohol cessation may slow progression and reduce mortality risk
+structural_competency:
+  equity_implications: 'All-cause mortality in ALD patients reflects failures across multiple structural
+    systems: limited alcohol treatment availability, fragmented healthcare that separates addiction and
+    medical care, socioeconomic barriers to healthy alternatives to alcohol use, and the commercial determinants
+    of health from the alcohol industry. Addressing mortality requires policy interventions including
+    alcohol pricing, marketing restrictions, and integrated care models.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.412345'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

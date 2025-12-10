@@ -1,0 +1,45 @@
+id: corporate_lobbying_expenditures_to_product_safety_recalls
+name: Corporate Lobbying Expenditures → Product Safety Recalls (Voluntary and Mandatory)
+from_node:
+  node_id: corporate_lobbying_expenditures
+  node_name: Corporate Lobbying Expenditures
+to_node:
+  node_id: product_safety_recalls
+  node_name: Product Safety Recalls (Voluntary and Mandatory)
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Automotive companies invest in lobbying to influence regulatory agencies
+  and shape the regulatory environment'
+- 'Step 2: Increased lobbying creates institutional legitimacy and reduces regulatory
+  scrutiny, weakening enforcement mechanisms'
+- 'Step 3: Reduced regulatory pressure and institutional legitimacy decrease both
+  voluntary firm-initiated recalls and mandatory regulator-initiated recalls'
+- 'Step 4: Fewer recalls mean defective vehicles remain in use, increasing risk of
+  accidents, injuries, and fatalities that disproportionately affect lower-income
+  consumers who cannot afford newer, safer vehicles'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Khimendra Singh and Rajdeep Grewal 2020. "Lobbying and Product
+    Recalls: A Study of the U.S. Automobile Industry." *Social Science Research Network*.
+    https://doi.org/10.1177/00222437221131568'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.013284'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: defect_severity
+  direction: weakens
+  strength: moderate
+  description: Higher defect severity moderates the relationship between lobbying
+    and recalls, suggesting lobbying is less effective at preventing recalls when
+    defects are more severe
+- name: media_coverage
+  direction: weakens
+  strength: moderate
+  description: Greater media coverage moderates the relationship between lobbying
+    and recalls; the interaction between media coverage and lobbying mediates the
+    interaction between defect severity and lobbying (full indirect moderation)

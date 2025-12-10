@@ -1,0 +1,50 @@
+id: tele_bridge_clinic_implementation_to_outpatient_treatment_linkage
+name: Implementation of Phone-Based Tele-Bridge Buprenorphine Clinic → Linkage to
+  Outpatient Addiction Treatment
+from_node:
+  node_id: tele_bridge_clinic_implementation
+  node_name: Implementation of Phone-Based Tele-Bridge Buprenorphine Clinic
+to_node:
+  node_id: outpatient_treatment_linkage
+  node_name: Linkage to Outpatient Addiction Treatment
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Phone hotline established with DATA 2000 waivered providers who can conduct
+  initial assessments remotely'
+- 'Step 2: People with moderate to severe opioid use disorder can access immediate
+  assessment and buprenorphine prescription for unobserved induction via phone'
+- 'Step 3: Buprenorphine stabilization reduces acute withdrawal symptoms and craving,
+  enabling engagement with services'
+- 'Step 4: Hotline functions as bridge connecting stabilized individuals to ongoing
+  outpatient addiction treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'E. Samuels et al. 2020. "Innovation During COVID-19: Improving
+    Addiction Treatment Access." *Journal of addiction medicine*. https://doi.org/10.1097/ADM.0000000000000685'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.716541'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: outpatient_treatment_capacity
+  direction: strengthens
+  strength: strong
+  description: Availability of outpatient treatment slots determines effectiveness
+    of bridge clinic in achieving sustained treatment engagement
+- name: pharmacy_accessibility
+  direction: strengthens
+  strength: moderate
+  description: Proximity and willingness of pharmacies to fill buprenorphine prescriptions
+    affects bridge clinic effectiveness
+- name: insurance_coverage
+  direction: strengthens
+  strength: strong
+  description: Insurance coverage for both medication and outpatient services enables
+    sustained treatment engagement
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/tele_bridge_clinic_implementation_to_outpatient_treatment_linkage.yaml
+_category: healthcare_access

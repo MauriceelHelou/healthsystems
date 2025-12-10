@@ -1,0 +1,41 @@
+id: zinc_deficiency_to_viral_infection_susceptibility
+name: Zinc Deficiency → Viral Infection Susceptibility
+from_node:
+  node_id: zinc_deficiency
+  node_name: Zinc Deficiency
+to_node:
+  node_id: viral_infection_susceptibility
+  node_name: Viral Infection Susceptibility
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Zinc deficiency impairs immune cell function and reduces cellular defense
+  mechanisms'
+- 'Step 2: Weakened immune responses reduce the body''s ability to prevent viral entry
+  and replication'
+- 'Step 3: Compromised antiviral defenses increase susceptibility to various viral
+  pathogens'
+- 'Step 4: Enhanced vulnerability manifests as higher infection rates and severity
+  of viral diseases'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Di Jin et al. 2024. "The nutritional roles of zinc for immune
+    system and COVID-19 patients." *Frontiers in Nutrition*. https://doi.org/10.3389/fnut.2024.1385591
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.077677'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: severity_of_deficiency
+  direction: strengthens
+  strength: strong
+  description: Severe zinc deficiency is associated with particularly high susceptibility
+    to viral infections
+- name: type_of_viral_pathogen
+  direction: strengthens
+  strength: moderate
+  description: Susceptibility appears relevant across various viral infections including
+    SARS-CoV-2/COVID-19

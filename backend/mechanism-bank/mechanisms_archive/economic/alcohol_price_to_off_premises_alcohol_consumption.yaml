@@ -1,0 +1,45 @@
+id: alcohol_price_to_off_premises_alcohol_consumption
+name: Alcohol Price → Off-Premises Alcohol Consumption
+from_node:
+  node_id: alcohol_price
+  node_name: Alcohol Price
+to_node:
+  node_id: off_premises_alcohol_consumption
+  node_name: Off-Premises Alcohol Consumption
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Increase in alcohol prices reduces affordability of alcoholic beverages
+  for consumers'
+- 'Step 2: Reduced affordability creates economic constraint on quantity of alcohol
+  that can be purchased within household budgets'
+- 'Step 3: Economic constraint leads to decreased quantity of pure alcohol purchased
+  and consumed from off-premises retailers'
+- 'Step 4: Lower alcohol consumption reduces population-level exposure to alcohol
+  and associated health harms'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Guillermo Paraje et al. 2024. "Off-premises demand elasticities
+    for pure alcohol in five Latin American countries: The case of Argentina, Chile,
+    Costa Rica, Honduras, and Uruguay.." *The International journal on drug policy*.
+    https://doi.org/10.1016/j.drugpo.2024.104316'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.142731'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: country_context
+  direction: modifies
+  strength: strong
+  description: Socioeconomic profile and alcohol consumption patterns vary by country,
+    creating substantial variation in price elasticity from -0.32 (Uruguay) to -0.656
+    (Chile)
+- name: household_expenditure
+  direction: strengthens
+  strength: moderate
+  description: Expenditure elasticities positive across all countries (0.857-1.182),
+    indicating alcohol is a normal good where increased household resources enable
+    more consumption

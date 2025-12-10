@@ -1,0 +1,44 @@
+id: housing_instability_to_hospital_use
+name: Housing Instability → Hospital Use
+from_node:
+  node_id: housing_instability
+  node_name: Housing Instability
+to_node:
+  node_id: hospital_use
+  node_name: Hospital Use
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Housing instability creates environmental conditions that increase exposure
+  to dangerous drug use contexts (e.g., lack of safe, private spaces for consumption)'
+- 'Step 2: Unstable housing reduces access to consistent healthcare and preventive
+  services, limiting overdose prevention interventions'
+- 'Step 3: Lack of stable housing increases stress and survival-focused behaviors
+  that may lead to higher-risk drug use patterns'
+- 'Step 4: These compounded vulnerabilities result in increased health crises requiring
+  emergency hospital care'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Katrina Milaney et al. 2021. "Drug use, homelessness and health:
+    responding to the opioid overdose crisis with housing and harm reduction services."
+    *Harm Reduction Journal*. https://doi.org/10.1186/s12954-021-00539-8'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.354769'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: harm_reduction_service_access
+  direction: weakens
+  strength: moderate
+  description: Access to harm reduction services such as safe supply and supervised
+    consumption sites may reduce the pathway from housing instability to hospital
+    use by providing safer drug use environments and overdose prevention
+- name: opioid_use_context
+  direction: strengthens
+  strength: strong
+  description: The opioid overdose crisis context amplifies the relationship between
+    housing instability and hospital use, as opioid-related overdoses are more likely
+    to be fatal and require emergency care

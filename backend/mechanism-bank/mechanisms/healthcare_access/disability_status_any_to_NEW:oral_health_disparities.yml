@@ -1,0 +1,58 @@
+id: disability_status_any_to_NEW:oral_health_disparities
+name: Disability Status (Any) → Oral Health Disparities
+from_node:
+  node_id: disability_status_any
+  node_name: Disability Status (Any)
+to_node:
+  node_id: NEW:oral_health_disparities
+  node_name: Oral Health Disparities
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: People with disabilities face multidimensional barriers including physical, behavioral, and
+  structural factors'
+- 'Step 2: Complex barriers interact to reduce dental service utilization across the care continuum'
+- 'Step 3: Reduced preventive care leads to higher rates of untreated dental disease'
+- 'Step 4: Oral health problems become more severe and require more intensive interventions'
+- 'Step 5: Greater oral health problems observed in disability populations compared to those without disabilities'
+evidence:
+  quality_rating: B
+  n_studies: 16
+  primary_citation: 'S. V. da Rosa et al. 2020. "Barriers in Access to Dental Services Hindering the Treatment
+    of People with Disabilities: A Systematic Review." https://doi.org/10.1155/2020/9074618'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review methodology with comprehensive database
+    search
+  - Quality analysis performed using Downs and Black assessment tool
+  - Evidence synthesized from 14 articles, one doctoral thesis, and one monograph
+  doi: 10.1155/2020/9074618
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The review establishes that people with disabilities tend to have greater oral health problems
+  compared to those without disabilities, due to complex physical, behavioral, and multidimensional barriers
+  in accessing dental services.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Legal frameworks enabling access to dental care for people with disabilities vary by
+    country
+moderators:
+- name: legal_framework_strength
+  direction: weakens
+  strength: strong
+  description: Strong disability rights legislation with enforcement mechanisms reduces disparities
+- name: provider_training_requirements
+  direction: weakens
+  strength: moderate
+  description: Mandatory disability competency training for dental providers reduces access barriers
+structural_competency:
+  equity_implications: 'This mechanism demonstrates how disability as a social category intersects with
+    structural barriers to produce health inequities. The disparities are not inherent to disability but
+    result from healthcare systems designed without disability inclusion. Interventions must address multiple
+    structural levels: provider training, physical accessibility, communication accommodations, and legal
+    protections.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.696516'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

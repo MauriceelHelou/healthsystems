@@ -1,0 +1,47 @@
+id: minimum_unit_pricing_policy_to_alcohol_consumption_reduction
+name: Alcohol Minimum Unit Pricing Policy → Alcohol Consumption Reduction
+from_node:
+  node_id: minimum_unit_pricing_policy
+  node_name: Alcohol Minimum Unit Pricing Policy
+to_node:
+  node_id: alcohol_consumption_reduction
+  node_name: Alcohol Consumption Reduction
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: MUP policy increases the minimum price per unit of alcohol, particularly
+  affecting low-cost high-strength products like white cider'
+- 'Step 2: Price increase creates economic barrier to purchasing previously affordable
+  high-strength alcohol'
+- 'Step 3: Some people with experience of homelessness respond by reducing overall
+  alcohol consumption or switching away from strong white cider'
+- 'Step 4: Reduced consumption leads to decreased alcohol intake among subset of population'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Carol Emslie et al. 2023. "The impact of alcohol minimum unit
+    pricing on people with experience of homelessness: Qualitative study.." *The International
+    journal on drug policy*. https://doi.org/10.1016/j.drugpo.2023.104095'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.381294'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: beverage_preference
+  direction: strengthens
+  strength: strong
+  description: Policy had stronger effect on consumers of strong white cider (which
+    experienced largest price increases) compared to consumers of wine, vodka, or
+    beer (which had minimal price changes)
+- name: personal_relational_social_factors
+  direction: strengthens
+  strength: moderate
+  description: Wider contextual factors played important role in determining whether
+    individuals reduced consumption in response to price increases
+- name: housing_stability
+  direction: weakens
+  strength: moderate
+  description: People experiencing homelessness accorded MUP low priority in hierarchy
+    of concerns, potentially reducing effectiveness compared to housed populations

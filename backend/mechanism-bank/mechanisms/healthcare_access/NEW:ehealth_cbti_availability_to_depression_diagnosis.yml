@@ -1,0 +1,58 @@
+id: NEW:ehealth_cbti_availability_to_depression_diagnosis
+name: eHealth Cognitive Behavioral Therapy for Insomnia Availability → Depression Diagnosis
+from_node:
+  node_id: NEW:ehealth_cbti_availability
+  node_name: eHealth Cognitive Behavioral Therapy for Insomnia Availability
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: eHealth CBTI increases treatment accessibility through digital delivery platforms'
+- 'Step 2: Insomnia and depression are highly comorbid, with insomnia often preceding and worsening depressive
+  episodes'
+- 'Step 3: CBTI treatment delivered via eHealth demonstrates significant improvements in depression as
+  a secondary outcome'
+- 'Step 4: Improved sleep quality and insomnia reduction contribute to decreased depressive symptoms'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'S. Knutzen et al. 2024. "Efficacy of eHealth Versus In-Person Cognitive Behavioral
+    Therapy for Insomnia: Systematic Review and Meta-Analysis of Equivalence." https://doi.org/10.2196/58217'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 15 RCTs
+  - Within-group analyses showed significant improvements in depression for both delivery formats
+  - Individual study citations available in full systematic review
+  doi: 10.2196/58217
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: The meta-analysis demonstrated that both eHealth and in-person CBTI led to statistically
+  significant improvements in depression as a secondary outcome. Given the high comorbidity between insomnia
+  and depression, expanding access to CBTI through eHealth delivery could help address depression disparities.
+quantitative_effects:
+  p_value: 0.05
+  sample_size: 1083
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Mental health provider shortages vary significantly by geography, affecting access
+    to depression treatment
+moderators:
+- name: dropout_rates
+  direction: weakens
+  strength: moderate
+  description: Higher dropout rates may reduce treatment effectiveness for comorbid depression
+structural_competency:
+  equity_implications: Depression prevalence is higher in populations experiencing socioeconomic disadvantage,
+    and access to mental health treatment is limited in many communities. The equivalence of eHealth CBTI
+    for depression outcomes supports structural interventions to expand digital mental health services,
+    potentially reducing disparities in depression treatment access and outcomes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.861221'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,58 @@
+id: mental_health_court_utilization_to_illicit_drug_use_past_month
+name: Mental Health Court Utilization → Illicit Drug Use Past Month
+from_node:
+  node_id: mental_health_court_utilization
+  node_name: Mental Health Court Utilization
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use Past Month
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Mental health court enrollment connects individuals with co-occurring disorders to integrated
+  treatment services'
+- 'Step 2: MISSION-CJ wraparound services provide comprehensive support addressing substance use alongside
+  mental health'
+- 'Step 3: Systems integration and outreach facilitate sustained engagement with treatment'
+- 'Step 4: Participants demonstrate significant reduction in illegal drug use over 6-month follow-up'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'D. Pinals et al. 2019. "Implementation of MISSION-Criminal Justice in a Treatment
+    Court: Preliminary Outcomes Among Individuals With Co-occurring Disorders.." https://doi.org/10.1176/appi.ps.201800570'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not provide specific prior study citations
+  - MISSION-CJ program development literature (referenced in methodology)
+  - Co-occurring disorders treatment literature (referenced in background)
+  doi: 10.1176/appi.ps.201800570
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Mental health court combined with MISSION-CJ services significantly reduced illegal drug
+  use among individuals with co-occurring mental health and substance use disorders who averaged nearly
+  14 years of drug use history.
+quantitative_effects:
+  p_value: 0.003
+  sample_size: 97
+moderators:
+- name: duration of prior drug use
+  direction: weakens
+  strength: moderate
+  description: Participants averaged 13.94 years of illegal drug use, indicating chronic substance use
+    history that may moderate treatment response
+- name: depression comorbidity
+  direction: strengthens
+  strength: moderate
+  description: 91% of participants had experienced depression; integrated treatment addressing both conditions
+    may enhance substance use outcomes
+structural_competency:
+  equity_implications: This mechanism demonstrates how structural integration of criminal justice and
+    healthcare systems can address substance use more effectively than incarceration alone. The approach
+    recognizes substance use disorders as health conditions requiring treatment access rather than moral
+    failings deserving punishment. High rates of depression (91%) highlight the interconnection of mental
+    health and substance use requiring integrated structural responses.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.556842'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

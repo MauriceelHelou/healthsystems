@@ -1,0 +1,38 @@
+id: alcohol_consumption_to_healthcare_service_underutilization
+name: Reported Alcohol Consumption → Healthcare Service Underutilization
+from_node:
+  node_id: alcohol_consumption
+  node_name: Reported Alcohol Consumption
+to_node:
+  node_id: healthcare_service_underutilization
+  node_name: Healthcare Service Underutilization
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption may reflect broader patterns of health-seeking behavior
+  or be associated with competing priorities that interfere with regular healthcare
+  attendance'
+- 'Step 2: Alcohol use may be linked to social determinants such as occupational patterns,
+  stress, or community norms that also affect healthcare engagement'
+- 'Step 3: Potential stigma or healthcare provider interactions related to alcohol
+  use may create barriers to consistent care-seeking'
+- 'Step 4: Reduced frequency of healthcare visits results in inadequate disease monitoring
+  and management for CAD patients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Neeraj Vinod Mohandas et al. 2024. "Healthcare service utilisation
+    among adults with coronary artery disease in rural Aluva, South India: a community-based
+    cross-sectional study.." *BMJ open*. https://doi.org/10.1136/bmjopen-2024-084468'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.489145'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: With 71% male participants, gender-specific patterns of alcohol use
+    and healthcare-seeking behavior may be relevant

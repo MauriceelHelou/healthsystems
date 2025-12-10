@@ -1,0 +1,49 @@
+id: prison_incarceration_rate_to_alcohol_use_disorder
+name: Prison Incarceration Rate → Alcohol Use Disorder
+from_node:
+  node_id: prison_incarceration_rate
+  node_name: Prison Incarceration Rate
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Prison populations contain 59-83% individuals with alcohol use disorders'
+- 'Step 2: Prison environment creates stress, trauma, and limited coping mechanisms'
+- 'Step 3: Inadequate evidence-based alcohol treatment programs within prison systems'
+- 'Step 4: Release without addressing AUD leads to recidivism and continued disorder'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: Dorothy Newbury-Birch et al. 2016. "A rapid systematic review of what we know about
+    alcohol use disorders and brief interventions in the criminal justice system.." https://doi.org/10.1108/IJPH-08-2015-0024
+  supporting_citations:
+  - UK prison prevalence studies 2000-2014
+  - Studies using validated AUDIT screening tool
+  - Additional citations require full-text access
+  doi: 10.1108/IJPH-08-2015-0024
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Prison populations show 59-83% prevalence of alcohol use disorders, indicating the prison
+  system concentrates individuals with AUD without providing adequate evidence-based treatment.
+quantitative_effects:
+  effect_size:
+    value: 83.0
+    type: percentage_change
+    ci_lower: 59.0
+    ci_upper: 83.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: 'Note: Abstract contains apparent typo ''5,913-863 per cent'' interpreted as 59-83%
+    based on context'
+structural_competency:
+  equity_implications: The high AUD prevalence in prisons reflects structural failures in both pre-incarceration
+    alcohol treatment access and in-prison intervention capacity. The criminal justice system functions
+    to warehouse individuals with alcohol problems rather than treat them, perpetuating health inequities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.542000'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

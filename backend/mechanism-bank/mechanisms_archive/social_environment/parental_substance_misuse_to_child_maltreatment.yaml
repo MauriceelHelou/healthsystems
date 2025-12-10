@@ -1,0 +1,45 @@
+id: parental_substance_misuse_to_child_maltreatment
+name: Parental Substance Misuse → Child Maltreatment
+from_node:
+  node_id: parental_substance_misuse
+  node_name: Parental Substance Misuse
+to_node:
+  node_id: child_maltreatment
+  node_name: Child Maltreatment
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Parental substance misuse impairs caregiving capacity and parental supervision'
+- 'Step 2: Impaired caregiving creates conditions for neglect and unsafe home environments'
+- 'Step 3: Children experience direct maltreatment or exposure to harmful situations'
+- 'Step 4: Child protection proceedings may be initiated due to maltreatment concerns'
+evidence:
+  quality_rating: C
+  n_studies: null
+  primary_citation: 'J. Harwin and Charlotte Barlow 2022. "The co-occurrence of substance
+    misuse, domestic abuse, and child maltreatment: Can Family Drug and Alcohol Courts
+    play a part?." *Frontiers in Psychiatry*. https://doi.org/10.3389/fpsyt.2022.989813'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.188917'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: co_occurring_domestic_abuse
+  direction: strengthens
+  strength: strong
+  description: Co-occurrence of domestic abuse with substance misuse creates greater
+    harm to children and compounds risk for child maltreatment
+- name: integrated_intervention_availability
+  direction: weakens
+  strength: moderate
+  description: Access to integrated interventions such as Family Drug and Alcohol
+    Courts (FDACs) may reduce the pathway from substance misuse to child maltreatment
+    by addressing underlying parental problems holistically
+- name: siloed_service_delivery
+  direction: strengthens
+  strength: moderate
+  description: Lack of coordination across sectors (criminal law, family law, intervention
+    programs) prevents effective holistic response to co-occurring problems, maintaining
+    risk to children

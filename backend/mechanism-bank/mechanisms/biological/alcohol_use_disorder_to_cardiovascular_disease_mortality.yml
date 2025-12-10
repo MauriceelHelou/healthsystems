@@ -1,0 +1,49 @@
+id: alcohol_use_disorder_to_cardiovascular_disease_mortality
+name: Alcohol Use Disorder → Cardiovascular Disease Mortality
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol-related liver disease develops from chronic alcohol use'
+- 'Step 2: Systemic inflammation and metabolic dysfunction from both liver disease and ongoing alcohol
+  exposure'
+- 'Step 3: Alcohol causes direct cardiotoxicity (alcoholic cardiomyopathy)'
+- 'Step 4: Hypertension and arrhythmias induced by chronic alcohol consumption'
+- 'Step 5: Increased cardiovascular disease mortality in ALD patients'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'M. Theodoreson et al. 2023. "Extra‐hepatic morbidity and mortality in alcohol‐related
+    liver disease: Systematic review and meta‐analysis." https://doi.org/10.1111/liv.15526'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review synthesizing evidence on cardiovascular
+    outcomes in ALD
+  - Studies on alcoholic cardiomyopathy and cardiac complications in ALD populations
+  - Primary research on cardiovascular mortality risk in chronic liver disease patients
+  doi: 10.1111/liv.15526
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patients with alcohol-related liver disease have elevated cardiovascular disease mortality
+  due to the direct cardiotoxic effects of alcohol, including cardiomyopathy, hypertension, and arrhythmias,
+  compounding the metabolic dysfunction from liver disease.
+moderators:
+- name: continued_alcohol_use
+  direction: strengthens
+  strength: strong
+  description: Ongoing alcohol consumption after ALD diagnosis likely worsens cardiovascular outcomes
+structural_competency:
+  equity_implications: Cardiovascular mortality in ALD patients reflects cumulative harm from structural
+    barriers to alcohol treatment, inadequate screening in primary care, and social determinants that
+    drive problematic alcohol use. Low-income populations face dual barriers of alcohol availability and
+    limited cardiology access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.410309'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

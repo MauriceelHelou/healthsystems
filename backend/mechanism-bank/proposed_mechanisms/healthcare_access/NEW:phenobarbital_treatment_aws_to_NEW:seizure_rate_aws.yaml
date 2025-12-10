@@ -1,0 +1,56 @@
+id: NEW:phenobarbital_treatment_aws_to_NEW:seizure_rate_aws
+name: Phenobarbital Treatment for Alcohol Withdrawal Syndrome → Seizure Rate in AWS
+  Patients
+from_node:
+  node_id: NEW:phenobarbital_treatment_aws
+  node_name: Phenobarbital Treatment for Alcohol Withdrawal Syndrome
+to_node:
+  node_id: NEW:seizure_rate_aws
+  node_name: Seizure Rate in AWS Patients
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Phenobarbital is administered to patients presenting with alcohol withdrawal
+  syndrome in emergency department or ICU settings'
+- 'Step 2: Phenobarbital acts on GABA-A receptors, enhancing inhibitory neurotransmission
+  through a different mechanism than benzodiazepines, providing anticonvulsant properties'
+- 'Step 3: The pharmacological action of phenobarbital helps stabilize neuronal activity
+  during alcohol withdrawal, potentially reducing seizure occurrence'
+- 'Step 4: However, evidence shows seizure rates are similar between phenobarbital
+  and benzodiazepine treatment groups (RR 0.73, 95% CI 0.29-1.89), indicating comparable
+  but not superior efficacy in seizure prevention'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Ali Pourmand et al. 2023. Evaluation of phenobarbital based approach
+    in treating patient with alcohol withdrawal syndrome: A systematic review and
+    meta-analysis. The American journal of emergency medicine.'
+  supporting_citations: []
+description: This meta-analysis of 12 studies (1934 patients) examined whether phenobarbital
+  treatment reduces seizure rates compared to benzodiazepines in alcohol withdrawal
+  syndrome patients. Results showed a non-significant trend toward reduced seizures
+  with phenobarbital (RR 0.73), but the wide confidence interval (0.29-1.89) crossing
+  1.0 indicates no statistically significant difference between treatments. Phenobarbital
+  appears to be a comparable but not superior alternative to benzodiazepines for seizure
+  prevention in AWS.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.73
+    type: relative_risk
+    ci_lower: 0.29
+    ci_upper: 1.89
+  p_value: null
+  sample_size: 1934
+moderators:
+- name: Treatment setting
+  direction: strengthens
+  strength: weak
+  description: Studies included both ED and ICU settings, which may influence treatment
+    protocols and outcomes
+- name: Study design
+  direction: weakens
+  strength: moderate
+  description: Most included studies were observational rather than randomized trials,
+    introducing potential confounding

@@ -1,0 +1,48 @@
+id: alcohol_consumption_to_inflammasome_activation
+name: Alcohol Consumption → Inflammasome Activation and Pyroptosis
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: inflammasome_activation
+  node_name: Inflammasome Activation and Pyroptosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol consumption contributes to intestinal dysbiosis and increased gut
+  permeability'
+- 'Step 2: Translocation of Gram-negative bacteria and bacterial components across
+  compromised intestinal barrier'
+- 'Step 3: Pro-inflammatory cytokines IFN-γ and TNF-α (elevated by alcohol exposure)
+  trigger pyroptosis process'
+- 'Step 4: Macrophages produce IL-1β and IL-18 which activate the inflammasome via
+  NLRC4 pathway'
+- 'Step 5: Inflammasome activation leads to pyroptotic cell death of thyroid cells'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Karolina Wrońska et al. 2024. "The Role of the Immune System
+    in the Course of Hashimoto''s Thyroiditis: The Current State of Knowledge." *International
+    Journal of Molecular Sciences*. https://doi.org/10.3390/ijms25136883'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.091873'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: intestinal_dysbiosis
+  direction: strengthens
+  strength: strong
+  description: Severity of alcohol-induced intestinal dysbiosis directly impacts availability
+    of Gram-negative bacteria to activate NLRC4 inflammasome pathway
+- name: malnutrition
+  direction: strengthens
+  strength: moderate
+  description: Malnutrition impairs intestinal barrier integrity, facilitating bacterial
+    translocation that activates inflammasome
+- name: smoking
+  direction: strengthens
+  strength: moderate
+  description: Concurrent smoking (another environmental factor mentioned) may compound
+    intestinal barrier dysfunction and inflammasome activation

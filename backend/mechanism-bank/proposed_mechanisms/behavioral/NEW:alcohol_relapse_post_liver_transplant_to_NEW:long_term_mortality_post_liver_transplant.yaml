@@ -1,0 +1,63 @@
+id: NEW:alcohol_relapse_post_liver_transplant_to_NEW:long_term_mortality_post_liver_transplant
+name: Alcohol Relapse After Liver Transplantation → Long-Term Mortality Post Liver
+  Transplant (10-year)
+from_node:
+  node_id: NEW:alcohol_relapse_post_liver_transplant
+  node_name: Alcohol Relapse After Liver Transplantation
+to_node:
+  node_id: NEW:long_term_mortality_post_liver_transplant
+  node_name: Long-Term Mortality Post Liver Transplant (10-year)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol relapse occurs in approximately 26.3% of liver transplant recipients
+  for alcoholic cirrhosis, with an annual relapse rate of 4.7% for any alcohol use'
+- 'Step 2: Continued alcohol consumption causes direct hepatotoxic damage to the transplanted
+  liver graft, leading to progressive histological changes including steatosis (4.1x
+  higher odds), steatohepatitis (4.5x higher odds), and alcoholic hepatitis (9.3x
+  higher odds)'
+- 'Step 3: Progressive liver damage advances to fibrosis and recurrent cirrhosis (8.4x
+  higher odds), with recurrent alcoholic cirrhosis occurring in 9% of biopsied patients'
+- 'Step 4: Recurrent alcoholic cirrhosis accounts for approximately 20% of all deaths
+  post-transplant, while alcohol''s systemic effects also increase risk of extra-hepatic
+  malignancy and cardiovascular events'
+- 'Step 5: These combined effects result in significantly increased 10-year mortality
+  among relapsers compared to abstainers'
+evidence:
+  quality_rating: A
+  n_studies: 7
+  primary_citation: 'Sudha Kodali et al. 2018. Alcohol Relapse After Liver Transplantation
+    for Alcoholic Cirrhosis-Impact on Liver Graft and Patient Survival: A Meta-analysis.
+    Alcohol and alcoholism (Oxford, Oxfordshire).'
+  supporting_citations: []
+description: Alcohol relapse after liver transplantation for alcoholic cirrhosis significantly
+  increases 10-year mortality risk. This meta-analysis of 7 studies found relapsers
+  were 3.67 times more likely to die at 10-year follow-up compared to abstainers.
+  The mechanism operates through direct hepatotoxic effects causing progressive graft
+  damage (steatosis, steatohepatitis, fibrosis, and recurrent cirrhosis) as well as
+  increased risk of extra-hepatic malignancy and cardiovascular events. Recurrent
+  alcoholic cirrhosis was responsible for approximately 20% of all deaths. Notably,
+  survival differences were not apparent at 5 years, suggesting cumulative long-term
+  damage is the primary driver of excess mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.67
+    type: odds_ratio
+    ci_lower: 1.42
+    ci_upper: 9.5
+  p_value: null
+  sample_size: null
+moderators:
+- name: Drinking pattern intensity
+  direction: strengthens
+  strength: moderate
+  description: Heavy alcohol use (annual relapse rate 2.9%) versus any alcohol use
+    (4.7%) may differentially impact outcomes, with heavier use associated with worse
+    graft histology
+- name: Follow-up duration
+  direction: strengthens
+  strength: strong
+  description: No significant difference in overall or 5-year survival, but over 3-fold
+    increased mortality at 10 years, indicating cumulative damage over time

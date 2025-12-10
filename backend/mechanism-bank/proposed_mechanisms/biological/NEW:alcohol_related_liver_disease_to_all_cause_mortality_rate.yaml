@@ -1,0 +1,49 @@
+id: NEW:alcohol_related_liver_disease_to_all_cause_mortality_rate
+name: Alcohol-Related Liver Disease → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:alcohol_related_liver_disease
+  node_name: Alcohol-Related Liver Disease
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol-related liver disease (ALD) causes progressive hepatic dysfunction
+  including fibrosis, cirrhosis, and hepatocellular carcinoma, directly increasing
+  mortality risk from liver failure and complications'
+- 'Step 2: Patients with ALD experience significant extra-hepatic morbidity including
+  cardiovascular disease, infections, and malignancies due to systemic effects of
+  chronic alcohol exposure and immune dysfunction'
+- 'Step 3: Combined hepatic and extra-hepatic disease burden leads to substantially
+  elevated all-cause mortality rates compared to general population'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'M. Theodoreson et al. 2023. Extra‐hepatic morbidity and mortality
+    in alcohol‐related liver disease: Systematic review and meta‐analysis. Liver international
+    (Print).'
+  supporting_citations: []
+description: Alcohol-related liver disease significantly increases all-cause mortality
+  through both direct hepatic complications (liver failure, hepatocellular carcinoma,
+  variceal bleeding) and extra-hepatic conditions. This systematic review and meta-analysis
+  demonstrates that ALD patients face elevated mortality risk from multiple organ
+  systems affected by chronic alcohol exposure, including cardiovascular disease,
+  infections, and non-hepatic malignancies.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Disease severity
+  direction: strengthens
+  strength: strong
+  description: More advanced liver disease stages (cirrhosis, decompensated disease)
+    associated with higher mortality risk
+- name: Continued alcohol use
+  direction: strengthens
+  strength: strong
+  description: Ongoing alcohol consumption accelerates disease progression and mortality
+- name: Extra-hepatic comorbidities
+  direction: strengthens
+  strength: moderate
+  description: Presence of cardiovascular, infectious, or malignant complications
+    increases mortality risk beyond hepatic causes

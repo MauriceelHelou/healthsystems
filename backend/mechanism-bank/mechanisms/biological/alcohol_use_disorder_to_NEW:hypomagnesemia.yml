@@ -1,0 +1,58 @@
+id: alcohol_use_disorder_to_NEW:hypomagnesemia
+name: Alcohol Use Disorder → Hypomagnesemia (Low Blood Magnesium)
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:hypomagnesemia
+  node_name: Hypomagnesemia (Low Blood Magnesium)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption leads to dietary magnesium depletion through poor nutritional intake'
+- 'Step 2: Alcohol directly impairs intestinal magnesium absorption'
+- 'Step 3: Chronic alcohol exposure blunts the kidney''s normal compensatory response to low magnesium
+  (impaired renal conservation)'
+- 'Step 4: Skeletal muscle magnesium stores become depleted, reducing the body''s magnesium reservoir'
+- 'Step 5: Both total and ionized circulating magnesium levels become markedly reduced'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'Flora O. Vanoni et al. 2021. "Magnesium Metabolism in Chronic Alcohol-Use Disorder:
+    Meta-Analysis and Systematic Review." https://doi.org/10.3390/nu13061959'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 2719 potentially relevant records
+    with 25 retained for analysis
+  - Studies measuring total circulating magnesium in chronic alcohol-use disorder populations
+  - Studies measuring ionized circulating magnesium in chronic alcohol-use disorder populations
+  doi: 10.3390/nu13061959
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Chronic alcohol-use disorder causes marked reduction in both total and ionized circulating
+  magnesium through multiple mechanisms: dietary depletion, impaired intestinal absorption, blunted renal
+  conservation response, and skeletal muscle magnesium depletion. This meta-analysis of 25 studies confirms
+  hypomagnesemia is common in chronic alcohol-use disorder.'
+moderators:
+- name: chronicity_of_alcohol_use
+  direction: strengthens
+  strength: strong
+  description: The mechanism specifically applies to chronic alcohol-use disorder, suggesting duration
+    and severity of alcohol use affects magnitude of magnesium depletion
+- name: renal_function
+  direction: strengthens
+  strength: moderate
+  description: The kidney plays a crucial role in magnesium depletion development; impaired renal handling
+    exacerbates the condition
+structural_competency:
+  equity_implications: This mechanism demonstrates how a behaviorally-linked condition (alcohol use disorder)
+    produces physiological harm through metabolic pathways. From a structural perspective, alcohol use
+    disorder itself is shaped by social determinants including economic stress, trauma, neighborhood alcohol
+    outlet density, and lack of access to treatment. The downstream magnesium depletion can contribute
+    to cardiovascular complications, muscle weakness, and neurological symptoms that compound health inequities
+    in populations with high rates of alcohol use disorder.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.276211'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

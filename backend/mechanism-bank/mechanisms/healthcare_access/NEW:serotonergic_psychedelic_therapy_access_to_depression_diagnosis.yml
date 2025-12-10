@@ -1,0 +1,58 @@
+id: NEW:serotonergic_psychedelic_therapy_access_to_depression_diagnosis
+name: Serotonergic Psychedelic Therapy Access → Depression Diagnosis
+from_node:
+  node_id: NEW:serotonergic_psychedelic_therapy_access
+  node_name: Serotonergic Psychedelic Therapy Access
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Serotonergic psychedelics (psilocybin, LSD, DMT) are administered in controlled therapeutic
+  settings'
+- 'Step 2: These substances act on serotonin 5-HT2A receptors, inducing neuroplastic changes'
+- 'Step 3: Therapeutic sessions with psychological support facilitate cognitive and emotional processing'
+- 'Step 4: Patients experience reduction in depressive symptoms'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Mikkel Højlund et al. 2025. "Efficacy, all-cause discontinuation, and safety of serotonergic
+    psychedelics and MDMA to treat mental disorders: A living systematic review with meta-analysis.."
+    https://doi.org/10.1016/j.euroneuro.2025.09.011'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 30 RCTs total
+  - Living systematic review maintained at https://ebipsyche-database.org/
+  - Search conducted across Pubmed/Scopus/clinical trial registries up to July 2025
+  doi: 10.1016/j.euroneuro.2025.09.011
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This living systematic review and meta-analysis examined serotonergic psychedelics and MDMA
+  for treating mental disorders including depression. The review included 30 RCTs with 1480 participants,
+  though the abstract specifically reports PTSD outcomes for MDMA. The majority of trials included psychological
+  support and showed promising results for treating mental disorders.
+quantitative_effects:
+  sample_size: 1480
+moderators:
+- name: psychological_support
+  direction: strengthens
+  strength: strong
+  description: 83.3% of included trials provided psychological support alongside pharmacological intervention
+- name: study_quality
+  direction: weakens
+  strength: moderate
+  description: 83.3% of studies had high risk of bias, potentially affecting reliability of effect estimates
+structural_competency:
+  equity_implications: Access to psychedelic-assisted therapies represents emerging healthcare infrastructure
+    that is unevenly distributed. Current drug scheduling policies create structural barriers to both
+    research and clinical access. Populations with treatment-resistant depression often face multiple
+    intersecting barriers including cost, geographic access to specialized treatment centers, and insurance
+    coverage limitations. The requirement for psychological support (83.3% of trials) indicates these
+    are resource-intensive interventions that may exacerbate existing healthcare disparities if not deliberately
+    made accessible across socioeconomic strata.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.882985'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

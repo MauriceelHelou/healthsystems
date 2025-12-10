@@ -1,0 +1,69 @@
+id: NEW:oat_clinic_location_access_to_NEW:driving_under_influence_impairment
+name: OAT Clinic Location and Transport Access → Driving Under the Influence of Impairing Substances
+from_node:
+  node_id: NEW:oat_clinic_location_access
+  node_name: OAT Clinic Location and Transport Access
+to_node:
+  node_id: NEW:driving_under_influence_impairment
+  node_name: Driving Under the Influence of Impairing Substances
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: OAT clinics located in areas with limited public transportation options create transport barriers
+  for clients'
+- 'Step 2: Clients receiving treatment from private clinics or pharmacies may face different access dynamics
+  and less oversight'
+- 'Step 3: Transport challenges combined with mandatory daily/regular dosing requirements increase likelihood
+  of driving while impaired'
+- 'Step 4: Private clinic/pharmacy patients showed 2.37 times higher odds of driving after using potentially
+  impairing substances'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Daniel T Winter et al. 2025. "Understanding issues of driving safety and transport
+    utilisation among clients receiving opioid agonist treatment: a cross-sectional survey in New South
+    Wales, Australia.." https://doi.org/10.1071/PY25035'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references regulatory and clinical constraints
+    literature
+  - Additional citations require full-text access - abstract references transport barriers literature
+  - Additional citations require full-text access - abstract references driving safety and OAT literature
+  doi: 10.1071/PY25035
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Limited transport options and geographic barriers to OAT clinics may contribute to impaired
+  driving among treatment clients, with private clinic/pharmacy patients showing higher risk. This reflects
+  structural barriers in treatment access rather than individual failure.
+quantitative_effects:
+  effect_size:
+    value: 2.37
+    type: odds_ratio
+    ci_lower: 1.14
+    ci_upper: 4.92
+  sample_size: 482
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in New South Wales, Australia across 15 public OAT clinics; findings
+    may vary by regional transport infrastructure and clinic distribution
+moderators:
+- name: clinic_type
+  direction: strengthens
+  strength: moderate
+  description: Private clinic or pharmacy patients had significantly higher odds (aOR=2.37) of driving
+    under influence compared to public clinic patients
+- name: illicit_drug_use
+  direction: strengthens
+  strength: strong
+  description: Past month illicit drug use was strongly associated with driving while impaired (aOR=6.55)
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare system design (clinic location, public
+    vs private settings) and transportation infrastructure create conditions that may lead to unsafe behaviors.
+    The structural issue is inadequate transport support for addiction treatment, not individual choice.
+    Equity implications include that those without reliable transportation face compounded barriers to
+    safe treatment adherence.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.161124'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

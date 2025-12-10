@@ -1,0 +1,131 @@
+id: transportation_barriers_to_emergency_department_utilization
+name: Transportation Barriers → Emergency Department Utilization
+from_node:
+  node_id: transportation_barriers
+  node_name: Transportation Barriers
+  node_type: stock
+to_node:
+  node_id: emergency_department_utilization
+  node_name: Emergency Department Utilization
+  node_type: crisis_endpoint
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Transportation barriers prevent regular primary care and preventive visits'
+- 'Step 2: Missed primary care leads to unmanaged chronic conditions and delayed
+  care for acute symptoms'
+- 'Step 3: Conditions progress to severity requiring emergency intervention'
+- 'Step 4: Emergency department becomes default care access point (ambulances available
+  regardless of transportation)'
+- 'Step 5: Cyclical pattern develops as ED care does not establish ongoing care relationships'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Wolfe, Mary K., Noreen C. McDonald, and George M. Holmes. 2020.
+    "Transportation barriers to health care in the United States: findings from the
+    national health interview survey, 1997-2017." American Journal of Public Health
+    110(6): 815-822.'
+  supporting_citations:
+  - 'Syed, Samina T., Ben S. Gerber, and Lisa K. Sharp. 2013. "Traveling towards disease:
+    transportation barriers to health care access." Journal of Community Health 38(5):
+    976-993.'
+  - 'Tierney, William M., et al. 2000. "Restricting Medicaid payments for transportation:
+    Effects on inner-city patients'' health care." The American Journal of the Medical
+    Sciences 319(5): 326-333.'
+  doi: 10.2105/AJPH.2020.305579
+  journal: American Journal of Public Health
+  year: 2020
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7204444/
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  primary_effect:
+    value: 2.41
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: null
+    ci_level: 95
+    comparison: 4+ annual ED visits vs. 0 ED visits for transportation barrier prevalence
+    source: Wolfe et al. 2020 NHIS analysis
+  gradient_effect:
+    description: '1.3% with zero ED visits reported transportation barriers vs. 11.9%
+      with 4+ ED visits (9-fold increase)'
+    source: NHIS 1997-2017 pooled data (n=892,235)
+  poor_health_status:
+    value: 11.6
+    type: percentage
+    comparison: proportion with poor self-rated health reporting transportation barriers
+    source: NHIS 2017 (n=24,947)
+  disease_specific:
+    weak_kidneys: 7.1
+    stroke_history: 6.9
+    diabetes: 3.8
+    asthma: 3.5
+    unit: percentage reporting transportation barriers
+  sample_size: 892235
+  interpretation: Individuals with 4+ annual ED visits have 9 times higher prevalence
+    of transportation barriers than those with no ED visits (11.9% vs 1.3%), indicating
+    transportation barriers drive ED-dependent care patterns
+last_updated: '2025-11-30'
+version: '1.0'
+description: Transportation barriers are strongly associated with emergency department
+  utilization patterns. Those with 4+ annual ED visits are 9 times more likely to
+  report transportation barriers compared to those with no ED visits. This reflects
+  a structural pattern where lack of transportation prevents primary care access but
+  emergency care remains accessible via ambulance, creating costly and suboptimal
+  care patterns.
+moderators:
+- name: chronic_disease_status
+  direction: strengthens
+  strength: strong
+  description: Those with chronic conditions (kidney disease, stroke, diabetes) show
+    higher transportation barrier prevalence
+- name: self_reported_health_status
+  direction: strengthens
+  strength: strong
+  description: Poor health status associated with 11.6% transportation barrier prevalence
+    vs. 0.8% for excellent health
+- name: functional_limitation
+  direction: strengthens
+  strength: strong
+  description: Functional limitations show strongest association with transportation
+    barriers (AOR 2.58)
+- name: ambulance_availability
+  direction: enables_pathway
+  strength: strong
+  description: Ambulances provide transportation to ED regardless of other transportation
+    access, enabling this care pattern
+structural_competency:
+  root_cause_level: healthcare_system_design
+  avoids_victim_blaming: true
+  equity_implications: ED-dependent care patterns resulting from transportation barriers
+    reflect healthcare system design that provides emergency access universally while
+    primary care access depends on individual transportation resources. This creates
+    inequitable care patterns that are more costly and less effective. Structural
+    solutions include community health centers, mobile health units, and medical transportation
+    programs.
+assumptions:
+- ED utilization measured as annual visit frequency
+- Transportation barriers self-reported in NHIS
+- Association is bidirectional (barriers cause ED use; chronic conditions causing
+  ED use also cause barriers)
+limitations:
+- Cross-sectional data limits causal inference
+- Self-reported transportation barriers may underestimate true prevalence
+- Does not distinguish appropriate from inappropriate ED use
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: ED utilization patterns vary by primary care availability, transit
+    infrastructure, and ambulance response patterns.
+  relevant_geographies:
+  - Rural areas with limited primary care may show higher ED-dependent patterns
+  - Urban areas with accessible hospitals but poor transit show similar patterns
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

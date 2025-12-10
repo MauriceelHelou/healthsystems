@@ -1,0 +1,46 @@
+id: incarceration_pregnant_oud_to_moud_access
+name: Incarceration of Pregnant Persons with OUD → Medications for Opioid Use Disorder
+  Access
+from_node:
+  node_id: incarceration_pregnant_oud
+  node_name: Incarceration of Pregnant Persons with OUD
+to_node:
+  node_id: moud_access
+  node_name: Medications for Opioid Use Disorder Access
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Incarceration removes pregnant persons from community-based addiction treatment
+  settings where MOUD is available'
+- 'Step 2: Jail systems operate under security-focused policies that create barriers
+  to bringing controlled medications into facilities'
+- 'Step 3: Correctional administrators lack training and institutional policies supporting
+  evidence-based addiction treatment'
+- 'Step 4: Pregnant incarcerated persons face serious barriers accessing MOUD despite
+  clinical guidelines recommending continuation of treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Kelley N Benck et al. 2023. "United States county jail treatment
+    and care of pregnant incarcerated persons with opioid use disorder.." *Drug and
+    alcohol dependence*. https://doi.org/10.1016/j.drugalcdep.2023.109863
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.397656'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: pregnancy_status
+  direction: weakens
+  strength: moderate
+  description: Pregnant incarcerated persons had greater access to MOUD than non-pregnant
+    persons, though significant barriers remained
+- name: pre_incarceration_moud_treatment
+  direction: weakens
+  strength: moderate
+  description: Some jails offered continuation of pre-incarceration MOUD treatment,
+    creating differential access based on treatment status at time of incarceration
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/incarceration_pregnant_oud_to_moud_access.yaml
+_category: healthcare_access

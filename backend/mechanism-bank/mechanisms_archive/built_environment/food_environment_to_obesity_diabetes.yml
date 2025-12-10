@@ -1,0 +1,83 @@
+id: food_environment_to_obesity_diabetes
+name: Unhealthy Food Environment -> Obesity and Diabetes Prevalence
+from_node:
+  node_id: unhealthy_food_environment
+  node_name: Unhealthy Food Environment (Fast Food Density, Limited Grocery Access)
+  node_type: stock
+to_node:
+  node_id: obesity_diabetes_prevalence
+  node_name: Obesity and Type 2 Diabetes Prevalence
+  node_type: proxy_index
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Neighborhood food retail is shaped by market decisions and zoning policies favoring fast food and convenience stores'
+- 'Step 2: High density of fast food outlets and limited supermarkets increases exposure to calorie-dense, nutrient-poor foods'
+- 'Step 3: Relative pricing makes unhealthy options more affordable than fresh fruits, vegetables, and whole grains'
+- 'Step 4: Food environment shapes dietary patterns through availability, accessibility, and marketing exposure'
+- 'Step 5: Sustained consumption of energy-dense diets increases obesity and type 2 diabetes risk'
+evidence:
+  quality_rating: B
+  n_studies: 35
+  primary_citation: 'Cobb, Laura K., et al. 2015. "The relationship of the local food environment with obesity: A systematic review of methods, study quality, and results." Obesity 23(7): 1331-1344.'
+  supporting_citations:
+  - 'Caspi, Caitlin E., et al. 2012. "The local food environment and diet: a systematic review." Health & Place 18(5): 1172-1187.'
+  - 'Morland, Kimberly B., and Kelly R. Evenson. 2009. "Obesity prevalence and the local food environment." Health & Place 15(2): 491-495.'
+  doi: 10.1002/oby.21118
+  journal: Obesity
+  year: 2015
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: null
+    type: null
+    ci_lower: null
+    ci_upper: null
+    ci_level: null
+  sample_size: null
+  interpretation: "Systematic reviews find mixed but generally positive associations between unhealthy food environments and obesity/diabetes, with stronger effects when accounting for individual-level confounders and using objective environment measures"
+  additional_effects:
+  - metric: Diabetes prevalence in least connected counties
+    value: 41
+    type: percentage_change
+    notes: "Counties with lowest broadband access have 41% higher diabetes prevalence (FCC data)"
+last_updated: '2025-11-30'
+version: '1.0'
+description: The local food environment - including supermarket access, fast food density, and food pricing - is associated with obesity and diabetes through its influence on dietary patterns. Systematic reviews find generally positive associations, though effect sizes vary by measurement approach and population. Environmental factors operate alongside individual-level determinants, with stronger effects in populations facing multiple structural disadvantages.
+moderators:
+- name: socioeconomic_status
+  direction: strengthens
+  strength: strong
+  description: Low-income populations are more constrained by local food environment
+- name: vehicle_access
+  direction: weakens
+  strength: moderate
+  description: Car ownership allows shopping outside immediate neighborhood
+- name: food_assistance_participation
+  direction: weakens
+  strength: moderate
+  description: SNAP and WIC benefits increase purchasing power for healthier options
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: Food environment disparities reflect historical redlining, ongoing market discrimination, and zoning policies that concentrate fast food in low-income and minority neighborhoods. Interventions should target structural change (zoning reform, supermarket incentives, healthy food financing) rather than individual nutrition education. Price policies and SNAP incentives can shift relative costs of healthy vs unhealthy foods.
+assumptions:
+- Food environment measured by retail outlet density, distance, or composite indices
+- Obesity and diabetes measured by BMI and diagnosed prevalence
+- Mechanism operates through dietary intake
+limitations:
+- Causality difficult to establish from observational studies
+- Food environment is only one of many obesity determinants
+- Measurement of food environment varies substantially across studies
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Food environments vary by urban/rural status and neighborhood income/demographics
+  relevant_geographies:
+  - Low-income urban neighborhoods have higher fast food density
+  - Rural areas face long distances to any food retail
+  - Suburban areas often have car-dependent food access patterns
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: medium
+  prompt_version: 1.0-mvp

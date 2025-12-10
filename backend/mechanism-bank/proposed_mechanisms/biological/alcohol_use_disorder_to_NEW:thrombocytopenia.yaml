@@ -1,0 +1,50 @@
+id: alcohol_use_disorder_to_NEW:thrombocytopenia
+name: Alcohol Use Disorder → Thrombocytopenia (Low Platelet Count)
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:thrombocytopenia
+  node_name: Thrombocytopenia (Low Platelet Count)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption associated with alcohol use disorder leads
+  to direct toxic effects on bone marrow, suppressing megakaryocyte production and
+  platelet formation'
+- 'Step 2: Alcohol-induced liver damage (common in AUD) impairs thrombopoietin production,
+  which is essential for platelet synthesis'
+- 'Step 3: Splenic sequestration of platelets occurs due to portal hypertension and
+  splenomegaly associated with alcohol-related liver disease'
+- 'Step 4: Direct toxic effects of alcohol on circulating platelets reduce their lifespan
+  and functional capacity'
+- 'Step 5: Resulting thrombocytopenia is prevalent in 46% of patients hospitalized
+  for alcohol withdrawal syndrome, with lower platelet counts associated with more
+  severe clinical presentations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Andrzej Silczuk et al. 2019. Thrombocytopenia in Patients Hospitalized
+    for Alcohol Withdrawal Syndrome and Its Associations to Clinical Complications.
+    Alcohol and Alcoholism.
+  supporting_citations: []
+description: Alcohol use disorder leads to thrombocytopenia through multiple biological
+  mechanisms including direct bone marrow suppression, impaired hepatic thrombopoietin
+  production, and increased splenic sequestration. In a study of 300 hospitalized
+  patients with alcohol withdrawal syndrome, 46% exhibited thrombocytopenia, with
+  significantly higher prevalence (71%) in those experiencing complicated withdrawal
+  (delirium tremens or seizures) compared to non-complicated cases (21%).
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Severity of alcohol withdrawal
+  direction: strengthens
+  strength: strong
+  description: Patients with complicated alcohol withdrawal syndrome (delirium tremens,
+    withdrawal seizures) showed significantly lower platelet counts compared to non-complicated
+    cases (Mrang = 105.04 vs. 195.96)
+- name: Platelet count threshold
+  direction: strengthens
+  strength: strong
+  description: Thrombocytopenia below 119k/mL was associated with higher risk of developing
+    complicated alcohol withdrawal syndrome

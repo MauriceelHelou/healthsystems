@@ -1,0 +1,53 @@
+id: NEW:covid_19_infection_to_acute_myocardial_infarction_rate
+name: COVID-19 Infection → Acute Myocardial Infarction Rate
+from_node:
+  node_id: NEW:covid_19_infection
+  node_name: COVID-19 Infection
+to_node:
+  node_id: acute_myocardial_infarction_rate
+  node_name: Acute Myocardial Infarction Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: SARS-CoV-2 virus binds to and downregulates ACE2 receptors on endothelial
+  cells and cardiomyocytes, disrupting normal cardiovascular homeostasis'
+- 'Step 2: COVID-19 triggers systemic inflammation with increased levels of pro-inflammatory
+  cytokines (cytokine storm), causing widespread endothelial dysfunction'
+- 'Step 3: Endothelial dysfunction combined with COVID-19-induced pro-coagulant status
+  increases thrombotic risk in coronary arteries'
+- 'Step 4: The combination of inflammation, endothelial injury, and hypercoagulability
+  promotes plaque instability and coronary thrombosis, leading to acute myocardial
+  infarction'
+- 'Step 5: Elevated myocardial biomarkers (troponin I, NT-proBNP) indicate direct
+  myocardial injury from viral infection and immune-mediated damage'
+evidence:
+  quality_rating: A
+  n_studies: 27
+  primary_citation: 'Marius Rus et al. 2024. Acute Myocardial Infarction during the
+    COVID-19 Pandemic: Long-Term Outcomes and Prognosis—A Systematic Review. Life.'
+  supporting_citations: []
+description: COVID-19 infection increases acute myocardial infarction risk through
+  multiple pathological mechanisms including ACE2 receptor downregulation, endothelial
+  dysfunction, pro-coagulant state, and elevated pro-inflammatory cytokines. Mortality
+  in patients with concurrent COVID-19 and AMI is substantially elevated (10-76%)
+  compared to AMI patients without COVID-19 (4.6-7%). Cardiovascular event risk remains
+  elevated even after the acute phase of COVID-19, indicating persistent vascular
+  damage.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Time from symptom onset
+  direction: strengthens
+  strength: strong
+  description: Risk of acute coronary syndromes greatest during acute phase of COVID-19
+    infection
+- name: Baseline cardiovascular risk factors
+  direction: strengthens
+  strength: moderate
+  description: Pre-existing cardiovascular conditions may amplify COVID-19 related
+    myocardial injury
+- name: Healthcare access delays
+  direction: strengthens
+  strength: moderate
+  description: Prolonged symptom-to-first-medical-contact time and longer door-to-balloon
+    time worsen outcomes

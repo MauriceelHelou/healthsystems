@@ -1,0 +1,55 @@
+id: NEW:alcohol_outlet_density_to_NEW:disability_adjusted_life_years_violence
+name: Alcohol Outlet Density → Disability-Adjusted Life Years from Violence
+from_node:
+  node_id: NEW:alcohol_outlet_density
+  node_name: Alcohol Outlet Density
+to_node:
+  node_id: NEW:disability_adjusted_life_years_violence
+  node_name: Disability-Adjusted Life Years from Violence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher alcohol outlet density increases neighborhood-level alcohol availability'
+- 'Step 2: Increased availability leads to higher consumption and intoxication rates'
+- 'Step 3: Alcohol-related violence increases, causing premature deaths and injuries'
+- 'Step 4: Homicides and non-fatal violence result in years of life lost and years lived with disability'
+- 'Step 5: Population-level burden measured in DALYs reflects cumulative health impact'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Trangenstein et al. 2020. "The Violence Prevention Potential of Reducing Alcohol
+    Outlet Access in Baltimore, Maryland.." https://doi.org/10.15288/jsad.2020.81.24
+  supporting_citations:
+  - Additional citations require full-text access
+  - DALY methodology literature for violence-related health burden
+  - Cost-effectiveness analysis frameworks for alcohol policy
+  doi: 10.15288/jsad.2020.81.24
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Reducing alcohol outlet density by one quintile in Baltimore was associated with prevention
+  of 764 DALYs annually. Removing liquor stores from residential zones specifically would prevent 391
+  DALYs.
+quantitative_effects:
+  effect_size:
+    value: 764.0
+    type: risk_difference
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: DALYs calculated specifically for Baltimore City population
+moderators:
+- name: policy_intervention_type
+  direction: strengthens
+  strength: strong
+  description: Full quintile reduction yields 764 DALYs prevented; residential zone liquor store removal
+    yields 391 DALYs
+structural_competency:
+  equity_implications: This mechanism quantifies the population health burden attributable to structural
+    alcohol availability decisions. DALYs capture both mortality and morbidity, providing a comprehensive
+    measure of how zoning and licensing policies translate into community health outcomes. The analysis
+    supports evidence-based policy change rather than individual-level interventions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.486757'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

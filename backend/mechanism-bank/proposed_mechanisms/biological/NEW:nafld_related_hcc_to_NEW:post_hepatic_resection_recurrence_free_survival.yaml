@@ -1,0 +1,56 @@
+id: NEW:nafld_related_hcc_to_NEW:post_hepatic_resection_recurrence_free_survival
+name: NAFLD-Related Hepatocellular Carcinoma → Recurrence-Free Survival After Hepatic
+  Resection
+from_node:
+  node_id: NEW:nafld_related_hcc
+  node_name: NAFLD-Related Hepatocellular Carcinoma
+to_node:
+  node_id: NEW:post_hepatic_resection_recurrence_free_survival
+  node_name: Recurrence-Free Survival After Hepatic Resection
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: NAFLD-related HCC patients have lower rates of underlying cirrhosis (50.4%
+  vs 64.0%) compared to HCC of other aetiologies, preserving more functional liver
+  parenchyma'
+- 'Step 2: Better preserved liver function allows for more complete surgical resection
+  with adequate functional liver remnant, reducing residual disease burden'
+- 'Step 3: The absence of severe cirrhosis-related portal hypertension and hepatic
+  dysfunction reduces the microenvironment favorable for tumor recurrence'
+- 'Step 4: Lower cirrhosis rates may enable better post-operative liver regeneration
+  and immune surveillance against residual cancer cells, contributing to improved
+  recurrence-free survival'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'Jiaoling Su et al. 2023. Prognosis after hepatic resection of
+    patients with hepatocellular carcinoma related to non-alcoholic fatty liver disease:
+    meta-analysis. BJS Open.'
+  supporting_citations: []
+description: Meta-analysis of 17 retrospective studies involving 11,477 patients found
+  that NAFLD-related HCC is associated with slightly improved recurrence-free survival
+  after hepatic resection compared to HCC of other aetiologies (HR 0.93, 95% CI 0.84-1.02).
+  This trend reached statistical significance in Asian subpopulations (HR 0.88, 95%
+  CI 0.79-0.98). The mechanism may relate to lower cirrhosis prevalence in NAFLD-HCC
+  patients, allowing better liver function reserve and surgical outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.93
+    type: hazard_ratio
+    ci_lower: 0.84
+    ci_upper: 1.02
+  p_value: null
+  sample_size: 11477
+moderators:
+- name: Geographic region (Asian vs non-Asian)
+  direction: strengthens
+  strength: moderate
+  description: The positive association between NAFLD-related HCC and recurrence-free
+    survival is significant only in Asian populations
+- name: Cirrhosis status
+  direction: strengthens
+  strength: moderate
+  description: Lower cirrhosis rates in NAFLD-related HCC patients (50.4% vs 64.0%)
+    may mediate the survival advantage

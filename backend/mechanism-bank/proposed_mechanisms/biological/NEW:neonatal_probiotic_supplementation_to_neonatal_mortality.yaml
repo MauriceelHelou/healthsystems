@@ -1,0 +1,65 @@
+id: NEW:neonatal_probiotic_supplementation_to_neonatal_mortality
+name: Neonatal Probiotic Supplementation → Neonatal Mortality
+from_node:
+  node_id: NEW:neonatal_probiotic_supplementation
+  node_name: Neonatal Probiotic Supplementation
+to_node:
+  node_id: neonatal_mortality
+  node_name: Neonatal Mortality
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Probiotic supplementation introduces beneficial microorganisms (e.g., Lactobacillus,
+  Bifidobacterium species) to the neonatal gastrointestinal tract'
+- 'Step 2: These probiotics colonize the gut and compete with pathogenic bacteria
+  for nutrients and adhesion sites, reducing pathogen proliferation'
+- 'Step 3: Probiotics enhance gut barrier function and reduce intestinal permeability,
+  preventing bacterial translocation'
+- 'Step 4: Immune modulation occurs through stimulation of secretory IgA production
+  and regulation of inflammatory cytokines'
+- 'Step 5: Reduced incidence of necrotizing enterocolitis (NEC) by 54% through protection
+  of intestinal mucosal integrity'
+- 'Step 6: Reduced incidence of neonatal sepsis by 22% through prevention of systemic
+  bacterial infection'
+- 'Step 7: Combined reduction in life-threatening conditions leads to 20% reduction
+  in all-cause neonatal mortality'
+evidence:
+  quality_rating: A
+  n_studies: 33
+  primary_citation: 'A. Imdad et al. 2021. Effects of neonatal nutrition interventions
+    on neonatal mortality and child health and development outcomes: A systematic
+    review. Campbell Systematic Reviews.'
+  supporting_citations: []
+description: Probiotic supplementation during the neonatal period reduces all-cause
+  mortality by 20% in preterm and/or low birth weight neonates in hospital settings
+  in LMICs. This effect is mediated primarily through substantial reductions in necrotizing
+  enterocolitis (54% reduction, NNT=17) and neonatal sepsis (22% reduction, NNT=14).
+  The number needed to treat to prevent one death is 100. Evidence quality is high
+  with no statistical heterogeneity (I²=0%) and symmetrical funnel plot suggesting
+  low publication bias.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.8
+    type: relative_risk
+    ci_lower: 0.66
+    ci_upper: 0.96
+  p_value: null
+  sample_size: 10998
+moderators:
+- name: gestational_age
+  direction: strengthens
+  strength: strong
+  description: Most studies included preterm neonates (born <37 weeks gestation) who
+    showed greatest benefit from probiotic supplementation
+- name: birth_weight
+  direction: strengthens
+  strength: strong
+  description: Low birth weight infants (<2500g) demonstrated significant benefit;
+    evidence primarily from this population
+- name: setting
+  direction: strengthens
+  strength: moderate
+  description: Most evidence from hospital/NICU settings; lack of community-based
+    studies limits generalizability

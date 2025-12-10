@@ -1,0 +1,44 @@
+id: chronic_alcohol_intoxication_60day_to_pharmacological_treatment_response
+name: Chronic Alcohol Intoxication (60 days) → Pharmacological Treatment Response
+  to Combined Therapy
+from_node:
+  node_id: chronic_alcohol_intoxication_60day
+  node_name: Chronic Alcohol Intoxication (60 days)
+to_node:
+  node_id: pharmacological_treatment_response
+  node_name: Pharmacological Treatment Response to Combined Therapy
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: 60 days of chronic alcohol intoxication creates more severe metabolic and
+  immune dysfunction when combined with acute pancreatitis'
+- 'Step 2: Heptral/Glutoxim/Mexidol combination normalizes 17.6% and corrects 67.6%
+  of altered parameters'
+- 'Step 3: Phosphogliv/Hypoxen/Hepon combination normalizes only 11.8% and corrects
+  38.2% of parameters'
+- 'Step 4: Longer duration alcohol exposure reduces overall normalization rates but
+  optimal drug combinations still show superior correction'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: O. Bushmina et al. 2018. "Pharmacological correction of metabolic
+    disorders in experimental acute pancreatitis on the background of chronic alcohol
+    intoxication." *Research Results in Pharmacology*. https://doi.org/10.3897/RRPHARMACOLOGY.4.31594
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.164335'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: treatment_combination_type
+  direction: strengthens
+  strength: moderate
+  description: Heptral/Glutoxim/Mexidol remains more effective than alternative combinations
+    even with prolonged alcohol exposure, though overall normalization rates decline
+- name: alcohol_exposure_duration
+  direction: weakens
+  strength: strong
+  description: 60 days of alcohol exposure versus 30 days substantially reduces normalization
+    rates (17.6% vs 57.8%) even with optimal treatment, indicating more refractory
+    disease

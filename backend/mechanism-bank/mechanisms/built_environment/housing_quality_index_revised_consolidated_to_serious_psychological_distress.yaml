@@ -1,0 +1,46 @@
+id: housing_quality_index_revised_consolidated_to_serious_psychological_distress
+name: Housing Quality → Psychological Distress
+from_node:
+  node_id: housing_quality_index_revised_consolidated
+  node_name: Housing Quality
+to_node:
+  node_id: serious_psychological_distress
+  node_name: Psychological Distress
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Poor housing quality exposes individuals to physical stressors including
+  inadequate ventilation, temperature extremes, dampness, noise, overcrowding, and
+  structural deficiencies'
+- 'Step 2: These environmental stressors disrupt sleep quality, create chronic physiological
+  stress responses, and reduce sense of safety and control over one''s environment'
+- 'Step 3: Chronic exposure to substandard housing conditions leads to increased symptoms
+  of depression, anxiety, and overall psychological distress, while quality housing
+  provides restorative environments that support mental wellbeing'
+evidence:
+  quality_rating: A
+  n_studies: 47
+  primary_citation: 'I. Franzoi et al. 2022. Housing conditions and psychological
+    distress among higher education students: a systematic literature review. Journal
+    of Further and Higher Education.'
+  supporting_citations: []
+description: This systematic review synthesized evidence from 47 studies examining
+  the relationship between housing conditions and psychological wellbeing among higher
+  education students. Housing quality factors including physical conditions, crowding,
+  noise levels, and safety were associated with multiple mental health outcomes including
+  overall psychological distress, depression, anxiety, sleep disturbances, and other
+  health-related behaviors. Better housing quality was consistently associated with
+  lower psychological distress across multiple outcome categories.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: housing_type
+  direction: strengthens
+  strength: moderate
+  description: Different housing types (on-campus dormitories, off-campus rentals,
+    family homes) show varying associations with psychological outcomes
+- name: social_environment
+  direction: strengthens
+  strength: moderate
+  description: Roommate relationships and living arrangements moderate the relationship
+    between housing conditions and mental health outcomes

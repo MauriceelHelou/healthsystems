@@ -1,0 +1,45 @@
+id: zero_bac_law_to_moderate_severe_injury_crashes
+name: Zero Blood Alcohol Concentration Law → Moderate/Severe Injury Traffic Crashes
+from_node:
+  node_id: zero_bac_law
+  node_name: Zero Blood Alcohol Concentration Law
+to_node:
+  node_id: moderate_severe_injury_crashes
+  node_name: Moderate/Severe Injury Traffic Crashes
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Zero-BAC law eliminates legal threshold for alcohol consumption before
+  driving'
+- 'Step 2: Stricter legal standard theoretically reduces alcohol-impaired driving
+  through deterrence'
+- 'Step 3: Reduced drunk driving would decrease crash frequency and severity'
+- 'Step 4: Fewer alcohol-related crashes would result in lower rates of moderate/severe
+  injury crashes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Steven Davenport et al. 2020. "Assessment of the impact of implementation
+    of a zero-blood alcohol concentration law in Uruguay on moderate/severe injury
+    and fatal crashes: a quasi-experimental study.." *Addiction*. https://doi.org/10.1111/add.15231'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.527766'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: crash_severity_threshold
+  direction: weakens
+  strength: strong
+  description: Policy showed significant effects for fatal crashes but not for moderate/severe
+    injury crashes, suggesting the mechanism may operate differently across severity
+    levels. Fatal crashes may be more strongly associated with high BAC levels.
+- name: time_since_implementation
+  direction: u_shaped
+  strength: weak
+  description: Effect at 12 months was -10.2% and at 24 months was -9.4%, showing
+    minimal change over time but remaining non-significant at both time points
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/zero_bac_law_to_moderate_severe_injury_crashes.yaml
+_category: political

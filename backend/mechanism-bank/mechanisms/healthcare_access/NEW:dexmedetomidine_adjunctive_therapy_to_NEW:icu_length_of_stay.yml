@@ -1,0 +1,62 @@
+id: NEW:dexmedetomidine_adjunctive_therapy_to_NEW:icu_length_of_stay
+name: Dexmedetomidine Adjunctive Therapy → ICU Length of Stay
+from_node:
+  node_id: NEW:dexmedetomidine_adjunctive_therapy
+  node_name: Dexmedetomidine Adjunctive Therapy
+to_node:
+  node_id: NEW:icu_length_of_stay
+  node_name: ICU Length of Stay
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with severe alcohol withdrawal syndrome require ICU-level care for monitoring and
+  management'
+- 'Step 2: Adjunctive dexmedetomidine provides alpha-2 adrenergic agonist effects that reduce sympathetic
+  hyperactivity characteristic of AWS'
+- 'Step 3: Reduced sympathetic overdrive may decrease agitation, tachycardia, and hypertension associated
+  with AWS'
+- 'Step 4: Better symptom control potentially reduces time needed in intensive care setting'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'E. T. Polintan et al. 2022. "Adjunctive Dexmedetomidine in Alcohol Withdrawal Syndrome:
+    A Systematic Review and Meta-analysis of Retrospective Cohort Studies and Randomized Controlled Trials."
+    https://doi.org/10.1177/10600280221130458'
+  supporting_citations:
+  - Additional citations require full-text access - abstract notes 12 studies included in systematic review
+    and 7 in meta-analysis
+  - Studies include both RCTs and retrospective cohort studies exploring DEX use in AWS management
+  - Multiple study designs evaluating critically ill patients with alcohol withdrawal syndrome
+  doi: 10.1177/10600280221130458
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Pooled randomized controlled trial data suggests adjunctive dexmedetomidine to benzodiazepine
+  therapy may reduce ICU length of stay in critically ill patients with alcohol withdrawal syndrome, though
+  evidence quality is low.
+quantitative_effects:
+  effect_size:
+    value: -20.07
+    type: standardized_mean_difference
+    ci_lower: -36.86
+    ci_upper: -3.28
+  p_value: 0.02
+moderators:
+- name: study_design
+  direction: strengthens
+  strength: strong
+  description: RCTs showed significant ICU LOS reduction (MD -20.07 hours, favoring DEX), while cohort
+    studies showed opposite direction (MD 48.06 hours, favoring DEX but indicating longer stays in DEX
+    arm)
+structural_competency:
+  equity_implications: This mechanism addresses treatment of severe alcohol withdrawal in healthcare settings.
+    Access to ICU-level care and advanced pharmacotherapy like dexmedetomidine may be structurally limited
+    for marginalized populations with alcohol use disorder due to insurance barriers, hospital resource
+    constraints, and geographic disparities in critical care availability. The need for ICU treatment
+    of severe AWS reflects upstream failures in accessible community-based alcohol treatment and harm
+    reduction services.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.328461'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

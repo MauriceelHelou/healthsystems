@@ -1,0 +1,54 @@
+id: NEW:digital_therapeutics_access_to_NEW:liver_enzyme_levels
+name: Digital Therapeutics Access → Liver Enzyme Levels
+from_node:
+  node_id: NEW:digital_therapeutics_access
+  node_name: Digital Therapeutics Access
+to_node:
+  node_id: NEW:liver_enzyme_levels
+  node_name: Liver Enzyme Levels
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital therapeutic platforms deliver lifestyle interventions that promote weight loss in patients
+  with liver disease'
+- 'Step 2: Weight reduction decreases hepatic steatosis (fat accumulation in liver)'
+- 'Step 3: Reduced hepatic fat burden decreases hepatocellular injury and inflammation'
+- 'Step 4: Decreased liver injury manifests as improved (lower) liver enzyme levels indicating better
+  liver health'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'S. Albhaisi et al. 2024. "Digital therapeutics lead to clinically significant body
+    weight loss in patients with metabolic dysfunction–associated steatotic liver disease: A systematic
+    review and meta-analysis." https://doi.org/10.1097/HC9.0000000000000499'
+  supporting_citations:
+  - Additional citations require full-text access - liver enzymes were secondary outcomes in the meta-analysis
+  - Improvement in liver enzymes accompanied weight loss across included studies
+  - Studies examined patients specifically diagnosed with metabolic dysfunction-associated steatotic liver
+    disease
+  doi: 10.1097/HC9.0000000000000499
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Digital therapeutic lifestyle interventions that produce weight loss also result in improvement
+  in liver enzymes, indicating reduced hepatic injury in patients with metabolic dysfunction-associated
+  steatotic liver disease
+quantitative_effects:
+  sample_size: 1001
+moderators:
+- name: baseline_weight
+  direction: strengthens
+  strength: moderate
+  description: Higher baseline weight may provide greater opportunity for weight loss and consequent liver
+    enzyme improvement
+structural_competency:
+  equity_implications: This mechanism demonstrates how healthcare delivery structure affects not just
+    proximate outcomes (weight) but downstream organ-specific health. The liver enzyme improvement reflects
+    reduced disease progression, potentially preventing costly and debilitating complications like cirrhosis.
+    Scalable digital interventions could reduce the population burden of liver disease, which disproportionately
+    affects communities with limited access to hepatology specialists and comprehensive lifestyle programs.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.866506'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

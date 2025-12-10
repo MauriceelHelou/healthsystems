@@ -1,0 +1,64 @@
+id: permanent_supportive_housing_units_to_emergency_department_visit_rate
+name: Permanent Supportive Housing (Housing First) → Emergency Department Visit Rate
+from_node:
+  node_id: permanent_supportive_housing_units
+  node_name: Permanent Supportive Housing (Housing First)
+to_node:
+  node_id: emergency_department_visit_rate
+  node_name: Emergency Department Visit Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Permanent Supportive Housing (PSH) with Housing First approach provides
+  immediate stable housing to homeless individuals with disabilities without requiring
+  treatment compliance or sobriety first'
+- 'Step 2: Stable housing reduces exposure to environmental hazards, violence, and
+  stress associated with homelessness, decreasing acute health crises'
+- 'Step 3: PSH programs include integrated supportive services (health, mental health,
+  case management) that enable proactive outpatient care management'
+- 'Step 4: Access to regular primary care and mental health services addresses health
+  needs before they escalate to emergencies'
+- 'Step 5: Improved housing stability and service coordination reduces reliance on
+  emergency departments as primary source of healthcare'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'Yinan Peng et al. 2020. Permanent Supportive Housing With Housing
+    First to Reduce Homelessness and Promote Health Among Homeless Populations With
+    Disability: A Community Guide Systematic Review. Journal of Public Health Management
+    and Practice.'
+  supporting_citations: []
+description: This Community Guide systematic review of 26 studies found that Housing
+  First permanent supportive housing programs reduced emergency department use by
+  41% among homeless individuals with disabilities, particularly those living with
+  HIV. The mechanism operates through immediate provision of stable housing combined
+  with integrated supportive services, which enables regular outpatient care and reduces
+  crisis-driven healthcare utilization.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -41.0
+    type: percent_reduction
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: HIV status
+  direction: strengthens
+  strength: strong
+  description: Housing First programs showed particularly strong effects for clients
+    living with HIV infection, with 41% reduction in ED use specifically documented
+    in this population
+- name: Disability type
+  direction: strengthens
+  strength: moderate
+  description: Programs target homeless populations with disabilities including mental
+    health conditions and substance use disorders, who have particularly high baseline
+    ED utilization
+- name: Comparison condition
+  direction: strengthens
+  strength: moderate
+  description: Effects measured relative to Treatment First programs; greater effects
+    may be seen compared to no intervention

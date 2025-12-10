@@ -1,0 +1,60 @@
+id: NEW:glucocorticosteroid_treatment_to_all_cause_mortality_rate
+name: Glucocorticosteroid Treatment → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:glucocorticosteroid_treatment
+  node_name: Glucocorticosteroid Treatment
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Glucocorticosteroids are administered to patients with alcoholic hepatitis
+  to reduce inflammation through suppression of pro-inflammatory cytokines and immune
+  cell activity'
+- 'Step 2: The anti-inflammatory effect is hypothesized to reduce hepatic necroinflammation
+  and prevent progression of liver damage'
+- 'Step 3: Reduced liver inflammation and damage would theoretically decrease complications
+  and mortality risk'
+- 'Step 4: However, meta-analysis of 16 randomized clinical trials shows NO statistically
+  significant effect on all-cause mortality (RR 0.90, 95% CI 0.70-1.15), indicating
+  the biological mechanism does not translate to meaningful clinical mortality reduction'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: Chavdar S Pavlov et al. 2019. Glucocorticosteroids for people
+    with alcoholic hepatitis. The Cochrane database of systematic reviews.
+  supporting_citations:
+  - Chavdar S Pavlov et al. 2017. Glucocorticosteroids for people with alcoholic hepatitis.
+    The Cochrane database of systematic reviews.
+description: This Cochrane systematic review and meta-analysis of 16 randomized clinical
+  trials (1861 participants) found no evidence that glucocorticosteroids reduce all-cause
+  mortality in people with alcoholic hepatitis compared to placebo or no intervention.
+  The proposed biological mechanism involves anti-inflammatory effects reducing hepatic
+  necroinflammation, but this did not translate to mortality benefits. The effect
+  estimate was RR 0.90 (95% CI 0.70-1.15) with moderate heterogeneity (I²=45%). All
+  trials were at high risk of bias and the certainty of evidence was rated very low.
+  Wide confidence intervals mean clinically significant benefits or harms cannot be
+  ruled out.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.9
+    type: relative_risk
+    ci_lower: 0.7
+    ci_upper: 1.15
+  p_value: null
+  sample_size: 1861
+moderators:
+- name: Disease severity (Maddrey's score)
+  direction: weakens
+  strength: weak
+  description: Studies included both mild (Maddrey's score <32) and severe (≥32) alcoholic
+    hepatitis, but subgroup analyses were limited by inadequate individual participant
+    data reporting
+- name: Alcohol abstinence
+  direction: strengthens
+  strength: moderate
+  description: Risk of death depends on severity of liver damage and abstinence from
+    alcohol; resolution of hepatitis possible with abstinence regardless of treatment

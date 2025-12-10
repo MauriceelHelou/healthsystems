@@ -1,0 +1,73 @@
+id: NEW:eating_disorder_diagnosis_to_all_cause_mortality_rate
+name: Eating Disorder Diagnosis (AN, BN, BED, OSFED) → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:eating_disorder_diagnosis
+  node_name: Eating Disorder Diagnosis (AN, BN, BED, OSFED)
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Eating disorders (AN, BN, BED, OSFED) cause severe nutritional deficiencies,
+  electrolyte imbalances, and metabolic dysregulation through restrictive eating,
+  purging behaviors, or binge eating patterns'
+- 'Step 2: Chronic malnutrition and purging behaviors lead to multi-organ damage including
+  cardiac complications (arrhythmias, cardiomyopathy), renal dysfunction, bone loss,
+  and immune suppression'
+- 'Step 3: Psychiatric comorbidities including depression, anxiety, and self-injurious
+  behaviors increase suicide risk and reduce treatment adherence'
+- 'Step 4: High chronicity rates (25% of patients) and diagnostic migration patterns
+  perpetuate physiological stress and organ damage over extended periods'
+- 'Step 5: Cumulative physiological damage, medical complications, and elevated suicide
+  risk result in increased all-cause mortality (5.2 deaths per 1,000 person-years)'
+evidence:
+  quality_rating: A
+  n_studies: 214
+  primary_citation: 'Marco Solmi et al. 2024. Outcomes in people with eating disorders:
+    a transdiagnostic and disorder‐specific systematic review, meta‐analysis and multivariable
+    meta‐regression analysis. World Psychiatry.'
+  supporting_citations: []
+description: Eating disorders significantly increase all-cause mortality through multiple
+  pathways including severe malnutrition, metabolic complications, cardiac dysfunction,
+  and elevated suicide risk. Meta-analysis of 214 studies (N=88,372) found mortality
+  rate of 5.2 deaths per 1,000 person-years across ED types, with substantial variation
+  by diagnosis. High chronicity rates (25%) and low recovery rates perpetuate physiological
+  damage. Treatment access and type significantly moderate outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 5.2
+    type: incidence_rate
+    ci_lower: 4.4
+    ci_upper: 6.1
+  p_value: null
+  sample_size: 88372
+moderators:
+- name: eating_disorder_type
+  direction: varies
+  strength: moderate
+  description: 'Mortality rates varied significantly among ED types (p<0.01): mixed
+    ED had highest (8.2 per 1,000 person-years) and BN had lowest (3.4 per 1,000 person-years)'
+- name: age_group
+  direction: weakens
+  strength: moderate
+  description: Children and adolescents had more favorable outcomes across and within
+    EDs than adults
+- name: self_injurious_behaviors
+  direction: strengthens
+  strength: moderate
+  description: Self-injurious behaviors were associated with lower recovery rates
+    in pooled EDs, potentially increasing mortality risk
+- name: treatment_type
+  direction: weakens
+  strength: moderate
+  description: Family-based therapy, CBT, psychodynamic therapy, and nutritional interventions
+    associated with higher recovery rates; waiting list associated with higher mortality
+    in AN
+- name: socio_demographic_index
+  direction: strengthens
+  strength: weak
+  description: Higher socio-demographic index moderated lower recovery and higher
+    chronicity in AN

@@ -1,0 +1,56 @@
+id: alcohol_outlet_density_to_alcohol_use_disorder
+name: Alcohol Outlet Density -> Alcohol Use Disorder
+from_node:
+  node_id: alcohol_outlet_density
+  node_name: Alcohol Outlet Density
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: built_environment
+mechanism_pathway:
+- Higher density of alcohol outlets increases physical availability and accessibility
+  of alcohol in neighborhoods
+- Increased accessibility facilitates both initiation and maintenance of problematic
+  drinking patterns, particularly among genetically vulnerable individuals
+- Enhanced exposure to alcohol availability leads to increased risk of developing
+  alcohol use disorder, with effects varying by individual and environmental factors
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Karriker-Jaffe, Katherine J., et al. "Alcohol Availability and
+    Onset and Recurrence of Alcohol Use Disorder: Examination in a Longitudinal Cohort
+    with Cosibling Analysis." Alcoholism: Clinical and Experimental Research 42, no.
+    8 (2018): 1525-1534.'
+  supporting_citations:
+  - 'Young-Wolff, Kim C., et al. "Neighborhood density of alcohol outlets moderates
+    genetic and environmental influences on alcohol problems." Addiction 114, no.
+    5 (2019): 815-824.'
+  - 'Karriker-Jaffe, Katherine J., et al. "Microecological Relationships Between Area
+    Income, Off-Premise Alcohol Outlet Density, Drinking Patterns, and Alcohol Use
+    Disorders: The East Bay Neighborhoods Study." Alcoholism: Clinical and Experimental
+    Research 44, no. 8 (2020): 1653-1664.'
+  - 'Karriker-Jaffe, Katherine J., et al. "Intersection of familial risk and environmental
+    social control on high-risk drinking and alcohol dependence in a US national sample
+    of adults." Addictive Behaviors 113 (2021): 106668.'
+description: Higher alcohol outlet density increases the risk of alcohol use disorder
+  onset through increased physical availability and accessibility. The relationship
+  is particularly strong among individuals with genetic predisposition (heritability
+  increases from 11% in areas with no outlets to 78% in high-density areas) and varies
+  by demographic factors including sex, age, and socioeconomic status. Cosibling analyses
+  support causal interpretation by controlling for shared genetic and environmental
+  factors.
+structural_competency_notes: Alcohol outlet density reflects structural policy decisions
+  about zoning, licensing, and commercial regulation. Effects are moderated by neighborhood
+  income, social control factors, and demographic composition, highlighting how structural
+  inequities in alcohol retail environments can differentially impact vulnerable populations.
+last_updated: '2025-12-08'
+extraction_method: node_pair_discovery_v4
+quantitative_effects:
+  effect_size:
+    value: 1.16
+    type: hazard_ratio
+    ci_lower: 1.13
+    ci_upper: 1.19
+  p_value: null
+  sample_size: 2633922

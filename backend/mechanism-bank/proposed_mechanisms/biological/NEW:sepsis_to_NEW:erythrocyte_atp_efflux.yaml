@@ -1,0 +1,41 @@
+id: NEW:sepsis_to_NEW:erythrocyte_atp_efflux
+name: Sepsis → Decreased Erythrocyte Oxygen-Dependent ATP Efflux
+from_node:
+  node_id: NEW:sepsis
+  node_name: Sepsis
+to_node:
+  node_id: NEW:erythrocyte_atp_efflux
+  node_name: Decreased Erythrocyte Oxygen-Dependent ATP Efflux
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Sepsis induces systemic inflammatory response and microcirculatory dysfunction'
+- 'Step 2: Inflammatory mediators and altered microenvironment affect red blood cell
+  (erythrocyte) function and deformability'
+- 'Step 3: Erythrocyte oxygen-sensing mechanisms become impaired, reducing the normal
+  ATP release response to hypoxia'
+- 'Step 4: Decreased ATP efflux from erythrocytes impairs local vasodilation signals
+  that normally match oxygen delivery to tissue oxygen demand'
+- 'Step 5: This contributes to impaired capillary response within hypoxic capillaries,
+  worsening tissue oxygenation in sepsis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'R. M. Bateman, M. D. Sharpe, J. E. Jagger, C. G. Ellis. 2016.
+    36th International Symposium on Intensive Care and Emergency Medicine: Brussels,
+    Belgium. 15-18 March 2016. Critical care (London, England).'
+  supporting_citations: []
+description: Sepsis impairs the capillary response within hypoxic capillaries and
+  decreases erythrocyte oxygen-dependent ATP efflux. Under normal physiological conditions,
+  erythrocytes release ATP in response to hypoxia, which acts as a signaling molecule
+  to induce local vasodilation and improve oxygen delivery. In sepsis, this oxygen-sensing
+  and ATP release mechanism is compromised, contributing to microcirculatory dysfunction
+  and inadequate tissue oxygenation despite potentially adequate systemic oxygen delivery.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Sepsis severity
+  direction: strengthens
+  strength: moderate
+  description: More severe sepsis likely results in greater impairment of erythrocyte
+    ATP efflux due to more pronounced microcirculatory dysfunction

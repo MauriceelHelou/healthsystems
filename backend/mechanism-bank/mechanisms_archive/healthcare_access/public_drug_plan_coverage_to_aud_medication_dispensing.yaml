@@ -1,0 +1,44 @@
+id: public_drug_plan_coverage_to_aud_medication_dispensing
+name: Public Drug Plan Coverage for AUD Medications → First-Line AUD Medication Dispensing
+from_node:
+  node_id: public_drug_plan_coverage
+  node_name: Public Drug Plan Coverage for AUD Medications
+to_node:
+  node_id: aud_medication_dispensing
+  node_name: First-Line AUD Medication Dispensing
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Public drug plan provides financial coverage for naltrexone and acamprosate,
+  removing cost barriers for eligible beneficiaries'
+- 'Step 2: Despite availability of coverage, prescribing patterns by healthcare providers
+  remain extremely low following hospital-based AUD diagnosis'
+- 'Step 3: Very low dispensing rate (3.56 per 1000 population) suggests systemic barriers
+  beyond financial access, including potential prescriber knowledge gaps, treatment
+  fragmentation, or service delivery failures'
+- 'Step 4: Minimal medication dispensing limits pharmacological support for alcohol
+  use disorder recovery despite evidence-based first-line treatments being covered'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sheryl Spithoff et al. 2017. "First-line medications for alcohol
+    use disorders among public drug plan beneficiaries in Ontario.." *Canadian family
+    physician Medecin de famille canadien*.
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.689507'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sex
+  direction: no_effect
+  strength: weak
+  description: Abstract indicates dispensing rate did not differ significantly by
+    sex, suggesting gender does not moderate this mechanism
+- name: hospital_based_diagnosis
+  direction: strengthens
+  strength: moderate
+  description: Cohort limited to individuals with hospital-based AUD diagnosis, suggesting
+    more severe presentations, yet dispensing remained extremely low even in this
+    higher-acuity population

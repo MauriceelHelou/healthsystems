@@ -1,0 +1,57 @@
+id: NEW:mdma_assisted_therapy_access_to_NEW:ptsd_symptom_severity
+name: MDMA-Assisted Therapy Access → PTSD Symptom Severity
+from_node:
+  node_id: NEW:mdma_assisted_therapy_access
+  node_name: MDMA-Assisted Therapy Access
+to_node:
+  node_id: NEW:ptsd_symptom_severity
+  node_name: PTSD Symptom Severity
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: MDMA-assisted therapy is provided in clinical settings with psychological support'
+- 'Step 2: MDMA facilitates therapeutic processing by reducing fear response and enhancing emotional engagement'
+- 'Step 3: Patients experience improved ability to process traumatic memories during therapy sessions'
+- 'Step 4: Reduction in PTSD symptom severity as measured by disease-specific scales'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: 'Mikkel Højlund et al. 2025. "Efficacy, all-cause discontinuation, and safety of serotonergic
+    psychedelics and MDMA to treat mental disorders: A living systematic review with meta-analysis.."
+    https://doi.org/10.1016/j.euroneuro.2025.09.011'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 30 RCTs total
+  - Studies included in PTSD meta-analysis (k=11) require full-text access
+  - Living systematic review database available at https://ebipsyche-database.org/
+  doi: 10.1016/j.euroneuro.2025.09.011
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: MDMA-assisted therapy significantly reduces PTSD symptoms compared to control conditions,
+  with a large effect size (SMD=-0.85). This finding is based on 11 randomized controlled trials within
+  a larger systematic review of 30 RCTs examining psychedelic-assisted therapies.
+quantitative_effects:
+  effect_size:
+    value: -0.85
+    type: standardized_mean_difference
+    ci_lower: -1.09
+    ci_upper: -0.6
+  sample_size: 1480
+moderators:
+- name: psychological_support
+  direction: strengthens
+  strength: strong
+  description: 83.3% of trials included psychological support, suggesting this is a key component of treatment
+    efficacy
+structural_competency:
+  equity_implications: Access to MDMA-assisted therapy represents a structural healthcare access issue.
+    Current regulatory barriers limit availability of this promising treatment. Populations with higher
+    PTSD prevalence (veterans, trauma survivors, marginalized communities) may face additional barriers
+    to accessing experimental treatments due to healthcare system inequities, insurance coverage limitations,
+    and geographic distribution of research sites. Expanding access requires policy changes at federal
+    and state levels regarding controlled substance scheduling and treatment coverage.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.881850'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

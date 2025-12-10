@@ -1,0 +1,44 @@
+id: minimum_unit_price_policy_to_cask_wine_purchasing
+name: Minimum Unit Price Policy for Alcohol → Cask Wine Purchasing Behavior
+from_node:
+  node_id: minimum_unit_price_policy
+  node_name: Minimum Unit Price Policy for Alcohol
+to_node:
+  node_id: cask_wine_purchasing
+  node_name: Cask Wine Purchasing Behavior
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Minimum unit price policy sets floor price for alcohol per standard drink'
+- 'Step 2: All cask wine purchases currently occur under $1.30 per standard drink,
+  making them vulnerable to minimum pricing'
+- 'Step 3: Pricing intervention would disproportionately affect cask wine relative
+  to bottled wine'
+- 'Step 4: Economic accessibility of cheapest alcohol format reduced, potentially
+  decreasing high-volume consumption patterns'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: 'Alexandra Torney et al. 2023. "Cask wine: Describing drinking
+    patterns associated with Australia''s cheapest alcohol.." *Drug and alcohol review*.
+    https://doi.org/10.1111/dar.13684'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.159573'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: price_threshold_level
+  direction: strengthens
+  strength: strong
+  description: Minimum unit price above $1.30 would affect all cask wine purchases
+    but smaller proportion of bottled wine
+- name: consumer_income_level
+  direction: strengthens
+  strength: moderate
+  description: Price-sensitive consumers who rely on cheapest alcohol options would
+    be most affected by minimum pricing
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/minimum_unit_price_policy_to_cask_wine_purchasing.yaml
+_category: political

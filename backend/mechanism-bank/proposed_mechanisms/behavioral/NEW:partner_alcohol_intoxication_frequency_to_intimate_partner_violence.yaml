@@ -1,0 +1,52 @@
+id: NEW:partner_alcohol_intoxication_frequency_to_intimate_partner_violence
+name: Partner Alcohol Intoxication Frequency → Intimate Partner Violence Experience
+from_node:
+  node_id: NEW:partner_alcohol_intoxication_frequency
+  node_name: Partner Alcohol Intoxication Frequency
+to_node:
+  node_id: intimate_partner_violence
+  node_name: Intimate Partner Violence Experience
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Partner engages in alcohol consumption leading to episodes of intoxication
+  (occasional or frequent drunkenness)'
+- 'Step 2: Alcohol intoxication impairs cognitive functioning, judgment, and impulse
+  control, reducing inhibitions against aggressive behavior'
+- 'Step 3: Intoxicated partner exhibits increased aggression, reduced empathy, and
+  impaired conflict resolution abilities'
+- 'Step 4: These behavioral changes during intoxication episodes increase the likelihood
+  of physical violence perpetration against the intimate partner'
+- 'Step 5: Higher frequency of partner intoxication episodes leads to greater cumulative
+  exposure and elevated risk of experiencing intimate partner violence'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'L. Ramsoomar et al. 2021. Pooled analysis of the association
+    between alcohol use and violence against women: evidence from four violence prevention
+    studies in Africa. BMJ Open.'
+  supporting_citations: []
+description: Women who report their intimate partners being intoxicated (drunk) have
+  significantly elevated odds of experiencing physical intimate partner violence.
+  This relationship demonstrates a clear dose-response pattern, with occasional partner
+  drunkenness associated with 2.68 times higher odds of IPV, while frequent partner
+  drunkenness is associated with nearly 6 times higher odds of experiencing physical
+  IPV compared to women whose partners do not drink.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 5.94
+    type: odds_ratio
+    ci_lower: 4.19
+    ci_upper: 8.41
+  p_value: null
+  sample_size: 5613
+moderators:
+- name: frequency_of_intoxication
+  direction: strengthens
+  strength: strong
+  description: 'Dose-response relationship observed: women with partners frequently
+    drunk had substantially higher odds of IPV (aOR=5.94) compared to those with occasionally
+    drunk partners (aOR=2.68), demonstrating that increased frequency of intoxication
+    strongly amplifies IPV risk'

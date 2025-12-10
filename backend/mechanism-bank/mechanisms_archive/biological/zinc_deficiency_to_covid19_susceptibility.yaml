@@ -1,0 +1,41 @@
+id: zinc_deficiency_to_covid19_susceptibility
+name: Zinc Deficiency → COVID-19 Susceptibility
+from_node:
+  node_id: zinc_deficiency
+  node_name: Zinc Deficiency
+to_node:
+  node_id: covid19_susceptibility
+  node_name: COVID-19 Susceptibility
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Zinc deficiency compromises immune cell function critical for antiviral
+  defense'
+- 'Step 2: Impaired immune signaling reduces ability to mount effective response against
+  SARS-CoV-2'
+- 'Step 3: Weakened cellular immunity increases vulnerability to SARS-CoV-2 infection
+  and replication'
+- 'Step 4: Enhanced susceptibility leads to higher COVID-19 infection rates and potentially
+  more severe outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Di Jin et al. 2024. "The nutritional roles of zinc for immune
+    system and COVID-19 patients." *Frontiers in Nutrition*. https://doi.org/10.3389/fnut.2024.1385591
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.078364'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_immune_function
+  direction: strengthens
+  strength: moderate
+  description: Individuals with pre-existing immune dysfunction may experience amplified
+    effects of zinc deficiency on COVID-19 susceptibility
+- name: severity_of_zinc_deficiency
+  direction: strengthens
+  strength: strong
+  description: Severe zinc deficiency creates particularly high vulnerability to SARS-CoV-2
+    infection

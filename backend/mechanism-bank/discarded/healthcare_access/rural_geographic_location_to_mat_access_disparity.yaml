@@ -1,0 +1,41 @@
+id: rural_geographic_location_to_mat_access_disparity
+name: Rural Geographic Location → Medication-Assisted Treatment Access Disparity
+from_node:
+  node_id: rural_geographic_location
+  node_name: Rural Geographic Location
+to_node:
+  node_id: mat_access_disparity
+  node_name: Medication-Assisted Treatment Access Disparity
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Rural areas have lower density of waivered physicians authorized to prescribe
+  buprenorphine compared to urban areas'
+- 'Step 2: Limited number of treatment providers creates capacity constraints and
+  longer travel distances for patients seeking treatment'
+- 'Step 3: Geographic barriers reduce treatment initiation and retention for individuals
+  with opioid use disorder'
+- 'Step 4: Untreated or inadequately treated opioid use disorder leads to increased
+  morbidity, mortality, and continued substance use'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: C. H. A. Andrilla et al. 2018. "Projected Contributions of Nurse
+    Practitioners and Physicians Assistant to Buprenorphine Treatment Services for
+    Opioid Use Disorder in Rural Areas." *Medical Care Research and Review*. https://doi.org/10.1177/1077558718793070
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.481177'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: regional_census_division
+  direction: strengthens
+  strength: moderate
+  description: The magnitude of rural-urban treatment access disparities varies by
+    Census Division, with some regions having more severe baseline gaps in treatment
+    availability
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/rural_geographic_location_to_mat_access_disparity.yaml
+_category: healthcare_access

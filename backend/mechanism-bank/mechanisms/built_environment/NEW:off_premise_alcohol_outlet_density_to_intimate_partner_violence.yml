@@ -1,0 +1,71 @@
+id: NEW:off_premise_alcohol_outlet_density_to_intimate_partner_violence
+name: Off-Premise Alcohol Outlet Density → Intimate Partner Violence
+from_node:
+  node_id: NEW:off_premise_alcohol_outlet_density
+  node_name: Off-Premise Alcohol Outlet Density
+to_node:
+  node_id: intimate_partner_violence
+  node_name: Intimate Partner Violence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of off-premise alcohol outlets (liquor stores, convenience stores) increases
+  physical availability of alcohol in neighborhoods'
+- 'Step 2: Increased alcohol availability facilitates greater alcohol purchasing and consumption within
+  households'
+- 'Step 3: Alcohol intoxication impairs judgment, reduces inhibition, and increases aggression in potential
+  perpetrators'
+- 'Step 4: Neighborhood-level alcohol availability creates environmental conditions conducive to domestic
+  violence incidents'
+- 'Step 5: Male-on-female domestic violence rates increase in areas with higher off-premise outlet density'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Thomas H. Johnson and Aleksandra J. Snowden 2023. "Neighborhood Ecological Models
+    of Alcohol Outlet Density and Male–on–Female Domestic Violence: Accounting for Adjacent Place and
+    Neighborhood Characteristics." https://doi.org/10.1177/00220426231159016'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references consistent predictor relationship
+    between alcohol availability and domestic violence
+  - Additional citations require full-text access - abstract mentions prior research on alcohol availability
+    and intimate partner violence
+  - Additional citations require full-text access - abstract references spatial regression methodology
+    from prior neighborhood ecological studies
+  doi: 10.1177/00220426231159016
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Off-premise alcohol outlet density (liquor stores, convenience stores selling alcohol for
+  consumption elsewhere) is significantly associated with male-on-female domestic violence at the neighborhood
+  level, even after controlling for concentrated disadvantage and other neighborhood characteristics.
+  This relationship operates through increased alcohol availability and consumption in home settings.
+quantitative_effects:
+  sample_size: 571
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study specifically examined spatial spillover effects, finding that off-premise alcohol
+    outlet density in surrounding block groups also predicts MFDV in focal block groups. Milwaukee, Wisconsin
+    context.
+moderators:
+- name: concentrated_disadvantage
+  direction: strengthens
+  strength: moderate
+  description: Concentrated disadvantage was controlled for in models, suggesting it may interact with
+    or confound the alcohol-violence relationship
+- name: lack_of_health_insurance
+  direction: strengthens
+  strength: weak
+  description: Lack of health insurance was included as a control variable, indicating potential interaction
+    with neighborhood vulnerability
+structural_competency:
+  equity_implications: 'This mechanism identifies a structural/environmental determinant (alcohol outlet
+    zoning and licensing policies) rather than blaming individual alcohol users. The finding that off-premise
+    (not on-premise) outlets drive MFDV suggests that alcohol consumption in private/domestic settings
+    is the key pathway. Equity implications: disadvantaged neighborhoods often have higher alcohol outlet
+    density, creating environmental risk for intimate partner violence. Policy interventions could target
+    alcohol licensing and zoning rather than individual behavior.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.052292'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

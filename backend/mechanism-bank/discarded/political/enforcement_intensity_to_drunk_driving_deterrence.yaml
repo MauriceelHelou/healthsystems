@@ -1,0 +1,46 @@
+id: enforcement_intensity_to_drunk_driving_deterrence
+name: Police Checkpoint Enforcement Intensity → Drunk Driving Deterrence
+from_node:
+  node_id: enforcement_intensity
+  node_name: Police Checkpoint Enforcement Intensity
+to_node:
+  node_id: drunk_driving_deterrence
+  node_name: Drunk Driving Deterrence
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Higher enforcement intensity increases probability of detection for drunk
+  drivers at checkpoint locations'
+- 'Step 2: Increased detection probability raises expected costs of drunk driving
+  behavior'
+- 'Step 3: Higher expected costs create stronger deterrent effect through rational
+  decision-making'
+- 'Step 4: Deterrent effect is modulated by enforcement pattern predictability and
+  learning dynamics'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Banerjee et al. 2019. "The Efficient Deployment of Police
+    Resources: Theory and New Evidence from a Randomized Drunk Driving Crackdown in
+    India." https://doi.org/10.3386/w26224'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.208882'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: checkpoint_rotation_strategy
+  direction: strengthens
+  strength: strong
+  description: Rotating checkpoints amplify intensity effects by preventing strategic
+    avoidance, while fixed locations enable displacement that nullifies intensity
+    benefits
+- name: baseline_enforcement_level
+  direction: strengthens
+  strength: moderate
+  description: Intensity increases have larger marginal effects in contexts with low
+    baseline enforcement where detection probability starts near zero
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/enforcement_intensity_to_drunk_driving_deterrence.yaml
+_category: political

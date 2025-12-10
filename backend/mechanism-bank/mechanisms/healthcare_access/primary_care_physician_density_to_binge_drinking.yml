@@ -1,0 +1,61 @@
+id: primary_care_physician_density_to_binge_drinking
+name: Primary Care Physician Density → Binge Drinking
+from_node:
+  node_id: primary_care_physician_density
+  node_name: Primary Care Physician Density
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Higher primary care physician density increases population access to primary care encounters'
+- 'Step 2: More primary care encounters create more opportunities for alcohol screening'
+- 'Step 3: Screening identifies individuals with hazardous/harmful drinking who would not otherwise seek
+  help'
+- 'Step 4: Brief interventions delivered at primary care encounters reduce alcohol consumption'
+- 'Step 5: Population-level reduction in binge drinking through increased healthcare access'
+evidence:
+  quality_rating: A
+  n_studies: 69
+  primary_citation: 'F R Beyer et al. 2019. "The Cochrane 2018 Review on Brief Interventions in Primary
+    Care for Hazardous and Harmful Alcohol Consumption: A Distillation for Clinicians and Policy Makers.."
+    https://doi.org/10.1093/alcalc/agz035'
+  supporting_citations:
+  - Kaner EF et al. (2018). Cochrane Database of Systematic Reviews
+  - Ballesteros J et al. (2004). Addiction - Meta-analysis of brief interventions in primary care
+  - Whitlock EP et al. (2004). Annals of Internal Medicine - USPSTF review of screening and counseling
+  doi: 10.1093/alcalc/agz035
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The effectiveness of brief interventions for alcohol demonstrated in this review is contingent
+  on access to primary care settings where screening occurs. Primary care physician density serves as
+  a structural determinant of whether populations can access evidence-based alcohol interventions.
+quantitative_effects:
+  effect_size:
+    value: -20.0
+    type: standardized_mean_difference
+    ci_lower: -28.0
+    ci_upper: -12.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Primary care access varies geographically; areas with healthcare deserts would have
+    fewer opportunities for screening and brief intervention delivery
+moderators:
+- name: healthcare_desert_status
+  direction: weakens
+  strength: strong
+  description: Populations in primary care shortage areas have reduced access to the screening and brief
+    intervention infrastructure that produces these effects
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare infrastructure distribution creates inequitable
+    access to evidence-based alcohol interventions. Communities with primary care shortages cannot benefit
+    from screening and brief intervention even when such interventions are proven effective. This represents
+    a structural pathway through which healthcare resource allocation decisions create differential health
+    outcomes across geographic areas and populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.031009'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

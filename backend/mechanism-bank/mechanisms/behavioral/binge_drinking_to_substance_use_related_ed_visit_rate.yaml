@@ -1,0 +1,67 @@
+id: binge_drinking_to_substance_use_related_ed_visit_rate
+name: Binge Drinking → Alcohol-Related Emergency Room Admissions
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: substance_use_related_ed_visit_rate
+  node_name: Alcohol-Related Emergency Room Admissions
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Binge drinking episodes lead to acute alcohol intoxication, resulting in
+  blood alcohol concentrations that impair cognitive and motor function'
+- 'Step 2: Acute intoxication increases risk of injuries (falls, motor vehicle accidents,
+  violence), alcohol poisoning, and exacerbation of underlying health conditions'
+- 'Step 3: These acute medical emergencies necessitate emergency room visits for treatment
+  of alcohol-related injuries, overdose, or acute health crises'
+- 'Step 4: Population-level increases in binge drinking prevalence, particularly among
+  middle-aged and older adults, drive corresponding increases in alcohol-related ER
+  admissions'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'R. Grucza et al. 2018. Trends in Adult Alcohol Use and Binge
+    Drinking in the Early 21st‐Century United States: A Meta‐Analysis of 6 National
+    Survey Series. Alcoholism: Clinical and Experimental Research.'
+  supporting_citations: []
+description: This meta-analysis of 6 national surveys establishes that binge drinking
+  prevalence increased significantly in the United States between 2000-2016, with
+  an average annual increase of 0.72% per year. The study explicitly frames rising
+  alcohol-related emergency room admissions as a key indicator of concern alongside
+  trends in binge drinking. The mechanism operates through acute intoxication episodes
+  leading to medical emergencies requiring ER care. The relationship is particularly
+  pronounced among middle-aged and older adults who showed the largest increases in
+  binge drinking prevalence.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.72
+    type: annual_percentage_increase
+    ci_lower: 0.46
+    ci_upper: 0.98
+  p_value: null
+  sample_size: null
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Adults aged 50-64 and 65+ showed substantially larger increases in
+    binge drinking prevalence, while ages 18-29 showed smaller, negative, or nonsignificant
+    changes. The increase among middle-aged and older adults may be driving increasing
+    rates of alcohol-related morbidity including ER admissions.
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Trends varied by sex, with differential impacts across demographic
+    groups
+- name: race
+  direction: strengthens
+  strength: moderate
+  description: Trends showed variation by race, indicating differential demographic
+    impacts
+- name: educational_attainment
+  direction: strengthens
+  strength: moderate
+  description: Trends varied by educational attainment level

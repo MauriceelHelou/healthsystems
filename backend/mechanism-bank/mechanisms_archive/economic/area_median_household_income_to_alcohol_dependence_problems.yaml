@@ -1,0 +1,38 @@
+id: area_median_household_income_to_alcohol_dependence_problems
+name: Area Median Household Income → Alcohol Dependence and Problems (AUDIT Score)
+from_node:
+  node_id: area_median_household_income
+  node_name: Area Median Household Income
+to_node:
+  node_id: alcohol_dependence_problems
+  node_name: Alcohol Dependence and Problems (AUDIT Score)
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: High-income neighborhoods create social environments with higher frequency
+  of alcohol consumption opportunities'
+- 'Step 2: More frequent drinking increases cumulative alcohol exposure and tolerance
+  development'
+- 'Step 3: Regular alcohol consumption patterns in affluent contexts may mask problematic
+  use due to social acceptability'
+- 'Step 4: Sustained higher frequency drinking increases risk of alcohol dependence
+  and related problems'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'C. Mair et al. 2020. "Microecological Relationships Between Area
+    Income, Off-Premise Alcohol Outlet Density, Drinking Patterns, and Alcohol Use
+    Disorders: The East Bay Neighborhoods Study.." *Alcoholism: Clinical and Experimental
+    Research*. https://doi.org/10.1111/acer.14387'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:04.996047'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: off_premise_outlet_density
+  direction: weakens
+  strength: weak
+  description: High-income site effects on AUDIT scores persisted regardless of off-premise
+    alcohol outlet density

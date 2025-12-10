@@ -1,0 +1,49 @@
+id: NEW:racial_minority_status_elderly_to_NEW:pci_utilization_rate
+name: Racial Minority Status (African American/Hispanic, Age 65+) → Percutaneous Coronary
+  Intervention Utilization Rate
+from_node:
+  node_id: NEW:racial_minority_status_elderly
+  node_name: Racial Minority Status (African American/Hispanic, Age 65+)
+to_node:
+  node_id: NEW:pci_utilization_rate
+  node_name: Percutaneous Coronary Intervention Utilization Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: African American and Hispanic elderly patients (65+) experience systemic
+  barriers in accessing cardiac care facilities equipped for PCI procedures'
+- 'Step 2: These populations face longer door-to-balloon times, indicating delays
+  in receiving timely intervention after presenting with acute coronary syndromes'
+- 'Step 3: Structural factors including differential hospital referral patterns, geographic
+  distribution of cardiac catheterization labs, and potential implicit bias in treatment
+  recommendations contribute to lower PCI utilization'
+- 'Step 4: Insurance coverage disparities and socioeconomic factors compound access
+  barriers, though Medicaid expansion has shown potential to reduce some disparities'
+- 'Step 5: The cumulative effect results in significantly lower rates of PCI utilization
+  among racial and ethnic minority elderly patients compared to White patients'
+evidence:
+  quality_rating: B
+  n_studies: 10
+  primary_citation: 'Olawale O Olanisa et al. 2023. Racial Disparities and Outcomes
+    of Percutaneous Coronary Interventions in Patients Above 65 Years in America:
+    A Systematic Review. Cureus.'
+  supporting_citations: []
+description: This systematic review of 10 studies demonstrates that African American
+  and Hispanic patients aged 65 and older in America experience significantly lower
+  rates of percutaneous coronary intervention utilization compared to White patients.
+  The disparity manifests through longer door-to-balloon times and reduced access
+  to PCI procedures, contributing to worse clinical outcomes including higher mortality
+  rates and increased risk of major adverse cardiovascular events.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Medicaid expansion status
+  direction: weakens
+  strength: moderate
+  description: States with Medicaid expansion showed reduced disparities in access,
+    treatment, and outcomes for patients with acute myocardial infarction
+- name: Insurance status
+  direction: strengthens
+  strength: moderate
+  description: Lack of adequate insurance coverage exacerbates disparities in PCI
+    access and utilization

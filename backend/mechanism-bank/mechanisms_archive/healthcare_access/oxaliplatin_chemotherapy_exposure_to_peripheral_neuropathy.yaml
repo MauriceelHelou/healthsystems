@@ -1,0 +1,48 @@
+id: oxaliplatin_chemotherapy_exposure_to_peripheral_neuropathy
+name: Oxaliplatin Chemotherapy Exposure → Peripheral Neuropathy
+from_node:
+  node_id: oxaliplatin_chemotherapy_exposure
+  node_name: Oxaliplatin Chemotherapy Exposure
+to_node:
+  node_id: peripheral_neuropathy
+  node_name: Peripheral Neuropathy
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Oxaliplatin administered as part of colorectal cancer chemotherapy regimen
+  (FOLFOX or XELOX) creates direct neurotoxic exposure to peripheral nerves'
+- 'Step 2: Cumulative dosing over multiple treatment cycles leads to progressive neuronal
+  damage and dysfunction'
+- 'Step 3: Peripheral nerve damage manifests as sensory and motor dysfunction including
+  tingling, numbness, hypersensitivity, walking difficulties, and increased pain sensation'
+- 'Step 4: Clinical and subclinical neuropathy develops in majority of patients, with
+  66.6% showing neurological symptoms and/or electrophysiological signs after 4 cycles'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'M. Banach et al. 2018. "Oxaliplatin treatment and peripheral
+    nerve damage in cancer patients: A Polish cohort study." *Journal of Cancer Research
+    and Therapeutics*. https://doi.org/10.4103/jcrt.JCRT_971_16'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.271369'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: cumulative_dose_cycles
+  direction: strengthens
+  strength: strong
+  description: Risk of peripheral nerve damage increases after 4th cycle of treatment,
+    with cumulative neurotoxicity being the main dose-limiting factor
+- name: pre_existing_neuropathy
+  direction: strengthens
+  strength: strong
+  description: 10 of 14 symptomatic patients had previously diagnosed PNP and showed
+    signs of further neuronal deterioration and progressing dysfunction
+- name: early_detection_monitoring
+  direction: weakens
+  strength: moderate
+  description: Electroneurophysiological testing can detect subclinical cases (33.4%
+    of affected patients), potentially allowing for treatment adjustment before irreversible
+    damage

@@ -1,0 +1,55 @@
+id: NEW:sachet_alcohol_ban_policy_to_NEW:alcohol_retail_availability
+name: Sachet Alcohol Ban Policy → Alcohol Retail Availability
+from_node:
+  node_id: NEW:sachet_alcohol_ban_policy
+  node_name: Sachet Alcohol Ban Policy
+to_node:
+  node_id: NEW:alcohol_retail_availability
+  node_name: Alcohol Retail Availability
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: National legislation enacted banning manufacture and sale of sachet alcohol products'
+- 'Step 2: Regulatory enforcement targets retail food and beverage establishments'
+- 'Step 3: Retail establishments reduce or eliminate alcohol sales to comply with law'
+- 'Step 4: Overall alcohol availability in commercial establishments decreases from 69% to 43%'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Mieka Smart et al. 2021. "Impact of the Sachet Alcohol Ban on Alcohol Availability
+    in Uganda.." https://doi.org/10.15288/jsad.2021.82.511
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not cite specific prior studies
+  doi: 10.15288/jsad.2021.82.511
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: National sachet alcohol ban legislation significantly reduced overall alcohol availability
+  in retail establishments, with reductions observed primarily in off-premise outlets where enforcement
+  may be more effective or where sachet products were more prevalent.
+quantitative_effects:
+  effect_size:
+    value: -26.0
+    type: percentage_change
+  p_value: 0.001
+  sample_size: 100
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in two Ugandan districts (Kampala and Jinja); effects may vary by urban/rural
+    setting and enforcement capacity
+moderators:
+- name: premise_type
+  direction: strengthens
+  strength: strong
+  description: Ban significantly reduced alcohol availability in off-premise establishments (p<.001) but
+    not in on-premise establishments (p=.710)
+structural_competency:
+  equity_implications: This mechanism demonstrates how national alcohol policy can structurally modify
+    the commercial availability environment. The differential effect by premise type suggests that structural
+    interventions may have varying impacts across different commercial contexts, requiring tailored enforcement
+    strategies.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.257390'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

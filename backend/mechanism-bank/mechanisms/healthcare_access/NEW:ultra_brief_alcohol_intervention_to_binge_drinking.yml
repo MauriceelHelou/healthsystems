@@ -1,0 +1,69 @@
+id: NEW:ultra_brief_alcohol_intervention_to_binge_drinking
+name: Ultra-Brief Alcohol Intervention (<1 minute) → Binge Drinking
+from_node:
+  node_id: NEW:ultra_brief_alcohol_intervention
+  node_name: Ultra-Brief Alcohol Intervention (<1 minute)
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Doctor delivers brief oral advice about hazardous drinking'
+- 'Step 2: Patient receives alcohol information leaflet'
+- 'Step 3: Intended pathway: increased awareness leads to motivation for behavior change'
+- 'Step 4: Observed outcome: no significant difference in alcohol consumption compared to screening only'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Ryuhei So et al. 2025. "Effectiveness of screening and ultra-brief intervention for
+    hazardous drinking in primary care: pragmatic cluster randomised controlled trial.." https://doi.org/10.1136/bmj-2024-083985'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Prior literature on brief interventions for alcohol referenced implicitly
+  - UMIN Clinical Trials Registry UMIN000051388
+  doi: 10.1136/bmj-2024-083985
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'The study tested whether an ultra-brief doctor-delivered intervention (brief oral advice
+  plus information leaflet in <1 minute) reduced alcohol consumption among patients with hazardous drinking
+  compared to AUDIT-C screening alone. At 24 weeks, the intervention group consumed 1046.9 g/4 weeks versus
+  1019.0 g/4 weeks in the control group, a non-significant difference of 27.8 g/4 weeks (95% CI: -149.7
+  to 205.4). The finding suggests that minimal interventions may not be sufficient to address hazardous
+  drinking in primary care.'
+quantitative_effects:
+  effect_size:
+    value: 27.8
+    type: risk_difference
+    ci_lower: -149.7
+    ci_upper: 205.4
+  p_value: 0.75
+  sample_size: 1133
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in 40 primary care clinics in Japan; cultural attitudes toward alcohol
+    and healthcare delivery may differ in other settings
+moderators:
+- name: intervention_duration
+  direction: weakens
+  strength: strong
+  description: Ultra-brief intervention (<1 minute) may be insufficient to produce behavior change compared
+    to longer evidence-based brief interventions
+- name: readiness_to_change
+  direction: strengthens
+  strength: weak
+  description: Readiness to change was measured as secondary outcome; may moderate intervention effectiveness
+structural_competency:
+  equity_implications: 'The null finding has important structural implications: (1) Time constraints in
+    primary care create pressure to develop ultra-brief interventions, but this may compromise effectiveness;
+    (2) Healthcare system investment in alcohol interventions requires balancing feasibility with evidence
+    of efficacy; (3) The study reveals a tension between scalable, low-intensity interventions and the
+    structural supports needed to actually change drinking behavior; (4) Structural factors like lack
+    of routine alcohol screening infrastructure, absence of treatment programs, and unavailability of
+    self-help groups in participating clinics may limit intervention effectiveness regardless of intensity.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.237362'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

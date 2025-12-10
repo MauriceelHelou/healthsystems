@@ -1,0 +1,73 @@
+id: NEW:evidence_based_psychotherapy_to_NEW:eating_disorder_recovery_rate
+name: Evidence-Based Psychotherapy (CBT, FBT, DBT, Psychodynamic) → Eating Disorder
+  Recovery Rate
+from_node:
+  node_id: NEW:evidence_based_psychotherapy
+  node_name: Evidence-Based Psychotherapy (CBT, FBT, DBT, Psychodynamic)
+to_node:
+  node_id: NEW:eating_disorder_recovery_rate
+  node_name: Eating Disorder Recovery Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with eating disorders (AN, BN, BED, OSFED) receive evidence-based
+  psychotherapy treatments including cognitive-behavioral therapy (CBT), family-based
+  therapy (FBT), dialectical behavioral therapy (DBT), or psychodynamic therapy'
+- 'Step 2: These therapies target core eating disorder pathology through specific
+  mechanisms - CBT addresses maladaptive cognitions and behaviors around food/body
+  image, FBT mobilizes family support for adolescent recovery, DBT builds emotion
+  regulation skills, and psychodynamic therapy addresses underlying psychological
+  conflicts'
+- 'Step 3: Treatment engagement leads to symptom reduction in purging behaviors, binge
+  eating, and normalization of body weight status'
+- 'Step 4: Sustained therapeutic intervention over time results in measurable recovery
+  outcomes, with recovery rates improving from 42% at <2 years to 67% at ≥10 years
+  follow-up'
+evidence:
+  quality_rating: A
+  n_studies: 415
+  primary_citation: 'Marco Solmi et al. 2024. Outcomes in people with eating disorders:
+    a transdiagnostic and disorder‐specific systematic review, meta‐analysis and multivariable
+    meta‐regression analysis. World Psychiatry.'
+  supporting_citations: []
+description: 'This comprehensive meta-analysis of 415 studies (N=88,372) demonstrates
+  that evidence-based psychotherapies including CBT, FBT, DBT, and psychodynamic therapy
+  are associated with higher recovery rates in eating disorders. Overall recovery
+  occurred in 46% of patients, with rates improving over time. Specific treatment-outcome
+  associations were identified: FBT, CBT, psychodynamic therapy, and nutritional interventions
+  for AN; CBT, DBT, psychodynamic therapy, self-help, and nutritional/pharmacological
+  treatments for BN; CBT, DBT, and nutritional/pharmacological interventions for BED;
+  and CBT and psychodynamic therapy for OSFED. Notably, waiting list conditions were
+  associated with higher mortality in AN, underscoring the importance of timely access
+  to evidence-based treatment.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.46
+    type: proportion_recovered
+    ci_lower: 0.44
+    ci_upper: 0.49
+  p_value: null
+  sample_size: 88372
+moderators:
+- name: Age group
+  direction: strengthens
+  strength: strong
+  description: Children/adolescents had more favorable outcomes across and within
+    eating disorders than adults
+- name: Self-injurious behaviors
+  direction: weakens
+  strength: moderate
+  description: Self-injurious behaviors were associated with lower recovery rates
+    in pooled eating disorders
+- name: Treatment duration/follow-up
+  direction: strengthens
+  strength: strong
+  description: 'Recovery rates increased substantially with longer follow-up: 42%
+    at <2 years to 67% at ≥10 years'
+- name: Eating disorder type
+  direction: varies
+  strength: moderate
+  description: Specific treatments showed differential effectiveness by ED type -
+    FBT particularly effective for AN, DBT for BN and BED

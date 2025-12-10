@@ -1,0 +1,55 @@
+id: NEW:psychological_smoking_cessation_intervention_incarcerated_to_smoking_cessation_attempts
+name: Psychological Smoking Cessation Interventions for Incarcerated Populations → Smoking Cessation Attempts
+from_node:
+  node_id: NEW:psychological_smoking_cessation_intervention_incarcerated
+  node_name: Psychological Smoking Cessation Interventions for Incarcerated Populations
+to_node:
+  node_id: smoking_cessation_attempts
+  node_name: Smoking Cessation Attempts
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Psychological interventions are delivered to incarcerated smokers'
+- 'Step 2: Interventions enhance motivation, self-efficacy, and coping skills for quitting'
+- 'Step 3: Participants make structured quit attempts with professional support'
+- 'Step 4: Pooled abstinence rate of 18.8% indicates successful cessation attempts across follow-up periods'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: 'Mélanie Rome et al. 2025. "Effectiveness of psychological interventions for smoking
+    cessation among incarcerated population: A systematic review and meta-analysis.." https://doi.org/10.1016/j.drugalcdep.2025.112941'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Pooled analysis across 11 studies with varying follow-up periods
+  - Seven RCTs comparing intervention to control conditions
+  doi: 10.1016/j.drugalcdep.2025.112941
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The pooled post-intervention abstinence rate across follow-up periods was 18.8% (95% CI [15.5,
+  22.1]), indicating that psychological interventions can facilitate smoking cessation attempts among
+  incarcerated populations. However, moderate to high heterogeneity was observed.
+quantitative_effects:
+  effect_size:
+    value: 18.8
+    type: percentage_change
+    ci_lower: 15.5
+    ci_upper: 22.1
+  sample_size: 2688
+moderators:
+- name: follow_up_period
+  direction: weakens
+  strength: moderate
+  description: Meta-regression examined effect of follow-up duration on abstinence, suggesting variation
+    across time points
+structural_competency:
+  equity_implications: This finding demonstrates that incarcerated individuals can successfully quit smoking
+    when provided appropriate support, challenging stereotypes about this population's capacity for health
+    behavior change. The structural barrier is not individual motivation but rather access to evidence-based
+    interventions. Investment in correctional health services represents an equity-promoting approach
+    to reducing smoking-related health disparities in a population with concentrated health burdens.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.697373'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,50 @@
+id: physical_activity_engagement_any_to_NEW:covid_19_icu_admission_rate
+name: Physical Activity Engagement → COVID-19 ICU Admission Rate
+from_node:
+  node_id: physical_activity_engagement_any
+  node_name: Physical Activity Engagement
+to_node:
+  node_id: NEW:covid_19_icu_admission_rate
+  node_name: COVID-19 ICU Admission Rate
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Regular physical activity prior to COVID-19 infection enhances baseline
+  immune function and reduces chronic inflammation'
+- 'Step 2: Improved cardiorespiratory fitness from exercise increases physiological
+  reserve and oxygen utilization capacity'
+- 'Step 3: Physical activity reduces comorbidities (obesity, cardiovascular disease,
+  diabetes) that are risk factors for severe COVID-19'
+- 'Step 4: Enhanced immune regulation and reduced systemic inflammation attenuate
+  the severity of COVID-19 infection'
+- 'Step 5: Lower disease severity translates to reduced need for intensive care unit
+  admission among physically active individuals'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'M. Rahmati et al. 2022. Baseline physical activity is associated
+    with reduced mortality and disease outcomes in COVID‐19: A systematic review and
+    meta‐analysis. Reviews in Medical Virology.'
+  supporting_citations: []
+description: A meta-analysis of 12 studies involving over 1.25 million COVID-19 patients
+  found that physically active individuals had a 35% lower risk of ICU admission compared
+  to inactive individuals. This protective effect is likely mediated through improved
+  immune function, enhanced cardiorespiratory fitness, reduced chronic inflammation,
+  and lower prevalence of comorbidities among physically active people.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.65
+    type: relative_risk
+    ci_lower: 0.52
+    ci_upper: 0.81
+  p_value: 0.001
+  sample_size: 1256609
+moderators:
+- name: Exercise type
+  direction: strengthens
+  strength: moderate
+  description: Resistance exercise showed particularly strong protective effects (RR
+    = 0.27 for hospitalization), suggesting different exercise modalities may confer
+    varying degrees of protection

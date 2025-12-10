@@ -1,0 +1,51 @@
+id: NEW:sev_mir421_release_to_NEW:cardiac_ace2_suppression
+name: Small Extracellular Vesicle miR-421 Release → Cardiac ACE2 Suppression
+from_node:
+  node_id: NEW:sev_mir421_release
+  node_name: Small Extracellular Vesicle miR-421 Release
+to_node:
+  node_id: NEW:cardiac_ace2_suppression
+  node_name: Cardiac ACE2 Suppression
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: PM2.5 exposure causes lung injury and triggers bronchial epithelial cells
+  to release small extracellular vesicles (sEV) containing miR-421'
+- 'Step 2: sEV-enclosed miR-421 enters systemic circulation and is transported from
+  the respiratory system to the heart'
+- 'Step 3: miR-421 delivered via sEV directly targets and suppresses cardiac angiotensin
+  converting enzyme 2 (ACE2) expression'
+- 'Step 4: ACE2 suppression in cardiomyocytes leads to myocardial cell apoptosis and
+  cardiac dysfunction'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Hongyun Wang et al. 2022. Extracellular vesicles enclosed‐miR‐421
+    suppresses air pollution (PM2.5)‐induced cardiac dysfunction via ACE2 signalling.
+    Journal of Extracellular Vesicles.
+  supporting_citations: []
+description: Small extracellular vesicles (sEV) released from PM2.5-injured lung tissue
+  carry miR-421 to the heart, where it directly suppresses ACE2 expression. This lung-heart
+  crosstalk mechanism was demonstrated through intratracheal instillation in vivo,
+  organ culture ex vivo, and human bronchial epithelial cell culture in vitro. SP-IRIS
+  analysis confirmed PM2.5 increased CD63/CD81/CD9 positive particles. ACE2 was identified
+  as a direct downstream target of sEV-miR421, with suppression leading to myocardial
+  cell apoptosis and cardiac dysfunction.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: GW4869 (sEV release inhibitor)
+  direction: weakens
+  strength: strong
+  description: GW4869 treatment attenuates PM2.5-induced cardiac dysfunction by blocking
+    sEV release
+- name: Diminazene aceturate (DIZE, ACE2 activator)
+  direction: weakens
+  strength: strong
+  description: DIZE treatment attenuates PM2.5-induced cardiac dysfunction by restoring
+    ACE2 activity
+- name: AAV9-miR421-sponge
+  direction: weakens
+  strength: strong
+  description: Inhibition of miR-421 by AAV9-miR421-sponge significantly reverses
+    PM2.5-induced cardiac dysfunction

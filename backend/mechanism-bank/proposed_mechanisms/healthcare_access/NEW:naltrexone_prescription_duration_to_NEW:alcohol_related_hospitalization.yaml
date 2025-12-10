@@ -1,0 +1,53 @@
+id: NEW:naltrexone_prescription_duration_to_NEW:alcohol_related_hospitalization
+name: Duration of Naltrexone Prescription → Alcohol-Related Hospitalization
+from_node:
+  node_id: NEW:naltrexone_prescription_duration
+  node_name: Duration of Naltrexone Prescription
+to_node:
+  node_id: NEW:alcohol_related_hospitalization
+  node_name: Alcohol-Related Hospitalization
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Longer duration of naltrexone prescription (>30 days) provides sustained
+  opioid receptor blockade, which reduces the rewarding effects of alcohol consumption'
+- 'Step 2: Reduced reward from alcohol consumption leads to decreased cravings and
+  lower rates of heavy drinking episodes'
+- 'Step 3: Sustained medication adherence allows for better management of alcohol
+  use disorder with improved liver enzyme levels (reduced AST and ALT)'
+- 'Step 4: Lower rates of heavy drinking and improved liver function reduce the likelihood
+  of acute alcohol-related medical emergencies requiring hospitalization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'D. Ayyala et al. 2022. "Naltrexone for alcohol use disorder:
+    Hepatic safety in patients with and without liver disease." Hepatology Communications.'
+  supporting_citations: []
+description: Shorter duration of naltrexone prescription (≤30 days) is independently
+  associated with increased risk of subsequent alcohol-related hospitalization. Patients
+  prescribed naltrexone for longer periods showed improved liver enzymes (lower AST
+  and ALT) and reduced hospitalization rates, suggesting that sustained pharmacotherapy
+  for alcohol use disorder provides protective effects against acute alcohol-related
+  medical events requiring hospitalization.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.5
+    type: hazard_ratio
+    ci_lower: 1.12
+    ci_upper: 5.2
+  p_value: 0.01
+  sample_size: 160
+moderators:
+- name: liver_disease_status
+  direction: strengthens
+  strength: strong
+  description: Patients with liver disease (HR 3.70) and cirrhosis (HR 5.16) had significantly
+    higher hospitalization rates, suggesting liver disease status is a strong moderator
+    of the relationship between naltrexone duration and hospitalization risk
+- name: cirrhosis_compensation_status
+  direction: strengthens
+  strength: moderate
+  description: Decompensated cirrhosis patients showed highest 2-year hospitalization
+    rates (41.7%) compared to those without liver disease (8.2%)

@@ -1,0 +1,50 @@
+id: NEW:healthcare_access_sdoh_to_NEW:lupus_nephritis_outcomes
+name: Healthcare Access SDoH Domain → Lupus Nephritis Outcomes
+from_node:
+  node_id: NEW:healthcare_access_sdoh
+  node_name: Healthcare Access SDoH Domain
+to_node:
+  node_id: NEW:lupus_nephritis_outcomes
+  node_name: Lupus Nephritis Outcomes
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Limited access to rheumatology and nephrology specialists delays appropriate diagnosis and
+  treatment'
+- 'Step 2: Healthcare deserts and provider shortages reduce frequency of monitoring and early intervention'
+- 'Step 3: Inadequate access leads to delayed recognition of disease flares and complications'
+- 'Step 4: Progressive renal damage accumulates leading to end-stage renal disease'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'Shivani Garg et al. 2024. "Multiplicative Impact of Adverse Social Determinants of
+    Health on Outcomes in Lupus Nephritis: A Meta‐analysis and Systematic Review." https://doi.org/10.1002/acr.25359'
+  supporting_citations:
+  - Additional citations require full-text access - healthcare access domain analyses from included studies
+  - Studies on specialist access and lupus outcomes
+  - Studies on healthcare utilization in autoimmune kidney disease
+  doi: 10.1002/acr.25359
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Healthcare access as an SDoH domain affects lupus nephritis outcomes through specialist availability,
+  care continuity, and timely intervention
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Healthcare access varies significantly by geographic location, with rural and underserved
+    urban areas having less specialist availability
+moderators:
+- name: Specialist density
+  direction: weakens
+  strength: moderate
+  description: Greater availability of rheumatologists and nephrologists may attenuate negative outcomes
+structural_competency:
+  equity_implications: Healthcare access barriers reflect structural issues in healthcare system organization,
+    geographic distribution of specialists, and insurance coverage policies. Addressing these requires
+    health system redesign, telehealth expansion, and workforce distribution policies rather than expecting
+    patients to overcome access barriers individually.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.923662'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

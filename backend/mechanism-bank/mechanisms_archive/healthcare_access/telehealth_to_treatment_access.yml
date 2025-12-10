@@ -1,0 +1,88 @@
+id: telehealth_to_treatment_access
+name: Telehealth/Virtual Care → Treatment Access
+from_node:
+  node_id: telehealth_availability
+  node_name: Telehealth/Virtual Care Availability
+  node_type: stock
+to_node:
+  node_id: treatment_access
+  node_name: Treatment Access and Retention
+  node_type: stock
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Virtual care eliminates transportation barriers that prevent in-person attendance'
+- 'Step 2: Flexible scheduling accommodates work and childcare obligations that conflict with clinic hours'
+- 'Step 3: Reduced wait times and immediate access options enable same-day treatment initiation'
+- 'Step 4: Lower barrier to entry increases treatment engagement for stigmatized conditions'
+- 'Step 5: Improved access and convenience leads to better treatment retention and outcomes'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: 'Day, Nathaniel, et al. 2022. ''Virtual opioid agonist treatment: Alberta''s virtual
+    opioid dependency program and outcomes.'' Addiction Science & Clinical Practice 17: 40.'
+  supporting_citations:
+  - 'Frueh, B. Christopher. 2015. ''Solving Mental Healthcare Access Problems in the Twenty-first Century.''
+    Australian Psychologist 50(4): 262-264.'
+  doi: 10.1186/s13722-022-00323-4
+  journal: Addiction Science &amp; Clinical Practice
+  year: 2022
+  fulltext:
+    available: true
+    source: unpaywall
+    url: https://ascpjournal.biomedcentral.com/counter/pdf/10.1186/s13722-022-00323-4
+    is_open_access: true
+    fetched_date: '2025-11-30'
+    license: cc-by
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '1.0'
+description: Virtual/telehealth care delivery significantly improves treatment access and retention. Alberta's
+  Virtual Opioid Dependency Program demonstrated rapid growth, 90% 6-month retention, and 58% 12-month
+  retention. Same-day start reduced median wait from 6 days to 0 days. Virtual care is particularly effective
+  for behavioral health, chronic disease management, and populations facing geographic or stigma barriers.
+moderators:
+- name: broadband_access
+  direction: strengthens
+  strength: strong
+  description: Reliable internet access required for video-based telehealth
+- name: digital_literacy
+  direction: strengthens
+  strength: moderate
+  description: Comfort with technology affects engagement with virtual care
+- name: condition_type
+  direction: strengthens
+  strength: moderate
+  description: Behavioral health and medication management particularly suited to virtual delivery
+- name: hybrid_model_availability
+  direction: strengthens
+  strength: moderate
+  description: Combined virtual and in-person options maximize access for diverse needs
+structural_competency:
+  root_cause_level: institutional
+  avoids_victim_blaming: true
+  equity_implications: Telehealth can reduce geographic and transportation barriers but may create new
+    digital divide disparities. Implementation must address broadband access, device availability, and
+    digital literacy to avoid excluding low-income and elderly populations. Policy should ensure telehealth
+    reimbursement parity and audio-only options for those without video capability.
+assumptions:
+- Telehealth includes video visits, phone consultations, and asynchronous messaging
+- Treatment access measured by initiation rates, wait times, and retention
+- Assumes adequate technology infrastructure and reimbursement policies
+limitations:
+- Some conditions require in-person examination or procedures
+- Digital divide may exclude vulnerable populations
+- Long-term outcomes data still emerging for many conditions
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Telehealth impact varies based on broadband infrastructure, state licensing laws, and
+    baseline access barriers.
+  relevant_geographies:
+  - Rural areas show largest access improvements from telehealth
+  - States with telehealth parity laws show higher utilization
+  - Areas with limited specialty care benefit most from virtual specialty access
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

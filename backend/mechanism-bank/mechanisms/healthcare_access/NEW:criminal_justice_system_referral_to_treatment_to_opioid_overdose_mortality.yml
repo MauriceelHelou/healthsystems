@@ -1,0 +1,57 @@
+id: NEW:criminal_justice_system_referral_to_treatment_to_opioid_overdose_mortality
+name: Criminal Justice System Referral to OUD Treatment → Opioid Overdose Mortality
+from_node:
+  node_id: NEW:criminal_justice_system_referral_to_treatment
+  node_name: Criminal Justice System Referral to OUD Treatment
+to_node:
+  node_id: opioid_overdose_mortality
+  node_name: Opioid Overdose Mortality
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Criminal justice system refers individuals with OUD to treatment programs'
+- 'Step 2: Structural barriers in criminal justice-referred treatment result in lower MOUD utilization'
+- 'Step 3: Without MOUD, individuals experience higher rates of treatment dropout and relapse'
+- 'Step 4: Lack of medication-based treatment increases vulnerability to opioid overdose'
+- 'Step 5: Population-level overdose mortality rates remain elevated in this subgroup'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. T. Donahoe et al. 2024. "Disparities in Medication Use for Criminal Justice System–Referred
+    Opioid Use Disorder Treatment." https://doi.org/10.1001/jamahealthforum.2024.2807
+  supporting_citations:
+  - Additional citations require full-text access - abstract references poor outcomes in criminal justice-involved
+    population
+  - Additional citations require full-text access - evidence base on MOUD reducing overdose mortality
+  - Additional citations require full-text access - literature on treatment disparities and health outcomes
+  doi: 10.1001/jamahealthforum.2024.2807
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The pathway from criminal justice referral through reduced MOUD access ultimately contributes
+  to poor health outcomes including overdose mortality. The abstract explicitly notes that targeted efforts
+  are needed to address 'poor outcomes experienced by this population,' implying mortality and morbidity
+  consequences of the treatment disparity.
+quantitative_effects:
+  sample_size: 3000000
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Geographic variation noted across states in both the treatment disparity and presumably
+    downstream outcomes
+moderators:
+- name: drug_court_availability
+  direction: weakens
+  strength: moderate
+  description: Drug court programs that mandate or encourage MOUD may reduce the disparity in treatment
+    approaches
+structural_competency:
+  equity_implications: This mechanism illustrates how carceral systems perpetuate health inequities through
+    institutional practices that restrict evidence-based treatment. Individuals with criminal justice
+    involvement already face compounded disadvantages, and the treatment gap represents an additional
+    structural harm. The solution requires policy-level intervention to mandate MOUD access in criminal
+    justice settings rather than blaming individuals for treatment non-response.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.550912'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

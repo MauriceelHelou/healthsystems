@@ -1,0 +1,61 @@
+id: NEW:alcohol_related_steatosis_to_liver_failure_cirrhosis_hospitalization
+name: Alcohol-Related Steatosis → Liver Cirrhosis
+from_node:
+  node_id: NEW:alcohol_related_steatosis
+  node_name: Alcohol-Related Steatosis
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Cirrhosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption leads to alcohol-related steatosis (fatty liver),
+  characterized by fat accumulation in hepatocytes'
+- 'Step 2: Continued alcohol exposure in the presence of steatosis promotes oxidative
+  stress, lipid peroxidation, and inflammatory cytokine release'
+- 'Step 3: Persistent inflammation can progress to alcohol-related steatohepatitis
+  (ASH) with hepatocyte injury and immune cell infiltration'
+- 'Step 4: Repeated cycles of injury and repair activate hepatic stellate cells, leading
+  to progressive fibrosis'
+- 'Step 5: Progressive fibrosis ultimately results in cirrhosis with architectural
+  distortion, nodule formation, and impaired liver function'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Richard Parker 2020. The natural history of alcohol-related liver
+    disease. Current opinion in gastroenterology.
+  supporting_citations: []
+description: Alcohol-related steatosis represents the most common and earliest stage
+  of alcohol-related liver disease (ArLD). While associated with a relatively low
+  annual progression rate to cirrhosis (approximately 3% per year), it serves as the
+  necessary precursor stage in the disease continuum. The progression involves ongoing
+  hepatocyte injury, inflammation, and fibrogenesis that can ultimately lead to cirrhosis.
+  Notably, patients with alcohol-related steatosis have higher rates of non-liver-related
+  morbidity (4% per year) compared to liver-related complications (1% per year), but
+  progression to cirrhosis significantly worsens outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.0
+    type: incidence_rate
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: Obesity
+  direction: strengthens
+  strength: strong
+  description: Obesity is the most common comorbid factor that lowers the threshold
+    for alcohol-related liver disease development and accelerates progression
+- name: Continued alcohol consumption
+  direction: strengthens
+  strength: strong
+  description: Ongoing alcohol use above threshold levels promotes disease progression
+    from steatosis to more advanced stages
+- name: Presence of steatohepatitis
+  direction: strengthens
+  strength: strong
+  description: Alcohol-related steatohepatitis indicates more active disease with
+    higher rates of progression to cirrhosis compared to simple steatosis

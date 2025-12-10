@@ -1,0 +1,43 @@
+id: genotype_guided_naltrexone_allocation_to_alcohol_use_disorder_relapse_rate
+name: Genotype-Guided Naltrexone Treatment Allocation → Alcohol Use Disorder Relapse
+  Rate
+from_node:
+  node_id: genotype_guided_naltrexone_allocation
+  node_name: Genotype-Guided Naltrexone Treatment Allocation
+to_node:
+  node_id: alcohol_use_disorder_relapse_rate
+  node_name: Alcohol Use Disorder Relapse Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: OPRM1 genotype testing identifies patients carrying G-allele variant (c.118A>G)
+  who have differential pharmacological response to naltrexone'
+- 'Step 2: G-allele carriers are preferentially allocated to naltrexone therapy, while
+  AA homozygotes receive acamprosate or naltrexone'
+- 'Step 3: Genotype-matched treatment allocation improves pharmacological effectiveness
+  through optimized opioid receptor interaction in G-allele carriers'
+- 'Step 4: Enhanced medication response reduces relapse rates and improves treatment
+  outcomes for alcohol use disorders'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: R. L. Sluiter et al. 2018. "Cost-Effectiveness Analysis of Genotype-Guided
+    Treatment Allocation in Patients with Alcohol Use Disorders Using Naltrexone or
+    Acamprosate, Using a Modeling Approach." *European Addiction Research*. https://doi.org/10.1159/000494127
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.659619'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: risk_ratio_to_relapse
+  direction: strengthens
+  strength: strong
+  description: Sensitivity analyses identified risk ratio to relapse after treatment
+    allocation as having the largest impact on cost-effectiveness of the intervention
+- name: willingness_to_pay_threshold
+  direction: strengthens
+  strength: moderate
+  description: Probability that genotype-guided intervention is cost-effective varies
+    between 6% and 79% depending on the willingness to pay for one QALY gained

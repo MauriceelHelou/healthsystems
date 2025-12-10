@@ -1,0 +1,60 @@
+id: NEW:alcohol_attributable_medical_comorbidity_any_to_sud_medication_treatment_rate_oud
+name: Any Alcohol-Attributable Medical Comorbidity → AUD Pharmacotherapy Receipt Rate
+from_node:
+  node_id: NEW:alcohol_attributable_medical_comorbidity_any
+  node_name: Any Alcohol-Attributable Medical Comorbidity
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: AUD Pharmacotherapy Receipt Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients develop alcohol-attributable medical conditions as a consequence of AUD'
+- 'Step 2: Medical comorbidities may shift clinical focus toward acute medical management rather than
+  addiction treatment'
+- 'Step 3: Specialist care silos may separate addiction treatment from medical management'
+- 'Step 4: Prescribers in specialist care settings may feel uncertain about initiating AUD medications'
+- 'Step 5: Structural barriers result in paradoxically lower AUD treatment rates among those with greatest
+  medical need'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Månsson et al. 2024. "Pharmacotherapy for alcohol use disorder among adults with
+    medical disorders in Sweden." https://doi.org/10.1186/s13722-024-00471-9
+  supporting_citations:
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  doi: 10.1186/s13722-024-00471-9
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Across all categories of alcohol-attributable medical diagnoses, patients in specialist care
+  with AUD and comorbidities receive significantly less pharmacotherapy than those without comorbidities,
+  representing systematic underutilization of evidence-based treatment.
+quantitative_effects:
+  sample_size: 132728
+moderators:
+- name: type_of_comorbidity
+  direction: strengthens
+  strength: strong
+  description: Cardiovascular comorbidities show strongest reduction in treatment access (OR 0.41), followed
+    by neurological (OR 0.52) and gastrointestinal (OR 0.57)
+- name: contraindication_presence
+  direction: weakens
+  strength: moderate
+  description: Some reduction attributable to legitimate contraindications, but this does not fully explain
+    the treatment gap
+structural_competency:
+  equity_implications: 'This overarching pattern demonstrates a fundamental structural inequity in healthcare
+    delivery: the paradox of inverse care where those with greatest medical complexity and need receive
+    least access to effective treatment. The findings call for systemic interventions including better
+    integration of addiction medicine into specialist care, clearer clinical guidelines for complex patients,
+    and policy reforms to address prescriber barriers. The undertreatment cannot be attributed to patient
+    factors but represents healthcare system failure that perpetuates health inequities and preventable
+    morbidity and mortality.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.148616'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

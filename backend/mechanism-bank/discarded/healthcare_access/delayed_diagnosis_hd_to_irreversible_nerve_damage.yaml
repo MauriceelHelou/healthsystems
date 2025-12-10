@@ -1,0 +1,50 @@
+id: delayed_diagnosis_hd_to_irreversible_nerve_damage
+name: Delayed Diagnosis of Hansen's Disease → Irreversible Nerve Damage
+from_node:
+  node_id: delayed_diagnosis_hd
+  node_name: Delayed Diagnosis of Hansen's Disease
+to_node:
+  node_id: irreversible_nerve_damage
+  node_name: Irreversible Nerve Damage
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Traditional palpation examination is subjective and fails to detect nerve
+  thickening in earliest cases even when performed by well-trained professionals'
+- 'Step 2: Silent (subclinical) peripheral neuropathy progresses undetected in household
+  contacts who appear asymptomatic'
+- 'Step 3: Without early diagnosis, HD-induced nerve inflammation and damage continues
+  unchecked'
+- 'Step 4: By time clinical signs are detectable by palpation, irreversible structural
+  nerve changes have occurred including focal thickening and asymmetric mononeuropathy'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: G. Voltan et al. 2023. "Silent peripheral neuropathy determined
+    by high-resolution ultrasound among contacts of patients with Hansen's disease."
+    *Frontiers in Medicine*. https://doi.org/10.3389/fmed.2022.1059448
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.277445'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: hrus_availability
+  direction: weakens
+  strength: strong
+  description: Access to high-resolution ultrasound enables earlier detection of silent
+    neuropathy before irreversible damage occurs
+- name: contact_screening_programs
+  direction: weakens
+  strength: moderate
+  description: Systematic screening of household contacts can identify subclinical
+    cases earlier than waiting for symptom development
+- name: healthcare_infrastructure
+  direction: weakens
+  strength: strong
+  description: Better healthcare system capacity for early diagnosis and specialized
+    testing reduces diagnostic delays
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/delayed_diagnosis_hd_to_irreversible_nerve_damage.yaml
+_category: healthcare_access

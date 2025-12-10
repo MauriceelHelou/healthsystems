@@ -1,0 +1,49 @@
+id: housing_quality_index_revised_consolidated_to_sleep_duration_inadequate
+name: Housing Conditions → Inadequate Sleep
+from_node:
+  node_id: housing_quality_index_revised_consolidated
+  node_name: Housing Conditions
+to_node:
+  node_id: sleep_duration_inadequate
+  node_name: Inadequate Sleep
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Poor housing conditions create physical environmental stressors including
+  noise, inadequate temperature control, overcrowding, and uncomfortable sleeping
+  arrangements'
+- 'Step 2: These environmental stressors directly interfere with sleep onset, sleep
+  maintenance, and sleep quality through disruption of circadian rhythms and frequent
+  awakenings'
+- 'Step 3: Additionally, poor housing conditions contribute to psychological distress
+  and anxiety which further impair sleep through rumination, hyperarousal, and difficulty
+  relaxing'
+- 'Step 4: The combination of physical and psychological disruptions leads to inadequate
+  sleep duration and poor sleep quality among residents of substandard housing'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: 'I. Franzoi et al. 2022. Housing conditions and psychological
+    distress among higher education students: a systematic literature review. Journal
+    of Further and Higher Education.'
+  supporting_citations: []
+description: This systematic review identified sleep as one of ten key health outcome
+  categories affected by student housing conditions. Poor housing conditions were
+  associated with sleep problems through both direct environmental pathways (noise,
+  comfort, overcrowding) and indirect psychological pathways (stress, anxiety, distress).
+  The review emphasized housing as one of the most important areas related to individual
+  well-being, with sleep being a critical intermediary between housing quality and
+  broader health outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: student_status
+  direction: strengthens
+  strength: moderate
+  description: Effects examined specifically in higher education student populations
+    who may have unique housing vulnerabilities and stressors
+- name: housing_type
+  direction: strengthens
+  strength: moderate
+  description: Different housing arrangements (dormitories, shared housing, off-campus)
+    may differentially affect sleep outcomes

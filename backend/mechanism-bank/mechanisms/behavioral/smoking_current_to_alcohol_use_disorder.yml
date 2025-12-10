@@ -1,0 +1,66 @@
+id: smoking_current_to_alcohol_use_disorder
+name: Current Smoking → Alcohol Use Disorder
+from_node:
+  node_id: smoking_current
+  node_name: Current Smoking
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Smoking and alcohol use share common neurobiological reward pathways involving dopamine release'
+- 'Step 2: Nicotine may enhance the reinforcing effects of alcohol through cross-sensitization mechanisms'
+- 'Step 3: Social environments that normalize smoking often also normalize heavy drinking'
+- 'Step 4: Shared genetic and environmental risk factors predispose individuals to both behaviors'
+- 'Step 5: Co-use patterns lead to increased alcohol consumption and higher risk of developing AUD'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Getaneh Mulualem Belay et al. 2023. "Magnitude and determinants of alcohol use disorder
+    among adult population in East Asian countries: A systematic review and meta-analysis." https://doi.org/10.3389/fpubh.2023.1144012'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 14 primary studies from East
+    Asian countries
+  - Studies from Korea, China, Japan, Taiwan, and Mongolia included in systematic review
+  - Individual study citations available in full-text supplementary materials
+  doi: 10.3389/fpubh.2023.1144012
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Smoking is a significant determinant of alcohol use disorder in East Asian adult populations.
+  Current smokers have nearly 4 times the odds of developing AUD compared to non-smokers, reflecting shared
+  biological vulnerability, social environmental factors, and behavioral co-occurrence patterns.
+quantitative_effects:
+  effect_size:
+    value: 3.99
+    type: odds_ratio
+    ci_lower: 1.65
+    ci_upper: 6.33
+  sample_size: 93161
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted across East Asian countries (Korea, China, Japan, Taiwan, Mongolia)
+    with highest AUD prevalence observed in Korea
+moderators:
+- name: country
+  direction: strengthens
+  strength: moderate
+  description: Korea showed highest 1-year (9.78%) and lifetime (16.73%) AUD prevalence compared to other
+    East Asian countries
+- name: gender
+  direction: strengthens
+  strength: strong
+  description: Male gender independently associated with AUD (OR 5.9), suggesting smoking-AUD relationship
+    may be modified by gender
+structural_competency:
+  equity_implications: This mechanism reflects structural factors including tobacco and alcohol industry
+    marketing practices, cultural norms around substance use in East Asian societies, and limited integration
+    of tobacco-alcohol treatment services. The co-occurrence suggests need for comprehensive substance
+    use policies rather than siloed interventions. Workplace cultures and social drinking norms in some
+    East Asian countries may reinforce both behaviors.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.291763'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

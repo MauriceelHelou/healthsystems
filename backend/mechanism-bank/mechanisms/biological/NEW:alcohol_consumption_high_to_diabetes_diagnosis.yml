@@ -1,0 +1,57 @@
+id: NEW:alcohol_consumption_high_to_diabetes_diagnosis
+name: High Alcohol Consumption → Diabetes Diagnosis
+from_node:
+  node_id: NEW:alcohol_consumption_high
+  node_name: High Alcohol Consumption
+to_node:
+  node_id: diabetes_diagnosis
+  node_name: Diabetes Diagnosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: High alcohol consumption (above 49g/day) exceeds metabolic threshold'
+- 'Step 2: Chronic high alcohol intake leads to pancreatic damage and impaired insulin secretion'
+- 'Step 3: Hepatic dysfunction from alcohol affects glucose homeostasis'
+- 'Step 4: Loss of protective effect and potential increased diabetes risk at high consumption levels'
+evidence:
+  quality_rating: A
+  n_studies: 55
+  primary_citation: 'Laura Llamosas-Falcón et al. 2023. "The Relationship Between Alcohol Consumption,
+    BMI, and Type 2 Diabetes: A Systematic Review and Dose-Response Meta-analysis.." https://doi.org/10.2337/dc23-1015'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Dose-response modeling across 55 cohort studies
+  - Combined sample size exceeding 2.6 million participants
+  doi: 10.2337/dc23-1015
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The J-shaped relationship indicates that while moderate consumption shows protection, the
+  protective association ceases above 49g of alcohol per day in women. At this threshold, RR was 0.82
+  (95% CI 0.68-0.99), barely maintaining statistical significance for any protective effect.
+quantitative_effects:
+  effect_size:
+    value: 0.82
+    type: relative_risk
+    ci_lower: 0.68
+    ci_upper: 0.99
+  sample_size: 1290628
+moderators:
+- name: dose_threshold
+  direction: weakens
+  strength: strong
+  description: At 49g/day, the protective association ceases (RR 0.82, 95% CI 0.68-0.99 - barely significant),
+    indicating the threshold where protection disappears
+structural_competency:
+  equity_implications: High alcohol consumption is not randomly distributed in the population. Structural
+    factors including alcohol outlet density in low-income neighborhoods, targeted marketing to marginalized
+    communities, lack of access to mental health services, and economic stressors contribute to patterns
+    of harmful alcohol use. The loss of any protective effect at high consumption levels, combined with
+    well-documented harms of heavy drinking, underscores the importance of structural interventions (pricing
+    policies, outlet density restrictions, marketing regulations) rather than individual behavior change
+    messaging.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.319786'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

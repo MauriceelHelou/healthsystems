@@ -1,0 +1,70 @@
+id: NEW:whole_of_community_aod_intervention_to_alcohol_use_disorder
+name: Whole-of-Community Alcohol and Other Drug Intervention → Alcohol Use Disorder
+from_node:
+  node_id: NEW:whole_of_community_aod_intervention
+  node_name: Whole-of-Community Alcohol and Other Drug Intervention
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Whole-of-community interventions mobilize community leaders, organizations, and policy-makers
+  across multiple settings (schools, sporting clubs, police, retail premises)'
+- 'Step 2: Coordinated interventions create environmental changes that reduce alcohol availability, marketing
+  exposure, and social acceptability of risky drinking'
+- 'Step 3: Changes in community norms and enforcement reduce opportunities for problematic drinking patterns'
+- 'Step 4: Population-level reduction in risky drinking (AUDIT >8) as measured by validated screening
+  tools'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'E. Stockings et al. 2018. "Whole‐of‐community interventions to reduce population‐level
+    harms arising from alcohol and other drug use: a systematic review and meta‐analysis." https://doi.org/10.1111/add.14277'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 63 publications from 24 trials
+  - Studies implemented in schools, sporting clubs, police/law enforcement, community centres, local media,
+    retail premises
+  - Meta-analysis included 3 trials with 7 data points for risky drinking outcome
+  doi: 10.1111/add.14277
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Whole-of-community interventions that coordinate efforts across multiple settings (schools,
+  sporting clubs, law enforcement, retail) to address alcohol and other drug use produce significant reductions
+  in risky drinking (AUDIT >8) with a 22% relative risk reduction. This represents a structural approach
+  that modifies environmental and policy factors rather than targeting individual behavior alone.
+quantitative_effects:
+  effect_size:
+    value: 0.78
+    type: relative_risk
+    ci_lower: 0.62
+    ci_upper: 0.99
+  sample_size: 249125
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Interventions were implemented across different community settings including schools,
+    sporting clubs, police agencies, community centres, local media, and retail premises, suggesting geographic
+    and setting-based variation in implementation
+moderators:
+- name: implementation_fidelity
+  direction: strengthens
+  strength: moderate
+  description: High risk of bias due to lack of random allocation, selective reporting, and significant
+    attrition may moderate effect estimates
+- name: number_of_settings
+  direction: strengthens
+  strength: moderate
+  description: Interventions implemented in two or more community settings were required for inclusion,
+    suggesting multi-setting approaches may enhance effectiveness
+structural_competency:
+  equity_implications: This mechanism exemplifies structural intervention by targeting community-level
+    systems rather than individual behavior change. The approach recognizes that alcohol-related harms
+    arise from complex interactions between availability, social norms, enforcement, and environmental
+    factors. By mobilizing multiple stakeholders and modifying the built and social environment simultaneously,
+    these interventions address root causes. However, high risk of bias limits confidence in effect estimates.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.391634'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

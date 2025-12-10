@@ -1,0 +1,51 @@
+id: homelessness_unstable_housing_to_cardiovascular_procedures
+name: Homelessness and Unstable Housing → Cardiovascular Procedures
+from_node:
+  node_id: homelessness_unstable_housing
+  node_name: Homelessness and Unstable Housing
+to_node:
+  node_id: cardiovascular_procedures
+  node_name: Cardiovascular Procedures
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Housing instability reduces access to routine cardiovascular care and specialist visits'
+- 'Step 2: Delayed or missed preventive and management care leads to later-stage disease presentation'
+- 'Step 3: Complex procedures require stable housing for pre-operative preparation and post-operative
+  recovery'
+- 'Step 4: Healthcare providers may defer elective procedures for patients without stable housing due
+  to recovery concerns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Lara J Sokoloff et al. 2024. "Association of Homelessness and Unstable Housing With
+    Cardiovascular Care Utilization Among Veterans.." *Circulation. Cardiovascular quality and outcomes*.
+    https://doi.org/10.1161/CIRCOUTCOMES.124.010993
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1161/CIRCOUTCOMES.124.010993
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '2.0'
+description: Veterans experiencing homelessness and unstable housing had lower rates of receiving certain
+  cardiovascular procedures including coronary artery bypass graft, lower extremity revascularization,
+  and carotid artery stenosis interventions.
+quantitative_effects:
+  sample_size: 1357973
+moderators:
+- name: procedure_type
+  direction: strengthens
+  strength: strong
+  description: Complex procedures requiring post-operative care (coronary artery bypass graft, lower extremity
+    revascularization, carotid artery stenosis interventions) show stronger associations with housing
+    status
+structural_competency:
+  equity_implications: This mechanism reveals how housing instability creates barriers to life-saving
+    cardiovascular interventions. The pattern reflects structural inequities where housing policy failures
+    translate directly into differential access to advanced medical procedures, potentially contributing
+    to worse cardiovascular outcomes among vulnerable populations.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.931869'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

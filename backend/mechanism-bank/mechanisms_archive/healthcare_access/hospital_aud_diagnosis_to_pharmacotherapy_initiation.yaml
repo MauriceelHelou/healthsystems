@@ -1,0 +1,47 @@
+id: hospital_aud_diagnosis_to_pharmacotherapy_initiation
+name: Hospital-Based AUD Diagnosis → Initiation of Evidence-Based AUD Pharmacotherapy
+from_node:
+  node_id: hospital_aud_diagnosis
+  node_name: Hospital-Based AUD Diagnosis
+to_node:
+  node_id: pharmacotherapy_initiation
+  node_name: Initiation of Evidence-Based AUD Pharmacotherapy
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Hospital visit with AUD diagnosis represents healthcare system contact
+  and formal recognition of substance use disorder requiring treatment'
+- 'Step 2: Hospital diagnosis creates opportunity for treatment initiation, discharge
+  planning, and connection to ongoing pharmacotherapy'
+- 'Step 3: Among 10,394 individuals with hospital-based AUD diagnosis eligible for
+  medication coverage, only 37 received first-line medications, indicating 99.6% treatment
+  gap'
+- 'Step 4: Lack of care continuity and integration between acute hospital care and
+  community-based addiction treatment results in missed therapeutic opportunities
+  during critical recovery window'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sheryl Spithoff et al. 2017. "First-line medications for alcohol
+    use disorders among public drug plan beneficiaries in Ontario.." *Canadian family
+    physician Medecin de famille canadien*.
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.690307'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: public_insurance_eligibility
+  direction: weakens
+  strength: strong
+  description: Study population limited to public drug plan beneficiaries (ages 18-65),
+    who may face additional structural barriers including lower socioeconomic status,
+    disability, or social assistance receipt, potentially indicating more complex
+    health and social needs
+- name: age_restriction
+  direction: weakens
+  strength: moderate
+  description: Cohort restricted to ages 18-65, excluding older adults who may have
+    different access patterns through senior drug benefits, suggesting age-based eligibility
+    criteria create access disparities

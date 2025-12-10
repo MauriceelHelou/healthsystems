@@ -1,0 +1,41 @@
+id: nursing_home_closure_to_comprehensive_care_access
+name: Nursing Home Closure → Access to Comprehensive PAC/LTC Services
+from_node:
+  node_id: nursing_home_closure
+  node_name: Nursing Home Closure
+to_node:
+  node_id: comprehensive_care_access
+  node_name: Access to Comprehensive PAC/LTC Services
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Nursing home closure eliminates local provider of both PAC and LTC services'
+- 'Step 2: Alternative providers (home health agencies, swing bed hospitals) may not
+  offer comprehensive service range'
+- 'Step 3: Distance barriers increase even when accounting for all alternative provider
+  types'
+- 'Step 4: Residents face reduced access to full continuum of post-acute and long-term
+  care'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Hari Sharma et al. 2024. "Nursing home closures and access to
+    post-acute care and long-term care services in rural areas.." *Journal of Rural
+    Health*. https://doi.org/10.1111/jrh.12822
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.467888'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: rural_location
+  direction: strengthens
+  strength: strong
+  description: Rural areas have fewer alternative providers, making nursing home closures
+    more impactful on overall access to care continuum
+- name: multiple_provider_types
+  direction: weakens
+  strength: weak
+  description: Presence of home health agencies and swing bed hospitals provides partial
+    mitigation but does not eliminate increased distance barriers

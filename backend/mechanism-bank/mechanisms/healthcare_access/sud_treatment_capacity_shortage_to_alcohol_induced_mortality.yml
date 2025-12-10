@@ -1,0 +1,51 @@
+id: sud_treatment_capacity_shortage_to_alcohol_induced_mortality
+name: SUD Treatment Capacity Shortage → Alcohol-Induced Mortality
+from_node:
+  node_id: sud_treatment_capacity_shortage
+  node_name: SUD Treatment Capacity Shortage
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Treatment services for AUD/PAU are fragmented and challenging to access'
+- 'Step 2: COVID-19 pandemic further disrupted treatment availability while alcohol use increased'
+- 'Step 3: Low utilization of available services due to various service-level barriers'
+- 'Step 4: Untreated alcohol use disorder progresses, leading to increased alcohol-related morbidity and
+  mortality'
+evidence:
+  quality_rating: C
+  n_studies: 0
+  primary_citation: 'D. Wolfe et al. 2022. "Service-level barriers to and facilitators of access to services
+    for the treatment of alcohol use disorder and problematic alcohol use: protocol for a scoping review."
+    https://doi.org/10.1136/bmjopen-2022-064578'
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1136/bmjopen-2022-064578
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The protocol acknowledges that substance use health services for AUD/PAU treatment were fragmented
+  and challenging to access even before the pandemic, with low utilization when services were available.
+  The pandemic increased alcohol use while simultaneously disrupting treatment access.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The review will stratify findings by key measures of inequity across service users,
+    suggesting differential impacts across populations and geographies
+moderators:
+- name: service_type
+  direction: varies
+  strength: moderate
+  description: Different types of treatment services have different barriers and facilitators affecting
+    access
+structural_competency:
+  equity_implications: This mechanism traces alcohol-related mortality to systemic failures in treatment
+    service organization and accessibility. The focus on service-level barriers rather than individual
+    treatment-seeking behavior appropriately locates the problem in structural factors. The review's equity
+    focus recognizes that marginalized populations face compounded barriers.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.712092'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,65 @@
+id: NEW:sbirt_implementation_inpatient_to_30_day_hospital_readmission_rate
+name: Inpatient SBIRT Implementation for Alcohol Use Disorder → 30-Day Hospital Readmission Rate (90-day)
+from_node:
+  node_id: NEW:sbirt_implementation_inpatient
+  node_name: Inpatient SBIRT Implementation for Alcohol Use Disorder
+to_node:
+  node_id: 30_day_hospital_readmission_rate
+  node_name: 30-Day Hospital Readmission Rate (90-day)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Inpatient SBIRT identifies alcohol use disorder and initiates treatment engagement during acute
+  hospitalization'
+- 'Step 2: Brief intervention addresses ambivalence about alcohol use and enhances motivation for change'
+- 'Step 3: Referral to treatment establishes connection to outpatient addiction services for sustained
+  care'
+- 'Step 4: Continued engagement with treatment services supports ongoing abstinence or reduced drinking'
+- 'Step 5: Sustained reduction in alcohol consumption prevents progression of liver disease and need for
+  rehospitalization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Dennis Wang and M. Puglia 2023. "Inpatient Screening, Brief Intervention, and Referral
+    to Treatment for Alcohol Use Disorder in Patients Admitted with Alcohol-associated Liver Disease Is
+    Not Universally Implemented in Practice, But Can Reduce Readmissions for Alcohol-associated Hepatitis."
+    https://doi.org/10.1093/jcag/gwad048
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not provide references to prior SBIRT
+    studies
+  - Additional citations require full-text access - abstract does not reference foundational alcohol-liver
+    disease literature
+  - Additional citations require full-text access - abstract does not cite multidisciplinary care guidelines
+  doi: 10.1093/jcag/gwad048
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Inpatient SBIRT conducted during hospitalization for alcohol-associated hepatitis was associated
+  with an 83% reduction in odds of 90-day readmission (OR 0.166, 95% CI 0.052-0.534, p=0.003). This sustained
+  effect suggests SBIRT may facilitate lasting behavior change or treatment engagement.
+quantitative_effects:
+  effect_size:
+    value: 0.166
+    type: odds_ratio
+    ci_lower: 0.052
+    ci_upper: 0.534
+  p_value: 0.003
+  sample_size: 120
+moderators:
+- name: diagnosis_type
+  direction: strengthens
+  strength: strong
+  description: SBIRT effect was significant for alcohol-associated hepatitis (AAH) but NOT for decompensated
+    alcohol-related cirrhosis (DARLC), suggesting earlier disease stage or reversibility may moderate
+    intervention effectiveness
+structural_competency:
+  equity_implications: The persistence of protective effects at 90 days demonstrates how healthcare system
+    organization shapes long-term outcomes. Patients without SBIRT access face ongoing structural barriers
+    to addiction treatment, perpetuating cycles of hospitalization. This represents a healthcare equity
+    issue - receipt of evidence-based addiction care during hospitalization is determined by institutional
+    protocols and provider practices rather than patient need.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.067740'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

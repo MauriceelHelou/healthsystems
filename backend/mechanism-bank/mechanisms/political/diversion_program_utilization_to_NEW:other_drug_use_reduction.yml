@@ -1,0 +1,63 @@
+id: diversion_program_utilization_to_NEW:other_drug_use_reduction
+name: Diversion Program Utilization → Other Drug Use Reduction
+from_node:
+  node_id: diversion_program_utilization
+  node_name: Diversion Program Utilization
+to_node:
+  node_id: NEW:other_drug_use_reduction
+  node_name: Other Drug Use Reduction
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Diversion programs provide court-mandated or voluntary treatment pathways for drug-using offenders'
+- 'Step 2: Treatment programs address polysubstance use patterns common among class A drug users'
+- 'Step 3: Sustained treatment engagement enables behavioral changes across multiple substances'
+- 'Step 4: Reduction in use of drugs beyond the primary substance of concern'
+evidence:
+  quality_rating: B
+  n_studies: 16
+  primary_citation: 'Karen P Hayhurst et al. 2015. "The effectiveness and cost-effectiveness of diversion
+    and aftercare programmes for offenders using class A drugs: a systematic review and economic evaluation.."
+    https://doi.org/10.3310/hta19060'
+  supporting_citations:
+  - UK Drug Data Warehouse statistics (cited for economic evaluation data)
+  - UK Drug Treatment Outcomes Research Study (cited for outcome data)
+  - Additional citations require full-text access - abstract references 16 included effectiveness studies
+  doi: 10.3310/hta19060
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Diversion programs show larger effect on reducing use of drugs other than the primary substance
+  (OR 2.60, 95% CI 1.70-3.98). This suggests treatment accessed through diversion may have broader impacts
+  on polysubstance use patterns, though evidence quality limitations persist.
+quantitative_effects:
+  effect_size:
+    value: 2.6
+    type: odds_ratio
+    ci_lower: 1.7
+    ci_upper: 3.98
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Evidence predominantly from US (California) methamphetamine users (99.6% of participants).
+    Transferability to UK opiate/cocaine populations uncertain.
+moderators:
+- name: primary_substance
+  direction: strengthens
+  strength: moderate
+  description: Effect sizes stronger for 'other drug use' reduction than primary drug use, suggesting
+    broader treatment benefits
+- name: methodological_limitations
+  direction: weakens
+  strength: strong
+  description: High attrition, retrospective data, limited follow-up periods, and publication bias reduce
+    confidence in estimates
+structural_competency:
+  equity_implications: This finding emphasizes that structural alternatives to incarceration can produce
+    health benefits extending beyond the targeted condition. The criminal justice system serves as a touchpoint
+    for connecting individuals with substance use disorders to treatment that might otherwise be inaccessible
+    due to economic, geographic, or social barriers.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.586883'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

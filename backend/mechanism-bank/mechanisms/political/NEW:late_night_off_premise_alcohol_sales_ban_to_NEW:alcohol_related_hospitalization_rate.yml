@@ -1,0 +1,62 @@
+id: NEW:late_night_off_premise_alcohol_sales_ban_to_NEW:alcohol_related_hospitalization_rate
+name: Late-Night Off-Premise Alcohol Sales Ban → Alcohol-Related Hospitalization Rate
+from_node:
+  node_id: NEW:late_night_off_premise_alcohol_sales_ban
+  node_name: Late-Night Off-Premise Alcohol Sales Ban
+to_node:
+  node_id: NEW:alcohol_related_hospitalization_rate
+  node_name: Alcohol-Related Hospitalization Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Policy restricts sale of alcoholic beverages in off-premise outlets (kiosks, petrol stations,
+  supermarkets) between 10pm and 5am'
+- 'Step 2: Reduced late-night alcohol availability limits spontaneous alcohol purchases during high-risk
+  drinking hours'
+- 'Step 3: Decreased access to alcohol during nighttime hours reduces binge drinking episodes among youth
+  and young adults'
+- 'Step 4: Lower rates of acute alcohol intoxication and alcohol poisoning result in fewer emergency hospitalizations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jan Marcus and T. Siedler 2015. "Reducing Binge Drinking? The Effect of a Ban on Late-Night
+    Off-Premise Alcohol Sales on Alcohol-Related Hospital Stays in Germany." https://doi.org/10.2139/ssrn.2553193
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not provide referenced prior studies
+  - Study uses administrative hospitalization data from Germany 2007-2010
+  - Difference-in-difference methodology comparing Baden-Württemberg to other German states
+  doi: 10.2139/ssrn.2553193
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: A ban on late-night off-premise alcohol sales (10pm-5am) implemented in Baden-Württemberg,
+  Germany in March 2010 reduced alcohol-related hospitalizations among adolescents and young adults by
+  approximately 9%. This structural policy intervention restricts alcohol availability during high-risk
+  hours without requiring individual behavior change.
+quantitative_effects:
+  effect_size:
+    value: -9.0
+    type: percentage_change
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focused on Baden-Württemberg state in Germany; effects may vary by local drinking
+    culture, enforcement capacity, and availability of on-premise alternatives
+moderators:
+- name: age_group
+  direction: strengthens
+  strength: strong
+  description: Effect concentrated among adolescents and young adults who are more likely to engage in
+    binge drinking and purchase alcohol from off-premise outlets late at night
+structural_competency:
+  equity_implications: This mechanism exemplifies structural intervention - rather than targeting individual
+    drinking behavior through education or persuasion, the policy changes the commercial environment to
+    reduce alcohol availability during high-risk periods. The intervention is described as 'costless'
+    public health initiative, highlighting how structural changes can be more efficient than individual-level
+    interventions. This approach avoids blaming youth for binge drinking and instead modifies the commercial
+    determinants of health. The policy addresses root causes (alcohol availability) rather than proximate
+    symptoms (individual drinking decisions).
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.254954'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

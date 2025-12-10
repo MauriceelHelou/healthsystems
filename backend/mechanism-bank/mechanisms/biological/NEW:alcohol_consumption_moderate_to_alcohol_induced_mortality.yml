@@ -1,0 +1,49 @@
+id: NEW:alcohol_consumption_moderate_to_alcohol_induced_mortality
+name: Moderate Alcohol Consumption (20g/day) → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:alcohol_consumption_moderate
+  node_name: Moderate Alcohol Consumption (20g/day)
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Moderate alcohol consumption contributes to cumulative hepatotoxic effects over time'
+- 'Step 2: Even low-level chronic exposure contributes to cardiomyopathy and cancer risk'
+- 'Step 3: Increased risk of accidents and acute alcohol-related events'
+- 'Step 4: Elevated mortality risk from 100% alcohol-attributable causes'
+evidence:
+  quality_rating: B
+  n_studies: 7
+  primary_citation: 'Tessa Carr et al. 2024. "The risk relationships between alcohol consumption, alcohol
+    use disorder and alcohol use disorder mortality: A systematic review and meta-analysis.." https://doi.org/10.1111/add.16456'
+  supporting_citations:
+  - Studies from high-income countries meeting inclusion criteria (2000-2022)
+  - Studies from Brazil meeting inclusion criteria for qualitative synthesis
+  - Two primary US data sources analyzed
+  - Additional citations require full-text access
+  doi: 10.1111/add.16456
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: At moderate consumption of 20g/day (about one large beer), the risk of dying from alcohol
+  use disorder is approximately double that of current non-drinkers, indicating that mortality risk elevation
+  begins at commonly consumed levels.
+quantitative_effects:
+  effect_size:
+    value: 2.0
+    type: relative_risk
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies from high-income countries and Brazil
+structural_competency:
+  equity_implications: Population-level mortality from even moderate consumption represents a significant
+    public health burden. Structural interventions including alcohol pricing policies, outlet density
+    restrictions, and marketing limitations can reduce population consumption and associated mortality.
+    The framing of 'moderate' drinking as safe is shaped by industry influence on research and policy.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.283332'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

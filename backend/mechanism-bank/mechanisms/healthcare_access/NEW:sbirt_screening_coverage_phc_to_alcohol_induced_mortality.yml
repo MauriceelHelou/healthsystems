@@ -1,0 +1,65 @@
+id: NEW:sbirt_screening_coverage_phc_to_alcohol_induced_mortality
+name: SBIRT Screening Coverage in Primary Health Care → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:sbirt_screening_coverage_phc
+  node_name: SBIRT Screening Coverage in Primary Health Care
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: SBIRT programs systematically screen patients in primary health care for risky alcohol use'
+- 'Step 2: Risky drinkers identified through screening receive brief intervention or referral to treatment'
+- 'Step 3: Brief intervention reduces individual alcohol consumption levels over time'
+- 'Step 4: Population-level alcohol consumption decreases by up to 12% with high screening coverage'
+- 'Step 5: Reduced alcohol consumption leads to decreased alcohol-attributable harm and mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Manthey et al. 2021. "Can alcohol consumption in Germany be reduced by alcohol
+    screening, brief intervention and referral to treatment in primary health care? Results of a simulation
+    study." https://doi.org/10.1101/2021.05.18.21257405
+  supporting_citations:
+  - Meta-analyses providing effect sizes for SBIRT interventions
+  - German epidemiological data on alcohol-attributable harm
+  - Additional citations require full-text access
+  doi: 10.1101/2021.05.18.21257405
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: Unexpected error: list index out of range'
+last_updated: '2025-12-06'
+version: '2.0'
+description: The paper's modeling suggests that large-scale SBIRT implementation in primary health care
+  can substantially reduce population-level alcohol consumption (by 12% at 50% screening coverage), which
+  would be expected to reduce alcohol-attributable harm and mortality. The study notes that Germany has
+  high levels of alcohol consumption and attributable harm, making this intervention particularly relevant.
+  The authors emphasize that other effective alcohol policies are needed for short-term harm reduction.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in Germany where high levels of alcohol consumption and attributable
+    harm exist; effects would vary based on baseline consumption levels and healthcare system capacity
+    in other countries
+moderators:
+- name: baseline_consumption_level
+  direction: strengthens
+  strength: moderate
+  description: Higher baseline consumption in Germany suggests greater potential for reduction
+- name: implementation_timeframe
+  direction: weakens
+  strength: strong
+  description: High screening coverage rates may only be achievable in the long run, limiting short-term
+    mortality impact
+structural_competency:
+  equity_implications: This mechanism positions healthcare system capacity and policy as structural determinants
+    of alcohol-related mortality. The current 2.9% screening rate in Germany represents a structural barrier
+    to population health improvement. The need for complementary policy approaches (beyond clinical intervention)
+    underscores that individual-level healthcare alone cannot address the structural and cultural factors
+    driving alcohol harm. The open-access simulation model itself is a tool for evidence-based policy
+    making at the structural level.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.057963'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,48 @@
+id: poverty_rate_to_NEW:tobacco_outlet_density
+name: Poverty Rate → Tobacco Outlet Density
+from_node:
+  node_id: poverty_rate
+  node_name: Poverty Rate
+to_node:
+  node_id: NEW:tobacco_outlet_density
+  node_name: Tobacco Outlet Density
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Areas with higher income deprivation have lower commercial operating costs'
+- 'Step 2: Higher perceived demand for tobacco products in deprived areas attracts retailers'
+- 'Step 3: Less community capacity to regulate or limit tobacco retail presence'
+- 'Step 4: Retail planning policies fail to account for health impacts of tobacco outlet concentration'
+- 'Step 5: Result is disproportionate concentration of tobacco retailers in deprived neighbourhoods'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: N. Shortt et al. 2015. "A cross-sectional analysis of the relationship between tobacco
+    and alcohol outlet density and neighbourhood deprivation." https://doi.org/10.1186/s12889-015-2321-1
+  supporting_citations:
+  - Additional citations require full-text access - abstract references tobacco-related harm gradient
+  - Additional citations require full-text access - abstract references tobacco control policy
+  - Additional citations require full-text access - abstract references supply-side interventions
+  doi: 10.1186/s12889-015-2321-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Neighbourhood-level income deprivation is positively associated with tobacco retailer density,
+  with the most deprived quintile having the highest density of tobacco outlets and the least deprived
+  having the lowest.
+quantitative_effects:
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Positive linear relationship observed across all deprivation quintiles in Scotland
+    using national tobacco retailer register
+structural_competency:
+  equity_implications: This mechanism demonstrates how poverty shapes commercial environments in ways
+    that create health-harming exposures. The tobacco retail environment is a structural factor that perpetuates
+    health inequities by concentrating harmful commodity access in already disadvantaged communities.
+    Supply-side tobacco control policies should consider equity implications.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.493072'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

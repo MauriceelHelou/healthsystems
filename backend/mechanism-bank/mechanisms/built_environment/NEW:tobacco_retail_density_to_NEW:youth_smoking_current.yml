@@ -1,0 +1,55 @@
+id: NEW:tobacco_retail_density_to_NEW:youth_smoking_current
+name: Tobacco Retail Density → Youth Current Smoking
+from_node:
+  node_id: NEW:tobacco_retail_density
+  node_name: Tobacco Retail Density
+to_node:
+  node_id: NEW:youth_smoking_current
+  node_name: Youth Current Smoking
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher tobacco retail density increases youth exposure to tobacco marketing and product availability
+  in their daily environments'
+- 'Step 2: Adolescents walking to school or recreation pass multiple tobacco outlets, normalizing smoking
+  as a common adult behavior'
+- 'Step 3: Peer influence is amplified when tobacco is easily accessible for social experimentation'
+- 'Step 4: Reduced barriers to purchase (despite age restrictions) facilitate youth initiation and progression
+  to regular use'
+evidence:
+  quality_rating: A
+  n_studies: 62
+  primary_citation: Veronica A Martin-Gall et al. 2024. "Tobacco retail availability and smoking-A systematic
+    review and meta-analysis.." https://doi.org/10.1111/dar.13936
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included youth-specific studies
+  - Studies examining tobacco outlet density near schools included in meta-analysis
+  - Multiple studies assessed current youth smoking as outcome measure
+  doi: 10.1111/dar.13936
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher tobacco retail density shows a significant positive association with current smoking
+  among youth. The meta-analysis found an OR of 1.23 with notably low heterogeneity (I²=0%), suggesting
+  a consistent effect across studies.
+quantitative_effects:
+  effect_size:
+    value: 1.23
+    type: odds_ratio
+    ci_lower: 1.08
+    ci_upper: 1.4
+  heterogeneity_i_squared: 0.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: School neighborhood environments vary in retail tobacco density, creating differential
+    exposure for youth based on school location
+structural_competency:
+  equity_implications: Youth are particularly vulnerable to environmental influences on health behaviors.
+    The concentration of tobacco retailers near schools represents a structural failure to protect children.
+    This mechanism avoids blaming youth for poor choices and instead identifies the commercial environment
+    as the upstream cause requiring policy intervention.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.242454'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

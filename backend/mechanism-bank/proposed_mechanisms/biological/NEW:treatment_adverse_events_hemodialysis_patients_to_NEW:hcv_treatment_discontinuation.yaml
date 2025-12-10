@@ -1,0 +1,61 @@
+id: NEW:treatment_adverse_events_hemodialysis_patients_to_NEW:hcv_treatment_discontinuation
+name: Treatment Adverse Events in Hemodialysis Patients → HCV Treatment Discontinuation
+from_node:
+  node_id: NEW:treatment_adverse_events_hemodialysis_patients
+  node_name: Treatment Adverse Events in Hemodialysis Patients
+to_node:
+  node_id: NEW:hcv_treatment_discontinuation
+  node_name: HCV Treatment Discontinuation
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hemodialysis patients receiving interferon-based HCV treatment experience
+  high rates of adverse events due to altered drug pharmacokinetics and pre-existing
+  comorbidities'
+- 'Step 2: Flu-like syndrome occurs in approximately 41% of patients, causing significant
+  discomfort and reduced quality of life'
+- 'Step 3: Severe adverse events accumulate across multiple organ systems including
+  hematological (cytopenia/anemia), thyroid dysfunction, gastrointestinal problems,
+  cardiovascular complications, CNS effects, and infectious complications'
+- 'Step 4: The cumulative burden of adverse events, particularly severe ones, leads
+  to treatment discontinuation in approximately 11% of patients'
+evidence:
+  quality_rating: A
+  n_studies: 38
+  primary_citation: 'T Casanovas Taltavull et al. 2009. Results of hepatitis C virus
+    treatment in patients on hemodialysis: data from published meta-analyses in 2008.
+    Transplantation proceedings.'
+  supporting_citations: []
+description: 'Treatment adverse events in hemodialysis patients receiving interferon-based
+  HCV therapy lead to treatment discontinuation in approximately 11% of patients.
+  Adverse events occur in less than 50% of documented cases but include severe multi-system
+  complications: flu-like syndrome (41%), anemia requiring intervention, thyroid dysfunction,
+  cytopenia, gastrointestinal symptoms, cardiovascular problems, CNS effects, and
+  infectious complications. The accumulated severity of these events necessitates
+  treatment withdrawal.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 11.0
+    type: percentage
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 1104
+moderators:
+- name: Flu-like syndrome severity
+  direction: strengthens
+  strength: strong
+  description: Flu-like syndrome occurred in 41% of patients and was a primary driver
+    of treatment withdrawal
+- name: Anemia management
+  direction: weakens
+  strength: moderate
+  description: Use of erythropoietin, IV iron, or transfusions may mitigate anemia-related
+    discontinuation, though inconsistently reported
+- name: Prior transplant history
+  direction: strengthens
+  strength: moderate
+  description: Immunological adverse events including prior graft rejection increase
+    discontinuation risk

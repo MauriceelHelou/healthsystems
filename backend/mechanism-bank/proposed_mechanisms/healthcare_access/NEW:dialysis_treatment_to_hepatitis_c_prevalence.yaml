@@ -1,0 +1,69 @@
+id: NEW:dialysis_treatment_to_hepatitis_c_prevalence
+name: Hemodialysis Treatment → Hepatitis C Virus Infection
+from_node:
+  node_id: NEW:dialysis_treatment
+  node_name: Hemodialysis Treatment
+to_node:
+  node_id: hepatitis_c_prevalence
+  node_name: Hepatitis C Virus Infection
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with chronic kidney disease require regular hemodialysis treatment,
+  typically 3 times per week in dialysis centers'
+- 'Step 2: In-center hemodialysis involves repeated vascular access, blood exposure,
+  and shared equipment/environment among multiple patients'
+- 'Step 3: Nosocomial transmission of HCV occurs within hemodialysis units through
+  breaches in infection control practices, contaminated equipment, or environmental
+  surfaces'
+- 'Step 4: Patients on long-term hemodialysis accumulate exposure risk over time,
+  with higher HCV prevalence (~10% in DOPPS studies) compared to general population
+  (~1%)'
+- 'Step 5: Transfers between dialysis facilities and modalities create additional
+  opportunities for HCV exposure and transmission'
+evidence:
+  quality_rating: A
+  n_studies: 125
+  primary_citation: 'C. Gordon et al. 2019. Prevention, Diagnosis, Evaluation, and
+    Treatment of Hepatitis C Virus Infection in Chronic Kidney Disease: Synopsis of
+    the Kidney Disease: Improving Global Outcomes 2018 Clinical Practice Guideline.
+    Annals of Internal Medicine.'
+  supporting_citations: []
+description: Hemodialysis treatment is associated with elevated hepatitis C virus
+  infection prevalence through nosocomial transmission mechanisms in dialysis settings.
+  The KDIGO 2018 guideline, based on systematic review of 125 studies, documents approximately
+  10% HCV seroprevalence among hemodialysis patients compared to 1% in the general
+  US population. This elevated risk results from repeated vascular access, blood exposure,
+  shared equipment, and environmental contamination in dialysis centers. The guideline
+  recommends universal HCV screening at dialysis initiation and upon facility transfers
+  to identify infected patients and prevent further transmission.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 10.0
+    type: prevalence_ratio
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: Duration of hemodialysis treatment
+  direction: strengthens
+  strength: strong
+  description: Long-term hemodialysis increases cumulative exposure risk for HCV transmission
+- name: Infection control practices
+  direction: weakens
+  strength: strong
+  description: Strict adherence to infection control protocols in dialysis units reduces
+    nosocomial HCV transmission
+- name: Dialysis modality
+  direction: weakens
+  strength: moderate
+  description: Home hemodialysis and peritoneal dialysis have lower transmission risk
+    than in-center hemodialysis due to reduced shared equipment exposure
+- name: Facility transfers
+  direction: strengthens
+  strength: moderate
+  description: Transfers between dialysis facilities or modalities increase exposure
+    to potentially varied infection control standards

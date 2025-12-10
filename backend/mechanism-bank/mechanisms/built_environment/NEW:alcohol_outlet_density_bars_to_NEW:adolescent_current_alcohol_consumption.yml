@@ -1,0 +1,67 @@
+id: NEW:alcohol_outlet_density_bars_to_NEW:adolescent_current_alcohol_consumption
+name: Alcohol Outlet Density - Bars → Adolescent Current Alcohol Consumption
+from_node:
+  node_id: NEW:alcohol_outlet_density_bars
+  node_name: Alcohol Outlet Density - Bars
+to_node:
+  node_id: NEW:adolescent_current_alcohol_consumption
+  node_name: Adolescent Current Alcohol Consumption
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of bars within 200 meters of adolescent residences increases visibility and
+  normalization of alcohol consumption in the community'
+- 'Step 2: Bars serve as social venues where adult drinking is modeled and potentially accessible to adolescents'
+- 'Step 3: Proximity to bars may facilitate social networks and peer influences that promote alcohol use'
+- 'Step 4: Higher bar density may correlate with weaker enforcement of age restrictions in the immediate
+  area'
+- 'Step 5: Combined environmental and social factors lead to increased current alcohol consumption among
+  adolescents'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: B. R. Carvalho et al. 2020. "Is alcohol outlet density in the residential area associated
+    with alcohol consumption among adolescents?." https://doi.org/10.1590/1980-549720200089
+  supporting_citations:
+  - Additional citations require full-text access - study references prior literature on alcohol outlet
+    density and consumption patterns
+  - Additional citations require full-text access - study references WHO recommendations on alcohol availability
+  - Additional citations require full-text access - study references Brazilian national survey data
+  doi: 10.1590/1980-549720200089
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Each additional bar within 200 meters of an adolescent's residence is associated with a 21%
+  increase in the prevalence of current alcohol consumption. Bars showed the strongest association among
+  outlet types, reflecting their role as dedicated alcohol venues in shaping neighborhood alcohol environments.
+quantitative_effects:
+  effect_size:
+    value: 1.21
+    type: relative_risk
+    ci_lower: 1.05
+    ci_upper: 1.38
+  sample_size: 601
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in Belo Horizonte, Brazil; bar culture and regulatory environment may
+    differ across geographic contexts
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Significant interaction between outlet density and sex was found
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Significant interaction between outlet density and age was found
+structural_competency:
+  equity_implications: This finding demonstrates how municipal licensing decisions and zoning policies
+    create obesogenic and 'alcohogenic' environments that differentially affect youth based on where they
+    live. The structural distribution of bars across neighborhoods reflects broader patterns of urban
+    development and socioeconomic segregation. Interventions should focus on licensing regulations and
+    zoning rather than adolescent behavior modification.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.472661'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

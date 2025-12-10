@@ -1,0 +1,67 @@
+id: pharmacy_density_to_sud_medication_treatment_rate_oud
+name: Pharmacy Density → SUD Medication Treatment Rate for OUD
+from_node:
+  node_id: pharmacy_density
+  node_name: Pharmacy Density
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate for OUD
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Higher pharmacy density increases geographic accessibility to medication-assisted treatment
+  (MAT) services'
+- 'Step 2: Pharmacist injection authority enables direct provision of long-acting injectable naltrexone
+  without requiring separate clinical visits'
+- 'Step 3: Reduced travel burden and increased convenience lowers barriers to initiating and maintaining
+  OUD treatment'
+- 'Step 4: Increased treatment engagement leads to higher rates of medication adherence and sustained
+  recovery'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: James H. Ford et al. 2019. "Systematic Analysis of the Service Process and the Legislative
+    and Regulatory Environment for a Pharmacist-Provided Naltrexone Injection Service in Wisconsin." https://doi.org/10.3390/pharmacy7020059
+  supporting_citations:
+  - Additional citations require full-text access - abstract references opioid epidemic affecting Wisconsin
+    residents
+  - Additional citations require full-text access - abstract references approved medications including
+    long-acting injectable naltrexone
+  - Additional citations require full-text access - abstract references shortages of behavioral health
+    providers in the U.S.
+  doi: 10.3390/pharmacy7020059
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Community pharmacies can serve as significant access points for treating opioid use disorder
+  with naltrexone injections, particularly important given shortages of behavioral health providers. Wisconsin
+  law authorizes pharmacist injection services, though implementation requires substantial coordination.
+quantitative_effects:
+  sample_size: 4
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focuses on Wisconsin specifically; notes that only a small number of pharmacists
+    currently use injection authority, suggesting geographic variation in service availability across
+    the state
+moderators:
+- name: pharmacy_practice_law_scope
+  direction: strengthens
+  strength: strong
+  description: Wisconsin's pharmacy practice laws authorizing pharmacists to administer medications via
+    injection enable the service; states without such authority cannot implement this access point
+- name: care_coordination_capacity
+  direction: strengthens
+  strength: moderate
+  description: Service requires considerable coordination and communication with practitioners, patients,
+    and pharmacy staff; stronger coordination infrastructure facilitates successful implementation
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to OUD treatment by leveraging existing
+    pharmacy infrastructure to expand access points beyond traditional clinical settings. The focus on
+    behavioral health provider shortages appropriately identifies a systemic workforce gap rather than
+    blaming individuals for not seeking care. Geographic disparities in pharmacy availability may differentially
+    affect rural communities and those with limited transportation options.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.233584'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

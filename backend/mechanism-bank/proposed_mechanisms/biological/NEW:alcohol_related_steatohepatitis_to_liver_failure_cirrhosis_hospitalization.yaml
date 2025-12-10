@@ -1,0 +1,58 @@
+id: NEW:alcohol_related_steatohepatitis_to_liver_failure_cirrhosis_hospitalization
+name: Alcohol-Related Steatohepatitis (Requiring Hospitalization) → Liver Failure/Cirrhosis
+  Hospitalization
+from_node:
+  node_id: NEW:alcohol_related_steatohepatitis
+  node_name: Alcohol-Related Steatohepatitis (Requiring Hospitalization)
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Failure/Cirrhosis Hospitalization
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol-related steatohepatitis involves active hepatic inflammation with
+  hepatocyte injury (ballooning degeneration), neutrophilic infiltration, and fat
+  accumulation in the liver'
+- 'Step 2: Persistent inflammation triggers hepatic stellate cell activation, leading
+  to progressive fibrosis through excessive collagen deposition and extracellular
+  matrix remodeling'
+- 'Step 3: Progressive fibrosis leads to cirrhosis at an annualized rate of approximately
+  10% (6-17%) in patients with steatohepatitis, significantly higher than other ALD
+  stages'
+- 'Step 4: Cirrhosis results in portal hypertension, synthetic dysfunction, and decompensation
+  events requiring hospitalization for liver failure'
+evidence:
+  quality_rating: A
+  n_studies: 37
+  primary_citation: 'Richard Parker et al. 2019. Natural history of histologically
+    proven alcohol-related liver disease: A systematic review. Journal of hepatology.'
+  supporting_citations: []
+description: Alcohol-related steatohepatitis requiring hospitalization represents
+  the most dangerous subtype of alcohol-related liver disease. This systematic review
+  of 37 studies (7,528 participants) found that steatohepatitis has the highest annualized
+  progression rate to cirrhosis (10%, range 6-17%) compared to steatosis (3%) or fibrosis
+  alone (8%). Inpatient steatohepatitis cohorts demonstrate particularly poor outcomes
+  with 15% annual mortality, confirming that hospitalization-requiring steatohepatitis
+  strongly predicts progression to cirrhosis and liver failure.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 10.0
+    type: annualized_progression_rate_percent
+    ci_lower: 6.0
+    ci_upper: 17.0
+  p_value: null
+  sample_size: 7528
+moderators:
+- name: hospitalization_status
+  direction: strengthens
+  strength: strong
+  description: Inpatient cohorts with steatohepatitis had markedly higher annual mortality
+    (15%, 8-26%) compared to mixed inpatient/outpatient cohorts (5%, 2-10%), indicating
+    hospitalization requirement identifies a more severe phenotype
+- name: continued_alcohol_use
+  direction: strengthens
+  strength: strong
+  description: Continued hazardous drinking accelerates progression from steatohepatitis
+    to cirrhosis

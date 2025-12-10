@@ -1,0 +1,65 @@
+id: NEW:transoral_robotic_surgery_salvage_to_NEW:surgical_morbidity_head_neck
+name: Transoral Robotic Surgery for Salvage Treatment → Surgical Morbidity in Head
+  and Neck Cancer
+from_node:
+  node_id: NEW:transoral_robotic_surgery_salvage
+  node_name: Transoral Robotic Surgery for Salvage Treatment
+to_node:
+  node_id: NEW:surgical_morbidity_head_neck
+  node_name: Surgical Morbidity in Head and Neck Cancer
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: TORS provides minimally invasive transoral access to head and neck tumors,
+  avoiding external incisions and tissue disruption associated with traditional open
+  surgical approaches'
+- 'Step 2: The robotic platform enables precise dissection in previously irradiated
+  fields with enhanced visualization and instrument articulation, reducing collateral
+  tissue damage'
+- 'Step 3: Reduced surgical invasiveness leads to shorter tracheostomy dependence
+  (mean 9.7 days to decannulation) and nasogastric tube dependence (mean 12.8 days),
+  with only 0-11.5% requiring long-term tracheostomy'
+- 'Step 4: Overall complication rate of 32.3% is achieved, with 92% of complications
+  being lower severity (Clavien-Dindo grade 2-3), representing decreased morbidity
+  compared to traditional open salvage techniques'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Sahil Goel et al. 2025. Is transoral robotic surgery useful as
+    a salvage technique in head and neck cancers: a systematic review and meta analysis.
+    Head & neck.'
+  supporting_citations: []
+description: Transoral robotic surgery (TORS) for salvage treatment of recurrent,
+  residual, or second primary head and neck cancers in previously irradiated fields
+  demonstrates reduced surgical morbidity compared to traditional open techniques.
+  This systematic review and meta-analysis of 15 studies with 515 patients showed
+  a pooled complication rate of 32.3%, with the majority (92%) being low-severity
+  complications. Functional outcomes showed rapid recovery with mean tracheostomy
+  decannulation at 9.7 days and nasogastric tube removal at 12.8 days, with minimal
+  long-term feeding tube or tracheostomy dependence.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.323
+    type: proportion
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 515
+moderators:
+- name: HPV status
+  direction: strengthens
+  strength: moderate
+  description: HPV status identified as a confounding factor that may influence outcomes
+    but not fully addressed in current literature
+- name: Prior adjuvant therapy
+  direction: weakens
+  strength: moderate
+  description: Previous radiation and chemotherapy exposure affects tissue healing
+    and surgical outcomes in salvage setting
+- name: Tumor stage/location
+  direction: weakens
+  strength: moderate
+  description: More advanced tumors or challenging anatomic locations may have higher
+    morbidity rates

@@ -1,0 +1,46 @@
+id: rapid_ed_return_visits_to_recurrent_substance_related_ed_utilization
+name: Rapid Emergency Department Return Visits (Within 7 Days) → Recurrent Substance-Related
+  Emergency Department Utilization
+from_node:
+  node_id: rapid_ed_return_visits
+  node_name: Rapid Emergency Department Return Visits (Within 7 Days)
+to_node:
+  node_id: recurrent_substance_related_ed_utilization
+  node_name: Recurrent Substance-Related Emergency Department Utilization
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with problematic substance use present to ED without access to
+  addiction treatment'
+- 'Step 2: ED addresses acute medical crisis but patient remains disconnected from
+  addiction services'
+- 'Step 3: Underlying substance use disorder remains untreated after ED discharge'
+- 'Step 4: Patient experiences subsequent crisis requiring return ED visit within
+  7 days (28% of cohort)'
+- 'Step 5: Cycle continues without intervention, creating pattern of recurrent high-acuity
+  healthcare utilization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Hann et al. 2020. "Identification of emergency department patients
+    for referral to rapid-access addiction services.." *CJEM*. https://doi.org/10.1017/cem.2019.453
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.721431'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: absence_addiction_service_referral
+  direction: strengthens
+  strength: strong
+  description: Lack of immediate addiction service connection at index visit increases
+    likelihood of repeat presentations
+- name: high_risk_substance_use
+  direction: strengthens
+  strength: strong
+  description: Problematic or high-risk substance use patterns drive recurrent acute
+    medical complications requiring ED care
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/rapid_ed_return_visits_to_recurrent_substance_related_ed_utilization.yaml
+_category: healthcare_access

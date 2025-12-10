@@ -1,0 +1,72 @@
+id: NEW:remote_digital_treatment_supplementation_to_NEW:alcohol_drug_relapse_rate
+name: Remote/Digital Treatment Supplementation → Alcohol/Drug Relapse Rate
+from_node:
+  node_id: NEW:remote_digital_treatment_supplementation
+  node_name: Remote/Digital Treatment Supplementation
+to_node:
+  node_id: NEW:alcohol_drug_relapse_rate
+  node_name: Alcohol/Drug Relapse Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Remote/digital interventions (telephone or computer-based) are added to existing in-person
+  alcohol/drug treatment programs'
+- 'Step 2: Supplemental remote contact increases treatment intensity and continuity of care between in-person
+  sessions'
+- 'Step 3: Enhanced therapeutic engagement and support accessibility reduces treatment gaps and maintains
+  recovery motivation'
+- 'Step 4: Sustained treatment engagement leads to improved coping strategies and reduced relapse triggers'
+- 'Step 5: Lower odds of returning to substance use (39% reduction in relapse odds)'
+evidence:
+  quality_rating: A
+  n_studies: 34
+  primary_citation: Irene Kwan et al. 2025. "How effective are remote and/or digital interventions as
+    part of alcohol and drug treatment and recovery support? A systematic review and meta-analysis.."
+    https://doi.org/10.1111/add.70021
+  supporting_citations:
+  - Additional citations require full-text access - this meta-analysis included 34 RCTs with 6461 participants
+    evaluating 42 remote interventions
+  - Studies conducted in OECD countries published 2004-2023
+  - 17 interventions evaluated for relapse outcome when supplementing in-person care
+  doi: 10.1111/add.70021
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Remote and digital interventions that supplement in-person alcohol/drug treatment reduce
+  relapse by 39% (OR 0.61). This systematic review of 34 RCTs demonstrates that enhancing treatment accessibility
+  through telephone or computer-based support improves recovery outcomes for people with alcohol/drug
+  use disorders.
+quantitative_effects:
+  effect_size:
+    value: 0.61
+    type: odds_ratio
+    ci_lower: 0.46
+    ci_upper: 0.81
+  p_value: 0.001
+  sample_size: 6461
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies limited to OECD countries; geographic variation within included studies not
+    specified in abstract
+moderators:
+- name: intervention_type
+  direction: strengthens
+  strength: moderate
+  description: Supplemental interventions (adding to in-person care) show stronger effects than replacement
+    interventions
+- name: therapeutic_approach_diversity
+  direction: strengthens
+  strength: moderate
+  description: Diverse therapeutic approaches were used across interventions, suggesting flexibility in
+    effective modalities
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to treatment access including geographic
+    distance, transportation limitations, scheduling conflicts, and stigma associated with in-person treatment.
+    Remote interventions can reduce inequities in treatment access for rural populations, those with disabilities,
+    or individuals facing work/caregiving constraints. However, digital divide issues may create new disparities
+    for those without technology access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.954025'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

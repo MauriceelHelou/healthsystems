@@ -1,0 +1,46 @@
+id: moud_facility_medication_type_availability_to_patient_medication_treatment_options
+name: MOUD Facility Medication Type Availability → Patient Medication Treatment Options
+from_node:
+  node_id: moud_facility_medication_type_availability
+  node_name: MOUD Facility Medication Type Availability
+to_node:
+  node_id: patient_medication_treatment_options
+  node_name: Patient Medication Treatment Options
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Different MOUD medications (methadone, buprenorphine, naltrexone) have
+  distinct clinical profiles, administration requirements, and patient suitability'
+- 'Step 2: Facility-level availability of specific medication types determines which
+  treatment options are accessible to patients in that geographic area'
+- 'Step 3: Among critical access facilities, only 3 provide methadone, 77 provide
+  buprenorphine, and 23 provide naltrexone, creating differential medication access
+  patterns'
+- 'Step 4: Limited medication type availability constrains patient-provider shared
+  decision-making and optimal treatment matching'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Harold A Pollack et al. 2023. "Critical access medication for
+    opioid use disorder (MOUD) treatment facilities in the continental United States.."
+    *Drug and alcohol dependence reports*. https://doi.org/10.1016/j.dadr.2022.100130
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.493709'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: regulatory_requirements
+  direction: weakens
+  strength: strong
+  description: Methadone's requirement for specialized opioid treatment programs with
+    daily observed dosing limits its availability, particularly in rural areas
+- name: provider_waiver_status
+  direction: strengthens
+  strength: moderate
+  description: DATA 2000 waiver requirements for buprenorphine prescribing affect
+    facility capacity to offer this medication type
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/moud_facility_medication_type_availability_to_patient_medication_treatment_options.yaml
+_category: healthcare_access

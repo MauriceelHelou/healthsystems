@@ -1,0 +1,55 @@
+id: NEW:emergency_department_opioid_intervention_to_substance_use_related_ed_visit_rate
+name: Emergency Department Opioid Intervention → Substance Use Related ED Visit Rate
+from_node:
+  node_id: NEW:emergency_department_opioid_intervention
+  node_name: Emergency Department Opioid Intervention
+to_node:
+  node_id: substance_use_related_ed_visit_rate
+  node_name: Substance Use Related ED Visit Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: ED represents critical touchpoint for people with OUD during acute events'
+- 'Step 2: ED-based interventions provide opportunity for engagement during vulnerable period'
+- 'Step 3: Harm reduction services and treatment linkage provided during ED visit'
+- 'Step 4: Successful intervention theoretically reduces subsequent substance use-related ED presentations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Dennis P. Watson et al. 2024. "Results From the POINT Pragmatic Randomized Trial:
+    An Emergency Department-Based Peer Support Specialist Intervention to Increase Opioid Use Disorder
+    Treatment Linkage and Reduce Recurrent Overdose." https://doi.org/10.1177/29767342231221054'
+  supporting_citations:
+  - Additional citations require full-text access - abstract describes ED as potentially critical point
+    for intervention
+  - Additional citations require full-text access - abstract measures all-cause ED re-presentation as
+    secondary outcome
+  - Additional citations require full-text access - abstract notes outcomes assessed using administrative
+    data from state health exchange
+  doi: 10.1177/29767342231221054
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study examined whether ED-based PRSS intervention could reduce all-cause ED re-presentation
+  rates among OUD patients. No significant differences were found between intervention and control groups
+  on this outcome. The authors note that ED represents a potentially critical intervention point for people
+  with OUD.
+quantitative_effects:
+  sample_size: 243
+moderators:
+- name: intervention_modality
+  direction: strengthens
+  strength: weak
+  description: Authors suggest multimodal ED-based interventions may be more effective than standalone
+    PRSS services
+structural_competency:
+  equity_implications: This mechanism recognizes the ED as a structural healthcare touchpoint that interfaces
+    with populations who face barriers to primary care and preventive services. The lack of effect may
+    reflect broader structural issues including fragmented healthcare systems, lack of post-ED follow-up
+    infrastructure, and insufficient integration between ED and community-based services. The study focuses
+    on system-level solutions rather than blaming individuals for ED utilization patterns.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.792490'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,43 @@
+# Node Definition: Housing Instability
+# Scale 4 - Household Conditions
+
+id: housing_instability
+name: Housing Instability
+scale: 4
+category: economic
+type: Rate
+
+unit: "Percentage of households with ≥3 moves in 5 years"
+
+description: |
+  Frequency of residential moves indicating housing insecurity and lack of stable housing.
+  Measured as the proportion of households experiencing multiple involuntary moves
+  within a 5-year period, often due to eviction, foreclosure, or inability to afford rent.
+
+measurement_method: |
+  - Longitudinal survey tracking residential history
+  - Administrative eviction records
+  - Self-reported housing instability (NHANES, ACS)
+
+typical_range: "10-30% for low-income households; 3-8% for general population"
+
+data_sources:
+  - name: "National Longitudinal Survey of Youth (NLSY)"
+    availability: "Annual"
+    granularity: "County-level (select metro areas), State-level (nationwide)"
+  - name: "American Community Survey (ACS)"
+    variables: ["B25038", "B25039"]
+    availability: "Annual"
+    granularity: "Census tract, County, State"
+  - name: "Eviction Lab Dataset"
+    url: "https://evictionlab.org"
+    availability: "2000-2018"
+    granularity: "Census tract"
+
+baseline_us: "15% of low-income households (NLSY 2018)"
+
+limitations: |
+  - Underreports informal housing arrangements
+  - May not capture frequent moves within same neighborhood
+  - Limited data for rural areas
+  - Definition varies across surveys

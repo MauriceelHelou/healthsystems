@@ -1,0 +1,53 @@
+id: grocery_store_density_to_obesity_individual
+name: Food Availability in Neighborhood Environment → Obesity/Nutrition Outcomes
+from_node:
+  node_id: grocery_store_density
+  node_name: Food Availability in Neighborhood Environment
+to_node:
+  node_id: obesity_individual
+  node_name: Obesity/Nutrition Outcomes
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher grocery store density increases physical access to retail outlets
+  selling fresh, unprocessed foods in the neighborhood environment'
+- 'Step 2: Increased availability of healthy food options reduces barriers to purchasing
+  nutritious foods including fruits, vegetables, and whole grains'
+- 'Step 3: Improved access leads to changes in dietary behavior, with increased consumption
+  of healthier food options'
+- 'Step 4: Sustained healthier dietary patterns result in reduced caloric intake from
+  processed foods and improved nutritional quality'
+- 'Step 5: Better nutrition outcomes translate to lower rates of obesity and improved
+  body mass index at the individual level'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'S. Westbury et al. 2021. The influence of the urban food environment
+    on diet, nutrition and health outcomes in low-income and middle-income countries:
+    a systematic review. BMJ Global Health.'
+  supporting_citations: []
+description: Systematic review evidence from 74 studies in LMICs demonstrates that
+  neighborhood food availability characteristics are consistently associated with
+  dietary behavior (14 studies, 10 good quality) and the balance of evidence supports
+  associations with health and nutrition outcomes including obesity (17 of 24 relevant
+  studies). The pathway operates through increased physical access to healthy food
+  retail, which facilitates healthier purchasing and consumption patterns, ultimately
+  improving nutrition and weight outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: urban_setting
+  direction: strengthens
+  strength: moderate
+  description: Effects more consistently observed in urban LMIC settings where food
+    environment interventions are most feasible
+- name: income_level
+  direction: strengthens
+  strength: moderate
+  description: Low-income populations may be more sensitive to food availability changes
+    due to greater reliance on nearby food sources
+- name: study_quality
+  direction: strengthens
+  strength: strong
+  description: Higher quality studies (10 rated as good quality out of 14 for diet
+    outcomes) showed more consistent associations

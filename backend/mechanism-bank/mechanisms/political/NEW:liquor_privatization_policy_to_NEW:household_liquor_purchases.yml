@@ -1,0 +1,62 @@
+id: NEW:liquor_privatization_policy_to_NEW:household_liquor_purchases
+name: Liquor Privatization Policy → Household Liquor Purchases
+from_node:
+  node_id: NEW:liquor_privatization_policy
+  node_name: Liquor Privatization Policy
+to_node:
+  node_id: NEW:household_liquor_purchases
+  node_name: Household Liquor Purchases
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: State policy (Initiative 1183) transfers liquor retail from state-controlled stores to private
+  retailers'
+- 'Step 2: Privatization dramatically increases the number of retail outlets selling liquor (increased
+  physical access)'
+- 'Step 3: Greater geographic availability and extended hours of operation reduce barriers to purchase'
+- 'Step 4: Despite new fees on retailers/distributors, increased competition and convenience drive purchasing
+  behavior'
+- 'Step 5: Household liquor purchases increase substantially (82% increase in monthly liquor ounces)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Sarah Beth L Barnett et al. 2020. "Washington''s privatization of liquor: effects
+    on household alcohol purchases from Initiative 1183.." https://doi.org/10.1111/add.14875'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references Nielsen Consumer Panel Dataset
+    methodology
+  - Additional citations require full-text access - abstract references pre-I-1183 period comparison methods
+  - Additional citations require full-text access - abstract references differences-in-differences methodology
+  doi: 10.1111/add.14875
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Washington's Initiative 1183 privatizing liquor sales was associated with a 6.34-ounce increase
+  in monthly household liquor purchases (approximately 82% increase) compared to control states, demonstrating
+  how alcohol retail policy directly shapes population-level alcohol availability and purchasing
+quantitative_effects:
+  effect_size:
+    value: 6.34
+    type: beta_coefficient
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focused on metropolitan and surrounding areas in Washington State compared to
+    10 control states; rural areas may have different effects
+moderators:
+- name: baseline_alcohol_purchasing_level
+  direction: u_shaped
+  strength: strong
+  description: Low and moderate alcohol purchasers increased monthly ethanol purchases while high purchasers
+    decreased purchases, suggesting differential response by baseline consumption patterns
+structural_competency:
+  equity_implications: This mechanism traces health-relevant behavior (alcohol purchasing) to state-level
+    policy decisions about alcohol retail structure. The policy change represents a structural determinant
+    that affects entire populations through environmental availability rather than individual choice.
+    Equity implications include differential effects across consumption levels - concerning that low/moderate
+    purchasers increased consumption while only high purchasers decreased
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.186998'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

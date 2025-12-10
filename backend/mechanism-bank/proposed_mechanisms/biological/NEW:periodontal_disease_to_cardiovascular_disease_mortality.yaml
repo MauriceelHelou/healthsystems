@@ -1,0 +1,69 @@
+id: NEW:periodontal_disease_to_cardiovascular_disease_mortality
+name: Periodontal Disease → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:periodontal_disease
+  node_name: Periodontal Disease
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Periodontal disease creates chronic oral infection with bacterial pathogens
+  entering systemic circulation through inflamed and ulcerated gingival tissues'
+- 'Step 2: Systemic bacteremia and inflammatory mediators from periodontal infection
+  trigger chronic low-grade systemic inflammation, elevating inflammatory markers
+  (CRP, IL-6, TNF-α)'
+- 'Step 3: Chronic systemic inflammation promotes endothelial dysfunction, accelerates
+  atherosclerotic plaque formation and destabilization in coronary and cerebral arteries'
+- 'Step 4: Advanced atherosclerosis and plaque rupture lead to major adverse cardiovascular
+  events including myocardial infarction, stroke, and cardiac death'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'Xiangyu Guo et al. 2023. Periodontal disease and subsequent risk
+    of cardiovascular outcome and all-cause mortality: A meta-analysis of prospective
+    studies. PLoS ONE.'
+  supporting_citations: []
+description: 'Periodontal disease is associated with a 42% increased risk of cardiac
+  death (RR: 1.42, 95% CI: 1.10-1.84). This meta-analysis of 39 prospective cohort
+  studies comprising over 4.3 million individuals demonstrates that periodontal disease
+  elevates risk across multiple cardiovascular outcomes including major adverse cardiovascular
+  events (RR: 1.24), coronary heart disease (RR: 1.20), myocardial infarction (RR:
+  1.14), and stroke (RR: 1.26). The biological mechanism involves chronic oral bacterial
+  infection leading to systemic inflammation, endothelial dysfunction, and accelerated
+  atherosclerosis.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.42
+    type: relative_risk
+    ci_lower: 1.1
+    ci_upper: 1.84
+  p_value: 0.007
+  sample_size: 4389263
+moderators:
+- name: region
+  direction: strengthens
+  strength: moderate
+  description: Geographic region affects the strength of association between periodontal
+    disease and cardiovascular mortality
+- name: study_design
+  direction: strengthens
+  strength: moderate
+  description: Study design methodology influences effect estimates
+- name: periodontal_disease_definition
+  direction: strengthens
+  strength: moderate
+  description: Different definitions of periodontal disease severity affect observed
+    associations
+- name: follow_up_duration
+  direction: strengthens
+  strength: moderate
+  description: Longer follow-up periods may capture cumulative cardiovascular risk
+    from chronic periodontal infection
+- name: study_quality
+  direction: strengthens
+  strength: moderate
+  description: Higher quality studies show more precise effect estimates

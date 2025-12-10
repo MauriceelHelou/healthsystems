@@ -1,0 +1,44 @@
+id: alcohol_outlet_density_reduction_policy_to_violent_crime_exposure
+name: Alcohol Outlet Density Reduction Policy → Exposure to Violent Crime
+from_node:
+  node_id: alcohol_outlet_density_reduction_policy
+  node_name: Alcohol Outlet Density Reduction Policy
+to_node:
+  node_id: violent_crime_exposure
+  node_name: Exposure to Violent Crime
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Policy intervention implements regulations to reduce the number of on-premises
+  alcohol outlets through licensing restrictions or non-renewal'
+- 'Step 2: Reduced outlet density decreases geographic concentration of alcohol availability
+  and associated nighttime commerce'
+- 'Step 3: Decreased concentration reduces the spatial clustering of alcohol consumption
+  and intoxicated individuals in public areas'
+- 'Step 4: Lower concentration of alcohol-related activity reduces opportunities and
+  settings for violent interpersonal conflicts'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Xingyou Zhang et al. 2015. "Changes in Density of On-Premises
+    Alcohol Outlets and Impact on Violent Crime, Atlanta, Georgia, 1997–2007." *Preventing
+    Chronic Disease*. https://doi.org/10.5888/pcd12.140317
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.097880'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: magnitude_of_density_reduction
+  direction: strengthens
+  strength: strong
+  description: Even a modest 3% reduction in outlet density produced substantial crime
+    reduction, suggesting that larger reductions could have even greater protective
+    effects
+- name: initial_outlet_density
+  direction: strengthens
+  strength: moderate
+  description: Policies implemented in neighborhoods with high initial outlet density
+    may show greater absolute reductions in violent crime exposure compared to areas
+    with lower baseline density

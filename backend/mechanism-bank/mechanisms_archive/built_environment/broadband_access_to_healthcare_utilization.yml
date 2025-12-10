@@ -1,0 +1,87 @@
+id: broadband_access_to_healthcare_utilization
+name: Broadband Internet Access -> Healthcare Utilization and Outcomes
+from_node:
+  node_id: broadband_infrastructure
+  node_name: Broadband Internet Infrastructure
+  node_type: stock
+to_node:
+  node_id: healthcare_utilization
+  node_name: Healthcare Utilization and Outcomes
+  node_type: proxy_index
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Broadband infrastructure enables access to telehealth services and online health information'
+- 'Step 2: Patients can research provider quality and choose higher-quality healthcare facilities'
+- 'Step 3: Remote monitoring and virtual consultations reduce need for in-person visits'
+- 'Step 4: Improved care coordination through electronic health records and patient portals'
+- 'Step 5: Earlier intervention and better disease management reduce hospitalizations and complications'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'Demaerschalk, Bart M., et al. 2023. "Broadband Internet Access and Health Outcomes: Patient and Provider Responses in Medicare." NBER Working Paper No. 31579.'
+  supporting_citations:
+  - 'Federal Communications Commission. 2020. "Advancing Broadband Connectivity as a Social Determinant of Health." FCC Task Force Report.'
+  - 'Strom, Mark A., and Patrick Richard. 2021. "Disparities in Technology and Broadband Internet Access Across Rurality: Implications for Health and Education." Family Medicine and Community Health 9(3).'
+  doi: 10.3386/w31579
+  journal: NBER Working Papers
+  year: 2023
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 7.0
+    type: percentage_change
+    ci_lower: null
+    ci_upper: null
+    ci_level: 95
+  sample_size: null
+  interpretation: "Broadband rollout associated with 7% reduction in joint replacement readmission rates; approximately 12% of 1999-2008 improvement in joint replacement outcomes attributable to broadband expansion"
+  additional_effects:
+  - metric: COVID-19 mortality reduction
+    value: 50
+    type: percentage_change
+    notes: "Counties with highest internet access had less than 50% of the COVID-19 mortality compared to counties with lowest access (July-October 2020)"
+  - metric: Diabetes prevalence difference per quintile
+    value: 9.6
+    type: percentage_change
+    notes: "Counties in any quintile of broadband access have on average 9.6% lower diabetes prevalence than those in the next lower quintile"
+last_updated: '2025-11-30'
+version: '1.0'
+description: Broadband internet access significantly improves healthcare utilization and outcomes through multiple pathways including telehealth access, health information seeking, provider selection, and care coordination. The FCC has designated broadband as a "super determinant of health" due to its foundational role in enabling other health-related activities.
+moderators:
+- name: rurality
+  direction: strengthens
+  strength: strong
+  description: Rural areas show largest improvements when gaining broadband access due to baseline lack of specialty care
+- name: digital_literacy
+  direction: strengthens
+  strength: moderate
+  description: Ability to effectively use internet for health purposes affects magnitude of benefit
+- name: healthcare_provider_adoption
+  direction: strengthens
+  strength: strong
+  description: Provider adoption of telehealth and electronic records amplifies patient benefits
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: Approximately 30% of rural residents lack broadband access, creating digital health deserts. Infrastructure investment disproportionately benefits urban areas, perpetuating rural-urban health disparities. Low-income households face affordability barriers even when infrastructure exists. Policy interventions should prioritize underserved areas and include affordability programs.
+assumptions:
+- Broadband defined as minimum speeds enabling video telehealth (typically 25 Mbps download)
+- Healthcare utilization includes both preventive and acute care services
+- Assumes baseline healthcare provider availability
+limitations:
+- Infrastructure investment has long lead times
+- Connectivity alone insufficient without digital literacy support
+- Some healthcare services require in-person delivery
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Impact strongest in rural and underserved areas with limited healthcare infrastructure
+  relevant_geographies:
+  - Rural counties with no prior broadband show largest outcome improvements
+  - Tribal lands face both infrastructure and regulatory barriers
+  - Low-income urban areas may have infrastructure but face affordability gaps
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

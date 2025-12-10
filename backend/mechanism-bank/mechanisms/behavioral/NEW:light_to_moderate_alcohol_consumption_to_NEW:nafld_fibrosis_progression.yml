@@ -1,0 +1,56 @@
+id: NEW:light_to_moderate_alcohol_consumption_to_NEW:nafld_fibrosis_progression
+name: Light-to-Moderate Alcohol Consumption → NAFLD Fibrosis Progression
+from_node:
+  node_id: NEW:light_to_moderate_alcohol_consumption
+  node_name: Light-to-Moderate Alcohol Consumption
+to_node:
+  node_id: NEW:nafld_fibrosis_progression
+  node_name: NAFLD Fibrosis Progression
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Light-to-moderate alcohol consumption (below heavy drinking threshold) in individuals with
+  NAFLD'
+- 'Step 2: Potential protective effects through mechanisms such as improved insulin sensitivity or anti-inflammatory
+  properties at low doses'
+- 'Step 3: Reduced progression from simple steatosis to advanced fibrosis or cirrhosis'
+- 'Step 4: Lower rates of histological fibrosis progression in NAFLD patients'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'Louise Magherman et al. 2023. "Meta‐analysis: The impact of light‐to‐moderate alcohol
+    consumption on progressive non‐alcoholic fatty liver disease." https://doi.org/10.1111/apt.17388'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of multiple studies on NAFLD and alcohol
+    consumption
+  - Studies examining histological progression of fatty liver disease
+  - Research on alcohol consumption thresholds in liver disease populations
+  doi: 10.1111/apt.17388
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This meta-analysis examines the impact of light-to-moderate alcohol consumption on progressive
+  non-alcoholic fatty liver disease, investigating whether low levels of alcohol intake affect fibrosis
+  progression and mortality outcomes in NAFLD patients.
+moderators:
+- name: alcohol_consumption_level
+  direction: u_shaped
+  strength: strong
+  description: Heavy alcohol consumption is excluded from NAFLD definition and likely harmful; only light-to-moderate
+    consumption examined for potential effects
+- name: baseline_liver_disease_severity
+  direction: weakens
+  strength: moderate
+  description: Effects may differ based on initial stage of NAFLD/NASH
+structural_competency:
+  equity_implications: While this mechanism focuses on individual alcohol consumption patterns, structural
+    factors influence drinking behaviors including alcohol availability, pricing policies, social norms,
+    and marketing. NAFLD prevalence itself is shaped by food environments, economic factors affecting
+    diet quality, and access to healthcare for metabolic disease management. The definition of 'light-to-moderate'
+    drinking may vary across populations and cultures, and access to information about safe drinking levels
+    is unequally distributed.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.486623'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

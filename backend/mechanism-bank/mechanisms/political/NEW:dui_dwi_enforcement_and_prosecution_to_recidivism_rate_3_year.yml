@@ -1,0 +1,76 @@
+id: NEW:dui_dwi_enforcement_and_prosecution_to_recidivism_rate_3_year
+name: DUI/DWI Enforcement and Prosecution → Recidivism Rate (3-Year)
+from_node:
+  node_id: NEW:dui_dwi_enforcement_and_prosecution
+  node_name: DUI/DWI Enforcement and Prosecution
+to_node:
+  node_id: recidivism_rate_3_year
+  node_name: Recidivism Rate (3-Year)
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Alcohol-impaired drivers injured in motor vehicle collisions are brought to hospitals/trauma
+  centers'
+- 'Step 2: Blood alcohol concentration (BAC) is measured but institutional procedures vary in obtaining
+  legally admissible evidence'
+- 'Step 3: Majority of intoxicated drivers (median 87%) are never charged or convicted for DUI/DWI'
+- 'Step 4: Lack of legal consequences fails to deter future alcohol-impaired driving behavior'
+- 'Step 5: Previous DUI/DWI offenders continue to drive while impaired, with 15.5% having prior convictions
+  and 3.5% being reconvicted during study periods'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'Robert S Green et al. 2015. "Legal consequences for alcohol-impaired drivers injured
+    in motor vehicle collisions: A systematic review.." https://doi.org/10.1016/j.aap.2015.04.005'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 26 studies across USA, Canada,
+    and Sweden
+  - Studies included 20 from USA examining DUI/DWI conviction rates
+  - 5 Canadian studies examining legal consequences for injured impaired drivers
+  doi: 10.1016/j.aap.2015.04.005
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review found that the median DUI/DWI conviction rate for alcohol-impaired
+  drivers injured in motor vehicle collisions was only 13% (range 0-85%), meaning the majority of intoxicated
+  injured drivers face no legal consequences. A substantial proportion (median 15.5%) had previous DUI/DWI
+  convictions, and 3.5% were reconvicted during study follow-up periods, indicating system failures in
+  both initial prosecution and recidivism prevention.
+quantitative_effects:
+  effect_size:
+    value: 13.0
+    type: percentage_change
+    ci_lower: 0.0
+    ci_upper: 85.0
+  sample_size: 11409
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Substantial heterogeneity between study designs, legal jurisdictions, and institutional
+    procedures for obtaining legally admissible BAC measurements precluded meta-analysis. Studies from
+    USA (n=20), Canada (n=5), and Sweden (n=1) showed varying conviction rates.
+moderators:
+- name: Legal jurisdiction
+  direction: strengthens
+  strength: strong
+  description: Different legal jurisdictions have varying procedures and policies for obtaining legally
+    admissible BAC measurements, affecting prosecution rates
+- name: Institutional procedures
+  direction: strengthens
+  strength: strong
+  description: Hospital and trauma center policies for blood alcohol measurement affect whether evidence
+    is legally admissible for prosecution
+structural_competency:
+  equity_implications: 'This mechanism highlights structural failures in the criminal justice and healthcare
+    systems'' coordination. The low conviction rate reflects systemic issues including: (1) lack of standardized
+    protocols for obtaining legally admissible BAC evidence in healthcare settings, (2) jurisdictional
+    variations in DUI/DWI laws and enforcement, and (3) potential conflicts between healthcare providers''
+    therapeutic obligations and law enforcement needs. The high rate of prior convictions among this population
+    (15.5%) suggests these are not isolated incidents but rather reflect populations with alcohol use
+    disorders who are inadequately connected to treatment. This is fundamentally a structural issue requiring
+    policy coordination between healthcare, public health, and criminal justice systems rather than individual-level
+    interventions.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.623553'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

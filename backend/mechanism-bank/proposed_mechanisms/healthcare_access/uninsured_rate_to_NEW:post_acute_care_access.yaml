@@ -1,0 +1,60 @@
+id: uninsured_rate_to_NEW:post_acute_care_access
+name: Uninsured Rate → Access to Post-Acute Care at Discharge
+from_node:
+  node_id: uninsured_rate
+  node_name: Uninsured Rate
+to_node:
+  node_id: NEW:post_acute_care_access
+  node_name: Access to Post-Acute Care at Discharge
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: High uninsured rates in a population mean more patients lack health insurance
+  coverage at the time of hospitalization for trauma or emergency general surgery'
+- 'Step 2: Uninsured patients face barriers to discharge planning as post-acute care
+  facilities (skilled nursing facilities, rehabilitation centers, home health services)
+  require payment assurance or insurance coverage'
+- 'Step 3: Without insurance coverage, patients are less likely to be accepted by
+  post-acute care facilities or be able to afford these services, resulting in delayed
+  discharges, discharges to home without adequate support, or prolonged acute care
+  stays'
+- 'Step 4: Insurance expansion policies (Medicaid expansion, healthcare reform) reduce
+  uninsured rates, which increases the proportion of patients with coverage that post-acute
+  care facilities will accept, improving access to appropriate post-discharge care'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: 'Yasmin A. Zerhouni et al. 2019. Impact of the Affordable Care
+    Act on Trauma and Emergency General Surgery: An Eastern Association for the Surgery
+    of Trauma Systematic Review and Meta-Analysis. Journal of Trauma and Acute Care
+    Surgery.'
+  supporting_citations: []
+description: Higher uninsured rates are associated with reduced access to post-acute
+  care at hospital discharge. This systematic review and meta-analysis of 18 studies
+  found that insurance expansion policies significantly reduced the odds of being
+  uninsured (OR 0.49, 95% CI 0.37-0.66) and were often associated with increased access
+  to post-acute care at discharge for trauma and emergency general surgery patients.
+  The mechanism operates through the requirement of payment assurance or insurance
+  coverage by post-acute care facilities.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.49
+    type: odds_ratio
+    ci_lower: 0.37
+    ci_upper: 0.66
+  p_value: null
+  sample_size: null
+moderators:
+- name: State Medicaid expansion status
+  direction: strengthens
+  strength: strong
+  description: The relationship between insurance coverage and post-acute care access
+    is most evident in states that expanded Medicaid, as these policies directly reduced
+    uninsured rates
+- name: Patient population type
+  direction: strengthens
+  strength: moderate
+  description: Both trauma and emergency general surgery patients showed improved
+    access to post-acute care with insurance expansion

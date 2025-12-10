@@ -1,0 +1,35 @@
+id: dui_law_stringency
+name: DUI Law Stringency
+scale: 1
+domain: Policy, Criminal Justice, Transportation Safety
+category: political
+stock:
+  value: 6.8
+  unit: Index 0-10 (composite of BAC limits, penalties, enforcement)
+  year: 2023
+  source: NHTSA, NIAAA APIS, MADD State Ratings
+geographic_variation:
+  score: 3
+  level: state
+  notes: All states have 0.08% BAC limit but vary in penalties, ignition interlock requirements, and administrative sanctions
+data_quality:
+  availability: high
+  frequency: annual
+  bias_notes: Statutory analysis; actual enforcement and prosecution rates vary
+  primary_sources:
+  - name: NHTSA Traffic Safety Facts
+    granularity: state
+  - name: NIAAA Alcohol Policy Information System (APIS)
+    granularity: state
+  - name: Mothers Against Drunk Driving (MADD) State Ratings
+    granularity: state
+  - name: Insurance Institute for Highway Safety (IIHS)
+    granularity: state
+description: |-
+  Composite measure of driving under the influence (DUI) law stringency including: blood alcohol
+  concentration (BAC) limits (standard 0.08%, lower for commercial drivers 0.04%, zero tolerance
+  for under-21), mandatory ignition interlock requirements, administrative license revocation
+  provisions, sobriety checkpoint authorization, enhanced penalties for high-BAC or repeat offenders,
+  and felony thresholds. Higher scores indicate more comprehensive and stricter DUI enforcement
+  frameworks. Strong DUI laws associated with reduced alcohol-related traffic fatalities.
+type: Policy

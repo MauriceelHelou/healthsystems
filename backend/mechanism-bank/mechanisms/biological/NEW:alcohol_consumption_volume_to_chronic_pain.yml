@@ -1,0 +1,60 @@
+id: NEW:alcohol_consumption_volume_to_chronic_pain
+name: Alcohol Consumption Volume → Chronic Pain
+from_node:
+  node_id: NEW:alcohol_consumption_volume
+  node_name: Alcohol Consumption Volume
+to_node:
+  node_id: chronic_pain
+  node_name: Chronic Pain
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Moderate alcohol consumption may provide acute analgesic effects through central nervous system
+  depression'
+- 'Step 2: Alcohol''s effects on GABA and opioid neurotransmitter systems may temporarily reduce pain
+  perception'
+- 'Step 3: Over time, baseline consumption patterns may be associated with reduced pain interference in
+  general population'
+- 'Step 4: However, this relationship reverses among those with advanced alcohol use disorder symptomatology'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Ellen W Yeung et al. 2020. "The association between alcohol consumption and pain
+    interference in a nationally representative sample: The moderating roles of gender and alcohol use
+    disorder symptomatology.." https://doi.org/10.1111/acer.14282'
+  supporting_citations:
+  - Koob GF. Dark Side of Alcohol Addiction theory (referenced in abstract conclusions)
+  - Medical Outcomes Study 12-item Short-Form Health Survey (MOS-SF-12) - methodology reference
+  - Additional citations require full-text access
+  doi: 10.1111/acer.14282
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: In the general population, higher baseline alcohol consumption was associated with lower
+  subsequent pain interference at 3-year follow-up. However, this protective pattern reversed among men
+  with elevated AUD symptomatology, where higher consumption predicted greater pain interference, consistent
+  with Koob's Dark Side of Alcohol Addiction theory.
+quantitative_effects:
+  sample_size: 29989
+moderators:
+- name: gender
+  direction: strengthens
+  strength: strong
+  description: The detrimental effect of alcohol on pain interference (positive association) emerged specifically
+    among men with higher AUD symptom counts
+- name: alcohol_use_disorder_symptomatology
+  direction: u_shaped
+  strength: strong
+  description: Among individuals with higher AUD symptom counts, particularly men, the relationship reverses
+    - higher alcohol consumption becomes associated with higher subsequent pain interference
+structural_competency:
+  equity_implications: This mechanism highlights how the alcohol-pain relationship differs based on stage
+    of alcohol use disorder progression. The finding that detrimental effects emerge at advanced AUD stages
+    among men suggests differential vulnerability based on disease progression. Structural factors that
+    contribute to AUD development (e.g., alcohol availability, marketing, treatment access) may indirectly
+    influence pain outcomes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.820779'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

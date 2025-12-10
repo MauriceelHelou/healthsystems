@@ -1,0 +1,49 @@
+id: low_alcohol_prices_to_population_alcohol_consumption
+name: Low Alcohol Prices (Ready-to-Drink Products) → Population-Level Alcohol Consumption
+from_node:
+  node_id: low_alcohol_prices
+  node_name: Low Alcohol Prices (Ready-to-Drink Products)
+to_node:
+  node_id: population_alcohol_consumption
+  node_name: Population-Level Alcohol Consumption
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Absence of pricing policies allows manufacturers to market ready-to-drink
+  alcohol products at very low prices per standard drink'
+- 'Step 2: Low prices reduce economic barriers to alcohol purchase, particularly for
+  price-sensitive consumers including young people and low-income populations'
+- 'Step 3: Increased affordability and accessibility of alcohol products leads to
+  higher volume and frequency of alcohol purchases'
+- 'Step 4: Greater alcohol availability and consumption at population level increases
+  overall alcohol-related health risks'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Matthew E Rossheim et al. 2025. "An online assessment of pricing
+    for ready-to-drink alcohol products: Implications for risk and policy solutions.."
+    *Alcohol, clinical & experimental research*. https://doi.org/10.1111/acer.15491'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.122905'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_by_volume
+  direction: strengthens
+  strength: strong
+  description: Least expensive brands had higher average ABV (9.0%) compared to all
+    products (5.9%), meaning low-cost options deliver more alcohol per dollar, amplifying
+    consumption risk
+- name: single_serve_container_availability
+  direction: strengthens
+  strength: moderate
+  description: 70% of least expensive brands available in single-serve containers
+    increases accessibility and immediate consumption opportunity, particularly for
+    youth
+- name: product_type_flavored_alcoholic_beverages
+  direction: strengthens
+  strength: moderate
+  description: Flavored alcoholic beverages (FAB), malt liquor, and premixed cocktails
+    among cheapest options; these products are particularly appealing to young people

@@ -1,0 +1,44 @@
+id: housing_instability_veterans_to_vha_homeless_program_utilization
+name: Housing Instability Among Veterans → VHA Homeless Program Utilization
+from_node:
+  node_id: housing_instability_veterans
+  node_name: Housing Instability Among Veterans
+to_node:
+  node_id: vha_homeless_program_utilization
+  node_name: VHA Homeless Program Utilization
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Universal screening for housing instability (Homelessness Screening Clinical
+  Reminder) identifies veterans at risk'
+- 'Step 2: Positive screening creates pathway to specialized homeless services within
+  VHA system'
+- 'Step 3: Veterans with identified housing needs are connected to appropriate programs
+  and resources'
+- 'Step 4: Within 6 months, veterans access homeless programs to address housing instability'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Montgomery et al. 2020. "Housing Instability and Homeless
+    Program Use Among Veterans: The Intersection of Race, Sex, and Homelessness."
+    *Housing Policy Debate*. https://doi.org/10.1080/10511482.2020.1712613'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.313448'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: race
+  direction: strengthens
+  strength: moderate
+  description: Racial minority veterans show higher utilization patterns corresponding
+    to higher housing instability rates without apparent access barriers
+- name: universal_screening_implementation
+  direction: strengthens
+  strength: strong
+  description: Universal screening creates systematic identification and referral
+    pathway regardless of demographic characteristics
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/housing_instability_veterans_to_vha_homeless_program_utilization.yaml
+_category: healthcare_access

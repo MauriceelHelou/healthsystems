@@ -1,0 +1,49 @@
+id: ambient_no2_exposure_to_pediatric_asthma_incidence
+name: Ambient Nitrogen Dioxide (NO2) Exposure → Pediatric Asthma Incidence
+from_node:
+  node_id: ambient_no2_exposure
+  node_name: Ambient Nitrogen Dioxide (NO2) Exposure
+to_node:
+  node_id: pediatric_asthma_incidence
+  node_name: Pediatric Asthma Incidence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: NO2 exposure occurs disproportionately in communities affected by systemic
+  racism due to historical residential segregation and proximity to traffic-heavy
+  areas'
+- 'Step 2: NO2 causes airway inflammation and oxidative stress in developing respiratory
+  systems'
+- 'Step 3: Chronic exposure leads to airway hyperresponsiveness and increased asthma
+  incidence in children'
+- 'Step 4: Racial disparities in NO2-attributable pediatric asthma have increased
+  by 19% between 2010 and 2019 despite overall pollution reductions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: G. Kerr et al. 2024. "Increasing Racial and Ethnic Disparities
+    in Ambient Air Pollution-Attributable Morbidity and Mortality in the United States."
+    *Environmental Health Perspectives*. https://doi.org/10.1289/EHP11900
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.510915'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: race
+  direction: strengthens
+  strength: strong
+  description: Racial relative disparities in NO2-attributable pediatric asthma increased
+    by 19% over the study period, indicating race as a strong moderator through structural
+    racism and residential segregation
+- name: ethnicity
+  direction: strengthens
+  strength: moderate
+  description: Ethnic relative disparities in NO2-attributable pediatric asthma increased
+    by 10% over the study period
+- name: time_period
+  direction: strengthens
+  strength: moderate
+  description: Disparities widened from 2010 to 2019 despite overall pollution reductions,
+    suggesting systemic inequities are intensifying over time

@@ -1,0 +1,91 @@
+id: educational_attainment_to_mortality
+name: Educational Attainment -> All-Cause Mortality
+from_node:
+  node_id: educational_attainment
+  node_name: Educational Attainment Level
+  node_type: stock
+to_node:
+  node_id: all_cause_mortality
+  node_name: All-Cause Adult Mortality
+  node_type: crisis_endpoint
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Higher education increases access to stable employment with health benefits and safe working conditions'
+- 'Step 2: Education provides health knowledge and cognitive resources for navigating healthcare systems'
+- 'Step 3: Higher income from education enables access to healthier housing, food, and neighborhoods'
+- 'Step 4: Educational attainment shapes social networks and social support resources'
+- 'Step 5: Cumulative advantage across domains produces lower mortality risk throughout adulthood'
+evidence:
+  quality_rating: A
+  n_studies: 603
+  primary_citation: 'Global Burden of Disease Education Collaboration. 2024. "Effects of education on adult mortality: a global systematic review and meta-analysis." The Lancet Public Health 9(1): e51-e60.'
+  supporting_citations:
+  - 'Montez, Jennifer Karas, et al. 2019. "Educational Disparities in Adult Mortality Across U.S. States." American Journal of Public Health 109(10): 1378-1385.'
+  - 'Cutler, David M., and Adriana Lleras-Muney. 2008. "Education and health: evaluating theories and evidence." In Making Americans Healthier: Social and Economic Policy as Health Policy.'
+  doi: 10.1016/S2468-2667(23)00306-7
+  journal: The Lancet Public Health
+  year: 2024
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 1.9
+    type: percentage_change
+    ci_lower: 1.8
+    ci_upper: 2.0
+    ci_level: 95
+  sample_size: 10355
+  interpretation: "Each additional year of education associated with 1.9% reduction in mortality risk (95% UI: 1.8-2.0%); effect stronger in younger adults (2.9% for ages 18-49) than older adults (0.8% for ages 70+)"
+  additional_effects:
+  - metric: Low education vs high education HR (US)
+    value: 1.39
+    type: hazard_ratio
+    ci_lower: 1.29
+    ci_upper: 1.50
+    notes: "Less than high school vs college education associated with 39% higher all-cause mortality risk"
+  - metric: Primary vs tertiary education RR (Asia-Pacific)
+    value: 2.40
+    type: relative_risk
+    ci_lower: 1.74
+    ci_upper: 3.31
+    notes: "Primary education vs tertiary associated with 140% higher mortality in high-income Asia Pacific"
+last_updated: '2025-11-30'
+version: '1.0'
+description: Educational attainment demonstrates a consistent dose-response relationship with all-cause mortality across 59 countries. A landmark 2024 Lancet meta-analysis of 603 studies found each additional year of education reduces mortality risk by approximately 1.9%, with effects persisting but attenuating with age. The relationship operates through multiple pathways including employment, income, health behaviors, and healthcare access.
+moderators:
+- name: age
+  direction: weakens
+  strength: moderate
+  description: Effect diminishes with age (2.9% reduction per year for 18-49 vs 0.8% for 70+)
+- name: cause_of_death
+  direction: varies
+  strength: moderate
+  description: Stronger effects for cardiovascular and preventable causes
+- name: healthcare_access
+  direction: weakens
+  strength: moderate
+  description: Universal healthcare may reduce education-mortality gradient
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: Educational attainment reflects upstream structural factors including school funding inequity, residential segregation, and intergenerational wealth transfers. Discriminatory policies (redlining, school segregation) created persistent educational disparities. Policy should address educational quality and access rather than individual attainment alone.
+assumptions:
+- Educational attainment measured as completed years of formal education
+- Mortality includes all causes of death
+- Mechanism operates through multiple interdependent pathways
+limitations:
+- Selection effects may confound estimates (healthier children may attain more education)
+- Educational quality varies within attainment levels
+- Credential effects may differ from knowledge/skill effects
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect size varies by country development level and healthcare system
+  relevant_geographies:
+  - High-income Asia-Pacific shows strong education-mortality gradient
+  - United States shows persistent and widening disparities
+  - Nordic countries with universal systems may show weaker gradients
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

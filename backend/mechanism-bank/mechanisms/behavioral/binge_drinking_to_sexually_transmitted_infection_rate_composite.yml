@@ -1,0 +1,54 @@
+id: binge_drinking_to_sexually_transmitted_infection_rate_composite
+name: Binge Drinking → Sexually Transmitted Infection Rate
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: sexually_transmitted_infection_rate_composite
+  node_name: Sexually Transmitted Infection Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption leads to risky sexual behaviors (early initiation, inconsistent condom
+  use, multiple partners)'
+- 'Step 2: These risky sexual behaviors increase exposure to sexually transmitted infections'
+- 'Step 3: Impaired judgment during intoxication reduces likelihood of STI prevention behaviors'
+- 'Step 4: Cumulative exposure through multiple risk behaviors elevates STI acquisition risk'
+evidence:
+  quality_rating: A
+  n_studies: 50
+  primary_citation: 'Hyang-Soon Cho and Youngran Yang 2023. "Relationship Between Alcohol Consumption
+    and Risky Sexual Behaviors Among Adolescents and Young Adults: A Meta-Analysis." https://doi.org/10.3389/ijph.2023.1605669'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 50 studies from 2000-2020
+  - Studies included adolescents and young adults across multiple settings
+  - Literature systematically reviewed from qualified articles 2000-2020
+  doi: 10.3389/ijph.2023.1605669
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This mechanism represents the downstream health consequence pathway where alcohol consumption
+  leads to risky sexual behaviors that ultimately increase STI risk. The study documents the intermediate
+  behavioral outcomes that are established STI risk factors.
+quantitative_effects:
+  sample_size: 465595
+moderators:
+- name: condom_use_consistency
+  direction: strengthens
+  strength: strong
+  description: Inconsistent condom use (OR=1.228) directly mediates STI transmission risk
+- name: number_of_partners
+  direction: strengthens
+  strength: strong
+  description: Multiple sexual partners (OR=1.722) increases cumulative STI exposure
+structural_competency:
+  equity_implications: The call for prevention programs initiated at early age and supported by homes,
+    schools, and communities reflects understanding that structural interventions are needed. Addressing
+    this pathway requires integrated approaches combining alcohol policy, comprehensive sexual health
+    education, and accessible STI testing/treatment. Equity concerns include differential access to prevention
+    resources, healthcare, and testing services across communities with varying socioeconomic conditions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.482378'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

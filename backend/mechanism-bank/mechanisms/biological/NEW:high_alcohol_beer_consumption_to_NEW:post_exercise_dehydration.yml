@@ -1,0 +1,49 @@
+id: NEW:high_alcohol_beer_consumption_to_NEW:post_exercise_dehydration
+name: High Alcohol Beer Consumption (>4%) → Post-Exercise Dehydration Risk
+from_node:
+  node_id: NEW:high_alcohol_beer_consumption
+  node_name: High Alcohol Beer Consumption (>4%)
+to_node:
+  node_id: NEW:post_exercise_dehydration
+  node_name: Post-Exercise Dehydration Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Higher alcohol content beer (>4%) is consumed post-exercise'
+- 'Step 2: Alcohol exerts diuretic effect by suppressing antidiuretic hormone (ADH)'
+- 'Step 3: Increased urinary output leads to greater fluid losses'
+- 'Step 4: Particularly pronounced when large volumes (>700ml) are consumed'
+- 'Step 5: Inadequate rehydration may impair recovery and subsequent performance'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: Jaison L Wynne and Patrick B Wilson 2021. "Got Beer? A Systematic Review of Beer and
+    Exercise.." https://doi.org/10.1123/ijsnem.2021-0064
+  supporting_citations:
+  - Studies examining diuresis with varying alcohol content beverages
+  - Research on fluid balance with >700ml consumption volumes
+  - Additional citations require full-text access
+  doi: 10.1123/ijsnem.2021-0064
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher alcohol content beer (>4%) consumed post-exercise increases dehydration risk through
+  diuretic effects. The review recommends pairing with nonalcoholic beverages to mitigate fluid losses.
+moderators:
+- name: pairing_with_nonalcoholic_beverage
+  direction: weakens
+  strength: moderate
+  description: Pairing higher alcohol beer with a nonalcoholic option can limit diuresis and improve rehydration
+- name: consumption_volume
+  direction: strengthens
+  strength: moderate
+  description: Volumes greater than 700ml increase diuretic effects
+structural_competency:
+  equity_implications: Sports culture and commercial sponsorship by alcohol companies creates structural
+    pressure to consume beer post-exercise. This finding has implications for workplace wellness programs,
+    sports league policies, and advertising regulations in athletic contexts.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.971114'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

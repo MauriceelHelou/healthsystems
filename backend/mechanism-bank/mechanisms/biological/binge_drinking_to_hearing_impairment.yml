@@ -1,0 +1,60 @@
+id: binge_drinking_to_hearing_impairment
+name: Binge Drinking → Hearing Impairment
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: hearing_impairment
+  node_name: Hearing Impairment
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol consumption leads to direct ototoxic effects on cochlear hair cells and auditory nerve
+  fibers'
+- 'Step 2: Chronic alcohol exposure causes oxidative stress and inflammatory damage to auditory structures'
+- 'Step 3: Alcohol-induced changes in central auditory processing pathways impair sound interpretation'
+- 'Step 4: Cumulative damage to auditory system results in measurable hearing loss'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: 'Peiyi Qian et al. 2023. "Alcohol as a risk factor for hearing loss: A systematic
+    review and meta-analysis." https://doi.org/10.1371/journal.pone.0280641'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 18 observational studies (9 cross-sectional,
+    5 case-control, 4 cohort)
+  - Studies included 27,849 participants across multiple databases through November 2021
+  - Individual study citations available in full systematic review
+  doi: 10.1371/journal.pone.0280641
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'This meta-analysis of 18 observational studies (9 cross-sectional, 5 case-control, 4 cohort)
+  with 27,849 participants found that alcohol drinkers have 22% higher odds of hearing loss compared to
+  non-drinkers (OR=1.22, 95% CI: 1.09-1.35). The findings suggest that alcohol consumption is a modifiable
+  risk factor for hearing loss, with implications for prevention strategies.'
+quantitative_effects:
+  effect_size:
+    value: 1.22
+    type: odds_ratio
+    ci_lower: 1.09
+    ci_upper: 1.35
+  sample_size: 27849
+moderators:
+- name: drinking_status
+  direction: strengthens
+  strength: moderate
+  description: Drinkers compared to non-drinkers showed elevated risk, suggesting dose-response relationship
+    between alcohol consumption and hearing loss
+structural_competency:
+  equity_implications: While this mechanism focuses on individual alcohol consumption and biological pathways,
+    structural factors influence alcohol use patterns including alcohol outlet density, marketing exposure,
+    socioeconomic conditions, and occupational stress leading to alcohol use. The finding that drinking
+    limitations may prevent hearing loss points to potential policy interventions (alcohol pricing, availability
+    restrictions) rather than individual blame. Populations with higher structural exposure to alcohol
+    (e.g., those in areas with high alcohol outlet density, fewer recreational alternatives, or higher
+    occupational stress) may face compounded risk for hearing loss.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.862420'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

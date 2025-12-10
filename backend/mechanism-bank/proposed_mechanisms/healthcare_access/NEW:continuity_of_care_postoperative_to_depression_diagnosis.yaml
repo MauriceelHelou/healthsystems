@@ -1,0 +1,54 @@
+id: NEW:continuity_of_care_postoperative_to_depression_diagnosis
+name: Continuity of Care for Postoperative Patients → Postoperative Depression
+from_node:
+  node_id: NEW:continuity_of_care_postoperative
+  node_name: Continuity of Care for Postoperative Patients
+to_node:
+  node_id: depression_diagnosis
+  node_name: Postoperative Depression
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Continuity of care programs provide comprehensive, continuous, and personalized
+  follow-up services extending beyond hospital discharge'
+- 'Step 2: Ongoing care relationships enable early identification and intervention
+  for psychological distress symptoms in postoperative patients'
+- 'Step 3: Structured support systems address emotional needs, provide education,
+  and reinforce coping strategies during recovery'
+- 'Step 4: Sustained healthcare engagement reduces feelings of abandonment and isolation
+  common after cancer surgery'
+- 'Step 5: These combined effects significantly reduce postoperative depression symptoms
+  in surgical patients'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Wenfeng Fu et al. 2024. Effectiveness of continuity of care in
+    postoperative patients with cervical cancer: a systematic evaluation and meta-analysis
+    of a randomized controlled trial. Frontiers in oncology.'
+  supporting_citations: []
+description: Continuity of care interventions for postoperative cervical cancer patients
+  significantly reduce depression symptoms compared to standard care. The meta-analysis
+  of randomized controlled trials demonstrates a large negative effect (SMD=-1.15),
+  indicating that extended, personalized care services substantially decrease postoperative
+  depression through sustained support and comprehensive follow-up.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -1.15
+    type: standardized_mean_difference
+    ci_lower: -1.35
+    ci_upper: -0.95
+  p_value: 0.05
+  sample_size: null
+moderators:
+- name: cancer_type
+  direction: strengthens
+  strength: moderate
+  description: Evidence specifically from cervical cancer patients; effect may vary
+    across cancer types
+- name: baseline_anxiety
+  direction: strengthens
+  strength: moderate
+  description: Continuity of care also significantly reduced anxiety (SMD=-0.92),
+    suggesting patients with comorbid anxiety may benefit more

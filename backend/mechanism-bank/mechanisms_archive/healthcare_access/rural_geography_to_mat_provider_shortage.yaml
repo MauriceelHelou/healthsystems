@@ -1,0 +1,43 @@
+id: rural_geography_to_mat_provider_shortage
+name: Rural Geographic Location → Limited Access to MAT Prescribers
+from_node:
+  node_id: rural_geography
+  node_name: Rural Geographic Location
+to_node:
+  node_id: mat_provider_shortage
+  node_name: Limited Access to MAT Prescribers
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Rural areas have lower population density and reduced healthcare workforce,
+  limiting number of providers offering specialized services like MAT'
+- 'Step 2: Federal regulatory requirements (DATA 2000 waivers) restrict which providers
+  can prescribe buprenorphine, further limiting rural capacity'
+- 'Step 3: Limited number of MAT prescribers in rural areas face capacity constraints,
+  creating waitlists and forcing patients to travel long distances'
+- 'Step 4: Structural barriers compound to create median travel distance of 48.8 miles
+  to actual MAT prescribers despite closer geographic proximity to potential prescribers'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Evan S Cole et al. 2019. "The Role of Primary Care in Improving
+    Access to Medication-Assisted Treatment for Rural Medicaid Enrollees with Opioid
+    Use Disorder.." *Journal of general internal medicine*. https://doi.org/10.1007/s11606-019-04943-6
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.502651'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: medicaid_enrollment
+  direction: strengthens
+  strength: moderate
+  description: Medicaid enrollees may face additional access barriers through limited
+    provider networks accepting Medicaid, compounding rural geographic constraints
+- name: primary_care_infrastructure
+  direction: weakens
+  strength: moderate
+  description: Presence of primary care providers offering MAT in rural areas can
+    partially mitigate specialist shortage, as 67.6% of MAT recipients received treatment
+    from PCPs

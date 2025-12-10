@@ -1,0 +1,59 @@
+id: depression_diagnosis_to_NEW:increased_alcohol_consumption
+name: Depression Diagnosis → Increased Alcohol Consumption During Pandemic
+from_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+to_node:
+  node_id: NEW:increased_alcohol_consumption
+  node_name: Increased Alcohol Consumption During Pandemic
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals with a previous diagnosis of depression experience heightened
+  psychological vulnerability during pandemic-related stressors'
+- 'Step 2: COVID-19 pandemic stressors (job loss, social isolation, extended time
+  at home) exacerbate depressive symptoms in those with depression history'
+- 'Step 3: Individuals with depression diagnosis and current symptoms engage in increased
+  alcohol consumption as a maladaptive coping mechanism'
+- 'Step 4: This self-medication behavior results in significantly higher odds of increased
+  alcohol consumption compared to those without depression'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Weerakoon et al. 2020. "Longer time spent at home during COVID-19
+    pandemic is associated with binge drinking among US adults." The American Journal
+    of Drug and Alcohol Abuse.
+  supporting_citations: []
+description: 'Individuals with a previous diagnosis of depression and current depression
+  symptoms had significantly greater odds (AOR: 1.77) of increasing alcohol consumption
+  during the COVID-19 pandemic compared to those without depression. This relationship
+  was observed among binge drinkers in a US adult sample during the early pandemic
+  period (March-April 2020), suggesting depression serves as a risk factor for maladaptive
+  alcohol-related coping behaviors during crisis periods.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.77
+    type: odds_ratio
+    ci_lower: 1.16
+    ci_upper: 2.73
+  p_value: null
+  sample_size: 1982
+moderators:
+- name: binge drinking status
+  direction: strengthens
+  strength: moderate
+  description: The association between depression and increased alcohol consumption
+    was specifically examined among binge drinkers, with 60% of binge drinkers increasing
+    consumption during pandemic vs 28% of non-binge drinkers
+- name: current depression symptoms
+  direction: strengthens
+  strength: moderate
+  description: The effect was observed among those with both previous diagnosis AND
+    current depression symptoms, suggesting active symptomatology amplifies the relationship
+- name: time spent at home
+  direction: strengthens
+  strength: moderate
+  description: Each 1-week increase in time at home was associated with 1.19 greater
+    odds of binge drinking, compounding depression-related drinking

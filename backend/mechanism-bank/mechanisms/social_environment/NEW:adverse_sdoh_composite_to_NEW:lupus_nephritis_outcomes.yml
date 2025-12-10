@@ -1,0 +1,53 @@
+id: NEW:adverse_sdoh_composite_to_NEW:lupus_nephritis_outcomes
+name: Adverse Social Determinants of Health Composite → Lupus Nephritis Outcomes
+from_node:
+  node_id: NEW:adverse_sdoh_composite
+  node_name: Adverse Social Determinants of Health Composite
+to_node:
+  node_id: NEW:lupus_nephritis_outcomes
+  node_name: Lupus Nephritis Outcomes
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Multiple adverse SDoH domains (economic, educational, healthcare access, social, neighborhood)
+  create cumulative disadvantage'
+- 'Step 2: Each additional adverse SDoH domain compounds risk through multiplicative rather than additive
+  effects'
+- 'Step 3: Compounded disadvantage leads to delayed diagnosis, suboptimal treatment adherence, and reduced
+  access to specialist care'
+- 'Step 4: Chronic stress from multiple adverse SDoH triggers inflammatory pathways and immune dysregulation'
+- 'Step 5: Worsened disease activity and progression to adverse outcomes including end-stage renal disease'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'Shivani Garg et al. 2024. "Multiplicative Impact of Adverse Social Determinants of
+    Health on Outcomes in Lupus Nephritis: A Meta‐analysis and Systematic Review." https://doi.org/10.1002/acr.25359'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis includes multiple primary studies on
+    SDoH and lupus nephritis outcomes
+  - Studies examining economic stability domain effects on LN outcomes
+  - Studies examining healthcare access domain effects on LN outcomes
+  doi: 10.1002/acr.25359
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Overall burden of adverse social determinants of health demonstrates multiplicative impact
+  on lupus nephritis outcomes, suggesting compounding effects across domains rather than simple additive
+  risk
+moderators:
+- name: Number of adverse SDoH domains
+  direction: strengthens
+  strength: strong
+  description: Multiplicative effect indicates each additional adverse SDoH domain compounds rather than
+    simply adds to risk
+structural_competency:
+  equity_implications: This mechanism appropriately frames lupus nephritis disparities as products of
+    structural inequities across multiple SDoH domains rather than individual patient behaviors. The multiplicative
+    framework emphasizes how systems of disadvantage compound to produce health inequities. Interventions
+    targeting single domains may be insufficient; structural approaches addressing multiple domains simultaneously
+    are needed.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.921670'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

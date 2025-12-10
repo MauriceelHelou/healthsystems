@@ -1,0 +1,39 @@
+id: mental_disorders_due_to_alcohol_to_ald_survival_outcomes
+name: Mental Disorders Due to Alcohol (F10 Diagnosis) → Survival Outcomes in ALD Patients
+from_node:
+  node_id: mental_disorders_due_to_alcohol
+  node_name: Mental Disorders Due to Alcohol (F10 Diagnosis)
+to_node:
+  node_id: ald_survival_outcomes
+  node_name: Survival Outcomes in ALD Patients
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: F10 diagnosis indicates more severe alcohol use disorder with psychiatric
+  manifestations'
+- 'Step 2: Severe alcohol use disorder associated with higher cumulative alcohol exposure
+  and continued drinking'
+- 'Step 3: Increased alcohol consumption accelerates liver injury, inflammation, and
+  fibrosis'
+- 'Step 4: Psychiatric comorbidity may reduce treatment adherence and health-seeking
+  behavior'
+- 'Step 5: Combined effects result in poorer survival outcomes in ALD patients with
+  F10 codes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Keungmo Yang et al. 2024. "The prognostic impact of psychiatric
+    intervention on alcohol-associated liver disease: The UK Biobank cohort study.."
+    *Clinical and molecular hepatology*. https://doi.org/10.3350/cmh.2024.0278'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.407817'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: psychiatric_intervention_availability
+  direction: weakens
+  strength: strong
+  description: Psychiatric intervention significantly improved outcomes even in patients
+    with F10 codes, suggesting modifiable risk factor

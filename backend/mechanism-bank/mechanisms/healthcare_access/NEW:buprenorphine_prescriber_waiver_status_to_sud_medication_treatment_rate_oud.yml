@@ -1,0 +1,58 @@
+id: NEW:buprenorphine_prescriber_waiver_status_to_sud_medication_treatment_rate_oud
+name: Buprenorphine Prescriber Waiver Status → SUD Medication Treatment Rate (OUD)
+from_node:
+  node_id: NEW:buprenorphine_prescriber_waiver_status
+  node_name: Buprenorphine Prescriber Waiver Status
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate (OUD)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Federal waiver requirements create regulatory barriers for NPs/PAs to prescribe buprenorphine'
+- 'Step 2: Waivered providers have different perceived barriers than non-waivered providers'
+- 'Step 3: Waivered providers report insurance prior authorization and detoxification access as key barriers'
+- 'Step 4: These structural healthcare system barriers limit buprenorphine prescribing even among waivered
+  providers'
+- 'Step 5: Reduced prescribing capacity leads to lower medication treatment rates for OUD patients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: B. Andraka-Christou et al. 2022. "Perceptions of buprenorphine barriers and efficacy
+    among nurse practitioners and physician assistants." https://doi.org/10.1186/s13722-022-00321-6
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1186/s13722-022-00321-6
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Federal waiver requirements and associated structural barriers (insurance prior authorization,
+  detoxification access) limit NP/PA buprenorphine prescribing capacity, contributing to underutilization
+  of evidence-based medication treatment for OUD
+quantitative_effects:
+  sample_size: 240
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Buprenorphine is underutilized nationally, particularly in rural areas where NPs/PAs
+    could help address treatment gaps
+moderators:
+- name: waiver_status
+  direction: strengthens
+  strength: moderate
+  description: Waivered versus non-waivered NPs/PAs perceive different barriers to prescribing, with non-waivered
+    providers more concerned about patient mix
+- name: rural_location
+  direction: strengthens
+  strength: moderate
+  description: Rural areas have greater underutilization of buprenorphine, making NP/PA prescribing more
+    critical
+structural_competency:
+  equity_implications: This mechanism highlights structural healthcare policy barriers rather than individual
+    provider deficits. The waiver system creates regulatory obstacles that differentially affect mid-level
+    providers. Insurance prior authorization requirements and lack of detox beds are systemic healthcare
+    infrastructure problems, not individual failures.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.242012'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

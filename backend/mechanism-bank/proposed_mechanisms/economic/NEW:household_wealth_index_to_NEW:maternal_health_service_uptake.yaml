@@ -1,0 +1,65 @@
+id: NEW:household_wealth_index_to_NEW:maternal_health_service_uptake
+name: Household Wealth Index → Maternal Health Care Service Utilization
+from_node:
+  node_id: NEW:household_wealth_index
+  node_name: Household Wealth Index
+to_node:
+  node_id: NEW:maternal_health_service_uptake
+  node_name: Maternal Health Care Service Utilization
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher household wealth index increases financial resources available for
+  healthcare expenditures including transportation, service fees, and indirect costs'
+- 'Step 2: Wealthier households have greater ability to overcome financial barriers
+  to accessing maternal health facilities and services'
+- 'Step 3: Reduced financial constraints enable more frequent and comprehensive utilization
+  of antenatal care, skilled delivery, and postnatal care services'
+- 'Step 4: A dose-response relationship exists where each higher wealth quintile shows
+  progressively greater maternal health service utilization'
+evidence:
+  quality_rating: A
+  n_studies: 51
+  primary_citation: 'Addisu Alemayehu Gube et al. 2024. Inequity in uptake of maternal
+    health care services in developing countries: a systematic review and meta-analysis.
+    Frontiers in Public Health.'
+  supporting_citations: []
+description: A systematic review and meta-analysis of 51 studies from developing countries
+  demonstrates that household wealth index is positively associated with maternal
+  health care service utilization. Mothers in the second wealth quintile were 62%
+  more likely to utilize antenatal care compared to the lowest wealth quintile (OR
+  1.62; 95% CI 1.36-1.91), with progressively stronger associations at higher wealth
+  levels. Similar wealth-based inequities were observed for skilled delivery care
+  and postnatal care utilization.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.62
+    type: odds_ratio
+    ci_lower: 1.36
+    ci_upper: 1.91
+  p_value: null
+  sample_size: 224530
+moderators:
+- name: wealth_quintile_level
+  direction: strengthens
+  strength: strong
+  description: Higher wealth quintiles show progressively stronger associations with
+    maternal health service utilization - second quintile OR 1.62, with further increases
+    at higher quintiles
+- name: type_of_maternal_service
+  direction: strengthens
+  strength: moderate
+  description: Similar wealth-based inequalities observed across antenatal care, skilled
+    delivery care, and postnatal care utilization
+- name: education_level
+  direction: strengthens
+  strength: strong
+  description: Education interacts with wealth - those with higher education and higher
+    wealth show compounded advantages in service utilization
+- name: urban_rural_residence
+  direction: strengthens
+  strength: strong
+  description: Urban residence compounds wealth effects - urban mothers 3 times more
+    likely to receive antenatal care than rural mothers

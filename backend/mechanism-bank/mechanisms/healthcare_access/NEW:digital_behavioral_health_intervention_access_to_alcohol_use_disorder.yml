@@ -1,0 +1,62 @@
+id: NEW:digital_behavioral_health_intervention_access_to_alcohol_use_disorder
+name: Digital Behavioral Health Intervention Access → Alcohol Use Disorder
+from_node:
+  node_id: NEW:digital_behavioral_health_intervention_access
+  node_name: Digital Behavioral Health Intervention Access
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital platforms deliver integrated treatment addressing alcohol use alongside depression'
+- 'Step 2: Reduced barriers to treatment access (time, cost, stigma) increase engagement with therapeutic
+  content'
+- 'Step 3: Interventions provide self-monitoring, feedback, and skill-building for reducing alcohol consumption'
+- 'Step 4: Treatment of comorbid depression reduces alcohol use as coping mechanism'
+- 'Step 5: Sustained engagement produces delayed but significant reductions in problematic alcohol use'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'M. Schouten et al. 2021. "Digital Interventions for People With Co-Occurring Depression
+    and Problematic Alcohol Use: A Systematic Review and Meta-Analysis." https://doi.org/10.1093/alcalc/agaa147'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 5-6 studies
+  - Trials included in random-effects meta-analyses for alcohol outcomes
+  - Studies evaluated using GRADE methodology
+  doi: 10.1093/alcalc/agaa147
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Digital interventions addressing both depression and problematic alcohol use produce small
+  but significant reductions in alcohol use at 6-month follow-up, though effects appear delayed compared
+  to depression outcomes and are sensitive to analytical choices.
+quantitative_effects:
+  effect_size:
+    value: 0.14
+    type: standardized_mean_difference
+    ci_lower: 0.07
+    ci_upper: 0.2
+  p_value: 0.005
+moderators:
+- name: follow_up_duration
+  direction: strengthens
+  strength: moderate
+  description: Effect on alcohol use non-significant at 3-month follow-up (g=0.14, p=0.07) but significant
+    at 6-month follow-up (g=0.14, p=0.005), suggesting delayed treatment effects for alcohol outcomes
+- name: statistical_estimator_choice
+  direction: weakens
+  strength: moderate
+  description: Sensitivity analysis indicated 6-month alcohol use finding was sensitive to statistical
+    estimator choice, suggesting some uncertainty in the robustness of findings
+structural_competency:
+  equity_implications: This mechanism highlights how technology-based solutions can address structural
+    barriers in substance use treatment systems, including treatment fragmentation between mental health
+    and substance use services, limited specialty provider availability, and stigma associated with seeking
+    in-person treatment. The integrated approach reflects a structural understanding that comorbid conditions
+    require coordinated intervention rather than siloed treatment systems.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.335727'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

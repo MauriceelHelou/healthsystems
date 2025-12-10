@@ -1,0 +1,52 @@
+id: NEW:alcohol_advertising_density_to_alcohol_withdrawal_severe_rate
+name: Alcohol Advertising Density → Alcohol Withdrawal Syndrome Hospitalization Rate
+from_node:
+  node_id: NEW:alcohol_advertising_density
+  node_name: Alcohol Advertising Density
+to_node:
+  node_id: alcohol_withdrawal_severe_rate
+  node_name: Alcohol Withdrawal Syndrome Hospitalization Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of alcohol advertisements in residential neighborhoods increases visual exposure
+  to alcohol marketing cues'
+- 'Step 2: Repeated exposure to advertising normalizes alcohol consumption and triggers consumption behaviors'
+- 'Step 3: Increased consumption frequency and quantity leads to development of alcohol dependence'
+- 'Step 4: Physiological dependence results in withdrawal syndrome requiring medical treatment when alcohol
+  is unavailable'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jessica L Johnson et al. 2020. "Positive association between neighborhood retail alcohol
+    outlet access and hospital admissions for alcohol withdrawal syndrome in New Orleans." https://doi.org/10.1080/10550887.2020.1762029
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1080/10550887.2020.1762029
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Neighborhood alcohol advertising density is associated with increased risk of hospital admission
+  for alcohol withdrawal syndrome, representing an environmental exposure that promotes alcohol consumption
+  patterns leading to dependence.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focused on New Orleans; advertising density and regulations vary significantly
+    across jurisdictions
+moderators:
+- name: proximity_to_home
+  direction: strengthens
+  strength: moderate
+  description: Advertising density within one-quarter and one-half mile of home both examined as potential
+    risk factors
+structural_competency:
+  equity_implications: Alcohol advertising represents a commercial determinant of health that disproportionately
+    targets certain communities. Marketing saturation in neighborhoods is a structural factor shaped by
+    advertising regulations and zoning policies. This mechanism avoids individual blame by recognizing
+    how environmental exposures shape consumption patterns. Policy interventions restricting alcohol advertising
+    near homes represent equity-oriented structural solutions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.477507'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

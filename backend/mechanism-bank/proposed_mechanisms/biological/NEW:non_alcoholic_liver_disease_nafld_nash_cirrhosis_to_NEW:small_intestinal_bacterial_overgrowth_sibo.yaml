@@ -1,0 +1,57 @@
+id: NEW:non_alcoholic_liver_disease_nafld_nash_cirrhosis_to_NEW:small_intestinal_bacterial_overgrowth_sibo
+name: Non-Alcoholic Liver Disease (NAFLD/NASH/Cirrhosis) → Small Intestinal Bacterial
+  Overgrowth (SIBO)
+from_node:
+  node_id: NEW:non_alcoholic_liver_disease_nafld_nash_cirrhosis
+  node_name: Non-Alcoholic Liver Disease (NAFLD/NASH/Cirrhosis)
+to_node:
+  node_id: NEW:small_intestinal_bacterial_overgrowth_sibo
+  node_name: Small Intestinal Bacterial Overgrowth (SIBO)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Non-alcoholic liver disease alters bile acid metabolism and secretion,
+  reducing the antimicrobial properties of bile in the small intestine'
+- 'Step 2: Liver dysfunction impairs intestinal motility through autonomic nervous
+  system dysregulation and reduced clearance of bacterial metabolites'
+- 'Step 3: Portal hypertension and altered gut-liver axis signaling lead to intestinal
+  barrier dysfunction and mucosal immune changes'
+- 'Step 4: These changes create a favorable environment for pathological bacterial
+  overgrowth in the small intestine, with SIBO prevalence reaching approximately 35%
+  in NAFLD patients'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: 'Anna Gudan et al. 2022. The Prevalence of Small Intestinal Bacterial
+    Overgrowth in Patients with Non-Alcoholic Liver Diseases: NAFLD, NASH, Fibrosis,
+    Cirrhosis—A Systematic Review, Meta-Analysis and Meta-Regression. Nutrients.'
+  supporting_citations: []
+description: Systematic review and meta-analysis of 18 studies (n=1,263) demonstrates
+  that approximately 35% of patients with non-alcoholic liver diseases develop small
+  intestinal bacterial overgrowth. The gut-liver axis is bidirectionally disrupted
+  in NAFLD, with liver dysfunction promoting conditions favorable for bacterial overgrowth
+  in the small intestine through altered bile acid metabolism, impaired intestinal
+  motility, and mucosal immune dysfunction. The prevalence of SIBO is particularly
+  elevated in NASH patients and increases with the proportion of males in the study
+  population.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.35
+    type: prevalence_rate
+    ci_lower: 0.244
+    ci_upper: 0.472
+  p_value: 0.017
+  sample_size: 1263
+moderators:
+- name: sex_male_percentage
+  direction: strengthens
+  strength: moderate
+  description: Higher percentage of males in the population with liver diseases is
+    a predisposing factor toward SIBO (coefficient = 0.0195, p = 0.0426)
+- name: liver_disease_severity
+  direction: strengthens
+  strength: weak
+  description: NASH subgroup showed highest SIBO prevalence (0.411) compared to NAFLD
+    alone, though differences were not statistically significant (p = 0.854)

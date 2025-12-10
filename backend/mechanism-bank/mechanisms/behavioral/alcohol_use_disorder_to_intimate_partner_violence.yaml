@@ -1,0 +1,89 @@
+id: alcohol_use_disorder_to_intimate_partner_violence
+name: Alcohol Use → Intimate Partner Violence
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use
+to_node:
+  node_id: intimate_partner_violence
+  node_name: Intimate Partner Violence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption impairs cognitive functioning, judgment, and impulse
+  control, reducing inhibitions against aggressive behavior'
+- 'Step 2: Intoxication amplifies negative emotional states and misinterpretation
+  of social cues, increasing likelihood of aggressive responses to perceived provocations'
+- 'Step 3: Heavy drinking patterns create relationship conflict around drinking behavior,
+  financial strain, and role dysfunction'
+- 'Step 4: Acute intoxication episodes trigger violent incidents, with frequency and
+  severity of IPV increasing with frequency of drunkenness'
+- 'Step 5: Harmful alcohol use becomes embedded in syndemic interactions with other
+  risk factors (HIV, stress, poverty), creating compounding vulnerability for IPV
+  perpetration and victimization'
+evidence:
+  quality_rating: A
+  n_studies: 89
+  primary_citation: 'Ramsoomar L et al. 2021. Pooled analysis of the association between
+    alcohol use and violence against women: evidence from four violence prevention
+    studies in Africa. BMJ Open.'
+  supporting_citations:
+  - 'Tenkorang E et al. 2020. Intimate Partner Violence (IPV) Against HIV-Positive
+    Women in Sub-Saharan Africa: A Mixed-Method Systematic Review and Meta-Analysis.
+    Trauma, Violence, & Abuse.'
+  - 'Bifftu BB and Guracho Y. 2022. Determinants of Intimate Partner Violence against
+    Pregnant Women in Ethiopia: A Systematic Review and Meta-Analysis. BioMed Research
+    International.'
+  - 'Tomita A et al. 2022. Syndemics of intimate partner violence among women in HIV
+    endemic South Africa: geospatial analysis of nationally representative data. Scientific
+    Reports.'
+  - 'Shamu S et al. 2011. A systematic review of African studies on intimate partner
+    violence against pregnant women: prevalence and risk factors. PLoS ONE.'
+  - 'Sugarman DE and Greenfield S. 2020. Alcohol and COVID-19: How Do We Respond to
+    This Growing Public Health Crisis? Journal of General Internal Medicine.'
+description: 'Alcohol use demonstrates a robust positive association with intimate
+  partner violence perpetration and victimization. Harmful alcohol use among men is
+  associated with 3.45 times higher odds of perpetrating physical IPV compared to
+  non-drinkers. The relationship shows a clear dose-response pattern: women with occasionally
+  drunk partners have 2.68 times higher odds of experiencing IPV, while those with
+  frequently drunk partners have 5.94 times higher odds. Alcohol use by partners increases
+  women''s risk of IPV during pregnancy with odds ratios ranging from 2.89-11.60.
+  The mechanism operates through alcohol''s disinhibiting effects on aggressive impulses,
+  impaired judgment, and relationship dysfunction. Syndemic interactions with HIV
+  and substance abuse create synergistic effects in high-burden settings.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.45
+    type: odds_ratio
+    ci_lower: 2.56
+    ci_upper: 4.64
+  p_value: null
+  sample_size: 13716
+moderators:
+- name: frequency_of_intoxication
+  direction: strengthens
+  strength: strong
+  description: Women whose partners were frequently drunk had OR=5.94 for physical
+    IPV vs OR=2.68 for occasionally drunk partners, demonstrating dose-response relationship
+- name: severity_of_alcohol_use
+  direction: strengthens
+  strength: strong
+  description: Harmful alcohol use (per AUDIT scale) associated with substantially
+    higher odds of IPV perpetration than moderate drinking
+- name: HIV_status
+  direction: strengthens
+  strength: moderate
+  description: Syndemic interaction between alcohol, HIV, and IPV creates multiplicative
+    effects, with RERI=4.42 indicating synergistic interaction
+- name: sex_gender
+  direction: strengthens
+  strength: moderate
+  description: Psychological distress-alcohol-IPV relationship more pronounced for
+    women; women's increased drinking during pandemic associated with higher income
+    and mental illness history
+- name: stress_trauma_exposure
+  direction: strengthens
+  strength: moderate
+  description: Social isolation, pandemic-related stress, and traumatic events increase
+    both alcohol consumption and subsequent IPV risk

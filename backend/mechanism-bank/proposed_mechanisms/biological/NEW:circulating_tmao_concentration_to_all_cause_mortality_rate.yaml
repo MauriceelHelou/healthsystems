@@ -1,0 +1,56 @@
+id: NEW:circulating_tmao_concentration_to_all_cause_mortality_rate
+name: Circulating Trimethylamine-N-oxide (TMAO) Concentration → All-Cause Mortality
+  Rate
+from_node:
+  node_id: NEW:circulating_tmao_concentration
+  node_name: Circulating Trimethylamine-N-oxide (TMAO) Concentration
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Dietary nutrients (choline, L-carnitine, betaine) from foods like red meat,
+  eggs, and fish are metabolized by gut microbiota to produce trimethylamine (TMA)'
+- 'Step 2: TMA is absorbed into the bloodstream and transported to the liver where
+  it is oxidized by flavin monooxygenase 3 (FMO3) to form trimethylamine-N-oxide (TMAO)'
+- 'Step 3: Elevated circulating TMAO promotes atherosclerosis through enhanced macrophage
+  foam cell formation and altered cholesterol metabolism'
+- 'Step 4: TMAO contributes to endothelial dysfunction, vascular inflammation, and
+  platelet hyperreactivity, increasing cardiovascular disease risk'
+- 'Step 5: TMAO also impairs renal function and promotes hypertension, further compounding
+  cardiometabolic risk'
+- 'Step 6: These cumulative effects on cardiovascular health, kidney function, and
+  metabolic processes increase the risk of all-cause mortality'
+evidence:
+  quality_rating: A
+  n_studies: 82
+  primary_citation: 'Doudou Li et al. 2022. Gut microbiota–derived metabolite trimethylamine-N-oxide
+    and multiple health outcomes: an umbrella review and updated meta-analysis. American
+    Journal of Clinical Nutrition.'
+  supporting_citations: []
+description: Circulating trimethylamine-N-oxide (TMAO), a gut microbiota-derived metabolite
+  from dietary nutrients, is positively associated with all-cause mortality. This
+  umbrella review and meta-analysis of 82 individual studies found highly suggestive
+  evidence for this association. TMAO promotes cardiovascular disease through multiple
+  mechanisms including atherosclerosis promotion, endothelial dysfunction, and platelet
+  hyperreactivity, while also contributing to hypertension, diabetes, and impaired
+  kidney function, collectively increasing mortality risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: dietary_pattern
+  direction: strengthens
+  strength: moderate
+  description: Higher consumption of red meat, eggs, and other choline/carnitine-rich
+    foods increases TMAO production
+- name: gut_microbiome_composition
+  direction: strengthens
+  strength: moderate
+  description: Specific gut bacterial profiles that efficiently convert dietary precursors
+    to TMA lead to higher TMAO levels
+- name: kidney_function
+  direction: strengthens
+  strength: strong
+  description: Impaired renal function reduces TMAO clearance, leading to higher circulating
+    concentrations

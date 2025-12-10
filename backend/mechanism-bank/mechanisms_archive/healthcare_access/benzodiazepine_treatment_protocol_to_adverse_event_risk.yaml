@@ -1,0 +1,41 @@
+id: benzodiazepine_treatment_protocol_to_adverse_event_risk
+name: Benzodiazepine Treatment Protocol for AWS → Serious Adverse Effects Risk
+from_node:
+  node_id: benzodiazepine_treatment_protocol
+  node_name: Benzodiazepine Treatment Protocol for AWS
+to_node:
+  node_id: adverse_event_risk
+  node_name: Serious Adverse Effects Risk
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Benzodiazepines as standard treatment for alcohol withdrawal syndrome carry
+  inherent risks including respiratory depression, oversedation, and cognitive impairment'
+- 'Step 2: These adverse effects may necessitate higher levels of monitoring, extended
+  hospitalization, or intensive care transfers'
+- 'Step 3: Safety concerns limit treatment accessibility for patients with contraindications
+  and increase healthcare system burden through extended resource utilization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Kristina Karapetyan et al. 2023. "Evaluation of Gabapentin and
+    Baclofen Combination for Inpatient Management of Alcohol Withdrawal Syndrome.."
+    *Federal practitioner : for the health care professionals of the VA, DoD, and
+    PHS*. https://doi.org/10.12788/fp.0362'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.746303'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: patient_comorbidities
+  direction: strengthens
+  strength: strong
+  description: Patients with respiratory conditions, liver disease, or concurrent
+    substance use face amplified risks from benzodiazepine treatment
+- name: polypharmacy
+  direction: strengthens
+  strength: moderate
+  description: Concurrent medications increase drug-drug interaction risks and adverse
+    event probability with benzodiazepines

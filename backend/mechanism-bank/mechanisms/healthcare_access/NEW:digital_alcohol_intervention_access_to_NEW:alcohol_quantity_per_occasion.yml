@@ -1,0 +1,54 @@
+id: NEW:digital_alcohol_intervention_access_to_NEW:alcohol_quantity_per_occasion
+name: Digital Alcohol Intervention Access → Alcohol Quantity Per Drinking Occasion
+from_node:
+  node_id: NEW:digital_alcohol_intervention_access
+  node_name: Digital Alcohol Intervention Access
+to_node:
+  node_id: NEW:alcohol_quantity_per_occasion
+  node_name: Alcohol Quantity Per Drinking Occasion
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital interventions provide personalized feedback about drinking quantities and associated
+  risks'
+- 'Step 2: Behavior change techniques including goal setting help users set limits for drinking occasions'
+- 'Step 3: Problem solving techniques help users identify strategies to reduce quantity consumed'
+- 'Step 4: Behavior substitution techniques offer alternatives to continued drinking during occasions'
+- 'Step 5: Reduction in alcohol units consumed per drinking occasion'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: Eileen Fs Kaner et al. 2017. "Personalised digital interventions for reducing hazardous
+    and harmful alcohol consumption in community-dwelling populations.." https://doi.org/10.1002/14651858.CD011479.pub2
+  supporting_citations:
+  - 15 studies reporting quantity per occasion outcome
+  - Studies based on Motivational Interviewing Theory
+  - Studies incorporating multiple behavior change techniques
+  doi: 10.1002/14651858.CD011479.pub2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Intervention participants drank approximately one unit less per drinking occasion compared
+  to no intervention controls, indicating digital interventions can modify quantity consumed during drinking
+  episodes through accessible delivery of evidence-based behavior change techniques.
+quantitative_effects:
+  effect_size:
+    value: -1.0
+    type: standardized_mean_difference
+  sample_size: 9791
+moderators:
+- name: behavior_substitution_technique
+  direction: strengthens
+  strength: strong
+  description: Behavior substitution showed strongest association with reduced consumption (-123.71 g/week
+    in unadjusted model, 95% CI -184.63 to -62.80)
+structural_competency:
+  equity_implications: This mechanism enables harm reduction by making interventions accessible to community-dwelling
+    populations who may not present to healthcare settings. The digital delivery model addresses structural
+    barriers including limited provider time for brief interventions, geographic access constraints, and
+    stigma associated with help-seeking for alcohol problems.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.043960'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

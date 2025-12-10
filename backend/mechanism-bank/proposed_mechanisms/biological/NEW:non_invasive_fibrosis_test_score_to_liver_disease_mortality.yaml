@@ -1,0 +1,47 @@
+id: NEW:non_invasive_fibrosis_test_score_to_liver_disease_mortality
+name: Non-Invasive Fibrosis Test Score (FIB4/ELF/FibroScan/FibroTest) → Liver Disease
+  Mortality
+from_node:
+  node_id: NEW:non_invasive_fibrosis_test_score
+  node_name: Non-Invasive Fibrosis Test Score (FIB4/ELF/FibroScan/FibroTest)
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Non-invasive tests (FIB4, ELF, FibroScan, FibroTest) measure biomarkers
+  and physical properties of liver tissue that reflect underlying hepatic fibrosis
+  severity'
+- 'Step 2: Higher scores on these tests indicate more advanced liver fibrosis, which
+  represents progressive replacement of functional hepatocytes with scar tissue'
+- 'Step 3: Advanced fibrosis leads to impaired liver function, portal hypertension,
+  and increased risk of hepatic decompensation'
+- 'Step 4: Progressive fibrosis culminates in cirrhosis and end-stage liver disease,
+  significantly elevating mortality risk from liver-related causes'
+evidence:
+  quality_rating: B
+  n_studies: 11
+  primary_citation: 'Freya A Rhodes et al. 2021. Systematic review: Investigating
+    the prognostic performance of four non-invasive tests in alcohol-related liver
+    disease. Journal of gastroenterology and hepatology.'
+  supporting_citations: []
+description: Non-invasive fibrosis tests predict liver disease mortality by measuring
+  the degree of hepatic fibrosis, which is the strongest prognostic factor for mortality
+  in chronic liver disease. Higher test scores indicate more advanced fibrosis and
+  correspondingly higher mortality risk. In alcohol-related liver disease, all four
+  major NITs (FIB4, ELF, FibroScan, FibroTest) demonstrated acceptable prognostic
+  performance with AUROCs generally exceeding 0.7.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: test_type
+  direction: strengthens
+  strength: moderate
+  description: ELF test showed highest AUROC range (0.72-0.85), followed by FIB4 (0.64-0.83),
+    FibroTest (0.69-0.79), and FibroScan (0.65-0.76)
+- name: alcohol_related_liver_disease
+  direction: strengthens
+  strength: moderate
+  description: Evidence specifically validated in alcohol-related liver disease populations
+    where fibrosis stage is the best mortality predictor

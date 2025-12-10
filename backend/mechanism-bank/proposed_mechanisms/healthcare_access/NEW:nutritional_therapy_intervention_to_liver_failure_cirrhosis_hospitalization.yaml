@@ -1,0 +1,50 @@
+id: NEW:nutritional_therapy_intervention_to_liver_failure_cirrhosis_hospitalization
+name: Nutritional Therapy Intervention → Liver Failure/Cirrhosis Hospitalization
+from_node:
+  node_id: NEW:nutritional_therapy_intervention
+  node_name: Nutritional Therapy Intervention
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Failure/Cirrhosis Hospitalization
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Nutritional therapy addresses protein-energy malnutrition and sarcopenia
+  common in patients with alcoholic liver disease progressing to cirrhosis'
+- 'Step 2: Correction of vitamin and trace element deficiencies (preventing anemia
+  and altered cognitive status) improves overall physiological resilience'
+- 'Step 3: Targeted nutritional management helps control complications of liver failure
+  including ascites and hepatic encephalopathy'
+- 'Step 4: Improved nutritional status reduces disease progression and associated
+  complications, decreasing need for hospitalization due to liver failure/cirrhosis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Tomoko Tadokoro et al. 2023. Nutritional Support for Alcoholic
+    Liver Disease. Nutrients.
+  supporting_citations: []
+description: Nutritional therapy intervention reduces liver failure/cirrhosis hospitalizations
+  by addressing the multifactorial malnutrition common in alcoholic liver disease
+  patients. This includes correcting inadequate dietary intake, abnormal absorption
+  and digestion, increased protein catabolism, and vitamin/trace element deficiencies.
+  As disease progresses, nutritional support helps manage complications like ascites
+  and hepatic encephalopathy, improving prognosis and reducing acute decompensation
+  events requiring hospitalization.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Disease stage
+  direction: strengthens
+  strength: moderate
+  description: Nutritional therapy becomes increasingly important as ALD progresses
+    to cirrhosis with complications
+- name: Metabolic syndrome comorbidity
+  direction: weakens
+  strength: moderate
+  description: Patients with concurrent metabolic syndrome require individualized
+    treatment to avoid overnutrition, complicating standard nutritional approaches
+- name: Severity of malnutrition
+  direction: strengthens
+  strength: strong
+  description: Patients with more severe protein-energy malnutrition and sarcopenia
+    may benefit more substantially from nutritional intervention

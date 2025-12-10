@@ -1,0 +1,53 @@
+id: NEW:legal_cannabis_retail_density_to_NEW:cannabis_related_emergency_visits
+name: Legal Cannabis Retail Density → Cannabis-Related Emergency Department Visits
+from_node:
+  node_id: NEW:legal_cannabis_retail_density
+  node_name: Legal Cannabis Retail Density
+to_node:
+  node_id: NEW:cannabis_related_emergency_visits
+  node_name: Cannabis-Related Emergency Department Visits
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of legal cannabis retailers increases population-level access to cannabis products'
+- 'Step 2: Increased access leads to higher rates of cannabis consumption across the population'
+- 'Step 3: Higher consumption rates increase probability of acute adverse events including vomiting, psychosis'
+- 'Step 4: Acute adverse events require emergency medical care, increasing ED presentations'
+evidence:
+  quality_rating: B
+  n_studies: 13
+  primary_citation: 'Jakob Manthey et al. 2023. "The impact of legal cannabis availability on cannabis
+    use and health outcomes: A systematic review.." https://doi.org/10.1016/j.drugpo.2023.104039'
+  supporting_citations:
+  - Studies examining ED presentations related to cannabis (n=855,630 presentations)
+  - Research from North American jurisdictions with legal recreational cannabis
+  - Additional citations require full-text access for specific study identification
+  doi: 10.1016/j.drugpo.2023.104039
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Analysis of 855,630 ED presentations found that increased legal cannabis availability is
+  linked to health-related outcomes including vomiting, psychosis, and cannabis-involved presentations
+  to emergency departments.
+quantitative_effects:
+  sample_size: 855630
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: All studies conducted in North America, primarily Western US states with established
+    recreational cannabis markets.
+moderators:
+- name: prior_cannabis_exposure
+  direction: strengthens
+  strength: strong
+  description: Groups with less prior cannabis exposure may be more susceptible to acute adverse effects
+    due to lack of tolerance or experience with dosing
+structural_competency:
+  equity_implications: This mechanism demonstrates how the commercial cannabis environment creates population-level
+    health system burden. The structural determinant is the regulatory framework allowing retail concentration,
+    which then produces downstream healthcare utilization. This avoids blaming individual users by focusing
+    on how market structure shapes health outcomes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.445172'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

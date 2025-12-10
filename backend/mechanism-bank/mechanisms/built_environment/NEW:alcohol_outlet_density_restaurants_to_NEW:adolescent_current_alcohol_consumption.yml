@@ -1,0 +1,67 @@
+id: NEW:alcohol_outlet_density_restaurants_to_NEW:adolescent_current_alcohol_consumption
+name: Alcohol Outlet Density - Restaurants → Adolescent Current Alcohol Consumption
+from_node:
+  node_id: NEW:alcohol_outlet_density_restaurants
+  node_name: Alcohol Outlet Density - Restaurants
+to_node:
+  node_id: NEW:adolescent_current_alcohol_consumption
+  node_name: Adolescent Current Alcohol Consumption
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of restaurants serving alcohol within 200 meters increases environmental exposure
+  to alcohol availability'
+- 'Step 2: Restaurants provide settings where alcohol consumption is normalized as part of social dining'
+- 'Step 3: Adolescents may accompany family members to restaurants where alcohol is served, increasing
+  exposure'
+- 'Step 4: Higher restaurant density increases opportunities for adolescent alcohol acquisition through
+  various channels'
+- 'Step 5: Environmental availability translates to increased likelihood of current alcohol consumption'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: B. R. Carvalho et al. 2020. "Is alcohol outlet density in the residential area associated
+    with alcohol consumption among adolescents?." https://doi.org/10.1590/1980-549720200089
+  supporting_citations:
+  - Additional citations require full-text access - study references prior literature on alcohol outlet
+    density and consumption patterns
+  - Additional citations require full-text access - study references WHO recommendations on alcohol availability
+  - Additional citations require full-text access - study references Brazilian national survey data
+  doi: 10.1590/1980-549720200089
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Each additional restaurant serving alcohol within 200 meters of an adolescent's residence
+  is associated with an 11% increase in the prevalence of current alcohol consumption. While showing the
+  smallest effect among significant outlet types, restaurants still contribute to the cumulative alcohol
+  environment affecting youth.
+quantitative_effects:
+  effect_size:
+    value: 1.11
+    type: relative_risk
+    ci_lower: 1.02
+    ci_upper: 1.21
+  sample_size: 601
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in urban Belo Horizonte, Brazil; restaurant density and alcohol service
+    patterns vary by geographic context
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Significant interaction between outlet density and sex was found
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Significant interaction between outlet density and age was found
+structural_competency:
+  equity_implications: This mechanism demonstrates that alcohol availability extends beyond dedicated
+    drinking establishments. Restaurant licensing policies that permit alcohol service contribute to the
+    overall alcohol landscape surrounding adolescents. This supports comprehensive approaches to alcohol
+    control that consider all commercial alcohol sources rather than targeting specific outlet types.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.473920'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

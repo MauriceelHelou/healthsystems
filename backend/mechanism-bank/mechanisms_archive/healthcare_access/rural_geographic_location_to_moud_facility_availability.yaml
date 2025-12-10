@@ -1,0 +1,42 @@
+id: rural_geographic_location_to_moud_facility_availability
+name: Rural Geographic Location → MOUD Facility Availability
+from_node:
+  node_id: rural_geographic_location
+  node_name: Rural Geographic Location
+to_node:
+  node_id: moud_facility_availability
+  node_name: MOUD Facility Availability
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Rural areas have lower population density and fewer healthcare facilities
+  overall, including MOUD treatment providers'
+- 'Step 2: Economic disincentives and workforce shortages limit establishment of MOUD
+  facilities in low-density rural areas'
+- 'Step 3: Rural areas become dependent on single critical access providers with no
+  proximate alternatives'
+- 'Step 4: Loss of critical access facility leaves rural populations with substantially
+  increased distances to nearest MOUD treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Harold A Pollack et al. 2023. "Critical access medication for
+    opioid use disorder (MOUD) treatment facilities in the continental United States.."
+    *Drug and alcohol dependence reports*. https://doi.org/10.1016/j.dadr.2022.100130
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.492187'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: population_density
+  direction: weakens
+  strength: strong
+  description: Lower population density strengthens the negative relationship between
+    rural location and facility availability due to economic and workforce constraints
+- name: regional_opioid_epidemic_severity
+  direction: weakens
+  strength: moderate
+  description: Regions with higher opioid use disorder prevalence may have slightly
+    more facility development despite rural location

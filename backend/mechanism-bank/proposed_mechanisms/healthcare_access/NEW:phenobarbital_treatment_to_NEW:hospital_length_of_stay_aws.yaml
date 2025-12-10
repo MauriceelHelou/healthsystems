@@ -1,0 +1,61 @@
+id: NEW:phenobarbital_treatment_to_NEW:hospital_length_of_stay_aws
+name: Phenobarbital Treatment for Alcohol Withdrawal → Hospital Length of Stay for
+  Alcohol Withdrawal Syndrome
+from_node:
+  node_id: NEW:phenobarbital_treatment
+  node_name: Phenobarbital Treatment for Alcohol Withdrawal
+to_node:
+  node_id: NEW:hospital_length_of_stay_aws
+  node_name: Hospital Length of Stay for Alcohol Withdrawal Syndrome
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Chronic alcohol use leads to downregulation of GABA receptors, causing
+  benzodiazepine resistance in many patients with alcohol withdrawal syndrome'
+- 'Step 2: Phenobarbital acts on GABA-A receptors through a different binding site
+  than benzodiazepines, providing effective symptom control even in benzodiazepine-resistant
+  patients'
+- 'Step 3: More effective withdrawal symptom management with phenobarbital leads to
+  faster clinical stabilization and reduced need for escalating benzodiazepine doses'
+- 'Step 4: Faster symptom resolution and clinical stability enables earlier hospital
+  discharge, reducing overall hospital length of stay by approximately 2.6 days compared
+  to benzodiazepine-only treatment'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'Zaryab Umar et al. 2023. "Phenobarbital and Alcohol Withdrawal
+    Syndrome: A Systematic Review and Meta-Analysis." Cureus.'
+  supporting_citations: []
+description: 'Phenobarbital treatment for alcohol withdrawal syndrome is associated
+  with a statistically significant reduction in hospital length of stay compared to
+  benzodiazepine-only treatment. This meta-analysis found a mean difference of -2.6
+  days (95% CI: -4.48 to -0.72, p=0.007) favoring phenobarbital. The mechanism involves
+  phenobarbital''s ability to effectively manage withdrawal symptoms through GABA-A
+  receptor modulation, particularly in patients who are resistant to benzodiazepines
+  due to chronic alcohol-induced GABA receptor downregulation.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -2.6
+    type: mean_difference_days
+    ci_lower: -4.48
+    ci_upper: -0.72
+  p_value: 0.007
+  sample_size: null
+moderators:
+- name: Symptom severity
+  direction: strengthens
+  strength: moderate
+  description: Drug administration should be adapted according to the severity of
+    symptoms; more severe cases may show greater benefit from phenobarbital
+- name: Benzodiazepine resistance
+  direction: strengthens
+  strength: moderate
+  description: Patients with downregulated GABA receptors and benzodiazepine resistance
+    may benefit more from phenobarbital's alternative mechanism of action
+- name: Phenobarbital dosing protocol
+  direction: weakens
+  strength: weak
+  description: Lack of uniformity in phenobarbital dosing across studies may affect
+    consistency of outcomes

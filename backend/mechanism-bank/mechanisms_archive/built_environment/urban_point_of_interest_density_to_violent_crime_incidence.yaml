@@ -1,0 +1,42 @@
+id: urban_point_of_interest_density_to_violent_crime_incidence
+name: Urban Point of Interest Density (Non-Alcohol) → Violent Crime Incidence
+from_node:
+  node_id: urban_point_of_interest_density
+  node_name: Urban Point of Interest Density (Non-Alcohol)
+to_node:
+  node_id: violent_crime_incidence
+  node_name: Violent Crime Incidence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Non-alcohol urban points of interest (e.g., entertainment venues, restaurants,
+  transit hubs) concentrate large numbers of people in specific urban areas'
+- 'Step 2: These points of interest create footfall patterns that overlap with alcohol
+  consumption economy zones in city centers'
+- 'Step 3: High density of diverse points of interest extends the temporal and spatial
+  range of nighttime economy activity'
+- 'Step 4: Increased mixing of diverse populations in uncontrolled environments creates
+  additional opportunities for interpersonal conflicts and violent incidents'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Joseph Redfern et al. 2020. "Association of violence with urban
+    points of interest.." *PloS one*. https://doi.org/10.1371/journal.pone.0239840
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.102596'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: proximity_to_alcohol_outlets
+  direction: strengthens
+  strength: strong
+  description: Points of interest that are spatially co-located with alcohol outlets
+    show stronger associations with violence, suggesting synergistic effects of the
+    alcohol consumption economy
+- name: city_specific_characteristics
+  direction: u_shaped
+  strength: moderate
+  description: Different cities show different patterns of which point of interest
+    types are most predictive, requiring tailored approaches rather than uniform policies

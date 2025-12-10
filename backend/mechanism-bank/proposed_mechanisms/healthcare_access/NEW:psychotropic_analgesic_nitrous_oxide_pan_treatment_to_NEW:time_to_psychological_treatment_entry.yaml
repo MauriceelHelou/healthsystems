@@ -1,0 +1,50 @@
+id: NEW:psychotropic_analgesic_nitrous_oxide_pan_treatment_to_NEW:time_to_psychological_treatment_entry
+name: Psychotropic Analgesic Nitrous Oxide (PAN) Treatment → Time to Psychological
+  Treatment Entry
+from_node:
+  node_id: NEW:psychotropic_analgesic_nitrous_oxide_pan_treatment
+  node_name: Psychotropic Analgesic Nitrous Oxide (PAN) Treatment
+to_node:
+  node_id: NEW:time_to_psychological_treatment_entry
+  node_name: Time to Psychological Treatment Entry
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: PAN treatment is administered to patients experiencing alcohol withdrawal
+  syndrome, providing rapid therapeutic effects on withdrawal symptoms'
+- 'Step 2: PAN therapy requires minimal sedative medication compared to benzodiazepine
+  regimens, reducing sedation duration and intensity'
+- 'Step 3: Improved psychomotor function is achieved more quickly due to reduced sedative
+  load (WMD -8.71 improvement in psychomotor function)'
+- 'Step 4: Patients with less sedation and better psychomotor function are cognitively
+  and physically prepared to engage in psychological treatment sooner'
+- 'Step 5: Time to entry into psychological treatment phase is reduced, accelerating
+  overall recovery trajectory'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: M A Gillman et al. 2007. Psychotropic analgesic nitrous oxide
+    for alcoholic withdrawal states. The Cochrane database of systematic reviews.
+  supporting_citations: []
+description: Psychotropic analgesic nitrous oxide (PAN) treatment reduces time to
+  psychological treatment entry in alcohol withdrawal patients by providing rapid
+  symptom improvement while minimizing sedative medication requirements. The reduced
+  sedation load preserves psychomotor function, enabling patients to be cognitively
+  and physically ready to engage in psychological treatment more quickly than those
+  receiving traditional benzodiazepine regimens.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.35
+    type: relative_risk
+    ci_lower: 1.01
+    ci_upper: 1.79
+  p_value: null
+  sample_size: 212
+moderators:
+- name: withdrawal_severity
+  direction: weakens
+  strength: moderate
+  description: Evidence supports efficacy primarily for mild to moderate alcohol withdrawal
+    states; effectiveness in severe cases uncertain

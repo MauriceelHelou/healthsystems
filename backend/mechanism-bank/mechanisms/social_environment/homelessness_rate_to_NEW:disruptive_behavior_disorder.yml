@@ -1,0 +1,56 @@
+id: homelessness_rate_to_NEW:disruptive_behavior_disorder
+name: Homelessness Rate → Disruptive Behavior Disorder
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: NEW:disruptive_behavior_disorder
+  node_name: Disruptive Behavior Disorder
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Homelessness exposes adolescents to chronic adversity, trauma, and unpredictable environments'
+- 'Step 2: Survival in street environments may require aggressive or rule-breaking behaviors'
+- 'Step 3: Lack of stable adult relationships and prosocial role models disrupts behavioral development'
+- 'Step 4: Untreated trauma and stress manifest as externalizing behavioral problems'
+- 'Step 5: Without mental health intervention, disruptive behavior patterns become entrenched disorders'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: 'David Borkenhagen et al. 2025. "Prevalence of Mental Health and Substance Use Disorders
+    Among Adolescents Experiencing Homelessness: A Systematic Review.." https://doi.org/10.1007/s10597-025-01492-7'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 2 studies meeting criteria
+  - Earlier versions of DSM and ICD diagnostic classifications referenced
+  - Studies using validated diagnostic measures in homeless adolescent populations
+  doi: 10.1007/s10597-025-01492-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Disruptive behavior disorder affected 39% of homeless adolescents, the second most prevalent
+  disorder identified. This reflects how structural housing instability creates conditions that promote
+  behavioral disorders in developing youth.
+quantitative_effects:
+  effect_size:
+    value: 39.0
+    type: percentage_change
+    ci_lower: 25.0
+    ci_upper: 53.0
+  sample_size: 226
+moderators:
+- name: substance_use_comorbidity
+  direction: strengthens
+  strength: strong
+  description: High prevalence of substance use disorders among this population likely exacerbates disruptive
+    behavior disorder symptoms
+structural_competency:
+  equity_implications: Disruptive behavior disorder prevalence reflects structural conditions of homelessness
+    rather than individual character flaws. The chaotic, unsafe environments homeless youth navigate require
+    adaptive behaviors that may be pathologized. Addressing this requires housing-first approaches and
+    trauma-informed mental health services rather than punitive responses that further marginalize affected
+    youth.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.514298'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

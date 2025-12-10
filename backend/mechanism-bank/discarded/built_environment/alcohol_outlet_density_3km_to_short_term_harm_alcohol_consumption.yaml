@@ -1,0 +1,45 @@
+id: alcohol_outlet_density_3km_to_short_term_harm_alcohol_consumption
+name: Alcohol Outlet Density within 3 km → Alcohol Consumption Above Short-Term Harm
+  Guidelines
+from_node:
+  node_id: alcohol_outlet_density_3km
+  node_name: Alcohol Outlet Density within 3 km
+to_node:
+  node_id: short_term_harm_alcohol_consumption
+  node_name: Alcohol Consumption Above Short-Term Harm Guidelines
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of alcohol outlets within 3 km increases physical availability
+  and accessibility of alcohol products'
+- 'Step 2: Increased proximity to outlets reduces barriers to alcohol purchase (time,
+  transportation costs)'
+- 'Step 3: Greater convenience and marketing exposure from multiple outlets normalizes
+  higher frequency purchasing'
+- 'Step 4: Increased purchasing opportunities lead to more frequent consumption exceeding
+  short-term harm thresholds (>4 drinks on any day)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Karen E Lamb et al. 2017. "Associations between access to alcohol
+    outlets and alcohol intake and depressive symptoms in women from socioeconomically
+    disadvantaged neighbourhoods in Australia.." *BMC public health*. https://doi.org/10.1186/s12889-017-4022-4
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.044314'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: distance_threshold
+  direction: strengthens
+  strength: strong
+  description: Association only present at 3 km distance, not at 0.4 km proximity
+- name: socioeconomic_disadvantage
+  direction: strengthens
+  strength: moderate
+  description: Study population restricted to women from socioeconomically disadvantaged
+    neighborhoods where effects may be more pronounced
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/alcohol_outlet_density_3km_to_short_term_harm_alcohol_consumption.yaml
+_category: built_environment

@@ -1,0 +1,46 @@
+id: NEW:statin_therapy_to_cardiovascular_disease_mortality
+name: Statin Therapy → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:statin_therapy
+  node_name: Statin Therapy
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Statins inhibit HMG-CoA reductase, reducing hepatic cholesterol synthesis
+  and lowering circulating LDL cholesterol levels'
+- 'Step 2: Reduced LDL cholesterol decreases atherosclerotic plaque formation and
+  progression in coronary and peripheral arteries'
+- 'Step 3: Statins exert pleiotropic effects including anti-inflammatory properties
+  that reduce systemic inflammation and vascular inflammation'
+- 'Step 4: Statins demonstrate antifibrotic properties that may reduce arterial stiffness
+  and improve vascular function'
+- 'Step 5: These combined lipid-modulating and anti-inflammatory effects reduce the
+  risk of cardiovascular events including myocardial infarction and stroke, thereby
+  lowering CVD mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Shiqin Zhang et al. 2024. A Systematic Review of Statins for
+    the Treatment of Nonalcoholic Steatohepatitis: Safety, Efficacy, and Mechanism
+    of Action. Molecules.'
+  supporting_citations: []
+description: Statin therapy reduces cardiovascular disease mortality through multiple
+  mechanisms. Statins are primarily known for their lipid-modulating effects, reducing
+  LDL cholesterol through HMG-CoA reductase inhibition. Additionally, statins exhibit
+  anti-inflammatory and antifibrotic properties that provide cardiovascular protection
+  beyond lipid lowering. In populations with NAFLD/NASH, where CVD represents the
+  leading cause of mortality, statin therapy may be particularly beneficial. The review
+  also notes potential benefits through modulation of gut microbiota, reducing systemic
+  inflammation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: NASH/NAFLD comorbidity
+  direction: strengthens
+  strength: moderate
+  description: In NASH patients, CVD is the most common cause of death compared to
+    liver-related causes, making statin therapy particularly relevant for reducing
+    mortality in this population

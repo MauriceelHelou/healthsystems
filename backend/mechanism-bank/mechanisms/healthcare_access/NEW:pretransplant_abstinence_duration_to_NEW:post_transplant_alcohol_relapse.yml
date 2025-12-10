@@ -1,0 +1,61 @@
+id: NEW:pretransplant_abstinence_duration_to_NEW:post_transplant_alcohol_relapse
+name: Pre-Transplant Alcohol Abstinence Duration → Post-Transplant Alcohol Relapse
+from_node:
+  node_id: NEW:pretransplant_abstinence_duration
+  node_name: Pre-Transplant Alcohol Abstinence Duration
+to_node:
+  node_id: NEW:post_transplant_alcohol_relapse
+  node_name: Post-Transplant Alcohol Relapse
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Duration of pre-transplant sobriety has been traditionally viewed as a predictor of post-transplant
+  outcomes'
+- 'Step 2: The 6-month rule was implemented based on assumption that longer abstinence indicates lower
+  relapse risk'
+- 'Step 3: Recent evidence challenges this assumption by showing abstinence duration is not predictive
+  of relapse'
+- 'Step 4: Other patient selection criteria may be more relevant for predicting post-transplant outcomes'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'Yousaf Zafar et al. 2024. "Alcohol Relapse After Early Liver Transplantation in Patients
+    With Alcoholic Liver Disease: A Meta-Analysis." https://doi.org/10.14740/gr1674'
+  supporting_citations:
+  - Dallas Consensus on liver transplantation selection criteria
+  - Studies on risk stratification for return to harmful drinking post-transplant
+  - Additional citations require full-text access
+  doi: 10.14740/gr1674
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The meta-analysis provides evidence that the duration of pre-transplant sobriety is not associated
+  with increased risk of alcohol relapse post-transplant. This challenges the long-standing clinical assumption
+  underlying the 6-month abstinence requirement and suggests that alternative risk stratification approaches
+  should be considered.
+quantitative_effects:
+  effect_size:
+    value: 1.24
+    type: odds_ratio
+    ci_lower: 0.75
+    ci_upper: 2.06
+  p_value: 0.4
+  sample_size: 367
+moderators:
+- name: Comprehensive patient selection beyond abstinence duration
+  direction: weakens
+  strength: moderate
+  description: Multifactorial patient selection criteria that assess psychosocial factors, social support,
+    and medical urgency may be more predictive of outcomes than abstinence duration alone
+structural_competency:
+  equity_implications: The abstinence duration requirement functions as a structural barrier within healthcare
+    systems. It reflects historical moral judgments about alcohol use disorder rather than evidence-based
+    patient selection. This policy may disproportionately affect patients with fewer resources for addiction
+    treatment, housing stability, or social support during the waiting period. The finding that abstinence
+    duration does not predict relapse suggests healthcare systems should adopt more equitable, evidence-based
+    criteria for transplant eligibility.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.622662'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

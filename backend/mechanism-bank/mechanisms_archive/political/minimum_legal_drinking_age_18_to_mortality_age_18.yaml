@@ -1,0 +1,47 @@
+id: minimum_legal_drinking_age_18_to_mortality_age_18
+name: Minimum Legal Drinking Age (MLDA) at 18 Years → All-Cause Mortality at Age 18
+from_node:
+  node_id: minimum_legal_drinking_age_18
+  node_name: Minimum Legal Drinking Age (MLDA) at 18 Years
+to_node:
+  node_id: mortality_age_18
+  node_name: All-Cause Mortality at Age 18
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Legal access to spirits and hard liquor becomes available at age 18 (in
+  addition to beer/wine available since 16)'
+- 'Step 2: Increased availability of higher alcohol content beverages coincides with
+  continued novice driver period'
+- 'Step 3: Novice driver effect remains primary mortality risk factor as youth have
+  limited driving experience'
+- 'Step 4: Discontinuous increase in deaths occurs at age 18 threshold, with minimal
+  contribution from expanded alcohol access'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Raffael Kamalow and T. Siedler 2019. "The Effects of Stepwise
+    Minimum Legal Drinking Age Legislation on Mortality: Evidence from Germany." *Social
+    Science Research Network*. https://doi.org/10.2139/ssrn.3415800'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.167701'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: prior_alcohol_exposure
+  direction: weakens
+  strength: moderate
+  description: By age 18, youth have had 2 years of legal access to beer and wine,
+    potentially reducing novelty effect of alcohol compared to single-threshold systems
+- name: novice_driver_status
+  direction: strengthens
+  strength: strong
+  description: Continued driving inexperience remains the primary driver of mortality
+    increases at age 18
+- name: spirits_access
+  direction: strengthens
+  strength: weak
+  description: New access to higher alcohol content beverages has marginal effect
+    on mortality outcomes

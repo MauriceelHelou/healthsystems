@@ -1,0 +1,58 @@
+id: NEW:malnutrition_older_adults_to_all_cause_mortality_rate
+name: Malnutrition in Older Adults → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:malnutrition_older_adults
+  node_name: Malnutrition in Older Adults
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Malnutrition in older adults leads to protein-energy deficits, micronutrient
+  deficiencies, and compromised immune function'
+- 'Step 2: Impaired nutritional status reduces physiological reserves, muscle mass
+  (sarcopenia), and wound healing capacity'
+- 'Step 3: Following acute health events such as hip fractures, malnourished older
+  adults experience higher rates of complications including delirium, infections,
+  and delayed recovery'
+- 'Step 4: Reduced functional capacity and increased complication rates lead to prolonged
+  hospitalization, loss of independence, and transfer to more supported living arrangements'
+- 'Step 5: Cumulative effects of poor recovery, complications, and frailty result
+  in significantly elevated mortality risk at both short-term (1 month) and long-term
+  (1 year) timepoints'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'M. Chiavarini et al. 2024. "Malnutrition-Related Health Outcomes
+    in Older Adults with Hip Fractures: A Systematic Review and Meta-Analysis." Nutrients.'
+  supporting_citations: []
+description: Malnutrition in older adults significantly increases all-cause mortality
+  risk, with meta-analytic evidence from 14 studies showing 3.4-3.7 fold increased
+  odds of death. This relationship is mediated through compromised physiological reserves,
+  impaired recovery from acute events, increased complication rates (including delirium),
+  and reduced functional independence. Effects are observed both in short-term (1
+  month) and long-term (1 year) follow-up periods.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.68
+    type: odds_ratio
+    ci_lower: 3.0
+    ci_upper: 4.52
+  p_value: 0.05
+  sample_size: null
+moderators:
+- name: time_since_event
+  direction: weakens
+  strength: moderate
+  description: Effect sizes are stronger at 1 month (OR=3.42, HR=3.51) compared to
+    1 year (OR=3.68, HR=2.34), suggesting acute effects may attenuate over time while
+    remaining significant
+- name: hip_fracture_status
+  direction: strengthens
+  strength: strong
+  description: Evidence specifically examined older adults with hip fractures, where
+    malnutrition effects on mortality are particularly pronounced due to surgical
+    stress and recovery demands

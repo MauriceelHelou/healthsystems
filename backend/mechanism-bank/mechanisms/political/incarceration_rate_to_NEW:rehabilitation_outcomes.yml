@@ -1,0 +1,60 @@
+id: incarceration_rate_to_NEW:rehabilitation_outcomes
+name: Incarceration Rate → Rehabilitation Outcomes
+from_node:
+  node_id: incarceration_rate
+  node_name: Incarceration Rate
+to_node:
+  node_id: NEW:rehabilitation_outcomes
+  node_name: Rehabilitation Outcomes
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Individuals with neurologically-based behavioral disorders are incarcerated'
+- 'Step 2: Prison environment lacks specialized treatment for underlying neurological or iatrogenic conditions'
+- 'Step 3: Incarceration hinders access to appropriate medical and psychiatric rehabilitation'
+- 'Step 4: Poor rehabilitation outcomes increase risk of recidivism upon release'
+evidence:
+  quality_rating: C
+  n_studies: 3
+  primary_citation: 'Alexa Schincariol et al. 2026. "Addressing insanity in paedophilic disorder: The
+    need for a cognitive approach for forensic assessment to correctly identify idiopathic, acquired and
+    iatrogenic forms.." https://doi.org/10.1016/j.ijlp.2025.102164'
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1016/j.ijlp.2025.102164
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The paper argues that incarceration is inappropriate for individuals whose offending behavior
+  stems from neurological conditions or iatrogenic medication effects, as it hinders rehabilitation and
+  fails to address the underlying condition. Non-custodial treatment in specialized facilities is proposed
+  as an alternative.
+quantitative_effects:
+  sample_size: 3
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Paper notes inconsistent judicial outcomes across cases, suggesting geographic/jurisdictional
+    variation in how these cases are handled
+moderators:
+- name: availability_of_specialized_treatment_facilities
+  direction: weakens
+  strength: strong
+  description: Treatment in specialized non-custodial facilities could better address underlying conditions
+    and reduce recidivism
+- name: forensic_assessment_quality
+  direction: weakens
+  strength: moderate
+  description: Multidisciplinary forensic assessment using cognitive models can identify cases where incarceration
+    is inappropriate
+structural_competency:
+  equity_implications: This mechanism directly addresses structural issues in the criminal justice system.
+    The paper critiques the one-size-fits-all approach to sentencing that ignores the medical/neurological
+    basis of some offenses. The structural solution involves reforming forensic assessment practices to
+    incorporate neuropsychological and neuroimaging evidence, and creating specialized treatment facilities
+    as alternatives to incarceration. This represents a shift from punitive to therapeutic approaches
+    for medically-based behavioral disorders.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.807916'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

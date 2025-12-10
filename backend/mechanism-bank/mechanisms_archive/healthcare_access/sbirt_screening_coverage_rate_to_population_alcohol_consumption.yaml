@@ -1,0 +1,44 @@
+id: sbirt_screening_coverage_rate_to_population_alcohol_consumption
+name: SBIRT Screening Coverage Rate in Primary Healthcare → Population-Level Alcohol
+  Consumption
+from_node:
+  node_id: sbirt_screening_coverage_rate
+  node_name: SBIRT Screening Coverage Rate in Primary Healthcare
+to_node:
+  node_id: population_alcohol_consumption
+  node_name: Population-Level Alcohol Consumption
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Increased screening coverage in primary healthcare settings identifies
+  more individuals with risky drinking patterns'
+- 'Step 2: Identified risky drinkers receive brief intervention or referral to treatment
+  based on their consumption levels'
+- 'Step 3: Evidence-based interventions reduce individual alcohol consumption among
+  those receiving treatment'
+- 'Step 4: Cumulative effect of individual-level reductions aggregates to measurable
+  population-level decreases in alcohol consumption'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Manthey et al. 2021. "Can alcohol consumption in Germany be
+    reduced by alcohol screening, brief intervention and referral to treatment in
+    primary health care? Results of a simulation study." *medRxiv*. https://doi.org/10.1101/2021.05.18.21257405
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.755535'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: screening_coverage_threshold
+  direction: strengthens
+  strength: strong
+  description: Screening coverage rates below 10% were not found to have measurable
+    effect on drinking levels, indicating a threshold effect where higher coverage
+    dramatically increases impact
+- name: screening_coverage_50_percent
+  direction: strengthens
+  strength: strong
+  description: At 50% screening coverage, 21% of adult residents received BI or RT
+    over 10 years, resulting in 12% reduction in population alcohol consumption

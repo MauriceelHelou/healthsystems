@@ -1,0 +1,51 @@
+id: NEW:alcohol_outlet_density_to_violent_crime_rate_new_added_to_fill_mechanism_gap
+name: Alcohol Outlet Density → Alcohol-Related Violent Crime
+from_node:
+  node_id: NEW:alcohol_outlet_density
+  node_name: Alcohol Outlet Density
+to_node:
+  node_id: violent_crime_rate_new_added_to_fill_mechanism_gap
+  node_name: Alcohol-Related Violent Crime
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of alcohol outlets increases physical availability and accessibility
+  of alcohol within a geographic area'
+- 'Step 2: Increased availability facilitates higher alcohol consumption and binge
+  drinking among local populations'
+- 'Step 3: Elevated alcohol consumption impairs judgment, reduces inhibitions, and
+  increases aggressive behavior'
+- 'Step 4: Concentration of drinking establishments creates environments where intoxicated
+  individuals congregate, increasing potential for interpersonal conflicts'
+- 'Step 5: These factors combine to increase rates of alcohol-related violent crime
+  against persons in areas with higher outlet density'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Fone et al. 2012. Change in alcohol outlet density and alcohol-related
+    harm to population health (CHALICE). BMC Public Health.
+  supporting_citations: []
+description: Higher alcohol outlet density increases alcohol availability, which elevates
+  consumption and binge drinking in the population. This leads to increased alcohol-related
+  violent crime through mechanisms including impaired judgment, reduced inhibitions,
+  and concentration of intoxicated individuals in areas with many outlets. The CHALICE
+  study uses a natural experiment design with longitudinal data linkage to examine
+  this relationship at both individual and area levels.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: outlet_type
+  direction: strengthens
+  strength: moderate
+  description: On-premise outlets (bars, pubs) may have stronger associations with
+    violent crime than off-premise outlets (liquor stores)
+- name: time_of_day
+  direction: strengthens
+  strength: strong
+  description: Study specifically examines A&E attendances between midnight-6am, indicating
+    stronger effects during nighttime hours
+- name: socioeconomic_deprivation
+  direction: strengthens
+  strength: moderate
+  description: Study designed to assess impact on health inequalities, suggesting
+    differential effects by area-level deprivation

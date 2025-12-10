@@ -1,0 +1,76 @@
+id: NEW:calorie_labeling_policy_food_to_NEW:energy_selection_food
+name: Calorie Labeling Policy for Food → Energy Selected from Food
+from_node:
+  node_id: NEW:calorie_labeling_policy_food
+  node_name: Calorie Labeling Policy for Food
+to_node:
+  node_id: NEW:energy_selection_food
+  node_name: Energy Selected from Food
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Mandatory calorie labeling policies require display of energy content on menus, menu boards,
+  and food packaging'
+- 'Step 2: Consumers are exposed to calorie information at point of purchase/selection in restaurants,
+  cafeterias, and supermarkets'
+- 'Step 3: Information availability enables comparison of energy content across food options'
+- 'Step 4: Consumers incorporate calorie information into food selection decisions'
+- 'Step 5: Average energy content of food selections decreases slightly at population level'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: Natasha Clarke et al. 2025. "Calorie (energy) labelling for changing selection and
+    consumption of food or alcohol.." https://doi.org/10.1002/14651858.CD014845.pub2
+  supporting_citations:
+  - Additional citations require full-text access - this is a Cochrane systematic review updating the
+    2018 Cochrane review
+  - Studies conducted across 15 USA sites, 6 UK sites, and sites in Ireland, France, and Canada
+  - 18 RCTs, 1 quasi-RCT, 2 interrupted time series, and 4 controlled before-after studies included
+  doi: 10.1002/14651858.CD014845.pub2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Calorie labeling on food menus, products, and packaging leads to a small but statistically
+  significant reduction in energy selected. For an average 600 kcal meal, adults exposed to calorie labeling
+  select approximately 11 kcal less (1.8% reduction). This represents high-certainty evidence from 16
+  randomized studies.
+quantitative_effects:
+  effect_size:
+    value: -0.06
+    type: standardized_mean_difference
+    ci_lower: -0.08
+    ci_upper: -0.03
+  sample_size: 9850
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies conducted primarily in high-income countries (24/25 studies); 15 in USA, 6
+    in UK, 1 each in Ireland, France, and Canada. Geographic variation in implementation settings (restaurants,
+    cafeterias, supermarkets).
+moderators:
+- name: socioeconomic_status
+  direction: unknown
+  strength: moderate
+  description: Most studies (18/25) conducted in high SES populations; only 1 study included only low
+    SES participants. Further research needed to assess SES as moderator.
+- name: label_type
+  direction: unknown
+  strength: weak
+  description: Most studies assessed simple calorie labeling (20/25); some included additional nutrient
+    information or physical activity calorie equivalent (PACE) labeling.
+- name: setting
+  direction: unknown
+  strength: moderate
+  description: 16/25 studies in real-world field settings (restaurants, cafeterias, supermarkets); 6 in
+    naturalistic laboratories; 3 in laboratory settings.
+structural_competency:
+  equity_implications: This mechanism represents a structural policy intervention that modifies the food
+    environment rather than relying on individual education or willpower. By mandating information disclosure,
+    the policy shifts responsibility from individuals to food providers and creates systemic change. However,
+    equity concerns exist as most evidence comes from high-SES populations, and effects on low-SES groups
+    remain unclear. The intervention may not address underlying structural drivers of food choice such
+    as food access, affordability, and marketing of energy-dense foods.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.401985'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

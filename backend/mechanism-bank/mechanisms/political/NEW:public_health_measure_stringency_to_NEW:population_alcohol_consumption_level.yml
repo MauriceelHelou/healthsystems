@@ -1,0 +1,57 @@
+id: NEW:public_health_measure_stringency_to_NEW:population_alcohol_consumption_level
+name: Public Health Measure Stringency (COVID-19 Restrictions) → Population-Level Alcohol Consumption
+  (Per Capita)
+from_node:
+  node_id: NEW:public_health_measure_stringency
+  node_name: Public Health Measure Stringency (COVID-19 Restrictions)
+to_node:
+  node_id: NEW:population_alcohol_consumption_level
+  node_name: Population-Level Alcohol Consumption (Per Capita)
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Government imposes stringent COVID-19 restrictions including travel limitations, social activity
+  restrictions, and economic shutdowns'
+- 'Step 2: Governments simultaneously expand home delivery options and extend trading hours for liquor
+  stores'
+- 'Step 3: Population experiences increased stress, isolation, and disrupted routines due to restrictions'
+- 'Step 4: Reduced bar/restaurant sales partially offset by increased private liquor store sales'
+- 'Step 5: Overall per capita alcohol consumption increases by 7.10% during pandemic versus previous years'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'T. Stockwell et al. 2022. "Alcohol sales in Canadian liquor outlets as a predictor
+    of subsequent COVID‐19 infection rates: a time‐series analysis." https://doi.org/10.1111/add.16011'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not cite specific prior studies
+  - Public Health Agency of Canada (PHAC) stringency index data referenced
+  - Provincial government alcohol distributor sales data (Ontario, British Columbia, Nova Scotia)
+  doi: 10.1111/add.16011
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Stringency of COVID-19 public health measures was positively associated with population-level
+  alcohol consumption, with overall consumption increasing 7.10% during the pandemic compared to previous
+  years. This reflects a paradoxical effect where restrictions intended to reduce viral transmission may
+  have increased alcohol-related harms.
+quantitative_effects:
+  effect_size:
+    value: 7.1
+    type: percentage_change
+  p_value: 0.013
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study covers Ontario, British Columbia, and Nova Scotia provinces with varying levels
+    of COVID-19 restriction stringency
+structural_competency:
+  equity_implications: This mechanism illustrates the unintended consequences of public health policy
+    and the need for policy coherence. While COVID-19 restrictions were implemented to protect health,
+    concurrent decisions to expand alcohol availability (home delivery, extended hours) may have undermined
+    public health goals. The structural framing focuses on policy decisions rather than individual coping
+    behaviors, highlighting how government alcohol monopoly systems can either promote or harm population
+    health depending on policy choices.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.119265'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

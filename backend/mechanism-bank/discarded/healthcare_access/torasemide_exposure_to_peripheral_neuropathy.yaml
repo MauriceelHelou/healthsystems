@@ -1,0 +1,53 @@
+id: torasemide_exposure_to_peripheral_neuropathy
+name: Torasemide (Loop Diuretic) Exposure → Peripheral Neuropathy (Neurological Damage)
+from_node:
+  node_id: torasemide_exposure
+  node_name: Torasemide (Loop Diuretic) Exposure
+to_node:
+  node_id: peripheral_neuropathy
+  node_name: Peripheral Neuropathy (Neurological Damage)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Torasemide triggers vasculitic response in patient with underlying EGPA
+  predisposition and pANCA positivity'
+- 'Step 2: Necrotizing inflammation of small and medium vessels extends to vasa nervorum
+  (blood vessels supplying peripheral nerves)'
+- 'Step 3: Ischemic nerve damage occurs due to vasculitic compromise of nerve blood
+  supply'
+- 'Step 4: Electromyography demonstrates loss of sural nerve response bilaterally
+  and slowed conduction velocity in tibial and peroneal nerves, manifesting as lower
+  limb paresthesia, pain, and weakness'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Aleksandra Frątczak et al. 2022. "Torasemide-induced Vascular
+    Purpura in the Course of Eosinophilic Granulomatosis with Polyangiitis.." *Acta
+    dermatovenerologica Croatica : ADC*.'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.295195'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: panca_antibody_positivity
+  direction: strengthens
+  strength: strong
+  description: pANCA-positive EGPA patients (40-60% of cases) have significantly higher
+    rates of neuropathy compared to seronegative patients. This patient's elevated
+    anti-MPO antibodies (1:160) strongly predispose to nerve involvement
+- name: vasculitis_multi_organ_involvement
+  direction: strengthens
+  strength: strong
+  description: Concurrent involvement of skin (purpura), lungs (peribronchial opacities),
+    and peripheral nerves indicates systemic vasculitic process affecting multiple
+    vascular beds including vasa nervorum
+- name: age_advanced
+  direction: strengthens
+  strength: moderate
+  description: 74-year-old patient may have reduced vascular reserve and pre-existing
+    microvascular changes that increase vulnerability to ischemic nerve injury
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/torasemide_exposure_to_peripheral_neuropathy.yaml
+_category: healthcare_access

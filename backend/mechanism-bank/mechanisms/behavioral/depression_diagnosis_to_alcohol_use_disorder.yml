@@ -1,0 +1,58 @@
+id: depression_diagnosis_to_alcohol_use_disorder
+name: Depression Diagnosis → Alcohol Use Disorder
+from_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Armed conflict creates conditions for depression through trauma, loss, and displacement'
+- 'Step 2: Depression in conflict settings often goes untreated due to destroyed or inadequate mental
+  health infrastructure'
+- 'Step 3: Individuals with depression experience anhedonia, hopelessness, and emotional pain requiring
+  relief'
+- 'Step 4: Alcohol provides temporary anxiolytic and mood-altering effects that self-medicate depressive
+  symptoms'
+- 'Step 5: Repeated self-medication establishes patterns of harmful alcohol use and potential alcohol
+  use disorder'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: Janice Lo et al. 2017. "A Systematic Review on Harmful Alcohol Use Among Civilian
+    Populations Affected by Armed Conflict in Low- and Middle-Income Countries.." https://doi.org/10.1080/10826084.2017.1289411
+  supporting_citations:
+  - Additional citations require full-text access - systematic review synthesized 22 primary studies
+  - Studies examined mental health-alcohol comorbidity in conflict-affected LMIC populations
+  - Research noted weak overall evidence quality for risk factors
+  doi: 10.1080/10826084.2017.1289411
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Depression was identified as a factor associated with harmful alcohol use among conflict-affected
+  populations in low- and middle-income countries. This represents a comorbidity pathway where untreated
+  depression in conflict settings increases risk for harmful alcohol use as a self-medication strategy.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The depression-alcohol pathway may be modified by cultural attitudes toward both mental
+    illness and alcohol use across different LMIC regions
+moderators:
+- name: mental_health_service_availability
+  direction: weakens
+  strength: moderate
+  description: Access to mental health treatment for depression would likely weaken the self-medication
+    pathway to alcohol use, though no intervention studies were identified
+structural_competency:
+  equity_implications: This mechanism connects depression to alcohol use through the structural lens of
+    destroyed or inadequate mental health systems in conflict-affected LMICs. Rather than framing this
+    as individual comorbidity, the pathway emphasizes how conflict creates both the conditions for depression
+    and the treatment gap that leads to harmful self-medication with alcohol. The absence of intervention
+    studies noted in the review reflects systemic neglect of both mental health and substance use services
+    in humanitarian responses.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.470073'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

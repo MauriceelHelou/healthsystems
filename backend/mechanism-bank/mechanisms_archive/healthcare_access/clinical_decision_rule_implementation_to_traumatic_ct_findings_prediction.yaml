@@ -1,0 +1,38 @@
+id: clinical_decision_rule_implementation_to_traumatic_ct_findings_prediction
+name: Implementation of PECARN Clinical Decision Rules → Prediction of Traumatic CT
+  Findings in Pediatric Head Trauma
+from_node:
+  node_id: clinical_decision_rule_implementation
+  node_name: Implementation of PECARN Clinical Decision Rules
+to_node:
+  node_id: traumatic_ct_findings_prediction
+  node_name: Prediction of Traumatic CT Findings in Pediatric Head Trauma
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Standardized clinical decision rules (PECARN) provide structured criteria
+  for when to order CT imaging in pediatric minor head trauma'
+- 'Step 2: These rules maintain statistical predictive validity for intracranial damage
+  across different presentation timeframes'
+- 'Step 3: Consistent application reduces both unnecessary radiation exposure from
+  over-imaging and missed injuries from under-imaging'
+- 'Step 4: Presence of PECARN indications predicted traumatic CT abnormalities regardless
+  of timing of presentation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: E. Sert et al. 2020. "The Use of PECARN and CATCH Rules in Children
+    With Minor Head Trauma Presenting to Emergency Department 24 Hours After Injury."
+    *Pediatric emergency care*. https://doi.org/10.1097/PEC.0000000000002011
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.576125'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: presentation_timing_within_24_hours
+  direction: strengthens
+  strength: moderate
+  description: PECARN sensitivity was highest (96.3%) in children presenting within
+    24 hours of injury compared to 85.7% for delayed presenters

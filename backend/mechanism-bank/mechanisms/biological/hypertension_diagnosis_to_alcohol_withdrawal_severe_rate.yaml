@@ -1,0 +1,51 @@
+id: hypertension_diagnosis_to_alcohol_withdrawal_severe_rate
+name: Hypertension Diagnosis → Severe Alcohol Withdrawal Syndrome Rate
+from_node:
+  node_id: hypertension_diagnosis
+  node_name: Hypertension Diagnosis
+to_node:
+  node_id: alcohol_withdrawal_severe_rate
+  node_name: Severe Alcohol Withdrawal Syndrome Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic heavy alcohol consumption leads to compensatory cardiovascular
+  adaptations, including elevated baseline blood pressure through increased sympathetic
+  nervous system activity and dysregulation of the hypothalamic-pituitary-adrenal
+  axis'
+- 'Step 2: During alcohol withdrawal, the sudden removal of alcohol''s CNS depressant
+  effects causes sympathetic hyperactivity, manifesting as elevated blood pressure
+  (systolic BP ≥140 mmHg) which serves as a marker of withdrawal severity'
+- 'Step 3: Elevated baseline systolic blood pressure at hospital admission indicates
+  greater physiological dependence and sympathetic nervous system dysregulation, predicting
+  higher likelihood of progression to severe alcohol withdrawal syndrome including
+  delirium tremens and withdrawal seizures'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'E. Wood et al. 2018. Will This Hospitalized Patient Develop Severe
+    Alcohol Withdrawal Syndrome?: The Rational Clinical Examination Systematic Review.
+    Journal of the American Medical Association (JAMA).'
+  supporting_citations: []
+description: Baseline systolic blood pressure of 140 mmHg or higher is associated
+  with increased likelihood of developing severe alcohol withdrawal syndrome (SAWS).
+  This systematic review of 14 studies with 71,295 patients found that elevated blood
+  pressure at admission, reflecting underlying sympathetic hyperactivity and cardiovascular
+  stress, predicts progression to severe withdrawal outcomes including delirium tremens
+  and seizures.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.7
+    type: likelihood_ratio
+    ci_lower: 1.3
+    ci_upper: 2.3
+  p_value: null
+  sample_size: 71295
+moderators:
+- name: history_of_delirium_tremens
+  direction: strengthens
+  strength: strong
+  description: Prior delirium tremens history significantly increases likelihood of
+    SAWS (LR 2.9, 95% CI 1.7-5.2)

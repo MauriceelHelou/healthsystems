@@ -1,0 +1,59 @@
+id: hepatitis_c_prevalence_to_kidney_disease
+name: Hepatitis C Virus Infection → Chronic Kidney Disease Progression
+from_node:
+  node_id: hepatitis_c_prevalence
+  node_name: Hepatitis C Virus Infection
+to_node:
+  node_id: kidney_disease
+  node_name: Chronic Kidney Disease Progression
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hepatitis C virus (HCV) infection establishes chronic viral replication
+  in the body, leading to systemic inflammation and immune complex formation'
+- 'Step 2: HCV-associated immune complexes deposit in glomerular structures, causing
+  HCV-associated glomerulonephritides (including membranoproliferative glomerulonephritis
+  and cryoglobulinemic vasculitis)'
+- 'Step 3: Beyond direct glomerular injury, HCV infection promotes systemic inflammation
+  and metabolic dysregulation that accelerates kidney damage through mechanisms independent
+  of glomerulonephritis'
+- 'Step 4: The combination of direct glomerular injury and systemic effects leads
+  to faster rates of GFR decline and CKD progression in HCV-infected individuals compared
+  to uninfected patients'
+- 'Step 5: Successful HCV treatment with direct-acting antivirals has been shown to
+  slow the rate of GFR decline, supporting a causal relationship between HCV viremia
+  and CKD progression'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'C. Gordon et al. 2019. Prevention, Diagnosis, Evaluation, and
+    Treatment of Hepatitis C Virus Infection in Chronic Kidney Disease: Synopsis of
+    the Kidney Disease: Improving Global Outcomes 2018 Clinical Practice Guideline.
+    Annals of Internal Medicine.'
+  supporting_citations: []
+description: Hepatitis C virus infection is an independent risk factor for faster
+  rates of CKD progression. This relationship is mediated both through HCV-associated
+  glomerulonephritides (including membranoproliferative glomerulonephritis and cryoglobulinemic
+  vasculitis) and through mechanisms independent of direct glomerular disease. The
+  KDIGO 2018 clinical practice guideline synthesis of 125 eligible studies supports
+  this causal pathway, noting that successful HCV treatment with direct-acting antivirals
+  results in slower GFR decline, providing evidence for reversibility of this effect.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Successful HCV treatment
+  direction: weakens
+  strength: strong
+  description: Direct-acting antivirals achieving viral eradication (>95% rate) result
+    in slower GFR decline post-treatment compared to pre-treatment in patients with
+    eGFR <60 mL/min/1.73 m2
+- name: Dialysis modality
+  direction: strengthens
+  strength: moderate
+  description: In-center hemodialysis patients have higher risk of nosocomial HCV
+    transmission compared to peritoneal dialysis or home hemodialysis patients
+- name: CKD stage
+  direction: strengthens
+  strength: moderate
+  description: Higher CKD stages (lower GFR) combined with higher albuminuria categories
+    increase risk classification and disease progression

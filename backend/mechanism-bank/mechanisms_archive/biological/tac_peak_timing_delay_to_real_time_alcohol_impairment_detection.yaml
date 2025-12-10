@@ -1,0 +1,44 @@
+id: tac_peak_timing_delay_to_real_time_alcohol_impairment_detection
+name: Transdermal Alcohol Concentration Peak Timing → Real-Time Alcohol Impairment
+  Detection
+from_node:
+  node_id: tac_peak_timing_delay
+  node_name: Transdermal Alcohol Concentration Peak Timing
+to_node:
+  node_id: real_time_alcohol_impairment_detection
+  node_name: Real-Time Alcohol Impairment Detection
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Wrist-worn Skyn sensor shows TAC peaks 54 minutes after peak BrAC, compared
+  to 120 minutes for ankle-worn SCRAM'
+- 'Step 2: Earlier TAC peak timing provides more temporally accurate representation
+  of actual blood alcohol concentration during drinking episodes'
+- 'Step 3: Reduced time lag between actual impairment (peak BAC) and detected impairment
+  (peak TAC) enables more timely intervention'
+- 'Step 4: More accurate temporal detection could support policies requiring real-time
+  notification of alcohol consumption violations, potentially preventing impaired
+  driving events'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Catharine E. Fairbairn and Dahyeon Kang 2019. "Temporal Dynamics
+    of Transdermal Alcohol Concentration Measured via New-Generation Wrist-Worn Biosensor.."
+    *Alcoholism: Clinical and Experimental Research*. https://doi.org/10.1111/acer.14172'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.537760'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: smartphone_integration
+  direction: strengthens
+  strength: moderate
+  description: Wrist-worn device features smartphone integration enabling potential
+    real-time alerts and monitoring, unlike bulky ankle monitors
+- name: compact_wearable_design
+  direction: strengthens
+  strength: moderate
+  description: Compact wrist-worn design may increase compliance and continuous wear
+    compared to large ankle monitors, improving detection coverage

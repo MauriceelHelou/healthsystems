@@ -1,0 +1,37 @@
+id: pfos_serum_concentration_to_er_positive_breast_cancer
+name: Serum Perfluorooctane Sulfonate (PFOS) Concentration → Estrogen Receptor Positive
+  (ER+) Breast Cancer
+from_node:
+  node_id: pfos_serum_concentration
+  node_name: Serum Perfluorooctane Sulfonate (PFOS) Concentration
+to_node:
+  node_id: er_positive_breast_cancer
+  node_name: Estrogen Receptor Positive (ER+) Breast Cancer
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: PFOS disrupts estrogen signaling pathways through endocrine disruption'
+- 'Step 2: Environmental exposure occurs through contaminated drinking water, food
+  chain bioaccumulation, and consumer products'
+- 'Step 3: Chronic low-dose exposure alters estrogen receptor expression and activity
+  in breast tissue'
+- 'Step 4: Modified estrogen signaling promotes proliferation of ER+ tumor cells'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'V. Chang et al. 2023. "Serum perfluorooctane sulfonate and perfluorooctanoate
+    and risk of postmenopausal breast cancer according to hormone receptor status:
+    An analysis in the Prostate, Lung, Colorectal and Ovarian Cancer Screening Trial."
+    *International Journal of Cancer*. https://doi.org/10.1002/ijc.34487'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.489704'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: exposure_quartile
+  direction: strengthens
+  strength: moderate
+  description: Third quartile PFOS showed statistically significant association (OR=1.59,
+    95% CI 1.01-2.50) with ER+ tumors

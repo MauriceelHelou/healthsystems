@@ -1,0 +1,60 @@
+id: NEW:brief_drug_intervention_general_medical_setting_to_illicit_drug_use_past_month
+name: Brief Drug Intervention in General Medical Settings → Illicit Drug Use (Multiple/Mixed
+  Substances)
+from_node:
+  node_id: NEW:brief_drug_intervention_general_medical_setting
+  node_name: Brief Drug Intervention in General Medical Settings
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use (Multiple/Mixed Substances)
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Patients presenting to general medical settings (primary care, hospitals)
+  are screened for substance use and identified as using illicit drugs'
+- 'Step 2: Brief interventions are delivered by healthcare providers, typically involving
+  motivational interviewing, personalized feedback, and goal-setting around drug use
+  reduction'
+- 'Step 3: The intervention increases patient awareness of drug use patterns and associated
+  health risks within a trusted medical context'
+- 'Step 4: Patients develop increased motivation for behavior change through reflective
+  dialogue and non-judgmental support'
+- 'Step 5: Small but significant reductions in multiple drug/mixed substance use occur,
+  particularly when delivered by general practitioners'
+evidence:
+  quality_rating: A
+  n_studies: 116
+  primary_citation: 'E. Tanner‐Smith et al. 2021. Effects of brief substance use interventions
+    delivered in general medical settings: a systematic review and meta-analysis.
+    Addiction.'
+  supporting_citations: []
+description: Brief drug interventions delivered in general medical settings produce
+  small but statistically significant reductions in multiple drug/mixed substance
+  use. A comprehensive meta-analysis of 116 randomized trials with over 64,000 participants
+  found that drug-targeted brief interventions yield a small effect (Hedges' g = 0.08)
+  on reducing illicit drug use. The effect is notably stronger when interventions
+  are delivered by general practitioners (g = 0.19). However, the evidence for effects
+  on single substances like cannabis alone was not significant after adjusting for
+  multiple comparisons.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.08
+    type: hedges_g
+    ci_lower: 0.002
+    ci_upper: 0.15
+  p_value: null
+  sample_size: 64439
+moderators:
+- name: Provider type
+  direction: strengthens
+  strength: strong
+  description: Drug-targeted brief interventions yield larger improvements in multiple
+    drug/mixed substance use when delivered by a general practitioner (g = 0.19, 95%
+    CI = 0.187-0.193) compared to other providers
+- name: Setting type
+  direction: strengthens
+  strength: moderate
+  description: General medical settings show more consistent effects compared to emergency
+    department/trauma centers where evidence is inconclusive

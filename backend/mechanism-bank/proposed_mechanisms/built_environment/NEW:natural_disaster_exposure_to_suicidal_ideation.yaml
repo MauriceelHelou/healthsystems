@@ -1,0 +1,69 @@
+id: NEW:natural_disaster_exposure_to_suicidal_ideation
+name: Natural Disaster Exposure (floods, cyclones, heatwaves, river erosion) → Suicidal
+  Ideation
+from_node:
+  node_id: NEW:natural_disaster_exposure
+  node_name: Natural Disaster Exposure (floods, cyclones, heatwaves, river erosion)
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Natural disasters (floods, cyclones, heatwaves, river erosion) cause direct
+  physical damage to homes, infrastructure, and livelihoods'
+- 'Step 2: Displacement, loss of property, death of family members, loss of livestock,
+  and food insecurity create acute and chronic psychological stress'
+- 'Step 3: These traumatic experiences and ongoing stressors trigger mental health
+  conditions including depression, anxiety, PTSD, and stress disorders'
+- 'Step 4: Compounding factors such as lack of social support, financial hardship,
+  physical injuries, and family conflicts exacerbate psychological distress'
+- 'Step 5: Accumulated mental health burden and hopelessness associated with loss
+  and uncertain future lead to suicidal ideation'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'Md Zawadul Karim et al. 2024. Understanding mental health challenges
+    and associated risk factors of post-natural disasters in Bangladesh: a systematic
+    review. Frontiers in psychology.'
+  supporting_citations: []
+description: Natural disaster exposure in Bangladesh is positively associated with
+  suicidal ideation, with prevalence ranging from 10.9% to 57.5% among affected populations.
+  The pathway operates through multiple interconnected mechanisms including traumatic
+  loss, displacement, economic devastation, and development of comorbid mental health
+  conditions such as depression (16.3-92.71%), anxiety (6-92.19%), stress (32.41-58%),
+  and PTSD. Vulnerable populations including those with lower education, limited resources,
+  and inadequate social support face elevated risks.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Gender identified as demographic risk factor affecting mental health
+    outcomes post-disaster
+- name: socioeconomic_status
+  direction: strengthens
+  strength: strong
+  description: Lower social class, income loss, vulnerable livelihoods, and lack of
+    financial support increase mental health risks including suicidal ideation
+- name: social_support
+  direction: weakens
+  strength: moderate
+  description: Presence of social support serves as protective factor against mental
+    health consequences of disaster exposure
+- name: physical_injury_disability
+  direction: strengthens
+  strength: moderate
+  description: Physical injury during disaster or resulting disability amplifies psychological
+    distress and suicidal ideation risk
+- name: displacement
+  direction: strengthens
+  strength: strong
+  description: Displacement from home compounds trauma and disrupts social networks,
+    increasing mental health burden
+- name: family_loss
+  direction: strengthens
+  strength: strong
+  description: Death of family members during disasters significantly increases risk
+    of mental health problems including suicidal ideation

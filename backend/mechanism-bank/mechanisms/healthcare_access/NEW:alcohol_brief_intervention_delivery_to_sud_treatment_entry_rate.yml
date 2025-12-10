@@ -1,0 +1,53 @@
+id: NEW:alcohol_brief_intervention_delivery_to_sud_treatment_entry_rate
+name: Alcohol Brief Intervention Delivery → SUD Treatment Entry Rate
+from_node:
+  node_id: NEW:alcohol_brief_intervention_delivery
+  node_name: Alcohol Brief Intervention Delivery
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with diagnosed alcohol use disorder receive brief intervention in primary care'
+- 'Step 2: Brief intervention provides advice to reduce or abstain from alcohol'
+- 'Step 3: Despite having a clinical diagnosis indicating need for specialty treatment, BI may substitute
+  for rather than supplement referral'
+- 'Step 4: Healthcare system treats BI as an endpoint rather than a step in stepped care model'
+- 'Step 5: Patients with AUD experience reduced likelihood of receiving appropriate specialty treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Madeline C. Frost et al. 2019. "Documented brief intervention associated with reduced
+    linkage to specialty addictions treatment in a national sample of VA patients with unhealthy alcohol
+    use with and without alcohol use disorders.." https://doi.org/10.1111/add.14836
+  supporting_citations:
+  - Meta-analysis of randomized trials finding no evidence that BI increases treatment for AUD (citation
+    requires full-text access)
+  - Studies on SBIRT implementation in healthcare systems (citation requires full-text access)
+  - Research on VA addictions treatment access (citation requires full-text access)
+  doi: 10.1111/add.14836
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among patients with documented alcohol use disorder diagnosis, brief intervention was associated
+  with a 17% reduction in receiving specialty addictions treatment, suggesting the intervention may paradoxically
+  reduce access to appropriate care for those with diagnosed disorders.
+quantitative_effects:
+  effect_size:
+    value: 0.83
+    type: relative_risk
+    ci_lower: 0.82
+    ci_upper: 0.84
+structural_competency:
+  equity_implications: This finding is particularly concerning from a structural competency perspective
+    because it demonstrates how a well-intentioned healthcare intervention designed as part of a stepped
+    care model may actually function as a barrier to necessary specialty care for patients with diagnosed
+    disorders. The system design assumes BI leads to specialty referral when needed, but the data suggest
+    the opposite occurs. This represents a failure of healthcare system design rather than individual
+    patient engagement.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.050635'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

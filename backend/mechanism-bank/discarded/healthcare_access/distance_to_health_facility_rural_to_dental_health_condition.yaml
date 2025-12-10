@@ -1,0 +1,42 @@
+id: distance_to_health_facility_rural_to_dental_health_condition
+name: Distance to Health Facility in Rural Areas → Dental Health Condition (Number
+  of Teeth)
+from_node:
+  node_id: distance_to_health_facility_rural
+  node_name: Distance to Health Facility in Rural Areas
+to_node:
+  node_id: dental_health_condition
+  node_name: Dental Health Condition (Number of Teeth)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Greater geographic distance to health facilities in rural areas creates
+  physical barriers to accessing dental care services'
+- 'Step 2: Limited accessibility reduces frequency and regularity of dental treatment
+  and preventive care utilization'
+- 'Step 3: Reduced dental care utilization leads to untreated dental conditions and
+  progressive tooth loss'
+- 'Step 4: Cumulative lack of treatment results in worse dental health outcomes, measured
+  by having fewer than 20 teeth'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: F. H. Akbar et al. 2019. "Relationship Between Health Service
+    Access to Dental Conditions in Urban and Rural Areas in Indonesia." *Pesquisa
+    Brasileira em Odontopediatria e Clínica Integrada*. https://doi.org/10.4034/PBOCI.2019.191.83
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.463551'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: urbanicity
+  direction: weakens
+  strength: strong
+  description: Urban residence completely attenuates the relationship between distance
+    to health facilities and dental conditions, as urban areas show no significant
+    association while rural areas demonstrate significant effects
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/distance_to_health_facility_rural_to_dental_health_condition.yaml
+_category: healthcare_access

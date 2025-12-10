@@ -1,0 +1,59 @@
+id: NEW:alcohol_biomarker_diagnostic_accuracy_to_NEW:alcohol_use_monitoring_liver_transplant
+name: Alcohol Biomarker Diagnostic Accuracy in Liver Disease → Alcohol Use Monitoring
+  for Liver Transplant Evaluation
+from_node:
+  node_id: NEW:alcohol_biomarker_diagnostic_accuracy
+  node_name: Alcohol Biomarker Diagnostic Accuracy in Liver Disease
+to_node:
+  node_id: NEW:alcohol_use_monitoring_liver_transplant
+  node_name: Alcohol Use Monitoring for Liver Transplant Evaluation
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Alcohol-related liver disease (ALD) is a major indication for liver transplantation,
+  requiring reliable methods to monitor alcohol use during transplant evaluation'
+- 'Step 2: Validated biomarkers with high diagnostic accuracy (urinary EtG sensitivity
+  70-89%, specificity 93-99%; hair EtG sensitivity 85-100%, specificity 97-100%; PEth
+  sensitivity 73-100%, specificity 90-96%) enable objective detection of alcohol consumption'
+- 'Step 3: Different biomarkers provide complementary detection windows (urinary EtG:
+  days; PEth: weeks; hair EtG: 3-6 months), allowing comprehensive monitoring throughout
+  transplant evaluation periods'
+- 'Step 4: Accurate biomarker testing improves transplant program ability to objectively
+  assess patient sobriety, enhancing clinical decision-making for transplant candidacy'
+- 'Step 5: Objective monitoring facilitates access to transplantation for patients
+  who can demonstrate sustained abstinence through validated testing'
+evidence:
+  quality_rating: B
+  n_studies: 12
+  primary_citation: 'Janique Arnts et al. 2020. Systematic Review: Diagnostic Accuracy
+    of Biomarkers of Alcohol Use in Patients with Liver Disease. Alcoholism: Clinical
+    and Experimental Research.'
+  supporting_citations: []
+description: High diagnostic accuracy of alcohol biomarkers in liver disease patients
+  enables reliable objective monitoring of alcohol use during liver transplant evaluation.
+  Urinary EtG, hair EtG, and PEth show good to excellent sensitivity and specificity
+  in detecting alcohol use across different time windows, supporting transplant programs'
+  ability to assess candidate sobriety and make informed listing decisions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: biomarker_type
+  direction: strengthens
+  strength: strong
+  description: Hair EtG shows highest sensitivity (85-100%) and specificity (97-100%)
+    for chronic excessive use; PEth highly promising but less validated in liver patients
+- name: hepatic_function
+  direction: weakens
+  strength: moderate
+  description: Hepatic damage may alter biomarker formation, potentially affecting
+    diagnostic accuracy in patients with advanced liver disease
+- name: kidney_function
+  direction: weakens
+  strength: moderate
+  description: Altered excretion due to kidney dysfunction and diuretic use may influence
+    urinary biomarker concentrations
+- name: detection_window_needed
+  direction: strengthens
+  strength: moderate
+  description: Combining biomarkers with different detection windows (days to months)
+    provides more comprehensive monitoring capability

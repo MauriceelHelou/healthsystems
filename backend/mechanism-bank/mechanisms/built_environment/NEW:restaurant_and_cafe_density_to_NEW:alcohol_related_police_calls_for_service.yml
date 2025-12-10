@@ -1,0 +1,54 @@
+id: NEW:restaurant_and_cafe_density_to_NEW:alcohol_related_police_calls_for_service
+name: Restaurant and Cafe Density → Alcohol-Related Police Calls-for-Service
+from_node:
+  node_id: NEW:restaurant_and_cafe_density
+  node_name: Restaurant and Cafe Density
+to_node:
+  node_id: NEW:alcohol_related_police_calls_for_service
+  node_name: Alcohol-Related Police Calls-for-Service
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Restaurants and cafes provide alcohol alongside food in dining-focused environments'
+- 'Step 2: Food consumption with alcohol slows absorption and reduces intoxication levels'
+- 'Step 3: Social norms in restaurants emphasize moderate drinking in meal contexts rather than heavy
+  consumption'
+- 'Step 4: Reduced intoxication and social control in these settings leads to fewer alcohol-related incidents'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Miriam Marco et al. 2017. "Neighborhood Characteristics, Alcohol Outlet Density,
+    and Alcohol-Related Calls-for-Service: A Spatiotemporal Analysis in a Wet Drinking Country." https://doi.org/10.3390/IJGI6120380'
+  supporting_citations:
+  - Livingston, M. (2008). A longitudinal analysis of alcohol outlet density and assault.
+  - Gruenewald, P.J. et al. (2006). Regulating alcohol outlet density.
+  - Additional citations require full-text access
+  doi: 10.3390/IJGI6120380
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher restaurant and cafe density is negatively associated with alcohol-related police calls-for-service.
+  These venues promote moderate alcohol consumption in meal contexts with social controls that reduce
+  problematic drinking behaviors.
+quantitative_effects:
+  sample_size: 552
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: This protective effect was observed in Valencia, Spain. The relationship between restaurant/cafe
+    density and alcohol-related calls may vary by cultural drinking patterns.
+moderators:
+- name: spatially_lagged_economic_status
+  direction: strengthens
+  strength: moderate
+  description: Restaurant and cafe density was higher in areas with higher spatially-lagged economic status,
+    suggesting neighborhood affluence of surrounding areas matters
+structural_competency:
+  equity_implications: The protective effect of restaurants versus bars reflects how alcohol licensing
+    and zoning categories create different risk environments. Policy distinctions between venue types
+    have real public health consequences. This mechanism demonstrates that not all alcohol availability
+    is equal - the context of consumption matters for neighborhood safety.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.057342'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

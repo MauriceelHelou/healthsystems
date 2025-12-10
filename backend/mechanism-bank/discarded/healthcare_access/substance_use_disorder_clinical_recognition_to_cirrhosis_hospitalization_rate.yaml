@@ -1,0 +1,41 @@
+id: substance_use_disorder_clinical_recognition_to_cirrhosis_hospitalization_rate
+name: Clinically-Recognized Substance Use Disorder → Hospitalization Rate in Cirrhosis
+  Patients
+from_node:
+  node_id: substance_use_disorder_clinical_recognition
+  node_name: Clinically-Recognized Substance Use Disorder
+to_node:
+  node_id: cirrhosis_hospitalization_rate
+  node_name: Hospitalization Rate in Cirrhosis Patients
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with cirrhosis and documented substance use disorders experience
+  ongoing substance use that may not be adequately treated'
+- 'Step 2: Continued substance use (particularly alcohol) leads to progressive liver
+  damage and decompensation events'
+- 'Step 3: Only 35% of patients with clinically-recognized SUD establish addiction
+  treatment despite 65% receiving referrals, creating a treatment gap'
+- 'Step 4: Untreated or inadequately treated SUD results in cirrhosis complications
+  requiring repeated hospitalizations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Lamia Y. Haque et al. 2020. "Substance Use Disorders in Recently
+    Hospitalized Patients With Cirrhosis." *Journal of addiction medicine*. https://doi.org/10.1097/ADM.0000000000000677
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.363329'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: establishment_of_addiction_treatment
+  direction: weakens
+  strength: strong
+  description: Establishment of addiction treatment would be expected to reduce hospitalization
+    risk, but only 35% of patients with SUD established treatment despite 65% receiving
+    referrals
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/substance_use_disorder_clinical_recognition_to_cirrhosis_hospitalization_rate.yaml
+_category: healthcare_access

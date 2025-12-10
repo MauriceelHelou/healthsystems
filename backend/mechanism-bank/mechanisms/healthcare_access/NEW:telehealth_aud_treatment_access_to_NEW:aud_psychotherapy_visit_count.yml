@@ -1,0 +1,61 @@
+id: NEW:telehealth_aud_treatment_access_to_NEW:aud_psychotherapy_visit_count
+name: Telehealth AUD Treatment Access → AUD Psychotherapy Visit Count
+from_node:
+  node_id: NEW:telehealth_aud_treatment_access
+  node_name: Telehealth AUD Treatment Access
+to_node:
+  node_id: NEW:aud_psychotherapy_visit_count
+  node_name: AUD Psychotherapy Visit Count
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Telehealth modality removes geographic and transportation barriers to accessing AUD treatment'
+- 'Step 2: Reduced need for in-person travel decreases time and cost burden for patients'
+- 'Step 3: Lower barriers enable patients to attend more frequent treatment sessions'
+- 'Step 4: Increased psychotherapy visit frequency improves treatment engagement and continuity'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Perumalswami et al. 2024. "Telehealth and delivery of alcohol use disorder treatment
+    in the Veterans Health Administration.." https://doi.org/10.1111/acer.15305
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1111/acer.15305
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Receiving any AUD telehealth was associated with receiving more psychotherapy visits compared
+  to only in-person care, suggesting telehealth removes structural barriers to treatment engagement
+quantitative_effects:
+  sample_size: 138619
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study used mixed-effects models to adjust for correlation across patients treated at
+    same facility, suggesting facility-level variation exists
+moderators:
+- name: gender
+  direction: weakens
+  strength: moderate
+  description: Male patients were less likely to receive any telehealth-delivered AUD treatment compared
+    to only in-person treatment
+- name: opioid_use_disorder_comorbidity
+  direction: weakens
+  strength: moderate
+  description: Patients with opioid use disorder were less likely to receive telehealth AUD treatment
+    compared to those without non-AUD substance use disorder
+- name: stimulant_use_disorder_comorbidity
+  direction: weakens
+  strength: moderate
+  description: Patients with stimulant use disorder were less likely to receive telehealth AUD treatment
+    compared to those without non-AUD substance use disorder
+structural_competency:
+  equity_implications: This mechanism addresses healthcare access barriers as structural determinants.
+    The shift to telehealth during COVID-19 represents a systems-level change that differentially benefits
+    those facing transportation, geographic, or scheduling barriers. However, the findings reveal equity
+    concerns as male patients and those with polysubstance use disorders face additional barriers to telehealth
+    access, suggesting structural gaps in service delivery.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.726748'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

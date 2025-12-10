@@ -1,0 +1,47 @@
+id: nitrogen_dioxide_exposure_to_cardiovascular_disease_incidence
+name: Long-term Nitrogen Dioxide (NO2) Exposure → Cardiovascular Disease Incidence
+from_node:
+  node_id: nitrogen_dioxide_exposure
+  node_name: Long-term Nitrogen Dioxide (NO2) Exposure
+to_node:
+  node_id: cardiovascular_disease_incidence
+  node_name: Cardiovascular Disease Incidence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Long-term NO2 exposure from traffic-related air pollution and industrial
+  emissions creates sustained environmental exposure'
+- 'Step 2: NO2 triggers systemic inflammation and oxidative stress in cardiovascular
+  tissues'
+- 'Step 3: Chronic inflammation and oxidative damage lead to endothelial dysfunction
+  and atherosclerotic processes'
+- 'Step 4: Progressive vascular damage and atherosclerosis manifest as clinical cardiovascular
+  disease events'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Xi Xia et al. 2024. "Associations of long-term nitrogen dioxide
+    exposure with a wide spectrum of diseases: a prospective cohort study of 0·5 million
+    Chinese adults.." *The Lancet. Public health*. https://doi.org/10.1016/S2468-2667(24)00264-0'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.467855'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: urbanization_level
+  direction: strengthens
+  strength: moderate
+  description: Urban areas with higher traffic density and industrial activity likely
+    have higher NO2 concentrations, potentially strengthening the association with
+    cardiovascular disease
+- name: baseline_age
+  direction: strengthens
+  strength: moderate
+  description: Older adults (mean age 52.0 years) may be more vulnerable to cardiovascular
+    effects of air pollution due to pre-existing subclinical disease and reduced physiological
+    resilience
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/nitrogen_dioxide_exposure_to_cardiovascular_disease_incidence.yaml
+_category: built_environment

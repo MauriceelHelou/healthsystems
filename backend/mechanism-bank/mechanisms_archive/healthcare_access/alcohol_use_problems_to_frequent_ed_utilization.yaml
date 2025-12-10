@@ -1,0 +1,41 @@
+id: alcohol_use_problems_to_frequent_ed_utilization
+name: Alcohol Use Problems → Frequent Emergency Department Utilization
+from_node:
+  node_id: alcohol_use_problems
+  node_name: Alcohol Use Problems
+to_node:
+  node_id: frequent_ed_utilization
+  node_name: Frequent Emergency Department Utilization
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Alcohol use problems create acute medical complications requiring emergency
+  care (intoxication, withdrawal, injuries)'
+- 'Step 2: Lack of access to primary care and addiction treatment services forces
+  reliance on emergency departments as safety net'
+- 'Step 3: Untreated alcohol problems lead to repeated acute crises and injury recurrence'
+- 'Step 4: ED becomes primary point of contact for healthcare, generating high utilization
+  patterns documented in health information exchange'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: L. Whiteside et al. 2021. "Leveraging a health information exchange
+    to examine the accuracy of self-report emergency department utilization data among
+    hospitalized injury survivors." *Trauma Surgery & Acute Care Open*. https://doi.org/10.1136/tsaco-2020-000550
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.574562'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: major_psychiatric_illness
+  direction: strengthens
+  strength: strong
+  description: Comorbid psychiatric conditions compound alcohol-related acute care
+    needs
+- name: insurance_status
+  direction: strengthens
+  strength: moderate
+  description: Lack of insurance or underinsurance likely increases ED utilization
+    as primary care access point

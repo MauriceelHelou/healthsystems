@@ -1,0 +1,56 @@
+id: alcohol_use_disorder_to_NEW:bipolar_treatment_outcomes_poor
+name: Alcohol Use Disorder → Poor Bipolar Disorder Treatment Outcomes
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:bipolar_treatment_outcomes_poor
+  node_name: Poor Bipolar Disorder Treatment Outcomes
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Comorbid AUD complicates bipolar disorder medication management and adherence'
+- 'Step 2: Alcohol interferes with mood stabilizer effectiveness and increases medication side effects'
+- 'Step 3: Healthcare systems often lack integrated treatment protocols for dual diagnosis'
+- 'Step 4: Fragmented care between mental health and addiction services creates treatment gaps'
+- 'Step 5: Poor treatment outcomes perpetuate cycle of both conditions'
+evidence:
+  quality_rating: A
+  n_studies: 20
+  primary_citation: 'M. O. Pozzolo Pedro et al. 2023. "Alcohol use disorders in patients with bipolar
+    disorder: a systematic review and meta-analysis." https://doi.org/10.1080/09540261.2023.2249548'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Paper notes AUD comorbidity 'may improve treatment outcomes' if addressed, implying current outcomes
+    are suboptimal
+  - Studies from multiple international healthcare contexts included
+  doi: 10.1080/09540261.2023.2249548
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The paper emphasizes that addressing AUD comorbidity in bipolar patients 'may improve treatment
+  outcomes, reduce harm, and promote public health,' indicating that the high comorbidity rate currently
+  leads to poorer outcomes that could be improved through targeted interventions.
+quantitative_effects:
+  sample_size: 32886
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Treatment outcomes likely vary by country based on healthcare system integration and
+    dual-diagnosis service availability
+moderators:
+- name: integrated_treatment_availability
+  direction: weakens
+  strength: strong
+  description: Access to integrated mental health and substance use treatment would weaken the negative
+    impact of comorbidity on outcomes
+structural_competency:
+  equity_implications: 'This mechanism identifies a clear structural intervention point: the need for
+    ''targeted interventions to prevent and address comorbid conditions.'' Current healthcare system structures
+    that separate mental health and addiction treatment create barriers to optimal care for the 29% of
+    bipolar patients with AUD. The paper frames this as a public health priority requiring systems-level
+    change rather than individual-level behavior modification.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.265857'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

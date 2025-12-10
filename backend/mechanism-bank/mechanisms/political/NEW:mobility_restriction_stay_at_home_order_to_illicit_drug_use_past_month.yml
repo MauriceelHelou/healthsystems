@@ -1,0 +1,65 @@
+id: NEW:mobility_restriction_stay_at_home_order_to_illicit_drug_use_past_month
+name: Mobility Restriction (Stay-at-Home Order) → Illicit Drug Use Past Month
+from_node:
+  node_id: NEW:mobility_restriction_stay_at_home_order
+  node_name: Mobility Restriction (Stay-at-Home Order)
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use Past Month
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: COVID-19 pandemic necessitates public health infection control policies including stay-at-home
+  orders'
+- 'Step 2: Mobility restrictions limit access to social support networks, employment, and routine activities'
+- 'Step 3: Confinement increases psychological distress, isolation, and boredom'
+- 'Step 4: Reduced access to behavioral health services and support systems during lockdown'
+- 'Step 5: Increased drug use as coping mechanism for pandemic-related stress and isolation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Soo-Hoon Lee et al. 2025. "Representative national survey on drug use during the COVID-19
+    stay-at-home order in the USA.." https://doi.org/10.1136/bmjopen-2024-086141
+  supporting_citations:
+  - Additional citations require full-text access - abstract references National Institute on Drug Abuse-Modified
+    ASSIST questionnaire
+  - Additional citations require full-text access - abstract references psychometrically validated scales
+    for mental states
+  - Additional citations require full-text access - abstract references Qualtrics panel methodology
+  doi: 10.1136/bmjopen-2024-086141
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: COVID-19 stay-at-home orders enacted from March to June 2020 were identified as a risk factor
+  for drug use in the US general population. The study found that mobility restriction during national
+  health crises had unintended consequences on substance use behaviors, highlighting the complex interplay
+  between infection control policies and behavioral health outcomes.
+quantitative_effects:
+  sample_size: 3340
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Sample was stratified by geographical region to represent the US population; regional
+    variation in COVID-19 policies and enforcement may affect the relationship
+moderators:
+- name: mental_health_conditions
+  direction: strengthens
+  strength: moderate
+  description: Mental health conditions identified as important covariates that may amplify the relationship
+    between mobility restriction and drug use
+- name: demographics
+  direction: strengthens
+  strength: moderate
+  description: Demographics identified as important covariates; differential vulnerability by age, race,
+    and gender may moderate the effect
+structural_competency:
+  equity_implications: This mechanism appropriately traces drug use to structural factors (pandemic policy)
+    rather than individual moral failing. The study explicitly calls for further research on 'unintended
+    consequences of infection control policies during national health crises,' recognizing that public
+    health interventions can have differential impacts. The structural root cause is governmental pandemic
+    response policy, with equity implications as the effects likely varied by socioeconomic status, housing
+    stability, and pre-existing mental health conditions - all of which are structurally determined.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.669182'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

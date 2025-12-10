@@ -1,0 +1,50 @@
+id: alcohol_prices_to_heavy_episodic_drinking
+name: Alcohol Prices → Heavy Episodic Drinking (HED)
+from_node:
+  node_id: alcohol_prices
+  node_name: Alcohol Prices
+to_node:
+  node_id: heavy_episodic_drinking
+  node_name: Heavy Episodic Drinking (HED)
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher alcohol prices reduce affordability of alcohol products for youth
+  with limited financial resources'
+- 'Step 2: Economic barriers delay age of alcohol use initiation among youth populations'
+- 'Step 3: Later initiation occurs during periods of greater neurological maturity
+  and impulse control'
+- 'Step 4: Youth who initiate drinking at older ages establish less harmful consumption
+  patterns'
+- 'Step 5: Sustained higher prices continue to constrain purchasing power for heavy
+  consumption episodes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Guillermo R Paraje et al. 2020. "Prices, alcohol use initiation
+    and heavy episodic drinking among Chilean youth." *Addiction*. https://doi.org/10.1111/add.15167
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.246335'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: household_income
+  direction: strengthens
+  strength: strong
+  description: Price effects likely stronger among youth from lower-income households
+    with greater budget constraints
+- name: alcohol_availability
+  direction: weakens
+  strength: moderate
+  description: High alcohol outlet density may provide alternative low-cost options
+    that attenuate price effects
+- name: marketing_exposure
+  direction: weakens
+  strength: moderate
+  description: Heavy alcohol marketing to youth may increase demand and willingness
+    to pay despite higher prices
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/economic/alcohol_prices_to_heavy_episodic_drinking.yaml
+_category: economic

@@ -1,0 +1,46 @@
+id: delay_to_specialized_care_to_severity_of_persistent_deficits
+name: 4-Month Delay from Emergency Care to Specialized Neurorehabilitation → Severity
+  of Persistent Cognitive and Functional Deficits
+from_node:
+  node_id: delay_to_specialized_care
+  node_name: 4-Month Delay from Emergency Care to Specialized Neurorehabilitation
+to_node:
+  node_id: severity_of_persistent_deficits
+  node_name: Severity of Persistent Cognitive and Functional Deficits
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patient initially admitted to emergency care with suspected postconcussive
+  syndrome, alcohol-related thiamine deficiency, and TAON'
+- 'Step 2: Acute treatment with thiamine, cobalamin, and folate substitution improved
+  TAON but major cognitive deficits remained'
+- 'Step 3: 4-month delay before admission to specialized neurorehabilitation center
+  during which deficits persisted without targeted intervention'
+- 'Step 4: At neurorehabilitation admission, patient was fully reliant on care staff
+  for all ADL, suggesting potential worsening or lack of improvement during delay
+  period'
+- 'Step 5: Extended delay may have allowed maladaptive patterns to consolidate, potentially
+  requiring longer rehabilitation duration (26 months)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'M. Schrader et al. 2021. "Case Report: Intensive Inpatient Neurorehabilitation
+    Achieves Sustained Real-World Benefits in Severe Alcohol-Related Wernicke-Korsakoff
+    Syndrome: A Case Study With 7-Years Follow-Up." *Frontiers in Psychology*. https://doi.org/10.3389/fpsyg.2021.693920'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.326454'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: insurance_authorization_barriers
+  direction: strengthens
+  strength: strong
+  description: Insurance approval processes for specialized inpatient neurorehabilitation
+    often create delays in accessing appropriate care
+- name: lack_of_referral_pathways
+  direction: strengthens
+  strength: moderate
+  description: Emergency care providers may lack awareness of or connections to specialized
+    neurorehabilitation centers for WKS patients

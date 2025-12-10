@@ -1,0 +1,56 @@
+id: binge_drinking_to_breast_cancer_incidence
+name: Binge Drinking → Breast Cancer Incidence
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: breast_cancer_incidence
+  node_name: Breast Cancer Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Higher daily alcohol consumption (2-3 drinks) delivers substantial ethanol dose to breast tissue'
+- 'Step 2: Increased acetaldehyde production overwhelms cellular detoxification capacity'
+- 'Step 3: Sustained elevation of estrogen levels promotes hormone-dependent tumor growth'
+- 'Step 4: Chronic inflammation and immune suppression reduce cancer surveillance'
+- 'Step 5: Dose-dependent carcinogenic effects manifest as substantially elevated breast cancer risk'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: 'Ivneet Sohi et al. 2024. "Alcoholic beverage consumption and female breast cancer
+    risk: A systematic review and meta‐analysis of prospective cohort studies." https://doi.org/10.1111/acer.15493'
+  supporting_citations:
+  - Meta-regression performed across range of alcohol consumption categories
+  - Studies included consumption levels from non-drinking to heavy drinking
+  - Additional citations require full-text access
+  doi: 10.1111/acer.15493
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Consuming 3 standard drinks per day is associated with a 22% increased risk of breast cancer
+  compared to non-drinking. The dose-response relationship demonstrates that higher consumption levels
+  substantially increase risk, supporting evidence-based cancer prevention guidelines to reduce alcohol
+  intake.
+quantitative_effects:
+  effect_size:
+    value: 1.22
+    type: relative_risk
+    ci_lower: 1.19
+    ci_upper: 1.25
+moderators:
+- name: daily_consumption_level
+  direction: strengthens
+  strength: strong
+  description: 'Clear dose-response: RR 1.10 at 1 drink/day, 1.18 at 2 drinks/day, 1.22 at 3 drinks/day'
+structural_competency:
+  equity_implications: Heavy alcohol consumption patterns are shaped by structural factors including socioeconomic
+    stress, alcohol outlet density in neighborhoods, pricing policies, and inadequate access to mental
+    health services. Populations experiencing higher chronic stress or living in areas with greater alcohol
+    availability may face disproportionate exposure. Policy interventions including minimum unit pricing,
+    outlet density restrictions, and expanded substance use treatment access address root causes of heavy
+    consumption patterns.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.278108'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

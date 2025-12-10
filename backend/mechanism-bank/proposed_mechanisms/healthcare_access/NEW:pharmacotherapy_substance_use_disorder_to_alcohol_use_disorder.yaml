@@ -1,0 +1,56 @@
+id: NEW:pharmacotherapy_substance_use_disorder_to_alcohol_use_disorder
+name: Pharmacotherapy for Substance Use Disorders → Alcohol Use Disorder Severity
+from_node:
+  node_id: NEW:pharmacotherapy_substance_use_disorder
+  node_name: Pharmacotherapy for Substance Use Disorders
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder Severity
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Pharmacotherapy for substance use disorders (e.g., naltrexone, acamprosate,
+  disulfiram) is prescribed to individuals with alcohol use disorder'
+- 'Step 2: Medications act on neurobiological pathways to reduce alcohol cravings,
+  block rewarding effects of alcohol, or create aversive reactions to alcohol consumption'
+- 'Step 3: Reduced cravings and altered reward/punishment mechanisms lead to decreased
+  alcohol consumption and lower relapse rates'
+- 'Step 4: When combined with trauma-focused therapy for comorbid PTSD, synergistic
+  effects enhance treatment outcomes through addressing both psychological and physiological
+  components'
+- 'Step 5: Sustained pharmacotherapy adherence results in clinically significant reductions
+  in alcohol use disorder severity'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'D. Hien et al. 2022. Project Harmony: A Meta-Analysis With Individual
+    Patient Data on Behavioral and Pharmacologic Trials for Comorbid Posttraumatic
+    Stress and Alcohol or Other Drug Use Disorders. American Journal of Psychiatry.'
+  supporting_citations: []
+description: This meta-analysis of 36 trials (N=4,046) demonstrates that pharmacotherapy
+  for substance use disorders significantly reduces alcohol use disorder severity,
+  with a large effect size (d=-1.10) when combined with trauma-focused therapy. Pharmacological
+  interventions targeting alcohol use showed consistent benefits across multiple treatment
+  approaches, with sustained improvements observed at 12-month follow-up.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -1.1
+    type: cohens_d
+    ci_lower: -1.54
+    ci_upper: -0.68
+  p_value: null
+  sample_size: 4046
+moderators:
+- name: Combination with trauma-focused therapy
+  direction: strengthens
+  strength: strong
+  description: Combining pharmacotherapy for substance use disorders with trauma-focused
+    therapy showed the largest comparative effect sizes for alcohol use severity (d=-1.10)
+    compared to treatment as usual
+- name: Comorbid PTSD
+  direction: strengthens
+  strength: moderate
+  description: In populations with comorbid PTSD and substance use disorders, integrated
+    treatment approaches addressing both conditions showed enhanced outcomes

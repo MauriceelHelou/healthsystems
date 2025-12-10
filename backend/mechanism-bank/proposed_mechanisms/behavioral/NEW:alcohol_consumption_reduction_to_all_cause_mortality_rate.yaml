@@ -1,0 +1,55 @@
+id: NEW:alcohol_consumption_reduction_to_all_cause_mortality_rate
+name: Reduced Alcohol Consumption → All-Cause Mortality
+from_node:
+  node_id: NEW:alcohol_consumption_reduction
+  node_name: Reduced Alcohol Consumption
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol-dependent individuals reduce their alcohol consumption levels through
+  intervention, treatment, or behavioral change'
+- 'Step 2: Reduced alcohol intake decreases acute toxic effects on multiple organ
+  systems including liver, cardiovascular system, and nervous system'
+- 'Step 3: Lower alcohol consumption reduces risk of alcohol-related accidents, injuries,
+  and acute health events'
+- 'Step 4: Chronic disease progression (cirrhosis, cardiomyopathy, pancreatitis) is
+  slowed or halted'
+- 'Step 5: Cumulative reduction in physiological damage and acute risk events leads
+  to significantly lower all-cause mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'Philippe Laramée et al. 2015. Risk of All-Cause Mortality in
+    Alcohol-Dependent Individuals: A Systematic Literature Review and Meta-Analysis.
+    EBioMedicine.'
+  supporting_citations: []
+description: This meta-analysis of 39 observational studies demonstrates that alcohol-dependent
+  individuals have 3.45 times higher mortality risk compared to the general population.
+  Critically, the study shows that reducing alcohol consumption significantly lowers
+  this mortality risk, even among those who do not achieve complete abstinence. The
+  protective effect of reduction operates through decreased physiological damage to
+  multiple organ systems and reduced risk of acute alcohol-related events.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.45
+    type: relative_risk
+    ci_lower: 2.96
+    ci_upper: 4.02
+  p_value: 0.0001
+  sample_size: null
+moderators:
+- name: abstinence_vs_reduction
+  direction: strengthens
+  strength: moderate
+  description: Abstinence leads to greater mortality reduction than non-abstinence,
+    but even reduction without full abstinence significantly decreases mortality risk
+- name: baseline_drinking_level
+  direction: strengthens
+  strength: strong
+  description: Alcohol-dependent subjects continuing to drink heavily had significantly
+    greater mortality than those who reduced intake

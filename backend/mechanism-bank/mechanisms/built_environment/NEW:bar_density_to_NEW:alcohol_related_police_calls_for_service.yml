@@ -1,0 +1,58 @@
+id: NEW:bar_density_to_NEW:alcohol_related_police_calls_for_service
+name: Bar Density → Alcohol-Related Police Calls-for-Service
+from_node:
+  node_id: NEW:bar_density
+  node_name: Bar Density
+to_node:
+  node_id: NEW:alcohol_related_police_calls_for_service
+  node_name: Alcohol-Related Police Calls-for-Service
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher bar density increases physical availability and accessibility of alcohol in neighborhoods'
+- 'Step 2: Bars serve as venues where heavy drinking occurs on-premise with immediate consumption'
+- 'Step 3: Patrons leaving bars may engage in public intoxication, disorderly conduct, or violence'
+- 'Step 4: These alcohol-related incidents generate increased police calls-for-service in the area'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Miriam Marco et al. 2017. "Neighborhood Characteristics, Alcohol Outlet Density,
+    and Alcohol-Related Calls-for-Service: A Spatiotemporal Analysis in a Wet Drinking Country." https://doi.org/10.3390/IJGI6120380'
+  supporting_citations:
+  - 'Gruenewald, P.J. (2007). The spatial ecology of alcohol problems: niche theory and assortative drinking.'
+  - 'Livingston, M. (2008). Alcohol outlet density and assault: a spatial analysis.'
+  - Additional citations require full-text access
+  doi: 10.3390/IJGI6120380
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Higher bar density in neighborhoods is positively associated with alcohol-related police
+  calls-for-service. Bars create environments for heavy drinking and public intoxication that generate
+  neighborhood disorder requiring police intervention.
+quantitative_effects:
+  sample_size: 552
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in Valencia, Spain - a 'wet' drinking culture country with greater
+    social acceptance of drinking compared to the U.S. Results may differ in other cultural contexts.
+moderators:
+- name: drinking_culture
+  direction: strengthens
+  strength: moderate
+  description: Wet drinking culture with greater social acceptance of alcohol may moderate the relationship
+    between bar density and alcohol-related problems
+- name: neighborhood_economic_status
+  direction: strengthens
+  strength: moderate
+  description: Bar density was higher in areas with higher economic status and higher spatially-lagged
+    economic status
+structural_competency:
+  equity_implications: This mechanism traces to structural factors including zoning policies and alcohol
+    licensing that determine where bars can operate. The concentration of bars in certain neighborhoods
+    creates differential exposure to alcohol-related harms. Economic status influences bar location, potentially
+    creating different risk profiles across neighborhoods.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.056119'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

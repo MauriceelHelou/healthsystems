@@ -1,0 +1,70 @@
+id: NEW:food_price_elasticity_measurement_to_NEW:policy_analysis_accuracy
+name: Food Price Elasticity Measurement Methodology → Policy Analysis Accuracy for Food Interventions
+from_node:
+  node_id: NEW:food_price_elasticity_measurement
+  node_name: Food Price Elasticity Measurement Methodology
+to_node:
+  node_id: NEW:policy_analysis_accuracy
+  node_name: Policy Analysis Accuracy for Food Interventions
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Scanner data (household-level purchase records) generates different demand elasticity estimates
+  compared to aggregate data sources'
+- 'Step 2: Household scanner quantity data produces more elastic demand estimates than other quantity
+  measurement types'
+- 'Step 3: Retail scanner price data used as proxies for actual prices tend to show more price-elastic
+  responses'
+- 'Step 4: These methodological differences affect predictions of how price-based policies (taxes, subsidies)
+  will influence food purchasing behavior'
+- 'Step 5: Inaccurate elasticity selection can lead to over- or under-estimation of policy impacts on
+  food consumption patterns'
+evidence:
+  quality_rating: A
+  n_studies: 50
+  primary_citation: Younghyeon Jeon et al. 2023. "A meta‐analysis of U.S. food demand elasticities to
+    detect the impacts of scanner data." https://doi.org/10.1002/aepp.13414
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of U.S. food demand elasticity studies
+  - Studies using household scanner data from Nielsen and IRI panels
+  - Studies using aggregate quantity data from USDA and BLS sources
+  doi: 10.1002/aepp.13414
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This meta-analysis examines how the choice of data source affects estimates of food demand
+  price elasticity in the U.S. The study finds that scanner data generate statistically different elasticity
+  estimates, with demand appearing more elastic (more responsive to price changes) than estimates from
+  other data types. This has important implications for health policy analysis, as elasticity estimates
+  are used to predict how food taxes or subsidies will affect consumption of items like sugar-sweetened
+  beverages, alcohol, and unhealthy foods. Selecting inappropriate elasticities could lead to inaccurate
+  policy impact predictions.
+moderators:
+- name: data_source_type
+  direction: strengthens
+  strength: strong
+  description: Scanner data sources (household and retail) generate statistically different and more elastic
+    demand estimates compared to other data types
+- name: quantity_measurement_method
+  direction: strengthens
+  strength: moderate
+  description: Household scanner quantity data appears more elastic than other quantity measurement types
+- name: price_proxy_type
+  direction: strengthens
+  strength: moderate
+  description: Using retail scanner price data as proxies for prices tends to produce more price-elastic
+    estimates
+structural_competency:
+  equity_implications: This methodological finding has important equity implications for food and beverage
+    taxation policies aimed at improving population health. Price-based interventions (like soda taxes
+    or alcohol taxes) are often critiqued as regressive, but their effectiveness depends on accurate elasticity
+    estimates. If elasticities are systematically different depending on data source, policy analyses
+    using the wrong estimates could either overestimate (leading to policy adoption with disappointing
+    results) or underestimate (preventing adoption of effective policies) the impact of structural interventions
+    on diet-related health outcomes. Low-income populations may be more price-sensitive, so accurate elasticity
+    measurement is crucial for equitable policy design.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.046532'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

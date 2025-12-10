@@ -1,0 +1,53 @@
+id: NEW:circulating_tmao_concentration_to_cardiovascular_disease_mortality
+name: Circulating Trimethylamine-N-oxide (TMAO) Concentration → Cardiovascular Disease
+  Mortality
+from_node:
+  node_id: NEW:circulating_tmao_concentration
+  node_name: Circulating Trimethylamine-N-oxide (TMAO) Concentration
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Dietary nutrients (choline, carnitine, betaine from red meat, eggs, fish)
+  are metabolized by gut microbiota to produce trimethylamine (TMA)'
+- 'Step 2: TMA is absorbed and transported to the liver where flavin monooxygenases
+  (FMO3) oxidize it to trimethylamine-N-oxide (TMAO)'
+- 'Step 3: Elevated circulating TMAO promotes atherosclerosis through enhanced macrophage
+  foam cell formation and cholesterol accumulation in arterial walls'
+- 'Step 4: TMAO contributes to endothelial dysfunction, platelet hyperreactivity,
+  and thrombosis risk'
+- 'Step 5: These cumulative vascular effects increase the risk of cardiovascular events
+  leading to cardiovascular disease mortality'
+evidence:
+  quality_rating: A
+  n_studies: 82
+  primary_citation: 'Doudou Li et al. 2022. Gut microbiota–derived metabolite trimethylamine-N-oxide
+    and multiple health outcomes: an umbrella review and updated meta-analysis. American
+    Journal of Clinical Nutrition.'
+  supporting_citations: []
+description: Circulating TMAO, a gut microbiota-derived metabolite from dietary nutrients,
+  is positively associated with cardiovascular disease mortality. This umbrella review
+  and meta-analysis synthesizing 82 individual studies found highly suggestive evidence
+  for the TMAO-CVD mortality association. TMAO promotes atherosclerosis, endothelial
+  dysfunction, and thrombosis through multiple mechanisms, contributing to increased
+  cardiovascular mortality risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: dietary_pattern
+  direction: strengthens
+  strength: moderate
+  description: Diets high in red meat, eggs, and other choline/carnitine-rich foods
+    increase TMAO production and may strengthen the association with CVD mortality
+- name: gut_microbiome_composition
+  direction: strengthens
+  strength: moderate
+  description: Individual variation in gut microbiota composition affects TMA production
+    capacity, potentially modifying TMAO levels and associated cardiovascular risk
+- name: renal_function
+  direction: strengthens
+  strength: moderate
+  description: Impaired kidney function reduces TMAO clearance, leading to higher
+    circulating concentrations and potentially stronger associations with CVD mortality

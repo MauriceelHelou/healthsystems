@@ -1,0 +1,55 @@
+id: NEW:whole_of_community_aod_intervention_to_illicit_drug_use_past_month
+name: Whole-of-Community Alcohol and Other Drug Intervention → Illicit Drug Use Past Month
+from_node:
+  node_id: NEW:whole_of_community_aod_intervention
+  node_name: Whole-of-Community Alcohol and Other Drug Intervention
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use Past Month
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Community-wide interventions mobilize multiple sectors including law enforcement and community
+  organizations'
+- 'Step 2: Coordinated prevention efforts target both alcohol and drug use through environmental modification'
+- 'Step 3: Changes in social norms, enforcement, and availability are implemented'
+- 'Step 4: 12-month marijuana use is measured as outcome indicator'
+evidence:
+  quality_rating: B
+  n_studies: 2
+  primary_citation: 'E. Stockings et al. 2018. "Whole‐of‐community interventions to reduce population‐level
+    harms arising from alcohol and other drug use: a systematic review and meta‐analysis." https://doi.org/10.1111/add.14277'
+  supporting_citations:
+  - Additional citations require full-text access - 2 trials examined marijuana use outcomes
+  - Studies implemented across multiple community settings
+  - Part of larger systematic review of 24 trials
+  doi: 10.1111/add.14277
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Whole-of-community interventions showed no significant effect on 12-month marijuana use (RR=0.98,
+  95% CI 0.86-1.11). This null finding suggests that interventions designed primarily for alcohol may
+  not translate effectively to other substance use without specific targeting.
+quantitative_effects:
+  effect_size:
+    value: 0.98
+    type: relative_risk
+    ci_lower: 0.86
+    ci_upper: 1.11
+  sample_size: 249125
+moderators:
+- name: intervention_focus
+  direction: weakens
+  strength: moderate
+  description: Many whole-of-community interventions may focus primarily on alcohol rather than other
+    drugs, potentially limiting effectiveness for marijuana use
+structural_competency:
+  equity_implications: The lack of effect on marijuana use highlights that structural interventions may
+    need to be substance-specific. Cannabis use operates within different social, legal, and commercial
+    contexts than alcohol, requiring tailored policy and environmental approaches. This finding does not
+    suggest individual blame but rather the need for appropriately targeted structural interventions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.394319'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

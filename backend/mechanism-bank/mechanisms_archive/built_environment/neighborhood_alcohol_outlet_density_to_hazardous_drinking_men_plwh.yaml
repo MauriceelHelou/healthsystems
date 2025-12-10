@@ -1,0 +1,45 @@
+id: neighborhood_alcohol_outlet_density_to_hazardous_drinking_men_plwh
+name: Neighborhood Alcohol Outlet Density → Hazardous Drinking Among Men Living with
+  HIV
+from_node:
+  node_id: neighborhood_alcohol_outlet_density
+  node_name: Neighborhood Alcohol Outlet Density
+to_node:
+  node_id: hazardous_drinking_men_plwh
+  node_name: Hazardous Drinking Among Men Living with HIV
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: High density of alcohol outlets in neighborhood increases physical availability
+  and accessibility of alcohol for residents'
+- 'Step 2: Greater access reduces barriers to alcohol purchase and normalizes alcohol
+  consumption through environmental cues and commercial promotion'
+- 'Step 3: Increased exposure to alcohol-related marketing and social drinking contexts
+  in the neighborhood facilitates more frequent and higher-volume alcohol consumption'
+- 'Step 4: Men with HIV in alcohol-dense neighborhoods engage in hazardous drinking
+  patterns due to structural factors of availability and environmental influences'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K P Theall et al. 2019. "Neighborhood Alcohol Environment: Differential
+    Effects on Hazardous Drinking and Mental Health by Sex in Persons Living with
+    HIV (PLWH)." *AIDS and behavior*. https://doi.org/10.1007/s10461-019-02632-3'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.885709'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Association between neighborhood alcohol density and hazardous drinking
+    was present among men but not women living with HIV, indicating sex-specific vulnerability
+    to environmental alcohol exposure
+- name: hiv_status
+  direction: strengthens
+  strength: moderate
+  description: Population of persons living with HIV may have increased vulnerability
+    to alcohol-related harms due to co-occurring mental health conditions and social
+    stressors

@@ -1,0 +1,45 @@
+id: nitrogen_dioxide_exposure_to_stroke_incidence
+name: Long-term Nitrogen Dioxide (NO2) Exposure → Stroke Incidence
+from_node:
+  node_id: nitrogen_dioxide_exposure
+  node_name: Long-term Nitrogen Dioxide (NO2) Exposure
+to_node:
+  node_id: stroke_incidence
+  node_name: Stroke Incidence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Long-term NO2 exposure creates chronic environmental burden on the cerebrovascular
+  system'
+- 'Step 2: NO2 induces endothelial dysfunction and promotes pro-thrombotic states
+  through oxidative stress'
+- 'Step 3: Chronic inflammation and altered hemostasis increase risk of both ischemic
+  and hemorrhagic cerebrovascular events'
+- 'Step 4: Accumulated vascular damage manifests as clinical stroke events'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Xi Xia et al. 2024. "Associations of long-term nitrogen dioxide
+    exposure with a wide spectrum of diseases: a prospective cohort study of 0·5 million
+    Chinese adults.." *The Lancet. Public health*. https://doi.org/10.1016/S2468-2667(24)00264-0'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.468647'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sex
+  direction: strengthens
+  strength: weak
+  description: With 59.0% female and 41.0% male participants, potential sex-based
+    differences in stroke vulnerability and NO2 effects may exist, though specific
+    moderation is not detailed in abstract
+- name: regional_pollution_levels
+  direction: strengthens
+  strength: strong
+  description: Areas with higher baseline NO2 concentrations would show stronger dose-response
+    relationships with stroke incidence
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/nitrogen_dioxide_exposure_to_stroke_incidence.yaml
+_category: built_environment

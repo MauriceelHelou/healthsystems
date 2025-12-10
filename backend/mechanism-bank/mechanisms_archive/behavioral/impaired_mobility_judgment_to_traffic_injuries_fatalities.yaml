@@ -1,0 +1,39 @@
+id: impaired_mobility_judgment_to_traffic_injuries_fatalities
+name: Impaired Mobility and Judgment Due to Alcohol → Traffic-Related Injuries and
+  Fatalities
+from_node:
+  node_id: impaired_mobility_judgment
+  node_name: Impaired Mobility and Judgment Due to Alcohol
+to_node:
+  node_id: traffic_injuries_fatalities
+  node_name: Traffic-Related Injuries and Fatalities
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol-induced impairment of judgment reduces ability to accurately assess
+  fitness to drive'
+- 'Step 2: Impaired motor coordination and reaction time increase crash risk when
+  driving'
+- 'Step 3: Driving while impaired results in over 800 injuries and fatalities daily'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ruojun Li et al. 2023. "Fine-Grained Intoxicated Gait Classification
+    Using a Bilinear CNN.." *IEEE sensors journal*. https://doi.org/10.1109/jsen.2023.3248868
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.544167'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: public_transportation_availability
+  direction: weakens
+  strength: strong
+  description: Areas with robust public transportation reduce necessity to drive after
+    drinking, lowering DUI incidents
+- name: geographic_isolation
+  direction: strengthens
+  strength: moderate
+  description: Rural areas with limited alternative transportation options may have
+    higher rates of driving after drinking due to structural necessity

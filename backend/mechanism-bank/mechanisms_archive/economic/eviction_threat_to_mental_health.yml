@@ -1,0 +1,94 @@
+id: eviction_threat_to_mental_health
+name: Eviction Threat → Mental Health Outcomes
+from_node:
+  node_id: eviction_threat
+  node_name: Eviction Threat/Housing Instability
+  node_type: stock
+to_node:
+  node_id: mental_health_outcomes
+  node_name: Mental Health Outcomes
+  node_type: stock
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Receiving eviction notice or threat creates acute psychological distress and fear of displacement'
+- 'Step 2: Uncertainty about housing future generates chronic stress and elevated cortisol levels'
+- 'Step 3: Social disruption anticipation causes anxiety about losing community, schools, and support
+  networks'
+- 'Step 4: Financial strain from legal fees, moving costs, and potential job loss compounds psychological
+  burden'
+- 'Step 5: Prolonged housing instability stress manifests as depression, anxiety disorders, and trauma
+  symptoms'
+evidence:
+  quality_rating: B
+  n_studies: 8
+  primary_citation: JAMA Network Open. 2025. 'Stress About Eviction or Loss of Housing and Child Mental
+    Health.' JAMA Network Open. doi:10.1001/jamanetworkopen.2024.58984
+  supporting_citations:
+  - 'Social Science & Medicine. 2025. ''Evictions, legal counsel, and population health: A mixed methods
+    study.'' doi:10.1016/j.socscimed.2025.118134'
+  - 'Psychoneuroendocrinology. 2024. ''Depressive-Like Effects of Foreclosing: A Cross-Sectional Study
+    of Hair Cortisol.'' doi:10.1159/000530706'
+  doi: 10.1001/jamanetworkopen.2024.58984
+  journal: JAMA Network Open
+  year: 2025
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_package/4a/81/PMC11822551.tar.gz
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '1.0'
+description: Eviction threat and housing instability are significant stressors that negatively impact
+  mental health outcomes including depression, anxiety, and psychological distress. Research shows elevated
+  cortisol levels among those facing foreclosure and housing loss, indicating physiological stress response.
+moderators:
+- name: legal_counsel_access
+  direction: weakens
+  strength: moderate
+  description: Access to legal services for eviction defense reduces housing loss and associated mental
+    health impacts
+- name: children_in_household
+  direction: strengthens
+  strength: strong
+  description: Caregivers with children show heightened stress about eviction due to concerns about child
+    wellbeing and stability
+- name: social_support_network
+  direction: weakens
+  strength: moderate
+  description: Strong social networks buffer psychological impacts of housing insecurity
+- name: prior_housing_trauma
+  direction: strengthens
+  strength: moderate
+  description: History of homelessness or displacement amplifies psychological response to new eviction
+    threats
+structural_competency:
+  root_cause_level: economic_system
+  avoids_victim_blaming: true
+  equity_implications: Eviction disproportionately affects low-income renters, Black and Latino households,
+    and single mothers due to structural factors including wage stagnation, discrimination, and inadequate
+    housing assistance. The mental health consequences reflect systemic housing policy failures, not individual
+    shortcomings. Just-cause eviction protections and rental assistance address root causes.
+assumptions:
+- Eviction threat includes formal notice, court filing, or credible threat of displacement
+- Mental health outcomes measured through validated instruments (PHQ, GAD, etc.)
+- Mechanism applies to both actual eviction and threat/instability
+limitations:
+- Most studies are observational with limited causal inference
+- Difficult to separate eviction effects from underlying poverty effects
+- Mental health problems may also contribute to eviction risk (bidirectionality)
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Eviction rates and protections vary substantially by jurisdiction. States with strong
+    tenant protections show lower eviction-related mental health impacts.
+  relevant_geographies:
+  - High-cost urban areas show elevated eviction-related stress
+  - States without just-cause eviction protections have higher displacement rates
+  - Areas with legal aid programs show better tenant outcomes
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

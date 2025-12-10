@@ -1,0 +1,55 @@
+id: NEW:sbirt_provider_competency_to_sud_treatment_entry_rate
+name: SBIRT Provider Competency and Confidence → SUD Treatment Entry Rate
+from_node:
+  node_id: NEW:sbirt_provider_competency
+  node_name: SBIRT Provider Competency and Confidence
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Providers with SBIRT training have increased confidence to screen patients for alcohol and
+  substance use'
+- 'Step 2: Systematic screening in primary care and mental health settings identifies patients with substance
+  use disorders earlier'
+- 'Step 3: Brief interventions delivered by trained providers increase patient awareness and motivation
+  for change'
+- 'Step 4: Appropriate referrals to treatment facilitated by providers with knowledge of referral pathways'
+- 'Step 5: Increased treatment entry rates among identified patients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ssu-Yu Yeh et al. 2024. "Using Virtual Reality Simulation for Screening Brief Intervention
+    and Referral to Treatment.." https://doi.org/10.3928/01484834-20240505-06
+  supporting_citations:
+  - Additional citations require full-text access - abstract references understanding of substance use
+    disorders but does not cite specific studies
+  doi: 10.3928/01484834-20240505-06
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Enhanced provider competency in SBIRT enables systematic screening and brief intervention
+  in routine healthcare encounters, addressing the structural gap where many individuals with alcohol
+  use disorders go unidentified in healthcare settings. This upstream intervention in workforce training
+  can increase downstream treatment entry rates.
+quantitative_effects:
+  sample_size: 380
+moderators:
+- name: setting_type
+  direction: strengthens
+  strength: moderate
+  description: Integration of SBIRT training for both mental health and primary care settings may enhance
+    identification across multiple entry points
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to SUD treatment access. Many patients
+    with alcohol use disorders interact with healthcare systems but are never screened or referred to
+    treatment. Training the healthcare workforce systematically in SBIRT transforms routine healthcare
+    encounters into opportunities for intervention, reducing reliance on patients seeking help independently.
+    This approach can reduce disparities in treatment access that arise when identification depends on
+    patient self-referral or specialist-only detection.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.054087'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

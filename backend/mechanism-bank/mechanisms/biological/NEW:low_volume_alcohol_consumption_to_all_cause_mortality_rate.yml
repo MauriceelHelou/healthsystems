@@ -1,0 +1,59 @@
+id: NEW:low_volume_alcohol_consumption_to_all_cause_mortality_rate
+name: Low Volume Alcohol Consumption (1 drink/week to 2 drinks/day) → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:low_volume_alcohol_consumption
+  node_name: Low Volume Alcohol Consumption (1 drink/week to 2 drinks/day)
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: In non-smoking cohorts, low-volume alcohol consumption shows mean RR above 1.0 (RR=1.16, 0.91-1.41)'
+- 'Step 2: This suggests alcohol consumption, even at low volumes, may increase mortality risk when smoking
+  confounding is removed'
+- 'Step 3: Alcohol''s toxic and carcinogenic properties may explain increased mortality without smoking
+  as competing risk'
+- 'Step 4: Previous apparent protective associations were confounded by unmeasured health behaviors and
+  selection effects'
+evidence:
+  quality_rating: A
+  n_studies: 107
+  primary_citation: Tim R Stockwell et al. 2024. "Why do only some cohort studies find health benefits
+    from low volume alcohol use? A systematic review and meta-analysis of study characteristics that may
+    bias mortality risk estimates.." https://doi.org/10.15288/jsad.23-00283
+  supporting_citations:
+  - Meta-analysis of 107 longitudinal studies
+  - 724 estimates from studies covering 4,838,825 participants
+  - 425,564 recorded deaths analyzed
+  doi: 10.15288/jsad.23-00283
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Exploratory analyses in non-smoking cohorts suggest that even low-volume alcohol consumption
+  may increase mortality risk (RR=1.16), though confidence intervals include 1.0. This finding challenges
+  the widely held belief in alcohol's protective effects and suggests the relationship between alcohol
+  and health may be mediated, moderated, or confounded by smoking status.
+quantitative_effects:
+  effect_size:
+    value: 1.16
+    type: relative_risk
+    ci_lower: 0.91
+    ci_upper: 1.41
+  sample_size: 4838825
+moderators:
+- name: smoking_status
+  direction: strengthens
+  strength: strong
+  description: In non-smoking cohorts, low-volume alcohol shows RR above 1.0, suggesting smoking may mask
+    or mediate alcohol's mortality effects
+structural_competency:
+  equity_implications: Public health guidelines on 'safe' alcohol consumption have structural implications
+    for population health. If low-volume drinking is not protective and may be harmful, current policies
+    that implicitly endorse moderate drinking may contribute to population-level harm. This particularly
+    affects populations targeted by alcohol marketing and those with less access to accurate health information.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.236792'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

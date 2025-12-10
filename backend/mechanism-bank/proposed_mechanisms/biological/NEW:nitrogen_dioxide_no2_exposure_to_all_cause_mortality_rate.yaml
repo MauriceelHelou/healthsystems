@@ -1,0 +1,58 @@
+id: NEW:nitrogen_dioxide_no2_exposure_to_all_cause_mortality_rate
+name: Nitrogen Dioxide (NO2) Exposure → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:nitrogen_dioxide_no2_exposure
+  node_name: Nitrogen Dioxide (NO2) Exposure
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Long-term exposure to NO2, a marker of combustion-related air pollution
+  (traffic, industrial sources), leads to chronic inhalation of this reactive gas'
+- 'Step 2: NO2 causes oxidative stress and inflammation in the respiratory system,
+  with effects extending to systemic inflammation and cardiovascular damage'
+- 'Step 3: Chronic exposure contributes to the development and progression of cardiovascular
+  disease (particularly ischemic heart disease) and respiratory conditions'
+- 'Step 4: These pathological processes increase the risk of premature mortality from
+  multiple causes, including cardiovascular and respiratory deaths'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: 'Hoek G, Krishnan RM, Beelen R, Peters A, Ostro B, Brunekreef
+    B, Kaufman JD. Long-term air pollution exposure and cardio-respiratory mortality:
+    a review. Environmental Health. 2013;12:43.'
+  supporting_citations: []
+description: Long-term exposure to nitrogen dioxide (NO2), a marker of combustion
+  sources including traffic, is significantly associated with increased all-cause
+  mortality. Meta-analysis of epidemiological cohort studies found a pooled estimate
+  of 5% excess risk per 10 μg/m3 increase in NO2 exposure. NO2 exposure contributes
+  to mortality primarily through cardiovascular disease pathways, particularly ischemic
+  heart disease.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 5.0
+    type: relative_risk_percent_increase
+    ci_lower: 3.0
+    ci_upper: 8.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: education_level
+  direction: strengthens
+  strength: weak
+  description: Lower education associated with larger effect estimates for air pollution-related
+    mortality, though evidence has weakened in more recent studies
+- name: obesity
+  direction: strengthens
+  strength: moderate
+  description: Obese subjects showed larger effect estimates for mortality related
+    to air pollution exposure
+- name: sex
+  direction: neutral
+  strength: weak
+  description: Little evidence for stronger associations among women compared to men
+    across studies

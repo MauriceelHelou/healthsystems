@@ -1,0 +1,52 @@
+id: poverty_rate_to_NEW:pediatric_asthma_healthcare_utilization
+name: Poverty Rate → Pediatric Asthma Healthcare Utilization (ED visits/hospitalizations)
+from_node:
+  node_id: poverty_rate
+  node_name: Poverty Rate
+to_node:
+  node_id: NEW:pediatric_asthma_healthcare_utilization
+  node_name: Pediatric Asthma Healthcare Utilization (ED visits/hospitalizations)
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher area-level poverty rates are associated with reduced access to primary
+  care and preventive health services for children with asthma'
+- 'Step 2: Limited preventive care leads to poor asthma control, increased symptom
+  severity, and lack of proper medication management'
+- 'Step 3: High-poverty areas often have worse environmental conditions (air quality,
+  housing quality) that trigger and exacerbate asthma symptoms'
+- 'Step 4: Inadequate disease management and environmental exposures result in acute
+  asthma exacerbations requiring emergency department visits and hospitalizations'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Jordan Tyris et al. 2023. Population-level SDOH and Pediatric
+    Asthma Health Care Utilization: A Systematic Review. Hospital Pediatrics.'
+  supporting_citations: []
+description: This systematic review of 40 US-based studies found consistent significant
+  associations between area-level poverty rates and increased pediatric asthma healthcare
+  utilization (ED visits and hospitalizations). Poverty was one of the most frequently
+  studied social determinants and demonstrated reliable positive associations with
+  acute care utilization across multiple geographic analyses. The relationship operates
+  through interconnected pathways including reduced healthcare access, poor environmental
+  conditions, substandard housing quality, and limited resources for disease management.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: environmental_conditions
+  direction: strengthens
+  strength: strong
+  description: Environmental conditions were one of the most frequently studied SDOH
+    and showed consistent significant associations with asthma healthcare utilization,
+    potentially mediating or compounding poverty effects
+- name: housing_quality
+  direction: strengthens
+  strength: moderate
+  description: Housing quality showed consistent significant associations with asthma
+    utilization and may mediate the poverty-asthma pathway through indoor allergen
+    exposures and triggers
+- name: primary_care_access
+  direction: weakens
+  strength: moderate
+  description: Better primary care access showed consistent protective associations
+    against asthma utilization, suggesting it may buffer the effects of poverty

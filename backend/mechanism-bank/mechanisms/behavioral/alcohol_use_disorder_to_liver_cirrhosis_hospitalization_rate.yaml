@@ -1,0 +1,65 @@
+id: alcohol_use_disorder_to_liver_cirrhosis_hospitalization_rate
+name: Alcohol Use Disorder -> Liver Cirrhosis Hospitalization Rate
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: liver_cirrhosis_hospitalization_rate
+  node_name: Liver Cirrhosis Hospitalization Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol use disorder leads to chronic excessive alcohol consumption, causing
+  direct hepatotoxicity and inflammatory processes in liver tissue'
+- 'Step 2: Persistent alcohol-induced liver injury progresses through stages from
+  fatty liver to fibrosis to cirrhosis, with AUD patients showing 51% prevalence of
+  alcohol-associated liver disease'
+- 'Step 3: Advanced liver disease and cirrhosis complications result in hepatic decompensation,
+  requiring hospitalization for management of portal hypertension, ascites, and other
+  cirrhosis-related complications'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'Huang, David K., et al. "Prevalence of alcohol-associated liver
+    disease: a systematic review and meta-analysis." Hepatology Communications 7,
+    no. 5 (2023): e0133.'
+  supporting_citations:
+  - 'Treatment of alcohol use disorder in alcohol-associated liver disease: A meta-analysis.
+    Hepatology Communications (2025): e0686.'
+  - 'Proactive case finding of alcohol-related liver disease in high-risk populations:
+    A systematic review. Liver International (2024): 15895.'
+  - 'Systematic review: Interventions for alcohol use disorder in patients with cirrhosis
+    or alcohol-associated hepatitis. Alimentary Pharmacology & Therapeutics (2023):
+    17665.'
+  - 'Alcohol use disorders and the risk of progression of liver disease in people
+    with hepatitis C virus infection - a systematic review. Addiction Science & Clinical
+    Practice (2020): 287-1.'
+  - 'Systematic review: Investigating the prognostic performance of four non-invasive
+    tests in alcohol-related liver disease. Journal of Gastroenterology and Hepatology
+    (2021): 15335.'
+  - 'Does Advice Based on Biomarkers of Liver Injury or Non-Invasive Tests of Liver
+    Fibrosis Impact High-Risk Drinking Behaviour: A Systematic Review With Meta-analysis.
+    Alcohol and Alcoholism (2021): agaa143.'
+  - 'Evaluating the Long-Term Benefits of Medications for Alcohol Use Disorder in
+    Alcohol-Associated Cirrhosis. Liver International (2025): 70424.'
+description: Alcohol use disorder significantly increases the risk of liver cirrhosis
+  and related hospitalizations through a progressive pathway of alcohol-induced hepatotoxicity.
+  Meta-analytic evidence shows AUD patients have a 51% prevalence of alcohol-associated
+  liver disease compared to 3.5% in general populations, with a 3.3-fold increased
+  risk of decompensated liver cirrhosis requiring hospitalization. The mechanism involves
+  chronic alcohol exposure causing inflammatory liver injury that progresses through
+  fibrosis to cirrhosis, ultimately leading to complications requiring hospital care.
+structural_competency_notes: Access to addiction treatment services, healthcare screening
+  programs, and socioeconomic factors influence both AUD treatment engagement and
+  early detection of liver disease, potentially affecting hospitalization rates through
+  delayed diagnosis and intervention.
+last_updated: '2025-12-08'
+extraction_method: node_pair_discovery_v4
+quantitative_effects:
+  effect_size:
+    value: 3.3
+    type: relative_risk
+    ci_lower: 1.8
+    ci_upper: 4.8
+  p_value: null
+  sample_size: 513278

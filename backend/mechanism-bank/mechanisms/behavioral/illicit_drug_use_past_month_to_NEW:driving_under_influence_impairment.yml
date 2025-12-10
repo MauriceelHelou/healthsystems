@@ -1,0 +1,57 @@
+id: illicit_drug_use_past_month_to_NEW:driving_under_influence_impairment
+name: Past Month Illicit Drug Use → Driving Under the Influence of Impairing Substances
+from_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Past Month Illicit Drug Use
+to_node:
+  node_id: NEW:driving_under_influence_impairment
+  node_name: Driving Under the Influence of Impairing Substances
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: OAT clients using illicit substances in addition to treatment medications face cumulative impairment
+  effects'
+- 'Step 2: 86.5% of clients reported using sedating medications or illicit drugs in the past month'
+- 'Step 3: Combined substance use increases cognitive and motor impairment affecting driving ability'
+- 'Step 4: Clients with past month illicit drug use showed 6.55 times higher odds of driving while impaired'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Daniel T Winter et al. 2025. "Understanding issues of driving safety and transport
+    utilisation among clients receiving opioid agonist treatment: a cross-sectional survey in New South
+    Wales, Australia.." https://doi.org/10.1071/PY25035'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references sedating medication literature
+  - Additional citations require full-text access - abstract references driving impairment and substance
+    use literature
+  - Additional citations require full-text access - abstract references OAT treatment outcomes literature
+  doi: 10.1071/PY25035
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Among OAT clients, concurrent illicit drug use significantly increases the likelihood of
+  driving under the influence. This reflects the complexity of addiction treatment where polysubstance
+  use remains common.
+quantitative_effects:
+  effect_size:
+    value: 6.55
+    type: odds_ratio
+    ci_lower: 2.89
+    ci_upper: 14.83
+  sample_size: 482
+moderators:
+- name: sedating_medication_use
+  direction: strengthens
+  strength: moderate
+  description: 86.5% of participants used sedating medications or illicit drugs, creating high-risk environment
+    for impaired driving
+structural_competency:
+  equity_implications: While this appears behavioral, it reflects structural issues including inadequate
+    harm reduction services, limited treatment options for polysubstance use, and transportation systems
+    that force reliance on personal vehicles. Treatment systems need to address transport barriers rather
+    than expecting abstinence-based compliance.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.162578'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,54 @@
+id: telemedicine_use_to_NEW:patient_therapeutic_comfort
+name: Telemedicine Use for OUD Treatment → Patient Therapeutic Comfort and Openness
+from_node:
+  node_id: telemedicine_use
+  node_name: Telemedicine Use for OUD Treatment
+to_node:
+  node_id: NEW:patient_therapeutic_comfort
+  node_name: Patient Therapeutic Comfort and Openness
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients receive OUD treatment via telehealth from their own home environment'
+- 'Step 2: Home environment provides psychological safety and comfort during clinical encounters'
+- 'Step 3: Reduced stigma exposure from not being seen at OUD treatment facilities'
+- 'Step 4: Patients report greater comfort and openness with providers during telehealth visits'
+- 'Step 5: Enhanced therapeutic relationship may improve treatment engagement and outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Shoshana V Aronowitz et al. 2025. "Patient and provider experiences with opioid use
+    disorder care delivered via telehealth: A systematic mixed-studies review.." https://doi.org/10.1016/j.drugalcdep.2024.112522'
+  supporting_citations:
+  - Studies reviewed in systematic review - specific citations require full-text access
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  doi: 10.1016/j.drugalcdep.2024.112522
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patients reported that being in their own environments during telehealth OUD treatment visits
+  facilitated comfort and openness, contrasting with provider concerns about rapport-building. This patient-provider
+  perception gap represents an important finding for understanding telehealth effectiveness.
+moderators:
+- name: home_environment_stability
+  direction: strengthens
+  strength: moderate
+  description: Patients with stable, private home environments may experience greater comfort during telehealth
+    visits
+- name: provider_perception_discrepancy
+  direction: weakens
+  strength: moderate
+  description: Providers expressed more concern about rapport-building than patients did, suggesting patient
+    benefits may not be fully recognized by clinical systems
+structural_competency:
+  equity_implications: This mechanism highlights how the physical context of healthcare delivery shapes
+    patient experience. In-person OUD treatment may expose patients to stigma (being seen at treatment
+    facilities) and power imbalances (clinical settings). Telehealth restructures the clinical encounter
+    in ways that may benefit patients, though provider concerns about rapport could limit telehealth offerings.
+    Understanding this perception gap is critical for equitable telehealth implementation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.740781'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

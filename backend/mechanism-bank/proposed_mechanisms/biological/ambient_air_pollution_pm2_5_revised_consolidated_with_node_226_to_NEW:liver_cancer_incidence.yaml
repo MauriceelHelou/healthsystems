@@ -1,0 +1,55 @@
+id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226_to_NEW:liver_cancer_incidence
+name: Ambient Air Pollution PM2.5 → Liver Cancer Incidence
+from_node:
+  node_id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226
+  node_name: Ambient Air Pollution PM2.5
+to_node:
+  node_id: NEW:liver_cancer_incidence
+  node_name: Liver Cancer Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhalation of PM2.5 particles allows ultrafine particles and their chemical
+  components to enter the respiratory system and translocate into systemic circulation'
+- 'Step 2: PM2.5 particles and associated toxic compounds (polycyclic aromatic hydrocarbons,
+  heavy metals) reach the liver through portal and systemic circulation'
+- 'Step 3: Hepatic exposure to PM2.5 components induces oxidative stress, chronic
+  inflammation, and DNA damage in liver cells'
+- 'Step 4: Persistent oxidative stress and inflammatory responses promote hepatocyte
+  injury, cellular proliferation, and genomic instability'
+- 'Step 5: Accumulated DNA damage and dysregulated cellular processes increase risk
+  of hepatocellular carcinogenesis and liver cancer development'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: 'Pritchett N. et al. 2022. Exposure to Outdoor Particulate Matter
+    Air Pollution and Risk of Gastrointestinal Cancers in Adults: A Systematic Review
+    and Meta-Analysis of Epidemiologic Evidence. Environmental Health Perspectives.'
+  supporting_citations: []
+description: PM2.5 exposure is associated with increased liver cancer incidence through
+  systemic translocation of inhaled particles and their toxic constituents to the
+  liver, where they induce oxidative stress, chronic inflammation, and DNA damage
+  leading to hepatocarcinogenesis. A meta-analysis of cohort studies found a 31% increased
+  risk of liver cancer per unit increase in PM2.5 exposure, with all included studies
+  showing positive associations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.31
+    type: relative_risk
+    ci_lower: 1.07
+    ci_upper: 1.56
+  p_value: null
+  sample_size: null
+moderators:
+- name: PM2.5 chemical composition
+  direction: strengthens
+  strength: moderate
+  description: Authors identify investigation of specific chemical components of PM
+    as important for future research, suggesting composition may modify carcinogenic
+    potential
+- name: exposure assessment method
+  direction: strengthens
+  strength: weak
+  description: Different PM exposure assessment approaches may impact observed associations

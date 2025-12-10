@@ -1,0 +1,67 @@
+id: NEW:pulmonary_perfusion_defects_residual_vascular_obstruction_to_NEW:post_pulmonary_embolism_persistent_symptoms
+name: Pulmonary Perfusion Defects or Residual Vascular Obstruction → Post-Pulmonary Embolism Persistent
+  Symptoms
+from_node:
+  node_id: NEW:pulmonary_perfusion_defects_residual_vascular_obstruction
+  node_name: Pulmonary Perfusion Defects or Residual Vascular Obstruction
+to_node:
+  node_id: NEW:post_pulmonary_embolism_persistent_symptoms
+  node_name: Post-Pulmonary Embolism Persistent Symptoms
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Acute pulmonary embolism causes occlusion of pulmonary vasculature'
+- 'Step 2: Despite anticoagulant treatment, residual thrombus or organized fibrotic clots may persist
+  in pulmonary vessels'
+- 'Step 3: Persistent vascular obstruction leads to mismatched perfusion defects detectable on V/Q scan'
+- 'Step 4: Impaired pulmonary blood flow contributes to chronic functional limitations including dyspnea
+  and reduced exercise tolerance'
+- 'Step 5: Patients experience post-PE syndrome manifestations including CTEPH, CTEPD, or post-PE functional
+  impairment'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'L. A. Cimini et al. 2024. "Pulmonary perfusion defects or residual vascular obstruction
+    and persistent symptoms after pulmonary embolism: a systematic review and meta-analysis." https://doi.org/10.1183/23120541.01010-2023'
+  supporting_citations:
+  - Reference 1-4 in original paper describe up to 50% of acute PE survivors having persistent symptoms
+    or alterations of cardiocirculatory function
+  - Reference 5 defines post-PE syndrome criteria for patients symptomatic after 3 months of anticoagulation
+  - Reference 6-10 describe various aetiologies of post-PE syndrome including CTEPH and CTEPD
+  - Additional citations require full-text access
+  doi: 10.1183/23120541.01010-2023
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Presence of pulmonary perfusion defects or residual vascular obstruction after acute pulmonary
+  embolism is associated with a 2.15-fold increased odds of persistent symptoms during follow-up. Among
+  patients with these defects, 48% remained symptomatic compared to 34% without such defects. However,
+  the authors note that a significant proportion of patients with perfusion defects reported no limitations,
+  indicating that direct causality remains unproven.
+quantitative_effects:
+  effect_size:
+    value: 2.15
+    type: odds_ratio
+    ci_lower: 1.66
+    ci_upper: 2.78
+  sample_size: 1888
+  heterogeneity_i_squared: 0.0
+moderators:
+- name: time_since_pulmonary_embolism
+  direction: varies
+  strength: moderate
+  description: Follow-up ranged from 2-72 months (median 6 months), which may influence persistence of
+    defects and symptoms
+structural_competency:
+  equity_implications: This mechanism is primarily biological rather than structural. However, healthcare
+    access for adequate anticoagulation therapy, follow-up imaging (V/Q scan, CTPA), and specialist care
+    for post-PE syndrome may vary by socioeconomic status, insurance coverage, and geographic location.
+    Patients in healthcare deserts or those without specialist access may experience worse outcomes due
+    to delayed diagnosis of CTEPH or CTEPD. The finding that causality is unproven suggests other factors
+    (potentially including social determinants affecting recovery, rehabilitation access, and deconditioning)
+    may contribute to persistent symptoms.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.358173'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

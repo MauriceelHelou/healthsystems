@@ -1,0 +1,57 @@
+id: mental_health_provider_shortage_severe_to_sud_treatment_capacity_shortage
+name: Mental Health Provider Shortage (Severe) → SUD Treatment Capacity Shortage
+from_node:
+  node_id: mental_health_provider_shortage_severe
+  node_name: Mental Health Provider Shortage (Severe)
+to_node:
+  node_id: sud_treatment_capacity_shortage
+  node_name: SUD Treatment Capacity Shortage
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Shortages of behavioral health providers in the U.S. limit the number of clinical settings
+  offering OUD treatment'
+- 'Step 2: Limited treatment capacity creates bottlenecks for patients seeking medication-assisted treatment'
+- 'Step 3: Long wait times and geographic barriers result in untreated OUD and continued substance use'
+- 'Step 4: Alternative access points (like pharmacist-provided services) become necessary to address the
+  treatment gap'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: James H. Ford et al. 2019. "Systematic Analysis of the Service Process and the Legislative
+    and Regulatory Environment for a Pharmacist-Provided Naltrexone Injection Service in Wisconsin." https://doi.org/10.3390/pharmacy7020059
+  supporting_citations:
+  - Additional citations require full-text access - abstract references shortages of behavioral health
+    providers in the U.S.
+  - Additional citations require full-text access - abstract references opioid epidemic as major public
+    health issue
+  - Additional citations require full-text access - abstract references pharmacists' knowledge about safe
+    use of medications
+  doi: 10.3390/pharmacy7020059
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Shortages of behavioral health providers create systemic barriers to OUD treatment, necessitating
+  expansion of treatment access through alternative healthcare professionals such as community pharmacists.
+quantitative_effects:
+  sample_size: 4
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Behavioral health provider shortages vary significantly by region, with rural areas
+    typically experiencing more severe shortages than urban areas
+moderators:
+- name: scope_of_practice_laws
+  direction: weakens
+  strength: moderate
+  description: Expanded scope of practice for pharmacists and other healthcare providers can mitigate
+    the impact of behavioral health provider shortages by enabling alternative access points
+structural_competency:
+  equity_implications: This mechanism identifies workforce distribution as a structural determinant of
+    treatment access, recognizing that provider shortages are a systemic issue requiring policy solutions
+    rather than individual-level interventions. Rural and underserved communities bear disproportionate
+    burden of these shortages, creating health inequities in OUD treatment access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.234828'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

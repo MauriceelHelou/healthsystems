@@ -1,0 +1,106 @@
+id: social_isolation_to_all_cause_mortality_rate
+name: Social Isolation -> All-Cause Mortality Rate
+from_node:
+  node_id: social_isolation
+  node_name: Social Isolation
+  node_type: stock
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+  node_type: crisis_endpoint
+direction: positive
+category: social_environment
+mechanism_pathway:
+  - "Step 1: Social isolation (objective lack of social contacts and relationships) reduces supportive social interactions"
+  - "Step 2: Absence of social connections reduces emotional support and practical assistance during health crises"
+  - "Step 3: Chronic stress from isolation activates hypothalamic-pituitary-adrenal (HPA) axis dysregulation"
+  - "Step 4: Sustained cortisol elevation and sympathetic nervous system activation increase inflammation"
+  - "Step 5: Chronic inflammation accelerates cardiovascular disease, immune dysfunction, and cognitive decline"
+  - "Step 6: Isolated individuals have reduced medication adherence and healthcare engagement"
+  - "Step 7: Cumulative physiological and behavioral effects manifest as elevated mortality from cardiovascular events, infections, and other causes"
+evidence:
+  quality_rating: A
+  n_studies: 90
+  primary_citation: "Wang, Feifei, et al. 2023. 'A Systematic Review and Meta-Analysis of 90 Cohort Studies of Social Isolation, Loneliness and Mortality.' Nature Human Behaviour 7: 1307-1319."
+  supporting_citations:
+    - "Holt-Lunstad, Julianne, et al. 2015. 'Loneliness and Social Isolation as Risk Factors for Mortality: A Meta-Analytic Review.' Perspectives on Psychological Science 10(2): 227-237."
+    - "Nakou, Christina, et al. 2025. 'Loneliness, Social Isolation, and Living Alone: A Comprehensive Systematic Review, Meta-Analysis and Meta-Regression of Mortality Risks in Older Adults.' Age and Ageing 54(1): afae283."
+    - "Leigh-Hunt, Nicholas, et al. 2017. 'An Overview of Systematic Reviews on the Public Health Consequences of Social Isolation and Loneliness.' Public Health 152: 157-171."
+  doi: "10.1038/s41562-023-01617-6"
+  journal: Nature Human Behaviour
+  year: 2023
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 1.32
+    type: relative_risk
+    ci_lower: 1.26
+    ci_upper: 1.39
+    ci_level: 95
+  secondary_effects:
+    - description: "Social isolation and CVD mortality"
+      value: 1.34
+      type: relative_risk
+      ci_lower: 1.25
+      ci_upper: 1.44
+      source: "Wang et al. 2023, 90 cohort studies"
+    - description: "Social isolation and cancer mortality"
+      value: 1.17
+      type: relative_risk
+      ci_lower: 1.06
+      ci_upper: 1.29
+      source: "Wang et al. 2023"
+    - description: "Living alone and mortality (CVD patients)"
+      value: 1.48
+      type: hazard_ratio
+      ci_lower: 1.20
+      ci_upper: 1.83
+      source: "Meta-analysis of 15 studies"
+  heterogeneity_i_squared: 73.0
+  sample_size: 2205199
+  interpretation: "Social isolation increases all-cause mortality risk by 32% (RR 1.32). Effect is stronger for cardiovascular mortality (34% increase) and present for cancer mortality (17% increase). Living alone in cardiovascular disease patients shows 48% increased mortality risk. Effects persist after controlling for demographic and health confounders."
+last_updated: "2025-12-01"
+version: "1.0"
+description: "Social isolation is a significant risk factor for all-cause mortality, with effects comparable to established risk factors like smoking and obesity. Meta-analysis of 90 cohort studies with over 2.2 million participants found 32% increased mortality risk among socially isolated individuals, mediated through chronic stress, inflammation, and reduced healthcare engagement."
+moderators:
+  - name: age
+    direction: varies
+    strength: moderate
+    description: "Effects stronger in samples younger than 65 years in some analyses"
+  - name: baseline_health_status
+    direction: strengthens
+    strength: strong
+    description: "Individuals with existing chronic conditions show stronger mortality effects"
+  - name: cardiovascular_disease
+    direction: strengthens
+    strength: strong
+    description: "CVD patients who are isolated have 48% higher mortality"
+  - name: gender
+    direction: neutral
+    strength: weak
+    description: "Effects consistent across gender in most studies"
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: "Social isolation is not purely individual choice but reflects structural factors: housing policies that disperse communities, transportation barriers that limit social access, economic pressures that reduce time for social connection, and urban design that discourages community interaction. Older adults, disabled individuals, and low-income populations face highest isolation rates. Addressing social isolation requires community-level interventions including housing design, public transportation, and social infrastructure investment."
+assumptions:
+  - "Social isolation measured objectively (contacts, network size) distinct from subjective loneliness"
+  - "Confounding by reverse causation (illness causing isolation) addressed in prospective designs"
+  - "Effect independent of loneliness (subjective feeling) though often co-occurring"
+limitations:
+  - "Substantial heterogeneity across studies (I-squared 73%)"
+  - "Measurement of social isolation varies across studies"
+  - "Difficult to establish causation vs. shared underlying factors"
+  - "Publication bias possible toward positive findings"
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: "Effects observed consistently across world regions (North America, Europe, Asia). Urban areas may have higher isolation despite population density. Rural areas face isolation due to geographic distance. Effects strongest in studies from Europe with longer follow-up."
+  relevant_geographies:
+    - "Effects consistent across global populations"
+    - "Urban isolation particularly relevant in aging societies"
+    - "Rural communities face geographic isolation barriers"
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: "2025-12-01T00:00:00"
+  extraction_confidence: high
+  prompt_version: "1.0-discovery"

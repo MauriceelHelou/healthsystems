@@ -1,0 +1,62 @@
+id: incarceration_rate_to_NEW:drug_use_disorder_prevalence
+name: Incarceration Rate → Drug Use Disorder Prevalence
+from_node:
+  node_id: incarceration_rate
+  node_name: Incarceration Rate
+to_node:
+  node_id: NEW:drug_use_disorder_prevalence
+  node_name: Drug Use Disorder Prevalence
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Drug criminalization policies in LMICs prioritize incarceration over treatment'
+- 'Step 2: Individuals with drug use disorders are disproportionately arrested and incarcerated'
+- 'Step 3: Limited harm reduction and treatment services in LMIC prison systems fail to address addiction'
+- 'Step 4: Prison environments may expose individuals to new substances and drug-using networks'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: 'Gergő Baranyi et al. 2019. "Severe mental illness and substance use disorders in
+    prisoners in low-income and middle-income countries: a systematic review and meta-analysis of prevalence
+    studies.." https://doi.org/10.1016/S2214-109X(18)30539-4'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 23 publications
+  - Global Burden of Diseases 2016 database provided comparison estimates
+  - Evidence spans 13 LMICs with 14,527 prisoners
+  doi: 10.1016/S2214-109X(18)30539-4
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Drug use disorder prevalence among prisoners in LMICs is 5.1% (95% CI 2.9-7.8), approximately
+  6 times higher than general populations. Regional variation shows higher rates in Eastern Mediterranean
+  compared to European LMIC regions.
+quantitative_effects:
+  effect_size:
+    value: 6.0
+    type: relative_risk
+  sample_size: 14527
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Drug use disorders were more prevalent in the Eastern Mediterranean region than in
+    Europe, reflecting regional drug trafficking patterns and enforcement policies
+moderators:
+- name: geographic_region
+  direction: strengthens
+  strength: strong
+  description: Eastern Mediterranean region showed higher drug use disorder prevalence than Europe, possibly
+    reflecting drug transit routes and enforcement intensity
+- name: prison_intake_timing
+  direction: strengthens
+  strength: moderate
+  description: Increased prevalence at intake indicates drug use disorders are concentrated among those
+    entering the criminal justice system
+structural_competency:
+  equity_implications: The 6-fold prevalence ratio reflects the criminalization of drug use rather than
+    its treatment as a health issue. Regional variation (Eastern Mediterranean > Europe) likely reflects
+    proximity to drug production/trafficking routes and punitive drug policies. This mechanism demonstrates
+    how the war on drugs concentrates vulnerable populations in prisons rather than treatment settings.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.465144'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

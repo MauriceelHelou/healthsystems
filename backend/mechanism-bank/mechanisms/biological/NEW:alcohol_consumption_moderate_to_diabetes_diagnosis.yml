@@ -1,0 +1,54 @@
+id: NEW:alcohol_consumption_moderate_to_diabetes_diagnosis
+name: Moderate Alcohol Consumption → Diabetes Diagnosis
+from_node:
+  node_id: NEW:alcohol_consumption_moderate
+  node_name: Moderate Alcohol Consumption
+to_node:
+  node_id: diabetes_diagnosis
+  node_name: Diabetes Diagnosis
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Moderate alcohol consumption in overweight/obese women (BMI ≥25)'
+- 'Step 2: Alcohol may modulate adipose tissue inflammation and adipokine secretion in individuals with
+  excess weight'
+- 'Step 3: Improved metabolic profile through effects on lipid metabolism and insulin signaling'
+- 'Step 4: Reduced progression from insulin resistance to type 2 diabetes'
+evidence:
+  quality_rating: A
+  n_studies: 55
+  primary_citation: 'Laura Llamosas-Falcón et al. 2023. "The Relationship Between Alcohol Consumption,
+    BMI, and Type 2 Diabetes: A Systematic Review and Dose-Response Meta-analysis.." https://doi.org/10.2337/dc23-1015'
+  supporting_citations:
+  - Additional citations require full-text access - stratified analysis by BMI category
+  - Analysis included 89,983 male and 57,974 female T2DM cases
+  - Random-effects multivariate dose-response meta-analytic models used
+  doi: 10.2337/dc23-1015
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: When results were stratified by BMI, the protective association between moderate alcohol
+  consumption and T2DM was only found in overweight and obese women. This suggests the metabolic context
+  (excess adiposity) is necessary for the protective mechanism to operate.
+quantitative_effects:
+  sample_size: 1290628
+moderators:
+- name: obesity_status
+  direction: strengthens
+  strength: strong
+  description: Protective association was ONLY found in overweight and obese women (BMI ≥25 kg/m²), not
+    in normal weight women
+structural_competency:
+  equity_implications: This finding has important equity implications. Obesity prevalence varies significantly
+    by socioeconomic status, race/ethnicity, and geography due to structural factors including food environment,
+    built environment, and economic constraints. The interaction between alcohol and BMI on diabetes risk
+    means that the potential protective effects would theoretically be more relevant in communities with
+    higher obesity prevalence, which often face greater structural barriers to health. However, promoting
+    alcohol for diabetes prevention would be inappropriate given alcohol's many harms, particularly in
+    communities already facing disproportionate alcohol-related harm due to targeted marketing and outlet
+    density.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.318729'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

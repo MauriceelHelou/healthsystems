@@ -1,0 +1,54 @@
+id: complex_referral_pathways_to_treatment_attrition
+name: Complex Healthcare Referral Pathways → Attrition from Addiction Treatment Services
+from_node:
+  node_id: complex_referral_pathways
+  node_name: Complex Healthcare Referral Pathways
+to_node:
+  node_id: treatment_attrition
+  node_name: Attrition from Addiction Treatment Services
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Multi-step referral processes requiring patient-initiated contact create
+  multiple points of failure, particularly for patients lacking stable phone access,
+  transportation, or experience navigating healthcare bureaucracy'
+- 'Step 2: Time delays between withdrawal management discharge and treatment initiation
+  allow window for relapse, loss of motivation, or competing survival needs (housing,
+  food) to take priority'
+- 'Step 3: Requirement for patients to independently navigate unfamiliar clinic locations
+  and intake procedures creates barriers disproportionate to their functional capacity
+  during early recovery'
+- 'Step 4: Absence of structural support during transition period results in majority
+  of patients never connecting to ongoing care despite initial treatment-seeking behavior'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Srivastava et al. 2021. "Facilitating rapid access to addiction
+    treatment: a randomized controlled trial." *Addiction Science & Clinical Practice*.
+    https://doi.org/10.1186/s13722-021-00240-y'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.725431'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: housing_instability
+  direction: strengthens
+  strength: strong
+  description: Patients without stable housing face compounded barriers to maintaining
+    contact information, receiving appointment reminders, and accessing transportation
+    to clinics
+- name: concurrent_mental_health_conditions
+  direction: strengthens
+  strength: moderate
+  description: Cognitive impairments or psychiatric symptoms may further reduce capacity
+    to navigate complex administrative requirements independently
+- name: social_support_networks
+  direction: weakens
+  strength: moderate
+  description: Presence of family or peer support may help patients navigate referral
+    processes, partially mitigating structural barriers
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/complex_referral_pathways_to_treatment_attrition.yaml
+_category: healthcare_access

@@ -1,0 +1,44 @@
+id: drug_court_non_graduation_to_substance_use_related_health_outcomes
+name: Drug Court Non-Graduation (Failure to Complete Program) → Substance Use-Related
+  Health Outcomes
+from_node:
+  node_id: drug_court_non_graduation
+  node_name: Drug Court Non-Graduation (Failure to Complete Program)
+to_node:
+  node_id: substance_use_related_health_outcomes
+  node_name: Substance Use-Related Health Outcomes
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Drug court programs provide structured access to substance use disorder
+  treatment and support services'
+- 'Step 2: Non-graduation typically results in incarceration rather than continued
+  treatment access'
+- 'Step 3: Incarceration disrupts treatment continuity and reduces access to evidence-based
+  substance use interventions'
+- 'Step 4: Loss of treatment access and incarceration-related stress exacerbate substance
+  use disorders and related health complications'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Alyssa M. Sheeran and Amanda J. Heideman 2021. "The Effects of
+    Race and Ethnicity on Admission, Graduation, and Recidivism in the Milwaukee County
+    Adult Drug Treatment Court." *The social science*. https://doi.org/10.3390/SOCSCI10070261
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.425471'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: racial_ethnic_minority_status
+  direction: strengthens
+  strength: strong
+  description: Given documented racial disparities in drug court graduation, minority
+    populations experience disproportionate loss of treatment access and increased
+    incarceration exposure
+- name: custody_sanctions
+  direction: strengthens
+  strength: strong
+  description: More frequent or severe custody sanctions during program participation
+    predict non-graduation and early treatment discontinuation

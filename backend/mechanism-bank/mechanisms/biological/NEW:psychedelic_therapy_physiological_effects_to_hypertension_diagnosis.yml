@@ -1,0 +1,45 @@
+id: NEW:psychedelic_therapy_physiological_effects_to_hypertension_diagnosis
+name: Psychedelic Therapy Physiological Effects → Hypertension Diagnosis
+from_node:
+  node_id: NEW:psychedelic_therapy_physiological_effects
+  node_name: Psychedelic Therapy Physiological Effects
+to_node:
+  node_id: hypertension_diagnosis
+  node_name: Hypertension Diagnosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Psychedelic compounds administered during therapy session'
+- 'Step 2: Serotonergic activity of psychedelics causes transient cardiovascular effects'
+- 'Step 3: Blood pressure increases transiently during the psychedelic experience'
+- 'Step 4: Requires medical monitoring and may be contraindicated in patients with cardiovascular conditions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Dakota J. Sicignano et al. 2023. "The impact of psychedelics on patients with alcohol
+    use disorder: a systematic review with meta-analysis." https://doi.org/10.1080/03007995.2023.2296968'
+  supporting_citations:
+  - Trial reporting transient blood pressure increases (specific citation requires full-text access)
+  doi: 10.1080/03007995.2023.2296968
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: One trial reported transient increases in blood pressure during psychedelic therapy, a known
+  pharmacological effect requiring further exploration to determine the balance of benefits to harms,
+  particularly for patients with cardiovascular comorbidities.
+moderators:
+- name: baseline_cardiovascular_status
+  direction: strengthens
+  strength: moderate
+  description: Patients with pre-existing hypertension or cardiovascular disease may experience greater
+    risk from transient blood pressure elevations
+structural_competency:
+  equity_implications: Cardiovascular safety monitoring requirements create structural barriers to psychedelic
+    therapy access in settings without adequate medical infrastructure. This may limit access for populations
+    in healthcare deserts or those without established primary care relationships for pre-treatment cardiovascular
+    screening.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.297368'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

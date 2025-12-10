@@ -1,0 +1,67 @@
+id: disability_status_any_to_intimate_partner_violence
+name: Disability Status → Sexual Intimate Partner Violence
+from_node:
+  node_id: disability_status_any
+  node_name: Disability Status
+to_node:
+  node_id: intimate_partner_violence
+  node_name: Sexual Intimate Partner Violence
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Women with disabilities experience significant social marginalization and
+  reduced autonomy in developing country contexts'
+- 'Step 2: Marginalization intersects with partner behaviors (alcohol consumption,
+  witnessing parental violence) and socioeconomic factors (occupation, wealth) to
+  increase vulnerability'
+- 'Step 3: Reduced power dynamics and dependency relationships within intimate partnerships
+  create conditions where women with disabilities face higher risk of sexual coercion
+  and violence'
+- 'Step 4: Women with disabilities in specific occupational categories (agriculture,
+  manual work) and wealth quintiles experience compounded risk compared to non-disabled
+  women in similar categories'
+evidence:
+  quality_rating: C
+  n_studies: 3
+  primary_citation: 'Betty Kwagala and Johnstone Galande 2022. "Disability status,
+    partner behavior, and the risk of sexual intimate partner violence in Uganda:
+    An analysis of the demographic and health survey data." BMC Public Health.'
+  supporting_citations: []
+description: Women with disabilities face 51% higher adjusted odds of experiencing
+  sexual intimate partner violence compared to women without disabilities. This association
+  operates through multiple intersecting pathways including social marginalization,
+  reduced autonomy, partner behavioral factors, and socioeconomic vulnerabilities.
+  Sexual IPV prevalence was 25% among women with disabilities compared to 18% among
+  those without disabilities.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.51
+    type: odds_ratio
+    ci_lower: 1.1
+    ci_upper: 2.07
+  p_value: null
+  sample_size: 9689
+moderators:
+- name: partner_alcohol_consumption
+  direction: strengthens
+  strength: strong
+  description: Partners who often or sometimes got drunk significantly increased odds
+    of sexual IPV regardless of disability status
+- name: witnessing_parental_violence
+  direction: strengthens
+  strength: moderate
+  description: Women who witnessed parental violence had higher odds of experiencing
+    sexual IPV
+- name: occupation_type
+  direction: strengthens
+  strength: moderate
+  description: Women with disabilities in agriculture and manual occupations had increased
+    odds of sexual IPV compared to non-disabled women in same categories
+- name: wealth_quintile
+  direction: u_shaped
+  strength: moderate
+  description: Women with disabilities in poorer, middle, and rich wealth quintiles
+    had increased odds compared to non-disabled counterparts; interaction effects
+    observed

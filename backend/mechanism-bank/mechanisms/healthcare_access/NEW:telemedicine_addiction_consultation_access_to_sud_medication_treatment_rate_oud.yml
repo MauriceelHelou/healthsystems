@@ -1,0 +1,66 @@
+id: NEW:telemedicine_addiction_consultation_access_to_sud_medication_treatment_rate_oud
+name: Telemedicine Addiction Medicine Consultation Access → SUD Medication Treatment Rate
+from_node:
+  node_id: NEW:telemedicine_addiction_consultation_access
+  node_name: Telemedicine Addiction Medicine Consultation Access
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary care providers receive training on alcohol use disorder (AUD) pharmacotherapy and access
+  to on-call addiction medicine video consultations'
+- 'Step 2: Telemedicine consultations reduce barriers to specialty knowledge by providing immediate access
+  to addiction medicine expertise'
+- 'Step 3: PCPs gain confidence and practical guidance to prescribe FDA-approved AUD medications like
+  naltrexone'
+- 'Step 4: Increased prescribing of AUD pharmacotherapy (naltrexone) leads to higher medication treatment
+  rates for patients with AUD'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Leibowitz et al. 2020. "A Telemedicine Approach to Increase Treatment of Alcohol
+    Use Disorder in Primary Care: A Pilot Feasibility Study." https://doi.org/10.1097/ADM.0000000000000666'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references background literature on unhealthy
+    drinking as health threat and low AUD treatment rates
+  doi: 10.1097/ADM.0000000000000666
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patients who received telemedicine addiction medicine consultations had significantly higher
+  naltrexone prescription rates (34.4%) compared to non-recipients (6.4%, p<0.0001). This demonstrates
+  that telemedicine consultation services can dramatically increase AUD pharmacotherapy adoption in primary
+  care settings.
+quantitative_effects:
+  effect_size:
+    value: 34.4
+    type: percentage_change
+  p_value: 0.0001
+  sample_size: 703
+moderators:
+- name: workflow_complexity
+  direction: weakens
+  strength: moderate
+  description: Users indicated desire for easier workflow, suggesting complex processes may reduce utilization
+    of telemedicine consult service
+- name: consultant_availability
+  direction: strengthens
+  strength: moderate
+  description: Users requested increased consultant availability, indicating limited availability constrains
+    service effectiveness
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to AUD treatment including lack of
+    addiction medicine specialists in primary care, limited PCP training in AUD pharmacotherapy, and fragmented
+    care systems. By embedding specialty consultation within primary care via telemedicine, the intervention
+    addresses healthcare system inadequacies rather than blaming patients for not seeking specialty treatment.
+    The low baseline prescription rate (6.4%) reflects systemic undertreatment of AUD.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.132149'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,55 @@
+id: NEW:glycated_hemoglobin_hba1c_to_NEW:diabetes_glycemic_control
+name: Glycated Hemoglobin (HbA1c) → Diabetes Glycemic Control
+from_node:
+  node_id: NEW:glycated_hemoglobin_hba1c
+  node_name: Glycated Hemoglobin (HbA1c)
+to_node:
+  node_id: NEW:diabetes_glycemic_control
+  node_name: Diabetes Glycemic Control
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: HbA1c reflects average blood glucose levels over the preceding 2-3 months
+  through glycation of hemoglobin molecules'
+- 'Step 2: Higher HbA1c levels indicate prolonged exposure to elevated blood glucose,
+  reflecting poor glycemic control'
+- 'Step 3: Dietary interventions (e.g., carbohydrate counting) that reduce HbA1c demonstrate
+  improved glycemic control, confirming the inverse relationship'
+- 'Step 4: Sustained reductions in HbA1c indicate improved long-term glucose regulation
+  and better diabetes management outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: 'C. Builes-Montaño et al. 2022. Efficacy and safety of carbohydrate
+    counting versus other forms of dietary advice in patients with type 1 diabetes
+    mellitus: A systematic review and meta-analysis of randomized clinical trials.
+    Journal of human nutrition and dietetics (Print).'
+  supporting_citations: []
+description: 'HbA1c serves as a biomarker of long-term glycemic control, with higher
+  levels indicating poorer glucose management. This systematic review of 11 RCTs with
+  899 T1DM patients demonstrated that interventions reducing HbA1c (mean follow-up
+  52 weeks) directly improve glycemic control. The negative relationship indicates
+  that as HbA1c decreases, glycemic control improves, with a standardized mean difference
+  of -0.52% (95% CI: -0.82 to -0.23) when comparing carbohydrate counting to standard
+  education.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.52
+    type: standardized_mean_difference
+    ci_lower: -0.82
+    ci_upper: -0.23
+  p_value: null
+  sample_size: 899
+moderators:
+- name: type_of_comparison_intervention
+  direction: strengthens
+  strength: moderate
+  description: Carbohydrate counting shows significantly greater HbA1c reduction when
+    compared to standard diabetes education versus other dietary advice forms
+- name: trial_duration
+  direction: weakens
+  strength: weak
+  description: No significant change in HbA1c reduction effect related to prolonged
+    trial duration

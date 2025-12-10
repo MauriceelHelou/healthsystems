@@ -1,0 +1,45 @@
+id: NEW:combined_opioid_supply_restriction_policies_to_self_harm_injury_rate
+name: Combined Opioid Supply Restriction Policies → Self-Harm Injury Rate (ED visits per 100k)
+from_node:
+  node_id: NEW:combined_opioid_supply_restriction_policies
+  node_name: Combined Opioid Supply Restriction Policies
+to_node:
+  node_id: self_harm_injury_rate
+  node_name: Self-Harm Injury Rate (ED visits per 100k)
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Combined prescription drug monitoring and PBS restrictions reduce prescription opioid availability'
+- 'Step 2: Policy implementation does not appear to cause significant psychological distress leading to
+  self-harm'
+- 'Step 3: Differences between opioid and control groups in self-harm presentations were not statistically
+  significant'
+- 'Step 4: Supply restriction policies do not appear to increase self-harm related hospital presentations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Suzanne Nielsen et al. 2025. "Prescription opioid supply-restricting policies and
+    hospital use by people prescribed opioid medications, Victoria, 2018-22: a controlled interrupted
+    time series analysis.." https://doi.org/10.5694/mja2.52713'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references European post-authorisation study
+    register (EUROPAS), EUPAS104005
+  doi: 10.5694/mja2.52713
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Differences between the opioid and control groups in changes to self-harm-related presentations
+  were not statistically significant, suggesting that opioid supply restriction policies did not increase
+  self-harm among people prescribed opioids.
+quantitative_effects:
+  sample_size: 179091
+structural_competency:
+  equity_implications: This null finding is important for policy evaluation - a key concern with opioid
+    restriction policies is potential for increased mental health crises if patients lose access to pain
+    management or develop withdrawal. The lack of increased self-harm suggests adequate transition supports
+    or that the policies did not create acute psychological distress requiring emergency intervention.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.662436'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

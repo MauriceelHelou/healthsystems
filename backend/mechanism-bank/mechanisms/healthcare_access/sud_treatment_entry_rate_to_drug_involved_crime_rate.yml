@@ -1,0 +1,45 @@
+id: sud_treatment_entry_rate_to_drug_involved_crime_rate
+name: SUD Treatment Entry Rate → Drug-Involved Crime Rate
+from_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+to_node:
+  node_id: drug_involved_crime_rate
+  node_name: Drug-Involved Crime Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Diversion program connects individuals to substance use disorder treatment'
+- 'Step 2: Treatment addresses addiction as chronic relapsing brain disorder rather than criminal behavior'
+- 'Step 3: Evidence-based treatment reduces compulsive drug-seeking behavior'
+- 'Step 4: Decreased substance use reduces need for illegal activities to obtain drugs'
+- 'Step 5: Lower drug-related criminal activity leads to fewer arrests'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Veronica M White et al. 2021. "Impact of a community-policing initiative promoting
+    substance use disorder treatment over criminal charges on arrest recidivism.." https://doi.org/10.1016/j.drugalcdep.2021.108915
+  supporting_citations:
+  - Abstract notes 'Treatment improves outcomes, including reducing crime'
+  - Abstract notes 'few individuals with addiction receive treatment'
+  - Additional citations require full-text access
+  doi: 10.1016/j.drugalcdep.2021.108915
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study background notes that treatment improves outcomes including reducing crime, yet
+  few individuals with addiction receive treatment. The MARI program addresses this treatment gap by using
+  police encounters as an opportunity to connect individuals to care rather than prosecution.
+quantitative_effects:
+  sample_size: 315
+structural_competency:
+  equity_implications: This mechanism highlights the structural treatment gap - 'few individuals with
+    addiction receive treatment' despite known effectiveness. Barriers to treatment access are structural
+    (cost, availability, stigma, criminal record barriers, lack of insurance) rather than individual choice.
+    The MARI program represents a structural intervention that overcomes access barriers at the point
+    of police contact.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.576884'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

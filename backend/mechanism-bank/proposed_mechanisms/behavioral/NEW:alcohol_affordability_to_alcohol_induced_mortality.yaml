@@ -1,0 +1,62 @@
+id: NEW:alcohol_affordability_to_alcohol_induced_mortality
+name: Alcohol Affordability → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:alcohol_affordability
+  node_name: Alcohol Affordability
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Higher alcohol affordability (lower relative prices) enables increased
+  alcohol purchasing and consumption, particularly among price-sensitive populations
+  with lower socioeconomic status'
+- 'Step 2: Increased alcohol consumption leads to higher rates of acute harm (injuries)
+  and chronic conditions (infectious diseases, alcohol-induced diseases)'
+- 'Step 3: These alcohol-related harms translate into elevated mortality rates, with
+  stronger effects observed among lower educated/lower income populations who are
+  more responsive to price changes'
+- 'Step 4: The inverse is also demonstrated - when affordability decreases (through
+  taxation), mortality declines, confirming the positive relationship between affordability
+  and alcohol-induced mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'J. Manthey et al. 2023. "The impact of alcohol taxation increase
+    on all-cause mortality inequalities in Lithuania: an interrupted time series analysis."
+    BMC Medicine.'
+  supporting_citations: []
+description: Higher alcohol affordability is associated with increased alcohol-induced
+  mortality through increased consumption. Evidence from Lithuania's 2017 taxation
+  increase (which reduced affordability) demonstrated a 13% temporary reduction in
+  mortality inequalities among men, primarily through reductions in injury-related
+  and infectious disease deaths. This natural experiment confirms that when alcohol
+  becomes more affordable, consumption and related mortality increase, particularly
+  among socioeconomically disadvantaged populations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -13.0
+    type: percent_change
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Men showed more pronounced reduction in mortality inequalities (13%
+    among men vs smaller effects in women) following affordability changes
+- name: education_level
+  direction: strengthens
+  strength: strong
+  description: Lower educated populations showed greater mortality changes in response
+    to affordability shifts, indicating higher price sensitivity
+- name: cause_of_death
+  direction: strengthens
+  strength: moderate
+  description: Effects were primarily driven by injuries and infectious diseases rather
+    than all causes equally

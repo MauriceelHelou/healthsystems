@@ -1,0 +1,50 @@
+id: alcohol_outlet_density_to_alcohol_problems
+name: Neighborhood Density of Alcohol Outlets → Alcohol Problems
+from_node:
+  node_id: alcohol_outlet_density
+  node_name: Neighborhood Density of Alcohol Outlets
+to_node:
+  node_id: alcohol_problems
+  node_name: Alcohol Problems
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of alcohol outlets in neighborhoods increases physical availability
+  and accessibility of alcohol'
+- 'Step 2: Greater alcohol availability facilitates expression of genetic predisposition
+  to alcohol problems through increased exposure and opportunity for consumption'
+- 'Step 3: Enhanced gene-environment interaction leads to manifestation of alcohol
+  use disorder symptoms and alcohol-related problems'
+- 'Step 4: Environmental context modulates heritability estimates, with high-outlet-density
+  neighborhoods showing 78% heritability versus 11% in zero-outlet neighborhoods'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: W. Slutske et al. 2019. "Neighborhood density of alcohol outlets
+    moderates genetic and environmental influences on alcohol problems." *Addiction*.
+    https://doi.org/10.1111/add.14534
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.088721'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: genetic_predisposition_to_alcohol_problems
+  direction: strengthens
+  strength: strong
+  description: 'Genetic predisposition to alcohol problems strongly moderates the
+    relationship between outlet density and alcohol problems. In high-outlet-density
+    neighborhoods (>10 on-premises outlets), heritability was 78% (95% CI: 52-100%),
+    compared to 11% (95% CI: 0-29%) in zero-outlet neighborhoods, indicating that
+    environmental availability facilitates genetic expression.'
+- name: on_premises_outlet_density
+  direction: strengthens
+  strength: strong
+  description: Specifically on-premises outlets (bars, restaurants serving alcohol)
+    showed the moderating effect. Neighborhoods with more than 10 on-premises outlets
+    showed dramatically higher heritability of alcohol problems compared to neighborhoods
+    with no on-premises outlets.
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/alcohol_outlet_density_to_alcohol_problems.yaml
+_category: built_environment

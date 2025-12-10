@@ -1,0 +1,60 @@
+id: NEW:comorbidity_burden_heart_failure_to_all_cause_mortality_rate
+name: Comorbidity Burden in Heart Failure Patients → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:comorbidity_burden_heart_failure
+  node_name: Comorbidity Burden in Heart Failure Patients
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Heart failure patients accumulate multiple comorbid conditions (diabetes,
+  COPD, CKD, stroke, ischemic heart disease, anemia, cancer, atrial fibrillation,
+  dementia, depression) due to shared risk factors, aging, and pathophysiological
+  interconnections'
+- 'Step 2: Each comorbid condition creates additional physiological burden through
+  organ dysfunction, metabolic derangements, systemic inflammation, and compromised
+  compensatory mechanisms'
+- 'Step 3: Multiple comorbidities interact synergistically to accelerate cardiovascular
+  decline, reduce functional reserve, and complicate treatment regimens'
+- 'Step 4: Comorbidity burden impairs self-care capacity, treatment adherence, and
+  health-related quality of life, further compromising disease management'
+- 'Step 5: The cumulative effect of multiple organ system dysfunction and reduced
+  physiological reserve leads to increased all-cause mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'Kyoung Suk Lee et al. 2023. Relationship between comorbidity
+    and health outcomes in patients with heart failure: a systematic review and meta-analysis.
+    BMC Cardiovascular Disorders.'
+  supporting_citations: []
+description: Comorbidity burden in heart failure patients significantly increases
+  all-cause mortality risk through cumulative physiological stress, organ system dysfunction,
+  and compromised compensatory mechanisms. A meta-analysis of 39 studies found that
+  presence of comorbid conditions in HF patients is associated with 31% increased
+  hazard of all-cause mortality (HR 1.31, 95% CI 1.18-1.45). Ten specific comorbidities
+  (diabetes, COPD, CKD, stroke, ischemic heart disease, anemia, cancer, atrial fibrillation,
+  dementia, and depression) were identified as having significant negative effects
+  on prognostic outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.31
+    type: hazard_ratio
+    ci_lower: 1.18
+    ci_upper: 1.45
+  p_value: null
+  sample_size: null
+moderators:
+- name: Type of comorbidity
+  direction: strengthens
+  strength: moderate
+  description: Anemia (HR 1.42), COPD (HR 1.31), stroke (HR 1.25), and atrial fibrillation
+    (HR 1.25) show stronger effects on mortality than other comorbidities
+- name: Number of comorbidities
+  direction: strengthens
+  strength: moderate
+  description: Greater comorbidity burden associated with worse prognostic outcomes
+    across multiple health domains

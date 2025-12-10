@@ -1,0 +1,56 @@
+id: NEW:anti_seizure_medication_use_aws_to_substance_use_treatment_dropout_rate
+name: Anti-Seizure Medication Use in Alcohol Withdrawal Syndrome → Treatment Dropout
+  Due to Adverse Events
+from_node:
+  node_id: NEW:anti_seizure_medication_use_aws
+  node_name: Anti-Seizure Medication Use in Alcohol Withdrawal Syndrome
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Treatment Dropout Due to Adverse Events
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients undergoing alcohol withdrawal syndrome treatment receive anti-seizure
+  medications (ASMs) as therapeutic intervention'
+- 'Step 2: ASMs produce adverse effects including sedation, dizziness, cognitive impairment,
+  and other medication-specific side effects that patients find intolerable'
+- 'Step 3: The burden of adverse events leads patients to discontinue treatment prematurely,
+  with significantly higher dropout rates compared to placebo (OR: 1.86)'
+- 'Step 4: Treatment dropout reduces exposure to complete AWS management protocols,
+  potentially compromising recovery outcomes and continuity of care'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'Jou-Yin Lai et al. 2021. The Effectiveness and Tolerability of
+    Anti-Seizure Medication in Alcohol Withdrawal Syndrome: A Systematic Review, Meta-Analysis
+    and GRADE of the evidence. Addiction.'
+  supporting_citations: []
+description: 'Anti-seizure medications used in alcohol withdrawal syndrome treatment
+  are associated with significantly increased odds of treatment dropout due to adverse
+  events compared to placebo. A systematic review and meta-analysis of 24 RCTs with
+  2,223 participants found that ASMs led to 86% higher odds of dropout due to adverse
+  events (OR: 1.86, 95% CI: 1.05-3.28, p=0.034). This tolerability issue, combined
+  with lack of demonstrated efficacy benefits, suggests ASMs may compromise treatment
+  retention in AWS management.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.86
+    type: odds_ratio
+    ci_lower: 1.05
+    ci_upper: 3.28
+  p_value: 0.034
+  sample_size: 2223
+moderators:
+- name: Comparator type
+  direction: strengthens
+  strength: moderate
+  description: Dropout due to adverse events was significantly higher when ASMs were
+    compared to placebo specifically; comparison with benzodiazepines showed different
+    patterns (increased rescue medication need rather than dropout)
+- name: Study age
+  direction: weakens
+  strength: weak
+  description: Majority of included studies were conducted before 2000, which may
+    limit generalizability to current clinical practice and newer ASM formulations

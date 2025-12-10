@@ -1,0 +1,80 @@
+id: wealth_inequality_gini_coefficient_to_all_cause_mortality_rate
+name: Wealth Inequality (Gini Coefficient) → All-Cause Mortality Rate
+from_node:
+  node_id: wealth_inequality_gini_coefficient
+  node_name: Wealth Inequality (Gini Coefficient)
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher income inequality creates differential access to health-promoting resources across socioeconomic
+  strata'
+- 'Step 2: Reduced public investment in health infrastructure, social services, and safety nets in high-inequality
+  societies'
+- 'Step 3: Psychosocial stress from relative deprivation and social comparison affects physiological systems'
+- 'Step 4: Chronic disease development and progression through cumulative stress exposure and reduced
+  healthcare access'
+- 'Step 5: Elevated mortality risk across the population'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'M. Shimonovich et al. 2024. "Causal Assessment of Income Inequality on Self‐Rated
+    Health and All‐Cause Mortality: A Systematic Review and Meta‐Analysis." https://doi.org/10.1111/1468-0009.12689'
+  supporting_citations:
+  - 14 cohort studies with multilevel data included in mortality meta-analysis
+  - Additional citations require full-text access to identify specific primary studies
+  - Studies using natural experimental approaches (noted as very limited in the review)
+  doi: 10.1111/1468-0009.12689
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'This meta-analysis of 14 cohort studies found a marginal association between income inequality
+  and all-cause mortality. Per 0.05-unit increase in the Gini coefficient, the relative risk for mortality
+  was 1.02 (95% CI: 1.00-1.04), a very small effect that borders on null. The evidence was rated as low
+  certainty, with 50% of studies at serious risk of bias. While temporality and plausibility Bradford
+  Hill viewpoints were supported, the strength of association and dose-response gradient evidence was
+  inconclusive due to methodological limitations.'
+quantitative_effects:
+  effect_size:
+    value: 1.02
+    type: relative_risk
+    ci_lower: 1.0
+    ci_upper: 1.04
+  sample_size: 10727470
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Very few studies examined income inequality at the national level. The review identified
+    a gap in natural experimental approaches that could address geographic and temporal confounding. Different
+    subnational measurement levels may produce varying effect estimates.
+moderators:
+- name: individual_socioeconomic_position
+  direction: weakens
+  strength: moderate
+  description: All included studies adjusted for individual-level socioeconomic position, isolating the
+    contextual effect of area-level inequality
+- name: study_design_quality
+  direction: weakens
+  strength: moderate
+  description: 50% of mortality studies were at serious risk of bias, resulting in low certainty evidence
+    rating
+- name: level_of_inequality_measurement
+  direction: strengthens
+  strength: weak
+  description: Studies measuring inequality at national versus subnational levels may show different effect
+    magnitudes; national-level studies were rare
+structural_competency:
+  equity_implications: 'This mechanism appropriately examines structural economic conditions as determinants
+    of population health outcomes. The use of multilevel data separates contextual inequality effects
+    from individual income effects, avoiding conflation of these distinct pathways. The very small effect
+    size (RR 1.02) and wide confidence interval suggest that while income inequality may contribute to
+    mortality, the direct causal pathway is not well-established with current methods. The review notes
+    the need for natural experimental approaches to address confounding, acknowledging the complexity
+    of structural determinants. Equity implications: even small effects at the population level translate
+    to meaningful excess mortality when applied to large populations experiencing high inequality.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.473936'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

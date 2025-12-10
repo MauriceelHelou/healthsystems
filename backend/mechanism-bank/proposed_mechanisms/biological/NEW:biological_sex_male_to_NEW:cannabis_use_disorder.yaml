@@ -1,0 +1,55 @@
+id: NEW:biological_sex_male_to_NEW:cannabis_use_disorder
+name: Male Biological Sex → Cannabis Use Disorder
+from_node:
+  node_id: NEW:biological_sex_male
+  node_name: Male Biological Sex
+to_node:
+  node_id: NEW:cannabis_use_disorder
+  node_name: Cannabis Use Disorder
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Males demonstrate higher rates of cannabis initiation and use compared
+  to females, potentially due to biological differences in endocannabinoid system
+  function and hormonal influences'
+- 'Step 2: Greater exposure to cannabis combined with possible sex-specific neurobiological
+  responses increases vulnerability to developing problematic use patterns'
+- 'Step 3: Males are approximately twice as likely to receive a clinical diagnosis
+  of cannabis use disorder, though this may also reflect differential help-seeking
+  behaviors and diagnostic patterns'
+evidence:
+  quality_rating: A
+  n_studies: 37
+  primary_citation: K. Kozak et al. 2021. A systematic review and meta-analysis of
+    sex differences in cannabis use disorder amongst people with comorbid mental illness.
+    The American Journal of Drug and Alcohol Abuse.
+  supporting_citations: []
+description: Males are approximately twice as likely as females to be diagnosed with
+  cannabis use disorder (OR = 2.0, CI = 1.9-2.1). This sex difference is observed
+  across multiple study types and populations, though the magnitude varies by comorbid
+  mental illness status. While males show higher overall diagnosis rates, females
+  may be more susceptible to developing and maintaining CUD once initiated, and mental
+  illness appears to differentially increase CUD risk by sex.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.0
+    type: odds_ratio
+    ci_lower: 1.9
+    ci_upper: 2.1
+  p_value: null
+  sample_size: null
+moderators:
+- name: Comorbid mental illness type
+  direction: varies
+  strength: moderate
+  description: Male predominance is strongest for schizophrenia (OR ~2.6) and other
+    psychotic, mood, and substance use disorders (OR 1-2.2). The association reverses
+    for anxiety disorders and antisocial personality disorder where females show higher
+    rates (OR = 0.8)
+- name: Mental illness presence in females
+  direction: strengthens
+  strength: moderate
+  description: Among females, mental illness increases the likelihood of having CUD,
+    except for psychotic disorders and depression

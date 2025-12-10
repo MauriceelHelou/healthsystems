@@ -1,0 +1,60 @@
+id: sud_treatment_facility_density_to_NEW:alcohol_use_disorder_treatment_access
+name: SUD Treatment Facility Density → Alcohol Use Disorder Treatment Access
+from_node:
+  node_id: sud_treatment_facility_density
+  node_name: SUD Treatment Facility Density
+to_node:
+  node_id: NEW:alcohol_use_disorder_treatment_access
+  node_name: Alcohol Use Disorder Treatment Access
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Demonstration project trains and equips SUD treatment facilities to provide XR-NTX'
+- 'Step 2: Geographic mapping identifies referring agencies across Los Angeles County Service Planning
+  Areas'
+- 'Step 3: Patients with alcohol use disorder (71.9% of recipients) gain access to FDA-approved medication'
+- 'Step 4: Multiple doses administered (64% received more than 1 dose), indicating treatment engagement'
+- 'Step 5: Reduced barriers to pharmacotherapy for alcohol use disorder at the community level'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sarah J Cousins et al. 2016. "A demonstration project implementing extended-release
+    naltrexone in Los Angeles County.." https://doi.org/10.1080/08897077.2015.1052868
+  supporting_citations:
+  - Additional citations require full-text access - abstract references FDA approval for alcohol use disorder
+  - Reference to prior XR-NTX literature on abstinence, cravings, and relapse prevention
+  - GIS methodology for mapping service distribution referenced
+  doi: 10.1080/08897077.2015.1052868
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The demonstration project significantly expanded access to medication-assisted treatment
+  for alcohol use disorder, with 71.9% of 609 patients receiving XR-NTX reporting alcohol use disorder.
+  This represents a structural intervention to address the gap between evidence-based treatment availability
+  and patient need for alcohol use disorder pharmacotherapy.
+quantitative_effects:
+  effect_size:
+    value: 71.9
+    type: percentage_change
+  sample_size: 438
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: GIS mapping documented distribution of XR-NTX-referring agencies across Los Angeles
+    County, with coverage in 6 of 8 Service Planning Areas
+moderators:
+- name: primary_substance
+  direction: strengthens
+  strength: strong
+  description: Majority of patients (71.9%, n=438) reported alcohol use disorder as primary condition,
+    indicating strong uptake among this population
+structural_competency:
+  equity_implications: This mechanism highlights the structural gap in alcohol use disorder treatment
+    - despite FDA-approved medications being available, real-world implementation requires coordinated
+    public health efforts. The high proportion of alcohol use disorder patients (71.9%) demonstrates unmet
+    need in the community. The project addresses healthcare system barriers rather than framing treatment
+    access as an individual responsibility.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.794361'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

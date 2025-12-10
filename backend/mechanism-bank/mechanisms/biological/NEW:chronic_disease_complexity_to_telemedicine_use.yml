@@ -1,0 +1,51 @@
+id: NEW:chronic_disease_complexity_to_telemedicine_use
+name: Chronic Disease Complexity and Comorbidity → Telemedicine Use
+from_node:
+  node_id: NEW:chronic_disease_complexity
+  node_name: Chronic Disease Complexity and Comorbidity
+to_node:
+  node_id: telemedicine_use
+  node_name: Telemedicine Use
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Multiple chronic conditions create complex health management needs'
+- 'Step 2: Health-related barriers including physical and cognitive limitations increase with comorbidity'
+- 'Step 3: Disease burden reduces energy and capacity available for learning new technologies'
+- 'Step 4: Complex health needs may also increase motivation for technology adoption when properly supported'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'Alessia Bertolazzi et al. 2024. "Barriers and facilitators to health technology adoption
+    by older adults with chronic diseases: an integrative systematic review." https://doi.org/10.1186/s12889-024-18036-5'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Majority of studies focused on comorbid conditions
+  - Health-related factors identified as key domain affecting adoption
+  doi: 10.1186/s12889-024-18036-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Health-related factors including chronic disease burden and comorbidities create barriers
+  to technology adoption while also potentially increasing motivation for remote monitoring when adequate
+  support is available.
+quantitative_effects:
+  sample_size: 6213
+moderators:
+- name: caregiver_support
+  direction: strengthens
+  strength: strong
+  description: Caregiver assistance can overcome health-related barriers to technology use
+- name: technology_design
+  direction: strengthens
+  strength: moderate
+  description: Accessible design features can accommodate health-related limitations
+structural_competency:
+  equity_implications: Chronic disease clustering reflects upstream social determinants including socioeconomic
+    status, environmental exposures, and healthcare access across the lifecourse. Technology adoption
+    barriers among those with complex health needs compound existing health inequities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.703046'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,57 @@
+id: NEW:household_air_pollution_from_solid_biomass_fuels_to_infant_mortality_rate
+name: Household Air Pollution from Solid Biomass Fuels → Infant Mortality Rate
+from_node:
+  node_id: NEW:household_air_pollution_from_solid_biomass_fuels
+  node_name: Household Air Pollution from Solid Biomass Fuels
+to_node:
+  node_id: infant_mortality_rate
+  node_name: Infant Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Combustion of solid biomass fuels (wood, charcoal, crop residues, dung)
+  for cooking, heating, and lighting releases harmful pollutants including particulate
+  matter (PM2.5), carbon monoxide, nitrogen dioxide, and polycyclic aromatic hydrocarbons
+  into the household environment'
+- 'Step 2: Infants experience high exposure levels due to proximity to cooking areas
+  and time spent indoors, combined with their higher respiratory rates relative to
+  body size'
+- 'Step 3: Inhaled pollutants cause oxidative stress, systemic inflammation, and damage
+  to developing respiratory tissues in infants'
+- 'Step 4: These biological insults lead to increased susceptibility to acute lower
+  respiratory infections (pneumonia), impaired lung development, and other adverse
+  health outcomes'
+- 'Step 5: Severe respiratory infections and compromised respiratory function contribute
+  to elevated infant mortality, particularly in low- and middle-income countries with
+  limited healthcare access'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. Woolley et al. 2021. Effectiveness of interventions to reduce
+    household air pollution from solid biomass fuels and improve maternal and child
+    health outcomes in low- and middle-income countries: a systematic review protocol.
+    Systematic Reviews.'
+  supporting_citations: []
+description: Household air pollution from solid biomass fuel combustion exposes infants
+  to high levels of particulate matter and toxic gases, causing respiratory damage
+  and inflammation. This biological vulnerability, combined with increased susceptibility
+  to respiratory infections like pneumonia, leads to elevated infant mortality rates,
+  particularly in low- and middle-income countries where such fuel use is common.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Infants and children under 5 years are particularly vulnerable due
+    to biological susceptibility and developing respiratory systems
+- name: exposure duration
+  direction: strengthens
+  strength: moderate
+  description: Higher exposure levels in children due to time spent indoors near cooking
+    areas increases risk
+- name: healthcare access
+  direction: strengthens
+  strength: moderate
+  description: Limited access to healthcare in LMIC settings increases mortality risk
+    from HAP-related respiratory infections

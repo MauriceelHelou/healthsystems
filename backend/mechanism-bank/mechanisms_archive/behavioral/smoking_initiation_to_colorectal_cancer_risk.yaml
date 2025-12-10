@@ -1,0 +1,37 @@
+id: smoking_initiation_to_colorectal_cancer_risk
+name: Smoking Initiation → Colorectal Cancer Risk
+from_node:
+  node_id: smoking_initiation
+  node_name: Smoking Initiation
+to_node:
+  node_id: colorectal_cancer_risk
+  node_name: Colorectal Cancer Risk
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Tobacco smoking initiation leads to exposure to carcinogenic compounds
+  that enter systemic circulation'
+- 'Step 2: Smoking-related compounds induce epigenetic modifications (DNA methylation
+  changes) in blood cells at specific CpG sites'
+- 'Step 3: Altered DNA methylation patterns, particularly at sites like cg02149899,
+  create pro-tumorigenic cellular environments'
+- 'Step 4: These epigenetic changes accumulate over time and increase susceptibility
+  to colorectal carcinogenesis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Xuan Zhou et al. 2023. "Dissecting the pathogenic effects of smoking
+    and its hallmarks in blood DNA methylation on colorectal cancer risk." *British
+    Journal of Cancer*. https://doi.org/10.1038/s41416-023-02397-6
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.494920'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_drinking
+  direction: strengthens
+  strength: moderate
+  description: Multivariable MR analysis revealed smoking-CRC associations were independent
+    of alcohol drinking, but both exposures may act synergistically

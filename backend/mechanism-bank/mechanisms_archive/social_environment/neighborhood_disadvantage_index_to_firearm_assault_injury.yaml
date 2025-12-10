@@ -1,0 +1,44 @@
+id: neighborhood_disadvantage_index_to_firearm_assault_injury
+name: Neighborhood Disadvantage Index → Firearm Assault Injury
+from_node:
+  node_id: neighborhood_disadvantage_index
+  node_name: Neighborhood Disadvantage Index
+to_node:
+  node_id: firearm_assault_injury
+  node_name: Firearm Assault Injury
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Economic deprivation creates concentrated areas with limited employment
+  opportunities and resources'
+- 'Step 2: Lack of economic opportunity and public assistance dependence contributes
+  to social stress and community instability'
+- 'Step 3: Female-headed households with children and poverty concentration strain
+  social networks and protective factors'
+- 'Step 4: Structural disadvantage increases exposure to violence and reduces community
+  capacity for conflict resolution'
+- 'Step 5: These conditions create environments with elevated risk for firearm violence'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Kimberly Dalve et al. 2021. "Neighborhood disadvantage and firearm
+    injury: does shooting location matter?." *Injury Epidemiology*. https://doi.org/10.1186/s40621-021-00304-2'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.863182'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: proximity_to_employment_opportunities
+  direction: weakens
+  strength: moderate
+  description: Census tracts with higher disadvantage but proximity to employment
+    opportunities showed lower counts of firearm injury than expected, suggesting
+    employment access serves as a protective factor
+- name: targeted_neighborhood_redevelopment
+  direction: weakens
+  strength: moderate
+  description: Areas with targeted redevelopment initiatives showed lower firearm
+    injury counts despite high neighborhood disadvantage, indicating investment can
+    buffer structural risk

@@ -1,0 +1,47 @@
+id: travel_time_to_mental_health_facility_to_outpatient_mental_health_service_utilization
+name: Travel Time to Mental Health Facility (Public Transportation) → Outpatient Mental
+  Health Service Utilization
+from_node:
+  node_id: travel_time_to_mental_health_facility
+  node_name: Travel Time to Mental Health Facility (Public Transportation)
+to_node:
+  node_id: outpatient_mental_health_service_utilization
+  node_name: Outpatient Mental Health Service Utilization
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Greater travel time by public transportation creates temporal and logistical
+  barriers to accessing outpatient mental health services'
+- 'Step 2: Distance decay effect reduces the gravitational pull of mental health facilities
+  for geographically remote populations'
+- 'Step 3: Reduced utilization occurs across all mental disorder types, even after
+  controlling for community socioeconomic characteristics'
+- 'Step 4: Remote areas become insufficiently supplied with mental health care, creating
+  geographic inequities in access'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'N. Stulz et al. 2018. "The gravitational force of mental health
+    services: distance decay effects in a rural Swiss service area." *BMC Health Services
+    Research*. https://doi.org/10.1186/s12913-018-2888-1'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.482715'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: service_type
+  direction: strengthens
+  strength: strong
+  description: Distance decay effect is significant for outpatient services but not
+    for inpatient services (except organic mental disorders), indicating that outpatient
+    care is more sensitive to geographic barriers
+- name: mental_disorder_type
+  direction: weakens
+  strength: weak
+  description: Effect applies across all mental disorders for outpatient services,
+    with exception noted only for organic mental disorders in inpatient settings
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/travel_time_to_mental_health_facility_to_outpatient_mental_health_service_utilization.yaml
+_category: healthcare_access

@@ -1,0 +1,54 @@
+id: NEW:maternal_sars_cov_2_infection_pregnancy_to_neonatal_icu_admission_rate
+name: Maternal SARS-CoV-2 Infection During Pregnancy → Neonatal ICU Admission Rate
+from_node:
+  node_id: NEW:maternal_sars_cov_2_infection_pregnancy
+  node_name: Maternal SARS-CoV-2 Infection During Pregnancy
+to_node:
+  node_id: neonatal_icu_admission_rate
+  node_name: Neonatal ICU Admission Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Maternal SARS-CoV-2 infection during pregnancy triggers systemic inflammatory
+  response and potential placental dysfunction'
+- 'Step 2: Infection increases risk of preterm birth and fetal growth restriction
+  (small for gestational age), both independent risk factors for NICU admission'
+- 'Step 3: Neonates born to infected mothers may experience respiratory complications
+  and require higher levels of respiratory support'
+- 'Step 4: Precautionary clinical protocols for COVID-exposed neonates may also contribute
+  to increased NICU admission rates for monitoring and isolation purposes'
+- 'Step 5: Combined direct effects (prematurity, respiratory disease) and indirect
+  effects (clinical protocols) result in higher NICU admission rates'
+evidence:
+  quality_rating: A
+  n_studies: 204
+  primary_citation: 'S. Sturrock et al. 2023. Neonatal outcomes and indirect consequences
+    following maternal SARS-CoV-2 infection in pregnancy: a systematic review. BMJ
+    Open.'
+  supporting_citations: []
+description: Systematic review of 204 studies including 45,646 neonates across 36
+  countries found that neonatal unit admission was more common in infants born following
+  maternal SARS-CoV-2 infection during pregnancy, particularly in larger studies.
+  The association appears driven by both direct biological effects (increased preterm
+  birth, respiratory complications) and indirect consequences (clinical protocols
+  requiring monitoring of exposed neonates). Limited evidence of increased risk of
+  specific neonatal morbidities including respiratory disease was found.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: timing_of_infection
+  direction: strengthens
+  strength: moderate
+  description: Limited evidence available for first trimester infections (only 17
+    studies); later pregnancy infections may have stronger association with NICU admission
+    due to proximity to delivery
+- name: maternal_symptom_severity
+  direction: strengthens
+  strength: moderate
+  description: More severe maternal illness likely increases risk of preterm birth
+    and associated NICU admission
+- name: healthcare_setting_income_level
+  direction: strengthens
+  strength: weak
+  description: Limited data from low-income settings; NICU availability and admission
+    thresholds vary by setting

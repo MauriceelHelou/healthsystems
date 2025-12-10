@@ -1,0 +1,43 @@
+id: telephone_based_screening_followup_to_completion_full_audit_assessment
+name: Telephone-Based Screening Follow-up System → Completion of Full AUDIT Assessment
+from_node:
+  node_id: telephone_based_screening_followup
+  node_name: Telephone-Based Screening Follow-up System
+to_node:
+  node_id: completion_full_audit_assessment
+  node_name: Completion of Full AUDIT Assessment
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Telephone outreach eliminates transportation barriers and time constraints
+  that prevent patients from returning to clinic for follow-up assessment'
+- 'Step 2: Remote access increases reach to working patients and those with caregiving
+  responsibilities who cannot attend in-person appointments'
+- 'Step 3: Trained counselors successfully contact patients at convenient times, facilitating
+  completion of comprehensive alcohol use assessment'
+- 'Step 4: 412 of 632 patients (65.2%) who screened positive completed full AUDIT
+  via telephone, enabling risk stratification for appropriate intervention'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Michael Pignone et al. 2025. "Screening and Telephone-Based Intervention
+    for Unhealthy Alcohol Use in a Diverse Federally Qualified Health Center System
+    in Texas.." *Journal of general internal medicine*. https://doi.org/10.1007/s11606-024-09240-5
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.783185'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: county_based_medical_access_program
+  direction: strengthens
+  strength: moderate
+  description: 66% of patients completing AUDIT were insured through MAP, suggesting
+    telephone follow-up particularly effective for underinsured populations
+- name: hispanic_latino_ethnicity
+  direction: strengthens
+  strength: moderate
+  description: 86% of patients completing AUDIT identified as Hispanic/Latino, compared
+    to 58% in initial screening population, suggesting telephone approach reduced
+    barriers for this population

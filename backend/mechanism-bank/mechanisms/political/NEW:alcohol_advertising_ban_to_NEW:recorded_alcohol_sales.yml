@@ -1,0 +1,79 @@
+id: NEW:alcohol_advertising_ban_to_NEW:recorded_alcohol_sales
+name: Alcohol Advertising Ban → Recorded Alcohol Sales
+from_node:
+  node_id: NEW:alcohol_advertising_ban
+  node_name: Alcohol Advertising Ban
+to_node:
+  node_id: NEW:recorded_alcohol_sales
+  node_name: Recorded Alcohol Sales
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Implementation of complete ban on alcohol advertising eliminates commercial promotion of alcohol
+  products'
+- 'Step 2: Reduced exposure to alcohol marketing decreases social normalization of alcohol consumption'
+- 'Step 3: Lower marketing exposure reduces consumer demand and purchase intentions for alcohol'
+- 'Step 4: Decreased demand translates to immediate and sustained reduction in recorded alcohol sales'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'I. Rossow 2021. "The alcohol advertising ban in Norway: Effects on recorded alcohol
+    sales.." https://doi.org/10.1111/dar.13289'
+  supporting_citations:
+  - Additional citations require full-text access - abstract mentions WHO recommendations on advertising
+    bans as effective policy
+  - Additional citations require full-text access - abstract references prior indirect evidence supporting
+    advertising bans
+  - Additional citations require full-text access - abstract notes literature on marketing via social
+    media and satellite TV
+  doi: 10.1111/dar.13289
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: A complete ban on alcohol advertising in Norway in 1975 was associated with an immediate
+  and lasting 7.4% reduction in recorded alcohol sales. This policy-level intervention demonstrates how
+  restricting commercial promotion of alcohol can reduce population-level consumption through decreased
+  exposure to marketing that normalizes and promotes drinking behavior.
+quantitative_effects:
+  effect_size:
+    value: -7.4
+    type: percentage_change
+  p_value: 0.002
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study specific to Norway; effects may vary by country based on enforcement capacity,
+    alternative marketing channels (social media, satellite TV), and baseline alcohol consumption patterns
+moderators:
+- name: alcohol_prices
+  direction: strengthens
+  strength: moderate
+  description: Analysis adjusted for alcohol prices, suggesting price policy interacts with advertising
+    effects
+- name: wages
+  direction: weakens
+  strength: moderate
+  description: Analysis adjusted for wages, indicating economic conditions moderate the relationship
+- name: unrecorded_alcohol_consumption
+  direction: weakens
+  strength: moderate
+  description: Possible substitution to unrecorded alcohol sources may attenuate the protective effect
+    on total consumption
+- name: social_media_marketing
+  direction: weakens
+  strength: moderate
+  description: Marketing through social media and satellite TV channels may circumvent traditional advertising
+    bans
+structural_competency:
+  equity_implications: This mechanism exemplifies structural intervention at the policy level - rather
+    than targeting individual drinking behaviors, it addresses the commercial determinants of health by
+    restricting industry marketing practices. The advertising ban removes environmental cues that normalize
+    alcohol consumption and create demand, demonstrating how regulatory policy can shape health behaviors
+    without placing blame on individuals. Equity implications include potential differential effects across
+    socioeconomic groups who may have varying exposure to alternative marketing channels (e.g., satellite
+    TV, social media) that could circumvent the ban. The policy represents a population-level approach
+    that affects the entire commercial environment rather than requiring individual behavior change.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.494039'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

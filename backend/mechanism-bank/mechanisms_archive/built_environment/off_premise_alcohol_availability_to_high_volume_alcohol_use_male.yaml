@@ -1,0 +1,40 @@
+id: off_premise_alcohol_availability_to_high_volume_alcohol_use_male
+name: Off-Premise Alcohol Availability (Drive Time to Closest Outlet) → High-Volume
+  Alcohol Use in Males (>2 drinks/day)
+from_node:
+  node_id: off_premise_alcohol_availability
+  node_name: Off-Premise Alcohol Availability (Drive Time to Closest Outlet)
+to_node:
+  node_id: high_volume_alcohol_use_male
+  node_name: High-Volume Alcohol Use in Males (>2 drinks/day)
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Greater physical accessibility to off-premise alcohol outlets (shorter
+  drive times) increases structural opportunities for alcohol purchase'
+- 'Step 2: Reduced travel barriers lower the transaction costs and effort required
+  to obtain alcohol'
+- 'Step 3: Increased convenience and exposure to alcohol retail environments normalize
+  alcohol purchase behaviors at the community level'
+- 'Step 4: Higher neighborhood-level alcohol availability increases population-level
+  consumption patterns, resulting in elevated prevalence of high-volume drinking'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'E. Friesen et al. 2022. "Associations Between the Physical Availability
+    of Alcohol and Alcohol Use: Regional Variation Across 15 Major Cities in Ontario,
+    Canada.." *Journal of Studies on Alcohol and Drugs*. https://doi.org/10.15288/jsad.21-00402'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.070974'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: city_specific_context
+  direction: strengthens
+  strength: strong
+  description: The association between alcohol availability and use varies substantially
+    between the 15 major Ontario cities studied, with some cities showing positive
+    associations and others negative, suggesting local sociodemographic characteristics
+    and built environment context strongly moderate this relationship.

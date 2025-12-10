@@ -1,0 +1,56 @@
+id: NEW:ptsd_diagnosis_to_substance_use_disorder_any
+name: Post-Traumatic Stress Disorder Diagnosis → Substance Use Disorder (Any)
+from_node:
+  node_id: NEW:ptsd_diagnosis
+  node_name: Post-Traumatic Stress Disorder Diagnosis
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: PTSD involves dysregulation of stress response systems and hyperarousal symptoms'
+- 'Step 2: Individuals may use substances as self-medication to manage intrusive thoughts, hypervigilance,
+  and emotional numbing'
+- 'Step 3: Chronic substance use leads to neurobiological adaptations and dependence'
+- 'Step 4: Co-occurring disorders create reciprocal worsening cycles with worse health outcomes than either
+  condition alone'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'Megan Swannell et al. 2025. "Pharmacological treatments for co-occurring PTSD and
+    substance use disorders: A systematic review.." https://doi.org/10.1016/j.josat.2024.209601'
+  supporting_citations:
+  - Additional citations require full-text access - abstract mentions 29 studies examining 16 pharmacotherapies
+    but does not cite individual studies
+  - Studies focused on veteran populations with co-occurring PTSD and SUD
+  - Studies examining alcohol use disorders as primary SUD subtype
+  doi: 10.1016/j.josat.2024.209601
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: PTSD and substance use disorders commonly co-occur, with this comorbidity associated with
+  worse health outcomes than either condition alone. The systematic review identified 29 studies examining
+  16 pharmacotherapies for this co-occurring population.
+moderators:
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Review notes majority of studies focused on males, suggesting potential gender differences
+    in treatment response or access that remain understudied
+- name: veteran_status
+  direction: strengthens
+  strength: moderate
+  description: Many studies focused on veteran population, which may have different trauma exposure patterns
+    and healthcare access through VA system
+structural_competency:
+  equity_implications: The review highlights structural barriers to treatment access as a key concern
+    - noting that while psychosocial therapies are recommended, they come with 'numerous barriers to access
+    and engagement.' This points to healthcare system failures rather than individual non-compliance.
+    The concentration of research on veterans reflects structural investment patterns in military healthcare
+    that may not generalize to civilian populations who lack equivalent access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.732608'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

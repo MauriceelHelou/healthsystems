@@ -1,0 +1,54 @@
+id: NEW:aircraft_noise_exposure_to_diabetes_mortality
+name: Aircraft Noise Exposure → Diabetes Mellitus Mortality
+from_node:
+  node_id: NEW:aircraft_noise_exposure
+  node_name: Aircraft Noise Exposure
+to_node:
+  node_id: diabetes_mortality
+  node_name: Diabetes Mellitus Mortality
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Chronic aircraft noise exposure causes intermittent high-intensity noise events disrupting
+  physiological homeostasis'
+- 'Step 2: Repeated startle responses and sleep disturbance activate stress pathways'
+- 'Step 3: Chronic stress promotes metabolic dysfunction including insulin resistance'
+- 'Step 4: Metabolic disturbances contribute to diabetes onset and progression'
+- 'Step 5: Diabetes complications increase mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'D. Vienneau et al. 2024. "Long-term exposure to transportation noise and diabetes
+    mellitus mortality: a national cohort study and updated meta-analysis." https://doi.org/10.1186/s12940-024-01084-0'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 5 studies for aircraft noise
+  - Swiss National Cohort subset analysis around airports
+  - Combined incidence and mortality meta-analysis results
+  doi: 10.1186/s12940-024-01084-0
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Aircraft noise exposure shows a suggestive but not statistically significant association
+  with diabetes mortality in the primary analysis (HR 1.01, 95% CI 0.99-1.02). However, combined meta-analysis
+  of incidence and mortality studies showed a significant positive association.
+quantitative_effects:
+  effect_size:
+    value: 1.01
+    type: hazard_ratio
+    ci_lower: 0.99
+    ci_upper: 1.02
+  sample_size: 4140000
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: A subset analysis around airports was conducted; combined incidence and mortality meta-analysis
+    showed significant association (HR 1.02, 95% CI 1.00-1.03)
+structural_competency:
+  equity_implications: Communities near airports are often socioeconomically disadvantaged and face cumulative
+    environmental burdens. Airport siting decisions and flight path determinations are structural factors
+    that create unequal noise exposure. This analysis provides evidence that should inform environmental
+    justice considerations in aviation policy.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.415604'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

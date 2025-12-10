@@ -1,0 +1,54 @@
+id: adverse_childhood_experiences_score_to_binge_drinking
+name: Adverse Childhood Experiences (ACEs) Score -> Binge Drinking Prevalence
+from_node:
+  node_id: adverse_childhood_experiences_score
+  node_name: Adverse Childhood Experiences (ACEs) Score
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking Prevalence
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Adverse childhood experiences create neurobiological and psychological
+  stress responses that persist into adulthood'
+- 'Step 2: These stress responses and trauma-related emotional dysregulation lead
+  individuals to seek maladaptive coping mechanisms'
+- 'Step 3: Alcohol becomes a preferred coping strategy, with binge drinking patterns
+  emerging as a way to self-medicate and manage psychological distress'
+evidence:
+  quality_rating: B
+  n_studies: 6
+  primary_citation: 'The Effects of Individual and Dual ACE Domains on Binge Drinking:
+    Comparisons by Gender. Journal of Substance Abuse. 2021. DOI: 10.1080/10826084.2021.1949604'
+  supporting_citations:
+  - 'The Prevalence of Adverse Childhood Experiences in Ohio: Changes from 2015 to
+    2019. Ohio Journal of Public Health. 2024. DOI: 10.18061/ojph.v6i2.9839'
+  - 'Associations between adverse childhood experiences and adverse health outcomes
+    among adolescents in Bangkok, Thailand. Cogent Psychology. 2020. DOI: 10.1080/23311908.2020.1832403'
+  - 'Adverse childhood experiences and the association with initiating Alcohol, and
+    chat Consumption before age of 18. Research Square. 2020. DOI: 10.21203/rs.3.rs-24816/v1'
+  - 'Exploring the individual contributions of the 8 adverse childhood experiences
+    (ACEs) domains to substance use. Journal of Affective Disorders. 2025. DOI: 10.1016/j.jad.2025.119923'
+  - 'Does binge drinking mediate the relationship between four adverse childhood experiences
+    and adult traumatic brain injury? Injury Prevention. 2023. DOI: 10.1136/ip-2022-044710'
+description: Higher ACE scores are associated with increased prevalence of binge drinking
+  through psychological and neurobiological stress pathways. The relationship shows
+  a dose-response pattern, with odds ratios ranging from 1.09 to 3.32 depending on
+  study population and ACE severity. Specific ACE domains like household substance
+  use (OR=1.256) and emotional abuse show particularly strong associations with binge
+  drinking behaviors.
+structural_competency_notes: The ACE-binge drinking pathway is influenced by structural
+  factors including healthcare access barriers, socioeconomic disparities, and inadequate
+  mental health infrastructure. Individuals with higher ACE scores face compounded
+  disadvantages including reduced insurance coverage and limited access to trauma-informed
+  care, perpetuating cycles of substance use as maladaptive coping mechanisms.
+last_updated: '2025-12-09'
+extraction_method: node_pair_discovery_v4
+quantitative_effects:
+  effect_size:
+    value: 3.259
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 89511

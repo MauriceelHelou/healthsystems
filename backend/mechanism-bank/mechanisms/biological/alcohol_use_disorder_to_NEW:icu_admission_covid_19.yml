@@ -1,0 +1,64 @@
+id: alcohol_use_disorder_to_NEW:icu_admission_covid_19
+name: Alcohol Use Disorder → ICU Admission for COVID-19
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:icu_admission_covid_19
+  node_name: ICU Admission for COVID-19
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol consumption causes chronic liver damage and impaired hepatic function'
+- 'Step 2: Reduced hepatic synthetic function compromises production of acute phase reactants and coagulation
+  factors'
+- 'Step 3: Alcohol-induced cardiomyopathy and cardiovascular compromise reduce physiological reserve'
+- 'Step 4: Diminished organ function reserves lead to rapid clinical deterioration requiring intensive
+  care'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Baozhu Wei et al. 2023. "Impact of alcohol consumption on coronavirus disease 2019
+    severity: A systematic review and meta‐analysis." https://doi.org/10.1002/jmv.28547'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 40 studies
+  - Studies examining ICU admission outcomes in American populations
+  - Studies examining drinking history association with ICU admission
+  doi: 10.1002/jmv.28547
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Individuals with drinking history had 32% higher risk of ICU admission for COVID-19. This
+  reflects alcohol's cumulative damage to multiple organ systems that reduces physiological reserve needed
+  to survive severe infection. American populations showed 51% increased risk of ICU admission among drinkers.
+quantitative_effects:
+  effect_size:
+    value: 1.32
+    type: relative_risk
+    ci_lower: 1.08
+    ci_upper: 1.6
+  p_value: 0.01
+  sample_size: 6995
+  heterogeneity_i_squared: 46.6
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: 'American drinkers specifically showed RR=1.51 (95% CI: 1.30-1.75) for ICU admission
+    with I²=0.0%'
+moderators:
+- name: race_ethnicity
+  direction: strengthens
+  strength: strong
+  description: Brown (non-white) population showed RR=1.58 for severe COVID-19, suggesting potential racial/ethnic
+    disparities in alcohol-COVID interaction
+structural_competency:
+  equity_implications: ICU admission patterns reflect intersection of alcohol-related health vulnerability
+    and healthcare system access. Communities with higher rates of alcohol use disorders due to structural
+    factors (economic deprivation, targeted marketing, limited treatment access) faced compounded risk
+    during the pandemic. The racial/ethnic variation (Brown drinkers RR=1.58) suggests structural racism
+    may create differential vulnerability through both increased alcohol exposure and reduced healthcare
+    access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.319414'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

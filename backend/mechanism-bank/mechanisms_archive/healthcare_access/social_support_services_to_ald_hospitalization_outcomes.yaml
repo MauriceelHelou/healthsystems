@@ -1,0 +1,45 @@
+id: social_support_services_to_ald_hospitalization_outcomes
+name: Social Support Services (Care Coordination) → Alcohol-Related Liver Disease
+  Hospitalization Outcomes
+from_node:
+  node_id: social_support_services
+  node_name: Social Support Services (Care Coordination)
+to_node:
+  node_id: ald_hospitalization_outcomes
+  node_name: Alcohol-Related Liver Disease Hospitalization Outcomes
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare institution implements systematic screening by care coordinators
+  for all ALD patients'
+- 'Step 2: Care coordinators identify needs for rehabilitation counseling and post-discharge
+  coordination'
+- 'Step 3: Provision of social support services addresses structural barriers to recovery
+  (housing, transportation, healthcare access)'
+- 'Step 4: Equal access to support services mitigates the impact of neighborhood-level
+  social vulnerability on clinical outcomes'
+- 'Step 5: Hepatic decompensation, critical care needs, readmission, and mortality
+  show no significant difference by SVI'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ayushi Jain et al. 2024. "Impact of social vulnerability index
+    on patients with alcohol-related liver disease.." *Alcohol (Fayetteville, N.Y.)*.
+    https://doi.org/10.1016/j.alcohol.2024.08.005
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.403339'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: institutional_social_support_access
+  direction: strengthens
+  strength: strong
+  description: Standard practice of care coordinator screening and support provision
+    may have equalized outcomes across SVI levels
+- name: disease_type
+  direction: strengthens
+  strength: moderate
+  description: No SVI-based outcome differences observed in both alcoholic hepatitis
+    (n=73) and alcoholic cirrhosis (n=393) cohorts

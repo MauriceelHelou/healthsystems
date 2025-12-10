@@ -1,0 +1,69 @@
+id: NEW:alcohol_outlet_density_to_assault_injury_rate
+name: Alcohol Outlet Density → Assault Injury Rate
+from_node:
+  node_id: NEW:alcohol_outlet_density
+  node_name: Alcohol Outlet Density
+to_node:
+  node_id: assault_injury_rate
+  node_name: Assault Injury Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of alcohol outlets increases physical availability of alcohol within a neighborhood'
+- 'Step 2: Increased availability leads to higher alcohol consumption and intoxication among residents
+  and visitors'
+- 'Step 3: Alcohol intoxication impairs judgment and lowers inhibitions, increasing likelihood of aggressive
+  behavior'
+- 'Step 4: Concentration of outlets creates gathering points where intoxicated individuals interact, escalating
+  conflict potential'
+- 'Step 5: Areas with high outlet density experience higher rates of violent assaults over time'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'R. Wei et al. 2020. "Spatiotemporal patterns of alcohol outlets and violence: A spatially
+    heterogeneous Markov chain analysis." https://doi.org/10.1177/2399808320965569'
+  supporting_citations:
+  - 'Gruenewald PJ. (2007). The spatial ecology of alcohol problems: niche theory and assortative drinking.
+    Addiction.'
+  - Livingston M. (2011). A longitudinal analysis of alcohol outlet density and domestic violence. Addiction.
+  - Grubesic TH, Pridemore WA. (2011). Alcohol outlets and clusters of violence. International Journal
+    of Health Geographics.
+  doi: 10.1177/2399808320965569
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This study uses a spatially heterogeneous Markov chain framework to analyze how neighborhood
+  violence evolves in response to varying access to alcohol outlets at the block group level in Seattle.
+  Results indicate that locations with sparsely distributed alcohol outlets are less likely to see an
+  increase in violence compared to areas with higher outlet densities. The methodology identifies specific
+  locations that might 'tip' into more violent conditions if additional outlets were allowed to operate.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The study explicitly demonstrates spatial heterogeneity at the block group level in
+    Seattle, Washington. Violence patterns and their relationship to outlet density vary significantly
+    by local neighborhood context. Some locations are identified as potential 'tipping points' that could
+    transition to more violent conditions if additional outlets are permitted.
+moderators:
+- name: baseline_outlet_density
+  direction: strengthens
+  strength: strong
+  description: Areas with already high outlet density are more likely to experience increases in violence
+    when outlets are added, compared to areas with sparse outlet distribution
+- name: spatial_context
+  direction: strengthens
+  strength: moderate
+  description: Local neighborhood characteristics and spatial heterogeneity moderate the relationship
+    between outlet density and violence
+structural_competency:
+  equity_implications: This mechanism properly traces violence to the built environment (alcohol outlet
+    distribution) rather than individual behavior. It demonstrates how land use decisions and alcohol
+    licensing policies create structural conditions that produce violence. The spatial heterogeneity findings
+    highlight how policy decisions about outlet licensing have differential impacts across neighborhoods,
+    with equity implications for communities already experiencing high outlet concentrations. The research
+    supports evidence-based alcohol outlet management and licensing policy as structural interventions
+    to reduce violence.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.077333'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

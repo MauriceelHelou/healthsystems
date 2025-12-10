@@ -1,0 +1,49 @@
+id: ciwa_ar_score_to_mminds_score
+name: CIWA-Ar Alcohol Withdrawal Severity Score → mMINDS Alcohol Withdrawal Severity
+  Score
+from_node:
+  node_id: ciwa_ar_score
+  node_name: CIWA-Ar Alcohol Withdrawal Severity Score
+to_node:
+  node_id: mminds_score
+  node_name: mMINDS Alcohol Withdrawal Severity Score
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Both CIWA-Ar and mMINDS scoring tools assess overlapping clinical manifestations
+  of alcohol withdrawal syndrome including tremor, agitation, and orientation status'
+- 'Step 2: Higher severity of alcohol withdrawal symptoms manifests consistently across
+  both assessment instruments'
+- 'Step 3: Correlation is particularly robust in mild-to-moderate withdrawal (CIWA-Ar
+  ≤10) where symptoms are more reliably assessed across both tools'
+- 'Step 4: Standardized assessment protocols enable consistent identification of withdrawal
+  severity regardless of which validated tool is used'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Audrey J Littlefield et al. 2018. "Correlation Between mMINDS
+    and CIWA-Ar Scoring Tools in Patients With Alcohol Withdrawal Syndrome.." *American
+    journal of critical care : an official publication, American Association of Critical-Care
+    Nurses*. https://doi.org/10.4037/ajcc2018547'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.772242'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: withdrawal_severity_level
+  direction: weakens
+  strength: strong
+  description: Correlation is stronger (r=0.87) for CIWA-Ar scores ≤10 compared to
+    weaker correlation (r=0.52) for scores >10, indicating assessment tools diverge
+    more in severe withdrawal
+- name: specific_symptom_measured
+  direction: strengthens
+  strength: strong
+  description: Correlation is particularly robust for tremor (r=0.98), agitation (r=0.84),
+    and orientation (r=0.87), indicating certain clinical manifestations are more
+    consistently assessed across tools
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/ciwa_ar_score_to_mminds_score.yaml
+_category: healthcare_access

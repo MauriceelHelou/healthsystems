@@ -1,0 +1,67 @@
+id: NEW:poor_glycemic_control_to_kidney_disease
+name: Poor Glycemic Control (FBG >150 mg/dl) → Chronic Kidney Disease
+from_node:
+  node_id: NEW:poor_glycemic_control
+  node_name: Poor Glycemic Control (FBG >150 mg/dl)
+to_node:
+  node_id: kidney_disease
+  node_name: Chronic Kidney Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic hyperglycemia (FBG >150 mg/dl) leads to sustained elevated blood
+  glucose levels in the circulation'
+- 'Step 2: Elevated glucose causes glycation of proteins and formation of advanced
+  glycation end products (AGEs) that damage renal vasculature and glomerular basement
+  membrane'
+- 'Step 3: Hyperglycemia induces oxidative stress and inflammation in renal tissues,
+  contributing to mesangial expansion and glomerular hyperfiltration'
+- 'Step 4: Prolonged exposure causes progressive nephron damage, reduced glomerular
+  filtration rate (GFR), and eventual chronic kidney disease development'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'W. Shiferaw et al. 2020. Chronic Kidney Disease among Diabetes
+    Patients in Ethiopia: A Systematic Review and Meta-Analysis. International Journal
+    of Nephrology.'
+  supporting_citations: []
+description: Poor glycemic control, defined as fasting blood glucose >150 mg/dl, significantly
+  increases the risk of chronic kidney disease among diabetic patients. This meta-analysis
+  of 12 studies with 4,075 participants in Ethiopia found that poor glycemic control
+  more than doubles the odds of developing CKD (OR=2.58). The mechanism involves chronic
+  hyperglycemia-induced damage to renal microvasculature through advanced glycation
+  end products, oxidative stress, and inflammation, leading to progressive nephropathy.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.58
+    type: odds_ratio
+    ci_lower: 1.79
+    ci_upper: 3.72
+  p_value: null
+  sample_size: 4075
+moderators:
+- name: Duration of diabetes
+  direction: strengthens
+  strength: strong
+  description: 'Diabetes duration >10 years significantly increases CKD risk (OR=2.76,
+    95% CI: 1.38-5.51)'
+- name: Age
+  direction: strengthens
+  strength: strong
+  description: 'Age greater than 60 years increases CKD risk (OR=2.99, 95% CI: 1.56-5.73)'
+- name: Systolic blood pressure
+  direction: strengthens
+  strength: strong
+  description: 'Systolic BP >140 mmHg substantially increases CKD risk (OR=3.26, 95%
+    CI: 2.24-4.74)'
+- name: Body mass index
+  direction: strengthens
+  strength: moderate
+  description: 'BMI >30 kg/m² increases CKD risk (OR=2.06, 95% CI: 1.41-3.00)'
+- name: Diabetic retinopathy
+  direction: strengthens
+  strength: strong
+  description: 'Presence of diabetic retinopathy strongly associated with CKD (OR=4.54,
+    95% CI: 1.08-25)'

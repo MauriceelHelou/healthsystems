@@ -1,0 +1,50 @@
+id: robotic_surgical_technology_access_to_hospital_length_of_stay
+name: Access to Robotic Surgical Technology → Hospital Length of Stay
+from_node:
+  node_id: robotic_surgical_technology_access
+  node_name: Access to Robotic Surgical Technology
+to_node:
+  node_id: hospital_length_of_stay
+  node_name: Hospital Length of Stay
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Robotic surgical technology enables minimally invasive liver transplant
+  procedures with enhanced precision and dexterity'
+- 'Step 2: Minimally invasive approach reduces surgical trauma, blood loss, and tissue
+  disruption compared to open surgery'
+- 'Step 3: Reduced surgical trauma accelerates post-operative recovery and mobilization'
+- 'Step 4: Faster recovery enables earlier hospital discharge and reduced length of
+  stay'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Dieter Broering et al. 2024. "Outcomes of Fully Robotic Recipient
+    Living Donor Liver Transplant in Relation to the Open Approach." *Transplantation*.
+    https://doi.org/10.1097/TP.0000000000005109
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.591788'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: disease_severity
+  direction: weakens
+  strength: strong
+  description: Current selection criteria limit robotic approach to recipients with
+    MELD score ≤25, restricting access for sicker patients who might benefit from
+    reduced recovery time
+- name: anatomical_characteristics
+  direction: weakens
+  strength: moderate
+  description: Specific anatomical requirements restrict which patients can receive
+    robotic transplant, creating selection bias
+- name: institutional_resources
+  direction: strengthens
+  strength: strong
+  description: Centers with robotic technology, trained surgical teams, and adequate
+    logistics infrastructure can offer this approach
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/robotic_surgical_technology_access_to_hospital_length_of_stay.yaml
+_category: healthcare_access

@@ -1,0 +1,51 @@
+id: criminal_justice_involvement_intensity_revised_consolidated_to_opioid_overdose_mortality
+name: Criminal Justice Involvement Intensity → Opioid Overdose Mortality
+from_node:
+  node_id: criminal_justice_involvement_intensity_revised_consolidated
+  node_name: Criminal Justice Involvement Intensity
+to_node:
+  node_id: opioid_overdose_mortality
+  node_name: Opioid Overdose Mortality
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Individuals experience incarceration leading to physiological tolerance reduction'
+- 'Step 2: Release from incarceration creates period of heightened vulnerability'
+- 'Step 3: Barriers to MOUD within criminal justice system reduce treatment access'
+- 'Step 4: Untreated or undertreated OUD during post-release period'
+- 'Step 5: Elevated risk of fatal overdose due to reduced tolerance and lack of treatment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Marisa D Booty et al. 2023. "Barriers and facilitators to the use of medication for
+    opioid use disorder within the criminal justice system: Perspectives from clinicians.." https://doi.org/10.1016/j.josat.2023.209051'
+  supporting_citations:
+  - Additional citations require full-text access - study references high OUD rates among justice-involved
+    individuals
+  - Study references heightened overdose risk upon release from incarceration (citation in full text)
+  - Study references MOUD as life-saving treatment (citation in full text)
+  doi: 10.1016/j.josat.2023.209051
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Criminal justice involvement creates heightened overdose mortality risk, particularly during
+  the post-release period, due to reduced tolerance and structural barriers to accessing medications for
+  opioid use disorder.
+quantitative_effects:
+  sample_size: 25
+moderators:
+- name: moud_access
+  direction: weakens
+  strength: strong
+  description: Access to MOUD during incarceration and post-release mitigates overdose risk
+structural_competency:
+  equity_implications: This mechanism demonstrates how mass incarceration and criminal justice system
+    policies create direct pathways to mortality for people with substance use disorders. The structural
+    barriers identified (stigma, poor collaboration, policy limitations on medication types) represent
+    modifiable system-level factors. Equity implications are significant given racial disparities in incarceration
+    rates.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.775155'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

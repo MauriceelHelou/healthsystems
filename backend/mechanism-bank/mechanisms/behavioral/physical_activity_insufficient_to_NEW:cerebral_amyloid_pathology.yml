@@ -1,0 +1,48 @@
+id: physical_activity_insufficient_to_NEW:cerebral_amyloid_pathology
+name: Insufficient Physical Activity → Cerebral Amyloid Pathology
+from_node:
+  node_id: physical_activity_insufficient
+  node_name: Insufficient Physical Activity
+to_node:
+  node_id: NEW:cerebral_amyloid_pathology
+  node_name: Cerebral Amyloid Pathology
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Low physical activity reduces cerebral blood flow and vascular health'
+- 'Step 2: Decreased vascular function impairs delivery of nutrients and clearance of waste products'
+- 'Step 3: Sedentary behavior associated with reduced brain-derived neurotrophic factor (BDNF)'
+- 'Step 4: Combined vascular and neurotrophic deficits promote amyloid accumulation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Julie E Oomens et al. 2025. "Associations of lifestyle factors with amyloid pathology
+    in persons without dementia." https://doi.org/10.1177/13872877251379083
+  supporting_citations:
+  - Additional citations require full-text access - this is a cross-sectional study from the Amyloid Biomarker
+    Study data pooling initiative
+  doi: 10.1177/13872877251379083
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Physical activity levels are examined as a lifestyle factor associated with cerebral amyloid
+  pathology, with insufficient activity potentially increasing AD-related neuropathology.
+quantitative_effects:
+  sample_size: 11726
+moderators:
+- name: cognitive_status
+  direction: strengthens
+  strength: moderate
+  description: Study stratified analysis by NC vs MCI status
+structural_competency:
+  equity_implications: Physical activity is structurally constrained by built environment (sidewalk availability,
+    park access, safety), time poverty from employment demands, and neighborhood walkability. Investments
+    in active transportation infrastructure and green space represent structural interventions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.174483'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

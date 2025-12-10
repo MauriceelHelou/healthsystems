@@ -1,0 +1,49 @@
+id: NEW:baclofen_treatment_to_NEW:alcohol_abstinence_rate
+name: Baclofen Treatment → Alcohol Abstinence Rate
+from_node:
+  node_id: NEW:baclofen_treatment
+  node_name: Baclofen Treatment
+to_node:
+  node_id: NEW:alcohol_abstinence_rate
+  node_name: Alcohol Abstinence Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Baclofen, a GABA-B receptor agonist, is administered to patients with alcohol
+  use disorder (AUD) co-morbid with liver diseases'
+- 'Step 2: Baclofen reduces alcohol craving through GABAergic modulation, which is
+  implicated in the reward pathways associated with alcohol dependence'
+- 'Step 3: Reduced craving supports patients in maintaining abstinence from alcohol
+  consumption'
+- 'Step 4: Overall abstinence rate of 53% observed in patients with AUD and liver
+  disease receiving baclofen treatment'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: 'Fangfang Duan et al. 2023. Systematic review and meta-analysis:
+    Efficacy and safety of baclofen in patients with alcohol use disorder co-morbid
+    liver diseases. Journal of psychiatric research.'
+  supporting_citations: []
+description: 'Baclofen treatment demonstrates a potential positive effect on alcohol
+  abstinence rates in patients with alcohol use disorder co-morbid with liver diseases.
+  The meta-analysis of 5 studies showed an overall abstinence rate of 53%, though
+  when compared directly to placebo in RCTs, the difference was not statistically
+  significant (RR: 1.42, 95% CI: 0.41-4.92). Baclofen is notable as the only drug
+  investigated in randomized controlled trials specifically for anti-craving in this
+  population with liver disease.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.42
+    type: relative_risk
+    ci_lower: 0.41
+    ci_upper: 4.92
+  p_value: null
+  sample_size: 322
+moderators:
+- name: liver_disease_type
+  direction: strengthens
+  strength: moderate
+  description: 'Abstinence rate varied by liver disease type: 63% in alcohol-related
+    liver disease vs 55% in cirrhosis patients'

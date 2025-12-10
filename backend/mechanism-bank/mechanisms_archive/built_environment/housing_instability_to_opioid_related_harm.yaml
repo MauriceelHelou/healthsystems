@@ -1,0 +1,43 @@
+id: housing_instability_to_opioid_related_harm
+name: Housing Instability → Opioid-Related Harm
+from_node:
+  node_id: housing_instability
+  node_name: Housing Instability
+to_node:
+  node_id: opioid_related_harm
+  node_name: Opioid-Related Harm
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Lack of stable housing eliminates private, safe spaces for drug consumption,
+  forcing people to use in public or high-risk environments'
+- 'Step 2: Housing instability disrupts social support networks and access to harm
+  reduction resources like naloxone and clean supplies'
+- 'Step 3: Unstable housing increases likelihood of using alone, reducing chances
+  of overdose reversal by bystanders'
+- 'Step 4: These environmental conditions increase risk of overdose and other opioid-related
+  health complications'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Katrina Milaney et al. 2021. "Drug use, homelessness and health:
+    responding to the opioid overdose crisis with housing and harm reduction services."
+    *Harm Reduction Journal*. https://doi.org/10.1186/s12954-021-00539-8'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.355552'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: supervised_consumption_site_availability
+  direction: weakens
+  strength: strong
+  description: Supervised consumption sites provide safe environments for drug use,
+    reducing risks associated with lack of private housing spaces
+- name: safe_supply_programs
+  direction: weakens
+  strength: strong
+  description: Safe supply programs reduce exposure to contaminated or unexpectedly
+    potent opioids, addressing one pathway through which housing instability increases
+    harm

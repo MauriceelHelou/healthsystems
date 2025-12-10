@@ -1,0 +1,47 @@
+id: alcohol_outlet_density_to_neighborhood_violence
+name: Alcohol Outlet Density → Neighborhood Violence (Assault Events)
+from_node:
+  node_id: alcohol_outlet_density
+  node_name: Alcohol Outlet Density
+to_node:
+  node_id: neighborhood_violence
+  node_name: Neighborhood Violence (Assault Events)
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of alcohol outlets increases alcohol availability and accessibility
+  in neighborhoods'
+- 'Step 2: Greater alcohol availability leads to increased alcohol consumption and
+  congregation of intoxicated individuals in public spaces'
+- 'Step 3: Alcohol intoxication impairs judgment and increases aggression, while congregation
+  creates more opportunities for interpersonal conflict'
+- 'Step 4: These conditions elevate the probability of assault events occurring in
+  the neighborhood'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'R. Wei et al. 2020. "Spatiotemporal patterns of alcohol outlets
+    and violence: A spatially heterogeneous Markov chain analysis." *Environment and
+    Planning B Urban Analytics and City Science*. https://doi.org/10.1177/2399808320965569'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.099455'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_outlet_density
+  direction: strengthens
+  strength: strong
+  description: Areas with higher existing densities of alcohol outlets show stronger
+    associations between additional outlets and increased violence. Sparse outlet
+    areas show weaker or negligible effects.
+- name: spatial_location
+  direction: strengthens
+  strength: moderate
+  description: Local spatial context and neighborhood characteristics modify the strength
+    of the outlet-violence relationship, with certain locations identified as more
+    likely to 'tip' into more violent conditions.
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/alcohol_outlet_density_to_neighborhood_violence.yaml
+_category: built_environment

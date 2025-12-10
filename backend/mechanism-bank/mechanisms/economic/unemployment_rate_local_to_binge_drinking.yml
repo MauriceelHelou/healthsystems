@@ -1,0 +1,62 @@
+id: unemployment_rate_local_to_binge_drinking
+name: Unemployment Rate → Binge Drinking
+from_node:
+  node_id: unemployment_rate_local
+  node_name: Unemployment Rate
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Long-term unemployment (≥6 months) creates sustained economic stress and loss of daily structure'
+- 'Step 2: Loss of employment removes workplace social controls and time constraints on drinking behavior'
+- 'Step 3: Economic strain and psychological distress increase maladaptive coping behaviors including
+  alcohol consumption'
+- 'Step 4: Prolonged unemployment erodes social networks and increases social isolation, facilitating
+  problematic drinking patterns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Lluís Mangot-Sala et al. 2022. "Disentangling the association between alcohol consumption
+    and employment status: causation, selection or confounding?." https://doi.org/10.1093/eurpub/ckac141'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior literature on causation
+    hypothesis
+  - Additional citations require full-text access - abstract references selection hypothesis literature
+  - Additional citations require full-text access - abstract references confounding literature
+  doi: 10.1093/eurpub/ckac141
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Long-term unemployment increases the risk of binge drinking, supporting the causation hypothesis
+  that unemployment alters drinking patterns. The effect holds after accounting for reciprocal causality
+  and time-constant confounding through fixed-effects models.
+quantitative_effects:
+  effect_size:
+    value: 0.23
+    type: beta_coefficient
+    ci_lower: 0.04
+    ci_upper: 0.42
+  sample_size: 138875
+moderators:
+- name: unemployment_duration
+  direction: strengthens
+  strength: strong
+  description: Long-term unemployment (≥6 months) shows significant effect while short-term (<6 months)
+    does not
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Binge drinking thresholds differ by sex (≥5 drinks for men, ≥4 for women)
+structural_competency:
+  equity_implications: This mechanism identifies unemployment as a structural determinant of harmful alcohol
+    use, shifting focus from individual choice to economic conditions. The finding that the effect persists
+    after controlling for confounding suggests true causal impact of labor market exclusion on health
+    behaviors. Policy implications include employment support and economic stability programs as alcohol
+    harm reduction interventions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.032946'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

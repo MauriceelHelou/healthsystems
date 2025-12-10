@@ -1,0 +1,45 @@
+id: minimum_legal_drinking_age_to_marijuana_use_young_adults
+name: Minimum Legal Drinking Age (MLDA) → Marijuana Use Among Young Adults
+from_node:
+  node_id: minimum_legal_drinking_age
+  node_name: Minimum Legal Drinking Age (MLDA)
+to_node:
+  node_id: marijuana_use_young_adults
+  node_name: Marijuana Use Among Young Adults
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Before reaching MLDA, young people face legal barriers to alcohol access'
+- 'Step 2: Limited alcohol availability may drive some youth toward alternative substances
+  like marijuana as substitutes'
+- 'Step 3: Upon reaching age 21, legal alcohol becomes more accessible and socially
+  acceptable'
+- 'Step 4: Increased alcohol availability reduces relative demand for marijuana as
+  a substitute substance'
+- 'Step 5: This substitution effect results in decreased marijuana use after reaching
+  MLDA'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. Keyes et al. 2015. "Effects of minimum legal drinking age
+    on alcohol and marijuana use: evidence from toxicological testing data for fatally
+    injured drivers aged 16 to 25 years." *Injury Epidemiology*. https://doi.org/10.1186/s40621-014-0032-1'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.172936'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: marijuana_legal_status
+  direction: weakens
+  strength: moderate
+  description: The substitution effect may be weaker in contexts where marijuana is
+    legally or more easily accessible, reducing the relative impact of alcohol availability
+    changes
+- name: age_threshold_discontinuity
+  direction: weakens
+  strength: moderate
+  description: Joinpoint analysis showed limited evidence for a structural break at
+    age 21 for marijuana use, suggesting the substitution effect may be less pronounced
+    than the direct alcohol effect

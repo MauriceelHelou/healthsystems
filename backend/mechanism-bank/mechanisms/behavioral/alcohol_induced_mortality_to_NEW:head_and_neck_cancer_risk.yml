@@ -1,0 +1,56 @@
+id: alcohol_induced_mortality_to_NEW:head_and_neck_cancer_risk
+name: Alcohol Consumption (as Risk Factor Context) → Head and Neck Cancer Risk
+from_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol Consumption (as Risk Factor Context)
+to_node:
+  node_id: NEW:head_and_neck_cancer_risk
+  node_name: Head and Neck Cancer Risk
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption is an established risk factor for head and neck cancer'
+- 'Step 2: Ethanol and acetaldehyde metabolites cause direct DNA damage to oral and pharyngeal mucosa'
+- 'Step 3: Alcohol acts as a solvent enhancing penetration of other carcinogens (tobacco)'
+- 'Step 4: Chronic alcohol use depletes tissue antioxidants and impairs immune surveillance'
+- 'Step 5: Mediterranean diet adherence may partially counteract alcohol-related carcinogenic pathways
+  through antioxidant provision'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: 'Nader G Zalaquett et al. 2025. "Adherence to the Mediterranean Diet and the Risk
+    of Head and Neck Cancer: A Systematic Review and Meta-Analysis of Case–Control Studies." https://doi.org/10.3390/nu17020287'
+  supporting_citations:
+  - Alcohol consumption referenced as established risk factor in abstract
+  - Additional citations require full-text access
+  doi: 10.3390/nu17020287
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The paper identifies alcohol consumption as an established risk factor for head and neck
+  cancer, operating alongside tobacco use and viral infections. The Mediterranean diet's protective effect
+  may partially offset alcohol-related carcinogenic mechanisms, suggesting dietary intervention as a complementary
+  cancer prevention strategy.
+quantitative_effects:
+  sample_size: 15272
+moderators:
+- name: mediterranean_diet_adherence
+  direction: weakens
+  strength: moderate
+  description: Mediterranean diet adherence may attenuate alcohol-related cancer risk through antioxidant
+    and anti-inflammatory mechanisms
+- name: tobacco_use
+  direction: strengthens
+  strength: strong
+  description: Synergistic effect between alcohol and tobacco dramatically increases HNC risk
+structural_competency:
+  equity_implications: Alcohol consumption patterns are shaped by structural factors including alcohol
+    outlet density, alcohol pricing policies, marketing exposure, economic stress, and neighborhood disadvantage.
+    Communities with higher alcohol outlet density and fewer resources for substance use treatment face
+    elevated structural risk for alcohol-related cancers. The interaction between diet and alcohol suggests
+    multi-level intervention opportunities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.334626'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

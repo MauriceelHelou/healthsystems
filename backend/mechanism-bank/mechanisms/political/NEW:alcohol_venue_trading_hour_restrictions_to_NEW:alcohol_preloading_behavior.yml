@@ -1,0 +1,67 @@
+id: NEW:alcohol_venue_trading_hour_restrictions_to_NEW:alcohol_preloading_behavior
+name: Alcohol Venue Trading Hour Restrictions → Alcohol Preloading Behavior
+from_node:
+  node_id: NEW:alcohol_venue_trading_hour_restrictions
+  node_name: Alcohol Venue Trading Hour Restrictions
+to_node:
+  node_id: NEW:alcohol_preloading_behavior
+  node_name: Alcohol Preloading Behavior
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Legislative change reduces alcohol venue trading hours (from 5am to 3am closing)'
+- 'Step 2: Patrons adapt by consuming more alcohol at home or other locations before entering entertainment
+  districts'
+- 'Step 3: Approximately 50% fewer people enter entertainment districts without having preloaded after
+  legislation'
+- 'Step 4: Patrons enter nightlife entertainment districts systematically later and more intoxicated'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'G. Devilly et al. 2019. "A big night out getting bigger: Alcohol consumption, arrests
+    and crowd numbers, before and after legislative change." https://doi.org/10.1371/journal.pone.0218161'
+  supporting_citations:
+  - Additional citations require full-text access - Study 1, Study 2, and Study 3 are described as separate
+    studies within this paper
+  - Queensland State Government 2016 legislative change documentation referenced
+  - Prior studies on alcohol preloading behavior referenced in introduction
+  doi: 10.1371/journal.pone.0218161
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Restrictive alcohol trading hour legislation led to unintended behavioral adaptation where
+  patrons increased alcohol preloading before entering entertainment districts. The policy reduced venue
+  operating hours but failed to account for cultural patterns of pre-drinking, resulting in patrons arriving
+  later and more intoxicated.
+quantitative_effects:
+  effect_size:
+    value: 50.0
+    type: percentage_change
+  sample_size: 3993
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focused on Queensland, Australia night-time entertainment districts (NEDs). Effects
+    may vary by local drinking culture and enforcement patterns.
+moderators:
+- name: local_drinking_culture
+  direction: strengthens
+  strength: strong
+  description: Cultural norms around preloading and nightlife participation moderate the behavioral adaptation
+    to trading hour restrictions
+- name: venue_location_ned_vs_outside
+  direction: strengthens
+  strength: moderate
+  description: Different regulations applied to venues within NEDs (3am closing) versus outside NEDs (2am
+    closing) may create differential effects
+structural_competency:
+  equity_implications: This mechanism demonstrates how well-intentioned alcohol control policies can produce
+    unintended consequences when they fail to account for existing cultural practices. The structural
+    intervention (trading hour restrictions) shifted drinking from regulated venues to unregulated private
+    spaces, potentially reducing oversight of intoxication levels. The policy represents a supply-side
+    approach that did not address demand-side factors or the social context of preloading culture in young
+    adults.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.246126'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

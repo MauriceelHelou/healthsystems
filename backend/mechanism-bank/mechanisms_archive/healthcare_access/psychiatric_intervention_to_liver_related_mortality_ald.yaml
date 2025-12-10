@@ -1,0 +1,38 @@
+id: psychiatric_intervention_to_liver_related_mortality_ald
+name: Psychiatric Intervention (Consultation or Medication) → Liver-Related Mortality
+  in ALD Patients
+from_node:
+  node_id: psychiatric_intervention
+  node_name: Psychiatric Intervention (Consultation or Medication)
+to_node:
+  node_id: liver_related_mortality_ald
+  node_name: Liver-Related Mortality in ALD Patients
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Psychiatric intervention addresses alcohol use disorder and co-occurring
+  mental health conditions'
+- 'Step 2: Treatment reduces alcohol consumption and improves abstinence rates'
+- 'Step 3: Decreased alcohol intake reduces hepatotoxic exposure and allows for liver
+  regeneration'
+- 'Step 4: Reduced hepatic inflammation and fibrosis progression slow liver disease
+  advancement'
+- 'Step 5: Slower disease progression results in reduced liver-related mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Keungmo Yang et al. 2024. "The prognostic impact of psychiatric
+    intervention on alcohol-associated liver disease: The UK Biobank cohort study.."
+    *Clinical and molecular hepatology*. https://doi.org/10.3350/cmh.2024.0278'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.406418'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: timing_of_intervention
+  direction: strengthens
+  strength: strong
+  description: 2-year landmark analysis showed consistent survival benefit, suggesting
+    early psychiatric intervention provides sustained protective effects

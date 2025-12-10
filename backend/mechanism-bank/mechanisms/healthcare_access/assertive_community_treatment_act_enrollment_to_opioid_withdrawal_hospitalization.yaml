@@ -1,0 +1,52 @@
+id: assertive_community_treatment_act_enrollment_to_opioid_withdrawal_hospitalization
+name: Assertive Community Treatment (ACT) Enrollment → Hospitalization Rates
+from_node:
+  node_id: assertive_community_treatment_act_enrollment
+  node_name: Assertive Community Treatment (ACT) Enrollment
+to_node:
+  node_id: opioid_withdrawal_hospitalization
+  node_name: Hospitalization Rates
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: ACT provides intensive, community-based outreach that proactively engages
+  patients with substance use disorders who have difficulty accessing traditional
+  outpatient care'
+- 'Step 2: ACT integrates specific SUD treatments into comprehensive case management,
+  addressing substantial medical and social needs in the community setting'
+- 'Step 3: Increased treatment engagement and continuous care coordination prevents
+  escalation of withdrawal symptoms and related medical crises'
+- 'Step 4: Proactive management of substance use and associated health issues reduces
+  need for acute inpatient hospitalization for withdrawal and related complications'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: 'Louise Penzenstadler et al. 2019. Effect of Assertive Community
+    Treatment for Patients with Substance Use Disorder: A Systematic Review. European
+    Addiction Research.'
+  supporting_citations: []
+description: Assertive Community Treatment (ACT) reduces hospitalization rates among
+  patients with substance use disorders through intensive community-based engagement,
+  integrated SUD treatment, and proactive care coordination. A systematic review of
+  5 randomized controlled datasets found positive effects on hospitalization rates
+  in 2 datasets, with treatment engagement consistently higher for ACT groups. The
+  effect is strongest among high service utilizers and when ACT model fidelity is
+  maintained.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: ACT model fidelity
+  direction: strengthens
+  strength: moderate
+  description: Higher fidelity to the ACT model appears to improve outcomes including
+    hospitalization rates
+- name: Baseline service utilization
+  direction: strengthens
+  strength: moderate
+  description: Patients with high inpatient service use appear to benefit most from
+    ACT approach
+- name: Housing status
+  direction: strengthens
+  strength: weak
+  description: Homeless populations with SUD may particularly benefit from ACT's community-based
+    outreach model

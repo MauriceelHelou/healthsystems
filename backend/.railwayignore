@@ -54,7 +54,7 @@ requirements-dev.txt
 .DS_Store
 Thumbs.db
 
-# Large data files
+# Large data files (but NOT mechanism-bank or Nodes)
 *.json
 *.jsonl
 data/
@@ -62,3 +62,8 @@ reports/
 configs/
 agents/
 frontend/
+pipelines/*.json
+
+# Keep mechanism-bank and Nodes folders (they contain YAML mechanism/node definitions)
+!mechanism-bank/
+!Nodes/

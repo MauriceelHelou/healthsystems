@@ -1,0 +1,48 @@
+id: NEW:socioeconomic_status_composite_to_cardiovascular_disease_mortality
+name: Socioeconomic Status (Composite Low SES) - Men → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:socioeconomic_status_composite
+  node_name: Socioeconomic Status (Composite Low SES) - Men
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Low SES men face material disadvantage affecting living conditions and diet quality'
+- 'Step 2: Occupational exposures in low-wage jobs may increase cardiovascular risk'
+- 'Step 3: Economic stress and job insecurity contribute to chronic physiological stress'
+- 'Step 4: Limited access to preventive care reduces early detection of CVD risk factors'
+- 'Step 5: Delayed treatment and accumulated risk factors increase CVD events'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: O. J. Baruwa et al. 2024. "Are socio-economic inequalities related to cardiovascular
+    disease risk? A systematic review and meta-analysis of prospective studies." https://doi.org/10.1186/s12872-024-04248-5
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 17 cohort studies
+  - Studies included approximately 26.5 million participants
+  - Over 900,000 CVD events analyzed across included studies
+  doi: 10.1186/s12872-024-04248-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Men of low socioeconomic status have a 45% increased risk of cardiovascular disease compared
+  to men of high SES. While significant, this effect is smaller than observed in women (79% increase),
+  though the difference between sexes was not statistically significant.
+quantitative_effects:
+  effect_size:
+    value: 1.45
+    type: relative_risk
+    ci_lower: 1.09
+    ci_upper: 1.92
+structural_competency:
+  equity_implications: The socioeconomic gradient in men's CVD risk reflects structural inequalities in
+    economic opportunity, working conditions, and healthcare access. While the relative risk is lower
+    than for women, low-SES men still face substantial excess cardiovascular risk due to their position
+    in social hierarchies that determine access to health-promoting resources.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.434409'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

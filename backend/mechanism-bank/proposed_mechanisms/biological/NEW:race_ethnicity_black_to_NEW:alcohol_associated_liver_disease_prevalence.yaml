@@ -1,0 +1,55 @@
+id: NEW:race_ethnicity_black_to_NEW:alcohol_associated_liver_disease_prevalence
+name: Black Race/Ethnicity → Alcohol-Associated Liver Disease Prevalence
+from_node:
+  node_id: NEW:race_ethnicity_black
+  node_name: Black Race/Ethnicity
+to_node:
+  node_id: NEW:alcohol_associated_liver_disease_prevalence
+  node_name: Alcohol-Associated Liver Disease Prevalence
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Black individuals in the United States demonstrate lower prevalence rates
+  of alcohol-associated liver disease (1.4%) compared to White (3.1%) and Hispanic
+  (4.5%) populations'
+- 'Step 2: Potential biological factors may include differences in alcohol metabolism
+  enzyme variants (ADH and ALDH polymorphisms) that vary by ancestry, though specific
+  mechanisms remain poorly characterized in the literature'
+- 'Step 3: Despite lower ALD prevalence, mortality among those with ALD does not significantly
+  differ between Black and White individuals (OR: 1.2, 95% CI: 0.8–1.6), suggesting
+  the protective effect operates primarily at the disease development stage rather
+  than progression'
+- 'Step 4: The exact biological mechanisms underlying this racial disparity remain
+  incompletely understood and may involve complex interactions between genetic susceptibility,
+  drinking patterns, and other unmeasured factors'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: 'Ahmad Anouti et al. 2024. Racial and ethnic disparities in alcohol-associated
+    liver disease in the United States: A systematic review and meta-analysis. Hepatology
+    Communications.'
+  supporting_citations: []
+description: 'Black individuals in the United States have significantly lower prevalence
+  of alcohol-associated liver disease compared to White individuals (pooled risk ratio
+  0.59, 95% CI: 0.35–0.87). This meta-analysis of 16 studies comprising over 76 million
+  patients found ALD prevalence of 1.4% in Black individuals versus 3.1% in White
+  individuals. However, among those who develop ALD, mortality rates do not significantly
+  differ between racial groups, suggesting the protective effect operates at the disease
+  development stage. The biological mechanisms underlying this disparity remain poorly
+  characterized in the existing literature.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.59
+    type: relative_risk
+    ci_lower: 0.35
+    ci_upper: 0.87
+  p_value: null
+  sample_size: 76867544
+moderators:
+- name: disease_stage
+  direction: weakens
+  strength: moderate
+  description: The protective association is observed for ALD prevalence but not for
+    mortality among those with established ALD, suggesting the effect is stage-dependent

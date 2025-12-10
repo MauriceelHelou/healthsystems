@@ -1,0 +1,48 @@
+id: alcohol_use_to_pancreatitis_dalys
+name: Alcohol Use → Pancreatitis Disability-Adjusted Life Years (DALYs)
+from_node:
+  node_id: alcohol_use
+  node_name: Alcohol Use
+to_node:
+  node_id: pancreatitis_dalys
+  node_name: Pancreatitis Disability-Adjusted Life Years (DALYs)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption causes direct toxic effects on pancreatic acinar cells
+  through metabolic byproducts like acetaldehyde and fatty acid ethyl esters'
+- 'Step 2: Chronic alcohol exposure promotes inflammation, fibrosis, and oxidative
+  stress in pancreatic tissue'
+- 'Step 3: Progressive pancreatic damage leads to both acute and chronic pancreatitis
+  episodes'
+- 'Step 4: Pancreatitis results in premature mortality and years lived with disability,
+  measured as DALYs'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. Han et al. 2022. "Burden of pancreatitis and associated risk
+    factors in China, 1990 to 2019: a systematic analysis for the Global Burden of
+    Disease Study 2019." *Chinese Medical Journal*. https://doi.org/10.1097/CM9.0000000000002164'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.152087'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Disease burden of pancreatitis was more severe among men than women,
+    suggesting differential alcohol consumption patterns or vulnerability by sex
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Variances in distribution among different age groups noted, with aging
+    population creating additional challenges
+- name: temporal_trend
+  direction: strengthens
+  strength: strong
+  description: Age-standardized DALYs caused by alcohol-related pancreatitis have
+    gradually worsened in the past decade, indicating increasing importance of alcohol
+    as a risk factor

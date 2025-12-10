@@ -1,0 +1,38 @@
+id: higher_risk_alcohol_use_to_psychological_treatment_dropout
+name: Higher Risk Alcohol Use (AUDIT-C ≥8) → Psychological Treatment Drop-out
+from_node:
+  node_id: higher_risk_alcohol_use
+  node_name: Higher Risk Alcohol Use (AUDIT-C ≥8)
+to_node:
+  node_id: psychological_treatment_dropout
+  node_name: Psychological Treatment Drop-out
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Higher risk drinking (AUDIT-C score of 8 or more) creates barriers to consistent
+  engagement with psychological treatment services'
+- 'Step 2: Alcohol use patterns may interfere with ability to attend scheduled appointments
+  and maintain treatment continuity'
+- 'Step 3: Increased likelihood of disengagement leads to premature termination from
+  IAPT services before treatment completion'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'J. Buckman et al. 2018. "The Impact of Alcohol Use on Drop-out
+    and Psychological Treatment Outcomes in Improving Access to Psychological Therapies
+    Services: an Audit." *Behavioural and Cognitive Psychotherapy*. https://doi.org/10.1017/S1352465817000819'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.470584'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_severity_threshold
+  direction: strengthens
+  strength: moderate
+  description: Drop-out risk specifically increases at AUDIT-C threshold of 8 or more,
+    suggesting a dose-response relationship
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/higher_risk_alcohol_use_to_psychological_treatment_dropout.yaml
+_category: healthcare_access

@@ -1,0 +1,57 @@
+id: NEW:nurse_delivered_alcohol_intervention_to_binge_drinking
+name: Nurse-Delivered Alcohol Intervention → Binge Drinking
+from_node:
+  node_id: NEW:nurse_delivered_alcohol_intervention
+  node_name: Nurse-Delivered Alcohol Intervention
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare systems deploy nurses to deliver brief alcohol interventions'
+- 'Step 2: Nurses provide patient-centered counseling with established therapeutic relationships'
+- 'Step 3: Patient trust and rapport with nursing staff enhances intervention receptivity'
+- 'Step 4: Sustained engagement and follow-up opportunities in nursing care'
+- 'Step 5: Greater reduction in alcohol consumption quantity compared to other provider types'
+evidence:
+  quality_rating: A
+  n_studies: 52
+  primary_citation: 'L. Platt et al. 2016. "How effective are brief interventions in reducing alcohol
+    consumption: do the setting, practitioner group and content matter? Findings from a systematic review
+    and metaregression analysis." https://doi.org/10.1136/bmjopen-2016-011473'
+  supporting_citations:
+  - Additional citations require full-text access - subset analysis of nurse-delivered interventions from
+    52 RCTs
+  - Studies comparing practitioner groups in brief intervention delivery
+  - Individual study citations available in full publication
+  doi: 10.1136/bmjopen-2016-011473
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Nurse-delivered brief alcohol interventions demonstrate the largest effect size among practitioner
+  groups for reducing alcohol consumption quantity. The standardized mean difference of -0.23 (95% CI:
+  -0.33 to -0.13) represents a clinically meaningful reduction.'
+quantitative_effects:
+  effect_size:
+    value: -0.23
+    type: standardized_mean_difference
+    ci_lower: -0.33
+    ci_upper: -0.13
+  sample_size: 29891
+moderators:
+- name: outcome_type
+  direction: strengthens
+  strength: strong
+  description: Nurse-delivered interventions were most effective for reducing quantity of consumption
+    but not frequency
+structural_competency:
+  equity_implications: This finding has important workforce and health equity implications. Nurses often
+    serve as the primary point of healthcare contact for underserved populations and in community health
+    settings. Investing in nurse training for ABI delivery could expand reach to populations with limited
+    access to physicians or specialists, potentially reducing alcohol-related health disparities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.954453'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

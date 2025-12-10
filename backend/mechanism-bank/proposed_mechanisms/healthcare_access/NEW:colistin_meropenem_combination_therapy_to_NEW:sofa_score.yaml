@@ -1,0 +1,57 @@
+id: NEW:colistin_meropenem_combination_therapy_to_NEW:sofa_score
+name: Colistin Plus Meropenem Combination Therapy → Sequential Organ Failure Assessment
+  Score
+from_node:
+  node_id: NEW:colistin_meropenem_combination_therapy
+  node_name: Colistin Plus Meropenem Combination Therapy
+to_node:
+  node_id: NEW:sofa_score
+  node_name: Sequential Organ Failure Assessment Score
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Administration of colistin plus meropenem combination therapy provides
+  synergistic antimicrobial activity against multidrug-resistant gram-negative bacteria
+  causing nosocomial pneumonia'
+- 'Step 2: Enhanced bacterial killing through dual mechanisms - colistin disrupts
+  bacterial cell membranes while meropenem inhibits cell wall synthesis, leading to
+  more effective pathogen eradication'
+- 'Step 3: Reduced bacterial load decreases systemic inflammatory response and prevents
+  progression of sepsis-related organ dysfunction'
+- 'Step 4: Improved infection control leads to stabilization and recovery of affected
+  organ systems, resulting in lower Sequential Organ Failure Assessment (SOFA) scores
+  indicating reduced multi-organ dysfunction'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: Hazhir Moradi et al. 2024. Systematic review and meta-analysis
+    of colistin plus meropenem therapy for the treatment of nosocomial pneumonia.
+    Iranian journal of microbiology.
+  supporting_citations: []
+description: 'Colistin plus meropenem combination therapy significantly reduces Sequential
+  Organ Failure Assessment (SOFA) scores in patients with nosocomial pneumonia compared
+  to other colistin-based treatments. This meta-analysis of 5 studies involving 991
+  patients demonstrated a statistically significant reduction in SOFA scores (OR =
+  -0.28, 95% CI: -0.44 to -0.11, p = 0.001), indicating improved organ function with
+  the combination therapy.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.28
+    type: standardized_mean_difference
+    ci_lower: -0.44
+    ci_upper: -0.11
+  p_value: 0.001
+  sample_size: 991
+moderators:
+- name: baseline_illness_severity
+  direction: weakens
+  strength: moderate
+  description: Patients with higher baseline APACHE II scores may show less pronounced
+    SOFA score improvements due to more severe underlying conditions
+- name: comorbidity_burden
+  direction: weakens
+  strength: moderate
+  description: Higher Charlson Comorbidity Index scores were associated with the treatment
+    group, potentially affecting the magnitude of SOFA score reduction

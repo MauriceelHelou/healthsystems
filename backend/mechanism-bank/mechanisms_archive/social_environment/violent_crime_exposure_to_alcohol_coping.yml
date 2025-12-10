@@ -1,0 +1,96 @@
+id: violent_crime_exposure_to_alcohol_coping
+name: Violent Crime Exposure → Alcohol Use as Coping
+from_node:
+  node_id: violent_crime_rate
+  node_name: Violent Crime Rate
+  node_type: stock
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+  node_type: stock
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Exposure to community violence creates chronic fear, hypervigilance, and traumatic stress symptoms'
+- 'Step 2: Witnessing or experiencing violence produces PTSD symptoms including intrusive thoughts, avoidance,
+  and hyperarousal'
+- 'Step 3: Limited access to trauma-informed mental health services leaves violence-related distress untreated'
+- 'Step 4: Alcohol use emerges as accessible self-medication for trauma symptoms and sleep disturbance'
+- 'Step 5: Escalating drinking develops into binge pattern as maladaptive coping for ongoing violence
+  exposure and unresolved trauma'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: Rayna E Gasik et al.. 2024. "Using Geographic Momentary Assessment to Explore Spatial
+    Environment Influences on Wellbeing in People With HIV" AIDS and Behavior. https://doi.org/10.1007/s10461-024-04527-4
+  supporting_citations:
+  - 'Theall, Katherine P., Maeve E. Wallace, Robert Drury, et al. 2017. "Neighborhood disorder and telomeres:
+    Connecting children''s exposure to community level stress and cellular response." Social Science &
+    Medicine 85: 50-58.'
+  - 'Cunradi, Carol B., Raul Caetano, and John Schafer. 2002. "Alcohol-related problems, drug use, and
+    male intimate partner violence severity among US couples." Alcoholism: Clinical and Experimental Research
+    26(4): 493-500.'
+  doi: 10.1007/s10964-010-9575-8
+  fulltext:
+    available: true
+    source: harvard_proxy
+    url: https://ezp-prod1.hul.harvard.edu/login?url=https://doi.org/10.1007/s10964-010-9575-8
+    is_open_access: false
+    fetched_date: '2025-11-30'
+  citation_verified: false
+last_updated: '2025-11-30'
+version: '1.0'
+description: Exposure to community violence increases alcohol use through untreated traumatic stress,
+  chronic fear and hypervigilance, and use of drinking as accessible self-medication for violence-related
+  psychological distress.
+moderators:
+- name: direct_victimization
+  direction: strengthens
+  strength: strong
+  description: Personal victimization shows stronger drinking association than witnessing violence alone
+- name: trauma_therapy_access
+  direction: weakens
+  strength: strong
+  description: Access to evidence-based trauma treatment (EMDR, CPT) reduces reliance on alcohol self-medication
+- name: social_support
+  direction: weakens
+  strength: moderate
+  description: Strong family and community support buffer violence exposure effects
+- name: youth_age
+  direction: strengthens
+  strength: moderate
+  description: Adolescents show heightened vulnerability to violence-related substance use initiation
+structural_competency:
+  root_cause_level: policy
+  avoids_victim_blaming: true
+  equity_implications: 'High violent crime is not random but concentrates in communities experiencing
+    structural abandonment and disinvestment. Decades of segregation, discriminatory policing, limited
+    economic opportunity, and defunded social services create conditions where violence flourishes. Communities
+    of color face both higher violence exposure and greater policing that criminalizes trauma responses.
+    The violence-alcohol pathway represents how structural violence (policy-driven inequity) produces
+    interpersonal violence, which then generates individual suffering manifesting as substance use. High
+    drinking in violence-exposed communities reflects rational coping responses to intolerable conditions.
+    Addressing this requires root-cause interventions: economic opportunity, violence prevention programs,
+    community investment, and trauma-informed services—not increased criminalization that compounds trauma.'
+assumptions:
+- Violence exposure includes both direct victimization and witnessing violence
+- Mechanism operates through trauma and chronic stress pathways
+- Assumes limited access to mental health treatment in high-violence areas
+limitations:
+- Not all violence-exposed individuals increase drinking; resilience factors matter
+- Bidirectional relationship may exist (alcohol use can increase violence risk)
+- Individual trauma history and other stressors compound violence effects
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Violent crime concentrates in specific neighborhoods experiencing cumulative structural
+    disadvantage
+  relevant_geographies:
+  - Historically segregated urban neighborhoods show concentrated violence and trauma exposure
+  - Communities experiencing deindustrialization and disinvestment have elevated violence
+  - Areas with strong community-based violence intervention programs show reduced trauma-alcohol pathways
+  - Native American communities face violence from historical trauma and jurisdictional gaps in law enforcement
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

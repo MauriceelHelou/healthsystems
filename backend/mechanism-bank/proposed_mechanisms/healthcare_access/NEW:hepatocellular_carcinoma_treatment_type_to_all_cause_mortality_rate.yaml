@@ -1,0 +1,62 @@
+id: NEW:hepatocellular_carcinoma_treatment_type_to_all_cause_mortality_rate
+name: Hepatocellular Carcinoma Treatment Type (Surgery vs Radiofrequency Ablation)
+  → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:hepatocellular_carcinoma_treatment_type
+  node_name: Hepatocellular Carcinoma Treatment Type (Surgery vs Radiofrequency Ablation)
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with early or very early-stage hepatocellular carcinoma who are
+  eligible for surgery may receive either surgical resection or radiofrequency ablation
+  as treatment options'
+- 'Step 2: Surgery involves direct tumor removal through hepatic resection, while
+  radiofrequency ablation uses thermal energy to destroy tumor cells through a minimally
+  invasive approach'
+- 'Step 3: Both treatments aim to achieve complete tumor destruction, but may differ
+  in completeness of tumor removal, recurrence rates, and procedure-related complications'
+- 'Step 4: The evidence shows no statistically significant difference in all-cause
+  mortality between surgery and radiofrequency ablation in eligible patients (HR 0.80,
+  95% CI 0.60-1.08), suggesting comparable survival outcomes'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Avik Majumdar et al. 2017. Management of people with early- or
+    very early-stage hepatocellular carcinoma: an attempted network meta-analysis.
+    The Cochrane database of systematic reviews.'
+  supporting_citations: []
+description: In patients with early or very early-stage hepatocellular carcinoma who
+  are eligible for surgery, surgical resection compared to radiofrequency ablation
+  shows no significant difference in all-cause mortality at maximal follow-up (29-42
+  months). The hazard ratio of 0.80 (95% CI 0.60-1.08) suggests a trend toward lower
+  mortality with surgery, but the confidence interval crosses 1.0, indicating no statistically
+  significant difference between treatments.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.8
+    type: hazard_ratio
+    ci_lower: 0.6
+    ci_upper: 1.08
+  p_value: null
+  sample_size: 574
+moderators:
+- name: surgical_eligibility
+  direction: strengthens
+  strength: moderate
+  description: Comparison applies specifically to patients eligible for surgery; those
+    not eligible showed different outcomes with non-surgical interventions
+- name: cirrhosis_status
+  direction: strengthens
+  strength: weak
+  description: Majority of participants had cirrhotic livers which may influence treatment
+    outcomes
+- name: tumor_characteristics
+  direction: strengthens
+  strength: moderate
+  description: Early or very early-stage HCC (single tumor or ≤3 tumors of ≤3cm) defines
+    the applicable population

@@ -1,0 +1,52 @@
+id: NEW:omega_3_pufa_supplementation_to_NEW:nafld_metabolic_profile
+name: Omega-3 PUFA Supplementation → NAFLD Metabolic Profile
+from_node:
+  node_id: NEW:omega_3_pufa_supplementation
+  node_name: Omega-3 PUFA Supplementation
+to_node:
+  node_id: NEW:nafld_metabolic_profile
+  node_name: NAFLD Metabolic Profile
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Omega-3 PUFAs (EPA and DHA) are incorporated into hepatocyte cell membranes
+  and serve as substrates for anti-inflammatory mediator synthesis'
+- 'Step 2: Omega-3 PUFAs activate peroxisome proliferator-activated receptors (PPARs),
+  particularly PPAR-alpha, enhancing hepatic fatty acid oxidation'
+- 'Step 3: Reduced hepatic lipogenesis and enhanced lipid metabolism lead to decreased
+  triglyceride accumulation in the liver'
+- 'Step 4: Improved hepatic lipid handling results in reduced hepatocellular injury,
+  manifested as decreased ALT and AST levels'
+- 'Step 5: Systemic lipid profile improvements occur with reductions in serum triglycerides,
+  LDL cholesterol, and total cholesterol'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Tarique Aziz et al. 2024. Effectiveness of Omega-3 Polyunsaturated
+    Fatty Acids in Non-alcoholic Fatty Liver Disease: A Systematic Review and Meta-Analysis.
+    Cureus.'
+  supporting_citations: []
+description: Omega-3 PUFA supplementation improves metabolic profiles in NAFLD patients
+  through multiple mechanisms including enhanced hepatic fatty acid oxidation, reduced
+  lipogenesis, and anti-inflammatory effects. Meta-analysis of 15 studies demonstrated
+  significant reductions in liver enzymes (ALT mean difference -2.12, AST mean difference
+  -1.50) and improvements in serum lipid profiles including triglycerides, LDL, and
+  total cholesterol. While impact on liver fat content remains uncertain, omega-3
+  supplementation provides beneficial effects on metabolic parameters in NAFLD.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -2.12
+    type: mean_difference
+    ci_lower: -3.36
+    ci_upper: -0.87
+  p_value: null
+  sample_size: null
+moderators:
+- name: Study type (human vs animal)
+  direction: strengthens
+  strength: moderate
+  description: Animal models showed more consistent and significant reductions in
+    hepatic enzymes including AST, ALT, and alkaline phosphatase compared to human
+    studies

@@ -1,0 +1,51 @@
+id: adverse_childhood_experiences_aces_to_alcohol_use_disorder
+name: Adverse Childhood Experiences (ACEs) → Alcohol Use Disorder
+from_node:
+  node_id: adverse_childhood_experiences_aces
+  node_name: Adverse Childhood Experiences (ACEs)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Early life trauma and adverse childhood experiences create vulnerability to PTSD development'
+- 'Step 2: PTSD symptoms emerging from ACEs produce chronic psychological distress'
+- 'Step 3: Limited access to mental health services and trauma-informed care leaves symptoms untreated'
+- 'Step 4: Alcohol becomes accessible self-medication tool for managing trauma-related symptoms'
+- 'Step 5: Pattern of drinking to cope establishes pathway to alcohol use disorder'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: Sage E. Hawn et al. 2020. "A Systematic Review of the Self-Medication Hypothesis in
+    the Context of Posttraumatic Stress Disorder and Comorbid Problematic Alcohol Use.." https://doi.org/10.1002/jts.22521
+  supporting_citations:
+  - Additional citations require full-text access - review examines etiological models explaining PTSD-AUD
+    overlap
+  - Shared genetic risk and phenotypic causality models also examined
+  - Drinking-to-cope self-medication model identified as predominant etiological model
+  doi: 10.1002/jts.22521
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This mechanism links early life adversity through PTSD development to alcohol use disorder
+  via self-medication. The systematic review identifies multiple etiological models including shared genetic
+  risk and phenotypic causality, with self-medication being the dominant explanatory framework.
+moderators:
+- name: shared_genetic_risk
+  direction: strengthens
+  strength: moderate
+  description: The review notes shared genetic risk as an alternative/complementary etiological model
+    explaining PTSD-AUD comorbidity
+structural_competency:
+  equity_implications: ACEs are not randomly distributed - they concentrate in communities experiencing
+    poverty, discrimination, housing instability, and other structural disadvantages. The pathway from
+    ACEs to PTSD to AUD reflects failures of social protection systems, inadequate mental health infrastructure,
+    and the downstream health consequences of structural inequity. Prevention requires addressing root
+    causes of childhood adversity through policy interventions targeting poverty, housing stability, and
+    community violence.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.449627'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,54 @@
+id: NEW:digital_health_intervention_access_to_NEW:daily_alcohol_consumption_grams
+name: Digital Health Intervention Access → Daily Alcohol Consumption (Grams)
+from_node:
+  node_id: NEW:digital_health_intervention_access
+  node_name: Digital Health Intervention Access
+to_node:
+  node_id: NEW:daily_alcohol_consumption_grams
+  node_name: Daily Alcohol Consumption (Grams)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital platforms deliver evidence-based brief interventions and motivational content to reduce
+  alcohol intake'
+- 'Step 2: Self-monitoring features increase user awareness of daily consumption quantities'
+- 'Step 3: Personalized feedback and goal-setting tools support gradual reduction in drinking amounts'
+- 'Step 4: Overall daily alcohol quantity decreases through sustained engagement with digital tools'
+evidence:
+  quality_rating: A
+  n_studies: 66
+  primary_citation: 'Ivneet Sohi et al. 2023. "Digital interventions for reducing alcohol use in general
+    populations: An updated systematic review and meta-analysis.." https://doi.org/10.1111/acer.15175'
+  supporting_citations:
+  - 2017 systematic review baseline study referenced in abstract
+  - 35 new RCTs published January 2017 to June 2022
+  - Additional citations require full-text access
+  doi: 10.1111/acer.15175
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Digital interventions reduce daily alcohol consumption by 4.12 grams per day (95% CI: 2.88-5.36)
+  compared to no intervention or minimal intervention controls. This represents the most robust finding
+  from 66 studies assessing alcohol quantity outcomes.'
+quantitative_effects:
+  effect_size:
+    value: -4.12
+    type: standardized_mean_difference
+    ci_lower: 2.88
+    ci_upper: 5.36
+moderators:
+- name: student_population
+  direction: strengthens
+  strength: moderate
+  description: Significant reductions in alcohol quantity were observed among students
+structural_competency:
+  equity_implications: This mechanism demonstrates how technology can democratize access to alcohol reduction
+    support at the population level. Digital interventions bypass traditional healthcare system bottlenecks
+    and can reach individuals who might never present to formal treatment. The effect addresses structural
+    barriers including provider shortages, geographic isolation, and stigma. Population-level deployment
+    could reduce alcohol-attributable harms at scale.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.258585'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

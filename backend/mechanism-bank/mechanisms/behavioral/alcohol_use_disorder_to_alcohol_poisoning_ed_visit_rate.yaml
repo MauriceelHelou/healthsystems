@@ -1,0 +1,61 @@
+id: alcohol_use_disorder_to_alcohol_poisoning_ed_visit_rate
+name: Alcohol Use Disorder -> Alcohol Poisoning ED Visit Rate
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: alcohol_poisoning_ed_visit_rate
+  node_name: Alcohol Poisoning ED Visit Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals with alcohol use disorder exhibit patterns of heavy, frequent,
+  and problematic alcohol consumption with impaired control over drinking behavior'
+- 'Step 2: These consumption patterns increase the likelihood of consuming toxic amounts
+  of alcohol, leading to acute alcohol intoxication and poisoning episodes'
+- 'Step 3: Acute alcohol poisoning requires emergency medical intervention, resulting
+  in increased ED visits specifically for alcohol poisoning among those with AUD'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Kosa, Katherine M., et al. "Characterizing the clinical subgroups
+    of individuals who present to the emergency department for alcohol-related harms
+    in Ontario, Canada: A latent class analysis." Psychiatry Research 333 (2024):
+    115726.'
+  supporting_citations:
+  - 'Kanny, Dafna, et al. "Acute injury mortality and all-cause mortality following
+    emergency department presentation for alcohol use disorder." Drug and Alcohol
+    Dependence 237 (2022): 109472.'
+  - 'Carfora, Lorenzo, et al. "Mortality and its association with chronic alcohol-related
+    diseases in patients admitted to the emergency department for acute alcoholic
+    intoxication: retrospective cohort study." Internal and Emergency Medicine 18,
+    no. 1 (2023): 147-157.'
+  - 'Leban, Lindsay, et al. "Mortality Risk Following Nonfatal Injuries With Alcohol
+    Use Disorder Involvement: A One-Year Follow-Up of Emergency Department Patients
+    Using Linked Administrative Data." Journal of Studies on Alcohol and Drugs 83,
+    no. 3 (2022): 444-453.'
+description: 'Alcohol use disorder creates a direct pathway to increased alcohol poisoning
+  ED visits through the fundamental characteristic of AUD: impaired control over alcohol
+  consumption leading to heavy drinking patterns. Individuals with AUD demonstrate
+  significantly higher rates of acute alcohol intoxication presentations compared
+  to those with episodic drinking, with latent class analysis revealing distinct severity
+  gradients from low-frequency acute intoxication visits to high-frequency AUD-related
+  presentations. The mechanism operates through the core pathophysiology of AUD, where
+  tolerance development and loss of behavioral control result in consumption of potentially
+  toxic alcohol amounts.'
+structural_competency_notes: Structural factors including homelessness, lack of access
+  to addiction treatment services, and limited mental health resources contribute
+  to the cyclical nature of this pathway. Individuals with AUD and co-occurring conditions
+  like substance use disorders show even higher rates of ED utilization, suggesting
+  that social determinants and healthcare access barriers amplify the relationship
+  between AUD and acute alcohol poisoning presentations.
+last_updated: '2025-12-08'
+extraction_method: node_pair_discovery_v4
+quantitative_effects:
+  effect_size:
+    value: 8.26
+    type: odds_ratio
+    ci_lower: 7.81
+    ci_upper: 8.75
+  p_value: null
+  sample_size: 515013

@@ -1,0 +1,54 @@
+id: NEW:msm_sexual_orientation_to_suicide_attempt_rate_ed_hospital
+name: Men who have sex with men (MSM) identity → Suicide attempt rate
+from_node:
+  node_id: NEW:msm_sexual_orientation
+  node_name: Men who have sex with men (MSM) identity
+to_node:
+  node_id: suicide_attempt_rate_ed_hospital
+  node_name: Suicide attempt rate
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: MSM identity exposes individuals to minority stress including discrimination,
+  stigma, social rejection, and internalized homophobia'
+- 'Step 2: Chronic exposure to minority stressors leads to elevated rates of mental
+  health disorders including depression, anxiety, and substance use'
+- 'Step 3: Mental health burden combined with social isolation, lack of family support,
+  and experiences of victimization increases suicidal ideation'
+- 'Step 4: Suicidal ideation, particularly when combined with HIV-related stressors
+  and other intersecting vulnerabilities, progresses to suicide attempts at rates
+  significantly higher than general male population'
+evidence:
+  quality_rating: A
+  n_studies: 31
+  primary_citation: 'Elham Nouri et al. 2023. The global prevalence of suicidal ideation
+    and suicide attempts among men who have sex with men: a systematic review and
+    meta-analysis. European Journal of Medical Research.'
+  supporting_citations: []
+description: This systematic review and meta-analysis of 31 studies found that MSM
+  have a 12% global prevalence of suicide attempts, which is substantially higher
+  than rates in the general male population. The elevated risk is attributed to minority
+  stress, discrimination, stigma, and associated mental health burden. MSM with HIV
+  face compounded vulnerability with 40% prevalence of suicidal ideation.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 12.0
+    type: prevalence_percentage
+    ci_lower: 8.0
+    ci_upper: 17.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: HIV status
+  direction: strengthens
+  strength: moderate
+  description: MSM living with HIV showed prevalence of suicidal ideation of 40% (95%
+    CI 35%-45%) and suicide attempts of 10% (95% CI 1%-27%), indicating HIV status
+    as a significant moderator
+- name: Geographic region
+  direction: strengthens
+  strength: moderate
+  description: American MSM showed higher suicide attempt prevalence than other regions,
+    suggesting regional variation in risk

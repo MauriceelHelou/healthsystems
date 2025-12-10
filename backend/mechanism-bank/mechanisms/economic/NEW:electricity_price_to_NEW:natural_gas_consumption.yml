@@ -1,0 +1,54 @@
+id: NEW:electricity_price_to_NEW:natural_gas_consumption
+name: Electricity Price → Natural Gas Consumption
+from_node:
+  node_id: NEW:electricity_price
+  node_name: Electricity Price
+to_node:
+  node_id: NEW:natural_gas_consumption
+  node_name: Natural Gas Consumption
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Electricity prices increase in the market'
+- 'Step 2: Higher electricity costs make natural gas relatively more attractive as an energy source'
+- 'Step 3: Consumers and industries substitute toward natural gas for heating, cooking, and industrial
+  processes'
+- 'Step 4: Natural gas consumption increases (cross-price elasticity 2.122 short-run, 1.884 long-run)'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Jian Chai et al. 2018. "The Price Elasticity of Natural Gas Demand in China: A Meta-Regression
+    Analysis." https://doi.org/10.3390/EN11123255'
+  supporting_citations:
+  - Additional citations require full-text access - meta-regression synthesizes empirical estimates
+  - Studies examine electricity-to-natural gas substitution patterns
+  - Analysis covers various consumer types and geographic regions in China
+  doi: 10.3390/EN11123255
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Electricity and natural gas show a strong positive cross-price elasticity, with values of
+  2.122 (short-run) and 1.884 (long-run), indicating these are substitute energy sources. Rising electricity
+  prices significantly increase natural gas demand.
+quantitative_effects:
+  effect_size:
+    value: 2.122
+    type: beta_coefficient
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Geographic region contributes to heterogeneity in elasticity estimates
+moderators:
+- name: time_horizon
+  direction: weakens
+  strength: moderate
+  description: Long-run elasticity (1.884) slightly lower than short-run (2.122), but both indicate strong
+    substitution
+structural_competency:
+  equity_implications: Energy substitution patterns have implications for household energy security and
+    heating/cooling adequacy, which relate to health outcomes. Higher electricity prices may push households
+    toward natural gas, affecting indoor air quality and energy poverty differently across income groups.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.050190'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

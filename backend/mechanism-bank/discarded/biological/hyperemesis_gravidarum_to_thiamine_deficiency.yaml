@@ -1,0 +1,45 @@
+id: hyperemesis_gravidarum_to_thiamine_deficiency
+name: Hyperemesis Gravidarum → Severe Thiamine Deficiency
+from_node:
+  node_id: hyperemesis_gravidarum
+  node_name: Hyperemesis Gravidarum
+to_node:
+  node_id: thiamine_deficiency
+  node_name: Severe Thiamine Deficiency
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Persistent severe vomiting for extended period (1 month) prevents oral
+  nutrition intake and absorption'
+- 'Step 2: Inability to consume and retain food depletes thiamine stores (body stores
+  only support 18 days without intake)'
+- 'Step 3: Pregnancy increases metabolic demands and thiamine requirements for fetal
+  development'
+- 'Step 4: Combined effect of increased demand and zero intake creates severe thiamine
+  deficiency state'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'V. Mishra and Ruchika A Verneker 2019. "Hyperemesis gravidarum
+    causing Wernicke–Korsakoff syndrome: A rare complication." *The journal of obstetrics
+    and gynaecology research*. https://doi.org/10.1111/jog.14039'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.337768'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: vomiting_duration
+  direction: strengthens
+  strength: strong
+  description: Duration of continuous vomiting directly determines severity of nutritional
+    depletion
+- name: baseline_nutritional_status
+  direction: strengthens
+  strength: moderate
+  description: Pre-pregnancy thiamine stores influence how quickly deficiency develops
+    during hyperemesis
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/hyperemesis_gravidarum_to_thiamine_deficiency.yaml
+_category: biological

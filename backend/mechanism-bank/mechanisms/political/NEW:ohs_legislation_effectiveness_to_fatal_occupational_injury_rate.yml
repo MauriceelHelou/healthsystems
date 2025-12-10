@@ -1,0 +1,67 @@
+id: NEW:ohs_legislation_effectiveness_to_fatal_occupational_injury_rate
+name: Occupational Health and Safety Legislation Effectiveness → Fatal Occupational Injury Rate
+from_node:
+  node_id: NEW:ohs_legislation_effectiveness
+  node_name: Occupational Health and Safety Legislation Effectiveness
+to_node:
+  node_id: fatal_occupational_injury_rate
+  node_name: Fatal Occupational Injury Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Effective OHS legislation establishes legal requirements for workplace safety standards and
+  employer responsibilities'
+- 'Step 2: Regulatory enforcement mechanisms ensure compliance through inspections and penalties'
+- 'Step 3: Worker representation in OHS systems provides oversight and advocacy for safety improvements'
+- 'Step 4: Clear and precise regulations enable evaluation and enforcement, reducing occupational hazards'
+- 'Step 5: Reduced workplace hazards lead to fewer work-related deaths and diseases'
+evidence:
+  quality_rating: B
+  n_studies: 18
+  primary_citation: J. Fassier 2016. "The law, the researcher, and occupational health.." https://doi.org/10.5271/sjweh.3543
+  supporting_citations:
+  - MacEachen et al. (2016). Systematic review of qualitative literature on OHS legislation. Scandinavian
+    Journal of Work, Environment & Health.
+  - Weber M. (c. 1917). Science as a Vocation and Politics as a Vocation.
+  - Additional citations require full-text access
+  doi: 10.5271/sjweh.3543
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2015, source is 2016'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Occupational health and safety legislation aims to protect workers from occupational hazards,
+  accidents, and disease. The effectiveness of OHS law depends on regulation formation processes, regulatory
+  enforcement, inspector organization, and worker representation. Gaps in legislation effectiveness contribute
+  to an estimated 2.3 million annual work-related deaths globally, primarily from work-related diseases.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The way OHS is regulated varies across nation states; evidence base dominated by Australia
+    and Canada with limited representation from developing countries (only Philippines)
+moderators:
+- name: economic_conditions
+  direction: weakens
+  strength: moderate
+  description: Economic decline and recession amplify OHS regulation challenges; unions constrained by
+    economic conditions lead to weakened OHS legislation coverage
+- name: union_density_rate_revised_consolidated_with_node_113
+  direction: strengthens
+  strength: moderate
+  description: Worker representation through unions enhances OHS system effectiveness and enforcement
+- name: organizational_restructuring
+  direction: weakens
+  strength: moderate
+  description: Complex contracts, outsourcing, temporary work, and international supply chains create
+    challenges for OHS regulation
+structural_competency:
+  equity_implications: This mechanism appropriately traces health outcomes to policy-level determinants
+    (legislation, enforcement, regulatory systems) rather than individual worker behaviors. It highlights
+    how structural factors like economic conditions and organizational restructuring create barriers to
+    worker protection. The finding that developing countries are underrepresented in OHS research points
+    to global health inequities in occupational safety.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.612870'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

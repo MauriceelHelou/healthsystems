@@ -1,0 +1,52 @@
+id: NEW:caffeinated_coffee_consumption_to_cardiovascular_disease_mortality
+name: Caffeinated Coffee Consumption → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:caffeinated_coffee_consumption
+  node_name: Caffeinated Coffee Consumption
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Regular caffeinated coffee consumption delivers bioactive compounds including
+  chlorogenic acids, caffeine, and other polyphenols to the body'
+- 'Step 2: These compounds exert antioxidant and anti-inflammatory effects, reducing
+  oxidative stress and chronic inflammation in vascular tissues'
+- 'Step 3: Coffee bioactives improve endothelial function, reduce arterial stiffness,
+  and modulate lipid metabolism favorably'
+- 'Step 4: These cardiovascular protective effects lead to reduced atherosclerosis
+  progression and lower risk of cardiovascular events'
+- 'Step 5: The cumulative protective effects result in decreased cardiovascular disease
+  mortality, with optimal benefit observed at 3-4 cups per day'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'Matteo Di Maso et al. 2021. Caffeinated Coffee Consumption and
+    Health Outcomes in the US Population: A Dose-Response Meta-Analysis and Estimation
+    of Disease Cases and Deaths Avoided. Advances in Nutrition.'
+  supporting_citations: []
+description: 'Caffeinated coffee consumption is inversely associated with cardiovascular
+  disease mortality. A meta-analysis of 26 prospective studies with over 3.7 million
+  participants found that any coffee consumption compared to no consumption was associated
+  with a 10% reduction in CVD risk (RR = 0.90, 95% CI: 0.84-0.96). The relationship
+  follows a nonlinear dose-response pattern, with optimal protective effects observed
+  at 3-4 cups per day. Current US consumption patterns would account for approximately
+  6-12% of avoided cardiovascular deaths.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.9
+    type: relative_risk
+    ci_lower: 0.84
+    ci_upper: 0.96
+  p_value: null
+  sample_size: 3713932
+moderators:
+- name: cups_per_day
+  direction: u_shaped
+  strength: moderate
+  description: Dose-response relationship is nonlinear for CVD (P-nonlinearity = 0.01),
+    with largest risk reduction at 3-4 cups/day (~120 mL/cup) and no additional reduction
+    thereafter

@@ -1,0 +1,49 @@
+id: NEW:alcohol_consumption_level_to_alcohol_use_disorder
+name: Alcohol Consumption Level → Alcohol Use Disorder
+from_node:
+  node_id: NEW:alcohol_consumption_level
+  node_name: Alcohol Consumption Level
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Regular alcohol consumption at increasing levels leads to neuroadaptive
+  changes in brain reward and stress systems'
+- 'Step 2: These neurobiological adaptations result in tolerance development, requiring
+  higher consumption to achieve desired effects'
+- 'Step 3: Continued escalation of consumption establishes patterns of compulsive
+  use and loss of control characteristic of alcohol use disorder'
+- 'Step 4: The dose-response relationship is exponential, with risk of AUD incidence
+  increasing approximately sevenfold at 4 standard drinks per day compared to non-drinkers'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: 'Tessa Carr et al. 2024. "The risk relationships between alcohol
+    consumption, alcohol use disorder and alcohol use disorder mortality: A systematic
+    review and meta-analysis." Addiction.'
+  supporting_citations: []
+description: A systematic review and meta-analysis of 7 studies (plus 2 primary data
+  sources) demonstrates an exponential positive relationship between alcohol consumption
+  levels and AUD incidence. At moderate consumption of 20g/day, AUD risk is nearly
+  3-fold higher than non-drinkers, while at 40g/day the risk increases to 7-fold.
+  This dose-response relationship reflects progressive neuroadaptation and behavioral
+  conditioning that underlies the development of compulsive alcohol use patterns.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 7.14
+    type: relative_risk
+    ci_lower: 5.13
+    ci_upper: 9.93
+  p_value: null
+  sample_size: null
+moderators:
+- name: daily_consumption_level
+  direction: strengthens
+  strength: strong
+  description: Risk relationship is exponential - at 20g/day (about one large beer)
+    risk is nearly threefold; at 40g/day (4 standard drinks) risk is sevenfold compared
+    to non-drinkers

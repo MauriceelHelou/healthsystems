@@ -1,0 +1,50 @@
+id: NEW:restaurant_density_to_NEW:burglary_rate
+name: Restaurant Density → Burglary Rate
+from_node:
+  node_id: NEW:restaurant_density
+  node_name: Restaurant Density
+to_node:
+  node_id: NEW:burglary_rate
+  node_name: Burglary Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher restaurant density creates commercial areas with increased foot traffic and economic
+  activity'
+- 'Step 2: Restaurant districts attract both legitimate patrons and potential offenders'
+- 'Step 3: Cash transactions and valuable equipment in restaurants create targets for theft'
+- 'Step 4: Mixed commercial-residential areas may have reduced informal social control'
+- 'Step 5: Burglary rates are consistently higher in areas with greater restaurant densities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'P. Gruenewald et al. 2023. "Micro-temporal analyses of crime related to alcohol outlets:
+    A comparison of outcomes over weekday, weekend, daytime and nighttime hours.." https://doi.org/10.1111/dar.13644'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior statistical associations
+    across neighbourhoods
+  - Study methodology builds on ecological analyses of outlet-crime relationships
+  - Bayesian space-time models referenced from prior methodological literature
+  doi: 10.1111/dar.13644
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Areas with greater densities of restaurants experience consistently higher burglary rates.
+  Unlike the bar/pub associations with assault and DUI which showed weekend evening specificity, the restaurant-burglary
+  relationship was consistent across all time periods examined.
+quantitative_effects:
+  sample_size: 336
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study conducted in Oakland, California with 336 Census block groups; burglary-restaurant
+    association was consistent across time periods unlike the temporal specificity seen with bar/pub effects
+structural_competency:
+  equity_implications: This finding demonstrates how commercial land use patterns shape crime geography.
+    The consistent temporal pattern (unlike assault/DUI) suggests different mechanisms may be operating
+    - potentially related to commercial targets and routine activities rather than alcohol-related intoxication
+    effects. Understanding these distinct pathways is important for targeted prevention strategies.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.083252'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,57 @@
+id: binge_drinking_to_liver_failure_cirrhosis_hospitalization
+name: Alcohol Consumption → Liver Cirrhosis
+from_node:
+  node_id: binge_drinking
+  node_name: Alcohol Consumption
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Cirrhosis
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Chronic or heavy alcohol consumption leads to repeated hepatic exposure
+  to ethanol and its toxic metabolite acetaldehyde'
+- 'Step 2: Acetaldehyde causes direct hepatocyte injury, oxidative stress, and inflammatory
+  responses in the liver'
+- 'Step 3: Persistent inflammation triggers activation of hepatic stellate cells,
+  leading to excessive collagen deposition and fibrosis'
+- 'Step 4: Progressive fibrosis disrupts normal liver architecture, eventually resulting
+  in cirrhosis with impaired liver function'
+- 'Step 5: Advanced cirrhosis leads to liver failure requiring hospitalization for
+  complications such as ascites, variceal bleeding, or hepatic encephalopathy'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'Laura Llamosas-Falcón et al. 2022. Sex-specific association between
+    alcohol consumption and liver cirrhosis: An updated systematic review and meta-analysis.
+    Frontiers in Gastroenterology.'
+  supporting_citations: []
+description: 'Systematic review and meta-analysis of 24 longitudinal and case-control
+  studies demonstrates a strong positive dose-response relationship between alcohol
+  consumption and liver cirrhosis risk. The relationship is non-linear, with risk
+  increasing exponentially at higher consumption levels. At 80g/day alcohol consumption,
+  relative risk is 7.93 (95% CI: 7.12-8.83) for males and 23.32 (95% CI: 18.24-29.82)
+  for females, indicating females are at substantially higher risk at equivalent consumption
+  levels.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 7.93
+    type: relative_risk
+    ci_lower: 7.12
+    ci_upper: 8.83
+  p_value: null
+  sample_size: 3037329
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Females show substantially higher risk of liver cirrhosis at equivalent
+    alcohol consumption levels compared to males. At 40g/day, females have RR 9.35
+    vs males RR 2.82; at 80g/day, females have RR 23.32 vs males RR 7.93
+- name: dose
+  direction: strengthens
+  strength: strong
+  description: Non-linear dose-response relationship identified - risk increases exponentially
+    with higher daily alcohol consumption

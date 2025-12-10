@@ -1,0 +1,58 @@
+id: NEW:eating_disorder_prevalence_to_suicide_attempt_rate_ed_hospital
+name: Eating Disorder Prevalence → Suicide Attempts
+from_node:
+  node_id: NEW:eating_disorder_prevalence
+  node_name: Eating Disorder Prevalence
+to_node:
+  node_id: suicide_attempt_rate_ed_hospital
+  node_name: Suicide Attempts
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Eating disorders (anorexia nervosa, bulimia nervosa, and other EDs) involve
+  severe psychological distress, emotional dysregulation, and impaired coping mechanisms'
+- 'Step 2: These conditions frequently co-occur with depression, anxiety, sleep problems,
+  and aggression, creating compounding psychological vulnerability'
+- 'Step 3: The psychological distress and comorbid mental health conditions elevate
+  non-suicidal self-injury (40% prevalence) and suicidal ideation (51% prevalence)'
+- 'Step 4: Persistent suicidal ideation and self-harm behaviors increase the likelihood
+  of progressing to suicide attempts (22% prevalence among those with eating disorders)'
+evidence:
+  quality_rating: A
+  n_studies: 52
+  primary_citation: 'S. Amiri and Moien A. B. Khan 2023. "Prevalence of non-suicidal
+    self-injury, suicidal ideation, suicide attempts, suicide mortality in eating
+    disorders: a systematic review and meta-analysis." Eating Disorders.'
+  supporting_citations: []
+description: 'This meta-analysis of 52 studies demonstrates that eating disorders
+  are strongly associated with elevated suicide attempt rates, with 22% prevalence
+  (95% CI: 18-25%) among individuals with eating disorders. The pathway operates through
+  severe psychological distress, emotional dysregulation, and high rates of comorbid
+  psychiatric conditions. Suicidal ideation (51% prevalence) and non-suicidal self-injury
+  (40% prevalence) serve as intermediate steps in the progression toward suicide attempts.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.22
+    type: prevalence
+    ci_lower: 0.18
+    ci_upper: 0.25
+  p_value: null
+  sample_size: null
+moderators:
+- name: Eating disorder subtype
+  direction: strengthens
+  strength: moderate
+  description: Different eating disorder subtypes (anorexia nervosa, bulimia nervosa)
+    show varying prevalence rates of suicide attempts
+- name: Comorbid mental health conditions
+  direction: strengthens
+  strength: strong
+  description: Co-occurring depression, anxiety, sleep problems, and aggression amplify
+    suicide risk in eating disorder populations
+- name: Non-suicidal self-injury history
+  direction: strengthens
+  strength: strong
+  description: High prevalence of NSSI (40%) in ED populations indicates elevated
+    risk pathway to suicide attempts

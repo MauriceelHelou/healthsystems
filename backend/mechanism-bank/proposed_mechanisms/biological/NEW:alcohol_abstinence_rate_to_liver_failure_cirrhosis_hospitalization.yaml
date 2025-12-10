@@ -1,0 +1,57 @@
+id: NEW:alcohol_abstinence_rate_to_liver_failure_cirrhosis_hospitalization
+name: Alcohol Abstinence Rate → Liver Failure/Cirrhosis Hospitalization
+from_node:
+  node_id: NEW:alcohol_abstinence_rate
+  node_name: Alcohol Abstinence Rate
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Failure/Cirrhosis Hospitalization
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol abstinence eliminates ongoing hepatotoxic exposure from ethanol
+  and its metabolites (acetaldehyde), halting direct hepatocyte injury'
+- 'Step 2: Cessation of alcohol consumption reduces oxidative stress, inflammation,
+  and immune activation in liver tissue, allowing hepatic regeneration to occur'
+- 'Step 3: Without continued alcohol-induced damage, progression of fibrosis slows
+  or halts, and in some cases partial reversal of cirrhotic changes may occur'
+- 'Step 4: Improved liver function reduces risk of decompensation events (ascites,
+  variceal bleeding, hepatic encephalopathy) that necessitate hospitalization'
+- 'Step 5: Lower rates of acute-on-chronic liver failure and reduced disease progression
+  decrease liver failure/cirrhosis hospitalization rates'
+evidence:
+  quality_rating: B
+  n_studies: 5
+  primary_citation: 'Fangfang Duan et al. 2023. Systematic review and meta-analysis:
+    Efficacy and safety of baclofen in patients with alcohol use disorder co-morbid
+    liver diseases. Journal of psychiatric research.'
+  supporting_citations: []
+description: Alcohol abstinence reduces liver failure and cirrhosis hospitalization
+  through elimination of ongoing hepatotoxic injury. In patients with alcohol use
+  disorder and co-morbid liver diseases, abstinence rates of 53% were achieved, with
+  higher rates (63%) in those with alcohol-related liver disease specifically. Sustained
+  abstinence halts disease progression and allows for hepatic recovery, reducing hospitalization
+  risk for liver decompensation events.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.53
+    type: proportion_abstinent
+    ci_lower: 0.23
+    ci_upper: 0.84
+  p_value: null
+  sample_size: 322
+moderators:
+- name: Liver disease severity
+  direction: weakens
+  strength: moderate
+  description: Patients with cirrhosis showed 55% abstinence rate compared to 63%
+    in those with alcohol-related liver disease without cirrhosis, suggesting more
+    severe disease may moderate abstinence-related benefits
+- name: Type of liver disease
+  direction: strengthens
+  strength: weak
+  description: Patients with alcohol-related liver disease showed higher abstinence
+    rates (63%) compared to overall population (53%), suggesting direct alcohol etiology
+    may strengthen the protective effect of abstinence

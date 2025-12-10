@@ -1,0 +1,58 @@
+id: NEW:telehealth_aud_treatment_access_to_NEW:aud_medication_coverage_duration
+name: Telehealth AUD Treatment Access → AUD Medication Coverage Duration
+from_node:
+  node_id: NEW:telehealth_aud_treatment_access
+  node_name: Telehealth AUD Treatment Access
+to_node:
+  node_id: NEW:aud_medication_coverage_duration
+  node_name: AUD Medication Coverage Duration
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Telehealth enables more frequent provider contact for medication management'
+- 'Step 2: Reduced barriers to follow-up visits improve medication monitoring and adjustment'
+- 'Step 3: Sustained provider engagement supports continued medication prescribing'
+- 'Step 4: Longer medication coverage duration achieved through reduced structural barriers to care'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Perumalswami et al. 2024. "Telehealth and delivery of alcohol use disorder treatment
+    in the Veterans Health Administration.." https://doi.org/10.1111/acer.15305
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1111/acer.15305
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Receiving any AUD telehealth was associated with longer medication coverage days compared
+  to only in-person care, indicating telehealth supports treatment continuity for pharmacotherapy
+quantitative_effects:
+  sample_size: 138619
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Mixed-effects models adjusted for facility-level clustering, indicating geographic
+    and facility-level variation in outcomes
+moderators:
+- name: gender
+  direction: weakens
+  strength: moderate
+  description: Male patients were less likely to receive any telehealth-delivered AUD treatment
+- name: opioid_use_disorder_comorbidity
+  direction: weakens
+  strength: moderate
+  description: Patients with opioid use disorder were less likely to receive telehealth AUD treatment
+- name: stimulant_use_disorder_comorbidity
+  direction: weakens
+  strength: moderate
+  description: Patients with stimulant use disorder were less likely to receive telehealth AUD treatment
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare delivery modality acts as a structural
+    determinant of treatment duration. The association between telehealth and longer medication coverage
+    suggests that in-person-only requirements create barriers that limit treatment duration. Medication
+    treatment for AUD is evidence-based but underutilized; telehealth may address access barriers at the
+    systems level.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.727924'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

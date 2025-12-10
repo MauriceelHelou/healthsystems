@@ -1,0 +1,39 @@
+id: masld_diagnostic_criteria_to_liver_disease_diagnosis_concordance
+name: MASLD Diagnostic Criteria Requiring Cardiometabolic Risk Factors → Liver Disease
+  Diagnosis and Clinical Classification
+from_node:
+  node_id: masld_diagnostic_criteria
+  node_name: MASLD Diagnostic Criteria Requiring Cardiometabolic Risk Factors
+to_node:
+  node_id: liver_disease_diagnosis_concordance
+  node_name: Liver Disease Diagnosis and Clinical Classification
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: New MASLD diagnostic criteria require presence of at least one cardiometabolic
+  risk factor (BMI ≥25 kg/m², type 2 diabetes, hypertension, dyslipidemia, etc.)'
+- 'Step 2: 99% of NAFLD database patients and 94.71% of NHANES NAFLD participants
+  met MASLD criteria, showing high concordance (Cohen''s kappa 0.968, 95% CI 0.962-0.973)'
+- 'Step 3: High concordance between diagnostic frameworks allows interchangeable use
+  of NAFLD and MASLD evidence base for clinical decision-making and risk stratification'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Zobair M Younossi et al. 2024. "Clinical profiles and mortality
+    rates are similar for metabolic dysfunction-associated steatotic liver disease
+    and non-alcoholic fatty liver disease.." *Journal of hepatology*. https://doi.org/10.1016/j.jhep.2024.01.014
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.621272'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: bmi_threshold
+  direction: strengthens
+  strength: strong
+  description: 95% of NAFLD patients met MASLD criteria on BMI criterion alone, indicating
+    BMI is a dominant cardiometabolic marker
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/masld_diagnostic_criteria_to_liver_disease_diagnosis_concordance.yaml
+_category: healthcare_access

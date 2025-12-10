@@ -1,0 +1,46 @@
+id: alcohol_use_disorder_to_cognitive_impairment
+name: Alcohol Use Disorder → Cognitive Impairment
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: cognitive_impairment
+  node_name: Cognitive Impairment
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol use disorder leads to thiamine deficiency through multiple pathways
+  (impaired absorption, increased utilization, reduced intake)'
+- 'Step 2: Thiamine deficiency impairs neuronal energy metabolism and glucose utilization
+  in brain'
+- 'Step 3: Neuronal dysfunction and structural damage occur in memory and cognitive
+  centers'
+- 'Step 4: Cognitive decline manifests, particularly in memory performance, if thiamine
+  deficiency is not corrected'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Stephan Listabarth et al. 2023. "Can thiamine substitution restore
+    cognitive function in alcohol use disorder?." *Alcohol and alcoholism (Oxford,
+    Oxfordshire)*. https://doi.org/10.1093/alcalc/agad017
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.342763'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: thiamine_supplementation_access
+  direction: weakens
+  strength: strong
+  description: Access to timely thiamine substitution prevents cognitive decline progression
+- name: aud_severity
+  direction: strengthens
+  strength: moderate
+  description: More severe AUD associated with greater risk of thiamine deficiency
+    and cognitive impairment
+- name: treatment_engagement
+  direction: weakens
+  strength: moderate
+  description: Engagement in alcohol withdrawal treatment with thiamine supplementation
+    interrupts pathway to cognitive impairment

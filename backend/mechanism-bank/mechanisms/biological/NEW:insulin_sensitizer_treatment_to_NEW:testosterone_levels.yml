@@ -1,0 +1,48 @@
+id: NEW:insulin_sensitizer_treatment_to_NEW:testosterone_levels
+name: Insulin Sensitizer Treatment → Testosterone Levels
+from_node:
+  node_id: NEW:insulin_sensitizer_treatment
+  node_name: Insulin Sensitizer Treatment
+to_node:
+  node_id: NEW:testosterone_levels
+  node_name: Testosterone Levels
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Insulin sensitizers administered to PCOS patients'
+- 'Step 2: Reduced hyperinsulinemia decreases ovarian androgen production'
+- 'Step 3: Lower insulin levels reduce hepatic SHBG suppression'
+- 'Step 4: Circulating testosterone levels decrease improving androgenic profile'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'Fabio Facchinetti et al. 2019. "Short-term effects of metformin and myo-inositol
+    in women with polycystic ovarian syndrome (PCOS): a meta-analysis of randomized clinical trials.."
+    https://doi.org/10.1080/09513590.2018.1540578'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 6 RCTs comparing MET to MI
+  - Studies conducted from 1994-2017 identified via MEDLINE, Cochrane Library, PubMed
+  - Individual study citations available in full-text systematic review
+  doi: 10.1080/09513590.2018.1540578
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'No significant difference between metformin and myo-inositol on testosterone levels (SMD=-0.01,
+  95% CI: -0.24-0.21, p=.922), showing equivalent androgenic effects in PCOS treatment.'
+quantitative_effects:
+  effect_size:
+    value: -0.01
+    type: standardized_mean_difference
+    ci_lower: -0.24
+    ci_upper: 0.21
+  p_value: 0.922
+  sample_size: 355
+structural_competency:
+  equity_implications: Equivalent efficacy on testosterone levels means women can achieve similar hormonal
+    benefits regardless of which treatment they can access, reducing disparities related to prescription
+    medication access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.987059'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

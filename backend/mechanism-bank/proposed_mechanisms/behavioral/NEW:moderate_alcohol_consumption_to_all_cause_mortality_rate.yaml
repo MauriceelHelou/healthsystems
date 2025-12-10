@@ -1,0 +1,58 @@
+id: NEW:moderate_alcohol_consumption_to_all_cause_mortality_rate
+name: Moderate Alcohol Consumption (AUDIT 1-7) → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:moderate_alcohol_consumption
+  node_name: Moderate Alcohol Consumption (AUDIT 1-7)
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Moderate alcohol consumption (AUDIT-10 score 1-7 or AUDIT-C score 1-3)
+  reflects low-risk drinking patterns that avoid harmful physiological effects of
+  heavy alcohol use'
+- 'Step 2: This consumption level may confer cardiovascular benefits through improved
+  lipid profiles and reduced platelet aggregation compared to abstention, while avoiding
+  toxic effects of higher consumption'
+- 'Step 3: The apparent protective effect results in lower all-cause mortality risk
+  compared to past-year abstainers, though this association varies by population and
+  may be partially confounded by former drinkers among abstainers'
+evidence:
+  quality_rating: A
+  n_studies: 7
+  primary_citation: 'Kuitunen-Paul S, Roerecke M. Alcohol Use Disorders Identification
+    Test (AUDIT) and mortality risk: a systematic review and meta-analysis. Journal
+    of Epidemiology and Community Health. 2018.'
+  supporting_citations: []
+description: Moderate alcohol consumption (AUDIT-10 score 1-7) is associated with
+  reduced all-cause mortality risk compared to abstention, with a 25% lower mortality
+  risk observed in US Veterans populations. However, this association may be partially
+  confounded by the inclusion of former drinkers (who may have stopped drinking due
+  to health problems) in the abstainer reference group. The effect was not replicated
+  in general population-based studies, suggesting limited generalizability.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.75
+    type: relative_risk
+    ci_lower: 0.71
+    ci_upper: 0.79
+  p_value: null
+  sample_size: 309991
+moderators:
+- name: Population type
+  direction: strengthens
+  strength: strong
+  description: The protective effect was observed primarily in US Veterans populations
+    but not replicated in general population-based studies
+- name: Sex
+  direction: weakens
+  strength: moderate
+  description: Data for women were scarce; most evidence came from studies among men
+- name: Former drinker prevalence
+  direction: strengthens
+  strength: moderate
+  description: Higher prevalence of former drinkers among abstainers may inflate the
+    apparent protective effect of moderate drinking

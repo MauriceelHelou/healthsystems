@@ -1,0 +1,67 @@
+id: permanent_supportive_housing_units_to_all_cause_mortality_rate
+name: Permanent Supportive Housing (Housing First) → All-Cause Mortality Rate
+from_node:
+  node_id: permanent_supportive_housing_units
+  node_name: Permanent Supportive Housing (Housing First)
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Permanent Supportive Housing (Housing First) provides stable housing without
+  requiring ''housing readiness'' prerequisites such as sobriety or psychiatric treatment
+  compliance'
+- 'Step 2: Stable housing reduces exposure to environmental health hazards, violence,
+  and extreme weather conditions associated with street homelessness'
+- 'Step 3: Housing stability facilitates consistent access to integrated health, mental
+  health, and substance use support services'
+- 'Step 4: Improved healthcare access leads to better management of chronic conditions
+  (e.g., HIV viral load reduced by 22%, depression reduced by 13%)'
+- 'Step 5: Reduced emergency department use (41% reduction) and hospitalization (36%
+  reduction) indicates transition from crisis care to preventive care'
+- 'Step 6: Combined improvements in physical health, mental health, and reduced crisis
+  utilization result in decreased mortality (37% reduction observed in HIV population)'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'Yinan Peng et al. 2020. Permanent Supportive Housing With Housing
+    First to Reduce Homelessness and Promote Health Among Homeless Populations With
+    Disability: A Community Guide Systematic Review. Journal of Public Health Management
+    and Practice.'
+  supporting_citations: []
+description: Permanent Supportive Housing using a Housing First approach reduces all-cause
+  mortality by providing stable housing without treatment prerequisites, enabling
+  consistent healthcare access, reducing emergency healthcare utilization, and improving
+  management of chronic conditions. A systematic review of 26 studies found 37% mortality
+  reduction among HIV-positive homeless individuals, with parallel improvements in
+  viral load (22% reduction), depression (13% reduction), emergency department use
+  (41% reduction), and hospitalization (36% reduction).
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.63
+    type: relative_risk
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: HIV status
+  direction: strengthens
+  strength: strong
+  description: Mortality reduction of 37% was specifically documented for clients
+    living with HIV infection, suggesting stronger effects for populations with serious
+    chronic health conditions
+- name: Disability status
+  direction: strengthens
+  strength: moderate
+  description: Programs specifically target homeless populations with disabilities,
+    who may have greater health vulnerabilities and therefore larger mortality benefits
+    from housing stability
+- name: Integration of supportive services
+  direction: strengthens
+  strength: moderate
+  description: Housing First programs with integrated health, mental health, and substance
+    use services show greater health improvements than housing alone

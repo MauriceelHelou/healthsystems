@@ -1,0 +1,42 @@
+id: family_history_genetic_syndromes_to_pancreatic_cancer_risk
+name: Family History and Genetic Syndromes → Pancreatic Cancer Risk
+from_node:
+  node_id: family_history_genetic_syndromes
+  node_name: Family History and Genetic Syndromes
+to_node:
+  node_id: pancreatic_cancer_risk
+  node_name: Pancreatic Cancer Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inherited germline mutations in cancer susceptibility genes (BRCA1/2, PALB2,
+  Lynch syndrome genes, familial pancreatitis genes) are transmitted through families'
+- 'Step 2: These genetic variants impair DNA repair mechanisms, cell cycle regulation,
+  or increase susceptibility to pancreatic inflammation'
+- 'Step 3: Carriers have reduced capacity to repair spontaneous DNA damage or damage
+  from environmental exposures'
+- 'Step 4: Accumulated genetic damage over time significantly increases lifetime risk
+  of pancreatic malignancy'
+evidence:
+  quality_rating: C
+  n_studies: null
+  primary_citation: 'Carl Bryce and Merima Bucaj 2024. "Pancreatic Cancer: Rapid Evidence
+    Review.." *American family physician*.'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.213408'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: modifiable_risk_factors
+  direction: strengthens
+  strength: strong
+  description: Individuals with genetic susceptibility who are also exposed to smoking,
+    heavy alcohol use, or obesity may have substantially elevated risk through gene-environment
+    interactions
+- name: screening_access
+  direction: weakens
+  strength: moderate
+  description: Access to screening for high-risk individuals can enable earlier detection
+    and potentially better outcomes

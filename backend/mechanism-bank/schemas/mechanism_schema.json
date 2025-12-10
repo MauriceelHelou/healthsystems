@@ -1,0 +1,147 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Causal Mechanism Schema",
+  "description": "Schema for validating causal mechanism data",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "category",
+    "mechanism_type",
+    "effect_size",
+    "evidence",
+    "last_updated",
+    "version"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "description": "Unique identifier (snake_case)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the mechanism"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "built_environment",
+        "social_environment",
+        "economic",
+        "political",
+        "biological"
+      ]
+    },
+    "mechanism_type": {
+      "type": "string",
+      "enum": [
+        "biological",
+        "psychological",
+        "social",
+        "environmental",
+        "economic",
+        "political"
+      ]
+    },
+    "effect_size": {
+      "type": "object",
+      "required": ["measure", "point_estimate", "confidence_interval", "unit"],
+      "properties": {
+        "measure": {
+          "type": "string",
+          "enum": [
+            "odds_ratio",
+            "relative_risk",
+            "hazard_ratio",
+            "standardized_mean_difference",
+            "correlation",
+            "beta_coefficient",
+            "percentage_change"
+          ]
+        },
+        "point_estimate": {
+          "type": "number"
+        },
+        "confidence_interval": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "unit": {
+          "type": "string"
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["quality_rating", "n_studies", "citation"],
+      "properties": {
+        "quality_rating": {
+          "type": "string",
+          "enum": ["A", "B", "C"]
+        },
+        "n_studies": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "citation": {
+          "type": "string",
+          "minLength": 10
+        }
+      }
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+$"
+    },
+    "validated_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "type": "string"
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "moderators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "direction", "strength"],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "direction": {
+            "type": "string",
+            "enum": ["positive", "negative", "u_shaped"]
+          },
+          "strength": {
+            "type": "string",
+            "enum": ["weak", "moderate", "strong"]
+          }
+        }
+      }
+    }
+  }
+}

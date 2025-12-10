@@ -1,0 +1,61 @@
+id: NEW:psychosocial_therapy_access_barriers_to_NEW:ptsd_sud_treatment_gap
+name: Psychosocial Therapy Access Barriers → PTSD-SUD Treatment Gap
+from_node:
+  node_id: NEW:psychosocial_therapy_access_barriers
+  node_name: Psychosocial Therapy Access Barriers
+to_node:
+  node_id: NEW:ptsd_sud_treatment_gap
+  node_name: PTSD-SUD Treatment Gap
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Psychosocial therapies are currently the only specifically recommended treatments for co-occurring
+  PTSD and SUD'
+- 'Step 2: These therapies face numerous structural barriers to access including availability, cost, time
+  requirements, and workforce shortages'
+- 'Step 3: Engagement barriers include stigma, transportation, scheduling conflicts, and treatment complexity'
+- 'Step 4: Limited treatment options result in untreated or undertreated co-occurring conditions with
+  worse outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'Megan Swannell et al. 2025. "Pharmacological treatments for co-occurring PTSD and
+    substance use disorders: A systematic review.." https://doi.org/10.1016/j.josat.2024.209601'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review methodology
+  - Review encompasses RCTs, observational studies, case-control, and cohort studies
+  - 16 pharmacotherapies examined across 29 included studies
+  doi: 10.1016/j.josat.2024.209601
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The review identifies that currently only psychosocial therapies are specifically recommended
+  for co-occurring PTSD and SUD, but these face 'numerous barriers to access and engagement.' This creates
+  a treatment gap that pharmacological options could help address.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Access barriers likely vary significantly by geography, with rural areas having fewer
+    mental health and addiction specialists, and civilian populations having different access patterns
+    than veterans with VA healthcare
+moderators:
+- name: civilian_vs_veteran_status
+  direction: strengthens
+  strength: strong
+  description: Civilian populations may face greater access barriers than veterans who have access to
+    VA healthcare system; review calls for more civilian-focused research
+- name: substance_type
+  direction: strengthens
+  strength: moderate
+  description: Review notes majority of studies focused on alcohol use disorders, with less evidence for
+    other SUDs potentially reflecting treatment system gaps
+structural_competency:
+  equity_implications: This mechanism highlights healthcare system inadequacy as a structural determinant
+    of health outcomes. The treatment gap is not due to individual non-compliance but to systemic barriers
+    in treatment availability and accessibility. The review explicitly calls for expanded pharmacological
+    options to address these structural barriers, recognizing that relying solely on therapy-based approaches
+    creates inequitable access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.733852'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

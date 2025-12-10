@@ -1,0 +1,41 @@
+id: unemployment_rate_to_firearm_assault_injury
+name: Proportion of Civilian Labor Force Unemployed → Firearm Assault Injury
+from_node:
+  node_id: unemployment_rate
+  node_name: Proportion of Civilian Labor Force Unemployed
+to_node:
+  node_id: firearm_assault_injury
+  node_name: Firearm Assault Injury
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Labor market discrimination and structural barriers create spatially concentrated
+  unemployment'
+- 'Step 2: Lack of employment reduces household income and economic stability in affected
+  areas'
+- 'Step 3: Unemployment concentration signals areas with limited job opportunities
+  and economic mobility'
+- 'Step 4: Economic insecurity and loss of social connectedness through work increase
+  community stress'
+- 'Step 5: These structural conditions create environments vulnerable to violence
+  and firearm injury'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Kimberly Dalve et al. 2021. "Neighborhood disadvantage and firearm
+    injury: does shooting location matter?." *Injury Epidemiology*. https://doi.org/10.1186/s40621-021-00304-2'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.865727'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: proximity_to_employment_opportunities
+  direction: weakens
+  strength: moderate
+  description: High-disadvantage areas with proximity to employment showed lower firearm
+    injury counts, suggesting geographic access to jobs provides protection
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/economic/unemployment_rate_to_firearm_assault_injury.yaml
+_category: economic

@@ -1,0 +1,49 @@
+id: sars_cov_2_infection_to_pediatric_pasc_symptoms
+name: SARS-CoV-2 Infection → Pediatric Post-Acute Sequelae of SARS-CoV-2 (PASC) Symptoms
+from_node:
+  node_id: sars_cov_2_infection
+  node_name: SARS-CoV-2 Infection
+to_node:
+  node_id: pediatric_pasc_symptoms
+  node_name: Pediatric Post-Acute Sequelae of SARS-CoV-2 (PASC) Symptoms
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: SARS-CoV-2 infection occurs in children and adolescents, initiating immune
+  and inflammatory responses'
+- 'Step 2: Viral infection triggers persistent multi-system pathophysiological changes
+  affecting neurological, gastrointestinal, sensory, and other organ systems'
+- 'Step 3: These systemic changes manifest as prolonged symptoms across multiple domains
+  including neurocognitive function, pain, fatigue, and sensory alterations'
+- 'Step 4: Symptom persistence extends well beyond acute infection phase (median 506-556
+  days), affecting quality of life and overall health status'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Rachel S Gross et al. 2024. "Characterizing Long COVID in Children
+    and Adolescents.." *JAMA*. https://doi.org/10.1001/jama.2024.12747
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.974817'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: age_group
+  direction: modifies_presentation
+  strength: strong
+  description: School-age children (6-11 years) showed 4 unique symptoms not present
+    in adolescents, while adolescents (12-17 years) showed 3 unique symptoms. Symptom
+    clustering patterns differed with 4 phenotypes in school-age children versus 3
+    in adolescents. Symptom profiles emphasize neurocognitive, pain, and gastrointestinal
+    symptoms in school-age children but change or loss in smell/taste, pain, and fatigue/malaise
+    in adolescents.
+- name: time_since_infection
+  direction: persistence
+  strength: moderate
+  description: Median time between first infection and symptom survey was 506 days
+    for school-age children and 556 days for adolescents, indicating prolonged symptom
+    duration extending well beyond acute infection phase
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/sars_cov_2_infection_to_pediatric_pasc_symptoms.yaml
+_category: biological

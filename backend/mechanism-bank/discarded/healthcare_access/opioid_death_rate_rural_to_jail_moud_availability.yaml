@@ -1,0 +1,40 @@
+id: opioid_death_rate_rural_to_jail_moud_availability
+name: Rural County Opioid Death Rate → Jail MOUD Availability
+from_node:
+  node_id: opioid_death_rate_rural
+  node_name: Rural County Opioid Death Rate
+to_node:
+  node_id: jail_moud_availability
+  node_name: Jail MOUD Availability
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Rural counties experience higher and increasing rates of opioid-related
+  deaths compared to urban counties'
+- 'Step 2: Rural areas have fewer healthcare providers, addiction specialists, and
+  treatment facilities per capita'
+- 'Step 3: Rural jails reflect community-wide healthcare infrastructure deficits and
+  lack specialized addiction treatment resources'
+- 'Step 4: Despite greater need based on opioid death rates, rural jails are significantly
+  less likely to offer MOUD, creating treatment-need mismatch'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Kelley N Benck et al. 2023. "United States county jail treatment
+    and care of pregnant incarcerated persons with opioid use disorder.." *Drug and
+    alcohol dependence*. https://doi.org/10.1016/j.drugalcdep.2023.109863
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.399786'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: healthcare_infrastructure_rural
+  direction: strengthens
+  strength: strong
+  description: Limited rural healthcare infrastructure amplifies the negative relationship
+    between need and treatment availability
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/opioid_death_rate_rural_to_jail_moud_availability.yaml
+_category: healthcare_access

@@ -1,0 +1,68 @@
+id: NEW:mental_health_disorder_prevalence_to_homelessness_rate
+name: Mental Health Disorder Prevalence → Homelessness Rate
+from_node:
+  node_id: NEW:mental_health_disorder_prevalence
+  node_name: Mental Health Disorder Prevalence
+to_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Mental health disorders impair cognitive functioning, decision-making,
+  and ability to maintain employment, reducing income stability and financial resources'
+- 'Step 2: Symptoms of mental health disorders (including substance use disorders,
+  depression, schizophrenia, bipolar disorder) compromise capacity to maintain social
+  relationships and support networks that could prevent housing loss'
+- 'Step 3: Behavioral manifestations of untreated mental disorders may lead to conflicts
+  with landlords, family members, or roommates, resulting in eviction or loss of housing
+  arrangements'
+- 'Step 4: Mental health disorders create barriers to navigating housing systems,
+  completing applications, and meeting tenancy requirements, increasing vulnerability
+  to housing instability'
+- 'Step 5: Lack of coordinated mental health, social, and housing services results
+  in individuals with mental disorders falling through gaps in the social safety net,
+  culminating in homelessness'
+evidence:
+  quality_rating: A
+  n_studies: 85
+  primary_citation: 'Rebecca Barry et al. 2024. "Prevalence of Mental Health Disorders
+    Among Individuals Experiencing Homelessness: A Systematic Review and Meta-Analysis."
+    JAMA psychiatry.'
+  supporting_citations: []
+description: Mental health disorders substantially increase the risk of experiencing
+  homelessness through multiple pathways including impaired functioning, reduced employment
+  capacity, compromised social relationships, and barriers to navigating housing systems.
+  The meta-analysis found that 67% of people experiencing homelessness have current
+  mental health disorders and 77% have lifetime prevalence, far exceeding general
+  population rates. This bidirectional relationship is acknowledged, where homelessness
+  may also exacerbate mental health conditions, but the high prevalence of pre-existing
+  disorders indicates mental health as a significant driver of housing instability.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.67
+    type: prevalence
+    ci_lower: 0.55
+    ci_upper: 0.77
+  p_value: null
+  sample_size: 48414
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Male individuals exhibited significantly higher lifetime prevalence
+    of mental health disorders (86%) compared to female individuals (69%) among those
+    experiencing homelessness
+- name: disorder_type
+  direction: strengthens
+  strength: strong
+  description: 'Specific disorders show varying prevalence: substance use disorder
+    (44%), antisocial personality disorder (26%), major depression (19%), schizophrenia
+    (7%), bipolar disorder (8%)'
+- name: lifetime_vs_current
+  direction: strengthens
+  strength: moderate
+  description: Lifetime prevalence (77%) is higher than current prevalence (67%),
+    suggesting cumulative mental health burden contributes to homelessness risk

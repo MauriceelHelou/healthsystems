@@ -1,0 +1,53 @@
+id: sud_treatment_capacity_shortage_to_NEW:kratom_use_self_medication
+name: SUD Treatment Capacity Shortage → Kratom Use for Self-Medication
+from_node:
+  node_id: sud_treatment_capacity_shortage
+  node_name: SUD Treatment Capacity Shortage
+to_node:
+  node_id: NEW:kratom_use_self_medication
+  node_name: Kratom Use for Self-Medication
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Many patients lack access to conventional SUD treatment due to capacity limitations'
+- 'Step 2: Perceived stigma and reluctance to seek formal care further reduce treatment uptake'
+- 'Step 3: Some individuals may not desire complete cessation of substance use'
+- 'Step 4: These barriers drive individuals toward unregulated harm reduction alternatives like kratom'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: MeShell Green et al. 2024. "Kratom as a potential substance use disorder harm reduction
+    agent." https://doi.org/10.3389/fpubh.2024.1416689
+  supporting_citations:
+  - Description of treatment access barriers (stated in abstract)
+  - Discussion of stigma as barrier to care (stated in abstract)
+  - Additional citations require full-text access
+  doi: 10.3389/fpubh.2024.1416689
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Structural barriers to conventional SUD treatment including limited access, stigma, and abstinence-only
+  approaches drive individuals toward unregulated alternatives like kratom
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Treatment access varies significantly by region in the US; kratom has historical use
+    in Southeast Asia where treatment infrastructure differs
+moderators:
+- name: stigma_perception
+  direction: strengthens
+  strength: moderate
+  description: Higher perceived stigma around SUD treatment increases use of alternative approaches
+- name: abstinence_preference
+  direction: strengthens
+  strength: moderate
+  description: Individuals not desiring complete abstinence may prefer harm reduction approaches
+structural_competency:
+  equity_implications: This mechanism centers structural failures in the healthcare system—treatment capacity
+    shortages, stigmatizing care environments, and lack of harm reduction options—rather than blaming
+    individuals for seeking alternatives. The root cause is systemic underinvestment in SUD treatment
+    infrastructure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.129196'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,53 @@
+id: prenatal_alcohol_exposure_to_infant_baseline_heart_rate
+name: Prenatal Alcohol Exposure → Infant Baseline Heart Rate
+from_node:
+  node_id: prenatal_alcohol_exposure
+  node_name: Prenatal Alcohol Exposure
+to_node:
+  node_id: infant_baseline_heart_rate
+  node_name: Infant Baseline Heart Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Prenatal alcohol exposure occurs during fetal development affecting cardiovascular
+  system formation'
+- 'Step 2: Alcohol crosses placental barrier and affects fetal cardiac development
+  and autonomic nervous system'
+- 'Step 3: Developmental changes result in altered cardiac function measurable as
+  elevated baseline heart rate in infancy'
+evidence:
+  quality_rating: C
+  n_studies: 6
+  primary_citation: 'Peyton McDonnell et al. 2023. "Baseline heart rate in infants
+    with prenatal alcohol exposure: A systematic review and independent analysis.."
+    *Birth defects research*. https://doi.org/10.1002/bdr2.2135'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.680740'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: age_at_heart_rate_measurement
+  direction: weakens
+  strength: strong
+  description: When controlling for precise age at measurement using individual patient
+    data, the elevated heart rate finding was nullified, with age-matched infants
+    showing similar baseline heart rates regardless of PAE (p > 0.05)
+- name: gestational_age_at_birth
+  direction: weakens
+  strength: moderate
+  description: When restricting analysis to full-term infants (excluding premature
+    births), differences in baseline heart rate between PAE and control groups were
+    eliminated
+- name: birth_weight_for_gestational_age
+  direction: weakens
+  strength: moderate
+  description: When excluding infants who were small for gestational age, differences
+    in baseline heart rate between PAE and control groups were no longer observed
+- name: control_group_selection
+  direction: strengthens
+  strength: moderate
+  description: Studies with control infants showed elevated heart rate in PAE group,
+    but few studies included appropriate control groups, limiting the strength of
+    this finding

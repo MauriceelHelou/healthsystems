@@ -1,0 +1,64 @@
+id: child_welfare_system_involvement_rate_to_NEW:sud_treatment_retention_90_days_pregnant_postpartum
+name: Child Welfare System Involvement Rate → SUD Treatment Retention ≥90 Days (Pregnant/Postpartum Women)
+from_node:
+  node_id: child_welfare_system_involvement_rate
+  node_name: Child Welfare System Involvement Rate
+to_node:
+  node_id: NEW:sud_treatment_retention_90_days_pregnant_postpartum
+  node_name: SUD Treatment Retention ≥90 Days (Pregnant/Postpartum Women)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Active CPS involvement creates external accountability structure requiring demonstrated treatment
+  engagement'
+- 'Step 2: Women with CPS cases face potential custody consequences providing motivation for treatment
+  adherence'
+- 'Step 3: CPS involvement may facilitate access to wraparound services and case management support'
+- 'Step 4: Extended treatment duration (≥90 days) allows for stabilization and development of recovery
+  skills'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Darien Colson-Fearon et al. 2023. "The Impact of Child Protective Services Involvement
+    on Pregnant and Postpartum Women in Substance Use Disorder Treatment." https://doi.org/10.1080/10826084.2023.2212074
+  supporting_citations:
+  - Additional citations require full-text access - abstract references treatment retention literature
+    for pregnant women with SUD
+  - Additional citations require full-text access - abstract references CPS involvement effects on treatment
+    outcomes
+  - Additional citations require full-text access - abstract references Center for Addiction and Pregnancy
+    program data
+  doi: 10.1080/10826084.2023.2212074
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Active CPS involvement during SUD treatment admission was significantly associated with increased
+  likelihood of spending at least 90 days in treatment among pregnant and postpartum women. Women with
+  active CPS cases were 78% more likely to remain in treatment for the recommended minimum duration compared
+  to those without CPS involvement.
+quantitative_effects:
+  effect_size:
+    value: 1.78
+    type: odds_ratio
+    ci_lower: 1.09
+    ci_upper: 2.93
+  sample_size: 127
+moderators:
+- name: pregnancy_postpartum_status
+  direction: strengthens
+  strength: moderate
+  description: Study population specifically pregnant and postpartum women, who may have heightened motivation
+    related to child welfare concerns
+structural_competency:
+  equity_implications: This mechanism highlights the complex relationship between child welfare systems
+    and healthcare. While CPS involvement appears to support treatment retention, this must be understood
+    within a structural context where pregnant women with SUD face criminalization and family separation.
+    The finding suggests that system involvement can provide scaffolding for treatment engagement, but
+    raises questions about whether punitive threat versus supportive services drive this effect. Equity
+    implications include potential differential CPS involvement by race and socioeconomic status, which
+    could create disparate treatment pathways.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.786469'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

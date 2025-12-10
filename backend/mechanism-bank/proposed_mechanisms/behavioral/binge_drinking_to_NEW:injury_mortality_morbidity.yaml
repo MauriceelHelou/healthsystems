@@ -1,0 +1,50 @@
+id: binge_drinking_to_NEW:injury_mortality_morbidity
+name: Volume of Alcohol Use / Blood Alcohol Concentration → Injury Mortality and Morbidity
+from_node:
+  node_id: binge_drinking
+  node_name: Volume of Alcohol Use / Blood Alcohol Concentration
+to_node:
+  node_id: NEW:injury_mortality_morbidity
+  node_name: Injury Mortality and Morbidity
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption leads to elevated blood alcohol concentration (BAC),
+  which impairs cognitive function, motor coordination, reaction time, and judgment'
+- 'Step 2: Impaired psychomotor and cognitive abilities increase the likelihood of
+  accidents, falls, motor vehicle crashes, and risk-taking behaviors'
+- 'Step 3: These alcohol-impaired states result in increased incidence of both intentional
+  and unintentional injuries'
+- 'Step 4: Higher severity and frequency of injuries lead to increased injury-related
+  mortality and morbidity across multiple ICD-10 categories'
+evidence:
+  quality_rating: A
+  n_studies: 255
+  primary_citation: Jürgen Rehm et al. 2017. The relationship between different dimensions
+    of alcohol use and the burden of disease-an update. Addiction (Abingdon, England).
+  supporting_citations: []
+description: This systematic review of 255 reviews and meta-analyses establishes that
+  alcohol use is causally linked to injury mortality and morbidity. Blood alcohol
+  concentration is identified as the most critical dimension of alcohol exposure for
+  injury outcomes (except suicide). The relationship is dose-responsive, with higher
+  alcohol consumption leading to greater injury risk. More than 40 ICD-10 three-digit
+  categories are fully attributable to alcohol, with injuries representing a major
+  category of alcohol-related harm.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Blood alcohol concentration level
+  direction: strengthens
+  strength: strong
+  description: For injuries (except suicide), blood alcohol concentration was identified
+    as the most important dimension of alcohol use affecting injury risk
+- name: Heavy drinking occasions
+  direction: strengthens
+  strength: moderate
+  description: Biological pathways suggest heavy drinking occasions have additional
+    impact on injury risk beyond average volume
+- name: Injury type
+  direction: varies
+  strength: moderate
+  description: Different injury categories show varying relationships with alcohol;
+    suicide shows distinct patterns compared to other injuries

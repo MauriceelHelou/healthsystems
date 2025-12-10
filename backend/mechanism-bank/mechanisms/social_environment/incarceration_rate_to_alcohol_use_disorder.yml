@@ -1,0 +1,65 @@
+id: incarceration_rate_to_alcohol_use_disorder
+name: Incarceration Rate → Alcohol Use Disorder
+from_node:
+  node_id: incarceration_rate
+  node_name: Incarceration Rate
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Limited substance use treatment infrastructure in LMICs results in criminalization rather than
+  treatment of alcohol use disorders'
+- 'Step 2: Alcohol-related offenses and behaviors increase likelihood of incarceration'
+- 'Step 3: Prison systems lack adequate detoxification and treatment services'
+- 'Step 4: Incarceration disrupts any existing treatment relationships and support systems'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: 'Gergő Baranyi et al. 2019. "Severe mental illness and substance use disorders in
+    prisoners in low-income and middle-income countries: a systematic review and meta-analysis of prevalence
+    studies.." https://doi.org/10.1016/S2214-109X(18)30539-4'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 23 publications
+  - Global Burden of Diseases 2016 database used for population-level comparisons
+  - 13 LMICs represented in the evidence base
+  doi: 10.1016/S2214-109X(18)30539-4
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol use disorder prevalence among prisoners in LMICs is 3.8% (95% CI 1.2-7.6), approximately
+  double that of general populations. Geographic variation shows higher rates in Southeast Asia versus
+  Eastern Mediterranean regions.
+quantitative_effects:
+  effect_size:
+    value: 2.0
+    type: relative_risk
+  sample_size: 14527
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Prevalence of alcohol use disorders was higher in the Southeast Asian region than in
+    the Eastern Mediterranean region, reflecting cultural and policy differences in alcohol availability
+    and criminalization
+moderators:
+- name: geographic_region
+  direction: strengthens
+  strength: strong
+  description: Southeast Asian region showed higher prevalence than Eastern Mediterranean region, likely
+    reflecting differential alcohol policies and cultural factors
+- name: prison_intake_timing
+  direction: strengthens
+  strength: moderate
+  description: Increased prevalence at prison intake suggests active alcohol use disorders are common
+    among those entering the justice system
+structural_competency:
+  equity_implications: The geographic variation in alcohol use disorder prevalence reflects differential
+    alcohol policies - countries with stricter alcohol prohibition (Eastern Mediterranean) show lower
+    prisoner prevalence. This demonstrates how policy environments shape both substance use patterns and
+    criminalization. The treatment gap in LMICs means alcohol problems are addressed through incarceration
+    rather than healthcare.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.463945'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,50 @@
+id: NEW:racial_minority_status_elderly_to_NEW:door_to_balloon_time
+name: Racial Minority Status (African American/Hispanic, Age 65+) → Door-to-Balloon
+  Time
+from_node:
+  node_id: NEW:racial_minority_status_elderly
+  node_name: Racial Minority Status (African American/Hispanic, Age 65+)
+to_node:
+  node_id: NEW:door_to_balloon_time
+  node_name: Door-to-Balloon Time
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: African American and Hispanic elderly patients (65+) present with acute
+  myocardial infarction requiring percutaneous coronary intervention (PCI)'
+- 'Step 2: Racial minority patients experience systemic barriers including presentation
+  to hospitals with fewer cardiac catheterization resources, implicit bias in triage
+  decisions, and differential treatment prioritization'
+- 'Step 3: These barriers result in delays in the recognition, diagnosis, and initiation
+  of PCI procedures'
+- 'Step 4: Consequently, door-to-balloon time is prolonged for African American and
+  Hispanic elderly patients compared to White patients, contributing to worse cardiovascular
+  outcomes'
+evidence:
+  quality_rating: B
+  n_studies: 10
+  primary_citation: 'Olawale O Olanisa et al. 2023. "Racial Disparities and Outcomes
+    of Percutaneous Coronary Interventions in Patients Above 65 Years in America:
+    A Systematic Review." Cureus.'
+  supporting_citations: []
+description: This systematic review of 10 studies demonstrates that African American
+  and Hispanic patients aged 65 and older experience longer door-to-balloon times
+  during percutaneous coronary interventions compared to White patients. These disparities
+  reflect systemic inequities in healthcare access and delivery, including differential
+  hospital presentation patterns, potential implicit bias in clinical decision-making,
+  and structural barriers to timely cardiac care. The prolonged door-to-balloon time
+  contributes to worse clinical outcomes including higher mortality rates and increased
+  major adverse cardiovascular events among racial minority elderly patients.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Medicaid expansion status
+  direction: weakens
+  strength: moderate
+  description: States with Medicaid expansion showed reduced disparities in access,
+    treatment, and outcomes for AMI patients
+- name: Hospital catheterization capability
+  direction: strengthens
+  strength: moderate
+  description: Racial minorities more likely to present to hospitals with fewer interventional
+    cardiology resources, exacerbating delays

@@ -1,0 +1,68 @@
+id: NEW:alcohol_licensing_policy_cumulative_impact_zone_to_NEW:alcohol_related_hospital_admissions
+name: Alcohol Licensing Policy - Cumulative Impact Zone → Alcohol-Related Hospital Admissions
+from_node:
+  node_id: NEW:alcohol_licensing_policy_cumulative_impact_zone
+  node_name: Alcohol Licensing Policy - Cumulative Impact Zone
+to_node:
+  node_id: NEW:alcohol_related_hospital_admissions
+  node_name: Alcohol-Related Hospital Admissions
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Local government implements cumulative impact zones restricting new alcohol licenses in saturated
+  areas'
+- 'Step 2: Combined with increased licensing enforcement, this reduces alcohol outlet density and availability'
+- 'Step 3: Reduced alcohol availability decreases population-level alcohol consumption'
+- 'Step 4: Lower consumption leads to reduced acute alcohol-related harms requiring hospitalization'
+- 'Step 5: Hospital admissions for alcohol-related conditions decline at community level'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'F. de Vocht et al. 2017. "The intervention effect of local alcohol licensing policies
+    on hospital admission and crime: a natural experiment using a novel Bayesian synthetictime-series
+    method." https://doi.org/10.1136/jech-2017-208931'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not provide specific referenced studies
+  - Home Office licensing data (2007-2012) referenced as data source
+  - Novel Bayesian structural time series methodology applied
+  doi: 10.1136/jech-2017-208931
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Local alcohol licensing policies combining cumulative impact zones with increased enforcement
+  were associated with a 6.3% average reduction in alcohol-related hospital admissions compared to expected
+  trends in control areas. This represents a structural intervention at the local government level that
+  modifies the alcohol environment rather than targeting individual behavior.
+quantitative_effects:
+  effect_size:
+    value: -6.3
+    type: percentage_change
+    ci_lower: -12.8
+    ci_upper: 0.2
+  sample_size: 91
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study identified 5 intervention areas and 86 control areas in England, suggesting geographic
+    variation in policy implementation and effects
+moderators:
+- name: enforcement_intensity
+  direction: strengthens
+  strength: moderate
+  description: Increased licensing enforcement combined with cumulative impact zones appeared necessary
+    for effect
+- name: time_since_implementation
+  direction: strengthens
+  strength: moderate
+  description: Effects observed over 2011-2015 follow-up period, with sustained impact on hospital admissions
+structural_competency:
+  equity_implications: This mechanism exemplifies structural intervention - local governments using regulatory
+    authority to modify the built and commercial environment. The policy addresses upstream determinants
+    (alcohol availability) rather than downstream individual behaviors. The natural experiment design
+    provides evidence that policy-level changes can produce population health improvements. Equity implications
+    include potential differential effects in areas with high outlet density, which often correlates with
+    lower-income neighborhoods.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.198993'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,58 @@
+id: NEW:liver_graft_histology_damage_to_NEW:long_term_mortality_post_liver_transplant
+name: Liver Graft Histological Damage (Steatosis/Fibrosis/Cirrhosis) → Long-Term Mortality
+  Post Liver Transplant (10-year)
+from_node:
+  node_id: NEW:liver_graft_histology_damage
+  node_name: Liver Graft Histological Damage (Steatosis/Fibrosis/Cirrhosis)
+to_node:
+  node_id: NEW:long_term_mortality_post_liver_transplant
+  node_name: Long-Term Mortality Post Liver Transplant (10-year)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Progressive histological damage to the liver graft develops, including
+  steatosis (fatty infiltration), steatohepatitis (inflammation), and advancing fibrosis'
+- 'Step 2: Ongoing hepatic injury leads to architectural distortion, decreased hepatocyte
+  function, and eventual progression to graft cirrhosis in severe cases'
+- 'Step 3: Recurrent cirrhosis causes portal hypertension, synthetic dysfunction,
+  and hepatic decompensation, contributing to graft failure'
+- 'Step 4: Graft failure and hepatic decompensation increase long-term mortality,
+  with recurrent alcoholic cirrhosis responsible for approximately 20% of deaths on
+  follow-up after liver transplantation'
+evidence:
+  quality_rating: A
+  n_studies: 7
+  primary_citation: 'Sudha Kodali et al. 2018. Alcohol Relapse After Liver Transplantation
+    for Alcoholic Cirrhosis-Impact on Liver Graft and Patient Survival: A Meta-analysis.
+    Alcohol and alcoholism (Oxford, Oxfordshire)'
+  supporting_citations: []
+description: Liver graft histological damage including steatosis, steatohepatitis,
+  and progression to fibrosis/cirrhosis significantly increases long-term mortality
+  in liver transplant recipients. A meta-analysis of 7 studies found that patients
+  with graft damage (relapsers vs abstainers as proxy) were over 3.6 times more likely
+  to die at 10-year follow-up. The progression from steatosis (OR 4.1) through steatohepatitis
+  (OR 4.5) to advanced fibrosis/cirrhosis (OR 8.4) represents a spectrum of increasing
+  graft injury. Recurrent cirrhosis, occurring in 9% of biopsied patients, was responsible
+  for approximately 20% of all deaths during follow-up.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.67
+    type: odds_ratio
+    ci_lower: 1.42
+    ci_upper: 9.5
+  p_value: null
+  sample_size: null
+moderators:
+- name: Time since transplant
+  direction: strengthens
+  strength: strong
+  description: Mortality differences between groups with graft damage become significant
+    at 10 years but not at 5 years, suggesting cumulative effects of histological
+    damage over time
+- name: Severity of histological damage
+  direction: strengthens
+  strength: strong
+  description: More severe damage (advanced fibrosis/cirrhosis with OR 8.4) has stronger
+    association with mortality compared to earlier stages (steatosis OR 4.1)

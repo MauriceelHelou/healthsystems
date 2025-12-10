@@ -1,0 +1,50 @@
+id: NEW:hepatitis_c_virus_infection_to_NEW:chronic_liver_disease
+name: Hepatitis C Virus Infection → Chronic Liver Disease
+from_node:
+  node_id: NEW:hepatitis_c_virus_infection
+  node_name: Hepatitis C Virus Infection
+to_node:
+  node_id: NEW:chronic_liver_disease
+  node_name: Chronic Liver Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hepatitis C virus infects hepatocytes, establishing chronic infection in
+  approximately 75-85% of infected individuals'
+- 'Step 2: Persistent viral replication triggers ongoing hepatic inflammation and
+  immune-mediated liver damage'
+- 'Step 3: Repeated cycles of hepatocyte injury and regeneration promote progressive
+  hepatic fibrosis'
+- 'Step 4: Continued fibrotic progression leads to cirrhosis and chronic liver disease'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'B. T. Tesfaye et al. 2021. Chronic Liver Disease in Ethiopia
+    with a Particular Focus on the Etiological Spectrums: A Systematic Review and
+    Meta-Analysis of Observational Studies. Canadian Journal of Gastroenterology and
+    Hepatology.'
+  supporting_citations: []
+description: Hepatitis C virus infection is the third most common cause of chronic
+  liver disease in Ethiopia, accounting for 15% of CLD cases. HCV establishes chronic
+  infection leading to progressive hepatic fibrosis and cirrhosis through persistent
+  inflammation and immune-mediated hepatocyte damage.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 15.0
+    type: proportion_percentage
+    ci_lower: 9.0
+    ci_upper: 21.0
+  p_value: 0.001
+  sample_size: null
+moderators:
+- name: co-infection_with_hepatitis_B
+  direction: strengthens
+  strength: moderate
+  description: Co-infection with HBV may accelerate liver disease progression
+- name: alcohol_consumption
+  direction: strengthens
+  strength: strong
+  description: Concurrent alcohol use amplifies hepatic damage and accelerates progression
+    to cirrhosis

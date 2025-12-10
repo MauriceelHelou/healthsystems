@@ -1,0 +1,60 @@
+id: sepsis_hospitalization_rate_to_all_cause_mortality_rate
+name: Sepsis Hospitalization Rate → All-Cause Mortality Rate
+from_node:
+  node_id: sepsis_hospitalization_rate
+  node_name: Sepsis Hospitalization Rate
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Sepsis serves as a major underlying risk factor for ARDS development in critically ill patients'
+- 'Step 2: Septic patients develop systemic inflammation that damages pulmonary endothelium and alveolar
+  epithelium'
+- 'Step 3: ARDS develops as a complication, compounding the severity of sepsis'
+- 'Step 4: Combined sepsis and ARDS creates synergistic multi-organ dysfunction'
+- 'Step 5: ARDS adds attributable mortality of 15% beyond that from sepsis alone'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'L. Torres et al. 2021. "Attributable mortality of acute respiratory distress syndrome:
+    a systematic review, meta-analysis and survival analysis using targeted minimum loss-based estimation."
+    https://doi.org/10.1136/thoraxjnl-2020-215950'
+  supporting_citations:
+  - 658 septic patients analyzed from three ICU cohorts
+  - Targeted minimum loss-based estimation controlled for sepsis severity and other confounders
+  - ARDS attributable mortality calculated specifically in septic patient population
+  doi: 10.1136/thoraxjnl-2020-215950
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: In septic patients, the development of ARDS as a complication adds 15% to the mortality rate
+  beyond what is attributable to sepsis itself. This finding, derived from causal inference methods controlling
+  for confounders, provides strong evidence that ARDS prevention in septic patients could meaningfully
+  improve survival.
+quantitative_effects:
+  effect_size:
+    value: 15.0
+    type: percentage_change
+    ci_lower: 3.0
+    ci_upper: 26.0
+  p_value: 0.015
+  sample_size: 658
+moderators:
+- name: trauma_vs_sepsis_etiology
+  direction: strengthens
+  strength: moderate
+  description: Meta-analysis showed numerically stronger association between ARDS and mortality in trauma
+    patients compared to sepsis patients
+structural_competency:
+  equity_implications: Sepsis disproportionately affects populations with less access to healthcare, those
+    with chronic conditions that are poorly managed due to healthcare access barriers, and those living
+    in conditions that increase infection risk. Structural factors such as housing quality, healthcare
+    access, food security, and economic stability influence both sepsis risk and outcomes. ARDS prevention
+    research funding decisions have equity implications for these populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.327349'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

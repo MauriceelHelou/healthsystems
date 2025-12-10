@@ -1,0 +1,61 @@
+id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226_to_asthma_prevalence_children_0_17_revised_terminology_standardized
+name: Ambient PM2.5 Air Pollution → Respiratory Diseases in Children (Wheezing, Cough,
+  Lower Respiratory Illness)
+from_node:
+  node_id: ambient_air_pollution_pm2_5_revised_consolidated_with_node_226
+  node_name: Ambient PM2.5 Air Pollution
+to_node:
+  node_id: asthma_prevalence_children_0_17_revised_terminology_standardized
+  node_name: Respiratory Diseases in Children (Wheezing, Cough, Lower Respiratory
+    Illness)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Children inhale ambient PM2.5 particles, which due to their small size
+  (≤2.5 μm) penetrate deep into the lower respiratory tract and alveoli'
+- 'Step 2: PM2.5 particles trigger local inflammatory responses in airway epithelium,
+  causing oxidative stress and release of pro-inflammatory cytokines'
+- 'Step 3: Chronic or repeated exposure leads to airway inflammation, increased mucus
+  production, and bronchial hyperresponsiveness'
+- 'Step 4: These pathophysiological changes manifest as respiratory symptoms including
+  wheezing, persistent cough, and lower respiratory illness in children'
+evidence:
+  quality_rating: A
+  n_studies: 35
+  primary_citation: 'Qian Liu et al. 2017. Effect of exposure to ambient PM2.5 pollution
+    on the risk of respiratory tract diseases: a meta-analysis of cohort studies.
+    Journal of Biomedical Research.'
+  supporting_citations: []
+description: This meta-analysis of 35 cohort studies demonstrates that ambient PM2.5
+  exposure is significantly associated with increased risk of respiratory tract diseases
+  in children, including wheezing, cough, and lower respiratory illness. Children
+  exposed to PM2.5 show pooled relative risks of 1.082 for wheezing, 1.075 for cough,
+  and 1.153 for lower respiratory illness. The association follows a dose-response
+  pattern with higher risks at PM2.5 concentrations ≥25 μg/m³.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.091
+    type: relative_risk
+    ci_lower: 1.049
+    ci_upper: 1.135
+  p_value: null
+  sample_size: null
+moderators:
+- name: PM2.5 concentration level
+  direction: strengthens
+  strength: moderate
+  description: 'Higher PM2.5 exposure (≥25 μg/m³) showed stronger association (RR
+    1.126, 95%CI: 1.067-1.190) compared to lower exposure (<25 μg/m³) (RR 1.091, 95%CI:
+    1.049-1.135)'
+- name: Traffic-related pollution source
+  direction: strengthens
+  strength: moderate
+  description: Risk of respiratory tract diseases was greater for exposure to traffic-related
+    than non-traffic-related air pollution
+- name: Respiratory outcome type
+  direction: strengthens
+  strength: moderate
+  description: Lower respiratory illness showed the strongest association (15.3% increase),
+    followed by wheezing (8.2%) and cough (7.5%)

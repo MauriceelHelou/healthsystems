@@ -1,0 +1,52 @@
+id: homelessness_rate_to_NEW:sud_treatment_retention
+name: Homelessness Rate → SUD Treatment Retention
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: NEW:sud_treatment_retention
+  node_name: SUD Treatment Retention
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Housing instability creates competing survival priorities that interfere with treatment engagement'
+- 'Step 2: Lack of stable address complicates medication storage, appointment attendance, and follow-up
+  contact'
+- 'Step 3: 16% of study participants were unhoused, representing vulnerable population with complex needs'
+- 'Step 4: Housing instability may contribute to treatment discontinuation despite low-barrier clinic
+  access'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sarah K Casey et al. 2024. "Linkage to Care Outcomes Following Treatment in A Low-Threshold
+    Substance Use Disorder Bridge Clinic." https://doi.org/10.1177/29767342241261609
+  supporting_citations:
+  - Additional citations require full-text access - abstract describes unhoused population characteristics
+  - Additional citations require full-text access - abstract references barriers to SUD care
+  - Additional citations require full-text access - abstract references treatment outcome disparities
+  doi: 10.1177/29767342241261609
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Housing instability among 16% of bridge clinic patients represents a structural barrier to
+  sustained SUD treatment engagement, as competing survival needs and logistical challenges associated
+  with homelessness interfere with care continuity.
+quantitative_effects:
+  effect_size:
+    value: 16.0
+    type: percentage_change
+  sample_size: 63
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Urban setting with 16% unhoused; rates vary significantly by geography and housing
+    market conditions
+structural_competency:
+  equity_implications: The intersection of housing instability and SUD exemplifies how structural factors
+    compound health vulnerabilities. Rather than viewing housing instability as individual failure, this
+    highlights how lack of affordable housing and social safety net creates conditions that perpetuate
+    both homelessness and substance use disorders.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.779659'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

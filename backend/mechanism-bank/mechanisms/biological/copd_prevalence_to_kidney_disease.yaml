@@ -1,0 +1,55 @@
+id: copd_prevalence_to_kidney_disease
+name: COPD Prevalence → Chronic Kidney Disease
+from_node:
+  node_id: copd_prevalence
+  node_name: COPD Prevalence
+to_node:
+  node_id: kidney_disease
+  node_name: Chronic Kidney Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: COPD causes chronic systemic inflammation through persistent pulmonary
+  inflammation and oxidative stress, releasing pro-inflammatory cytokines into circulation'
+- 'Step 2: Systemic inflammation leads to endothelial dysfunction and accelerated
+  atherosclerosis affecting renal vasculature'
+- 'Step 3: Hypoxemia from COPD causes renal hypoxia and activates maladaptive responses
+  including sympathetic nervous system activation and renin-angiotensin-aldosterone
+  system dysregulation'
+- 'Step 4: Shared risk factors (smoking, aging, cardiovascular disease) compound direct
+  pathophysiological effects to accelerate kidney function decline'
+- 'Step 5: Progressive renal damage leads to chronic kidney disease development and
+  progression'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: 'Zexin Liu et al. 2024. Association between COPD and CKD: a systematic
+    review and meta-analysis. Frontiers in public health.'
+  supporting_citations: []
+description: COPD significantly increases the risk of developing chronic kidney disease
+  through multiple interconnected biological pathways. The meta-analysis of 11 studies
+  demonstrated a 54% increased risk of CKD in COPD patients. The relationship is bidirectional,
+  with CKD also worsening COPD prognosis, suggesting shared pathophysiological mechanisms
+  including systemic inflammation, oxidative stress, hypoxemia, and cardiovascular
+  complications that affect both organ systems.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.54
+    type: odds_ratio
+    ci_lower: 1.28
+    ci_upper: 1.84
+  p_value: null
+  sample_size: null
+moderators:
+- name: acute_exacerbation
+  direction: strengthens
+  strength: moderate
+  description: 'Acute exacerbation of COPD (AECOPD) in patients with comorbid CKD
+    significantly increases short-term mortality risk (OR 1.53, 95% CI: 1.44-1.63)'
+- name: disease_duration
+  direction: strengthens
+  strength: moderate
+  description: 'Long-term COPD increases mortality risk in CKD patients (OR 1.70,
+    95% CI: 1.35-2.15)'

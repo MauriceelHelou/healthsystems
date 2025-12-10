@@ -1,0 +1,58 @@
+id: NEW:alcohol_outlet_hours_of_operation_to_homicide_rate
+name: Alcohol Outlet Hours of Operation → Homicide Rate
+from_node:
+  node_id: NEW:alcohol_outlet_hours_of_operation
+  node_name: Alcohol Outlet Hours of Operation
+to_node:
+  node_id: homicide_rate
+  node_name: Homicide Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Extended alcohol sales hours increase availability of alcohol during late-night periods when
+  situational risk factors for lethal violence are elevated'
+- 'Step 2: Prolonged drinking sessions enabled by late closing hours increase the likelihood of severe
+  intoxication'
+- 'Step 3: Severe intoxication impairs judgment, increases aggression, and reduces conflict de-escalation
+  capacity'
+- 'Step 4: Concentration of intoxicated individuals around bars/taverns creates conditions conducive to
+  escalation of conflicts to lethal violence'
+- 'Step 5: Restricting hours of sale reduces the temporal overlap between peak intoxication and environmental
+  conditions favoring violent outcomes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Erika M Rosen et al. 2024. "Interrupted Time Series Analysis of Bar/Tavern Closing
+    Hours and Violent Crime.." https://doi.org/10.1001/jamainternmed.2024.0255
+  supporting_citations:
+  - Additional citations require full-text access
+  - Prior research on alcohol availability and homicide referenced in abstract background
+  - Maryland Senate Bill 571 legislative record
+  doi: 10.1001/jamainternmed.2024.0255
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study found similar reductions in homicides following the restriction of bar/tavern hours
+  from 20 to 13 hours per day. While the abstract reports 'similar results' for homicides compared to
+  all violent crime, specific effect sizes for homicides alone are not provided in the abstract. The mechanism
+  operates through reducing late-night alcohol availability in geographic areas immediately surrounding
+  bars and taverns.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect localized to treatment neighborhood in Baltimore; results described as 'similar'
+    to all violent crime for homicides specifically but exact effect size not provided in abstract
+moderators:
+- name: proximity_to_alcohol_outlets
+  direction: strengthens
+  strength: strong
+  description: Effects measured within 800-ft buffer of bars/taverns; mechanism is spatially concentrated
+    around alcohol outlets
+structural_competency:
+  equity_implications: Homicide is framed as a predictable outcome of structural conditions (alcohol availability,
+    temporal patterns, spatial concentration) rather than solely individual criminality. Policy intervention
+    at the structural level (hours regulation) addresses upstream determinants of lethal violence.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.064781'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

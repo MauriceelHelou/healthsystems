@@ -1,0 +1,43 @@
+id: primary_care_alcohol_exposure_to_alcohol_associated_cirrhosis
+name: Primary Care Population Alcohol Exposure → Alcohol-Associated Cirrhosis
+from_node:
+  node_id: primary_care_alcohol_exposure
+  node_name: Primary Care Population Alcohol Exposure
+to_node:
+  node_id: alcohol_associated_cirrhosis
+  node_name: Alcohol-Associated Cirrhosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Primary care populations include individuals seeking healthcare, potentially
+  enriched for those with risk factors'
+- 'Step 2: Chronic alcohol consumption in this population leads to progressive liver
+  injury'
+- 'Step 3: Among primary care patients, 1.7% have developed cirrhosis, intermediate
+  between general population (0.3%) and AUD populations (12.9%)'
+- 'Step 4: This intermediate prevalence reflects selection of healthcare-seeking individuals
+  with elevated risk'
+evidence:
+  quality_rating: A
+  n_studies: 35
+  primary_citation: 'Sachin Amonker et al. 2023. "Prevalence of alcohol-associated
+    liver disease: a systematic review and meta-analysis." *Hepatology Communications*.
+    https://doi.org/10.1097/HC9.0000000000000133'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.345367'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: healthcare_seeking_behavior
+  direction: strengthens
+  strength: moderate
+  description: Primary care populations represent a selected group with healthcare
+    access and engagement, potentially enriched for individuals with symptoms or risk
+    factors
+- name: healthcare_access
+  direction: strengthens
+  strength: strong
+  description: Access to primary care enables detection of cirrhosis; prevalence estimates
+    reflect both true burden and detection capacity

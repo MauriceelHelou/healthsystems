@@ -1,0 +1,59 @@
+id: noise_exposure_to_cardiovascular_disease_mortality
+name: Environmental Noise Exposure → Cardiovascular Disease Mortality
+from_node:
+  node_id: noise_exposure
+  node_name: Environmental Noise Exposure
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Chronic environmental noise exposure (traffic, occupational, aircraft)
+  triggers repeated physiological stress responses including activation of the hypothalamic-pituitary-adrenal
+  axis and sympathetic nervous system'
+- 'Step 2: Sustained stress activation leads to elevated blood pressure, increased
+  cortisol and catecholamine release, and systemic inflammation'
+- 'Step 3: Chronic hypertension and inflammatory processes accelerate atherosclerosis,
+  endothelial dysfunction, and arterial stiffness'
+- 'Step 4: Progressive cardiovascular damage increases risk of fatal cardiovascular
+  events including myocardial infarction, stroke, and heart failure'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: 'Xia Chen et al. 2023. Environmental noise exposure and health
+    outcomes: an umbrella review of systematic reviews and meta-analysis. European
+    Journal of Public Health.'
+  supporting_citations: []
+description: This umbrella review of 23 systematic reviews and meta-analyses found
+  that environmental noise exposure is associated with a 12% increased risk of cardiovascular
+  disease mortality. The association demonstrates a dose-response relationship, with
+  risk increasing as noise exposure levels rise. Multiple noise sources contribute
+  including traffic, aircraft, and occupational noise. The evidence supports a pathway
+  through chronic stress activation leading to hypertension and cardiovascular damage.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.12
+    type: relative_risk
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: noise_source_type
+  direction: strengthens
+  strength: moderate
+  description: Occupational noise exposure shows larger effect sizes compared to residential
+    environmental noise
+- name: noise_intensity
+  direction: strengthens
+  strength: strong
+  description: Dose-response relationship confirmed - cardiovascular mortality risk
+    increases with increasing noise exposure levels
+- name: chronicity_of_exposure
+  direction: strengthens
+  strength: moderate
+  description: Longer duration of exposure associated with greater cardiovascular
+    mortality risk

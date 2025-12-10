@@ -1,0 +1,51 @@
+id: NEW:alcohol_consumption_moderate_to_alcohol_use_disorder
+name: Moderate Alcohol Consumption (20g/day) → Alcohol Use Disorder
+from_node:
+  node_id: NEW:alcohol_consumption_moderate
+  node_name: Moderate Alcohol Consumption (20g/day)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Even moderate regular alcohol consumption initiates neuroadaptive tolerance mechanisms'
+- 'Step 2: Regular drinking establishes behavioral patterns and psychological associations with alcohol
+  use'
+- 'Step 3: Gradual escalation of consumption may occur as tolerance develops'
+- 'Step 4: Subthreshold symptoms of dependence emerge before clinical AUD criteria are met'
+evidence:
+  quality_rating: B
+  n_studies: 7
+  primary_citation: 'Tessa Carr et al. 2024. "The risk relationships between alcohol consumption, alcohol
+    use disorder and alcohol use disorder mortality: A systematic review and meta-analysis.." https://doi.org/10.1111/add.16456'
+  supporting_citations:
+  - Studies from high-income countries meeting inclusion criteria (2000-2022)
+  - Studies from Brazil meeting inclusion criteria for qualitative synthesis
+  - Two primary US data sources analyzed
+  - Additional citations require full-text access
+  doi: 10.1111/add.16456
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Even at moderate consumption levels of 20g/day (approximately one large beer), the risk of
+  developing alcohol use disorder is nearly threefold that of current non-drinkers, demonstrating that
+  elevated risk begins at relatively low consumption levels.
+quantitative_effects:
+  effect_size:
+    value: 2.97
+    type: relative_risk
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies from high-income countries and Brazil; standard drink definitions vary internationally
+structural_competency:
+  equity_implications: Social norms around 'moderate' drinking are shaped by cultural factors, alcohol
+    industry marketing, and policy environments. What is considered socially acceptable drinking varies
+    by community and is influenced by structural factors including advertising exposure and alcohol outlet
+    availability. Public health messaging about 'safe' drinking levels has been challenged by evidence
+    of harm at lower thresholds.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.282344'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

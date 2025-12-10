@@ -1,0 +1,62 @@
+id: NEW:abstainer_misclassification_bias_to_NEW:apparent_protective_effect_low_volume_drinking
+name: Abstainer Misclassification Bias (Former/Occasional Drinkers as Abstainers)
+  → Apparent Protective Effect of Low-Volume Drinking
+from_node:
+  node_id: NEW:abstainer_misclassification_bias
+  node_name: Abstainer Misclassification Bias (Former/Occasional Drinkers as Abstainers)
+to_node:
+  node_id: NEW:apparent_protective_effect_low_volume_drinking
+  node_name: Apparent Protective Effect of Low-Volume Drinking
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Former drinkers (who may have quit due to health problems) and occasional
+  drinkers (<1.3g ethanol/day) are incorrectly classified as ''abstainers'' in epidemiological
+  studies'
+- 'Step 2: This misclassification creates a biased reference group where ''abstainers''
+  include individuals with elevated mortality risk (former drinkers RR=1.22) mixed
+  with true lifetime abstainers'
+- 'Step 3: When low-volume drinkers are compared against this sick-quitter-contaminated
+  reference group, they appear healthier by comparison, producing an artifactual J-shaped
+  mortality curve'
+- 'Step 4: Without adjustment, low-volume drinkers show apparent protective effect
+  (RR=0.86), but after correcting for abstainer bias and study quality, this effect
+  disappears (RR=0.97, non-significant)'
+evidence:
+  quality_rating: A
+  n_studies: 87
+  primary_citation: Tim Stockwell et al. 2016. Do 'Moderate' Drinkers Have Reduced
+    Mortality Risk? A Systematic Review and Meta-Analysis of Alcohol Consumption and
+    All-Cause Mortality. Journal of studies on alcohol and drugs.
+  supporting_citations: []
+description: The apparent protective effect of low-volume alcohol consumption (J-shaped
+  curve) is largely an artifact of misclassifying former drinkers and occasional drinkers
+  as abstainers. Former drinkers, who often quit due to health problems ('sick quitters'),
+  have elevated mortality risk. When they are incorrectly grouped with true lifetime
+  abstainers, the reference category becomes biased toward ill health, making moderate
+  drinkers appear relatively healthier. Meta-analysis of 87 studies (n=3,998,626)
+  showed that after adjusting for abstainer biases and study quality characteristics,
+  the apparent protective effect of low-volume drinking (unadjusted RR=0.86) disappeared
+  entirely (adjusted RR=0.97, non-significant).
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.86
+    type: relative_risk
+    ci_lower: 0.83
+    ci_upper: 0.9
+  p_value: null
+  sample_size: 3998626
+moderators:
+- name: Study quality and bias-free design
+  direction: weakens
+  strength: strong
+  description: Higher-quality bias-free studies that properly classify abstainers
+    show no protective effect of low-volume drinking (RR=0.97, CI 0.88-1.07)
+- name: Inclusion of former drinkers in abstainer group
+  direction: strengthens
+  strength: strong
+  description: Former drinkers have elevated mortality risk (RR=1.22, CI 1.14-1.31);
+    their inclusion in the reference group inflates the apparent benefit of moderate
+    drinking

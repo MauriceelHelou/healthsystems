@@ -1,0 +1,70 @@
+id: prison_incarceration_rate_to_prescription_opioid_misuse
+name: Prison Incarceration Rate → Prescription Opioid Misuse
+from_node:
+  node_id: prison_incarceration_rate
+  node_name: Prison Incarceration Rate
+to_node:
+  node_id: prescription_opioid_misuse
+  node_name: Prescription Opioid Misuse
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Incarcerated individuals with opioid use disorder receive prescribed opioid agonist treatment
+  (e.g., sublingual buprenorphine) for maintenance therapy'
+- 'Step 2: Prison environments with reduced access to illicit drugs create scarcity, increasing demand
+  for available substances'
+- 'Step 3: Prisoners divert prescribed sublingual buprenorphine by retaining tablets and administering
+  them nasally'
+- 'Step 4: Nasal administration emerges as dominant abuse route due to reduced injection drug use infrastructure
+  in prisons'
+- 'Step 5: Culture of prescription opioid diversion becomes normalized within prison populations'
+evidence:
+  quality_rating: B
+  n_studies: 10
+  primary_citation: 'Zanib Bi-Mohammed et al. 2017. "Prescription opioid abuse in prison settings: A systematic
+    review of prevalence, practice and treatment responses." https://doi.org/10.1016/j.drugalcdep.2016.11.032'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 10 papers from 1995-2016
+  - Studies from multiple countries including Australia, UK, and other international settings were included
+  - Reference lists of identified journals were hand-searched for relevant articles
+  doi: 10.1016/j.drugalcdep.2016.11.032
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Incarceration creates conditions where prescribed opioid medications, particularly sublingual
+  buprenorphine, are diverted and abused. The prison environment's reduced access to illicit drugs and
+  injection equipment leads to alternative abuse routes (nasal administration) becoming culturally normalized.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Significant differences in abuse behaviours between different countries were reported,
+    suggesting national prison policies and drug availability patterns shape diversion practices
+moderators:
+- name: illicit_drug_availability
+  direction: weakens
+  strength: strong
+  description: Reduced supplies of illicit drugs within prison increases diversion of prescribed opioids
+- name: injection_equipment_access
+  direction: strengthens
+  strength: moderate
+  description: Reduced prevalence of injection within prison leads to nasal administration becoming dominant
+    abuse route
+- name: medication_formulation
+  direction: weakens
+  strength: strong
+  description: Buprenorphine/naloxone preparation appears less amenable to abuse compared to buprenorphine
+    alone
+structural_competency:
+  equity_implications: This mechanism highlights how carceral institutions create unique drug use environments.
+    The scarcity of illicit substances combined with continued addiction needs among incarcerated populations
+    drives prescription medication diversion. Rather than framing this as individual moral failing, the
+    structural factors of incarceration, limited treatment options, and medication formulation choices
+    by healthcare systems shape these behaviors. Healthcare providers in prisons must consider 'least
+    abusable' preparations as a structural intervention.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.708219'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

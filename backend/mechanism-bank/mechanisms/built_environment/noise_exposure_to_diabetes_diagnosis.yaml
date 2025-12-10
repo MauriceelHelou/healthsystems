@@ -1,0 +1,54 @@
+id: noise_exposure_to_diabetes_diagnosis
+name: Environmental Noise Exposure → Diabetes Diagnosis
+from_node:
+  node_id: noise_exposure
+  node_name: Environmental Noise Exposure
+to_node:
+  node_id: diabetes_diagnosis
+  node_name: Diabetes Diagnosis
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Chronic environmental noise exposure (from traffic, occupational, or neighborhood
+  sources) activates the hypothalamic-pituitary-adrenal (HPA) axis stress response'
+- 'Step 2: Sustained stress activation leads to elevated cortisol levels and chronic
+  sympathetic nervous system arousal'
+- 'Step 3: Chronic stress hormones impair glucose metabolism, promote insulin resistance,
+  and contribute to metabolic dysfunction'
+- 'Step 4: Sleep disruption from noise exposure further exacerbates metabolic dysregulation
+  through altered circadian rhythms and reduced sleep quality'
+- 'Step 5: Cumulative metabolic dysfunction increases risk of developing type 2 diabetes'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: 'Xia Chen et al. 2023. Environmental noise exposure and health
+    outcomes: an umbrella review of systematic reviews and meta-analysis. European
+    Journal of Public Health.'
+  supporting_citations: []
+description: Environmental noise exposure is associated with a 23% increased risk
+  of diabetes. This umbrella review of 23 systematic reviews and meta-analyses found
+  consistent evidence linking noise to metabolic outcomes, with a clear dose-response
+  relationship where diabetes risk increases with higher noise exposure levels. The
+  mechanism operates through chronic stress activation, metabolic disruption, and
+  sleep disturbance pathways.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.23
+    type: relative_risk
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: noise_source_type
+  direction: strengthens
+  strength: moderate
+  description: Occupational noise exposure associated with larger risk increments
+    compared to environmental sources
+- name: noise_exposure_level
+  direction: strengthens
+  strength: strong
+  description: Dose-response relationship observed where diabetes risk increases with
+    increasing noise exposure

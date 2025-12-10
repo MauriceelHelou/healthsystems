@@ -1,0 +1,56 @@
+id: NEW:housing_first_intervention_to_emergency_department_visit_rate
+name: Housing First Intervention → Emergency Department Visit Rate
+from_node:
+  node_id: NEW:housing_first_intervention
+  node_name: Housing First Intervention
+to_node:
+  node_id: emergency_department_visit_rate
+  node_name: Emergency Department Visit Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Housing First intervention provides rapid access to permanent, non-abstinence-contingent
+  housing for homeless or at-risk individuals'
+- 'Step 2: Stable housing reduces exposure to environmental health hazards, violence,
+  and conditions that exacerbate chronic health problems'
+- 'Step 3: Housing stability enables more consistent access to primary care and routine
+  health services, reducing need for crisis intervention'
+- 'Step 4: Decreased exposure to acute stressors and improved ability to manage chronic
+  conditions leads to fewer health emergencies'
+- 'Step 5: Reduction in emergency department visits as acute health crises become
+  less frequent due to improved living conditions and healthcare access'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'A. Baxter et al. 2019. Effects of Housing First approaches on
+    health and well-being of adults who are homeless or at risk of homelessness: systematic
+    review and meta-analysis of randomised controlled trials. Journal of Epidemiology
+    and Community Health.'
+  supporting_citations: []
+description: Housing First interventions significantly reduce emergency department
+  visits among homeless or at-risk populations. A meta-analysis of 4 RCTs found that
+  intervention groups experienced 37% fewer ED visits (IRR=0.63, 95% CI 0.48-0.82)
+  compared to control groups. This reduction occurs through improved housing stability,
+  which enables better management of chronic conditions and reduces acute health crises
+  that would otherwise require emergency care.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.63
+    type: incidence_rate_ratio
+    ci_lower: 0.48
+    ci_upper: 0.82
+  p_value: null
+  sample_size: null
+moderators:
+- name: housing_stability_duration
+  direction: strengthens
+  strength: strong
+  description: Longer duration of stable housing associated with greater reductions
+    in emergency department use
+- name: substance_use_status
+  direction: weakens
+  strength: weak
+  description: No clear difference in substance use outcomes was observed, suggesting
+    the mechanism operates independently of substance use changes

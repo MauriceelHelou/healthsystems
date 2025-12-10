@@ -1,0 +1,35 @@
+id: binge_drinking
+name: Binge Drinking Prevalence
+scale: 5
+domain: Health Behavior, Substance Use
+category: behavioral
+stock:
+  value: 21.7
+  unit: Percent of adults binge drinking in past month
+  year: 2022
+  source: NSDUH, BRFSS
+geographic_variation:
+  score: 4
+  level: state
+  notes: Range from 11% (Utah) to 26% (Wisconsin); regional patterns with upper Midwest highest
+data_quality:
+  availability: high
+  frequency: annual
+  bias_notes: Self-report underestimates true consumption; definitions vary (4/5 drinks)
+  primary_sources:
+  - name: SAMHSA National Survey on Drug Use and Health (NSDUH)
+    granularity: state
+  - name: CDC Behavioral Risk Factor Surveillance System (BRFSS)
+    granularity: county
+  - name: National Health Interview Survey (NHIS)
+    granularity: national
+description: |-
+  Percentage of adults (18+) who engaged in binge drinking in the past 30 days.
+  Binge drinking is defined as consuming 5 or more drinks (men) or 4 or more drinks
+  (women) on a single occasion. This is a standalone behavioral measure with a
+  standardized definition; approximately 90% of alcohol consumed by youth and 50%
+  consumed by adults occurs through binge drinking. Relationships to health outcomes,
+  risk factors, or downstream conditions are captured in mechanisms, not in this
+  node definition. This node measures the behavior itself, independent of causes
+  or consequences.
+type: Rate

@@ -1,0 +1,53 @@
+id: smoking_cessation_treatment_use_to_NEW:adverse_events_smoking_cessation
+name: Smoking Cessation Treatment Use → Adverse Events from Smoking Cessation Interventions
+from_node:
+  node_id: smoking_cessation_treatment_use
+  node_name: Smoking Cessation Treatment Use
+to_node:
+  node_id: NEW:adverse_events_smoking_cessation
+  node_name: Adverse Events from Smoking Cessation Interventions
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Use of smoking cessation treatments (including e-cigarettes) may produce side effects'
+- 'Step 2: Nicotine delivery from any source can cause throat/mouth irritation, nausea'
+- 'Step 3: Monitoring for adverse events during cessation treatment'
+- 'Step 4: Low-certainty evidence suggests increased AEs with nicotine EC vs behavioral support alone'
+evidence:
+  quality_rating: A
+  n_studies: 49
+  primary_citation: Nicola Lindson et al. 2025. "Electronic cigarettes for smoking cessation.." https://doi.org/10.1002/14651858.CD010216.pub9
+  supporting_citations:
+  - Safety data from included RCTs in systematic review
+  - Comparison of adverse event rates across intervention arms
+  - Additional citations require full-text access
+  doi: 10.1002/14651858.CD010216.pub9
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Overall incidence of serious adverse events was low across all study arms. No evidence of
+  serious harm from nicotine e-cigarettes was detected, though confidence intervals were wide. Longer
+  and larger studies needed to fully evaluate safety.
+quantitative_effects:
+  sample_size: 29044
+moderators:
+- name: comparison_group
+  direction: u_shaped
+  strength: weak
+  description: No difference in AEs between nicotine and non-nicotine ECs or between nicotine ECs and
+    NRT; low-certainty evidence for increased AEs vs behavioral support only
+- name: product_type
+  direction: strengthens
+  strength: moderate
+  description: Illicit products and those containing THC may have different harm profiles than regulated
+    nicotine EC
+structural_competency:
+  equity_implications: Product safety is determined by regulatory frameworks, quality control standards,
+    and market oversight. Unregulated markets may expose users to greater risks. Structural factors include
+    FDA regulation, state-level policies, and enforcement capacity. Equity implications involve differential
+    access to regulated versus illicit products based on cost and availability.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.907549'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

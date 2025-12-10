@@ -1,0 +1,61 @@
+id: NEW:calorie_labeling_policy_food_to_obesity_individual
+name: Calorie Labeling Policy for Food → Obesity (Individual)
+from_node:
+  node_id: NEW:calorie_labeling_policy_food
+  node_name: Calorie Labeling Policy for Food
+to_node:
+  node_id: obesity_individual
+  node_name: Obesity (Individual)
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Mandatory calorie labeling implemented on menus, products, and packaging'
+- 'Step 2: Population-level exposure to calorie information at point of food selection'
+- 'Step 3: Small but consistent reductions in energy selected (~11 kcal/meal) and consumed (~35 kcal/meal)'
+- 'Step 4: Sustained caloric deficit accumulates over time when policy applied at scale'
+- 'Step 5: Population-level reduction in obesity prevalence through reduced chronic energy surplus'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: Natasha Clarke et al. 2025. "Calorie (energy) labelling for changing selection and
+    consumption of food or alcohol.." https://doi.org/10.1002/14651858.CD014845.pub2
+  supporting_citations:
+  - Authors note 'potentially meaningful impacts on population health when applied at scale'
+  - Evidence synthesis from 18 RCTs and 7 non-randomized studies
+  - Direction of effect consistent across randomized and non-randomized designs
+  doi: 10.1002/14651858.CD014845.pub2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Calorie labeling policies represent a structural intervention that may contribute to obesity
+  prevention at the population level. While individual meal-level effects are small (1.8-5.9% reduction
+  in energy), sustained exposure across a population eating out frequently could produce meaningful cumulative
+  effects on energy balance and obesity prevention.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Implementation varies across jurisdictions; most studies from USA and UK where labeling
+    policies have been implemented or are being expanded.
+moderators:
+- name: policy_scale
+  direction: strengthens
+  strength: strong
+  description: Authors emphasize effects are 'potentially meaningful impacts on population health when
+    applied at scale' - broader policy implementation strengthens population-level impact.
+- name: socioeconomic_status
+  direction: unknown
+  strength: moderate
+  description: Authors identify SES as a priority moderator requiring further research; differential effects
+    could have equity implications.
+structural_competency:
+  equity_implications: 'This mechanism exemplifies a structural approach to obesity prevention that modifies
+    the food environment rather than targeting individual behavior change. The policy places the burden
+    on food providers rather than consumers. However, equity implications require attention: if effects
+    differ by SES, the policy could inadvertently widen health disparities. The review notes most evidence
+    comes from high-SES populations, creating uncertainty about effects in communities experiencing greater
+    obesity burden. Additionally, the authors note potential systemic impacts on industry actions (reformulation,
+    portion sizing) that could amplify health benefits beyond individual selection effects.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.405376'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

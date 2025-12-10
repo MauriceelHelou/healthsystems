@@ -1,0 +1,43 @@
+id: portal_hypertension_detection_to_surgical_eligibility_hcc
+name: Portal Hypertension Detection and Management → Surgical Eligibility for Hepatocellular
+  Carcinoma
+from_node:
+  node_id: portal_hypertension_detection
+  node_name: Portal Hypertension Detection and Management
+to_node:
+  node_id: surgical_eligibility_hcc
+  node_name: Surgical Eligibility for Hepatocellular Carcinoma
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Portal hypertension status is a critical determinant of surgical eligibility
+  and post-operative complication risk'
+- 'Step 2: Access to diagnostic procedures (hepatic venous pressure gradient measurement,
+  imaging) required to assess portal hypertension varies by healthcare setting'
+- 'Step 3: Lack of portal hypertension assessment may lead to inappropriate treatment
+  selection or missed opportunities for optimal intervention'
+- 'Step 4: Healthcare infrastructure determines whether comprehensive pre-treatment
+  evaluation including portal hypertension assessment is standard of care'
+evidence:
+  quality_rating: C
+  n_studies: 18
+  primary_citation: 'Avik Majumdar et al. 2017. "Management of people with early-
+    or very early-stage hepatocellular carcinoma: an attempted network meta-analysis.."
+    *The Cochrane database of systematic reviews*. https://doi.org/10.1002/14651858.CD011650.pub2'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.641959'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: cirrhosis_prevalence
+  direction: strengthens
+  strength: strong
+  description: In populations with high cirrhosis prevalence, portal hypertension
+    assessment becomes more critical for treatment planning
+- name: specialist_gastroenterology_access
+  direction: strengthens
+  strength: moderate
+  description: Access to hepatology specialists who can perform and interpret portal
+    hypertension diagnostics structures treatment eligibility determinations

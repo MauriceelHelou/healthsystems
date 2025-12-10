@@ -1,0 +1,44 @@
+id: statin_prescription_non_mash_to_mortality_non_mash_cirrhosis
+name: Statin Prescription in Non-MASH Cirrhosis → Mortality in Non-MASH Cirrhosis
+  Patients
+from_node:
+  node_id: statin_prescription_non_mash
+  node_name: Statin Prescription in Non-MASH Cirrhosis
+to_node:
+  node_id: mortality_non_mash_cirrhosis
+  node_name: Mortality in Non-MASH Cirrhosis Patients
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Statin therapy prescribed to non-MASH cirrhosis patients, particularly
+  those with high disease severity (MELD-Na)'
+- 'Step 2: In advanced non-MASH cirrhosis, statins may have paradoxical effects due
+  to altered hepatic metabolism and synthetic function'
+- 'Step 3: High MELD-Na patients have reduced ability to metabolize statins and increased
+  risk of medication-related complications'
+- 'Step 4: Potential hepatotoxicity or drug interactions in severely decompensated
+  non-MASH cirrhosis increase mortality risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Katherine M Cooper et al. 2025. "Statin Therapy is Associated
+    With Lower Risk of Mortality Among Liver Transplant Candidates With Metabolic
+    Dysfunction-associated Steatohepatitis.." *Journal of clinical and experimental
+    hepatology*. https://doi.org/10.1016/j.jceh.2024.102427
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.380300'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: meld_na_score
+  direction: strengthens
+  strength: strong
+  description: High MELD-Na scores particularly associated with increased mortality
+    risk with statin use in non-MASH cirrhosis
+- name: cirrhosis_etiology
+  direction: strengthens
+  strength: strong
+  description: Effect specific to non-MASH cirrhosis etiologies (e.g., alcohol-related,
+    viral hepatitis); opposite effect seen in MASH

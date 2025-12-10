@@ -1,0 +1,60 @@
+id: NEW:buprenorphine_treatment_access_to_opioid_use_disorder
+name: Buprenorphine Treatment Access and Prescription → Opioid Use Disorder
+from_node:
+  node_id: NEW:buprenorphine_treatment_access
+  node_name: Buprenorphine Treatment Access and Prescription
+to_node:
+  node_id: opioid_use_disorder
+  node_name: Opioid Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Buprenorphine as a mu-opioid partial agonist reduces opioid cravings and withdrawal symptoms'
+- 'Step 2: Medication-assisted treatment enables stabilization and engagement in recovery services'
+- 'Step 3: Treatment response (measured by negative urine drug screens) indicates reduced illicit opioid
+  use'
+- 'Step 4: Sustained treatment adherence improves long-term recovery outcomes'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: Christal N Davis et al. 2025. "Multi-ancestry genome-wide association meta-analysis
+    of buprenorphine treatment response.." https://doi.org/10.1038/s41386-025-02117-z
+  supporting_citations:
+  - VA Million Veteran Program clinical data on OUD treatment outcomes
+  - Extended-release buprenorphine clinical trial data
+  - Additional citations require full-text access
+  doi: 10.1038/s41386-025-02117-z
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Investigation of factors affecting buprenorphine treatment response in opioid use disorder,
+  with the goal of identifying clinical and genetic predictors to improve treatment outcomes.
+quantitative_effects:
+  sample_size: 4690
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: VA healthcare system provides a specific structural context; treatment access and outcomes
+    likely vary by geographic availability of buprenorphine prescribers and state-level medication-assisted
+    treatment policies
+moderators:
+- name: Genetic background
+  direction: strengthens
+  strength: moderate
+  description: Individual genetic variants may modify treatment response, with the study aiming to identify
+    predictive markers
+- name: Treatment formulation
+  direction: strengthens
+  strength: moderate
+  description: Extended-release buprenorphine formulation included alongside standard formulations may
+    affect adherence and response
+structural_competency:
+  equity_implications: 'This mechanism highlights structural barriers to effective OUD treatment: (1)
+    variable access to buprenorphine prescribers across regions, (2) regulatory barriers (X-waiver requirements
+    historically), (3) insurance coverage disparities, (4) stigma in healthcare settings affecting treatment
+    engagement. The VA system represents a unique structural context with integrated care that may not
+    generalize to civilian populations facing greater access barriers.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.899418'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

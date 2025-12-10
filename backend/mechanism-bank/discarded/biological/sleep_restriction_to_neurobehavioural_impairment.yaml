@@ -1,0 +1,46 @@
+id: sleep_restriction_to_neurobehavioural_impairment
+name: Sleep Restriction → Neurobehavioural Performance Impairment
+from_node:
+  node_id: sleep_restriction
+  node_name: Sleep Restriction
+to_node:
+  node_id: neurobehavioural_impairment
+  node_name: Neurobehavioural Performance Impairment
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Sleep opportunity restricted to 5 hours at home and 3 hours in laboratory
+  creates acute sleep deprivation'
+- 'Step 2: Sleep restriction interacts with individual circadian rhythm phase timing'
+- 'Step 3: Earlier wake times relative to circadian phase (later DLMO) produce circadian
+  misalignment'
+- 'Step 4: Circadian misalignment leads to increased attentional lapses on psychomotor
+  vigilance task'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: T. Sletten et al. 2015. "Inter-Individual Differences in Neurobehavioural
+    Impairment following Sleep Restriction Are Associated with Circadian Rhythm Phase."
+    *PLoS ONE*. https://doi.org/10.1371/journal.pone.0128273
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.079491'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: circadian_rhythm_phase
+  direction: strengthens
+  strength: strong
+  description: Later DLMO (dim light melatonin onset) is associated with increased
+    PVT lapses (r = -0.468, p < 0.01), indicating that individuals with later circadian
+    phases experience greater neurobehavioural impairment following sleep restriction
+- name: dlmo_to_sleep_onset_interval
+  direction: strengthens
+  strength: strong
+  description: When the difference between DLMO and sleep onset was less than 2 hours,
+    individuals were significantly more likely to have at least three attentional
+    lapses the following morning
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/sleep_restriction_to_neurobehavioural_impairment.yaml
+_category: biological

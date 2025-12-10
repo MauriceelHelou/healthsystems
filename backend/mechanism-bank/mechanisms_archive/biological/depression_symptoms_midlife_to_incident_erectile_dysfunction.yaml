@@ -1,0 +1,41 @@
+id: depression_symptoms_midlife_to_incident_erectile_dysfunction
+name: Depression Symptoms in Midlife → Incident Erectile Dysfunction
+from_node:
+  node_id: depression_symptoms_midlife
+  node_name: Depression Symptoms in Midlife
+to_node:
+  node_id: incident_erectile_dysfunction
+  node_name: Incident Erectile Dysfunction
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Depression symptoms trigger chronic activation of stress hormones and inflammatory
+  pathways over decades'
+- 'Step 2: Chronic stress and inflammation contribute to endothelial dysfunction and
+  reduced nitric oxide bioavailability'
+- 'Step 3: Vascular health deteriorates progressively affecting penile blood flow'
+- 'Step 4: Combined vascular and neurological changes result in erectile dysfunction
+  diagnosis by late adulthood'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Hillary L Ditmars et al. 2022. "Associations between depression
+    and cardiometabolic health: A 27-year longitudinal study.." *Psychological medicine*.
+    https://doi.org/10.1017/S003329172000505X'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.908631'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: somatic_depression_symptoms
+  direction: strengthens
+  strength: strong
+  description: Association became non-significant when somatic symptoms excluded,
+    indicating somatic symptoms are key driver
+- name: c_reactive_protein
+  direction: weakens
+  strength: moderate
+  description: Inflammation marker was controlled for and association persisted, suggesting
+    mechanisms beyond inflammation alone

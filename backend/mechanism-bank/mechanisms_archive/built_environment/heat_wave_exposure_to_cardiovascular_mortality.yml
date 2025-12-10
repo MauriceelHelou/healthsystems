@@ -1,0 +1,165 @@
+id: heat_wave_exposure_to_cardiovascular_mortality
+name: Heat Wave Exposure → Cardiovascular Mortality
+from_node:
+  node_id: heat_wave_exposure
+  node_name: Extreme Heat and Heat Wave Exposure
+  node_type: stock
+to_node:
+  node_id: cardiovascular_mortality
+  node_name: Cardiovascular Mortality
+  node_type: crisis_endpoint
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Climate change increases frequency, intensity, and duration of heat waves'
+- 'Step 2: Extreme heat stresses cardiovascular system through thermoregulatory demands
+  (peripheral vasodilation, increased heart rate)'
+- 'Step 3: Heat exposure triggers dehydration, blood viscosity changes, and electrolyte
+  imbalances'
+- 'Step 4: Pre-existing cardiovascular conditions (hypertension, heart failure, coronary
+  disease) are exacerbated'
+- 'Step 5: Cardiovascular events (stroke, heart attack, arrhythmia, cardiac arrest)
+  increase during heat waves'
+evidence:
+  quality_rating: A
+  n_studies: 266
+  primary_citation: 'Zhao, Qi, et al. 2022. "Heat exposure and cardiovascular health
+    outcomes: a systematic review and meta-analysis." The Lancet Planetary Health
+    6(6): e484-e495.'
+  supporting_citations:
+  - 'Cheng, Jian, et al. 2019. "Cardiorespiratory effects of heatwaves: A systematic
+    review and meta-analysis of global evidence." Environmental Research 177: 108610.'
+  - 'Gasparrini, Antonio, et al. 2015. "Mortality risk attributable to high and low
+    ambient temperature: a multicountry observational study." The Lancet 386(9991):
+    369-375.'
+  - 'Bunker, Aditi, et al. 2016. "Effects of air temperature on climate-sensitive
+    mortality and morbidity outcomes in the elderly: a systematic review and meta-analysis."
+    EBioMedicine 6: 258-268.'
+  doi: 10.1016/S2542-5196(22)00117-6
+  journal: The Lancet Planetary Health
+  year: 2022
+  fulltext:
+    available: true
+    source: sciencedirect
+    url: https://www.sciencedirect.com/science/article/pii/S2542519622001176
+    is_open_access: false
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  primary_effect:
+    value: 1.021
+    type: relative_risk
+    ci_lower: 1.020
+    ci_upper: 1.023
+    ci_level: 95
+    comparison: cardiovascular mortality per 1 degree Celsius temperature increase
+    source: Zhao et al. 2022 meta-analysis (266 studies)
+  heat_wave_effect:
+    value: 1.117
+    type: relative_risk
+    ci_lower: 1.093
+    ci_upper: 1.141
+    ci_level: 95
+    comparison: cardiovascular mortality during heat waves vs. non-heat wave periods
+  heat_wave_by_intensity:
+    low_intensity:
+      value: 1.067
+      ci_lower: 1.056
+      ci_upper: 1.078
+    middle_intensity:
+      value: 1.088
+      ci_lower: 1.058
+      ci_upper: 1.119
+    high_intensity:
+      value: 1.189
+      ci_lower: 1.109
+      ci_upper: 1.269
+    unit: relative_risk
+    description: Dose-response relationship with increasing heat wave intensity
+  respiratory_mortality:
+    value: 1.183
+    type: relative_risk
+    ci_lower: 1.092
+    ci_upper: 1.282
+    ci_level: 95
+    comparison: respiratory mortality during heat waves vs. non-heat wave periods
+    source: Cheng et al. 2019 meta-analysis
+  sample_size: null
+  n_countries: 20
+  n_studies: 266
+  interpretation: Heat waves increase cardiovascular mortality by 11.7% (RR 1.117),
+    with high-intensity heat waves increasing risk by 18.9% (RR 1.189). Each 1 degree
+    C increase raises cardiovascular mortality by 2.1%.
+last_updated: '2025-11-30'
+version: '1.0'
+description: Climate change-driven heat waves significantly increase cardiovascular
+  mortality. A meta-analysis of 266 studies from 20 countries found heat waves increase
+  cardiovascular mortality by 11.7% (RR 1.117), with dose-response relationship by
+  intensity (18.9% increase for high-intensity heat waves). Each 1 degree C temperature
+  increase raises cardiovascular mortality by 2.1%. Elderly, women, tropical climate
+  residents, and lower-income populations face elevated risk.
+moderators:
+- name: age_elderly
+  direction: strengthens
+  strength: strong
+  description: Elderly (65+) have limited thermoregulatory capacity and higher baseline
+    cardiovascular risk
+- name: sex_female
+  direction: strengthens
+  strength: moderate
+  description: Women show elevated heat-related cardiovascular risk in most studies
+- name: pre_existing_cardiovascular_disease
+  direction: strengthens
+  strength: strong
+  description: Those with hypertension, heart failure, coronary disease most vulnerable
+- name: socioeconomic_status
+  direction: strengthens
+  strength: strong
+  description: Lower-income populations have less access to air conditioning and
+    cooling resources
+- name: air_conditioning_access
+  direction: weakens
+  strength: strong
+  description: Air conditioning access is protective against heat-related mortality
+- name: urban_heat_island
+  direction: strengthens
+  strength: moderate
+  description: Urban areas experience amplified heat exposure due to heat island
+    effect
+- name: tropical_climate
+  direction: strengthens
+  strength: moderate
+  description: Populations in tropical climates show elevated heat-related risk
+structural_competency:
+  root_cause_level: climate_systems
+  avoids_victim_blaming: true
+  equity_implications: Heat-related cardiovascular mortality reflects structural inequities
+    in climate vulnerability. Low-income communities, communities of color, and elderly
+    populations living in urban heat islands with poor housing and limited air conditioning
+    face disproportionate risk. Climate adaptation requires structural investments
+    in cooling centers, housing weatherization, green infrastructure, and early warning
+    systems targeting vulnerable populations.
+assumptions:
+- Heat wave definitions vary across studies but generally indicate sustained extreme
+  temperatures
+- Cardiovascular mortality includes stroke, myocardial infarction, heart failure,
+  arrhythmia deaths
+- Effect is acute (days to weeks) rather than chronic exposure
+limitations:
+- Heat wave definitions not standardized across studies
+- Publication bias possible toward significant findings
+- Effect modification by acclimatization not fully characterized
+- Most studies from higher-income countries
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Heat wave impacts vary by baseline climate, acclimatization, infrastructure,
+    and population vulnerability.
+  relevant_geographies:
+  - Tropical and subtropical regions show elevated risk
+  - Urban heat islands amplify exposure
+  - Regions with limited air conditioning infrastructure most vulnerable
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

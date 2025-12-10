@@ -1,0 +1,62 @@
+id: NEW:migrant_status_to_severe_maternal_morbidity_rate
+name: Migrant Status (Birth Outside Host Country) → Severe Maternal Morbidity Rate
+from_node:
+  node_id: NEW:migrant_status
+  node_name: Migrant Status (Birth Outside Host Country)
+to_node:
+  node_id: severe_maternal_morbidity_rate
+  node_name: Severe Maternal Morbidity Rate
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Migrant women face structural barriers including language differences,
+  unfamiliarity with healthcare systems, and potential documentation concerns that
+  delay or limit access to prenatal and maternal healthcare services'
+- 'Step 2: These barriers result in reduced utilization of preventive care, delayed
+  recognition of warning signs, and suboptimal management of pregnancy complications'
+- 'Step 3: Healthcare provider factors including implicit bias, communication challenges,
+  and lack of culturally competent care may lead to delayed or inadequate treatment
+  of emerging complications'
+- 'Step 4: Cumulative effects of pre-migration health exposures, stress of migration,
+  and post-migration social determinants (housing instability, economic precarity)
+  contribute to underlying health vulnerabilities'
+- 'Step 5: The combination of reduced healthcare access, delayed treatment, and underlying
+  vulnerabilities increases the risk of severe maternal morbidity and maternal mortality'
+evidence:
+  quality_rating: A
+  n_studies: 35
+  primary_citation: 'M. Eslier et al. 2023. Association between migration and severe
+    maternal outcomes in high-income countries: Systematic review and meta-analysis.
+    PLoS Medicine.'
+  supporting_citations: []
+description: 'Systematic review and meta-analysis of 35 studies found that migrant
+  women in high-income countries, defined by birth outside the host country, have
+  significantly elevated risks of severe maternal outcomes compared to native-born
+  women. The pooled risk ratio for maternal mortality in Europe was 1.34 (95% CI:
+  1.14-1.58). The magnitude of risk varied substantially by region of origin, with
+  women from sub-Saharan Africa and Latin America/Caribbean showing the highest risks
+  (RR 2.91 and 2.77 respectively). Similar patterns were observed for all-cause severe
+  maternal morbidity and maternal ICU admission.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.34
+    type: relative_risk
+    ci_lower: 1.14
+    ci_upper: 1.58
+  p_value: 0.001
+  sample_size: null
+moderators:
+- name: Region of birth
+  direction: strengthens
+  strength: strong
+  description: Sub-Saharan African origin (RR 2.91) and Latin American/Caribbean origin
+    (RR 2.77) show strongest associations; Asian origin shows moderate association
+    (RR 1.57); European and MENA origin show no significant elevation
+- name: Host country
+  direction: strengthens
+  strength: moderate
+  description: Association significant in European host countries but not in USA or
+    Australia, suggesting healthcare system and social integration policies modify
+    the relationship

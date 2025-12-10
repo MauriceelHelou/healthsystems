@@ -1,0 +1,56 @@
+id: substance_use_treatment_dropout_rate_to_opioid_overdose_mortality
+name: Treatment Cessation/Dropout → Opioid Overdose Mortality
+from_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Treatment Cessation/Dropout
+to_node:
+  node_id: opioid_overdose_mortality
+  node_name: Opioid Overdose Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals with opioid use disorder discontinue medication-assisted treatment
+  (MAT) including methadone, buprenorphine, or naltrexone'
+- 'Step 2: Upon treatment cessation, physiological opioid tolerance decreases significantly
+  while the neurobiological craving and psychological dependence may persist'
+- 'Step 3: Loss of protective pharmacological effects from MAT medications removes
+  the blocking or stabilizing action against illicit opioid use'
+- 'Step 4: Return to illicit opioid use occurs at pre-treatment doses that now exceed
+  the individual''s reduced tolerance threshold'
+- 'Step 5: The mismatch between reduced tolerance and resumed high-dose opioid consumption
+  leads to respiratory depression and overdose death'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Jun Ma et al. 2019. Effects of medication-assisted treatment
+    on mortality among opioids users: a systematic review and meta-analysis. Molecular
+    psychiatry.'
+  supporting_citations: []
+description: Treatment cessation from medication-assisted treatment substantially
+  increases overdose mortality risk among individuals with opioid use disorder. This
+  meta-analysis of 30 cohort studies found that after MAT cessation, the overdose
+  crude mortality rate was 0.68 per 100 person-years compared to 0.24 while receiving
+  treatment. Discharged participants had 3.09 times higher overdose death risk compared
+  to those retained in treatment. The untreated period showed even higher risk with
+  8.10 times greater overdose mortality compared to active treatment.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.09
+    type: relative_risk
+    ci_lower: 2.37
+    ci_upper: 4.01
+  p_value: null
+  sample_size: 370611
+moderators:
+- name: treatment_retention_duration
+  direction: weakens
+  strength: strong
+  description: Retention in MAT over 1 year associated with lower mortality (CMR 1.62)
+    compared to retention ≤1 year (CMR 5.31)
+- name: medication_type
+  direction: varies
+  strength: moderate
+  description: 'Post-cessation mortality rates vary by medication: methadone/buprenorphine
+    (1.79 per 100 PY) vs naltrexone (1.97 per 100 PY)'

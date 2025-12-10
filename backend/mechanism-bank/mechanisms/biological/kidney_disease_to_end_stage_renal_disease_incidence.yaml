@@ -1,0 +1,60 @@
+id: kidney_disease_to_end_stage_renal_disease_incidence
+name: Chronic Kidney Disease (low eGFR) → Kidney Failure Requiring Replacement Therapy
+from_node:
+  node_id: kidney_disease
+  node_name: Chronic Kidney Disease (low eGFR)
+to_node:
+  node_id: end_stage_renal_disease_incidence
+  node_name: Kidney Failure Requiring Replacement Therapy
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic kidney disease results in reduced estimated glomerular filtration
+  rate (eGFR), indicating decreased nephron function and kidney filtration capacity'
+- 'Step 2: Progressive nephron loss leads to compensatory hyperfiltration in remaining
+  nephrons, causing further glomerular damage and accelerating kidney function decline'
+- 'Step 3: Concurrent albuminuria reflects glomerular barrier damage and tubular injury,
+  which independently contributes to and predicts further kidney deterioration'
+- 'Step 4: Continued decline in eGFR through these mechanisms eventually leads to
+  kidney failure requiring replacement therapy (dialysis or transplantation) when
+  eGFR falls below critical thresholds'
+evidence:
+  quality_rating: A
+  n_studies: 114
+  primary_citation: 'Morgan E. Grams et al. 2023. Estimated Glomerular Filtration
+    Rate, Albuminuria, and Adverse Outcomes: An Individual-Participant Data Meta-Analysis.
+    Journal of the American Medical Association (JAMA).'
+  supporting_citations: []
+description: This large individual-participant data meta-analysis of 114 global cohorts
+  (27.5 million individuals) demonstrates that lower eGFR is significantly associated
+  with higher risk of kidney failure requiring replacement therapy. The association
+  is present even in mild CKD categories and is strengthened by concurrent albuminuria.
+  Both creatinine-based and creatinine-cystatin C-based eGFR measurements show consistent
+  associations with adverse kidney outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.3
+    type: hazard_ratio
+    ci_lower: 1.2
+    ci_upper: 1.3
+  p_value: null
+  sample_size: 27503140
+moderators:
+- name: albuminuria (UACR)
+  direction: strengthens
+  strength: strong
+  description: Higher urinary albumin-to-creatinine ratio independently associated
+    with increased risk of kidney failure; the combination of low eGFR and elevated
+    UACR confers higher risk than either alone
+- name: baseline eGFR level
+  direction: strengthens
+  strength: strong
+  description: Lower baseline eGFR categories associated with progressively higher
+    risk of kidney failure requiring replacement therapy
+- name: eGFR measurement method
+  direction: strengthens
+  strength: moderate
+  description: eGFR based on creatinine combined with cystatin C may provide more
+    accurate risk stratification compared to creatinine alone

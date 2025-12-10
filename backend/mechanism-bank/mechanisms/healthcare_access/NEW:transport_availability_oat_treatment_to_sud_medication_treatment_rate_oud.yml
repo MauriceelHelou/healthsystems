@@ -1,0 +1,56 @@
+id: NEW:transport_availability_oat_treatment_to_sud_medication_treatment_rate_oud
+name: Transport Availability for OAT Treatment Access → SUD Medication Treatment Rate for OUD
+from_node:
+  node_id: NEW:transport_availability_oat_treatment
+  node_name: Transport Availability for OAT Treatment Access
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate for OUD
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: OAT typically requires frequent (often daily) clinic attendance for supervised dosing'
+- 'Step 2: Limited public transport options, clinic locations, and prescriber availability create access
+  barriers'
+- 'Step 3: Transport challenges can lead to treatment non-adherence, dropout, or unsafe self-transport'
+- 'Step 4: Ensuring appropriate transport access is key to equitable and safe OAT delivery'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Daniel T Winter et al. 2025. "Understanding issues of driving safety and transport
+    utilisation among clients receiving opioid agonist treatment: a cross-sectional survey in New South
+    Wales, Australia.." https://doi.org/10.1071/PY25035'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references regulatory barriers to OAT literature
+  - Additional citations require full-text access - abstract references prescriber availability literature
+  - Additional citations require full-text access - abstract references treatment access equity literature
+  doi: 10.1071/PY25035
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Transport availability is a critical structural determinant of equitable OAT access. The
+  study emphasizes that beyond regulatory and clinical constraints, logistical factors including transport
+  challenges significantly impact treatment access and safety.
+quantitative_effects:
+  sample_size: 482
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Transport barriers vary significantly by urban/rural location, public transit availability,
+    and clinic distribution across New South Wales
+moderators:
+- name: clinic_type_public_vs_private
+  direction: strengthens
+  strength: moderate
+  description: Different clinic types (public vs private/pharmacy) may have different transport accessibility
+    profiles
+structural_competency:
+  equity_implications: This mechanism centers the structural barrier of transport infrastructure in addiction
+    treatment access. Rather than blaming individuals for non-adherence or unsafe driving, it identifies
+    how healthcare system design and transportation policy create conditions that undermine treatment
+    success. Equity implications are significant as those in transport-poor areas face compounded disadvantages
+    in accessing life-saving treatment.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.164864'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,49 @@
+id: racial_ethnic_minoritization_to_aud_diagnosis
+name: Racial and Ethnic Minoritization (Black/Hispanic Identity) → Alcohol Use Disorder
+  Diagnosis
+from_node:
+  node_id: racial_ethnic_minoritization
+  node_name: Racial and Ethnic Minoritization (Black/Hispanic Identity)
+to_node:
+  node_id: aud_diagnosis
+  node_name: Alcohol Use Disorder Diagnosis
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Structural racism and implicit bias shape clinical decision-making in healthcare
+  settings, leading providers to differentially apply diagnostic criteria'
+- 'Step 2: Black and Hispanic veterans experience heightened scrutiny and stereotyping
+  regarding substance use despite equivalent alcohol consumption patterns'
+- 'Step 3: Diagnostic thresholds are applied inconsistently, with minoritized veterans
+  more likely to receive formal AUD diagnoses at similar or lower levels of alcohol
+  consumption compared to White veterans'
+- 'Step 4: This diagnostic bias becomes encoded in electronic health records, creating
+  disparities in documented AUD prevalence that do not reflect actual differences
+  in alcohol consumption behavior'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: R. Vickers-Smith et al. 2023. "Racial and Ethnic Bias in the Diagnosis
+    of Alcohol Use Disorder in Veterans.." *American Journal of Psychiatry*. https://doi.org/10.1176/appi.ajp.21111097
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.359960'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: gender_male
+  direction: strengthens
+  strength: strong
+  description: The diagnostic disparity was greatest between Black and White men,
+    with Black men having 23%-109% greater odds of AUD diagnosis at most consumption
+    levels
+- name: alcohol_consumption_level
+  direction: u_shaped
+  strength: strong
+  description: Diagnostic disparities were present at all but the lowest and highest
+    levels of alcohol consumption, suggesting bias operates most strongly in middle
+    consumption ranges
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/racial_ethnic_minoritization_to_aud_diagnosis.yaml
+_category: healthcare_access

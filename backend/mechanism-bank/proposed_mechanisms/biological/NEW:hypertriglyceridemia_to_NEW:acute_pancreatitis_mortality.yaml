@@ -1,0 +1,55 @@
+id: NEW:hypertriglyceridemia_to_NEW:acute_pancreatitis_mortality
+name: Hypertriglyceridemia → Acute Pancreatitis Mortality
+from_node:
+  node_id: NEW:hypertriglyceridemia
+  node_name: Hypertriglyceridemia
+to_node:
+  node_id: NEW:acute_pancreatitis_mortality
+  node_name: Acute Pancreatitis Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hypertriglyceridemia leads to accumulation of triglycerides in pancreatic
+  capillaries, where pancreatic lipase hydrolyzes them into free fatty acids'
+- 'Step 2: High concentrations of free fatty acids cause direct toxic injury to pancreatic
+  acinar cells and capillary endothelium, triggering inflammation and microcirculatory
+  disturbances'
+- 'Step 3: HTG-induced acute pancreatitis develops with higher severity, characterized
+  by increased rates of organ failure, intensive care unit admission, and pancreatic
+  necrosis compared to other etiologies'
+- 'Step 4: The more severe disease course with multiple complications results in significantly
+  elevated mortality rates compared to alcoholic or biliary acute pancreatitis'
+evidence:
+  quality_rating: A
+  n_studies: 127
+  primary_citation: 'E. Bálint et al. 2020. Assessment of the course of acute pancreatitis
+    in the light of aetiology: a systematic review and meta-analysis. Scientific Reports.'
+  supporting_citations: []
+description: Hypertriglyceridemia-induced acute pancreatitis (HTG-AP) is associated
+  with significantly higher mortality compared to other common etiologies of acute
+  pancreatitis. This meta-analysis of 127 studies found that HTG-AP patients have
+  72% higher odds of mortality compared to alcoholic AP and 50% higher odds compared
+  to biliary AP. HTG-AP is also associated with the highest risk for developing non-mild
+  disease and the highest number of complications overall.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.72
+    type: odds_ratio
+    ci_lower: 1.04
+    ci_upper: 2.84
+  p_value: null
+  sample_size: null
+moderators:
+- name: comparison_etiology
+  direction: strengthens
+  strength: moderate
+  description: Mortality risk from HTG-AP is higher when compared to alcoholic AP
+    (OR=1.72) and biliary AP (OR=1.50), indicating HTG consistently confers worse
+    prognosis across etiological comparisons
+- name: disease_severity
+  direction: strengthens
+  strength: strong
+  description: HTG-AP has the highest risk for non-mild (moderately severe and severe)
+    conditions among all etiologies, which mediates the increased mortality

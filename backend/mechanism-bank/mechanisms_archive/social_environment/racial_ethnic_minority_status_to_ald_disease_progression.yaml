@@ -1,0 +1,42 @@
+id: racial_ethnic_minority_status_to_ald_disease_progression
+name: Racial and Ethnic Minority Status → Alcohol-Associated Liver Disease Progression
+from_node:
+  node_id: racial_ethnic_minority_status
+  node_name: Racial and Ethnic Minority Status
+to_node:
+  node_id: ald_disease_progression
+  node_name: Alcohol-Associated Liver Disease Progression
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Racial and ethnic minorities experience structural barriers including discrimination
+  in healthcare access and quality'
+- 'Step 2: These barriers lead to delayed diagnosis and reduced access to preventive
+  care and early intervention for alcohol-related liver conditions'
+- 'Step 3: Later stage diagnosis combined with potential differences in disease management
+  results in more advanced disease at presentation'
+- 'Step 4: Advanced disease stage at presentation accelerates progression through
+  the natural history continuum of ALD'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: G. Ayares et al. 2024. "Racial and ethnic disparities in the natural
+    history of alcohol‐associated liver disease in the United States." *Liver international
+    (Print)*. https://doi.org/10.1111/liv.16023
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.516347'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: disease_stage
+  direction: strengthens
+  strength: moderate
+  description: Disparities may vary across different stages of ALD continuum, with
+    potentially stronger effects at certain disease stages
+- name: healthcare_access
+  direction: strengthens
+  strength: strong
+  description: Limited healthcare access among racial/ethnic minorities amplifies
+    disparities in disease progression

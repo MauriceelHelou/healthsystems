@@ -1,0 +1,52 @@
+id: youth_homelessness_unaccompanied_rate_to_serious_mental_illness_smi
+name: Youth Homelessness Rate → Psychopathology (Mood Disorders, PTSD, Anxiety)
+from_node:
+  node_id: youth_homelessness_unaccompanied_rate
+  node_name: Youth Homelessness Rate
+to_node:
+  node_id: serious_mental_illness_smi
+  node_name: Psychopathology (Mood Disorders, PTSD, Anxiety)
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Youth experiencing homelessness face extreme environmental stressors including
+  lack of stable shelter, food insecurity, and exposure to violence and exploitation'
+- 'Step 2: Chronic stress activates prolonged hypothalamic-pituitary-adrenal (HPA)
+  axis responses, leading to dysregulation of stress hormones and neurobiological
+  changes'
+- 'Step 3: Traumatic experiences common during homelessness (physical assault, sexual
+  violence, witnessing violence) directly contribute to PTSD symptomatology'
+- 'Step 4: Social isolation, stigma, and loss of supportive relationships compound
+  psychological distress and contribute to mood disorders and anxiety'
+- 'Step 5: Limited access to mental health services and continuity of care prevents
+  early intervention, allowing symptoms to progress to diagnosable disorders'
+evidence:
+  quality_rating: A
+  n_studies: 32
+  primary_citation: 'Colin Burke et al. 2022. Systematic review: Rates of psychopathology,
+    substance misuse, and neuropsychological dysfunction among transitional age youth
+    experiencing homelessness. American Journal on Addictions.'
+  supporting_citations: []
+description: Transitional age youth experiencing homelessness (TAY-EH) demonstrate
+  elevated rates of mood disorders, PTSD, and anxiety disorders compared to housed
+  peers. This systematic review of 32 studies with 13,516 participants found consistent
+  evidence of disproportionate psychopathology burden among homeless youth, driven
+  by exposure to chronic stress, trauma, and barriers to mental health care.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: duration_of_homelessness
+  direction: strengthens
+  strength: moderate
+  description: Longer periods of homelessness likely associated with increased psychopathology
+    burden
+- name: prior_trauma_exposure
+  direction: strengthens
+  strength: strong
+  description: Pre-existing trauma and adverse childhood experiences compound vulnerability
+    to developing serious mental illness
+- name: access_to_services
+  direction: weakens
+  strength: moderate
+  description: Access to mental health services and supportive housing programs may
+    buffer against development of severe psychopathology

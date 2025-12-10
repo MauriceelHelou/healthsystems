@@ -1,0 +1,78 @@
+id: NEW:audit_screening_tool_use_to_alcohol_use_disorder
+name: AUDIT Screening Tool Use in Primary Care → Alcohol Use Disorder
+from_node:
+  node_id: NEW:audit_screening_tool_use
+  node_name: AUDIT Screening Tool Use in Primary Care
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: AUDIT screening tool is implemented in primary care settings to identify individuals with hazardous
+  drinking patterns'
+- 'Step 2: Cut-point scores determine sensitivity and specificity for detecting alcohol use disorders'
+- 'Step 3: Higher cut-points reduce false positives but decrease sensitivity for true AUD cases'
+- 'Step 4: Identified individuals can be referred for brief interventions or treatment'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'S. Lange et al. 2019. "Facilitating Screening and Brief Interventions in Primary
+    Care: A Systematic Review and Meta‐Analysis of the AUDIT as an Indicator of Alcohol Use Disorders."
+    https://doi.org/10.1111/acer.14171'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 36 original quantitative studies
+  - Studies searched from CINAHL, Embase, ERIC, MEDLINE, PsycINFO, Scopus, and Web of Science databases
+  - WHO AUDIT development studies (referenced in background)
+  doi: 10.1111/acer.14171
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review and meta-analysis of 36 studies found that the AUDIT screening tool
+  does not perform well for identifying individuals with alcohol use disorders, particularly in low-prevalence
+  populations and among women. The study used random-effects meta-regression to assess determinants of
+  specificity and sensitivity, finding significant variation by sex, AUD prevalence, cut-point scores,
+  and standard drink size definitions.
+quantitative_effects:
+  effect_size:
+    value: 0.95
+    type: percentage_change
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Countries with low prevalence of AUDs have higher false-positive rates compared to
+    countries with higher AUD prevalence. Standard drink size varies by country and affects AUDIT performance
+    for men.
+moderators:
+- name: sex
+  direction: weakens
+  strength: strong
+  description: AUDIT performs less well in identifying women compared to men; screening accuracy is lower
+    for female populations
+- name: aud_prevalence
+  direction: weakens
+  strength: strong
+  description: Countries and populations with low AUD prevalence have higher false-positive rates, reducing
+    screening utility
+- name: cut_point_score
+  direction: u_shaped
+  strength: strong
+  description: AUDIT score cut-point was significantly associated with both sensitivity and specificity;
+    higher cut-points increase specificity but reduce sensitivity
+- name: standard_drink_size
+  direction: weakens
+  strength: moderate
+  description: Standard drink size affects sensitivity and specificity for men but not women, creating
+    geographic variation in screening performance
+structural_competency:
+  equity_implications: This mechanism highlights structural barriers to equitable alcohol use disorder
+    identification. The AUDIT's differential performance by sex represents a systemic healthcare access
+    issue where screening tools validated primarily on male populations fail women. Geographic variation
+    in standard drink definitions and AUD prevalence creates structural inequities in screening accuracy
+    across countries. The finding that low-prevalence populations experience high false-positive rates
+    suggests screening may unnecessarily burden certain populations while missing cases in others. These
+    are healthcare system design issues, not individual patient failures.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.980562'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,65 @@
+id: NEW:interferon_based_hcv_treatment_to_hepatitis_c_treatment_completion
+name: Interferon-Based HCV Treatment → HCV Treatment Completion (Sustained Viral Response)
+from_node:
+  node_id: NEW:interferon_based_hcv_treatment
+  node_name: Interferon-Based HCV Treatment
+to_node:
+  node_id: hepatitis_c_treatment_completion
+  node_name: HCV Treatment Completion (Sustained Viral Response)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Interferon-based therapy (conventional or pegylated interferon) is administered
+  to HCV-infected patients, initiating antiviral immune response'
+- 'Step 2: Treatment induces viral suppression through interferon''s immunomodulatory
+  and antiviral effects'
+- 'Step 3: Sustained viral response (SVR) is achieved in approximately 40% of treated
+  patients overall, with 33% SVR rate in genotype 1'
+- 'Step 4: Treatment completion and SVR are moderated by adverse events (flu-like
+  syndrome in 41%, anemia, cytopenia) leading to 11% treatment discontinuation'
+- 'Step 5: Successful completion results in undetectable HCV RNA at follow-up, indicating
+  viral clearance'
+evidence:
+  quality_rating: A
+  n_studies: 38
+  primary_citation: 'T Casanovas Taltavull et al. 2009. Results of hepatitis C virus
+    treatment in patients on hemodialysis: data from published meta-analyses in 2008.
+    Transplantation proceedings.'
+  supporting_citations: []
+description: Interferon-based HCV treatment leads to sustained viral response (treatment
+  completion/cure) in approximately 40% of patients overall. This meta-analysis of
+  hemodialysis patients across two 2008 meta-analyses (645 and 459 patients respectively,
+  with 19 overlapping studies) demonstrates that while treatment is effective, completion
+  rates are affected by genotype (33% SVR for genotype 1), adverse events requiring
+  treatment withdrawal (11%), and patient-specific factors. Pegylated interferon showed
+  minimal advantage over conventional interferon in this population.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 40.0
+    type: percentage_svr
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 1104
+moderators:
+- name: HCV genotype
+  direction: weakens
+  strength: moderate
+  description: Genotype 1 shows lower SVR rate (33%) compared to overall SVR (40%)
+- name: Interferon formulation
+  direction: strengthens
+  strength: weak
+  description: Pegylated interferon provides few additional benefits over conventional
+    interferon in hemodialysis patients
+- name: Adverse events
+  direction: weakens
+  strength: moderate
+  description: Flu-like syndrome (41% of patients), anemia, and severe adverse events
+    lead to treatment discontinuation in 11% of cases
+- name: Dialysis status
+  direction: weakens
+  strength: moderate
+  description: Hemodialysis patients have specific challenges including high anemia
+    rates requiring erythropoietin or transfusions

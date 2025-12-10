@@ -1,0 +1,62 @@
+id: NEW:alcohol_duty_taxation_to_unemployment_rate_local
+name: Alcohol Duty/Taxation Level → Local Unemployment Rate
+from_node:
+  node_id: NEW:alcohol_duty_taxation
+  node_name: Alcohol Duty/Taxation Level
+to_node:
+  node_id: unemployment_rate_local
+  node_name: Local Unemployment Rate
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Increased alcohol duties generate additional government revenue'
+- 'Step 2: Government reallocates increased revenue to stimulate public expenditure'
+- 'Step 3: Increased government spending creates demand across multiple economic sectors'
+- 'Step 4: Economic activity and employment are stimulated through multiplier effects'
+- 'Step 5: Net positive effect on employment despite reduced alcohol industry activity'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. Connolly et al. 2019. "Can a policy-induced reduction in alcohol consumption improve
+    health outcomes and stimulate the UK economy?: A potential ''double dividend''." https://doi.org/10.1111/dar.12962'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Input-Output economic modeling literature referenced
+  - Previous UK alcohol impact studies showing 'gross' negative impacts considered in isolation
+  doi: 10.1111/dar.12962
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Contrary to conventional economic arguments against alcohol taxation, this study demonstrates
+  that when increased alcohol duties are accompanied by reinvestment of revenues into government expenditure,
+  there is no trade-off between employment and health - both improve simultaneously, creating a 'double
+  dividend'
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: UK-specific economic modeling; results depend on how government reinvests tax revenue
+    and the structure of the national economy
+moderators:
+- name: government_spending_allocation
+  direction: strengthens
+  strength: strong
+  description: The mechanism requires that increased government revenues are actually spent to stimulate
+    the economy rather than used for debt reduction or savings
+- name: economic_sector_diversification
+  direction: strengthens
+  strength: moderate
+  description: More diversified economies can better absorb reduced alcohol sector activity through growth
+    in other sectors
+structural_competency:
+  equity_implications: This mechanism challenges the structural argument often used against alcohol control
+    policies - that they harm the economy and employment. By demonstrating that proper revenue reinvestment
+    creates net positive economic effects, the study removes a key barrier to structural interventions
+    on alcohol availability. The finding has equity implications as alcohol-related harms disproportionately
+    affect lower-income populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.630409'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

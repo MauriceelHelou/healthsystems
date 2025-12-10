@@ -1,0 +1,43 @@
+id: incomplete_drug_testing_data_to_biased_drugged_driving_estimates
+name: Incomplete Drug Testing Data → Biased Drugged Driving Prevalence Estimates
+from_node:
+  node_id: incomplete_drug_testing_data
+  node_name: Incomplete Drug Testing Data
+to_node:
+  node_id: biased_drugged_driving_estimates
+  node_name: Biased Drugged Driving Prevalence Estimates
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Low and variable state drug testing rates (ranging from 10.0% to 70.8%
+  depending on driver type) result in incomplete surveillance data'
+- 'Step 2: Missing data is not random but systematically biased toward certain driver
+  types (surviving, not-at-fault drivers tested less frequently)'
+- 'Step 3: Biased testing creates systematic underestimation of drugged driving prevalence,
+  particularly among certain driver populations'
+- 'Step 4: Underestimated prevalence leads to inadequate policy responses and resource
+  allocation for drugged driving prevention'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Megan E Slater et al. 2016. "Differences in state drug testing
+    and reporting by driver type in U.S. fatal traffic crashes.." *Accident; analysis
+    and prevention*. https://doi.org/10.1016/j.aap.2016.03.015
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.561870'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: driver_type_tested
+  direction: strengthens
+  strength: strong
+  description: Bias is most severe for surviving drivers not transported to hospital
+    (14.0% tested) and not-at-fault drivers (10.0% tested), creating the greatest
+    potential for underestimation in these populations
+- name: state_resources
+  direction: strengthens
+  strength: moderate
+  description: States with fewer testing resources likely have more incomplete data,
+    potentially correlating with other social and economic disadvantages

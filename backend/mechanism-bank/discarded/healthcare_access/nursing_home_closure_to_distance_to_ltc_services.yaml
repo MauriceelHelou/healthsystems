@@ -1,0 +1,42 @@
+id: nursing_home_closure_to_distance_to_ltc_services
+name: Nursing Home Closure → Distance to Long-Term Care Services
+from_node:
+  node_id: nursing_home_closure
+  node_name: Nursing Home Closure
+to_node:
+  node_id: distance_to_ltc_services
+  node_name: Distance to Long-Term Care Services
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Nursing home providing long-term care services closes in rural community'
+- 'Step 2: Local access point for long-term care is eliminated'
+- 'Step 3: Residents needing LTC must identify and travel to next nearest facility'
+- 'Step 4: Geographic distance to closest LTC provider increases'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Hari Sharma et al. 2024. "Nursing home closures and access to
+    post-acute care and long-term care services in rural areas.." *Journal of Rural
+    Health*. https://doi.org/10.1111/jrh.12822
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.466420'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: rural_vs_urban_location
+  direction: strengthens
+  strength: strong
+  description: Rural location amplifies the impact of closures on LTC access, with
+    rural areas experiencing 6.5 times greater distance increases than urban areas
+- name: presence_of_nursing_homes_in_zip
+  direction: weakens
+  strength: strong
+  description: Rural ZIP codes with no nursing homes in 2018 had even higher distances
+    to LTC providers than those that experienced closure, indicating complete absence
+    of local facilities creates most severe access barriers
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/nursing_home_closure_to_distance_to_ltc_services.yaml
+_category: healthcare_access

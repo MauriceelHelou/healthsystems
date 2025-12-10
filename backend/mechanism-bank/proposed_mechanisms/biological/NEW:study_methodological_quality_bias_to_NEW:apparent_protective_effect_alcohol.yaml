@@ -1,0 +1,74 @@
+id: NEW:study_methodological_quality_bias_to_NEW:apparent_protective_effect_alcohol
+name: Study Methodological Quality (Selection Bias) → Apparent Protective Effect of
+  Alcohol on Mortality
+from_node:
+  node_id: NEW:study_methodological_quality_bias
+  node_name: Study Methodological Quality (Selection Bias)
+to_node:
+  node_id: NEW:apparent_protective_effect_alcohol
+  node_name: Apparent Protective Effect of Alcohol on Mortality
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Studies with methodological limitations include former drinkers (who may
+  have quit due to illness) and occasional drinkers in the abstainer reference group,
+  creating a ''sick quitter'' bias'
+- 'Step 2: These misclassified abstainer groups have elevated mortality risk due to
+  pre-existing health conditions that prompted cessation of drinking'
+- 'Step 3: When low-volume drinkers are compared against this artificially unhealthy
+  reference group, they appear to have lower mortality risk (RR=0.84)'
+- 'Step 4: Higher quality studies that exclude former and occasional drinkers from
+  abstainer groups, use younger cohorts (≤55 years), and follow beyond age 55 eliminate
+  these selection biases'
+- 'Step 5: In higher quality studies, the apparent protective effect disappears and
+  low-volume drinking shows similar mortality risk to true abstainers (RR=0.98, CI:
+  0.87-1.11)'
+evidence:
+  quality_rating: A
+  n_studies: 107
+  primary_citation: Tim R Stockwell et al. 2024. Why do only some cohort studies find
+    health benefits from low volume alcohol use? A systematic review and meta-analysis
+    of study characteristics that may bias mortality risk estimates. Journal of Studies
+    on Alcohol and Drugs.
+  supporting_citations: []
+description: Methodological quality in alcohol epidemiology studies, specifically
+  related to selection bias in defining abstainer reference groups and cohort characteristics,
+  significantly influences whether studies find apparent protective effects of low-volume
+  alcohol consumption on mortality. Higher quality studies that avoid 'sick quitter'
+  bias by excluding former and occasional drinkers from abstainer groups find no protective
+  effect (RR=0.98), while lower quality studies with these biases report significant
+  apparent protection (RR=0.84). This systematic review of 107 longitudinal studies
+  with over 4.8 million participants demonstrates that the widely reported health
+  benefits of moderate drinking may be a methodological artifact rather than a true
+  biological effect.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.98
+    type: relative_risk
+    ci_lower: 0.87
+    ci_upper: 1.11
+  p_value: null
+  sample_size: 4838825
+moderators:
+- name: Cohort age at baseline
+  direction: strengthens
+  strength: strong
+  description: Younger cohorts (≤55 years) reduce selection bias from health-related
+    cessation of drinking
+- name: Abstainer reference group definition
+  direction: strengthens
+  strength: strong
+  description: Separating former and occasional drinkers from abstainers eliminates
+    sick quitter bias
+- name: Smoking status
+  direction: weakens
+  strength: moderate
+  description: 'Non-smoking cohorts showed RR above 1.0 (RR=1.16, CI: 0.91-1.41),
+    suggesting smoking may confound or mediate the relationship'
+- name: Socioeconomic status control
+  direction: weakens
+  strength: moderate
+  description: Studies controlling for SES had reduced apparent protective effects
+    for low volume drinkers

@@ -1,0 +1,44 @@
+id: alcohol_intake_to_cardiovascular_disease
+name: Alcohol Intake → Cardiovascular Disease
+from_node:
+  node_id: alcohol_intake
+  node_name: Alcohol Intake
+to_node:
+  node_id: cardiovascular_disease
+  node_name: Cardiovascular Disease
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption (particularly heavy/chronic use) may contribute to
+  hypertension through sympathetic nervous system activation and altered vascular
+  tone'
+- 'Step 2: Alcohol metabolism produces acetaldehyde and reactive oxygen species causing
+  direct myocardial and vascular damage'
+- 'Step 3: Heavy alcohol use promotes dyslipidemia (elevated triglycerides) and metabolic
+  dysregulation'
+- 'Step 4: Cumulative vascular and cardiac damage increases risk of stroke and ischemic
+  heart disease'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Byun et al. 2020. "Cross-Sectional Analysis of the Association
+    between Periodontitis and Cardiovascular Disease Using the Korean Genome and Epidemiology
+    Study Data." *International Journal of Environmental Research and Public Health*.
+    https://doi.org/10.3390/ijerph17145237
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.433345'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: periodontitis
+  direction: strengthens
+  strength: moderate
+  description: Periodontitis may interact with alcohol-related inflammation to amplify
+    cardiovascular risk through synergistic inflammatory pathways
+- name: smoking_habit
+  direction: strengthens
+  strength: strong
+  description: Combined alcohol and smoking exposure creates multiplicative cardiovascular
+    risk through multiple vascular damage mechanisms

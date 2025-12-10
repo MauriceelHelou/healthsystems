@@ -1,0 +1,63 @@
+id: NEW:oud_treatment_supportive_services_to_sud_medication_treatment_rate_oud
+name: OUD Treatment Supportive Services Availability → SUD Medication Treatment Rate - OUD
+from_node:
+  node_id: NEW:oud_treatment_supportive_services
+  node_name: OUD Treatment Supportive Services Availability
+to_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: SUD Medication Treatment Rate - OUD
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Treatment facilities decide which supportive services to offer alongside medication treatment'
+- 'Step 2: No clinics provide childcare or transportation services for pregnant patients'
+- 'Step 3: Absence of childcare and transportation creates practical barriers to treatment attendance'
+- 'Step 4: Pregnant individuals with existing children or transportation limitations cannot consistently
+  access treatment'
+- 'Step 5: Reduced treatment engagement and completion among pregnant patients with OUD'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Ashley C. Lensch et al. 2021. "Pregnant Patients Using Opioids: Treatment Access
+    Barriers in the Age of COVID-19." https://doi.org/10.1097/ADM.0000000000000826'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  doi: 10.1097/ADM.0000000000000826
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Complete absence of childcare and transportation services at OUD treatment facilities creates
+  structural barriers for pregnant patients. While 86% offer individual counseling, the lack of practical
+  supportive services prevents many pregnant individuals from accessing and maintaining treatment.
+quantitative_effects:
+  effect_size:
+    value: 0.0
+    type: percentage_change
+  sample_size: 44
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: North Carolina specific findings; supportive service availability may vary by state
+    and region
+moderators:
+- name: Individual counseling availability
+  direction: weakens
+  strength: moderate
+  description: 86% of accepting clinics offer individual counseling, partially offsetting lack of other
+    supportive services
+- name: Same-day intake
+  direction: weakens
+  strength: moderate
+  description: 52% of accepting clinics offer same-day intake, reducing one barrier to treatment initiation
+structural_competency:
+  equity_implications: This mechanism highlights how the design of healthcare services fails to account
+    for the lived realities of pregnant individuals seeking OUD treatment. The absence of childcare and
+    transportation represents a structural failure to address known barriers to care. This disproportionately
+    affects low-income individuals who may lack alternative childcare or transportation options, creating
+    inequitable treatment access based on socioeconomic status.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.201890'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,44 @@
+id: criminal_justice_referral_to_moud_receipt
+name: Criminal Justice Agency Referral Source → Medications for Opioid Use Disorder
+  Receipt
+from_node:
+  node_id: criminal_justice_referral
+  node_name: Criminal Justice Agency Referral Source
+to_node:
+  node_id: moud_receipt
+  node_name: Medications for Opioid Use Disorder Receipt
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Criminal justice agencies operate within systems that historically prioritize
+  abstinence-based treatment models and may have institutional barriers to medication-assisted
+  treatment'
+- 'Step 2: Criminal justice-referred individuals face stigma and discrimination in
+  healthcare settings due to their involvement with the legal system'
+- 'Step 3: Treatment facilities serving criminal justice populations may have limited
+  capacity or authorization to prescribe controlled substances like buprenorphine
+  or methadone'
+- 'Step 4: Lack of integration between criminal justice and healthcare systems creates
+  administrative and logistical barriers to accessing medications for OUD'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: U. G. Khatri et al. 2021. "Medicaid Expansion Increased Medications
+    For Opioid Use Disorder Among Adults Referred By Criminal Justice Agencies.."
+    *Health Affairs*. https://doi.org/10.1377/hlthaff.2020.01251
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.371366'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: medicaid_expansion
+  direction: weakens
+  strength: moderate
+  description: Medicaid expansion slightly narrowed the disparity in MOUD receipt
+    between criminal justice-referred individuals and those referred from other sources,
+    though disparities persisted
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/criminal_justice_referral_to_moud_receipt.yaml
+_category: healthcare_access

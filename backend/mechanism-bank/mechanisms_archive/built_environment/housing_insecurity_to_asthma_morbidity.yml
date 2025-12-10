@@ -1,0 +1,44 @@
+id: housing_insecurity_to_asthma_morbidity
+name: Housing Insecurity → Asthma Morbidity
+from_node:
+  node_id: housing_insecurity
+  node_name: Housing Insecurity
+to_node:
+  node_id: asthma_morbidity
+  node_name: Asthma Morbidity
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Housing insecurity leads to unstable living conditions with potential exposure to environmental
+  triggers'
+- 'Step 2: Poor housing quality often includes allergens, mold, pests, and inadequate ventilation'
+- 'Step 3: These environmental factors trigger inflammatory responses in airways'
+- 'Step 4: Chronic exposure to triggers leads to increased asthma symptoms and exacerbations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jonathan M Gabbay et al. 2024. "Housing Insecurity and Asthma Outcomes.." *The journal
+    of allergy and clinical immunology. In practice*. https://doi.org/10.1016/j.jaip.2023.10.031
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1016/j.jaip.2023.10.031
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '2.0'
+description: Housing insecurity exacerbates asthma morbidity through exposure to environmental triggers
+  and poor housing conditions that promote respiratory inflammation
+moderators:
+- name: age_group
+  direction: strengthens
+  strength: moderate
+  description: Children and adolescents may be particularly vulnerable to housing-related asthma triggers
+    due to developing respiratory systems
+structural_competency:
+  equity_implications: This mechanism traces housing insecurity to broader structural factors including
+    housing policy, income inequality, and systemic disinvestment in affordable housing. It avoids blaming
+    individuals and focuses on how structural conditions create differential health outcomes.
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.969995'
+  extraction_confidence: medium
+  prompt_version: 2.0-citation-verified

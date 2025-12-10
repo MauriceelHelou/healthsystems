@@ -1,0 +1,59 @@
+id: NEW:emergency_call_handler_dispatcher_occupation_to_anxiety_disorder
+name: Emergency Call-Handler and Dispatcher Occupation → Anxiety Disorder
+from_node:
+  node_id: NEW:emergency_call_handler_dispatcher_occupation
+  node_name: Emergency Call-Handler and Dispatcher Occupation
+to_node:
+  node_id: anxiety_disorder
+  node_name: Anxiety Disorder
+direction: positive
+category: occupational_health
+mechanism_pathway:
+- 'Step 1: CHDs must maintain constant alertness and rapid decision-making under pressure'
+- 'Step 2: Unpredictable nature of emergency calls creates chronic hypervigilance'
+- 'Step 3: Fear of making errors with life-or-death consequences produces anticipatory anxiety'
+- 'Step 4: Sustained physiological stress response leads to clinical anxiety disorders'
+evidence:
+  quality_rating: A
+  n_studies: 37
+  primary_citation: C Osório et al. 2025. "Systematic review and meta-analysis on the mental health of
+    emergency and urgent call-handlers and dispatchers.." https://doi.org/10.1093/occmed/kqae104
+  supporting_citations:
+  - Additional citations require full-text access - abstract references studies from Annals of Emergency
+    Dispatch and Response
+  - Studies from 10 electronic databases and grey literature included
+  - 13 articles provided quantitative information for meta-analyses
+  doi: 10.1093/occmed/kqae104
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2024, source is 2025'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Pooled prevalence of anxiety among emergency call-handlers and dispatchers is 17.2%, with
+  notable heterogeneity across studies as indicated by the wide confidence interval.
+quantitative_effects:
+  effect_size:
+    value: 17.2
+    type: percentage_change
+    ci_lower: 6.6
+    ci_upper: 31.5
+  sample_size: 7759
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Wide confidence interval (6.6-31.5%) suggests significant heterogeneity across the
+    nine countries studied
+moderators:
+- name: job_demands
+  direction: strengthens
+  strength: moderate
+  description: Higher call volumes and understaffing may increase anxiety risk
+structural_competency:
+  equity_implications: Anxiety prevalence reflects job design factors including high cognitive demands,
+    time pressure, and consequences of errors. Structural interventions should address workload management,
+    adequate break times, and technology improvements rather than placing burden on individual coping.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.013386'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

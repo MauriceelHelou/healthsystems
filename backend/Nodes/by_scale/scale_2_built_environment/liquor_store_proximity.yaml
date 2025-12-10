@@ -1,0 +1,33 @@
+id: liquor_store_proximity
+name: Liquor Store Proximity
+scale: 2
+domain: Built Environment, Public Health
+category: built_environment
+stock:
+  value: 0.8
+  unit: Average distance to nearest off-premise alcohol outlet (miles)
+  year: 2022
+  source: State Licensing Data, GIS Analysis
+geographic_variation:
+  score: 5
+  level: neighborhood
+  notes: Urban areas often <0.25 miles; rural areas may exceed 10 miles
+data_quality:
+  availability: medium
+  frequency: annual
+  bias_notes: Requires GIS analysis; outlet locations from licensing may lag actual openings/closings
+  primary_sources:
+  - name: State Alcohol Beverage Control License Geocoded Data
+    granularity: neighborhood
+  - name: ESRI Business Analyst
+    granularity: census_tract
+  - name: InfoUSA/Data Axle Business Database
+    granularity: address
+description: |-
+  Average distance from residential addresses to the nearest off-premise alcohol outlet (liquor
+  store, convenience store selling alcohol, grocery store with alcohol sales). Lower values
+  indicate greater physical accessibility to purchase alcohol. Proximity is associated with
+  increased consumption and alcohol-related problems, particularly for heavy drinkers. Youth
+  drinking initiation is earlier in areas with closer alcohol access. This measure captures
+  the friction cost of obtaining alcohol in the physical environment.
+type: Infrastructure

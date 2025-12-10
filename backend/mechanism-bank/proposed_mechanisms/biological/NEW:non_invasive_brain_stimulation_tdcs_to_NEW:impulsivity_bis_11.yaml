@@ -1,0 +1,57 @@
+id: NEW:non_invasive_brain_stimulation_tdcs_to_NEW:impulsivity_bis_11
+name: Transcranial Direct Current Stimulation (tDCS) → Impulsivity (Barratt Impulsiveness
+  Scale)
+from_node:
+  node_id: NEW:non_invasive_brain_stimulation_tdcs
+  node_name: Transcranial Direct Current Stimulation (tDCS)
+to_node:
+  node_id: NEW:impulsivity_bis_11
+  node_name: Impulsivity (Barratt Impulsiveness Scale)
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: tDCS delivers low-intensity electrical current to targeted brain regions,
+  typically the prefrontal cortex, which is involved in executive function and impulse
+  control'
+- 'Step 2: The electrical stimulation modulates neuronal excitability and synaptic
+  plasticity in the stimulated regions, enhancing activity in circuits associated
+  with inhibitory control'
+- 'Step 3: Enhanced prefrontal cortex activity strengthens top-down cognitive control
+  mechanisms that regulate impulsive urges and behaviors'
+- 'Step 4: Improved impulse control manifests as reduced scores on the Barratt Impulsiveness
+  Scale (BIS-11), indicating decreased motor, attentional, and non-planning impulsivity'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: 'Yuri de Castro Machado et al. 2024. Effects of non-invasive brain
+    stimulation on impulsivity in patients with mental disorders: a systematic review
+    and meta-analysis of randomised clinical trials. General psychiatry.'
+  supporting_citations: []
+description: Transcranial direct current stimulation (tDCS) shows a moderate effect
+  in reducing impulsivity as measured by the Barratt Impulsiveness Scale (BIS-11)
+  in patients with mental disorders. A meta-analysis of 9 tDCS RCTs found that active
+  tDCS was associated with reduced BIS-11 scores compared to placebo, with a medium
+  effect size (Hedges' g = -0.54) and no heterogeneity across studies. The mechanism
+  involves neuromodulation of prefrontal cortical regions involved in executive function
+  and impulse control.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.54
+    type: hedges_g
+    ci_lower: -0.97
+    ci_upper: -0.12
+  p_value: 0.05
+  sample_size: 655
+moderators:
+- name: Outcome measure used
+  direction: strengthens
+  strength: moderate
+  description: Effect was significant only when using BIS-11 as outcome measure; overall
+    tDCS effect across all impulsivity measures was non-significant (g=-0.18)
+- name: Stimulation type
+  direction: strengthens
+  strength: moderate
+  description: tDCS showed trend toward improvement while rTMS did not show significant
+    effects on impulsivity

@@ -1,0 +1,63 @@
+id: NEW:ambient_air_pollution_no2_to_cardiovascular_disease_mortality
+name: Ambient Air Pollution (NO2) → Cardiovascular Disease Mortality
+from_node:
+  node_id: NEW:ambient_air_pollution_no2
+  node_name: Ambient Air Pollution (NO2)
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhalation of NO2 leads to entry into the respiratory system and subsequent
+  absorption into the bloodstream'
+- 'Step 2: NO2 exposure triggers oxidative stress and systemic inflammation through
+  generation of reactive oxygen species'
+- 'Step 3: Inflammatory mediators and oxidative damage promote endothelial dysfunction
+  and vascular inflammation'
+- 'Step 4: Chronic or acute exposure leads to autonomic dysfunction, increased blood
+  pressure, and accelerated atherosclerosis'
+- 'Step 5: These cardiovascular insults increase risk of acute cardiovascular events
+  (myocardial infarction, stroke) leading to mortality'
+evidence:
+  quality_rating: A
+  n_studies: 30
+  primary_citation: 'Lei Zhao et al. 2017. Association between air pollution and cardiovascular
+    mortality in China: a systematic review and meta-analysis. OncoTarget.'
+  supporting_citations: []
+description: Each 10 μg/m³ increase in NO2 concentration is associated with a 1.12%
+  excess risk of cardiovascular mortality. NO2 showed the highest excess risk among
+  all pollutants studied (PM2.5, PM10, SO2, O3). The effect is strongest with lag
+  0-1 day exposure, indicating acute effects. Vulnerable populations include females,
+  elderly (≥65 years), and those exposed during cooler temperatures.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.12
+    type: excess_risk_percent_per_10ugm3
+    ci_lower: 0.76
+    ci_upper: 1.48
+  p_value: null
+  sample_size: null
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Female sex associated with greater risk of cardiovascular mortality
+    from NO2 exposure
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Age ≥65 years associated with greater risk of cardiovascular mortality
+    compared to younger individuals
+- name: temperature
+  direction: strengthens
+  strength: moderate
+  description: Lower/cooler temperatures associated with greater cardiovascular mortality
+    risk from NO2 exposure
+- name: exposure_duration
+  direction: strengthens
+  strength: moderate
+  description: Longer duration of exposure (lag 0-1 days) showed strongest associations
+    with cardiovascular mortality

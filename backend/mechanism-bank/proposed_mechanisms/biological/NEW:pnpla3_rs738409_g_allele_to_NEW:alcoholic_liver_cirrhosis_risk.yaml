@@ -1,0 +1,60 @@
+id: NEW:pnpla3_rs738409_g_allele_to_NEW:alcoholic_liver_cirrhosis_risk
+name: PNPLA3 rs738409 G Allele (I148M Variant) → Alcoholic Liver Cirrhosis Risk
+from_node:
+  node_id: NEW:pnpla3_rs738409_g_allele
+  node_name: PNPLA3 rs738409 G Allele (I148M Variant)
+to_node:
+  node_id: NEW:alcoholic_liver_cirrhosis_risk
+  node_name: Alcoholic Liver Cirrhosis Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: The PNPLA3 rs738409 C>G polymorphism results in an isoleucine to methionine
+  substitution at position 148 (I148M) in the adiponutrin/patatin-like phospholipase
+  domain-containing 3 protein'
+- 'Step 2: The I148M variant impairs the lipase activity of PNPLA3, leading to reduced
+  triglyceride hydrolysis in hepatocytes'
+- 'Step 3: Accumulation of lipid droplets in liver cells promotes hepatic steatosis,
+  which is exacerbated by alcohol consumption'
+- 'Step 4: Combined effects of alcohol toxicity and impaired lipid metabolism accelerate
+  hepatocellular injury, inflammation, and fibrosis progression'
+- 'Step 5: Progressive fibrosis leads to increased risk of developing alcoholic liver
+  cirrhosis, following an additive genetic model where each G allele incrementally
+  increases risk'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: 'A-J Chamorro et al. 2014. Systematic review with meta-analysis:
+    the I148M variant of patatin-like phospholipase domain-containing 3 gene (PNPLA3)
+    is significantly associated with alcoholic liver cirrhosis. Alimentary pharmacology
+    & therapeutics.'
+  supporting_citations: []
+description: The PNPLA3 rs738409 G allele (I148M variant) is strongly associated with
+  increased risk of alcoholic liver cirrhosis. This meta-analysis of 11 studies including
+  2087 patients with alcoholic liver cirrhosis and 5038 controls demonstrates a clear
+  dose-dependent relationship, with homozygous GG carriers having over 4-fold increased
+  odds of developing cirrhosis compared to CC carriers. The association follows an
+  additive genetic model, where each copy of the G allele incrementally increases
+  cirrhosis risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 4.3
+    type: odds_ratio
+    ci_lower: 3.25
+    ci_upper: 5.69
+  p_value: 1.0e-05
+  sample_size: 8533
+moderators:
+- name: Genotype (additive model)
+  direction: strengthens
+  strength: strong
+  description: 'Risk increases in additive manner: GC vs CC shows OR 1.91, while GG
+    vs CC shows OR 4.30, suggesting dose-dependent effect of G allele'
+- name: Alcohol consumption status
+  direction: strengthens
+  strength: strong
+  description: Association remains significant when comparing ALC patients vs alcoholics
+    without ALD, indicating the variant modifies risk specifically in the context
+    of alcohol exposure

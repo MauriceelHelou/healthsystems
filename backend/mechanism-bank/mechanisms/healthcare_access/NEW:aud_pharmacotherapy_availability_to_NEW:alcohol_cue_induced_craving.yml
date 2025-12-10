@@ -1,0 +1,64 @@
+id: NEW:aud_pharmacotherapy_availability_to_NEW:alcohol_cue_induced_craving
+name: AUD Pharmacotherapy Availability → Alcohol Cue-Induced Craving
+from_node:
+  node_id: NEW:aud_pharmacotherapy_availability
+  node_name: AUD Pharmacotherapy Availability
+to_node:
+  node_id: NEW:alcohol_cue_induced_craving
+  node_name: Alcohol Cue-Induced Craving
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Pharmacotherapies for AUD are developed and tested using cue-exposure paradigms in laboratory
+  settings'
+- 'Step 2: Medications target neurobiological pathways involved in alcohol craving and reward processing'
+- 'Step 3: Effective medications reduce cue-reactivity (craving response) when exposed to alcohol-related
+  stimuli'
+- 'Step 4: Reduced cue-induced craving serves as early efficacy signal for medication development'
+- 'Step 5: Lower craving responses predict potential for reduced drinking behavior in clinical outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'Lindsay R Meredith et al. 2023. "Testing pharmacotherapies for alcohol use disorder
+    with cue exposure paradigms: A systematic review and quantitative synthesis of human laboratory trial
+    methodology.." https://doi.org/10.1111/acer.15143'
+  supporting_citations:
+  - Studies testing 19 different medications for AUD effects on cue-reactivity (systematic review includes
+    36 trials)
+  - 28 unique randomized trials testing 15 medications included in quantitative synthesis
+  - Additional citations require full-text access for specific study identification
+  doi: 10.1111/acer.15143
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Eight pharmacotherapies demonstrated small-to-medium effects (Cohen''s d range: |0.24 -
+  0.64|) on reducing cue-induced craving compared to placebo. This systematic review synthesized 63 effect
+  sizes (47 for craving, 16 for psychophysiological outcomes) from 28 randomized trials testing 15 medications,
+  finding that individuals randomized to medication reported lower craving following cue exposure.'
+quantitative_effects:
+  effect_size:
+    value: 0.24
+    type: standardized_mean_difference
+  sample_size: 1640
+moderators:
+- name: cue_exposure_type
+  direction: strengthens
+  strength: moderate
+  description: In vivo cue exposure (n=26 studies) was most commonly used compared to visual (n=8) or
+    audio script cues (n=2), potentially affecting effect size detection
+- name: biological_sex
+  direction: strengthens
+  strength: weak
+  description: Studies included 71% male participants on average, which may affect generalizability and
+    effect sizes across sexes
+structural_competency:
+  equity_implications: This mechanism highlights how access to evidence-based pharmacotherapy for AUD
+    depends on medication development infrastructure, clinical trial capacity, and ultimately healthcare
+    system access. Structural barriers to AUD treatment access (insurance coverage, treatment facility
+    availability, stigma) may limit who benefits from these pharmacotherapies. The review notes methodological
+    heterogeneity that may slow medication development, representing a systemic barrier to treatment advancement.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.439227'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

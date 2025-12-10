@@ -1,0 +1,38 @@
+id: roux_en_y_gastric_bypass_surgery_to_thirty_day_readmission_alcohol_hepatitis
+name: Roux-en-Y Gastric Bypass Surgery → 30-Day Hospital Readmission for Alcohol-Associated
+  Hepatitis
+from_node:
+  node_id: roux_en_y_gastric_bypass_surgery
+  node_name: Roux-en-Y Gastric Bypass Surgery
+to_node:
+  node_id: thirty_day_readmission_alcohol_hepatitis
+  node_name: 30-Day Hospital Readmission for Alcohol-Associated Hepatitis
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: RYGB patients present with more severe alcohol-associated hepatitis (higher
+  MELD-Na scores)'
+- 'Step 2: Inadequate post-discharge resources and monitoring fail to address unique
+  needs of post-bariatric surgery patients with liver disease'
+- 'Step 3: Altered metabolism and disease severity lead to complications requiring
+  hospital readmission'
+- 'Step 4: Healthcare system lacks targeted interventions for this high-risk population
+  at discharge'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Chimaobi Anugwom et al. 2023. "Lower survival and higher rates
+    of cirrhosis in patients with ROUX-EN-Y gastric bypass hospitalised with alcohol-associated
+    hepatitis." *BMJ Open Gastroenterology*. https://doi.org/10.1136/bmjgast-2022-001083
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.354695'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: discharge_resource_allocation
+  direction: weakens
+  strength: moderate
+  description: Paper notes that allocation of additional resources on discharge may
+    improve outcomes and reduce readmissions

@@ -1,0 +1,64 @@
+id: alcohol_use_disorder_to_NEW:hippocampal_tspo_expression_altered
+name: Alcohol Use Disorder → Hippocampal TSPO Expression Altered
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:hippocampal_tspo_expression_altered
+  node_name: Hippocampal TSPO Expression Altered
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol exposure affects glial cell function in hippocampus, a brain region critical
+  for memory and learning'
+- 'Step 2: Translocator protein (TSPO), a marker of microglial activation, shows altered expression patterns'
+- 'Step 3: PET imaging with [11C]PBR28 radioligand detects reduced TSPO binding in hippocampus of AUD
+  patients'
+- 'Step 4: Reduced TSPO total volume of distribution suggests altered neuroimmune homeostasis in this
+  vulnerable brain region'
+- 'Step 5: Hippocampal neuroimmune dysregulation may contribute to cognitive deficits observed in AUD'
+evidence:
+  quality_rating: B
+  n_studies: 11
+  primary_citation: 'Claire Adams et al. 2023. "Central markers of neuroinflammation in alcohol use disorder:
+    A meta-analysis of neuroimaging, cerebral spinal fluid, and postmortem studies.." https://doi.org/10.1111/acer.14992'
+  supporting_citations:
+  - Additional citations require full-text access - PET neuroimaging studies using [11C]PBR28 included
+    in meta-analysis
+  - Additional citations require full-text access - studies examining TSPO in alcohol use disorder
+  - Additional citations require full-text access - hippocampal neuroimaging studies in AUD populations
+  doi: 10.1111/acer.14992
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: PET imaging meta-analysis reveals that individuals with alcohol use disorder show significantly
+  lower translocator protein (TSPO) binding in the hippocampus compared to healthy controls (g=-1.95,
+  p<0.001). This large negative effect suggests that chronic alcohol exposure produces specific alterations
+  in hippocampal neuroimmune signaling, potentially reflecting microglial dysfunction or neuronal loss
+  in this memory-critical region.
+quantitative_effects:
+  effect_size:
+    value: -1.95
+    type: standardized_mean_difference
+    ci_lower: -2.72
+    ci_upper: -1.18
+  p_value: 0.001
+moderators:
+- name: Brain region
+  direction: strengthens
+  strength: strong
+  description: Effect specifically demonstrated in hippocampus; other brain regions may show different
+    patterns
+structural_competency:
+  equity_implications: The hippocampal TSPO findings represent biological evidence of brain changes resulting
+    from chronic heavy alcohol use, which itself is shaped by structural factors including alcohol availability
+    policies, pricing, marketing regulations, treatment accessibility, and social determinants that increase
+    vulnerability to AUD. Communities with higher alcohol outlet density, weaker alcohol control policies,
+    and limited mental health/addiction treatment resources may see higher rates of these neurobiological
+    consequences. Equity implications include that marginalized communities often face both higher exposure
+    to alcohol marketing and reduced access to AUD treatment.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.289224'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

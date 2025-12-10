@@ -1,0 +1,66 @@
+id: NEW:psychosocial_intervention_for_aud_to_NEW:alcohol_abstinence_rate
+name: Psychosocial Intervention for Alcohol Use Disorder → Alcohol Abstinence Rate
+from_node:
+  node_id: NEW:psychosocial_intervention_for_aud
+  node_name: Psychosocial Intervention for Alcohol Use Disorder
+to_node:
+  node_id: NEW:alcohol_abstinence_rate
+  node_name: Alcohol Abstinence Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individuals with moderate to severe AUD receive psychosocial interventions (e.g., cognitive
+  behavioral therapy, motivational interviewing, contingency management)'
+- 'Step 2: Interventions address psychological, behavioral, and social factors contributing to alcohol
+  dependence'
+- 'Step 3: Participants develop coping strategies, motivation for change, and behavioral skills to avoid
+  alcohol'
+- 'Step 4: Increased likelihood of achieving and maintaining abstinence from alcohol'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Abhishek Ghosh et al. 2024. "Effectiveness of psychosocial interventions for alcohol
+    use disorder: a systematic review and meta-analysis update." https://doi.org/10.1080/00952990.2024.2350056'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 14 studies in narrative synthesis
+    and 13 in meta-analysis from WHO Mental Health Gap Action Programme update
+  - Studies used ICD 10/DSM-IV diagnosis criteria for alcohol dependence
+  - Studies compared psychosocial interventions against treatment-as-usual (TAU) and active controls
+  doi: 10.1080/00952990.2024.2350056
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Psychosocial interventions for alcohol use disorder increase the relative risk of achieving
+  abstinence by 28% compared to treatment-as-usual (NNT=9), though they do not significantly reduce drinking
+  frequency or amount among those who continue drinking
+quantitative_effects:
+  effect_size:
+    value: 1.28
+    type: relative_risk
+    ci_lower: 1.07
+    ci_upper: 1.53
+  p_value: 0.01
+  sample_size: 2575
+moderators:
+- name: sex_composition
+  direction: strengthens
+  strength: moderate
+  description: 71.5% of participants were men, which may reflect both the higher prevalence of AUD in
+    men and potential differences in treatment response by sex
+- name: diagnostic_criteria
+  direction: strengthens
+  strength: moderate
+  description: 13 of 14 studies used ICD 10/DSM-IV diagnosis, suggesting effects are robust for clinically
+    diagnosed alcohol dependence
+structural_competency:
+  equity_implications: This mechanism highlights the importance of healthcare system capacity to deliver
+    psychosocial interventions for AUD. Access barriers (mental health provider shortages, lack of insurance
+    coverage for behavioral health, geographic maldistribution of treatment facilities) create structural
+    inequities in who can benefit from these evidence-based treatments. The finding that interventions
+    improve abstinence but not harm reduction outcomes suggests policy implications for how AUD treatment
+    success is defined and measured.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.248043'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

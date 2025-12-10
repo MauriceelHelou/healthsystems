@@ -1,0 +1,58 @@
+id: NEW:aud_intervention_liver_disease_to_NEW:alcohol_abstinence_rate
+name: AUD Intervention in Liver Disease Patients → Alcohol Abstinence Rate
+from_node:
+  node_id: NEW:aud_intervention_liver_disease
+  node_name: AUD Intervention in Liver Disease Patients
+to_node:
+  node_id: NEW:alcohol_abstinence_rate
+  node_name: Alcohol Abstinence Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Patients with liver disease receive dedicated AUD intervention (either
+  integrated colocated liver and addiction clinics or concomitant separate hepatology
+  and addiction clinics)'
+- 'Step 2: AUD intervention provides structured support including behavioral counseling,
+  pharmacotherapy, and monitoring that addresses the addiction component of alcohol-related
+  liver disease'
+- 'Step 3: Ongoing addiction-focused care increases patient engagement with recovery
+  programs and provides accountability mechanisms'
+- 'Step 4: Combined medical and addiction support results in increased rates of alcohol
+  abstinence (0.41 abstinence rate per person-year with intervention)'
+evidence:
+  quality_rating: A
+  n_studies: 20
+  primary_citation: 'M. Elfeki et al. 2022. Simultaneous Management of Alcohol Use
+    Disorder and Liver Disease: A Systematic Review and Meta-analysis. Journal of
+    addiction medicine.'
+  supporting_citations: []
+description: AUD intervention in patients with liver disease leads to improved alcohol
+  abstinence rates. Meta-analysis of 20 studies with 38,329 patients (7,072 receiving
+  AUD intervention) found abstinence rates of 0.41 per person-year with AUD intervention.
+  The odds ratio for abstinence with AUD intervention versus standard of care was
+  1.24, while relapse odds were reduced to 0.52. For liver transplant recipients specifically,
+  integrated addiction team follow-up reduced relapse odds to 0.48.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.24
+    type: odds_ratio
+    ci_lower: 0.86
+    ci_upper: 1.8
+  p_value: null
+  sample_size: 38329
+moderators:
+- name: Integration model
+  direction: strengthens
+  strength: moderate
+  description: Integrated clinics (colocated liver and addiction services) versus
+    concomitant (separate clinics) showed similar abstinence rates, but integrated
+    follow-up for liver transplant recipients showed improved outcomes with odds ratio
+    0.48 for relapse
+- name: Liver transplant status
+  direction: strengthens
+  strength: moderate
+  description: Liver transplant recipients receiving follow-up integrated with addiction
+    team showed lower odds of relapse (OR 0.48, 95% CI 0.25-0.72) compared to hepatology
+    alone

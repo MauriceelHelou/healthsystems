@@ -1,0 +1,51 @@
+id: measurement_methodology_choice_to_alcohol_exposure_assessment_accuracy
+name: Measurement Methodology Choice (Crow Flies vs Street Network) → Alcohol Exposure
+  Assessment Accuracy
+from_node:
+  node_id: measurement_methodology_choice
+  node_name: Measurement Methodology Choice (Crow Flies vs Street Network)
+to_node:
+  node_id: alcohol_exposure_assessment_accuracy
+  node_name: Alcohol Exposure Assessment Accuracy
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Different buffering methods (crow flies vs street network distances) capture
+  different aspects of spatial exposure to alcohol outlets'
+- 'Step 2: Crow flies method produces higher density estimates by including outlets
+  that may not be easily accessible via actual walking routes'
+- 'Step 3: Street network method provides more realistic measure of functional accessibility
+  but may underestimate visual exposure and proximity effects'
+- 'Step 4: Methodological choice affects exposure misclassification and subsequent
+  epidemiological analyses of alcohol availability impacts'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Irene Martín-Turrero et al. 2023. "How Can We Measure Alcohol
+    Outlet Density Around Schools? A Comparison Between Two Buffer-Based Methods.."
+    *Journal of urban health : bulletin of the New York Academy of Medicine*. https://doi.org/10.1007/s11524-023-00740-z'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.012712'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: outlet_density_level
+  direction: strengthens
+  strength: strong
+  description: Higher density of outlets increases disagreement between methods, with
+    crow flies producing increasingly higher estimates in dense retail environments
+- name: urban_morphology
+  direction: strengthens
+  strength: moderate
+  description: Complex urban morphology with barriers and irregular street patterns
+    increases methodological divergence
+- name: geographical_context
+  direction: strengthens
+  strength: strong
+  description: Spatial characteristics of the study area fundamentally influence which
+    methodology provides more accurate exposure assessment
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/measurement_methodology_choice_to_alcohol_exposure_assessment_accuracy.yaml
+_category: built_environment

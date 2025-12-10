@@ -1,0 +1,65 @@
+id: NEW:emergency_department_brief_intervention_for_alcohol_to_binge_drinking
+name: Emergency Department Brief Intervention for Alcohol Use → Binge Drinking
+from_node:
+  node_id: NEW:emergency_department_brief_intervention_for_alcohol
+  node_name: Emergency Department Brief Intervention for Alcohol Use
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Systematic screening protocols in emergency rooms identify patients with at-risk drinking patterns'
+- 'Step 2: Brief intervention (BI) is delivered to identified at-risk drinkers during ER visit'
+- 'Step 3: BI provides immediate counseling and motivational interviewing to increase awareness of alcohol-related
+  harms'
+- 'Step 4: Patients receive information and resources for behavior change at a teachable moment'
+- 'Step 5: Reduction in alcohol consumption behaviors including binge drinking occurs, though effect diminishes
+  over time'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: Anne-Louise Pot et al. 2020. "[Not Available].." https://doi.org/10.3917/spub.204.0315
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review of 13 articles including
+    RCTs, meta-analyses, and literature reviews published between July 2014 and March 2019
+  - Studies included randomized controlled trials evaluating BI effectiveness in ER settings
+  - Meta-analyses examining pooled effects of BI on alcohol consumption reduction
+  doi: 10.3917/spub.204.0315
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review of 13 articles (RCTs, meta-analyses, and reviews) finds that brief
+  interventions delivered in emergency rooms are effective at reducing alcohol consumption among at-risk
+  drinkers, though with modest effect sizes and heterogeneity across studies. The effectiveness appears
+  to diminish over time, and optimal implementation strategies remain undefined.
+moderators:
+- name: time_since_intervention
+  direction: weakens
+  strength: moderate
+  description: Effectiveness of brief intervention appears to decrease over time, suggesting need for
+    follow-up or booster interventions
+- name: intervention_modality
+  direction: strengthens
+  strength: moderate
+  description: Significant heterogeneity in intervention types suggests some modalities may be more effective
+    than others, though optimal modalities remain undefined
+- name: at_risk_subgroup
+  direction: strengthens
+  strength: moderate
+  description: Authors note need to identify at-risk subgroups who may benefit more from BI, suggesting
+    differential effectiveness
+structural_competency:
+  equity_implications: This mechanism represents a structural healthcare intervention that embeds alcohol
+    screening into routine ER care, making it a system-level rather than individual-level approach. The
+    ER setting provides a unique opportunity to reach populations who may not otherwise access preventive
+    services, including those with lower socioeconomic status or who lack primary care access. However,
+    the modest effect sizes highlight that individual-level brief interventions alone cannot address the
+    broader structural determinants of alcohol use disorder, such as alcohol outlet density, marketing
+    exposure, economic stress, and housing instability. Equity implications include ensuring BI is implemented
+    consistently across all ER settings serving diverse populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.097988'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

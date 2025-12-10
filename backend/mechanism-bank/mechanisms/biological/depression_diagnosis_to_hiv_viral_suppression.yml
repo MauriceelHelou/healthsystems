@@ -1,0 +1,49 @@
+id: depression_diagnosis_to_hiv_viral_suppression
+name: Depression Diagnosis → HIV Viral Suppression
+from_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+to_node:
+  node_id: hiv_viral_suppression
+  node_name: HIV Viral Suppression
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Depression impairs executive function and motivation needed for medication management'
+- 'Step 2: Depressive symptoms reduce healthcare appointment attendance and engagement'
+- 'Step 3: Depression may directly affect immune function through neuroendocrine pathways'
+- 'Step 4: Combined behavioral and biological effects of depression reduce viral suppression rates'
+evidence:
+  quality_rating: A
+  n_studies: 45
+  primary_citation: 'Thomas O''Grady et al. 2023. "The Characteristics and HIV-Related Outcomes of People
+    Living with Co-occurring HIV and Mental Health Conditions in the United States: A Systematic Review
+    of Literature from 2016 to 2021." https://doi.org/10.1007/s10461-023-04150-9'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review on mental health and HIV
+  - Studies on depression and HIV treatment outcomes
+  - Studies on mental health conditions affecting HIV care engagement
+  doi: 10.1007/s10461-023-04150-9
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Co-occurring mental health conditions, particularly depression, negatively impact HIV treatment
+  outcomes through behavioral and potentially biological pathways.
+moderators:
+- name: access_to_mental_health_treatment
+  direction: weakens
+  strength: moderate
+  description: Access to effective depression treatment can mitigate negative effects on HIV outcomes
+- name: substance_use_comorbidity
+  direction: strengthens
+  strength: strong
+  description: Co-occurring substance use amplifies depression's impact on HIV outcomes
+structural_competency:
+  equity_implications: Depression prevalence is shaped by structural factors including economic stress,
+    discrimination, trauma exposure, and access to mental health care. Addressing depression in PLWH requires
+    addressing these upstream determinants alongside clinical treatment.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.938026'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

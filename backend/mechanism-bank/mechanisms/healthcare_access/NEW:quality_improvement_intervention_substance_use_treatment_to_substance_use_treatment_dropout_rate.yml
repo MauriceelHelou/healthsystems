@@ -1,0 +1,51 @@
+id: NEW:quality_improvement_intervention_substance_use_treatment_to_substance_use_treatment_dropout_rate
+name: Quality Improvement Intervention for Substance Use Treatment → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: NEW:quality_improvement_intervention_substance_use_treatment
+  node_name: Quality Improvement Intervention for Substance Use Treatment
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: CARE intervention provides staff with clinical training and evidence-based tools'
+- 'Step 2: Quality improvement processes enable systematic monitoring of client progress'
+- 'Step 3: Client-reported treatment progress data identifies at-risk clients early'
+- 'Step 4: Data-driven interventions address barriers to treatment engagement'
+- 'Step 5: Reduced treatment dropout through improved service quality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Megan A. O''Grady et al. 2021. "A facilitation model for implementing quality improvement
+    practices to enhance outpatient substance use disorder treatment outcomes: a stepped-wedge randomized
+    controlled trial study protocol." https://doi.org/10.1186/s13012-020-01076-x'
+  supporting_citations:
+  - Additional citations require full-text access - this is a study protocol describing planned research
+  doi: 10.1186/s13012-020-01076-x
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: The CARE intervention aims to reduce treatment dropout by implementing systematic quality
+  improvement processes that enable data-driven identification and support of at-risk clients.
+quantitative_effects:
+  sample_size: 2000
+moderators:
+- name: external_facilitation_intensity
+  direction: strengthens
+  strength: moderate
+  description: More intensive external facilitation support expected to enhance implementation and sustainability
+    of dropout-reducing practices
+structural_competency:
+  equity_implications: This mechanism reframes treatment dropout from an individual client failure to
+    a system-level quality issue. The intervention targets organizational capacity to monitor, identify,
+    and respond to client needs, recognizing that dropout rates reflect treatment system performance rather
+    than individual motivation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.782932'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

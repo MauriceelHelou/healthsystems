@@ -1,0 +1,77 @@
+id: sud_medication_treatment_rate_oud_to_all_cause_mortality_rate
+name: Opioid Agonist Treatment (OAT) Receipt → All-Cause Mortality Rate
+from_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: Opioid Agonist Treatment (OAT) Receipt
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Opioid agonist treatment (OAT) with methadone or buprenorphine provides
+  stable, controlled doses of long-acting opioids that satisfy opioid receptors and
+  reduce cravings'
+- 'Step 2: Reduced cravings and withdrawal symptoms decrease illicit opioid use, thereby
+  lowering risk of fatal overdose from unpredictable potency and contamination of
+  street drugs'
+- 'Step 3: Regular engagement with OAT programs connects patients to healthcare services,
+  enabling monitoring and treatment of comorbid conditions (HIV, hepatitis C, cardiovascular
+  disease)'
+- 'Step 4: Stabilization on OAT reduces high-risk behaviors associated with drug-seeking,
+  including injection drug use and related infections, decreasing infection-related
+  mortality'
+- 'Step 5: OAT reduces suicide risk through stabilization of mood, reduced desperation
+  associated with addiction, and connection to mental health services'
+- 'Step 6: Retention in treatment provides sustained protection; mortality risk increases
+  substantially (6-fold) in the 4 weeks after OAT cessation due to loss of tolerance'
+evidence:
+  quality_rating: A
+  n_studies: 81
+  primary_citation: 'Thomas Santo et al. 2021. Association of Opioid Agonist Treatment
+    With All-Cause Mortality and Specific Causes of Death Among People With Opioid
+    Dependence: A Systematic Review and Meta-analysis. JAMA psychiatry.'
+  supporting_citations:
+  - 'Jun Ma et al. 2019. Effects of medication-assisted treatment on mortality among
+    opioids users: a systematic review and meta-analysis. Molecular psychiatry.'
+description: Opioid agonist treatment (OAT) with methadone or buprenorphine reduces
+  all-cause mortality by more than 50% among people with opioid dependence. This robust
+  finding from two large meta-analyses (51 cohorts and 15 RCTs in Santo 2021; 30 cohorts
+  in Ma 2019) demonstrates that OAT reduces not only overdose deaths but also suicide,
+  cancer, alcohol-related, and cardiovascular mortality. The protective effect is
+  consistent across sex, age, HIV status, hepatitis C status, and injection drug use
+  status. Critical time periods of vulnerability include treatment initiation (first
+  4 weeks of methadone) and treatment discontinuation, highlighting the importance
+  of careful induction protocols and continuous treatment engagement.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.47
+    type: relative_risk
+    ci_lower: 0.42
+    ci_upper: 0.53
+  p_value: null
+  sample_size: 749634
+moderators:
+- name: treatment_phase
+  direction: u_shaped
+  strength: strong
+  description: First 4 weeks of methadone treatment show doubled mortality risk (RR
+    2.01) compared to remainder of treatment; first 4 weeks after cessation show 6-fold
+    increased mortality (RR 6.01)
+- name: medication_type
+  direction: strengthens
+  strength: moderate
+  description: Buprenorphine may have stronger protective effect (RR 0.34) compared
+    to methadone (RR 0.47), though both significantly reduce mortality
+- name: retention_duration
+  direction: strengthens
+  strength: strong
+  description: Retention in MAT over 1 year associated with lower mortality rate (CMR
+    1.62) than retention ≤1 year (CMR 5.31)
+- name: incarceration_status
+  direction: strengthens
+  strength: strong
+  description: OAT shows particularly strong protective effect during incarceration
+    (RR 0.06) and after release (RR 0.09)

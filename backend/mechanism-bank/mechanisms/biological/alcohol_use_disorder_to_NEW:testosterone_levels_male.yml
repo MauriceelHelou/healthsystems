@@ -1,0 +1,50 @@
+id: alcohol_use_disorder_to_NEW:testosterone_levels_male
+name: Alcohol Use Disorder → Testosterone Levels in Males
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:testosterone_levels_male
+  node_name: Testosterone Levels in Males
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol overuse disrupts the hypothalamus-pituitary-testis (HPT) axis'
+- 'Step 2: Alcohol''s toxic effects on Leydig cells in the testes impair testosterone synthesis'
+- 'Step 3: Disrupted feedback mechanisms alter LH secretion patterns'
+- 'Step 4: Resultant testosterone deficiency affects male reproductive and metabolic health'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'M. Moosazadeh et al. 2024. "Association of the Effect of Alcohol Consumption on Luteinizing
+    Hormone (LH), Follicle-Stimulating Hormone (FSH), and Testosterone Hormones in Men: A Systematic Review
+    and Meta-Analysis." https://doi.org/10.4103/ijpvm.ijpvm_81_24'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 17 observational studies
+  - Studies included cohorts, case-controls, and cross-sectional designs comparing alcohol consumers vs
+    non-consumers
+  - Subgroup analyses stratified by alcohol intake levels (low, moderate, high)
+  doi: 10.4103/ijpvm.ijpvm_81_24
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Chronic alcohol overuse, particularly in those with alcohol use disorder, disrupts the hypothalamus-pituitary-testis
+  axis leading to alterations in testosterone levels. The meta-analysis found significant changes in testosterone
+  in individuals with alcohol use disorder with associated feedback changes in LH.
+moderators:
+- name: alcohol_intake_level
+  direction: strengthens
+  strength: strong
+  description: Individuals with alcohol use disorder show notable alterations in testosterone levels compared
+    to moderate/low consumers; effect is dose-dependent with overuse showing destructive effects
+structural_competency:
+  equity_implications: This mechanism relates to structural determinants through alcohol availability,
+    marketing, and socioeconomic factors that influence alcohol use patterns. Communities with greater
+    alcohol outlet density and fewer economic opportunities may have higher rates of alcohol use disorder.
+    The biological pathway demonstrates how structural factors enabling excessive alcohol consumption
+    translate to hormonal disruption.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.309342'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

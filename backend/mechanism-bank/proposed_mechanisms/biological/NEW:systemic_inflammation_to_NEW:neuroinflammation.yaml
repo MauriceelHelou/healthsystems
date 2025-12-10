@@ -1,0 +1,49 @@
+id: NEW:systemic_inflammation_to_NEW:neuroinflammation
+name: Systemic Inflammation → Neuroinflammation
+from_node:
+  node_id: NEW:systemic_inflammation
+  node_name: Systemic Inflammation
+to_node:
+  node_id: NEW:neuroinflammation
+  node_name: Neuroinflammation
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Systemic inflammation (e.g., from liver cirrhosis or chronic alcohol-induced
+  immune activation) generates elevated circulating pro-inflammatory cytokines and
+  immune mediators'
+- 'Step 2: These peripheral inflammatory signals cross the blood-brain barrier through
+  multiple mechanisms including cytokine transport, vagal nerve signaling, and compromised
+  barrier integrity'
+- 'Step 3: Peripheral immune signals activate microglia (brain immune cells), triggering
+  central inflammatory responses'
+- 'Step 4: Activated microglia release pro-inflammatory cytokines within the brain,
+  establishing neuroinflammatory state'
+- 'Step 5: Chronic systemic inflammation attenuates initial compensatory microglial
+  neuroprotective responses, leading to sustained neuroinflammation'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: V. Coppens et al. 2019. The Interplay of Inflammatory Processes
+    and Cognition in Alcohol Use Disorders—A Systematic Review. Frontiers in Psychiatry.
+  supporting_citations: []
+description: Systemic inflammation, particularly from alcohol-related liver damage
+  and chronic immune activation, propagates to the central nervous system through
+  circulating pro-inflammatory mediators that activate brain microglia. This somatic
+  immune system activation negatively impacts brain functioning. While acute exposure
+  may trigger compensatory neuroprotective microglial responses, chronic systemic
+  inflammation attenuates these protective mechanisms and promotes sustained neuroinflammatory
+  states.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Chronicity of alcohol exposure
+  direction: strengthens
+  strength: moderate
+  description: Chronic alcohol intake attenuates initial compensatory microglial neuroprotective
+    responses while acute exposure may trigger protective mechanisms
+- name: Liver cirrhosis presence
+  direction: strengthens
+  strength: strong
+  description: Severely immunogenic liver cirrhosis amplifies systemic immune activation,
+    intensifying the peripheral-to-central inflammatory cascade

@@ -1,0 +1,96 @@
+id: housing_instability_to_alcohol_use_disorder
+name: Housing Instability → Alcohol Use Disorder
+from_node:
+  node_id: housing_stability_rent_burdened
+  node_name: Housing Stability (% Rent Burdened)
+  node_type: stock
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+  node_type: stock
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Housing instability (high rent burden, frequent moves, eviction threat) creates chronic stress
+  and insecurity'
+- 'Step 2: Unstable housing disrupts social networks, employment stability, and access to healthcare and
+  services'
+- 'Step 3: Material hardship from prioritizing rent over other needs (food, healthcare) increases deprivation
+  and stress'
+- 'Step 4: Alcohol use increases as coping mechanism for housing-related stress, anxiety, and sense of
+  failure'
+- 'Step 5: Escalating drinking impairs housing stability through missed rent, eviction, and homelessness,
+  creating downward spiral to AUD'
+evidence:
+  quality_rating: B
+  n_studies: 9
+  primary_citation: 'A. Ogunbajo et al.. 2018. "Substance Use and Depression Among Recently Migrated African
+    Gay and Bisexual Men Living in the United States" Journal of Immigrant and Minority Health. https://doi.org/10.1007/s10903-018-0849-8
+    (Cited: 16)'
+  supporting_citations:
+  - 'Desmond, Matthew, and Rachel Tolbert Kimbro. 2015. "Eviction''s fallout: Housing, hardship, and health."
+    Social Forces 94(1): 295-324.'
+  - 'Hatch, Megan E., and Jill Yavorsky. 2019. "Structural barriers to college attendance and degree completion."
+    Socius 5: 1-14.'
+  doi: 10.2471/BLT.10.086231
+  fulltext:
+    available: true
+    source: harvard_proxy
+    url: https://ezp-prod1.hul.harvard.edu/login?url=https://doi.org/10.2471/BLT.10.086231
+    is_open_access: false
+    fetched_date: '2025-11-30'
+  citation_verified: false
+last_updated: '2025-11-30'
+version: '1.0'
+description: Housing instability increases alcohol use disorder through chronic stress, material deprivation,
+  disrupted social networks and services, and a bidirectional spiral where drinking worsens housing stability.
+moderators:
+- name: eviction_history
+  direction: strengthens
+  strength: strong
+  description: Past eviction dramatically increases AUD risk through trauma, housing barriers, and criminal
+    records
+- name: social_support
+  direction: weakens
+  strength: moderate
+  description: Family or community housing support buffers effects of individual housing insecurity
+- name: rental_assistance_programs
+  direction: weakens
+  strength: moderate
+  description: Housing vouchers and rental assistance reduce instability and associated stress
+structural_competency:
+  root_cause_level: policy
+  avoids_victim_blaming: true
+  equity_implications: 'Housing instability is not individual failure but the predictable result of policy
+    choices about housing as commodity versus human right. Decades of declining affordable housing production,
+    wage stagnation, and financialization of housing have created a crisis where half of renters are cost-burdened.
+    Communities of color face discriminatory lending, displacement through gentrification, and concentrated
+    eviction filing. The housing-AUD pathway reflects how structural violence—policy-driven housing unaffordability—produces
+    health harm. Eviction operates as social determinant concentrating in Black women-headed households
+    in specific zip codes. High AUD in housing-unstable populations represents coping with manufactured
+    scarcity. Addressing this requires transformative housing policy: social housing production, rent
+    control, universal housing vouchers, eviction prevention, and challenging housing as profit vehicle
+    rather than secure foundation for health.'
+assumptions:
+- Housing instability includes rent burden >30% income, frequent moves, doubled up housing, eviction
+- Mechanism operates through both material deprivation and psychosocial stress
+- Assumes competitive rental market with limited affordable options
+limitations:
+- Bidirectionality exists (AUD can also cause housing instability)
+- Individual social capital and resources create variability in outcomes
+- Housing instability severity ranges from rent burden to literal homelessness with different health impacts
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Housing affordability crisis varies by market dynamics, rent control policies, and
+    housing assistance availability
+  relevant_geographies:
+  - High-cost coastal cities show severe rent burden but more robust tenant protections in some cases
+  - Eviction hotspots concentrate in specific neighborhoods, often communities of color in Sun Belt cities
+  - Rural areas have limited rental stock and few housing assistance options
+  - Cities with strong tenant protections, rent control, and housing voucher access buffer instability
+    effects
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

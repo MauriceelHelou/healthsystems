@@ -1,0 +1,44 @@
+id: liver_transplant_access_ald_to_survival_rates_ald
+name: Access to Liver Transplantation for ALD → Survival Rates for Alcohol-Related
+  Liver Disease
+from_node:
+  node_id: liver_transplant_access_ald
+  node_name: Access to Liver Transplantation for ALD
+to_node:
+  node_id: survival_rates_ald
+  node_name: Survival Rates for Alcohol-Related Liver Disease
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with alcohol-related liver disease (ALD) gain access to liver
+  transplantation'
+- 'Step 2: Transplantation provides definitive treatment for end-stage liver disease
+  that cannot be managed medically'
+- 'Step 3: Post-transplant care and immunosuppression prevent graft rejection and
+  maintain liver function'
+- 'Step 4: Improved survival rates observed in transplant recipients compared to patients
+  awaiting transplant or managed medically'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: M. Sedki et al. 2020. "Ethical and allocation issues in liver
+    transplant candidates with alcohol related liver disease.." *Translational Gastroenterology
+    and Hepatology*. https://doi.org/10.21037/TGH-2019-LTNA-14
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.607398'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: patient_selection_criteria
+  direction: strengthens
+  strength: strong
+  description: Careful selection of ALD patients produces excellent post-transplant
+    outcomes, maximizing survival benefits
+- name: sobriety_duration
+  direction: u_shaped
+  strength: weak
+  description: Studies report excellent outcomes even with less than 6 months sobriety
+    when patients are carefully selected, suggesting sobriety duration alone may not
+    predict outcomes

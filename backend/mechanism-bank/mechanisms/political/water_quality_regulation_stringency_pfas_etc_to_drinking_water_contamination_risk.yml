@@ -1,0 +1,55 @@
+id: water_quality_regulation_stringency_pfas_etc_to_drinking_water_contamination_risk
+name: Water Quality Regulation Stringency → Drinking Water Contamination Risk
+from_node:
+  node_id: water_quality_regulation_stringency_pfas_etc
+  node_name: Water Quality Regulation Stringency
+to_node:
+  node_id: drinking_water_contamination_risk
+  node_name: Drinking Water Contamination Risk
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Regulatory standards (WHO guidelines, Iranian Standard 1053) establish permissible limits for
+  heavy metals in drinking water'
+- 'Step 2: Weak enforcement or inadequate standards allow water supplies to exceed safe thresholds for
+  Cr, Pb, Ba, Al, As, Zn, and Cd'
+- 'Step 3: Water treatment infrastructure investment priorities are shaped by regulatory requirements'
+- 'Step 4: Communities served by non-compliant water systems experience elevated contaminant exposure'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Nilufar Marufi et al. 2022. "Carcinogenic and non-carcinogenic human health risk
+    assessments of heavy metals contamination in drinking water supplies in Iran: a systematic review."
+    https://doi.org/10.1515/reveh-2022-0060'
+  supporting_citations:
+  - World Health Organization drinking water quality guidelines
+  - Iranian Standard 1053 for drinking water quality
+  - Additional primary study citations require full-text access
+  doi: 10.1515/reveh-2022-0060
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The systematic review found that average concentrations of seven heavy metals (Cr, Pb, Ba,
+  Al, As, Zn, Cd) exceeded permissible limits set by WHO and Iranian Standard 1053, indicating gaps between
+  regulatory standards and actual water quality achieved.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Average concentrations of Cr, Pb, Ba, Al, As, Zn, and Cd exceeded WHO and Iranian standards
+    across sampled locations, indicating regulatory compliance gaps
+moderators:
+- name: development_status
+  direction: weakens
+  strength: strong
+  description: Developing country context noted as particularly concerning for water contamination, suggesting
+    resource constraints affect regulatory enforcement capacity
+structural_competency:
+  equity_implications: This mechanism highlights how regulatory infrastructure and enforcement capacity
+    are structural determinants of population health. The gap between established standards and actual
+    water quality reflects political and economic decisions about resource allocation for water treatment
+    and monitoring systems. Developing country status creates systematic disadvantage in achieving water
+    quality goals.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.397929'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

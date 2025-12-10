@@ -1,0 +1,40 @@
+id: alcohol_consumption_to_alcoholic_cirrhosis
+name: Alcohol Consumption → Alcoholic Cirrhosis
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: alcoholic_cirrhosis
+  node_name: Alcoholic Cirrhosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption causes direct hepatotoxic effects through acetaldehyde
+  accumulation and oxidative stress in liver tissue'
+- 'Step 2: Sustained alcohol exposure triggers inflammatory responses and hepatocyte
+  death, leading to progressive liver fibrosis'
+- 'Step 3: Continued fibrotic changes result in cirrhotic transformation of liver
+  architecture with nodule formation and loss of normal liver function'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Akshata Borle et al. 2024. "A Study of the Clinical Profiles of
+    Patients With Hepatorenal Syndrome.." *Cureus*. https://doi.org/10.7759/cureus.66778
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.392903'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: male_sex
+  direction: strengthens
+  strength: strong
+  description: 76% of patients were male, suggesting potential sex-based differences
+    in alcohol-related cirrhosis prevalence, potentially related to differential alcohol
+    consumption patterns or biological susceptibility
+- name: young_age
+  direction: strengthens
+  strength: moderate
+  description: 25% of patients fell within 18-30 years age range, indicating early
+    onset of alcohol-related liver disease in younger populations

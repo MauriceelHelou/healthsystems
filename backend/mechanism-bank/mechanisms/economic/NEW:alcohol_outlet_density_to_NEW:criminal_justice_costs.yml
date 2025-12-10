@@ -1,0 +1,57 @@
+id: NEW:alcohol_outlet_density_to_NEW:criminal_justice_costs
+name: Alcohol Outlet Density → Criminal Justice and Victim Costs
+from_node:
+  node_id: NEW:alcohol_outlet_density
+  node_name: Alcohol Outlet Density
+to_node:
+  node_id: NEW:criminal_justice_costs
+  node_name: Criminal Justice and Victim Costs
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Higher alcohol outlet density increases alcohol availability and consumption'
+- 'Step 2: Increased consumption leads to more alcohol-related violence and homicides'
+- 'Step 3: Each homicide generates substantial criminal justice system costs (investigation, prosecution,
+  incarceration)'
+- 'Step 4: Victims and families bear medical costs, lost productivity, and quality of life losses'
+- 'Step 5: Cumulative costs to society are substantial and preventable through policy intervention'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Trangenstein et al. 2020. "The Violence Prevention Potential of Reducing Alcohol
+    Outlet Access in Baltimore, Maryland.." https://doi.org/10.15288/jsad.2020.81.24
+  supporting_citations:
+  - Additional citations require full-text access
+  - Criminal justice cost estimation literature
+  - Victim cost methodology studies
+  doi: 10.15288/jsad.2020.81.24
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Reducing alcohol outlet density by one quintile in Baltimore was associated with $63.7 million
+  in prevented victim and criminal justice costs annually. Removing liquor stores from residential zones
+  would save $27.5 million.
+quantitative_effects:
+  effect_size:
+    value: 63.7
+    type: percentage_change
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Cost estimates specific to Baltimore; $63.7 million represents savings from one quintile
+    density reduction
+moderators:
+- name: policy_scope
+  direction: strengthens
+  strength: strong
+  description: Broader density reduction (full quintile) yields $63.7M savings; targeted residential zone
+    intervention yields $27.5M
+structural_competency:
+  equity_implications: This economic analysis demonstrates the substantial societal costs of permissive
+    alcohol zoning policies. The costs are disproportionately borne by communities with high outlet density,
+    which are often lower-income and minority neighborhoods. This represents a structural transfer of
+    costs to already disadvantaged communities through land use policy decisions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.487790'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

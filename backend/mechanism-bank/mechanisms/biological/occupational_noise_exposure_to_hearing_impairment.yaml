@@ -1,0 +1,48 @@
+id: occupational_noise_exposure_to_hearing_impairment
+name: Occupational Noise Exposure → Hearing Impairment
+from_node:
+  node_id: occupational_noise_exposure
+  node_name: Occupational Noise Exposure
+to_node:
+  node_id: hearing_impairment
+  node_name: Hearing Impairment
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Prolonged occupational noise exposure delivers high-intensity sound energy
+  to the cochlea'
+- 'Step 2: Excessive acoustic energy causes mechanical damage to hair cells in the
+  organ of Corti'
+- 'Step 3: Sustained exposure leads to oxidative stress and metabolic exhaustion in
+  cochlear structures'
+- 'Step 4: Progressive damage results in noise-induced hearing loss (NIHL), affecting
+  both speech and high frequencies'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: 'Xia Chen et al. 2023. Environmental noise exposure and health
+    outcomes: an umbrella review of systematic reviews and meta-analysis. European
+    Journal of Public Health.'
+  supporting_citations: []
+description: Occupational noise exposure is strongly associated with noise-induced
+  hearing loss, with the umbrella review finding that workers exposed to occupational
+  noise had 6.68 times higher risk of speech frequency hearing loss and 4.46 times
+  higher risk of high-frequency hearing loss compared to unexposed individuals. This
+  represents the largest risk increment among all noise exposure sources examined.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 6.68
+    type: relative_risk
+    ci_lower: 3.41
+    ci_upper: 13.07
+  p_value: null
+  sample_size: null
+moderators:
+- name: frequency_of_hearing_loss
+  direction: strengthens
+  strength: strong
+  description: 'Speech frequency hearing loss showed larger effect (RR: 6.68) compared
+    to high-frequency hearing loss (RR: 4.46), suggesting differential vulnerability
+    by frequency range'

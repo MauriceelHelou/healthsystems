@@ -1,0 +1,51 @@
+id: NEW:neighborhood_environment_sdoh_to_NEW:lupus_nephritis_outcomes
+name: Neighborhood and Built Environment SDoH Domain → Lupus Nephritis Outcomes
+from_node:
+  node_id: NEW:neighborhood_environment_sdoh
+  node_name: Neighborhood and Built Environment SDoH Domain
+to_node:
+  node_id: NEW:lupus_nephritis_outcomes
+  node_name: Lupus Nephritis Outcomes
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Disadvantaged neighborhoods have reduced access to healthy food, safe spaces for physical activity,
+  and healthcare facilities'
+- 'Step 2: Environmental exposures in disadvantaged neighborhoods may trigger or exacerbate autoimmune
+  inflammation'
+- 'Step 3: Transportation barriers limit ability to attend regular medical appointments'
+- 'Step 4: Cumulative environmental and access disadvantages worsen disease trajectory'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'Shivani Garg et al. 2024. "Multiplicative Impact of Adverse Social Determinants of
+    Health on Outcomes in Lupus Nephritis: A Meta‐analysis and Systematic Review." https://doi.org/10.1002/acr.25359'
+  supporting_citations:
+  - Additional citations require full-text access - neighborhood environment domain analyses
+  - Studies on area deprivation and autoimmune disease outcomes
+  - Studies on built environment and chronic disease management
+  doi: 10.1002/acr.25359
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Neighborhood and built environment factors contribute to lupus nephritis disparities through
+  environmental exposures, resource availability, and access barriers
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Neighborhood effects inherently vary by geography and reflect historical patterns of
+    residential segregation and disinvestment
+moderators:
+- name: Area deprivation index
+  direction: strengthens
+  strength: moderate
+  description: Higher area deprivation amplifies negative effects on outcomes
+structural_competency:
+  equity_implications: Neighborhood disadvantage reflects historical and ongoing structural racism, redlining,
+    and disinvestment rather than individual residential choices. Health equity interventions must address
+    place-based inequities through community development, transportation infrastructure, and environmental
+    justice.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.924673'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

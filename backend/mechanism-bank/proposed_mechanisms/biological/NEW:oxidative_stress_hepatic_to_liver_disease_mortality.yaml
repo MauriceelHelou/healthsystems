@@ -1,0 +1,57 @@
+id: NEW:oxidative_stress_hepatic_to_liver_disease_mortality
+name: Hepatic Oxidative Stress → Liver Disease Mortality
+from_node:
+  node_id: NEW:oxidative_stress_hepatic
+  node_name: Hepatic Oxidative Stress
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hepatic oxidative stress generates reactive oxygen species (ROS) that overwhelm
+  cellular antioxidant defenses in liver tissue'
+- 'Step 2: ROS cause direct damage to hepatocyte membranes, proteins, and DNA, leading
+  to cellular dysfunction and various forms of cell death including apoptosis, necroptosis,
+  and ferroptosis'
+- 'Step 3: Oxidative stress triggers endoplasmic reticulum stress and abnormal lipid
+  metabolism, promoting lipid accumulation and steatosis'
+- 'Step 4: Damaged hepatocytes release damage-associated molecular patterns (DAMPs),
+  activating liver immune responses and inflammatory pathways'
+- 'Step 5: Chronic oxidative damage and inflammation stimulate hepatic stellate cell
+  activation, leading to progressive fibrosis and cirrhosis'
+- 'Step 6: Advanced liver disease progression increases risk of hepatocellular carcinoma
+  and end-stage liver failure, culminating in liver disease mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Xiao Hong et al. 2024. "Alcohol-related liver disease (ALD):
+    current perspectives on pathogenesis, therapeutic strategies, and animal models."
+    Frontiers in Pharmacology.'
+  supporting_citations: []
+description: Hepatic oxidative stress is a critical pathogenic mechanism in liver
+  disease progression and mortality. Oxidative stress damages hepatocytes through
+  multiple mechanisms including direct cellular injury, lipid peroxidation, endoplasmic
+  reticulum stress, and activation of cell death pathways (apoptosis, necroptosis,
+  ferroptosis). This damage triggers inflammatory responses and immune activation,
+  leading to progressive fibrosis, cirrhosis, and potentially hepatocellular carcinoma.
+  The cumulative hepatic damage from chronic oxidative stress ultimately increases
+  liver disease mortality risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: alcohol_consumption_level
+  direction: strengthens
+  strength: strong
+  description: Chronic alcohol consumption significantly increases hepatic oxidative
+    stress through ethanol metabolism via CYP2E1 pathway
+- name: antioxidant_capacity
+  direction: weakens
+  strength: moderate
+  description: Adequate antioxidant defenses and nutritional status may attenuate
+    oxidative damage progression
+- name: gut_microbiota_composition
+  direction: strengthens
+  strength: moderate
+  description: Intestinal microbiota dysbiosis can exacerbate hepatic oxidative stress
+    through gut-liver axis interactions

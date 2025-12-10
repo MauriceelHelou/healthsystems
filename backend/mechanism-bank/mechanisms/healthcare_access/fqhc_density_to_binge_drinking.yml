@@ -1,0 +1,63 @@
+id: fqhc_density_to_binge_drinking
+name: FQHC Density → Binge Drinking
+from_node:
+  node_id: fqhc_density
+  node_name: FQHC Density
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Higher density of primary care facilities (including FQHCs) increases population access to
+  healthcare'
+- 'Step 2: Routine healthcare visits create opportunities for alcohol screening and brief intervention'
+- 'Step 3: Brief interventions in primary care settings are effective at reducing alcohol consumption'
+- 'Step 4: Population-level exposure to screening and intervention reduces hazardous drinking patterns'
+- 'Step 5: Decreased binge drinking frequency and intensity across communities with better primary care
+  access'
+evidence:
+  quality_rating: A
+  n_studies: 38
+  primary_citation: Eileen Fs Kaner et al. 2018. "Effectiveness of brief alcohol interventions in primary
+    care populations.." https://doi.org/10.1002/14651858.CD004148.pub4
+  supporting_citations:
+  - General practice setting studies (38 studies, 55% of included research)
+  - Studies from Cochrane systematic review methodology
+  - Additional citations require full-text access for specific study identification
+  doi: 10.1002/14651858.CD004148.pub4
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The availability of primary care infrastructure, including general practice and community
+  health centers, creates structural opportunities for population-level alcohol screening and brief intervention
+  delivery. This mechanism links healthcare access to reduced hazardous drinking through systematic screening
+  and intervention programs.
+quantitative_effects:
+  effect_size:
+    value: -0.08
+    type: standardized_mean_difference
+    ci_lower: -0.14
+    ci_upper: -0.02
+  sample_size: 6946
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effectiveness demonstrated across general practice settings in multiple countries,
+    suggesting healthcare infrastructure access is a key structural determinant of intervention reach
+moderators:
+- name: setting_type
+  direction: strengthens
+  strength: moderate
+  description: General practice settings accounted for 55% of studies, demonstrating that primary care
+    infrastructure is a key delivery platform for alcohol interventions
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare infrastructure disparities translate into
+    differential alcohol-related health outcomes. Communities with primary care shortages may have reduced
+    exposure to evidence-based brief interventions, perpetuating health inequities. Policy investments
+    in primary care density could serve as upstream interventions to reduce alcohol-related harm at the
+    population level.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.036095'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

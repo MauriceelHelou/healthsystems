@@ -1,0 +1,59 @@
+id: NEW:menthol_cigarette_retail_sales_restriction_policy_to_smoking_current
+name: Menthol Cigarette Retail Sales Restriction Policy → Current Smoking Rate
+from_node:
+  node_id: NEW:menthol_cigarette_retail_sales_restriction_policy
+  node_name: Menthol Cigarette Retail Sales Restriction Policy
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Policy restricts retail sales of menthol cigarettes to prevent initiation and promote quitting'
+- 'Step 2: 54.5% of retailers believed customers would stop smoking altogether following the ban'
+- 'Step 3: Reduced access to preferred menthol products may prompt cessation'
+- 'Step 4: However, continued availability undermines this pathway, maintaining smoking rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Kellie Ann Mei et al. 2024. "Commercial Tobacco Retailers Need to Be Included in Research
+    on Policies Restricting the Sale of Menthol Cigarettes.." https://doi.org/10.1093/ntr/ntad252
+  supporting_citations:
+  - Additional citations require full-text access - abstract references policy goals of preventing initiation
+  - Additional citations require full-text access - abstract references promoting quitting
+  - Additional citations require full-text access - abstract references reducing disparities
+  doi: 10.1093/ntr/ntad252
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Menthol cigarette sales restrictions aim to reduce smoking prevalence, with over half of
+  retailers believing the policy would lead to cessation; however, continued retail availability may limit
+  actual impact
+quantitative_effects:
+  effect_size:
+    value: 54.5
+    type: percentage_change
+  sample_size: 22
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Policy effects likely vary by local enforcement, alternative product availability,
+    and community characteristics
+moderators:
+- name: policy_implementation_fidelity
+  direction: strengthens
+  strength: strong
+  description: Effectiveness depends on actual reduction in retail availability, not just policy adoption
+- name: alternative_product_access
+  direction: weakens
+  strength: moderate
+  description: Access to non-menthol products or cross-border purchasing may reduce cessation effects
+structural_competency:
+  equity_implications: This policy intervention represents a structural approach to reducing tobacco use
+    disparities by targeting the retail environment rather than individual behavior change. The mechanism
+    acknowledges that commercial environments shape health behaviors and that addressing structural factors
+    is necessary for equity.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.560866'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,50 @@
+id: NEW:daily_mood_state_to_binge_drinking
+name: Daily Mood State → Binge Drinking
+from_node:
+  node_id: NEW:daily_mood_state
+  node_name: Daily Mood State
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Daily mood fluctuations create varying motivational states for drinking'
+- 'Step 2: Both positive moods (celebration) and negative moods (coping) can trigger drinking occasions'
+- 'Step 3: Mood-congruent drinking motives activate context-specific consumption patterns'
+- 'Step 4: Interaction between mood and social/physical context determines consumption level'
+evidence:
+  quality_rating: A
+  n_studies: 65
+  primary_citation: 'O. Stanesby et al. 2019. "The contexts of heavy drinking: A systematic review of
+    the combinations of context-related factors associated with heavy drinking occasions." https://doi.org/10.1371/journal.pone.0218465'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 65 eligible studies
+  - Ecological momentary assessment studies on mood-drinking relationships
+  - Event-level studies on affective states and alcohol consumption
+  doi: 10.1371/journal.pone.0218465
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Daily mood is an important driver of heavy drinking occasions. The relationship between mood
+  and drinking is modified by individual characteristics such as personality and drinking motives.
+moderators:
+- name: drinking_motives
+  direction: varies
+  strength: strong
+  description: Coping motives strengthen negative mood-drinking associations while enhancement motives
+    strengthen positive mood-drinking associations
+- name: personality
+  direction: varies
+  strength: moderate
+  description: Personality traits modify how mood states translate to drinking behavior
+structural_competency:
+  equity_implications: While mood is individually experienced, chronic stress and mood disturbances often
+    trace to structural factors including economic precarity, discrimination, and environmental stressors.
+    Mental health service access and community-level stressors are upstream determinants of mood-related
+    drinking.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.403200'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

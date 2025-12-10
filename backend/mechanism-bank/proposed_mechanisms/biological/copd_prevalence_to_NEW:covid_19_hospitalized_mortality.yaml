@@ -1,0 +1,52 @@
+id: copd_prevalence_to_NEW:covid_19_hospitalized_mortality
+name: Chronic Obstructive Pulmonary Disease → COVID-19 Hospitalized Patient Mortality
+from_node:
+  node_id: copd_prevalence
+  node_name: Chronic Obstructive Pulmonary Disease
+to_node:
+  node_id: NEW:covid_19_hospitalized_mortality
+  node_name: COVID-19 Hospitalized Patient Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: COPD causes pre-existing structural lung damage including airway remodeling,
+  emphysematous changes, and impaired mucociliary clearance, reducing baseline respiratory
+  reserve'
+- 'Step 2: SARS-CoV-2 infection causes additional pulmonary damage through viral pneumonia
+  and inflammatory response, overwhelming already compromised respiratory function'
+- 'Step 3: COPD patients have chronic systemic inflammation and immune dysregulation,
+  which may amplify the cytokine storm response characteristic of severe COVID-19'
+- 'Step 4: Reduced respiratory capacity combined with COVID-19-induced acute respiratory
+  distress syndrome leads to rapid respiratory failure and increased mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 87
+  primary_citation: 'G. Corona et al. 2021. Diabetes is most important cause for mortality
+    in COVID-19 hospitalized patients: Systematic review and meta-analysis. Reviews
+    in Endocrine & Metabolic Disorders.'
+  supporting_citations: []
+description: Chronic obstructive pulmonary disease (COPD) is identified as a significant
+  predictor of mortality in hospitalized COVID-19 patients, ranking second after diabetes
+  mellitus in adjusted analyses. This systematic review and meta-analysis of 87 studies
+  with 35,486 patients demonstrates that pre-existing COPD increases vulnerability
+  to COVID-19 mortality through compromised baseline pulmonary function and impaired
+  respiratory reserve. The relationship is modified by age and sex, with effects varying
+  across geographic regions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: COPD's contribution to mortality was found to be age-dependent, with
+    older patients showing stronger associations
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: The effect of COPD on mortality was found to be sex-dependent in adjusted
+    analyses
+- name: diabetes_mellitus
+  direction: strengthens
+  strength: strong
+  description: Diabetes was identified as the strongest predictor of mortality, and
+    comorbidity with COPD may compound risk

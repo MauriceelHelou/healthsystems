@@ -1,0 +1,50 @@
+id: NEW:buprenorphine_naloxone_combination_treatment_to_neonatal_icu_admission_rate
+name: Buprenorphine-Naloxone Combination Treatment During Pregnancy → Neonatal ICU Admission Rate
+from_node:
+  node_id: NEW:buprenorphine_naloxone_combination_treatment
+  node_name: Buprenorphine-Naloxone Combination Treatment During Pregnancy
+to_node:
+  node_id: neonatal_icu_admission_rate
+  node_name: Neonatal ICU Admission Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Pregnant individuals receive buprenorphine-naloxone for opioid use disorder treatment'
+- 'Step 2: Reduced severity of neonatal abstinence syndrome in exposed newborns'
+- 'Step 3: Less intensive monitoring and treatment required for neonatal withdrawal'
+- 'Step 4: Fewer newborns require intensive care unit level of care'
+- 'Step 5: Modestly lower NICU admission rates among exposed infants'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Loreen Straub et al. 2024. "Comparative Safety of In Utero Exposure to Buprenorphine
+    Combined With Naloxone vs Buprenorphine Alone.." https://doi.org/10.1001/jama.2024.11501
+  supporting_citations:
+  - Additional citations require full-text access - Abstract references limited perinatal safety data
+    on combination product
+  - Additional citations require full-text access - Study builds on existing buprenorphine monotherapy
+    pregnancy research
+  - Additional citations require full-text access - Medicaid utilization data from 2000-2018 analyzed
+  doi: 10.1001/jama.2024.11501
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Prenatal buprenorphine-naloxone exposure was associated with a 9% lower risk of NICU admission
+  compared to buprenorphine alone (absolute risk 30.6% vs 34.9%).
+quantitative_effects:
+  effect_size:
+    value: 0.91
+    type: relative_risk
+    ci_lower: 0.85
+    ci_upper: 0.98
+  sample_size: 8695
+structural_competency:
+  equity_implications: NICU admissions represent significant healthcare resource utilization and family
+    disruption. Reducing NICU admissions through optimal medication treatment supports both maternal-infant
+    bonding and reduces healthcare system burden. This has equity implications as Medicaid populations
+    may face additional barriers to extended NICU stays.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.685133'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

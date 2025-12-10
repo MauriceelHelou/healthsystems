@@ -1,0 +1,49 @@
+id: hiv_status_diagnosed_to_all_cause_mortality_rate
+name: HIV Status → All-Cause Mortality Rate
+from_node:
+  node_id: hiv_status_diagnosed
+  node_name: HIV Status
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: HIV infection leads to progressive immune system dysfunction through CD4+
+  T-cell depletion and chronic immune activation'
+- 'Step 2: Immunocompromised state increases vulnerability to opportunistic infections,
+  malignancies, and other AIDS-defining conditions'
+- 'Step 3: HIV-related comorbidities (cardiovascular disease, liver disease, renal
+  dysfunction) accelerate due to chronic inflammation and antiretroviral medication
+  effects'
+- 'Step 4: Among people with opioid use disorder, HIV compounds mortality risk through
+  synergistic effects of immune suppression and drug-related health complications'
+- 'Step 5: Elevated all-cause mortality results from combination of AIDS-related deaths,
+  non-AIDS comorbidities, and increased susceptibility to overdose complications'
+evidence:
+  quality_rating: A
+  n_studies: 101
+  primary_citation: 'A. Bahji et al. 2020. Mortality Among People With Opioid Use
+    Disorder: A Systematic Review and Meta-analysis. Journal of addiction medicine.'
+  supporting_citations: []
+description: HIV status is identified as a substantial predictor of all-cause mortality
+  among people with opioid use disorder. This meta-analysis of 101 cohorts found that
+  individuals with HIV had substantially higher all-cause mortality rates. The mechanism
+  operates through HIV's immunosuppressive effects combined with the health vulnerabilities
+  associated with substance use, creating compounded mortality risk. HIV is identified
+  as a potentially modifiable risk factor amenable to global efforts improving treatment
+  access and harm reduction.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: injection_drug_use
+  direction: strengthens
+  strength: strong
+  description: People who use injection drugs showed higher mortality risk, likely
+    due to increased HIV transmission risk and direct health harms from injection
+    practices
+- name: country_income_level
+  direction: strengthens
+  strength: strong
+  description: Low/middle-income country residence associated with substantially higher
+    mortality, reflecting disparities in HIV treatment access and healthcare infrastructure

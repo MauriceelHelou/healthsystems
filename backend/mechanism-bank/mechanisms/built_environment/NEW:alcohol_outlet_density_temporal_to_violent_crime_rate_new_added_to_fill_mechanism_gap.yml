@@ -1,0 +1,64 @@
+id: NEW:alcohol_outlet_density_temporal_to_violent_crime_rate_new_added_to_fill_mechanism_gap
+name: Alcohol Outlet Density with Temporal Sales Patterns → Violent Crime Rate
+from_node:
+  node_id: NEW:alcohol_outlet_density_temporal
+  node_name: Alcohol Outlet Density with Temporal Sales Patterns
+to_node:
+  node_id: violent_crime_rate_new_added_to_fill_mechanism_gap
+  node_name: Violent Crime Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Alcohol outlet density varies spatially across neighborhoods'
+- 'Step 2: Alcohol sales and consumption at outlets follow predictable temporal patterns (peak during
+  weekend evenings)'
+- 'Step 3: Periods of highest sales correspond to periods of greatest intoxication in the area'
+- 'Step 4: Intoxication increases risk of violent behavior and victimization'
+- 'Step 5: Crime incidents cluster spatially around outlets and temporally during peak consumption periods'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'P. Gruenewald et al. 2023. "Micro-temporal analyses of crime related to alcohol outlets:
+    A comparison of outcomes over weekday, weekend, daytime and nighttime hours.." https://doi.org/10.1111/dar.13644'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior statistical associations
+    across neighbourhoods
+  - Study methodology builds on ecological analyses of outlet-crime relationships
+  - Bayesian space-time models referenced from prior methodological literature
+  doi: 10.1111/dar.13644
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study's innovative micro-temporal approach demonstrates that alcohol outlet-crime relationships
+  are not constant but vary by time periods corresponding to peak alcohol sales. This spatiotemporal signature
+  strengthens causal inference by showing that crime increases in outlet-dense areas specifically when
+  alcohol sales are greatest.
+quantitative_effects:
+  sample_size: 336
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study analyzed 336 Census block groups in Oakland, California from 2000-2015; micro-temporal
+    analysis revealed that outlet-crime associations vary by time of day and day of week
+moderators:
+- name: outlet_type
+  direction: strengthens
+  strength: strong
+  description: Bars/pubs showed strongest temporal-specific associations; restaurants showed consistent
+    but different patterns; off-premise outlets not highlighted as significant
+- name: temporal_period
+  direction: strengthens
+  strength: strong
+  description: Weekend evening hours showed strongest outlet-crime associations
+structural_competency:
+  equity_implications: This methodological approach strengthens causal claims about alcohol outlets as
+    structural determinants of crime by addressing confounding. By showing temporal specificity (effects
+    strongest when alcohol sales peak), the study provides evidence that the relationship is not merely
+    due to unobserved neighborhood characteristics that affect both outlet location and crime. This supports
+    structural interventions targeting outlet licensing, hours of operation, and geographic density rather
+    than individual-level approaches. The 15-year longitudinal design (2000-2015) across 336 Census block
+    groups provides robust spatial-temporal evidence.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.084273'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

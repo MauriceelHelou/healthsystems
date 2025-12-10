@@ -1,0 +1,148 @@
+id: structural_racism_to_air_toxics_exposure
+name: Structural Racism → Air Toxics Exposure
+from_node:
+  node_id: structural_racism_index
+  node_name: State Structural Racism Index
+  node_type: proxy_index
+to_node:
+  node_id: air_toxics_exposure
+  node_name: Air Toxics Exposure (Cancer and Respiratory Risk)
+  node_type: stock
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Historical redlining and discriminatory zoning concentrated communities
+  of color in industrial areas'
+- 'Step 2: Polluting industries systematically located in marginalized communities
+  due to weaker political power and land costs'
+- 'Step 3: State-level structural racism perpetuates patterns through continued discriminatory
+  policy and enforcement'
+- 'Step 4: Cumulative air toxics exposure (criteria pollutants, hazardous air pollutants)
+  elevated in high-racism states'
+- 'Step 5: Elevated exposure translates to increased cancer and respiratory health
+  risks concentrated in communities of color'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'Lukachko, Alicia, Mark L. Hatzenbuehler, and Katherine M. Keyes.
+    2022. "Structural racism as an environmental justice issue: a multilevel analysis
+    of the state racism index and environmental health risk from air toxics." Environmental
+    Health Perspectives 130(12): 127701.'
+  supporting_citations:
+  - 'Tessum, Christopher W., et al. 2021. "PM2.5 polluters disproportionately and
+    systemically affect people of color in the United States." Science Advances 7(18):
+    eabf4491.'
+  - 'Mohai, Paul, and Robin Saha. 2015. "Which came first, people or pollution? Assessing
+    the disparate siting and post-siting demographic change hypotheses of environmental
+    injustice." Environmental Research Letters 10(11): 115008.'
+  - 'Bravo, Mercedes A., et al. 2016. "Racial isolation and exposure to airborne particulate
+    matter and ozone in understudied US populations." Environment International 92-93:
+    247-255.'
+  doi: 10.1289/EHP10814
+  journal: Environmental Health Perspectives
+  year: 2022
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9810559/
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  cancer_risk_effect:
+    model_b_coefficient: 0.357
+    model_b_p_value: 0.001
+    model_c_coefficient: 0.192
+    model_c_p_value: 0.006
+    variance_explained_pct: 10
+    description: State racism index explains approximately 10% of county- and state-level
+      variance in cancer risk from air toxics
+  respiratory_risk_effect:
+    model_b_coefficient: 0.014
+    model_b_p_value: 0.005
+    model_c_coefficient: 0.008
+    model_c_p_value: 0.033
+    variance_explained_pct: 4
+    description: State racism index explains approximately 4% of noncancer respiratory
+      risk variation
+  geographic_disparity:
+    cancer_risk_high: 48.40
+    cancer_risk_low: 17.87
+    cancer_ratio: 2.71
+    respiratory_risk_high: 1.89
+    respiratory_risk_low: 0.63
+    respiratory_ratio: 2.98
+    unit: per million over 70 years (cancer) or hazard quotient (respiratory)
+    description: Cancer risk 2.71x higher in highest vs. lowest racism states; respiratory
+      risk 2.98x higher
+  consumption_disparity:
+    white_exposure_gap: -17
+    black_latino_exposure_gap: 50
+    unit: percentage relative to consumption-based fair share
+    description: White people exposed to 17% less pollution than they consume; Black
+      and Latino people exposed to 50%+ more
+  sample_size: 72724
+  interpretation: Structural racism at state level is significantly associated with
+    elevated air toxics exposure and cancer/respiratory health risks, with communities
+    of color bearing disproportionate burden
+last_updated: '2025-11-30'
+version: '1.0'
+description: Structural racism, as measured by state-level racism indices capturing
+  residential segregation, incarceration disparities, and political participation
+  gaps, is significantly associated with elevated air toxics exposure and resulting
+  cancer and respiratory health risks. The association persists after controlling
+  for individual demographics, indicating a structural rather than compositional effect.
+  Cancer risk is 2.71x higher in high-racism vs. low-racism states; respiratory risk
+  is 2.98x higher.
+moderators:
+- name: residential_segregation
+  direction: strengthens
+  strength: strong
+  description: Higher residential segregation concentrates exposure among communities
+    of color
+- name: political_participation_gaps
+  direction: strengthens
+  strength: moderate
+  description: Lower political power reduces community ability to resist polluting
+    facility siting
+- name: environmental_regulation_enforcement
+  direction: weakens
+  strength: moderate
+  description: Stronger state environmental enforcement may partially mitigate exposure
+    disparities
+- name: community_advocacy
+  direction: weakens
+  strength: moderate
+  description: Environmental justice advocacy can shift facility siting and enforcement
+    priorities
+structural_competency:
+  root_cause_level: systemic_racism
+  avoids_victim_blaming: true
+  equity_implications: This mechanism demonstrates how structural racism operates
+    through multiple channels (residential segregation, political disenfranchisement,
+    discriminatory zoning) to create environmental health inequities. Solutions require
+    addressing root causes including residential integration, environmental justice
+    enforcement, and community power-building rather than expecting communities to
+    move or adapt to toxic environments.
+assumptions:
+- State racism index captures meaningful structural variation
+- Air toxics exposure from EPA National Air Toxics Assessment
+- Cancer and respiratory risk estimates from EPA risk models
+limitations:
+- Cross-sectional analysis limits causal inference
+- State-level analysis may mask within-state variation
+- Air toxics assessment has measurement limitations
+- Some confounders may be on causal pathway (SES, urbanicity)
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Air toxics exposure and structural racism vary substantially by
+    state and region, with highest disparities in Southern states and industrial areas.
+  relevant_geographies:
+  - Alabama shows highest cancer risk (48.40 per million)
+  - North Dakota shows lowest (17.87 per million)
+  - California shows highest respiratory risk (1.89 hazard quotient)
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

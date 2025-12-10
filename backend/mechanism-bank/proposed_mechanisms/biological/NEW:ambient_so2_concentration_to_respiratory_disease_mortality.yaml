@@ -1,0 +1,52 @@
+id: NEW:ambient_so2_concentration_to_respiratory_disease_mortality
+name: Ambient SO2 Concentration → Respiratory Disease Mortality
+from_node:
+  node_id: NEW:ambient_so2_concentration
+  node_name: Ambient SO2 Concentration
+to_node:
+  node_id: respiratory_disease_mortality
+  node_name: Respiratory Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhalation of ambient SO2 leads to direct irritation of respiratory tract
+  mucosa and airways'
+- 'Step 2: SO2 exposure triggers inflammatory responses in the respiratory system,
+  causing oxidative stress and epithelial damage'
+- 'Step 3: Chronic or repeated exposure exacerbates existing respiratory conditions
+  including chronic lower respiratory diseases, influenza, and pneumonia'
+- 'Step 4: Inflammatory burden and respiratory impairment contribute to increased
+  risk of respiratory mortality, particularly in vulnerable populations'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'K. K. Mokoena et al. 2019. Ambient air pollution and respiratory
+    mortality in Xi''an, China: a time-series analysis. Respiratory Research.'
+  supporting_citations: []
+description: 'Short-term exposure to ambient SO2 is associated with increased respiratory
+  mortality. A 10 μg/m3 increase in two-day moving average SO2 concentration was associated
+  with RR 1.402 (95% CI: 0.827-2.854) for respiratory mortality. The effect remained
+  statistically significant after adjusting for co-pollutants in multi-pollutant models.
+  The majority of respiratory deaths (62.9%) were attributed to chronic lower respiratory
+  diseases, followed by influenza and pneumonia (28.5%).'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.402
+    type: relative_risk
+    ci_lower: 0.827
+    ci_upper: 2.854
+  p_value: null
+  sample_size: 7965
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Subgroup analysis stratified by age (≤64 years and ≥65 years) suggests
+    differential vulnerability by age group
+- name: gender
+  direction: strengthens
+  strength: weak
+  description: Gender-stratified analysis performed; some pollutant effects differed
+    by gender

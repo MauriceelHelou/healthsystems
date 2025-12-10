@@ -1,0 +1,107 @@
+id: fqhc_density_to_preventive_care_utilization
+name: FQHC Density -> Preventive Care Utilization
+from_node:
+  node_id: fqhc_density
+  node_name: FQHC Density (Federally Qualified Health Centers per 100k)
+  node_type: stock
+to_node:
+  node_id: preventive_care_utilization
+  node_name: Preventive Care Utilization
+  node_type: proxy_index
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+  - "Step 1: Federally Qualified Health Centers (FQHCs) establish service delivery sites in medically underserved areas"
+  - "Step 2: FQHCs reduce geographic and financial barriers to primary care through sliding fee scales and community locations"
+  - "Step 3: FQHC care model emphasizes preventive services (immunizations, screenings, chronic disease management)"
+  - "Step 4: Enabling services (transportation, translation, case management) address non-medical barriers to care"
+  - "Step 5: Community health worker and outreach programs proactively engage underserved populations"
+  - "Step 6: Increased primary care access shifts utilization from emergency care to preventive and routine care"
+  - "Step 7: Higher preventive service rates achieved for cancer screening, immunizations, and chronic disease monitoring"
+evidence:
+  quality_rating: B
+  n_studies: 15
+  primary_citation: "Shi, Leiyu, et al. 2012. 'Federally Qualified Health Centers and Private Practice Performance on Ambulatory Care Measures.' American Journal of Preventive Medicine 43(2): 142-149."
+  supporting_citations:
+    - "Krist, Alex H., et al. 2024. 'National Breast, Cervical, and Colorectal Cancer Screening Use in Federally Qualified Health Centers.' JAMA Internal Medicine 184(5): 514-523."
+    - "Cole, Michael B., et al. 2017. 'Federally Qualified Health Centers and Health Care System Performance.' Medical Care 55(10): 965-973."
+    - "Health Resources and Services Administration. 2023. 'Health Center Program: Impact and Growth.' HRSA Bureau of Primary Health Care."
+  doi: "10.1016/j.amepre.2012.02.033"
+  journal: American Journal of Preventive Medicine
+  year: 2012
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 5.9
+    type: percentage_change
+    description: "Increased influenza immunization rate with first FQHC inclusion in ACO"
+  secondary_effects:
+    - description: "Tobacco screening and cessation intervention improvement"
+      value: 11.8
+      type: percentage_point_increase
+      source: "Medicare ACO study"
+    - description: "Depression screening and follow-up improvement"
+      value: 8.9
+      type: percentage_point_increase
+      source: "Medicare ACO study"
+    - description: "FQHC colorectal cancer screening improvement (2005-2007)"
+      value: 12.6
+      type: percentage_point_increase
+      from: 8.6
+      to: 21.2
+      source: "Community health center collaborative"
+  comparative_performance:
+    fqhc_breast_screening: 45.4
+    us_general_breast_screening: 78.2
+    fqhc_cervical_screening: 51.0
+    us_general_cervical_screening: 82.9
+    fqhc_colorectal_screening: 40.2
+    us_general_colorectal_screening: 72.3
+    note: "FQHCs serve populations with significant barriers; absolute rates lower but equal or better quality-adjusted performance"
+  sample_size: 3162882
+  interpretation: "FQHC inclusion in healthcare systems improves preventive care delivery by 6-12 percentage points across measures. FQHCs perform as well as or better than private practices on quality measures despite serving populations with more barriers. National screening rates at FQHCs (45% breast, 51% cervical, 40% colorectal) reflect underlying population disadvantage rather than FQHC performance deficits."
+last_updated: "2025-12-01"
+version: "1.0"
+description: "Federally Qualified Health Centers improve preventive care utilization in underserved populations through reduced barriers to access, care model emphasis on prevention, and enabling services. Studies show 6-12 percentage point improvements in immunization, screening, and chronic disease management when FQHCs are integrated into healthcare systems. FQHCs equal or exceed private practice performance on quality measures while serving higher-barrier populations."
+moderators:
+  - name: medicaid_expansion
+    direction: strengthens
+    strength: strong
+    description: "Medicaid expansion increases FQHC patient volume and preventive service delivery"
+  - name: enabling_services
+    direction: strengthens
+    strength: moderate
+    description: "FQHCs with robust enabling services (transportation, translation) show better outcomes"
+  - name: population_insurance_status
+    direction: varies
+    strength: moderate
+    description: "Uninsured patients face remaining barriers even at FQHCs"
+  - name: rural_vs_urban
+    direction: varies
+    strength: moderate
+    description: "Rural FQHCs may face different challenges and opportunities than urban sites"
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: "FQHCs are structural interventions designed to address healthcare access inequities. They serve 30+ million patients, predominantly low-income, uninsured, and racial/ethnic minorities. Lower absolute screening rates at FQHCs reflect population-level barriers (poverty, transportation, work schedules) rather than FQHC deficits. Expanding FQHC funding and density is a structural intervention to reduce healthcare disparities. Policy should address FQHC workforce shortages, funding stability, and integration with broader health systems."
+assumptions:
+  - "FQHC density measured as sites per 100,000 population at county level"
+  - "Preventive care utilization includes cancer screening, immunizations, and annual checkups"
+  - "Quality comparisons adjust for patient case-mix and socioeconomic complexity"
+limitations:
+  - "Limited randomized evidence; most studies quasi-experimental or observational"
+  - "FQHC patients differ from general population making comparisons complex"
+  - "Data from HRSA UDS may not capture all care received by FQHC patients"
+  - "Geographic selection bias possible (FQHCs located in highest-need areas)"
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: "FQHC density varies substantially by state and county. Effects may be stronger in areas with fewer alternative providers. Rural health center networks face different challenges than urban FQHCs. State Medicaid policies significantly affect FQHC patient population and resources."
+  relevant_geographies:
+    - "Medically underserved areas (MUAs) and health professional shortage areas (HPSAs)"
+    - "States with Medicaid expansion show stronger FQHC performance"
+    - "Rural areas rely heavily on FQHC network for primary care access"
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: "2025-12-01T00:00:00"
+  extraction_confidence: moderate
+  prompt_version: "1.0-discovery"

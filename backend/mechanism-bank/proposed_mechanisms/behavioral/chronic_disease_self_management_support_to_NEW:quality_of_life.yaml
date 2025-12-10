@@ -1,0 +1,53 @@
+id: chronic_disease_self_management_support_to_NEW:quality_of_life
+name: Chronic Disease Self-Management Support → Quality of Life
+from_node:
+  node_id: chronic_disease_self_management_support
+  node_name: Chronic Disease Self-Management Support
+to_node:
+  node_id: NEW:quality_of_life
+  node_name: Quality of Life
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Patients with chronic diseases receive structured self-management interventions
+  including education, skill-building, and support'
+- 'Step 2: These interventions enhance self-efficacy, empowering patients to actively
+  manage their conditions and health behaviors'
+- 'Step 3: Improved self-management leads to better disease control, reduced depressive
+  symptoms, and enhanced adaptation to disease-related changes'
+- 'Step 4: The cumulative effect of better disease management and psychological well-being
+  results in significantly improved quality of life'
+evidence:
+  quality_rating: A
+  n_studies: 34
+  primary_citation: 'Yanfang Huang et al. 2024. The Effect of Self-Management on Patients
+    with Chronic Diseases: A Systematic Review and Meta-Analysis. Healthcare.'
+  supporting_citations: []
+description: Self-management interventions for chronic diseases significantly improve
+  quality of life compared to usual care. This meta-analysis of 34 studies involving
+  7,603 patients demonstrated that self-management support enhances quality of life
+  through multiple pathways including improved self-efficacy and reduced depressive
+  symptoms. The effect was more pronounced in older adults (>60 years) and with longer
+  follow-up periods (>6 months), suggesting that sustained engagement with self-management
+  strategies yields greater benefits for quality of life outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.08
+    type: standardized_mean_difference
+    ci_lower: 0.01
+    ci_upper: 0.15
+  p_value: 0.03
+  sample_size: 7603
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Studies with mean age greater than 60 years were more effective in
+    improving quality of life (p = 0.03)
+- name: follow_up_duration
+  direction: strengthens
+  strength: moderate
+  description: Follow-up times greater than 6 months were more effective in improving
+    quality of life (p = 0.004)

@@ -1,0 +1,43 @@
+id: psoriasis_disease_severity_to_alcohol_dependence
+name: Psoriasis Disease Severity (PASI ≥3) → Alcohol Dependence
+from_node:
+  node_id: psoriasis_disease_severity
+  node_name: Psoriasis Disease Severity (PASI ≥3)
+to_node:
+  node_id: alcohol_dependence
+  node_name: Alcohol Dependence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Increased psoriasis severity (PASI ≥3) causes significant psychological
+  distress and reduced quality of life'
+- 'Step 2: Psychological distress and impaired mental health (depression, anxiety)
+  create vulnerability for substance use as coping mechanism'
+- 'Step 3: Alcohol use may initially serve as self-medication for psychological symptoms
+  and social stigma associated with visible skin disease'
+- 'Step 4: Chronic alcohol use patterns develop into alcohol dependence, particularly
+  in context of ongoing disease burden'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: W. Sondermann et al. 2020. "Psychological burden of psoriatic
+    patients in a German university hospital dermatology department." *Journal of
+    dermatology (Print)*. https://doi.org/10.1111/1346-8138.15721
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.522730'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: mental_health_comorbidity
+  direction: strengthens
+  strength: strong
+  description: Co-occurring depression and anxiety disorders strengthen the pathway
+    from psoriasis to alcohol dependence, as approximately 50% of patients had mental
+    health problems
+- name: dermatology_quality_of_life
+  direction: strengthens
+  strength: moderate
+  description: DLQI correlated with all psychological test results, suggesting quality
+    of life impairment mediates substance use risk

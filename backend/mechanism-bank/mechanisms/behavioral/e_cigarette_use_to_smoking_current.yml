@@ -1,0 +1,53 @@
+id: e_cigarette_use_to_smoking_current
+name: E-Cigarette Use (Nicotine) → Current Smoking Status
+from_node:
+  node_id: e_cigarette_use
+  node_name: E-Cigarette Use (Nicotine)
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking Status
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Nicotine e-cigarettes provide regulated alternative nicotine source'
+- 'Step 2: E-cigarette use reduces dependence on combustible tobacco products'
+- 'Step 3: Behavioral substitution occurs as e-cigarettes replace cigarettes'
+- 'Step 4: Long-term smoking abstinence (6+ months) achieved'
+evidence:
+  quality_rating: A
+  n_studies: 49
+  primary_citation: Nicola Lindson et al. 2025. "Electronic cigarettes for smoking cessation.." https://doi.org/10.1002/14651858.CD010216.pub9
+  supporting_citations:
+  - 90 completed studies representing systematic review evidence base
+  - 10 studies rated at low risk of bias overall
+  - Additional citations require full-text access for specific study identification
+  doi: 10.1002/14651858.CD010216.pub9
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Nicotine-containing e-cigarettes significantly reduce current smoking prevalence by facilitating
+  long-term abstinence. High-certainty evidence from 49 RCTs shows superior effectiveness compared to
+  established pharmacotherapy.
+quantitative_effects:
+  effect_size:
+    value: 1.59
+    type: relative_risk
+    ci_lower: 1.3
+    ci_upper: 1.93
+  sample_size: 29044
+moderators:
+- name: comparison_intervention
+  direction: strengthens
+  strength: strong
+  description: Effect strongest when compared to NRT; moderate certainty when compared to non-nicotine
+    EC
+structural_competency:
+  equity_implications: Smoking cessation is influenced by structural factors including tobacco industry
+    marketing, taxation policies, smoke-free regulations, and availability of cessation resources. E-cigarette
+    access represents a modifiable structural factor that can reduce smoking prevalence. Equity concerns
+    include ensuring regulated product access across socioeconomic groups.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.905504'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,61 @@
+id: NEW:routine_outcome_monitoring_feedback_to_substance_use_treatment_dropout_rate
+name: Routine Outcome Monitoring and Feedback in AOD Treatment → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: NEW:routine_outcome_monitoring_feedback
+  node_name: Routine Outcome Monitoring and Feedback in AOD Treatment
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Routine outcome monitoring (ROM) systems collect regular data on client progress during alcohol
+  and other drug (AOD) treatment'
+- 'Step 2: Feedback from ROM data is provided to clinicians and/or clients, enabling real-time awareness
+  of treatment progress'
+- 'Step 3: Clinicians can adjust treatment approaches based on objective outcome data, particularly for
+  clients who are off-track'
+- 'Step 4: Improved therapeutic alliance and client engagement result from collaborative progress monitoring'
+- 'Step 5: Enhanced treatment retention occurs as clients and clinicians have shared goals and measurable
+  progress indicators'
+evidence:
+  quality_rating: B
+  n_studies: 10
+  primary_citation: India Cordony et al. 2023. "A systematic review on the effect of routine outcome monitoring
+    and feedback on client outcomes in alcohol and other drug treatment." https://doi.org/10.1111/dar.13742
+  supporting_citations:
+  - Additional citations require full-text access - systematic review methodology referenced
+  - Five randomized controlled trials included in review
+  - Five pre-post within-subjects designs included in review
+  doi: 10.1111/dar.13742
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Routine outcome monitoring with feedback to clinicians and/or clients in AOD treatment settings
+  improves treatment retention, with 4 of 6 good/fair quality studies showing improved outcomes including
+  treatment retention
+moderators:
+- name: feedback_recipient
+  direction: strengthens
+  strength: moderate
+  description: Different effects observed based on whether feedback is provided to clinicians only, clients
+    only, or both
+- name: client_trajectory_status
+  direction: strengthens
+  strength: moderate
+  description: Off-track clients showed greater benefit from feedback interventions for substance use
+    outcomes
+structural_competency:
+  equity_implications: This mechanism addresses healthcare system infrastructure and quality improvement
+    processes rather than individual blame. ROM systems represent structural interventions that enhance
+    treatment delivery capacity and quality. Implementation requires institutional investment in monitoring
+    systems and clinician training, highlighting the role of healthcare infrastructure in addiction treatment
+    outcomes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.669725'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

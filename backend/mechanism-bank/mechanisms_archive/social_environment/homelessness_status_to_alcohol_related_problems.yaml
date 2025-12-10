@@ -1,0 +1,43 @@
+id: homelessness_status_to_alcohol_related_problems
+name: Homelessness Status → Alcohol-Related Problems
+from_node:
+  node_id: homelessness_status
+  node_name: Homelessness Status
+to_node:
+  node_id: alcohol_related_problems
+  node_name: Alcohol-Related Problems
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Housing instability and homelessness create conditions of chronic stress,
+  trauma, and lack of safety'
+- 'Step 2: Street-based living environments increase exposure to alcohol use as coping
+  mechanism and social activity'
+- 'Step 3: Lack of stable housing reduces access to healthcare and addiction treatment
+  services'
+- 'Step 4: Disproportionate burden of alcohol-related problems develops among people
+  experiencing homelessness'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Filipe Oliveira Azevedo et al. 2023. "Problemas ligados ao álcool
+    em centros de emergência (PLACE)-People experiencing homelessness with alcohol-related
+    problems in Lisbon''s emergency shelters during the COVID-19 pandemic: a description
+    and analysis of a harm reduction intervention.." *Frontiers in psychology*. https://doi.org/10.3389/fpsyg.2023.1165322'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.386100'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: healthcare_access
+  direction: weakens
+  strength: moderate
+  description: Greater access to low-barrier healthcare and addiction services may
+    reduce severity of alcohol-related problems among people experiencing homelessness
+- name: housing_first_policies
+  direction: weakens
+  strength: strong
+  description: Policies that prioritize housing provision without treatment preconditions
+    may reduce alcohol-related harm

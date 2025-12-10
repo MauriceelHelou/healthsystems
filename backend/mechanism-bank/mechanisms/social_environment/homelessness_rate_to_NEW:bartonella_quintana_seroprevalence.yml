@@ -1,0 +1,65 @@
+id: homelessness_rate_to_NEW:bartonella_quintana_seroprevalence
+name: Homelessness Rate → Bartonella quintana Seroprevalence
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: NEW:bartonella_quintana_seroprevalence
+  node_name: Bartonella quintana Seroprevalence
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Homelessness leads to inadequate access to hygiene facilities and sanitation'
+- 'Step 2: Poor hygiene conditions increase exposure to body lice (Pediculus humanus corporis), the primary
+  vector for Bartonella quintana'
+- 'Step 3: Body lice infestation facilitates transmission of B. quintana bacteria through louse feces
+  contaminating skin abrasions'
+- 'Step 4: Prolonged homelessness duration increases cumulative exposure risk to infected vectors'
+- 'Step 5: Resulting in higher seroprevalence rates among homeless populations compared to housed populations'
+evidence:
+  quality_rating: A
+  n_studies: 45
+  primary_citation: Ba-Hoang-Anh Mai 2022. "Seroprevalence of ." https://doi.org/10.4103/jgid.jgid_220_21
+  supporting_citations:
+  - Studies from 21 countries across 4 continents included in systematic review (1996-2020)
+  - 61 subpopulations with positive rates ranging from 0.2% to 65%
+  - Additional citations require full-text access for specific study details
+  doi: 10.4103/jgid.jgid_220_21
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review of 45 articles identified homeless people as the main target population
+  for Bartonella quintana infection, with seroprevalence rates varying widely (0.2%-65%) across 84 subpopulations
+  globally. The structural conditions of homelessness - lack of access to hygiene, crowded shelters, and
+  inability to maintain personal cleanliness - create ideal conditions for body lice transmission of this
+  bacterium.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Review included 84 subpopulations from 21 countries across 4 continents, with seroprevalence
+    ranging from 0.2% to 65%, indicating substantial geographic variation
+moderators:
+- name: homeless_period_duration
+  direction: strengthens
+  strength: strong
+  description: Longer duration of homelessness identified as a key susceptibility factor for infection
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Age identified as a factor related to susceptibility among homeless populations
+- name: alcoholism
+  direction: strengthens
+  strength: strong
+  description: Alcoholism identified as a key susceptibility factor, potentially through impaired immune
+    function and reduced self-care capacity
+structural_competency:
+  equity_implications: 'This mechanism clearly traces to structural root causes: housing policy failures,
+    inadequate social safety nets, and lack of accessible hygiene infrastructure for unhoused populations.
+    The infection burden reflects systemic inequities rather than individual choices. Homeless period
+    duration as a risk factor emphasizes how prolonged exposure to inadequate housing conditions compounds
+    health risks. Policy interventions should focus on housing-first approaches, accessible hygiene facilities,
+    and healthcare outreach rather than individual behavioral change.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.516524'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,62 @@
+id: drinking_water_contamination_risk_to_NEW:carcinogenic_health_risk
+name: Drinking Water Contamination Risk → Carcinogenic Health Risk
+from_node:
+  node_id: drinking_water_contamination_risk
+  node_name: Drinking Water Contamination Risk
+to_node:
+  node_id: NEW:carcinogenic_health_risk
+  node_name: Carcinogenic Health Risk
+direction: positive
+category: environmental
+mechanism_pathway:
+- 'Step 1: Heavy metals (As, Cr, Cd, Pb) contaminate drinking water supplies through industrial discharge,
+  agricultural runoff, and natural geological sources'
+- 'Step 2: Chronic exposure to arsenic through drinking water leads to bioaccumulation in human tissues'
+- 'Step 3: Arsenic acts as a known carcinogen, inducing DNA damage, oxidative stress, and disruption of
+  cellular signaling pathways'
+- 'Step 4: Long-term exposure increases probability of developing cancers (skin, bladder, lung)'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Nilufar Marufi et al. 2022. "Carcinogenic and non-carcinogenic human health risk
+    assessments of heavy metals contamination in drinking water supplies in Iran: a systematic review."
+    https://doi.org/10.1515/reveh-2022-0060'
+  supporting_citations:
+  - Additional citations require full-text access - this systematic review synthesized 40 articles from
+    2010-2021
+  - Studies indexed in Google Scholar, Web of Science, Science Direct, PubMed, Springer, and Scopus databases
+  - World Health Organization drinking water quality guidelines referenced for permissible limits
+  doi: 10.1515/reveh-2022-0060
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Arsenic contamination in drinking water supplies creates significant carcinogenic risk for
+  populations. This systematic review found that 58.82% of water samples in Iran showed arsenic levels
+  creating cancer risk exceeding the acceptable threshold of 1.00E-04 for both adult and child consumers.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Significant variation across cities and villages in Iran; 58.82% of samples for both
+    adults and children showed carcinogenic risk (CR) of arsenic exceeding 1.00E-04 threshold indicating
+    significant cancer risk
+moderators:
+- name: age_group
+  direction: strengthens
+  strength: moderate
+  description: Children showed different hazard quotient rankings compared to adults (Cd>As>Cr>Pb>Li for
+    children vs As>Cr>Pb>Fe=Zn=Cu>Cd for adults), suggesting differential vulnerability
+- name: geographic_location
+  direction: strengthens
+  strength: strong
+  description: Heavy metal concentrations varied significantly by location, with some cities and villages
+    exceeding WHO and Iranian standards while others remained within safe limits
+structural_competency:
+  equity_implications: This mechanism demonstrates how inadequate water infrastructure and regulatory
+    enforcement in developing countries creates differential exposure to carcinogens. The contamination
+    is a structural issue related to industrial regulation, water treatment infrastructure investment,
+    and environmental policy enforcement rather than individual behavior. Populations in areas with poor
+    water infrastructure bear disproportionate cancer risk.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.395525'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

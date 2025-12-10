@@ -1,0 +1,54 @@
+id: NEW:alcohol_consumption_dose_response_to_NEW:peripheral_artery_disease_incidence
+name: Alcohol Consumption Dose-Response Pattern → Peripheral Artery Disease Incidence
+from_node:
+  node_id: NEW:alcohol_consumption_dose_response
+  node_name: Alcohol Consumption Dose-Response Pattern
+to_node:
+  node_id: NEW:peripheral_artery_disease_incidence
+  node_name: Peripheral Artery Disease Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Nonlinear dose-response relationship exists between alcohol intake and vascular health outcomes'
+- 'Step 2: At low doses (≤2 drinks/week), cardioprotective mechanisms predominate including improved lipid
+  profiles'
+- 'Step 3: As consumption increases beyond moderate levels, harmful effects emerge including hypertension,
+  oxidative stress, and pro-inflammatory states'
+- 'Step 4: At ≥10 drinks/week, cumulative vascular damage exceeds protective effects, leading to increased
+  PAD risk'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'S. Yuan et al. 2024. "Association between alcohol consumption and peripheral artery
+    disease: two de novo prospective cohorts and a systematic review with meta-analysis." https://doi.org/10.1093/eurjpc/zwae142'
+  supporting_citations:
+  - Swedish cohort study (n=70,116) - prospective cohort from Yuan et al. 2024
+  - UK Biobank cohort (n=405,406) - prospective cohort from Yuan et al. 2024
+  - Additional citations require full-text access for complete list of studies included in systematic
+    review
+  doi: 10.1093/eurjpc/zwae142
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis revealed a statistically significant U-shaped nonlinear association between
+  alcohol consumption and PAD risk (P nonlinearity <0.001). Risk nadir occurred at approximately 2 drinks/week
+  with pronounced risk elevation at ≥10 drinks/week.
+quantitative_effects:
+  p_value: 0.001
+  sample_size: 475522
+moderators:
+- name: drinking_frequency_pattern
+  direction: u_shaped
+  strength: strong
+  description: Lowest risk at 2 drinks/week; risk increases pronouncedly at ≥10 drinks/week demonstrating
+    clear U-shaped dose-response
+structural_competency:
+  equity_implications: Understanding the dose-response relationship is critical for evidence-based alcohol
+    policy. Structural interventions including pricing policies, availability restrictions, and marketing
+    regulations can influence population-level consumption patterns. Policies should aim to shift heavy
+    drinkers toward moderation rather than encouraging non-drinkers to initiate consumption.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.301651'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

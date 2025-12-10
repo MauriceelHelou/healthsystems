@@ -1,0 +1,63 @@
+id: NEW:egfr_severity_to_NEW:healthcare_cost_ckd
+name: Lower Estimated Glomerular Filtration Rate (eGFR) → Healthcare Costs for CKD
+  Patients
+from_node:
+  node_id: NEW:egfr_severity
+  node_name: Lower Estimated Glomerular Filtration Rate (eGFR)
+to_node:
+  node_id: NEW:healthcare_cost_ckd
+  node_name: Healthcare Costs for CKD Patients
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Lower eGFR indicates more severe chronic kidney disease (CKD), reflecting
+  greater loss of kidney function and filtration capacity'
+- 'Step 2: More severe CKD leads to increased complications requiring medical intervention,
+  including anemia, mineral bone disorders, fluid overload, and cardiovascular complications'
+- 'Step 3: Patients with lower eGFR require more intensive monitoring, specialist
+  consultations, laboratory testing, and medication management'
+- 'Step 4: As eGFR declines below 15 mL/min/1.73m², patients often require dialysis
+  preparation, vascular access procedures, or initiation of renal replacement therapy'
+- 'Step 5: Increased hospitalizations, emergency department visits, outpatient procedures,
+  and kidney-specific care drive substantially higher cumulative healthcare costs'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: B. Manns et al. 2019. The Cost of Care for People With Chronic
+    Kidney Disease. Canadian Journal of Kidney Health and Disease.
+  supporting_citations: []
+description: Lower eGFR, indicating more severe chronic kidney disease, is associated
+  with substantially higher healthcare costs. In a population-based cohort of 219,641
+  adults with CKD in Alberta, Canada, mean 1-year unadjusted healthcare costs were
+  Can$14,634 per patient overall, with a clear graded association between CKD severity
+  and costs. Kidney-specific care costs increased from 1.6% of total costs overall
+  to 32.3% (Can$14,169) for patients with eGFR<15 mL/min/1.73m². This relationship
+  is driven by increased need for specialist care, hospitalizations, emergency visits,
+  dialysis, and management of CKD complications.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 14169.0
+    type: mean_cost_CAD
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 219641
+moderators:
+- name: Comorbidity burden
+  direction: strengthens
+  strength: strong
+  description: Patients with more comorbidities had higher healthcare costs across
+    all CKD stages
+- name: Albuminuria severity
+  direction: strengthens
+  strength: moderate
+  description: More severe albuminuria was associated with higher costs independent
+    of eGFR category
+- name: KDIGO CKD category
+  direction: strengthens
+  strength: strong
+  description: Graded association observed with costs increasing substantially at
+    lower eGFR categories, with kidney care costs representing 32.3% of total costs
+    at eGFR<15 mL/min/1.73m² compared to 1.6% overall

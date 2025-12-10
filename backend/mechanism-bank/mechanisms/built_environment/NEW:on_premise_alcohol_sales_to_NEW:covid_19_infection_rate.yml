@@ -1,0 +1,56 @@
+id: NEW:on_premise_alcohol_sales_to_NEW:covid_19_infection_rate
+name: On-Premise Alcohol Sales (Bars/Restaurants) → COVID-19 Infection Rate
+from_node:
+  node_id: NEW:on_premise_alcohol_sales
+  node_name: On-Premise Alcohol Sales (Bars/Restaurants)
+to_node:
+  node_id: NEW:covid_19_infection_rate
+  node_name: COVID-19 Infection Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Bars and restaurants serve as venues where alcohol consumption occurs in close physical proximity
+  to others'
+- 'Step 2: Alcohol consumption in these settings reduces inhibitions and compliance with distancing measures'
+- 'Step 3: Indoor dining/drinking environments with poor ventilation facilitate aerosol transmission'
+- 'Step 4: Social nature of on-premise consumption involves conversation (droplet production) and prolonged
+  contact'
+- 'Step 5: COVID-19 infections increase in the population 2 weeks following elevated on-premise consumption'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'T. Stockwell et al. 2022. "Alcohol sales in Canadian liquor outlets as a predictor
+    of subsequent COVID‐19 infection rates: a time‐series analysis." https://doi.org/10.1111/add.16011'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not cite specific prior studies
+  - Public Health Agency of Canada (PHAC) COVID-19 surveillance data referenced
+  - Provincial government alcohol distributor sales data (Ontario, British Columbia, Nova Scotia)
+  doi: 10.1111/add.16011
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: On-premise alcohol consumption at bars and restaurants showed dramatically larger effect
+  sizes (+77.27% increase in COVID-19 infections at 2-week lag per standard drink/person/week) compared
+  to retail alcohol sales, reflecting the high-risk transmission environment of indoor social drinking
+  venues.
+quantitative_effects:
+  effect_size:
+    value: 77.27
+    type: percentage_change
+  p_value: 0.009
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect observed across three Canadian provinces with varying levels of COVID-19 restrictions
+    on bars and restaurants
+structural_competency:
+  equity_implications: This mechanism demonstrates how built environment features (hospitality venues)
+    interact with alcohol policy to create differential health risks. The substantially higher transmission
+    risk from on-premise versus off-premise consumption reflects structural factors - the physical design
+    of bars/restaurants that cluster people together - rather than individual drinking choices. Policy
+    decisions about when and how to restrict hospitality venues during pandemics have major public health
+    implications.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.118162'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

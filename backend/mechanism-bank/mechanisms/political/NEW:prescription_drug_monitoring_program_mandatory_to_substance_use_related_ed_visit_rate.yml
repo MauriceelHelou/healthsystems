@@ -1,0 +1,61 @@
+id: NEW:prescription_drug_monitoring_program_mandatory_to_substance_use_related_ed_visit_rate
+name: Mandatory Prescription Drug Monitoring Program → Substance Use Related ED Visit Rate (non-opioid)
+from_node:
+  node_id: NEW:prescription_drug_monitoring_program_mandatory
+  node_name: Mandatory Prescription Drug Monitoring Program
+to_node:
+  node_id: substance_use_related_ed_visit_rate
+  node_name: Substance Use Related ED Visit Rate (non-opioid)
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Mandatory prescription drug monitoring restricts access to prescription opioids for people
+  with opioid dependence'
+- 'Step 2: Patients unable to access prescription opioids may substitute with other substances to manage
+  withdrawal or pain'
+- 'Step 3: Non-opioid substances including illicit drugs or other medications may have different safety
+  profiles'
+- 'Step 4: Initial substitution behavior leads to increased non-opioid substance-related adverse events'
+- 'Step 5: Transient increase in non-opioid substance-related ED presentations observed immediately after
+  policy implementation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Suzanne Nielsen et al. 2025. "Prescription opioid supply-restricting policies and
+    hospital use by people prescribed opioid medications, Victoria, 2018-22: a controlled interrupted
+    time series analysis.." https://doi.org/10.5694/mja2.52713'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references European post-authorisation study
+    register (EUROPAS), EUPAS104005
+  doi: 10.5694/mja2.52713
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'The immediate change in non-opioid substance-related ED presentation rate was greater for
+  the opioid group than the control group (β=11.1 presentations per 100,000 patients; 95% CI: 1.7-20.5).
+  However, by March 2022, this rate had declined to below pre-intervention levels, indicating a transient
+  substitution effect that resolved.'
+quantitative_effects:
+  effect_size:
+    value: 11.1
+    type: beta_coefficient
+    ci_lower: 1.7
+    ci_upper: 20.5
+  sample_size: 179091
+moderators:
+- name: time_since_implementation
+  direction: weakens
+  strength: strong
+  description: By March 2022, non-opioid substance-related ED rate had declined to below pre-intervention
+    levels, suggesting transient substitution effect that resolved over time
+structural_competency:
+  equity_implications: 'This finding highlights a critical equity consideration in supply-restriction
+    policies: reducing access without adequate treatment alternatives may initially increase other substance-related
+    harms. The structural competency lens recognizes that people with opioid use disorder may not have
+    access to medication-assisted treatment, forcing substitution. The transient nature suggests systems
+    adapted or patients accessed alternative supports.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.661229'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

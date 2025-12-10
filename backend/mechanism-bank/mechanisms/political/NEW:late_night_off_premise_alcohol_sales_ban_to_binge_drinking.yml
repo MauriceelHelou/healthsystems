@@ -1,0 +1,61 @@
+id: NEW:late_night_off_premise_alcohol_sales_ban_to_binge_drinking
+name: Late-Night Off-Premise Alcohol Sales Ban → Binge Drinking
+from_node:
+  node_id: NEW:late_night_off_premise_alcohol_sales_ban
+  node_name: Late-Night Off-Premise Alcohol Sales Ban
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Policy eliminates legal sale of alcohol at off-premise outlets during nighttime hours (10pm-5am)'
+- 'Step 2: Youth and young adults face increased barriers to obtaining additional alcohol during peak
+  social drinking periods'
+- 'Step 3: Reduced spontaneous alcohol availability interrupts escalation from moderate to heavy drinking
+  episodes'
+- 'Step 4: Overall reduction in high-risk drinking patterns among adolescents and young adults'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jan Marcus and T. Siedler 2015. "Reducing Binge Drinking? The Effect of a Ban on Late-Night
+    Off-Premise Alcohol Sales on Alcohol-Related Hospital Stays in Germany." https://doi.org/10.2139/ssrn.2553193
+  supporting_citations:
+  - Additional citations require full-text access - abstract references this as addressing 'excessive
+    alcohol consumption among youth and young adults' as a 'major public health concern'
+  - Study design uses 70% random sample of all hospitalizations in Germany
+  - Natural experiment comparing pre/post policy in treatment vs control states
+  doi: 10.2139/ssrn.2553193
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Restricting hours during which alcohol can be sold at off-premise outlets reduces binge drinking
+  among youth and young adults by limiting access to alcohol during high-risk nighttime hours when excessive
+  consumption is most likely.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect measured in German context where off-premise sales at kiosks and petrol stations
+    are common; may differ in jurisdictions with different retail alcohol environments
+moderators:
+- name: outlet_type
+  direction: strengthens
+  strength: moderate
+  description: Policy specifically targets off-premise outlets (kiosks, petrol stations, supermarkets)
+    which may be preferred sources for spontaneous late-night purchases by youth
+- name: time_restriction_hours
+  direction: strengthens
+  strength: moderate
+  description: Restriction covers 10pm-5am, capturing peak late-night drinking hours when binge drinking
+    is most likely to occur
+structural_competency:
+  equity_implications: 'This mechanism operates at the commercial/regulatory level, modifying the retail
+    environment rather than individual decision-making. It recognizes that youth binge drinking is shaped
+    by structural availability factors, not simply individual choice. The policy shifts responsibility
+    from individuals to the regulatory environment, representing a structural competency approach. Equity
+    implications: Such policies may have differential effects by socioeconomic status depending on access
+    to alternative alcohol sources (e.g., bars, restaurants) and enforcement patterns across neighborhoods.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.256198'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

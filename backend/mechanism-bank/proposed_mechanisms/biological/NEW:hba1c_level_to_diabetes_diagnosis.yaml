@@ -1,0 +1,55 @@
+id: NEW:hba1c_level_to_diabetes_diagnosis
+name: Hemoglobin A1c Level → Diabetes Diagnosis/Control
+from_node:
+  node_id: NEW:hba1c_level
+  node_name: Hemoglobin A1c Level
+to_node:
+  node_id: diabetes_diagnosis
+  node_name: Diabetes Diagnosis/Control
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: HbA1c reflects average blood glucose levels over 2-3 months through glycation
+  of hemoglobin molecules'
+- 'Step 2: Elevated HbA1c levels (≥6.5%) indicate sustained hyperglycemia consistent
+  with diabetes diagnosis'
+- 'Step 3: HbA1c serves as both a diagnostic marker and a measure of glycemic control
+  in diabetes management'
+- 'Step 4: Changes in HbA1c reflect the effectiveness of diabetes interventions, with
+  reductions indicating improved disease control'
+evidence:
+  quality_rating: B
+  n_studies: 7
+  primary_citation: 'Jingjing He et al. 2021. Clinical efficacy on glycemic control
+    and safety of mesenchymal stem cells in patients with diabetes mellitus: Systematic
+    review and meta-analysis of RCT data. PLoS ONE.'
+  supporting_citations: []
+description: 'HbA1c (glycated hemoglobin) serves as the primary biomarker for diabetes
+  diagnosis and glycemic control. Elevated HbA1c levels directly reflect sustained
+  hyperglycemia over 2-3 months, with levels ≥6.5% meeting diagnostic criteria for
+  diabetes. This meta-analysis of 7 RCTs (413 participants) demonstrated that interventions
+  targeting glucose control resulted in significant HbA1c reductions (MD = -1.32,
+  95% CI: -2.06 to -0.57), confirming the direct relationship between HbA1c and diabetes
+  status/control.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -1.32
+    type: mean_difference
+    ci_lower: -2.06
+    ci_upper: -0.57
+  p_value: 0.01
+  sample_size: 413
+moderators:
+- name: Treatment intervention
+  direction: weakens
+  strength: moderate
+  description: MSC therapy significantly reduced HbA1c levels compared to control
+    (MD = -0.87), demonstrating that interventions can modify the HbA1c-diabetes control
+    relationship
+- name: Diabetes type
+  direction: strengthens
+  strength: weak
+  description: The meta-analysis included both type 1 and type 2 diabetes patients,
+    suggesting HbA1c is a universal marker across diabetes types

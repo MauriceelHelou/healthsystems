@@ -1,0 +1,43 @@
+id: advanced_age_to_infection_mortality_risk
+name: Advanced Age (80+ years) → Infection Mortality Risk (SARS-CoV-2)
+from_node:
+  node_id: advanced_age
+  node_name: Advanced Age (80+ years)
+to_node:
+  node_id: infection_mortality_risk
+  node_name: Infection Mortality Risk (SARS-CoV-2)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Advanced age leads to immunosenescence - decline in immune cell numbers
+  and immune organ structure'
+- 'Step 2: Immunosenescence reduces immune defense capacity of the organism'
+- 'Step 3: Reduced immune defense increases susceptibility to infections, particularly
+  emerging and reemerging microorganisms'
+- 'Step 4: Increased susceptibility translates to dramatically higher mortality rates
+  from infectious diseases'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: K. McGovern et al. 2023. "The aging of the immune system and its
+    implications for transplantation." *GeroScience*. https://doi.org/10.1007/s11357-022-00720-2
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.086091'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: age_threshold
+  direction: strengthens
+  strength: strong
+  description: Effect is dramatically amplified in adults over 80 years compared to
+    18-39 year olds, showing a dose-response relationship with advancing age
+- name: pathogen_type
+  direction: strengthens
+  strength: moderate
+  description: Increased susceptibility is particularly pronounced for emerging and
+    reemerging microorganisms
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/advanced_age_to_infection_mortality_risk.yaml
+_category: biological

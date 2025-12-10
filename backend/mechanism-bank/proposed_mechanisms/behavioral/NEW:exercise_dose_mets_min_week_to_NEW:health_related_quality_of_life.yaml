@@ -1,0 +1,57 @@
+id: NEW:exercise_dose_mets_min_week_to_NEW:health_related_quality_of_life
+name: Exercise Dose (METs-min/week) → Health-Related Quality of Life
+from_node:
+  node_id: NEW:exercise_dose_mets_min_week
+  node_name: Exercise Dose (METs-min/week)
+to_node:
+  node_id: NEW:health_related_quality_of_life
+  node_name: Health-Related Quality of Life
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Exercise at specific doses (measured in METs-min/week) induces physiological
+  adaptations including improved cardiovascular function, muscle strength, and metabolic
+  regulation'
+- 'Step 2: These physiological improvements enhance functional capacity and reduce
+  cancer-related fatigue, pain, and physical limitations'
+- 'Step 3: Improved physical function translates to better performance in daily activities
+  and enhanced psychological well-being through increased self-efficacy and reduced
+  depression/anxiety'
+- 'Step 4: The combination of physical and psychological benefits culminates in improved
+  health-related quality of life, with optimal benefits observed at approximately
+  850 METs-min/week and diminishing returns beyond 1,100 METs-min/week'
+evidence:
+  quality_rating: A
+  n_studies: 48
+  primary_citation: 'Zhiyu Xiong et al. 2024. "Optimal exercise dose-response improves
+    health-related quality of life in cancer survivors: a systematic review and Bayesian
+    network meta-analysis of RCTs." Frontiers in oncology.'
+  supporting_citations: []
+description: 'Exercise dose measured in METs-min/week demonstrates a dose-response
+  relationship with health-related quality of life in cancer survivors. The optimal
+  dose across all exercise types is 850 METs-min/week, producing a moderate-to-large
+  effect (SMD: 0.753). Mixed training combining aerobic and resistance components
+  shows the strongest benefits, while diminishing returns occur above 1,100 METs-min/week.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.753
+    type: standardized_mean_difference
+    ci_lower: 0.463
+    ci_upper: 1.096
+  p_value: null
+  sample_size: 3050
+moderators:
+- name: exercise_type
+  direction: strengthens
+  strength: strong
+  description: 'Mixed training (MT) shows optimal effects at 970 METs-min/week (SMD:
+    0.883), followed by resistance training at 450 METs-min/week (SMD: 0.695), aerobic
+    exercise at 430 METs-min/week (SMD: 0.681), and mind-body exercises at 390 METs-min/week
+    (SMD: 0.672)'
+- name: exercise_dose_threshold
+  direction: u_shaped
+  strength: moderate
+  description: Benefits increase up to approximately 850-1100 METs-min/week, with
+    diminishing returns observed beyond 1,100 METs-min/week

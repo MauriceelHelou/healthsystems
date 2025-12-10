@@ -1,0 +1,47 @@
+id: wastewater_based_epidemiology_monitoring_to_alcohol_consumption_surveillance
+name: Wastewater-Based Epidemiology Monitoring System → Population-Level Alcohol Consumption
+  Surveillance
+from_node:
+  node_id: wastewater_based_epidemiology_monitoring
+  node_name: Wastewater-Based Epidemiology Monitoring System
+to_node:
+  node_id: alcohol_consumption_surveillance
+  node_name: Population-Level Alcohol Consumption Surveillance
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Implementation of wastewater-based epidemiology (WBE) infrastructure enables
+  detection of alcohol metabolites (ethyl glucuronide and ethyl sulfate) in sewage
+  samples'
+- 'Step 2: UPLC-MS/MS analytical methods allow quantification of these metabolites
+  with high sensitivity (LLOQ 0.1 μg/L) and accuracy (>97% recovery)'
+- 'Step 3: Systematic collection from 31 provincial capital cities'' wastewater treatment
+  plants provides representative population-level alcohol consumption estimates'
+- 'Step 4: WBE-derived estimates (6.09 ± 4.56 g ethanol/person/day) enable objective,
+  real-time monitoring of alcohol consumption patterns across geographic regions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Yan Yao et al. 2024. "Investigating alcohol consumption in China
+    via wastewater-based epidemiology." *Environmental Geochemistry and Health*. https://doi.org/10.1007/s10653-023-01829-9
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.122082'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: urban_infrastructure_quality
+  direction: strengthens
+  strength: moderate
+  description: Presence of wastewater treatment plants in provincial capitals enables
+    WBE implementation; cities with better sewage infrastructure provide more reliable
+    monitoring data
+- name: analytical_method_sensitivity
+  direction: strengthens
+  strength: strong
+  description: UPLC-MS/MS method with LLOQ of 0.1 μg/L, precision <6%, and recovery
+    >97% ensures accurate quantification of alcohol metabolites
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/wastewater_based_epidemiology_monitoring_to_alcohol_consumption_surveillance.yaml
+_category: healthcare_access

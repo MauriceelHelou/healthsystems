@@ -1,0 +1,56 @@
+id: NEW:primary_dental_implantation_timing_to_NEW:dental_implant_survival_rate
+name: Primary Dental Implantation (simultaneous with bone flap reconstruction) → Dental
+  Implant Survival Rate
+from_node:
+  node_id: NEW:primary_dental_implantation_timing
+  node_name: Primary Dental Implantation (simultaneous with bone flap reconstruction)
+to_node:
+  node_id: NEW:dental_implant_survival_rate
+  node_name: Dental Implant Survival Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary dental implantation is performed simultaneously with free bone
+  flap reconstruction during oncologic surgery for oral cavity malignant tumors'
+- 'Step 2: Simultaneous placement allows implants to integrate with vascularized bone
+  graft during initial healing phase, before potential bone resorption or radiotherapy-induced
+  changes occur'
+- 'Step 3: Earlier implant placement enables faster prosthetic rehabilitation, reducing
+  time to functional dental restoration'
+- 'Step 4: Primary implantation results in higher implant survival rates (92.5%) compared
+  to secondary/delayed implantation (88.5%), improving long-term orofacial function
+  and quality of life'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: 'Sophie Dugast et al. 2025. Assessing Dental Implant Success:
+    A Systematic Review and Meta-Analysis of Primary Versus Secondary Implantation
+    in Free Bone Flap Reconstruction for Malignant Tumors. Head & neck.'
+  supporting_citations: []
+description: This systematic review and meta-analysis of 16 studies (284 patients,
+  1427 implants) demonstrates that primary dental implantation performed simultaneously
+  with free bone flap reconstruction for oral cancer achieves higher implant survival
+  rates (92.5%) compared to secondary/delayed implantation (88.5%). Primary implantation
+  allows for prosthetic rehabilitation during the initial healing period, providing
+  rapid functional and aesthetic improvement for oncologic patients.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 92.5
+    type: survival_rate_percentage
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 284
+moderators:
+- name: Radiotherapy status
+  direction: weakens
+  strength: moderate
+  description: Radiotherapy is common in oncologic patients and may affect implant
+    survival outcomes in both primary and secondary implantation groups
+- name: Type of bone flap used
+  direction: strengthens
+  strength: moderate
+  description: The type and quality of free bone flap (e.g., fibula, iliac crest)
+    may influence implant integration and survival rates

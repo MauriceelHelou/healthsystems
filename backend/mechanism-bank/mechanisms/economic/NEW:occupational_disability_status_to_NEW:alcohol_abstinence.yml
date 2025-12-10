@@ -1,0 +1,52 @@
+id: NEW:occupational_disability_status_to_NEW:alcohol_abstinence
+name: Occupational Disability Status → Alcohol Abstinence
+from_node:
+  node_id: NEW:occupational_disability_status
+  node_name: Occupational Disability Status
+to_node:
+  node_id: NEW:alcohol_abstinence
+  node_name: Alcohol Abstinence
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Occupational disability often results from serious health conditions requiring medical management'
+- 'Step 2: Medical conditions may contraindicate alcohol use or require medications incompatible with
+  drinking'
+- 'Step 3: Disability-related health deterioration leads to voluntary or medically-advised abstinence'
+- 'Step 4: Economic constraints from disability income may also limit alcohol purchasing'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Lluís Mangot-Sala et al. 2022. "Disentangling the association between alcohol consumption
+    and employment status: causation, selection or confounding?." https://doi.org/10.1093/eurpub/ckac141'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references occupationally disabled subgroup
+  - Additional citations require full-text access - abstract notes this subgroup often disregarded in
+    literature
+  - Additional citations require full-text access
+  doi: 10.1093/eurpub/ckac141
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Occupational disability is strongly associated with alcohol abstinence, reflecting the 'sick
+  quitter' phenomenon where individuals with deteriorating health cease alcohol consumption. This represents
+  the strongest association found in the study and highlights the importance of examining abstainers separately
+  from moderate drinkers.
+quantitative_effects:
+  effect_size:
+    value: 0.4
+    type: beta_coefficient
+    ci_lower: 0.24
+    ci_upper: 0.57
+  sample_size: 138875
+structural_competency:
+  equity_implications: This mechanism illustrates how health-related labor market exit concentrates abstainers
+    among the occupationally disabled. The strong association underscores that abstinence is not always
+    a health-positive choice but may reflect underlying illness - important for interpreting epidemiological
+    findings about alcohol and health that sometimes show J-shaped curves with abstainers appearing less
+    healthy than moderate drinkers.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.036246'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

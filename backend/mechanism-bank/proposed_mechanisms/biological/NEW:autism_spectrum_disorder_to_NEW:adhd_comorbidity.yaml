@@ -1,0 +1,54 @@
+id: NEW:autism_spectrum_disorder_to_NEW:adhd_comorbidity
+name: Autism Spectrum Disorder → Attention-Deficit Hyperactivity Disorder Comorbidity
+from_node:
+  node_id: NEW:autism_spectrum_disorder
+  node_name: Autism Spectrum Disorder
+to_node:
+  node_id: NEW:adhd_comorbidity
+  node_name: Attention-Deficit Hyperactivity Disorder Comorbidity
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Autism Spectrum Disorder (ASD) involves neurodevelopmental alterations
+  affecting neural circuitry, particularly in regions governing attention, executive
+  function, and impulse control'
+- 'Step 2: Shared genetic and neurobiological substrates between ASD and ADHD create
+  vulnerability for co-occurring attention deficits and hyperactivity symptoms'
+- 'Step 3: Children and adolescents with ASD demonstrate significantly elevated rates
+  of ADHD comorbidity (26.2% prevalence), indicating strong biological association
+  between these neurodevelopmental conditions'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'T. Mutluer et al. 2022. Population-Based Psychiatric Comorbidity
+    in Children and Adolescents With Autism Spectrum Disorder: A Meta-Analysis. Frontiers
+    in Psychiatry.'
+  supporting_citations: []
+description: 'This meta-analysis of 39 population-based studies found that 26.2% (95%
+  CI: 22-31%) of children and adolescents with Autism Spectrum Disorder have comorbid
+  Attention-Deficit Hyperactivity Disorder. This represents the second highest psychiatric
+  comorbidity in ASD after intellectual disability, demonstrating substantial biological
+  overlap between these neurodevelopmental conditions. Population-based estimates
+  are lower than clinical samples but still indicate considerable co-occurrence without
+  referral bias.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 26.2
+    type: prevalence_percentage
+    ci_lower: 22.0
+    ci_upper: 31.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: study_setting
+  direction: strengthens
+  strength: moderate
+  description: Clinical and treatment referral samples show higher comorbidity rates
+    compared to population-based samples due to referral bias
+- name: diagnostic_methods
+  direction: strengthens
+  strength: moderate
+  description: Different diagnostic approaches and tools affect detection rates of
+    ADHD comorbidity in ASD populations

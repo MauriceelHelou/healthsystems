@@ -1,0 +1,45 @@
+id: bac_limit_reduction_to_traffic_fatalities
+name: Reduction in Legal BAC Limit (from 0.08% to 0.05%) → Traffic Crash Fatalities
+from_node:
+  node_id: bac_limit_reduction
+  node_name: Reduction in Legal BAC Limit (from 0.08% to 0.05%)
+to_node:
+  node_id: traffic_fatalities
+  node_name: Traffic Crash Fatalities
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Lower BAC limit establishes stricter legal threshold for impaired driving'
+- 'Step 2: Drivers modify behavior to avoid legal consequences, reducing driving at
+  BAC levels between 0.05% and 0.08%'
+- 'Step 3: Reduced alcohol-impaired driving decreases crash risk and severity'
+- 'Step 4: Fewer and less severe crashes result in reduced fatalities'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: Lidia P Kostyniuk et al. 2018. "Potential effects of lowering
+    the BAC limit on injuries, fatalities, and costs.." *Journal of safety research*.
+    https://doi.org/10.1016/j.jsr.2017.12.005
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.555305'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: driver_compliance_behavior
+  direction: strengthens
+  strength: strong
+  description: Wide difference between outcomes (4-16% vs 71-99% reductions) reflects
+    sensitivity of BAC policy benefits to driver compliance. Greater compliance produces
+    substantially larger reductions in fatalities.
+- name: enforcement_infrastructure
+  direction: strengthens
+  strength: moderate
+  description: Effectiveness depends on enforcement capacity to detect and penalize
+    violations at lower BAC thresholds
+- name: driver_bac_distribution
+  direction: strengthens
+  strength: moderate
+  description: Scenario 3 assumed decreases limited to drivers near previous legal
+    limit, producing smaller effects than scenarios assuming broader behavioral change

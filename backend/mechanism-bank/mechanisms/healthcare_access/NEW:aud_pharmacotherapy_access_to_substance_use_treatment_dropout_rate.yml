@@ -1,0 +1,52 @@
+id: NEW:aud_pharmacotherapy_access_to_substance_use_treatment_dropout_rate
+name: Access to AUD Pharmacotherapy → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: NEW:aud_pharmacotherapy_access
+  node_name: Access to AUD Pharmacotherapy
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with AUD receive pharmacotherapy in addition to psychosocial intervention'
+- 'Step 2: Medications reduce craving and withdrawal symptoms that often precipitate treatment dropout'
+- 'Step 3: Improved symptom management increases treatment engagement and retention'
+- 'Step 4: Lower relapse rates lead to reduced treatment dropout and leaving against medical advice'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: Youngjung Kim et al. 2018. "Practical outpatient pharmacotherapy for alcohol use disorder."
+    https://doi.org/10.7573/dic.212308
+  supporting_citations:
+  - Jonas DE et al. (2014). Pharmacotherapy for adults with alcohol use disorders in outpatient settings.
+    JAMA.
+  - Rösner S et al. (2010). Acamprosate for alcohol dependence. Cochrane Database of Systematic Reviews.
+  - 'Anton RF et al. (2006). Combined pharmacotherapies and behavioral interventions for alcohol dependence:
+    The COMBINE study.'
+  doi: 10.7573/dic.212308
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: High relapse rates with psychosocial intervention alone contribute to treatment dropout.
+  Adding pharmacotherapy addresses biological aspects of alcohol dependence, improving treatment retention
+  by reducing relapse precipitants.
+moderators:
+- name: medication_side_effect_profile
+  direction: weakens
+  strength: moderate
+  description: Side effects of different medications may affect tolerability and treatment continuation
+- name: treatment_population_severity
+  direction: strengthens
+  strength: moderate
+  description: Difficult-to-treat populations may show greater relative benefit from pharmacotherapy augmentation
+structural_competency:
+  equity_implications: Treatment dropout in AUD is often attributed to patient motivation, but this mechanism
+    reframes it as a treatment adequacy issue. When healthcare systems fail to provide comprehensive treatment
+    including pharmacotherapy, higher dropout rates are predictable system failures rather than individual
+    patient failures.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.119473'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

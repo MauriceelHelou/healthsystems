@@ -1,0 +1,53 @@
+id: homelessness_rate_to_child_maltreatment_substantiated_rate
+name: Homelessness Rate → Child Maltreatment Substantiated Rate
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: child_maltreatment_substantiated_rate
+  node_name: Child Maltreatment Substantiated Rate
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Homelessness creates severe material hardship and housing instability for
+  families with children, disrupting stable caregiving environments'
+- 'Step 2: Housing stress increases parental stress, mental health challenges, and
+  reduces parental capacity for adequate supervision and nurturing care'
+- 'Step 3: Homeless families face resource scarcity, social isolation, and chaotic
+  living conditions (shelters, doubled-up arrangements) that compromise child safety'
+- 'Step 4: Increased family stress and reduced parenting capacity elevates risk of
+  neglect and physical maltreatment incidents'
+- 'Step 5: Families experiencing homelessness have increased contact with social services
+  and mandated reporters, leading to higher CPS reports, investigations, and substantiated
+  maltreatment findings'
+evidence:
+  quality_rating: A
+  n_studies: 21
+  primary_citation: 'Caroline E. Chandler et al. 2020. Association of Housing Stress
+    With Child Maltreatment: A Systematic Review. Trauma, Violence, & Abuse.'
+  supporting_citations: []
+description: This systematic review of 21 U.S. studies found consistent evidence that
+  housing stress, including homelessness and eviction, is associated with increased
+  likelihood of child maltreatment across multiple outcome measures including CPS
+  reports, investigated and substantiated CPS reports, out-of-home placements, and
+  maltreatment death. Housing stress serves as a form of material hardship that more
+  directly measures how poverty affects daily caregiving capacity.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: type_of_housing_stress
+  direction: strengthens
+  strength: moderate
+  description: Different measures of housing stress (homelessness, eviction, shelter
+    stays, foreclosure, housing instability) show varying associations with maltreatment
+    outcomes
+- name: type_of_maltreatment
+  direction: strengthens
+  strength: moderate
+  description: Housing stress may differentially affect risk for specific types of
+    maltreatment (neglect vs. physical abuse)
+- name: poverty_level
+  direction: strengthens
+  strength: strong
+  description: Poverty is an established risk factor; housing stress represents material
+    hardship that more directly captures daily impacts of economic insecurity

@@ -1,0 +1,54 @@
+id: NEW:proactive_arld_screening_to_NEW:early_liver_disease_detection
+name: Proactive ARLD Screening in High-Risk Populations → Early Liver Disease Detection
+from_node:
+  node_id: NEW:proactive_arld_screening
+  node_name: Proactive ARLD Screening in High-Risk Populations
+to_node:
+  node_id: NEW:early_liver_disease_detection
+  node_name: Early Liver Disease Detection
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: High-risk populations (people with alcohol use disorder or history of alcohol
+  excess) are identified in key healthcare settings including inpatient addiction
+  services, outpatient addiction services, general acute hospital admissions, and
+  community outreach programs'
+- 'Step 2: Proactive fibrosis assessment is conducted using screening tools to detect
+  liver damage before clinical symptoms manifest'
+- 'Step 3: Screening identifies significant proportions of patients with advanced
+  liver disease (fibrosis and cirrhosis) who would otherwise remain undiagnosed'
+- 'Step 4: Early detection enables intervention opportunities including reduced alcohol
+  intake, hepatocellular carcinoma surveillance enrollment, and management of liver-related
+  complications'
+- 'Step 5: Earlier identification shifts diagnosis from late-stage presentation (with
+  high mortality) to earlier stages with improved treatment potential'
+evidence:
+  quality_rating: B
+  n_studies: 15
+  primary_citation: 'Ann J Archer et al. 2024. Proactive case finding of alcohol-related
+    liver disease in high-risk populations: A systematic review. Liver international:
+    official journal of the International Association for the Study of the Liver.'
+  supporting_citations: []
+description: Systematic review of 15 studies demonstrates that proactive screening
+  for alcohol-related liver disease among high-risk populations (those with AUD or
+  alcohol excess history) successfully identifies fibrosis and cirrhosis at earlier
+  stages. The yield of screening varies substantially by setting, with acute hospital
+  admissions detecting cirrhosis in 10.8%-29.6% of screened individuals, compared
+  to 1.2%-2.3% in community outreach. This targeted approach is feasible across multiple
+  healthcare settings and identifies patients at risk of advanced liver disease who
+  would otherwise present at late stages with poor prognosis.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: screening_setting
+  direction: strengthens
+  strength: strong
+  description: Acute hospital admissions yield highest cirrhosis detection (10.8%-29.6%),
+    while community outreach yields lowest (1.2%-2.3%). Inpatient AUD admissions show
+    highest overall yield for case finding.
+- name: patient_engagement_venue
+  direction: strengthens
+  strength: moderate
+  description: 'Four key settings identified: inpatient addiction services, outpatient
+    addiction services, general acute hospital admissions, and community outreach
+    - each with different yields for detecting advanced liver disease'

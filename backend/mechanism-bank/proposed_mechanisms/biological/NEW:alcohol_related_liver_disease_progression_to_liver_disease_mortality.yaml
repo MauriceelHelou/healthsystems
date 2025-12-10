@@ -1,0 +1,64 @@
+id: NEW:alcohol_related_liver_disease_progression_to_liver_disease_mortality
+name: Alcohol-Related Liver Disease Progression (Steatosis to Cirrhosis) → Liver Disease
+  Mortality
+from_node:
+  node_id: NEW:alcohol_related_liver_disease_progression
+  node_name: Alcohol-Related Liver Disease Progression (Steatosis to Cirrhosis)
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption initiates hepatic steatosis (fatty liver),
+  with annual mortality rate of 6% (4-7%) and liver-specific mortality of 1% per year'
+- 'Step 2: Progressive disease advances through steatohepatitis, characterized by
+  inflammation and hepatocyte damage, with annualized progression to cirrhosis of
+  10% (6-17%)'
+- 'Step 3: Steatohepatitis requiring hospitalization represents the most dangerous
+  subtype with 15% annual mortality (8-26% in inpatients)'
+- 'Step 4: Development of cirrhosis marks end-stage liver disease with annualized
+  mortality of 8% (5-13%), predominantly from liver-specific causes'
+- 'Step 5: Cirrhosis leads to liver failure, portal hypertension, hepatocellular carcinoma,
+  and other complications directly causing death'
+evidence:
+  quality_rating: A
+  n_studies: 37
+  primary_citation: 'Richard Parker et al. 2019. Natural history of histologically
+    proven alcohol-related liver disease: A systematic review. Journal of hepatology.'
+  supporting_citations: []
+description: Alcohol-related liver disease follows a progressive histological pathway
+  from steatosis through steatohepatitis and fibrosis to cirrhosis, with each stage
+  associated with increasing risk of liver-specific mortality. This systematic review
+  of 37 studies with 7,528 participants demonstrates that even early-stage steatosis
+  carries significant mortality risk (6%/year), while advanced stages show markedly
+  higher death rates. Steatohepatitis requiring hospitalization represents the most
+  lethal subtype at 15% annual mortality. The progression rates confirm that alcohol-related
+  steatosis is not benign and that liver disease mortality increases as histological
+  damage advances.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 8.0
+    type: annualized_mortality_rate_percent
+    ci_lower: 5.0
+    ci_upper: 13.0
+  p_value: null
+  sample_size: 7528
+moderators:
+- name: Disease stage
+  direction: strengthens
+  strength: strong
+  description: 'Mortality increases with disease progression: steatosis (6%/year)
+    < cirrhosis (8%/year) < steatohepatitis requiring hospitalization (15%/year)'
+- name: Hospitalization status
+  direction: strengthens
+  strength: strong
+  description: Inpatient steatohepatitis cohorts had 3x higher mortality (15%) compared
+    to mixed inpatient/outpatient cohorts (5%)
+- name: Disease subtype
+  direction: strengthens
+  strength: moderate
+  description: Only in steatosis did non-liver-related mortality exceed liver-specific
+    mortality; at all other stages liver disease drives mortality

@@ -1,0 +1,57 @@
+id: NEW:mass_media_alcohol_campaigns_to_binge_drinking
+name: Mass Media Campaigns About Alcohol → Binge Drinking
+from_node:
+  node_id: NEW:mass_media_alcohol_campaigns
+  node_name: Mass Media Campaigns About Alcohol
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Mass media campaigns deliver health messages targeting alcohol consumption reduction'
+- 'Step 2: Population exposed to messaging about alcohol harms and consumption guidelines'
+- 'Step 3: Theory suggests increased awareness should lead to reduced consumption'
+- 'Step 4: However, evidence shows little actual reduction in alcohol consumption behaviors'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: 'Ben Young et al. 2018. "Effectiveness of Mass Media Campaigns to Reduce Alcohol Consumption
+    and Harm: A Systematic Review.." https://doi.org/10.1093/alcalc/agx094'
+  supporting_citations:
+  - 13 studies within the review measured consumption outcomes
+  - Most campaigns did not explicitly state consumption reduction as aim
+  - Additional citations require full-text access
+  doi: 10.1093/alcalc/agx094
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Despite high recall and some knowledge/attitude changes, there is little evidence that mass
+  media campaigns reduce actual alcohol consumption. This finding held across 13 studies measuring consumption,
+  though most campaigns did not explicitly aim to reduce consumption.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies primarily in developed countries; most campaigns did not explicitly aim to
+    reduce consumption
+moderators:
+- name: explicit_consumption_reduction_aim
+  direction: strengthens
+  strength: weak
+  description: Most campaigns did not state alcohol consumption reduction as a specific aim, which may
+    explain lack of consumption effects
+- name: study_quality
+  direction: weakens
+  strength: moderate
+  description: Most included studies were of weak quality, limiting confidence in findings
+structural_competency:
+  equity_implications: 'This null finding highlights a critical structural issue: information-based interventions
+    that target individual decision-making fail to address the structural drivers of alcohol consumption
+    including pricing policies, outlet density, marketing exposure, and social norms shaped by commercial
+    interests. Effective alcohol harm reduction requires policy-level interventions (taxation, availability
+    restrictions, marketing bans) rather than relying on individuals to change behavior despite unchanged
+    environmental conditions.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.454494'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

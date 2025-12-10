@@ -1,0 +1,58 @@
+id: sud_treatment_capacity_shortage_to_stimulant_use_disorder
+name: SUD Treatment Capacity Shortage → Stimulant Use Disorder Prevalence
+from_node:
+  node_id: sud_treatment_capacity_shortage
+  node_name: SUD Treatment Capacity Shortage
+to_node:
+  node_id: stimulant_use_disorder
+  node_name: Stimulant Use Disorder Prevalence
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Lack of approved pharmacotherapy for methamphetamine withdrawal creates treatment infrastructure
+  gap'
+- 'Step 2: Treatment programs cannot offer medication-assisted treatment comparable to opioid use disorder
+  care'
+- 'Step 3: Patients experiencing withdrawal without pharmacological support face higher discontinuation
+  rates'
+- 'Step 4: Treatment discontinuation increases relapse risk and perpetuates stimulant use disorder'
+- 'Step 5: Structural limitations in treatment options maintain population-level stimulant use disorder
+  prevalence'
+evidence:
+  quality_rating: B
+  n_studies: 9
+  primary_citation: 'Liam S. Acheson et al. 2022. "Pharmacological treatment for methamphetamine withdrawal:
+    A systematic review and meta‐analysis of randomised controlled trials." https://doi.org/10.1111/dar.13511'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review covered literature from 1966-2020
+  - Previous meta-analysis from 2008 referenced as comparison point for evidence evolution
+  - GRADE methodology used for evidence quality assessment
+  doi: 10.1111/dar.13511
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review reveals a structural gap in treatment capacity for methamphetamine
+  use disorder. With no approved pharmacotherapy for withdrawal, treatment systems lack the tools available
+  for other substance use disorders. The finding that amineptine showed promise but is no longer approved
+  exemplifies how regulatory and pharmaceutical industry decisions create lasting treatment infrastructure
+  deficits for vulnerable populations.
+quantitative_effects:
+  sample_size: 242
+moderators:
+- name: medication_availability
+  direction: strengthens
+  strength: strong
+  description: The only medication showing efficacy (amineptine) is no longer approved, eliminating the
+    one potentially effective option
+structural_competency:
+  equity_implications: This mechanism illustrates how pharmaceutical development priorities and regulatory
+    decisions create structural inequities in healthcare access. The disparity between treatment options
+    for opioid versus stimulant use disorders reflects differential research investment and pharmaceutical
+    industry interest. The predominantly male (88%) study population also suggests potential gender bias
+    in clinical research participation and evidence generation for stimulant use disorders. Addressing
+    this gap requires structural changes in research funding priorities and regulatory pathways.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.693756'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

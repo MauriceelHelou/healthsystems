@@ -1,0 +1,53 @@
+id: NEW:indoor_residual_spraying_to_NEW:malaria_incidence
+name: Indoor Residual Spraying → Malaria Incidence
+from_node:
+  node_id: NEW:indoor_residual_spraying
+  node_name: Indoor Residual Spraying
+to_node:
+  node_id: NEW:malaria_incidence
+  node_name: Malaria Incidence
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Indoor residual spraying (IRS) involves applying long-lasting insecticides
+  to interior walls and surfaces of dwellings where malaria-transmitting mosquitoes
+  rest'
+- 'Step 2: When Anopheles mosquitoes enter treated homes and rest on sprayed surfaces,
+  they absorb lethal doses of insecticide, leading to mosquito mortality'
+- 'Step 3: Reduced mosquito populations and shortened mosquito lifespans decrease
+  the probability of successful malaria parasite transmission to humans'
+- 'Step 4: Lower transmission rates result in decreased Plasmodium falciparum and
+  Plasmodium vivax infection and clinical malaria incidence in the protected population'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'L. Messenger et al. 2023. Vector control for malaria prevention
+    during humanitarian emergencies: a systematic review and meta-analysis. Lancet
+    Global Health.'
+  supporting_citations: []
+description: Indoor residual spraying reduces malaria incidence by killing or repelling
+  mosquito vectors when they rest on treated indoor surfaces. Meta-analysis evidence
+  shows approximately 43% reduction in P. falciparum incidence and 49% reduction in
+  P. vivax incidence in humanitarian emergency settings, though evidence certainty
+  was rated as very low due to study design limitations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.57
+    type: incidence_rate_ratio
+    ci_lower: 0.53
+    ci_upper: 0.61
+  p_value: null
+  sample_size: 616611
+moderators:
+- name: Plasmodium species
+  direction: strengthens
+  strength: moderate
+  description: IRS showed slightly stronger effect against P. vivax (IRR 0.51) compared
+    to P. falciparum (IRR 0.57)
+- name: Emergency phase
+  direction: weakens
+  strength: moderate
+  description: All included studies were in chronic emergencies; evidence for acute
+    phase emergencies is limited

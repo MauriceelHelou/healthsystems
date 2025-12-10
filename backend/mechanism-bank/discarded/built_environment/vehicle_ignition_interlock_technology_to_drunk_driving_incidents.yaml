@@ -1,0 +1,50 @@
+id: vehicle_ignition_interlock_technology_to_drunk_driving_incidents
+name: Vehicle Ignition Interlock Technology for Alcohol Detection → Drunk Driving
+  Incidents
+from_node:
+  node_id: vehicle_ignition_interlock_technology
+  node_name: Vehicle Ignition Interlock Technology for Alcohol Detection
+to_node:
+  node_id: drunk_driving_incidents
+  node_name: Drunk Driving Incidents
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Multi-sensor IoT system (MQ-3 breath sensor, heartbeat sensor, facial recognition)
+  continuously monitors driver''s alcohol level, physiological state, and alertness'
+- 'Step 2: When alcohol level exceeds government-prescribed threshold AND either heartbeat
+  is abnormal OR driver shows drowsiness, system automatically disables vehicle ignition'
+- 'Step 3: System simultaneously sends alerts via Wi-Fi/TCP-IP to family, friends,
+  or law enforcement to provide assistance'
+- 'Step 4: Physical prevention of vehicle operation by intoxicated drivers reduces
+  drunk driving incidents and associated mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: V. V. et al. 2020. "Internet of Things(IoT) Based Multilevel Drunken
+    Driving Detection and Prevention System Using Raspberry Pi 3." *arXiv.org*. https://doi.org/10.31227/osf.io/bycjn
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.449248'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: presence_of_sober_alternative_driver
+  direction: strengthens
+  strength: moderate
+  description: System is designed to allow a sober friend to drive the vehicle if
+    the primary driver is intoxicated, preserving mobility while maintaining safety
+- name: wireless_connectivity_infrastructure
+  direction: strengthens
+  strength: strong
+  description: System effectiveness depends on Wi-Fi/TCP-IP connectivity to send alerts
+    to support network and emergency services
+- name: government_alcohol_threshold_policy
+  direction: strengthens
+  strength: strong
+  description: System operates based on government-prescribed alcohol limits, making
+    policy standards directly enforceable through technology
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/vehicle_ignition_interlock_technology_to_drunk_driving_incidents.yaml
+_category: built_environment

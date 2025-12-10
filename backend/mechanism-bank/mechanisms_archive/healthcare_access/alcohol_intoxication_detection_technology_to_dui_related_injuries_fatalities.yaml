@@ -1,0 +1,42 @@
+id: alcohol_intoxication_detection_technology_to_dui_related_injuries_fatalities
+name: Passive Alcohol Intoxication Detection Technology (Smartphone-Based) → Driving
+  Under the Influence (DUI) Related Injuries and Fatalities
+from_node:
+  node_id: alcohol_intoxication_detection_technology
+  node_name: Passive Alcohol Intoxication Detection Technology (Smartphone-Based)
+to_node:
+  node_id: dui_related_injuries_fatalities
+  node_name: Driving Under the Influence (DUI) Related Injuries and Fatalities
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Smartphone-based gait analysis using BiCNN models passively detects when
+  users exceed legal driving limit (0.08 BAC) with 83.5% accuracy'
+- 'Step 2: Just-In-Time alerts notify potentially intoxicated individuals before they
+  attempt to drive'
+- 'Step 3: Early detection and intervention prevents individuals over legal BAC limit
+  from driving'
+- 'Step 4: Reduction in DUI incidents leads to fewer alcohol-related traffic injuries
+  and fatalities (currently >800 per day)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Ruojun Li et al. 2023. "Fine-Grained Intoxicated Gait Classification
+    Using a Bilinear CNN.." *IEEE sensors journal*. https://doi.org/10.1109/jsen.2023.3248868
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.542760'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: smartphone_ownership
+  direction: strengthens
+  strength: strong
+  description: Intervention requires smartphone ownership; individuals without smartphones
+    cannot benefit from passive detection system
+- name: bac_threshold_enforcement
+  direction: strengthens
+  strength: moderate
+  description: Effectiveness depends on legal BAC limit of 0.08 and enforcement policies
+    in jurisdiction

@@ -1,0 +1,51 @@
+id: alcohol_use_disorder_to_alcohol_induced_mortality
+name: Alcohol Use Disorder → Alcohol-Induced Mortality
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Diagnosed AUD is associated with continued heavy alcohol consumption and difficulty achieving
+  sustained abstinence'
+- 'Step 2: Chronic alcohol exposure leads to progressive hepatic fibrosis, cirrhosis, and hepatocellular
+  carcinoma'
+- 'Step 3: Cardiovascular complications including alcoholic cardiomyopathy and arrhythmias develop'
+- 'Step 4: Neurological degeneration and increased risk of severe withdrawal complications including delirium
+  tremens'
+- 'Step 5: Multi-organ damage results in elevated mortality rate among AUD patients'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'Tessa Carr et al. 2024. "The risk relationships between alcohol consumption, alcohol
+    use disorder and alcohol use disorder mortality: A systematic review and meta-analysis.." https://doi.org/10.1111/add.16456'
+  supporting_citations:
+  - Studies meeting inclusion criteria for mortality rates in AUD patients
+  - Additional citations require full-text access
+  doi: 10.1111/add.16456
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patients diagnosed with alcohol use disorder have an elevated mortality rate of 3.13 per
+  1000 person-years. This reflects the considerable health burden associated with AUD, including direct
+  alcohol toxicity and related chronic diseases.
+quantitative_effects:
+  effect_size:
+    value: 3.13
+    type: relative_risk
+    ci_lower: 1.07
+    ci_upper: 9.13
+structural_competency:
+  equity_implications: AUD mortality is influenced by structural factors including treatment availability,
+    healthcare access, insurance coverage for substance use disorders, stigma in healthcare settings,
+    and social determinants affecting recovery support. Medication-assisted treatment and evidence-based
+    psychosocial interventions can reduce mortality but remain underutilized due to system-level barriers.
+    Structural racism and economic inequality create differential access to quality treatment.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.281401'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

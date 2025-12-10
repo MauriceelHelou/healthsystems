@@ -1,0 +1,46 @@
+id: alcohol_policy_restrictiveness_to_mv_crash_fatalities_bac_below_0_08
+name: Alcohol Policy Restrictiveness (Alcohol Policy Scale Score) → Motor Vehicle
+  Crash Fatalities with Blood Alcohol Concentration Below 0.08%
+from_node:
+  node_id: alcohol_policy_restrictiveness
+  node_name: Alcohol Policy Restrictiveness (Alcohol Policy Scale Score)
+to_node:
+  node_id: mv_crash_fatalities_bac_below_0_08
+  node_name: Motor Vehicle Crash Fatalities with Blood Alcohol Concentration Below
+    0.08%
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Restrictive state alcohol policies (measured by Alcohol Policy Scale) reduce
+  overall alcohol availability and accessibility through mechanisms like pricing,
+  outlet density restrictions, and marketing limits'
+- 'Step 2: Reduced alcohol availability decreases population-level alcohol consumption,
+  including consumption patterns that result in lower blood alcohol concentrations'
+- 'Step 3: Lower rates of driving with any alcohol impairment (even below legal limits)
+  reduce crash risk across the BAC spectrum'
+- 'Step 4: Reduced alcohol-impaired driving at sub-legal BAC levels results in fewer
+  motor vehicle crash fatalities involving BAC <0.08%'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Marlene C Lira et al. 2020. "Alcohol Policies and Motor Vehicle
+    Crash Deaths Involving Blood Alcohol Concentrations Below 0.08.." *American journal
+    of preventive medicine*. https://doi.org/10.1016/j.amepre.2019.12.015
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.550055'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: decedent_characteristics
+  direction: strengthens
+  strength: moderate
+  description: Findings held across multiple subgroup analyses by decedent characteristics,
+    suggesting the protective effect of restrictive policies is consistent across
+    different population groups
+- name: crash_characteristics
+  direction: strengthens
+  strength: moderate
+  description: Findings held across multiple subgroup analyses by crash characteristics,
+    indicating the policy effect operates across different crash contexts

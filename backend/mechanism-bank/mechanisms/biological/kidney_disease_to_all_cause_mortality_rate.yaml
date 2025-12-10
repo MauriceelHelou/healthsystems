@@ -1,0 +1,56 @@
+id: kidney_disease_to_all_cause_mortality_rate
+name: Chronic Kidney Disease → All-Cause Mortality
+from_node:
+  node_id: kidney_disease
+  node_name: Chronic Kidney Disease
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic kidney disease leads to progressive decline in renal function,
+  resulting in accumulation of uremic toxins, electrolyte imbalances, and fluid retention'
+- 'Step 2: These metabolic derangements cause systemic inflammation, oxidative stress,
+  accelerated atherosclerosis, and cardiovascular complications'
+- 'Step 3: CKD-associated comorbidities including anemia, mineral bone disorder, and
+  immune dysfunction further compromise physiological resilience'
+- 'Step 4: In patients with comorbid conditions (e.g., COPD), CKD impairs compensatory
+  mechanisms and reduces physiological reserve during acute exacerbations'
+- 'Step 5: The cumulative burden of organ dysfunction, cardiovascular disease, and
+  impaired recovery capacity leads to significantly increased all-cause mortality
+  risk'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Zexin Liu et al. 2024. Association between COPD and CKD: a systematic
+    review and meta-analysis. Frontiers in public health.'
+  supporting_citations: []
+description: 'This meta-analysis of 12 studies examining mortality outcomes demonstrates
+  that chronic kidney disease significantly increases all-cause mortality risk. CKD
+  increased long-term all-cause mortality by 70% (OR 1.70, 95% CI: 1.35-2.15) and
+  short-term mortality during acute exacerbations by 53% (OR 1.53, 95% CI: 1.44-1.63).
+  The mechanism involves accumulation of uremic toxins, systemic inflammation, cardiovascular
+  complications, and reduced physiological reserve that impairs recovery from acute
+  health events.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.7
+    type: odds_ratio
+    ci_lower: 1.35
+    ci_upper: 2.15
+  p_value: null
+  sample_size: null
+moderators:
+- name: Acute exacerbation status
+  direction: strengthens
+  strength: moderate
+  description: CKD shows stronger impact on short-term mortality during acute exacerbations
+    of comorbid conditions (OR 1.53 for short-term vs OR 1.70 for long-term mortality)
+- name: Comorbid respiratory disease
+  direction: strengthens
+  strength: moderate
+  description: Presence of COPD comorbidity amplifies the mortality risk associated
+    with CKD due to shared inflammatory pathways and reduced physiological reserve

@@ -1,0 +1,46 @@
+id: criminal_justice_involvement_to_dui_recidivism_risk
+name: Criminal History and Justice System Involvement → DUI Recidivism Risk
+from_node:
+  node_id: criminal_justice_involvement
+  node_name: Criminal History and Justice System Involvement
+to_node:
+  node_id: dui_recidivism_risk
+  node_name: DUI Recidivism Risk
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Prior criminal history reflects exposure to criminogenic environments and
+  circumstances'
+- 'Step 2: Criminal justice involvement disrupts employment, housing, and social support
+  systems'
+- 'Step 3: Systemic barriers post-incarceration limit access to treatment and recovery
+  resources'
+- 'Step 4: Accumulated disadvantages increase likelihood of substance use and impaired
+  driving'
+- 'Step 5: Higher probability of DUI recidivism within 12 months, particularly among
+  males'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Robertson et al. 2019. "Gender-Specific Predictors of Recidivism
+    Among DUI Offenders.." *Journal of Studies on Alcohol and Drugs*. https://doi.org/10.15288/jsad.2019.80.641
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.437710'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Criminal history is a stronger predictor of DUI recidivism specifically
+    for males compared to females
+- name: prior_dui_arrest
+  direction: strengthens
+  strength: strong
+  description: Specific history of DUI arrest predicts recidivism for both sexes beyond
+    general criminal history
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/social_environment/criminal_justice_involvement_to_dui_recidivism_risk.yaml
+_category: social_environment

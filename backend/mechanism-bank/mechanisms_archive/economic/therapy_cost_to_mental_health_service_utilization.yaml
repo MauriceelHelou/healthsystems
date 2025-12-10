@@ -1,0 +1,43 @@
+id: therapy_cost_to_mental_health_service_utilization
+name: High Cost of Therapy Services → Mental Health Service Utilization
+from_node:
+  node_id: therapy_cost
+  node_name: High Cost of Therapy Services
+to_node:
+  node_id: mental_health_service_utilization
+  node_name: Mental Health Service Utilization
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: High therapy costs create direct financial barriers for nursing students
+  who typically have limited income during training periods'
+- 'Step 2: Financial inaccessibility prevents service utilization even among those
+  with positive attitudes toward help-seeking'
+- 'Step 3: Inability to afford services forces students to forgo needed mental health
+  support despite recognizing its value'
+- 'Step 4: Untreated mental health needs accumulate, potentially leading to worsening
+  psychological distress and impaired academic/professional functioning'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Yasmin Mohamed Mohamed Abdelmonaem et al. 2024. "Mental health
+    stigma and internship nursing students'' attitudes toward seeking professional
+    psychological help: a cross-sectional study." *BMC Nursing*. https://doi.org/10.1186/s12912-024-01910-3'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.419457'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: student_income_status
+  direction: strengthens
+  strength: strong
+  description: Students with lower income or no independent income face stronger barriers
+    from therapy costs, as they have fewer financial resources to allocate toward
+    mental health services
+- name: insurance_coverage
+  direction: weakens
+  strength: strong
+  description: Adequate insurance coverage that includes mental health services would
+    weaken the cost barrier, though coverage quality may vary

@@ -1,0 +1,51 @@
+id: NEW:common_mental_disorder_to_alcohol_use_disorder
+name: Common Mental Disorder (Depression, Anxiety, Phobia) → Alcohol Use Disorder
+from_node:
+  node_id: NEW:common_mental_disorder
+  node_name: Common Mental Disorder (Depression, Anxiety, Phobia)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals experience symptoms of common mental disorders including depression,
+  anxiety, or phobia, characterized by negative affect, emotional distress, and psychological
+  discomfort'
+- 'Step 2: These individuals may engage in alcohol consumption as a form of self-medication
+  or coping strategy to alleviate negative emotional states and manage distressing
+  symptoms'
+- 'Step 3: Repeated use of alcohol for symptom relief leads to tolerance, increased
+  consumption patterns, and neurobiological adaptations that promote dependence'
+- 'Step 4: The combination of underlying mental health vulnerability and maladaptive
+  coping through alcohol use results in development of alcohol use disorder'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'Jo-Anne Puddephatt et al. 2021. Associations of common mental
+    disorder with alcohol use in the adult general population: a systematic review
+    and meta‐analysis. Addiction.'
+  supporting_citations: []
+description: Individuals with common mental disorders (depression, anxiety, phobia)
+  have a twofold increase in the odds of reporting an alcohol use disorder compared
+  to those without CMDs. This meta-analysis of 17 studies with over 380,000 participants
+  demonstrates a robust and consistent association across different types of common
+  mental disorders, supporting a behavioral pathway where mental health symptoms may
+  drive alcohol use as a coping mechanism.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.02
+    type: odds_ratio
+    ci_lower: 1.72
+    ci_upper: 2.36
+  p_value: null
+  sample_size: 382201
+moderators:
+- name: Type of CMD
+  direction: strengthens
+  strength: moderate
+  description: 'Similar odds were observed across CMD types: mood disorder (OR = 2.00,
+    95% CI = 1.62–2.47) and anxiety/phobic disorder (OR = 1.94, 95% CI = 1.35–2.78),
+    suggesting consistent associations regardless of specific CMD type'

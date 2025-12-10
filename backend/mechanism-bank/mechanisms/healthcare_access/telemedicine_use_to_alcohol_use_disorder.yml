@@ -1,0 +1,61 @@
+id: telemedicine_use_to_alcohol_use_disorder
+name: Telemedicine Use → Alcohol Use Disorder
+from_node:
+  node_id: telemedicine_use
+  node_name: Telemedicine Use
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Video conferencing-based therapy removes geographic and transportation barriers to treatment
+  access'
+- 'Step 2: Patients can maintain treatment continuity during external disruptions (e.g., pandemic lockdowns)'
+- 'Step 3: Cognitive behavioral therapy delivered via telehealth provides equivalent therapeutic engagement'
+- 'Step 4: Maintained treatment adherence leads to similar abstinence outcomes as in-person care'
+- 'Step 5: Reduced alcohol use disorder severity through effective remote treatment delivery'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Edwin de Beurs et al. 2023. "Alcohol use disorder treatment via video conferencing
+    compared with in-person therapy during COVID-19 social distancing : A non-inferiority comparison of
+    three cohorts.." https://doi.org/10.1111/acer.15184'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references randomized controlled studies
+    and meta-analyses supporting video conferencing non-inferiority
+  - Abstract mentions routine treatment evaluation practices at the Netherlands treatment center
+  - References to prior meta-analyses comparing video conferencing to in-person care in clinical effectiveness
+  doi: 10.1111/acer.15184
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Video conferencing-based cognitive behavioral therapy for alcohol use disorder demonstrated
+  non-inferior outcomes compared to traditional in-person treatment, with similar abstinence rates, psychopathology
+  improvements, and quality of life outcomes across three cohorts (pre-COVID in-person, partially during
+  COVID, and entirely during COVID lockdown).
+quantitative_effects:
+  sample_size: 1838
+moderators:
+- name: treatment_intensity
+  direction: strengthens
+  strength: moderate
+  description: Treatments conducted partially or fully during COVID-19 pandemic lasted longer (higher
+    treatment intensity), potentially compensating for remote delivery format
+- name: COVID-19 lockdown measures
+  direction: weakens
+  strength: weak
+  description: Despite potentially negative effects of COVID-related lockdown measures, telehealth treatment
+    maintained equivalent outcomes
+structural_competency:
+  equity_implications: This mechanism highlights how healthcare delivery modality can maintain treatment
+    access during systemic disruptions. The structural shift to telehealth during COVID-19 represents
+    a natural experiment demonstrating that treatment accessibility need not depend on physical proximity
+    to care facilities. This has implications for health equity, as telehealth can reduce barriers for
+    individuals with transportation challenges, work constraints, or geographic isolation. However, digital
+    access disparities may create new inequities for populations lacking reliable internet or technology.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.747820'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

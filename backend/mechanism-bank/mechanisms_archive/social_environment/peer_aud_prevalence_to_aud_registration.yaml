@@ -1,0 +1,42 @@
+id: peer_aud_prevalence_to_aud_registration
+name: Peer Alcohol Use Disorder Prevalence → Alcohol Use Disorder Registration
+from_node:
+  node_id: peer_aud_prevalence
+  node_name: Peer Alcohol Use Disorder Prevalence
+to_node:
+  node_id: aud_registration
+  node_name: Alcohol Use Disorder Registration
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Higher prevalence of AUD among peers in the neighborhood creates normalization
+  of alcohol misuse patterns'
+- 'Step 2: Social modeling and peer influence shape individual drinking behaviors
+  through daily interactions and social network effects'
+- 'Step 3: Increased exposure to alcohol-related behaviors and reduced collective
+  efficacy against substance use increases individual risk'
+- 'Step 4: Environmental factors combine with social networks to increase likelihood
+  of AUD development requiring registration'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'E C Long et al. 2019. "Different Characteristics and Heritabilities
+    of Alcohol Use Disorder Classes: A Population-Based Swedish Study.." *Alcohol
+    and alcoholism (Oxford, Oxfordshire)*. https://doi.org/10.1093/alcalc/agz069'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.882789'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: aud_class_type
+  direction: strengthens
+  strength: moderate
+  description: Different AUD classes show varying patterns of association with peer
+    AUD, suggesting heterogeneous neighborhood effects across disorder subtypes
+- name: neighborhood_deprivation
+  direction: strengthens
+  strength: moderate
+  description: Neighborhood deprivation likely interacts with peer AUD prevalence
+    to compound risk

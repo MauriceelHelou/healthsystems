@@ -1,0 +1,50 @@
+id: NEW:hiv_related_stigma_to_depression_diagnosis
+name: HIV-Related Stigma → Depression Diagnosis
+from_node:
+  node_id: NEW:hiv_related_stigma
+  node_name: HIV-Related Stigma
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: People living with HIV experience HIV-related stigma (HRS) through social
+  phenomena including structural inequalities, cultural discrimination, and discrimination
+  by healthcare providers'
+- 'Step 2: HRS causes negative psychological experiences including emotional distress,
+  shame, and internalized stigma that compound the traumatic experience of HIV diagnosis'
+- 'Step 3: These chronic psychological stressors lead to increased risk of depression,
+  with those diagnosed with depression being 1.61 times more likely to report HRS,
+  indicating a bidirectional reinforcing relationship'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Bahram Armoon et al. 2022. HIV related stigma associated with
+    social support, alcohol use disorders, depression, anxiety, and suicidal ideation
+    among people living with HIV: a systematic review and meta-analysis. International
+    Journal of Mental Health Systems.'
+  supporting_citations: []
+description: This systematic review and meta-analysis of 22 studies (n=9548) demonstrates
+  that HIV-related stigma has a detrimental association with depression among people
+  living with HIV. The relationship is bidirectional, with stigma contributing to
+  depression through emotional distress and shame, while depression may also increase
+  vulnerability to experiencing or reporting stigma. Social support serves as a protective
+  factor against both stigma and its mental health consequences.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.61
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 9548
+moderators:
+- name: social_support
+  direction: weakens
+  strength: moderate
+  description: Higher levels of social support were associated with reduced likelihood
+    of reporting HIV-related stigma, suggesting social support buffers the stigma-depression
+    pathway

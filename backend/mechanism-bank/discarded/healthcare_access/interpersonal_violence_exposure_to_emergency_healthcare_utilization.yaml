@@ -1,0 +1,53 @@
+id: interpersonal_violence_exposure_to_emergency_healthcare_utilization
+name: Interpersonal Violence Exposure → Emergency Healthcare Utilization and Costs
+from_node:
+  node_id: interpersonal_violence_exposure
+  node_name: Interpersonal Violence Exposure
+to_node:
+  node_id: emergency_healthcare_utilization
+  node_name: Emergency Healthcare Utilization and Costs
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Interpersonal violence results in acute injuries requiring immediate medical
+  attention'
+- 'Step 2: Violence-related presentations significantly more often arrive via ambulance
+  service or directly to trauma room compared to other trauma presentations'
+- 'Step 3: Violence group requires significantly more diagnostic imaging (CT scans)
+  due to head injuries and concomitant alcohol intoxication complicating clinical
+  assessment'
+- 'Step 4: Significantly more surgical wound care is required for violence-related
+  injuries, with frequent inpatient admissions'
+- 'Step 5: The violence group represents a relevant cost factor for the healthcare
+  system'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Jason-Alexander Hörauf et al. 2023. "Saturday Night Fever: Interpersonal
+    Violence as a Reason for Presentation in a University Emergency Department.."
+    *International journal of environmental research and public health*. https://doi.org/10.3390/ijerph20054552'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.627875'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_intoxication
+  direction: strengthens
+  strength: strong
+  description: Half of violence group under alcohol influence, requiring more extensive
+    diagnostic workup to rule out brain injury
+- name: head_injury_presence
+  direction: strengthens
+  strength: strong
+  description: Head injuries most common in violence group, necessitating more imaging
+    and surgical intervention
+- name: weekend_nighttime_presentation
+  direction: strengthens
+  strength: moderate
+  description: Temporal clustering may strain emergency department resources during
+    specific periods
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/interpersonal_violence_exposure_to_emergency_healthcare_utilization.yaml
+_category: healthcare_access

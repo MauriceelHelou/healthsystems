@@ -1,0 +1,60 @@
+id: NEW:alcohol_outlet_density_license_d_to_NEW:aggravated_assault_rate
+name: Alcohol Outlet Density (License D - Off Premises/Liquor Stores) → Aggravated Assault Rate
+from_node:
+  node_id: NEW:alcohol_outlet_density_license_d
+  node_name: Alcohol Outlet Density (License D - Off Premises/Liquor Stores)
+to_node:
+  node_id: NEW:aggravated_assault_rate
+  node_name: Aggravated Assault Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of off-premises alcohol establishments (liquor stores, package stores) increases
+  access to alcohol for off-site consumption'
+- 'Step 2: Off-premises outlets often attract loitering and public drinking in surrounding areas'
+- 'Step 3: Increased alcohol consumption in public spaces and homes leads to interpersonal conflicts'
+- 'Step 4: Neighborhood-level alcohol availability contributes to violence through both direct intoxication
+  effects and social disorder'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: D. Lardier et al. 2021. "A Spatial Analysis of Alcohol Outlet Density Type, Abandoned
+    Properties, and Police Calls on Aggravated Assault Rates in a Northeastern U.S. City." https://doi.org/10.1080/10826084.2021.1942053
+  supporting_citations:
+  - Additional citations require full-text access - abstract references established public health research
+    on alcohol-violence link
+  - Community-based research and prevention scholarship cited in abstract
+  - Ecological structure research referenced in background
+  doi: 10.1080/10826084.2021.1942053
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: License D alcohol outlets (off-premises establishments like liquor stores) are positively
+  associated with aggravated assault rates, with each unit increase associated with a 13% increase in
+  assault incidence. This is a smaller effect than License C outlets, suggesting on-premises drinking
+  venues have stronger violence associations.
+quantitative_effects:
+  effect_size:
+    value: 1.13
+    type: incidence_rate_ratio
+    ci_lower: 1.01
+    ci_upper: 1.3
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study focused on a Northeastern U.S. urban city; the unique contribution of this study
+    is distinguishing License D from License C effects
+moderators:
+- name: neighborhood_poverty
+  direction: strengthens
+  strength: moderate
+  description: Poor communities experience both higher outlet density and compounded effects
+structural_competency:
+  equity_implications: The distinction between outlet types reflects how zoning and licensing policies
+    differentially shape violence risk. Liquor stores concentrated in low-income neighborhoods represent
+    structural disadvantage, not individual choice. Policy interventions targeting outlet density represent
+    structural solutions to violence prevention.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.479820'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

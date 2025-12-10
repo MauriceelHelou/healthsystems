@@ -1,0 +1,61 @@
+id: metabolic_syndrome_prevalence_to_NEW:metabolic_dysfunction_associated_fatty_liver_disease_mafld
+name: Metabolic Syndrome Prevalence → Metabolic Dysfunction-Associated Fatty Liver
+  Disease (MAFLD)
+from_node:
+  node_id: metabolic_syndrome_prevalence
+  node_name: Metabolic Syndrome Prevalence
+to_node:
+  node_id: NEW:metabolic_dysfunction_associated_fatty_liver_disease_mafld
+  node_name: Metabolic Dysfunction-Associated Fatty Liver Disease (MAFLD)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Metabolic syndrome components (obesity, insulin resistance, dyslipidemia,
+  hypertension) create systemic metabolic dysfunction'
+- 'Step 2: Insulin resistance promotes de novo lipogenesis in hepatocytes and reduces
+  fatty acid oxidation, leading to hepatic fat accumulation'
+- 'Step 3: Adipose tissue dysfunction releases excess free fatty acids and pro-inflammatory
+  cytokines that traffic to the liver'
+- 'Step 4: Hepatic steatosis develops when lipid accumulation exceeds the liver''s
+  metabolic capacity, meeting MAFLD diagnostic criteria (steatosis plus metabolic
+  dysfunction markers)'
+- 'Step 5: MAFLD by definition requires metabolic dysfunction (overweight/obesity,
+  type 2 diabetes, or metabolic dysregulation), directly linking metabolic syndrome
+  components to disease diagnosis'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Harry Crane et al. 2024. Global prevalence of metabolic dysfunction-associated
+    fatty liver disease-related hepatocellular carcinoma: A systematic review and
+    meta-analysis. Clinical and Molecular Hepatology.'
+  supporting_citations: []
+description: Metabolic syndrome prevalence directly contributes to MAFLD through shared
+  pathophysiological mechanisms. MAFLD diagnostic criteria explicitly require metabolic
+  dysfunction markers (overweight/obesity with ethnicity-specific BMI thresholds,
+  type 2 diabetes, or evidence of metabolic dysregulation) in addition to hepatic
+  steatosis. This meta-analysis found that 48.7% of hepatocellular carcinoma patients
+  had MAFLD, with metabolic dysfunction serving as both a defining criterion and causal
+  pathway. The high prevalence of MAFLD as a co-factor in other liver diseases (40-64%)
+  demonstrates how metabolic syndrome amplifies liver disease progression across multiple
+  etiologies.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 48.7
+    type: prevalence_percentage
+    ci_lower: 34.5
+    ci_upper: 63.0
+  p_value: null
+  sample_size: 56565
+moderators:
+- name: concurrent_liver_disease
+  direction: strengthens
+  strength: strong
+  description: 'MAFLD prevalence was higher in mixed-aetiology cases: 40.0% in hepatitis
+    B, 54.1% in hepatitis C, and 64.3% in alcohol-related liver disease cohorts'
+- name: ethnicity
+  direction: strengthens
+  strength: moderate
+  description: Ethnicity-specific BMI cut-offs affect MAFLD diagnosis thresholds,
+    suggesting varying susceptibility across populations

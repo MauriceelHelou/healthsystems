@@ -1,0 +1,61 @@
+id: NEW:breast_cancer_treatment_access_to_NEW:breast_cancer_mortality_young_women
+name: Access to Breast Cancer Treatment → Breast Cancer Mortality in Young Women (Age 20-49)
+from_node:
+  node_id: NEW:breast_cancer_treatment_access
+  node_name: Access to Breast Cancer Treatment
+to_node:
+  node_id: NEW:breast_cancer_mortality_young_women
+  node_name: Breast Cancer Mortality in Young Women (Age 20-49)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare system provides access to comprehensive breast cancer treatment (surgery, chemotherapy,
+  radiation, hormonal therapy)'
+- 'Step 2: Timely treatment initiation prevents disease progression'
+- 'Step 3: Multimodal treatment approaches improve tumor control and survival'
+- 'Step 4: Reduced breast cancer mortality among treated patients'
+evidence:
+  quality_rating: B
+  n_studies: 6
+  primary_citation: 'Juliana Dalcin Donini E Silva et al. 2024. "Mortality of Young Women due to Breast
+    Cancer in Low, Middle and High-Income Countries: Systematic Literature Review and Meta-Analysis."
+    https://doi.org/10.31557/APJCP.2024.25.7.2519'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Review explicitly identifies treatment access as factor in mortality disparities
+  - Pooled analysis from retrospective mortality studies
+  doi: 10.31557/APJCP.2024.25.7.2519
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: DOI not found in Crossref database'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Access to comprehensive breast cancer treatment is a key structural determinant of mortality
+  outcomes. The paper attributes declining mortality in high-income countries to treatment availability,
+  while increased mortality in lower-income countries reflects treatment access barriers.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Treatment access varies dramatically between high-income and lower-income countries,
+    contributing to observed mortality differentials
+moderators:
+- name: treatment_timeliness
+  direction: strengthens
+  strength: strong
+  description: Delays in treatment initiation reduce effectiveness and worsen outcomes
+- name: treatment_modality_availability
+  direction: strengthens
+  strength: strong
+  description: Access to multiple treatment modalities (surgery, chemotherapy, radiation, targeted therapy)
+    improves outcomes
+structural_competency:
+  equity_implications: Treatment access is fundamentally a structural issue determined by healthcare system
+    capacity, financing mechanisms, and geographic distribution of oncologic services - not by individual
+    patient characteristics or choices. The stark mortality gradient by national income level demonstrates
+    how economic structures determine who receives life-saving treatment. This mechanism has critical
+    equity implications for global health justice.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.428685'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

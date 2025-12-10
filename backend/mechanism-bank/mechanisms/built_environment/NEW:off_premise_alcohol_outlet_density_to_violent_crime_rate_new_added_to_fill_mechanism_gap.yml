@@ -1,0 +1,64 @@
+id: NEW:off_premise_alcohol_outlet_density_to_violent_crime_rate_new_added_to_fill_mechanism_gap
+name: Off-Premise Alcohol Outlet Density → Violent Crime Rate
+from_node:
+  node_id: NEW:off_premise_alcohol_outlet_density
+  node_name: Off-Premise Alcohol Outlet Density
+to_node:
+  node_id: violent_crime_rate_new_added_to_fill_mechanism_gap
+  node_name: Violent Crime Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Off-premise outlets (liquor stores, convenience stores) allow purchase of alcohol for consumption
+  elsewhere'
+- 'Step 2: Lack of effective measures to keep order in and around off-premise outlets creates opportunity
+  for criminal activity'
+- 'Step 3: Off-premise consumption occurs in unregulated public spaces without oversight or security measures'
+- 'Step 4: This unmonitored alcohol consumption attracts or multiplies violent crime in surrounding areas'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Trangenstein et al. 2018. "Outlet Type, Access to Alcohol, and Violent Crime."
+    https://doi.org/10.1111/acer.13880
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior conflicting findings on
+    outlet type effects
+  - Additional citations require full-text access - abstract references routine activity theory
+  - Additional citations require full-text access - abstract references overwhelming data on outlet density-crime
+    association
+  doi: 10.1111/acer.13880
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: A 10% increase in access to off-premise outlets was associated with a 4.4% increase in violent
+  crime exposure. Off-premise outlets showed a greater association with violent crime than on-premise
+  outlets, attributed to the lack of supervision and order maintenance around these establishments.
+quantitative_effects:
+  effect_size:
+    value: 0.45
+    type: beta_coefficient
+    ci_lower: 0.33
+    ci_upper: 0.57
+  p_value: 0.001
+  sample_size: 51006
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect observed in Baltimore, MD; may vary based on local enforcement capacity and
+    neighborhood characteristics
+moderators:
+- name: enforcement_capacity
+  direction: weakens
+  strength: moderate
+  description: The mechanism specifically notes that lack of effective measures to keep order around off-premise
+    outlets contributes to the crime association
+structural_competency:
+  equity_implications: This finding highlights how commercial licensing policies that permit high concentrations
+    of off-premise alcohol outlets create criminogenic environments. The structural factor is not individual
+    alcohol consumption but rather the lack of regulatory requirements for security and order maintenance
+    at off-premise locations. Policy solutions include licensing restrictions, security requirements,
+    and zoning changes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.068410'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,39 @@
+id: icu_symptom_triggered_protocol_implementation_to_mechanical_ventilation_need
+name: ICU Symptom-Triggered Protocol Implementation for Alcohol Withdrawal → Need
+  for Mechanical Ventilation
+from_node:
+  node_id: icu_symptom_triggered_protocol_implementation
+  node_name: ICU Symptom-Triggered Protocol Implementation for Alcohol Withdrawal
+to_node:
+  node_id: mechanical_ventilation_need
+  node_name: Need for Mechanical Ventilation
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Standardized symptom-triggered protocol (Yale Alcohol Withdrawal Protocol)
+  pairs modified Minnesota Detoxification Scale with structured order sets for benzodiazepine
+  dosing'
+- 'Step 2: Protocolized approach enables systematic monitoring and titration of sedative
+  medications matched to objective withdrawal severity scores'
+- 'Step 3: Appropriate benzodiazepine dosing prevents severe autonomic instability
+  and respiratory compromise associated with uncontrolled alcohol withdrawal syndrome'
+- 'Step 4: Prevention of severe withdrawal complications reduces respiratory distress
+  and need for mechanical ventilation support'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jason J Heavner et al. 2018. "Implementation of an ICU-Specific
+    Alcohol Withdrawal Syndrome Management Protocol Reduces the Need for Mechanical
+    Ventilation.." *Pharmacotherapy*. https://doi.org/10.1002/phar.2127
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.776073'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: severity_of_illness_at_admission
+  direction: strengthens
+  strength: moderate
+  description: Analysis adjusted for APACHE II scores, suggesting protocol effectiveness
+    independent of baseline illness severity

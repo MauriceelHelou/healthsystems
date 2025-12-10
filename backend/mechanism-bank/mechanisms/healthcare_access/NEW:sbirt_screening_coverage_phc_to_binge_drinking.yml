@@ -1,0 +1,56 @@
+id: NEW:sbirt_screening_coverage_phc_to_binge_drinking
+name: SBIRT Screening Coverage in Primary Health Care → Binge Drinking (Heavy Episodic Drinking)
+from_node:
+  node_id: NEW:sbirt_screening_coverage_phc
+  node_name: SBIRT Screening Coverage in Primary Health Care
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking (Heavy Episodic Drinking)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary health care implements SBIRT programs to identify high-risk alcohol users'
+- 'Step 2: Screening identifies individuals with heavy episodic drinking (HED) patterns'
+- 'Step 3: Brief interventions delivered to HED individuals'
+- 'Step 4: Interventions aim to reduce frequency and quantity of binge drinking episodes'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Manthey et al. 2021. "Can alcohol consumption in Germany be reduced by alcohol
+    screening, brief intervention and referral to treatment in primary health care? Results of a simulation
+    study." https://doi.org/10.1101/2021.05.18.21257405
+  supporting_citations:
+  - Meta-analyses on brief intervention effect sizes for HED (referenced in methods)
+  - German survey data on HED prevalence
+  - Additional citations require full-text access
+  doi: 10.1101/2021.05.18.21257405
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: Unexpected error: list index out of range'
+last_updated: '2025-12-06'
+version: '2.0'
+description: The simulation found that even at 50% screening coverage with SBIRT, there was no measurable
+  impact on heavy episodic drinking (HED) prevalence at the population level, despite reducing overall
+  alcohol consumption by 12%. This suggests brief interventions may be more effective at reducing overall
+  consumption than changing binge drinking patterns specifically.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: German context; model applicable to other settings
+moderators:
+- name: screening_coverage_rate
+  direction: strengthens
+  strength: moderate
+  description: Higher screening coverage needed to detect HED individuals
+structural_competency:
+  equity_implications: This null finding is important from a structural perspective - it indicates that
+    healthcare-based screening alone may not address deeply ingrained cultural drinking patterns like
+    heavy episodic drinking. This points to the need for broader structural interventions (pricing policies,
+    availability restrictions, cultural change) rather than relying solely on individual-level healthcare
+    interventions. The finding avoids blaming individuals by recognizing the limitations of clinical intervention
+    for behaviors embedded in social and cultural contexts.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.056844'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

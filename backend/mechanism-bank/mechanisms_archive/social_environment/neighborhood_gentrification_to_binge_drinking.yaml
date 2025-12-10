@@ -1,0 +1,59 @@
+id: neighborhood_gentrification_to_binge_drinking
+name: Neighborhood Gentrification → Binge Drinking
+from_node:
+  node_id: neighborhood_gentrification
+  node_name: Neighborhood Gentrification
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Gentrification brings influx of capital and higher socioeconomic status
+  residents into historically-disinvested neighborhoods'
+- 'Step 2: Neighborhood transformation creates social and financial pressures on existing
+  residents through rising costs, displacement threats, and community disruption'
+- 'Step 3: These stressors and community changes contribute to increased psychological
+  distress and coping behaviors'
+- 'Step 4: Residents respond to gentrification-related stress through increased excessive
+  alcohol consumption and binge drinking'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Jacob M Izenberg et al. 2018. "Gentrification and binge drinking
+    in California neighborhoods: It matters how long you''ve lived there.." *Drug
+    and alcohol dependence*. https://doi.org/10.1016/j.drugalcdep.2018.03.018'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.891431'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: duration_of_neighborhood_residence
+  direction: strengthens
+  strength: strong
+  description: Gentrification is significantly associated with binge drinking among
+    residents living in neighborhood <5 years (AOR=1.49, 95% CI 1.15-1.93), but shows
+    no association among those living in neighborhood ≥5 years. Suggests newer residents
+    experience greater impact from gentrification pressures
+- name: housing_tenure
+  direction: u_shaped
+  strength: moderate
+  description: Study tested interactions between gentrification and housing tenure
+    (renter vs owner), suggesting differential vulnerability by housing security status
+- name: federal_poverty_level
+  direction: u_shaped
+  strength: moderate
+  description: Study tested interactions between gentrification and poverty level,
+    indicating economic vulnerability may modify gentrification effects
+- name: race_ethnicity
+  direction: u_shaped
+  strength: moderate
+  description: Study tested interactions between gentrification and race/ethnicity,
+    suggesting differential impacts across racial/ethnic groups
+- name: sex
+  direction: u_shaped
+  strength: weak
+  description: Study tested interactions between gentrification and sex, exploring
+    potential gender differences in response to neighborhood change

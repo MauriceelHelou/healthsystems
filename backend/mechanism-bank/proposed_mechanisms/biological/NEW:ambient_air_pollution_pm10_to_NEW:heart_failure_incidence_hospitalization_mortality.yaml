@@ -1,0 +1,62 @@
+id: NEW:ambient_air_pollution_pm10_to_NEW:heart_failure_incidence_hospitalization_mortality
+name: Ambient Air Pollution (PM10) → Heart Failure Incidence, Hospitalization, and
+  Mortality
+from_node:
+  node_id: NEW:ambient_air_pollution_pm10
+  node_name: Ambient Air Pollution (PM10)
+to_node:
+  node_id: NEW:heart_failure_incidence_hospitalization_mortality
+  node_name: Heart Failure Incidence, Hospitalization, and Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhalation of PM10 particles leads to deposition in the respiratory tract,
+  with smaller particles capable of reaching alveoli and entering systemic circulation'
+- 'Step 2: PM10 exposure triggers systemic inflammation, oxidative stress, and endothelial
+  dysfunction, which are key pathophysiological processes affecting cardiovascular
+  health'
+- 'Step 3: Chronic and acute inflammatory responses contribute to myocardial stress,
+  altered cardiac function, and exacerbation of underlying cardiovascular conditions'
+- 'Step 4: These physiological changes increase the risk of heart failure events including
+  new-onset heart failure, hospitalizations for acute decompensation, and cardiovascular
+  mortality'
+evidence:
+  quality_rating: A
+  n_studies: 100
+  primary_citation: 'Yanhui Jia et al. 2023. Effect of Air Pollution on Heart Failure:
+    Systematic Review and Meta-Analysis. Environmental Health Perspectives.'
+  supporting_citations: []
+description: 'A comprehensive meta-analysis of 100 studies across 20 countries demonstrated
+  that both short-term and long-term PM10 exposure are adversely associated with heart
+  failure risk. Short-term exposure showed a 1.6% increased risk of heart failure
+  per 10-μg/m3 increment in PM10 (RR=1.016, 95% CI: 1.011-1.020), while long-term
+  exposure demonstrated a 21.2% increased risk per 10-μg/m3 increment (RR=1.212, 95%
+  CI: 1.010-1.454). The biological mechanism involves PM10-induced systemic inflammation,
+  oxidative stress, and endothelial dysfunction leading to cardiac stress and heart
+  failure events.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.016
+    type: relative_risk
+    ci_lower: 1.011
+    ci_upper: 1.02
+  p_value: null
+  sample_size: null
+moderators:
+- name: Country income level
+  direction: strengthens
+  strength: moderate
+  description: Associations were stronger in low- and middle-income countries compared
+    to high-income countries
+- name: Exposure duration
+  direction: strengthens
+  strength: strong
+  description: Long-term exposure (RR=1.212 per 10-μg/m3) showed stronger associations
+    than short-term exposure (RR=1.016 per 10-μg/m3)
+- name: Lag time
+  direction: strengthens
+  strength: weak
+  description: Positive associations were stronger when exposure was considered over
+    the previous 2 days (lag 0-1) rather than on the day of exposure only (lag 0)

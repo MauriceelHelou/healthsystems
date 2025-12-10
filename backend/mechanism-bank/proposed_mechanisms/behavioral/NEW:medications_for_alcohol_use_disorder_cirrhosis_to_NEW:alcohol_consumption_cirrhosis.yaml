@@ -1,0 +1,62 @@
+id: NEW:medications_for_alcohol_use_disorder_cirrhosis_to_NEW:alcohol_consumption_cirrhosis
+name: Medications for Alcohol Use Disorder in Cirrhosis Patients → Alcohol Consumption
+  in Cirrhosis Patients
+from_node:
+  node_id: NEW:medications_for_alcohol_use_disorder_cirrhosis
+  node_name: Medications for Alcohol Use Disorder in Cirrhosis Patients
+to_node:
+  node_id: NEW:alcohol_consumption_cirrhosis
+  node_name: Alcohol Consumption in Cirrhosis Patients
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Patients with alcohol-associated cirrhosis and alcohol use disorder receive
+  medications for alcohol use disorder (MAUD) including baclofen, metadoxine, acamprosate,
+  or fecal microbiota transplant'
+- 'Step 2: These medications act through various pharmacological mechanisms - baclofen
+  acts as a GABA-B receptor agonist reducing alcohol craving and withdrawal symptoms;
+  acamprosate modulates glutamatergic neurotransmission to reduce negative affective
+  states associated with protracted abstinence'
+- 'Step 3: The pharmacological effects reduce alcohol craving, withdrawal severity,
+  and reward from alcohol consumption'
+- 'Step 4: Reduced craving and withdrawal symptoms facilitate behavioral change, enabling
+  patients to achieve and maintain alcohol abstinence'
+- 'Step 5: MAUD treatment results in 32% increased alcohol abstinence compared to
+  placebo or standard treatment, significantly reducing alcohol consumption in cirrhosis
+  patients'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'Gratacós-Ginés J et al. 2023. Medications for alcohol use disorder
+    promote abstinence in alcohol-associated cirrhosis: Results from a systematic
+    review and meta-analysis. Hepatology.'
+  supporting_citations: []
+description: 'Medications for alcohol use disorder (MAUD) including baclofen, metadoxine,
+  acamprosate, and fecal microbiota transplant are effective in reducing alcohol consumption
+  among patients with alcohol-associated cirrhosis. Meta-analysis of 4 RCTs showed
+  MAUD reduces the relative risk of alcohol consumption by 32% (RR=0.68, 95% CI: 0.48-0.97)
+  compared to placebo or standard treatment. These medications demonstrate a good
+  safety profile, with only 3% of serious adverse events possibly or probably related
+  to study medications.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.68
+    type: relative_risk
+    ci_lower: 0.48
+    ci_upper: 0.97
+  p_value: 0.03
+  sample_size: 794
+moderators:
+- name: medication_type
+  direction: strengthens
+  strength: moderate
+  description: Different medications showed varying efficacy - baclofen was most studied
+    (6 studies), while metadoxine, acamprosate, and fecal microbiota transplant each
+    had 1 study
+- name: liver_disease_severity
+  direction: weakens
+  strength: weak
+  description: Authors note that larger studies are especially needed in patients
+    with advanced liver disease, suggesting potential variation by disease severity

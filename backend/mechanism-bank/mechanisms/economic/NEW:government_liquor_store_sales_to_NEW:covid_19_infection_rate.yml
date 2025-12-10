@@ -1,0 +1,55 @@
+id: NEW:government_liquor_store_sales_to_NEW:covid_19_infection_rate
+name: Government Liquor Store Sales → COVID-19 Infection Rate
+from_node:
+  node_id: NEW:government_liquor_store_sales
+  node_name: Government Liquor Store Sales
+to_node:
+  node_id: NEW:covid_19_infection_rate
+  node_name: COVID-19 Infection Rate
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Government liquor stores serve as primary retail channel for off-premise alcohol sales in Canadian
+  provinces'
+- 'Step 2: Increased sales from government stores lead to higher at-home alcohol consumption'
+- 'Step 3: Home consumption may involve household mixing or social gatherings that violate distancing
+  guidelines'
+- 'Step 4: Alcohol impairs judgment about COVID-19 precautions and may encourage risky social behaviors'
+- 'Step 5: COVID-19 infections increase 2 weeks following elevated government store sales'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'T. Stockwell et al. 2022. "Alcohol sales in Canadian liquor outlets as a predictor
+    of subsequent COVID‐19 infection rates: a time‐series analysis." https://doi.org/10.1111/add.16011'
+  supporting_citations:
+  - Additional citations require full-text access - abstract does not cite specific prior studies
+  - Public Health Agency of Canada (PHAC) COVID-19 surveillance data referenced
+  - Provincial government alcohol distributor sales data (Ontario, British Columbia, Nova Scotia)
+  doi: 10.1111/add.16011
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Sales from government-operated liquor stores predicted COVID-19 infections 2 weeks later,
+  with a 6.49% increase per standard drink/person/week. This effect size was much smaller than on-premise
+  sales but still statistically significant, suggesting off-premise consumption also contributed to transmission.
+quantitative_effects:
+  effect_size:
+    value: 6.49
+    type: percentage_change
+  p_value: 0.001
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Canadian provincial government alcohol monopolies have different structures across
+    Ontario, British Columbia, and Nova Scotia
+structural_competency:
+  equity_implications: This mechanism highlights the role of government alcohol retail monopolies as structural
+    determinants of both alcohol consumption and downstream health outcomes. The Canadian provincial government
+    liquor store system provides unique data for tracking population-level consumption, while also raising
+    questions about government revenue interests versus public health protection. Policy decisions to
+    expand delivery options during COVID-19 may have prioritized revenue or alcohol access over infection
+    control.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.120413'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

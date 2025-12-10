@@ -1,0 +1,49 @@
+id: NEW:race_ethnicity_hispanic_to_NEW:alcohol_associated_liver_disease_prevalence
+name: Hispanic Race/Ethnicity → Alcohol-Associated Liver Disease Prevalence
+from_node:
+  node_id: NEW:race_ethnicity_hispanic
+  node_name: Hispanic Race/Ethnicity
+to_node:
+  node_id: NEW:alcohol_associated_liver_disease_prevalence
+  node_name: Alcohol-Associated Liver Disease Prevalence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hispanic individuals in the United States demonstrate higher rates of alcohol-associated
+  liver disease compared to White and Black populations'
+- 'Step 2: Biological factors may include genetic polymorphisms affecting alcohol
+  metabolism (e.g., ADH and ALDH variants) that differ across ethnic populations,
+  potentially affecting susceptibility to alcohol-induced liver injury'
+- 'Step 3: Social determinants including access to healthcare, socioeconomic factors,
+  and cultural patterns of alcohol consumption may interact with biological susceptibility'
+- 'Step 4: These combined factors result in Hispanic individuals having 64% higher
+  prevalence of alcohol-associated liver disease compared to White individuals'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'Ahmad Anouti et al. 2024. Racial and ethnic disparities in alcohol-associated
+    liver disease in the United States: A systematic review and meta-analysis. Hepatology
+    Communications.'
+  supporting_citations: []
+description: Hispanic individuals in the United States have a 64% higher prevalence
+  of alcohol-associated liver disease compared to White individuals, with an absolute
+  prevalence of 4.5% compared to 3.1% in White and 1.4% in Black populations. This
+  systematic review and meta-analysis of 25 studies comprising over 76 million patients
+  demonstrates significant racial/ethnic disparities in ALD epidemiology, though the
+  underlying mechanisms remain incompletely characterized.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.64
+    type: risk_ratio
+    ci_lower: 1.12
+    ci_upper: 2.39
+  p_value: null
+  sample_size: 76867544
+moderators:
+- name: disease_subtype
+  direction: strengthens
+  strength: moderate
+  description: The disparity may vary between alcohol-associated hepatitis and alcohol-associated
+    cirrhosis subtypes

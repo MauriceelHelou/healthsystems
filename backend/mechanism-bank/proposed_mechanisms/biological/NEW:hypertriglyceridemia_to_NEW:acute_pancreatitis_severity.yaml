@@ -1,0 +1,51 @@
+id: NEW:hypertriglyceridemia_to_NEW:acute_pancreatitis_severity
+name: Hypertriglyceridemia → Acute Pancreatitis Severity
+from_node:
+  node_id: NEW:hypertriglyceridemia
+  node_name: Hypertriglyceridemia
+to_node:
+  node_id: NEW:acute_pancreatitis_severity
+  node_name: Acute Pancreatitis Severity
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hypertriglyceridemia leads to excessive accumulation of triglycerides in
+  the bloodstream, which can be hydrolyzed by pancreatic lipase into free fatty acids'
+- 'Step 2: High concentrations of free fatty acids in pancreatic tissue cause direct
+  cytotoxic damage to pancreatic acinar cells and capillary endothelium'
+- 'Step 3: This lipotoxicity triggers an exaggerated inflammatory cascade, increased
+  oxidative stress, and microcirculatory disturbances in the pancreas'
+- 'Step 4: The heightened inflammatory response leads to more severe local and systemic
+  complications, including higher rates of organ failure, pancreatic necrosis, and
+  increased mortality compared to other etiologies'
+evidence:
+  quality_rating: A
+  n_studies: 127
+  primary_citation: 'E. Bálint et al. 2020. Assessment of the course of acute pancreatitis
+    in the light of aetiology: a systematic review and meta-analysis. Scientific Reports.'
+  supporting_citations: []
+description: Hypertriglyceridemia-induced acute pancreatitis (HTG-AP) is associated
+  with the highest risk of non-mild (moderately severe and severe) disease course
+  compared to other common etiologies including alcoholic, biliary, and post-ERCP
+  pancreatitis. Meta-analysis of 127 studies demonstrated that HTG-AP patients have
+  significantly higher mortality rates (OR 1.72 vs alcoholic AP; OR 1.50 vs biliary
+  AP) and the highest number of complications. The mechanism involves lipotoxicity
+  from excessive free fatty acid release causing direct pancreatic tissue damage and
+  amplified systemic inflammatory responses.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.72
+    type: odds_ratio
+    ci_lower: 1.04
+    ci_upper: 2.84
+  p_value: null
+  sample_size: null
+moderators:
+- name: Comparison etiology
+  direction: strengthens
+  strength: moderate
+  description: HTG-induced AP shows highest severity compared to alcoholic, biliary,
+    and post-ERCP pancreatitis; the effect is most pronounced when compared to biliary
+    or post-ERCP causes

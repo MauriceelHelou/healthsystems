@@ -1,0 +1,51 @@
+id: opioid_use_disorder_to_unemployment_rate_local
+name: Opioid Use Disorder → Unemployment Rate
+from_node:
+  node_id: opioid_use_disorder
+  node_name: Opioid Use Disorder
+to_node:
+  node_id: unemployment_rate_local
+  node_name: Unemployment Rate
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Opioid use disorder creates functional limitations affecting employment capacity'
+- 'Step 2: Criminal justice involvement associated with OUD creates additional employment barriers'
+- 'Step 3: Medication treatment requirements may conflict with inflexible work schedules'
+- 'Step 4: Stigma and background check barriers prevent hiring of individuals with OUD history'
+- 'Step 5: Extended periods of economic inactivity (6+ months) make re-entry increasingly difficult'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: John Marsden et al. 2020. "Protocol for a multi-centre, definitive randomised controlled
+    trial of the effectiveness of Individual Placement and Support for employment support among people
+    with alcohol and drug dependence." https://doi.org/10.1186/s13063-020-4099-4
+  supporting_citations:
+  - Background literature on unemployment prevalence in opioid use disorder populations (referenced but
+    specific citations require full-text access)
+  - Evidence on ineffective employment support in addiction treatment (referenced but specific citations
+    require full-text access)
+  - Additional citations require full-text access
+  doi: 10.1186/s13063-020-4099-4
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Opioid use disorder is associated with high unemployment rates due to functional impairment,
+  stigma, and inadequate vocational support within treatment systems.
+moderators:
+- name: medication_assisted_treatment
+  direction: weakens
+  strength: moderate
+  description: MAT engagement may stabilize functioning and improve employment outcomes
+structural_competency:
+  equity_implications: This mechanism identifies how people with OUD face compounded structural barriers
+    including healthcare system design that does not integrate employment support, labor market discrimination,
+    and criminal justice involvement that further marginalizes this population economically.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.907385'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

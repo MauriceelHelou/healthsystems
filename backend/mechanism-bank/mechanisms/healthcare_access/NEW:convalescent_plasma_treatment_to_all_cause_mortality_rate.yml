@@ -1,0 +1,62 @@
+id: NEW:convalescent_plasma_treatment_to_all_cause_mortality_rate
+name: Convalescent Plasma Treatment for COVID-19 → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:convalescent_plasma_treatment
+  node_name: Convalescent Plasma Treatment for COVID-19
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Convalescent plasma contains antibodies from recovered COVID-19 patients'
+- 'Step 2: Passive immunization transfers neutralizing antibodies to active patients'
+- 'Step 3: Antibodies may help neutralize SARS-CoV-2 viral particles'
+- 'Step 4: Reduced viral load could theoretically prevent severe disease progression'
+- 'Step 5: However, meta-analysis found no significant mortality reduction (RR 0.93-1.02)'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: 'P. Janiaud et al. 2021. "Association of Convalescent Plasma Treatment With Clinical
+    Outcomes in Patients With COVID-19: A Systematic Review and Meta-analysis.." https://doi.org/10.1001/jama.2021.2747'
+  supporting_citations:
+  - Peer-reviewed RCTs included in primary analysis (4 studies)
+  - Preprint and press release RCTs included in secondary analysis (6 studies)
+  - Cochrane COVID-19 trial registry studies
+  - Additional citations require full-text access for specific study identification
+  doi: 10.1001/jama.2021.2747
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Systematic review and meta-analysis of 10 RCTs (4 peer-reviewed, 6 preprints/press releases)
+  including 11,782 total patients found convalescent plasma treatment was not significantly associated
+  with reduced all-cause mortality compared to placebo or standard care. The summary RR from peer-reviewed
+  RCTs was 0.93 (95% CI 0.63-1.38) and from all RCTs was 1.02 (95% CI 0.92-1.12).
+quantitative_effects:
+  effect_size:
+    value: 0.93
+    type: relative_risk
+    ci_lower: 0.63
+    ci_upper: 1.38
+  sample_size: 1060
+moderators:
+- name: publication_status
+  direction: weakens
+  strength: moderate
+  description: When including unpublished data (preprints/press releases), summary RR shifted to 1.02
+    (95% CI 0.92-1.12), suggesting no benefit
+- name: evidence_certainty
+  direction: weakens
+  strength: moderate
+  description: Low to moderate certainty of evidence due to imprecision limits confidence in findings
+structural_competency:
+  equity_implications: This mechanism relates to healthcare access and therapeutic intervention availability
+    during a pandemic. While not directly addressing structural determinants of health inequity, access
+    to experimental treatments like convalescent plasma during COVID-19 was influenced by healthcare system
+    capacity, hospital resources, and geographic location. The null finding has equity implications as
+    it suggests resources should be directed toward proven interventions rather than unproven therapies.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.868781'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

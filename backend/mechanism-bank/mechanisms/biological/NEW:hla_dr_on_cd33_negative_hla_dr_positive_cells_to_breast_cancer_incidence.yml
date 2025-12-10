@@ -1,0 +1,73 @@
+id: NEW:hla_dr_on_cd33_negative_hla_dr_positive_cells_to_breast_cancer_incidence
+name: HLA DR on CD33- HLA DR+ Cells → Breast Cancer Incidence
+from_node:
+  node_id: NEW:hla_dr_on_cd33_negative_hla_dr_positive_cells
+  node_name: HLA DR on CD33- HLA DR+ Cells
+to_node:
+  node_id: breast_cancer_incidence
+  node_name: Breast Cancer Incidence
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Higher HLA DR expression on CD33- HLA DR+ cells enhances antigen presentation capacity'
+- 'Step 2: Enhanced antigen presentation activates other immune cells to boost overall antitumor response'
+- 'Step 3: Activated immune cells recognize and target breast cancer cells more effectively'
+- 'Step 4: Inhibition of angiogenesis reduces tumor nutrient supply'
+- 'Step 5: Combined immune mechanisms slow disease progression and reduce cancer incidence'
+evidence:
+  quality_rating: B
+  n_studies: 2
+  primary_citation: 'Wanxian Xu et al. 2024. "The association between immune cells and breast cancer:
+    insights from Mendelian randomization and meta‐analysis." https://doi.org/10.1097/JS9.0000000000001840'
+  supporting_citations:
+  - BCAC consortium GWAS data on breast cancer
+  - FinnGen R10 database breast cancer GWAS
+  - GWAS Catalog immune cell phenotype data (731 immune phenotypes)
+  doi: 10.1097/JS9.0000000000001840
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Mendelian randomization meta-analysis demonstrates that genetically determined higher HLA
+  DR expression on CD33- HLA DR+ cells is causally protective against breast cancer. This immune phenotype
+  enhances antigen presentation, activates broader antitumor immune responses, and inhibits tumor angiogenesis,
+  collectively reducing breast cancer risk.
+quantitative_effects:
+  effect_size:
+    value: 0.973
+    type: odds_ratio
+    ci_lower: 0.961
+    ci_upper: 0.984
+  p_value: 3.8e-06
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Geographic variation in breast cancer incidence noted, with highest rates in North
+    America, Europe, and Australia and lower rates in parts of Asia and Africa.
+moderators:
+- name: obesity
+  direction: weakens
+  strength: moderate
+  description: Paper identifies obesity as a risk factor for breast cancer, which may impair immune function
+    and reduce protective effects
+- name: alcohol_consumption
+  direction: weakens
+  strength: moderate
+  description: Alcohol consumption is identified as a breast cancer risk factor that may affect immune
+    cell function
+- name: physical_activity
+  direction: strengthens
+  strength: moderate
+  description: Lack of physical activity is a risk factor; conversely, physical activity may enhance immune
+    protection
+structural_competency:
+  equity_implications: The paper contextualizes immune protection within broader structural determinants.
+    Risk factors for breast cancer include modifiable factors (obesity, alcohol consumption, lack of physical
+    activity) that are shaped by built environment, food systems, and socioeconomic conditions. The paper
+    also notes that survival rates differ dramatically between developed and developing countries (>90%
+    vs. lower), highlighting how healthcare infrastructure and access to screening technologies (mammography,
+    MRI) create structural inequities in cancer outcomes. These structural factors may influence whether
+    immune-mediated protection translates to reduced mortality.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.635110'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

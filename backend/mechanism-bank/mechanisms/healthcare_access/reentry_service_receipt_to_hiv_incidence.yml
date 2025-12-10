@@ -1,0 +1,61 @@
+id: reentry_service_receipt_to_hiv_incidence
+name: Reentry Service Receipt → HIV Incidence
+from_node:
+  node_id: reentry_service_receipt
+  node_name: Reentry Service Receipt
+to_node:
+  node_id: hiv_incidence
+  node_name: HIV Incidence
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Community-based organizations provide reentry services to people releasing from incarceration'
+- 'Step 2: Some CBOs offer PrEP or other forms of HIV prevention as part of comprehensive services'
+- 'Step 3: Many CBOs focus on meeting basic needs (housing, food, employment) which are prerequisites
+  for engaging with health services'
+- 'Step 4: Building community connection through CBOs creates pathways to HIV prevention resources'
+- 'Step 5: Reduced HIV acquisition risk when prevention services are accessible during reentry'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Emily Callen et al. 2025. "HIV Prevention for People Releasing from Incarceration:
+    A Qualitative Pre-implementation Study.." https://doi.org/10.1007/s11606-025-09895-8'
+  supporting_citations:
+  - Additional citations require full-text access - this is a qualitative implementation study
+  - Prior efforts to expand PrEP access for people releasing from jail or prison mentioned in abstract
+  - Consolidated Framework for Implementation Research referenced as theoretical framework
+  doi: 10.1007/s11606-025-09895-8
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Community-based organizations that serve people releasing from incarceration can provide
+  HIV prevention services, but many focus on meeting basic needs or building community rather than directly
+  providing PrEP. Effective linkage to HIV prevention requires addressing the primacy of basic needs first.
+quantitative_effects:
+  sample_size: 35
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Washington State study; availability and capacity of community-based organizations
+    varies significantly by geographic area
+moderators:
+- name: basic_needs_met
+  direction: strengthens
+  strength: strong
+  description: When basic needs (housing, food) are met, individuals can better engage with HIV prevention
+    services; primacy of basic needs means HIV prevention is lower priority until these are addressed
+- name: staff_capacity
+  direction: strengthens
+  strength: moderate
+  description: Improved care coordination between carceral and community organizations requires adequate
+    staff capacity
+structural_competency:
+  equity_implications: This mechanism highlights how the hierarchy of needs during reentry creates structural
+    barriers to HIV prevention. Organizations must address housing, food, and employment before HIV prevention
+    becomes accessible, demonstrating how poverty and structural disadvantage compound health risks for
+    formerly incarcerated populations. The need for new funding to add HIV prevention programming reflects
+    systematic underinvestment in reentry health services.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.798716'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

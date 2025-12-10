@@ -1,0 +1,49 @@
+id: pfos_serum_concentration_to_hormone_receptor_positive_breast_cancer
+name: Serum Perfluorooctane Sulfonate (PFOS) Concentration → Hormone Receptor Positive
+  Breast Cancer (ER+/PR+)
+from_node:
+  node_id: pfos_serum_concentration
+  node_name: Serum Perfluorooctane Sulfonate (PFOS) Concentration
+to_node:
+  node_id: hormone_receptor_positive_breast_cancer
+  node_name: Hormone Receptor Positive Breast Cancer (ER+/PR+)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: PFOS acts as an endocrine-disrupting chemical that interferes with hormonal
+  signaling pathways'
+- 'Step 2: Disruption of estrogen and progesterone receptor pathways promotes cellular
+  proliferation in hormone-sensitive breast tissue'
+- 'Step 3: Persistent exposure to PFOS through contaminated water, food, and consumer
+  products leads to sustained endocrine disruption'
+- 'Step 4: Accumulated endocrine disruption increases risk of hormone receptor-positive
+  tumor development in postmenopausal women'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'V. Chang et al. 2023. "Serum perfluorooctane sulfonate and perfluorooctanoate
+    and risk of postmenopausal breast cancer according to hormone receptor status:
+    An analysis in the Prostate, Lung, Colorectal and Ovarian Cancer Screening Trial."
+    *International Journal of Cancer*. https://doi.org/10.1002/ijc.34487'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.488846'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: hormone_receptor_status
+  direction: strengthens
+  strength: strong
+  description: PFOS association specifically elevated for ER+/PR+ tumors (OR=2.19,
+    95% CI 1.21-3.98) but not for overall breast cancer risk, suggesting hormonal
+    pathway-specific mechanism
+- name: exposure_quartile
+  direction: u_shaped
+  strength: moderate
+  description: Third quartile showed strongest association with ER+/PR+ tumors (OR=2.19),
+    while fourth quartile showed elevated but non-statistically significant ORs, suggesting
+    possible non-linear dose-response
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/pfos_serum_concentration_to_hormone_receptor_positive_breast_cancer.yaml
+_category: biological

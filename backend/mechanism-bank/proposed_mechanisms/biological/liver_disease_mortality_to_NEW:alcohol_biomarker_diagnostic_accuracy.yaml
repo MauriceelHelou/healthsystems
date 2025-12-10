@@ -1,0 +1,56 @@
+id: liver_disease_mortality_to_NEW:alcohol_biomarker_diagnostic_accuracy
+name: Liver Disease Mortality → Alcohol Biomarker Diagnostic Accuracy in Liver Disease
+from_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+to_node:
+  node_id: NEW:alcohol_biomarker_diagnostic_accuracy
+  node_name: Alcohol Biomarker Diagnostic Accuracy in Liver Disease
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Advanced liver disease causes hepatic damage that impairs normal metabolic
+  enzyme function, reducing the liver''s capacity to form alcohol biomarkers such
+  as carbohydrate deficient transferrin (CDT)'
+- 'Step 2: Liver disease often leads to kidney dysfunction and necessitates diuretic
+  use, which alters the excretion patterns of urinary biomarkers (ethyl glucuronide,
+  ethyl sulfate)'
+- 'Step 3: Systemic effects of severe liver disease may alter deposition of alcohol
+  metabolites in hair and nails, affecting long-term biomarker detection'
+- 'Step 4: These pathophysiological changes reduce sensitivity and specificity of
+  standard alcohol biomarkers, compromising diagnostic accuracy in patients with liver
+  disease compared to healthy populations'
+evidence:
+  quality_rating: B
+  n_studies: 12
+  primary_citation: 'Janique Arnts et al. 2020. Systematic Review: Diagnostic Accuracy
+    of Biomarkers of Alcohol Use in Patients with Liver Disease. Alcoholism: Clinical
+    and Experimental Research.'
+  supporting_citations: []
+description: 'Liver disease impairs the diagnostic accuracy of alcohol biomarkers
+  through multiple biological mechanisms: hepatic damage reduces biomarker formation
+  (particularly CDT), kidney dysfunction and diuretics alter excretion of urinary
+  biomarkers, and systemic effects may alter deposition in hair/nails. This systematic
+  review of 12 studies found that while some biomarkers (urinary and hair ethyl glucuronide,
+  phosphatidylethanol) maintain reasonable accuracy, others (serum CDT) show substantially
+  reduced sensitivity in liver disease patients.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: biomarker_type
+  direction: strengthens
+  strength: moderate
+  description: Urinary ethyl glucuronide (sensitivity 70-89%, specificity 93-99%)
+    and scalp hair ethyl glucuronide (sensitivity 85-100%, specificity 97-100%) maintain
+    better diagnostic accuracy in liver disease patients compared to serum CDT (sensitivity
+    40-79%)
+- name: severity_of_liver_disease
+  direction: weakens
+  strength: moderate
+  description: More severe hepatic damage likely causes greater impairment of biomarker
+    formation and excretion, further reducing diagnostic accuracy
+- name: kidney_function
+  direction: weakens
+  strength: moderate
+  description: Kidney dysfunction and diuretic use in liver disease patients alter
+    biomarker excretion patterns

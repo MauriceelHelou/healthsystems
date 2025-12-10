@@ -1,0 +1,55 @@
+id: child_sexual_abuse_rate_to_self_harm_injury_rate
+name: Childhood Sexual Abuse → Self-Harm
+from_node:
+  node_id: child_sexual_abuse_rate
+  node_name: Childhood Sexual Abuse
+to_node:
+  node_id: self_harm_injury_rate
+  node_name: Self-Harm
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Childhood sexual abuse causes severe psychological trauma, disrupting normal
+  emotional development and attachment patterns'
+- 'Step 2: Trauma leads to difficulties in emotional regulation, including heightened
+  stress reactivity and maladaptive coping mechanisms'
+- 'Step 3: Survivors may develop dissociative symptoms, feelings of worthlessness,
+  shame, and self-blame as psychological sequelae'
+- 'Step 4: These psychological effects increase vulnerability to mental health disorders
+  including depression and anxiety'
+- 'Step 5: Self-harm emerges as a maladaptive coping strategy to regulate overwhelming
+  emotions, express psychological pain, or regain sense of control'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'Cory N. Spencer et al. 2023. Health effects associated with exposure
+    to intimate partner violence against women and childhood sexual abuse: a Burden
+    of Proof study. Nature Medicine.'
+  supporting_citations: []
+description: A systematic review and meta-analysis using burden of proof methodology
+  found a moderate association between childhood sexual abuse and self-harm, with
+  35% increased risk. The relationship is classified as behavioral, operating through
+  trauma-induced psychological dysfunction and maladaptive coping mechanisms. Self-harm
+  serves as an emotional regulation strategy for survivors experiencing overwhelming
+  distress.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.35
+    type: relative_risk
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: severity_of_abuse
+  direction: strengthens
+  strength: moderate
+  description: More severe or prolonged abuse exposure likely increases risk of self-harm
+    behaviors
+- name: access_to_mental_health_services
+  direction: weakens
+  strength: moderate
+  description: Evidence-based interventions and access to care may mitigate the pathway
+    from trauma to self-harm

@@ -1,0 +1,64 @@
+id: NEW:sud_treatment_availability_controlled_drinking_to_sud_treatment_entry_rate
+name: SUD Treatment Availability for Controlled Drinking Goals → SUD Treatment Entry Rate
+from_node:
+  node_id: NEW:sud_treatment_availability_controlled_drinking
+  node_name: SUD Treatment Availability for Controlled Drinking Goals
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Traditional SUD treatment systems predominantly offer abstinence-only approaches'
+- 'Step 2: Scarcity of controlled drinking treatment options creates barrier for individuals unwilling
+  to commit to abstinence'
+- 'Step 3: Offering evidence-based controlled drinking treatments (BSCT, MET) provides alternative pathway
+  into care'
+- 'Step 4: Increased treatment options matching patient preferences leads to higher treatment engagement
+  and entry rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Stina Ingesson Hammarberg et al. 2024. "Behavioural self-control training versus
+    motivational enhancement therapy for individuals with alcohol use disorder with a goal of controlled
+    drinking: A randomized controlled trial.." https://doi.org/10.1111/add.16325'
+  supporting_citations:
+  - Additional citations require full-text access - abstract notes scarcity of CD treatment methods but
+    does not cite specific sources
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  doi: 10.1111/add.16325
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2023, source is 2024'
+last_updated: '2025-12-06'
+version: '2.0'
+description: The abstract explicitly notes that controlled drinking is an attractive treatment goal for
+  a large proportion of individuals with AUD, but availability of supporting treatment methods is scarce.
+  This represents a structural gap in the healthcare system that limits treatment access for those who
+  prefer harm reduction over abstinence approaches.
+quantitative_effects:
+  sample_size: 250
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Abstract explicitly notes that availability of treatment methods supporting controlled
+    drinking goals is scarce, implying geographic and systemic variation in access
+moderators:
+- name: patient_treatment_goal_preference
+  direction: strengthens
+  strength: strong
+  description: The study specifically enrolled patients with a stated goal of controlled drinking rather
+    than abstinence, demonstrating that treatment goal alignment is crucial for engagement
+structural_competency:
+  equity_implications: This mechanism identifies a structural barrier in healthcare systems where dominant
+    paradigms favoring abstinence-only treatment may exclude or discourage treatment-seeking among individuals
+    with AUD who prefer controlled drinking goals. The study demonstrates that both BSCT and MET can effectively
+    support controlled drinking, suggesting policy and practice changes to expand treatment options could
+    improve equity in AUD care access. This is particularly relevant as treatment goal preferences may
+    vary by cultural background, socioeconomic status, and severity of AUD.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.177304'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

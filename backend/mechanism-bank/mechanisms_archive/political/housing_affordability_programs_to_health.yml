@@ -1,0 +1,89 @@
+id: housing_affordability_programs_to_health
+name: Housing Affordability Programs → Health Outcomes
+from_node:
+  node_id: housing_affordability_programs
+  node_name: Housing Affordability and Stability Programs
+  node_type: stock
+to_node:
+  node_id: population_health_outcomes
+  node_name: Population Health Outcomes
+  node_type: stock
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Housing affordability programs (vouchers, subsidies, assistance) reduce housing cost burden'
+- 'Step 2: Reduced housing cost burden prevents forced moves, eviction filings, and homelessness'
+- 'Step 3: Housing stability enables consistent healthcare access, medication adherence, and care continuity'
+- 'Step 4: Freed household resources allow investment in food security, healthcare, and other health inputs'
+- 'Step 5: Reduced housing stress improves mental health, sleep quality, and chronic disease management'
+evidence:
+  quality_rating: B
+  n_studies: 6
+  primary_citation: 'Fenelon, Andrew, et al. 2022. ''Association of Promoting Housing Affordability and
+    Stability With Improved Health Outcomes.'' JAMA Network Open 5(12): e2239860.'
+  supporting_citations:
+  - Health Affairs. 2023. 'Exploring the impact of housing insecurity on the health and well-being of
+    children.' doi:10.3310/TWWL4501
+  doi: 10.1001/jamanetworkopen.2022.39860
+  journal: JAMA Network Open
+  year: 2022
+  fulltext:
+    available: true
+    source: unpaywall
+    url: https://jamanetwork.com/journals/jamanetworkopen/articlepdf/2798095/chen_2022_oi_221130_1666786650.67922.pdf
+    is_open_access: true
+    fetched_date: '2025-11-30'
+    license: cc-by-nc-nd
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '1.0'
+description: Interventions that promote housing affordability and stability upstream of homelessness are
+  associated with improved health outcomes. Housing assistance programs reduce emergency department visits,
+  improve chronic disease management, and enhance mental health by addressing the fundamental housing
+  insecurity that drives health disparities.
+moderators:
+- name: program_comprehensiveness
+  direction: strengthens
+  strength: moderate
+  description: Programs combining rental assistance with supportive services show larger health effects
+- name: housing_market_tightness
+  direction: weakens
+  strength: moderate
+  description: In very tight housing markets, affordability assistance may be insufficient without supply
+    expansion
+- name: healthcare_integration
+  direction: strengthens
+  strength: strong
+  description: Programs integrated with healthcare systems enable care coordination and improved outcomes
+- name: income_targeting
+  direction: strengthens
+  strength: moderate
+  description: Targeting extremely low-income households maximizes health impact per dollar spent
+structural_competency:
+  root_cause_level: policy
+  avoids_victim_blaming: true
+  equity_implications: Housing affordability programs represent structural intervention addressing root
+    causes of housing insecurity. These programs counteract market failures, discriminatory housing practices,
+    and inadequate wages that create housing instability. Expanding these programs is a policy choice
+    that can reduce health inequities driven by housing insecurity.
+assumptions:
+- Programs provide meaningful, sustained housing affordability improvement
+- Health outcomes measured across multiple domains (ED visits, chronic disease, mental health)
+- Comparison is to similar populations without housing assistance
+limitations:
+- Selection effects in program participation may bias observational results
+- Housing assistance wait lists mean many eligible households don't receive support
+- Health impacts may take years to fully manifest
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Housing costs, program availability, and market conditions vary dramatically across
+    regions, affecting mechanism strength.
+  relevant_geographies:
+  - High-cost metros show larger potential health gains from housing assistance
+  - Rural areas may face housing quality issues not addressed by affordability alone
+  - States with robust housing programs show population health benefits
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

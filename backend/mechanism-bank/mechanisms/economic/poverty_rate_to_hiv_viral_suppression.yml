@@ -1,0 +1,45 @@
+id: poverty_rate_to_hiv_viral_suppression
+name: Poverty Rate → HIV Viral Suppression
+from_node:
+  node_id: poverty_rate
+  node_name: Poverty Rate
+to_node:
+  node_id: hiv_viral_suppression
+  node_name: HIV Viral Suppression
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Poverty limits access to resources needed for healthcare engagement'
+- 'Step 2: Economic strain contributes to psychological distress and mental health deterioration'
+- 'Step 3: Worsened mental health impairs cognitive function and self-care capacity'
+- 'Step 4: Reduced capacity leads to poor ART adherence and lower viral suppression rates'
+evidence:
+  quality_rating: A
+  n_studies: 45
+  primary_citation: 'Thomas O''Grady et al. 2023. "The Characteristics and HIV-Related Outcomes of People
+    Living with Co-occurring HIV and Mental Health Conditions in the United States: A Systematic Review
+    of Literature from 2016 to 2021." https://doi.org/10.1007/s10461-023-04150-9'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review on social determinants
+  - Studies on poverty and HIV outcomes
+  - Studies on economic factors affecting mental health in PLWH
+  doi: 10.1007/s10461-023-04150-9
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Poverty as a social determinant impacts mental health, which in turn affects HIV-related
+  outcomes such as viral suppression rates.
+moderators:
+- name: housing_instability
+  direction: strengthens
+  strength: strong
+  description: Housing instability often co-occurs with poverty and amplifies negative effects
+structural_competency:
+  equity_implications: Poverty is a structural condition shaped by wage policies, employment systems,
+    and social safety net adequacy. The mechanism highlights how economic deprivation creates health inequities
+    through mental health pathways rather than individual behavioral failures.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.935218'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

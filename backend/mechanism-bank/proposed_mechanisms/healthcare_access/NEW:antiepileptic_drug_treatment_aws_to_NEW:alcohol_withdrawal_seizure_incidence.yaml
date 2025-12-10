@@ -1,0 +1,58 @@
+id: NEW:antiepileptic_drug_treatment_aws_to_NEW:alcohol_withdrawal_seizure_incidence
+name: Antiepileptic Drug Treatment for Alcohol Withdrawal Syndrome → Alcohol Withdrawal
+  Seizure Incidence
+from_node:
+  node_id: NEW:antiepileptic_drug_treatment_aws
+  node_name: Antiepileptic Drug Treatment for Alcohol Withdrawal Syndrome
+to_node:
+  node_id: NEW:alcohol_withdrawal_seizure_incidence
+  node_name: Alcohol Withdrawal Seizure Incidence
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with moderate to severe alcohol withdrawal syndrome are admitted
+  to inpatient settings and prescribed antiepileptic drugs (AEDs) such as carbamazepine,
+  valproic acid, or other anticonvulsants'
+- 'Step 2: AEDs are intended to modulate neuronal excitability by blocking voltage-gated
+  sodium channels, enhancing GABAergic inhibition, or reducing glutamatergic transmission
+  to prevent seizure activity'
+- 'Step 3: Despite theoretical mechanisms, systematic evidence shows AEDs provide
+  no significant benefit over placebo or standard treatments in reducing seizure incidence
+  during AWS (RR = 1.0, indicating no effect)'
+- 'Step 4: The lack of demonstrated efficacy means that AED treatment does not reduce
+  alcohol withdrawal seizure incidence compared to alternative approaches'
+evidence:
+  quality_rating: A
+  n_studies: 26
+  primary_citation: 'Jenny Rojo-Mira et al. 2021. Efficacy and Safety of Anticonvulsants
+    for the Inpatient Treatment of Alcohol Withdrawal Syndrome: A Systematic Review
+    and Meta-analysis. Alcohol and Alcoholism.'
+  supporting_citations: []
+description: 'This systematic review and meta-analysis of 26 randomized controlled
+  trials (n=1709) found no significant benefit of antiepileptic drug treatment in
+  preventing seizures during moderate to severe alcohol withdrawal syndrome. The pooled
+  relative risk was 1.0 (95% CI: 0.76-1.33), indicating AEDs neither increase nor
+  decrease seizure incidence compared to other treatments or placebo. The evidence
+  quality was rated as moderate using GRADE methodology, leading to a weak recommendation
+  against routine AED use for AWS unless indicated for comorbid conditions.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.0
+    type: relative_risk
+    ci_lower: 0.76
+    ci_upper: 1.33
+  p_value: null
+  sample_size: 1709
+moderators:
+- name: Comparator type
+  direction: weakens
+  strength: weak
+  description: When compared specifically to placebo, AEDs showed similar null effect
+    (RR = 0.95, CI 0.57-1.57), confirming no seizure prevention benefit
+- name: AWS severity
+  direction: weakens
+  strength: moderate
+  description: Studies focused on moderate to severe AWS; outpatient and unspecified
+    severity cases were excluded, potentially limiting generalizability

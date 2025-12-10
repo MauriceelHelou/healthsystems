@@ -1,0 +1,73 @@
+id: NEW:maternal_caffeine_consumption_pregnancy_to_NEW:offspring_cord_blood_dna_methylation
+name: Maternal Caffeine Consumption During Pregnancy → Offspring Cord Blood DNA Methylation
+from_node:
+  node_id: NEW:maternal_caffeine_consumption_pregnancy
+  node_name: Maternal Caffeine Consumption During Pregnancy
+to_node:
+  node_id: NEW:offspring_cord_blood_dna_methylation
+  node_name: Offspring Cord Blood DNA Methylation
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Pregnant women consume caffeine through coffee, tea, or cola beverages'
+- 'Step 2: Caffeine crosses the placental barrier and exposes the developing fetus'
+- 'Step 3: Fetal exposure to caffeine may trigger epigenetic changes in cord blood cells'
+- 'Step 4: DNA methylation patterns are altered at specific CpG sites in offspring cord blood'
+- 'Step 5: These epigenetic modifications may serve as a biological bridge between environmental exposure
+  and gene expression'
+evidence:
+  quality_rating: A
+  n_studies: 5
+  primary_citation: 'Laura Schellhas et al. 2023. "Maternal caffeine consumption during pregnancy and
+    offspring cord blood DNA methylation: an epigenome-wide association study meta-analysis.." https://doi.org/10.2217/epi-2023-0263'
+  supporting_citations:
+  - Studies on smoking during pregnancy showing >6000 DNAm changes (referenced in abstract)
+  - European cohort studies included in meta-analysis (multiple countries referenced)
+  - Additional citations require full-text access
+  doi: 10.2217/epi-2023-0263
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This meta-analysis of 3725 European mother-child pairs examined whether maternal caffeine
+  consumption during pregnancy affects offspring DNA methylation at birth. The study found only two significant
+  changes in DNA methylation - one associated with total caffeine and one with cola consumption - which
+  the authors interpret as insufficient evidence that caffeine intake during pregnancy substantially impacts
+  offspring epigenetic programming. The biological plausibility is supported by comparisons to smoking
+  during pregnancy, which produces thousands of DNAm changes, suggesting caffeine's effects, if present,
+  are much smaller in magnitude.
+quantitative_effects:
+  sample_size: 3725
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study included mother-child pairs from different European countries, suggesting potential
+    geographic variation in caffeine consumption patterns and dietary habits
+moderators:
+- name: caffeine_consumption_level
+  direction: strengthens
+  strength: moderate
+  description: Authors note that low caffeine consumption in the study population may have limited ability
+    to detect effects; higher consumption levels may produce different results
+- name: caffeine_source
+  direction: strengthens
+  strength: weak
+  description: Different caffeine sources (coffee, tea, cola) were examined separately, with cola showing
+    one significant DNAm change distinct from total caffeine
+- name: sample_size
+  direction: weakens
+  strength: moderate
+  description: Authors acknowledge study may have been underpowered to detect very small DNAm changes
+    related to caffeine consumption
+structural_competency:
+  equity_implications: This study examines a behavioral exposure (caffeine consumption) that is shaped
+    by structural factors including food environment access, workplace culture, marketing of caffeinated
+    beverages, and socioeconomic status affecting beverage choices. The finding of minimal effects at
+    low-moderate consumption levels has policy implications for pregnancy guidelines that currently recommend
+    limiting caffeine to <200mg daily. From an equity perspective, caffeine consumption patterns vary
+    by socioeconomic status and cultural context across European populations studied. The study avoids
+    individual blame by noting structural uncertainty about whether current guidelines are justified by
+    biological evidence.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.616694'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

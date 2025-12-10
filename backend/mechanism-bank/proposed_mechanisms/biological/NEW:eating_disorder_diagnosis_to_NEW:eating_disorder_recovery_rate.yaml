@@ -1,0 +1,74 @@
+id: NEW:eating_disorder_diagnosis_to_NEW:eating_disorder_recovery_rate
+name: Eating Disorder Diagnosis (AN, BN, BED, OSFED) → Eating Disorder Recovery Rate
+from_node:
+  node_id: NEW:eating_disorder_diagnosis
+  node_name: Eating Disorder Diagnosis (AN, BN, BED, OSFED)
+to_node:
+  node_id: NEW:eating_disorder_recovery_rate
+  node_name: Eating Disorder Recovery Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Formal eating disorder diagnosis (AN, BN, BED, OSFED) enables identification
+  of specific pathophysiological patterns and symptom clusters requiring targeted
+  intervention'
+- 'Step 2: Diagnosis initiates access to evidence-based treatments including family-based
+  therapy, cognitive-behavioral therapy, psychodynamic therapy, dialectical behavioral
+  therapy, nutritional interventions, and pharmacological treatments specific to ED
+  subtype'
+- 'Step 3: Treatment engagement over time leads to normalization of eating behaviors,
+  weight restoration (in AN), reduction in binge-purge cycles, and improvement in
+  psychological functioning'
+- 'Step 4: Recovery rates increase progressively with duration of follow-up: 42% at
+  <2 years, 54% at 4-6 years, 64% at 8-10 years, and 67% at ≥10 years, indicating
+  time-dependent biological and psychological healing processes'
+evidence:
+  quality_rating: A
+  n_studies: 415
+  primary_citation: 'Marco Solmi et al. 2024. Outcomes in people with eating disorders:
+    a transdiagnostic and disorder‐specific systematic review, meta‐analysis and multivariable
+    meta‐regression analysis. World Psychiatry.'
+  supporting_citations: []
+description: Eating disorder diagnosis across subtypes (AN, BN, BED, OSFED) is positively
+  associated with recovery, with overall recovery occurring in 46% of patients at
+  mean follow-up of 44.9 months. Recovery rates improve substantially over time, reaching
+  67% at ≥10 years. The diagnosis enables access to subtype-specific evidence-based
+  treatments that address the underlying biological and psychological mechanisms of
+  disordered eating.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.46
+    type: proportion
+    ci_lower: 0.44
+    ci_upper: 0.49
+  p_value: null
+  sample_size: 88372
+moderators:
+- name: Age group
+  direction: strengthens
+  strength: strong
+  description: Children/adolescents had more favorable outcomes across and within
+    ED subtypes compared to adults
+- name: Self-injurious behaviors
+  direction: weakens
+  strength: moderate
+  description: Self-injurious behaviors were associated with lower recovery rates
+    in pooled EDs
+- name: Treatment type
+  direction: strengthens
+  strength: strong
+  description: Family-based therapy, CBT, psychodynamic therapy, and nutritional interventions
+    for AN; self-help, CBT, DBT, psychodynamic therapy for BN; CBT, nutritional, pharmacological,
+    and DBT for BED were associated with higher recovery
+- name: Follow-up duration
+  direction: strengthens
+  strength: strong
+  description: Recovery rates increased progressively from 42% at <2 years to 67%
+    at ≥10 years follow-up
+- name: Socio-demographic index
+  direction: weakens
+  strength: moderate
+  description: Higher SDI moderated lower recovery and higher chronicity in AN across
+    countries

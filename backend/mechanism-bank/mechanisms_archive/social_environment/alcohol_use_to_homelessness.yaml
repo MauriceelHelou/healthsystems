@@ -1,0 +1,41 @@
+id: alcohol_use_to_homelessness
+name: Alcohol Use → Homelessness
+from_node:
+  node_id: alcohol_use
+  node_name: Alcohol Use
+to_node:
+  node_id: homelessness
+  node_name: Homelessness
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Alcohol use may impair individuals'' ability to maintain stable employment
+  and income'
+- 'Step 2: Reduced economic resources limit ability to afford and maintain housing'
+- 'Step 3: Social relationships and support networks may deteriorate, reducing access
+  to housing assistance'
+- 'Step 4: Increased probability of losing current housing or inability to secure
+  new housing leads to homelessness'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Duncan McVicar et al. 2015. "From substance use to homelessness
+    or vice versa?." *Social science & medicine (1982)*. https://doi.org/10.1016/j.socscimed.2015.05.005
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.347479'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: type_of_homelessness
+  direction: strengthens
+  strength: moderate
+  description: The relationship between alcohol use and homelessness varies by type
+    of homelessness experienced, suggesting differential vulnerability pathways
+- name: individual_characteristics
+  direction: strengthens
+  strength: strong
+  description: Observed and unobserved personal characteristics are the predominant
+    drivers of both homelessness and substance use, indicating that underlying vulnerabilities
+    moderate this relationship

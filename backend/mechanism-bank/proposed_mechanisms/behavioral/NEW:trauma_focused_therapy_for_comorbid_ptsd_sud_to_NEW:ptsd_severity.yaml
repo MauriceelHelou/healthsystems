@@ -1,0 +1,61 @@
+id: NEW:trauma_focused_therapy_for_comorbid_ptsd_sud_to_NEW:ptsd_severity
+name: Trauma-Focused Therapy for Comorbid PTSD-SUD → PTSD Severity
+from_node:
+  node_id: NEW:trauma_focused_therapy_for_comorbid_ptsd_sud
+  node_name: Trauma-Focused Therapy for Comorbid PTSD-SUD
+to_node:
+  node_id: NEW:ptsd_severity
+  node_name: PTSD Severity
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Trauma-focused therapy (e.g., trauma-focused CBT) directly addresses traumatic
+  memories and associated cognitions through exposure and cognitive processing techniques'
+- 'Step 2: Processing of trauma memories reduces avoidance behaviors and emotional
+  reactivity to trauma-related cues, which are core maintaining factors in PTSD'
+- 'Step 3: Integrated treatment addresses the bidirectional relationship between PTSD
+  symptoms and substance use, preventing substance use from interfering with trauma
+  processing'
+- 'Step 4: Reduction in PTSD symptom severity occurs both immediately post-treatment
+  and is maintained at 6-13 month follow-up'
+evidence:
+  quality_rating: A
+  n_studies: 27
+  primary_citation: Roberts N. et al. 2022. A systematic review and meta-analysis
+    of psychological interventions for comorbid post-traumatic stress disorder and
+    substance use disorder. European Journal of Psychotraumatology.
+  supporting_citations: []
+description: Trauma-focused therapy for individuals with comorbid PTSD and substance
+  use disorder produces modest but significant reductions in PTSD severity compared
+  to SUD-only interventions. The meta-analysis of 27 studies found that trauma-focused
+  interventions combined with SUD treatment reduced PTSD symptoms both post-treatment
+  (SMD=-0.36) and at follow-up (SMD=-0.48), with integrated CBT also showing specific
+  benefits. Present-focused coping skills approaches did not show added benefit over
+  standard addiction treatments.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.36
+    type: standardized_mean_difference
+    ci_lower: -0.64
+    ci_upper: -0.08
+  p_value: null
+  sample_size: null
+moderators:
+- name: treatment_duration_follow_up
+  direction: strengthens
+  strength: moderate
+  description: Effect size increases from post-treatment (SMD=-0.36) to 6-13 month
+    follow-up (SMD=-0.48), suggesting maintained or improved benefits over time
+- name: therapy_type
+  direction: strengthens
+  strength: moderate
+  description: Integrated cognitive behavioral therapy (ICBT) showed specific modest
+    effects (SMD=-0.33), while present-focused approaches showed no benefit beyond
+    SUD-only interventions
+- name: treatment_engagement
+  direction: weakens
+  strength: strong
+  description: High dropout rates across studies limit treatment effectiveness; incentivized
+    attendance may reduce dropout for trauma-focused interventions

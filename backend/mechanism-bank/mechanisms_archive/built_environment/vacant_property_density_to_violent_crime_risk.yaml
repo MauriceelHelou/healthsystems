@@ -1,0 +1,37 @@
+id: vacant_property_density_to_violent_crime_risk
+name: Vacant Property Density → Violent Crime Risk
+from_node:
+  node_id: vacant_property_density
+  node_name: Vacant Property Density
+to_node:
+  node_id: violent_crime_risk
+  node_name: Violent Crime Risk
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Vacant properties signal neighborhood disorder and structural neglect,
+  reducing perceptions of social control'
+- 'Step 2: Physical deterioration and abandonment reduce natural surveillance and
+  eyes on the street'
+- 'Step 3: Vacant properties create isolated spaces that facilitate criminal activity
+  with reduced detection risk'
+- 'Step 4: Cumulative environmental disorder weakens collective efficacy and community
+  capacity to prevent violence'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Gibran C. Mancus et al. 2021. "Greenness and the Potential Resilience
+    to Sexual Violence: "Your Neighborhood Is Being Neglected Because People Don''t
+    Care. People With Power Don''t Care"." *Journal of Interpersonal Violence*. https://doi.org/10.1177/08862605211028009'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.091874'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: green_space_proximity
+  direction: weakens
+  strength: moderate
+  description: Presence of nearby green spaces may partially offset negative effects
+    of vacant properties by providing alternative community spaces

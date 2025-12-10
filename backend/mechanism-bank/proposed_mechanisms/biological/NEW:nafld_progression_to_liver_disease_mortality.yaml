@@ -1,0 +1,49 @@
+id: NEW:nafld_progression_to_liver_disease_mortality
+name: Progressive Non-Alcoholic Fatty Liver Disease → Liver Disease Mortality
+from_node:
+  node_id: NEW:nafld_progression
+  node_name: Progressive Non-Alcoholic Fatty Liver Disease
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Progressive NAFLD involves accumulation of hepatic steatosis (fat in liver
+  cells) that advances beyond simple fatty liver'
+- 'Step 2: Progression leads to non-alcoholic steatohepatitis (NASH) characterized
+  by hepatocyte injury, inflammation, and oxidative stress'
+- 'Step 3: Chronic inflammation triggers hepatic stellate cell activation and progressive
+  fibrosis (scarring) of liver tissue'
+- 'Step 4: Advanced fibrosis progresses to cirrhosis with loss of functional liver
+  tissue and portal hypertension'
+- 'Step 5: Cirrhotic liver leads to hepatic decompensation, liver failure, hepatocellular
+  carcinoma, and ultimately death from liver disease'
+evidence:
+  quality_rating: A
+  n_studies: 13
+  primary_citation: 'Louise Magherman et al. 2023. Meta‐analysis: The impact of light‐to‐moderate
+    alcohol consumption on progressive non‐alcoholic fatty liver disease. Alimentary
+    Pharmacology and Therapeutics.'
+  supporting_citations: []
+description: Progressive non-alcoholic fatty liver disease (NAFLD) leads to liver
+  disease mortality through a well-established pathophysiological cascade. Simple
+  steatosis can progress to non-alcoholic steatohepatitis (NASH), characterized by
+  hepatocyte injury and inflammation. This chronic inflammatory state activates fibrogenic
+  pathways, leading to progressive fibrosis and eventually cirrhosis. Cirrhotic changes
+  result in portal hypertension, hepatic decompensation, and increased risk of hepatocellular
+  carcinoma, all contributing to liver-related mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: alcohol_consumption
+  direction: u_shaped
+  strength: moderate
+  description: Light-to-moderate alcohol consumption may modify the relationship between
+    progressive NAFLD and mortality outcomes, though the exact nature of this modification
+    is under investigation
+- name: fibrosis_stage
+  direction: strengthens
+  strength: strong
+  description: Higher fibrosis stages in progressive NAFLD are associated with greater
+    liver disease mortality risk

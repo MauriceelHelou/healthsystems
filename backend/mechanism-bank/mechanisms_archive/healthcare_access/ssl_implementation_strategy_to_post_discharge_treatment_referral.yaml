@@ -1,0 +1,43 @@
+id: ssl_implementation_strategy_to_post_discharge_treatment_referral
+name: Science to Service Laboratory (SSL) Implementation Strategy → Post-Discharge
+  AOD Treatment Referral
+from_node:
+  node_id: ssl_implementation_strategy
+  node_name: Science to Service Laboratory (SSL) Implementation Strategy
+to_node:
+  node_id: post_discharge_treatment_referral
+  node_name: Post-Discharge AOD Treatment Referral
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: SSL implementation strategy includes protocols for referring high-risk
+  adolescents to primary care providers or specialty services'
+- 'Step 2: Trauma center staff attempt to connect identified adolescents with continuation
+  of AOD discussions after discharge'
+- 'Step 3: Structural barriers in care transitions, insurance coverage, or community
+  service availability impede referral completion'
+- 'Step 4: Referral to treatment remains low despite implementation efforts, revealing
+  gaps in post-discharge care coordination infrastructure'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Michael J Mello et al. 2024. "Implementing Screening, Brief Interventions,
+    and Referral to Treatment at Pediatric Trauma Centers: A Step Wedge Cluster Randomized
+    Trial.." *Journal of pediatric surgery*. https://doi.org/10.1016/j.jpedsurg.2024.07.003'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.814547'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: community_treatment_infrastructure
+  direction: strengthens
+  strength: strong
+  description: Availability and accessibility of primary care providers and specialty
+    AOD services in the community likely moderates referral success
+- name: insurance_coverage
+  direction: strengthens
+  strength: strong
+  description: Adolescent insurance status and coverage for AOD services likely influences
+    ability to complete referrals

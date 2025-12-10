@@ -1,0 +1,58 @@
+id: NEW:pandemic_healthcare_service_restriction_to_neonatal_abstinence_syndrome_nas
+name: Pandemic-Related Healthcare Service Restrictions → Neonatal Abstinence Syndrome (NAS)
+from_node:
+  node_id: NEW:pandemic_healthcare_service_restriction
+  node_name: Pandemic-Related Healthcare Service Restrictions
+to_node:
+  node_id: neonatal_abstinence_syndrome_nas
+  node_name: Neonatal Abstinence Syndrome (NAS)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: COVID-19 pandemic prompts healthcare facilities to restrict services and patient populations'
+- 'Step 2: 33% of clinics that previously accepted pregnant patients stopped doing so during pandemic'
+- 'Step 3: Reduced treatment access leads to fewer pregnant individuals receiving OUD medication treatment'
+- 'Step 4: Untreated or undertreated OUD during pregnancy leads to continued opioid use'
+- 'Step 5: Prenatal opioid exposure increases risk of neonatal abstinence syndrome in newborns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Ashley C. Lensch et al. 2021. "Pregnant Patients Using Opioids: Treatment Access
+    Barriers in the Age of COVID-19." https://doi.org/10.1097/ADM.0000000000000826'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  doi: 10.1097/ADM.0000000000000826
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The COVID-19 pandemic caused a 33% reduction in buprenorphine clinics accepting pregnant
+  patients, from 66 clinics to 44 clinics in North Carolina. This reduction in treatment access for pregnant
+  individuals with OUD has downstream implications for neonatal outcomes including NAS.
+quantitative_effects:
+  effect_size:
+    value: 33.0
+    type: percentage_change
+  sample_size: 66
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: North Carolina specific; pandemic responses and treatment access varied substantially
+    across states
+moderators:
+- name: Pre-pandemic treatment access
+  direction: strengthens
+  strength: strong
+  description: Areas with already limited pre-pandemic access (48% clinic exclusion) experienced compounded
+    barriers
+structural_competency:
+  equity_implications: This mechanism demonstrates how external crises (pandemic) interact with pre-existing
+    structural barriers to amplify health inequities. The decision to exclude pregnant patients during
+    the pandemic reflects institutional prioritization that disadvantages vulnerable populations. The
+    downstream effects on infant health outcomes illustrate how structural barriers in maternal healthcare
+    propagate intergenerational health inequities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.203099'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

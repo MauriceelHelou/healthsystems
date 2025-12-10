@@ -1,0 +1,57 @@
+id: NEW:face_to_face_cbt_availability_to_alcohol_use_disorder
+name: Face-to-Face CBT Treatment Availability → Alcohol Use Disorder
+from_node:
+  node_id: NEW:face_to_face_cbt_availability
+  node_name: Face-to-Face CBT Treatment Availability
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Traditional face-to-face CBT requires physical presence at treatment facilities'
+- 'Step 2: In-person therapeutic alliance may enhance treatment engagement for some patients'
+- 'Step 3: Direct clinician observation allows real-time adjustment of treatment approach'
+- 'Step 4: CBT cognitive restructuring and behavioral strategies address drinking triggers and patterns'
+- 'Step 5: Successful treatment completion reduces AUD severity and maintains recovery'
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: 'Ji Eun Kim et al. 2025. "Comparative effectiveness of digital versus face-to-face
+    cognitive behavioral therapy for alcohol use disorder: a systematic review and meta-analysis.." https://doi.org/10.1017/S0033291725102043'
+  supporting_citations:
+  - Additional citations require full-text access - abstract indicates 25 RCTs were included
+  - Face-to-face CBT established as evidence-based treatment for AUD
+  - Individual RCT citations not provided in abstract
+  doi: 10.1017/S0033291725102043
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Face-to-face CBT is the traditional evidence-based delivery modality for AUD treatment. This
+  review compared its effectiveness to digital alternatives, acknowledging that access barriers limit
+  who can receive face-to-face treatment.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Face-to-face CBT availability varies significantly by region, with urban areas having
+    greater provider density than rural areas
+moderators:
+- name: mental_health_provider_density
+  direction: strengthens
+  strength: strong
+  description: Areas with more CBT-trained providers have greater access to face-to-face treatment
+- name: transportation_access
+  direction: strengthens
+  strength: moderate
+  description: Ability to travel to treatment facilities affects engagement with face-to-face CBT
+structural_competency:
+  equity_implications: Face-to-face treatment access is determined by structural factors including provider
+    workforce distribution, insurance coverage, transportation infrastructure, and work flexibility. The
+    study acknowledges 'access barriers' as a driver of digital CBT development, implicitly recognizing
+    that geographic and economic factors create inequitable access to evidence-based AUD treatment. Communities
+    with fewer treatment providers, limited public transit, and higher proportions of workers without
+    flexible schedules face structural disadvantages in accessing care.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.724344'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

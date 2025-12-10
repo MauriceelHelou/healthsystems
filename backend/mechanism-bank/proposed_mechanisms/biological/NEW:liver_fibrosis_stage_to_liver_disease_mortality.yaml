@@ -1,0 +1,47 @@
+id: NEW:liver_fibrosis_stage_to_liver_disease_mortality
+name: Liver Fibrosis Stage → Liver Disease Mortality
+from_node:
+  node_id: NEW:liver_fibrosis_stage
+  node_name: Liver Fibrosis Stage
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Progressive liver fibrosis leads to structural distortion of hepatic architecture
+  with increasing collagen deposition and nodule formation'
+- 'Step 2: Advanced fibrosis stages (F3-F4) result in impaired hepatic function including
+  reduced synthetic capacity, detoxification, and metabolic regulation'
+- 'Step 3: Progression to cirrhosis causes portal hypertension leading to complications
+  including variceal bleeding, ascites, and hepatic encephalopathy'
+- 'Step 4: These decompensation events and progressive hepatic failure contribute
+  directly to increased mortality from liver disease'
+evidence:
+  quality_rating: A
+  n_studies: 11
+  primary_citation: 'Freya A Rhodes et al. 2021. Systematic review: Investigating
+    the prognostic performance of four non-invasive tests in alcohol-related liver
+    disease. Journal of gastroenterology and hepatology.'
+  supporting_citations: []
+description: Liver fibrosis stage is established as the best predictor of mortality
+  in alcohol-related liver disease. This systematic review of 11 studies demonstrated
+  that non-invasive tests measuring fibrosis (FIB4, ELF, FibroScan, FibroTest) consistently
+  showed good prognostic performance for predicting mortality outcomes, with AUROC
+  values generally exceeding 0.7 across all test categories. The biological mechanism
+  reflects the progressive nature of liver fibrosis leading to cirrhosis, portal hypertension,
+  hepatic decompensation, and ultimately death from liver-related causes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Non-invasive test type
+  direction: strengthens
+  strength: moderate
+  description: ELF test showed highest prognostic performance (AUROC 0.72-0.85), followed
+    by FIB4 (0.64-0.83), FibroTest (0.69-0.79), and FibroScan (0.65-0.76) for predicting
+    mortality outcomes
+- name: Alcohol-related etiology
+  direction: strengthens
+  strength: moderate
+  description: The systematic review focused specifically on alcohol-related liver
+    disease where fibrosis stage is described as the best mortality predictor

@@ -1,0 +1,43 @@
+id: alcohol_associated_liver_disease_to_primary_liver_cancer_from_alcohol
+name: Alcohol-Associated Liver Disease (ALD) → Primary Liver Cancer from Alcohol
+from_node:
+  node_id: alcohol_associated_liver_disease
+  node_name: Alcohol-Associated Liver Disease (ALD)
+to_node:
+  node_id: primary_liver_cancer_from_alcohol
+  node_name: Primary Liver Cancer from Alcohol
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: ALD-induced cirrhosis creates a pro-carcinogenic liver microenvironment
+  with chronic inflammation and hepatocyte regeneration'
+- 'Step 2: Repeated cycles of cell injury and regeneration in cirrhotic liver tissue
+  lead to accumulation of genetic mutations and epigenetic changes'
+- 'Step 3: Transformed hepatocytes develop into hepatocellular carcinoma in the context
+  of ongoing alcohol exposure and cirrhotic architecture'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Pojsakorn Danpanichkul et al. 2024. "Increased mortality from
+    alcohol use disorder, alcohol‐associated liver disease, and liver cancer from
+    alcohol among older adults in the United States: 2000 to 2021." *Alcohol, clinical
+    & experimental research*. https://doi.org/10.1111/acer.15516'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.369190'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: age_over_70_years
+  direction: strengthens
+  strength: strong
+  description: Older adults show the steepest increase in liver cancer from alcohol
+    (APC 2.93%), suggesting cumulative exposure time and age-related biological factors
+    amplify cancer development from ALD
+- name: us_versus_global_context
+  direction: strengthens
+  strength: strong
+  description: US trends show increases while global trends decline, suggesting structural
+    and policy environments in the US create conditions that accelerate the ALD-to-cancer
+    progression

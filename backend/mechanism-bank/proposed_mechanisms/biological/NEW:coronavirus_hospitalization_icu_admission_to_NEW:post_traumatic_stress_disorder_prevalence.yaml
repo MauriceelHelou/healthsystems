@@ -1,0 +1,60 @@
+id: NEW:coronavirus_hospitalization_icu_admission_to_NEW:post_traumatic_stress_disorder_prevalence
+name: Severe Coronavirus Infection (SARS/MERS) Requiring Hospitalization or ICU →
+  Post-Traumatic Stress Disorder (PTSD)
+from_node:
+  node_id: NEW:coronavirus_hospitalization_icu_admission
+  node_name: Severe Coronavirus Infection (SARS/MERS) Requiring Hospitalization or
+    ICU
+to_node:
+  node_id: NEW:post_traumatic_stress_disorder_prevalence
+  node_name: Post-Traumatic Stress Disorder (PTSD)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Severe coronavirus infection (SARS/MERS) requiring hospitalization or ICU
+  admission exposes patients to life-threatening illness and acute respiratory distress'
+- 'Step 2: ICU admission involves traumatic medical experiences including invasive
+  procedures, mechanical ventilation, isolation, and fear of death'
+- 'Step 3: Prolonged hospitalization creates sustained psychological stress from uncertainty,
+  physical suffering, and social isolation'
+- 'Step 4: Neurobiological stress responses during critical illness may dysregulate
+  the hypothalamic-pituitary-adrenal axis and alter fear processing circuits'
+- 'Step 5: Post-discharge, survivors experience persistent intrusive memories, hypervigilance,
+  and avoidance behaviors characteristic of PTSD, with prevalence of 39% beyond 6
+  months'
+evidence:
+  quality_rating: A
+  n_studies: 28
+  primary_citation: 'H. Ahmed et al. 2020. Long-term clinical outcomes in survivors
+    of severe acute respiratory syndrome and Middle East respiratory syndrome coronavirus
+    outbreaks after hospitalisation or ICU admission: A systematic review and meta-analysis.
+    Journal of Rehabilitation Medicine.'
+  supporting_citations: []
+description: 'Systematic review and meta-analysis of 28 studies demonstrates that
+  survivors of severe SARS and MERS coronavirus infections requiring hospitalization
+  or ICU admission have a pooled PTSD prevalence of 39% (95% CI: 31-47%) at follow-up
+  beyond 6 months. This high prevalence reflects the traumatic nature of severe respiratory
+  illness, life-threatening experiences during hospitalization, and prolonged recovery
+  periods. The evidence suggests clinicians should anticipate similar long-term psychological
+  outcomes in COVID-19 survivors.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.39
+    type: prevalence
+    ci_lower: 0.31
+    ci_upper: 0.47
+  p_value: null
+  sample_size: null
+moderators:
+- name: Time since infection
+  direction: strengthens
+  strength: moderate
+  description: PTSD prevalence measured beyond 6 months post-discharge showed sustained
+    high rates (39%), suggesting persistent psychological sequelae
+- name: ICU admission severity
+  direction: strengthens
+  strength: moderate
+  description: More severe illness requiring ICU admission likely associated with
+    greater trauma exposure and subsequent PTSD risk

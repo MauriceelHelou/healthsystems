@@ -1,0 +1,44 @@
+id: surveillance_system_data_fragmentation_to_underdetection_housing_instability
+name: Surveillance System Data Fragmentation → Underdetection of Housing Instability
+from_node:
+  node_id: surveillance_system_data_fragmentation
+  node_name: Surveillance System Data Fragmentation
+to_node:
+  node_id: underdetection_housing_instability
+  node_name: Underdetection of Housing Instability
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Medicolegal death investigation systems operate independently from healthcare
+  electronic health record systems, creating data silos'
+- 'Step 2: SUDORS definitions rely on limited data sources (scene investigation, next-of-kin
+  interviews) that systematically miss housing status documented in clinical encounters'
+- 'Step 3: Healthcare billing codes, address data, and clinical notes contain rich
+  housing status information that remains inaccessible to public health surveillance'
+- 'Step 4: Fragmented data systems produce artificially low estimates of housing instability
+  prevalence (10.5% vs true 41.5%), distorting burden estimates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Daniel R Harris et al. 2024. "Housing instability increases for
+    stimulant-involved overdose deaths after linking surveillance data to electronic
+    health records in Kentucky.." *Drug and alcohol dependence*. https://doi.org/10.1016/j.drugalcdep.2024.112455
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.335875'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: safety_net_hospital_catchment_area
+  direction: strengthens
+  strength: strong
+  description: Proximity to and utilization of safety-net hospitals increased likelihood
+    of data linkage success, with 38.5% of catchment area overdoses linked compared
+    to 8.0% statewide
+- name: multiple_data_source_integration
+  direction: strengthens
+  strength: strong
+  description: Using structured administrative codes, semi-structured address data,
+    AND unstructured clinical notes (vs. SUDORS alone) increased detection nearly
+    4-fold

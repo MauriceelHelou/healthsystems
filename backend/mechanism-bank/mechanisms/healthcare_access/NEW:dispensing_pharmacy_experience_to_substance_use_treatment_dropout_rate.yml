@@ -1,0 +1,50 @@
+id: NEW:dispensing_pharmacy_experience_to_substance_use_treatment_dropout_rate
+name: Dispensing Pharmacy Experience Quality → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: NEW:dispensing_pharmacy_experience
+  node_name: Dispensing Pharmacy Experience Quality
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patient experiences at dispensing pharmacies shape perceptions of treatment'
+- 'Step 2: Positive pharmacy experiences (respectful treatment, privacy, convenience) support treatment
+  engagement'
+- 'Step 3: Negative pharmacy experiences (stigma, long waits, lack of privacy) create barriers to continued
+  engagement'
+- 'Step 4: Quality of pharmacy experience influences treatment retention and dropout rates'
+evidence:
+  quality_rating: A
+  n_studies: 47
+  primary_citation: 'Natalie Lowry et al. 2024. "Patient experience of opioid use disorder treatment medications:
+    a systematic review of contemporary qualitative research.." https://doi.org/10.1136/bmjopen-2024-088617'
+  supporting_citations:
+  - Studies published between 2005 and 2023 included in the systematic review
+  - Additional citations require full-text access
+  - 47 reports from qualitative and mixed methods studies
+  doi: 10.1136/bmjopen-2024-088617
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The systematic review identified experience of the dispensing pharmacy as a major theme,
+  with subthemes of attending and medication dispensing affecting patient engagement with treatment
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Pharmacy density and service quality likely vary by geographic location and urban/rural
+    settings
+moderators:
+- name: pharmacy_staff_training
+  direction: weakens
+  strength: moderate
+  description: Staff training in patient-centered care may reduce negative experiences
+structural_competency:
+  equity_implications: This mechanism identifies the healthcare delivery structure (pharmacy systems)
+    as a determinant of treatment outcomes rather than blaming patients for non-adherence. Structural
+    solutions include redesigning pharmacy services for patient-centered care.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.742962'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

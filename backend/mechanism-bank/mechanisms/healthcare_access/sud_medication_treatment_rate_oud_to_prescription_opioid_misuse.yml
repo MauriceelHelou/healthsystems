@@ -1,0 +1,55 @@
+id: sud_medication_treatment_rate_oud_to_prescription_opioid_misuse
+name: MOUD Treatment Receipt → Non-Medical Opioid Use
+from_node:
+  node_id: sud_medication_treatment_rate_oud
+  node_name: MOUD Treatment Receipt
+to_node:
+  node_id: prescription_opioid_misuse
+  node_name: Non-Medical Opioid Use
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Pharmacotherapies for OUD (methadone, buprenorphine, naltrexone) are evidence-based treatments
+  that reduce opioid cravings and withdrawal symptoms'
+- 'Step 2: Treatment engagement reduces non-medical opioid use through medication effects on opioid receptors'
+- 'Step 3: Study population was actively receiving MOUD, providing context for examining whether concurrent
+  cannabis use affects treatment outcomes'
+- 'Step 4: Cannabis use status does not appear to modify the relationship between MOUD receipt and opioid
+  use outcomes'
+evidence:
+  quality_rating: A
+  n_studies: 10
+  primary_citation: 'Gabriel P A Costa et al. 2024. "The impact of cannabis on non-medical opioid use
+    among individuals receiving pharmacotherapies for opioid use disorder: a systematic review and meta-analysis
+    of longitudinal studies." https://doi.org/10.1080/00952990.2023.2287406'
+  supporting_citations:
+  - Studies included patients on methadone maintenance (76.3% of sample)
+  - Buprenorphine treatment represented 21.3% of treatment modality
+  - Naltrexone treatment represented 2.4% of treatment modality
+  doi: 10.1080/00952990.2023.2287406
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study context establishes that among individuals receiving medications for opioid use
+  disorder (MOUD), cannabis use does not appear to negatively impact treatment outcomes related to non-medical
+  opioid use. This supports the protective effect of MOUD regardless of cannabis use status.
+quantitative_effects:
+  sample_size: 8367
+moderators:
+- name: Treatment modality type
+  direction: strengthens
+  strength: moderate
+  description: Different pharmacotherapies may have varying interactions with cannabis use; methadone
+    was most common (76.3%)
+structural_competency:
+  equity_implications: The finding that cannabis use does not undermine MOUD effectiveness has structural
+    implications for treatment access. Policy restrictions requiring cannabis abstinence for MOUD enrollment
+    create unnecessary barriers to care. Given that MOUD is a critical intervention for reducing opioid
+    overdose deaths, structural barriers that limit access disproportionately harm communities with high
+    overdose burden, often those facing intersecting inequities related to race, poverty, and healthcare
+    access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.447311'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

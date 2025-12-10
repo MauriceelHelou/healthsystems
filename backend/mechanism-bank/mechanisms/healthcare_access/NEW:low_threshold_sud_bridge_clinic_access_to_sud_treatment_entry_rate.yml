@@ -1,0 +1,56 @@
+id: NEW:low_threshold_sud_bridge_clinic_access_to_sud_treatment_entry_rate
+name: Low-Threshold SUD Bridge Clinic Access → SUD Treatment Entry Rate
+from_node:
+  node_id: NEW:low_threshold_sud_bridge_clinic_access
+  node_name: Low-Threshold SUD Bridge Clinic Access
+to_node:
+  node_id: sud_treatment_entry_rate
+  node_name: SUD Treatment Entry Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Low-threshold bridge clinics remove traditional barriers to SUD treatment (appointments, documentation,
+  abstinence requirements)'
+- 'Step 2: Same-day medication and treatment provision reduces time from help-seeking to treatment initiation'
+- 'Step 3: Harm reduction services integrated with clinical care engage patients who might otherwise avoid
+  traditional treatment'
+- 'Step 4: Successful connection to community-based treatment providers establishes ongoing care relationships'
+- 'Step 5: Increased treatment entry rates among previously underserved populations with SUD'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sarah K Casey et al. 2024. "Linkage to Care Outcomes Following Treatment in A Low-Threshold
+    Substance Use Disorder Bridge Clinic." https://doi.org/10.1177/29767342241261609
+  supporting_citations:
+  - Additional citations require full-text access - abstract references general literature on bridge clinic
+    models
+  - Additional citations require full-text access - abstract references harm reduction service literature
+  - Additional citations require full-text access - abstract references barriers to SUD treatment literature
+  doi: 10.1177/29767342241261609
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Low-threshold bridge clinics that provide same-day medication and treatment for SUD without
+  traditional barriers successfully connected 78% of patients to ongoing community-based SUD treatment,
+  demonstrating that reducing structural barriers to care entry improves treatment linkage.
+quantitative_effects:
+  effect_size:
+    value: 78.0
+    type: percentage_change
+  sample_size: 63
+moderators:
+- name: housing_status
+  direction: weakens
+  strength: moderate
+  description: 16% of participants were unhoused, which may affect treatment retention and follow-up outcomes
+structural_competency:
+  equity_implications: This mechanism highlights how traditional healthcare system barriers (appointments,
+    documentation requirements, abstinence mandates) structurally exclude people with SUD from treatment.
+    The bridge clinic model addresses these structural barriers rather than placing blame on individuals
+    for not engaging with treatment. The 16% unhoused population demonstrates the intersection of housing
+    instability and SUD treatment access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.775653'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

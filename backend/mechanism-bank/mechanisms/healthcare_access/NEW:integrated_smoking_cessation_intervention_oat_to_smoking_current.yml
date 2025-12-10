@@ -1,0 +1,67 @@
+id: NEW:integrated_smoking_cessation_intervention_oat_to_smoking_current
+name: Integrated Smoking Cessation Intervention at OAT Clinics → Current Smoking Status
+from_node:
+  node_id: NEW:integrated_smoking_cessation_intervention_oat
+  node_name: Integrated Smoking Cessation Intervention at OAT Clinics
+to_node:
+  node_id: smoking_current
+  node_name: Current Smoking Status
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Smoking cessation services are integrated into existing opioid agonist therapy (OAT) clinics
+  where patients already receive regular care'
+- 'Step 2: Integration reduces access barriers by providing services at familiar, trusted locations that
+  patients visit routinely'
+- 'Step 3: Free provision of smoking cessation medications and individualized choice of medication and
+  tapering regimen increases intervention acceptability'
+- 'Step 4: Regular weekly contact maintains engagement and provides ongoing support for behavior change'
+- 'Step 5: Reduced number of cigarettes smoked (from median 70 to 26 per week) among participants who
+  completed all visits'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Karl Trygve Druckrey-Fiskaaen et al. 2025. "Multimethod feasibility evaluation of
+    smoking cessation intervention for patients receiving opioid agonist therapy.." https://doi.org/10.1186/s40814-025-01717-2
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 85% smoking prevalence among OAT
+    patients
+  - Additional citations require full-text access - abstract references <10% quit rates with current interventions
+  - Additional citations require full-text access - abstract references significant impact of smoking-related
+    pulmonary diseases in this population
+  doi: 10.1186/s40814-025-01717-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Integration of smoking cessation services into OAT clinics reduced cigarette consumption
+  by more than half among patients who completed the 12-week intervention, though only 1 of 25 participants
+  achieved complete cessation
+quantitative_effects:
+  effect_size:
+    value: -62.9
+    type: percentage_change
+  sample_size: 25
+moderators:
+- name: intervention_completion
+  direction: strengthens
+  strength: strong
+  description: Participants who completed all 12 weeks showed greater reduction in cigarettes (70 to 26)
+    compared to overall cohort
+- name: medication_choice_autonomy
+  direction: strengthens
+  strength: moderate
+  description: Participants stressed that individual choice of smoking medication and tapering regimen
+    was important for acceptability
+structural_competency:
+  equity_implications: This mechanism addresses structural barriers to smoking cessation care for people
+    with opioid use disorder by integrating services into existing treatment infrastructure. The 85% smoking
+    prevalence among OAT patients reflects systemic failure to address tobacco use in addiction treatment
+    settings. The intervention model reduces stigma and access barriers by leveraging trusted relationships
+    and eliminating cost barriers. However, the low quit rate (4%) suggests that structural intervention
+    alone may be insufficient without addressing underlying social determinants that perpetuate tobacco
+    dependence in marginalized populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.192498'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

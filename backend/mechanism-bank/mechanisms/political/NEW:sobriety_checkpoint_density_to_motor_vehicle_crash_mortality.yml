@@ -1,0 +1,68 @@
+id: NEW:sobriety_checkpoint_density_to_motor_vehicle_crash_mortality
+name: Sobriety Checkpoint Density → Motor Vehicle Crash Mortality
+from_node:
+  node_id: NEW:sobriety_checkpoint_density
+  node_name: Sobriety Checkpoint Density
+to_node:
+  node_id: motor_vehicle_crash_mortality
+  node_name: Motor Vehicle Crash Mortality
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Increased sobriety checkpoint density in a geographic area creates deterrent effect on alcohol-impaired
+  driving'
+- 'Step 2: Reduced alcohol-impaired driving decreases proportion of drivers operating vehicles while intoxicated'
+- 'Step 3: Fewer intoxicated drivers on roadways reduces collision risk from impaired judgment, reaction
+  time, and motor control'
+- 'Step 4: Lower motor vehicle crashes result in reduced injuries and fatalities'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: C. Morrison et al. 2021. "The Geography of Sobriety Checkpoints and Alcohol-Impaired
+    Driving.." https://doi.org/10.1111/add.15766
+  supporting_citations:
+  - 'Abstract states: ''Sobriety checkpoints are an effective strategy to reduce alcohol-impaired driving,
+    motor vehicle crashes, injuries, and fatalities'''
+  - Additional citations require full-text access - established literature on checkpoint effectiveness
+    referenced
+  - Additional citations require full-text access - injury and fatality reduction evidence implied
+  doi: 10.1111/add.15766
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2022, source is 2021'
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study background establishes that sobriety checkpoints reduce motor vehicle crashes,
+  injuries, and fatalities through their deterrent effect on alcohol-impaired driving. The study's primary
+  finding of geographically bounded effects on impaired driving provides mechanistic evidence for understanding
+  the spatial reach of this public health intervention.
+quantitative_effects:
+  sample_size: 178464
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Based on the finding that checkpoint effects on impaired driving are geographically
+    bounded to local areas (~60,000 residents, ~3,000 roadway km), downstream effects on crashes and fatalities
+    would similarly vary by geography based on checkpoint distribution.
+moderators:
+- name: checkpoint_geographic_coverage
+  direction: strengthens
+  strength: moderate
+  description: Broader geographic distribution of checkpoints would extend protective effects across more
+    roadway kilometers and populations
+- name: checkpoint_frequency
+  direction: strengthens
+  strength: moderate
+  description: Given 1-week temporal decay of effects, more frequent checkpoint deployment would sustain
+    deterrent effects over time
+structural_competency:
+  equity_implications: This mechanism demonstrates how traffic safety enforcement operates as a structural
+    determinant of injury mortality. The geographic boundedness of effects raises equity concerns about
+    which communities receive protective checkpoint coverage. Rural areas with greater roadway distances
+    may require different intervention strategies. Resource allocation for traffic safety enforcement
+    reflects policy priorities that differentially affect population health across jurisdictions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.638273'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

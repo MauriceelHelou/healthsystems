@@ -1,0 +1,55 @@
+id: NEW:kratom_access_availability_to_opioid_use_disorder
+name: Kratom Access and Availability → Opioid Use Disorder
+from_node:
+  node_id: NEW:kratom_access_availability
+  node_name: Kratom Access and Availability
+to_node:
+  node_id: opioid_use_disorder
+  node_name: Opioid Use Disorder
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Kratom contains alkaloids (mitragynine, 7-hydroxymitragynine) that act as partial mu-opioid
+  receptor agonists'
+- 'Step 2: These compounds produce opioid-like effects that may reduce opioid craving and withdrawal symptoms'
+- 'Step 3: Individuals self-administer kratom as a substitute for more harmful opioids'
+- 'Step 4: Reduced reliance on illicit opioids decreases progression and severity of opioid use disorder'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: MeShell Green et al. 2024. "Kratom as a potential substance use disorder harm reduction
+    agent." https://doi.org/10.3389/fpubh.2024.1416689
+  supporting_citations:
+  - Historical use in Southeast Asia for opioid withdrawal management (described in review)
+  - Early preclinical studies on kratom pharmacology (referenced in abstract)
+  - Additional citations require full-text access
+  doi: 10.3389/fpubh.2024.1416689
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Kratom's pharmacological properties as a partial mu-opioid agonist suggest potential for
+  reducing opioid use disorder severity through substitution and withdrawal management, though evidence
+  remains preliminary
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Historically used in Southeast Asia for harm reduction; growing use in the US with
+    different regulatory context
+moderators:
+- name: regulation_status
+  direction: strengthens
+  strength: moderate
+  description: Limited regulation of kratom manufacturing and sale affects quality control and safety
+- name: access_to_conventional_treatment
+  direction: strengthens
+  strength: strong
+  description: Kratom use may be more prevalent among those lacking access to or reluctant to seek conventional
+    MAT
+structural_competency:
+  equity_implications: This mechanism highlights how barriers to conventional SUD treatment (stigma, access,
+    cost) may drive individuals toward unregulated alternatives like kratom. The lack of treatment access
+    is a structural issue rooted in healthcare system failures, not individual choice.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.126217'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

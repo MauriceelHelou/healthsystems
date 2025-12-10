@@ -1,0 +1,52 @@
+id: NEW:hepatitis_b_virus_infection_to_NEW:chronic_liver_disease
+name: Hepatitis B Virus Infection → Chronic Liver Disease
+from_node:
+  node_id: NEW:hepatitis_b_virus_infection
+  node_name: Hepatitis B Virus Infection
+to_node:
+  node_id: NEW:chronic_liver_disease
+  node_name: Chronic Liver Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hepatitis B virus (HBV) infects hepatocytes and establishes chronic infection
+  in a proportion of infected individuals'
+- 'Step 2: Persistent viral replication triggers ongoing hepatic inflammation and
+  immune-mediated liver cell damage'
+- 'Step 3: Repeated cycles of necroinflammation lead to progressive hepatic fibrosis'
+- 'Step 4: Advanced fibrosis progresses to cirrhosis and established chronic liver
+  disease'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'B. T. Tesfaye et al. 2021. Chronic Liver Disease in Ethiopia
+    with a Particular Focus on the Etiological Spectrums: A Systematic Review and
+    Meta-Analysis of Observational Studies. Canadian Journal of Gastroenterology and
+    Hepatology.'
+  supporting_citations: []
+description: Hepatitis B virus infection is the leading etiological cause of chronic
+  liver disease in Ethiopia, accounting for 40% of all CLD cases. The virus causes
+  persistent hepatic inflammation and progressive liver damage leading to fibrosis,
+  cirrhosis, and end-stage liver disease. Hospital mortality among CLD patients is
+  approximately 25%.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 40.0
+    type: prevalence_proportion
+    ci_lower: 29.0
+    ci_upper: 51.0
+  p_value: 0.001
+  sample_size: null
+moderators:
+- name: alcohol_consumption
+  direction: strengthens
+  strength: moderate
+  description: Alcohol is an independent contributor (17% of CLD cases) and may synergistically
+    worsen HBV-related liver damage
+- name: hepatitis_c_coinfection
+  direction: strengthens
+  strength: moderate
+  description: HCV accounts for 15% of CLD cases and coinfection may accelerate disease
+    progression

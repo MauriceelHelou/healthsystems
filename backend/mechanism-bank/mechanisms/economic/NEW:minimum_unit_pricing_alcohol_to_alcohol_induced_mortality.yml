@@ -1,0 +1,50 @@
+id: NEW:minimum_unit_pricing_alcohol_to_alcohol_induced_mortality
+name: Minimum Unit Pricing for Alcohol → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:minimum_unit_pricing_alcohol
+  node_name: Minimum Unit Pricing for Alcohol
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Minimum unit pricing establishes a price floor for alcohol based on alcohol content'
+- 'Step 2: Cheap high-strength alcohol products become relatively more expensive'
+- 'Step 3: Heavy drinkers who consume cheap high-strength products reduce consumption'
+- 'Step 4: Reduced consumption of harmful quantities decreases alcohol-induced mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Robin Room 2025. "Attractive but Harmful Commodities: Looking Across Unhealthy Commodities
+    to Improve Public Health Responses.." https://doi.org/10.1002/puh2.70117'
+  supporting_citations:
+  - Additional citations require full-text access - minimum unit pricing mentioned as successful control
+    measure
+  - Cross-commodity policy analysis referenced in abstract
+  - Case study examples of effective mechanisms cited
+  doi: 10.1002/puh2.70117
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Minimum unit pricing is identified as a successful control measure that reduces alcohol-related
+  harms by making cheap high-strength alcohol less affordable
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Paper explicitly identifies minimum unit pricing as a successful control measure that
+    might be more widely applied, suggesting geographic variation in current implementation
+moderators:
+- name: price_elasticity_by_drinking_level
+  direction: strengthens
+  strength: strong
+  description: Heavy drinkers consuming cheap products show greatest response to minimum pricing
+structural_competency:
+  equity_implications: Minimum unit pricing is a structural intervention that addresses the commercial
+    determinants of health. It recognizes that the alcohol industry strategically prices products to maximize
+    consumption, particularly among heavy drinkers and those with lower incomes. This policy approach
+    targets the commercial environment rather than individual behavior.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.227624'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

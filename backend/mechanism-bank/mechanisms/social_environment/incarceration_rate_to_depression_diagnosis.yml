@@ -1,0 +1,57 @@
+id: incarceration_rate_to_depression_diagnosis
+name: Incarceration Rate → Depression Diagnosis
+from_node:
+  node_id: incarceration_rate
+  node_name: Incarceration Rate
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Poverty and social marginalization in LMICs create conditions that both increase depression
+  risk and criminal justice contact'
+- 'Step 2: Incarceration disrupts social support networks, employment, and family connections'
+- 'Step 3: Prison conditions including overcrowding, violence, and isolation exacerbate depressive symptoms'
+- 'Step 4: Limited access to mental health treatment within LMIC prison systems prevents adequate care'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: 'Gergő Baranyi et al. 2019. "Severe mental illness and substance use disorders in
+    prisoners in low-income and middle-income countries: a systematic review and meta-analysis of prevalence
+    studies.." https://doi.org/10.1016/S2214-109X(18)30539-4'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis synthesizes 23 publications
+  - Global Burden of Diseases 2016 database provided general population comparison estimates
+  - Studies span 13 LMICs providing cross-national evidence
+  doi: 10.1016/S2214-109X(18)30539-4
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Major depression prevalence among prisoners in LMICs is 16.0% (95% CI 11.7-20.8), approximately
+  6 times higher than general populations, reflecting both selection effects and the depressogenic nature
+  of incarceration environments.
+quantitative_effects:
+  effect_size:
+    value: 6.0
+    type: relative_risk
+  sample_size: 14527
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Variations noted across LMIC regions with differing mental health infrastructure
+moderators:
+- name: prison_intake_status
+  direction: strengthens
+  strength: moderate
+  description: Higher prevalence observed at prison intake suggests pre-existing conditions are concentrated
+    among those entering the justice system
+structural_competency:
+  equity_implications: The elevated depression prevalence reflects structural violence - the concentration
+    of socially marginalized populations within carceral systems. Poverty, lack of mental health services,
+    and criminalization of survival behaviors funnel vulnerable individuals into prisons where conditions
+    worsen mental health. This is a policy failure, not individual pathology.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.462845'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

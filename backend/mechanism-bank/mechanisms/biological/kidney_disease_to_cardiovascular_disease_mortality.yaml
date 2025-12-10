@@ -1,0 +1,60 @@
+id: kidney_disease_to_cardiovascular_disease_mortality
+name: Chronic Kidney Disease (low eGFR or albuminuria) → Cardiovascular Mortality
+from_node:
+  node_id: kidney_disease
+  node_name: Chronic Kidney Disease (low eGFR or albuminuria)
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic kidney disease leads to reduced glomerular filtration rate (eGFR)
+  and/or increased albuminuria, indicating impaired kidney function and glomerular
+  barrier integrity'
+- 'Step 2: Reduced kidney function causes accumulation of uremic toxins, fluid retention,
+  electrolyte imbalances, and chronic inflammation that contribute to systemic vascular
+  damage'
+- 'Step 3: Albuminuria reflects endothelial dysfunction and increased vascular permeability,
+  serving as both a marker and mediator of systemic vascular disease'
+- 'Step 4: These pathophysiological changes accelerate atherosclerosis, promote left
+  ventricular hypertrophy, increase arterial stiffness, and contribute to arrhythmogenesis'
+- 'Step 5: The cumulative cardiovascular burden from these mechanisms increases the
+  risk of fatal cardiovascular events including myocardial infarction, stroke, heart
+  failure, and sudden cardiac death'
+evidence:
+  quality_rating: A
+  n_studies: 114
+  primary_citation: 'Morgan E. Grams et al. 2023. Estimated Glomerular Filtration
+    Rate, Albuminuria, and Adverse Outcomes: An Individual-Participant Data Meta-Analysis.
+    Journal of the American Medical Association (JAMA)'
+  supporting_citations: []
+description: This individual-participant data meta-analysis of 114 global cohorts
+  involving over 27 million individuals demonstrates that chronic kidney disease,
+  defined by either low eGFR or elevated albuminuria, is significantly associated
+  with increased cardiovascular mortality. Both lower eGFR (whether measured by creatinine
+  alone or creatinine plus cystatin C) and more severe albuminuria were independently
+  and significantly associated with higher cardiovascular mortality risk. These associations
+  were present even in the mildest categories of CKD, indicating that kidney dysfunction
+  across its spectrum contributes to cardiovascular mortality through multiple pathophysiological
+  mechanisms including uremic toxin accumulation, endothelial dysfunction, chronic
+  inflammation, and accelerated vascular disease.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: eGFR level
+  direction: strengthens
+  strength: strong
+  description: Lower eGFR categories are associated with progressively higher cardiovascular
+    mortality risk; associations significant even in mildest CKD categories (eGFR
+    45-59 mL/min/1.73 m²)
+- name: Albuminuria severity
+  direction: strengthens
+  strength: strong
+  description: Higher UACR levels are independently associated with increased cardiovascular
+    mortality risk, with graded associations across albuminuria categories
+- name: eGFR measurement method
+  direction: strengthens
+  strength: moderate
+  description: eGFR based on creatinine combined with cystatin C may provide more
+    accurate risk stratification than creatinine alone

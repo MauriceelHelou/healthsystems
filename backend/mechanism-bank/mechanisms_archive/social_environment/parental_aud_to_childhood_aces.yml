@@ -1,0 +1,104 @@
+id: parental_aud_to_childhood_aces
+name: Parental Alcohol Use Disorder → Childhood ACEs (Intergenerational)
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+  node_type: stock
+to_node:
+  node_id: childhood_adverse_experiences
+  node_name: Childhood Adverse Experiences (ACEs Score)
+  node_type: stock
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Parental AUD impairs parenting capacity through intoxication, preoccupation with substance
+  use, and emotional unavailability'
+- 'Step 2: Household chaos and unpredictability create emotionally unsafe environment (household dysfunction
+  ACE)'
+- 'Step 3: Economic instability from addiction-related job loss and spending increases household hardship
+  and neglect risk'
+- 'Step 4: Increased risk of emotional/physical abuse during intoxication and intimate partner violence
+  exposure'
+- 'Step 5: Children experience multiple ACE domains: household substance use, abuse, neglect, and often
+  parental separation/incarceration'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: 'Youngmi Kim et al.. 2019. "Adverse childhood experience patterns, major depressive
+    disorder, and substance use disorder in older adults" Aging & Mental Health. https://doi.org/10.1080/13607863.2019.1693974
+    (Cited: 90)'
+  supporting_citations:
+  - 'Dube, Shanta R., Robert F. Anda, Vincent J. Felitti, et al. 2001. "Growing up with parental alcohol
+    abuse: Exposure to childhood abuse, neglect, and household dysfunction." Child Abuse & Neglect 25(12):
+    1627-1640.'
+  - 'Jiang, Yi, Elizabeth M. Perry, and Arlene P. Hesser. 2010. "Suicide patterns and association with
+    predictors among Rhode Island public high school students: A latent class analysis." American Journal
+    of Public Health 100(9): 1701-1707.'
+  doi: 10.1007/s00406-005-0624-4
+  journal: European Archives of Psychiatry and Clinical Neuroscience
+  year: 2005
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: null
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '1.0'
+description: Parental alcohol use disorder substantially increases childhood adversity through impaired
+  parenting, household chaos, economic instability, and elevated risk of abuse and neglect, creating intergenerational
+  trauma transmission.
+moderators:
+- name: two_parent_household_stability
+  direction: weakens
+  strength: moderate
+  description: Non-drinking co-parent can buffer some parental AUD effects on children
+- name: parental_treatment_engagement
+  direction: weakens
+  strength: strong
+  description: Parent in recovery with family therapy involvement reduces child adversity exposure
+- name: extended_family_support
+  direction: weakens
+  strength: moderate
+  description: Involved grandparents or other relatives provide stability and protective relationships
+- name: poverty
+  direction: strengthens
+  strength: strong
+  description: Concurrent economic hardship amplifies parental AUD impact on child material and emotional
+    needs
+structural_competency:
+  root_cause_level: institutional
+  avoids_victim_blaming: true
+  equity_implications: The intergenerational transmission of trauma through parental addiction reflects
+    systematic failure to support families experiencing addiction. Rather than providing accessible treatment,
+    childcare, economic support, and family services, the response is often punitive child removal that
+    compounds trauma. Parents of color with addiction face disproportionate child welfare involvement
+    and termination of parental rights. The pathway from parent AUD to child ACEs is not inevitable but
+    reflects policy choices to criminalize and separate families rather than provide treatment and support.
+    High ACE rates in certain communities represent intergenerational accumulation of structural harm
+    including historical trauma, poverty, and treatment inaccessibility. Interrupting this cycle requires
+    family-centered treatment, economic support, home visiting programs, and addressing root causes that
+    generate parent addiction in the first place.
+assumptions:
+- Parental AUD measured during child-rearing years (child ages 0-18)
+- ACEs include the 10 standard categories from original ACE Study
+- Mechanism assumes limited access to family-centered treatment and support
+limitations:
+- Not all children of parents with AUD experience high ACEs; protective factors matter
+- Severity of parental AUD and co-occurring disorders affects child impact
+- Standard ACE measure may not capture full range of addiction-related adversities
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Child protective services involvement and family support access vary dramatically by
+    region and resource availability
+  relevant_geographies:
+  - Communities with family-centered addiction treatment show better child outcomes
+  - Areas with robust home visiting and parent support reduce ACE accumulation
+  - Regions with punitive child welfare approaches increase trauma from family separation
+  - Rural areas with treatment deserts leave families without intervention options
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

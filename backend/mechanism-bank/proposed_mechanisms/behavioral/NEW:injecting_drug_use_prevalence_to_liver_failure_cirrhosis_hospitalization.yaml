@@ -1,0 +1,60 @@
+id: NEW:injecting_drug_use_prevalence_to_liver_failure_cirrhosis_hospitalization
+name: Injecting Drug Use Prevalence → Liver Disease Hospitalization
+from_node:
+  node_id: NEW:injecting_drug_use_prevalence
+  node_name: Injecting Drug Use Prevalence
+to_node:
+  node_id: liver_failure_cirrhosis_hospitalization
+  node_name: Liver Disease Hospitalization
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Injecting drug use involves sharing of needles and drug preparation equipment,
+  creating direct blood-to-blood contact between users'
+- 'Step 2: Blood-borne hepatitis C virus (HCV) transmission occurs through contaminated
+  injection equipment, with HCV seroprevalence reaching 20% (95% CI 12%-30%) among
+  people who are homeless with injection drug use'
+- 'Step 3: Chronic HCV infection leads to progressive liver inflammation and hepatic
+  fibrosis, with F4 fibrosis (cirrhosis) prevalence of 7-16% in this population'
+- 'Step 4: Advanced liver fibrosis and cirrhosis result in liver decompensation requiring
+  hospitalization for complications including liver failure'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'A Hashim et al. 2021. Community-Based Assessment and Treatment
+    of Hepatitis C Virus-Related Liver Disease, Injecting Drug and Alcohol Use Amongst
+    People Who Are Homeless: A Systematic Review and Meta-Analysis. The International
+    journal on drug policy.'
+  supporting_citations: []
+description: Injecting drug use increases liver disease hospitalization primarily
+  through hepatitis C virus transmission via contaminated injection equipment. In
+  populations with high injecting drug use prevalence, HCV seroprevalence reaches
+  20%, leading to progressive liver fibrosis and cirrhosis (F4 fibrosis prevalence
+  7-16%). The pathway is exacerbated by concurrent alcohol use and barriers to HCV
+  treatment access, particularly among marginalized populations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.2
+    type: prevalence
+    ci_lower: 0.12
+    ci_upper: 0.3
+  p_value: null
+  sample_size: 13918
+moderators:
+- name: alcohol_use
+  direction: strengthens
+  strength: strong
+  description: Alcohol use prevalence of 59% (95% CI 20%-92%) in homeless populations
+    accelerates liver disease progression in those with HCV infection
+- name: housing_status
+  direction: strengthens
+  strength: moderate
+  description: Homelessness creates barriers to HCV treatment access, with community-based
+    interventions significantly improving linkage to care (p=0.04) and treatment outcomes
+- name: access_to_treatment
+  direction: weakens
+  strength: strong
+  description: Direct-acting antiviral treatment achieves 82-92% sustained virological
+    response rates, preventing progression to advanced liver disease when accessible

@@ -1,0 +1,60 @@
+id: NEW:chloroquine_treatment_covid19_to_all_cause_mortality_rate
+name: Chloroquine Treatment for COVID-19 → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:chloroquine_treatment_covid19
+  node_name: Chloroquine Treatment for COVID-19
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Chloroquine administered to COVID-19 patients based on theoretical antiviral properties'
+- 'Step 2: Drug has known cardiac toxicity profile similar to hydroxychloroquine'
+- 'Step 3: No demonstrated therapeutic benefit against SARS-CoV-2 infection in clinical trials'
+- 'Step 4: Potential for adverse events without offsetting clinical improvement'
+- 'Step 5: No mortality benefit observed, with wide confidence intervals due to limited data'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: C. Axfors et al. 2021. "Mortality outcomes with hydroxychloroquine and chloroquine
+    in COVID-19 from an international collaborative meta-analysis of randomized trials." https://doi.org/10.1038/s41467-021-22446-z
+  supporting_citations:
+  - RECOVERY Collaborative Group. Effect of hydroxychloroquine in hospitalized patients with Covid-19.
+    N Engl J Med.
+  - WHO SOLIDARITY Trial Consortium. Repurposed antiviral drugs for Covid-19. N Engl J Med.
+  - Additional citations require full-text access for identification of specific chloroquine RCTs
+  doi: 10.1038/s41467-021-22446-z
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis of 4 randomized controlled trials (307 patients) found no mortality benefit
+  from chloroquine treatment for COVID-19 (OR 1.77, 95% CI 0.15-21.13). The extremely wide confidence
+  intervals reflect the small evidence base and preclude definitive conclusions, though the point estimate
+  suggests potential harm.
+quantitative_effects:
+  effect_size:
+    value: 1.77
+    type: odds_ratio
+    ci_lower: 0.15
+    ci_upper: 21.13
+  sample_size: 307
+  heterogeneity_i_squared: 0.0
+moderators:
+- name: sample_size
+  direction: weakens
+  strength: strong
+  description: Very limited sample size (307 patients) results in imprecise estimates with extremely wide
+    confidence intervals
+structural_competency:
+  equity_implications: The limited evidence base for chloroquine reflects structural challenges in pandemic
+    research coordination. Different countries pursued different antimalarial drugs based on local availability
+    and regulatory environments. This fragmentation of research efforts across similar but not identical
+    interventions reduced statistical power to detect effects. The finding highlights how global health
+    infrastructure and research coordination systems affect the quality of evidence available for clinical
+    decision-making.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.880304'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

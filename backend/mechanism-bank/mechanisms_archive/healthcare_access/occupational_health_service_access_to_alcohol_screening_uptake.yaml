@@ -1,0 +1,47 @@
+id: occupational_health_service_access_to_alcohol_screening_uptake
+name: Occupational Health Service Access → Alcohol Screening Uptake
+from_node:
+  node_id: occupational_health_service_access
+  node_name: Occupational Health Service Access
+to_node:
+  node_id: alcohol_screening_uptake
+  node_name: Alcohol Screening Uptake
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Workplace-based health services are positioned as universally available
+  to all employees regardless of socioeconomic status or ethnicity'
+- 'Step 2: Integration of alcohol screening into comprehensive health checks (including
+  smoking, diet, physical activity) normalizes screening and reduces stigma'
+- 'Step 3: Online format provides convenience and perceived confidentiality (60% confident),
+  reducing barriers to participation'
+- 'Step 4: Embedding in workplace setting reaches working-age hazardous drinkers who
+  would not typically seek help through traditional healthcare channels'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Zarnie Khadjesari et al. 2015. "Online health check for reducing
+    alcohol intake among employees: a feasibility study in six workplaces across England.."
+    *PloS one*. https://doi.org/10.1371/journal.pone.0121174'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.302392'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: employment_sector
+  direction: varies
+  strength: weak
+  description: Participation varied across workplace types (local authorities, university,
+    hospital, petro-chemical company) though specific rates not provided
+- name: occupational_status
+  direction: strengthens
+  strength: strong
+  description: Higher participation among intermediate (58%) and higher managerial/professional
+    (39%) occupations compared to routine and manual workers (2%)
+- name: ethnic_background
+  direction: weakens
+  strength: strong
+  description: 94% of participants were White British, indicating structural barriers
+    to participation for ethnic minority employees

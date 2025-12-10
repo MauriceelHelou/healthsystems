@@ -1,0 +1,55 @@
+id: illicit_drug_use_past_month_to_suicide_rate
+name: Illicit Drug Use → Suicide Rate
+from_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use
+to_node:
+  node_id: suicide_rate
+  node_name: Suicide Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Illicit drug use leads to neurobiological changes including dysregulation
+  of neurotransmitter systems (dopamine, serotonin) that affect mood regulation and
+  impulse control'
+- 'Step 2: Acute intoxication and chronic use impair judgment, increase impulsivity,
+  and lower inhibitions against self-harm'
+- 'Step 3: Drug use contributes to social deterioration including relationship breakdown,
+  job loss, financial problems, and social isolation - all established suicide risk
+  factors'
+- 'Step 4: Pathological drug use (dependence/addiction) creates cycles of despair,
+  hopelessness, and psychological distress that elevate suicidal ideation'
+- 'Step 5: The combined neurobiological impairment, psychosocial stressors, and acute
+  intoxication states increase both suicidal ideation and the likelihood of acting
+  on suicidal thoughts, resulting in elevated suicide rates'
+evidence:
+  quality_rating: A
+  n_studies: 108
+  primary_citation: 'E. Breet et al. 2018. Substance use and suicidal ideation and
+    behaviour in low- and middle-income countries: a systematic review. BMC Public
+    Health.'
+  supporting_citations: []
+description: Systematic review of 108 studies demonstrates a consistent positive association
+  between illicit drug use and suicidal ideation and behavior across all substance
+  use dimensions and all suicidality dimensions in low- and middle-income countries.
+  The review identifies substance use as a potentially modifiable risk factor for
+  suicide, with the relationship mediated through neurobiological, psychological,
+  and social pathways.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: substance_use_dimension
+  direction: strengthens
+  strength: strong
+  description: Association present across all dimensions (intoxication, use, pathological
+    use), with pathological use showing strongest associations with suicidal behavior
+- name: suicidal_behavior_dimension
+  direction: strengthens
+  strength: moderate
+  description: Consistent positive association found across suicidal ideation, non-fatal
+    suicidal behavior, and completed suicide
+- name: income_level
+  direction: strengthens
+  strength: moderate
+  description: Association demonstrated in LMICs where 75% of global suicides occur,
+    suggesting context-dependent factors may amplify risk

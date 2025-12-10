@@ -1,0 +1,54 @@
+id: binge_drinking_to_NEW:dehydration_markers_during_heat_exposure
+name: Binge Drinking → Dehydration Markers During Heat Exposure
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:dehydration_markers_during_heat_exposure
+  node_name: Dehydration Markers During Heat Exposure
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: High-dose alcohol consumption has diuretic effects increasing urine output'
+- 'Step 2: Increased urine volume contributes to fluid loss and potential dehydration'
+- 'Step 3: Dehydration effects were only observed at higher alcohol doses, not moderate consumption'
+- 'Step 4: Typical markers (urine volume, mass loss, plasma volume) were not consistently altered at moderate
+  doses'
+evidence:
+  quality_rating: C
+  n_studies: 3
+  primary_citation: 'Nathan B. Morris et al. 2024. "The effect of alcohol consumption on human physiological
+    and perceptual responses to heat stress: a systematic scoping review." https://doi.org/10.1186/s12940-024-01113-y'
+  supporting_citations:
+  - 1 of 3 studies showed increased urine volume with alcohol
+  - 1 of 3 studies showed increased mass loss with alcohol
+  - 0 of 2 studies showed decreased plasma volume with alcohol
+  - Dehydration markers only consistently observed in study with highest alcohol dose
+  doi: 10.1186/s12940-024-01113-y
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Contrary to common assumptions, typical markers of dehydration (increased urine volume, mass
+  loss, decreased plasma volume) were not consistently observed with moderate alcohol consumption during
+  heat exposure. Only the study with the highest alcohol dose showed consistent dehydration effects, suggesting
+  a dose-dependent relationship.
+quantitative_effects:
+  sample_size: 93
+moderators:
+- name: alcohol_dose
+  direction: strengthens
+  strength: strong
+  description: Dehydration effects only observed at highest alcohol doses tested; moderate doses (average
+    0.68 g/kg) did not consistently produce dehydration markers
+structural_competency:
+  equity_implications: This finding has implications for public health messaging during heat events. Current
+    guidance often warns that alcohol causes dehydration and increases heat risk, but this evidence suggests
+    the relationship is dose-dependent. Structural factors influencing heavy alcohol consumption patterns,
+    including economic stress, limited recreational alternatives, and alcohol outlet density in vulnerable
+    communities, may be more relevant to heat-health outcomes than moderate consumption. Policy approaches
+    should address upstream determinants rather than individual drinking behavior alone.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.298559'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

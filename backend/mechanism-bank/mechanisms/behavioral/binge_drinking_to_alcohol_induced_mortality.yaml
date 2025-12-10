@@ -1,0 +1,61 @@
+id: binge_drinking_to_alcohol_induced_mortality
+name: Binge Drinking → Alcohol-Induced Mortality
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Binge drinking episodes expose the body to high blood alcohol concentrations
+  that cause acute organ stress, particularly to the liver'
+- 'Step 2: Repeated binge drinking leads to cumulative liver injury, elevated liver
+  biomarkers (e.g., GGT), and progressive liver fibrosis'
+- 'Step 3: Chronic binge drinking patterns increase risk of alcoholic liver disease,
+  alcohol-related emergency admissions, and alcohol use disorder'
+- 'Step 4: The combination of acute alcohol toxicity events and chronic organ damage
+  from repeated binge episodes leads to increased alcohol-induced mortality'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'R. Grucza et al. 2018. "Trends in Adult Alcohol Use and Binge
+    Drinking in the Early 21st‐Century United States: A Meta‐Analysis of 6 National
+    Survey Series." Alcoholism: Clinical and Experimental Research.'
+  supporting_citations:
+  - 'Mohsan Subhani et al. 2021. "Does Advice Based on Biomarkers of Liver Injury
+    or Non-Invasive Tests of Liver Fibrosis Impact High-Risk Drinking Behaviour: A
+    Systematic Review With Meta-analysis." Alcohol and alcoholism (Oxford, Oxfordshire).'
+description: Binge drinking directly increases alcohol-induced mortality through both
+  acute toxicity and cumulative organ damage. Meta-analyses of 6 national surveys
+  demonstrate that rising binge drinking prevalence (0.72% annual increase) correlates
+  with increases in alcoholic liver disease, alcohol-related emergency room admissions,
+  and alcohol use disorder. The mechanism operates through repeated high-dose alcohol
+  exposure causing progressive liver injury, as evidenced by elevated GGT levels that
+  decrease when drinking is reduced. Studies confirm higher alcohol-attributed mortality
+  in groups without intervention to reduce binge drinking.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.72
+    type: annual_percentage_increase
+    ci_lower: 0.46
+    ci_upper: 0.98
+  p_value: null
+  sample_size: 3763
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Binge drinking trends show substantial increases among middle-aged
+    (50-64) and older adults (65+), which may be driving increasing rates of alcohol-related
+    morbidity and mortality. Younger adults (18-29) show smaller, negative, or nonsignificant
+    trends.
+- name: biomarker_based_intervention
+  direction: weakens
+  strength: moderate
+  description: Advice based on liver biomarkers or non-invasive tests of liver fibrosis
+    significantly reduces harmful alcohol consumption and alcohol-related mortality
+    (mean reduction of 74.4 g/week alcohol intake)

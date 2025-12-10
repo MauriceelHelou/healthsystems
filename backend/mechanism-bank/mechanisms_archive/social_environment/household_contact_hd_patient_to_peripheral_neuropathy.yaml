@@ -1,0 +1,44 @@
+id: household_contact_hd_patient_to_peripheral_neuropathy
+name: Household Contact with Hansen's Disease Patient → Peripheral Neuropathy
+from_node:
+  node_id: household_contact_hd_patient
+  node_name: Household Contact with Hansen's Disease Patient
+to_node:
+  node_id: peripheral_neuropathy
+  node_name: Peripheral Neuropathy
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Household contacts (HHCs) of Hansen''s disease (HD) patients have 5-10
+  times higher risk of HD infection than general population due to close proximity
+  and prolonged exposure to Mycobacterium leprae'
+- 'Step 2: Mycobacterium leprae preferentially infects Schwann cells in peripheral
+  nerves, causing nerve inflammation and damage'
+- 'Step 3: Silent (subclinical) peripheral neuropathy develops with nerve thickening
+  and increased cross-sectional area detectable by high-resolution ultrasound before
+  clinical symptoms appear'
+- 'Step 4: Progressive nerve damage leads to asymmetric multiple mononeuropathy pattern
+  characteristic of HD neuropathy'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: G. Voltan et al. 2023. "Silent peripheral neuropathy determined
+    by high-resolution ultrasound among contacts of patients with Hansen's disease."
+    *Frontiers in Medicine*. https://doi.org/10.3389/fmed.2022.1059448
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.275868'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: household_proximity
+  direction: strengthens
+  strength: strong
+  description: Closer and more prolonged household contact with multibacillary (MB)
+    HD patients increases transmission risk and likelihood of developing neuropathy
+- name: diagnostic_technology_access
+  direction: strengthens
+  strength: moderate
+  description: Access to high-resolution ultrasound enables detection of silent neuropathy
+    that would be missed by traditional palpation examination

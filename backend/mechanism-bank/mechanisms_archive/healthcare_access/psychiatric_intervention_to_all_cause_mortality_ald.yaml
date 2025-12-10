@@ -1,0 +1,45 @@
+id: psychiatric_intervention_to_all_cause_mortality_ald
+name: Psychiatric Intervention (Consultation or Medication) → All-Cause Mortality
+  in ALD Patients
+from_node:
+  node_id: psychiatric_intervention
+  node_name: Psychiatric Intervention (Consultation or Medication)
+to_node:
+  node_id: all_cause_mortality_ald
+  node_name: All-Cause Mortality in ALD Patients
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Psychiatric intervention (consultation with psychiatrists or medication
+  for alcohol use disorder) addresses underlying mental health comorbidities in ALD
+  patients'
+- 'Step 2: Treatment of psychiatric comorbidities and alcohol use disorder reduces
+  harmful alcohol consumption patterns'
+- 'Step 3: Reduced alcohol exposure decreases progression of liver damage and improves
+  overall health status'
+- 'Step 4: Integrated medical-psychiatric management improves medication adherence
+  and health-seeking behaviors'
+- 'Step 5: Combined effects result in reduced all-cause mortality in ALD patients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Keungmo Yang et al. 2024. "The prognostic impact of psychiatric
+    intervention on alcohol-associated liver disease: The UK Biobank cohort study.."
+    *Clinical and molecular hepatology*. https://doi.org/10.3350/cmh.2024.0278'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.405600'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: propensity_score_matching
+  direction: strengthens
+  strength: strong
+  description: Analysis incorporated propensity score matching to precisely assess
+    impact, controlling for confounding factors and strengthening causal inference
+- name: psychiatric_comorbidity_presence
+  direction: strengthens
+  strength: moderate
+  description: Benefits observed specifically in ALD patients with psychiatric comorbidities,
+    suggesting intervention targets appropriate population

@@ -1,0 +1,91 @@
+id: paid_family_leave_policy_generosity_to_infant_mortality_rate
+name: Paid Family Leave Policy Generosity -> Infant Mortality Rate
+from_node:
+  node_id: paid_family_leave_policy_generosity
+  node_name: Paid Family Leave Policy Generosity
+  node_type: stock
+to_node:
+  node_id: infant_mortality_rate
+  node_name: Infant Mortality Rate
+  node_type: crisis_endpoint
+direction: negative
+category: political
+mechanism_pathway:
+  - "Step 1: State-level paid family leave policy provides wage replacement during postpartum period"
+  - "Step 2: Income security enables parents to take time off work without financial hardship"
+  - "Step 3: Extended parental presence supports breastfeeding initiation and duration"
+  - "Step 4: Breastfeeding provides immunological protection and optimal nutrition for infants"
+  - "Step 5: Parental bonding time enables early detection of infant illness and timely medical care"
+  - "Step 6: Reduced parental stress and improved mental health enhance quality of infant care"
+  - "Step 7: Cumulative protective effects reduce postneonatal mortality (deaths 28 days to 1 year)"
+evidence:
+  quality_rating: A
+  n_studies: 25
+  primary_citation: "Nandi, Arijit, et al. 2018. 'The Impact of Parental and Medical Leave Policies on Socioeconomic and Health Outcomes in OECD Countries: A Systematic Review of the Empirical Literature.' PLOS ONE 13(12): e0207329."
+  supporting_citations:
+    - "Stearns, Jenna. 2015. 'The Effects of Paid Maternity Leave: Evidence from Temporary Disability Insurance.' Journal of Health Economics 43: 85-102."
+    - "Rossin, Maya. 2011. 'The Effects of Maternity Leave on Children's Birth and Infant Health Outcomes in the United States.' Journal of Health Economics 30(2): 221-239."
+    - "Burtle, Adam, and Stephen Bezruchka. 2016. 'Population Health and Paid Parental Leave: What the United States Can Learn from Two Decades of Research.' Healthcare 4(2): 30."
+    - "Pihl, Ariel, and Gayle Bersich. 2020. 'The Impact of Paid Family Leave in the United States on Birth Outcomes and Mortality in the First Year of Life.' Health Services Research 55(5): 807-814."
+  doi: "10.1371/journal.pone.0207329"
+  journal: PLOS ONE
+  year: 2018
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 0.88
+    type: odds_ratio
+    ci_lower: 0.80
+    ci_upper: 0.97
+    ci_level: 95
+  secondary_effects:
+    - description: "10-week extension of paid leave reduces infant mortality by 2.5-3.4%"
+      value: -2.9
+      type: percentage_change
+      source: "OECD country analysis"
+    - description: "Postneonatal mortality shows greatest effect: 3.7-4.6% reduction"
+      value: -4.1
+      type: percentage_change
+      source: "OECD country analysis"
+  sample_size: 6000000
+  interpretation: "California paid family leave (vs unexposed states) reduced postneonatal mortality by 12% (aOR 0.88). A 10-week extension of paid leave reduces infant mortality by 2.5-3.4%, with postneonatal mortality showing strongest effects (3.7-4.6% reduction)."
+last_updated: "2025-12-01"
+version: "1.0"
+description: "State paid family leave policies reduce infant mortality through multiple pathways including extended breastfeeding, improved parental mental health, and enhanced infant care. Evidence from California shows a 12% reduction in postneonatal mortality after policy implementation, with OECD analyses showing 2.5-4.6% reductions per 10 weeks of paid leave."
+moderators:
+  - name: wage_replacement_rate
+    direction: strengthens
+    strength: moderate
+    description: "Higher wage replacement enables more workers to take leave"
+  - name: job_protection
+    direction: strengthens
+    strength: strong
+    description: "Job protection increases leave uptake among vulnerable workers"
+  - name: income_level
+    direction: weakens
+    strength: moderate
+    description: "Low-wage workers may not afford leave even with partial replacement"
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: "Paid family leave policies disproportionately benefit low-income and minority families who have highest infant mortality rates and lowest access to employer-provided leave. The US lack of universal paid leave contributes to infant mortality disparities compared to peer nations. States without paid leave see higher infant mortality, concentrated among working-class families."
+assumptions:
+  - "Effect sizes from California may not generalize to all state policy designs"
+  - "OECD cross-national comparisons control for relevant confounders"
+  - "Wage replacement rate and duration interact in determining uptake"
+limitations:
+  - "Limited US-based RCT evidence; relies on quasi-experimental designs"
+  - "Difficult to isolate leave effect from concurrent policy changes"
+  - "Self-selection into states with paid leave possible"
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: "Effects strongest where baseline infant mortality is high and where policy features include job protection and adequate wage replacement. Rural areas may see smaller effects due to limited healthcare access regardless of leave."
+  relevant_geographies:
+    - "California (first US state, studied extensively)"
+    - "New Jersey, Rhode Island (early adopters)"
+    - "Southern states without policies show higher baseline infant mortality"
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: "2025-12-01T00:00:00"
+  extraction_confidence: high
+  prompt_version: "1.0-discovery"

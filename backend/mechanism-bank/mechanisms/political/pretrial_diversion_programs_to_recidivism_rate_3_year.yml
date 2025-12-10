@@ -1,0 +1,74 @@
+id: pretrial_diversion_programs_to_recidivism_rate_3_year
+name: Pretrial Diversion Programs → Recidivism Rate (3-Year)
+from_node:
+  node_id: pretrial_diversion_programs
+  node_name: Pretrial Diversion Programs
+to_node:
+  node_id: recidivism_rate_3_year
+  node_name: Recidivism Rate (3-Year)
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Police-initiated diversion programs route low-risk youth away from formal court processing
+  toward alternative interventions'
+- 'Step 2: Reduced penetration into criminal justice system limits exposure to potentially criminogenic
+  environments and peer influences within the system'
+- 'Step 3: Avoidance of formal processing prevents labeling effects and stigmatization associated with
+  official delinquency records'
+- 'Step 4: Alternative interventions may address underlying psychosocial needs without the negative consequences
+  of system involvement'
+- 'Step 5: Reduced future delinquent behavior results from avoiding the harmful effects of deeper justice
+  system engagement'
+evidence:
+  quality_rating: A
+  n_studies: 19
+  primary_citation: 'David B. Wilson et al. 2018. "Police‐initiated diversion for youth to prevent future
+    delinquent behavior: a systematic review." https://doi.org/10.4073/csr.2018.5'
+  supporting_citations:
+  - Studies conducted 1973-2011 across USA (11 studies), Canada (4 studies), Australia (2 studies), and
+    UK (2 studies) - specific citations require full-text access
+  - 13 randomized controlled trials included in the systematic review - specific citations require full-text
+    access
+  - 6 quasi-experimental studies included in the systematic review - specific citations require full-text
+    access
+  doi: 10.4073/csr.2018.5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Police-led diversion of low-risk youth reduces future delinquent behavior compared to traditional
+  system processing. Assuming a 50% reoffending rate for traditional processing, diverted youth show approximately
+  44% reoffending rate - a 6 percentage point reduction. This effect held across 13 RCTs judged free from
+  obvious risks of bias.
+quantitative_effects:
+  effect_size:
+    value: 6.0
+    type: percentage_change
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies conducted across USA (11), Canada (4), Australia (2), and UK (2), suggesting
+    the finding generalizes across multiple Western justice system contexts
+moderators:
+- name: prior_justice_system_involvement
+  direction: weakens
+  strength: moderate
+  description: Findings specifically support diversion for low-risk youth with limited or no prior involvement
+    with the juvenile justice system
+- name: type_of_diversion_program
+  direction: strengthens
+  strength: weak
+  description: No meaningful differences were found across types of diversionary programs, suggesting
+    the effect is robust regardless of specific diversion approach
+structural_competency:
+  equity_implications: This mechanism highlights how criminal justice system structure itself can be criminogenic
+    - traditional processing may increase rather than decrease future delinquency through labeling, stigmatization,
+    and exposure to negative peer influences. The intervention operates at the system level rather than
+    blaming individual youth for their behavior. Policy implications focus on changing police and justice
+    system responses rather than individual-level interventions. Equity implications are significant as
+    youth of color are disproportionately processed through traditional justice channels, meaning they
+    may disproportionately experience the harmful effects of formal processing that diversion programs
+    can prevent.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.617625'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

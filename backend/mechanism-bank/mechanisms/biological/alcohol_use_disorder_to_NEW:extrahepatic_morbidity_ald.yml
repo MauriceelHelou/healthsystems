@@ -1,0 +1,52 @@
+id: alcohol_use_disorder_to_NEW:extrahepatic_morbidity_ald
+name: Alcohol Use Disorder → Extra-hepatic Morbidity in Alcohol-Related Liver Disease
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:extrahepatic_morbidity_ald
+  node_name: Extra-hepatic Morbidity in Alcohol-Related Liver Disease
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol use leads to alcohol-related liver disease'
+- 'Step 2: Alcohol exposure affects multiple organ systems beyond the liver simultaneously'
+- 'Step 3: Neurological damage (peripheral neuropathy, cognitive impairment)'
+- 'Step 4: Gastrointestinal complications (pancreatitis, gastritis)'
+- 'Step 5: Cumulative extra-hepatic organ damage increases overall morbidity burden'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'M. Theodoreson et al. 2023. "Extra‐hepatic morbidity and mortality in alcohol‐related
+    liver disease: Systematic review and meta‐analysis." https://doi.org/10.1111/liv.15526'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of extra-hepatic complications in ALD
+  - Studies on neurological and gastrointestinal complications in alcohol-related liver disease
+  - Primary research on multi-organ effects of chronic alcohol exposure
+  doi: 10.1111/liv.15526
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review demonstrates that patients with alcohol-related liver disease face
+  significant morbidity from conditions beyond the liver, including neurological, cardiovascular, and
+  gastrointestinal complications, due to the systemic toxic effects of chronic alcohol exposure.
+moderators:
+- name: duration_of_alcohol_use
+  direction: strengthens
+  strength: strong
+  description: Longer duration of heavy alcohol use increases cumulative multi-organ damage
+- name: access_to_alcohol_treatment
+  direction: weakens
+  strength: moderate
+  description: Early intervention and treatment access may reduce progression of extra-hepatic damage
+structural_competency:
+  equity_implications: 'Extra-hepatic morbidity in ALD represents a cascade of harm originating from structural
+    factors: alcohol industry marketing, inadequate regulation of alcohol pricing/availability, limited
+    addiction treatment infrastructure, and healthcare systems that fail to integrate liver and addiction
+    care. These burdens fall disproportionately on socioeconomically disadvantaged populations with higher
+    alcohol outlet density in their neighborhoods and fewer treatment resources.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.411288'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

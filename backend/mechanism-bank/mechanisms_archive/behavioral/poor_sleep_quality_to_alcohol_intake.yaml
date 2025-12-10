@@ -1,0 +1,46 @@
+id: poor_sleep_quality_to_alcohol_intake
+name: Poor Sleep Quality → Alcohol Intake
+from_node:
+  node_id: poor_sleep_quality
+  node_name: Poor Sleep Quality
+to_node:
+  node_id: alcohol_intake
+  node_name: Alcohol Intake
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Poor sleep quality produces daytime fatigue, irritability, and dysfunction
+  that impair daily functioning'
+- 'Step 2: Individuals experiencing sleep-related impairment may use alcohol as a
+  self-medication strategy to promote relaxation and sleep initiation'
+- 'Step 3: Alcohol intake increases as a compensatory mechanism to manage sleep difficulties
+  and associated daytime symptoms'
+- 'Step 4: This creates a cyclical pattern where alcohol use may further degrade sleep
+  architecture and perpetuate poor sleep quality'
+evidence:
+  quality_rating: C
+  n_studies: null
+  primary_citation: 'Kathy L Nelson et al. 2022. "Sleep quality: An evolutionary concept
+    analysis.." *Nursing forum*. https://doi.org/10.1111/nuf.12659'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.070207'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: healthcare_access_for_sleep_disorders
+  direction: weakens
+  strength: strong
+  description: Greater access to healthcare and evidence-based sleep interventions
+    reduces reliance on alcohol as self-medication for sleep difficulties
+- name: economic_stress
+  direction: strengthens
+  strength: moderate
+  description: Economic stressors that contribute to poor sleep may also increase
+    alcohol use as a coping mechanism, amplifying both pathways
+- name: alcohol_retail_density
+  direction: strengthens
+  strength: moderate
+  description: Higher neighborhood alcohol availability increases accessibility of
+    alcohol as a sleep aid strategy

@@ -1,0 +1,63 @@
+id: sud_treatment_facility_density_to_prenatal_substance_exposure
+name: SUD Treatment Facility Density → Prenatal Substance Exposure
+from_node:
+  node_id: sud_treatment_facility_density
+  node_name: SUD Treatment Facility Density
+to_node:
+  node_id: prenatal_substance_exposure
+  node_name: Prenatal Substance Exposure
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Limited number of buprenorphine treatment clinics exist in region (490 total in North Carolina)'
+- 'Step 2: Of responding clinics, only 34% accepted pregnant patients during pandemic'
+- 'Step 3: Geographic distribution creates treatment deserts for pregnant individuals with OUD'
+- 'Step 4: Inability to access medication treatment results in continued opioid use during pregnancy'
+- 'Step 5: Ongoing opioid use leads to prenatal substance exposure affecting fetal development'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Ashley C. Lensch et al. 2021. "Pregnant Patients Using Opioids: Treatment Access
+    Barriers in the Age of COVID-19." https://doi.org/10.1097/ADM.0000000000000826'
+  supporting_citations:
+  - SAMHSA treatment locator data used as sampling frame
+  - Additional citations require full-text access
+  - Additional citations require full-text access
+  doi: 10.1097/ADM.0000000000000826
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Low density of SUD treatment facilities accepting pregnant patients (only 34% during pandemic)
+  creates structural barriers to care that increase risk of prenatal substance exposure. Treatment service
+  limitations (45% prescribe naltrexone, 57% offer detoxification) further restrict therapeutic options.
+quantitative_effects:
+  effect_size:
+    value: 34.0
+    type: percentage_change
+  sample_size: 128
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study sampled every sixth clinic in North Carolina from SAMHSA locator; geographic
+    distribution of accepting clinics not detailed but likely creates rural-urban disparities
+moderators:
+- name: Detoxification availability
+  direction: weakens
+  strength: weak
+  description: Only 57% of accepting clinics offered detoxification with opioid agonists, further limiting
+    treatment options
+- name: Naltrexone prescribing
+  direction: weakens
+  strength: weak
+  description: Only 45% of accepting clinics prescribed naltrexone, limiting medication options for some
+    patients
+structural_competency:
+  equity_implications: This mechanism illustrates how healthcare infrastructure decisions at the policy
+    and institutional level determine access to evidence-based treatment for pregnant individuals with
+    OUD. The structural exclusion of pregnant patients from OUD treatment represents a systemic failure
+    that leads to preventable prenatal exposures and adverse birth outcomes. Policy interventions requiring
+    treatment facilities to serve pregnant populations would address this structural barrier.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.204262'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

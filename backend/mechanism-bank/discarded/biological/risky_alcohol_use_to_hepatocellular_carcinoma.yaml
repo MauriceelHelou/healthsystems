@@ -1,0 +1,41 @@
+id: risky_alcohol_use_to_hepatocellular_carcinoma
+name: Risky Alcohol Use → Hepatocellular Carcinoma
+from_node:
+  node_id: risky_alcohol_use
+  node_name: Risky Alcohol Use
+to_node:
+  node_id: hepatocellular_carcinoma
+  node_name: Hepatocellular Carcinoma
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Combined alcohol and HCV exposure creates chronic hepatic inflammation
+  and cirrhotic environment'
+- 'Step 2: Alcohol-induced oxidative stress generates DNA damage and promotes mutagenesis
+  in hepatocytes'
+- 'Step 3: Cirrhotic liver provides pro-carcinogenic milieu with altered growth factor
+  signaling'
+- 'Step 4: Dysplastic nodules undergo malignant transformation to hepatocellular carcinoma'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Paul J Clark et al. 2024. "Alcohol does not impact chronic hepatitis
+    C treatment outcomes but increases risk for progressive liver disease: Findings
+    from a prospective multicentre Australian study (OPERA-C)." *Drug and alcohol
+    review*. https://doi.org/10.1111/dar.13914'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.409780'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: cirrhosis_presence
+  direction: strengthens
+  strength: strong
+  description: Given the high prevalence of cirrhosis in risky alcohol users (45.1%),
+    cirrhosis likely serves as an intermediate step that substantially increases HCC
+    risk
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/risky_alcohol_use_to_hepatocellular_carcinoma.yaml
+_category: biological

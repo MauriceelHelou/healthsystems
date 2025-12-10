@@ -1,0 +1,52 @@
+id: NEW:maternal_low_hemoglobin_to_low_birthweight_rate
+name: Maternal Low Hemoglobin Concentration (<110 g/L) → Low Birthweight Rate
+from_node:
+  node_id: NEW:maternal_low_hemoglobin
+  node_name: Maternal Low Hemoglobin Concentration (<110 g/L)
+to_node:
+  node_id: low_birthweight_rate
+  node_name: Low Birthweight Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Low maternal hemoglobin (<110 g/L) reduces oxygen-carrying capacity of
+  maternal blood'
+- 'Step 2: Decreased oxygen delivery to placenta impairs placental function and nutrient
+  transfer'
+- 'Step 3: Reduced oxygen and nutrient supply to fetus restricts fetal growth'
+- 'Step 4: Chronic fetal hypoxia and nutrient restriction results in low birthweight
+  (<2500g)'
+evidence:
+  quality_rating: A
+  n_studies: 148
+  primary_citation: 'M. Young et al. 2023. Maternal low and high hemoglobin concentrations
+    and associations with adverse maternal and infant health outcomes: an updated
+    global systematic review and meta-analysis. BMC Pregnancy and Childbirth.'
+  supporting_citations: []
+description: 'Low maternal hemoglobin concentration (<110 g/L) during pregnancy is
+  significantly associated with increased risk of low birthweight. This meta-analysis
+  of 148 studies found an OR of 1.28 (95% CI: 1.22-1.35) for LBW, with even stronger
+  effects for very low birthweight (OR 2.15). The biological mechanism involves reduced
+  oxygen-carrying capacity leading to fetal hypoxia and growth restriction. Effects
+  are stronger when anemia occurs earlier in pregnancy and with more severe anemia.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.28
+    type: odds_ratio
+    ci_lower: 1.22
+    ci_upper: 1.35
+  p_value: null
+  sample_size: null
+moderators:
+- name: timing_of_hemoglobin_assessment
+  direction: strengthens
+  strength: moderate
+  description: Stronger associations noted earlier in pregnancy for low Hb and adverse
+    birth outcomes
+- name: severity_of_anemia
+  direction: strengthens
+  strength: strong
+  description: Lower Hb cutoffs were associated with greater odds of poor outcomes;
+    very low birthweight (VLBW) showed OR of 2.15 (1.47-3.13)

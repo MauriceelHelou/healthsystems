@@ -1,0 +1,57 @@
+id: NEW:phenobarbital_treatment_aws_to_NEW:intubation_rate_aws
+name: Phenobarbital Treatment for Alcohol Withdrawal Syndrome → Intubation Rate in
+  AWS Patients
+from_node:
+  node_id: NEW:phenobarbital_treatment_aws
+  node_name: Phenobarbital Treatment for Alcohol Withdrawal Syndrome
+to_node:
+  node_id: NEW:intubation_rate_aws
+  node_name: Intubation Rate in AWS Patients
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with chronic/heavy alcohol consumption develop Alcohol Withdrawal
+  Syndrome (AWS) requiring medical intervention in ED/ICU settings'
+- 'Step 2: Phenobarbital is administered as treatment for AWS, acting on GABA receptors
+  with a longer half-life and different pharmacological profile than benzodiazepines'
+- 'Step 3: Phenobarbital''s mechanism of action provides CNS depression and anticonvulsant
+  effects, potentially offering smoother withdrawal management'
+- 'Step 4: Treatment aims to reduce severe AWS complications including respiratory
+  failure requiring intubation'
+- 'Step 5: Meta-analysis shows phenobarbital associated with numerically lower (but
+  not statistically significant) intubation rates compared to standard benzodiazepine
+  treatment (RR 0.70)'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Ali Pourmand et al. 2023. Evaluation of phenobarbital based approach
+    in treating patient with alcohol withdrawal syndrome: A systematic review and
+    meta-analysis. The American journal of emergency medicine.'
+  supporting_citations: []
+description: This meta-analysis of 12 studies (1934 patients) examined whether phenobarbital
+  treatment for Alcohol Withdrawal Syndrome affects intubation rates compared to benzodiazepine
+  treatment. Results showed a non-significant trend toward lower intubation risk with
+  phenobarbital (RR 0.70, 95% CI 0.36-1.38, P=0.31). While the point estimate suggests
+  a 30% relative reduction in intubation risk, the wide confidence interval crossing
+  1.0 indicates uncertainty about the true effect. The negative direction is supported
+  by the point estimate but not statistically confirmed.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.7
+    type: relative_risk
+    ci_lower: 0.36
+    ci_upper: 1.38
+  p_value: 0.31
+  sample_size: 1934
+moderators:
+- name: Treatment setting (ED vs ICU)
+  direction: strengthens
+  strength: weak
+  description: Both ED and ICU settings were included; effect may vary by acuity of
+    care setting
+- name: Study design
+  direction: weakens
+  strength: moderate
+  description: Mostly observational studies included, limiting causal inference strength

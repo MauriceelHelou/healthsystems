@@ -1,0 +1,43 @@
+id: cesarean_delivery_rate_to_alcohol_use_disorder
+name: Cesarean Delivery Rate → Alcohol Use Disorder
+from_node:
+  node_id: cesarean_delivery_rate
+  node_name: Cesarean Delivery Rate
+  _original_id: care_delivery_interventions
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+  _original_id: alcohol_use_outcomes
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Care delivery interventions modify treatment structures to increase pharmacotherapy
+  access'
+- 'Step 2: Increased pharmacotherapy receipt provides patients with evidence-based
+  medication treatment'
+- 'Step 3: Medication treatment affects neurobiological pathways related to alcohol
+  dependence and craving'
+- 'Step 4: Changes in alcohol consumption patterns result from pharmacological and
+  care delivery effects'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Emily C Williams et al. 2019. "Strategies to increase implementation
+    of pharmacotherapy for alcohol use disorders: a structured review of care delivery
+    and implementation interventions.." *Addiction science & clinical practice*. https://doi.org/10.1186/s13722-019-0134-8'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.686737'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: medication_receipt
+  direction: strengthens
+  strength: strong
+  description: Only one of three care delivery interventions that increased medication
+    receipt also improved alcohol use outcomes, suggesting medication receipt alone
+    is insufficient
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/care_delivery_interventions_to_alcohol_use_outcomes.yaml
+_category: healthcare_access

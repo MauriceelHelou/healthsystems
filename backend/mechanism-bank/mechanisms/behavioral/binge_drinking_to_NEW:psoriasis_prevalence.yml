@@ -1,0 +1,57 @@
+id: binge_drinking_to_NEW:psoriasis_prevalence
+name: Binge Drinking - Heavy Consumption (>45g/day) → Psoriasis Prevalence
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking - Heavy Consumption (>45g/day)
+to_node:
+  node_id: NEW:psoriasis_prevalence
+  node_name: Psoriasis Prevalence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Heavy alcohol consumption (>45g/day, equivalent to 3.2 drinks) creates sustained metabolic
+  and inflammatory burden'
+- 'Step 2: Chronic heavy drinking impairs liver function and increases circulating inflammatory mediators'
+- 'Step 3: Dose-dependent immune dysregulation accelerates T-cell mediated skin inflammation'
+- 'Step 4: Higher alcohol doses produce more pronounced psoriatic disease manifestations'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'Jeeyu Choi et al. 2024. "Dose‐response analysis between alcohol consumption and psoriasis:
+    A systematic review and meta‐analysis." https://doi.org/10.1111/ddg.15380'
+  supporting_citations:
+  - Dose-response analysis based on 8 studies (3 cohort, 5 case-control)
+  - Additional citations require full-text access
+  - Total meta-analysis included 48 studies with 1,702,847 individuals
+  doi: 10.1111/ddg.15380
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Dose-response meta-analysis of 8 studies demonstrating that each additional gram of daily
+  alcohol intake increases psoriasis odds by 4%. The association becomes more prominent at consumption
+  levels exceeding 45g/day, establishing a clear dose-response gradient between alcohol consumption and
+  psoriasis risk.
+quantitative_effects:
+  effect_size:
+    value: 1.04
+    type: odds_ratio
+  sample_size: 1702847
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Dose-response analysis conducted across studies from multiple countries
+moderators:
+- name: consumption_threshold
+  direction: strengthens
+  strength: strong
+  description: Association more prominent above 45g/day threshold (approximately 3.2 alcoholic drink equivalent)
+structural_competency:
+  equity_implications: Heavy alcohol consumption patterns are not randomly distributed but cluster in
+    communities experiencing economic deprivation, limited recreational opportunities, high alcohol outlet
+    density, and weak alcohol control policies. Structural interventions targeting alcohol pricing, availability,
+    and marketing can reduce population-level heavy consumption, potentially reducing alcohol-related
+    inflammatory disease burden including psoriasis.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.308265'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

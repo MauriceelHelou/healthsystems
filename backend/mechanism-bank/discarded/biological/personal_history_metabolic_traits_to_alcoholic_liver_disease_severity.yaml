@@ -1,0 +1,47 @@
+id: personal_history_metabolic_traits_to_alcoholic_liver_disease_severity
+name: Personal History of Metabolic Traits (Diabetes, Hypertension, Obesity) → Alcoholic
+  Liver Disease Severity
+from_node:
+  node_id: personal_history_metabolic_traits
+  node_name: Personal History of Metabolic Traits (Diabetes, Hypertension, Obesity)
+to_node:
+  node_id: alcoholic_liver_disease_severity
+  node_name: Alcoholic Liver Disease Severity
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Pre-existing metabolic traits (diabetes, hypertension, obesity) create
+  baseline metabolic dysfunction and inflammatory state in the liver'
+- 'Step 2: Alcohol exposure in metabolically compromised individuals produces synergistic
+  hepatotoxic effects through increased oxidative stress and impaired hepatic regeneration'
+- 'Step 3: Combined metabolic and alcohol-induced stress leads to earlier onset and
+  more severe liver damage even with smaller quantities and shorter duration of alcohol
+  exposure'
+- 'Step 4: Progressive liver injury occurs more rapidly due to compounded metabolic
+  and toxic insults'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Bhadoria et al. 2019. "Personal or family history of metabolic
+    traits predispose to higher hepatotoxic effects of alcohol." *Journal of Family
+    Medicine and Primary Care*. https://doi.org/10.4103/jfmpc.jfmpc_439_19
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.874855'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_quantity
+  direction: strengthens
+  strength: moderate
+  description: Higher alcohol consumption amplifies hepatotoxic effects in those with
+    metabolic traits, though damage occurs even at lower quantities
+- name: duration_of_exposure
+  direction: strengthens
+  strength: moderate
+  description: Liver damage occurs earlier in disease course (shorter duration) among
+    those with metabolic traits compared to those without
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/personal_history_metabolic_traits_to_alcoholic_liver_disease_severity.yaml
+_category: biological

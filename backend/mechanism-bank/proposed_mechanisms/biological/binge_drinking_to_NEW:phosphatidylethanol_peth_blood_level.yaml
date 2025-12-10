@@ -1,0 +1,55 @@
+id: binge_drinking_to_NEW:phosphatidylethanol_peth_blood_level
+name: Chronic Heavy Alcohol Use → Phosphatidylethanol (PEth) Blood Level
+from_node:
+  node_id: binge_drinking
+  node_name: Chronic Heavy Alcohol Use
+to_node:
+  node_id: NEW:phosphatidylethanol_peth_blood_level
+  node_name: Phosphatidylethanol (PEth) Blood Level
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic heavy alcohol consumption results in sustained presence of ethanol
+  in the bloodstream'
+- 'Step 2: Ethanol reacts with phosphatidylcholine in cell membranes via phospholipase
+  D enzyme, forming phosphatidylethanol (PEth) as a direct metabolite'
+- 'Step 3: PEth accumulates in red blood cell membranes due to its long half-life
+  (approximately 4 weeks), serving as a cumulative biomarker'
+- 'Step 4: Higher alcohol intake (>60 g/day) results in significantly elevated PEth
+  concentrations (mean 3.897 μM) compared to social drinkers (mean 0.288 μM)'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'G. Viel et al. 2012. Phosphatidylethanol in Blood as a Marker
+    of Chronic Alcohol Use: A Systematic Review and Meta-Analysis. International Journal
+    of Molecular Sciences.'
+  supporting_citations: []
+description: Phosphatidylethanol (PEth) is formed directly from the reaction between
+  ethanol and phosphatidylcholine catalyzed by phospholipase D. This systematic review
+  and meta-analysis of 12 studies demonstrates that PEth concentrations are significantly
+  elevated in chronic heavy drinkers compared to social drinkers, with heavy drinkers
+  showing mean concentrations of 3.897 μM versus 0.288 μM in social drinkers. PEth
+  accumulates in red blood cell membranes and has a long half-life, making it an effective
+  biomarker for detecting chronic heavy alcohol consumption and potentially binge
+  drinking behaviors.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.897
+    type: mean_difference
+    ci_lower: 2.404
+    ci_upper: 5.391
+  p_value: null
+  sample_size: null
+moderators:
+- name: daily_alcohol_intake
+  direction: strengthens
+  strength: strong
+  description: Heavy drinkers (>60 g/day) show approximately 13.5-fold higher PEth
+    concentrations compared to social drinkers (≤60 g/day)
+- name: binge_drinking_pattern
+  direction: strengthens
+  strength: moderate
+  description: Evidence suggests PEth may have utility for identifying binge drinking
+    behaviors specifically

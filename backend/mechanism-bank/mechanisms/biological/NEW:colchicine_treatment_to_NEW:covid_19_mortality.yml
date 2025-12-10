@@ -1,0 +1,47 @@
+id: NEW:colchicine_treatment_to_NEW:covid_19_mortality
+name: Colchicine Treatment → COVID-19 Mortality
+from_node:
+  node_id: NEW:colchicine_treatment
+  node_name: Colchicine Treatment
+to_node:
+  node_id: NEW:covid_19_mortality
+  node_name: COVID-19 Mortality
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Colchicine treatment initiated in COVID-19 patients'
+- 'Step 2: Anti-inflammatory effects reduce lung inflammation and ARDS progression'
+- 'Step 3: Prevention of multi-organ failure associated with severe COVID-19'
+- 'Step 4: Reduced mortality from COVID-19 infection'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'T. Hariyanto et al. 2021. "Colchicine treatment can improve outcomes of coronavirus
+    disease 2019 (COVID‐19): A systematic review and meta‐analysis." https://doi.org/10.1111/1440-1681.13488'
+  supporting_citations:
+  - Additional citations require full-text access - mortality subgroup analysis from 8 included studies
+  doi: 10.1111/1440-1681.13488
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Subgroup analysis shows colchicine treatment is associated with reduced COVID-19 mortality
+  (OR 0.43, 95% CI 0.32-0.58, p<0.00001, I²=0%)
+quantitative_effects:
+  effect_size:
+    value: 0.43
+    type: odds_ratio
+    ci_lower: 0.32
+    ci_upper: 0.58
+  p_value: 1.0e-05
+  sample_size: 5778
+  heterogeneity_i_squared: 0.0
+structural_competency:
+  equity_implications: COVID-19 mortality has shown significant disparities by race, socioeconomic status,
+    and geography. Access to evidence-based treatments like colchicine may be influenced by healthcare
+    infrastructure, insurance status, and proximity to well-resourced medical facilities. Structural inequities
+    in healthcare access could lead to differential mortality benefits from this treatment.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.874194'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

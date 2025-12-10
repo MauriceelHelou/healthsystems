@@ -1,0 +1,52 @@
+id: NEW:digital_health_intervention_access_to_NEW:drinking_days_per_week
+name: Digital Health Intervention Access → Drinking Days Per Week
+from_node:
+  node_id: NEW:digital_health_intervention_access
+  node_name: Digital Health Intervention Access
+to_node:
+  node_id: NEW:drinking_days_per_week
+  node_name: Drinking Days Per Week
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital interventions provide continuous availability of support and reminders'
+- 'Step 2: Users can access motivational content and coping strategies in real-time when facing triggers'
+- 'Step 3: Tracking features increase accountability and awareness of drinking frequency patterns'
+- 'Step 4: Reduced number of days per week when alcohol is consumed'
+evidence:
+  quality_rating: A
+  n_studies: 20
+  primary_citation: 'Ivneet Sohi et al. 2023. "Digital interventions for reducing alcohol use in general
+    populations: An updated systematic review and meta-analysis.." https://doi.org/10.1111/acer.15175'
+  supporting_citations:
+  - 2017 systematic review baseline referenced
+  - 35 additional studies from 2017-2022 search
+  - Additional citations require full-text access
+  doi: 10.1111/acer.15175
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Digital interventions reduce drinking frequency by 0.17 fewer drinking days per week (95%
+  CI: 0.06-0.29) compared to control conditions. While a modest effect, at population scale this represents
+  meaningful reduction in alcohol exposure frequency.'
+quantitative_effects:
+  effect_size:
+    value: -0.17
+    type: standardized_mean_difference
+    ci_lower: 0.06
+    ci_upper: 0.29
+moderators:
+- name: student_population
+  direction: strengthens
+  strength: moderate
+  description: Significant reductions in drinking frequency observed among students
+structural_competency:
+  equity_implications: Reducing drinking frequency has downstream effects on health and social outcomes.
+    Digital interventions provide a structural solution by creating ubiquitous access to support that
+    operates outside traditional healthcare hours and locations. This addresses time-based barriers to
+    care that disproportionately affect working populations.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.259645'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

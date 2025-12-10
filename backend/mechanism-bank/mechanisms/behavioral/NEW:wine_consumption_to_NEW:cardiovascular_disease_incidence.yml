@@ -1,0 +1,61 @@
+id: NEW:wine_consumption_to_NEW:cardiovascular_disease_incidence
+name: Wine Consumption → Cardiovascular Disease Incidence
+from_node:
+  node_id: NEW:wine_consumption
+  node_name: Wine Consumption
+to_node:
+  node_id: NEW:cardiovascular_disease_incidence
+  node_name: Cardiovascular Disease Incidence
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Wine consumption provides polyphenolic compounds with cardioprotective properties'
+- 'Step 2: These compounds improve lipid profiles by increasing HDL cholesterol and reducing LDL oxidation'
+- 'Step 3: Anti-inflammatory effects reduce chronic low-grade inflammation associated with CVD development'
+- 'Step 4: Improved endothelial function and reduced platelet aggregation decrease CVD incidence'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Maribel Lucerón-Lucas-Torres et al. 2023. "Association between Wine Consumption with
+    Cardiovascular Disease and Cardiovascular Mortality: A Systematic Review and Meta-Analysis." https://doi.org/10.3390/nu15122785'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 25 longitudinal studies included
+  - DerSimonian and Laird random effects approach used for pooled estimates
+  - PROSPERO registration CRD42021293568
+  doi: 10.3390/nu15122785
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Pooled analysis using DerSimonian and Laird approach showed wine consumption inversely associated
+  with CVD risk (RR=0.83, 95% CI: 0.70-0.98). The association remained stable across different age groups,
+  sex compositions, and follow-up durations.'
+quantitative_effects:
+  effect_size:
+    value: 0.83
+    type: relative_risk
+    ci_lower: 0.7
+    ci_upper: 0.98
+moderators:
+- name: age
+  direction: strengthens
+  strength: weak
+  description: Age did not modify the inverse association between wine and CVD
+- name: sex_proportion_female
+  direction: strengthens
+  strength: weak
+  description: Proportion of women in samples did not influence the association
+- name: follow_up_time
+  direction: strengthens
+  strength: weak
+  description: Duration of follow-up did not modify the protective association
+structural_competency:
+  equity_implications: The structural determinants of alcohol consumption patterns are shaped by socioeconomic
+    factors, cultural contexts, and policy environments. Wine consumption specifically may reflect socioeconomic
+    privilege, as wine tends to be more expensive than other alcoholic beverages. This creates potential
+    confounding where apparent health benefits may partially reflect unmeasured socioeconomic advantages.
+    Policy implications should focus on harm reduction rather than promoting consumption.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.309825'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,58 @@
+id: criminal_justice_system_contact_any_revised_to_NEW:substance_use_treatment_receipt_rate
+name: Criminal Justice System Contact (Probation/Parole) → Substance Use Treatment Receipt Rate
+from_node:
+  node_id: criminal_justice_system_contact_any_revised
+  node_name: Criminal Justice System Contact (Probation/Parole)
+to_node:
+  node_id: NEW:substance_use_treatment_receipt_rate
+  node_name: Substance Use Treatment Receipt Rate
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Adults placed on probation or parole are subject to criminal justice supervision requirements'
+- 'Step 2: Supervision conditions often mandate substance use treatment as part of compliance requirements'
+- 'Step 3: Court-ordered treatment leads to higher treatment receipt rates (15% alcohol, 16% drug) compared
+  to actual disorder prevalence (8-11%)'
+- 'Step 4: Treatment receipt becomes disconnected from clinical need, driven instead by legal mandates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Audrey Hang Hai et al. 2025. "Adults on probation and parole who receive substance
+    use treatment: An analysis of correlates in a national sample, 2015-2021.." https://doi.org/10.1016/j.jpsychires.2025.03.035'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references need for behavioral health research
+    on community-based sanctions
+  - Additional citations require full-text access - abstract references NSDUH data 2015-2021
+  - Additional citations require full-text access - abstract references prior research on racial disparities
+    in treatment
+  doi: 10.1016/j.jpsychires.2025.03.035
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Criminal justice supervision (probation/parole) creates a mismatch between substance use
+  disorder prevalence and treatment receipt, with 15-16% receiving treatment while only 8-11% meet SUD
+  criteria. This suggests treatment is driven by legal requirements rather than clinical need.
+moderators:
+- name: race_ethnicity
+  direction: weakens
+  strength: strong
+  description: African Americans had half the likelihood of receiving drug treatment compared to Whites
+    among those on probation/parole
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Population tends to be male, which may affect treatment patterns
+- name: income_level
+  direction: weakens
+  strength: moderate
+  description: Population is disproportionately low-income, potentially affecting treatment access
+structural_competency:
+  equity_implications: This mechanism highlights how criminal justice involvement structures access to
+    treatment independent of clinical need. The finding that treatment receipt exceeds disorder prevalence
+    suggests systemic over-treatment driven by legal mandates rather than health needs. This represents
+    a structural determinant where policy shapes healthcare utilization patterns.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.753580'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

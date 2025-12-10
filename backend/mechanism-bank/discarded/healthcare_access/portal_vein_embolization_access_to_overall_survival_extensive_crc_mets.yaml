@@ -1,0 +1,46 @@
+id: portal_vein_embolization_access_to_overall_survival_extensive_crc_mets
+name: Access to Portal Vein Embolization and Liver Resection → Overall Survival in
+  Extensive Colorectal Cancer Liver Metastases
+from_node:
+  node_id: portal_vein_embolization_access
+  node_name: Access to Portal Vein Embolization and Liver Resection
+to_node:
+  node_id: overall_survival_extensive_crc_mets
+  node_name: Overall Survival in Extensive Colorectal Cancer Liver Metastases
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Portal vein embolization induces hypertrophy of the future liver remnant
+  in patients with extensive liver metastases'
+- 'Step 2: Increased liver remnant volume enables safe surgical resection in patients
+  who would otherwise be ineligible'
+- 'Step 3: Successful resection removes macroscopic tumor burden and provides potential
+  for cure'
+- 'Step 4: Subset of patients achieves long-term survival, though overall outcomes
+  remain inferior to transplantation in high tumor load cases'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Dueland et al. 2021. "Survival Outcomes After Portal Vein Embolization
+    and Liver Resection Compared With Liver Transplant for Patients With Extensive
+    Colorectal Cancer Liver Metastases.." *JAMA Surgery*. https://doi.org/10.1001/jamasurg.2021.0267
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.610435'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: tumor_load
+  direction: weakens
+  strength: strong
+  description: High tumor load (9+ metastases or ≥5.5cm largest lesion) dramatically
+    reduced 5-year OS to 6.7% compared to 44.6% overall for PVE/resection patients
+- name: primary_tumor_location
+  direction: weakens
+  strength: moderate
+  description: Left-sided primary tumors with high tumor load had only 12.5% 5-year
+    OS with PVE/resection approach
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/portal_vein_embolization_access_to_overall_survival_extensive_crc_mets.yaml
+_category: healthcare_access

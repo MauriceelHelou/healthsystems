@@ -1,0 +1,44 @@
+id: treatment_cost_effectiveness_to_treatment_accessibility_ald
+name: Cost-Effectiveness of Alcohol Use Disorder Treatment → Accessibility of Treatment
+  for Patients with ALD
+from_node:
+  node_id: treatment_cost_effectiveness
+  node_name: Cost-Effectiveness of Alcohol Use Disorder Treatment
+to_node:
+  node_id: treatment_accessibility_ald
+  node_name: Accessibility of Treatment for Patients with ALD
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Cost-effectiveness analysis provides evidence for insurance coverage decisions
+  and healthcare resource allocation'
+- 'Step 2: Demonstration of cost-effectiveness at $100,000 willingness-to-pay threshold
+  supports coverage approval for interventions'
+- 'Step 3: Insurance coverage and healthcare system adoption increase accessibility
+  of effective treatments'
+- 'Step 4: Greater treatment accessibility for advanced ALD patients improves population-level
+  health outcomes through increased abstinence rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'O A Abiola et al. 2024. "Cost-Effectiveness Analysis of Deep
+    Brain Stimulation for the Treatment of Alcohol Use Disorder and Alcoholic Liver
+    Disease.." *medRxiv : the preprint server for health sciences*. https://doi.org/10.1101/2024.08.22.24312455'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.400408'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: disease_severity_at_intervention
+  direction: strengthens
+  strength: strong
+  description: Cost-effectiveness is achieved only for advanced ALD patients (fibrosis
+    stage 3+), not for general AUD patients, creating a disease severity threshold
+    for treatment accessibility
+- name: healthcare_system_willingness_to_pay
+  direction: strengthens
+  strength: strong
+  description: Different willingness-to-pay thresholds across healthcare systems and
+    payers determine whether treatments are deemed cost-effective and therefore accessible

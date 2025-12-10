@@ -1,0 +1,52 @@
+id: smoking_current_to_NEW:male_infertility_semen_quality
+name: Current Smoking Status → Male Infertility - Semen Quality Impairment
+from_node:
+  node_id: smoking_current
+  node_name: Current Smoking Status
+to_node:
+  node_id: NEW:male_infertility_semen_quality
+  node_name: Male Infertility - Semen Quality Impairment
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Tobacco smoke contains reactive oxygen species and heavy metals that accumulate in seminal
+  plasma'
+- 'Step 2: Oxidative stress damages sperm DNA, cell membranes, and mitochondrial function'
+- 'Step 3: Toxic compounds disrupt spermatogenesis in the seminiferous tubules'
+- 'Step 4: Resulting reduction in sperm concentration, motility, and morphology leads to male infertility'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Ryan Ramon et al. 2024. "Effect of tobacco smoking and alcohol consumption on semen
+    quality and hormone reproductive levels in infertile males: A systematic review and meta analysis."
+    https://doi.org/10.3897/pharmacia.71.e113854'
+  supporting_citations:
+  - Additional citations require full-text access - this is a meta-analysis of 15 studies with 12,503
+    participants
+  - Studies included infertile males comparing 8,025 non-smokers to 4,477 smokers
+  - Individual study citations not provided in abstract
+  doi: 10.3897/pharmacia.71.e113854
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Tobacco smoking significantly impairs semen quality in infertile males compared to non-smokers,
+  with effects on sperm concentration, motility, and morphology.
+quantitative_effects:
+  sample_size: 12503
+moderators:
+- name: alcohol_consumption
+  direction: strengthens
+  strength: moderate
+  description: Combined tobacco smoking and alcohol consumption may amplify negative effects on semen
+    parameters
+structural_competency:
+  equity_implications: While framed as individual behavior, tobacco use is shaped by structural factors
+    including tobacco industry marketing, socioeconomic stress, lack of cessation support, and occupational
+    exposure. Low-income and marginalized communities face disproportionate tobacco advertising and fewer
+    resources for cessation. Reproductive health consequences thus reflect structural inequities in tobacco
+    control policy implementation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.313680'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,42 @@
+id: critical_access_facility_closure_risk_to_population_treatment_access_disruption
+name: Critical Access Facility Closure Risk → Population Treatment Access Disruption
+from_node:
+  node_id: critical_access_facility_closure_risk
+  node_name: Critical Access Facility Closure Risk
+to_node:
+  node_id: population_treatment_access_disruption
+  node_name: Population Treatment Access Disruption
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Areas dependent on single critical access MOUD facilities have no proximate
+  alternative providers'
+- 'Step 2: Closure or capacity reduction of critical access facility creates large
+  distance increases to next nearest provider'
+- 'Step 3: Population-weighted distance gap (difference between closest and second-closest
+  facility multiplied by population) quantifies the scale of disruption'
+- 'Step 4: Treatment disruption affects ongoing patients and creates substantial barriers
+  for new treatment seekers'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Harold A Pollack et al. 2023. "Critical access medication for
+    opioid use disorder (MOUD) treatment facilities in the continental United States.."
+    *Drug and alcohol dependence reports*. https://doi.org/10.1016/j.dadr.2022.100130
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.492941'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: difference_in_distance_metric
+  direction: strengthens
+  strength: strong
+  description: Larger difference between closest and second-closest facility distance
+    indicates greater vulnerability to access disruption
+- name: affected_population_size
+  direction: strengthens
+  strength: strong
+  description: Larger populations dependent on single critical access facility increases
+    the scale of disruption from closure

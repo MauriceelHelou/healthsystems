@@ -1,0 +1,54 @@
+id: alcohol_outlet_density_to_binge_drinking
+name: Alcohol Outlet Density -> Binge Drinking Prevalence
+from_node:
+  node_id: alcohol_outlet_density
+  node_name: Alcohol Outlet Density
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking Prevalence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher alcohol outlet density increases physical availability and accessibility
+  of alcohol in communities'
+- 'Step 2: Increased accessibility reduces barriers to alcohol acquisition and creates
+  more opportunities for alcohol consumption'
+- 'Step 3: Greater access and availability leads to increased binge drinking behaviors,
+  particularly among adolescents and young adults'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Rossow, Ingeborg, and Elin K. Bye. "Community alcohol outlet
+    density and underage drinking." Addiction 105, no. 10 (2010): 1824-1830.'
+  supporting_citations:
+  - Chaiyasong, Surasak, et al. "SPATIAL ASSOCIATION PATTERNS OF BINGE DRINKING, ALCOHOL
+    OUTLET DENSITY, AND EARLY STARTED DRINKING IN THAILAND." Journal of the Southwest
+    Jiaotong University 56, no. 4 (2021).
+  - 'Siqueira, Claudia E., et al. "Binge drinking, alcohol outlet density and associated
+    factors: a multilevel analysis among adolescents in Belo Horizonte, Minas Gerais
+    State, Brazil." Cadernos de Saúde Pública 35 (2019): e00052119.'
+  - 'Morrison, Christopher, et al. "Alcohol outlets and alcohol consumption in changing
+    environments: prevalence and changes over time." Addiction Science & Clinical
+    Practice 17, no. 1 (2022): 1-10.'
+description: Higher alcohol outlet density increases binge drinking prevalence through
+  enhanced physical availability and accessibility of alcohol. Studies consistently
+  show positive associations between outlet density and binge drinking behaviors,
+  particularly among adolescents and young adults. The mechanism operates through
+  reduced barriers to alcohol acquisition and increased opportunities for consumption
+  in high-density areas.
+structural_competency_notes: Alcohol outlet density represents a structural determinant
+  that shapes drinking environments and behaviors at the community level. Regulatory
+  policies controlling outlet density can serve as population-level interventions
+  to reduce binge drinking, particularly important for protecting vulnerable populations
+  like adolescents who may have limited mobility to seek alcohol beyond their local
+  communities.
+last_updated: '2025-12-08'
+extraction_method: node_pair_discovery_v4
+quantitative_effects:
+  effect_size:
+    value: 0.32
+    type: odds_ratio
+    ci_lower: 0.14
+    ci_upper: 0.73
+  p_value: null
+  sample_size: 68975

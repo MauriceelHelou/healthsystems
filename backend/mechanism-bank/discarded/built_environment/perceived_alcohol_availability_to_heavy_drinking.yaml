@@ -1,0 +1,48 @@
+id: perceived_alcohol_availability_to_heavy_drinking
+name: Perceived Alcohol Availability → Heavy Drinking (≥120mL men, ≥90mL women absolute
+  alcohol monthly)
+from_node:
+  node_id: perceived_alcohol_availability
+  node_name: Perceived Alcohol Availability
+to_node:
+  node_id: heavy_drinking
+  node_name: Heavy Drinking (≥120mL men, ≥90mL women absolute alcohol monthly)
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: High density of alcohol outlets and extended trading hours creates spatial
+  environment where alcohol is easily accessible'
+- 'Step 2: Perceived easy availability reduces barriers to obtaining alcohol, including
+  time and transportation costs'
+- 'Step 3: Reduced access barriers enable more frequent purchasing occasions and opportunistic
+  consumption'
+- 'Step 4: Increased purchasing frequency and accessibility facilitates transition
+  from occasional to regular heavy drinking patterns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'P. Petersen Williams et al. 2019. "Alcohol Advertising, Affordability
+    and Availability, and the Effect on Adult Heavy Drinking and Symptoms of Alcohol
+    Problems: International Alcohol Control Study (South Africa)." *Substance Use
+    & Misuse*. https://doi.org/10.1080/10826084.2019.1609987'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.087527'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: mode_of_transport_to_purchase_alcohol
+  direction: strengthens
+  strength: strong
+  description: Mode of transport used to purchase alcohol significantly impacted heavy
+    drinking, indicating transportation access mediates the availability-consumption
+    relationship
+- name: race_ethnicity
+  direction: strengthens
+  strength: moderate
+  description: Race/ethnicity impacted heavy drinking, potentially reflecting apartheid-era
+    spatial segregation affecting current alcohol outlet distribution
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/perceived_alcohol_availability_to_heavy_drinking.yaml
+_category: built_environment

@@ -1,0 +1,56 @@
+id: NEW:oral_naltrexone_treatment_to_alcohol_use_disorder
+name: Oral Naltrexone Treatment (50mg/d) → Alcohol Use Disorder
+from_node:
+  node_id: NEW:oral_naltrexone_treatment
+  node_name: Oral Naltrexone Treatment (50mg/d)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Oral naltrexone (50mg/d) is prescribed as pharmacotherapy for patients
+  with alcohol use disorder, typically in conjunction with psychosocial interventions'
+- 'Step 2: Naltrexone acts as an opioid receptor antagonist, blocking the mu-opioid
+  receptors in the brain''s reward system'
+- 'Step 3: By blocking opioid receptors, naltrexone reduces the pleasurable effects
+  and reinforcing properties of alcohol consumption'
+- 'Step 4: Reduced reward response decreases craving and motivation to drink, leading
+  to lower rates of return to any drinking (NNT=18) and return to heavy drinking (NNT=11)'
+- 'Step 5: Sustained treatment adherence results in reduced alcohol consumption and
+  improved management of alcohol use disorder'
+evidence:
+  quality_rating: A
+  n_studies: 118
+  primary_citation: 'Melissa McPheeters et al. 2023. Pharmacotherapy for Alcohol Use
+    Disorder: A Systematic Review and Meta-Analysis. Journal of the American Medical
+    Association (JAMA)'
+  supporting_citations: []
+description: Oral naltrexone at 50mg/d is an effective first-line pharmacotherapy
+  for alcohol use disorder. A systematic review and meta-analysis of 118 clinical
+  trials with 20,976 participants found that oral naltrexone significantly reduces
+  return to any drinking (NNT=18) and return to heavy drinking (NNT=11) compared to
+  placebo. The medication works by blocking opioid receptors, thereby reducing the
+  rewarding effects of alcohol. Treatment is most effective when combined with psychosocial
+  interventions.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 18.0
+    type: number_needed_to_treat
+    ci_lower: 4.0
+    ci_upper: 32.0
+  p_value: null
+  sample_size: 20976
+moderators:
+- name: psychosocial_interventions
+  direction: strengthens
+  strength: moderate
+  description: Naltrexone is recommended to be used in conjunction with psychosocial
+    interventions for optimal efficacy
+- name: gastrointestinal_tolerance
+  direction: weakens
+  strength: moderate
+  description: Gastrointestinal side effects (nausea RR=1.73, vomiting RR=1.53) may
+    reduce treatment adherence

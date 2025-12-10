@@ -1,0 +1,59 @@
+id: NEW:dui_arrest_rate_to_motor_vehicle_crash_mortality
+name: DUI Arrest Rate → Motor Vehicle Crash Mortality
+from_node:
+  node_id: NEW:dui_arrest_rate
+  node_name: DUI Arrest Rate
+to_node:
+  node_id: motor_vehicle_crash_mortality
+  node_name: Motor Vehicle Crash Mortality
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: DUI enforcement and arrests serve as a deterrent to alcohol-impaired driving behavior'
+- 'Step 2: Reduced alcohol-impaired driving decreases the risk of traffic crashes'
+- 'Step 3: Fewer alcohol-related crashes result in decreased traffic deaths and injuries'
+- 'Step 4: Public awareness of DUI enforcement may further reduce impaired driving prevalence'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'J. Oluwoye and L.F. Nicolas-Kassama 2021. "Mann-Kendall test for Monotonic Trend
+    Analysis of Driving Under Intoxicated (DUI) Arrests in the United States: 1995-2013." https://doi.org/10.51542/ijscia.v2i5.36'
+  supporting_citations:
+  - Federal Bureau of Investigation, Uniform Crime Reporting Program (UCR), 1995.
+  - Additional citations require full-text access
+  doi: 10.51542/ijscia.v2i5.36
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study frames DUI as a public health issue linked to significant traffic deaths and injuries.
+  While the study does not directly measure mortality outcomes, it establishes the rationale that monitoring
+  DUI trends is essential for evaluating prevention measures aimed at reducing traffic-related morbidity
+  and mortality. The implied mechanism is that effective DUI enforcement and deterrence should lead to
+  reduced alcohol-impaired driving and consequently fewer traffic fatalities.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Geographic variation implied by multi-jurisdictional data collection across diverse
+    law enforcement agencies
+moderators:
+- name: public_awareness_campaigns
+  direction: strengthens
+  strength: moderate
+  description: The paper notes that DUI impacts have been highly publicized, which may moderate the relationship
+    between enforcement and outcomes
+- name: perceived_safety_threat
+  direction: strengthens
+  strength: moderate
+  description: High percentage of people perceiving DUI as a major personal safety threat indicates public
+    concern that may influence policy and enforcement priorities
+structural_competency:
+  equity_implications: This mechanism connects structural enforcement policies to population health outcomes
+    (traffic mortality). The study appropriately identifies DUI as a public health issue requiring systematic
+    intervention rather than individual-level approaches alone. The emphasis on using existing data sources
+    for policy planning reflects a structural approach to addressing alcohol-related harm. Equity implications
+    are not directly addressed in the abstract, though differential enforcement and its consequences by
+    demographic groups remains an important structural consideration.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.606739'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

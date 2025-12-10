@@ -1,0 +1,42 @@
+id: untreated_alcohol_withdrawal_hypertension_to_hypertensive_urgency_emergency
+name: Untreated Hypertension in Alcohol Withdrawal → Hypertensive Urgency or Emergency
+from_node:
+  node_id: untreated_alcohol_withdrawal_hypertension
+  node_name: Untreated Hypertension in Alcohol Withdrawal
+to_node:
+  node_id: hypertensive_urgency_emergency
+  node_name: Hypertensive Urgency or Emergency
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Hypertension during alcohol withdrawal remains untreated or inadequately
+  managed due to lack of recognition or access to care'
+- 'Step 2: Sustained elevated blood pressure exceeds compensatory mechanisms and autoregulatory
+  capacity of vascular beds'
+- 'Step 3: Severe hypertension (urgency) develops or progresses to end-organ damage
+  (emergency) affecting brain, heart, kidneys, or other organs'
+- 'Step 4: Hypertensive emergency manifests with acute end-organ dysfunction requiring
+  immediate intervention'
+evidence:
+  quality_rating: C
+  n_studies: 17
+  primary_citation: 'Ermal Bojdani et al. 2019. "Hypertensive Urgency and Emergency
+    in Alcohol Withdrawal: A Literature Review.." *The primary care companion for
+    CNS disorders*. https://doi.org/10.4088/PCC.19r02513'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.765682'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: baseline_hypertension_control
+  direction: strengthens
+  strength: strong
+  description: Pre-existing treatment-resistant hypertension increases risk of progression
+    to urgency/emergency
+- name: clinical_recognition
+  direction: weakens
+  strength: strong
+  description: Clinician awareness and early treatment of withdrawal-related hypertension
+    prevents progression to urgency/emergency

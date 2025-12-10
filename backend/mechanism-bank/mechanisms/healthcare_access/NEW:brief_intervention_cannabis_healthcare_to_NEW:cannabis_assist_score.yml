@@ -1,0 +1,64 @@
+id: NEW:brief_intervention_cannabis_healthcare_to_NEW:cannabis_assist_score
+name: Brief Interventions for Cannabis Use in Healthcare Settings → Cannabis-Specific ASSIST Score
+from_node:
+  node_id: NEW:brief_intervention_cannabis_healthcare
+  node_name: Brief Interventions for Cannabis Use in Healthcare Settings
+to_node:
+  node_id: NEW:cannabis_assist_score
+  node_name: Cannabis-Specific ASSIST Score
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Brief interventions delivered during healthcare encounters aim to screen for and address cannabis
+  use'
+- 'Step 2: ASSIST (Alcohol, Smoking and Substance Involvement Screening Test) used to measure cannabis-specific
+  risk'
+- 'Step 3: Interventions intended to reduce cannabis involvement and associated harms'
+- 'Step 4: Expected decrease in ASSIST scores indicating lower risk cannabis use patterns'
+- 'Step 5: Results show no significant effect on ASSIST scores despite intervention'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: 'Sameer Imtiaz et al. 2020. "Brief Interventions for Cannabis Use in Healthcare Settings:
+    Systematic Review and Meta-analyses of Randomized Trials.." https://doi.org/10.1097/ADM.0000000000000527'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of randomized trials
+  - Studies used ASSIST as standardized outcome measure for cannabis-specific involvement
+  - Random-effects meta-analyses with change-from-baseline measurements
+  doi: 10.1097/ADM.0000000000000527
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief interventions in healthcare settings showed no significant effect on reducing cannabis-specific
+  ASSIST scores in the short term (MD -1.27 points; 95% CI -3.75, 1.21). The very high heterogeneity (I²=84.4%)
+  indicates substantial variation across studies. This null finding challenges the assumption that brief
+  intervention approaches effective for alcohol can be directly applied to cannabis use.
+quantitative_effects:
+  effect_size:
+    value: -1.27
+    type: standardized_mean_difference
+    ci_lower: -3.75
+    ci_upper: 1.21
+  heterogeneity_i_squared: 84.4
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: High heterogeneity (I²=84.4%) suggests substantial variation across studies, potentially
+    reflecting differences in healthcare systems, populations, or intervention implementation
+moderators:
+- name: study_heterogeneity
+  direction: weakens
+  strength: strong
+  description: Very high heterogeneity (I²=84.4%) indicates substantial inconsistency across studies,
+    weakening confidence in pooled estimate
+structural_competency:
+  equity_implications: The high heterogeneity suggests that effectiveness may vary substantially based
+    on structural factors including healthcare system characteristics, population demographics, and social
+    context. This underscores that individual-level clinical interventions operate within structural constraints
+    that may limit their effectiveness. A health equity approach would consider how cannabis use patterns
+    are shaped by social determinants (economic opportunity, neighborhood environment, stress exposure)
+    that brief clinical encounters cannot modify.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.022774'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

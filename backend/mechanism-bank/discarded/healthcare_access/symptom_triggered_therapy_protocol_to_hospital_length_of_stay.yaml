@@ -1,0 +1,46 @@
+id: symptom_triggered_therapy_protocol_to_hospital_length_of_stay
+name: Symptom-Triggered Therapy Protocol Implementation → Hospital Length of Stay
+from_node:
+  node_id: symptom_triggered_therapy_protocol
+  node_name: Symptom-Triggered Therapy Protocol Implementation
+to_node:
+  node_id: hospital_length_of_stay
+  node_name: Hospital Length of Stay
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Implementation of symptom-triggered therapy (STT) protocol in emergency
+  department clinical decision units provides structured assessment framework using
+  Clinical Institute Withdrawal Assessment for Alcohol'
+- 'Step 2: STT allows for individualized benzodiazepine dosing based on objective
+  withdrawal severity measurements rather than fixed schedules'
+- 'Step 3: Individualized dosing reduces unnecessary medication administration and
+  waiting periods, accelerating patient stabilization'
+- 'Step 4: Median time for STT completion of 12 hours enables discharge within 22-hour
+  median CDU stay, reducing overall length of hospitalization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Muhammad Fahmi Ismail et al. 2018. "Symptom-triggered therapy
+    for assessment and management of alcohol withdrawal syndrome in the emergency
+    department short-stay clinical decision unit." *Emergency Medicine Journal*. https://doi.org/10.1136/emermed-2017-206997
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.711819'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: withdrawal_severity
+  direction: strengthens
+  strength: moderate
+  description: 64% of patients had at least one CIWA-Ar measurement ≥10, triggering
+    diazepam dosing; higher severity scores may extend treatment time
+- name: cumulative_benzodiazepine_dose
+  direction: strengthens
+  strength: moderate
+  description: 15% of patients required cumulative doses ≥100mg, which may extend
+    monitoring and length of stay
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/symptom_triggered_therapy_protocol_to_hospital_length_of_stay.yaml
+_category: healthcare_access

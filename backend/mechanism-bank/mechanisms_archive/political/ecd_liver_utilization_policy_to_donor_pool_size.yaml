@@ -1,0 +1,41 @@
+id: ecd_liver_utilization_policy_to_donor_pool_size
+name: ECD Liver Utilization Policy → Donor Pool Size for High Acuity Recipients
+from_node:
+  node_id: ecd_liver_utilization_policy
+  node_name: ECD Liver Utilization Policy
+to_node:
+  node_id: donor_pool_size
+  node_name: Donor Pool Size for High Acuity Recipients
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: Current allocation policies largely relegate ECD organs to low acuity recipients
+  based on risk aversion'
+- 'Step 2: Evidence demonstrates non-inferior outcomes (similar graft survival and
+  rejection-free survival) in high acuity ECD recipients'
+- 'Step 3: Policy expansion to allow ECD organ acceptance for high acuity patients
+  increases available grafts for this population by 20.4%'
+- 'Step 4: Expanded donor pool reduces structural barriers to transplant access for
+  critically ill patients facing imminent mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jacob Guorgui et al. 2021. "The Utility of Extended Criteria Donor
+    Livers in High Acuity Liver Transplant Recipients." *The American surgeon*. https://doi.org/10.1177/00031348211024658
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.616184'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: institutional_risk_tolerance
+  direction: strengthens
+  strength: strong
+  description: Centers with higher risk tolerance and willingness to use ECD organs
+    for high acuity patients can expand their effective donor pool
+- name: regional_organ_shortage_severity
+  direction: strengthens
+  strength: moderate
+  description: Regions with greater organ scarcity may benefit more from ECD utilization
+    expansion policies

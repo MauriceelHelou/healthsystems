@@ -1,0 +1,62 @@
+id: NEW:bariatric_surgery_to_alcohol_use_disorder
+name: Bariatric Surgery → Alcohol Use Disorder
+from_node:
+  node_id: NEW:bariatric_surgery
+  node_name: Bariatric Surgery
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Bariatric surgery alters gastrointestinal anatomy, reducing stomach capacity and modifying
+  absorption pathways'
+- 'Step 2: Post-surgical changes lead to faster alcohol absorption and higher peak blood alcohol concentrations'
+- 'Step 3: Altered gut hormones (ghrelin, GLP-1) may affect reward pathways and alcohol sensitivity'
+- 'Step 4: Psychological factors including addiction transfer and coping mechanism shifts may increase
+  alcohol use'
+- 'Step 5: Beyond two years post-surgery, these physiological and psychological changes manifest as increased
+  alcohol use disorder risk'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: 'Mariana Capelo Vides et al. 2023. "Bariatric surgery and its influence on alcohol
+    consumption: Differences before and after surgery - A systematic review and meta-analysis." https://doi.org/10.1080/09540261.2023.2223317'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review included 18 articles
+  - Meta-analysis conducted on 6 articles examining alcohol use behaviors
+  - 12 articles examined patterns up to 2 years post-surgery
+  doi: 10.1080/09540261.2023.2223317
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This systematic review and meta-analysis of 18 studies found that bariatric surgery is associated
+  with increased risk of alcohol use disorders, particularly beyond 2 years post-surgery. While short-term
+  outcomes (up to 2 years) showed improvement in alcohol consumption patterns (9/12 studies), longer-term
+  follow-up (beyond 2 years) revealed worsening alcohol use behaviors (4/5 studies). Meta-analysis of
+  6 articles did not find statistically significant differences at 1 year post-surgery.
+moderators:
+- name: time_since_surgery
+  direction: strengthens
+  strength: strong
+  description: Risk of alcohol use disorders increases significantly after 2 years post-surgery; 4 out
+    of 5 articles with monitoring beyond 2 years showed worsening consumption compared to pre-surgery
+    levels
+- name: follow_up_duration_under_2_years
+  direction: weakens
+  strength: moderate
+  description: Within the first 2 years post-surgery, 9 out of 12 articles showed improvement in alcohol
+    consumption patterns
+structural_competency:
+  equity_implications: 'This mechanism highlights how medical interventions can have unintended consequences
+    on substance use patterns. The healthcare system''s focus on weight loss outcomes may inadvertently
+    create conditions for alcohol use disorder development. Structural considerations include: (1) Pre-surgical
+    screening and counseling protocols for alcohol use; (2) Long-term post-surgical monitoring requirements;
+    (3) Access to behavioral health support integrated with bariatric care; (4) Insurance coverage for
+    extended follow-up care. Equity implications include potential differential access to comprehensive
+    post-surgical support services based on insurance status, geographic location, and socioeconomic resources.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.256244'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

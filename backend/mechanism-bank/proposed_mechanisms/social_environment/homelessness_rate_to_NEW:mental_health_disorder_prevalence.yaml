@@ -1,0 +1,64 @@
+id: homelessness_rate_to_NEW:mental_health_disorder_prevalence
+name: Homelessness Rate → Mental Health Disorder Prevalence
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: NEW:mental_health_disorder_prevalence
+  node_name: Mental Health Disorder Prevalence
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Homelessness exposes individuals to chronic stressors including lack of
+  stable shelter, food insecurity, social isolation, and exposure to violence and
+  victimization'
+- 'Step 2: These stressors activate prolonged physiological stress responses and deplete
+  psychological coping resources, increasing vulnerability to mental health conditions'
+- 'Step 3: Limited access to healthcare services, social support networks, and stable
+  environments prevents early intervention and treatment of emerging mental health
+  symptoms'
+- 'Step 4: Cumulative exposure to adverse conditions results in elevated prevalence
+  of mental health disorders including substance use disorders (44%), major depression
+  (19%), antisocial personality disorder (26%), schizophrenia (7%), and bipolar disorder
+  (8%)'
+evidence:
+  quality_rating: A
+  n_studies: 85
+  primary_citation: 'Rebecca Barry et al. 2024. Prevalence of Mental Health Disorders
+    Among Individuals Experiencing Homelessness: A Systematic Review and Meta-Analysis.
+    JAMA psychiatry.'
+  supporting_citations: []
+description: 'This systematic review and meta-analysis of 85 studies (N=48,414 participants)
+  demonstrates that 67% of people experiencing homelessness currently have mental
+  health disorders, with lifetime prevalence reaching 77%. This is substantially higher
+  than general community samples. The relationship is bidirectional: mental health
+  disorders may increase risk of homelessness, and experiencing homelessness increases
+  risk of developing mental health disorders through exposure to chronic stressors
+  and limited access to care.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 67.0
+    type: prevalence_percentage
+    ci_lower: 55.0
+    ci_upper: 77.0
+  p_value: null
+  sample_size: 48414
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Male individuals exhibited significantly higher lifetime prevalence
+    of mental health disorders (86%; 95% CI, 74-92) compared to female individuals
+    (69%; 95% CI, 48-84)
+- name: study_year
+  direction: strengthens
+  strength: weak
+  description: Meta-regression examined association between mental health disorders
+    and study year as a potential moderator
+- name: age_group
+  direction: strengthens
+  strength: weak
+  description: Subgroup analyses performed by age group suggest age modifies the relationship
+    between homelessness and mental health disorder prevalence

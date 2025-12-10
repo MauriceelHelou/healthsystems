@@ -1,0 +1,58 @@
+id: NEW:hepatitis_b_infection_to_liver_disease_mortality
+name: Hepatitis B Infection → Liver Disease Mortality
+from_node:
+  node_id: NEW:hepatitis_b_infection
+  node_name: Hepatitis B Infection
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic hepatitis B virus infection causes persistent inflammation in liver
+  tissue'
+- 'Step 2: Ongoing hepatic inflammation leads to progressive fibrosis and scarring
+  of liver tissue'
+- 'Step 3: Advanced fibrosis progresses to liver cirrhosis with loss of functional
+  hepatocytes'
+- 'Step 4: Cirrhosis leads to liver failure, portal hypertension, and complications
+  including hepatocellular carcinoma'
+- 'Step 5: These complications result in increased mortality from liver disease'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Rezaei N. et al. 2019. Liver cirrhosis mortality at national
+    and provincial levels in Iran between 1990 and 2015: A meta regression analysis.
+    PLoS ONE.'
+  supporting_citations: []
+description: Hepatitis B infection is a major driver of liver disease mortality, accounting
+  for more than 60% of liver cirrhosis deaths in Iran (when combined with hepatitis
+  C). The hepatitis B mortality rate is approximately four times higher than hepatitis
+  C mortality rate. Chronic infection leads to progressive liver damage, cirrhosis,
+  and ultimately death from liver failure or related complications.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 4.0
+    type: relative_risk
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Liver cirrhosis mortality in elderly patients was 12 times higher than
+    in younger patients at national level in 2015
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Over 26 years, liver cirrhosis mortality in males increased more than
+    in females
+- name: vaccination_status
+  direction: weakens
+  strength: strong
+  description: National hepatitis B vaccination program associated with decreasing
+    mortality trends after 2002

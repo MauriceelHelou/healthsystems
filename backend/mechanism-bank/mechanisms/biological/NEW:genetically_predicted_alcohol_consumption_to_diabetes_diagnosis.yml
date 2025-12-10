@@ -1,0 +1,48 @@
+id: NEW:genetically_predicted_alcohol_consumption_to_diabetes_diagnosis
+name: Genetically Predicted Alcohol Consumption → Diabetes Diagnosis
+from_node:
+  node_id: NEW:genetically_predicted_alcohol_consumption
+  node_name: Genetically Predicted Alcohol Consumption
+to_node:
+  node_id: diabetes_diagnosis
+  node_name: Diabetes Diagnosis
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Genetic variants influencing alcohol metabolism used as instrumental variables'
+- 'Step 2: MR design addresses confounding present in observational studies'
+- 'Step 3: Systematic review finds 75% of studies report null associations for diabetes'
+- 'Step 4: Conflicting evidence suggests no clear causal protective or harmful effect of moderate alcohol
+  on diabetes'
+evidence:
+  quality_rating: A
+  n_studies: 24
+  primary_citation: 'I. A. T. van de Luitgaarden et al. 2021. "Alcohol consumption in relation to cardiovascular
+    diseases and mortality: a systematic review of Mendelian randomization studies." https://doi.org/10.1007/s10654-021-00799-5'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review methodology
+  - MR studies using alcohol metabolism genetic variants as instruments
+  - Studies examining glycemic outcomes and diabetes incidence
+  doi: 10.1007/s10654-021-00799-5
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Systematic review finding that 75% of MR studies report null associations between genetically
+  predicted alcohol consumption and diabetes. This challenges observational data suggesting protective
+  effects of moderate drinking on diabetes risk.
+moderators:
+- name: instrumental_variable_analysis_completeness
+  direction: strengthens
+  strength: strong
+  description: Only 71% of studies performed full instrumental variable analysis; incomplete analysis
+    may bias results
+structural_competency:
+  equity_implications: The null findings have implications for public health messaging and alcohol policy.
+    If moderate drinking does not causally protect against diabetes, policies that restrict alcohol availability
+    and marketing would not have unintended negative health consequences. Structural determinants of diabetes
+    (food environment, economic stress, healthcare access) remain primary targets for intervention.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.290345'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

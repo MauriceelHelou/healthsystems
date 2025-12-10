@@ -1,0 +1,63 @@
+id: alcohol_use_disorder_to_NEW:neuroinflammation_markers_elevated
+name: Alcohol Use Disorder → Neuroinflammation Markers Elevated
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:neuroinflammation_markers_elevated
+  node_name: Neuroinflammation Markers Elevated
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic heavy alcohol consumption leads to repeated exposure of neural tissue to ethanol and
+  its metabolites'
+- 'Step 2: Alcohol metabolism generates reactive oxygen species and acetaldehyde, triggering oxidative
+  stress in brain tissue'
+- 'Step 3: Oxidative stress activates microglia and astrocytes, initiating neuroimmune signaling cascades'
+- 'Step 4: Activated glial cells release pro-inflammatory cytokines, chemokines, and other neuroimmune
+  markers'
+- 'Step 5: Sustained neuroinflammation contributes to neurodegeneration and altered brain function observed
+  in postmortem studies'
+evidence:
+  quality_rating: B
+  n_studies: 11
+  primary_citation: 'Claire Adams et al. 2023. "Central markers of neuroinflammation in alcohol use disorder:
+    A meta-analysis of neuroimaging, cerebral spinal fluid, and postmortem studies.." https://doi.org/10.1111/acer.14992'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references CSF studies included in meta-analysis
+  - Additional citations require full-text access - abstract references PET neuroimaging studies included
+    in meta-analysis
+  - Additional citations require full-text access - abstract references postmortem brain tissue studies
+    included in meta-analysis
+  doi: 10.1111/acer.14992
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Meta-analysis of postmortem studies demonstrates that individuals with alcohol use disorder
+  show significantly higher levels of neuroimmune markers in brain tissue compared to healthy controls,
+  with a large effect size (d=1.50). This provides direct evidence that chronic heavy alcohol consumption
+  produces neuroinflammation detectable at the cellular/molecular level.
+quantitative_effects:
+  effect_size:
+    value: 1.5
+    type: standardized_mean_difference
+    ci_lower: 0.56
+    ci_upper: 2.45
+moderators:
+- name: Diagnostic modality
+  direction: strengthens
+  strength: moderate
+  description: Postmortem studies showed elevated neuroimmune markers while PET studies showed different
+    patterns (reduced TSPO binding), suggesting modality-specific findings
+structural_competency:
+  equity_implications: While this mechanism focuses on biological pathways, it connects to structural
+    determinants through the social and economic factors that drive alcohol use disorder prevalence, including
+    alcohol outlet density, alcohol marketing exposure, lack of access to treatment, and social environments
+    that normalize heavy drinking. The neuroinflammation caused by AUD represents a biological embedding
+    of these structural exposures. Structural interventions at the policy level (alcohol taxation, availability
+    restrictions, treatment access) could prevent this neuroinflammatory damage.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.287998'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

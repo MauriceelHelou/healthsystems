@@ -1,0 +1,59 @@
+id: NEW:isopropyl_alcohol_inhalation_therapy_to_NEW:acute_nausea_severity
+name: Isopropyl Alcohol Inhalation Therapy → Acute Nausea Severity
+from_node:
+  node_id: NEW:isopropyl_alcohol_inhalation_therapy
+  node_name: Isopropyl Alcohol Inhalation Therapy
+to_node:
+  node_id: NEW:acute_nausea_severity
+  node_name: Acute Nausea Severity
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Isopropyl alcohol (IPA) is inhaled nasally by emergency department patients experiencing nausea'
+- 'Step 2: Volatile IPA molecules stimulate olfactory receptors and trigeminal nerve endings'
+- 'Step 3: Neural signaling modulates the chemoreceptor trigger zone and vomiting center in the brainstem'
+- 'Step 4: This aromatherapy intervention reduces perceived nausea intensity on validated scales'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'Stefanie Y. Lee and John R Tamale 2023. "Isopropyl alcohol inhalation for the treatment
+    of nausea in adult emergency department patients: a systematic review and meta-analysis." https://doi.org/10.1136/emermed-2022-212871'
+  supporting_citations:
+  - Two trials comparing inhaled IPA to saline placebo (n=195 patients) - specific citations require full-text
+    access
+  - Third study comparing IPA + ondansetron vs placebo + ondansetron - specific citation requires full-text
+    access
+  - Additional citations require full-text access
+  doi: 10.1136/emermed-2022-212871
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Inhaled isopropyl alcohol reduces nausea severity in adult emergency department patients
+  by a mean of 2.18 points on a 0-10 scale compared to placebo, exceeding the minimum clinically significant
+  difference of 1.5 points. This represents a low-cost, rapidly available intervention for acute nausea
+  management.
+quantitative_effects:
+  effect_size:
+    value: -2.18
+    type: standardized_mean_difference
+    ci_lower: -2.76
+    ci_upper: -1.6
+  sample_size: 195
+moderators:
+- name: concurrent_antiemetic_use
+  direction: weakens
+  strength: moderate
+  description: When IPA was combined with oral ondansetron, the differential effect compared to placebo
+    with ondansetron was less clear, suggesting potential interaction or ceiling effect
+structural_competency:
+  equity_implications: This mechanism relates to healthcare access and resource availability in emergency
+    settings. IPA inhalation represents an accessible, low-cost intervention that could reduce reliance
+    on pharmaceutical antiemetics and decrease ED wait times for symptom relief. The intervention could
+    have equity implications as a cost-effective alternative when medication access is limited. However,
+    this is primarily a clinical treatment mechanism rather than a structural determinant of health. The
+    evidence is graded moderate due to imprecision from limited patient numbers (n=195 across pooled studies).
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.351269'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

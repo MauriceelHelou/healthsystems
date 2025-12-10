@@ -1,0 +1,41 @@
+id: sbirt_brief_intervention_to_heavy_episodic_drinking
+name: Receipt of Brief Intervention or Referral to Treatment → Heavy Episodic Drinking
+  Prevalence
+from_node:
+  node_id: sbirt_brief_intervention
+  node_name: Receipt of Brief Intervention or Referral to Treatment
+to_node:
+  node_id: heavy_episodic_drinking
+  node_name: Heavy Episodic Drinking Prevalence
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: SBIRT programs screen for and intervene on overall alcohol consumption
+  levels'
+- 'Step 2: Brief interventions focus on quantity and frequency of drinking rather
+  than drinking patterns'
+- 'Step 3: Reduction in overall consumption does not necessarily address binge drinking
+  behaviors or episodic heavy use'
+- 'Step 4: Heavy episodic drinking prevalence remains unchanged despite reductions
+  in total alcohol consumption'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: J. Manthey et al. 2021. "Can alcohol consumption in Germany be
+    reduced by alcohol screening, brief intervention and referral to treatment in
+    primary health care? Results of a simulation study." *medRxiv*. https://doi.org/10.1101/2021.05.18.21257405
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.757768'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: intervention_design
+  direction: weakens
+  strength: strong
+  description: Standard SBIRT protocols do not specifically target heavy episodic
+    drinking patterns, limiting effectiveness for this outcome
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/sbirt_brief_intervention_to_heavy_episodic_drinking.yaml
+_category: healthcare_access

@@ -1,0 +1,50 @@
+id: NEW:prehabilitation_behavior_change_intervention_to_NEW:functional_capacity_six_minute_walk
+name: Prehabilitation Behavior Change Intervention → Functional Capacity (Six-Minute Walk Test)
+from_node:
+  node_id: NEW:prehabilitation_behavior_change_intervention
+  node_name: Prehabilitation Behavior Change Intervention
+to_node:
+  node_id: NEW:functional_capacity_six_minute_walk
+  node_name: Functional Capacity (Six-Minute Walk Test)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Prehabilitation programs include physical activity and exercise interventions'
+- 'Step 2: Patients engage in structured exercise prior to surgery'
+- 'Step 3: Cardiovascular and musculoskeletal conditioning improves'
+- 'Step 4: Functional capacity measured by six-minute walk test increases'
+evidence:
+  quality_rating: A
+  n_studies: 19
+  primary_citation: 'M. Fong et al. 2023. "The effect of preoperative behaviour change interventions on
+    pre- and post-surgery health behaviours, health outcomes, and health inequalities in adults: A systematic
+    review and meta-analyses." https://doi.org/10.1371/journal.pone.0286757'
+  supporting_citations:
+  - Additional citations require full-text access - 19 trials included in pre-surgery analysis
+  - 9 trials included in 4-week post-surgery follow-up analysis
+  - Studies spanned multiple surgical specialties
+  doi: 10.1371/journal.pone.0286757
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Prehabilitation interventions improve functional capacity by an average of 31.8 meters on
+  the six-minute walk test prior to surgery, representing clinically meaningful improvement in physical
+  function.
+quantitative_effects:
+  effect_size:
+    value: 31.8
+    type: standardized_mean_difference
+    ci_lower: 21.2
+    ci_upper: 42.4
+  p_value: 0.001
+  heterogeneity_i_squared: 55.0
+structural_competency:
+  equity_implications: Access to prehabilitation programs requires healthcare system infrastructure, insurance
+    coverage, and patient capacity to attend programs. Inequities in healthcare access may create differential
+    opportunities for prehabilitation, potentially exacerbating existing health disparities in surgical
+    outcomes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.421824'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

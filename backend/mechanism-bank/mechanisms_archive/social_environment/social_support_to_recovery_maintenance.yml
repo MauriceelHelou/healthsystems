@@ -1,0 +1,100 @@
+id: social_support_to_recovery_maintenance
+name: Social Support Networks → Sustained Recovery from AUD
+from_node:
+  node_id: peer_support_service_utilization
+  node_name: Peer Support Service Utilization
+  node_type: stock
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+  node_type: stock
+direction: negative
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Peer recovery support (mutual aid groups, recovery coaches) provides non-judgmental community
+  of shared experience'
+- 'Step 2: Regular social contact with recovery-oriented peers offers accountability, encouragement, and
+  modeling of sober living'
+- 'Step 3: Recovery social networks replace substance-using social circles, removing drinking triggers
+  and enabling cues'
+- 'Step 4: Peer support provides practical assistance (transportation, employment leads, coping strategies)
+  during stressful periods'
+- 'Step 5: Strong recovery-supportive relationships increase self-efficacy and sustain motivation, reducing
+  relapse and maintaining remission'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: 'Ana‐Maria Bliuc, Tuyet-Ngan Doan, D. Best. 2018. "Sober social networks: The role
+    of online support groups in recovery from alcohol addiction" Journal of Community & Applied Social
+    Psychology. https://doi.org/10.1002/CASP.2388 (Cited: 39)'
+  supporting_citations:
+  - 'Bassuk, Ellen L., John C. Hanson, Richard N. Greene, Maria Richard, and Alicia Laudet. 2016. "Peer-delivered
+    recovery support services for addictions in the United States: A systematic review." Journal of Substance
+    Abuse Treatment 63: 1-9.'
+  - 'Reif, Sharon, Lisa Braude, Deborah R. Lyman, et al. 2014. "Peer recovery support for individuals
+    with substance use disorders: Assessing the evidence." Psychiatric Services 65(7): 853-861.'
+  doi: 10.1111/j.1360-0443.2009.02820.x
+  journal: Addiction
+  year: 2010
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: null
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '1.0'
+description: Peer recovery support and recovery-oriented social networks substantially reduce alcohol
+  use disorder by providing accountability, replacing substance-using relationships, offering practical
+  support, and increasing self-efficacy for sustained sobriety.
+moderators:
+- name: mutual_aid_participation_frequency
+  direction: strengthens
+  strength: strong
+  description: Higher meeting attendance (AA, SMART Recovery, etc.) shows dose-response relationship with
+    better outcomes
+- name: recovery_housing_access
+  direction: strengthens
+  strength: moderate
+  description: Sober living environments provide intensive peer support and substance-free social environment
+- name: co_occurring_mental_health
+  direction: weakens
+  strength: moderate
+  description: Untreated depression or PTSD can undermine peer support effectiveness without integrated
+    treatment
+structural_competency:
+  root_cause_level: institutional
+  avoids_victim_blaming: true
+  equity_implications: While peer support is evidence-based, access is inequitably distributed. Mutual
+    aid meetings concentrate in affluent areas while underserved communities lack options. Professional
+    peer support services are rarely Medicaid-reimbursed, creating access barriers for low-income individuals.
+    Transportation barriers in car-dependent areas prevent participation. Recovery housing has proliferated
+    in some regions but faces NIMBY zoning resistance. Culturally specific recovery supports (BIPOC, LGBTQ+,
+    women-only) are scarce. The effectiveness of peer support paradoxically highlights how social isolation
+    and lack of community connection drive addiction in the first place—conditions created by structural
+    arrangements. Universal access to peer recovery support requires Medicaid reimbursement, transportation
+    assistance, zoning reform for recovery housing, and community investment in culturally responsive
+    programming.
+assumptions:
+- Peer support includes both formal services (peer recovery coaches) and informal networks (mutual aid)
+- Mechanism operates through social influence, practical support, and identity transformation
+- Assumes voluntary participation rather than coerced attendance
+limitations:
+- Individual heterogeneity in response to peer support; not universally effective
+- Quality and philosophy of peer support programs vary widely
+- May be less effective without concurrent professional treatment for severe AUD
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Peer support availability varies dramatically by community resources, Medicaid policies,
+    and cultural acceptance
+  relevant_geographies:
+  - Urban areas have greater diversity of mutual aid options (AA, SMART, Refuge Recovery, etc.)
+  - Rural areas often lack regular meetings within reasonable travel distance
+  - States with Medicaid peer support services show broader access beyond volunteer meetings
+  - Recovery housing concentrates in certain cities/neighborhoods with variable quality and regulation
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

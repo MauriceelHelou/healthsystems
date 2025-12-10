@@ -1,0 +1,61 @@
+id: NEW:minimum_unit_pricing_alcohol_to_NEW:health_inequality_alcohol_related
+name: Minimum Unit Pricing for Alcohol → Health Inequality in Alcohol-Related Outcomes
+from_node:
+  node_id: NEW:minimum_unit_pricing_alcohol
+  node_name: Minimum Unit Pricing for Alcohol
+to_node:
+  node_id: NEW:health_inequality_alcohol_related
+  node_name: Health Inequality in Alcohol-Related Outcomes
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: MUP sets floor price that most affects cheap, high-strength alcohol products'
+- 'Step 2: These products are disproportionately consumed by individuals in most deprived socioeconomic
+  groups'
+- 'Step 3: Price increases create larger proportional reduction in consumption among heavy drinkers in
+  deprived areas'
+- 'Step 4: Greater health benefit accrues to those at highest baseline risk of alcohol-related harm'
+- 'Step 5: Differential benefit narrows the gap in alcohol-related health outcomes between socioeconomic
+  groups'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'T. Maharaj et al. 2023. "Impact of minimum unit pricing on alcohol-related hospital
+    outcomes: systematic review." https://doi.org/10.1136/bmjopen-2022-065220'
+  supporting_citations:
+  - Modelling studies examining differential impacts by socioeconomic status
+  - Scottish MUP evaluation examining equity impacts
+  - Canadian studies on minimum pricing and health disparities
+  doi: 10.1136/bmjopen-2022-065220
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: MUP has potential to reduce health inequalities by disproportionately benefiting the most
+  deprived populations who experience highest alcohol-related harm. The policy targets heavy consumers
+  of cheap alcohol who are overrepresented in disadvantaged groups, creating a progressive public health
+  impact.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Equity effects observed across different national contexts with varying baseline inequality
+    levels
+moderators:
+- name: baseline_socioeconomic_inequality
+  direction: strengthens
+  strength: strong
+  description: Greater baseline inequality in alcohol-related harm creates larger potential for reduction
+    in health disparities
+- name: price_elasticity_by_income
+  direction: strengthens
+  strength: moderate
+  description: Higher price sensitivity among lower-income heavy drinkers amplifies differential benefit
+structural_competency:
+  equity_implications: This mechanism explicitly addresses how structural policy can reduce health inequities.
+    Rather than individual-level interventions that may widen disparities (requiring resources or motivation),
+    MUP works through environmental modification that automatically provides greater protection to those
+    at highest risk. This represents structural competency by addressing the commercial determinants that
+    create and maintain health inequalities related to alcohol.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.314928'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,70 @@
+id: NEW:sarcopenia_prevalence_cirrhosis_to_all_cause_mortality_rate
+name: Sarcopenia Prevalence in Cirrhosis Patients → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:sarcopenia_prevalence_cirrhosis
+  node_name: Sarcopenia Prevalence in Cirrhosis Patients
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Cirrhosis leads to metabolic dysfunction including impaired protein synthesis,
+  hyperammonemia, and systemic inflammation, which contribute to skeletal muscle wasting
+  (sarcopenia)'
+- 'Step 2: Sarcopenia reflects severe catabolic state and depleted physiological reserves,
+  compromising the body''s ability to respond to metabolic stressors, infections,
+  and disease complications'
+- 'Step 3: Reduced muscle mass impairs immune function, respiratory capacity, and
+  physical performance, increasing vulnerability to complications such as infections,
+  hepatic encephalopathy, and respiratory failure'
+- 'Step 4: Sarcopenic patients have diminished capacity to tolerate treatments including
+  liver transplantation and interventions for portal hypertension, leading to worse
+  outcomes'
+- 'Step 5: The combination of reduced functional reserve and increased complication
+  risk results in approximately 2-fold higher mortality risk in cirrhotic patients
+  with sarcopenia'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Xinxing Tantai et al. 2022. Effect of sarcopenia on survival
+    in patients with cirrhosis: A meta-analysis. Journal of hepatology.'
+  supporting_citations: []
+description: Sarcopenia, affecting approximately 37.5% of patients with cirrhosis,
+  is independently associated with a 2.3-fold increased risk of mortality. This association
+  persists across patient subgroups stratified by sex, underlying liver disease etiology,
+  and severity of hepatic dysfunction. The relationship is supported by quantitative
+  muscle mass index analysis showing continuous association between muscle mass and
+  survival. Higher prevalence observed in males, alcohol-related liver disease, and
+  advanced cirrhosis (Child-Pugh C).
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.3
+    type: hazard_ratio
+    ci_lower: 2.01
+    ci_upper: 2.63
+  p_value: null
+  sample_size: 6965
+moderators:
+- name: Sex
+  direction: strengthens
+  strength: moderate
+  description: Sarcopenia prevalence higher in males, but association with mortality
+    similar across sexes
+- name: Liver disease etiology
+  direction: strengthens
+  strength: moderate
+  description: Higher sarcopenia prevalence in alcohol-associated liver disease; association
+    with mortality consistent across etiologies
+- name: Severity of hepatic dysfunction (Child-Pugh class)
+  direction: strengthens
+  strength: strong
+  description: Sarcopenia prevalence higher in Child-Pugh class C (up to 50%); association
+    with mortality consistent across severity levels
+- name: Duration and severity of sarcopenia
+  direction: strengthens
+  strength: strong
+  description: Mortality rate increased with greater severity or longer durations
+    of sarcopenia

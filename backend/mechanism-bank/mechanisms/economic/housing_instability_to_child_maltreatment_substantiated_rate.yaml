@@ -1,0 +1,50 @@
+id: housing_instability_to_child_maltreatment_substantiated_rate
+name: Housing Instability → Child Maltreatment Substantiated Rate
+from_node:
+  node_id: housing_instability
+  node_name: Housing Instability
+to_node:
+  node_id: child_maltreatment_substantiated_rate
+  node_name: Child Maltreatment Substantiated Rate
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Housing instability creates chronic stress for caregivers through uncertainty
+  about meeting basic shelter needs, fear of eviction, and frequent moves'
+- 'Step 2: This chronic stress depletes caregiver psychological and emotional resources,
+  reducing capacity for responsive and consistent parenting'
+- 'Step 3: Material hardship from housing costs may force trade-offs with other basic
+  needs (food, healthcare, childcare), further straining family functioning'
+- 'Step 4: Housing instability disrupts social support networks and community ties
+  that serve as protective factors against maltreatment'
+- 'Step 5: Diminished caregiver capacity combined with increased family stress elevates
+  risk of abuse and neglect behaviors'
+- 'Step 6: These maltreatment incidents are reported to child protective services,
+  investigated, and substantiated at higher rates among housing-unstable families'
+evidence:
+  quality_rating: A
+  n_studies: 21
+  primary_citation: 'Caroline E. Chandler et al. 2020. Association of Housing Stress
+    With Child Maltreatment: A Systematic Review. Trauma, Violence, & Abuse.'
+  supporting_citations: []
+description: This systematic review of 21 studies demonstrates that housing stress,
+  including housing instability, is consistently associated with increased likelihood
+  of substantiated child protective services reports. Housing instability functions
+  as a form of material hardship that serves as a more direct measure of how poverty
+  affects daily family life compared to income alone. The pathway operates through
+  increased caregiver stress, depleted resources for adequate child supervision and
+  care, and disruption of protective social networks.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: type_of_housing_stress
+  direction: strengthens
+  strength: moderate
+  description: Different types of housing stress (homelessness, eviction, foreclosure,
+    housing instability, inadequate housing, unaffordability) may differentially affect
+    maltreatment risk
+- name: type_of_maltreatment
+  direction: strengthens
+  strength: moderate
+  description: Review notes that specific types of housing stress may contribute differently
+    to specific types of maltreatment (physical abuse, neglect, etc.)

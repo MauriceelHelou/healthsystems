@@ -1,0 +1,57 @@
+id: caregiver_perceived_poor_child_health_to_pediatric_readmission_ed_visits
+name: Caregiver Perceived Poor Child Health Status → Pediatric Hospital Readmission and Emergency Department
+  Visits
+from_node:
+  node_id: caregiver_perceived_poor_child_health
+  node_name: Caregiver Perceived Poor Child Health Status
+to_node:
+  node_id: pediatric_readmission_ed_visits
+  node_name: Pediatric Hospital Readmission and Emergency Department Visits
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Caregivers with poor perception of child''s health may indicate underlying unaddressed medical
+  complexity'
+- 'Step 2: Poor perceived health status reflects inadequate disease management or unresolved health issues'
+- 'Step 3: Unresolved health problems increase vulnerability to acute health deterioration'
+- 'Step 4: Increased vulnerability leads to higher likelihood of emergency department visits and hospital
+  readmissions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Louise E. Vaz et al. 2020. "The Role of Caregiver-Reported Risks in Predicting Adverse
+    Pediatric Outcomes.." *Journal of Pediatric Psychology*. https://doi.org/10.1093/jpepsy/jsaa067
+  supporting_citations:
+  - See paper for additional references
+  doi: 10.1093/jpepsy/jsaa067
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '2.0'
+description: Caregiver perception of child's health being generally 'poor' or 'not good' prior to discharge
+  strongly predicts future emergency department visits and readmissions within 90 days
+quantitative_effects:
+  effect_size:
+    value: 4.7
+    type: odds_ratio
+    ci_lower: 2.3
+    ci_upper: 9.7
+  sample_size: 249
+moderators:
+- name: chronic_disease_status
+  direction: strengthens
+  strength: moderate
+  description: Children with chronic disease status may have stronger association between perceived poor
+    health and adverse outcomes
+- name: child_age
+  direction: strengthens
+  strength: weak
+  description: Age may modify the relationship between caregiver perceptions and health outcomes
+structural_competency:
+  equity_implications: This mechanism reflects structural healthcare gaps where caregivers recognize unmet
+    health needs that the healthcare system has not adequately addressed, indicating systemic failures
+    in comprehensive care delivery rather than individual caregiver failings
+llm_metadata:
+  extracted_by: claude-sonnet-4-20250514
+  extraction_date: '2025-11-30T21:06:25.744921'
+  extraction_confidence: high
+  prompt_version: 2.0-citation-verified

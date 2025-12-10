@@ -1,0 +1,36 @@
+id: alcohol_consumption_to_serum_immune_markers
+name: Alcohol Consumption → Serum Immune Markers
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: serum_immune_markers
+  node_name: Serum Immune Markers
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol consumption triggers inflammatory cascades in pancreatic tissue'
+- 'Step 2: Sustained alcohol exposure leads to activation of immune cells and cytokine
+  production'
+- 'Step 3: Immune activation results in detectable changes in serum immune marker
+  profiles'
+- 'Step 4: Multiple immune markers show associations with alcohol exposure status
+  across the pancreatitis continuum'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Bomi Lee et al. 2023. "Distinct serum immune profiles define the
+    spectrum of acute and chronic pancreatitis from the multi-center PROCEED study.."
+    *Gastroenterology*. https://doi.org/10.1053/j.gastro.2023.03.236
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.176575'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: pancreatitis_disease_stage
+  direction: strengthens
+  strength: moderate
+  description: Association between alcohol and immune markers may vary across the
+    disease continuum from acute to chronic pancreatitis

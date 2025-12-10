@@ -1,0 +1,59 @@
+id: NEW:physical_activity_first_trimester_to_gestational_diabetes_rate
+name: Physical Activity During First Trimester → Gestational Diabetes Rate
+from_node:
+  node_id: NEW:physical_activity_first_trimester
+  node_name: Physical Activity During First Trimester
+to_node:
+  node_id: gestational_diabetes_rate
+  node_name: Gestational Diabetes Rate
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Physical activity during early pregnancy (first trimester) establishes metabolic patterns before
+  placental hormones significantly alter insulin sensitivity'
+- 'Step 2: Early exercise intervention prevents excessive early gestational weight gain that predisposes
+  to insulin resistance'
+- 'Step 3: Curvilinear dose-response relationship indicates greatest benefit from initial activity increases,
+  with diminishing returns at very high levels'
+- 'Step 4: Achieving minimum guideline of 10 MET-h/week in first trimester provides significant (13%)
+  risk reduction'
+evidence:
+  quality_rating: A
+  n_studies: 35
+  primary_citation: 'Wanting Xie et al. 2024. "Physical activity during pregnancy and the risk of gestational
+    diabetes mellitus: a systematic review and dose–response meta-analysis." https://doi.org/10.1186/s12889-024-18131-7'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis synthesized evidence from multiple databases
+  - Restricted cubic splines used to model dose-response relationship
+  - Pnonlinearity = 0.012 confirmed curvilinear relationship
+  doi: 10.1186/s12889-024-18131-7
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Physical activity specifically during the first trimester shows a curvilinear dose-response
+  relationship with GDM risk. Achieving the minimum guideline of 10 MET-h/week reduces GDM risk by 13%
+  compared to inactive pregnant individuals.
+quantitative_effects:
+  effect_size:
+    value: 0.87
+    type: relative_risk
+    ci_lower: 0.79
+    ci_upper: 0.96
+  p_value: 0.012
+moderators:
+- name: baseline_activity_level
+  direction: strengthens
+  strength: moderate
+  description: Curvilinear relationship suggests inactive pregnant women gain more benefit from initial
+    increases in activity compared to those already active
+structural_competency:
+  equity_implications: First trimester is a critical window when many pregnant individuals may not yet
+    know they are pregnant or have access to prenatal care that promotes physical activity. Structural
+    barriers include delayed entry into prenatal care due to insurance gaps, lack of early pregnancy support
+    programs, and workplace policies that do not accommodate early pregnancy symptoms that might affect
+    physical activity participation.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.337177'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

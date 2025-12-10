@@ -1,0 +1,64 @@
+id: NEW:interferon_based_hcv_treatment_to_NEW:treatment_adverse_events_hemodialysis_patients
+name: Interferon-Based HCV Treatment → Treatment Adverse Events in Hemodialysis Patients
+from_node:
+  node_id: NEW:interferon_based_hcv_treatment
+  node_name: Interferon-Based HCV Treatment
+to_node:
+  node_id: NEW:treatment_adverse_events_hemodialysis_patients
+  node_name: Treatment Adverse Events in Hemodialysis Patients
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Interferon-based HCV treatment (conventional or pegylated interferon) is
+  administered to hemodialysis patients with hepatitis C infection'
+- 'Step 2: Interferon induces systemic inflammatory and immunomodulatory responses,
+  causing flu-like syndrome in approximately 41% of patients'
+- 'Step 3: Bone marrow suppression from interferon leads to cytopenia, with high rates
+  of anemia particularly problematic in dialysis patients who already have impaired
+  erythropoietin production'
+- 'Step 4: Additional adverse events manifest across multiple organ systems including
+  thyroid dysfunction, gastrointestinal problems, central nervous system effects,
+  cardiovascular complications, and increased infection risk'
+- 'Step 5: Severe adverse events lead to treatment discontinuation in approximately
+  11% of patients, with immunological complications including prior graft rejection
+  in transplant candidates'
+evidence:
+  quality_rating: A
+  n_studies: 38
+  primary_citation: 'T Casanovas Taltavull et al. 2009. Results of hepatitis C virus
+    treatment in patients on hemodialysis: data from published meta-analyses in 2008.
+    Transplantation proceedings.'
+  supporting_citations: []
+description: Interferon-based HCV treatment in hemodialysis patients causes multiple
+  adverse events including flu-like syndrome (41%), anemia, cytopenia, thyroid dysfunction,
+  gastrointestinal problems, CNS effects, cardiovascular complications, infectious
+  problems, and immunological reactions including graft rejection. Approximately 11%
+  of patients require treatment discontinuation due to severe adverse events. The
+  hemodialysis population is particularly vulnerable due to pre-existing anemia and
+  altered drug pharmacokinetics.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 41.0
+    type: percentage
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: 1104
+moderators:
+- name: Interferon type (pegylated vs conventional)
+  direction: weakens
+  strength: weak
+  description: Pegylated interferon provided few additional benefits over conventional
+    interferon in terms of efficacy, but adverse event profiles were similar
+- name: HCV genotype
+  direction: strengthens
+  strength: moderate
+  description: Genotype 1 patients had lower SVR rates (33%) requiring potentially
+    longer treatment exposure and cumulative adverse events
+- name: Erythropoietin use
+  direction: weakens
+  strength: moderate
+  description: Use of erythropoietin, IV iron, or transfusions can mitigate anemia
+    though not consistently reported

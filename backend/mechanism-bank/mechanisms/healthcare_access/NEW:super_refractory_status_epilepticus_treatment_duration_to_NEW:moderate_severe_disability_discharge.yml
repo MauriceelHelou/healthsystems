@@ -1,0 +1,59 @@
+id: NEW:super_refractory_status_epilepticus_treatment_duration_to_NEW:moderate_severe_disability_discharge
+name: Super-Refractory Status Epilepticus Treatment Duration → Moderate to Severe Disability at Discharge
+from_node:
+  node_id: NEW:super_refractory_status_epilepticus_treatment_duration
+  node_name: Super-Refractory Status Epilepticus Treatment Duration
+to_node:
+  node_id: NEW:moderate_severe_disability_discharge
+  node_name: Moderate to Severe Disability at Discharge
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Extended treatment duration reflects prolonged neurological crisis and sustained brain insult'
+- 'Step 2: Prolonged sedation and immobility during treatment contributes to functional decline'
+- 'Step 3: Extended ICU stay associated with critical illness myopathy and cognitive sequelae'
+- 'Step 4: While survival improves with longer treatment, neurological recovery is often incomplete'
+evidence:
+  quality_rating: A
+  n_studies: 95
+  primary_citation: 'Camilla Dyremose Cornwall et al. 2023. "Outcomes and Treatment Approaches for Super-Refractory
+    Status Epilepticus: A Systematic Review and Meta-Analysis." https://doi.org/10.1001/jamaneurol.2023.2407'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 95 articles and 30 conference
+    abstracts
+  - Individual patient meta-analysis of 266 patients from contributing studies
+  - Studies from MEDLINE, Cochrane Library, EMBASE, and ClinicalTrials.org through May 2022
+  doi: 10.1001/jamaneurol.2023.2407
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'At discharge, only 26.8% of SRSE patients had none to slight disability (none: 8.4%, nonsignificant
+  and slight: 18.4%). Very long-term treatment (>28 days) was associated with increased rates of seizure
+  cessation but also increased risk of moderate to severe disability, representing a survival-disability
+  trade-off.'
+quantitative_effects:
+  effect_size:
+    value: 26.8
+    type: percentage_change
+  sample_size: 190
+moderators:
+- name: srse_duration
+  direction: strengthens
+  strength: moderate
+  description: Mean SRSE duration was 36.3 days, indicating prolonged neurological crisis associated with
+    worse functional outcomes despite survival
+structural_competency:
+  equity_implications: This mechanism reflects the complex trade-offs in treating severe neurological
+    conditions. Access to rehabilitation services, long-term care facilities, and disability support systems
+    will significantly impact post-discharge outcomes. The high disability rates suggest structural needs
+    for rehabilitation infrastructure and disability support services. Health equity implications include
+    disparities in access to post-acute rehabilitation care and long-term disability support across different
+    healthcare systems and socioeconomic contexts.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.124243'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

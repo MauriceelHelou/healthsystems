@@ -1,0 +1,60 @@
+id: homelessness_rate_to_alcohol_use_disorder
+name: Homelessness Rate → Alcohol Use Disorder
+from_node:
+  node_id: homelessness_rate
+  node_name: Homelessness Rate
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Homelessness exposes individuals to extreme psychological stressors including
+  loss of stable housing, social disconnection, and daily survival challenges'
+- 'Step 2: Lack of stable shelter increases exposure to traumatic experiences, violence,
+  and harsh environmental conditions that compound psychological distress'
+- 'Step 3: Limited access to mental health services and healthy coping mechanisms
+  among homeless populations increases vulnerability to self-medication with alcohol'
+- 'Step 4: Street culture and social networks among homeless populations may normalize
+  and facilitate alcohol use as a coping strategy'
+- 'Step 5: Chronic stress, untreated mental health conditions, and environmental factors
+  contribute to development and maintenance of alcohol use disorder'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'S. Gutwinski et al. 2021. The prevalence of mental disorders
+    among homeless people in high-income countries: An updated systematic review and
+    meta-regression analysis. PLoS Medicine.'
+  supporting_citations: []
+description: Homeless populations show exceptionally high rates of alcohol use disorder
+  (36.7% prevalence), making it the most common psychiatric diagnosis among homeless
+  individuals in high-income countries. This meta-analysis of 39 studies with 8,049
+  participants demonstrates that homelessness is strongly associated with alcohol
+  use disorder, likely through pathways involving chronic stress, trauma exposure,
+  limited healthcare access, and environmental factors unique to street living.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 36.7
+    type: prevalence_percent
+    ci_lower: 27.7
+    ci_upper: 46.2
+  p_value: null
+  sample_size: 8049
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Sex distribution of participants partially explained heterogeneity
+    in prevalence rates across studies
+- name: sampling_method
+  direction: strengthens
+  strength: moderate
+  description: Different sampling methods contributed to variation in observed prevalence
+    rates
+- name: geographic_location
+  direction: strengthens
+  strength: moderate
+  description: Study location was a significant source of heterogeneity in prevalence
+    estimates

@@ -1,0 +1,50 @@
+id: dbs_treatment_access_to_alcohol_abstinence_ald
+name: Access to Deep Brain Stimulation Treatment → Alcohol Abstinence in Patients
+  with Alcoholic Liver Disease
+from_node:
+  node_id: dbs_treatment_access
+  node_name: Access to Deep Brain Stimulation Treatment
+to_node:
+  node_id: alcohol_abstinence_ald
+  node_name: Alcohol Abstinence in Patients with Alcoholic Liver Disease
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Deep brain stimulation provides neurosurgical intervention targeting brain
+  circuits involved in alcohol use disorder'
+- 'Step 2: DBS modulates neural pathways associated with addiction and craving reduction'
+- 'Step 3: Successful DBS treatment results in sustained abstinence from alcohol use'
+- 'Step 4: Abstinence from alcohol prevents further liver damage and allows for liver
+  function stabilization or improvement'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'O A Abiola et al. 2024. "Cost-Effectiveness Analysis of Deep
+    Brain Stimulation for the Treatment of Alcohol Use Disorder and Alcoholic Liver
+    Disease.." *medRxiv : the preprint server for health sciences*. https://doi.org/10.1101/2024.08.22.24312455'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.398732'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: liver_disease_severity
+  direction: strengthens
+  strength: strong
+  description: DBS cost-effectiveness increases substantially for advanced ALD patients
+    (fibrosis stage 3 or beyond) compared to general AUD patients, with cost-effectiveness
+    achieved at 53% success rate for advanced ALD versus no cost-effectiveness for
+    general AUD at any success rate
+- name: liver_decompensation_status
+  direction: strengthens
+  strength: strong
+  description: For advanced decompensated ALD patients, DBS becomes cost-effective
+    at even lower success rates (35% over one year) compared to compensated advanced
+    ALD (53% over two years)
+- name: dbs_treatment_success_rate
+  direction: strengthens
+  strength: strong
+  description: Higher DBS success rates improve cost-effectiveness, with threshold
+    analysis showing minimum success rates of 35-53% needed for cost-effectiveness
+    depending on disease severity

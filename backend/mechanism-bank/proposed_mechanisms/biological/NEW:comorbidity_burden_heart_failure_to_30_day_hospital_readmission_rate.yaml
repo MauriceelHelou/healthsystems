@@ -1,0 +1,60 @@
+id: NEW:comorbidity_burden_heart_failure_to_30_day_hospital_readmission_rate
+name: Comorbidity Burden in Heart Failure Patients → Hospital Readmission Rate
+from_node:
+  node_id: NEW:comorbidity_burden_heart_failure
+  node_name: Comorbidity Burden in Heart Failure Patients
+to_node:
+  node_id: 30_day_hospital_readmission_rate
+  node_name: Hospital Readmission Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Heart failure patients accumulate multiple comorbid conditions (diabetes,
+  COPD, CKD, stroke, IHD, anemia, cancer, atrial fibrillation, dementia, depression)
+  that create complex physiological interactions'
+- 'Step 2: Each comorbidity contributes additional pathophysiological burden - for
+  example, CKD impairs fluid management, COPD compromises respiratory compensation,
+  diabetes accelerates vascular damage, and anemia reduces oxygen-carrying capacity'
+- 'Step 3: Multiple comorbidities complicate treatment regimens, increase medication
+  interactions, and reduce patient self-care capacity and confidence'
+- 'Step 4: The cumulative physiological stress and management complexity leads to
+  faster clinical deterioration and incomplete recovery after index hospitalization'
+- 'Step 5: Patients with higher comorbidity burden experience higher rates of all-cause
+  readmission (HR 1.16), HF-related readmission (HR 1.13), and non-HF-related readmission
+  (HR 1.17)'
+evidence:
+  quality_rating: A
+  n_studies: 39
+  primary_citation: 'Kyoung Suk Lee et al. 2023. Relationship between comorbidity
+    and health outcomes in patients with heart failure: a systematic review and meta-analysis.
+    BMC Cardiovascular Disorders.'
+  supporting_citations: []
+description: 'A systematic review and meta-analysis of 42 studies (39 in pooled analysis)
+  demonstrates that comorbidity burden in heart failure patients significantly increases
+  hospital readmission risk. The pooled hazard ratio for all-cause readmission is
+  1.16 (95% CI 1.09-1.23), with similar effects for HF-related (HR 1.13) and non-HF-related
+  readmission (HR 1.17). Ten specific comorbidities were identified as having negative
+  effects on prognostic outcomes: diabetes, COPD, CKD, stroke, IHD, anemia, cancer,
+  atrial fibrillation, dementia, and depression.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.16
+    type: hazard_ratio
+    ci_lower: 1.09
+    ci_upper: 1.23
+  p_value: null
+  sample_size: null
+moderators:
+- name: Type of comorbidity
+  direction: strengthens
+  strength: moderate
+  description: 'Different comorbidities have varying effect sizes: anemia (HR 1.42)
+    and COPD (HR 1.31) show strongest effects, while diabetes (HR 1.16) and depression
+    (HR 1.17) show more modest effects'
+- name: Number of comorbidities
+  direction: strengthens
+  strength: moderate
+  description: Higher comorbidity burden (multiple conditions) associated with worse
+    outcomes across mortality, readmission, and quality of life measures

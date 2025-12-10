@@ -1,0 +1,64 @@
+id: NEW:natural_killer_cell_fraction_to_all_cause_mortality_rate
+name: Natural Killer Cell Fraction → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:natural_killer_cell_fraction
+  node_name: Natural Killer Cell Fraction
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Natural killer (NK) cells are innate immune cells that provide critical
+  immunosurveillance against infected and malignant cells'
+- 'Step 2: Higher NK cell fractions in blood reflect enhanced capacity for early detection
+  and elimination of abnormal cells, including cancer cells and virus-infected cells'
+- 'Step 3: NK cells produce cytokines (IFN-γ, TNF-α) that coordinate broader immune
+  responses and enhance adaptive immunity'
+- 'Step 4: Increased NK cell-mediated immunosurveillance reduces accumulation of malignant
+  cells and chronic infections that contribute to mortality'
+- 'Step 5: Higher NK cell fractions are associated with healthier lifestyle factors
+  (exercise, better sleep) and lower levels of harmful exposures (less obesity, smoking,
+  stress), which may partially mediate the mortality association'
+- 'Step 6: The protective effect of NK cells on mortality operates independently of
+  major epidemiological risk factors and baseline comorbidity'
+evidence:
+  quality_rating: A
+  n_studies: 23
+  primary_citation: Qi Luo et al. 2023. A meta-analysis of immune-cell fractions at
+    high resolution reveals novel associations with common phenotypes and health outcomes.
+    Genome Medicine.
+  supporting_citations: []
+description: Higher natural killer cell fractions in blood are associated with reduced
+  all-cause mortality risk, independent of major epidemiological risk factors and
+  baseline comorbidity. This relationship likely reflects NK cells' critical role
+  in immunosurveillance against malignant and infected cells. The meta-analysis of
+  22 cohorts with DNA methylation-derived immune cell fractions demonstrated that
+  immune cell composition, including NK cells, has predictive value for mortality
+  outcomes, with a machine learning model achieving C-index of 0.69 using immune fractions
+  alone and 0.83 when combined with epidemiological factors.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Exercise
+  direction: strengthens
+  strength: moderate
+  description: Exercise is associated with increased NK cell fractions, potentially
+    enhancing the protective effect
+- name: Sleep quality
+  direction: strengthens
+  strength: moderate
+  description: Better sleep correlates with higher NK cell fractions
+- name: Smoking
+  direction: weakens
+  strength: moderate
+  description: Smoking is associated with decreased NK cell counts, potentially diminishing
+    immunosurveillance
+- name: Obesity
+  direction: weakens
+  strength: moderate
+  description: Obesity is associated with decreased NK cell fractions
+- name: Stress levels
+  direction: weakens
+  strength: moderate
+  description: Higher stress levels associated with decreased NK cell counts

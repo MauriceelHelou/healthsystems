@@ -1,0 +1,52 @@
+id: NEW:brief_intervention_alcohol_healthcare_to_NEW:alcohol_related_consequences
+name: Brief Interventions for Alcohol Use in Healthcare Settings → Alcohol-Related Consequences
+from_node:
+  node_id: NEW:brief_intervention_alcohol_healthcare
+  node_name: Brief Interventions for Alcohol Use in Healthcare Settings
+to_node:
+  node_id: NEW:alcohol_related_consequences
+  node_name: Alcohol-Related Consequences
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare-delivered brief interventions screen for and address hazardous alcohol use'
+- 'Step 2: Intervention components target reduction in overall consumption and risky drinking patterns'
+- 'Step 3: Reduced alcohol consumption leads to fewer acute and chronic alcohol-related harms'
+- 'Step 4: Decrease in social, occupational, and health consequences attributable to alcohol use'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'Maria L Schweer-Collins et al. 2023. "Investigating for Whom Brief Substance Use
+    Interventions Are Most Effective: An Individual Participant Data Meta-analysis.." https://doi.org/10.1007/s11121-023-01525-1'
+  supporting_citations:
+  - Parent aggregate data meta-analysis (k = 116 trials)
+  - 'PROSPERO protocol #CRD42018086832'
+  - Additional citations require full-text access
+  doi: 10.1007/s11121-023-01525-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief interventions in general healthcare settings led to significant reductions in alcohol-related
+  consequences among females, with a moderate effect size.
+quantitative_effects:
+  effect_size:
+    value: 0.16
+    type: standardized_mean_difference
+    ci_lower: 0.08
+    ci_upper: 0.25
+  sample_size: 12074
+moderators:
+- name: sex_female
+  direction: strengthens
+  strength: strong
+  description: Effect was significant specifically among female participants
+structural_competency:
+  equity_implications: Alcohol-related consequences encompass social, legal, occupational, and health
+    domains that are often unequally distributed by socioeconomic status. The effectiveness of brief interventions
+    in reducing these consequences suggests that healthcare system investments in screening and brief
+    intervention capacity can contribute to reducing the broader social burden of alcohol use disorders.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.000604'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

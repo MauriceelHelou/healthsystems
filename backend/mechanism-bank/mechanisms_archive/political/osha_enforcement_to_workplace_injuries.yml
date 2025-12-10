@@ -1,0 +1,93 @@
+id: osha_enforcement_to_workplace_injuries
+name: OSHA Enforcement -> Workplace Injury Reduction
+from_node:
+  node_id: osha_enforcement
+  node_name: OSHA Inspections and Enforcement
+  node_type: stock
+to_node:
+  node_id: workplace_injuries
+  node_name: Workplace Injuries and Fatalities
+  node_type: crisis_endpoint
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: OSHA inspection schedules and enforcement priorities target high-hazard industries'
+- 'Step 2: Inspections with penalties create deterrent effect on employers'
+- 'Step 3: Compliance requirements mandate hazard controls and safety protocols'
+- 'Step 4: Regulatory oversight improves group-level safety climate within organizations'
+- 'Step 5: Reduced workplace hazard exposure leads to fewer injuries and fatalities'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Haviland, Amelia, et al. 2012. "A New Estimate of the Impact of OSHA Inspections on Manufacturing Injury Rates, 1998-2005." American Journal of Industrial Medicine 55(11): 964-975.'
+  supporting_citations:
+  - 'Gray, Wayne B., and John M. Mendeloff. 2005. "The Declining Effects of OSHA Inspections on Manufacturing Injuries, 1979-1998." Industrial and Labor Relations Review 58(4): 571-587.'
+  - 'Andersen, Johan Hviid, et al. 2019. "Effectiveness of workplace safety and health interventions." PMC.'
+  doi: 10.1002/ajim.22062
+  journal: American Journal of Industrial Medicine
+  year: 2012
+  citation_verified: true
+quantitative_effects:
+  effect_size:
+    value: 19
+    type: percentage_change
+    ci_lower: null
+    ci_upper: 24
+    ci_level: 95
+  sample_size: null
+  interpretation: "OSHA inspections with penalties associated with 19-24% decline in injuries during the two years following inspection"
+  additional_effects:
+  - metric: Injury decline from inspection notice only
+    value: 5
+    type: percentage_change
+    notes: "Firms receiving notice of potential inspection (not inspected) showed 5% injury decline over three years"
+  - metric: Inspection with penalty effect
+    value: 14
+    type: percentage_change
+    notes: "Firms inspected after notice showed 14% injury decline"
+  - metric: Legislative policy odds ratio
+    value: 0.73
+    type: odds_ratio
+    ci_lower: 0.62
+    ci_upper: 0.86
+    notes: "Meta-analysis found legislation effectively reduces workplace risk (OR 0.73)"
+last_updated: '2025-11-30'
+version: '1.0'
+description: Regulatory enforcement through OSHA inspections significantly reduces workplace injuries, with effects strongest when inspections result in penalties. Meta-analyses demonstrate that legislative and regulatory policy reduces workplace injuries, with group and organizational-level interventions more effective than individual-focused approaches.
+moderators:
+- name: penalty_severity
+  direction: strengthens
+  strength: strong
+  description: Larger financial penalties create stronger deterrent effects
+- name: industry_sector
+  direction: varies
+  strength: moderate
+  description: High-hazard industries (construction, manufacturing) show larger effects
+- name: inspection_targeting
+  direction: strengthens
+  strength: moderate
+  description: Inspections targeted at high-risk establishments are more effective
+structural_competency:
+  root_cause_level: structural
+  avoids_victim_blaming: true
+  equity_implications: Workplace injuries disproportionately affect low-wage workers, immigrants, and workers in non-unionized settings who have less power to demand safe conditions. OSHA enforcement resources have not kept pace with workforce growth, creating inspection gaps. Temporary and gig workers often fall outside regulatory coverage. Policy should expand OSHA funding and coverage to non-standard employment.
+assumptions:
+- OSHA enforcement includes inspections, citations, and penalties
+- Workplace injuries include both lost-workday injuries and fatalities
+- Assumes adequate enforcement resources and inspector capacity
+limitations:
+- Enforcement effects may have declined over time (weaker in 1992-1998 vs earlier periods)
+- Self-reporting of injuries may undercount actual incidents
+- Small employers less likely to be inspected
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Federal OSHA coverage varies by state; state-plan states may have different enforcement intensity
+  relevant_geographies:
+  - State-plan states (22 states) may have different standards and enforcement
+  - Rural areas have fewer inspection resources
+  - States with right-to-work laws may have weaker worker protections
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

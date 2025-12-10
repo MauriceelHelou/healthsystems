@@ -1,0 +1,57 @@
+id: NEW:digital_behavioral_health_intervention_access_to_depression_diagnosis
+name: Digital Behavioral Health Intervention Access → Depression Diagnosis
+from_node:
+  node_id: NEW:digital_behavioral_health_intervention_access
+  node_name: Digital Behavioral Health Intervention Access
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Digital interventions provide accessible, scalable delivery of evidence-based therapeutic content
+  for depression'
+- 'Step 2: Integrated treatment addresses both depression and alcohol use simultaneously, targeting bidirectional
+  reinforcement'
+- 'Step 3: Cognitive-behavioral and motivational components reduce depressive symptom severity'
+- 'Step 4: Reduced depression symptoms decrease reliance on alcohol as self-medication'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'M. Schouten et al. 2021. "Digital Interventions for People With Co-Occurring Depression
+    and Problematic Alcohol Use: A Systematic Review and Meta-Analysis." https://doi.org/10.1093/alcalc/agaa147'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis of 6 studies at 3-month follow-up
+  - Studies included in GRADE assessment for depressive symptoms
+  - Trials evaluating digital interventions for co-occurring conditions
+  doi: 10.1093/alcalc/agaa147
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Digital interventions targeting both depression and problematic alcohol use simultaneously
+  produce small but significant reductions in depressive symptoms at 3-month follow-up among people with
+  co-occurring conditions.
+quantitative_effects:
+  effect_size:
+    value: 0.34
+    type: standardized_mean_difference
+    ci_lower: 0.06
+    ci_upper: 0.62
+  p_value: 0.02
+moderators:
+- name: follow_up_duration
+  direction: weakens
+  strength: moderate
+  description: Effect on depressive symptoms significant at 3-month follow-up (g=0.34, p=0.02) but non-significant
+    at 6-month follow-up (g=0.29, p=0.15), suggesting attenuation over time
+structural_competency:
+  equity_implications: Digital interventions address structural barriers to mental health care access
+    including geographic isolation, cost, stigma, and limited provider availability. This approach can
+    reduce healthcare access disparities for populations unable to access traditional in-person treatment.
+    The focus on integrated treatment acknowledges the structural reality that co-occurring conditions
+    require coordinated care often unavailable in fragmented healthcare systems.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.334543'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

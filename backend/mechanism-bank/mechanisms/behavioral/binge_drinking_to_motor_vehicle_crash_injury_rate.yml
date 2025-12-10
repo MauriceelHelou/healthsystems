@@ -1,0 +1,50 @@
+id: binge_drinking_to_motor_vehicle_crash_injury_rate
+name: Binge Drinking → Motor Vehicle Crash Injury Rate
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: motor_vehicle_crash_injury_rate
+  node_name: Motor Vehicle Crash Injury Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol consumption impairs central nervous system function affecting psychomotor coordination'
+- 'Step 2: Driving performance decrements occur across multiple domains including lateral control and
+  hazard response'
+- 'Step 3: Impaired vehicle control and reaction time increases probability of crashes'
+- 'Step 4: Motor vehicle crashes result in injuries and fatalities'
+evidence:
+  quality_rating: A
+  n_studies: 57
+  primary_citation: 'S. Simmons et al. 2022. "The effects of cannabis and alcohol on driving performance
+    and driver behaviour: a systematic review and meta-analysis.." https://doi.org/10.1111/add.15770'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis component examining alcohol effects
+  - Epidemiological meta-analyses establishing alcohol-crash risk associations referenced
+  - Subgroup analyses comparing cannabis effects to low blood alcohol concentrations
+  doi: 10.1111/add.15770
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol impairs driving performance through multiple mechanisms affecting psychomotor function,
+  increasing crash risk. The study confirms alcohol's detrimental effects on driving and provides comparison
+  benchmark for cannabis effects.
+quantitative_effects:
+  sample_size: 1725
+moderators:
+- name: blood_alcohol_concentration
+  direction: strengthens
+  strength: strong
+  description: Higher blood alcohol concentrations produce greater driving impairment in dose-response
+    relationship
+structural_competency:
+  equity_implications: Structural determinants include alcohol outlet density, pricing policies, advertising
+    regulations, and availability of alternative transportation. Enforcement of drunk driving laws varies
+    by jurisdiction and demographic group. Economic factors influence both alcohol consumption patterns
+    and access to alternatives to driving while impaired.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.629789'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

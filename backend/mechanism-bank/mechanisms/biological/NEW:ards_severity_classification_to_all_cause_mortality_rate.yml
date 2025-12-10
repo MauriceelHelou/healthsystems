@@ -1,0 +1,50 @@
+id: NEW:ards_severity_classification_to_all_cause_mortality_rate
+name: ARDS Severity Classification (Moderate) → All-Cause Mortality Rate
+from_node:
+  node_id: NEW:ards_severity_classification
+  node_name: ARDS Severity Classification (Moderate)
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Moderate ARDS is classified by PaO2/FiO2 ratio 100-200 mmHg'
+- 'Step 2: Significant hypoxemia impairs oxygen delivery to vital organs'
+- 'Step 3: Inflammatory lung injury progresses with potential for worsening'
+- 'Step 4: Mechanical ventilation requirements increase complications risk'
+- 'Step 5: These factors increase mortality rate by 16%'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'L. Torres et al. 2021. "Attributable mortality of acute respiratory distress syndrome:
+    a systematic review, meta-analysis and survival analysis using targeted minimum loss-based estimation."
+    https://doi.org/10.1136/thoraxjnl-2020-215950'
+  supporting_citations:
+  - Survival analysis conducted on three ICU cohorts with prospectively collected patient-level data
+  - 658 septic patients included in the causal inference analysis
+  - Targeted minimum loss-based estimation used to control for confounders
+  doi: 10.1136/thoraxjnl-2020-215950
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Moderate ARDS increases mortality rate by 16%, demonstrating a graded relationship between
+  ARDS severity and attributable mortality. This intermediate effect size between mild (non-significant)
+  and severe ARDS supports the biological plausibility of the causal relationship.
+quantitative_effects:
+  effect_size:
+    value: 16.0
+    type: percentage_change
+    ci_lower: 2.0
+    ci_upper: 31.0
+  p_value: 0.031
+  sample_size: 658
+structural_competency:
+  equity_implications: Early recognition and optimal management of moderate ARDS may prevent progression
+    to severe ARDS. Healthcare systems with robust critical care training, nurse-to-patient ratios, and
+    protocol-driven care may achieve better outcomes, representing structural determinants of survival.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.326428'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

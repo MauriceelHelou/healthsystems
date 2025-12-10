@@ -1,0 +1,43 @@
+id: on_premise_alcohol_outlet_access_to_violent_crime_exposure
+name: Access to On-Premise Alcohol Outlets → Violent Crime Exposure
+from_node:
+  node_id: on_premise_alcohol_outlet_access
+  node_name: Access to On-Premise Alcohol Outlets
+to_node:
+  node_id: violent_crime_exposure
+  node_name: Violent Crime Exposure
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: On-premise outlets (bars, restaurants) concentrate alcohol consumption
+  within supervised establishments'
+- 'Step 2: Staff and management provide some level of guardianship and crowd control
+  within venues'
+- 'Step 3: Establishments have incentive to maintain order to preserve licenses and
+  business reputation'
+- 'Step 4: However, congregation of intoxicated patrons entering/exiting establishments
+  and nearby streets still creates opportunities for violent encounters, though to
+  lesser degree than off-premise outlets'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Pamela J Trangenstein et al. 2018. "Outlet Type, Access to Alcohol,
+    and Violent Crime.." *Alcoholism, clinical and experimental research*. https://doi.org/10.1111/acer.13880
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.033595'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: establishment_regulation
+  direction: weakens
+  strength: moderate
+  description: Built-in oversight and regulatory requirements for on-premise outlets
+    (security, capacity limits, service training) reduce violence risk compared to
+    off-premise
+- name: closing_time_policies
+  direction: strengthens
+  strength: moderate
+  description: Temporal concentration of patrons leaving establishments simultaneously
+    may create violence hotspots

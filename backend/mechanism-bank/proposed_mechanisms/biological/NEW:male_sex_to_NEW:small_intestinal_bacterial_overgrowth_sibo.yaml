@@ -1,0 +1,50 @@
+id: NEW:male_sex_to_NEW:small_intestinal_bacterial_overgrowth_sibo
+name: Male Sex → Small Intestinal Bacterial Overgrowth (SIBO)
+from_node:
+  node_id: NEW:male_sex
+  node_name: Male Sex
+to_node:
+  node_id: NEW:small_intestinal_bacterial_overgrowth_sibo
+  node_name: Small Intestinal Bacterial Overgrowth (SIBO)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Male sex is associated with higher prevalence of non-alcoholic liver diseases
+  (NAFLD, NASH, fibrosis, cirrhosis)'
+- 'Step 2: In populations with chronic non-alcoholic liver diseases, higher percentage
+  of males correlates with increased SIBO prevalence'
+- 'Step 3: Potential mechanisms may include sex-specific differences in gut motility,
+  bile acid metabolism, immune responses, or hormonal influences on intestinal microbiota
+  regulation'
+- 'Step 4: Meta-regression demonstrates that male sex is a predisposing factor toward
+  SIBO development in liver disease populations'
+evidence:
+  quality_rating: A
+  n_studies: 18
+  primary_citation: 'Anna Gudan et al. 2022. The Prevalence of Small Intestinal Bacterial
+    Overgrowth in Patients with Non-Alcoholic Liver Diseases: NAFLD, NASH, Fibrosis,
+    Cirrhosis—A Systematic Review, Meta-Analysis and Meta-Regression. Nutrients.'
+  supporting_citations: []
+description: Meta-regression analysis of 18 studies (n=1,263 patients) found that
+  higher percentage of males in populations with non-alcoholic liver diseases is a
+  significant predisposing factor toward SIBO. The overall SIBO prevalence in these
+  populations was 35%, and this prevalence increases with the proportion of men in
+  the study population. The regression coefficient of 0.0195 indicates that for each
+  percentage point increase in male proportion, there is a corresponding increase
+  in SIBO event rate.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.0195
+    type: regression_coefficient
+    ci_lower: null
+    ci_upper: null
+  p_value: 0.0426
+  sample_size: 1263
+moderators:
+- name: liver_disease_type
+  direction: strengthens
+  strength: weak
+  description: NASH subgroup showed highest SIBO prevalence (41.1%) compared to other
+    liver disease subtypes, though differences were not statistically significant

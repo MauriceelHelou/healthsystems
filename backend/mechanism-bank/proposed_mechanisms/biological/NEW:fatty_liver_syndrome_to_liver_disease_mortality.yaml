@@ -1,0 +1,52 @@
+id: NEW:fatty_liver_syndrome_to_liver_disease_mortality
+name: Fatty Liver Syndrome → Liver Disease Mortality
+from_node:
+  node_id: NEW:fatty_liver_syndrome
+  node_name: Fatty Liver Syndrome
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Fatty liver syndrome (encompassing NAFLD and AFLD) initiates with hepatic
+  steatosis - accumulation of fat in liver cells'
+- 'Step 2: Continued hepatic fat accumulation triggers inflammatory responses and
+  oxidative stress, leading to steatohepatitis'
+- 'Step 3: Chronic inflammation activates hepatic stellate cells, promoting fibrogenesis
+  and progressive hepatic fibrosis'
+- 'Step 4: Progressive fibrosis advances through stages (F0-F4), culminating in cirrhosis
+  with architectural distortion of the liver'
+- 'Step 5: Cirrhosis leads to liver-related complications including portal hypertension,
+  hepatocellular carcinoma, and liver failure'
+- 'Step 6: These end-stage liver complications result in increased liver disease mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: M. Han 2020. "Noninvasive Tests (NITs) for Hepatic Fibrosis in
+    Fatty Liver Syndrome." Life.
+  supporting_citations: []
+description: Fatty liver syndrome represents a spectrum of liver pathology that progresses
+  from simple steatosis through steatohepatitis and fibrosis to cirrhosis and liver-related
+  mortality. The disease's advancement to cirrhosis and liver-related complications
+  necessitates assessment of disease severity. The progression from fatty liver to
+  fibrosis to cirrhosis represents the key pathway through which this condition leads
+  to liver disease mortality.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: obesity
+  direction: strengthens
+  strength: strong
+  description: High obesity prevalence is a major driver of fatty liver syndrome and
+    its progression to severe liver disease
+- name: alcohol_use_disorder
+  direction: strengthens
+  strength: strong
+  description: Alcohol use disorder contributes to alcoholic fatty liver disease and
+    accelerates progression to cirrhosis
+- name: fibrosis_stage
+  direction: strengthens
+  strength: strong
+  description: Higher fibrosis stages (F3-F4) are strongly associated with increased
+    risk of liver-related mortality and complications

@@ -1,0 +1,58 @@
+id: NEW:nonalcoholic_steatohepatitis_nash_to_NEW:hepatocellular_carcinoma_hcc
+name: Nonalcoholic Steatohepatitis (NASH) → Hepatocellular Carcinoma (HCC)
+from_node:
+  node_id: NEW:nonalcoholic_steatohepatitis_nash
+  node_name: Nonalcoholic Steatohepatitis (NASH)
+to_node:
+  node_id: NEW:hepatocellular_carcinoma_hcc
+  node_name: Hepatocellular Carcinoma (HCC)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: NASH causes chronic liver inflammation with hepatocyte injury, leading
+  to cycles of cell death and regeneration'
+- 'Step 2: Repeated hepatocyte turnover and oxidative stress promote accumulation
+  of genetic mutations in liver progenitor cells'
+- 'Step 3: Progressive fibrosis develops in most cases, creating a pro-tumorigenic
+  microenvironment, though HCC can arise even without significant fibrosis in up to
+  38% of NASH-HCC cases'
+- 'Step 4: Metabolic dysfunction associated with NASH (insulin resistance, lipotoxicity,
+  altered adipokine signaling) provides additional carcinogenic stimulus independent
+  of cirrhosis'
+- 'Step 5: Malignant transformation of HCC precursor cells leads to hepatocellular
+  carcinoma initiation and progression'
+evidence:
+  quality_rating: B
+  n_studies: 19
+  primary_citation: 'Renumathy Dhanasekaran and Dean W Felsher 2019. A Tale of Two
+    Complications of Obesity: NASH and Hepatocellular Carcinoma. Hepatology (Baltimore,
+    Md.)'
+  supporting_citations: []
+description: NASH promotes hepatocellular carcinoma through chronic inflammation,
+  repeated hepatocyte injury and regeneration cycles, and progressive fibrosis. Unlike
+  other chronic liver diseases where cirrhosis almost always precedes HCC, NASH can
+  lead to HCC even without significant fibrosis in a substantial proportion of cases
+  (up to 38%), suggesting additional obesity-related metabolic mechanisms contribute
+  to carcinogenesis.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 38.0
+    type: prevalence_percentage
+    ci_lower: null
+    ci_upper: null
+  p_value: null
+  sample_size: null
+moderators:
+- name: Cirrhosis status
+  direction: strengthens
+  strength: moderate
+  description: While cirrhosis precedes HCC in >90% of patients with other chronic
+    liver diseases (hepatitis C, alcohol), up to 38% of NASH-HCC cases occur without
+    significant underlying fibrosis
+- name: Obesity
+  direction: strengthens
+  strength: moderate
+  description: Obesity may contribute to HCC pathogenesis independent of NASH and
+    overt fibrosis/cirrhosis through additional metabolic mechanisms

@@ -1,0 +1,57 @@
+id: NEW:polysubstance_use_cannabis_alcohol_to_motor_vehicle_crash_injury_rate
+name: Combined Cannabis and Alcohol Use → Motor Vehicle Crash Injury Rate
+from_node:
+  node_id: NEW:polysubstance_use_cannabis_alcohol
+  node_name: Combined Cannabis and Alcohol Use
+to_node:
+  node_id: motor_vehicle_crash_injury_rate
+  node_name: Motor Vehicle Crash Injury Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Combined use of cannabis and alcohol produces synergistic pharmacological effects on CNS function'
+- 'Step 2: Lateral control impairment significantly exceeds that of either substance alone (g=0.480 vs
+  alcohol; g=0.336 vs cannabis)'
+- 'Step 3: Time out of lane increases substantially compared to single substance use (g=0.525 vs alcohol;
+  g=0.475 vs cannabis)'
+- 'Step 4: Multiplicative impairment effects dramatically increase crash probability and severity'
+evidence:
+  quality_rating: A
+  n_studies: 57
+  primary_citation: 'S. Simmons et al. 2022. "The effects of cannabis and alcohol on driving performance
+    and driver behaviour: a systematic review and meta-analysis.." https://doi.org/10.1111/add.15770'
+  supporting_citations:
+  - Additional citations require full-text access - studies examining combined drug effects on driving
+  - Experimental driving studies using simulator, closed-course, and on-road paradigms
+  - Epidemiological literature on polysubstance involvement in fatal crashes
+  doi: 10.1111/add.15770
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The combination of cannabis and alcohol produces significantly greater driving impairment
+  than either substance alone, with synergistic effects on lateral control (g=0.480 vs alcohol alone;
+  g=0.336 vs cannabis alone) and time out of lane (g=0.525 vs alcohol; g=0.475 vs cannabis). This polysubstance
+  pattern substantially elevates crash risk.
+quantitative_effects:
+  effect_size:
+    value: 0.48
+    type: standardized_mean_difference
+    ci_lower: 0.096
+    ci_upper: 0.865
+  sample_size: 1725
+moderators:
+- name: relative_dose_of_each_substance
+  direction: strengthens
+  strength: moderate
+  description: Higher doses of either substance in combination likely produce greater synergistic impairment
+structural_competency:
+  equity_implications: Structural factors include co-location of alcohol and cannabis retail, marketing
+    practices that normalize concurrent use, limited public education about polysubstance risks, and inadequate
+    alternative transportation infrastructure. Policy gaps exist where cannabis legalization occurs without
+    corresponding impaired driving countermeasures. Equity implications include differential exposure
+    to marketing, enforcement disparities, and transportation access barriers in low-income communities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.630769'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

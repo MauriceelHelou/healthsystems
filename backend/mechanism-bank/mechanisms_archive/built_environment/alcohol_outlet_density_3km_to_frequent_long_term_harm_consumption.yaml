@@ -1,0 +1,43 @@
+id: alcohol_outlet_density_3km_to_frequent_long_term_harm_consumption
+name: Alcohol Outlet Density within 3 km → Frequent Alcohol Consumption Above Long-Term
+  Harm Guidelines
+from_node:
+  node_id: alcohol_outlet_density_3km
+  node_name: Alcohol Outlet Density within 3 km
+to_node:
+  node_id: frequent_long_term_harm_consumption
+  node_name: Frequent Alcohol Consumption Above Long-Term Harm Guidelines
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher outlet density within 3 km creates routine exposure to alcohol retail
+  environments'
+- 'Step 2: Frequent exposure to outlets and marketing normalizes regular alcohol consumption
+  patterns'
+- 'Step 3: Convenience of multiple nearby outlets reduces effort needed for regular
+  purchasing'
+- 'Step 4: Pattern of frequent purchasing becomes established, leading to regular
+  consumption above long-term harm guidelines (>2 drinks at least weekly)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Karen E Lamb et al. 2017. "Associations between access to alcohol
+    outlets and alcohol intake and depressive symptoms in women from socioeconomically
+    disadvantaged neighbourhoods in Australia.." *BMC public health*. https://doi.org/10.1186/s12889-017-4022-4
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.045072'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: consumption_frequency
+  direction: strengthens
+  strength: moderate
+  description: Association only evident when examining frequency of consumption above
+    guidelines (at least weekly), not single-occasion measures
+- name: distance_threshold
+  direction: strengthens
+  strength: strong
+  description: Effects observed at either 3 km or 0.4 km when examining frequency,
+    suggesting multiple spatial scales of influence

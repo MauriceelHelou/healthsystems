@@ -1,0 +1,51 @@
+id: NEW:legal_system_sud_treatment_referrals_to_NEW:cannabis_use_disorder_treatment
+name: Legal System SUD Treatment Referrals → Cannabis Use Disorder Treatment
+from_node:
+  node_id: NEW:legal_system_sud_treatment_referrals
+  node_name: Legal System SUD Treatment Referrals
+to_node:
+  node_id: NEW:cannabis_use_disorder_treatment
+  node_name: Cannabis Use Disorder Treatment
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Legal system contact occurs through cannabis-related arrests or violations'
+- 'Step 2: Courts mandate or incentivize treatment as alternative to criminal penalties'
+- 'Step 3: Individuals admitted to specialty SUD treatment for cannabis use'
+- 'Step 4: Declining legal referrals for cannabis reflect changing policy landscape'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Carrie E Fry et al. 2024. "Changes in legal referrals to specialty substance use disorder
+    treatment from 2015-2019.." https://doi.org/10.1186/s40352-024-00297-2
+  supporting_citations:
+  - Additional citations require full-text access - abstract notes cannabis among substances with declining
+    legal referrals
+  - Additional citations require full-text access - references composition of substances by referral source
+  - Additional citations require full-text access - study period 2015-2019 covers cannabis policy changes
+  doi: 10.1186/s40352-024-00297-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Legal referrals were associated with cannabis use but declined from 2015-2019, coinciding
+  with expanded cannabis decriminalization and legalization across U.S. states during this period.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Cannabis policy varies dramatically by state; legalization states likely show greater
+    declines in legal referrals for cannabis
+moderators:
+- name: cannabis_legalization_status
+  direction: weakens
+  strength: strong
+  description: State-level cannabis legalization reduces criminal justice contact for cannabis use, decreasing
+    legal referral pathway
+structural_competency:
+  equity_implications: The decline in cannabis-related legal referrals reflects structural policy changes
+    rather than changes in cannabis use patterns. This illustrates how criminalization shapes who receives
+    treatment and through what pathways. The racial disparities in cannabis enforcement mean that changes
+    to this pathway have significant equity implications.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.763014'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

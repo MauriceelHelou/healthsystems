@@ -1,0 +1,38 @@
+id: alcohol_sales_to_intoxicated_patrons_to_dwi_risk
+name: Alcohol Sales to Apparently Intoxicated Patrons → Driving While Intoxicated
+  (DWI) Risk
+from_node:
+  node_id: alcohol_sales_to_intoxicated_patrons
+  node_name: Alcohol Sales to Apparently Intoxicated Patrons
+to_node:
+  node_id: dwi_risk
+  node_name: Driving While Intoxicated (DWI) Risk
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Overservice of alcohol to already intoxicated customers increases their
+  blood alcohol concentration beyond legal driving limits'
+- 'Step 2: Intoxicated patrons leaving licensed establishments often drive vehicles
+  to return home or continue to other locations'
+- 'Step 3: Elevated alcohol consumption increases impairment of motor skills, judgment,
+  and reaction time necessary for safe driving'
+- 'Step 4: Increased prevalence of overservice at population level elevates community-wide
+  risk of DWI incidents'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: David B Buller et al. 2024. "Sales to Apparently Intoxicated Customers
+    in Three States With Different Histories of Responsible Beverage Service Training.."
+    *Journal of studies on alcohol and drugs*. https://doi.org/10.15288/jsad.23-00258
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.611954'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: state_rbs_policy_strength
+  direction: weakens
+  strength: moderate
+  description: Stronger RBS training policies reduce overservice frequency, thereby
+    reducing DWI risk exposure

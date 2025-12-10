@@ -1,0 +1,58 @@
+id: NEW:on_premise_alcohol_outlet_density_to_homicide_rate
+name: On-Premise Alcohol Outlet Density (Bars/Taverns) → Homicide Rate
+from_node:
+  node_id: NEW:on_premise_alcohol_outlet_density
+  node_name: On-Premise Alcohol Outlet Density (Bars/Taverns)
+to_node:
+  node_id: homicide_rate
+  node_name: Homicide Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher density of bars and taverns increases locations where alcohol is consumed in social
+  settings'
+- 'Step 2: On-premise consumption environments can facilitate intoxication and reduce inhibitions'
+- 'Step 3: Social dynamics in drinking establishments may lead to interpersonal conflicts'
+- 'Step 4: Concentration of intoxicated patrons in geographic areas creates conditions for violence'
+- 'Step 5: Altercations escalate to lethal violence, increasing homicide rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: P. Trangenstein et al. 2020. "The Violence Prevention Potential of Reducing Alcohol
+    Outlet Access in Baltimore, Maryland.." https://doi.org/10.15288/jsad.2020.81.24
+  supporting_citations:
+  - Additional citations require full-text access - abstract references prior work on on-premise outlet-violence
+    associations
+  - Studies establishing on-premise outlet density and homicide IRR of 1.41
+  - Literature on bars/taverns operating as liquor stores (hybrid outlets)
+  doi: 10.15288/jsad.2020.81.24
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: On-premise alcohol outlets (bars/taverns) are associated with increased homicide rates (IRR=1.41),
+  though the effect is weaker than off-premise outlets. Removing bars/taverns operating as liquor stores
+  would prevent only 1 homicide annually.
+quantitative_effects:
+  effect_size:
+    value: 1.41
+    type: incidence_rate_ratio
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Baltimore-specific analysis; effect of bars/taverns operating as liquor stores was
+    minimal (1 homicide reduction)
+moderators:
+- name: hybrid_operation
+  direction: weakens
+  strength: weak
+  description: Bars/taverns operating as liquor stores showed minimal independent effect on homicides
+    (only 1 homicide reduction projected if removed)
+structural_competency:
+  equity_implications: This mechanism demonstrates how different types of alcohol retail environments
+    have differential impacts on violence. The finding that hybrid establishments (bars operating as liquor
+    stores) have minimal impact suggests the primary driver is off-premise availability rather than on-premise
+    consumption settings. This informs targeted policy approaches.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.485691'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

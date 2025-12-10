@@ -1,0 +1,49 @@
+id: substance_use_stigma_clinical_assumptions_to_discharge_opioid_prescribing_disparities
+name: Stigma and Clinical Assumptions About Substance Use → Racial Disparities in
+  Discharge Opioid Prescriptions
+from_node:
+  node_id: substance_use_stigma_clinical_assumptions
+  node_name: Stigma and Clinical Assumptions About Substance Use
+to_node:
+  node_id: discharge_opioid_prescribing_disparities
+  node_name: Racial Disparities in Discharge Opioid Prescriptions
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Black patients with acute pancreatitis have higher documented rates of
+  alcohol and tobacco use due to structural factors'
+- 'Step 2: Clinicians making discharge decisions interpret substance use history as
+  indicator of addiction risk rather than consequence of structural exposure'
+- 'Step 3: Fear of contributing to opioid misuse or diversion leads to reduced opioid
+  prescribing at discharge for Black patients despite similar pain scores'
+- 'Step 4: Differential prescribing creates disparity in pain management access during
+  recovery period, with White patients receiving discharge opioids more frequently
+  (p=0.001)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Nicole McHenry et al. 2022. "Racial Variations in Pain Management
+    and Outcomes in Hospitalized Patients With Acute Pancreatitis." *Pancreas*. https://doi.org/10.1097/MPA.0000000000002160
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.509234'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: initial_pain_scores
+  direction: strengthens
+  strength: weak
+  description: Despite similar initial pain scores (p=0.851), disparities in discharge
+    prescribing persisted, suggesting pain assessment does not moderate this bias
+- name: discharge_pain_scores
+  direction: strengthens
+  strength: weak
+  description: Similar discharge pain scores (p=0.116) between groups suggest disparity
+    not explained by differential pain severity at discharge
+- name: alcohol_tobacco_use_documentation
+  direction: strengthens
+  strength: moderate
+  description: Higher documented alcohol (p<0.001) and tobacco use (p=0.013) in Black
+    patients used to justify reduced opioid prescribing despite being structural consequence
+    not individual choice

@@ -1,0 +1,62 @@
+id: NEW:alcohol_control_policy_implementation_to_alcohol_induced_mortality
+name: Alcohol Control Policy Implementation → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:alcohol_control_policy_implementation
+  node_name: Alcohol Control Policy Implementation
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Evidence-based alcohol policies (advertising restrictions, warning labels, pricing) reduce
+  population exposure to alcohol marketing and increase cost barriers'
+- 'Step 2: Reduced marketing exposure and increased prices decrease population-level consumption'
+- 'Step 3: Lower per capita consumption reduces prevalence of alcohol use disorder and hazardous drinking'
+- 'Step 4: Reduced hazardous drinking decreases alcohol-attributable mortality from liver disease, cardiovascular
+  disease, and injuries'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'S. Calnan et al. 2023. "Support for evidence-based alcohol policy in Ireland: results
+    from a representative household survey." https://doi.org/10.1093/eurpub/ckad031'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references alcohol as leading risk factor
+    for death and disability
+  - Additional citations require full-text access - abstract references evidence-based policy measures
+    to tackle excess consumption
+  - Additional citations require full-text access - abstract references Irish alcohol policy reforms context
+  doi: 10.1093/eurpub/ckad031
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study documents broad public support (>50%) for evidence-based alcohol policies in Ireland,
+  in context where alcohol use is described as a leading risk factor for death and disability. This support
+  provides enabling conditions for structural policy interventions to reduce alcohol-attributable mortality.
+quantitative_effects:
+  sample_size: 1069
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Ireland context with >50% support for evidence-based policies; implementation and effectiveness
+    may vary by national policy context
+moderators:
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Women more likely to support policies, potentially reflecting gendered experiences of alcohol-related
+    harms
+- name: sociodemographic_characteristics
+  direction: strengthens
+  strength: weak
+  description: Notable differences in support according to sociodemographic characteristics suggest equity
+    implications for policy implementation
+structural_competency:
+  equity_implications: This mechanism centers structural policy interventions rather than individual behavior
+    change as the pathway to reduced alcohol mortality. The framing acknowledges that 'excess alcohol
+    consumption and related harms' are produced by policy environments that can be modified through collective
+    action, not individual willpower.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.512968'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

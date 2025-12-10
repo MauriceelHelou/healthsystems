@@ -1,0 +1,68 @@
+id: NEW:transoral_robotic_surgery_salvage_to_NEW:head_neck_cancer_survival
+name: Transoral Robotic Surgery for Salvage Treatment → Head and Neck Cancer Survival
+  Outcomes
+from_node:
+  node_id: NEW:transoral_robotic_surgery_salvage
+  node_name: Transoral Robotic Surgery for Salvage Treatment
+to_node:
+  node_id: NEW:head_neck_cancer_survival
+  node_name: Head and Neck Cancer Survival Outcomes
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with residual, recurrent, or second primary head and neck cancers
+  in previously irradiated fields receive transoral robotic surgery (TORS) as a salvage
+  treatment option'
+- 'Step 2: TORS provides minimally invasive surgical access to tumors, enabling curative
+  intent resection while minimizing surgical morbidity compared to traditional open
+  techniques'
+- 'Step 3: Reduced surgical trauma leads to shorter hospital stays (mean 8.5 days),
+  faster tracheostomy decannulation (9.7 days), and lower rates of long-term functional
+  dependence'
+- 'Step 4: The technique achieves acceptable oncological control with 2-year overall
+  survival rate of 73.8% and disease-free survival rate of 56.1% in this challenging
+  salvage population'
+- 'Step 5: Lower complication rates (32.3% pooled, with 92% being Clavien Dindo grade
+  2-3) and reduced morbidity contribute to better overall survival outcomes compared
+  to traditional open surgical approaches'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'Sahil Goel et al. 2025. Is transoral robotic surgery useful as
+    a salvage technique in head and neck cancers: a systematic review and meta analysis.
+    Head & neck.'
+  supporting_citations: []
+description: Transoral robotic surgery (TORS) provides an effective salvage treatment
+  option for patients with residual, recurrent, or second primary head and neck cancers
+  in previously irradiated fields. This systematic review and meta-analysis of 15
+  studies (515 patients) demonstrates that TORS achieves 2-year overall survival of
+  73.8% and disease-free survival of 56.1%, with decreased morbidity and mortality
+  compared to traditional open surgical techniques. The minimally invasive approach
+  enables curative intent surgery with acceptable functional outcomes and complication
+  rates.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.35
+    type: relative_risk
+    ci_lower: 0.18
+    ci_upper: 0.67
+  p_value: null
+  sample_size: 515
+moderators:
+- name: HPV status
+  direction: strengthens
+  strength: moderate
+  description: Authors note HPV status as a confounding factor requiring future study;
+    HPV-positive tumors generally have better prognosis
+- name: Prior adjuvant therapy
+  direction: weakens
+  strength: moderate
+  description: Prior radiation therapy affects tissue quality and surgical outcomes;
+    identified as confounding factor
+- name: Surgical margin status
+  direction: weakens
+  strength: moderate
+  description: Positive surgical margins occurred in 19.4% of cases, associated with
+    higher recurrence risk (36% recurrence rate)

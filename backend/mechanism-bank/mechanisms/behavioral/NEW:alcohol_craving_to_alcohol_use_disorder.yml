@@ -1,0 +1,51 @@
+id: NEW:alcohol_craving_to_alcohol_use_disorder
+name: Alcohol Craving → Alcohol Use Disorder
+from_node:
+  node_id: NEW:alcohol_craving
+  node_name: Alcohol Craving
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Craving triggered by NoLo drink consumption in individuals with AUD'
+- 'Step 2: Increased craving may lead to seeking actual alcoholic beverages'
+- 'Step 3: Relapse risk increases following craving episodes'
+- 'Step 4: AUD severity may worsen or recovery may be compromised'
+evidence:
+  quality_rating: C
+  n_studies: 10
+  primary_citation: 'E. Caballeria et al. 2022. "Doctor, Can I Drink an Alcohol-Free Beer?" Low-Alcohol
+    and Alcohol-Free Drinks in People with Heavy Drinking or Alcohol Use Disorders: Systematic Review
+    of the Literature. https://doi.org/10.3390/nu14193925'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 10 studies
+  - Research on craving as predictor of relapse
+  - Clinical studies on AUD treatment outcomes
+  doi: 10.3390/nu14193925
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Increased craving from NoLo drink exposure may contribute to relapse risk and maintenance
+  of alcohol use disorder, particularly in those with more severe dependence.
+moderators:
+- name: alcohol_dependence_severity
+  direction: strengthens
+  strength: strong
+  description: More severe alcohol dependence is associated with stronger craving responses, potentially
+    increasing relapse risk
+structural_competency:
+  equity_implications: This mechanism has implications for clinical guidance and treatment protocols.
+    Healthcare systems and clinicians need evidence-based recommendations about NoLo drinks for patients
+    with AUD. The paper explicitly calls for studies to guide clinicians, patients, and stakeholders in
+    evidence-based decisions - highlighting the need for structural support rather than leaving individuals
+    to navigate this alone.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.390829'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

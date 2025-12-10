@@ -1,0 +1,46 @@
+id: ignition_interlock_policy_mandate_to_dui_recidivism_risk
+name: Ignition Interlock Policy Mandate → DUI Recidivism Risk
+from_node:
+  node_id: ignition_interlock_policy_mandate
+  node_name: Ignition Interlock Policy Mandate
+to_node:
+  node_id: dui_recidivism_risk
+  node_name: DUI Recidivism Risk
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Legal mandate requires DUI offenders to install ignition interlock devices'
+- 'Step 2: Device prevents vehicle operation when driver has consumed alcohol above
+  threshold'
+- 'Step 3: Physical barrier reduces opportunities for repeat DUI offenses during restriction
+  period'
+- 'Step 4: High-risk offenders (poor performers) particularly recognize device''s
+  preventive benefits'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Kenneth H Beck et al. 2020. "Driver experiences with the alcohol
+    ignition interlock: Comparing successful and poor performers.." *Traffic injury
+    prevention*. https://doi.org/10.1080/15389588.2020.1791323'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.499456'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: risk_level_of_offender
+  direction: strengthens
+  strength: moderate
+  description: People with more serious drinking patterns who may be most at risk
+    for recidivating were more inclined to recognize potential benefits of interlock
+    as DUI preventive countermeasure
+- name: post_removal_period
+  direction: weakens
+  strength: strong
+  description: Paper identifies need to influence high-risk DUI offenders to increase
+    effectiveness once interlock is removed, suggesting mechanism weakens substantially
+    after device removal
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/ignition_interlock_policy_mandate_to_dui_recidivism_risk.yaml
+_category: political

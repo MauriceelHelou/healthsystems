@@ -1,0 +1,53 @@
+id: NEW:urban_rural_location_to_NEW:tobacco_sales_to_minors_violation
+name: Urban vs Rural Geographic Location → Tobacco Sales to Minors Policy Violation
+from_node:
+  node_id: NEW:urban_rural_location
+  node_name: Urban vs Rural Geographic Location
+to_node:
+  node_id: NEW:tobacco_sales_to_minors_violation
+  node_name: Tobacco Sales to Minors Policy Violation
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Rural areas have less regulatory infrastructure and enforcement capacity'
+- 'Step 2: Rural vendors receive less policy education and outreach'
+- 'Step 3: Lower awareness and enforcement leads to higher rates of policy violations'
+- 'Step 4: Youth in rural areas have greater access to tobacco products through non-compliant vendors'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Fayaz Ahmad et al. 2022. "Awareness, perceptions of and compliance with tobacco control
+    policies among naswar vendors in Khyber Pakhtunkhwa Pakistan.." https://doi.org/10.1136/tobaccocontrol-2020-056377
+  supporting_citations:
+  - Additional citations require full-text access
+  doi: 10.1136/tobaccocontrol-2020-056377
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - 'Year mismatch: DOI shows 2021, source is 2022'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Rural vendors were 2.27 times more likely to violate the ban on sales to/by minors compared
+  to urban vendors (OR 2.27, 95% CI 1.05 to 4.96). This geographic disparity reflects structural differences
+  in policy implementation and enforcement capacity between urban and rural areas.
+quantitative_effects:
+  effect_size:
+    value: 2.27
+    type: odds_ratio
+    ci_lower: 1.05
+    ci_upper: 4.96
+  sample_size: 286
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The study explicitly compared urban and rural vendors across three districts of Khyber
+    Pakhtunkhwa province, finding significant urban/rural disparities in compliance
+structural_competency:
+  equity_implications: This mechanism demonstrates how geographic inequities in regulatory infrastructure
+    create differential tobacco access. Rural communities face structural disadvantages in tobacco control
+    implementation, not due to individual vendor decisions but due to systemic under-resourcing of rural
+    enforcement systems. This creates health equity implications as rural youth face greater tobacco exposure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.586802'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

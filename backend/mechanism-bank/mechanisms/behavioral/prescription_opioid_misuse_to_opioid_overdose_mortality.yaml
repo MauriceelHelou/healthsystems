@@ -1,0 +1,48 @@
+id: prescription_opioid_misuse_to_opioid_overdose_mortality
+name: Non-Medical Prescription Opioid Use → Fatal Overdose
+from_node:
+  node_id: prescription_opioid_misuse
+  node_name: Non-Medical Prescription Opioid Use
+to_node:
+  node_id: opioid_overdose_mortality
+  node_name: Fatal Overdose
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Non-medical prescription opioid use (NMPOU) exposes individuals to opioids
+  outside of medical supervision, often involving higher doses, more frequent use,
+  or alternative routes of administration than prescribed'
+- 'Step 2: NMPOU leads to development of opioid tolerance, requiring progressively
+  higher doses to achieve desired effects, increasing risk of respiratory depression'
+- 'Step 3: Without medical oversight, users lack awareness of safe dosing thresholds,
+  potential drug interactions, and signs of overdose'
+- 'Step 4: NMPOU is associated with progression to opioid use disorder, which further
+  escalates use patterns and risk-taking behaviors'
+- 'Step 5: Acute overdose occurs when opioid dose exceeds respiratory capacity, leading
+  to respiratory depression, hypoxia, and death if not reversed'
+evidence:
+  quality_rating: A
+  n_studies: 182
+  primary_citation: 'Dan Werb et al. 2022. Health harms of non-medical prescription
+    opioid use: A systematic review. Drug and alcohol review.'
+  supporting_citations: []
+description: A large systematic review of 182 studies identified a robust association
+  between non-medical prescription opioid use (NMPOU) and fatal overdose. The evidence
+  base demonstrates that NMPOU contributes substantially to morbidity through multiple
+  pathways, with the strongest evidence supporting associations with opioid use disorder
+  and both fatal and non-fatal overdose. The mechanism operates through unsupervised
+  opioid exposure leading to tolerance, dose escalation, and ultimately respiratory
+  depression at toxic doses.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: opioid_use_disorder
+  direction: strengthens
+  strength: strong
+  description: Development of opioid use disorder as a consequence of NMPOU substantially
+    increases overdose risk through escalating use patterns
+- name: mental_health_comorbidity
+  direction: strengthens
+  strength: moderate
+  description: 71% of included studies reported on mental and behavioral disorders
+    associated with NMPOU, which may compound overdose risk

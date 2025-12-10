@@ -1,0 +1,50 @@
+id: NEW:metformin_treatment_to_NEW:gastrointestinal_adverse_events
+name: Metformin Treatment → Gastrointestinal Adverse Events
+from_node:
+  node_id: NEW:metformin_treatment
+  node_name: Metformin Treatment
+to_node:
+  node_id: NEW:gastrointestinal_adverse_events
+  node_name: Gastrointestinal Adverse Events
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Metformin administered as insulin sensitizer for PCOS treatment'
+- 'Step 2: Drug absorbed through gastrointestinal tract causing local irritation'
+- 'Step 3: GI adverse effects (nausea, diarrhea, abdominal discomfort) develop'
+- 'Step 4: Adverse events limit treatment adherence and tolerability'
+evidence:
+  quality_rating: A
+  n_studies: 6
+  primary_citation: 'Fabio Facchinetti et al. 2019. "Short-term effects of metformin and myo-inositol
+    in women with polycystic ovarian syndrome (PCOS): a meta-analysis of randomized clinical trials.."
+    https://doi.org/10.1080/09513590.2018.1540578'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 6 RCTs comparing MET to MI
+  - Studies conducted from 1994-2017 identified via MEDLINE, Cochrane Library, PubMed
+  - Individual study citations available in full-text systematic review
+  doi: 10.1080/09513590.2018.1540578
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Meta-analysis of 6 RCTs (355 patients) found strong evidence that women receiving metformin
+  had 5.17 times higher risk of adverse events compared to those receiving myo-inositol (RR=5.17, 95%
+  CI: 2.91-9.17, p<.001), primarily gastrointestinal in nature.'
+quantitative_effects:
+  effect_size:
+    value: 5.17
+    type: relative_risk
+    ci_lower: 2.91
+    ci_upper: 9.17
+  p_value: 0.001
+  sample_size: 355
+structural_competency:
+  equity_implications: This mechanism relates to healthcare access and treatment tolerability. Adverse
+    effects from first-line treatments can create barriers to care, particularly for women without resources
+    to manage side effects or access alternative treatments. The availability of better-tolerated alternatives
+    like myo-inositol may improve treatment adherence and outcomes, especially in resource-limited settings.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.984184'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

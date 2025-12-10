@@ -1,0 +1,50 @@
+id: alcohol_use_disorder_to_NEW:extrahepatic_malignancy_mortality
+name: Alcohol Use Disorder → Extra-hepatic Malignancy Mortality
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:extrahepatic_malignancy_mortality
+  node_name: Extra-hepatic Malignancy Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic alcohol consumption causes alcohol-related liver disease (ALD)'
+- 'Step 2: Patients with ALD have systemic alcohol exposure affecting multiple organ systems'
+- 'Step 3: Alcohol acts as carcinogen through acetaldehyde metabolites and oxidative stress'
+- 'Step 4: Increased risk of malignancies in organs beyond the liver (esophageal, colorectal, breast,
+  etc.)'
+- 'Step 5: Higher mortality from extra-hepatic cancers in ALD population'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'M. Theodoreson et al. 2023. "Extra‐hepatic morbidity and mortality in alcohol‐related
+    liver disease: Systematic review and meta‐analysis." https://doi.org/10.1111/liv.15526'
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review and meta-analysis synthesizing
+    14+ studies on ALD complications
+  - Studies examining extra-hepatic malignancy in ALD patients referenced in meta-analysis
+  - Primary studies on alcohol-related cancer risk in liver disease populations
+  doi: 10.1111/liv.15526
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Patients with alcohol-related liver disease face elevated risk of death from cancers outside
+  the liver due to systemic effects of chronic alcohol exposure, which acts as a carcinogen across multiple
+  organ systems.
+moderators:
+- name: severity_of_liver_disease
+  direction: strengthens
+  strength: moderate
+  description: More severe ALD may indicate higher cumulative alcohol exposure and greater extra-hepatic
+    risk
+structural_competency:
+  equity_implications: This mechanism reflects downstream health consequences of alcohol use disorder,
+    which itself is shaped by structural factors including alcohol marketing, outlet density, pricing
+    policies, and lack of treatment access. The burden falls disproportionately on populations with limited
+    access to healthcare and addiction services.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.409152'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,54 @@
+id: NEW:cbt_mi_intervention_to_depression_diagnosis
+name: Cognitive-Behavioural Therapy and Motivational Interviewing Combined Intervention
+  → Depression Diagnosis
+from_node:
+  node_id: NEW:cbt_mi_intervention
+  node_name: Cognitive-Behavioural Therapy and Motivational Interviewing Combined
+    Intervention
+to_node:
+  node_id: depression_diagnosis
+  node_name: Depression Diagnosis
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: CBT component targets maladaptive thought patterns and cognitive distortions
+  associated with depression, teaching patients to identify and challenge negative
+  automatic thoughts'
+- 'Step 2: Motivational Interviewing enhances intrinsic motivation for behavior change
+  and treatment engagement, addressing ambivalence about recovery'
+- 'Step 3: Combined intervention addresses the bidirectional relationship between
+  alcohol use and depression, as reduced alcohol consumption removes a depressogenic
+  factor'
+- 'Step 4: Behavioral activation components increase engagement in rewarding activities,
+  counteracting withdrawal and anhedonia'
+- 'Step 5: Skills acquisition (coping strategies, emotion regulation) provides lasting
+  tools for managing depressive symptoms'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'H. Riper et al. 2014. Treatment of comorbid alcohol use disorders
+    and depression with cognitive-behavioural therapy and motivational interviewing:
+    a meta-analysis. Addiction.'
+  supporting_citations: []
+description: Combined CBT and motivational interviewing produces a small but clinically
+  significant reduction in depressive symptoms (g=0.27) among individuals with comorbid
+  alcohol use disorders and major depression. The intervention works by simultaneously
+  addressing cognitive distortions, enhancing motivation for change, and breaking
+  the cycle between alcohol misuse and depression. Digital delivery formats may enhance
+  effectiveness for depression outcomes.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.27
+    type: hedges_g
+    ci_lower: 0.13
+    ci_upper: 0.41
+  p_value: 0.001
+  sample_size: 1721
+moderators:
+- name: Delivery format
+  direction: strengthens
+  strength: strong
+  description: Digital interventions showed significantly higher effect sizes for
+    depression (g=0.73) compared to face-to-face interventions (g=0.23), p=0.030

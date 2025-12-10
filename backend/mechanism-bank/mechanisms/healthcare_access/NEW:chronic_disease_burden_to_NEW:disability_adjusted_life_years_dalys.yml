@@ -1,0 +1,62 @@
+id: NEW:chronic_disease_burden_to_NEW:disability_adjusted_life_years_dalys
+name: Chronic Disease Burden → Disability-Adjusted Life Years (DALYs)
+from_node:
+  node_id: NEW:chronic_disease_burden
+  node_name: Chronic Disease Burden
+to_node:
+  node_id: NEW:disability_adjusted_life_years_dalys
+  node_name: Disability-Adjusted Life Years (DALYs)
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Chronic conditions (cardiovascular disease, diabetes, cancer, mental disorders) accumulate
+  over time requiring long-term management'
+- 'Step 2: Health systems designed primarily for acute care are structurally unprepared to manage progressive,
+  long-term conditions'
+- 'Step 3: Inadequate chronic care infrastructure leads to disease progression and complications'
+- 'Step 4: Accumulated chronic disease burden contributes 68% of global DALYs, reflecting both premature
+  mortality and disability'
+evidence:
+  quality_rating: A
+  n_studies: 1
+  primary_citation: '2025. "Characterising acute and chronic care needs: insights from the Global Burden
+    of Disease Study 2019.." https://doi.org/10.1038/s41467-025-56910-x'
+  supporting_citations:
+  - GBD 2019 Disease and Injury Incidence and Prevalence Collaborators. Lancet.
+  - GBD 2019 Mortality Collaborators. Lancet.
+  - Additional citations require full-text access
+  doi: 10.1038/s41467-025-56910-x
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Chronic conditions requiring long-term management account for approximately 68% of global
+  DALYs, highlighting the structural mismatch between disease burden and health system design focused
+  on acute care.
+quantitative_effects:
+  effect_size:
+    value: 68.0
+    type: percentage_change
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Analysis by socio-demographic index suggests burden varies by development status
+moderators:
+- name: age
+  direction: strengthens
+  strength: strong
+  description: Chronic care needs increase substantially with age
+- name: socio_demographic_index
+  direction: strengthens
+  strength: moderate
+  description: Patterns vary by socio-demographic index, suggesting structural inequities in health system
+    capacity
+structural_competency:
+  equity_implications: 'This mechanism identifies a fundamental structural problem: health systems globally
+    were designed around acute care models but face chronic disease epidemics. The inequity is structural
+    - populations with less developed health systems and lower socio-demographic indices face disproportionate
+    chronic disease burden without adequate care infrastructure. Policy solutions require health system
+    transformation, not individual behavior change.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.001779'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

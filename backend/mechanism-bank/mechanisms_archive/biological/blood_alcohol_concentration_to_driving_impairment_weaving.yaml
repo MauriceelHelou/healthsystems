@@ -1,0 +1,38 @@
+id: blood_alcohol_concentration_to_driving_impairment_weaving
+name: Blood Alcohol Concentration (BAC) → Driving Impairment (Road Tracking Error/Weaving)
+from_node:
+  node_id: blood_alcohol_concentration
+  node_name: Blood Alcohol Concentration (BAC)
+to_node:
+  node_id: driving_impairment_weaving
+  node_name: Driving Impairment (Road Tracking Error/Weaving)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol consumption elevates blood alcohol concentration to 0.5 g/L (legal
+  limit threshold)'
+- 'Step 2: Alcohol acts on central nervous system, impairing psychomotor coordination
+  and visual-spatial processing'
+- 'Step 3: Impaired neurocognitive function reduces ability to maintain consistent
+  lateral position within driving lane'
+- 'Step 4: Reduced road tracking control manifests as increased standard deviation
+  of lateral position (SDLP), indicating weaving behavior'
+evidence:
+  quality_rating: B
+  n_studies: 9
+  primary_citation: S. Jongen et al. 2017. "A pooled analysis of on-the-road highway
+    driving studies in actual traffic measuring standard deviation of lateral position
+    (i.e., "weaving") while driving at a blood alcohol concentration of 0.5 g/L."
+    *Psychopharmacology*. https://doi.org/10.1007/s00213-016-4519-z
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.528576'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: gender
+  direction: no_effect
+  strength: weak
+  description: Gender did not affect alcohol-induced changes in SDLP, indicating consistent
+    impairment across sex

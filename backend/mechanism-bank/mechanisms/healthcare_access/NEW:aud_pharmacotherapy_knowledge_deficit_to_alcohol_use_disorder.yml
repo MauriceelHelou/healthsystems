@@ -1,0 +1,49 @@
+id: NEW:aud_pharmacotherapy_knowledge_deficit_to_alcohol_use_disorder
+name: AUD Pharmacotherapy Knowledge Deficit in Primary Care → Alcohol Use Disorder
+from_node:
+  node_id: NEW:aud_pharmacotherapy_knowledge_deficit
+  node_name: AUD Pharmacotherapy Knowledge Deficit in Primary Care
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Knowledge of AUD pharmacotherapy is insufficient among primary care providers'
+- 'Step 2: Limited knowledge leads to under-prescription of evidence-based anti-craving treatments'
+- 'Step 3: Patients with AUD presenting to primary care do not receive pharmacological support for withdrawal
+  and craving'
+- 'Step 4: Untreated or undertreated AUD persists, contributing to continued alcohol use disorder prevalence'
+evidence:
+  quality_rating: B
+  n_studies: 10
+  primary_citation: Guillou L Morgane et al. 2021. "The Place of Pharmacotherapy in Alcohol Use Disorder
+    Management in Family Practice - A Systematic Review.." https://doi.org/10.2174/1381612826666201015154051
+  supporting_citations:
+  - Studies examining Disulfiram prescribing patterns in primary care
+  - Studies examining Acamprosate prescribing patterns in primary care
+  - Studies examining Naltrexone prescribing patterns in primary care
+  - Additional citations require full-text access
+  doi: 10.2174/1381612826666201015154051
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The systematic review concludes that knowledge and prescription of pharmacotherapy for AUD,
+  specifically anti-craving treatment, is insufficient in primary care. This knowledge gap represents
+  a structural barrier to treatment access.
+moderators:
+- name: medical_education_curriculum
+  direction: strengthens
+  strength: moderate
+  description: Training in addiction medicine during medical education and continuing education affects
+    provider knowledge and prescribing behavior
+structural_competency:
+  equity_implications: The knowledge deficit among providers is a structural issue rooted in medical education
+    systems that historically underemphasize addiction medicine training. This creates treatment disparities
+    where AUD patients encounter providers unprepared to offer evidence-based pharmacotherapy, perpetuating
+    the cycle of undertreatment affecting the most prevalent yet most undertreated mental disorder globally.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.264432'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

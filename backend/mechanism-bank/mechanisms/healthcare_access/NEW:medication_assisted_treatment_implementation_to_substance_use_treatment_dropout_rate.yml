@@ -1,0 +1,60 @@
+id: NEW:medication_assisted_treatment_implementation_to_substance_use_treatment_dropout_rate
+name: Medication-Assisted Treatment Implementation → Substance Use Treatment Dropout Rate
+from_node:
+  node_id: NEW:medication_assisted_treatment_implementation
+  node_name: Medication-Assisted Treatment Implementation
+to_node:
+  node_id: substance_use_treatment_dropout_rate
+  node_name: Substance Use Treatment Dropout Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: XR-NTX made available through demonstration project at community treatment facilities'
+- 'Step 2: Patients with severe substance use histories enrolled in medication treatment'
+- 'Step 3: Treatment engagement measured through dosing records'
+- 'Step 4: Higher cessation rates observed compared to criminal justice-supervised populations'
+- 'Step 5: 36% of patients received only one dose, indicating treatment discontinuation challenges'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sarah J Cousins et al. 2016. "A demonstration project implementing extended-release
+    naltrexone in Los Angeles County.." https://doi.org/10.1080/08897077.2015.1052868
+  supporting_citations:
+  - Comparison to similar demonstration projects with parolees/probationers referenced in abstract
+  - Literature on XR-NTX association with abstinence, reduced cravings, and delayed relapse cited
+  - Additional citations require full-text access
+  doi: 10.1080/08897077.2015.1052868
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: While 64% of patients obtained more than one dose of XR-NTX, the study found higher cessation
+  rates and lower average number of doses compared to similar demonstration projects with criminal justice-involved
+  populations. This suggests that voluntary community-based treatment may face different retention challenges
+  than supervised settings.
+quantitative_effects:
+  effect_size:
+    value: 64.0
+    type: percentage_change
+  sample_size: 609
+moderators:
+- name: supervision_status
+  direction: weakens
+  strength: moderate
+  description: Voluntary community patients showed higher cessation rates and lower average doses compared
+    to patients on parole or probation in similar projects
+- name: substance_use_severity
+  direction: weakens
+  strength: moderate
+  description: More severe substance use histories among XR-NTX recipients may contribute to treatment
+    discontinuation challenges
+structural_competency:
+  equity_implications: Treatment retention reflects structural factors beyond individual motivation -
+    including healthcare system continuity, social support, housing stability, and employment pressures.
+    The comparison to criminal justice populations highlights how structural supervision mechanisms affect
+    treatment engagement, raising questions about whether community-based treatment requires different
+    support structures rather than more coercion.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.795579'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

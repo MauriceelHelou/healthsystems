@@ -1,0 +1,63 @@
+id: NEW:her2_low_tumor_status_to_NEW:breast_cancer_progression
+name: HER2-Low Tumor Status → Breast Cancer Progression
+from_node:
+  node_id: NEW:her2_low_tumor_status
+  node_name: HER2-Low Tumor Status
+to_node:
+  node_id: NEW:breast_cancer_progression
+  node_name: Breast Cancer Progression
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: HER2-low expression (IHC 1+ or IHC 2+/ISH-) represents a distinct biological subtype of hormone
+  receptor-positive breast cancer'
+- 'Step 2: Low-level HER2 expression may confer reduced sensitivity to CDK 4/6 inhibitor therapy through
+  altered cell cycle regulation'
+- 'Step 3: Diminished CDK 4/6 inhibitor efficacy leads to continued tumor cell proliferation and disease
+  progression'
+- 'Step 4: Higher progression-free survival hazard indicates faster disease advancement compared to HER2-zero
+  tumors'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: 'D. Guven and TK Sahin 2024. "The association between HER2-low status and survival
+    in patients with metastatic breast cancer treated with Cyclin-dependent kinases 4 and 6 inhibitors:
+    a systematic review and meta-analysis." https://doi.org/10.1007/s10549-023-07226-1'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 9 studies
+  - Studies searched from Pubmed, Web of Science, and Scopus databases
+  - Studies included MBC patients treated with CDK 4/6 inhibitors reporting survival outcomes by HER2
+    expression
+  doi: 10.1007/s10549-023-07226-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: HER2-low tumor status is associated with a 22% higher risk of progression and/or death compared
+  to HER2-zero tumors in patients with hormone receptor-positive metastatic breast cancer treated with
+  CDK 4/6 inhibitors. This suggests HER2-low may be a biomarker for reduced treatment efficacy.
+quantitative_effects:
+  effect_size:
+    value: 1.22
+    type: hazard_ratio
+    ci_lower: 1.1
+    ci_upper: 1.35
+  p_value: 0.001
+  sample_size: 2705
+moderators:
+- name: CDK 4/6 inhibitor treatment
+  direction: strengthens
+  strength: strong
+  description: The differential effect is observed specifically in the context of CDK 4/6 inhibitor treatment
+    for HR+ metastatic breast cancer
+structural_competency:
+  equity_implications: This is primarily a biological/clinical mechanism rather than a structural determinant.
+    However, recognition of HER2-low as a distinct category with treatment implications has healthcare
+    access implications - patients may benefit from alternative therapeutic strategies, and access to
+    HER2-targeting agents (like trastuzumab deruxtecan) may become relevant for this population. Equity
+    considerations include whether biomarker testing and newer targeted therapies are equally accessible
+    across demographic groups.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.890424'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

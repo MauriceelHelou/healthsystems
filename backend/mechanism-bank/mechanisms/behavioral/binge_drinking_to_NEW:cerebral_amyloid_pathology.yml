@@ -1,0 +1,51 @@
+id: binge_drinking_to_NEW:cerebral_amyloid_pathology
+name: Binge Drinking → Cerebral Amyloid Pathology
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:cerebral_amyloid_pathology
+  node_name: Cerebral Amyloid Pathology
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Excessive alcohol consumption leads to neuroinflammatory responses in the brain'
+- 'Step 2: Chronic inflammation disrupts normal amyloid-beta clearance mechanisms'
+- 'Step 3: Impaired clearance results in accumulation of amyloid plaques in cerebral tissue'
+- 'Step 4: Accumulated amyloid pathology increases risk for Alzheimer''s disease development'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Julie E Oomens et al. 2025. "Associations of lifestyle factors with amyloid pathology
+    in persons without dementia." https://doi.org/10.1177/13872877251379083
+  supporting_citations:
+  - Additional citations require full-text access - this is a cross-sectional study from the Amyloid Biomarker
+    Study data pooling initiative
+  - The abstract references pooled data but specific prior studies are not named in the abstract
+  doi: 10.1177/13872877251379083
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol consumption patterns are associated with cerebral amyloid pathology in persons without
+  dementia, suggesting a biological pathway linking drinking behavior to Alzheimer's disease precursor
+  states.
+quantitative_effects:
+  sample_size: 11726
+moderators:
+- name: cognitive_status
+  direction: strengthens
+  strength: moderate
+  description: Study stratified by normal cognition (NC) vs mild cognitive impairment (MCI), suggesting
+    differential effects by baseline cognitive status
+structural_competency:
+  equity_implications: While this mechanism appears behavioral, structural factors including alcohol marketing,
+    outlet density, and economic stressors drive population-level drinking patterns. Policies regulating
+    alcohol availability and pricing would be upstream interventions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.171632'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,56 @@
+id: sud_treatment_entry_rate_to_hiv_incidence
+name: Substance Use Disorder Treatment Entry Rate → HIV Incidence
+from_node:
+  node_id: sud_treatment_entry_rate
+  node_name: Substance Use Disorder Treatment Entry Rate
+to_node:
+  node_id: hiv_incidence
+  node_name: HIV Incidence
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Carceral institutions and CBOs often focus on substance use disorder treatment as a priority'
+- 'Step 2: SUD treatment provides an existing touchpoint with healthcare system for people releasing from
+  incarceration'
+- 'Step 3: HIV prevention education and interventions can be integrated into existing SUD treatment programs'
+- 'Step 4: Integrated services reduce barriers to accessing HIV prevention while addressing comorbid SUD'
+- 'Step 5: Reduced HIV acquisition through integrated prevention delivered via SUD treatment infrastructure'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Emily Callen et al. 2025. "HIV Prevention for People Releasing from Incarceration:
+    A Qualitative Pre-implementation Study.." https://doi.org/10.1007/s11606-025-09895-8'
+  supporting_citations:
+  - Additional citations require full-text access - this is a qualitative implementation study
+  - Prior efforts to expand PrEP access for people releasing from jail or prison mentioned in abstract
+  - Consolidated Framework for Implementation Research referenced as theoretical framework
+  doi: 10.1007/s11606-025-09895-8
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The study identifies opportunities to integrate HIV prevention education and interventions
+  into substance use disorder treatment programs, which are already prioritized by carceral institutions
+  and CBOs. This represents an implementation opportunity leveraging existing infrastructure.
+quantitative_effects:
+  sample_size: 35
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Washington State study; SUD treatment capacity and integration opportunities vary by
+    region
+moderators:
+- name: integration_funding
+  direction: strengthens
+  strength: moderate
+  description: Adding HIV prevention programming requires new funding; adequately funded integration efforts
+    would strengthen the protective effect
+structural_competency:
+  equity_implications: This mechanism identifies a structural opportunity rather than barrier - using
+    existing SUD treatment infrastructure to deliver HIV prevention. This approach acknowledges the interconnection
+    between substance use and HIV risk without blaming individuals, instead focusing on systems-level
+    integration of services. The finding highlights how fragmented categorical funding (SUD vs HIV prevention)
+    creates artificial barriers to comprehensive care.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.801060'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

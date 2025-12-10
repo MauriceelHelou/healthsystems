@@ -1,0 +1,40 @@
+id: aud_treatment_receipt_to_aud_medication_receipt
+name: Receipt of Any AUD Treatment → Receipt of FDA-Approved AUD Medications
+from_node:
+  node_id: aud_treatment_receipt
+  node_name: Receipt of Any AUD Treatment
+to_node:
+  node_id: aud_medication_receipt
+  node_name: Receipt of FDA-Approved AUD Medications
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Individuals with AUD access treatment services within healthcare system'
+- 'Step 2: Treatment settings determine whether medication is offered as part of treatment
+  plans'
+- 'Step 3: Among those receiving any treatment, only a small portion receive FDA-approved
+  medications'
+- 'Step 4: Structural barriers in treatment systems limit medication utilization even
+  among treatment-engaged patients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Barbara J Mason and Charles J Heyser 2021. "Alcohol Use Disorder:
+    The Role of Medication in Recovery.." *Alcohol research : current reviews*. https://doi.org/10.35946/arcr.v41.1.07'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.678641'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: treatment_setting_philosophy
+  direction: strengthens
+  strength: strong
+  description: Treatment programs with medication-friendly philosophies have higher
+    rates of pharmacotherapy utilization among patients
+- name: insurance_medication_coverage
+  direction: strengthens
+  strength: moderate
+  description: Insurance coverage of AUD medications increases prescribing rates among
+    treatment-engaged patients

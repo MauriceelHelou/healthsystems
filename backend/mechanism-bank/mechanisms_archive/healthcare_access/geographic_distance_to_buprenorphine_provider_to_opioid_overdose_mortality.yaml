@@ -1,0 +1,43 @@
+id: geographic_distance_to_buprenorphine_provider_to_opioid_overdose_mortality
+name: Geographic Distance to Buprenorphine Treatment Provider → Opioid Overdose Mortality
+from_node:
+  node_id: geographic_distance_to_buprenorphine_provider
+  node_name: Geographic Distance to Buprenorphine Treatment Provider
+to_node:
+  node_id: opioid_overdose_mortality
+  node_name: Opioid Overdose Mortality
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Greater geographic distance reduces accessibility to buprenorphine treatment
+  initiation and maintenance'
+- 'Step 2: Reduced access to MOUD means fewer people with opioid use disorder receive
+  evidence-based pharmacotherapy'
+- 'Step 3: Untreated or undertreated opioid use disorder increases continued use of
+  illicit opioids including fentanyl-contaminated supplies'
+- 'Step 4: Continued illicit opioid use without protective effects of MOUD increases
+  overdose risk and mortality'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: James R Langabeer et al. 2020. "Geographic proximity to buprenorphine
+    treatment providers in the U.S.." *Drug and alcohol dependence*. https://doi.org/10.1016/j.drugalcdep.2020.108131
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.500408'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: state_rurality
+  direction: strengthens
+  strength: moderate
+  description: Rural populations face both greater geographic barriers to treatment
+    and often have limited alternative transportation options, magnifying the impact
+    of distance on treatment access and subsequent overdose risk
+- name: fentanyl_prevalence_in_drug_supply
+  direction: strengthens
+  strength: strong
+  description: In contexts of fentanyl-contaminated drug supply, lack of access to
+    MOUD due to geographic barriers creates particularly elevated overdose mortality
+    risk

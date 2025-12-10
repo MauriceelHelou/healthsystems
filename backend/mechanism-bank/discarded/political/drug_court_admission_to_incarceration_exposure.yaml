@@ -1,0 +1,46 @@
+id: drug_court_admission_to_incarceration_exposure
+name: Drug Court Admission → Incarceration Exposure
+from_node:
+  node_id: drug_court_admission
+  node_name: Drug Court Admission
+to_node:
+  node_id: incarceration_exposure
+  node_name: Incarceration Exposure
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Drug courts serve as diversion programs offering treatment as alternative
+  to incarceration for substance-related offenses'
+- 'Step 2: Admission to drug court provides structured treatment program while avoiding
+  jail or prison time'
+- 'Step 3: Successful drug court participation reduces likelihood of future criminal
+  justice involvement'
+- 'Step 4: Reduced incarceration exposure prevents cascading health, economic, and
+  social consequences of imprisonment'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Alyssa M. Sheeran and Amanda J. Heideman 2021. "The Effects of
+    Race and Ethnicity on Admission, Graduation, and Recidivism in the Milwaukee County
+    Adult Drug Treatment Court." *The social science*. https://doi.org/10.3390/SOCSCI10070261
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.426237'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: racial_ethnic_minority_status
+  direction: weakens
+  strength: strong
+  description: Lower admission rates for racial/ethnic minorities reduce the protective
+    benefit of drug court diversion, resulting in disproportionate incarceration exposure
+    for minority populations
+- name: drug_court_graduation
+  direction: strengthens
+  strength: strong
+  description: Successful program completion maximizes the incarceration-reduction
+    benefit; racial disparities in graduation compound inequitable incarceration exposure
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/political/drug_court_admission_to_incarceration_exposure.yaml
+_category: political

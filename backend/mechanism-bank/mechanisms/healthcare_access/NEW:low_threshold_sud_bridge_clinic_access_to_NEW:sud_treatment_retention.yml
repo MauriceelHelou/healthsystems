@@ -1,0 +1,52 @@
+id: NEW:low_threshold_sud_bridge_clinic_access_to_NEW:sud_treatment_retention
+name: Low-Threshold SUD Bridge Clinic Access → SUD Treatment Retention
+from_node:
+  node_id: NEW:low_threshold_sud_bridge_clinic_access
+  node_name: Low-Threshold SUD Bridge Clinic Access
+to_node:
+  node_id: NEW:sud_treatment_retention
+  node_name: SUD Treatment Retention
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Bridge clinic establishes initial therapeutic alliance and treatment engagement'
+- 'Step 2: Structured transition process coordinates handoff to community-based providers'
+- 'Step 3: 37% remained at same transfer facility, while additional patients engaged with other treatment
+  sites'
+- 'Step 4: 84% reported being in SUD treatment anywhere at follow-up, indicating sustained engagement'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Sarah K Casey et al. 2024. "Linkage to Care Outcomes Following Treatment in A Low-Threshold
+    Substance Use Disorder Bridge Clinic." https://doi.org/10.1177/29767342241261609
+  supporting_citations:
+  - Additional citations require full-text access - abstract references cascade of care literature
+  - Additional citations require full-text access - abstract references treatment retention literature
+  - Additional citations require full-text access - abstract references care transition literature
+  doi: 10.1177/29767342241261609
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The bridge clinic cascade of care model achieved 84% treatment retention at follow-up, with
+  patients progressing through connection to transfer clinic, completion of clinic visit, and ongoing
+  retention in care, demonstrating that structured low-barrier treatment pathways improve long-term engagement.
+quantitative_effects:
+  effect_size:
+    value: 84.0
+    type: percentage_change
+  sample_size: 63
+moderators:
+- name: transfer_clinic_retention
+  direction: strengthens
+  strength: moderate
+  description: 37% remained at same transfer facility, suggesting stable care relationships improve retention
+structural_competency:
+  equity_implications: Treatment retention historically low in SUD care often reflects systemic failures
+    rather than individual motivation. This study demonstrates that restructuring the care delivery system
+    to reduce barriers and facilitate transitions can dramatically improve retention outcomes, shifting
+    focus from individual compliance to system design.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.777722'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

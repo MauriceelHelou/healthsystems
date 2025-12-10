@@ -1,0 +1,66 @@
+id: peer_support_service_utilization_to_opioid_overdose_nonfatal_rate
+name: Peer Support Service Utilization → Opioid Overdose Nonfatal Rate
+from_node:
+  node_id: peer_support_service_utilization
+  node_name: Peer Support Service Utilization
+to_node:
+  node_id: opioid_overdose_nonfatal_rate
+  node_name: Opioid Overdose Nonfatal Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Peer recovery support specialists (PRSS) engage patients presenting at emergency departments
+  for opioid-related reasons'
+- 'Step 2: PRSS provide harm reduction education and naloxone distribution'
+- 'Step 3: PRSS facilitate treatment linkage and recovery coaching'
+- 'Step 4: Increased treatment engagement and harm reduction practices theoretically reduce subsequent
+  overdose events'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Dennis P. Watson et al. 2024. "Results From the POINT Pragmatic Randomized Trial:
+    An Emergency Department-Based Peer Support Specialist Intervention to Increase Opioid Use Disorder
+    Treatment Linkage and Reduce Recurrent Overdose." https://doi.org/10.1177/29767342231221054'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references expansion of PRSS interventions
+    in US-based EDs
+  - Additional citations require full-text access - abstract references lack of established evidence for
+    such interventions
+  - Additional citations require full-text access - abstract mentions this is the first randomized trial
+    investigating overdose outcomes for ED peer recovery support specialist intervention
+  doi: 10.1177/29767342231221054
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: This pragmatic randomized trial tested whether an ED-initiated peer recovery support specialist
+  intervention (POINT) could reduce recurrent overdose and increase OUD treatment linkage. Results showed
+  no significant differences between POINT and standard care on any outcomes measured, including overdose-related
+  ED re-presentation at 3, 6, and 12 months. The study was underpowered but suggests PRSS services may
+  not provide benefit over standard care in ED settings.
+quantitative_effects:
+  sample_size: 243
+moderators:
+- name: treatment_readiness
+  direction: strengthens
+  strength: moderate
+  description: Participants presenting for overdose had significantly lower readiness to begin treatment
+    (3.5 vs 4.2, P<.01) compared to those presenting for other opioid-related issues, suggesting treatment
+    motivation moderates intervention effectiveness
+- name: reason_for_ed_presentation
+  direction: weakens
+  strength: moderate
+  description: Overdose patients showed lower treatment readiness scores, suggesting the intervention
+    may be less effective for acute overdose presentations versus other opioid-related ED visits
+structural_competency:
+  equity_implications: This study examines a structural healthcare intervention (peer support services
+    in ED settings) rather than individual-level factors. The null findings highlight systemic challenges
+    in OUD treatment linkage that may require multimodal interventions addressing broader structural barriers.
+    The finding that overdose patients have lower treatment readiness suggests timing of intervention
+    relative to crisis state matters. Structural factors like treatment accessibility, insurance coverage
+    (Medicaid enrollment was measured), and healthcare system capacity may moderate effectiveness. The
+    study appropriately focuses on system-level intervention rather than blaming individuals for addiction.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.790043'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

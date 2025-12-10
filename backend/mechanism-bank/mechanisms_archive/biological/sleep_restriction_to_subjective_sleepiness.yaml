@@ -1,0 +1,37 @@
+id: sleep_restriction_to_subjective_sleepiness
+name: Sleep Restriction → Subjective Sleepiness
+from_node:
+  node_id: sleep_restriction
+  node_name: Sleep Restriction
+to_node:
+  node_id: subjective_sleepiness
+  node_name: Subjective Sleepiness
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Sleep opportunity restricted to 5 hours at home and 3 hours in laboratory
+  creates sleep debt'
+- 'Step 2: Sleep restriction interacts with circadian timing to produce sleepiness'
+- 'Step 3: Later circadian phase (later DLMO) relative to wake time increases circadian
+  misalignment'
+- 'Step 4: Circadian misalignment leads to increased subjective sleepiness measured
+  by Karolinska Sleepiness Scale'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: T. Sletten et al. 2015. "Inter-Individual Differences in Neurobehavioural
+    Impairment following Sleep Restriction Are Associated with Circadian Rhythm Phase."
+    *PLoS ONE*. https://doi.org/10.1371/journal.pone.0128273
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.080262'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: circadian_rhythm_phase
+  direction: strengthens
+  strength: strong
+  description: Greater subjective sleepiness was significantly associated with later
+    DLMO (r = 0.510, p < 0.0001), indicating stronger effects for individuals waking
+    at earlier circadian phases

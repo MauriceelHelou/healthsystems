@@ -1,0 +1,48 @@
+id: binge_drinking_to_cardiovascular_disease_mortality
+name: Binge Drinking → Cardiovascular Disease Mortality
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Moderate alcohol consumption increases HDL cholesterol levels'
+- 'Step 2: Alcohol may reduce fibrinogen and platelet aggregation'
+- 'Step 3: Polyphenols in certain alcoholic beverages (wine) may provide antioxidant effects'
+- 'Step 4: These mechanisms may reduce cardiovascular disease mortality risk in breast cancer patients'
+evidence:
+  quality_rating: B
+  n_studies: 2
+  primary_citation: 'T. Nomura et al. 2023. "Alcohol consumption and breast cancer prognosis after breast
+    cancer diagnosis: a systematic review and meta‑analysis of the Japanese Breast Cancer Society Clinical
+    Practice Guideline, 2022 edition." https://doi.org/10.1007/s12282-023-01455-4'
+  supporting_citations:
+  - 2 studies assessed cardiovascular disease mortality and alcohol consumption
+  - Additional citations require full-text access
+  doi: 10.1007/s12282-023-01455-4
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alcohol consumption was associated with significantly decreased cardiovascular disease mortality
+  in breast cancer patients (RR 0.47, 95% CI 0.28-0.79, p=0.005) based on 2 studies. However, limited
+  study count warrants caution in interpretation.
+quantitative_effects:
+  effect_size:
+    value: 0.47
+    type: relative_risk
+    ci_lower: 0.28
+    ci_upper: 0.79
+  p_value: 0.005
+structural_competency:
+  equity_implications: While this association appears strong statistically, it is based on only 2 studies.
+    The finding aligns with broader literature on moderate alcohol and cardiovascular outcomes but should
+    not override clinical guidance given alcohol's carcinogenic properties. Structural policies should
+    continue to focus on cancer prevention through alcohol control.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.295436'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

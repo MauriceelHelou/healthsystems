@@ -1,0 +1,49 @@
+id: NEW:direct_psychotherapy_to_suicidal_ideation
+name: Direct Psychotherapy (targeting suicidality) → Suicidal Ideation
+from_node:
+  node_id: NEW:direct_psychotherapy
+  node_name: Direct Psychotherapy (targeting suicidality)
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Direct psychotherapy specifically targets suicidal ideation through evidence-based
+  therapeutic approaches (e.g., CBT for suicide prevention, DBT, safety planning interventions)'
+- 'Step 2: Therapeutic interventions address cognitive distortions, emotion regulation
+  deficits, and maladaptive coping strategies that maintain suicidal thinking'
+- 'Step 3: Patients develop alternative cognitive frameworks, improved distress tolerance
+  skills, and enhanced reasons for living'
+- 'Step 4: Reduction in frequency, intensity, and duration of suicidal ideation as
+  measured by validated multi-item assessments'
+evidence:
+  quality_rating: A
+  n_studies: 147
+  primary_citation: 'W. van Ballegooijen et al. 2024. Suicidal Ideation and Suicide
+    Attempts After Direct or Indirect Psychotherapy: A Systematic Review and Meta-Analysis.
+    JAMA psychiatry.'
+  supporting_citations: []
+description: Direct psychotherapy targeting suicidality is associated with significant
+  reductions in suicidal ideation. A comprehensive meta-analysis of 147 randomized
+  clinical trials with 11,001 participants found that direct psychotherapy interventions
+  produced a moderate effect size (Hedges g=-0.39) in reducing suicidal ideation compared
+  to control conditions. This effect was consistent across sensitivity analyses, though
+  substantial heterogeneity was observed (I²=83.2%), suggesting variability in treatment
+  effects across studies and populations.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.39
+    type: hedges_g
+    ci_lower: -0.53
+    ci_upper: -0.24
+  p_value: null
+  sample_size: 11001
+moderators:
+- name: Intervention type (direct vs indirect)
+  direction: strengthens
+  strength: weak
+  description: Direct psychotherapy (g=-0.39) showed slightly larger effect than indirect
+    psychotherapy (g=-0.30), though both were effective

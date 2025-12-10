@@ -1,0 +1,52 @@
+id: NEW:minimum_unit_pricing_alcohol_to_alcohol_induced_mortality
+name: Minimum Unit Pricing of Alcohol → Alcohol-Induced Mortality
+from_node:
+  node_id: NEW:minimum_unit_pricing_alcohol
+  node_name: Minimum Unit Pricing of Alcohol
+to_node:
+  node_id: alcohol_induced_mortality
+  node_name: Alcohol-Induced Mortality
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: MUP policy implementation raises minimum price per unit of alcohol'
+- 'Step 2: Price increases reduce overall population alcohol consumption'
+- 'Step 3: Reduced consumption decreases cumulative alcohol exposure and organ damage'
+- 'Step 4: Lower chronic alcohol exposure reduces incidence of alcohol-related diseases (liver cirrhosis,
+  cancers, cardiovascular disease)'
+- 'Step 5: Decreased disease incidence leads to reduced alcohol-related mortality'
+evidence:
+  quality_rating: A
+  n_studies: 33
+  primary_citation: 'S. Boniface et al. 2017. "Evidence for the effectiveness of minimum pricing of alcohol:
+    a systematic review and assessment using the Bradford Hill criteria for causality." https://doi.org/10.1136/bmjopen-2016-013497'
+  supporting_citations:
+  - Modelling studies projecting mortality reductions from MUP implementation
+  - Time series analyses linking price changes to mortality outcomes
+  - Analogous evidence from taxation studies on alcohol-related mortality
+  doi: 10.1136/bmjopen-2016-013497
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The systematic review found evidence satisfying Bradford Hill causality criteria that minimum
+  unit pricing reduces alcohol-related mortality. The pathway operates through price-mediated reductions
+  in consumption leading to decreased cumulative alcohol exposure and subsequent disease burden.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Evidence includes both modelling studies (forecasts) and observational studies from
+    different jurisdictions; quantitative uncertainty in estimates noted as often poorly communicated
+moderators:
+- name: baseline_mortality_rate
+  direction: strengthens
+  strength: moderate
+  description: Populations with higher baseline alcohol-related mortality may see larger absolute reductions
+structural_competency:
+  equity_implications: This mechanism demonstrates how pricing policy as a structural intervention can
+    reduce population-level mortality without requiring individual behavior change interventions. The
+    approach addresses the commercial determinants of health by modifying the market environment for alcohol
+    products.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.346476'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

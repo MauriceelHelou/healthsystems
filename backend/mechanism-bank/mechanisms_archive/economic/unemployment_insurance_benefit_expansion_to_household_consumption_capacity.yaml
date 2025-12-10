@@ -1,0 +1,37 @@
+id: unemployment_insurance_benefit_expansion_to_household_consumption_capacity
+name: Unemployment Insurance Benefit Expansion ($600 Federal Supplement) → Household
+  Consumption Capacity
+from_node:
+  node_id: unemployment_insurance_benefit_expansion
+  node_name: Unemployment Insurance Benefit Expansion ($600 Federal Supplement)
+to_node:
+  node_id: household_consumption_capacity
+  node_name: Household Consumption Capacity
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Federal UI supplement of $600 per week is added to regular state unemployment
+  benefits'
+- 'Step 2: Total UI benefits increase significantly above pre-unemployment wage replacement
+  levels'
+- 'Step 3: Enhanced income support enables maintenance or increase in consumption
+  spending'
+- 'Step 4: Unemployed households experience 10% increase in spending compared to 10%
+  decrease among employed'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Diana Farrell et al. 2020. "Consumption Effects of Unemployment
+    Insurance during the Covid-19 Pandemic." https://doi.org/10.2139/ssrn.3654274
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.911357'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: timing_of_benefit_receipt
+  direction: strengthens
+  strength: strong
+  description: Immediate receipt of benefits versus delayed receipt significantly
+    moderates consumption effects

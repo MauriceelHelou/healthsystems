@@ -1,0 +1,58 @@
+id: drug_court_participation_to_substance_use_disorder_any
+name: Drug Court Participation → Substance Use Disorder (Any)
+from_node:
+  node_id: drug_court_participation
+  node_name: Drug Court Participation
+to_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder (Any)
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Juvenile drug treatment courts provide substance use treatment services as core program component'
+- 'Step 2: Treatment services may include counseling, behavioral therapies, and family interventions'
+- 'Step 3: Court supervision provides accountability structure for treatment engagement'
+- 'Step 4: Substance use outcomes targeted through treatment provision during program participation'
+evidence:
+  quality_rating: A
+  n_studies: 55
+  primary_citation: 'E. Tanner‐Smith et al. 2023. "Examining the Effects of Juvenile Drug Treatment Courts:
+    A Systematic Review and Meta-Analysis." https://doi.org/10.1177/00938548231208208'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis synthesized 55 eligible samples
+  - Studies providing data from 12,310 participants across U.S.-based JDTCs
+  - Controlled evaluations examining substance use outcomes
+  doi: 10.1177/00938548231208208
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: JDTCs examined effects on substance use outcomes as a primary outcome, with the meta-analysis
+  finding variability in effects. The overall certainty of evidence for substance use outcomes was rated
+  as low or very low, with effectiveness potentially improved when services are better matched to youth
+  treatment needs.
+quantitative_effects:
+  sample_size: 12310
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study examined substance use outcomes with variability noted across programs
+moderators:
+- name: treatment_needs_matching
+  direction: strengthens
+  strength: moderate
+  description: Programs better tailored to youth's treatment needs show greater effectiveness
+- name: service_provision_quality
+  direction: strengthens
+  strength: moderate
+  description: Quality and appropriateness of treatment services affects substance use outcomes
+structural_competency:
+  equity_implications: Youth substance use often emerges from structural factors including trauma, poverty,
+    family instability, and community disinvestment. While JDTCs attempt to address substance use through
+    treatment, their effectiveness depends on whether they can connect youth to appropriate services that
+    address underlying structural determinants. The finding that better treatment matching improves outcomes
+    suggests current systems may not adequately assess and respond to individual needs shaped by structural
+    context.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.593046'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

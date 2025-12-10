@@ -1,0 +1,59 @@
+id: NEW:gambling_participation_adult_to_NEW:risk_gambling_prevalence
+name: Adult Gambling Participation → Risk Gambling Prevalence
+from_node:
+  node_id: NEW:gambling_participation_adult
+  node_name: Adult Gambling Participation
+to_node:
+  node_id: NEW:risk_gambling_prevalence
+  node_name: Risk Gambling Prevalence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Nearly half of adults globally (46.2%) engage in gambling activities'
+- 'Step 2: Among those who gamble, a subset develops at-risk gambling behaviors'
+- 'Step 3: Continued gambling exposure leads to risk gambling in 8.7% of adult population'
+- 'Step 4: Risk gambling represents intermediate stage on spectrum toward problematic gambling'
+evidence:
+  quality_rating: A
+  n_studies: 366
+  primary_citation: 'Lucy T Tran et al. 2024. "The prevalence of gambling and problematic gambling: a
+    systematic review and meta-analysis." https://doi.org/10.1016/S2468-2667(24)00126-9'
+  supporting_citations:
+  - Studies identified through systematic search of MEDLINE, Embase, and PsycInfo (Jan 1, 2010 - March
+    4, 2024)
+  - Meta-analysis used metaprop for country-level prevalence estimates
+  - Joanna Briggs Institute Critical Appraisal Tool used for risk of bias assessment
+  doi: 10.1016/S2468-2667(24)00126-9
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: The meta-analysis found that 8.7% (95% CI 6.6-11.3) of adults globally engage in any risk
+  gambling, with 46.2% (95% CI 41.7-50.8) participating in any gambling activity in the past 12 months.
+  This establishes the population-level burden of at-risk gambling behavior.
+quantitative_effects:
+  effect_size:
+    value: 8.7
+    type: percentage_change
+    ci_lower: 6.6
+    ci_upper: 11.3
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Data from 68 countries with population-weighted regional and global estimates generated
+moderators:
+- name: country_income_level
+  direction: strengthens
+  strength: moderate
+  description: Most samples were from high-income countries, suggesting potential underestimation of prevalence
+    in lower-income settings
+structural_competency:
+  equity_implications: This finding highlights gambling as a public health concern requiring population-level
+    interventions rather than individual-focused approaches. The high prevalence of risk gambling suggests
+    structural and environmental factors facilitate progression from casual to problematic gambling.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.167744'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

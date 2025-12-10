@@ -1,0 +1,54 @@
+id: alcohol_use_disorder_to_cardiovascular_disease_mortality
+name: Alcohol Use Disorder → Cardiovascular Disease Mortality
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic heavy alcohol consumption in individuals with AUD leads to sustained
+  elevation of blood pressure (hypertension) and direct cardiotoxic effects on myocardial
+  tissue'
+- 'Step 2: Prolonged alcohol exposure causes alcoholic cardiomyopathy, characterized
+  by weakened heart muscle, arrhythmias, and impaired cardiac function'
+- 'Step 3: AUD promotes dyslipidemia, systemic inflammation, and oxidative stress,
+  accelerating atherosclerotic plaque formation in coronary and cerebral arteries'
+- 'Step 4: These cumulative cardiovascular insults increase risk of fatal cardiac
+  events including myocardial infarction, stroke, and heart failure, making CVD the
+  leading cause of death in the AUD population'
+evidence:
+  quality_rating: A
+  n_studies: 31
+  primary_citation: 'Abdul-Kareem Abdul-Rahman et al. 2018. All-Cause and Cause-Specific
+    Mortality Rates of Patients Treated for Alcohol Use Disorders: A Meta-Analysis.
+    Substance Abuse.'
+  supporting_citations: []
+description: Meta-analysis of 31 studies found that cardiovascular disease is the
+  most common cause of death among patients treated for alcohol use disorders, with
+  a mortality rate of 6.9 per 1000 person-years. This confirms that despite increased
+  risk of gastrointestinal and unnatural deaths in AUD patients, CVD remains the leading
+  cause of mortality, similar to the general population but with elevated absolute
+  rates due to alcohol-related cardiovascular damage.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 6.9
+    type: mortality_rate_per_1000_person_years
+    ci_lower: 5.61
+    ci_upper: 8.49
+  p_value: null
+  sample_size: 36375
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Participants were mainly middle-aged males, suggesting male predominance
+    in the studied population
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Middle-aged participants at higher baseline cardiovascular risk

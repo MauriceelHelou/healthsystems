@@ -1,0 +1,41 @@
+id: alcohol_outlet_density_to_violent_crime
+name: Alcohol Outlet Density → Violent Crime
+from_node:
+  node_id: alcohol_outlet_density
+  node_name: Alcohol Outlet Density
+to_node:
+  node_id: violent_crime
+  node_name: Violent Crime
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher outlet density increases local alcohol consumption and concentration
+  of intoxicated individuals in specific geographic areas'
+- 'Step 2: Alcohol intoxication reduces inhibition and impairs judgment, increasing
+  likelihood of interpersonal conflict'
+- 'Step 3: Outlets serve as congregation points that bring together individuals under
+  conditions of impaired decision-making'
+- 'Step 4: Clustering of outlets amplifies these effects by concentrating both alcohol
+  availability and social interactions in high-density areas'
+evidence:
+  quality_rating: B
+  n_studies: null
+  primary_citation: 'Jeffrey J Sacks et al. 2020. "Measuring Alcohol Outlet Density:
+    An Overview of Strategies for Public Health Practitioners.." *Journal of public
+    health management and practice : JPHMP*. https://doi.org/10.1097/PHH.0000000000001023'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.019560'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: outlet_clustering
+  direction: strengthens
+  strength: strong
+  description: The abstract specifically notes that clustering is 'particularly important
+    when assessing the relationship between density and alcohol-related harms, such
+    as violent crime,' indicating clustering amplifies the violence risk
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/alcohol_outlet_density_to_violent_crime.yaml
+_category: built_environment

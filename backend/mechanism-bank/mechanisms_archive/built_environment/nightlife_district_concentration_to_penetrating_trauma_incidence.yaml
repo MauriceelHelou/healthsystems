@@ -1,0 +1,46 @@
+id: nightlife_district_concentration_to_penetrating_trauma_incidence
+name: Nightlife District Concentration → Penetrating Trauma Incidence
+from_node:
+  node_id: nightlife_district_concentration
+  node_name: Nightlife District Concentration
+to_node:
+  node_id: penetrating_trauma_incidence
+  node_name: Penetrating Trauma Incidence
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Urban planning concentrates bars, clubs, and alcohol venues in specific
+  districts (Old Town, City Center, Oberbilk)'
+- 'Step 2: Spatial concentration creates high-density crowds of intoxicated individuals
+  in limited geographic areas'
+- 'Step 3: Crowding and alcohol intoxication increase interpersonal conflicts and
+  reduce natural surveillance'
+- 'Step 4: Limited emergency response resources face higher demand in concentrated
+  areas, particularly during weekend peak hours (20:00-04:00)'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Jutta Schürmann et al. 2024. "[Development of violence-associated
+    penetrating trauma in the Düsseldorf metropolitan region over a 5-year period
+    (GewPen study)]." *Die Anaesthesiologie*. https://doi.org/10.1007/s00101-024-01420-6
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.598845'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: weekend_temporal_concentration
+  direction: strengthens
+  strength: strong
+  description: High frequency of incidents Saturday to Sunday nights (20:00-04:00)
+    when nightlife activity peaks
+- name: alcohol_venue_density
+  direction: strengthens
+  strength: strong
+  description: Districts with concentrated bars and clubs show elevated incident rates
+- name: young_adult_population_density
+  direction: strengthens
+  strength: moderate
+  description: Most common age group 15-34 years aligns with nightlife participation
+    demographics

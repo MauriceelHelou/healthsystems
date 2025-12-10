@@ -1,0 +1,61 @@
+id: NEW:ketamine_treatment_to_suicidal_ideation
+name: Ketamine/Esketamine Treatment → Suicidal Ideation
+from_node:
+  node_id: NEW:ketamine_treatment
+  node_name: Ketamine/Esketamine Treatment
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Ketamine (typically 0.5 mg/kg) administered via intravenous infusion over
+  30-45 minutes acts as an NMDA receptor antagonist'
+- 'Step 2: NMDA receptor blockade triggers rapid glutamatergic signaling changes and
+  increases BDNF release, promoting rapid synaptic plasticity'
+- 'Step 3: These neurobiological changes produce rapid antidepressant effects and
+  significant reduction in suicidal ideation within 4 hours post-infusion'
+- 'Step 4: Anti-suicidal effects persist up to 72 hours post-infusion but do not appear
+  to extend beyond this timeframe with single-dose administration'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'K. Witt et al. 2019. Ketamine for suicidal ideation in adults
+    with psychiatric disorders: A systematic review and meta-analysis of treatment
+    trials. Australian and New Zealand journal of psychiatry (Print).'
+  supporting_citations: []
+description: A systematic review and meta-analysis of 15 randomized controlled trials
+  (N=572) demonstrates that a single intravenous infusion of ketamine (0.5 mg/kg over
+  30-45 minutes) produces rapid and significant reductions in suicidal ideation in
+  adults with psychiatric disorders, predominantly affective disorders. The anti-suicidal
+  effect emerges within 4 hours post-infusion (SMD=-0.51) and persists up to 72 hours
+  (SMD=-0.57 at 24-72 hours), but does not extend beyond this timeframe. Evidence
+  was rated moderate to low quality, with marked heterogeneity across studies. Intranasal
+  esketamine showed only marginal effects in the single available trial. Virtually
+  no data exists on effects on actual suicidal behavior.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.57
+    type: standardized_mean_difference
+    ci_lower: -0.99
+    ci_upper: -0.14
+  p_value: null
+  sample_size: 572
+moderators:
+- name: Time since infusion
+  direction: weakens
+  strength: strong
+  description: Effect strongest at 4 hours (SMD=-0.51), persists through 72 hours,
+    but diminishes and becomes non-significant after 72 hours
+- name: Route of administration
+  direction: weakens
+  strength: moderate
+  description: Intranasal esketamine showed only marginal effects on suicidal ideation
+    compared to intravenous ketamine in the single available trial
+- name: Primary psychiatric diagnosis
+  direction: strengthens
+  strength: moderate
+  description: Effects observed predominantly in patients with affective disorders,
+    particularly treatment-resistant depression

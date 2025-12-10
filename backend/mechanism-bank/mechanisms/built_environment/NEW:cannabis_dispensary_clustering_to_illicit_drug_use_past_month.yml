@@ -1,0 +1,59 @@
+id: NEW:cannabis_dispensary_clustering_to_illicit_drug_use_past_month
+name: Cannabis Dispensary Clustering → Illicit Drug Use Past Month
+from_node:
+  node_id: NEW:cannabis_dispensary_clustering
+  node_name: Cannabis Dispensary Clustering
+to_node:
+  node_id: illicit_drug_use_past_month
+  node_name: Illicit Drug Use Past Month
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Spatial clustering of cannabis dispensaries creates concentrated retail environments in specific
+  geographic areas'
+- 'Step 2: Clustered outlets increase environmental salience and normalization of cannabis through multiple
+  visible retail establishments'
+- 'Step 3: Marketing and signage exposure is amplified in clustered areas, potentially triggering cue-induced
+  craving and purchasing'
+- 'Step 4: Concentrated retail environments facilitate daily/near-daily cannabis consumption patterns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Pamela J Trangenstein et al. 2025. "Measuring the Association Between Cannabis Dispensary
+    Density and Adult Consumption in a Statewide Setting: Does Urbanicity Matter?." https://doi.org/10.26828/cannabis/2025/000235'
+  supporting_citations:
+  - Additional citations require full-text access - study references Privatization of Spirits in Washington
+    Surveys
+  - Additional citations require full-text access - Washington State non-medical cannabis legalization
+    policy context
+  - Additional citations require full-text access - prior studies on retail clustering effects
+  doi: 10.26828/cannabis/2025/000235
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Spatial clustering of cannabis dispensaries was associated with daily/near-daily cannabis
+  use in Washington State's early legal market. Clustering may operate through different mechanisms than
+  simple count or proximity measures, potentially involving environmental normalization and increased
+  cue exposure.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Clustering measures detected greater densities in urban areas. The association between
+    clustering and daily/near-daily use suggests that concentrated retail environments may have distinct
+    effects on high-frequency consumption.
+moderators:
+- name: urbanicity
+  direction: strengthens
+  strength: moderate
+  description: Urban areas showed greater clustering of dispensaries, potentially amplifying the clustering-consumption
+    relationship
+structural_competency:
+  equity_implications: The clustering mechanism demonstrates how commercial zoning and business licensing
+    decisions create concentrated retail environments that shape population health behaviors. This is
+    fundamentally a structural determinant created by policy decisions about where businesses can locate.
+    Equity implications include the potential for clustering in lower-income or minority neighborhoods,
+    though this study does not directly examine such disparities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.234751'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

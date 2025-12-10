@@ -1,0 +1,62 @@
+id: covid_19_containment_measures_to_binge_drinking
+name: COVID-19 Containment Measures (Lockdown) → Binge Drinking Events
+from_node:
+  node_id: covid_19_containment_measures
+  node_name: COVID-19 Containment Measures (Lockdown)
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking Events
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Lockdown policies eliminate supervised social drinking contexts (bars,
+  restaurants, organized events) and shift consumption to unsupervised private settings'
+- 'Step 2: Loss of normative social environments removes informal peer monitoring
+  and social norms that typically moderate drinking intensity'
+- 'Step 3: Pandemic-related anxiety and stress accumulate without access to typical
+  coping mechanisms or social support structures'
+- 'Step 4: Students engage in binge drinking as maladaptive stress response in isolation
+  or small unsupervised groups'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Zysset et al. 2022. "Change in Alcohol Consumption and Binge
+    Drinking in University Students During the Early COVID-19 Pandemic." *Frontiers
+    in Public Health*. https://doi.org/10.3389/fpubh.2022.854350
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.298910'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: anxiety_levels
+  direction: strengthens
+  strength: moderate
+  description: Higher anxiety scores associated with higher probability of engaging
+    at least once in binge drinking
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Male gender associated with higher binge drinking engagement
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Younger age associated with binge drinking events
+- name: living_situation
+  direction: strengthens
+  strength: moderate
+  description: Not living with parents associated with binge drinking risk
+- name: baseline_alcohol_consumption
+  direction: strengthens
+  strength: strong
+  description: Higher baseline consumption associated with engaging in single and
+    multiple binge drinking events
+- name: perceived_social_support
+  direction: strengthens
+  strength: weak
+  description: Paradoxically, higher perceived social support was associated with
+    heavy binge drinking, possibly indicating social drinking contexts
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/social_environment/covid_19_containment_measures_to_binge_drinking.yaml
+_category: social_environment

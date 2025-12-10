@@ -1,0 +1,57 @@
+id: NEW:covid_19_pandemic_exposure_to_anxiety_disorder
+name: COVID-19 Pandemic Exposure → Anxiety Disorder
+from_node:
+  node_id: NEW:covid_19_pandemic_exposure
+  node_name: COVID-19 Pandemic Exposure
+to_node:
+  node_id: anxiety_disorder
+  node_name: Anxiety Disorder
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Pandemic creates pervasive threat environment with uncertain disease transmission risks'
+- 'Step 2: Information overload and misinformation amplify fear and uncertainty'
+- 'Step 3: Healthcare system strain reduces access to care and increases health anxiety'
+- 'Step 4: Economic precarity and job insecurity generate chronic worry about future'
+- 'Step 5: Prolonged exposure to threat and uncertainty manifests as anxiety symptoms'
+evidence:
+  quality_rating: A
+  n_studies: 27
+  primary_citation: 'Ismail Hosen et al. 2021. "Prevalence and risk factors of the symptoms of depression,
+    anxiety, and stress during the COVID-19 pandemic in Bangladesh: a systematic review and meta-analysis.."
+    https://doi.org/10.1017/gmh.2021.49'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review synthesizing Bangladeshi COVID-19
+    mental health literature
+  - Studies sourced from Medline/PubMed, Scopus, Web of Science, CINAHL, Google Scholar
+  - Included peer-reviewed and preprint studies (PsyArxiv, MedRxiv, ResearchGate)
+  doi: 10.1017/gmh.2021.49
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The COVID-19 pandemic was associated with elevated anxiety symptoms in the Bangladeshi population,
+  with pooled prevalence estimates reported in the meta-analysis alongside depression and stress outcomes.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Bangladesh-specific findings; anxiety prevalence likely influenced by local pandemic
+    severity, government response, and baseline mental health infrastructure
+moderators:
+- name: health_literacy
+  direction: weakens
+  strength: moderate
+  description: Higher health literacy may reduce anxiety through better understanding of actual disease
+    risks
+- name: pre_existing_mental_health_conditions
+  direction: strengthens
+  strength: strong
+  description: Individuals with prior anxiety disorders more vulnerable to pandemic-related exacerbation
+structural_competency:
+  equity_implications: Anxiety during the pandemic reflects structural determinants including inadequate
+    public health communication systems, limited mental health services, economic vulnerability of informal
+    workers, and healthcare system capacity constraints. The mechanism emphasizes systemic rather than
+    individual factors in anxiety development.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.345929'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

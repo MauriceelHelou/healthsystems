@@ -1,0 +1,58 @@
+id: alcohol_use_disorder_to_NEW:alcohol_biomarker_detection
+name: Alcohol Use Disorder → Alcohol Use Biomarker Detection
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+to_node:
+  node_id: NEW:alcohol_biomarker_detection
+  node_name: Alcohol Use Biomarker Detection
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol consumption in individuals with alcohol use disorder leads to ethanol
+  metabolism via hepatic alcohol dehydrogenase and subsequent enzymatic pathways'
+- 'Step 2: Metabolic byproducts are formed including direct ethanol metabolites (ethyl
+  glucuronide, ethyl sulfate) and phospholipid adducts (phosphatidylethanol), which
+  accumulate in blood, urine, hair, and other tissues'
+- 'Step 3: These biomarkers persist in detectable quantities for varying time windows
+  - urinary ethyl glucuronide/sulfate for days, phosphatidylethanol in blood for weeks,
+  and hair ethyl glucuronide for months'
+- 'Step 4: Laboratory assays can detect these biomarkers with high sensitivity (70-100%)
+  and specificity (86-100%), enabling objective verification of alcohol consumption
+  patterns'
+evidence:
+  quality_rating: B
+  n_studies: 12
+  primary_citation: 'Janique Arnts et al. 2020. Systematic Review: Diagnostic Accuracy
+    of Biomarkers of Alcohol Use in Patients with Liver Disease. Alcoholism: Clinical
+    and Experimental Research.'
+  supporting_citations: []
+description: Alcohol use disorder leads to detectable biomarkers through ethanol metabolism.
+  The body produces specific metabolites (ethyl glucuronide, ethyl sulfate, phosphatidylethanol)
+  that accumulate in various tissues and can be measured with high diagnostic accuracy.
+  Urinary ethyl glucuronide shows 70-89% sensitivity and 93-99% specificity; phosphatidylethanol
+  shows 73-100% sensitivity and 90-96% specificity; scalp hair ethyl glucuronide shows
+  85-100% sensitivity and 97-100% specificity for detecting chronic excessive alcohol
+  use.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: liver_disease_severity
+  direction: weakens
+  strength: moderate
+  description: Hepatic damage may alter biomarker formation, potentially affecting
+    diagnostic accuracy
+- name: kidney_dysfunction
+  direction: weakens
+  strength: moderate
+  description: Altered excretion by kidney dysfunction may influence urinary biomarker
+    concentrations
+- name: diuretic_use
+  direction: weakens
+  strength: weak
+  description: Diuretic use may alter excretion patterns and biomarker detection
+- name: biomarker_type
+  direction: strengthens
+  strength: strong
+  description: Different biomarkers have complementary time windows - urinary EtG/EtS
+    for recent use, PEth for past weeks, hair EtG for months of use

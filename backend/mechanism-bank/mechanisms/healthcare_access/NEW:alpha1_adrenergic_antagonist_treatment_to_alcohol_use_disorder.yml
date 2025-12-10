@@ -1,0 +1,64 @@
+id: NEW:alpha1_adrenergic_antagonist_treatment_to_alcohol_use_disorder
+name: Alpha-1 Adrenergic Antagonist Treatment (Prazosin/Doxazosin) → Alcohol Use Disorder
+from_node:
+  node_id: NEW:alpha1_adrenergic_antagonist_treatment
+  node_name: Alpha-1 Adrenergic Antagonist Treatment (Prazosin/Doxazosin)
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Alpha-1 antagonists (prazosin, doxazosin) are administered as pharmacotherapy for alcohol use
+  disorder'
+- 'Step 2: Alpha-1 receptor blockade reduces sympathetic nervous system hyperactivity associated with
+  alcohol dependence'
+- 'Step 3: Reduced noradrenergic signaling decreases stress-induced craving and arousal symptoms'
+- 'Step 4: Attenuated physiological stress response reduces motivation to consume alcohol'
+- 'Step 5: Decreased alcohol consumption improves clinical outcomes in alcohol use disorder'
+evidence:
+  quality_rating: B
+  n_studies: 6
+  primary_citation: 'P. Vanderkam et al. 2020. "Effectiveness of drugs acting on adrenergic receptors
+    in the treatment for tobacco or alcohol use disorders: systematic review and meta-analysis." https://doi.org/10.1111/add.15265'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 6 alcohol studies
+  - Studies identified through PUBMED, EMBASE, Cochrane Central Register of Controlled Trials, clinicaltrials.gov
+  - Randomized controlled trials with adult patients meeting DSM-5 criteria for alcohol use disorder
+  doi: 10.1111/add.15265
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Alpha-1 adrenergic antagonists prazosin and doxazosin significantly decrease alcohol consumption
+  with a standardized mean difference of -0.32, representing a small to moderate effect. However, these
+  medications did not significantly affect abstinence rates or heavy drinking days, suggesting they may
+  be more effective for harm reduction than complete cessation.
+quantitative_effects:
+  effect_size:
+    value: -0.32
+    type: standardized_mean_difference
+    ci_lower: -0.56
+    ci_upper: -0.07
+moderators:
+- name: outcome_measure
+  direction: weakens
+  strength: moderate
+  description: Alpha-1 antagonists showed significant effects on alcohol consumption (drinks per day/week)
+    but no significant effect on abstinence or heavy drinking days, suggesting mechanism may work through
+    consumption reduction rather than complete cessation
+structural_competency:
+  equity_implications: This mechanism highlights the importance of expanding the pharmacotherapy toolkit
+    for alcohol use disorder beyond traditional medications. Access to these treatments is mediated by
+    healthcare access, insurance coverage, and prescriber awareness. Populations facing structural barriers
+    to healthcare (uninsured, rural residents, marginalized communities) may have reduced access to emerging
+    pharmacotherapy options. Additionally, the finding that this treatment reduces consumption without
+    necessarily achieving abstinence supports harm reduction approaches, which face policy barriers in
+    some jurisdictions.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.354788'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

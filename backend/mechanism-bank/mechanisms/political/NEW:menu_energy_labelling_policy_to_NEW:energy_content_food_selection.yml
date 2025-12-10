@@ -1,0 +1,59 @@
+id: NEW:menu_energy_labelling_policy_to_NEW:energy_content_food_selection
+name: Menu Energy Labelling Policy → Energy Content of Food Selection
+from_node:
+  node_id: NEW:menu_energy_labelling_policy
+  node_name: Menu Energy Labelling Policy
+to_node:
+  node_id: NEW:energy_content_food_selection
+  node_name: Energy Content of Food Selection
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Energy labelling policies implemented in real-world food service settings'
+- 'Step 2: Pre-post implementation studies capture actual purchasing behavior changes'
+- 'Step 3: Consumers in naturalistic settings encounter calorie information during routine purchases'
+- 'Step 4: Real-world constraints (time pressure, habit, availability) may limit information processing'
+- 'Step 5: Minimal to no change in energy content of actual food purchases observed'
+evidence:
+  quality_rating: B
+  n_studies: 3
+  primary_citation: 'E. Robinson et al. 2023. "Socioeconomic position and the effect of energy labelling
+    on consumer behaviour: a systematic review and meta-analysis." https://doi.org/10.1186/s12966-023-01418-0'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 3 pre-post implementation field
+    studies
+  - PROSPERO registration CRD42022312532 contains protocol details
+  - OSF preregistration (https://doi.org/10.17605/OSF.IO/W7RDB) contains study methodology
+  doi: 10.1186/s12966-023-01418-0
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Meta-analysis of 3 pre-post implementation field studies examining real-world effects of
+  energy labelling. In higher SEP populations, effect was SMD=0.032 [95% CI: -0.053 to 0.117]. In lower
+  SEP populations, effect was SMD=-0.005 [95% CI: -0.051 to 0.041]. Neither effect was statistically significant
+  and they did not differ from each other.'
+quantitative_effects:
+  effect_size:
+    value: 0.032
+    type: standardized_mean_difference
+    ci_lower: -0.053
+    ci_upper: 0.117
+moderators:
+- name: socioeconomic_position
+  direction: neutral
+  strength: weak
+  description: In real-world field studies, effect did not differ by SEP (χ²(1)=0.22, p=.636). Higher
+    SEP SMD=0.032 vs lower SEP SMD=-0.005
+structural_competency:
+  equity_implications: Real-world implementation studies are critical for understanding structural policy
+    effects. The near-zero effects in field studies (compared to small effects in experimental studies
+    with hypothetical choices) suggest that information-based policies alone may be insufficient to change
+    behavior when structural barriers to healthy eating (cost, availability, time constraints) remain
+    unaddressed. The finding that lower SEP showed essentially no effect (SMD=-0.005) while not statistically
+    different from higher SEP, raises concerns about whether information-based policies can address diet-related
+    health inequities without accompanying structural changes.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.601193'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

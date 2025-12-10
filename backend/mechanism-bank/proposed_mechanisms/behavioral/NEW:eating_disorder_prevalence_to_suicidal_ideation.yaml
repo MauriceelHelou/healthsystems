@@ -1,0 +1,53 @@
+id: NEW:eating_disorder_prevalence_to_suicidal_ideation
+name: Eating Disorder Prevalence → Suicidal Ideation
+from_node:
+  node_id: NEW:eating_disorder_prevalence
+  node_name: Eating Disorder Prevalence
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Eating disorders (anorexia nervosa, bulimia nervosa, and other eating disorders)
+  create severe psychological distress through disordered eating behaviors, body image
+  disturbance, and emotional dysregulation'
+- 'Step 2: The psychological burden of eating disorders frequently co-occurs with
+  depression, anxiety, sleep problems, and aggression, compounding mental health vulnerability'
+- 'Step 3: These cumulative psychological stressors, combined with the chronic nature
+  of eating disorders and their impact on quality of life, significantly increase
+  the risk of suicidal ideation, with approximately 51% of individuals with eating
+  disorders experiencing suicidal ideation'
+evidence:
+  quality_rating: A
+  n_studies: 52
+  primary_citation: 'S. Amiri and Moien A. B. Khan 2023. "Prevalence of non-suicidal
+    self-injury, suicidal ideation, suicide attempts, suicide mortality in eating
+    disorders: a systematic review and meta-analysis." Eating Disorders.'
+  supporting_citations: []
+description: 'This systematic review and meta-analysis of 52 studies found that 51%
+  (95% CI: 41-62%) of individuals with eating disorders experience suicidal ideation.
+  The high prevalence indicates a strong positive association between eating disorder
+  presence and suicidal ideation, with the comorbidity providing important insights
+  into shared etiological factors.'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.51
+    type: prevalence
+    ci_lower: 0.41
+    ci_upper: 0.62
+  p_value: null
+  sample_size: null
+moderators:
+- name: eating_disorder_subtype
+  direction: varies
+  strength: moderate
+  description: Different eating disorder subtypes (anorexia nervosa, bulimia nervosa)
+    may have different prevalence rates of suicidal ideation
+- name: comorbid_mental_health_conditions
+  direction: strengthens
+  strength: strong
+  description: Co-occurring depression, anxiety, sleep problems, and aggression may
+    strengthen the association between eating disorders and suicidal ideation

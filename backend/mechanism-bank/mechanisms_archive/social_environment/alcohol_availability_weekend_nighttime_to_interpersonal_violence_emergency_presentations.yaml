@@ -1,0 +1,48 @@
+id: alcohol_availability_weekend_nighttime_to_interpersonal_violence_emergency_presentations
+name: Alcohol Availability During Weekend and Nighttime Hours → Emergency Department
+  Presentations Due to Interpersonal Violence
+from_node:
+  node_id: alcohol_availability_weekend_nighttime
+  node_name: Alcohol Availability During Weekend and Nighttime Hours
+to_node:
+  node_id: interpersonal_violence_emergency_presentations
+  node_name: Emergency Department Presentations Due to Interpersonal Violence
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Increased alcohol availability and consumption during weekend and nighttime
+  hours creates temporal clustering of intoxicated individuals in social settings'
+- 'Step 2: Alcohol intoxication impairs judgment, increases aggression, and reduces
+  conflict resolution capacity in social interactions'
+- 'Step 3: Violent confrontations occur with higher frequency during these periods,
+  leading to acute injuries requiring emergency care'
+- 'Step 4: Emergency departments experience significantly higher presentations for
+  violence-related trauma during weekend and nighttime periods'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Jason-Alexander Hörauf et al. 2023. "Saturday Night Fever: Interpersonal
+    Violence as a Reason for Presentation in a University Emergency Department.."
+    *International journal of environmental research and public health*. https://doi.org/10.3390/ijerph20054552'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.625960'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: day_of_week_weekend
+  direction: strengthens
+  strength: strong
+  description: Weekend days show significantly higher rates of violence-related emergency
+    presentations compared to weekdays
+- name: time_of_day_nighttime
+  direction: strengthens
+  strength: strong
+  description: Nighttime hours show significantly higher rates of violence-related
+    emergency presentations compared to daytime hours
+- name: male_gender
+  direction: strengthens
+  strength: strong
+  description: Large proportion of violence group were male, suggesting gender differences
+    in exposure to alcohol-related violence contexts

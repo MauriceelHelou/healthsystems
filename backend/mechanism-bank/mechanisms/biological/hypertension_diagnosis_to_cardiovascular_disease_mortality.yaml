@@ -1,0 +1,55 @@
+id: hypertension_diagnosis_to_cardiovascular_disease_mortality
+name: Hypertension Diagnosis → Cardiovascular Disease Mortality
+from_node:
+  node_id: hypertension_diagnosis
+  node_name: Hypertension Diagnosis
+to_node:
+  node_id: cardiovascular_disease_mortality
+  node_name: Cardiovascular Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Elevated blood pressure causes chronic mechanical stress on arterial walls
+  and endothelial damage'
+- 'Step 2: Sustained hypertension accelerates atherosclerosis through vascular inflammation
+  and lipid accumulation'
+- 'Step 3: Cumulative exposure to elevated systolic blood pressure leads to progressive
+  organ damage including cardiac remodeling and arterial stiffening'
+- 'Step 4: Irreversible damage to major organs (heart, brain, kidneys) increases vulnerability
+  to cardiovascular events'
+- 'Step 5: Cardiovascular events (myocardial infarction, stroke, heart failure) lead
+  to increased mortality'
+evidence:
+  quality_rating: C
+  n_studies: 2
+  primary_citation: 'S. Bell 2018. Alcohol Consumption, Hypertension, and Cardiovascular
+    Health Across the Life Course: There Is No Such Thing as a One‐Size‐Fits‐All Approach.
+    Journal of the American Heart Association.'
+  supporting_citations: []
+description: Hypertension is established as a leading cause of cardiovascular disease
+  and related mortality worldwide. The mechanism operates through cumulative vascular
+  damage, where sustained elevated blood pressure accelerates atherosclerosis and
+  causes irreversible organ damage. The relationship demonstrates a dose-response
+  pattern where longer duration of exposure to elevated systolic blood pressure proportionally
+  increases cardiovascular disease risk. Early intervention to lower blood pressure
+  before clinical hypertension develops may slow age-related vascular changes and
+  reduce cumulative cardiovascular risk.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: duration_of_exposure
+  direction: strengthens
+  strength: strong
+  description: Systolic blood pressure has a cumulative effect on cardiovascular disease
+    risk; reduction in risk is proportional to average time exposed to lower blood
+    pressure
+- name: age_at_onset
+  direction: strengthens
+  strength: moderate
+  description: Earlier exposure to elevated blood pressure leads to more rapid increases
+    in blood pressure with age and accelerated disease progression
+- name: alcohol_consumption
+  direction: strengthens
+  strength: moderate
+  description: Alcohol consumption causally associated with elevated blood pressure,
+    contributing to hypertension-related cardiovascular mortality

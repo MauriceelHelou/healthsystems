@@ -1,0 +1,38 @@
+id: blood_peth_concentration_to_alcohol_withdrawal_severity
+name: Blood Phosphatidylethanol (PEth) Concentration → Alcohol Withdrawal Syndrome
+  Severity
+from_node:
+  node_id: blood_peth_concentration
+  node_name: Blood Phosphatidylethanol (PEth) Concentration
+to_node:
+  node_id: alcohol_withdrawal_severity
+  node_name: Alcohol Withdrawal Syndrome Severity
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Higher blood PEth concentrations reflect greater cumulative alcohol exposure
+  and chronic heavy drinking patterns'
+- 'Step 2: Prolonged alcohol exposure leads to neuroadaptive changes including upregulation
+  of excitatory neurotransmitter systems and downregulation of inhibitory systems'
+- 'Step 3: Upon cessation of alcohol, the imbalance in neurotransmitter systems produces
+  more severe physiological and psychological withdrawal symptoms'
+- 'Step 4: PEth levels measured at admission predict the magnitude of withdrawal symptoms
+  throughout detoxification'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Lan Novak et al. 2023. "Alcohol Biomarker Phosphatidylethanol
+    as a Predictor of the Severity of Alcohol Withdrawal Syndrome.." *Alcohol and
+    Alcoholism*. https://doi.org/10.1093/alcalc/agac071
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.699779'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: clinical_history_severity
+  direction: strengthens
+  strength: weak
+  description: Although there was a trend for more severe clinical history aspects
+    in those with higher AWS scores, no differences reached statistical significance

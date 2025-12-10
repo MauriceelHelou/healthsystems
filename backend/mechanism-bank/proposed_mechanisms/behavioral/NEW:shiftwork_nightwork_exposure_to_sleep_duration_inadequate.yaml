@@ -1,0 +1,44 @@
+id: NEW:shiftwork_nightwork_exposure_to_sleep_duration_inadequate
+name: Shiftwork/Nightwork Exposure → Inadequate Sleep Duration
+from_node:
+  node_id: NEW:shiftwork_nightwork_exposure
+  node_name: Shiftwork/Nightwork Exposure
+to_node:
+  node_id: sleep_duration_inadequate
+  node_name: Inadequate Sleep Duration
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Shiftwork and nightwork schedules require workers to be active during normal
+  sleep periods, disrupting the natural circadian rhythm'
+- 'Step 2: Working during nighttime hours forces sleep to occur during daytime when
+  environmental and biological factors are less conducive to sleep'
+- 'Step 3: Irregular and rotating shift schedules prevent establishment of consistent
+  sleep-wake patterns, fragmenting and reducing total sleep time'
+- 'Step 4: Shiftworkers experience difficulties initiating and maintaining sleep,
+  resulting in shorter overall sleep duration compared to dayworkers'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'K. Richter et al. 2020. Shiftwork and Alcohol Consumption: A
+    Systematic Review of the Literature. European Addiction Research.'
+  supporting_citations: []
+description: Shiftwork disrupts the natural circadian rhythm by requiring wakefulness
+  during normal sleep periods and sleep during suboptimal times. This systematic review
+  confirms that shiftworkers sleep less than dayworkers, with 20-40% experiencing
+  difficulties initiating and maintaining sleep. The irregular scheduling inherent
+  to shiftwork, especially night and rotating shifts, prevents the establishment of
+  consistent sleep patterns, leading to chronic inadequate sleep duration.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: shift_type
+  direction: strengthens
+  strength: moderate
+  description: Night shifts and rotating shifts are particularly associated with greater
+    sleep disruption compared to fixed day shifts
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Older workers (especially those over 50 years) may experience greater
+    difficulty adapting to shift schedules

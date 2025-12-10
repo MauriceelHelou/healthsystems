@@ -1,0 +1,54 @@
+id: housing_quality_index_revised_consolidated_to_NEW:pediatric_asthma_healthcare_utilization
+name: Housing Quality → Pediatric Asthma Healthcare Utilization (ED visits/hospitalizations)
+from_node:
+  node_id: housing_quality_index_revised_consolidated
+  node_name: Housing Quality
+to_node:
+  node_id: NEW:pediatric_asthma_healthcare_utilization
+  node_name: Pediatric Asthma Healthcare Utilization (ED visits/hospitalizations)
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Poor housing quality exposes children to indoor environmental triggers
+  including mold, dampness, pest allergens (cockroach, rodent), dust mites, and inadequate
+  ventilation'
+- 'Step 2: Chronic exposure to these allergens and irritants causes airway inflammation,
+  increased bronchial hyperresponsiveness, and worsening of asthma symptoms in children'
+- 'Step 3: Poorly maintained housing also correlates with structural deficiencies
+  that prevent adequate temperature regulation, increasing respiratory stress'
+- 'Step 4: Children in low-quality housing experience more frequent and severe asthma
+  exacerbations requiring emergency department visits and hospitalizations'
+- 'Step 5: Higher housing quality reduces allergen exposure and environmental triggers,
+  leading to better asthma control and decreased healthcare utilization'
+evidence:
+  quality_rating: B
+  n_studies: 40
+  primary_citation: 'Jordan Tyris et al. 2023. Population-level SDOH and Pediatric
+    Asthma Health Care Utilization: A Systematic Review. Hospital Pediatrics.'
+  supporting_citations: []
+description: This systematic review of 40 US-based population-level studies found
+  consistent significant associations between housing quality and pediatric asthma
+  healthcare utilization (ED visits and hospitalizations). Housing quality was identified
+  as one of eight SDOH with consistent significant associations across the Healthy
+  People SDOH framework domains. Poor housing quality increases exposure to indoor
+  allergens and environmental triggers that exacerbate pediatric asthma, leading to
+  increased emergency and hospital care.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: poverty
+  direction: strengthens
+  strength: strong
+  description: Poverty was the most frequently studied SDOH and showed consistent
+    significant associations with asthma healthcare utilization; low-income households
+    often have worse housing quality
+- name: environmental_conditions
+  direction: strengthens
+  strength: strong
+  description: Environmental conditions including outdoor air quality interact with
+    housing quality to affect asthma outcomes; frequently studied alongside housing
+- name: healthcare_access
+  direction: weakens
+  strength: moderate
+  description: Better primary care and healthcare access may buffer the effects of
+    poor housing quality on emergency utilization through preventive care

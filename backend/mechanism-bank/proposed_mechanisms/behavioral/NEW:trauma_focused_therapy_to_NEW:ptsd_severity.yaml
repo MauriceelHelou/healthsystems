@@ -1,0 +1,57 @@
+id: NEW:trauma_focused_therapy_to_NEW:ptsd_severity
+name: Trauma-Focused Behavioral Therapy → PTSD Symptom Severity
+from_node:
+  node_id: NEW:trauma_focused_therapy
+  node_name: Trauma-Focused Behavioral Therapy
+to_node:
+  node_id: NEW:ptsd_severity
+  node_name: PTSD Symptom Severity
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Trauma-focused behavioral therapy provides structured exposure to trauma
+  memories and trauma-related stimuli in a safe therapeutic environment'
+- 'Step 2: Repeated exposure facilitates habituation to trauma cues and reduces conditioned
+  fear responses through extinction learning'
+- 'Step 3: Cognitive restructuring components help patients process and reframe maladaptive
+  trauma-related cognitions and beliefs'
+- 'Step 4: Integration of traumatic memories into autobiographical memory reduces
+  intrusive symptoms and hyperarousal'
+- 'Step 5: Reduced avoidance behaviors and improved emotional regulation lead to decreased
+  overall PTSD symptom severity'
+evidence:
+  quality_rating: A
+  n_studies: 36
+  primary_citation: 'D. Hien et al. 2022. Project Harmony: A Meta-Analysis With Individual
+    Patient Data on Behavioral and Pharmacologic Trials for Comorbid Posttraumatic
+    Stress and Alcohol or Other Drug Use Disorders. American Journal of Psychiatry.'
+  supporting_citations: []
+description: Trauma-focused behavioral therapies significantly reduce PTSD symptom
+  severity through structured exposure, cognitive restructuring, and emotional processing
+  of traumatic memories. This meta-analysis of 36 trials with individual patient data
+  demonstrated large effect sizes (d=-0.92) for trauma-focused approaches, with the
+  strongest effects observed when combined with pharmacotherapy for comorbid substance
+  use disorders. Both integrated and non-integrated trauma-focused therapies showed
+  reductions in PTSD symptoms, with effects sustained at 12-month follow-up.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -0.92
+    type: cohens_d
+    ci_lower: -1.57
+    ci_upper: -0.3
+  p_value: null
+  sample_size: 4046
+moderators:
+- name: combination with pharmacotherapy for substance use disorders
+  direction: strengthens
+  strength: strong
+  description: Combining trauma-focused therapy with pharmacotherapy for substance
+    use disorders showed the largest effect sizes for PTSD severity reduction compared
+    to other treatment approaches
+- name: comorbid substance use disorder
+  direction: weakens
+  strength: moderate
+  description: Study focused specifically on comorbid PTSD and substance use populations,
+    which may present additional treatment complexity

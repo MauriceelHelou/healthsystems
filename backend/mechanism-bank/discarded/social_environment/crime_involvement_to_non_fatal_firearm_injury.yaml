@@ -1,0 +1,50 @@
+id: crime_involvement_to_non_fatal_firearm_injury
+name: Crime-Related Circumstances → Non-fatal Firearm Injury
+from_node:
+  node_id: crime_involvement
+  node_name: Crime-Related Circumstances
+to_node:
+  node_id: non_fatal_firearm_injury
+  node_name: Non-fatal Firearm Injury
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Economic marginalization and structural disinvestment create conditions
+  conducive to criminal activity'
+- 'Step 2: Criminal circumstances often involve firearms for protection, coercion,
+  or commission of offenses'
+- 'Step 3: High firearm prevalence in criminal contexts increases risk of discharge
+  and injury'
+- 'Step 4: Intersection of criminal activity and firearm availability results in non-fatal
+  firearm injuries'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Akshaya Bhagavathula et al. 2025. "Trends and Disparities in Non-fatal
+    Firearm Injuries among Working-Age Adults in the United States, 2000-2021.." *Journal
+    of community health*. https://doi.org/10.1007/s10900-024-01431-9
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.584314'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: race_ethnicity
+  direction: strengthens
+  strength: strong
+  description: Non-Hispanic Blacks represent 48.8% of injuries, reflecting structural
+    exposure to criminalized environments and differential policing
+- name: working_age_status
+  direction: strengthens
+  strength: moderate
+  description: Working-age adults (18-64 years) are disproportionately affected, suggesting
+    economic pressures and labor market exclusion as structural factors
+- name: assault_intent
+  direction: strengthens
+  strength: strong
+  description: 68.5% of incidents were assaults, indicating intentional violence often
+    occurring in crime-related contexts
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/social_environment/crime_involvement_to_non_fatal_firearm_injury.yaml
+_category: social_environment

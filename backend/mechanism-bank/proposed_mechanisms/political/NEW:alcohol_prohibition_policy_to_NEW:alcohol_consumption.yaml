@@ -1,0 +1,53 @@
+id: NEW:alcohol_prohibition_policy_to_NEW:alcohol_consumption
+name: Alcohol Prohibition Policy → Alcohol Consumption
+from_node:
+  node_id: NEW:alcohol_prohibition_policy
+  node_name: Alcohol Prohibition Policy
+to_node:
+  node_id: NEW:alcohol_consumption
+  node_name: Alcohol Consumption
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Government enacts alcohol prohibition policy, legally restricting the production,
+  sale, and distribution of alcoholic beverages'
+- 'Step 2: Reduced legal availability of alcohol decreases population-level access
+  to alcoholic beverages'
+- 'Step 3: Decreased access leads to reduced overall alcohol consumption at the population
+  level'
+- 'Step 4: Reduced alcohol consumption manifests as decreased liver cirrhosis mortality
+  rates (proxy measure for consumption)'
+evidence:
+  quality_rating: B
+  n_studies: 7
+  primary_citation: 'Bethany R Chrystoja et al. 2020. Effect of alcohol prohibition
+    on liver cirrhosis mortality rates in Canada from 1901 to 1956: A time-series
+    analysis. Drug and alcohol review.'
+  supporting_citations: []
+description: Alcohol prohibition policies reduce population-level alcohol consumption
+  by restricting legal access to alcoholic beverages. This time-series analysis of
+  seven Canadian provinces from 1901-1956 found that prohibition was associated with
+  0.39 fewer liver cirrhosis deaths per 100,000 people (used as proxy measure for
+  consumption). While prohibition did not eliminate alcohol consumption entirely,
+  the evidence suggests meaningful reductions at the population level.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.39
+    type: rate_difference
+    ci_lower: 0.06
+    ci_upper: 0.72
+  p_value: 0.02
+  sample_size: null
+moderators:
+- name: Data completeness across prohibition periods
+  direction: strengthens
+  strength: moderate
+  description: Provinces with complete data (before, during, and after prohibition)
+    showed stronger effect sizes than those with data only beginning during prohibition
+- name: Provincial variation
+  direction: weakens
+  strength: moderate
+  description: Significant heterogeneity across provinces; only Nova Scotia showed
+    individually significant effects

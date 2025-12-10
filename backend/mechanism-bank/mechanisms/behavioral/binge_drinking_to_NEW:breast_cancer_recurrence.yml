@@ -1,0 +1,55 @@
+id: binge_drinking_to_NEW:breast_cancer_recurrence
+name: Binge Drinking → Breast Cancer Recurrence
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:breast_cancer_recurrence
+  node_name: Breast Cancer Recurrence
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Pre-diagnosis alcohol consumption exposes breast tissue to ethanol and its metabolite acetaldehyde'
+- 'Step 2: Acetaldehyde causes DNA damage and interferes with DNA repair mechanisms'
+- 'Step 3: Alcohol increases estrogen levels which may promote hormone-receptor positive breast cancer'
+- 'Step 4: Despite biological plausibility, meta-analysis shows no significant association with recurrence'
+evidence:
+  quality_rating: A
+  n_studies: 7
+  primary_citation: 'T. Nomura et al. 2023. "Alcohol consumption and breast cancer prognosis after breast
+    cancer diagnosis: a systematic review and meta‑analysis of the Japanese Breast Cancer Society Clinical
+    Practice Guideline, 2022 edition." https://doi.org/10.1007/s12282-023-01455-4'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references 33 total studies
+  - Studies assessed pre-diagnosis alcohol consumption (7 studies)
+  - Studies assessed post-diagnosis alcohol consumption (3 studies)
+  doi: 10.1007/s12282-023-01455-4
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Pre-diagnosis alcohol consumption was not significantly associated with breast cancer recurrence
+  (RR 1.02, 95% CI 0.77-1.37, p=0.88) based on 7 cohort studies with 4638 recurrence cases.
+quantitative_effects:
+  effect_size:
+    value: 1.02
+    type: relative_risk
+    ci_lower: 0.77
+    ci_upper: 1.37
+  p_value: 0.88
+  sample_size: 4638
+moderators:
+- name: timing_of_alcohol_consumption
+  direction: strengthens
+  strength: weak
+  description: Pre-diagnosis vs post-diagnosis consumption may have different effects, though neither
+    showed significant associations
+structural_competency:
+  equity_implications: While alcohol is an established risk factor for breast cancer incidence, this meta-analysis
+    finds no evidence that it affects prognosis after diagnosis. This is relevant for clinical counseling
+    and should not be used to blame patients for their disease outcomes. Structural factors affecting
+    alcohol access and marketing may influence initial cancer risk but appear less relevant for prognosis.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.292216'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

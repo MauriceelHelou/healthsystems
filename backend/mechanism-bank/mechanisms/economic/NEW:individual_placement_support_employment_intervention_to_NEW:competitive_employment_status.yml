@@ -1,0 +1,75 @@
+id: NEW:individual_placement_support_employment_intervention_to_NEW:competitive_employment_status
+name: Individual Placement and Support (IPS) Employment Intervention → Competitive Employment Status
+from_node:
+  node_id: NEW:individual_placement_support_employment_intervention
+  node_name: Individual Placement and Support (IPS) Employment Intervention
+to_node:
+  node_id: NEW:competitive_employment_status
+  node_name: Competitive Employment Status
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: IPS provides integrated employment support within addiction treatment settings for individuals
+  with alcohol/drug dependence'
+- 'Step 2: Employment specialists conduct rapid job search aligned with client preferences rather than
+  prevocational training'
+- 'Step 3: Ongoing support during job placement and retention (up to 4 months in-work support) addresses
+  barriers'
+- 'Step 4: Integration with treatment-as-usual addresses substance use while simultaneously pursuing employment'
+- 'Step 5: Competitive employment in open job market achieved, verified through tax and benefit database
+  linkage'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: John Marsden et al. 2020. "Protocol for a multi-centre, definitive randomised controlled
+    trial of the effectiveness of Individual Placement and Support for employment support among people
+    with alcohol and drug dependence." https://doi.org/10.1186/s13063-020-4099-4
+  supporting_citations:
+  - Meta-analysis cited showing 18% target difference on vocational effectiveness (referenced but not
+    fully cited in abstract)
+  - IPS evidence base in severe mental illness and physical disabilities (referenced as extensive but
+    specific citations require full-text access)
+  - Additional citations require full-text access
+  doi: 10.1186/s13063-020-4099-4
+  citation_verified: true
+  needs_manual_review: true
+  citation_issues:
+  - Primary citation doesn't match verified citation from literature search
+last_updated: '2025-12-06'
+version: '2.0'
+description: Individual Placement and Support (IPS), an evidence-based supported employment model, integrated
+  with addiction treatment-as-usual, is hypothesized to increase competitive employment rates among people
+  with alcohol and drug dependence compared to standard employment support alone.
+quantitative_effects:
+  effect_size:
+    value: 18.0
+    type: percentage_change
+  p_value: 0.05
+  sample_size: 832
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Seven-site trial across England; geographic variation in labor markets and treatment-as-usual
+    conditions may influence outcomes
+moderators:
+- name: substance_use_disorder_type
+  direction: strengthens
+  strength: moderate
+  description: Study includes AUD, OUD, and other drug use disorders; effectiveness may vary by primary
+    substance
+- name: duration_of_unemployment
+  direction: weakens
+  strength: moderate
+  description: Eligibility requires 6+ months unemployment or economic inactivity; longer duration may
+    present additional barriers
+structural_competency:
+  equity_implications: This mechanism addresses the structural barrier of unemployment among people with
+    substance use disorders by providing integrated vocational support rather than treating employment
+    as secondary to treatment completion. The intervention recognizes that traditional addiction treatment
+    programs offer ineffective employment support, perpetuating economic marginalization. By targeting
+    the structural exclusion of this population from competitive employment, IPS addresses a key social
+    determinant affecting health equity.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.904789'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

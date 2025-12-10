@@ -1,0 +1,47 @@
+id: NEW:shock_vasopressor_use_to_acute_kidney_injury_hospitalization
+name: Shock or Vasopressor Use → Acute Kidney Injury Hospitalization
+from_node:
+  node_id: NEW:shock_vasopressor_use
+  node_name: Shock or Vasopressor Use
+to_node:
+  node_id: acute_kidney_injury_hospitalization
+  node_name: Acute Kidney Injury Hospitalization
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Shock states (septic, cardiogenic, or hypovolemic) cause systemic hypoperfusion
+  and hemodynamic instability, leading to reduced renal blood flow'
+- 'Step 2: Vasopressor administration (while necessary to maintain blood pressure)
+  can cause renal vasoconstriction, further compromising renal perfusion'
+- 'Step 3: Reduced renal perfusion leads to ischemic injury to renal tubular cells,
+  activation of inflammatory cascades, and oxidative stress'
+- 'Step 4: Sustained hypoperfusion and ischemia-reperfusion injury result in acute
+  tubular necrosis and clinically manifest acute kidney injury requiring hospitalization'
+evidence:
+  quality_rating: A
+  n_studies: 52
+  primary_citation: 'A. Cau et al. 2021. Acute Kidney Injury and Renal Replacement
+    Therapy in COVID-19 Versus Other Respiratory Viruses: A Systematic Review and
+    Meta-Analysis. Canadian Journal of Kidney Health and Disease.'
+  supporting_citations: []
+description: Shock states and vasopressor use are significant risk factors for acute
+  kidney injury in critically ill hospitalized patients. The meta-analysis found that
+  after adjusting for shock or vasopressor use, differences in AKI rates between different
+  viral infection groups disappeared, indicating that hemodynamic instability requiring
+  vasopressor support is a critical pathway to AKI. Among 23,655 critically ill COVID-19
+  patients, 51% developed AKI, with shock and vasopressor use identified as key confounders
+  explaining differences in AKI rates across viral infections.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: viral_ace2_association
+  direction: weakens
+  strength: moderate
+  description: After adjusting for shock or vasopressor use, AKI and RRT rates were
+    not significantly different between virus groups, suggesting shock/vasopressor
+    use is a key mediator regardless of viral mechanism
+- name: critical_illness_severity
+  direction: strengthens
+  strength: strong
+  description: ICU admission and critical illness are associated with higher rates
+    of both shock/vasopressor use and AKI

@@ -1,0 +1,78 @@
+id: medicaid_expansion_status_to_uninsured_rate
+name: Medicaid Expansion Status → Uninsured Rate
+from_node:
+  node_id: medicaid_expansion_status
+  node_name: Medicaid Expansion Status
+to_node:
+  node_id: uninsured_rate
+  node_name: Uninsured Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: States adopt Medicaid expansion under the Affordable Care Act, extending
+  eligibility to adults with incomes up to 138% of the federal poverty level regardless
+  of pregnancy or parental status'
+- 'Step 2: Previously uninsured low-income adults gain access to Medicaid enrollment,
+  including those who were ineligible under prior categorical restrictions'
+- 'Step 3: Expanded eligibility leads to increased Medicaid enrollment, with corresponding
+  declines in uninsurance rates across multiple populations (trauma patients, perinatal
+  women, cardiac patients, cancer patients)'
+- 'Step 4: Reductions in uninsurance are particularly pronounced among vulnerable
+  populations including racial and ethnic minorities, low-income individuals, and
+  those with high healthcare needs'
+evidence:
+  quality_rating: A
+  n_studies: 75
+  primary_citation: 'Yasmin A. Zerhouni et al. 2019. Impact of the Affordable Care
+    Act on Trauma and Emergency General Surgery: An Eastern Association for the Surgery
+    of Trauma Systematic Review and Meta-Analysis. Journal of Trauma and Acute Care
+    Surgery.'
+  supporting_citations:
+  - 'M. Bellerose et al. 2022. The ACA Medicaid Expansion And Perinatal Insurance,
+    Health Care Use, And Health Outcomes: A Systematic Review. Health Affairs.'
+  - 'Ginger Y Jiang et al. 2023. Medicaid Expansion Under the Affordable Care Act
+    and Association With Cardiac Care: A Systematic Review. Circulation. Cardiovascular
+    quality and outcomes.'
+  - C. Malinowski et al. 2022. Association of Medicaid Expansion With Mortality Disparity
+    by Race and Ethnicity Among Patients With De Novo Stage IV Breast Cancer. JAMA
+    Oncology.
+description: Medicaid expansion under the ACA significantly reduces uninsurance rates
+  by extending eligibility to low-income adults previously excluded from coverage.
+  Meta-analysis of 18 trauma studies found patients were 51% less likely to be uninsured
+  after expansion (OR 0.49, 95% CI 0.37-0.66). Systematic reviews across perinatal
+  (24 studies), cardiac (30 studies), and oncology populations consistently demonstrate
+  increased Medicaid coverage with corresponding declines in uninsurance, private
+  insurance, and insurance churn following state adoption of expansion.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 0.49
+    type: odds_ratio
+    ci_lower: 0.37
+    ci_upper: 0.66
+  p_value: null
+  sample_size: 9322
+moderators:
+- name: Race and ethnicity
+  direction: strengthens
+  strength: strong
+  description: Racial and ethnic minorities experienced greater reductions in uninsurance
+    rates, with corresponding improvements in insurance coverage particularly among
+    Hispanic, non-Hispanic Black, and other minority populations
+- name: Income level
+  direction: strengthens
+  strength: strong
+  description: Patients in the lowest income quartile showed particularly strong benefits
+    from expansion, as they were most likely to be previously uninsured and newly
+    eligible under expansion criteria
+- name: Healthcare need intensity
+  direction: strengthens
+  strength: moderate
+  description: Populations with high healthcare needs (trauma, cardiac conditions,
+    cancer, perinatal care) showed substantial coverage gains under expansion
+- name: Pre-expansion coverage levels
+  direction: strengthens
+  strength: moderate
+  description: States with higher baseline uninsurance rates showed larger absolute
+    reductions following expansion

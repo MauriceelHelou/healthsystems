@@ -1,0 +1,63 @@
+id: alcohol_use_disorder_to_NEW:alcohol_related_liver_disease_progression
+name: Alcohol Use Disorder (Hazardous Drinking) → Alcohol-Related Liver Disease Progression
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder (Hazardous Drinking)
+to_node:
+  node_id: NEW:alcohol_related_liver_disease_progression
+  node_name: Alcohol-Related Liver Disease Progression
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Chronic hazardous alcohol consumption initiates hepatic injury through
+  direct hepatotoxic effects of ethanol and its metabolites (acetaldehyde)'
+- 'Step 2: Initial liver damage manifests as hepatic steatosis (fatty liver), present
+  in approximately 27% of hazardous drinkers'
+- 'Step 3: Continued alcohol exposure triggers inflammatory responses, progressing
+  to steatohepatitis (24% prevalence) with annualized progression rates of 10% to
+  cirrhosis'
+- 'Step 4: Persistent inflammation leads to hepatic fibrosis (8% annual progression
+  to cirrhosis) through activation of hepatic stellate cells and collagen deposition'
+- 'Step 5: Progressive fibrosis culminates in cirrhosis (26% prevalence among hazardous
+  drinkers), with associated mortality of 8% annually'
+evidence:
+  quality_rating: A
+  n_studies: 37
+  primary_citation: 'Parker R et al. 2019. Natural history of histologically proven
+    alcohol-related liver disease: A systematic review. Journal of hepatology.'
+  supporting_citations: []
+description: 'Systematic review of 37 studies (n=7,528) demonstrates that hazardous
+  drinking leads to progressive alcohol-related liver disease through a stepwise histological
+  progression. Among hazardous drinkers, 15% have normal histology, 27% steatosis,
+  24% steatohepatitis, and 26% cirrhosis. Annual progression rates to cirrhosis increase
+  with disease severity: 1% for normal histology, 3% for steatosis, 10% for steatohepatitis,
+  and 8% for fibrosis. Steatohepatitis requiring hospitalization represents the most
+  dangerous subtype with 15% annual mortality. Even ''benign'' steatosis carries significant
+  mortality risk (6% annually), with non-liver mortality (5%) exceeding liver-specific
+  mortality (1%).'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 10.0
+    type: annualized_progression_rate_percent
+    ci_lower: 6.0
+    ci_upper: 17.0
+  p_value: null
+  sample_size: 7528
+moderators:
+- name: Disease stage at presentation
+  direction: strengthens
+  strength: strong
+  description: Steatohepatitis has highest progression rate (10% annual) compared
+    to steatosis (3%) or normal histology (1%)
+- name: Clinical setting (inpatient vs outpatient)
+  direction: strengthens
+  strength: strong
+  description: Inpatient cohorts with steatohepatitis show markedly higher annual
+    mortality (15%) compared to mixed cohorts (5%)
+- name: Presence of fibrosis
+  direction: strengthens
+  strength: moderate
+  description: Fibrosis carries 8% annual progression to cirrhosis compared to 3%
+    for simple steatosis

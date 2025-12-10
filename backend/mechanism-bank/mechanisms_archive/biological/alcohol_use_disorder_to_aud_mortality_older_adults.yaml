@@ -1,0 +1,41 @@
+id: alcohol_use_disorder_to_aud_mortality_older_adults
+name: Alcohol Use Disorder (AUD) → Mortality from Alcohol Use Disorder
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder (AUD)
+to_node:
+  node_id: aud_mortality_older_adults
+  node_name: Mortality from Alcohol Use Disorder
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: AUD increases mortality through multiple pathways including liver disease
+  progression, cardiovascular complications, and alcohol poisoning'
+- 'Step 2: Chronic alcohol exposure in older adults compounds age-related physiological
+  decline and comorbidity burden'
+- 'Step 3: Increased prevalence of AUD translates to increased age-standardized mortality
+  rates among older adults'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Pojsakorn Danpanichkul et al. 2024. "Increased mortality from
+    alcohol use disorder, alcohol‐associated liver disease, and liver cancer from
+    alcohol among older adults in the United States: 2000 to 2021." *Alcohol, clinical
+    & experimental research*. https://doi.org/10.1111/acer.15516'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.370048'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Findings were categorized by sex, suggesting differential mortality
+    patterns between male and female older adults with AUD
+- name: us_policy_environment
+  direction: strengthens
+  strength: strong
+  description: US shows increasing mortality trends while global patterns decline,
+    indicating structural policy failures specific to the US context

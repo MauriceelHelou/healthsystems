@@ -1,0 +1,47 @@
+id: NEW:financial_problems_to_suicidal_ideation
+name: Financial Problems → Suicidal Ideation
+from_node:
+  node_id: NEW:financial_problems
+  node_name: Financial Problems
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: economic
+mechanism_pathway:
+- 'Step 1: Financial problems create acute and chronic economic stress, reducing access
+  to resources needed for healthcare, basic needs, and quality of life'
+- 'Step 2: Economic strain contributes to feelings of hopelessness, perceived burdensomeness,
+  and loss of control over one''s life circumstances'
+- 'Step 3: These psychological states, combined with reduced social functioning and
+  potential inability to afford treatment, increase vulnerability to suicidal ideation
+  particularly among already-stressed populations like cancer patients'
+evidence:
+  quality_rating: A
+  n_studies: 40
+  primary_citation: 'Jie Chen et al. 2024. Risk factors associated with suicidal ideation
+    among cancer patients: a systematic review and meta-analysis. Frontiers in Psychology.'
+  supporting_citations: []
+description: Financial problems are significantly associated with increased suicidal
+  ideation among cancer patients. This systematic review and meta-analysis of 40 studies
+  identified financial problems as one of multiple independent risk factors for suicidal
+  ideation, alongside other psychosocial stressors including depression, anxiety,
+  living alone, and lower social functioning.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Depression
+  direction: strengthens
+  strength: strong
+  description: Depression was identified as a significant co-occurring risk factor
+    that may amplify the impact of financial problems on suicidal ideation
+- name: Social functioning
+  direction: weakens
+  strength: moderate
+  description: Higher social functioning may buffer against the effects of financial
+    problems on suicidal ideation
+- name: Psychiatric illness history
+  direction: strengthens
+  strength: strong
+  description: Pre-existing psychiatric conditions may increase vulnerability to suicidal
+    ideation when experiencing financial problems

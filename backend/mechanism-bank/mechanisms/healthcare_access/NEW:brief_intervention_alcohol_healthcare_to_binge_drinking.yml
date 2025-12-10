@@ -1,0 +1,58 @@
+id: NEW:brief_intervention_alcohol_healthcare_to_binge_drinking
+name: Brief Interventions for Alcohol Use in Healthcare Settings → Binge Drinking Rate
+from_node:
+  node_id: NEW:brief_intervention_alcohol_healthcare
+  node_name: Brief Interventions for Alcohol Use in Healthcare Settings
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking Rate
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Healthcare settings provide opportunistic access point to identify individuals with problematic
+  alcohol use patterns'
+- 'Step 2: Brief interventions deliver structured motivational interviewing and feedback about drinking
+  behaviors'
+- 'Step 3: Intervention increases awareness of personal consumption patterns and associated risks'
+- 'Step 4: Patients develop skills and motivation to reduce binge drinking episodes'
+- 'Step 5: Reduction in frequency of binge alcohol consumption'
+evidence:
+  quality_rating: A
+  n_studies: 29
+  primary_citation: 'Maria L Schweer-Collins et al. 2023. "Investigating for Whom Brief Substance Use
+    Interventions Are Most Effective: An Individual Participant Data Meta-analysis.." https://doi.org/10.1007/s11121-023-01525-1'
+  supporting_citations:
+  - Parent aggregate data meta-analysis (k = 116 trials) referenced in methods
+  - Additional citations require full-text access for specific trial identifications
+  - 'PROSPERO protocol #CRD42018086832 pre-registration documents'
+  doi: 10.1007/s11121-023-01525-1
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief interventions delivered in general healthcare settings led to significant reductions
+  in binge alcohol consumption among female participants, with a small but statistically significant effect
+  size.
+quantitative_effects:
+  effect_size:
+    value: 0.09
+    type: standardized_mean_difference
+    ci_lower: 0.03
+    ci_upper: 0.14
+  sample_size: 12074
+moderators:
+- name: sex_female
+  direction: strengthens
+  strength: strong
+  description: Effect on binge drinking was significant among females but not explicitly compared to males
+    in reported findings
+structural_competency:
+  equity_implications: This mechanism highlights the importance of healthcare system infrastructure in
+    addressing alcohol use. Access to brief interventions depends on healthcare engagement, which itself
+    is shaped by structural factors including insurance coverage, geographic access to care, and integration
+    of behavioral health services in primary care. The differential effectiveness by sex suggests that
+    intervention design and delivery may need to account for gendered social contexts of alcohol use.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.998070'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

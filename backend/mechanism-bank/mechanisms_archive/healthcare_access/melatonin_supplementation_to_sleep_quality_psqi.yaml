@@ -1,0 +1,37 @@
+id: melatonin_supplementation_to_sleep_quality_psqi
+name: Melatonin Supplementation (10mg) → Sleep Quality (PSQI Score)
+from_node:
+  node_id: melatonin_supplementation
+  node_name: Melatonin Supplementation (10mg)
+to_node:
+  node_id: sleep_quality_psqi
+  node_name: Sleep Quality (PSQI Score)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Melatonin administration exerts chronobiotic effects, regulating circadian
+  rhythm disruption in COMISA patients'
+- 'Step 2: Antioxidant properties of melatonin reduce oxidative stress associated
+  with sleep fragmentation'
+- 'Step 3: Improved sleep architecture reduces nighttime awakenings and decreases
+  sleep latency'
+- 'Step 4: Overall sleep quality improves as measured by reduction in PSQI scores'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Tahereh Madani Motlaq et al. 2024. "Effect of melatonin on insomnia
+    and daytime sleepiness, in patients with obstructive sleep apnea and insomnia
+    (COMISA): A randomized double-blinded placebo-controlled trial." *Journal of Pharmaceutical
+    Health Care and Sciences*. https://doi.org/10.1186/s40780-024-00347-9'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.021883'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: pap_therapy_use
+  direction: strengthens
+  strength: moderate
+  description: Concurrent PAP therapy use for over one month required for study inclusion,
+    suggesting melatonin effects may be enhanced in context of existing OSA treatment

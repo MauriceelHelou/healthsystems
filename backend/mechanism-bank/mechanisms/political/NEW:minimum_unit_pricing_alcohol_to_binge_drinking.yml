@@ -1,0 +1,61 @@
+id: NEW:minimum_unit_pricing_alcohol_to_binge_drinking
+name: Minimum Unit Pricing of Alcohol → Binge Drinking
+from_node:
+  node_id: NEW:minimum_unit_pricing_alcohol
+  node_name: Minimum Unit Pricing of Alcohol
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Minimum unit pricing (MUP) policy establishes a floor price below which alcohol cannot be sold'
+- 'Step 2: This disproportionately increases prices of cheap, high-strength alcohol products favored by
+  heavy drinkers'
+- 'Step 3: Price increases reduce affordability of alcohol for price-sensitive consumers'
+- 'Step 4: Reduced affordability leads to decreased purchasing and consumption of alcohol'
+- 'Step 5: Lower consumption translates to reduced binge drinking episodes'
+evidence:
+  quality_rating: A
+  n_studies: 33
+  primary_citation: 'S. Boniface et al. 2017. "Evidence for the effectiveness of minimum pricing of alcohol:
+    a systematic review and assessment using the Bradford Hill criteria for causality." https://doi.org/10.1136/bmjopen-2016-013497'
+  supporting_citations:
+  - Modelling studies demonstrating consistency and specificity criteria for MUP-consumption relationship
+  - Time series analyses demonstrating temporality and experiment criteria for price-consumption effects
+  - Wider literature on taxation and affordability fulfilling analogy criterion
+  doi: 10.1136/bmjopen-2016-013497
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Systematic review meeting all nine Bradford Hill criteria for causality found that minimum
+  unit pricing policies reduce alcohol consumption. The mechanism operates through increasing the price
+  floor for cheap alcohol products, thereby reducing affordability and subsequent purchasing and consumption
+  behaviors.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies included peer-reviewed research and grey literature from multiple jurisdictions;
+    evidence base largely produced by small number of research teams suggesting geographic concentration
+    of evidence
+moderators:
+- name: baseline_drinking_level
+  direction: strengthens
+  strength: moderate
+  description: Heavy drinkers who consume cheap alcohol are more affected by minimum pricing as they purchase
+    larger volumes of low-cost products
+- name: price_sensitivity
+  direction: strengthens
+  strength: moderate
+  description: Price-sensitive populations show greater reductions in consumption in response to price
+    increases
+structural_competency:
+  equity_implications: This mechanism addresses alcohol harm through population-level policy intervention
+    rather than individual behavior change approaches. MUP is a structural intervention that modifies
+    the commercial environment. The policy specifically targets cheap, high-strength products which are
+    disproportionately consumed by heavy drinkers and lower-income populations, raising equity considerations
+    about differential impact.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.345087'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

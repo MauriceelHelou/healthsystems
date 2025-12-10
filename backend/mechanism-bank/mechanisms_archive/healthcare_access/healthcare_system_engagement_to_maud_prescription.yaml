@@ -1,0 +1,40 @@
+id: healthcare_system_engagement_to_maud_prescription
+name: Healthcare System Engagement → MAUD Prescription Receipt
+from_node:
+  node_id: healthcare_system_engagement
+  node_name: Healthcare System Engagement
+to_node:
+  node_id: maud_prescription
+  node_name: MAUD Prescription Receipt
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Patients with greater healthcare system engagement have more clinical encounters
+  and opportunities for diagnosis'
+- 'Step 2: Inpatient hospitalization creates structured opportunity for AUD diagnosis
+  and assessment'
+- 'Step 3: Formal diagnosis codes trigger clinical protocols and medication consideration'
+- 'Step 4: Providers prescribe MAUD during or following hospitalization'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: A. Rabiee et al. 2023. "Medications for alcohol use disorder improve
+    survival in patients with hazardous drinking and alcohol-associated cirrhosis."
+    *Hepatology Communications*. https://doi.org/10.1097/HC9.0000000000000093
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.335969'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: inpatient_admission
+  direction: strengthens
+  strength: strong
+  description: Inpatient diagnosis code for AUD was the strongest positive predictor
+    of MAUD prescription
+- name: mental_health_service_use
+  direction: strengthens
+  strength: moderate
+  description: Concurrent depression diagnosis predicted MAUD prescription, suggesting
+    mental health service engagement increases treatment access

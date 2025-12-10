@@ -1,0 +1,45 @@
+id: benzodiazepine_sparing_protocol_implementation_to_alcohol_withdrawal_severity
+name: Benzodiazepine-Sparing Protocol Implementation → Alcohol Withdrawal Severity
+  (CIWA-Ar Score)
+from_node:
+  node_id: benzodiazepine_sparing_protocol_implementation
+  node_name: Benzodiazepine-Sparing Protocol Implementation
+to_node:
+  node_id: alcohol_withdrawal_severity
+  node_name: Alcohol Withdrawal Severity (CIWA-Ar Score)
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Implementation of protocol substitutes clonidine and gabapentin for benzodiazepines
+  in managing alcohol withdrawal syndrome in trauma patients'
+- 'Step 2: Clonidine (alpha-2 agonist) and gabapentin (GABA analog) provide alternative
+  mechanisms for managing autonomic hyperactivity and neural excitation associated
+  with alcohol withdrawal'
+- 'Step 3: Alternative medications reduce withdrawal symptoms through different pharmacological
+  pathways, decreasing maximum daily CIWA-Ar scores'
+- 'Step 4: Lower withdrawal severity reduces clinical complications and adverse outcomes
+  in hospitalized trauma patients'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Mary Alyce McCullough et al. 2023. "Eliminating the benzos: A
+    benzodiazepine-sparing approach to preventing and treating alcohol withdrawal
+    syndrome." *Journal of Trauma and Acute Care Surgery*. https://doi.org/10.1097/TA.0000000000004188'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.721922'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: injury_severity_score
+  direction: strengthens
+  strength: moderate
+  description: Patients with similar injury severity scores (13 vs 16, p=0.10) demonstrated
+    protocol efficacy, suggesting effectiveness across trauma severity spectrum
+- name: admission_alcohol_level
+  direction: strengthens
+  strength: moderate
+  description: Similar admission alcohol levels (99 vs 149 mg/dL, p=0.06) between
+    groups suggests protocol effectiveness regardless of initial alcohol intoxication
+    level

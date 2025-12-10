@@ -1,0 +1,43 @@
+id: obesity_individual_to_NEW:nonalcoholic_steatohepatitis_nash
+name: Obesity → Nonalcoholic Steatohepatitis (NASH)
+from_node:
+  node_id: obesity_individual
+  node_name: Obesity
+to_node:
+  node_id: NEW:nonalcoholic_steatohepatitis_nash
+  node_name: Nonalcoholic Steatohepatitis (NASH)
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Obesity leads to excessive accumulation of triglycerides in hepatocytes,
+  causing hepatic steatosis (fatty liver)'
+- 'Step 2: Chronic lipid overload triggers lipotoxicity, oxidative stress, and mitochondrial
+  dysfunction in liver cells'
+- 'Step 3: These processes activate inflammatory pathways, leading to hepatocyte injury,
+  inflammation, and the progression from simple steatosis to nonalcoholic steatohepatitis
+  (NASH)'
+- 'Step 4: Sustained inflammation and cell death promote a cycle of hepatocyte regeneration
+  and fibrosis development'
+evidence:
+  quality_rating: B
+  n_studies: 19
+  primary_citation: 'Renumathy Dhanasekaran and Dean W Felsher 2019. A Tale of Two
+    Complications of Obesity: NASH and Hepatocellular Carcinoma. Hepatology (Baltimore,
+    Md.)'
+  supporting_citations: []
+description: Obesity is a primary driver of nonalcoholic steatohepatitis (NASH), the
+  most common chronic liver disease in developed countries. The mechanism involves
+  hepatic lipid accumulation leading to steatosis, followed by lipotoxicity-induced
+  inflammation, oxidative stress, and hepatocyte injury that characterizes the transition
+  to NASH. This paper, referencing a meta-analysis of 19 studies, confirms the strong
+  link between obesity and NASH development, while also noting that obesity can contribute
+  to liver pathology independent of traditional fibrosis pathways.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Fibrosis presence
+  direction: strengthens
+  strength: moderate
+  description: While obesity drives NASH development, the presence of cirrhosis/fibrosis
+    affects progression to HCC; notably up to 38% of NASH-related HCC occurs without
+    significant fibrosis

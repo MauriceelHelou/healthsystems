@@ -1,0 +1,60 @@
+id: NEW:cognitive_frailty_to_dementia_diagnosis_rate
+name: Cognitive Frailty → Dementia Diagnosis Rate
+from_node:
+  node_id: NEW:cognitive_frailty
+  node_name: Cognitive Frailty
+to_node:
+  node_id: dementia_diagnosis_rate
+  node_name: Dementia Diagnosis Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Cognitive frailty represents a combination of physical frailty and mild
+  cognitive impairment, creating a synergistic vulnerability state that accelerates
+  neurodegeneration'
+- 'Step 2: Physical frailty components (reduced strength, exhaustion, slow gait, low
+  activity) contribute to decreased cerebral blood flow, chronic inflammation, and
+  reduced neurotrophic factor production'
+- 'Step 3: Existing mild cognitive impairment indicates compromised neural reserve
+  and early pathological changes in brain structure and function'
+- 'Step 4: The combination of physical and cognitive decline creates a feedback loop
+  where reduced physical activity further impairs cognitive function and vice versa'
+- 'Step 5: This accelerated decline pathway leads to progression from mild cognitive
+  impairment to clinical dementia diagnosis at significantly elevated rates compared
+  to those without cognitive frailty'
+evidence:
+  quality_rating: A
+  n_studies: 22
+  primary_citation: 'Baoyu Chen et al. 2022. Impact of frailty, mild cognitive impairment
+    and cognitive frailty on adverse health outcomes among community-dwelling older
+    adults: A systematic review and meta-analysis. Frontiers in Medicine.'
+  supporting_citations: []
+description: Cognitive frailty, defined as the co-occurrence of physical frailty and
+  mild cognitive impairment without dementia, is strongly associated with increased
+  risk of dementia diagnosis. This meta-analysis of 22 cohort studies (n=71,544) found
+  that individuals with cognitive frailty had 3.67 times higher risk of developing
+  dementia compared to robust elders. The combined physical and cognitive vulnerabilities
+  create a synergistic effect that accelerates cognitive decline beyond what either
+  condition produces alone.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.67
+    type: relative_risk
+    ci_lower: 2.81
+    ci_upper: 4.78
+  p_value: null
+  sample_size: 71544
+moderators:
+- name: Pre-frailty status
+  direction: strengthens
+  strength: moderate
+  description: 'Mild cognitive impairment combined with pre-frailty also showed elevated
+    dementia risk (RR=4.15, 95% CI: 1.87-9.20), though somewhat lower than full cognitive
+    frailty'
+- name: Age
+  direction: strengthens
+  strength: moderate
+  description: Studies included participants with mean ages ranging from 65.1 to 93.6
+    years, with cognitive frailty effects observed across this age spectrum

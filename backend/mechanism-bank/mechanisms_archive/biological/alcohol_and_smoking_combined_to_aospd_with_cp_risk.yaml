@@ -1,0 +1,42 @@
+id: alcohol_and_smoking_combined_to_aospd_with_cp_risk
+name: Combined Alcohol and Smoking Exposure → AOSPD with Chronic Pancreatitis Risk
+from_node:
+  node_id: alcohol_and_smoking_combined
+  node_name: Combined Alcohol and Smoking Exposure
+to_node:
+  node_id: aospd_with_cp_risk
+  node_name: AOSPD with Chronic Pancreatitis Risk
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Smoking and alcohol consumption act synergistically to cause pancreatic
+  injury through oxidative stress and inflammatory pathways'
+- 'Step 2: Combined exposures accelerate progression of chronic pancreatitis with
+  more severe duct damage and calcification'
+- 'Step 3: More severe structural pancreatic changes increase risk of complete duct
+  obstruction'
+- 'Step 4: Smoking-related immune dysfunction may increase susceptibility to bacterial
+  infection in obstructed ducts, facilitating progression to suppurative ductitis'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Bingqing Bai et al. 2025. "Clinical insights and management strategies
+    for acute obstructive suppurative pancreatic ductitis: a retrospective study of
+    82 rare cases.." *Gastrointestinal endoscopy*. https://doi.org/10.1016/j.gie.2024.12.021'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.188314'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: male_sex
+  direction: strengthens
+  strength: strong
+  description: The concentration of AOSPD in men (80.5%) reflects higher prevalence
+    of combined alcohol and smoking exposures in male populations
+- name: age_over_60
+  direction: strengthens
+  strength: moderate
+  description: Median age of 60 years suggests cumulative dose-response relationship
+    with years of combined exposure

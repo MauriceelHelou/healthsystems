@@ -1,0 +1,57 @@
+id: alcohol_use_disorder_to_NEW:occupational_productivity_loss
+name: Alcohol Use Disorder (AUDIT/CAGE) → Occupational Productivity Loss (Absenteeism/Presenteeism)
+from_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder (AUDIT/CAGE)
+to_node:
+  node_id: NEW:occupational_productivity_loss
+  node_name: Occupational Productivity Loss (Absenteeism/Presenteeism)
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Alcohol use disorder leads to patterns of harmful drinking including binge
+  drinking and everyday drinking that impair physical and cognitive functioning'
+- 'Step 2: Impaired functioning results in increased absenteeism due to hangovers,
+  alcohol-related illness, and recovery time from drinking episodes'
+- 'Step 3: Workers with alcohol use disorder who do attend work experience presenteeism
+  - reduced productivity while present due to cognitive impairment, fatigue, and withdrawal
+  symptoms'
+- 'Step 4: In safety-sensitive occupations (e.g., truck driving), alcohol misuse additionally
+  increases risk of workplace injuries and accidents, further contributing to productivity
+  losses'
+evidence:
+  quality_rating: A
+  n_studies: 15
+  primary_citation: 'N. Bragazzi et al. 2018. Patterns of Harmful Alcohol Consumption
+    among Truck Drivers: Implications for Occupational Health and Work Safety from
+    a Systematic Review and Meta-Analysis. International Journal of Environmental
+    Research and Public Health.'
+  supporting_citations: []
+description: This systematic review and meta-analysis establishes that alcohol use
+  disorder, as measured by AUDIT/CAGE instruments, is directly linked to occupational
+  productivity losses through absenteeism, presenteeism, and workplace injuries. Among
+  truck drivers, 22.7% met criteria for alcohol misuse, with additional patterns of
+  binge drinking (19.0%) and everyday drinking (9.4%) contributing to impaired work
+  performance and safety risks.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 22.7
+    type: prevalence_percentage
+    ci_lower: 14.8
+    ci_upper: 33.0
+  p_value: null
+  sample_size: null
+moderators:
+- name: occupation_type
+  direction: strengthens
+  strength: strong
+  description: Safety-sensitive occupations like truck driving show particularly high
+    rates of alcohol misuse (22.7% by AUDIT/CAGE), with greater implications for productivity
+    loss through accidents and injuries
+- name: drinking_pattern
+  direction: strengthens
+  strength: moderate
+  description: Binge drinking (19.0% prevalence) and everyday drinking (9.4% prevalence)
+    patterns differentially affect absenteeism vs presenteeism outcomes

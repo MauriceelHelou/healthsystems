@@ -1,0 +1,54 @@
+id: NEW:disaster_exposure_to_suicidal_ideation
+name: Disaster and Mass Casualty Incident Exposure → Suicidal Ideation
+from_node:
+  node_id: NEW:disaster_exposure
+  node_name: Disaster and Mass Casualty Incident Exposure
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Exposure to disasters and mass casualty incidents causes physical injuries,
+  economic losses, and social disruption'
+- 'Step 2: These multidimensional losses trigger psychological distress including
+  anxiety, stress, and depression'
+- 'Step 3: Accumulated psychological burden, loss of resources, and disrupted social
+  support networks contribute to hopelessness and suicidal ideation'
+- 'Step 4: Suicidal ideation may progress to suicide attempts in vulnerable individuals,
+  particularly those lacking adequate mental health support'
+evidence:
+  quality_rating: A
+  n_studies: 33
+  primary_citation: 'Arezoo Karimi et al. 2021. Prevalence of Suicidal Ideation and
+    Suicide Attempts after Disaster and Mass Casualty Incidents in the World: A Systematic
+    Review and Meta-Analysis. Iranian Journal of Psychiatry.'
+  supporting_citations: []
+description: Exposure to disasters and mass casualty incidents significantly increases
+  the prevalence of suicidal ideation, with an overall pooled prevalence of 12.9%
+  among affected populations. This meta-analysis of 33 studies with over 61,000 participants
+  demonstrates that the physical, economic, and social injuries resulting from disasters
+  lead to mental disorders including anxiety, stress, and depression, which contribute
+  to suicidal ideation. Women are particularly vulnerable, showing nearly 50% higher
+  rates of suicidal ideation than men post-disaster.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 12.9
+    type: prevalence_percent
+    ci_lower: 10.3
+    ci_upper: 15.5
+  p_value: null
+  sample_size: 61180
+moderators:
+- name: sex
+  direction: strengthens
+  strength: strong
+  description: Women showed approximately 1.5 times higher prevalence of suicidal
+    ideation (15.8%) compared to men (10.6%) following disaster exposure
+- name: disaster_type
+  direction: strengthens
+  strength: moderate
+  description: Different types of disasters and mass casualty incidents may have varying
+    impacts on suicidal ideation prevalence

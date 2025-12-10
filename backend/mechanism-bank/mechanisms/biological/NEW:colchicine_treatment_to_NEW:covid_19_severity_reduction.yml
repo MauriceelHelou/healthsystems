@@ -1,0 +1,46 @@
+id: NEW:colchicine_treatment_to_NEW:covid_19_severity_reduction
+name: Colchicine Treatment → COVID-19 Severity Reduction
+from_node:
+  node_id: NEW:colchicine_treatment
+  node_name: Colchicine Treatment
+to_node:
+  node_id: NEW:covid_19_severity_reduction
+  node_name: COVID-19 Severity Reduction
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Colchicine is administered to COVID-19 patients'
+- 'Step 2: Drug inhibits microtubule polymerization and reduces inflammatory cytokine release'
+- 'Step 3: Attenuation of hyperinflammatory response prevents cytokine storm'
+- 'Step 4: Reduced progression from mild/moderate to severe COVID-19'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'T. Hariyanto et al. 2021. "Colchicine treatment can improve outcomes of coronavirus
+    disease 2019 (COVID‐19): A systematic review and meta‐analysis." https://doi.org/10.1111/1440-1681.13488'
+  supporting_citations:
+  - Additional citations require full-text access - subgroup analysis within meta-analysis of 8 studies
+  doi: 10.1111/1440-1681.13488
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Subgroup analysis demonstrates colchicine treatment reduces progression to severe COVID-19
+  (OR 0.44, 95% CI 0.31-0.63, p<0.00001, I²=0%)
+quantitative_effects:
+  effect_size:
+    value: 0.44
+    type: odds_ratio
+    ci_lower: 0.31
+    ci_upper: 0.63
+  p_value: 1.0e-05
+  sample_size: 5778
+  heterogeneity_i_squared: 0.0
+structural_competency:
+  equity_implications: The ability to receive timely anti-inflammatory treatment depends on healthcare
+    system capacity, treatment protocol adoption, and medication supply chains. Structural barriers to
+    healthcare access may create inequitable distribution of treatment benefits.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.873179'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

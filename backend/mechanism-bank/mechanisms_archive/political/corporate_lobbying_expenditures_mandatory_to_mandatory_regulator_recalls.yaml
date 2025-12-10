@@ -1,0 +1,46 @@
+id: corporate_lobbying_expenditures_mandatory_to_mandatory_regulator_recalls
+name: Corporate Lobbying Expenditures (Mandatory Recalls) → Mandatory Regulator-Initiated
+  Product Recalls
+from_node:
+  node_id: corporate_lobbying_expenditures_mandatory
+  node_name: Corporate Lobbying Expenditures (Mandatory Recalls)
+to_node:
+  node_id: mandatory_regulator_recalls
+  node_name: Mandatory Regulator-Initiated Product Recalls
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Automotive companies use lobbying to build relationships with regulatory
+  agencies and influence regulatory decision-making processes'
+- 'Step 2: Lobbying creates institutional pressures and legitimacy that reduce regulatory
+  agencies'' willingness or capacity to mandate recalls'
+- 'Step 3: Reduced mandatory recalls mean regulatory agencies fail to enforce product
+  safety standards, allowing defective vehicles to remain on roads'
+- 'Step 4: Unrecalled defective vehicles pose elevated crash, injury, and fatality
+  risks, with greatest impact on vulnerable populations who drive older vehicles and
+  have less access to safety information'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Khimendra Singh and Rajdeep Grewal 2020. "Lobbying and Product
+    Recalls: A Study of the U.S. Automobile Industry." *Social Science Research Network*.
+    https://doi.org/10.1177/00222437221131568'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.014180'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: defect_severity
+  direction: weakens
+  strength: moderate
+  description: Higher defect severity moderates the lobbying-mandatory recall relationship,
+    with lobbying less effective at preventing mandatory recalls when defects pose
+    greater safety risks
+- name: media_coverage
+  direction: weakens
+  strength: strong
+  description: Media coverage moderates the lobbying effect on mandatory recalls;
+    public scrutiny through media reduces lobbying effectiveness in preventing regulatory
+    action, with full indirect moderation through interaction with defect severity

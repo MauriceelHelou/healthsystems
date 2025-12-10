@@ -1,0 +1,46 @@
+id: roux_en_y_gastric_bypass_surgery_to_overall_mortality_alcohol_hepatitis
+name: Roux-en-Y Gastric Bypass Surgery → Overall Mortality in Alcohol-Associated Hepatitis
+from_node:
+  node_id: roux_en_y_gastric_bypass_surgery
+  node_name: Roux-en-Y Gastric Bypass Surgery
+to_node:
+  node_id: overall_mortality_alcohol_hepatitis
+  node_name: Overall Mortality in Alcohol-Associated Hepatitis
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: RYGB alters gastrointestinal anatomy and physiology, affecting alcohol
+  metabolism and absorption patterns'
+- 'Step 2: Post-RYGB patients develop more severe alcohol-associated hepatitis as
+  evidenced by higher MELD-Na scores (15.1 vs 10.9)'
+- 'Step 3: Increased disease severity and altered metabolism lead to accelerated liver
+  damage progression'
+- 'Step 4: Higher disease burden results in increased overall mortality after discharge
+  from hospital'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Chimaobi Anugwom et al. 2023. "Lower survival and higher rates
+    of cirrhosis in patients with ROUX-EN-Y gastric bypass hospitalised with alcohol-associated
+    hepatitis." *BMJ Open Gastroenterology*. https://doi.org/10.1136/bmjgast-2022-001083
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.353192'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Increased age associated with higher inpatient mortality in regression
+    analysis
+- name: meld_na_score
+  direction: strengthens
+  strength: strong
+  description: MELD-Na >20 associated with higher inpatient mortality; RYGB patients
+    had higher baseline MELD-Na (15.1 vs 10.9)
+- name: bmi
+  direction: strengthens
+  strength: moderate
+  description: Elevated body mass index associated with higher inpatient mortality

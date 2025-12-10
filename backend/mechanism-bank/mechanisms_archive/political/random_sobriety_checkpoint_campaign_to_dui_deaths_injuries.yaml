@@ -1,0 +1,41 @@
+id: random_sobriety_checkpoint_campaign_to_dui_deaths_injuries
+name: Random Sobriety Checkpoint Campaign → Driving Under Influence Deaths and Injuries
+from_node:
+  node_id: random_sobriety_checkpoint_campaign
+  node_name: Random Sobriety Checkpoint Campaign
+to_node:
+  node_id: dui_deaths_injuries
+  node_name: Driving Under Influence Deaths and Injuries
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Random sobriety checkpoints create increased perceived risk of detection
+  for drunk driving'
+- 'Step 2: Heightened enforcement presence deters individuals from driving after consuming
+  alcohol'
+- 'Step 3: Reduced drunk driving behavior leads to fewer alcohol-impaired vehicle
+  collisions'
+- 'Step 4: Fewer DUI collisions result in decreased deaths and injuries from drunk
+  driving incidents'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Harrison Chang et al. 2020. "The Intended and Unintended Effects
+    of Drunk Driving Policies." *Oxford Bulletin of Economics and Statistics*. https://doi.org/10.1111/obes.12326
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.196992'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: repeat_offender_status
+  direction: weakens
+  strength: strong
+  description: Repeat DUI offenders showed little response to the checkpoint campaign
+    policy
+- name: severity_of_prior_offenses
+  direction: weakens
+  strength: strong
+  description: Offenders who caused serious injuries in the past showed little response
+    to the policy

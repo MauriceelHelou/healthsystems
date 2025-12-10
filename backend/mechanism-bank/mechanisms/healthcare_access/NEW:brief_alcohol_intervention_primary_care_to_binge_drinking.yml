@@ -1,0 +1,75 @@
+id: NEW:brief_alcohol_intervention_primary_care_to_binge_drinking
+name: Brief Alcohol Intervention in Primary Care → Binge Drinking
+from_node:
+  node_id: NEW:brief_alcohol_intervention_primary_care
+  node_name: Brief Alcohol Intervention in Primary Care
+to_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Primary care or emergency department visit provides opportunity for universal alcohol screening'
+- 'Step 2: Identification of hazardous or harmful drinking patterns through screening tools'
+- 'Step 3: Brief intervention provides personalized feedback on alcohol consumption patterns and health
+  risks'
+- 'Step 4: Motivational counseling and collaborative development of personal reduction plan'
+- 'Step 5: Reduction in weekly alcohol consumption and binge drinking episodes'
+evidence:
+  quality_rating: A
+  n_studies: 69
+  primary_citation: Eileen Fs Kaner et al. 2018. "Effectiveness of brief alcohol interventions in primary
+    care populations.." https://doi.org/10.1002/14651858.CD004148.pub4
+  supporting_citations:
+  - Studies from Cochrane Central Register of Controlled Trials, MEDLINE, and 12 other bibliographic databases
+    (2017)
+  - Original Cochrane Review (2007)
+  - Additional citations require full-text access for specific study identification
+  doi: 10.1002/14651858.CD004148.pub4
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Brief alcohol interventions delivered in primary care settings reduce alcohol consumption
+  by approximately 20 grams per week compared to minimal or no intervention. This represents a structural
+  healthcare intervention that leverages routine healthcare encounters to address hazardous drinking before
+  it progresses to alcohol use disorder.
+quantitative_effects:
+  effect_size:
+    value: -20.0
+    type: standardized_mean_difference
+    ci_lower: -28.0
+    ci_upper: -12.0
+  sample_size: 33642
+  heterogeneity_i_squared: 73.0
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Studies conducted across multiple countries; heterogeneity was substantial (I²=73%)
+    suggesting geographic and contextual variation in intervention effectiveness
+moderators:
+- name: gender
+  direction: strengthens
+  strength: moderate
+  description: Subgroup analysis demonstrated that both men and women reduced alcohol consumption after
+    receiving brief intervention, confirming effectiveness across genders
+- name: setting_type
+  direction: strengthens
+  strength: moderate
+  description: Interventions delivered in general practice (55%) and emergency care (39%) settings showed
+    effectiveness, indicating structural healthcare access points matter
+- name: intervention_duration
+  direction: weakens
+  strength: weak
+  description: Extended interventions (>60 minutes) showed no greater impact than brief interventions,
+    suggesting diminishing returns with longer counseling duration
+structural_competency:
+  equity_implications: This mechanism demonstrates how healthcare system design and primary care infrastructure
+    can serve as a population-level intervention point. The effectiveness of brief interventions depends
+    on universal access to primary care and emergency services, highlighting how healthcare access disparities
+    may create differential exposure to this protective intervention. Populations with limited primary
+    care access may miss opportunities for early intervention, perpetuating health inequities related
+    to alcohol harm.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.033378'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

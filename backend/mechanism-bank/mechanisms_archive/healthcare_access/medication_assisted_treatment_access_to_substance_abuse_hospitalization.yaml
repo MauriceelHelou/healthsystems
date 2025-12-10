@@ -1,0 +1,43 @@
+id: medication_assisted_treatment_access_to_substance_abuse_hospitalization
+name: Medication-Assisted Treatment (MAT) Access for Alcohol Dependence → Substance
+  Abuse Hospitalization
+from_node:
+  node_id: medication_assisted_treatment_access
+  node_name: Medication-Assisted Treatment (MAT) Access for Alcohol Dependence
+to_node:
+  node_id: substance_abuse_hospitalization
+  node_name: Substance Abuse Hospitalization
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: MAT pharmacologically reduces alcohol cravings and withdrawal severity'
+- 'Step 2: Decreased alcohol consumption reduces risk of severe intoxication, withdrawal
+  seizures, and other acute complications requiring hospitalization'
+- 'Step 3: Outpatient MAT provides regular monitoring and intervention before substance
+  use escalates to crisis levels'
+- 'Step 4: Sustained treatment engagement replaces pattern of crisis-driven inpatient
+  detoxification admissions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Allison G. Robertson et al. 2018. "Medication-Assisted Treatment
+    for Alcohol-Dependent Adults With Serious Mental Illness and Criminal Justice
+    Involvement: Effects on Treatment Utilization and Outcomes.." *American Journal
+    of Psychiatry*. https://doi.org/10.1176/appi.ajp.2018.17060688'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.658142'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: alcohol_dependence_severity
+  direction: strengthens
+  strength: moderate
+  description: Study focused on moderate to severe alcohol dependence where MAT effects
+    are most pronounced
+- name: treatment_continuity
+  direction: strengthens
+  strength: moderate
+  description: Criminal justice involvement may disrupt treatment but MAT provision
+    post-incarceration may improve outcomes

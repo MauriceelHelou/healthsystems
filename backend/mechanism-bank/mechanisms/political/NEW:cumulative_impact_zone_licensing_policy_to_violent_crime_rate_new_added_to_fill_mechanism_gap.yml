@@ -1,0 +1,74 @@
+id: NEW:cumulative_impact_zone_licensing_policy_to_violent_crime_rate_new_added_to_fill_mechanism_gap
+name: Cumulative Impact Zone Licensing Policy → Violent Crime Rate
+from_node:
+  node_id: NEW:cumulative_impact_zone_licensing_policy
+  node_name: Cumulative Impact Zone Licensing Policy
+to_node:
+  node_id: violent_crime_rate_new_added_to_fill_mechanism_gap
+  node_name: Violent Crime Rate
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Cumulative impact zones restrict new alcohol outlet licenses in areas with high existing outlet
+  density'
+- 'Step 2: Reduced spatial availability of alcohol decreases opportunities for alcohol purchase and public
+  consumption'
+- 'Step 3: Lower alcohol availability reduces population-level alcohol consumption in affected areas'
+- 'Step 4: Reduced intoxication levels decrease alcohol-related violent behavior including interpersonal
+  violence'
+- 'Step 5: Violent crime rates decline as alcohol-attributable violence decreases'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: F. Vocht et al. 2016. "Testing the impact of local alcohol licencing policies on reported
+    crime rates in England." https://doi.org/10.1136/jech-2016-207753
+  supporting_citations:
+  - Additional citations require full-text access - abstract references excessive alcohol use contributing
+    to violence but does not cite specific prior studies
+  doi: 10.1136/jech-2016-207753
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Local alcohol licensing policies including cumulative impact zones that restrict spatial
+  availability of alcohol are associated with 4-6% greater declines in violent crime rates compared to
+  areas without such policies. High-intensity policy areas saw violent crime decline by approximately
+  1.2 per 1000 population compared to 0.6 per 1000 in passive policy areas.
+quantitative_effects:
+  effect_size:
+    value: 5.0
+    type: percentage_change
+    ci_lower: 4.0
+    ci_upper: 6.0
+  sample_size: 284
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects observed across 284 English lower tier local authorities (LTLAs); areas classified
+    by policy intensity as passive, low, medium, or high showed differential crime rate trajectories
+moderators:
+- name: policy_intensity
+  direction: strengthens
+  strength: strong
+  description: Areas with more intense cumulative impact zone policies showed stronger declines in violent
+    crime (1.2 per 1000 vs 0.6 per 1000 in passive areas)
+- name: time_period
+  direction: weakens
+  strength: strong
+  description: Effect was observed from 2009-2013 but crime rates increased again post-2013, suggesting
+    temporal limitations of policy effectiveness
+- name: area_deprivation
+  direction: strengthens
+  strength: moderate
+  description: Analysis adjusted for area deprivation suggesting effects operate above and beyond socioeconomic
+    factors
+structural_competency:
+  equity_implications: This mechanism exemplifies structural intervention by targeting the commercial
+    and regulatory environment rather than individual drinking behaviors. By restricting alcohol outlet
+    density through cumulative impact zones, local authorities address the upstream determinants of alcohol-related
+    violence. This approach acknowledges that violence is not simply a matter of individual choice but
+    is shaped by the spatial distribution of alcohol availability. The policy specifically targets areas
+    with existing high outlet density, potentially addressing concentrated disadvantage.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.212358'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

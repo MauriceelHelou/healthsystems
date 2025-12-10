@@ -1,0 +1,65 @@
+id: NEW:elevated_serum_ferritin_to_liver_disease_mortality
+name: Elevated Serum Ferritin → Liver Disease Mortality
+from_node:
+  node_id: NEW:elevated_serum_ferritin
+  node_name: Elevated Serum Ferritin
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Elevated serum ferritin reflects increased iron stores and/or inflammatory
+  processes in the liver, with prevalence of ~40.6% in patients with decompensated
+  cirrhosis'
+- 'Step 2: Iron overload contributes to oxidative stress and hepatocellular damage
+  through Fenton reactions generating reactive oxygen species'
+- 'Step 3: Ferritin elevation also serves as an acute phase reactant indicating systemic
+  inflammation and hepatic dysfunction severity'
+- 'Step 4: Higher ferritin levels correlate with more advanced liver disease (Child-Pugh
+  grade C), hepatic encephalopathy, and worse liver synthetic function'
+- 'Step 5: Combined effects of iron-mediated toxicity and inflammation accelerate
+  liver failure progression, leading to increased mortality risk'
+evidence:
+  quality_rating: A
+  n_studies: 8
+  primary_citation: 'Dan Liu et al. 2023. Effect of elevated serum ferritin on the
+    risk of death in patients with decompensated cirrhosis: a meta-analysis. European
+    journal of gastroenterology & hepatology.'
+  supporting_citations: []
+description: This meta-analysis of 8 studies with 1829 patients demonstrates that
+  elevated serum ferritin is significantly associated with increased mortality in
+  patients with decompensated cirrhosis. Nonsurvivors had substantially higher ferritin
+  levels (mean difference 247.90 ng/mL) compared to survivors. The pooled unadjusted
+  hazard ratio of 2.38 indicates that patients with elevated ferritin have more than
+  double the risk of death. The association showed low heterogeneity across studies,
+  suggesting consistent findings.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 2.38
+    type: hazard_ratio
+    ci_lower: 1.78
+    ci_upper: 3.18
+  p_value: null
+  sample_size: 1829
+moderators:
+- name: sex
+  direction: strengthens
+  strength: moderate
+  description: Elevated serum ferritin prevalence was higher in males
+- name: alcohol-associated liver disease etiology
+  direction: strengthens
+  strength: moderate
+  description: Higher prevalence of elevated ferritin in patients with alcohol-associated
+    liver disease
+- name: liver disease severity (Child-Pugh grade)
+  direction: strengthens
+  strength: strong
+  description: Higher prevalence of elevated ferritin in Child-Pugh grade C patients
+    indicating more severe disease
+- name: hepatic encephalopathy
+  direction: strengthens
+  strength: moderate
+  description: Higher prevalence of elevated ferritin in patients with hepatic encephalopathy

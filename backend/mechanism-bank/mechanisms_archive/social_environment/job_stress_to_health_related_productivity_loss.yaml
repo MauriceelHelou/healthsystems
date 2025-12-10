@@ -1,0 +1,55 @@
+id: job_stress_to_health_related_productivity_loss
+name: Job Stress → Health-Related Productivity Loss
+from_node:
+  node_id: job_stress
+  node_name: Job Stress
+to_node:
+  node_id: health_related_productivity_loss
+  node_name: Health-Related Productivity Loss
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Job stress in R&D work environments creates direct psychological and physical
+  strain on workers'
+- 'Step 2: Chronic occupational stress impairs sleep quality, creating insomnia and
+  sleep disturbances (mediating pathway)'
+- 'Step 3: Both direct stress effects and sleep-mediated pathways reduce worker cognitive
+  function and health status'
+- 'Step 4: Combined direct and indirect effects lead to increased health-related productivity
+  loss including absenteeism and presenteeism'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Yixuan Sun et al. 2024. "Mediating effect of sleep quality on
+    the association between job stress and health-related productivity loss among
+    workers in R&D enterprises in Shanghai." *Frontiers in Public Health*. https://doi.org/10.3389/fpubh.2024.1331458
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.029287'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: sleep_quality_mediation
+  direction: strengthens
+  strength: strong
+  description: Sleep quality plays a significant mediating role between job stress
+    and HRPL, amplifying the total effect
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Age significantly moderates the relationship through differential HRPL
+    rates
+- name: financial_difficulties
+  direction: strengthens
+  strength: strong
+  description: Financial stress compounds the effect of job stress on productivity
+    loss
+- name: marital_status
+  direction: strengthens
+  strength: moderate
+  description: Marital status influences the job stress to productivity loss pathway
+- name: length_of_service
+  direction: strengthens
+  strength: moderate
+  description: Years of service moderates the stress-productivity relationship

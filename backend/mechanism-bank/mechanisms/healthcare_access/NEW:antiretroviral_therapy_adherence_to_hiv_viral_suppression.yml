@@ -1,0 +1,67 @@
+id: NEW:antiretroviral_therapy_adherence_to_hiv_viral_suppression
+name: Antiretroviral Therapy Adherence → HIV Viral Suppression
+from_node:
+  node_id: NEW:antiretroviral_therapy_adherence
+  node_name: Antiretroviral Therapy Adherence
+to_node:
+  node_id: hiv_viral_suppression
+  node_name: HIV Viral Suppression
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Consistent adherence to antiretroviral therapy maintains therapeutic drug concentrations in
+  plasma'
+- 'Step 2: Adequate drug levels effectively suppress HIV replication in target cells'
+- 'Step 3: Sustained viral suppression reduces plasma HIV viral load to undetectable levels'
+- 'Step 4: Viral suppression slows disease progression and decreases transmission rates'
+evidence:
+  quality_rating: A
+  n_studies: 53
+  primary_citation: 'Jessica de Mattos Costa et al. 2018. "Adherence to antiretroviral therapy for HIV/AIDS
+    in Latin America and the Caribbean: Systematic review and meta-analysis.." https://doi.org/10.1002/jia2.25066'
+  supporting_citations:
+  - Additional citations require full-text access - meta-analysis included 53 studies from 25 Latin American
+    and Caribbean countries published 2005-2016
+  - Studies analyzed 22,603 people living with HIV across the region
+  - Individual study citations available in full-text systematic review
+  doi: 10.1002/jia2.25066
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Meta-analysis of 53 studies (n=22,603) found that overall ART adherence in Latin America
+  and Caribbean was 70% (95% CI: 63-76%), which may be below sufficient levels required for successful
+  long-term viral load suppression. Optimal adherence is closely related to viral suppression, slowing
+  disease progression, and decreasing HIV transmission.'
+quantitative_effects:
+  effect_size:
+    value: 70.0
+    type: percentage_change
+    ci_lower: 63.0
+    ci_upper: 76.0
+  sample_size: 22603
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Study analyzed adherence across 25 Latin American and Caribbean countries, suggesting
+    geographic variation in adherence rates and associated factors that may be setting-specific
+moderators:
+- name: measurement_method
+  direction: strengthens
+  strength: moderate
+  description: Different methods used to measure adherence across studies may affect reported adherence
+    rates
+- name: setting_specific_factors
+  direction: weakens
+  strength: moderate
+  description: Factors leading to poor adherence may be setting-specific across different Latin American
+    and Caribbean countries
+structural_competency:
+  equity_implications: Suboptimal adherence reflects structural barriers in Latin American and Caribbean
+    healthcare systems rather than individual failure. Setting-specific factors suggest that healthcare
+    infrastructure, medication access, social support systems, and economic conditions vary across countries
+    and influence adherence patterns. The finding that adherence is below therapeutic thresholds points
+    to systematic failures in treatment support rather than individual non-compliance.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.360396'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

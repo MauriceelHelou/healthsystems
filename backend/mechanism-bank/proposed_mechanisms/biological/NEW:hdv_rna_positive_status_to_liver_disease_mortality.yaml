@@ -1,0 +1,52 @@
+id: NEW:hdv_rna_positive_status_to_liver_disease_mortality
+name: Hepatitis Delta Virus RNA Positive Status → Liver Disease Mortality
+from_node:
+  node_id: NEW:hdv_rna_positive_status
+  node_name: Hepatitis Delta Virus RNA Positive Status
+to_node:
+  node_id: liver_disease_mortality
+  node_name: Liver Disease Mortality
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Active HDV replication indicated by detectable HDV RNA in patients co-infected
+  with HBV leads to persistent viral hepatitis'
+- 'Step 2: HDV superinfection or co-infection accelerates hepatic inflammation and
+  fibrogenesis beyond HBV monoinfection alone'
+- 'Step 3: Progressive liver damage leads to compensated cirrhosis at higher rates
+  in HDV RNA+ patients'
+- 'Step 4: Continued viral activity and liver dysfunction progress to decompensated
+  cirrhosis with portal hypertension and synthetic failure'
+- 'Step 5: Advanced cirrhosis increases risk of hepatocellular carcinoma development'
+- 'Step 6: End-stage liver disease manifestations (decompensation, HCC, liver failure)
+  result in significantly elevated liver-related mortality'
+evidence:
+  quality_rating: A
+  n_studies: 12
+  primary_citation: 'Robert G. Gish et al. 2023. "Association of hepatitis delta virus
+    with liver morbidity and mortality: A systematic literature review and meta-analysis."
+    Hepatology.'
+  supporting_citations: []
+description: 'HDV RNA positive status indicates active hepatitis delta virus replication
+  in patients co-infected with hepatitis B. This active viral replication accelerates
+  liver disease progression compared to HDV RNA negative patients, leading to significantly
+  higher rates of advanced liver disease events including cirrhosis, decompensation,
+  hepatocellular carcinoma, and ultimately liver-related mortality (HR 3.78, 95% CI:
+  2.18-6.56).'
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 3.78
+    type: hazard_ratio
+    ci_lower: 2.18
+    ci_upper: 6.56
+  p_value: null
+  sample_size: null
+moderators:
+- name: Disease progression stage
+  direction: strengthens
+  strength: strong
+  description: 'Effect size increases with disease severity: compensated cirrhosis
+    (RR 1.74), decompensated cirrhosis (HR 3.82), HCC (HR 2.97), liver transplantation
+    (HR 7.07)'

@@ -1,0 +1,40 @@
+id: symptom_triggered_dosing_protocol_to_treatment_duration
+name: Symptom-Triggered Benzodiazepine Dosing Protocol → Alcohol Withdrawal Treatment
+  Duration
+from_node:
+  node_id: symptom_triggered_dosing_protocol
+  node_name: Symptom-Triggered Benzodiazepine Dosing Protocol
+to_node:
+  node_id: treatment_duration
+  node_name: Alcohol Withdrawal Treatment Duration
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Symptom-triggered approach administers medication only when withdrawal
+  symptoms meet protocol thresholds'
+- 'Step 2: Conservative dosing prevents prolonged sedation and medication accumulation'
+- 'Step 3: Patients transition off protocol more efficiently when symptoms resolve
+  without unnecessary medication'
+- 'Step 4: Median protocol duration of 44.9 hours (IQR 22.4-77.2) indicates relatively
+  brief treatment course'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Brian K Lindner et al. 2019. "Evaluation of the Brief Alcohol
+    Withdrawal Scale Protocol at an Academic Medical Center.." *Journal of addiction
+    medicine*. https://doi.org/10.1097/ADM.0000000000000510
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.726807'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: benzodiazepine_receipt
+  direction: strengthens
+  strength: moderate
+  description: Patients who received benzodiazepines had median 4 lorazepam equivalents,
+    suggesting appropriate titration for those requiring treatment
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/healthcare_access/symptom_triggered_dosing_protocol_to_treatment_duration.yaml
+_category: healthcare_access

@@ -1,0 +1,52 @@
+id: NEW:ambient_so2_concentration_to_tuberculosis_incidence
+name: Ambient Air Pollution SO2 → Pulmonary Tuberculosis Incidence
+from_node:
+  node_id: NEW:ambient_so2_concentration
+  node_name: Ambient Air Pollution SO2
+to_node:
+  node_id: tuberculosis_incidence
+  node_name: Pulmonary Tuberculosis Incidence
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Inhalation of ambient SO2 causes direct irritation and damage to the respiratory
+  epithelium, compromising the mucosal barrier function'
+- 'Step 2: SO2 exposure triggers oxidative stress and inflammatory responses in the
+  lungs, impairing local immune defenses including alveolar macrophage function'
+- 'Step 3: Chronic exposure leads to impaired mucociliary clearance and reduced ability
+  to eliminate pathogens from the respiratory tract'
+- 'Step 4: Compromised pulmonary immune function increases susceptibility to Mycobacterium
+  tuberculosis infection and progression from latent to active tuberculosis'
+evidence:
+  quality_rating: A
+  n_studies: 9
+  primary_citation: Dimala CA, Momo Kadia B. A systematic review and meta-analysis
+    on the association between ambient air pollution and pulmonary tuberculosis. Scientific
+    Reports. 2022.
+  supporting_citations: []
+description: Meta-analysis of 9 studies demonstrates that for every 10 μg/m³ increment
+  in ambient SO2 concentration, there is an 8% increased risk of pulmonary tuberculosis
+  incidence. SO2 exposure compromises respiratory immune defenses through oxidative
+  stress, epithelial damage, and impaired macrophage function, increasing susceptibility
+  to TB infection and disease progression.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 1.08
+    type: relative_risk
+    ci_lower: 1.04
+    ci_upper: 1.12
+  p_value: 0.001
+  sample_size: 437255
+moderators:
+- name: geographic_region
+  direction: strengthens
+  strength: moderate
+  description: Studies predominantly from Asian countries where TB burden and air
+    pollution levels are higher, potentially amplifying observed associations
+- name: exposure_duration
+  direction: strengthens
+  strength: moderate
+  description: Longer-term exposure studies (cohort designs) may capture cumulative
+    immunosuppressive effects more accurately than short-term time-series analyses

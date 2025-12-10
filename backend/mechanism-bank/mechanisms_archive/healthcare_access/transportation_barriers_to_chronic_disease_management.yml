@@ -1,0 +1,151 @@
+id: transportation_barriers_to_chronic_disease_management
+name: Transportation Barriers → Chronic Disease Management
+from_node:
+  node_id: transportation_barriers
+  node_name: Transportation Barriers
+  node_type: stock
+to_node:
+  node_id: chronic_disease_management
+  node_name: Chronic Disease Management Outcomes
+  node_type: stock
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Lack of reliable transportation (no vehicle, limited transit) creates physical
+  barrier to regular healthcare appointments'
+- 'Step 2: Missed appointments disrupt continuity of chronic disease monitoring and
+  medication management'
+- 'Step 3: Gaps in care lead to uncontrolled biomarkers (HbA1c, blood pressure, lipids)
+  and disease progression'
+- 'Step 4: Poorly controlled chronic disease results in complications, hospitalizations,
+  and emergency care needs'
+- 'Step 5: Reliance on emergency care rather than primary care worsens long-term outcomes
+  and costs'
+evidence:
+  quality_rating: A
+  n_studies: 14
+  primary_citation: 'Starbird, Laura E., et al. 2019. "A systematic review of interventions
+    to minimize transportation barriers among people with chronic diseases." Journal
+    of Community Health 44(2): 400-411.'
+  supporting_citations:
+  - 'Syed, Samina T., Ben S. Gerber, and Lisa K. Sharp. 2013. "Traveling towards disease:
+    transportation barriers to health care access." Journal of Community Health 38(5):
+    976-993.'
+  - 'Wolfe, Mary K., Noreen C. McDonald, and George M. Holmes. 2020. "Transportation
+    barriers to health care in the United States: findings from the national health
+    interview survey, 1997-2017." American Journal of Public Health 110(6): 815-822.'
+  - 'Marcus, Alfred C., et al. 1992. "A randomized trial of a telephone intervention
+    for increasing the use of screening mammography." Preventive Medicine 21: 39-44.'
+  doi: 10.1007/s10900-018-0572-3
+  journal: Journal of Community Health
+  year: 2019
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6450539/
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+quantitative_effects:
+  primary_effect:
+    value: 1.48
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: null
+    ci_level: 95
+    comparison: transportation incentives vs. control for screening follow-up
+    source: Marcus et al. 1992 (n=2,044)
+  combined_intervention_effect:
+    value: 2.30
+    type: odds_ratio
+    ci_lower: null
+    ci_upper: null
+    ci_level: 95
+    comparison: combined transportation + education intervention vs. control
+    source: Marcus et al. 1992
+  screening_improvement:
+    value: 27
+    type: percentage_change
+    comparison: mammography completion with transportation assistance vs. control
+    source: Taylor et al. 1999 (n=314)
+  linkage_to_care:
+    value: 39
+    type: percentage_change
+    comparison: follow-up to medical care with transportation assistance vs. control
+    source: Krieger et al. 1999 (n=421)
+  biomarker_improvements:
+    description: 'Diabetes management with transportation assistance showed decreased
+      HbA1c, blood pressure, HDL, and LDL'
+    source: Esperat et al. 2012 (n=152)
+  sample_size: 32563
+  interpretation: Transportation assistance interventions (bus passes, taxi vouchers,
+    rideshare) improve healthcare utilization by 27-48% and show positive effects
+    on chronic disease biomarkers
+last_updated: '2025-11-30'
+version: '1.0'
+description: Transportation barriers significantly impair chronic disease management
+  through missed appointments and care discontinuity. A systematic review of 14 studies
+  found that transportation assistance interventions (bus passes, taxi vouchers, rideshare)
+  improve screening follow-up (OR 1.48-2.30), healthcare linkage (39% improvement),
+  and chronic disease biomarkers. Low-income and functionally limited populations
+  face the greatest transportation barriers.
+moderators:
+- name: functional_limitation
+  direction: strengthens
+  strength: strong
+  description: Persons with functional limitations face 2.58x higher odds of transportation
+    barriers (AOR 2.58)
+- name: poverty_status
+  direction: strengthens
+  strength: strong
+  description: Those below poverty level have 1.67x higher odds of transportation
+    barriers
+- name: medicaid_status
+  direction: strengthens
+  strength: moderate
+  description: Medicaid recipients face 1.60x higher odds of transportation barriers
+    despite NEMT benefits
+- name: intervention_type
+  direction: varies
+  strength: moderate
+  description: Multi-component interventions (transportation + education) more effective
+    than transportation alone (OR 2.30 vs 1.48)
+- name: geographic_location
+  direction: strengthens
+  strength: moderate
+  description: Midwest and South regions show higher transportation barrier prevalence
+    (AOR 1.61-1.93)
+structural_competency:
+  root_cause_level: spatial_arrangement
+  avoids_victim_blaming: true
+  equity_implications: Transportation barriers are structurally determined by urban
+    planning decisions, transit investment, healthcare facility siting, and vehicle
+    ownership patterns that systematically disadvantage low-income communities and
+    communities of color. Solutions require structural investments in transit, healthcare
+    in underserved areas, and medical transportation programs rather than expecting
+    individuals to overcome systemic barriers.
+assumptions:
+- Transportation barrier defined as delayed or missed care due to transportation
+- Includes both lack of personal vehicle and inadequate public transit
+- Chronic diseases include diabetes, hypertension, cardiovascular disease, cancer
+  screening
+limitations:
+- Many studies lack control groups and use non-randomized designs
+- Low uptake of transportation interventions in some studies (only 4% accepted bus
+  passes in Taylor 1999)
+- Difficult to isolate transportation from other access barriers
+- Longitudinal follow-up of disease outcomes generally lacking
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Transportation barriers vary by urban form, transit infrastructure,
+    and healthcare facility distribution. Rural areas face distance barriers; urban
+    areas face transit quality issues.
+  relevant_geographies:
+  - Midwest and South regions show higher transportation barrier prevalence
+  - Rural areas face greater distance-related barriers
+  - Urban areas with robust transit show lower barriers
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

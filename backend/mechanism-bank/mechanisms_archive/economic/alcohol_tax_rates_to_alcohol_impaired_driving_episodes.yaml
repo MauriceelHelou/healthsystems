@@ -1,0 +1,47 @@
+id: alcohol_tax_rates_to_alcohol_impaired_driving_episodes
+name: Alcohol Tax Rates → Alcohol-Impaired Driving Episodes
+from_node:
+  node_id: alcohol_tax_rates
+  node_name: Alcohol Tax Rates
+to_node:
+  node_id: alcohol_impaired_driving_episodes
+  node_name: Alcohol-Impaired Driving Episodes
+direction: negative
+category: economic
+mechanism_pathway:
+- 'Step 1: Increased alcohol taxes raise retail prices of alcoholic beverages across
+  commercial establishments'
+- 'Step 2: Higher prices reduce overall alcohol consumption particularly among price-sensitive
+  populations including young adults and heavy drinkers'
+- 'Step 3: Reduced drinking occasions and lower consumption per occasion decreases
+  likelihood of reaching BAC levels associated with impairment'
+- 'Step 4: Lower prevalence of alcohol impairment in population reduces opportunities
+  and instances of impaired driving'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Amy Jewett et al. 2015. "Alcohol-Impaired Driving Among Adults
+    — United States, 2012." *MMWR. Morbidity and mortality weekly report*. https://doi.org/10.15585/MMWR.MM6430A2
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.576440'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: price_elasticity_subgroup
+  direction: strengthens
+  strength: strong
+  description: Young adults and heavy drinkers show greater price sensitivity, making
+    tax increases particularly effective for populations accounting for majority of
+    impaired driving episodes
+- name: tax_comprehensiveness
+  direction: strengthens
+  strength: moderate
+  description: Taxes applied uniformly across beer, wine, and spirits prevent substitution
+    to cheaper alcohol types
+- name: inflation_indexing
+  direction: strengthens
+  strength: moderate
+  description: Automatic inflation adjustment maintains real price increases over
+    time rather than eroding through inflation

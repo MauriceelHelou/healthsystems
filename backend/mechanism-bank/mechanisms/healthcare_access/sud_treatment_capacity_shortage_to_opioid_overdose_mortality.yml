@@ -1,0 +1,52 @@
+id: sud_treatment_capacity_shortage_to_opioid_overdose_mortality
+name: Substance Use Disorder Treatment Capacity Shortage → Opioid Overdose Mortality
+from_node:
+  node_id: sud_treatment_capacity_shortage
+  node_name: Substance Use Disorder Treatment Capacity Shortage
+to_node:
+  node_id: opioid_overdose_mortality
+  node_name: Opioid Overdose Mortality
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: COVID-19 quarantine measures reduced capacity of clinics and treatment centers'
+- 'Step 2: Limited treatment capacity decreased access to medication-assisted treatment and counseling
+  services'
+- 'Step 3: Reduced access to treatment led to treatment discontinuation and relapse'
+- 'Step 4: Increased rates of opioid-related deaths due to inadequate treatment access'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Harrison Jordan et al. 2023. "A Comprehensive Literature Review of Digital Health
+    Interventions in the Treatment of Substance Use Disorder With Special Focus on Mobile Applications."
+    https://doi.org/10.7759/cureus.47639
+  supporting_citations:
+  - COVID-19 quarantine impact data referenced in abstract
+  - Additional citations require full-text access
+  doi: 10.7759/cureus.47639
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Limited capacity of clinics and treatment centers during COVID-19 quarantine contributed
+  to increased opioid-related deaths by reducing access to necessary treatment services for individuals
+  with substance use disorder.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Treatment capacity limitations varied by region based on COVID-19 restrictions and
+    pre-existing healthcare infrastructure
+moderators:
+- name: telehealth_availability
+  direction: weakens
+  strength: moderate
+  description: Availability of telehealth options mitigated the impact of physical clinic closures on
+    treatment access
+structural_competency:
+  equity_implications: This mechanism clearly identifies healthcare infrastructure as a structural determinant
+    of overdose mortality. The pandemic exposed vulnerabilities in treatment system capacity that were
+    pre-existing but exacerbated by crisis conditions. This framing avoids blaming individuals for overdose
+    deaths and instead highlights systemic failures in treatment infrastructure.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.754752'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

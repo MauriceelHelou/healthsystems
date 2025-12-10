@@ -1,0 +1,39 @@
+id: cbt_i_treatment_to_drinking_quantity
+name: Cognitive Behavioral Therapy for Insomnia (CBT-I) → Alcohol Drinking Quantity
+from_node:
+  node_id: cbt_i_treatment
+  node_name: Cognitive Behavioral Therapy for Insomnia (CBT-I)
+to_node:
+  node_id: drinking_quantity
+  node_name: Alcohol Drinking Quantity
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: CBT-I improves sleep quality and reduces insomnia severity'
+- 'Step 2: Improved sleep reduces need for self-medication with alcohol as sleep aid'
+- 'Step 3: Better sleep regulation may improve self-regulatory capacity reducing alcohol
+  consumption'
+- 'Step 4: Reductions in drinking quantity occur independent of cannabis use patterns'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Mary Beth Miller et al. 2022. "Cannabis use as a moderator of
+    cognitive behavioral therapy for insomnia.." *Journal of clinical sleep medicine
+    : JCSM : official publication of the American Academy of Sleep Medicine*. https://doi.org/10.5664/jcsm.9796'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.067271'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: cannabis_use
+  direction: no_moderation
+  strength: 'null'
+  description: Cannabis use during treatment did not moderate CBT-I effects on drinking
+    quantity, despite cannabis users reporting heavier baseline drinking
+- name: baseline_drinking_severity
+  direction: no_moderation
+  strength: 'null'
+  description: Cannabis users reported heavier drinking at baseline, but CBT-I effects
+    on drinking quantity were consistent across cannabis use status

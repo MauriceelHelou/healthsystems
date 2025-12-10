@@ -1,0 +1,55 @@
+id: binge_drinking_to_NEW:fsh_levels_male
+name: Binge Drinking → Follicle-Stimulating Hormone Levels in Males
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+to_node:
+  node_id: NEW:fsh_levels_male
+  node_name: Follicle-Stimulating Hormone Levels in Males
+direction: negative
+category: biological
+mechanism_pathway:
+- 'Step 1: Moderate to high alcohol consumption affects the hypothalamic-pituitary axis'
+- 'Step 2: Altered gonadotropin-releasing hormone (GnRH) secretion patterns emerge'
+- 'Step 3: FSH secretion from the anterior pituitary is modestly reduced'
+- 'Step 4: This may contribute to subtle effects on spermatogenesis'
+evidence:
+  quality_rating: A
+  n_studies: 17
+  primary_citation: 'M. Moosazadeh et al. 2024. "Association of the Effect of Alcohol Consumption on Luteinizing
+    Hormone (LH), Follicle-Stimulating Hormone (FSH), and Testosterone Hormones in Men: A Systematic Review
+    and Meta-Analysis." https://doi.org/10.4103/ijpvm.ijpvm_81_24'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review methodology
+  - Studies from PubMed, Scopus, Science Direct, Google Scholar databases
+  - 'Included observational studies: cohorts, case-controls, cross-sectional designs'
+  doi: 10.4103/ijpvm.ijpvm_81_24
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: 'Subgroup analysis indicated a small but statistically significant difference in FSH levels
+  between moderate/high alcohol consumption compared to low consumption groups. The overall pooled analysis
+  for FSH showed no significant difference (SMD -0.00, 95% CI: -0.099 to 0.099), but consumption level
+  moderated this relationship.'
+quantitative_effects:
+  effect_size:
+    value: -0.04
+    type: standardized_mean_difference
+    ci_lower: -0.08
+    ci_upper: 0.0
+moderators:
+- name: alcohol_intake_level
+  direction: strengthens
+  strength: weak
+  description: 'Subgroup analysis showed significant difference in FSH levels between moderate/high and
+    low alcohol consumption groups (SMD -0.04, 95% CI: -0.08 to -0.00)'
+structural_competency:
+  equity_implications: FSH is critical for male reproductive health and spermatogenesis. Structural factors
+    that promote higher alcohol consumption, including alcohol outlet density in disadvantaged neighborhoods,
+    targeted marketing to certain populations, and lack of accessible treatment services, may contribute
+    to population-level reproductive health disparities.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.311433'
+  extraction_confidence: low
+  prompt_version: 2.1-canonical-validated

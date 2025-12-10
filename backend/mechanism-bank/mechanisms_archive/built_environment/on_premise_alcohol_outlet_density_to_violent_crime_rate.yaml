@@ -1,0 +1,38 @@
+id: on_premise_alcohol_outlet_density_to_violent_crime_rate
+name: On-Premise Alcohol Outlet Density → Violent Crime Rate
+from_node:
+  node_id: on_premise_alcohol_outlet_density
+  node_name: On-Premise Alcohol Outlet Density
+to_node:
+  node_id: violent_crime_rate
+  node_name: Violent Crime Rate
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher concentration of on-premise alcohol outlets (bars, restaurants serving
+  alcohol) increases alcohol consumption and intoxication in public spaces'
+- 'Step 2: Increased alcohol consumption impairs judgment and increases aggressive
+  behavior among patrons'
+- 'Step 3: Congregation of intoxicated individuals in concentrated areas creates opportunities
+  for interpersonal conflicts'
+- 'Step 4: Conflicts escalate to violent confrontations resulting in increased violent
+  crime incidents'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: S. Haley et al. 2023. "Neighborhood Alcohol Outlet Density, Historical
+    Redlining, and Violent Crime in NYC 2014–2018." *International Journal of Environmental
+    Research and Public Health*. https://doi.org/10.3390/ijerph20043212
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.082180'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: history_of_redlining
+  direction: weakens
+  strength: strong
+  description: In communities with a history of redlining, on-premise alcohol outlet
+    density was not significantly associated with violent crime, suggesting other
+    structural factors may be more dominant in these areas

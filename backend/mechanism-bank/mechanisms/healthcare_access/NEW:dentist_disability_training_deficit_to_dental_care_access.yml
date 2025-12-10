@@ -1,0 +1,57 @@
+id: NEW:dentist_disability_training_deficit_to_dental_care_access
+name: Dentist Lack of Training for Disability Care → Dental Care Access
+from_node:
+  node_id: NEW:dentist_disability_training_deficit
+  node_name: Dentist Lack of Training for Disability Care
+to_node:
+  node_id: dental_care_access
+  node_name: Dental Care Access
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Dental education programs provide insufficient training on treating patients with disabilities'
+- 'Step 2: Dentists lack clinical skills and confidence to accommodate diverse physical, cognitive, and
+  communication needs'
+- 'Step 3: Practitioners may refuse to treat or provide inadequate care to patients with disabilities'
+- 'Step 4: People with disabilities face reduced availability of competent dental providers'
+- 'Step 5: Oral health access and utilization decreases among disability populations'
+evidence:
+  quality_rating: B
+  n_studies: 16
+  primary_citation: 'S. V. da Rosa et al. 2020. "Barriers in Access to Dental Services Hindering the Treatment
+    of People with Disabilities: A Systematic Review." https://doi.org/10.1155/2020/9074618'
+  supporting_citations:
+  - Additional citations require full-text access - systematic review of 16 studies including 14 articles,
+    a doctoral thesis, and a monograph
+  - Studies analyzed using Downs and Black assessment tool
+  - 'Multiple perspectives included: dentist, parent/guardian, and persons with disabilities'
+  doi: 10.1155/2020/9074618
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Systematic review identifying dentist lack of preparation to assist people with disabilities
+  as a major barrier to dental care access. This structural gap in professional education creates downstream
+  effects on care availability.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The review notes that legal frameworks enabling access to dental care for people with
+    disabilities vary by country and must be respected in each jurisdiction
+moderators:
+- name: dental_education_curriculum
+  direction: weakens
+  strength: strong
+  description: Enhanced disability-focused training in dental programs would reduce this barrier
+- name: disability_type
+  direction: strengthens
+  strength: moderate
+  description: Complex disabilities requiring specialized accommodation may face greater provider avoidance
+structural_competency:
+  equity_implications: This mechanism traces to structural failures in dental education systems and professional
+    training requirements rather than individual dentist attitudes. The responsibility lies with educational
+    institutions and licensing bodies to mandate adequate disability competency training. Equity implications
+    are significant as people with disabilities already face multiple structural barriers to healthcare.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.692025'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

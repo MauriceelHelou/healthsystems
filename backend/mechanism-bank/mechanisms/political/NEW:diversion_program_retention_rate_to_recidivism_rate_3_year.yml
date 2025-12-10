@@ -1,0 +1,54 @@
+id: NEW:diversion_program_retention_rate_to_recidivism_rate_3_year
+name: Diversion Program Retention Rate → Recidivism Rate (3-Year)
+from_node:
+  node_id: NEW:diversion_program_retention_rate
+  node_name: Diversion Program Retention Rate
+to_node:
+  node_id: recidivism_rate_3_year
+  node_name: Recidivism Rate (3-Year)
+direction: negative
+category: political
+mechanism_pathway:
+- 'Step 1: Individuals released from jail are enrolled in diversion programs'
+- 'Step 2: Those retained in programs receive sustained support services over time'
+- 'Step 3: Continuous engagement allows addressing of complex needs including substance use and mental
+  health'
+- 'Step 4: Sustained support builds stability in housing, employment, and social connections'
+- 'Step 5: Higher retention rates translate to dramatically lower recidivism rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Burcu Ozturk et al. 2022. "Criminal Justice Diversion and the Importance of Program
+    Retention." https://doi.org/10.15763/issn.1936-9298.2022.6.1.43-56
+  supporting_citations:
+  - Additional citations require full-text access - abstract emphasizes retention as key finding
+  - Additional citations require full-text access - abstract references evidence-based reentry policies
+  - Additional citations require full-text access - abstract references individual-level outcomes improvement
+  doi: 10.15763/issn.1936-9298.2022.6.1.43-56
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Program retention is the critical moderator of diversion effectiveness - non-retained clients
+  showed 31.22% recidivism (higher than 28.4% community baseline) while completers showed only 3.70%
+quantitative_effects:
+  sample_size: 757
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Program retention factors may vary by local service availability, program design, and
+    community resources
+moderators:
+- name: poverty_rate
+  direction: weakens
+  strength: moderate
+  description: Poverty creates barriers to program participation and retention through competing survival
+    needs
+structural_competency:
+  equity_implications: The finding that non-retention leads to worse outcomes than no program at all suggests
+    structural barriers to retention must be addressed. Simply offering programs is insufficient - structural
+    supports enabling sustained participation (transportation, childcare, housing stability, treatment
+    access) are essential. This shifts focus from individual 'compliance' to system capacity.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.547405'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,99 @@
+id: binge_drinking_to_alcohol_poisoning_ed_visits
+name: Binge Drinking → Alcohol Poisoning ED Visits
+from_node:
+  node_id: binge_drinking
+  node_name: Binge Drinking
+  node_type: stock
+to_node:
+  node_id: alcohol_poisoning_ed_visit_rate
+  node_name: Alcohol Poisoning ED Visit Rate
+  node_type: crisis_endpoint
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Rapid consumption of large alcohol quantities (binge drinking) produces blood alcohol concentration
+  (BAC) >0.20-0.30 g/dL'
+- 'Step 2: High BAC causes CNS depression affecting medullary respiratory and cardiovascular centers'
+- 'Step 3: Loss of protective reflexes leads to aspiration risk, respiratory depression, and potential
+  airway obstruction'
+- 'Step 4: Severe intoxication (BAC >0.30) can cause hypotension, hypothermia, hypoglycemia, and coma'
+- 'Step 5: Emergency presentation occurs due to altered mental status, respiratory distress, or witnessed
+  severe intoxication requiring medical stabilization'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Kristen A. Weiss, Andrew Walsh. 2016. "Alcohol-Related ED Visits and Ohio State Football:
+    Putting the O-H in ETOH" Online Journal of Public Health Informatics. https://doi.org/10.5210/OJPHI.V8I1.6592'
+  supporting_citations:
+  - 'Mundt, Marlon P., Larissa I. Zakletskaia, and Alex Brown. 2012. "Alcohol-related emergency department
+    visits that involve children." Journal of Studies on Alcohol and Drugs 73(5): 827-833.'
+  - 'Esser, Marissa B., Hugh Waters, Daniel Smart, and Robert D. Brewer. 2021. "Prevalence of alcohol
+    dependence among US adult drinkers, 2009–2011." Preventing Chronic Disease 11: E206.'
+  doi: 10.15288/jsad.2011.72.774
+  journal: Journal of Studies on Alcohol and Drugs
+  year: 2011
+  fulltext:
+    available: true
+    source: pubmed_central
+    url: null
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '1.0'
+description: Binge drinking produces dangerously high blood alcohol levels causing CNS depression, loss
+  of protective reflexes, and life-threatening respiratory or cardiovascular compromise requiring emergency
+  care.
+moderators:
+- name: young_age
+  direction: strengthens
+  strength: moderate
+  description: Adolescents and young adults (18-24) have highest ED visit rates due to inexperience and
+    rapid consumption patterns
+- name: polysubstance_use
+  direction: strengthens
+  strength: strong
+  description: Concurrent opioids, benzodiazepines, or stimulants synergistically increase toxicity and
+    overdose risk
+- name: drinking_context
+  direction: strengthens
+  strength: moderate
+  description: Competitive drinking games, hazing, and celebratory contexts promote rapid high-volume
+    consumption
+- name: low_body_weight
+  direction: strengthens
+  strength: moderate
+  description: Lower volume of distribution produces higher BAC for same alcohol quantity
+structural_competency:
+  root_cause_level: social_environment
+  avoids_victim_blaming: true
+  equity_implications: Alcohol poisoning ED visits reflect individual biology but occur within social
+    contexts shaped by structural factors. College binge drinking is normalized through industry marketing
+    and inadequate campus policies. Young people in economically distressed communities face predatory
+    alcohol outlet density and limited youth programming. Emergency departments become default acute care
+    sites for communities lacking preventive substance use services. High ED visit rates in specific populations
+    signal policy failures in alcohol regulation, youth development, and healthcare access, not individual
+    irresponsibility.
+assumptions:
+- Assumes rapid consumption pattern producing BAC spike (4-5 drinks in 1-2 hours)
+- ED presentation depends on bystander recognition and willingness to seek help
+- Not all binge drinking episodes produce ED-level intoxication
+limitations:
+- Many severe intoxication episodes do not result in ED presentation due to fear of consequences or lack
+  of access
+- Individual alcohol tolerance and metabolism create variability in toxicity threshold
+- Mechanism captures acute toxicity, not chronic health effects of binge drinking
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: ED visit rates vary by drinking culture, ED availability, college town demographics,
+    and state alcohol policies
+  relevant_geographies:
+  - College towns show spikes during academic year and events (homecoming, spring break)
+  - Rural areas may have delayed presentation due to ED access barriers
+  - States with lower minimum drinking age enforcement show higher youth rates
+  - Urban areas with high alcohol outlet density concentrate ED visits at safety-net hospitals
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-11-18T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

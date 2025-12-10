@@ -1,0 +1,96 @@
+id: transportation_barriers_to_healthcare_access
+name: Transportation Barriers → Healthcare Access
+from_node:
+  node_id: transportation_barriers
+  node_name: Transportation Barriers
+  node_type: stock
+to_node:
+  node_id: healthcare_access
+  node_name: Healthcare Access and Utilization
+  node_type: stock
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Lack of reliable transportation (no vehicle, limited transit, disability) creates physical
+  barrier to healthcare'
+- 'Step 2: Transportation costs and time burden force trade-offs with work, childcare, and other obligations'
+- 'Step 3: Missed and delayed appointments lead to gaps in preventive care and chronic disease management'
+- 'Step 4: Healthcare discontinuity results in disease progression, complications, and emergency care
+  needs'
+- 'Step 5: Reliance on emergency care for conditions treatable in primary care worsens outcomes and increases
+  costs'
+evidence:
+  quality_rating: B
+  n_studies: 8
+  primary_citation: Lyeo, J., et al. 2023. 'Predictors of transportation-related barriers to healthcare
+    access in a North American suburb.' Journal of Public Health. doi:10.1007/s10389-023-01916-2
+  supporting_citations:
+  - Hepatology Communications. 2024. 'Health care-related transportation insecurity is associated with
+    adverse health outcomes.' doi:10.1097/HC9.0000000000000358
+  - Luque, John S., et al. 2018. 'Access to health care for uninsured Latina immigrants in South Carolina.'
+    BMC Health Services Research.
+  doi: 10.1007/s10389-023-01916-2
+  journal: Journal of Public Health
+  year: 2023
+  fulltext:
+    available: true
+    source: unpaywall
+    url: https://link.springer.com/content/pdf/10.1007/s10389-023-01916-2.pdf
+    is_open_access: true
+    fetched_date: '2025-11-30'
+  citation_verified: true
+last_updated: '2025-11-30'
+version: '1.0'
+description: Transportation barriers are significant predictors of healthcare access problems including
+  delayed appointments, missed primary care visits, and foregone vaccinations. In suburban areas, 34.5%
+  of adults experienced transportation-related barriers. Those relying on public transit face 2x greater
+  risk of access barriers. Virtual care and transportation assistance programs can mitigate these effects.
+moderators:
+- name: public_transit_availability
+  direction: weakens
+  strength: moderate
+  description: Robust public transit systems reduce transportation barriers to healthcare
+- name: disability_status
+  direction: strengthens
+  strength: strong
+  description: Persons with disabilities face 2.6x higher risk of transportation barriers
+- name: telehealth_availability
+  direction: weakens
+  strength: strong
+  description: Virtual care options eliminate transportation need for many visits
+- name: medical_transportation_programs
+  direction: weakens
+  strength: moderate
+  description: Medicaid non-emergency medical transportation (NEMT) and rideshare programs improve access
+- name: suburban_rural_location
+  direction: strengthens
+  strength: moderate
+  description: Suburban and rural areas have greater transportation barriers than urban centers
+structural_competency:
+  root_cause_level: spatial_arrangement
+  avoids_victim_blaming: true
+  equity_implications: Transportation barriers reflect structural inequities in urban planning, transit
+    investment, and healthcare facility siting. Low-income communities and communities of color often
+    have both worse transit access and fewer nearby healthcare facilities. Addressing transportation barriers
+    requires investment in transit, healthcare in underserved areas, and transportation assistance programs.
+assumptions:
+- Transportation barrier defined as delayed/missed care or foregone services due to transportation
+- Includes both lack of personal vehicle and inadequate public transit
+- Applies to both urban and suburban/rural contexts with different mechanisms
+limitations:
+- Most studies from US and Canada; may not generalize globally
+- Self-reported transportation barriers may underestimate true prevalence
+- Difficult to separate transportation from other access barriers (cost, time)
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Transportation barriers vary dramatically by urban form, transit infrastructure, and
+    healthcare facility distribution.
+  relevant_geographies:
+  - Suburban areas show high transportation barrier prevalence
+  - Rural areas face distance-related barriers even with vehicle access
+  - Cities with robust transit show lower transportation barriers
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-11-30T00:00:00'
+  extraction_confidence: high
+  prompt_version: 1.0-mvp

@@ -1,0 +1,52 @@
+id: alcohol_consumption_to_pro_inflammatory_cytokine_production
+name: Alcohol Consumption → Pro-inflammatory Cytokine Production
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: pro_inflammatory_cytokine_production
+  node_name: Pro-inflammatory Cytokine Production
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol exposure triggers immune system activation and T cell differentiation
+  imbalance'
+- 'Step 2: CD4+ T cells predominate over CD8+ T cells, favoring Th1, Th17, Tfh, and
+  Tc subsets while reducing Treg cells'
+- 'Step 3: Anti-inflammatory cytokines (IL-10 and IL-2) decrease while pro-inflammatory
+  cytokines are upregulated'
+- 'Step 4: Increased synthesis of IL-2, IL-12, IL-17, IL-21, IL-22, interferon-gamma
+  (IFN-γ), and tumor necrosis factor-alpha (TNF-α)'
+- 'Step 5: IFN-γ and TNF-α specifically trigger pyroptosis pathway through inflammasome
+  activation'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Karolina Wrońska et al. 2024. "The Role of the Immune System
+    in the Course of Hashimoto''s Thyroiditis: The Current State of Knowledge." *International
+    Journal of Molecular Sciences*. https://doi.org/10.3390/ijms25136883'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.091006'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: chronic_stress
+  direction: strengthens
+  strength: moderate
+  description: Concurrent chronic stress (another environmental factor mentioned)
+    may amplify pro-inflammatory cytokine response to alcohol
+- name: intestinal_dysbiosis
+  direction: strengthens
+  strength: strong
+  description: Alcohol-related intestinal dysbiosis facilitates inflammasome activation
+    by Gram-negative bacteria, amplifying IL-1β and IL-18 production from macrophages
+- name: malnutrition
+  direction: strengthens
+  strength: moderate
+  description: Malnutrition alongside alcohol consumption may impair regulatory T
+    cell function, reducing capacity to suppress pro-inflammatory responses
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/biological/alcohol_consumption_to_pro_inflammatory_cytokine_production.yaml
+_category: biological

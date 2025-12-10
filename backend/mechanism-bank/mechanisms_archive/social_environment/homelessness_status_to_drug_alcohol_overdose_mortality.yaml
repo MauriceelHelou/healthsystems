@@ -1,0 +1,38 @@
+id: homelessness_status_to_drug_alcohol_overdose_mortality
+name: Homelessness Status → Drug/Alcohol Overdose Mortality
+from_node:
+  node_id: homelessness_status
+  node_name: Homelessness Status
+to_node:
+  node_id: drug_alcohol_overdose_mortality
+  node_name: Drug/Alcohol Overdose Mortality
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Homelessness creates conditions of chronic stress, trauma exposure, and
+  psychological distress that increase substance use as coping mechanism'
+- 'Step 2: Lack of stable housing limits access to addiction treatment programs and
+  harm reduction services'
+- 'Step 3: Street-based substance use occurs in unmonitored environments without access
+  to emergency medical response or overdose prevention resources'
+- 'Step 4: Combination of untreated addiction, lack of social support, and unsafe
+  consumption environments increases fatal overdose risk'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Alexa Courtepatte et al. 2023. "Differences in Risks for Recurrent
+    Injury and Death Among Survivors of Violence by Homeless Status.." *Journal of
+    urban health : bulletin of the New York Academy of Medicine*. https://doi.org/10.1007/s11524-023-00781-4'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.617021'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: violence_survivor_status
+  direction: strengthens
+  strength: strong
+  description: Among individuals who are already survivors of violent injury, the
+    combination of violence trauma and homelessness appears to compound overdose risk,
+    suggesting synergistic effects of multiple structural vulnerabilities

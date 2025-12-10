@@ -1,0 +1,49 @@
+id: NEW:legal_system_sud_treatment_referrals_to_alcohol_use_disorder
+name: Legal System SUD Treatment Referrals → Alcohol Use Disorder
+from_node:
+  node_id: NEW:legal_system_sud_treatment_referrals
+  node_name: Legal System SUD Treatment Referrals
+to_node:
+  node_id: alcohol_use_disorder
+  node_name: Alcohol Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Legal system identifies individuals with alcohol use problems through arrests or court involvement'
+- 'Step 2: Courts refer individuals to specialty SUD treatment as alternative to or condition of sentencing'
+- 'Step 3: Treatment admission provides access to evidence-based interventions for alcohol use disorder'
+- 'Step 4: Treatment reduces severity and consequences of alcohol use disorder'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Carrie E Fry et al. 2024. "Changes in legal referrals to specialty substance use disorder
+    treatment from 2015-2019.." https://doi.org/10.1186/s40352-024-00297-2
+  supporting_citations:
+  - Additional citations require full-text access - abstract notes legal referrals most often associated
+    with alcohol use
+  - Additional citations require full-text access - study examines treatment referral patterns by substance
+  - Additional citations require full-text access - references quality and outcomes of legal referrals
+  doi: 10.1186/s40352-024-00297-2
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Legal referrals to specialty SUD treatment were most often associated with alcohol use, though
+  referrals for alcohol declined from 2015-2019. This suggests the legal system has historically been
+  a significant pathway to alcohol treatment.
+moderators:
+- name: temporal_trends
+  direction: weakens
+  strength: moderate
+  description: Referrals for alcohol use declined from 2015-2019, potentially reducing this pathway's
+    contribution to treatment access
+structural_competency:
+  equity_implications: Alcohol-related legal referrals likely reflect enforcement patterns around DUI
+    and public intoxication. The decline may indicate shifting enforcement priorities or policy changes.
+    This mechanism highlights how criminal justice serves as a de facto gateway to treatment for alcohol
+    use disorder, raising equity concerns about who receives treatment through this pathway versus voluntary
+    access.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.761973'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

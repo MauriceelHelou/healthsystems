@@ -1,0 +1,63 @@
+id: NEW:off_premise_alcohol_sales_volume_to_child_maltreatment_substantiated_rate
+name: Off-Premise Alcohol Outlet Sales Volume (per outlet) → Child Maltreatment Substantiated Rate
+from_node:
+  node_id: NEW:off_premise_alcohol_sales_volume
+  node_name: Off-Premise Alcohol Outlet Sales Volume (per outlet)
+to_node:
+  node_id: child_maltreatment_substantiated_rate
+  node_name: Child Maltreatment Substantiated Rate
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Higher per-outlet sales volume may indicate more organized retail environments with larger,
+  established outlets'
+- 'Step 2: Areas with higher per-outlet volume may have lower outlet proliferation and less neighborhood
+  disorganization'
+- 'Step 3: Lower neighborhood disorganization associated with better social cohesion and informal social
+  control'
+- 'Step 4: Improved community conditions may buffer against family stressors that contribute to maltreatment'
+- 'Step 5: Reduced child maltreatment rates in areas with more organized alcohol retail environments'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'A. Laslett et al. 2022. "Community-Level Alcohol Availability and Child Maltreatment:
+    A Statewide Panel Analysis Over 13 Years.." https://doi.org/10.15288/jsad.20-00400'
+  supporting_citations:
+  - Additional citations require full-text access
+  - Literature on alcohol outlet density and neighborhood disorganization
+  - Prior studies on community-level alcohol availability measures
+  doi: 10.15288/jsad.20-00400
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: For each additional 1,000 liters of ethanol sold per off-premise outlet, child maltreatment
+  decreased by 3.7%. This counterintuitive finding suggests per-outlet sales volume may proxy for neighborhood
+  organization rather than pure alcohol exposure, with areas having fewer but larger outlets showing lower
+  maltreatment.
+quantitative_effects:
+  effect_size:
+    value: -3.7
+    type: percentage_change
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effect observed across Western Australian local government areas with varying commercial
+    environments
+moderators:
+- name: outlet_density
+  direction: u_shaped
+  strength: moderate
+  description: Authors note outlet density may act as measure of less disorganization - the counterintuitive
+    finding suggests high-volume established outlets differ from proliferated small outlets
+structural_competency:
+  equity_implications: 'This complex finding highlights how simple measures of alcohol availability may
+    conflate multiple structural factors. The authors suggest outlet density may indicate neighborhood
+    disorganization - areas with many small outlets may reflect disinvestment and concentrated disadvantage
+    that independently increases maltreatment risk. This underscores the importance of addressing root
+    causes of community disorganization rather than only targeting alcohol access. Equity implications:
+    Low-income and minority communities often experience both high outlet density AND concentrated disadvantage,
+    requiring comprehensive approaches.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.276992'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

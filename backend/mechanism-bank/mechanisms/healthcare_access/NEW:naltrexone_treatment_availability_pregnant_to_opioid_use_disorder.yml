@@ -1,0 +1,64 @@
+id: NEW:naltrexone_treatment_availability_pregnant_to_opioid_use_disorder
+name: Naltrexone Treatment Availability for Pregnant Individuals → Opioid Use Disorder
+from_node:
+  node_id: NEW:naltrexone_treatment_availability_pregnant
+  node_name: Naltrexone Treatment Availability for Pregnant Individuals
+to_node:
+  node_id: opioid_use_disorder
+  node_name: Opioid Use Disorder
+direction: negative
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Limited naltrexone prescribers willing to treat pregnant patients creates treatment gap'
+- 'Step 2: Pregnant individuals with OUD have reduced access to naltrexone as medication-assisted treatment
+  option'
+- 'Step 3: Without access to full range of MAT options, treatment may be suboptimal or inaccessible'
+- 'Step 4: Continued OUD during pregnancy increases risks for mother and developing fetus'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Chloe Deflorimonte et al. 2023. "National Provider Survey: Use of Naltrexone for
+    Pregnant Individuals with Substance Use Disorders." https://doi.org/10.1097/ADM.0000000000001225'
+  supporting_citations:
+  - Additional citations require full-text access - abstract references national registry of naltrexone
+    prescribers (N=5208)
+  - Additional citations require full-text access - references to national guidelines mentioned as barrier
+  - Additional citations require full-text access - safety concern literature referenced
+  doi: 10.1097/ADM.0000000000001225
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: The survey found significant barriers to naltrexone access for pregnant individuals with
+  opioid use disorder, with only about one-third of responding sites offering this treatment option. This
+  limits the range of medication-assisted treatment available to pregnant patients.
+quantitative_effects:
+  effect_size:
+    value: 35.9
+    type: percentage_change
+  sample_size: 78
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Northeast United States has the most sites offering naltrexone for pregnant individuals;
+    other regions have significantly fewer options
+moderators:
+- name: lack_of_national_guidelines
+  direction: weakens
+  strength: moderate
+  description: Absence of national guidelines for naltrexone use in pregnancy cited by 14.1% of providers
+    as barrier
+- name: provider_safety_concerns
+  direction: weakens
+  strength: moderate
+  description: Safety concerns during pregnancy reported by 9.4% of providers
+structural_competency:
+  equity_implications: This mechanism demonstrates how healthcare system structure and policy gaps create
+    inequitable access to SUD treatment for pregnant individuals. The survey response rate (33.1%) and
+    limited availability (35.9% of responders) suggest systemic underinvestment in perinatal addiction
+    medicine. Structural barriers including lack of guidelines, educational gaps, and geographic maldistribution
+    create a two-tiered system where pregnant individuals' treatment options depend heavily on location
+    rather than clinical need.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.209891'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

@@ -1,0 +1,66 @@
+id: NEW:wash_intervention_access_to_NEW:diarrheal_disease_incidence
+name: Water, Sanitation and Hygiene (WaSH) Intervention Access → Diarrheal Disease Incidence
+from_node:
+  node_id: NEW:wash_intervention_access
+  node_name: Water, Sanitation and Hygiene (WaSH) Intervention Access
+to_node:
+  node_id: NEW:diarrheal_disease_incidence
+  node_name: Diarrheal Disease Incidence
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Humanitarian crises disrupt water and sanitation infrastructure, creating unsafe water sources
+  and inadequate sanitation facilities'
+- 'Step 2: WaSH interventions provide access to safe drinking water, improved sanitation facilities, and
+  hygiene education/supplies'
+- 'Step 3: Safe water access reduces exposure to waterborne pathogens including Vibrio cholerae and other
+  enteric bacteria'
+- 'Step 4: Improved sanitation prevents fecal contamination of water sources and living environments'
+- 'Step 5: Reduced pathogen exposure decreases diarrheal disease incidence and related morbidity'
+evidence:
+  quality_rating: A
+  n_studies: 272
+  primary_citation: 'Mohammed Muneer Alareqi et al. 2024. "The Role of Water, Sanitation and Hygiene (WaSH)
+    Interventions on Health and Behavioral Outcomes during Humanitarian Crisis: A Systematic Review and
+    Meta-Analysis." https://doi.org/10.18502/ijph.v53i2.14918'
+  supporting_citations:
+  - Additional citations require full-text access - this is a systematic review of 7 reviews containing
+    272 primary studies
+  - Primary studies within included reviews address cholera outbreaks (43% of crisis contexts)
+  - Diarrheal disease outcomes represent 46% of impact evaluations in included studies
+  doi: 10.18502/ijph.v53i2.14918
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: WaSH interventions during humanitarian crises reduce diarrheal disease incidence by improving
+  access to safe water, adequate sanitation, and hygiene practices. Diarrheal diseases were the most commonly
+  reported outcome (46% of impact evaluations), and cholera outbreaks represented 43% of crisis contexts,
+  highlighting the critical role of water and sanitation infrastructure in preventing waterborne disease
+  transmission during emergencies.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: The review notes geographical distribution gaps in current evidence, indicating variation
+    across crisis settings and regions
+moderators:
+- name: crisis_context_type
+  direction: strengthens
+  strength: strong
+  description: Cholera outbreaks account for 43% of crisis contexts studied, suggesting WaSH interventions
+    may be particularly impactful during cholera-associated humanitarian emergencies
+- name: study_quality
+  direction: weakens
+  strength: moderate
+  description: Limited high-quality and experimental studies weaken confidence in effect estimates; only
+    1 of 7 reviews was high quality
+structural_competency:
+  equity_implications: This mechanism addresses structural determinants of health by focusing on infrastructure
+    and environmental conditions rather than individual behaviors. Humanitarian crises disproportionately
+    affect marginalized populations who lack resources for private water/sanitation solutions. The mechanism
+    recognizes that health outcomes are shaped by access to basic services during emergencies, which is
+    determined by policy decisions, resource allocation, and humanitarian response capacity rather than
+    individual choices.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:36.848306'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

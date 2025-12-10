@@ -1,0 +1,51 @@
+id: NEW:migrant_status_to_maternal_icu_admission_rate
+name: Migrant Status (Birth Outside Host Country) → Maternal ICU Admission Rate
+from_node:
+  node_id: NEW:migrant_status
+  node_name: Migrant Status (Birth Outside Host Country)
+to_node:
+  node_id: maternal_icu_admission_rate
+  node_name: Maternal ICU Admission Rate
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Migrant women face structural barriers to healthcare access including language
+  barriers, unfamiliarity with healthcare systems, lack of health insurance coverage,
+  and legal restrictions on healthcare entitlements'
+- 'Step 2: These barriers lead to delayed or inadequate prenatal care, resulting in
+  later detection and management of pregnancy complications'
+- 'Step 3: Migrant women may experience discrimination and implicit bias within healthcare
+  settings, leading to suboptimal care quality and clinical decision-making'
+- 'Step 4: Unmanaged or poorly managed pregnancy complications progress to severe
+  maternal morbidity requiring intensive care unit admission'
+- 'Step 5: The pattern varies by host country (stronger in Europe) and region of origin
+  (highest for sub-Saharan African, Latin American/Caribbean, and Asian migrants),
+  reflecting intersecting social determinants and healthcare system factors'
+evidence:
+  quality_rating: A
+  n_studies: 35
+  primary_citation: 'Eslier M et al. 2023. Association between migration and severe
+    maternal outcomes in high-income countries: Systematic review and meta-analysis.
+    PLoS Medicine.'
+  supporting_citations: []
+description: This systematic review and meta-analysis of 35 studies found that migrant
+  women in high-income countries have elevated risks of severe maternal outcomes including
+  ICU admission compared to native-born women. The patterns for maternal ICU admission
+  were similar to those observed for maternal mortality, though studied less frequently
+  and with heterogeneous outcome definitions. The association varies significantly
+  by host country context and migrant region of origin, suggesting complex interactions
+  between healthcare system factors, discrimination, and social determinants of health.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: Host country
+  direction: strengthens
+  strength: strong
+  description: Association between migration and severe maternal outcomes is stronger
+    in European host countries compared to USA or Australia
+- name: Region of birth
+  direction: strengthens
+  strength: strong
+  description: Migrants from sub-Saharan Africa, Latin America/Caribbean, and Asia
+    face highest risks; migrants from other European countries or Middle East/North
+    Africa show no significant elevation

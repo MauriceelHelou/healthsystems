@@ -1,0 +1,46 @@
+id: NEW:maternal_sars_cov_2_infection_pregnancy_to_preterm_birth_rate
+name: Maternal SARS-CoV-2 Infection During Pregnancy → Preterm Birth Rate
+from_node:
+  node_id: NEW:maternal_sars_cov_2_infection_pregnancy
+  node_name: Maternal SARS-CoV-2 Infection During Pregnancy
+to_node:
+  node_id: preterm_birth_rate
+  node_name: Preterm Birth Rate
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Maternal SARS-CoV-2 infection triggers systemic inflammatory response with
+  elevated cytokines (IL-6, TNF-α) and acute phase reactants'
+- 'Step 2: Inflammatory mediators can compromise placental function and trigger premature
+  cervical ripening and uterine contractions'
+- 'Step 3: Severe maternal illness may necessitate iatrogenic preterm delivery for
+  maternal or fetal indications'
+- 'Step 4: Potential direct viral effects on placental tissue and fetal membranes
+  may contribute to spontaneous preterm labor'
+- 'Step 5: Increased rates of preterm birth observed in infants born following maternal
+  SARS-CoV-2 infection during pregnancy'
+evidence:
+  quality_rating: A
+  n_studies: 204
+  primary_citation: 'S. Sturrock et al. 2023. "Neonatal outcomes and indirect consequences
+    following maternal SARS-CoV-2 infection in pregnancy: a systematic review." BMJ
+    Open.'
+  supporting_citations: []
+description: Systematic review of 204 studies encompassing 45,646 infants found that
+  preterm birth was more common in infants born following maternal SARS-CoV-2 infection
+  during pregnancy, particularly in larger studies. The association is mediated through
+  maternal inflammatory responses, potential placental dysfunction, and clinical decisions
+  for early delivery in severe cases.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: timing_of_infection
+  direction: strengthens
+  strength: moderate
+  description: Limited data on first trimester infections (only 17 studies); timing
+    of infection during pregnancy may influence preterm birth risk
+- name: disease_severity
+  direction: strengthens
+  strength: moderate
+  description: More severe maternal illness likely increases risk of both spontaneous
+    and iatrogenic preterm delivery

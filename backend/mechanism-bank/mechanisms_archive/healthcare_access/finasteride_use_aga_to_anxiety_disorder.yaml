@@ -1,0 +1,48 @@
+id: finasteride_use_aga_to_anxiety_disorder
+name: Finasteride Use for Androgenetic Alopecia → Anxiety Disorder
+from_node:
+  node_id: finasteride_use_aga
+  node_name: Finasteride Use for Androgenetic Alopecia
+to_node:
+  node_id: anxiety_disorder
+  node_name: Anxiety Disorder
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: Finasteride inhibits 5-alpha reductase enzyme, reducing conversion of testosterone
+  to dihydrotestosterone (DHT)'
+- 'Step 2: Reduced DHT levels alter neurosteroid synthesis in the brain, affecting
+  GABA-A receptor modulation'
+- 'Step 3: Changes in neurosteroid levels and neurotransmitter systems disrupt mood
+  regulation pathways'
+- 'Step 4: Dysregulation of anxiety-related neurotransmitter systems increases risk
+  of clinical anxiety disorders'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Anna Lyakhovitsky et al. 2024. "The risk of psychiatric disorders
+    in finasteride users with benign prostatic hyperplasia and androgenetic alopecia:
+    A population-based case-control study.." *The Australasian journal of dermatology*.
+    https://doi.org/10.1111/ajd.14359'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.551871'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: age
+  direction: strengthens
+  strength: moderate
+  description: Effect stratified by age in multivariate models, with younger AGA patients
+    (mean age 31.4 years) showing increased risk
+- name: socioeconomic_status
+  direction: u_shaped
+  strength: weak
+  description: Socioeconomic status included as stratification variable in multivariate
+    models
+- name: comorbidities
+  direction: strengthens
+  strength: weak
+  description: Presence of comorbidities included as stratification variable affecting
+    anxiety risk

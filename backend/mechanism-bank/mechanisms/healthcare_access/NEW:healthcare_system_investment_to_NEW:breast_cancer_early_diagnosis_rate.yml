@@ -1,0 +1,56 @@
+id: NEW:healthcare_system_investment_to_NEW:breast_cancer_early_diagnosis_rate
+name: Healthcare System Investment in Preventive Services → Breast Cancer Early Diagnosis Rate
+from_node:
+  node_id: NEW:healthcare_system_investment
+  node_name: Healthcare System Investment in Preventive Services
+to_node:
+  node_id: NEW:breast_cancer_early_diagnosis_rate
+  node_name: Breast Cancer Early Diagnosis Rate
+direction: positive
+category: healthcare_access
+mechanism_pathway:
+- 'Step 1: National investment in healthcare enables development of breast cancer screening infrastructure'
+- 'Step 2: Screening programs (mammography, clinical breast exams) become accessible to young women'
+- 'Step 3: Regular screening increases detection of breast cancer at earlier, localized stages'
+- 'Step 4: Early-stage diagnosis improves treatment options and prognosis'
+evidence:
+  quality_rating: B
+  n_studies: 6
+  primary_citation: 'Juliana Dalcin Donini E Silva et al. 2024. "Mortality of Young Women due to Breast
+    Cancer in Low, Middle and High-Income Countries: Systematic Literature Review and Meta-Analysis."
+    https://doi.org/10.31557/APJCP.2024.25.7.2519'
+  supporting_citations:
+  - Additional citations require full-text access - review identified early diagnosis as key factor in
+    mortality reduction
+  - Retrospective studies from 54 countries analyzed
+  - Meta-analysis pooled data from multiple primary studies
+  doi: 10.31557/APJCP.2024.25.7.2519
+  citation_verified: false
+  needs_manual_review: true
+  citation_issues:
+  - 'DOI verification failed: DOI not found in Crossref database'
+last_updated: '2025-12-06'
+version: '2.0'
+description: Healthcare system investment in preventive services directly enables early breast cancer
+  diagnosis through screening program availability. The paper identifies lack of early diagnosis infrastructure
+  as a key driver of higher mortality in lower-income countries.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Early diagnosis availability varies significantly by country income level, with high-income
+    countries having greater screening infrastructure
+moderators:
+- name: health_promotion_programs
+  direction: strengthens
+  strength: moderate
+  description: Health promotion and awareness campaigns increase screening uptake and early presentation
+structural_competency:
+  equity_implications: 'This mechanism identifies healthcare system capacity as a structural determinant
+    rather than placing responsibility on individual women for seeking care. The availability of screening
+    programs is determined by national policy and investment decisions, not individual health-seeking
+    behavior. Equity implications: women in under-resourced settings face structural barriers to early
+    detection regardless of personal health awareness.'
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:37.427558'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

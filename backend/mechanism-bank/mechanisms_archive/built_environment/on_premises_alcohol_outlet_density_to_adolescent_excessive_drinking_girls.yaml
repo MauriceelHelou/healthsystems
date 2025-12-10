@@ -1,0 +1,44 @@
+id: on_premises_alcohol_outlet_density_to_adolescent_excessive_drinking_girls
+name: On-Premises Alcohol Outlet Density → Adolescent Excessive Drinking (Girls)
+from_node:
+  node_id: on_premises_alcohol_outlet_density
+  node_name: On-Premises Alcohol Outlet Density
+to_node:
+  node_id: adolescent_excessive_drinking_girls
+  node_name: Adolescent Excessive Drinking (Girls)
+direction: negative
+category: built_environment
+mechanism_pathway:
+- 'Step 1: Housing vouchers lead families to move to census tracts with higher on-premises
+  alcohol outlet density (bars, restaurants)'
+- 'Step 2: Despite higher on-premises outlet density, MTO treatment decreased drinking
+  for girls through alcohol outlet density mediation at higher density levels'
+- 'Step 3: On-premises outlets may have different access barriers for adolescents
+  compared to off-premises outlets (age verification, supervised consumption)'
+- 'Step 4: The overall outlet environment configuration at higher densities mediates
+  protective effects for girls receiving housing vouchers'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Spruha Joshi et al. 2022. "Do Alcohol Outlets Mediate the Effects
+    of the Moving to Opportunity Experiment on Adolescent Excessive Drinking? A Secondary
+    Analysis of a Randomized Controlled Trial." *Substance Use & Misuse*. https://doi.org/10.1080/10826084.2022.2115847
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.004970'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: outlet_density_level
+  direction: strengthens
+  strength: strong
+  description: MTO treatment only decreased drinking for girls at higher levels of
+    outlet density, suggesting threshold effects in how retail environment impacts
+    adolescent alcohol access
+- name: gender
+  direction: strengthens
+  strength: strong
+  description: The mediation effect through on-premises outlet density was protective
+    for girls but not boys, indicating gender-specific pathways in alcohol retail
+    environment exposure

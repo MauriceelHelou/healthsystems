@@ -1,0 +1,40 @@
+id: alcohol_consumption_to_dna_methylation_colca1_colca2
+name: Alcohol Consumption → DNA Methylation at COLCA1/COLCA2 Gene Loci
+from_node:
+  node_id: alcohol_consumption
+  node_name: Alcohol Consumption
+to_node:
+  node_id: dna_methylation_colca1_colca2
+  node_name: DNA Methylation at COLCA1/COLCA2 Gene Loci
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Alcohol consumption alters cellular methylation patterns through metabolic
+  intermediates'
+- 'Step 2: Specific CpG sites (cg05593667 and cg10045354) at COLCA1/COLCA2 genes undergo
+  methylation changes'
+- 'Step 3: Methylation at these sites regulates expression of COLCA1/COLCA2 genes'
+- 'Step 4: Altered gene expression affects cellular processes related to cancer susceptibility'
+evidence:
+  quality_rating: B
+  n_studies: 32
+  primary_citation: 'Xuan Zhou et al. 2022. "Alcohol consumption, DNA methylation
+    and colorectal cancer risk: Results from pooled cohort studies and Mendelian randomization
+    analysis." *International Journal of Cancer*. https://doi.org/10.1002/ijc.33945'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:05.492489'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: eQTL_rs3087967_risk_allele
+  direction: strengthens
+  strength: moderate
+  description: Carriage of the risk allele of the eQTL polymorphism (rs3087967) interacts
+    with alcohol consumption to increase CRC risk (P-interaction = 0.027)
+- name: mQTL_rs11213823_risk_allele
+  direction: strengthens
+  strength: moderate
+  description: Carriage of the risk allele of the mQTL polymorphism (rs11213823) interacts
+    with alcohol consumption to increase CRC risk (P-interaction = 0.016)

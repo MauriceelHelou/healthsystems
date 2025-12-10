@@ -1,0 +1,58 @@
+id: NEW:biomarker_based_liver_advice_to_binge_drinking
+name: Advice Based on Liver Biomarkers/Non-Invasive Fibrosis Tests → Harmful Alcohol
+  Consumption
+from_node:
+  node_id: NEW:biomarker_based_liver_advice
+  node_name: Advice Based on Liver Biomarkers/Non-Invasive Fibrosis Tests
+to_node:
+  node_id: binge_drinking
+  node_name: Harmful Alcohol Consumption
+direction: negative
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Healthcare providers conduct liver biomarker tests (e.g., GGT, liver function
+  tests) or non-invasive fibrosis assessments on individuals with high-risk alcohol
+  consumption'
+- 'Step 2: Test results are shared with patients along with personalized advice explaining
+  the relationship between their drinking patterns and observed liver changes'
+- 'Step 3: Personalized biomarker feedback creates cognitive dissonance and increases
+  perceived personal risk of alcohol-related harm'
+- 'Step 4: Enhanced risk perception and tangible evidence of physiological harm motivates
+  behavior change'
+- 'Step 5: Individuals reduce harmful alcohol consumption, leading to measurable decreases
+  in weekly alcohol intake'
+evidence:
+  quality_rating: A
+  n_studies: 16
+  primary_citation: 'Mohsan Subhani et al. 2021. Does Advice Based on Biomarkers of
+    Liver Injury or Non-Invasive Tests of Liver Fibrosis Impact High-Risk Drinking
+    Behaviour: A Systematic Review With Meta-analysis. Alcohol and alcoholism (Oxford,
+    Oxfordshire)'
+  supporting_citations: []
+description: Providing advice based on liver biomarkers or non-invasive fibrosis tests
+  significantly reduces harmful alcohol consumption. A meta-analysis of 14 RCTs and
+  2 observational studies found that intervention-based advice led to a mean reduction
+  of 74.4 grams of alcohol per week compared to control groups. This was accompanied
+  by reductions in GGT levels (-19.7 IU/l) and lower rates of alcohol-attributed mortality,
+  hospitalizations, and physician visits in intervention groups.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: -74.4
+    type: mean_difference_grams_per_week
+    ci_lower: -126.1
+    ci_upper: -22.6
+  p_value: 0.005
+  sample_size: 3763
+moderators:
+- name: Type of biomarker used
+  direction: strengthens
+  strength: moderate
+  description: Both liver injury biomarkers and non-invasive fibrosis tests showed
+    effectiveness, though specific comparative effectiveness was not detailed
+- name: Baseline drinking severity
+  direction: strengthens
+  strength: moderate
+  description: Intervention targets high-risk drinkers who may have more room for
+    reduction

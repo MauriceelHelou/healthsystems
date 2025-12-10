@@ -1,0 +1,46 @@
+id: alcohol_outlet_visits_to_domestic_violence_incidents
+name: Visits to Alcohol Outlets (Bars and Liquor Stores) → Domestic Violence Incidents
+from_node:
+  node_id: alcohol_outlet_visits
+  node_name: Visits to Alcohol Outlets (Bars and Liquor Stores)
+to_node:
+  node_id: domestic_violence_incidents
+  node_name: Domestic Violence Incidents
+direction: positive
+category: social_environment
+mechanism_pathway:
+- 'Step 1: Individuals visit bars and liquor stores to purchase alcohol'
+- 'Step 2: COVID-19 stay-at-home orders result in alcohol being consumed at home rather
+  than in public venues'
+- 'Step 3: Increased home-based alcohol consumption co-occurs with extended time spent
+  with intimate partners and family members in confined spaces'
+- 'Step 4: The combination of alcohol consumption and prolonged co-residence under
+  pandemic stress increases conflict and violence between intimate partners and family
+  members'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: Aaron Chalfin et al. 2021. "COVID-19 Has Strengthened the Relationship
+    Between Alcohol Consumption and Domestic Violence." https://doi.org/10.3386/W28523
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.109165'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: covid_19_stay_at_home_orders
+  direction: strengthens
+  strength: strong
+  description: The relationship between alcohol outlet visits and domestic violence
+    more than doubled starting in March 2020 when stay-at-home orders were implemented,
+    shifting alcohol consumption from public to home settings
+- name: location_of_alcohol_consumption
+  direction: strengthens
+  strength: strong
+  description: Alcohol consumption at home (versus in public venues) is the principal
+    driver of domestic violence, with home consumption creating proximity between
+    alcohol effects and potential victims
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/social_environment/alcohol_outlet_visits_to_domestic_violence_incidents.yaml
+_category: social_environment

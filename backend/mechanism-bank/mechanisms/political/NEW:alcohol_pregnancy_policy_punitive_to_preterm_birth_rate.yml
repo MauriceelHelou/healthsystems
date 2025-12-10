@@ -1,0 +1,59 @@
+id: NEW:alcohol_pregnancy_policy_punitive_to_preterm_birth_rate
+name: Punitive Alcohol/Pregnancy Policies → Preterm Birth Rate
+from_node:
+  node_id: NEW:alcohol_pregnancy_policy_punitive
+  node_name: Punitive Alcohol/Pregnancy Policies
+to_node:
+  node_id: preterm_birth_rate
+  node_name: Preterm Birth Rate
+direction: positive
+category: political
+mechanism_pathway:
+- 'Step 1: State enacts punitive policies regarding alcohol use during pregnancy (e.g., civil commitment,
+  child abuse/neglect definitions)'
+- 'Step 2: Policies create fear of legal consequences and surveillance among pregnant women'
+- 'Step 3: Fear leads to avoidance of prenatal care and healthcare settings where alcohol use might be
+  detected'
+- 'Step 4: Reduced prenatal care utilization leads to unmanaged pregnancy complications'
+- 'Step 5: Increased rates of preterm birth due to inadequate prenatal monitoring and intervention'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'S. Roberts et al. 2020. "Variations by Education Status in Relationships Between
+    Alcohol/Pregnancy Policies and Birth Outcomes and Prenatal Care Utilization: A Legal Epidemiology
+    Study." https://doi.org/10.1097/PHH.0000000000001069'
+  supporting_citations:
+  - Previous research referenced in abstract finds some state policies increase low birth weight and preterm
+    birth
+  - NIAAA Alcohol Policy Information System data used for policy classification
+  - Additional citations require full-text access
+  doi: 10.1097/PHH.0000000000001069
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Punitive alcohol/pregnancy policies increase preterm birth rates, with effects concentrated
+  among women with higher education levels (high school graduates and those with more than high school
+  education), while women with less than high school education may experience protective effects from
+  some policies.
+spatial_variation:
+  varies_by_geography: true
+  variation_notes: Effects vary by state based on specific alcohol/pregnancy policy configurations. Study
+    uses state-level policy data from all US states from 1972-2015.
+moderators:
+- name: educational_attainment
+  direction: u_shaped
+  strength: strong
+  description: Effects vary significantly by education status. Women with high school education and those
+    with more than high school education experienced adverse effects on preterm birth from 5-6 policies,
+    while women with less than high school education experienced beneficial effects from some policies.
+structural_competency:
+  equity_implications: This mechanism demonstrates how well-intentioned policies designed to protect fetal
+    health can paradoxically harm birth outcomes by creating structural barriers to care. The differential
+    effects by education status suggest that policies may inadvertently increase health inequities, though
+    in an unexpected direction - potentially because higher-educated women face greater scrutiny or have
+    more to lose from policy consequences.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.141678'
+  extraction_confidence: medium
+  prompt_version: 2.1-canonical-validated

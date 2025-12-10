@@ -1,0 +1,41 @@
+id: mean_bac_above_legal_limit_to_severe_alcohol_impairment_driving
+name: Mean BAC Substantially Above Legal Limit → Severe Alcohol Impairment While Driving
+from_node:
+  node_id: mean_bac_above_legal_limit
+  node_name: Mean BAC Substantially Above Legal Limit
+to_node:
+  node_id: severe_alcohol_impairment_driving
+  node_name: Severe Alcohol Impairment While Driving
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Drivers with mean BAC of 0.151 g/dL and median BAC of 0.167 g/dL are operating
+  vehicles'
+- 'Step 2: These BAC levels are nearly double the legal limit of 0.08 g/dL in Texas'
+- 'Step 3: At these BAC levels, drivers experience severe impairment of coordination,
+  judgment, and reaction time'
+- 'Step 4: Severely impaired driving substantially increases crash risk and traffic
+  fatality rates'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'Corissa Rodgers et al. 2021. "Everything Is Bigger in Texas:
+    Alcohol Impaired Driving in Houston (2014-2018)." *Journal of analytical toxicology*.
+    https://doi.org/10.1093/jat/bkaa128'
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:06.548651'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: age_distribution
+  direction: strengthens
+  strength: strong
+  description: 75% of cases were individuals aged 21-44 years, representing peak productive
+    years and indicating substantial public safety and economic impact
+- name: male_gender
+  direction: strengthens
+  strength: moderate
+  description: 50% of samples were white males, suggesting demographic patterns in
+    high-BAC impaired driving

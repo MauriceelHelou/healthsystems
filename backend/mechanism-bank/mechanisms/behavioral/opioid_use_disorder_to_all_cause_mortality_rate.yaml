@@ -1,0 +1,57 @@
+id: opioid_use_disorder_to_all_cause_mortality_rate
+name: Opioid Use Disorder → All-Cause Mortality Rate
+from_node:
+  node_id: opioid_use_disorder
+  node_name: Opioid Use Disorder
+to_node:
+  node_id: all_cause_mortality_rate
+  node_name: All-Cause Mortality Rate
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Individuals with opioid use disorder engage in chronic use of opioids,
+  leading to physiological dependence and tolerance'
+- 'Step 2: Continued opioid use results in multiple direct health consequences including
+  respiratory depression, overdose risk, and organ damage'
+- 'Step 3: Behavioral factors associated with OUD (injection drug use, risky behaviors)
+  increase exposure to infectious diseases (HIV, hepatitis) and trauma'
+- 'Step 4: Cumulative physiological harm, overdose events, infectious disease complications,
+  and associated health conditions result in substantially elevated all-cause mortality
+  rates'
+evidence:
+  quality_rating: A
+  n_studies: 101
+  primary_citation: 'A. Bahji et al. 2020. Mortality Among People With Opioid Use
+    Disorder: A Systematic Review and Meta-analysis. Journal of addiction medicine.'
+  supporting_citations: []
+description: Opioid use disorder is associated with a crude all-cause mortality rate
+  of 18.7 per 1000 person-years, with overdose-specific mortality accounting for 7.0
+  per 1000 person-years. This represents a substantially elevated mortality risk compared
+  to the general population, driven by overdose events, injection-related complications,
+  infectious diseases, and other health consequences of chronic opioid use.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+quantitative_effects:
+  effect_size:
+    value: 18.7
+    type: crude_mortality_rate_per_1000_person_years
+    ci_lower: 17.1
+    ci_upper: 20.3
+  p_value: null
+  sample_size: 229274
+moderators:
+- name: HIV status
+  direction: strengthens
+  strength: strong
+  description: Individuals with OUD who have HIV have substantially higher mortality
+    rates
+- name: Injection drug use
+  direction: strengthens
+  strength: strong
+  description: People who inject drugs have significantly elevated mortality compared
+    to non-injecting OUD patients
+- name: Country income level
+  direction: strengthens
+  strength: moderate
+  description: Low/middle-income countries show higher all-cause and overdose-specific
+    mortality among people with OUD

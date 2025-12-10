@@ -1,0 +1,45 @@
+id: NEW:prenatal_alcohol_exposure_to_prenatal_substance_exposure
+name: Prenatal Alcohol Exposure → Prenatal Substance Exposure
+from_node:
+  node_id: NEW:prenatal_alcohol_exposure
+  node_name: Prenatal Alcohol Exposure
+to_node:
+  node_id: prenatal_substance_exposure
+  node_name: Prenatal Substance Exposure
+direction: positive
+category: biological
+mechanism_pathway:
+- 'Step 1: Maternal alcohol consumption during pregnancy'
+- 'Step 2: Alcohol crosses placental barrier and exposes developing fetus'
+- 'Step 3: Fetal exposure to teratogenic effects of alcohol'
+- 'Step 4: Documented as prenatal substance exposure with developmental consequences'
+evidence:
+  quality_rating: B
+  n_studies: 4
+  primary_citation: 'Ujjal Das et al. 2022. "Epigenetic insight of prenatal alcohol exposure on stress
+    axis development: Systematic review with meta-analysis approaches.." https://doi.org/10.1111/acer.14972'
+  supporting_citations:
+  - Multiple studies demonstrating long-term consequences of PAE on offspring
+  - Research on alcohol-induced teratogenesis
+  - Additional citations require full-text access
+  doi: 10.1111/acer.14972
+  citation_verified: true
+last_updated: '2025-12-06'
+version: '2.0'
+description: Prenatal alcohol exposure is a specific form of prenatal substance exposure with documented
+  teratogenic effects, including epigenetic alterations that affect HPA axis development.
+moderators:
+- name: maternal_socioeconomic_status
+  direction: strengthens
+  strength: moderate
+  description: Lower SES associated with reduced access to prenatal care and substance use treatment,
+    potentially increasing exposure severity
+structural_competency:
+  equity_implications: This mechanism connects maternal alcohol use to infant health outcomes. Structural
+    factors including alcohol marketing, pricing policies, treatment access, and social determinants of
+    maternal health all influence rates of prenatal alcohol exposure at the population level.
+llm_metadata:
+  extracted_by: claude-opus-4-5-20251101
+  extraction_date: '2025-12-06T21:12:38.044702'
+  extraction_confidence: high
+  prompt_version: 2.1-canonical-validated

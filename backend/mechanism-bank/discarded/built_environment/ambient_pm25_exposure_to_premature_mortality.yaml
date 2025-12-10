@@ -1,0 +1,52 @@
+id: ambient_pm25_exposure_to_premature_mortality
+name: Ambient Fine Particulate Matter (PM2.5) Exposure → Premature Mortality
+from_node:
+  node_id: ambient_pm25_exposure
+  node_name: Ambient Fine Particulate Matter (PM2.5) Exposure
+to_node:
+  node_id: premature_mortality
+  node_name: Premature Mortality
+direction: positive
+category: built_environment
+mechanism_pathway:
+- 'Step 1: PM2.5 exposure occurs disproportionately in communities affected by systemic
+  racism due to historical residential segregation and proximity to pollution sources'
+- 'Step 2: PM2.5 particles penetrate deep into lung tissue and enter the bloodstream'
+- 'Step 3: Systemic inflammation, oxidative stress, and cardiovascular dysfunction
+  result from chronic PM2.5 exposure'
+- 'Step 4: Increased risk of cardiovascular disease, respiratory disease, and premature
+  death'
+- 'Step 5: Racial disparities in PM2.5-attributable premature mortality have increased
+  by 16% between 2010 and 2019 despite overall pollution reductions'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: G. Kerr et al. 2024. "Increasing Racial and Ethnic Disparities
+    in Ambient Air Pollution-Attributable Morbidity and Mortality in the United States."
+    *Environmental Health Perspectives*. https://doi.org/10.1289/EHP11900
+last_updated: '2025-12-02'
+version: '1.0'
+llm_metadata:
+  extracted_by: claude-sonnet-4-5-20250929
+  extraction_date: '2025-12-02T18:12:07.511769'
+  batch_id: msgbatch_01AKnPJgzm7Fk9qubgAz9GaD
+moderators:
+- name: race
+  direction: strengthens
+  strength: strong
+  description: Racial relative disparities in PM2.5-attributable premature mortality
+    increased by 16% over the study period, indicating race as a strong moderator
+    through structural racism
+- name: ethnicity
+  direction: strengthens
+  strength: strong
+  description: Ethnic relative disparities in PM2.5-attributable premature mortality
+    increased by 40% over the study period, showing the strongest moderating effect
+- name: time_period
+  direction: strengthens
+  strength: moderate
+  description: Disparities widened from 2010 to 2019 despite overall PM2.5 reductions,
+    suggesting systemic inequities are intensifying
+_source_file: /Users/mauriceelhelou/Library/CloudStorage/OneDrive-HarvardUniversity/New
+  folder (2)/healthsystems/mechanism-bank/mechanisms/built_environment/ambient_pm25_exposure_to_premature_mortality.yaml
+_category: built_environment
