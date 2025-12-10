@@ -20,14 +20,14 @@ WORKDIR /app
 # Development stage
 FROM base as development
 
-# Copy requirements
-COPY requirements.txt requirements-dev.txt ./
+# Copy requirements (paths from repo root - Railway uses repo root as build context)
+COPY backend/requirements.txt backend/requirements-dev.txt ./
 
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements-dev.txt
 
 # Copy application code
-COPY . .
+COPY backend/ .
 
 # Expose port
 EXPOSE 8000
@@ -38,14 +38,14 @@ CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload
 # Production stage
 FROM base as production
 
-# Copy requirements
-COPY requirements.txt ./
+# Copy requirements (paths from repo root - Railway uses repo root as build context)
+COPY backend/requirements.txt ./
 
 # Install production dependencies only
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY . .
+COPY backend/ .
 
 # Make startup script executable
 RUN chmod +x start.sh
