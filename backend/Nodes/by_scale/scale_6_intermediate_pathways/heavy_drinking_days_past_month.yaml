@@ -25,6 +25,10 @@ data_quality:
     granularity: state
   - name: NHTSA FARS (fatalities)
     granularity: state
-description: |-
-  Average heavy drinking days (5+/4+ drinks men/women) per month. FDA-approved endpoint for AUD medication trials.
+description: Average heavy drinking days (5+/4+ drinks men/women) per month. FDA-approved endpoint for AUD medication trials.
 type: Rate
+hierarchy:
+  parent_ids:
+  - alcohol_use_days_past_month
+  depth: 1
+  is_grouping_node: false

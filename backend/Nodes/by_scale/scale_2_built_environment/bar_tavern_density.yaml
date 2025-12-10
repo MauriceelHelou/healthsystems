@@ -23,11 +23,20 @@ data_quality:
     granularity: county
   - name: Yelp/Google Places API (supplemental)
     granularity: neighborhood
-description: |-
-  Density of on-premise drinking establishments (bars, taverns, pubs, nightclubs) per geographic
+description: 'Density of on-premise drinking establishments (bars, taverns, pubs, nightclubs) per geographic
+
   area, specifically measuring venues whose primary business is alcohol sales for on-site consumption.
+
   Distinct from restaurants that serve alcohol. Higher bar density is associated with increased
+
   binge drinking, alcohol-related assaults, and impaired driving incidents. Entertainment districts
+
   with high bar concentration are hotspots for alcohol-related emergency department visits.
-  Spatial clustering creates multiplicative effects on alcohol-related harms.
+
+  Spatial clustering creates multiplicative effects on alcohol-related harms.'
 type: Infrastructure
+hierarchy:
+  parent_ids:
+  - alcohol_outlet_density
+  depth: 1
+  is_grouping_node: false

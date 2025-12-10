@@ -25,12 +25,22 @@ data_quality:
     granularity: state
   - name: NHTSA FARS (fatalities)
     granularity: state
-description: |-
-  Prevalence of alcohol use disorder (AUD) as defined by DSM-5 criteria, measured as
+description: 'Prevalence of alcohol use disorder (AUD) as defined by DSM-5 criteria, measured as
+
   percentage of adults meeting diagnostic criteria in the past 12 months. AUD is a
+
   clinical diagnosis with 11 symptom criteria; mild (2-3), moderate (4-5), or severe
+
   (6+) classification. This is a standalone diagnostic measure independent of causes
+
   or consequences. Relationships to risk factors (e.g., genetics, ACEs, policies) and
+
   outcomes (e.g., liver disease, mortality) are captured in mechanisms. Approximately
-  10-12% of US adults meet criteria for past-year AUD.
+
+  10-12% of US adults meet criteria for past-year AUD.'
 type: Rate
+hierarchy:
+  parent_ids:
+  - substance_use_disorder_any
+  depth: 1
+  is_grouping_node: false

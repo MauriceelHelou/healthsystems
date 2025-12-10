@@ -19,8 +19,14 @@ data_quality:
   primary_sources:
   - name: BLS Survey of Occupational Injuries and Illnesses
     granularity: state
-description: |-
-  Measures lost work time injury rate (DART - Days Away, Restricted, or Transferred).
+description: 'Measures lost work time injury rate (DART - Days Away, Restricted, or Transferred).
+
   This is a standalone intermediate pathway measure capturing severe occupational injuries.
-  Relationships to workplace conditions or economic impacts are captured in mechanisms.
+
+  Relationships to workplace conditions or economic impacts are captured in mechanisms.'
 type: Rate
+hierarchy:
+  parent_ids:
+  - workplace_injury_rate
+  depth: 1
+  is_grouping_node: false

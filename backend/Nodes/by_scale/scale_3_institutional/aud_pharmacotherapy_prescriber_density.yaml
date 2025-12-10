@@ -23,12 +23,24 @@ data_quality:
     granularity: state
   - name: State Prescription Drug Monitoring Programs
     granularity: county
-description: |-
-  Density of healthcare providers actively prescribing FDA-approved medications for alcohol
+description: 'Density of healthcare providers actively prescribing FDA-approved medications for alcohol
+
   use disorder: naltrexone (oral and extended-release injectable Vivitrol), acamprosate
+
   (Campral), and disulfiram (Antabuse). Unlike opioid treatment, these medications do not
+
   require special waiver or certification. Despite strong evidence, medications for AUD are
+
   drastically underutilized - only ~9% of those with AUD receive any medication. Barriers
+
   include provider unfamiliarity, patient preference, lack of integration with behavioral
-  treatment, and insufficient insurance coverage.
+
+  treatment, and insufficient insurance coverage.'
 type: Infrastructure
+hierarchy:
+  parent_ids:
+  - alcohol_treatment_facility_density
+  - healthcare_worker_shortage_vacancy_rate
+  - medication_shortage_impact
+  depth: 1
+  is_grouping_node: false

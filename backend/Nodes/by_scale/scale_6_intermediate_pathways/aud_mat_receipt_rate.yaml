@@ -23,12 +23,22 @@ data_quality:
     granularity: state
   - name: IQVIA National Prescription Audit
     granularity: state
-description: |-
-  Percentage of individuals with AUD who received an FDA-approved medication for alcohol
+description: 'Percentage of individuals with AUD who received an FDA-approved medication for alcohol
+
   use disorder: naltrexone (oral or extended-release injectable), acamprosate, or
+
   disulfiram. Despite strong evidence for efficacy, MAT for AUD is dramatically
+
   underutilized - less than 2% of those with AUD receive any medication. This is far
+
   lower than MAT rates for opioid use disorder. Barriers include lack of prescriber
+
   knowledge, patient preference for abstinence-only approaches, limited integration
-  with behavioral treatment, and insurance coverage gaps.
+
+  with behavioral treatment, and insurance coverage gaps.'
 type: Rate
+hierarchy:
+  parent_ids:
+  - aud_treatment_engagement_rate
+  depth: 1
+  is_grouping_node: false

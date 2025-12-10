@@ -2,8 +2,9 @@
 Rate limiting middleware to prevent API abuse.
 """
 
-from fastapi import Request, HTTPException, status
+from fastapi import Request, status
 from starlette.middleware.base import BaseHTTPMiddleware
+from fastapi.responses import JSONResponse  # <--- Import this
 from typing import Callable
 import time
 from collections import defaultdict
@@ -24,19 +25,6 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
         self.lock = asyncio.Lock()
 
     async def dispatch(self, request: Request, call_next: Callable):
-        """
-        Check rate limit before processing request.
-
-        Args:
-            request: Incoming HTTP request
-            call_next: Next middleware/route handler
-
-        Returns:
-            HTTP response
-
-        Raises:
-            HTTPException: If rate limit exceeded
-        """
         # Skip rate limiting for health checks
         if request.url.path in ["/health", "/docs", "/redoc", "/openapi.json"]:
             return await call_next(request)
@@ -53,9 +41,10 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
 
             # Check rate limit
             if len(self.requests[client_ip]) >= settings.rate_limit_per_minute:
-                raise HTTPException(
+                # FIX: Return a JSONResponse instead of raising HTTPException
+                return JSONResponse(
                     status_code=status.HTTP_429_TOO_MANY_REQUESTS,
-                    detail="Rate limit exceeded. Please try again later."
+                    content={"detail": "Rate limit exceeded. Please try again later."}
                 )
 
             # Add current request

@@ -19,6 +19,12 @@ data_quality:
   primary_sources:
   - name: TBD
     granularity: state
-description: |-
-  Measures cost-related medication nonadherence. Measured in % skipped meds due to cost. Part of the Healthcare, Economic domain.
+description: Measures cost-related medication nonadherence. Measured in % skipped meds due to cost. Part of the Healthcare,
+  Economic domain.
 type: Rate
+hierarchy:
+  parent_ids:
+  - medication_adherence_low
+  - delayed_care_due_to_cost
+  depth: 1
+  is_grouping_node: false

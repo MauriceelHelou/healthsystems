@@ -25,6 +25,11 @@ data_quality:
     granularity: state
   - name: NHTSA FARS (fatalities)
     granularity: state
-description: |-
-  Policy indicator measuring alcohol warning label implementation. Measured in Binary (0=no labels, 1=labels implemented). Part of the Policy domain.
+description: Policy indicator measuring alcohol warning label implementation. Measured in Binary (0=no labels, 1=labels implemented).
+  Part of the Policy domain.
 type: Policy
+hierarchy:
+  parent_ids:
+  - alcohol_warning_label_policy
+  depth: 1
+  is_grouping_node: false

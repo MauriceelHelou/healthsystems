@@ -25,21 +25,22 @@ logger = logging.getLogger(__name__)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """
-    Application lifespan manager.
-    Handles startup and shutdown events.
-    """
-    # Startup
     logger.info("Starting HealthSystems Platform API...")
-    await init_db()
-    logger.info("Database initialized")
+    try:
+        await init_db()
+        logger.info("Database initialized")
+    except Exception as e:
+        logger.error(f"Database initialization failed: {e}")
+        raise
 
     yield
 
-    # Shutdown
     logger.info("Shutting down HealthSystems Platform API...")
-    await close_db()
-    logger.info("Database connections closed")
+    try:
+        await close_db()
+        logger.info("Database connections closed")
+    except Exception as e:
+        logger.error(f"Database shutdown failed: {e}")
 
 
 # Create FastAPI application
@@ -58,7 +59,7 @@ app = FastAPI(
 # Middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.allowed_origins,
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

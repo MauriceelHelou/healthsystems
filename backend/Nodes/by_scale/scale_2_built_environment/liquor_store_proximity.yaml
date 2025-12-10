@@ -23,11 +23,20 @@ data_quality:
     granularity: census_tract
   - name: InfoUSA/Data Axle Business Database
     granularity: address
-description: |-
-  Average distance from residential addresses to the nearest off-premise alcohol outlet (liquor
+description: 'Average distance from residential addresses to the nearest off-premise alcohol outlet (liquor
+
   store, convenience store selling alcohol, grocery store with alcohol sales). Lower values
+
   indicate greater physical accessibility to purchase alcohol. Proximity is associated with
+
   increased consumption and alcohol-related problems, particularly for heavy drinkers. Youth
+
   drinking initiation is earlier in areas with closer alcohol access. This measure captures
-  the friction cost of obtaining alcohol in the physical environment.
+
+  the friction cost of obtaining alcohol in the physical environment.'
 type: Infrastructure
+hierarchy:
+  parent_ids:
+  - alcohol_outlet_density
+  depth: 1
+  is_grouping_node: false

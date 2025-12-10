@@ -23,12 +23,22 @@ data_quality:
     granularity: state
   - name: Adverse Childhood Experiences (ACE) studies
     granularity: state
-description: |-
-  Percentage of children (under 18) currently living in a household with at least
+description: 'Percentage of children (under 18) currently living in a household with at least
+
   one parent or caregiver meeting criteria for alcohol use disorder. Parental AUD
+
   is a recognized Adverse Childhood Experience (ACE) with lasting impacts on child
+
   development, mental health, academic achievement, and future substance use risk.
+
   Approximately 1 in 8 children in the US live with a parent with past-year AUD.
+
   These children experience elevated rates of neglect, abuse, household chaos, and
-  intergenerational transmission of alcohol problems.
+
+  intergenerational transmission of alcohol problems.'
 type: Rate
+hierarchy:
+  parent_ids:
+  - household_alcohol_exposure
+  depth: 1
+  is_grouping_node: false
