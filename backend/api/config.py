@@ -28,7 +28,14 @@ class Settings(BaseSettings):
     api_host: str = "0.0.0.0"
     api_port: int = int(os.getenv("PORT", "8000"))
     api_reload: bool = True
-    allowed_origins: List[str] = ["http://localhost:3000", "http://localhost:3002", "http://localhost:8000", "http://localhost:8002"]
+    allowed_origins: List[str] = [
+        "http://localhost:3000",
+        "http://localhost:3002",
+        "http://localhost:8000",
+        "http://localhost:8002",
+        "https://beautiful-perfection-production-5645.up.railway.app",
+        "https://backend-production-b6c2.up.railway.app",
+    ]
 
     # Database - explicitly check DATABASE_URL env var
     database_url: str = Field(
