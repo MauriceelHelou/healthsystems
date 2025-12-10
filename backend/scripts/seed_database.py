@@ -2,23 +2,18 @@
 Database seeding script for Railway deployment.
 
 This script:
-1. Loads ONLY nodes defined in nodes/by_scale/ directory
-2. Loads ONLY mechanisms from mechanism-bank/mechanisms/{category}/ where:
-   - The mechanism file does NOT have a NEW: prefix
-   - BOTH from_node and to_node exist in nodes/by_scale/
+1. Loads ALL mechanisms from mechanism-bank/mechanisms/{category}/ subdirectories
+2. Automatically creates nodes referenced by mechanisms
 3. Supports quality filtering (min_quality parameter)
 4. Supports topic filtering (e.g., alcohol-related mechanisms)
 5. Idempotent - can be run multiple times safely
-
-IMPORTANT: Mechanisms referencing undefined nodes are skipped.
-The NEW: prefix indicates proposed/candidate mechanisms not yet validated.
 
 Valid mechanism categories:
 - behavioral, built_environment, economic, healthcare_access,
   political, social_environment, biological
 
 Usage:
-    # Seed all valid mechanisms (no filters):
+    # Seed all mechanisms (no filters):
     python seed_database.py
 
     # Seed only high-quality mechanisms (A or B rating):
@@ -47,8 +42,9 @@ from sqlalchemy.exc import IntegrityError
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from models.database import Base
-from models.mechanism import Node, Mechanism
+from models.mechanism import Node, Mechanism, node_hierarchy
 from config.database import DatabaseConfig
+from sqlalchemy import insert
 
 # Quality rating hierarchy (A is best, C is worst)
 QUALITY_HIERARCHY = {'A': 1, 'B': 2, 'C': 3}
@@ -134,6 +130,8 @@ class DatabaseSeeder:
         self.nodes_cache: Dict[str, Node] = {}
         # Set of valid node IDs (only nodes from YAML files are valid)
         self.valid_node_ids: Set[str] = set()
+        # Store pending hierarchy relationships (child_id -> [parent_ids])
+        self._pending_hierarchy: Dict[str, List[str]] = {}
 
     def passes_quality_filter(self, mech_data: Dict) -> bool:
         """Check if mechanism passes quality filter."""
@@ -176,33 +174,16 @@ class DatabaseSeeder:
 
     def has_valid_node_references(self, mech_data: Dict) -> bool:
         """
-        Check if mechanism references nodes that exist in nodes/by_scale/.
+        Check if mechanism has valid node references.
 
-        Returns False if:
-        - Either node has NEW: prefix (proposed/candidate node)
-        - Either node doesn't exist in valid_node_ids set
+        Returns True if we can extract valid from_node and to_node IDs.
+        Nodes will be created dynamically if they don't exist.
         """
         # Get node IDs from mechanism data structure
-        from_node = mech_data.get('from_node', {})
-        to_node = mech_data.get('to_node', {})
+        from_node_id, to_node_id = self.get_node_ids_from_mechanism(mech_data)
 
-        from_node_id = from_node.get('node_id', '')
-        to_node_id = to_node.get('node_id', '')
-
-        # If no from_node/to_node structure, try to parse from ID
-        if not from_node_id or not to_node_id:
-            mech_id = mech_data.get('id', '')
-            if '_to_' in mech_id:
-                parts = mech_id.split('_to_')
-                from_node_id = from_node_id or parts[0]
-                to_node_id = to_node_id or '_to_'.join(parts[1:])
-
-        # Skip if either contains NEW: prefix
-        if 'NEW:' in from_node_id or 'NEW:' in to_node_id:
-            return False
-
-        # Check both nodes exist in valid set
-        return from_node_id in self.valid_node_ids and to_node_id in self.valid_node_ids
+        # Just need non-empty node IDs
+        return bool(from_node_id) and bool(to_node_id)
 
     def init_tables(self, drop_existing: bool = False):
         """Create all database tables."""
@@ -234,12 +215,11 @@ class DatabaseSeeder:
 
     def load_mechanism_files(self) -> List[Path]:
         """
-        Load valid mechanism YAML files from mechanism-bank categories.
+        Load ALL mechanism YAML files from mechanism-bank categories.
 
-        Only loads files from valid category subdirectories and excludes:
-        - Files with NEW: prefix (proposed/candidate mechanisms)
-        - JSON files (metadata files)
-        - Files not in valid category directories
+        Loads files from valid category subdirectories including:
+        - Files with NEW: prefix (these are valid mechanisms)
+        - All .yaml and .yml files
         """
         mechanism_bank_path = Path(__file__).parent.parent.parent / "mechanism-bank" / "mechanisms"
 
@@ -248,26 +228,20 @@ class DatabaseSeeder:
             return []
 
         yaml_files = []
-        new_prefix_count = 0
 
-        # Only load from valid category subdirectories
+        # Load from valid category subdirectories
         for category in VALID_MECHANISM_CATEGORIES:
             category_path = mechanism_bank_path / category
             if not category_path.exists():
                 logger.debug(f"Category directory not found: {category}")
                 continue
 
-            # Find YAML files in this category (not recursive - only direct children)
+            # Find ALL YAML files in this category
             for pattern in ["*.yaml", "*.yml"]:
                 for f in category_path.glob(pattern):
-                    # Skip files with NEW: prefix
-                    if f.name.startswith('NEW:'):
-                        new_prefix_count += 1
-                        continue
                     yaml_files.append(f)
 
-        logger.info(f"Found {len(yaml_files)} valid mechanism files")
-        logger.info(f"Skipped {new_prefix_count} files with NEW: prefix")
+        logger.info(f"Found {len(yaml_files)} mechanism files to load")
         return yaml_files
 
     def load_node_files(self) -> List[Path]:
@@ -299,7 +273,7 @@ class DatabaseSeeder:
         return 4
 
     def load_node_from_yaml(self, session: Session, file_path: Path) -> Optional[Node]:
-        """Load a node from a YAML definition file."""
+        """Load a node from a YAML definition file, including hierarchy data."""
         try:
             with open(file_path, 'r', encoding='utf-8') as f:
                 data = yaml.safe_load(f)
@@ -308,6 +282,16 @@ class DatabaseSeeder:
                 return None
 
             node_id = data.get('id')
+
+            # Extract hierarchy data if present
+            hierarchy = data.get('hierarchy', {})
+            parent_ids = hierarchy.get('parent_ids', [])
+            depth = hierarchy.get('depth', 0)
+            is_grouping_node = hierarchy.get('is_grouping_node', False)
+
+            # Store parent_ids for later junction table population
+            if parent_ids:
+                self._pending_hierarchy[node_id] = parent_ids
 
             # Check if node already exists
             stmt = select(Node).where(Node.id == node_id)
@@ -320,17 +304,23 @@ class DatabaseSeeder:
                 existing_node.category = data.get('category', 'built_environment')
                 existing_node.description = data.get('description', '')
                 existing_node.node_type = data.get('type', 'stock').lower()
+                # Update hierarchy fields
+                existing_node.depth = depth
+                existing_node.is_grouping_node = is_grouping_node
                 self.nodes_cache[node_id] = existing_node
                 return existing_node
 
-            # Create new node
+            # Create new node with hierarchy data
             new_node = Node(
                 id=node_id,
                 name=data.get('name', node_id.replace('_', ' ').title()),
                 node_type=data.get('type', 'stock').lower(),
                 category=data.get('category', 'built_environment'),
                 scale=data.get('scale', self.extract_scale_from_path(file_path)),
-                description=data.get('description', '')
+                description=data.get('description', ''),
+                # Hierarchy fields
+                depth=depth,
+                is_grouping_node=is_grouping_node
             )
 
             session.add(new_node)
@@ -367,6 +357,147 @@ class DatabaseSeeder:
         logger.info(f"Loaded {nodes_loaded} nodes from YAML definitions")
         logger.info(f"Valid node IDs registered: {len(self.valid_node_ids)}")
         return nodes_loaded
+
+    def seed_node_hierarchy(self, session: Session) -> int:
+        """
+        Populate node_hierarchy junction table from stored parent_ids.
+
+        Must be called AFTER seed_nodes_from_yaml() when all nodes exist in DB.
+        Also computes all_ancestors and primary_path for each node.
+
+        Returns count of hierarchy relationships created.
+        """
+        if not self._pending_hierarchy:
+            logger.info("No hierarchy relationships to seed")
+            return 0
+
+        relationships_created = 0
+        skipped = 0
+
+        # First pass: Insert all parent-child relationships
+        for child_id, parent_ids in self._pending_hierarchy.items():
+            for order_idx, parent_id in enumerate(parent_ids):
+                # Validate both nodes exist
+                if parent_id not in self.valid_node_ids:
+                    logger.warning(f"Skipping hierarchy: parent '{parent_id}' not found for child '{child_id}'")
+                    skipped += 1
+                    continue
+
+                if child_id not in self.valid_node_ids:
+                    logger.warning(f"Skipping hierarchy: child '{child_id}' not found")
+                    skipped += 1
+                    continue
+
+                try:
+                    stmt = insert(node_hierarchy).values(
+                        parent_node_id=parent_id,
+                        child_node_id=child_id,
+                        relationship_type='contains',
+                        order_index=order_idx
+                    )
+                    session.execute(stmt)
+                    relationships_created += 1
+                except IntegrityError:
+                    # Relationship already exists
+                    session.rollback()
+                    logger.debug(f"Hierarchy relationship already exists: {parent_id} -> {child_id}")
+
+        session.commit()
+        logger.info(f"Created {relationships_created} hierarchy relationships ({skipped} skipped)")
+
+        # Second pass: Compute all_ancestors and primary_path for each node
+        self._compute_hierarchy_fields(session)
+
+        return relationships_created
+
+    def _compute_hierarchy_fields(self, session: Session) -> None:
+        """
+        Compute all_ancestors and primary_path for all nodes.
+
+        Uses iterative approach to handle DAG structure.
+        """
+        logger.info("Computing all_ancestors and primary_path for nodes...")
+
+        # Build parent lookup from junction table
+        from sqlalchemy import select as sql_select
+        stmt = sql_select(node_hierarchy.c.child_node_id, node_hierarchy.c.parent_node_id)
+        results = session.execute(stmt).fetchall()
+
+        child_to_parents: Dict[str, List[str]] = {}
+        for child_id, parent_id in results:
+            if child_id not in child_to_parents:
+                child_to_parents[child_id] = []
+            child_to_parents[child_id].append(parent_id)
+
+        # Get all nodes
+        all_nodes = session.query(Node).all()
+        node_dict = {n.id: n for n in all_nodes}
+
+        # Compute all_ancestors for each node using BFS
+        for node_id, node in node_dict.items():
+            ancestors = self._get_all_ancestors(node_id, child_to_parents)
+            node.all_ancestors = list(ancestors)
+
+            # Compute primary_path (using first parent at each level)
+            node.primary_path = self._compute_primary_path(node_id, child_to_parents)
+
+        session.commit()
+        logger.info(f"Computed hierarchy fields for {len(all_nodes)} nodes")
+
+    def _get_all_ancestors(
+        self,
+        node_id: str,
+        child_to_parents: Dict[str, List[str]],
+        visited: Optional[Set[str]] = None
+    ) -> Set[str]:
+        """Recursively get all ancestors of a node."""
+        if visited is None:
+            visited = set()
+
+        if node_id in visited:
+            return set()  # Cycle detection
+
+        visited.add(node_id)
+
+        parent_ids = child_to_parents.get(node_id, [])
+        ancestors = set(parent_ids)
+
+        for parent_id in parent_ids:
+            ancestors.update(self._get_all_ancestors(parent_id, child_to_parents, visited.copy()))
+
+        return ancestors
+
+    def _compute_primary_path(
+        self,
+        node_id: str,
+        child_to_parents: Dict[str, List[str]]
+    ) -> str:
+        """
+        Compute primary path for a node.
+
+        Uses first parent at each level to build canonical path.
+        Format: "root_id/parent_id/node_id"
+        """
+        path_parts = [node_id]
+
+        current_id = node_id
+        visited = {node_id}
+
+        while current_id in child_to_parents:
+            parents = child_to_parents[current_id]
+            if not parents:
+                break
+
+            # Use first parent (primary)
+            first_parent = parents[0]
+            if first_parent in visited:
+                break  # Cycle detected
+
+            visited.add(first_parent)
+            path_parts.insert(0, first_parent)
+            current_id = first_parent
+
+        return '/'.join(path_parts)
 
     def parse_yaml_file(self, file_path: Path) -> Optional[Dict]:
         """Parse a single YAML file."""
@@ -454,12 +585,48 @@ class DatabaseSeeder:
 
         return from_node_id, to_node_id
 
+    def get_or_create_node(self, session: Session, node_id: str, node_data: Dict, category: str) -> Node:
+        """
+        Get existing node or create new one.
+
+        Creates nodes dynamically from mechanism data.
+        """
+        # Check cache first
+        if node_id in self.nodes_cache:
+            return self.nodes_cache[node_id]
+
+        # Check database
+        stmt = select(Node).where(Node.id == node_id)
+        existing_node = session.execute(stmt).scalar_one_or_none()
+
+        if existing_node:
+            self.nodes_cache[node_id] = existing_node
+            return existing_node
+
+        # Create new node from mechanism data
+        node_name = node_data.get('node_name', node_id.replace('_', ' ').replace('NEW:', '').title())
+        # Clean up node_id - remove NEW: prefix for storage
+        clean_node_id = node_id.replace('NEW:', '')
+
+        new_node = Node(
+            id=clean_node_id,
+            name=node_name,
+            node_type='stock',
+            category=category,
+            scale=4,  # Default scale
+            description=''
+        )
+
+        session.add(new_node)
+        self.nodes_cache[clean_node_id] = new_node
+        self.valid_node_ids.add(clean_node_id)
+        return new_node
+
     def create_mechanism(self, session: Session, mech_data: Dict) -> Optional[Mechanism]:
         """
         Create mechanism from YAML data.
 
-        IMPORTANT: Does NOT create nodes - only uses existing nodes from cache.
-        Mechanisms referencing non-existent nodes will return None.
+        Creates nodes dynamically if they don't exist.
         """
         try:
             mech_id = mech_data.get('id')
@@ -467,38 +634,41 @@ class DatabaseSeeder:
                 logger.warning("Mechanism missing ID, skipping")
                 return None
 
+            # Clean mechanism ID - remove NEW: prefix
+            clean_mech_id = mech_id.replace('NEW:', '')
+
             # Check if mechanism already exists
-            stmt = select(Mechanism).where(Mechanism.id == mech_id)
+            stmt = select(Mechanism).where(Mechanism.id == clean_mech_id)
             existing_mech = session.execute(stmt).scalar_one_or_none()
 
             if existing_mech:
-                logger.debug(f"Mechanism {mech_id} already exists, skipping")
+                logger.debug(f"Mechanism {clean_mech_id} already exists, skipping")
                 return existing_mech
 
             # Get node IDs from mechanism data
             from_node_id, to_node_id = self.get_node_ids_from_mechanism(mech_data)
             category = mech_data.get('category', 'built_environment')
 
-            # Lookup nodes from cache (do NOT create new nodes)
-            if from_node_id not in self.nodes_cache:
-                logger.debug(f"Skipping mechanism {mech_id}: from_node '{from_node_id}' not in valid nodes")
-                return None
-            if to_node_id not in self.nodes_cache:
-                logger.debug(f"Skipping mechanism {mech_id}: to_node '{to_node_id}' not in valid nodes")
-                return None
+            # Get or create nodes dynamically
+            from_node_data = mech_data.get('from_node', {})
+            to_node_data = mech_data.get('to_node', {})
 
-            from_node = self.nodes_cache[from_node_id]
-            to_node = self.nodes_cache[to_node_id]
+            from_node = self.get_or_create_node(session, from_node_id, from_node_data, category)
+            to_node = self.get_or_create_node(session, to_node_id, to_node_data, category)
 
             # Extract evidence data
             evidence = mech_data.get('evidence', {})
 
+            # Clean node IDs for storage
+            clean_from_node_id = from_node_id.replace('NEW:', '')
+            clean_to_node_id = to_node_id.replace('NEW:', '')
+
             # Create mechanism
             mechanism = Mechanism(
-                id=mech_id,
-                name=mech_data.get('name', mech_id),
-                from_node_id=from_node_id,
-                to_node_id=to_node_id,
+                id=clean_mech_id,
+                name=mech_data.get('name', clean_mech_id),
+                from_node_id=clean_from_node_id,
+                to_node_id=clean_to_node_id,
                 direction=self.infer_direction(mech_data),
                 category=category,
                 mechanism_pathway=mech_data.get('mechanism_pathway', []),
@@ -541,11 +711,11 @@ class DatabaseSeeder:
         Returns:
             Dictionary with counts of nodes and mechanisms created
 
-        IMPORTANT: Only seeds nodes from nodes/by_scale/ and mechanisms
-        where both from_node and to_node exist in that directory.
+        Loads ALL mechanisms from mechanism-bank/mechanisms/{category}/ and
+        creates nodes dynamically as needed.
         """
         stats = {
-            'nodes_from_yaml': 0,
+            'nodes_created': 0,
             'mechanisms_created': 0,
             'mechanisms_filtered_invalid_nodes': 0,
             'mechanisms_filtered_quality': 0,
@@ -570,15 +740,9 @@ class DatabaseSeeder:
             if self.topic:
                 logger.info(f"Topic filter: {self.topic}")
 
-            # Step 1: Load nodes from YAML definitions
+            # Load mechanism files from mechanism-bank
             logger.info("=" * 60)
-            logger.info("STEP 1: Loading node definitions from YAML files")
-            logger.info("=" * 60)
-            stats['nodes_from_yaml'] = self.seed_nodes_from_yaml(session)
-
-            # Step 2: Load mechanism files
-            logger.info("=" * 60)
-            logger.info("STEP 2: Loading mechanisms from mechanism-bank")
+            logger.info("Loading mechanisms from mechanism-bank/mechanisms/")
             logger.info("=" * 60)
             yaml_files = self.load_mechanism_files()
 
@@ -637,6 +801,7 @@ class DatabaseSeeder:
             # Get final counts
             total_nodes = session.query(Node).count()
             total_mechanisms = session.query(Mechanism).count()
+            stats['nodes_created'] = total_nodes
 
             logger.info("=" * 60)
             logger.info("DATABASE SEEDING COMPLETE")
@@ -645,9 +810,9 @@ class DatabaseSeeder:
             logger.info(f"  - Quality: {self.min_quality or 'None'}")
             logger.info(f"  - Topic: {self.topic or 'None'}")
             logger.info("-" * 60)
-            logger.info(f"Node definitions loaded from YAML: {stats['nodes_from_yaml']}")
             logger.info(f"Mechanisms created: {stats['mechanisms_created']}")
-            logger.info(f"Mechanisms filtered (invalid nodes): {stats['mechanisms_filtered_invalid_nodes']}")
+            logger.info(f"Nodes created: {total_nodes}")
+            logger.info(f"Mechanisms filtered (invalid refs): {stats['mechanisms_filtered_invalid_nodes']}")
             logger.info(f"Mechanisms filtered (quality): {stats['mechanisms_filtered_quality']}")
             logger.info(f"Mechanisms filtered (topic): {stats['mechanisms_filtered_topic']}")
             logger.info(f"Files failed: {stats['files_failed']}")
@@ -734,7 +899,7 @@ Quality ratings: A (best), B, C (lowest)
     # Seed data
     stats = seeder.seed(skip_if_data_exists=args.skip_if_exists)
 
-    total_created = stats.get('nodes_from_yaml', 0) + stats.get('mechanisms_created', 0)
+    total_created = stats.get('nodes_created', 0) + stats.get('mechanisms_created', 0)
     if total_created > 0:
         logger.info("Database seeded successfully!")
     else:
