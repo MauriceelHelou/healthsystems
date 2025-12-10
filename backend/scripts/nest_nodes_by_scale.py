@@ -73,9 +73,14 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Paths
-BASE_DIR = Path(__file__).parent.parent.parent
-NODES_DIR = BASE_DIR / 'nodes' / 'by_scale'
-OUTPUT_DIR = BASE_DIR / 'backend' / 'scripts' / 'outputs' / 'nesting_results'
+SCRIPT_DIR_PATH = Path(__file__).parent
+BACKEND_DIR_PATH = SCRIPT_DIR_PATH.parent
+PROJECT_DIR_PATH = BACKEND_DIR_PATH.parent
+
+# IMPORTANT: Use the same Nodes directory as seed_database.py
+# This is backend/Nodes/by_scale/ (capital N, inside backend)
+NODES_DIR = BACKEND_DIR_PATH / 'Nodes' / 'by_scale'
+OUTPUT_DIR = SCRIPT_DIR_PATH / 'outputs' / 'nesting_results'
 
 # Scale directory names
 SCALE_DIRS = {
