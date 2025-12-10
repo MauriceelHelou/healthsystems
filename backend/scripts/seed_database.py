@@ -726,6 +726,8 @@ class DatabaseSeeder:
 
         except Exception as e:
             logger.error(f"Error creating mechanism {mech_data.get('id', 'unknown')}: {e}")
+            # Rollback to recover from any partial state (e.g., node created but mechanism failed)
+            session.rollback()
             return None
 
     def seed(self, skip_if_data_exists: bool = True) -> Dict[str, int]:
@@ -773,6 +775,13 @@ class DatabaseSeeder:
             logger.info("STEP 1: Loading nodes from Nodes/by_scale/")
             logger.info("=" * 60)
             stats['nodes_from_yaml'] = self.seed_nodes_from_yaml(session)
+
+            # Step 1.5: Populate node hierarchy junction table
+            logger.info("=" * 60)
+            logger.info("STEP 1.5: Populating node hierarchy relationships")
+            logger.info("=" * 60)
+            hierarchy_count = self.seed_node_hierarchy(session)
+            stats['hierarchy_relationships'] = hierarchy_count
 
             # Step 2: Load mechanism files from mechanism-bank
             logger.info("=" * 60)
