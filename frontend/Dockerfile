@@ -1,64 +1,40 @@
-# Development stage
-FROM node:18-alpine as development
+# Build stage
+FROM node:20-alpine AS build
 
 WORKDIR /app
 
 # Copy package files
-COPY package.json package-lock.json* ./
+COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm ci
 
-# Copy application code
+# Copy source code
 COPY . .
 
-# Expose port
-EXPOSE 3000
+# Build argument for API URL (can be overridden at build time)
+ARG REACT_APP_API_URL=https://backend-production-b6c2.up.railway.app
+ENV REACT_APP_API_URL=$REACT_APP_API_URL
 
-# Start development server
-CMD ["npm", "start"]
+# Build the app
+RUN npm run build
 
-# Build stage
-FROM node:18-alpine as build
+# Production stage - serve with Node.js 'serve' package
+FROM node:20-alpine
 
 WORKDIR /app
 
-# Copy package files
-COPY package.json package-lock.json* ./
+# Install serve globally
+RUN npm install -g serve
 
-# Install ALL dependencies (using legacy-peer-deps for TypeScript compatibility)
-RUN npm install --legacy-peer-deps
+# Copy built assets from build stage
+COPY --from=build /app/build ./build
 
-# Copy application code
-COPY . .
-
-# Build application (disable eslint and typescript errors to allow build)
-ENV DISABLE_ESLINT_PLUGIN=true
-ENV TSC_COMPILE_ON_ERROR=true
-RUN npm run build
-
-# Production stage
-FROM nginx:alpine as production
-
-# Install gettext for envsubst
-RUN apk add --no-cache gettext
-
-# Copy custom nginx config as template
-COPY nginx.conf /etc/nginx/conf.d/default.conf.template
-
-# Copy startup script
-COPY start-nginx.sh /start-nginx.sh
-RUN chmod +x /start-nginx.sh
-
-# Copy built application
-COPY --from=build /app/build /usr/share/nginx/html
+# Railway requires listening on PORT env var (default 3000)
+ENV PORT=3000
 
 # Expose port
-EXPOSE 80
+EXPOSE ${PORT}
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD wget --quiet --tries=1 --spider http://localhost:${PORT:-80}/ || exit 1
-
-# Start nginx with PORT substitution
-CMD ["/start-nginx.sh"]
+# Serve the build folder with SPA fallback (-s flag)
+CMD serve -s build -l ${PORT}
