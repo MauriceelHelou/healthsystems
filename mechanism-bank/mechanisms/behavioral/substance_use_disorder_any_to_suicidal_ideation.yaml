@@ -1,0 +1,45 @@
+id: substance_use_disorder_any_to_suicidal_ideation
+name: Substance Use Disorder → Suicidal Ideation
+from_node:
+  node_id: substance_use_disorder_any
+  node_name: Substance Use Disorder
+to_node:
+  node_id: suicidal_ideation
+  node_name: Suicidal Ideation
+direction: positive
+category: behavioral
+mechanism_pathway:
+- 'Step 1: Substance use disorder creates neurobiological changes that affect mood
+  regulation, impulse control, and cognitive functioning'
+- 'Step 2: Individuals with SUD experience psychosocial consequences including relationship
+  problems, employment difficulties, and social isolation that compound psychological
+  distress'
+- 'Step 3: The combination of neurobiological vulnerability and psychosocial stressors
+  increases risk of developing suicidal thoughts, with 5-10 times higher lifetime
+  suicide risk than general population'
+- 'Step 4: Up to 19% of patients continue to experience suicidal ideation even after
+  accessing treatment, indicating persistent vulnerability'
+evidence:
+  quality_rating: C
+  n_studies: 1
+  primary_citation: 'S. Espinet et al. 2019. Predisposing and protective factors influencing
+    suicide ideation, attempt, and death in patients accessing substance use treatment:
+    a systematic review and meta-analysis protocol. Systematic Reviews.'
+  supporting_citations: []
+description: Substance use disorder substantially increases risk of suicidal ideation
+  through both neurobiological and psychosocial pathways. The lifetime risk of suicide
+  in patients with SUD is 5-10 times higher than the general population. Critically,
+  up to 19% of patients continue to experience suicidal thoughts even after accessing
+  treatment, indicating that the relationship persists across the treatment trajectory.
+last_updated: '2025-12-02'
+extraction_method: consolidated_batch_v3
+moderators:
+- name: treatment_access
+  direction: weakens
+  strength: moderate
+  description: Accessing substance use treatment may reduce but does not eliminate
+    suicidal ideation risk
+- name: timing_relative_to_treatment
+  direction: strengthens
+  strength: moderate
+  description: Risk factors may differ before versus after treatment initiation

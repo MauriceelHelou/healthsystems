@@ -20,11 +20,16 @@ Usage:
 
 import json
 import re
+import sys
 import yaml
 import argparse
 from pathlib import Path
 from typing import Dict, Any, Optional, List
 from collections import defaultdict
+
+# Add backend to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from utils.scale_inference import get_scale_from_node, infer_scale_from_name
 
 BASE_DIR = Path(__file__).parent.parent.parent
 CANONICAL_NODES_PATH = BASE_DIR / 'nodes' / 'canonical_nodes.json'
@@ -638,7 +643,8 @@ def create_node_yaml(node: Dict) -> Dict[str, Any]:
     """Create a complete YAML structure for a node."""
     node_id = normalize_node_id(node.get('id', ''))
     name = clean_field(node.get('name', node_id.replace('_', ' ').title()))
-    scale = node.get('scale', 4)  # Default to scale 4 (individual/household)
+    # Use intelligent scale inference instead of defaulting to 4
+    scale = get_scale_from_node(node)
     domain = clean_field(node.get('domain', 'Unknown'))
     node_type = clean_field(node.get('type', 'Unknown'))
     unit = clean_field(node.get('unit', 'TBD'))
@@ -878,9 +884,9 @@ Examples:
             node_data = create_node_yaml(node)
             scale = node_data['scale']
 
-            # Ensure valid scale (1-7)
+            # Ensure valid scale (1-7) - use inference if invalid
             if scale not in SCALE_DIRS:
-                scale = 4  # Default to scale 4 (individual/household)
+                scale = infer_scale_from_name(node_data['id'], node_data.get('name'))
                 node_data['scale'] = scale
 
             # Output path

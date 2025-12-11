@@ -44,6 +44,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from models.database import Base
 from models.mechanism import Node, Mechanism, node_hierarchy
 from config.database import DatabaseConfig
+from utils.scale_inference import infer_scale_from_name
 from sqlalchemy import insert
 
 # Quality rating hierarchy (A is best, C is worst)
@@ -633,12 +634,15 @@ class DatabaseSeeder:
         # Create new node from mechanism data
         node_name = node_data.get('node_name', clean_node_id.replace('_', ' ').title())
 
+        # Use intelligent scale inference instead of defaulting to 4
+        inferred_scale = infer_scale_from_name(clean_node_id, node_name)
+
         new_node = Node(
             id=clean_node_id,
             name=node_name,
             node_type='stock',
             category=category,
-            scale=4,  # Default scale
+            scale=inferred_scale,
             description=''
         )
 

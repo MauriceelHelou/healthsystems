@@ -33,7 +33,7 @@ const api = axios.create({
  */
 async function fetchMechanisms(): Promise<ApiMechanismListItem[]> {
   const response = await api.get<ApiMechanismListItem[]>('/api/mechanisms/', {
-    params: { limit: 1000 }, // Get all mechanisms
+    params: { limit: 5000 }, // Get all mechanisms (increased from 1000)
   });
   return response.data;
 }

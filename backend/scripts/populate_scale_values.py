@@ -1,7 +1,8 @@
 """
-Populate scale values for all nodes based on category.
+Populate scale values for all nodes based on category and name inference.
 
-This script updates existing nodes with scale values inferred from their category.
+This script updates existing nodes with scale values inferred from their category
+and node name patterns using the scale_inference utility.
 """
 
 import sys
@@ -14,40 +15,65 @@ sys.path.insert(0, str(backend_dir))
 from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
 from api.config import settings
+from utils.scale_inference import infer_scale_from_name
 
-def get_node_scale_from_category(category: str) -> int:
+# Category to scale mapping (first-pass)
+CATEGORY_SCALE_MAPPING = {
+    'political': 1,
+    'built_environment': 2,
+    'economic': 3,
+    'social_services': 3,
+    'social_environment': 4,
+    'economic_individual': 4,
+    'behavioral': 5,
+    'psychosocial': 5,
+    'healthcare_access': 6,
+    'clinical': 6,
+    'biological': 7,
+    'crisis': 7
+}
+
+
+def get_node_scale(node_id: str, node_name: str, category: str) -> int:
     """
-    Determine node scale based on category.
+    Determine node scale using category mapping with name inference fallback.
 
-    7-scale taxonomy mapping:
-    - political -> 1 (structural determinants - policy)
-    - built_environment -> 2 (built environment & infrastructure)
-    - economic, social_services -> 3 (institutional infrastructure)
-    - social_environment, economic_individual -> 4 (individual/household conditions)
-    - behavioral, psychosocial -> 5 (individual behaviors & psychosocial)
-    - healthcare_access, clinical -> 6 (intermediate pathways)
-    - biological, crisis -> 7 (crisis endpoints)
+    First tries the category mapping. If the category isn't mapped or is
+    'social_environment' (which is overly broad), falls back to name-based
+    inference for more accurate classification.
+
+    Args:
+        node_id: Node identifier (snake_case)
+        node_name: Human-readable node name
+        category: Node category
+
+    Returns:
+        Scale 1-7
     """
-    scale_mapping = {
-        'political': 1,
-        'built_environment': 2,
-        'economic': 3,
-        'social_services': 3,
-        'social_environment': 4,
-        'economic_individual': 4,
-        'behavioral': 5,
-        'psychosocial': 5,
-        'healthcare_access': 6,
-        'clinical': 6,
-        'biological': 7,
-        'crisis': 7
-    }
+    # First check category mapping
+    category_scale = CATEGORY_SCALE_MAPPING.get(category)
 
-    return scale_mapping.get(category, 4)  # Default to scale 4
+    # If category gives us a clear answer (not social_environment which is too broad)
+    if category_scale is not None and category != 'social_environment':
+        return category_scale
+
+    # Otherwise, use name-based inference for better accuracy
+    inferred_scale = infer_scale_from_name(node_id, node_name)
+
+    # If inference found a match, use it
+    if inferred_scale != 4:  # 4 is the default when no pattern matches
+        return inferred_scale
+
+    # Fall back to category mapping if available
+    if category_scale is not None:
+        return category_scale
+
+    # Final fallback
+    return 4
 
 
 def populate_scale_values():
-    """Populate scale values from category inference."""
+    """Populate scale values from category and name inference."""
 
     print("=" * 60)
     print("Populating scale values for nodes")
@@ -64,16 +90,16 @@ def populate_scale_values():
     session = Session()
 
     try:
-        # Get all nodes
-        result = session.execute(text("SELECT id, category, scale FROM nodes"))
+        # Get all nodes with their names
+        result = session.execute(text("SELECT id, name, category, scale FROM nodes"))
         nodes = result.fetchall()
 
         print(f"\nFound {len(nodes)} nodes")
         print("\nUpdating scale values...")
 
         updated_count = 0
-        for node_id, category, current_scale in nodes:
-            inferred_scale = get_node_scale_from_category(category)
+        for node_id, node_name, category, current_scale in nodes:
+            inferred_scale = get_node_scale(node_id, node_name, category)
 
             # Update if scale is NULL or different from inferred value
             if current_scale is None or current_scale != inferred_scale:

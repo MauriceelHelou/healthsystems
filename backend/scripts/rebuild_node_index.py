@@ -9,11 +9,16 @@ Reads all individual YAML node files and regenerates:
 Run after generating or modifying node YAML files.
 """
 
+import sys
 import json
 import yaml
 from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
+
+# Add backend to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from utils.scale_inference import infer_scale_from_name
 
 BASE_DIR = Path(__file__).parent.parent.parent
 NODES_DIR = BASE_DIR / 'nodes' / 'by_scale'
@@ -49,10 +54,18 @@ def load_all_nodes() -> list:
     return nodes
 
 
+def get_node_scale(node: dict) -> int:
+    """Get scale from node, using inference if not present."""
+    if 'scale' in node and isinstance(node['scale'], int) and 1 <= node['scale'] <= 7:
+        return node['scale']
+    # Use inference as fallback
+    return infer_scale_from_name(node.get('id', ''), node.get('name', ''))
+
+
 def build_canonical_json(nodes: list) -> dict:
     """Build the canonical_nodes.json structure."""
-    # Sort by scale, then by id
-    sorted_nodes = sorted(nodes, key=lambda n: (n.get('scale', 4), n.get('id', '')))
+    # Sort by scale, then by id (use inference for missing scales)
+    sorted_nodes = sorted(nodes, key=lambda n: (get_node_scale(n), n.get('id', '')))
 
     # Build lookup structures
     by_id = {}
@@ -61,7 +74,7 @@ def build_canonical_json(nodes: list) -> dict:
 
     for i, node in enumerate(sorted_nodes, 1):
         node_id = node.get('id', '')
-        scale = node.get('scale', 4)
+        scale = get_node_scale(node)
         domain = node.get('domain', 'Unknown')
 
         # Simplified node for the main list
@@ -110,7 +123,7 @@ def build_index_markdown(nodes: list) -> str:
     # Group by scale
     by_scale = defaultdict(list)
     for node in nodes:
-        scale = node.get('scale', 4)
+        scale = get_node_scale(node)
         by_scale[scale].append(node)
 
     for scale in sorted(by_scale.keys()):
@@ -152,7 +165,7 @@ def build_index_markdown(nodes: list) -> str:
         for node in domain_nodes[:20]:  # Limit to first 20 per domain in index
             node_id = node.get('id', '')
             name = node.get('name', node_id)
-            scale = node.get('scale', 4)
+            scale = get_node_scale(node)
             lines.append(f"- `{node_id}` - {name} (Scale {scale})")
 
         if len(domain_nodes) > 20:
@@ -198,7 +211,7 @@ def main():
 
     by_scale = defaultdict(int)
     for node in nodes:
-        by_scale[node.get('scale', 4)] += 1
+        by_scale[get_node_scale(node)] += 1
 
     for scale in sorted(by_scale.keys()):
         scale_name = SCALE_NAMES.get(scale, f'Scale {scale}')

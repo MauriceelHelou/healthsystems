@@ -69,7 +69,7 @@ def list_mechanisms(
     from_node: Optional[str] = Query(None, description="Filter by source node ID"),
     to_node: Optional[str] = Query(None, description="Filter by target node ID"),
     evidence_quality: Optional[str] = Query(None, description="Filter by evidence quality (A/B/C)"),
-    limit: int = Query(100, le=1000, description="Maximum number of results"),
+    limit: int = Query(100, le=5000, description="Maximum number of results"),
     offset: int = Query(0, ge=0, description="Offset for pagination"),
     db: Session = Depends(get_db)
 ):
